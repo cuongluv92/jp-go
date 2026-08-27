@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useMemo, useState } from "react";
 
 import { PronounceButton } from "@/components/pronounce-button";
+import { getExamplesForWord } from "@/lib/data/sample-examples";
 import { useVocabulary } from "@/lib/data/vocabulary-context";
 import type { FlashcardGrade } from "@/lib/types";
 
@@ -64,11 +65,15 @@ export default function FlashcardsPage() {
           <div className="flex w-full flex-col items-center gap-3">
             <p className="font-jp text-2xl font-semibold">{current.word}</p>
             <p className="text-base text-muted">{current.reading}</p>
-            <p className="text-lg font-medium">{current.meaning}</p>
-            <div className="mt-2 w-full rounded-xl bg-slate-50 p-3 text-left text-sm">
-              <p className="font-jp">{current.examples.daily.japanese}</p>
-              <p className="mt-0.5 text-xs text-muted">{current.examples.daily.translation}</p>
-            </div>
+            <p className="text-lg font-medium">{current.meaningVi}</p>
+            {getExamplesForWord(current.id)
+              .slice(0, 1)
+              .map((example) => (
+                <div key={example.exampleNo} className="mt-2 w-full rounded-xl bg-slate-50 p-3 text-left text-sm">
+                  <p className="font-jp">{example.exampleJp}</p>
+                  <p className="mt-0.5 text-xs text-muted">{example.exampleVi}</p>
+                </div>
+              ))}
             <div onClick={(e) => e.stopPropagation()}>
               <PronounceButton text={current.word} />
             </div>

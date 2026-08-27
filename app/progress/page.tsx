@@ -21,7 +21,7 @@ export default function ProgressPage() {
   const stats = computeStats(visible);
 
   const maxDailyTotal = Math.max(1, ...samplePracticeHistory.map((d) => d.total));
-  const maxTopicCount = Math.max(1, ...Object.values(stats.byTopic));
+  const maxLevelCount = Math.max(1, ...Object.values(stats.byLevel).map((v) => v ?? 0));
   const maxPosCount = Math.max(1, ...Object.values(stats.byPartOfSpeech).map((v) => v ?? 0));
 
   return (
@@ -61,10 +61,10 @@ export default function ProgressPage() {
       </section>
 
       <section>
-        <h2 className="mb-2 text-sm font-semibold">Theo chủ đề</h2>
+        <h2 className="mb-2 text-sm font-semibold">Theo cấp độ JLPT</h2>
         <div className="flex flex-col gap-2 rounded-2xl border border-border bg-surface p-4 shadow-sm">
-          {Object.entries(stats.byTopic).map(([topic, count]) => (
-            <BarRow key={topic} label={topic} count={count} max={maxTopicCount} />
+          {Object.entries(stats.byLevel).map(([level, count]) => (
+            <BarRow key={level} label={level} count={count ?? 0} max={maxLevelCount} />
           ))}
         </div>
       </section>

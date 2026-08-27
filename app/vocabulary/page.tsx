@@ -4,7 +4,7 @@ import Link from "next/link";
 import { useMemo, useState } from "react";
 
 import { StatusBadge } from "@/components/status-badge";
-import { filterWords, listTopics, type VocabularyFilter } from "@/lib/data/selectors";
+import { filterWords, type VocabularyFilter } from "@/lib/data/selectors";
 import { useVocabulary } from "@/lib/data/vocabulary-context";
 import {
   JLPT_LEVELS,
@@ -18,7 +18,6 @@ import {
 export default function VocabularyPage() {
   const { words } = useVocabulary();
   const visibleWords = useMemo(() => words.filter((w) => !w.isHidden), [words]);
-  const topics = useMemo(() => listTopics(visibleWords), [visibleWords]);
 
   const [filter, setFilter] = useState<VocabularyFilter>({});
 
@@ -59,12 +58,6 @@ export default function VocabularyPage() {
           onChange={(v) => setFilter((f) => ({ ...f, level: (v as JlptLevel) || undefined }))}
         />
         <SelectChip
-          label="Chủ đề"
-          value={filter.topic}
-          options={topics.map((t) => ({ value: t, label: t }))}
-          onChange={(v) => setFilter((f) => ({ ...f, topic: v || undefined }))}
-        />
-        <SelectChip
           label="Loại từ"
           value={filter.partOfSpeech}
           options={Object.entries(PART_OF_SPEECH_LABELS).map(([value, label]) => ({ value, label }))}
@@ -91,7 +84,7 @@ export default function VocabularyPage() {
                   {word.progress.isFavorite && <span aria-hidden>⭐</span>}
                 </div>
                 <p className="truncate text-xs text-muted">
-                  {word.reading} · {word.meaning}
+                  {word.reading} · {word.meaningVi}
                 </p>
               </div>
               <StatusBadge status={word.progress.status} />

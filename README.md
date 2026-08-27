@@ -3,11 +3,13 @@
 Web app học tiếng Nhật, ưu tiên điện thoại, giao diện tiếng Việt. Xây bằng
 Next.js App Router + TypeScript.
 
-> **Giai đoạn hiện tại: khung giao diện + dữ liệu mẫu.** Toàn bộ dữ liệu từ
-> vựng, thống kê, tiến độ... đang chạy trên dữ liệu mẫu trong bộ nhớ trình
-> duyệt (xem `lib/data/vocabulary-context.tsx`), **chưa** kết nối Supabase.
-> Trang Quản lý dữ liệu (`/admin`) cũng chỉ demo với dữ liệu mẫu, chưa nhập
-> dữ liệu thật.
+> **Giai đoạn hiện tại: schema v2 + 9 từ mẫu để kiểm tra đủ loại từ khó chia
+> nhất** (danh từ, 五段, 一段, する, 来る bất quy tắc, い形容詞 kể cả ngoại lệ
+> 良い, な形容詞, phó từ, biểu hiện cố định) trước khi nạp toàn bộ dữ liệu
+> thật. Toàn bộ dữ liệu đang chạy trên bộ nhớ trình duyệt (xem
+> `lib/data/vocabulary-context.tsx`), **chưa** kết nối Supabase. File nguồn
+> 1800 từ (chỉ có từ + nghĩa) **chưa** được nạp vào app — cần soạn thêm cách
+> đọc, loại từ, ví dụ, cách dùng... theo đúng schema trước.
 
 ## Bắt đầu
 
@@ -36,32 +38,49 @@ app/
 components/                UI dùng chung (nav, badge, nút phát âm...)
 
 lib/
-  types.ts                 Kiểu dữ liệu lõi — khớp 1-1 với cột Excel + metadata app
+  types.ts                 Kiểu dữ liệu lõi: VocabWord / VocabExample / Conjugation + schema Excel
+  conjugation.ts           Bộ máy chia động từ (godan/ichidan/suru/kuru) và tính từ (i/na), có test khớp mẫu
   srs.ts                   Thuật toán lặp lại ngắt quãng (SM-2 rút gọn)
   speech.ts                Phát âm bằng Web Speech API
   data/
-    sample-words.ts          Dữ liệu từ vựng mẫu
+    sample-words.ts          9 từ mẫu, đủ loại từ khó chia nhất
+    sample-examples.ts        3 ví dụ/từ (exam/daily/business) + cloze, có test round-trip
     sample-import-rows.ts     Dữ liệu mẫu giả lập "đọc từ Excel" cho trang admin
     practice-samples.ts       Câu hỏi mẫu cho từng dạng luyện tập
     activity.ts                Streak + lịch sử luyện tập mẫu
     selectors.ts                Lọc / tìm kiếm / thống kê — hàm thuần, có test
-    excel-import.ts             Map cột Excel → VocabularyWord, validate, phát hiện trùng
+    excel-import.ts             Map VOCAB row ↔ VocabWord, validate, đọc file .xlsx, phát hiện trùng ID
+    excel-export.ts             Xuất VOCAB/EXAMPLES/CONJUGATIONS ra 1 file .xlsx (exceljs)
     vocabulary-context.tsx      React context giữ state từ vựng (điểm thay thế bằng Supabase sau này)
 ```
 
-## Nhập dữ liệu Excel (chuẩn bị sẵn, chưa kích hoạt)
+## Schema dữ liệu & nhập/xuất Excel
 
-File Excel từ vựng có 16 cột, được định nghĩa chính xác trong
-`lib/types.ts` (`EXCEL_COLUMNS`, `ExcelVocabularyRow`). `lib/data/excel-import.ts`
-đã có sẵn:
+Ba thực thể tách rời — khớp 3 sheet khi export/import:
 
-- `validateExcelRow` — báo cột bắt buộc bị thiếu, cảnh báo cột nên có
-- `findMissingHeaders` — so khớp header thực tế của file với 16 cột chuẩn
-- `findDuplicatesWithinRows` / `findDuplicatesAgainstExisting` — phát hiện từ trùng
-- `mapExcelRowToWord` — chuyển 1 dòng Excel hợp lệ thành `VocabularyWord`
+- **VOCAB** (`VocabWord` / `VOCAB_COLUMNS` trong `lib/types.ts`, 18 cột): id, word,
+  kanji, reading, meaning_vi, part_of_speech, verb_class, transitivity,
+  particle_patterns, usage_patterns, collocations, register, usage_note,
+  common_mistake, similar_words, naturalness_note, jlpt, needs_review. Cột
+  danh sách nối bằng `" | "` (đọc được trực tiếp trong Excel, không phải JSON).
+- **EXAMPLES** (`VocabExample`, đúng 3 dòng/từ: exam/daily/business) — mỗi dòng
+  có `cloze_jp` (ẩn từ đang học bằng `_____`) + `answer`, dùng cho bài điền từ.
+  UI chỉ hiển thị số thứ tự 1/2/3, không hiển thị loại ví dụ.
+- **CONJUGATIONS** — sinh tự động từ `lib/conjugation.ts`, chỉ áp dụng
+  verb/i_adjective/na_adjective (xem `getConjugation()`).
 
-Khi có file Excel thật: chỉ cần thêm bước đọc file (.xlsx/.csv) thành
-`ExcelVocabularyRow[]` và nối vào trang `/admin` — không cần sửa UI.
+Trang `/admin`:
+
+- **Xuất Excel**: nút xuất toàn bộ dữ liệu hiện tại thành 1 file `.xlsx` thật
+  (3 sheet trên), dùng để tải về chỉnh sửa.
+- **Nhập Excel**: chọn file `.xlsx` thật (đọc bằng `exceljs`, không dùng
+  `xlsx`/SheetJS vì bản trên npm chưa vá lỗi ReDoS), xem trước từng dòng, báo
+  cột thiếu/giá trị enum sai, báo ID trùng trong file hoặc trùng với kho hiện
+  có (cho chọn Cập nhật/Bỏ qua), rồi mới nhập — không ghi đè bừa.
+
+File nguồn 1800 từ (chỉ có từ + cách đọc + nghĩa) **chưa** đủ các cột trên nên
+chưa nạp vào app — cần soạn thêm loại từ, ví dụ, cách dùng... cho từng từ
+trước, theo đúng schema này.
 
 ## Kế hoạch tích hợp Supabase (chưa thực hiện)
 

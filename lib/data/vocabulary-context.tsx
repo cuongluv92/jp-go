@@ -4,7 +4,7 @@ import { createContext, useCallback, useContext, useMemo, useState, type ReactNo
 
 import { sampleWords } from "@/lib/data/sample-words";
 import { applyFlashcardGrade } from "@/lib/srs";
-import type { FlashcardGrade, LearningStatus, VocabularyWord } from "@/lib/types";
+import type { FlashcardGrade, LearningStatus, VocabWord } from "@/lib/types";
 
 /**
  * Nguồn dữ liệu từ vựng cho toàn bộ UI, hiện đang chạy trên dữ liệu mẫu trong
@@ -14,22 +14,22 @@ import type { FlashcardGrade, LearningStatus, VocabularyWord } from "@/lib/types
  * trang UI gọi qua `useVocabulary()` nên không cần sửa lại.
  */
 interface VocabularyContextValue {
-  words: VocabularyWord[];
-  getWordById: (id: string) => VocabularyWord | undefined;
+  words: VocabWord[];
+  getWordById: (id: string) => VocabWord | undefined;
   toggleFavorite: (id: string) => void;
   setStatus: (id: string, status: LearningStatus) => void;
   gradeFlashcard: (id: string, grade: FlashcardGrade) => void;
-  addWord: (word: VocabularyWord) => void;
-  updateWord: (id: string, patch: Partial<VocabularyWord>) => void;
+  addWord: (word: VocabWord) => void;
+  updateWord: (id: string, patch: Partial<VocabWord>) => void;
   setHidden: (id: string, hidden: boolean) => void;
 }
 
 const VocabularyContext = createContext<VocabularyContextValue | null>(null);
 
 export function VocabularyProvider({ children }: { children: ReactNode }) {
-  const [words, setWords] = useState<VocabularyWord[]>(sampleWords);
+  const [words, setWords] = useState<VocabWord[]>(sampleWords);
 
-  const updateWord = useCallback((id: string, patch: Partial<VocabularyWord>) => {
+  const updateWord = useCallback((id: string, patch: Partial<VocabWord>) => {
     setWords((prev) => prev.map((w) => (w.id === id ? { ...w, ...patch } : w)));
   }, []);
 
@@ -49,7 +49,7 @@ export function VocabularyProvider({ children }: { children: ReactNode }) {
     );
   }, []);
 
-  const addWord = useCallback((word: VocabularyWord) => {
+  const addWord = useCallback((word: VocabWord) => {
     setWords((prev) => [word, ...prev]);
   }, []);
 

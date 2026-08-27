@@ -1,128 +1,141 @@
 import { describe, expect, it } from "vitest";
 
 import {
-  findDuplicatesAgainstExisting,
-  findDuplicatesWithinRows,
-  findMissingHeaders,
-  mapExcelRowToWord,
-  mapPartOfSpeech,
-  validateExcelRow,
+  findDuplicateIdsAgainstExisting,
+  findDuplicateIdsWithinRows,
+  findMissingVocabHeaders,
+  vocabRowToWord,
+  wordToVocabRow,
+  validateVocabRow,
 } from "@/lib/data/excel-import";
-import { EXCEL_COLUMNS, type ExcelVocabularyRow, type VocabularyWord } from "@/lib/types";
+import { VOCAB_COLUMNS, type VocabExcelRow, type VocabWord } from "@/lib/types";
 
-function makeRow(overrides: Partial<ExcelVocabularyRow> = {}): ExcelVocabularyRow {
-  const base = Object.fromEntries(EXCEL_COLUMNS.map((c) => [c, ""])) as ExcelVocabularyRow;
+function makeRow(overrides: Partial<VocabExcelRow> = {}): VocabExcelRow {
+  const base = Object.fromEntries(VOCAB_COLUMNS.map((c) => [c, ""])) as VocabExcelRow;
   return {
     ...base,
-    "Từ vựng": "会議",
-    "Cách đọc": "かいぎ",
-    "Nghĩa tiếng Việt": "cuộc họp",
-    "Loại từ": "Danh từ",
+    id: "kaigi",
+    word: "会議",
+    kanji: "会議",
+    reading: "かいぎ",
+    meaning_vi: "cuộc họp",
+    part_of_speech: "noun",
+    jlpt: "N4",
+    needs_review: "false",
     ...overrides,
   };
 }
 
-describe("mapPartOfSpeech", () => {
-  it("nhận diện đúng loại từ tiếng Việt", () => {
-    expect(mapPartOfSpeech("Danh từ")).toBe("danh_tu");
-    expect(mapPartOfSpeech("động từ")).toBe("dong_tu");
-    expect(mapPartOfSpeech(" Tính Từ ")).toBe("tinh_tu");
+function makeWord(overrides: Partial<VocabWord> = {}): VocabWord {
+  return {
+    id: "kaigi",
+    word: "会議",
+    kanji: "会議",
+    reading: "かいぎ",
+    meaningVi: "cuộc họp",
+    partOfSpeech: "noun",
+    verbClass: null,
+    transitivity: null,
+    particlePatterns: [],
+    usagePatterns: [],
+    collocations: [],
+    register: null,
+    usageNote: "",
+    commonMistake: "",
+    similarWords: "",
+    naturalnessNote: "",
+    jlpt: "N4",
+    needsReview: false,
+    progress: {
+      status: "chua_hoc",
+      isFavorite: false,
+      timesCorrect: 0,
+      timesWrong: 0,
+      lastReviewedAt: null,
+      nextReviewAt: null,
+      intervalDays: 1,
+      easeFactor: 2.5,
+      repetitions: 0,
+    },
+    ...overrides,
+  };
+}
+
+describe("validateVocabRow", () => {
+  it("báo lỗi khi thiếu cột bắt buộc", () => {
+    const result = validateVocabRow(makeRow({ meaning_vi: "" }));
+    expect(result.errors.some((e) => e.includes("meaning_vi"))).toBe(true);
   });
 
-  it("trả về 'khac' khi không nhận diện được", () => {
-    expect(mapPartOfSpeech("Không rõ")).toBe("khac");
+  it("báo lỗi khi part_of_speech không hợp lệ", () => {
+    const result = validateVocabRow(makeRow({ part_of_speech: "khong_ro" }));
+    expect(result.errors.some((e) => e.includes("part_of_speech"))).toBe(true);
   });
-});
 
-describe("validateExcelRow", () => {
-  it("báo thiếu cột bắt buộc", () => {
-    const row = makeRow({ "Nghĩa tiếng Việt": "" });
-    const result = validateExcelRow(row);
-    expect(result.missingColumns).toContain("Nghĩa tiếng Việt");
+  it("động từ phải có verb_class", () => {
+    const result = validateVocabRow(makeRow({ part_of_speech: "verb", verb_class: "" }));
+    expect(result.errors.some((e) => e.includes("verb_class"))).toBe(true);
   });
 
   it("chỉ cảnh báo (không chặn) khi thiếu cột không bắt buộc", () => {
-    const row = makeRow({ "Cấu trúc sử dụng": "" });
-    const result = validateExcelRow(row);
-    expect(result.missingColumns).toHaveLength(0);
-    expect(result.warnings.some((w) => w.includes("Cấu trúc sử dụng"))).toBe(true);
+    const result = validateVocabRow(makeRow({ usage_note: "" }));
+    expect(result.errors).toHaveLength(0);
+    expect(result.warnings.some((w) => w.includes("usage_note"))).toBe(true);
   });
 
-  it("không báo lỗi khi đầy đủ cột bắt buộc", () => {
-    const row = makeRow();
-    expect(validateExcelRow(row).missingColumns).toHaveLength(0);
+  it("không báo lỗi khi đầy đủ và hợp lệ", () => {
+    const result = validateVocabRow(makeRow({ particle_patterns: "会議に出る", usage_note: "x", similar_words: "y" }));
+    expect(result.errors).toHaveLength(0);
   });
 });
 
-describe("findMissingHeaders", () => {
-  it("phát hiện cột bị thiếu trong header thực tế của file", () => {
-    const actual = EXCEL_COLUMNS.filter((c) => c !== "Trợ từ thường đi kèm");
-    expect(findMissingHeaders(actual)).toEqual(["Trợ từ thường đi kèm"]);
+describe("findMissingVocabHeaders", () => {
+  it("phát hiện cột thiếu trong header thực tế của file", () => {
+    const actual = VOCAB_COLUMNS.filter((c) => c !== "register");
+    expect(findMissingVocabHeaders(actual)).toEqual(["register"]);
   });
 
   it("trả về mảng rỗng khi đủ hết cột", () => {
-    expect(findMissingHeaders([...EXCEL_COLUMNS])).toHaveLength(0);
+    expect(findMissingVocabHeaders([...VOCAB_COLUMNS])).toHaveLength(0);
   });
 });
 
-describe("mapExcelRowToWord", () => {
-  it("chuyển đổi đúng cấu trúc, giữ nguyên dữ liệu và gán metadata", () => {
+describe("vocabRowToWord / wordToVocabRow", () => {
+  it("chuyển đổi 2 chiều giữ nguyên nội dung danh sách (particle_patterns...)", () => {
     const row = makeRow({
-      "Ví dụ 1: phong cách đề thi": "明日の会議は何時からですか。",
-      "Bản dịch ví dụ 1": "Cuộc họp ngày mai bắt đầu từ mấy giờ?",
+      particle_patterns: "会議に出る | 会議を開く",
+      collocations: "定例会議 | 会議室",
     });
-    const word = mapExcelRowToWord(row, { id: "w-1", level: "N4", topic: "Công việc" });
-
-    expect(word.id).toBe("w-1");
-    expect(word.word).toBe("会議");
-    expect(word.partOfSpeech).toBe("danh_tu");
-    expect(word.level).toBe("N4");
-    expect(word.examples.exam.japanese).toBe("明日の会議は何時からですか。");
+    const word = vocabRowToWord(row);
+    expect(word.particlePatterns).toEqual(["会議に出る", "会議を開く"]);
+    expect(word.collocations).toEqual(["定例会議", "会議室"]);
     expect(word.progress.status).toBe("chua_hoc");
+
+    const roundTrip = wordToVocabRow(word);
+    expect(roundTrip.particle_patterns).toBe("会議に出る | 会議を開く");
+    expect(roundTrip.collocations).toBe("定例会議 | 会議室");
+    expect(roundTrip.id).toBe("kaigi");
+  });
+
+  it("needs_review parse đúng chuỗi 'true'/'false'", () => {
+    expect(vocabRowToWord(makeRow({ needs_review: "true" })).needsReview).toBe(true);
+    expect(vocabRowToWord(makeRow({ needs_review: "false" })).needsReview).toBe(false);
   });
 });
 
-describe("findDuplicatesWithinRows", () => {
-  it("phát hiện các dòng trùng từ + cách đọc trong cùng file", () => {
-    const rows = [makeRow(), makeRow(), makeRow({ "Từ vựng": "予約", "Cách đọc": "よやく" })];
-    const duplicates = findDuplicatesWithinRows(rows);
-    expect(duplicates).toEqual([{ word: "会議", reading: "かいぎ", count: 2 }]);
+describe("findDuplicateIdsWithinRows", () => {
+  it("phát hiện ID trùng nhau trong cùng file", () => {
+    const rows = [makeRow({ id: "a" }), makeRow({ id: "a" }), makeRow({ id: "b" })];
+    expect(findDuplicateIdsWithinRows(rows)).toEqual([{ id: "a", count: 2 }]);
   });
 });
 
-describe("findDuplicatesAgainstExisting", () => {
-  it("phát hiện dòng trùng với từ đã có trong kho", () => {
-    const existing: VocabularyWord[] = [
-      {
-        id: "w-1",
-        word: "会議",
-        reading: "かいぎ",
-        meaning: "cuộc họp",
-        partOfSpeech: "danh_tu",
-        level: "N4",
-        topic: "Công việc",
-        examples: {
-          exam: { japanese: "", translation: "" },
-          daily: { japanese: "", translation: "" },
-          work: { japanese: "", translation: "" },
-        },
-        usage: { structure: "", particles: "", precedingElements: "", followingElements: "", conjugation: "", notes: "" },
-        progress: {
-          status: "chua_hoc",
-          isFavorite: false,
-          timesCorrect: 0,
-          timesWrong: 0,
-          lastReviewedAt: null,
-          nextReviewAt: null,
-          intervalDays: 1,
-          easeFactor: 2.5,
-          repetitions: 0,
-        },
-      },
-    ];
-    const rows = [makeRow(), makeRow({ "Từ vựng": "予約", "Cách đọc": "よやく" })];
-    const result = findDuplicatesAgainstExisting(rows, existing);
-    expect(result).toHaveLength(1);
-    expect(result[0]["Từ vựng"]).toBe("会議");
+describe("findDuplicateIdsAgainstExisting", () => {
+  it("phát hiện ID trong file trùng với từ đã có trong kho", () => {
+    const existing = [makeWord({ id: "kaigi" })];
+    const rows = [makeRow({ id: "kaigi" }), makeRow({ id: "moi" })];
+    const result = findDuplicateIdsAgainstExisting(rows, existing);
+    expect(result.has("kaigi")).toBe(true);
+    expect(result.has("moi")).toBe(false);
   });
 });
