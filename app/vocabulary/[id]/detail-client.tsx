@@ -5,7 +5,7 @@ import Link from "next/link";
 import { PronounceButton } from "@/components/pronounce-button";
 import { StatusBadge } from "@/components/status-badge";
 import { getConjugation } from "@/lib/conjugation";
-import { getExamplesForWord } from "@/lib/data/sample-examples";
+import { getExamplesForWord } from "@/lib/data/selectors";
 import { useVocabulary } from "@/lib/data/vocabulary-context";
 import { PART_OF_SPEECH_LABELS, type Conjugation, type LearningStatus } from "@/lib/types";
 
@@ -16,7 +16,7 @@ const STATUS_OPTIONS: { value: LearningStatus; label: string }[] = [
 ];
 
 export function VocabularyDetailClient({ id }: { id: string }) {
-  const { getWordById, toggleFavorite, setStatus } = useVocabulary();
+  const { getWordById, toggleFavorite, setStatus, examples: allExamples } = useVocabulary();
   const word = getWordById(id);
 
   if (!word) {
@@ -30,7 +30,7 @@ export function VocabularyDetailClient({ id }: { id: string }) {
     );
   }
 
-  const examples = getExamplesForWord(word.id);
+  const examples = getExamplesForWord(allExamples, word.id);
   const conjugation = getConjugation(word);
   const notes = [word.commonMistake, word.similarWords, word.naturalnessNote].filter((n) => n.trim().length > 0);
 

@@ -1,4 +1,4 @@
-import type { JlptLevel, LearningStatus, PartOfSpeech, VocabWord } from "@/lib/types";
+import type { JlptLevel, LearningStatus, PartOfSpeech, VocabExample, VocabWord } from "@/lib/types";
 
 /** Bộ lọc dùng ở trang Kho từ vựng. Mọi trường đều tuỳ chọn (undefined = không lọc). */
 export interface VocabularyFilter {
@@ -45,6 +45,11 @@ export function getStruggledWords(words: VocabWord[]): VocabWord[] {
 
 export function getFavoriteWords(words: VocabWord[]): VocabWord[] {
   return words.filter((w) => w.progress.isFavorite);
+}
+
+/** Lấy đúng các ví dụ của 1 từ, sắp theo exampleNo. Hàm thuần, nhận `examples` từ context/state. */
+export function getExamplesForWord(examples: VocabExample[], vocabId: string): VocabExample[] {
+  return examples.filter((e) => e.vocabId === vocabId).sort((a, b) => a.exampleNo - b.exampleNo);
 }
 
 export interface VocabularyStats {

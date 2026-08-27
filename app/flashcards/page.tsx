@@ -4,12 +4,12 @@ import Link from "next/link";
 import { useMemo, useState } from "react";
 
 import { PronounceButton } from "@/components/pronounce-button";
-import { getExamplesForWord } from "@/lib/data/sample-examples";
+import { getExamplesForWord } from "@/lib/data/selectors";
 import { useVocabulary } from "@/lib/data/vocabulary-context";
 import type { FlashcardGrade } from "@/lib/types";
 
 export default function FlashcardsPage() {
-  const { words, gradeFlashcard } = useVocabulary();
+  const { words, examples, gradeFlashcard } = useVocabulary();
 
   const deck = useMemo(() => words.filter((w) => !w.isHidden && w.progress.status !== "da_nho"), [words]);
 
@@ -66,7 +66,7 @@ export default function FlashcardsPage() {
             <p className="font-jp text-2xl font-semibold">{current.word}</p>
             <p className="text-base text-muted">{current.reading}</p>
             <p className="text-lg font-medium">{current.meaningVi}</p>
-            {getExamplesForWord(current.id)
+            {getExamplesForWord(examples, current.id)
               .slice(0, 1)
               .map((example) => (
                 <div key={example.exampleNo} className="mt-2 w-full rounded-xl bg-slate-50 p-3 text-left text-sm">

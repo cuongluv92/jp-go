@@ -2,19 +2,21 @@
 
 import { createContext, useCallback, useContext, useMemo, useState, type ReactNode } from "react";
 
+import { sampleExamples } from "@/lib/data/sample-examples";
 import { sampleWords } from "@/lib/data/sample-words";
 import { applyFlashcardGrade } from "@/lib/srs";
-import type { FlashcardGrade, LearningStatus, VocabWord } from "@/lib/types";
+import type { FlashcardGrade, LearningStatus, VocabExample, VocabWord } from "@/lib/types";
 
 /**
  * Nguồn dữ liệu từ vựng cho toàn bộ UI, hiện đang chạy trên dữ liệu mẫu trong
  * bộ nhớ (state React, mất khi tải lại trang). Đây là điểm duy nhất cần thay
- * thế khi tích hợp Supabase thật: đổi `useState(sampleWords)` bằng dữ liệu lấy
- * từ Supabase, và đổi các hàm cập nhật bên dưới thành gọi API/Supabase — các
- * trang UI gọi qua `useVocabulary()` nên không cần sửa lại.
+ * thế khi tích hợp Supabase thật: đổi `useState(sampleWords)`/`useState(sampleExamples)`
+ * bằng dữ liệu lấy từ Supabase, và đổi các hàm cập nhật bên dưới thành gọi
+ * API/Supabase — các trang UI gọi qua `useVocabulary()` nên không cần sửa lại.
  */
 interface VocabularyContextValue {
   words: VocabWord[];
+  examples: VocabExample[];
   getWordById: (id: string) => VocabWord | undefined;
   toggleFavorite: (id: string) => void;
   setStatus: (id: string, status: LearningStatus) => void;
@@ -22,12 +24,15 @@ interface VocabularyContextValue {
   addWord: (word: VocabWord) => void;
   updateWord: (id: string, patch: Partial<VocabWord>) => void;
   setHidden: (id: string, hidden: boolean) => void;
+  /** Thay toàn bộ 3 ví dụ của các từ có mặt trong `newExamples` (dùng khi thêm/nhập lại 1 từ). */
+  upsertExamples: (newExamples: VocabExample[]) => void;
 }
 
 const VocabularyContext = createContext<VocabularyContextValue | null>(null);
 
 export function VocabularyProvider({ children }: { children: ReactNode }) {
   const [words, setWords] = useState<VocabWord[]>(sampleWords);
+  const [examples, setExamples] = useState<VocabExample[]>(sampleExamples);
 
   const updateWord = useCallback((id: string, patch: Partial<VocabWord>) => {
     setWords((prev) => prev.map((w) => (w.id === id ? { ...w, ...patch } : w)));
@@ -57,11 +62,29 @@ export function VocabularyProvider({ children }: { children: ReactNode }) {
     setWords((prev) => prev.map((w) => (w.id === id ? { ...w, isHidden: hidden } : w)));
   }, []);
 
+  const upsertExamples = useCallback((newExamples: VocabExample[]) => {
+    setExamples((prev) => {
+      const affectedIds = new Set(newExamples.map((e) => e.vocabId));
+      return [...prev.filter((e) => !affectedIds.has(e.vocabId)), ...newExamples];
+    });
+  }, []);
+
   const getWordById = useCallback((id: string) => words.find((w) => w.id === id), [words]);
 
   const value = useMemo(
-    () => ({ words, getWordById, toggleFavorite, setStatus, gradeFlashcard, addWord, updateWord, setHidden }),
-    [words, getWordById, toggleFavorite, setStatus, gradeFlashcard, addWord, updateWord, setHidden],
+    () => ({
+      words,
+      examples,
+      getWordById,
+      toggleFavorite,
+      setStatus,
+      gradeFlashcard,
+      addWord,
+      updateWord,
+      setHidden,
+      upsertExamples,
+    }),
+    [words, examples, getWordById, toggleFavorite, setStatus, gradeFlashcard, addWord, updateWord, setHidden, upsertExamples],
   );
 
   return <VocabularyContext.Provider value={value}>{children}</VocabularyContext.Provider>;
