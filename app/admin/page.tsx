@@ -3,18 +3,19 @@
 import { useMemo, useState } from "react";
 
 import {
+  exampleRowToExample,
   findDuplicateIdsWithinRows,
   parseVocabWorkbookFile,
   validateVocabRow,
   vocabRowToWord,
 } from "@/lib/data/excel-import";
 import { buildVocabularyWorkbook, downloadBlob } from "@/lib/data/excel-export";
-import { sampleExamples } from "@/lib/data/sample-examples";
-import { sampleImportRows } from "@/lib/data/sample-import-rows";
+import { sampleImportExampleRows, sampleImportRows } from "@/lib/data/sample-import-rows";
 import { useVocabulary } from "@/lib/data/vocabulary-context";
 import {
   JLPT_LEVELS,
   PART_OF_SPEECH_LABELS,
+  type ExampleExcelRow,
   type JlptLevel,
   type PartOfSpeech,
   type VocabExcelRow,
@@ -67,8 +68,9 @@ function analyzeRows(rows: VocabExcelRow[], existingIds: Set<string>): AnalyzedR
 }
 
 function ImportSection() {
-  const { words, addWord, updateWord } = useVocabulary();
+  const { words, addWord, updateWord, upsertExamples } = useVocabulary();
   const [rows, setRows] = useState<VocabExcelRow[] | null>(null);
+  const [exampleRows, setExampleRows] = useState<ExampleExcelRow[]>([]);
   const [actions, setActions] = useState<Record<number, RowAction>>({});
   const [fileName, setFileName] = useState<string | null>(null);
   const [parseError, setParseError] = useState<string | null>(null);
@@ -81,8 +83,9 @@ function ImportSection() {
     return analyzeRows(rows, existingIds).map((a, i) => ({ ...a, action: actions[i] ?? a.action }));
   }, [rows, existingIds, actions]);
 
-  function loadRows(newRows: VocabExcelRow[], name: string) {
+  function loadRows(newRows: VocabExcelRow[], newExampleRows: ExampleExcelRow[], name: string) {
     setRows(newRows);
+    setExampleRows(newExampleRows);
     setFileName(name);
     setParseError(null);
     setImportedCount(null);
@@ -93,12 +96,12 @@ function ImportSection() {
     const file = e.target.files?.[0];
     if (!file) return;
     try {
-      const { rows: parsedRows } = await parseVocabWorkbookFile(file);
+      const { rows: parsedRows, exampleRows: parsedExampleRows } = await parseVocabWorkbookFile(file);
       if (parsedRows.length === 0) {
         setParseError('Không đọc được dòng dữ liệu nào — kiểm tra sheet "VOCAB" và dòng tiêu đề cột.');
         return;
       }
-      loadRows(parsedRows, file.name);
+      loadRows(parsedRows, parsedExampleRows, file.name);
     } catch {
       setParseError("Không đọc được file — hãy chắc chắn đây là file .xlsx hợp lệ.");
     }
@@ -114,11 +117,14 @@ function ImportSection() {
     let count = 0;
     for (const item of analyzed) {
       if (item.errors.length > 0) continue;
-      if (item.action === "import") {
-        addWord(vocabRowToWord(item.row));
-        count += 1;
-      } else if (item.action === "update") {
-        updateWord(item.row.id.trim(), vocabRowToWord(item.row));
+      if (item.action === "import" || item.action === "update") {
+        const id = item.row.id.trim();
+        if (item.action === "import") addWord(vocabRowToWord(item.row));
+        else updateWord(id, vocabRowToWord(item.row));
+
+        const wordExamples = exampleRows.filter((r) => r.vocab_id.trim() === id).map(exampleRowToExample);
+        if (wordExamples.length > 0) upsertExamples(wordExamples);
+
         count += 1;
       }
     }
@@ -143,7 +149,7 @@ function ImportSection() {
         </label>
         <button
           type="button"
-          onClick={() => loadRows(sampleImportRows, "dữ liệu mẫu")}
+          onClick={() => loadRows(sampleImportRows, sampleImportExampleRows, "dữ liệu mẫu")}
           className="mt-2 w-full rounded-xl bg-accent py-2.5 text-sm font-semibold text-accent-foreground"
         >
           Hoặc xem trước với dữ liệu mẫu
@@ -241,13 +247,13 @@ function RowStatus({ item }: { item: AnalyzedRow }) {
 }
 
 function ExportSection() {
-  const { words } = useVocabulary();
+  const { words, examples } = useVocabulary();
   const [isExporting, setIsExporting] = useState(false);
 
   async function handleExport() {
     setIsExporting(true);
     try {
-      const blob = await buildVocabularyWorkbook(words, sampleExamples);
+      const blob = await buildVocabularyWorkbook(words, examples);
       downloadBlob(blob, `jp-go-vocabulary-${new Date().toISOString().slice(0, 10)}.xlsx`);
     } finally {
       setIsExporting(false);

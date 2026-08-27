@@ -1,4 +1,4 @@
-import type { VocabExcelRow } from "@/lib/types";
+import type { ExampleExcelRow, VocabExcelRow } from "@/lib/types";
 
 /**
  * Giả lập nội dung vừa đọc từ 1 file Excel theo đúng schema sheet VOCAB, dùng
@@ -88,5 +88,36 @@ export const sampleImportRows: VocabExcelRow[] = [
     naturalness_note: "",
     jlpt: "N4",
     needs_review: "false",
+  },
+];
+
+/** Ví dụ đi kèm cho dòng hợp lệ duy nhất (`houkokusho`) — minh hoạ import cả sheet EXAMPLES. */
+export const sampleImportExampleRows: ExampleExcelRow[] = [
+  {
+    vocab_id: "houkokusho",
+    example_no: "1",
+    example_type: "exam",
+    example_jp: "月末までに報告書を提出してください。",
+    example_vi: "Vui lòng nộp báo cáo trước cuối tháng.",
+    cloze_jp: "月末までに_____を提出してください。",
+    answer: "報告書",
+  },
+  {
+    vocab_id: "houkokusho",
+    example_no: "2",
+    example_type: "daily",
+    example_jp: "この報告書、ちょっと長すぎない?",
+    example_vi: "Bản báo cáo này hơi dài quá nhỉ?",
+    cloze_jp: "この_____、ちょっと長すぎない?",
+    answer: "報告書",
+  },
+  {
+    vocab_id: "houkokusho",
+    example_no: "3",
+    example_type: "business",
+    example_jp: "報告書のフォーマットを統一しましょう。",
+    example_vi: "Chúng ta hãy thống nhất định dạng báo cáo.",
+    cloze_jp: "_____のフォーマットを統一しましょう。",
+    answer: "報告書",
   },
 ];

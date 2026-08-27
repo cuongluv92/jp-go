@@ -1,7 +1,7 @@
 import { describe, expect, it } from "vitest";
 
-import { computeStats, filterWords, getDueWords, getStruggledWords } from "@/lib/data/selectors";
-import type { VocabWord } from "@/lib/types";
+import { computeStats, filterWords, getDueWords, getExamplesForWord, getStruggledWords } from "@/lib/data/selectors";
+import type { VocabExample, VocabWord } from "@/lib/types";
 
 function makeWord(overrides: Partial<VocabWord> = {}): VocabWord {
   return {
@@ -106,5 +106,36 @@ describe("computeStats", () => {
     expect(stats.notStarted).toBe(1);
     expect(stats.byLevel).toEqual({ N5: 2, N4: 1 });
     expect(stats.byPartOfSpeech).toEqual({ noun: 2, verb: 1 });
+  });
+});
+
+describe("getExamplesForWord", () => {
+  function makeExample(overrides: Partial<VocabExample> = {}): VocabExample {
+    return {
+      vocabId: "kaigi",
+      exampleNo: 1,
+      exampleType: "exam",
+      exampleJp: "",
+      exampleVi: "",
+      clozeJp: "",
+      answer: "",
+      ...overrides,
+    };
+  }
+
+  it("chỉ trả về ví dụ của đúng vocabId, sắp theo exampleNo", () => {
+    const examples = [
+      makeExample({ vocabId: "kaigi", exampleNo: 3 }),
+      makeExample({ vocabId: "khac", exampleNo: 1 }),
+      makeExample({ vocabId: "kaigi", exampleNo: 1 }),
+      makeExample({ vocabId: "kaigi", exampleNo: 2 }),
+    ];
+    const result = getExamplesForWord(examples, "kaigi");
+    expect(result.map((e) => e.exampleNo)).toEqual([1, 2, 3]);
+    expect(result.every((e) => e.vocabId === "kaigi")).toBe(true);
+  });
+
+  it("trả về mảng rỗng khi không có ví dụ nào", () => {
+    expect(getExamplesForWord([], "kaigi")).toEqual([]);
   });
 });

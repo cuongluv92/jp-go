@@ -236,23 +236,34 @@ function readSheetAsRows(sheet: ExcelJS.Worksheet): { headers: string[]; rows: R
   return { headers, rows };
 }
 
-/** Đọc file .xlsx do người dùng chọn, trả về các dòng thô của sheet VOCAB (nếu có). */
+/** Đọc file .xlsx do người dùng chọn: dòng thô của sheet VOCAB và (nếu có) sheet EXAMPLES. */
 export async function parseVocabWorkbookFile(
   file: File,
-): Promise<{ headers: string[]; rows: VocabExcelRow[] }> {
+): Promise<{ headers: string[]; rows: VocabExcelRow[]; exampleRows: ExampleExcelRow[] }> {
   const buffer = await file.arrayBuffer();
   const workbook = new ExcelJS.Workbook();
   await workbook.xlsx.load(buffer);
 
-  const sheet = workbook.getWorksheet(EXCEL_SHEET_NAMES.vocab) ?? workbook.worksheets[0];
-  if (!sheet) return { headers: [], rows: [] };
+  const vocabSheet = workbook.getWorksheet(EXCEL_SHEET_NAMES.vocab) ?? workbook.worksheets[0];
+  if (!vocabSheet) return { headers: [], rows: [], exampleRows: [] };
 
-  const { headers, rows } = readSheetAsRows(sheet);
+  const { headers, rows } = readSheetAsRows(vocabSheet);
   const normalizedRows: VocabExcelRow[] = rows.map((record) => {
     const row = {} as VocabExcelRow;
     for (const column of VOCAB_COLUMNS) row[column] = record[column] ?? "";
     return row;
   });
 
-  return { headers, rows: normalizedRows };
+  const examplesSheet = workbook.getWorksheet(EXCEL_SHEET_NAMES.examples);
+  let exampleRows: ExampleExcelRow[] = [];
+  if (examplesSheet) {
+    const { rows: exampleRecords } = readSheetAsRows(examplesSheet);
+    exampleRows = exampleRecords.map((record) => {
+      const row = {} as ExampleExcelRow;
+      for (const column of EXAMPLE_COLUMNS) row[column] = record[column] ?? "";
+      return row;
+    });
+  }
+
+  return { headers, rows: normalizedRows, exampleRows };
 }

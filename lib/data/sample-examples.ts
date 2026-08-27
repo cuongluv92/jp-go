@@ -268,6 +268,3 @@ export const sampleExamples: VocabExample[] = [
   },
 ];
 
-export function getExamplesForWord(vocabId: string): VocabExample[] {
-  return sampleExamples.filter((e) => e.vocabId === vocabId).sort((a, b) => a.exampleNo - b.exampleNo);
-}
