@@ -170,8 +170,15 @@ const VERB_ROWS: { key: keyof Extract<Conjugation, { kind: "verb" }>; label: str
   { key: "masuForm", label: "ます形" },
   { key: "teForm", label: "て形" },
   { key: "naiForm", label: "ない形" },
+  { key: "naiTaForm", label: "なかった形" },
   { key: "taForm", label: "た形" },
   { key: "potentialForm", label: "可能形" },
+  { key: "volitionalForm", label: "意向形" },
+  { key: "passiveForm", label: "受身形" },
+  { key: "causativeForm", label: "使役形" },
+  { key: "causativePassiveForm", label: "使役受身形" },
+  { key: "imperativeForm", label: "命令形" },
+  { key: "conditionalForm", label: "ば形" },
 ];
 
 const ADJECTIVE_ROWS: {
@@ -183,6 +190,7 @@ const ADJECTIVE_ROWS: {
   { key: "pastForm", label: "過去形" },
   { key: "negativePastForm", label: "過去否定形" },
   { key: "teForm", label: "て形" },
+  { key: "conditionalForm", label: "条件形" },
 ];
 
 function ConjugationTable({ conjugation }: { conjugation: Conjugation }) {
@@ -191,12 +199,10 @@ function ConjugationTable({ conjugation }: { conjugation: Conjugation }) {
       ? VERB_ROWS.map((r) => ({ label: r.label, value: conjugation[r.key] }))
       : ADJECTIVE_ROWS.map((r) => ({ label: r.label, value: conjugation[r.key] }));
 
-  const gridClass = conjugation.kind === "verb" ? "grid-cols-2" : "grid-cols-1";
-
   return (
     <div>
       <dt className="text-xs font-medium text-muted">Cách chia</dt>
-      <dd className={`font-jp mt-1 grid ${gridClass} gap-x-3 gap-y-1.5 rounded-lg bg-slate-50 p-3 text-sm`}>
+      <dd className="font-jp mt-1 grid grid-cols-1 gap-x-3 gap-y-1.5 rounded-lg bg-slate-50 p-3 text-sm">
         {rows.map((row) => (
           <div key={row.label} className="flex items-baseline justify-between gap-3">
             <span className="shrink-0 text-muted">{row.label}</span>
