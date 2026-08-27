@@ -1,69 +1,53 @@
 /**
- * Kiểu dữ liệu lõi cho jp-go.
+ * Kiểu dữ liệu lõi cho jp-go — schema v2.
  *
- * `ExcelVocabularyRow` khớp 1-1 với các cột trong file Excel từ vựng đang được
- * chuẩn bị (xem README mục "Nguồn dữ liệu Excel"). `VocabularyWord` là kiểu
- * dùng trong toàn bộ UI: nó chứa lại đúng các trường của Excel (đã đổi tên
- * sang camelCase, dễ dùng trong code) cộng thêm phần metadata do app quản lý
- * (cấp độ, chủ đề, tiến độ học...) mà Excel không có.
- *
- * Khi có file Excel thật, chỉ cần viết một hàm đọc file (xlsx/csv) trả về
- * `ExcelVocabularyRow[]`, rồi dùng `mapExcelRowToWord` (lib/data/excel-import.ts)
- * để chuyển sang `VocabularyWord` — không cần sửa lại UI.
+ * Thiết kế để phục vụ trực tiếp việc học (quiz, chia từ, cloze, SRS...),
+ * không chỉ hiển thị nghĩa. Ba thực thể tách rời, khớp với 3 sheet khi
+ * export/import Excel:
+ *   - VocabWord       → sheet VOCAB
+ *   - VocabExample    → sheet EXAMPLES (đúng 3 dòng / từ)
+ *   - Conjugation     → sheet CONJUGATIONS (chỉ áp dụng động từ/tính từ)
  */
 
-/** Tên các cột đúng như trong file Excel, dùng để đối chiếu khi nhập file. */
-export const EXCEL_COLUMNS = [
-  "Từ vựng",
-  "Cách đọc",
-  "Nghĩa tiếng Việt",
-  "Loại từ",
-  "Ví dụ 1: phong cách đề thi",
-  "Bản dịch ví dụ 1",
-  "Ví dụ 2: hội thoại đời thường tự nhiên tại Nhật",
-  "Bản dịch ví dụ 2",
-  "Ví dụ 3: môi trường công việc/văn phòng",
-  "Bản dịch ví dụ 3",
-  "Cấu trúc sử dụng",
-  "Trợ từ thường đi kèm",
-  "Thành phần thường đứng trước",
-  "Thành phần thường đứng sau",
-  "Cách chia hoặc dạng biến đổi",
-  "Lưu ý cách dùng và lỗi thường gặp",
-] as const;
+// ---------------------------------------------------------------------------
+// Loại từ, cấp độ, trạng thái học
+// ---------------------------------------------------------------------------
 
-export type ExcelColumn = (typeof EXCEL_COLUMNS)[number];
-
-/** Một dòng dữ liệu thô, đúng như đọc ra từ file Excel (mọi giá trị là text). */
-export type ExcelVocabularyRow = Record<ExcelColumn, string>;
-
-/** Loại từ. Excel ghi bằng tiếng Việt tự do; đây là tập giá trị chuẩn hoá dùng trong app. */
 export type PartOfSpeech =
-  | "danh_tu" // Danh từ
-  | "dong_tu" // Động từ
-  | "tinh_tu" // Tính từ
-  | "trang_tu" // Trạng từ
-  | "tro_tu" // Trợ từ
-  | "lien_tu" // Liên từ
-  | "cum_tu" // Cụm từ / thành ngữ
-  | "khac"; // Khác
+  | "noun"
+  | "verb"
+  | "i_adjective"
+  | "na_adjective"
+  | "adverb"
+  | "conjunction"
+  | "particle"
+  | "expression";
 
+/** Nhãn hiển thị trên UI — dùng thuật ngữ tiếng Nhật ngắn gọn, không diễn giải dài dòng. */
 export const PART_OF_SPEECH_LABELS: Record<PartOfSpeech, string> = {
-  danh_tu: "Danh từ",
-  dong_tu: "Động từ",
-  tinh_tu: "Tính từ",
-  trang_tu: "Trạng từ",
-  tro_tu: "Trợ từ",
-  lien_tu: "Liên từ",
-  cum_tu: "Cụm từ",
-  khac: "Khác",
+  noun: "名詞",
+  verb: "動詞",
+  i_adjective: "い形容詞",
+  na_adjective: "な形容詞",
+  adverb: "副詞",
+  conjunction: "接続詞",
+  particle: "助詞",
+  expression: "表現",
 };
+
+/** Chỉ có ý nghĩa khi part_of_speech = "verb". */
+export type VerbClass = "godan" | "ichidan" | "suru" | "kuru" | null;
+
+/** Chỉ có ý nghĩa với động từ. */
+export type Transitivity = "transitive" | "intransitive" | null;
+
+/** Sắc thái/độ trang trọng — để trống nếu không chắc, không suy đoán bừa. */
+export type Register = "casual" | "neutral" | "formal" | "business" | null;
 
 export type JlptLevel = "N5" | "N4" | "N3" | "N2" | "N1";
 
 export const JLPT_LEVELS: JlptLevel[] = ["N5", "N4", "N3", "N2", "N1"];
 
-/** Trạng thái học của một từ. */
 export type LearningStatus = "chua_hoc" | "dang_hoc" | "da_nho";
 
 export const LEARNING_STATUS_LABELS: Record<LearningStatus, string> = {
@@ -72,87 +56,135 @@ export const LEARNING_STATUS_LABELS: Record<LearningStatus, string> = {
   da_nho: "Đã nhớ",
 };
 
-/** Một câu ví dụ kèm bản dịch. */
-export interface ExampleSentence {
-  japanese: string;
-  translation: string;
-}
+// ---------------------------------------------------------------------------
+// SRS / tiến độ học — tách riêng khỏi nội dung từ vựng
+// ---------------------------------------------------------------------------
 
-/** Ba bối cảnh ví dụ bắt buộc cho mỗi từ. */
-export interface VocabularyExamples {
-  /** Ví dụ 1: phong cách đề thi (JLPT...) */
-  exam: ExampleSentence;
-  /** Ví dụ 2: hội thoại đời thường tự nhiên tại Nhật */
-  daily: ExampleSentence;
-  /** Ví dụ 3: môi trường công việc / văn phòng */
-  work: ExampleSentence;
-}
-
-/** Thông tin cách dùng chi tiết của từ. */
-export interface VocabularyUsage {
-  /** Cấu trúc sử dụng */
-  structure: string;
-  /** Trợ từ thường đi kèm */
-  particles: string;
-  /** Thành phần thường đứng trước */
-  precedingElements: string;
-  /** Thành phần thường đứng sau */
-  followingElements: string;
-  /** Cách chia hoặc dạng biến đổi */
-  conjugation: string;
-  /** Lưu ý cách dùng và lỗi thường gặp */
-  notes: string;
-}
-
-/** Tiến độ học / lặp lại ngắt quãng (spaced repetition) của một từ, tính riêng cho từng người dùng. */
 export interface LearningProgress {
   status: LearningStatus;
   isFavorite: boolean;
   timesCorrect: number;
   timesWrong: number;
-  /** ISO datetime của lần ôn gần nhất, null nếu chưa ôn lần nào. */
   lastReviewedAt: string | null;
-  /** ISO datetime của lần ôn kế tiếp theo lịch SRS, null nếu chưa lên lịch. */
   nextReviewAt: string | null;
-  /** Khoảng cách hiện tại (ngày) giữa hai lần ôn. */
   intervalDays: number;
-  /** Hệ số dễ (ease factor) kiểu SM-2, càng cao thì khoảng ôn tăng càng nhanh. */
   easeFactor: number;
-  /** Số lần đã ôn liên tiếp thành công (reset về 0 khi trả lời "chưa nhớ"). */
   repetitions: number;
 }
 
-/** Một từ vựng đầy đủ, dùng xuyên suốt UI. */
-export interface VocabularyWord {
+// ---------------------------------------------------------------------------
+// VOCAB — sheet chính
+// ---------------------------------------------------------------------------
+
+export interface VocabWord {
   id: string;
   word: string;
+  /** Phần kanji thuần (nếu có). Với từ thuần kana (アイデア...), để trống hoặc bằng `word`. */
+  kanji: string;
   reading: string;
-  meaning: string;
+  meaningVi: string;
   partOfSpeech: PartOfSpeech;
-  level: JlptLevel;
-  /** Chủ đề, ví dụ: "Công việc", "Đời sống", "Du lịch"... */
-  topic: string;
-  examples: VocabularyExamples;
-  usage: VocabularyUsage;
-  /** URL audio phát âm, nếu có. Khi không có, dùng Web Speech API để đọc `word`. */
-  audioUrl?: string;
-  /** Từ bị admin ẩn khỏi kho từ vựng (vẫn giữ dữ liệu, không xoá). */
+  verbClass: VerbClass;
+  transitivity: Transitivity;
+
+  /** Trợ từ / mẫu câu hoàn chỉnh thường đi kèm, vd "会議に出る" — không lưu trợ từ trần trụi. */
+  particlePatterns: string[];
+  /** Mẫu ngữ pháp/cách dùng rộng hơn (đặc biệt hữu ích với trợ từ, biểu hiện). */
+  usagePatterns: string[];
+  /** Cụm từ ghép / collocation thường gặp, vd "定例会議", "会議室". */
+  collocations: string[];
+
+  register: Register;
+  /** Cách dùng thực tế — mô tả ngắn cách người Nhật thực sự dùng từ này. */
+  usageNote: string;
+  /** Lỗi thường gặp khi dùng từ này. */
+  commonMistake: string;
+  /** Từ gần nghĩa / dễ nhầm, và điểm khác biệt. */
+  similarWords: string;
+  /** Ghi chú thêm về mức độ tự nhiên (vd chỉ dùng trong văn viết, hội thoại...). */
+  naturalnessNote: string;
+
+  jlpt: JlptLevel;
+  /** true nếu một trường nào đó (trợ từ, cách dùng, từ gần nghĩa...) chưa chắc chắn, cần người kiểm tra lại. */
+  needsReview: boolean;
+  /** Admin ẩn từ khỏi kho từ vựng (vẫn giữ dữ liệu, không xoá). Không thuộc dữ liệu Excel. */
   isHidden?: boolean;
+
   progress: LearningProgress;
 }
 
-/** Mức đánh giá khi học flashcard, dùng để cập nhật lịch ôn tập. */
+// ---------------------------------------------------------------------------
+// EXAMPLES — đúng 3 dòng / từ
+// ---------------------------------------------------------------------------
+
+export type ExampleNo = 1 | 2 | 3;
+export type ExampleType = "exam" | "daily" | "business";
+
+export const EXAMPLE_TYPE_BY_NO: Record<ExampleNo, ExampleType> = {
+  1: "exam",
+  2: "daily",
+  3: "business",
+};
+
+export interface VocabExample {
+  vocabId: string;
+  exampleNo: ExampleNo;
+  exampleType: ExampleType;
+  exampleJp: string;
+  exampleVi: string;
+  /** Câu example_jp nhưng ẩn từ đang học bằng "_____". */
+  clozeJp: string;
+  /** Từ bị ẩn trong cloze — dùng để chấm bài điền từ. */
+  answer: string;
+}
+
+// ---------------------------------------------------------------------------
+// CONJUGATIONS — chỉ verb / i_adjective / na_adjective mới có
+// ---------------------------------------------------------------------------
+
+export interface VerbConjugation {
+  kind: "verb";
+  dictionaryForm: string;
+  masuForm: string;
+  teForm: string;
+  naiForm: string;
+  taForm: string;
+  potentialForm: string;
+  volitionalForm: string;
+}
+
+export interface IAdjectiveConjugation {
+  kind: "i_adjective";
+  dictionaryForm: string;
+  negativeForm: string;
+  pastForm: string;
+  negativePastForm: string;
+  teForm: string;
+}
+
+export interface NaAdjectiveConjugation {
+  kind: "na_adjective";
+  dictionaryForm: string;
+  negativeForm: string;
+  pastForm: string;
+  negativePastForm: string;
+  teForm: string;
+}
+
+export type Conjugation = VerbConjugation | IAdjectiveConjugation | NaAdjectiveConjugation;
+
+// ---------------------------------------------------------------------------
+// Luyện tập
+// ---------------------------------------------------------------------------
+
 export type FlashcardGrade = "chua_nho" | "kho" | "da_nho";
 
-/** Một điểm dữ liệu thống kê luyện tập theo ngày, dùng ở trang Tiến độ. */
 export interface PracticeDailyResult {
-  /** Ngày dạng YYYY-MM-DD */
   date: string;
   correct: number;
   total: number;
 }
 
-/** Dạng bài luyện tập được hỗ trợ (giai đoạn này chỉ là khung giao diện). */
 export type PracticeMode =
   | "chon_nghia"
   | "dien_tu"
@@ -166,3 +198,54 @@ export interface PracticeModeInfo {
   title: string;
   description: string;
 }
+
+// ---------------------------------------------------------------------------
+// Import/Export Excel
+// ---------------------------------------------------------------------------
+
+/** Tên 3 sheet dùng khi export/import — cố định để import lại đúng chỗ. */
+export const EXCEL_SHEET_NAMES = {
+  vocab: "VOCAB",
+  examples: "EXAMPLES",
+  conjugations: "CONJUGATIONS",
+} as const;
+
+/** Cột của sheet VOCAB, đúng thứ tự khi export. */
+export const VOCAB_COLUMNS = [
+  "id",
+  "word",
+  "kanji",
+  "reading",
+  "meaning_vi",
+  "part_of_speech",
+  "verb_class",
+  "transitivity",
+  "particle_patterns",
+  "usage_patterns",
+  "collocations",
+  "register",
+  "usage_note",
+  "common_mistake",
+  "similar_words",
+  "naturalness_note",
+  "jlpt",
+  "needs_review",
+] as const;
+
+export type VocabColumn = (typeof VOCAB_COLUMNS)[number];
+
+/** Một dòng thô đọc từ sheet VOCAB (mọi giá trị là text, kể cả list đã join bằng "|"). */
+export type VocabExcelRow = Record<VocabColumn, string>;
+
+export const EXAMPLE_COLUMNS = [
+  "vocab_id",
+  "example_no",
+  "example_type",
+  "example_jp",
+  "example_vi",
+  "cloze_jp",
+  "answer",
+] as const;
+
+export type ExampleColumn = (typeof EXAMPLE_COLUMNS)[number];
+export type ExampleExcelRow = Record<ExampleColumn, string>;

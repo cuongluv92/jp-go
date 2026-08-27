@@ -1,111 +1,122 @@
+import ExcelJS from "exceljs";
+
 import {
-  EXCEL_COLUMNS,
-  type ExcelColumn,
-  type ExcelVocabularyRow,
+  EXAMPLE_COLUMNS,
+  EXCEL_SHEET_NAMES,
+  VOCAB_COLUMNS,
+  type ExampleColumn,
+  type ExampleExcelRow,
+  type JlptLevel,
   type PartOfSpeech,
-  type VocabularyWord,
+  type Register,
+  type Transitivity,
+  type VerbClass,
+  type VocabColumn,
+  type VocabExample,
+  type VocabExcelRow,
+  type VocabWord,
 } from "@/lib/types";
 
 /**
- * Lớp chuyển đổi giữa file Excel từ vựng và `VocabularyWord` dùng trong app.
- *
- * Giai đoạn này chưa đọc file Excel thật (chưa có file mẫu hoàn thiện), nhưng
- * toàn bộ logic map cột / kiểm tra thiếu cột / phát hiện trùng đã sẵn sàng.
- * Khi có file thật, chỉ cần thêm một bước đọc .xlsx/.csv thành mảng
- * `ExcelVocabularyRow` (mỗi dòng là 1 object khoá theo đúng tên cột) rồi gọi
- * các hàm dưới đây — không cần sửa UI trang Quản lý dữ liệu.
+ * Chuyển đổi giữa 2 sheet Excel (VOCAB, EXAMPLES) và dữ liệu dùng trong app.
+ * Danh sách (particle_patterns, usage_patterns, collocations) được nối bằng
+ * " | " trong 1 ô — vẫn là text đọc được trực tiếp trong Excel, không phải
+ * JSON, nhưng tách được lại chính xác khi import.
  */
 
-/** Các cột bắt buộc phải có giá trị thì mới nhập được một từ. */
-const REQUIRED_COLUMNS: ExcelColumn[] = ["Từ vựng", "Cách đọc", "Nghĩa tiếng Việt", "Loại từ"];
+const LIST_SEPARATOR = " | ";
 
-const PART_OF_SPEECH_ALIASES: Record<string, PartOfSpeech> = {
-  "danh từ": "danh_tu",
-  "động từ": "dong_tu",
-  "tính từ": "tinh_tu",
-  "trạng từ": "trang_tu",
-  "phó từ": "trang_tu",
-  "trợ từ": "tro_tu",
-  "liên từ": "lien_tu",
-  "cụm từ": "cum_tu",
-  "thành ngữ": "cum_tu",
-};
-
-export function mapPartOfSpeech(raw: string): PartOfSpeech {
-  const key = raw.trim().toLowerCase();
-  return PART_OF_SPEECH_ALIASES[key] ?? "khac";
+function joinList(items: string[]): string {
+  return items.join(LIST_SEPARATOR);
 }
 
-export interface ExcelRowValidation {
-  /** Các cột bắt buộc bị thiếu hoặc rỗng — phải sửa trước khi nhập. */
-  missingColumns: ExcelColumn[];
-  /** Các cột nên có nhưng đang trống — vẫn nhập được, chỉ cảnh báo. */
+function splitList(value: string): string[] {
+  return value
+    .split("|")
+    .map((s) => s.trim())
+    .filter((s) => s.length > 0);
+}
+
+const PART_OF_SPEECH_VALUES: PartOfSpeech[] = [
+  "noun",
+  "verb",
+  "i_adjective",
+  "na_adjective",
+  "adverb",
+  "conjunction",
+  "particle",
+  "expression",
+];
+
+const VERB_CLASS_VALUES: Exclude<VerbClass, null>[] = ["godan", "ichidan", "suru", "kuru"];
+const REGISTER_VALUES: Exclude<Register, null>[] = ["casual", "neutral", "formal", "business"];
+const JLPT_VALUES: JlptLevel[] = ["N5", "N4", "N3", "N2", "N1"];
+
+const REQUIRED_VOCAB_COLUMNS: VocabColumn[] = ["id", "word", "reading", "meaning_vi", "part_of_speech", "jlpt"];
+
+export interface RowValidation {
+  /** Cột bắt buộc bị thiếu hoặc rỗng, hoặc giá trị không nằm trong tập cho phép. */
+  errors: string[];
+  /** Cảnh báo không chặn import (cột nên có nhưng đang trống). */
   warnings: string[];
 }
 
-/** Kiểm tra một dòng Excel: cột nào thiếu, cột nào nên bổ sung thêm. */
-export function validateExcelRow(row: Partial<ExcelVocabularyRow>): ExcelRowValidation {
-  const missingColumns: ExcelColumn[] = [];
+/** Kiểm tra một dòng VOCAB: thiếu cột bắt buộc, hoặc giá trị enum không hợp lệ. */
+export function validateVocabRow(row: Partial<VocabExcelRow>): RowValidation {
+  const errors: string[] = [];
   const warnings: string[] = [];
 
-  for (const column of EXCEL_COLUMNS) {
-    const value = row[column]?.trim();
-    if (!value) {
-      if (REQUIRED_COLUMNS.includes(column)) {
-        missingColumns.push(column);
-      } else {
-        warnings.push(`Thiếu cột "${column}"`);
-      }
-    }
+  for (const column of REQUIRED_VOCAB_COLUMNS) {
+    if (!row[column]?.trim()) errors.push(`Thiếu cột bắt buộc "${column}"`);
   }
 
-  return { missingColumns, warnings };
+  const pos = row.part_of_speech?.trim();
+  if (pos && !PART_OF_SPEECH_VALUES.includes(pos as PartOfSpeech)) {
+    errors.push(`part_of_speech "${pos}" không hợp lệ`);
+  }
+  if (pos === "verb" && !row.verb_class?.trim()) {
+    errors.push('Động từ (part_of_speech="verb") phải có verb_class');
+  }
+  if (row.verb_class?.trim() && !VERB_CLASS_VALUES.includes(row.verb_class.trim() as (typeof VERB_CLASS_VALUES)[number])) {
+    errors.push(`verb_class "${row.verb_class}" không hợp lệ`);
+  }
+  const jlpt = row.jlpt?.trim();
+  if (jlpt && !JLPT_VALUES.includes(jlpt as JlptLevel)) {
+    errors.push(`jlpt "${jlpt}" không hợp lệ`);
+  }
+  const register = row.register?.trim();
+  if (register && !REGISTER_VALUES.includes(register as (typeof REGISTER_VALUES)[number])) {
+    errors.push(`register "${register}" không hợp lệ`);
+  }
+
+  for (const column of ["particle_patterns", "usage_patterns", "collocations", "usage_note", "similar_words"] as const) {
+    if (!row[column]?.trim()) warnings.push(`Thiếu cột "${column}"`);
+  }
+
+  return { errors, warnings };
 }
 
-/** Tìm các cột có trong `EXCEL_COLUMNS` nhưng không xuất hiện trong header thực tế của file. */
-export function findMissingHeaders(actualHeaders: string[]): ExcelColumn[] {
-  const headerSet = new Set(actualHeaders.map((h) => h.trim()));
-  return EXCEL_COLUMNS.filter((column) => !headerSet.has(column));
-}
-
-export interface ExcelImportOverrides {
-  id: string;
-  level: VocabularyWord["level"];
-  topic: string;
-}
-
-/** Chuyển một dòng Excel hợp lệ thành `VocabularyWord`. Metadata (id/level/topic) do người nhập chọn. */
-export function mapExcelRowToWord(row: ExcelVocabularyRow, overrides: ExcelImportOverrides): VocabularyWord {
+/** Chuyển 1 dòng VOCAB hợp lệ thành `VocabWord`. Từ mới nhập luôn bắt đầu ở trạng thái "chưa học". */
+export function vocabRowToWord(row: VocabExcelRow): VocabWord {
   return {
-    id: overrides.id,
-    word: row["Từ vựng"].trim(),
-    reading: row["Cách đọc"].trim(),
-    meaning: row["Nghĩa tiếng Việt"].trim(),
-    partOfSpeech: mapPartOfSpeech(row["Loại từ"]),
-    level: overrides.level,
-    topic: overrides.topic,
-    examples: {
-      exam: {
-        japanese: row["Ví dụ 1: phong cách đề thi"].trim(),
-        translation: row["Bản dịch ví dụ 1"].trim(),
-      },
-      daily: {
-        japanese: row["Ví dụ 2: hội thoại đời thường tự nhiên tại Nhật"].trim(),
-        translation: row["Bản dịch ví dụ 2"].trim(),
-      },
-      work: {
-        japanese: row["Ví dụ 3: môi trường công việc/văn phòng"].trim(),
-        translation: row["Bản dịch ví dụ 3"].trim(),
-      },
-    },
-    usage: {
-      structure: row["Cấu trúc sử dụng"].trim(),
-      particles: row["Trợ từ thường đi kèm"].trim(),
-      precedingElements: row["Thành phần thường đứng trước"].trim(),
-      followingElements: row["Thành phần thường đứng sau"].trim(),
-      conjugation: row["Cách chia hoặc dạng biến đổi"].trim(),
-      notes: row["Lưu ý cách dùng và lỗi thường gặp"].trim(),
-    },
+    id: row.id.trim(),
+    word: row.word.trim(),
+    kanji: row.kanji.trim(),
+    reading: row.reading.trim(),
+    meaningVi: row.meaning_vi.trim(),
+    partOfSpeech: row.part_of_speech.trim() as PartOfSpeech,
+    verbClass: (row.verb_class.trim() || null) as VerbClass,
+    transitivity: (row.transitivity.trim() || null) as Transitivity,
+    particlePatterns: splitList(row.particle_patterns),
+    usagePatterns: splitList(row.usage_patterns),
+    collocations: splitList(row.collocations),
+    register: (row.register.trim() || null) as Register,
+    usageNote: row.usage_note.trim(),
+    commonMistake: row.common_mistake.trim(),
+    similarWords: row.similar_words.trim(),
+    naturalnessNote: row.naturalness_note.trim(),
+    jlpt: row.jlpt.trim() as JlptLevel,
+    needsReview: row.needs_review.trim().toLowerCase() === "true",
     progress: {
       status: "chua_hoc",
       isFavorite: false,
@@ -120,35 +131,128 @@ export function mapExcelRowToWord(row: ExcelVocabularyRow, overrides: ExcelImpor
   };
 }
 
+/** Chiều ngược lại — dùng khi export. */
+export function wordToVocabRow(word: VocabWord): VocabExcelRow {
+  return {
+    id: word.id,
+    word: word.word,
+    kanji: word.kanji,
+    reading: word.reading,
+    meaning_vi: word.meaningVi,
+    part_of_speech: word.partOfSpeech,
+    verb_class: word.verbClass ?? "",
+    transitivity: word.transitivity ?? "",
+    particle_patterns: joinList(word.particlePatterns),
+    usage_patterns: joinList(word.usagePatterns),
+    collocations: joinList(word.collocations),
+    register: word.register ?? "",
+    usage_note: word.usageNote,
+    common_mistake: word.commonMistake,
+    similar_words: word.similarWords,
+    naturalness_note: word.naturalnessNote,
+    jlpt: word.jlpt,
+    needs_review: word.needsReview ? "true" : "false",
+  };
+}
+
+export function exampleRowToExample(row: ExampleExcelRow): VocabExample {
+  const exampleNo = Number(row.example_no) as 1 | 2 | 3;
+  return {
+    vocabId: row.vocab_id.trim(),
+    exampleNo,
+    exampleType: row.example_type.trim() as VocabExample["exampleType"],
+    exampleJp: row.example_jp,
+    exampleVi: row.example_vi,
+    clozeJp: row.cloze_jp,
+    answer: row.answer,
+  };
+}
+
+export function exampleToRow(example: VocabExample): ExampleExcelRow {
+  return {
+    vocab_id: example.vocabId,
+    example_no: String(example.exampleNo),
+    example_type: example.exampleType,
+    example_jp: example.exampleJp,
+    example_vi: example.exampleVi,
+    cloze_jp: example.clozeJp,
+    answer: example.answer,
+  };
+}
+
 export interface DuplicateGroup {
-  word: string;
-  reading: string;
+  id: string;
   count: number;
 }
 
-/** Phát hiện từ trùng nhau trong chính danh sách đang nhập (so theo word + reading). */
-export function findDuplicatesWithinRows(rows: ExcelVocabularyRow[]): DuplicateGroup[] {
-  const counts = new Map<string, DuplicateGroup>();
+/** ID trùng nhau ngay trong file đang nhập. */
+export function findDuplicateIdsWithinRows(rows: VocabExcelRow[]): DuplicateGroup[] {
+  const counts = new Map<string, number>();
   for (const row of rows) {
-    const word = row["Từ vựng"].trim();
-    const reading = row["Cách đọc"].trim();
-    if (!word) continue;
-    const key = `${word}__${reading}`;
-    const existing = counts.get(key);
-    if (existing) {
-      existing.count += 1;
-    } else {
-      counts.set(key, { word, reading, count: 1 });
-    }
+    const id = row.id.trim();
+    if (!id) continue;
+    counts.set(id, (counts.get(id) ?? 0) + 1);
   }
-  return Array.from(counts.values()).filter((group) => group.count > 1);
+  return Array.from(counts.entries())
+    .filter(([, count]) => count > 1)
+    .map(([id, count]) => ({ id, count }));
 }
 
-/** Phát hiện dòng Excel trùng với từ đã có sẵn trong kho từ vựng. */
-export function findDuplicatesAgainstExisting(
-  rows: ExcelVocabularyRow[],
-  existingWords: VocabularyWord[],
-): ExcelVocabularyRow[] {
-  const existingKeys = new Set(existingWords.map((w) => `${w.word}__${w.reading}`));
-  return rows.filter((row) => existingKeys.has(`${row["Từ vựng"].trim()}__${row["Cách đọc"].trim()}`));
+/** ID trong file trùng với từ đã có sẵn trong kho — cần người dùng chọn update hoặc skip. */
+export function findDuplicateIdsAgainstExisting(rows: VocabExcelRow[], existingWords: VocabWord[]): Set<string> {
+  const existingIds = new Set(existingWords.map((w) => w.id));
+  return new Set(rows.map((r) => r.id.trim()).filter((id) => existingIds.has(id)));
+}
+
+/** So khớp header thực tế của file với danh sách cột chuẩn của sheet VOCAB. */
+export function findMissingVocabHeaders(actualHeaders: string[]): VocabColumn[] {
+  const headerSet = new Set(actualHeaders.map((h) => h.trim()));
+  return VOCAB_COLUMNS.filter((column) => !headerSet.has(column));
+}
+
+export function findMissingExampleHeaders(actualHeaders: string[]): ExampleColumn[] {
+  const headerSet = new Set(actualHeaders.map((h) => h.trim()));
+  return EXAMPLE_COLUMNS.filter((column) => !headerSet.has(column));
+}
+
+function readSheetAsRows(sheet: ExcelJS.Worksheet): { headers: string[]; rows: Record<string, string>[] } {
+  const headers: string[] = [];
+  sheet.getRow(1).eachCell((cell, colNumber) => {
+    headers[colNumber - 1] = String(cell.value ?? "").trim();
+  });
+
+  const rows: Record<string, string>[] = [];
+  sheet.eachRow((row, rowNumber) => {
+    if (rowNumber === 1) return;
+    const record: Record<string, string> = {};
+    headers.forEach((header, i) => {
+      if (!header) return;
+      const cell = row.getCell(i + 1).value;
+      record[header] = cell === null || cell === undefined ? "" : String(cell).trim();
+    });
+    if (Object.values(record).some((v) => v !== "")) rows.push(record);
+  });
+
+  return { headers, rows };
+}
+
+/** Đọc file .xlsx do người dùng chọn, trả về các dòng thô của sheet VOCAB (nếu có). */
+export async function parseVocabWorkbookFile(
+  file: File,
+): Promise<{ headers: string[]; rows: VocabExcelRow[] }> {
+  const buffer = await file.arrayBuffer();
+  const workbook = new ExcelJS.Workbook();
+  await workbook.xlsx.load(buffer);
+
+  const sheet = workbook.getWorksheet(EXCEL_SHEET_NAMES.vocab) ?? workbook.worksheets[0];
+  if (!sheet) return { headers: [], rows: [] };
+
+  const { headers, rows } = readSheetAsRows(sheet);
+  const normalizedRows: VocabExcelRow[] = rows.map((record) => {
+    const row = {} as VocabExcelRow;
+    for (const column of VOCAB_COLUMNS) row[column] = record[column] ?? "";
+    return row;
+  });
+
+  return { headers, rows: normalizedRows };
 }

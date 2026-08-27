@@ -63,10 +63,10 @@ export default function HomePage() {
                   <div>
                     <p className="font-jp text-base font-semibold">{word.word}</p>
                     <p className="text-xs text-muted">
-                      {word.reading} · {word.meaning}
+                      {word.reading} · {word.meaningVi}
                     </p>
                   </div>
-                  <span className="text-xs text-muted">{word.level}</span>
+                  <span className="text-xs text-muted">{word.jlpt}</span>
                 </Link>
               </li>
             ))}

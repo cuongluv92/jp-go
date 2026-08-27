@@ -1,30 +1,28 @@
 import { describe, expect, it } from "vitest";
 
-import { computeStats, filterWords, getDueWords, getStruggledWords, listTopics } from "@/lib/data/selectors";
-import type { VocabularyWord } from "@/lib/types";
+import { computeStats, filterWords, getDueWords, getStruggledWords } from "@/lib/data/selectors";
+import type { VocabWord } from "@/lib/types";
 
-function makeWord(overrides: Partial<VocabularyWord> = {}): VocabularyWord {
+function makeWord(overrides: Partial<VocabWord> = {}): VocabWord {
   return {
     id: "w-test",
     word: "テスト",
+    kanji: "テスト",
     reading: "てすと",
-    meaning: "bài kiểm tra",
-    partOfSpeech: "danh_tu",
-    level: "N5",
-    topic: "Trường học",
-    examples: {
-      exam: { japanese: "", translation: "" },
-      daily: { japanese: "", translation: "" },
-      work: { japanese: "", translation: "" },
-    },
-    usage: {
-      structure: "",
-      particles: "",
-      precedingElements: "",
-      followingElements: "",
-      conjugation: "",
-      notes: "",
-    },
+    meaningVi: "bài kiểm tra",
+    partOfSpeech: "noun",
+    verbClass: null,
+    transitivity: null,
+    particlePatterns: [],
+    usagePatterns: [],
+    collocations: [],
+    register: null,
+    usageNote: "",
+    commonMistake: "",
+    similarWords: "",
+    naturalnessNote: "",
+    jlpt: "N5",
+    needsReview: false,
     progress: {
       status: "chua_hoc",
       isFavorite: false,
@@ -42,8 +40,8 @@ function makeWord(overrides: Partial<VocabularyWord> = {}): VocabularyWord {
 
 describe("filterWords", () => {
   const words = [
-    makeWord({ id: "1", word: "会議", reading: "かいぎ", meaning: "cuộc họp", level: "N4", topic: "Công việc" }),
-    makeWord({ id: "2", word: "頑張る", reading: "がんばる", meaning: "cố gắng", level: "N5", topic: "Đời sống" }),
+    makeWord({ id: "1", word: "会議", reading: "かいぎ", meaningVi: "cuộc họp", jlpt: "N4", partOfSpeech: "noun" }),
+    makeWord({ id: "2", word: "頑張る", reading: "がんばる", meaningVi: "cố gắng", jlpt: "N5", partOfSpeech: "verb" }),
   ];
 
   it("lọc theo từ khoá tìm kiếm khớp nghĩa tiếng Việt", () => {
@@ -61,20 +59,13 @@ describe("filterWords", () => {
     expect(result.map((w) => w.id)).toEqual(["2"]);
   });
 
-  it("lọc theo chủ đề", () => {
-    const result = filterWords(words, { topic: "Công việc" });
+  it("lọc theo loại từ", () => {
+    const result = filterWords(words, { partOfSpeech: "noun" });
     expect(result.map((w) => w.id)).toEqual(["1"]);
   });
 
   it("trả về tất cả khi không có bộ lọc", () => {
     expect(filterWords(words, {})).toHaveLength(2);
-  });
-});
-
-describe("listTopics", () => {
-  it("trả về danh sách chủ đề không trùng, đã sắp xếp", () => {
-    const words = [makeWord({ topic: "Du lịch" }), makeWord({ topic: "Công việc" }), makeWord({ topic: "Du lịch" })];
-    expect(listTopics(words)).toEqual(["Công việc", "Du lịch"]);
   });
 });
 
@@ -102,18 +93,18 @@ describe("getStruggledWords", () => {
 });
 
 describe("computeStats", () => {
-  it("đếm đúng số từ theo trạng thái, chủ đề, loại từ", () => {
+  it("đếm đúng số từ theo trạng thái, cấp độ, loại từ", () => {
     const words = [
-      makeWord({ id: "1", topic: "A", partOfSpeech: "danh_tu", progress: { ...makeWord().progress, status: "da_nho" } }),
-      makeWord({ id: "2", topic: "A", partOfSpeech: "dong_tu", progress: { ...makeWord().progress, status: "dang_hoc" } }),
-      makeWord({ id: "3", topic: "B", partOfSpeech: "danh_tu", progress: { ...makeWord().progress, status: "chua_hoc" } }),
+      makeWord({ id: "1", jlpt: "N5", partOfSpeech: "noun", progress: { ...makeWord().progress, status: "da_nho" } }),
+      makeWord({ id: "2", jlpt: "N5", partOfSpeech: "verb", progress: { ...makeWord().progress, status: "dang_hoc" } }),
+      makeWord({ id: "3", jlpt: "N4", partOfSpeech: "noun", progress: { ...makeWord().progress, status: "chua_hoc" } }),
     ];
     const stats = computeStats(words);
     expect(stats.total).toBe(3);
     expect(stats.learned).toBe(1);
     expect(stats.learning).toBe(1);
     expect(stats.notStarted).toBe(1);
-    expect(stats.byTopic).toEqual({ A: 2, B: 1 });
-    expect(stats.byPartOfSpeech).toEqual({ danh_tu: 2, dong_tu: 1 });
+    expect(stats.byLevel).toEqual({ N5: 2, N4: 1 });
+    expect(stats.byPartOfSpeech).toEqual({ noun: 2, verb: 1 });
   });
 });

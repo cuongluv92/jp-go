@@ -5,7 +5,7 @@ import Link from "next/link";
 import { StatusBadge } from "@/components/status-badge";
 import { getDueWords, getStruggledWords } from "@/lib/data/selectors";
 import { useVocabulary } from "@/lib/data/vocabulary-context";
-import type { VocabularyWord } from "@/lib/types";
+import type { VocabWord } from "@/lib/types";
 
 export default function ReviewPage() {
   const { words } = useVocabulary();
@@ -47,7 +47,7 @@ function ReviewSection({
 }: {
   title: string;
   emptyText: string;
-  words: VocabularyWord[];
+  words: VocabWord[];
 }) {
   return (
     <section>
@@ -68,7 +68,7 @@ function ReviewSection({
                 <div>
                   <p className="font-jp text-base font-semibold">{word.word}</p>
                   <p className="text-xs text-muted">
-                    {word.reading} · {word.meaning}
+                    {word.reading} · {word.meaningVi}
                   </p>
                 </div>
                 <StatusBadge status={word.progress.status} />
