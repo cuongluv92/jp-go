@@ -81,11 +81,19 @@ trang UI gọi qua hook `useVocabulary()` nên không cần viết lại giao di
 
 ## Triển khai Vercel
 
-Repo này độc lập với `nhatkytrading`. Để có bản Preview tại
-`jp-go.vercel.app`:
+Repo này độc lập với `nhatkytrading`.
 
 1. Vào [vercel.com/new](https://vercel.com/new), import repository `jp-go`.
 2. Framework Preset: Next.js (tự nhận diện).
 3. Không cần biến môi trường ở giai đoạn này (chưa dùng Supabase).
-4. Deploy — Vercel sẽ tự tạo Preview URL cho mỗi nhánh/PR, và domain chính
-   `jp-go.vercel.app` cho nhánh mặc định.
+4. Deploy — Vercel sẽ tự tạo Preview URL cho mỗi nhánh/PR.
+
+> Lưu ý: tên `jp-go.vercel.app` có thể đã có người khác dùng trên Vercel,
+> khi đó domain chính của project sẽ là một biến thể như
+> `jp-go-<tên-ngẫu-nhiên>.vercel.app` (xem trong Vercel → Settings →
+> Domains). Nếu domain chính báo 404 sau khi deploy, kiểm tra theo thứ tự:
+> - **Settings → Git → Production Branch** phải là `main`
+> - Tab **Deployments**: có bản build nào ứng với commit mới nhất trên
+>   `main` không, trạng thái là gì (Ready/Error) — nếu Error, xem Build Logs
+> - **Settings → General → Root Directory** phải để trống (project nằm ở
+>   gốc repo, không phải trong thư mục con)
