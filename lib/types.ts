@@ -148,9 +148,21 @@ export interface VerbConjugation {
   masuForm: string;
   teForm: string;
   naiForm: string;
+  /** なかった形 — quá khứ phủ định thể thường. */
+  naiTaForm: string;
   taForm: string;
   potentialForm: string;
   volitionalForm: string;
+  /** 受身形 */
+  passiveForm: string;
+  /** 使役形 */
+  causativeForm: string;
+  /** 使役受身形 */
+  causativePassiveForm: string;
+  /** 命令形 */
+  imperativeForm: string;
+  /** ば形 (điều kiện) */
+  conditionalForm: string;
 }
 
 export interface IAdjectiveConjugation {
@@ -160,6 +172,8 @@ export interface IAdjectiveConjugation {
   pastForm: string;
   negativePastForm: string;
   teForm: string;
+  /** ば形 (điều kiện) */
+  conditionalForm: string;
 }
 
 export interface NaAdjectiveConjugation {
@@ -169,6 +183,8 @@ export interface NaAdjectiveConjugation {
   pastForm: string;
   negativePastForm: string;
   teForm: string;
+  /** なら形 (điều kiện) */
+  conditionalForm: string;
 }
 
 export type Conjugation = VerbConjugation | IAdjectiveConjugation | NaAdjectiveConjugation;

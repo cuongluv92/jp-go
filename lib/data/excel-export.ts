@@ -18,12 +18,18 @@ const CONJUGATION_COLUMNS = [
   "masu_form",
   "te_form",
   "nai_form",
+  "nai_ta_form",
   "ta_form",
   "potential_form",
   "volitional_form",
+  "passive_form",
+  "causative_form",
+  "causative_passive_form",
+  "imperative_form",
   "negative_form",
   "past_form",
   "negative_past_form",
+  "conditional_form",
 ] as const;
 
 /**
@@ -58,9 +64,15 @@ export async function buildVocabularyWorkbook(words: VocabWord[], examples: Voca
         masu_form: conjugation.masuForm,
         te_form: conjugation.teForm,
         nai_form: conjugation.naiForm,
+        nai_ta_form: conjugation.naiTaForm,
         ta_form: conjugation.taForm,
         potential_form: conjugation.potentialForm,
         volitional_form: conjugation.volitionalForm,
+        passive_form: conjugation.passiveForm,
+        causative_form: conjugation.causativeForm,
+        causative_passive_form: conjugation.causativePassiveForm,
+        imperative_form: conjugation.imperativeForm,
+        conditional_form: conjugation.conditionalForm,
       });
     } else {
       conjugationSheet.addRow({
@@ -71,6 +83,7 @@ export async function buildVocabularyWorkbook(words: VocabWord[], examples: Voca
         past_form: conjugation.pastForm,
         negative_past_form: conjugation.negativePastForm,
         te_form: conjugation.teForm,
+        conditional_form: conjugation.conditionalForm,
       });
     }
   }
