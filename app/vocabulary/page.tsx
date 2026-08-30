@@ -1,7 +1,8 @@
 "use client";
 
 import Link from "next/link";
-import { useMemo, useState } from "react";
+import { useSearchParams } from "next/navigation";
+import { Suspense, useMemo, useState } from "react";
 
 import { StatusBadge } from "@/components/status-badge";
 import { filterWords, type VocabularyFilter } from "@/lib/data/selectors";
@@ -16,10 +17,23 @@ import {
 } from "@/lib/types";
 
 export default function VocabularyPage() {
+  return (
+    <Suspense fallback={null}>
+      <VocabularyPageContent />
+    </Suspense>
+  );
+}
+
+function VocabularyPageContent() {
   const { words } = useVocabulary();
   const visibleWords = useMemo(() => words.filter((w) => !w.isHidden), [words]);
+  const searchParams = useSearchParams();
+  const initialLevel = searchParams.get("level");
+  const isJlptLevel = (v: string | null): v is JlptLevel => !!v && (JLPT_LEVELS as readonly string[]).includes(v);
 
-  const [filter, setFilter] = useState<VocabularyFilter>({});
+  const [filter, setFilter] = useState<VocabularyFilter>(
+    isJlptLevel(initialLevel) ? { level: initialLevel } : {},
+  );
 
   const filtered = useMemo(() => filterWords(visibleWords, filter), [visibleWords, filter]);
 

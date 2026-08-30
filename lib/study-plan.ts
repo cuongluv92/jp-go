@@ -4,23 +4,18 @@
  */
 
 /**
- * Chia `total` mục cho `days` ngày sao cho:
- *  - Tổng các phần tử trả về đúng bằng `total`.
- *  - Chênh lệch số mục giữa 2 ngày bất kỳ tối đa là 1.
- * Dùng cách chia "cumulative rounding": ngày thứ i (0-index) nhận
- * round((i+1) * total / days) - round(i * total / days) mục.
+ * Chia `total` mục cho `days` ngày theo đúng công thức đã chốt:
+ * mỗi ngày = floor(total / days), số dư (chia không hết) dồn hết vào NGÀY
+ * CUỐI CÙNG — không rải số dư rải rác giữa chừng gây lệch ngày bất thường.
  */
 export function distributeEvenly(total: number, days: number): number[] {
   if (days <= 0) throw new Error("days phải lớn hơn 0");
   if (total < 0) throw new Error("total không được âm");
 
-  const counts: number[] = [];
-  let previousCumulative = 0;
-  for (let day = 1; day <= days; day += 1) {
-    const cumulative = Math.round((day * total) / days);
-    counts.push(cumulative - previousCumulative);
-    previousCumulative = cumulative;
-  }
+  const base = Math.floor(total / days);
+  const remainder = total - base * days;
+  const counts = Array<number>(days).fill(base);
+  counts[days - 1] += remainder;
   return counts;
 }
 
@@ -34,6 +29,31 @@ export function buildStudyDays(itemIds: string[], days: number): string[][] {
     offset += count;
   }
   return result;
+}
+
+export interface DayContent {
+  wordIds: string[];
+  kanjiIds: string[];
+  grammarIds: string[];
+}
+
+/**
+ * Chia đồng thời 3 loại nội dung (từ vựng/kanji/ngữ pháp) theo cùng số ngày
+ * — khi phạm vi là "Tất cả", mỗi ngày có đủ cả 3 loại theo đúng tỉ lệ,
+ * không phải kiểu "hôm nay chỉ kanji, mai chỉ từ vựng".
+ */
+export function buildMultiTypeStudyDays(
+  items: { vocab: string[]; kanji: string[]; grammar: string[] },
+  days: number,
+): DayContent[] {
+  const vocabGroups = buildStudyDays(items.vocab, days);
+  const kanjiGroups = buildStudyDays(items.kanji, days);
+  const grammarGroups = buildStudyDays(items.grammar, days);
+  return Array.from({ length: days }, (_, i) => ({
+    wordIds: vocabGroups[i] ?? [],
+    kanjiIds: kanjiGroups[i] ?? [],
+    grammarIds: grammarGroups[i] ?? [],
+  }));
 }
 
 export type DurationMonths = 1 | 2 | 3;

@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useState } from "react";
 
 import type { JlptLevel } from "@/lib/types";
@@ -17,7 +18,15 @@ interface LevelAccordionProps {
 
 const LEVELS: JlptLevel[] = ["N5", "N4", "N3", "N2", "N1"];
 
-function SubjectRow({ label, count }: { label: string; count: number }) {
+function SubjectRow({ label, count, href }: { label: string; count: number; href?: string }) {
+  if (count > 0 && href) {
+    return (
+      <Link href={href} className="flex items-center justify-between px-3 py-1.5 text-sm transition active:bg-slate-50">
+        <span className="text-muted">{label}</span>
+        <span className="font-medium text-accent">{count} →</span>
+      </Link>
+    );
+  }
   return (
     <div className="flex items-center justify-between px-3 py-1.5 text-sm">
       <span className="text-muted">{label}</span>
@@ -57,8 +66,8 @@ export function LevelAccordion({ countsByLevel }: LevelAccordionProps) {
             </button>
             {isOpen && (
               <div className="border-t border-border py-1">
-                <SubjectRow label="Từ vựng" count={counts.vocab} />
-                <SubjectRow label="Kanji" count={counts.kanji} />
+                <SubjectRow label="Từ vựng" count={counts.vocab} href={`/vocabulary?level=${level}`} />
+                <SubjectRow label="Kanji" count={counts.kanji} href={`/kanji?level=${level}`} />
                 <SubjectRow label="Ngữ pháp" count={counts.grammar} />
               </div>
             )}
