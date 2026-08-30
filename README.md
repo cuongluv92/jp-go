@@ -1,57 +1,80 @@
-# jp-go — Ứng dụng học từ vựng tiếng Nhật
+# jp-go — Ứng dụng học tiếng Nhật theo lộ trình JLPT
 
 Web app học tiếng Nhật, ưu tiên điện thoại, giao diện tiếng Việt. Xây bằng
-Next.js App Router + TypeScript.
+Next.js App Router + TypeScript + Supabase (Auth + Postgres).
 
-> **Giai đoạn hiện tại: schema v2 + 9 từ mẫu để kiểm tra đủ loại từ khó chia
-> nhất** (danh từ, 五段, 一段, する, 来る bất quy tắc, い形容詞 kể cả ngoại lệ
-> 良い, な形容詞, phó từ, biểu hiện cố định) trước khi nạp toàn bộ dữ liệu
-> thật. Toàn bộ dữ liệu đang chạy trên bộ nhớ trình duyệt (xem
-> `lib/data/vocabulary-context.tsx`), **chưa** kết nối Supabase. File nguồn
-> 1800 từ (chỉ có từ + nghĩa) **chưa** được nạp vào app — cần soạn thêm cách
-> đọc, loại từ, ví dụ, cách dùng... theo đúng schema trước.
+> **Hiện trạng nội dung**: chỉ có từ vựng N3 (1798 từ, `lib/data/sample-words.json`
+> + `sample-examples.json`, mỗi từ 3 ví dụ exam/daily/business đã kiểm chứng
+> cloze). N5/N4/N2/N1 và toàn bộ Kanji/Ngữ pháp (mọi cấp) **chưa có** — đây là
+> một dự án biên soạn nội dung riêng, làm sau theo từng đợt. Hạ tầng (đăng
+> nhập, đồng bộ, lộ trình, ôn tập, luyện đề) đã xây xong và chạy trên nền dữ
+> liệu N3 hiện có; Settings/luyện đề chỉ cho chọn N3 ở các phần chưa có nội
+> dung, hiển thị "sắp có" cho N5/N4/N2/N1.
 
 ## Bắt đầu
 
 ```bash
 npm install
-npm run dev       # http://localhost:3000
-npm run lint       # ESLint
-npm run typecheck  # tsc --noEmit
-npm run test       # Vitest
-npm run build      # Next.js production build
+cp .env.local.example .env.local   # điền NEXT_PUBLIC_SUPABASE_URL/ANON_KEY thật
+npm run dev        # http://localhost:3000
+npm run lint        # ESLint
+npm run typecheck   # tsc --noEmit
+npm run test        # Vitest
+npm run build       # Next.js production build
 ```
+
+Chạy migration `supabase/migrations/0001_jp_go_init.sql` qua Supabase SQL
+Editor trước khi dùng — xem mục Supabase bên dưới.
 
 ## Cấu trúc dự án
 
 ```
 app/
-  page.tsx                Trang chủ (tóm tắt tiến độ, streak, CTA học/ôn tập)
-  vocabulary/page.tsx      Kho từ vựng: tìm kiếm + lọc
-  vocabulary/[id]/         Chi tiết một từ (server page + client component)
-  flashcards/page.tsx      Học bằng flashcard (SRS đơn giản)
-  practice/page.tsx        6 dạng bài luyện tập (dữ liệu mẫu)
-  review/page.tsx          Ôn tập: đến hạn / trả lời sai / chưa nhớ
-  progress/page.tsx        Thống kê tiến độ học
-  admin/page.tsx           Quản lý dữ liệu (xem trước nhập Excel, ẩn/thêm từ)
+  login/page.tsx           Đăng nhập / đăng ký (email + mật khẩu)
+  settings/page.tsx         Cài đặt lộ trình học (cấp độ/phạm vi/thời gian)
+  page.tsx                  Trang chủ: tiến độ lộ trình, streak, "Hôm nay", N1-N5 dạng xổ (≡)
+  vocabulary/page.tsx       Kho từ vựng: tìm kiếm + lọc
+  vocabulary/[id]/          Chi tiết một từ (server page + client component)
+  flashcards/page.tsx       Học bằng flashcard (SM-2 rút gọn)
+  practice/page.tsx         Luyện tập: 4.1 đề tự động theo cấu trúc JLPT, 4.2 đề tự tạo
+  review/page.tsx           Ôn tập theo lịch SRS 1-5-15: lật thẻ / điền tiếng Nhật / nối từ-nghĩa
+  progress/page.tsx         Thống kê tiến độ học
+  admin/page.tsx            Quản lý dữ liệu (xem trước nhập Excel, ẩn/thêm từ)
 
-components/                UI dùng chung (nav, badge, nút phát âm...)
+components/                 UI dùng chung (nav, badge, nút phát âm, 3 kiểu bài ôn tập, quiz runner...)
+
+proxy.ts                    Bảo vệ toàn bộ route bằng session Supabase (Next 16 thay middleware.ts)
 
 lib/
-  types.ts                 Kiểu dữ liệu lõi: VocabWord / VocabExample / Conjugation + schema Excel
-  conjugation.ts           Bộ máy chia động từ (godan/ichidan/suru/kuru) và tính từ (i/na), có test khớp mẫu
-  srs.ts                   Thuật toán lặp lại ngắt quãng (SM-2 rút gọn)
-  speech.ts                Phát âm bằng Web Speech API
+  types.ts                  Kiểu dữ liệu lõi: VocabWord / VocabExample / Conjugation + schema Excel
+  conjugation.ts             Bộ máy chia động từ (godan/ichidan/suru/kuru) và tính từ (i/na), có test khớp mẫu
+  srs.ts                     SM-2 rút gọn cho flashcard
+  study-plan.ts               Thuật toán chia đều nội dung theo ngày + tính streak thật, có test
+  jlpt-blueprint.ts            Cấu trúc đề JLPT theo cấp độ (N2 lấy từ đề thật, cấp khác mô phỏng gần đúng)
+  speech.ts                   Phát âm bằng Web Speech API
+  supabase/
+    client.ts                  Supabase client phía trình duyệt
+    server.ts                  Supabase client phía server (Server Components/Route Handlers)
+    middleware.ts               Refresh session + redirect /login, dùng trong proxy.ts
   data/
-    sample-words.ts          9 từ mẫu, đủ loại từ khó chia nhất
-    sample-examples.ts        3 ví dụ/từ (exam/daily/business) + cloze, có test round-trip
-    sample-import-rows.ts     Dữ liệu mẫu giả lập "đọc từ Excel" cho trang admin
-    practice-samples.ts       Câu hỏi mẫu cho từng dạng luyện tập
-    activity.ts                Streak + lịch sử luyện tập mẫu
-    selectors.ts                Lọc / tìm kiếm / thống kê — hàm thuần, có test
-    excel-import.ts             Map VOCAB row ↔ VocabWord, validate, đọc file .xlsx, phát hiện trùng ID
-    excel-export.ts             Xuất VOCAB/EXAMPLES/CONJUGATIONS ra 1 file .xlsx (exceljs)
-    vocabulary-context.tsx      React context giữ state từ vựng (điểm thay thế bằng Supabase sau này)
+    sample-words.json           1798 từ N3 (nội dung tĩnh, đóng gói JSON — không ở Supabase)
+    sample-words.ts               Wrapper import + cast (JSON literal quá lớn khiến tsc lỗi TS2590)
+    sample-examples.json/.ts      3 ví dụ/từ (exam/daily/business) + cloze, có test round-trip
+    sample-import-rows.ts         Dữ liệu mẫu giả lập "đọc từ Excel" cho trang admin
+    activity.ts                    Streak + lịch sử luyện tập mẫu (trang Tiến độ)
+    selectors.ts                   Lọc / tìm kiếm / thống kê — hàm thuần, có test
+    excel-import.ts                Map VOCAB row ↔ VocabWord, validate, đọc file .xlsx, phát hiện trùng ID
+    excel-export.ts                Xuất VOCAB/EXAMPLES/CONJUGATIONS ra 1 file .xlsx (exceljs)
+    vocabulary-context.tsx         React context: nội dung tĩnh (JSON) + tiến độ đồng bộ qua jp_word_progress
+    study-plan-service.ts          Tạo/đọc lộ trình + đánh dấu hoàn thành ngày (Supabase)
+    review-service.ts               Đọc lịch ôn đến hạn + đánh dấu hoàn thành (Supabase)
+    jlpt-practice-generator.ts      Sinh câu hỏi trắc nghiệm thật từ VocabExample (chỉ phần nào đủ nội dung)
+    practice-attempt-service.ts     Lưu kết quả luyện đề (Supabase)
+    custom-test-service.ts          CRUD đề tự tạo (Supabase)
+
+supabase/migrations/
+  0001_jp_go_init.sql        Migration additive: jp_word_progress, jp_study_plans, jp_study_days,
+                               jp_review_schedules, jp_practice_attempts, jp_custom_tests + RLS
 ```
 
 ## Schema dữ liệu & nhập/xuất Excel
@@ -78,25 +101,58 @@ Trang `/admin`:
   cột thiếu/giá trị enum sai, báo ID trùng trong file hoặc trùng với kho hiện
   có (cho chọn Cập nhật/Bỏ qua), rồi mới nhập — không ghi đè bừa.
 
-File nguồn 1800 từ (chỉ có từ + cách đọc + nghĩa) **chưa** đủ các cột trên nên
-chưa nạp vào app — cần soạn thêm loại từ, ví dụ, cách dùng... cho từng từ
-trước, theo đúng schema này.
+> Lưu ý: `addWord`/`updateWord`/`upsertExamples` (dùng ở trang Admin) hiện chỉ
+> sửa nội dung tĩnh trong state React của phiên hiện tại — nội dung từ vựng
+> chưa có bảng Supabase riêng nên các thay đổi này **không** đồng bộ/lưu lại
+> khi tải lại trang. Chỉ `progress` (tiến độ học) mới đồng bộ qua Supabase.
 
-## Kế hoạch tích hợp Supabase (chưa thực hiện)
+## Tài khoản, lộ trình học, ôn tập, luyện đề
 
-jp-go sẽ dùng chung Supabase project với `nhatkytrading` nhưng tách dữ liệu
+- **Đăng nhập** (`/login`): email + mật khẩu qua Supabase Auth. `proxy.ts`
+  (tương đương middleware.ts của Next < 16) bắt buộc đăng nhập cho mọi trang.
+- **Cài đặt lộ trình** (`/settings`): chọn cấp độ (chỉ N3 khả dụng), phạm vi
+  (chỉ Từ vựng khả dụng), thời gian 1-3 tháng → `lib/study-plan.ts` chia đều
+  từ vựng theo từng ngày (chênh lệch tối đa 1 từ/ngày).
+- **Trang chủ**: hiển thị đúng nội dung ngày hiện tại, nút "Đã học xong" mở
+  khoá ngày kế tiếp và tự sinh 2 lịch ôn tập (5 ngày và 15 ngày sau).
+- **Ôn tập** (`/review`): liệt kê lịch ôn đến hạn, chọn 1/nhiều/tất cả, rồi
+  chọn 1 trong 3 kiểu bài (lật thẻ / điền tiếng Nhật theo cloze / nối từ-nghĩa).
+- **Luyện tập** (`/practice`):
+  - *4.1 Đề tự động*: cấu trúc theo `lib/jlpt-blueprint.ts` — N2 lấy đúng số
+    câu/phần từ đề thật (kỳ 2018-07), các cấp khác là mô phỏng gần đúng. Chỉ
+    phần nào có đủ nội dung (hiện tại: câu hỏi điền từ theo ngữ cảnh, dựng từ
+    `VocabExample` có sẵn) mới sinh được câu hỏi thật — các phần cần
+    Kanji/Ngữ pháp/đoạn văn đọc hiểu sẽ báo "chưa đủ nội dung" thay vì bịa.
+  - *4.2 Đề của tôi*: tự tạo đề trắc nghiệm, lưu ở `jp_custom_tests`, độc lập
+    hoàn toàn với lộ trình học.
+
+Tiến độ (`jp_word_progress`), lộ trình (`jp_study_plans`/`jp_study_days`),
+lịch ôn (`jp_review_schedules`) và kết quả luyện đề (`jp_practice_attempts`,
+`jp_custom_tests`) đều lưu ở Supabase theo `auth.uid()` — đổi thiết bị vẫn
+thấy cùng dữ liệu.
+
+## Supabase
+
+jp-go dùng **chung Supabase project với `nhatkytrading`** nhưng tách dữ liệu
 tuyệt đối:
 
-- Mọi bảng mới dùng tiền tố `jp_`
-- Storage bucket riêng, tiền tố `jp_`
-- RLS riêng cho dữ liệu học tiếng Nhật
-- Không sửa bảng/dữ liệu/policy/Auth hiện có của nhatkytrading
-- Migration chỉ additive, idempotent, có thể rollback an toàn — không
-  `DROP`/`TRUNCATE`/đổi tên bảng cũ
+- Mọi bảng dùng tiền tố `jp_` (xem `supabase/migrations/0001_jp_go_init.sql`)
+- RLS riêng theo `auth.uid()` cho từng bảng
+- Không đụng bảng/dữ liệu/policy/Auth hiện có của `nhatkytrading`
+- Migration chỉ additive, an toàn chạy lại nhiều lần
 
-Việc này **chưa** thực hiện ở giai đoạn hiện tại. Điểm cần thay khi tích hợp là
-`lib/data/vocabulary-context.tsx` (nguồn dữ liệu + các hàm cập nhật) — các
-trang UI gọi qua hook `useVocabulary()` nên không cần viết lại giao diện.
+**Thiết lập:**
+
+1. Bật Supabase Auth → Providers → Email cho project đang dùng.
+2. Chạy nguyên file `supabase/migrations/0001_jp_go_init.sql` trong Supabase
+   Dashboard → SQL Editor.
+3. Copy `NEXT_PUBLIC_SUPABASE_URL`/`NEXT_PUBLIC_SUPABASE_ANON_KEY` (Project
+   Settings → API) — dùng đúng giá trị đang dùng cho `nhatkytrading` — vào
+   `.env.local` (dev) và biến môi trường Vercel (production).
+
+Nội dung tĩnh (từ vựng/kanji/ngữ pháp) **không** ở Supabase — vẫn đóng gói
+JSON trong app như trước, chỉ tiến độ/lộ trình/lịch ôn/kết quả luyện đề mới
+đồng bộ theo tài khoản.
 
 ## Triển khai Vercel
 
@@ -104,7 +160,8 @@ Repo này độc lập với `nhatkytrading`.
 
 1. Vào [vercel.com/new](https://vercel.com/new), import repository `jp-go`.
 2. Framework Preset: Next.js (tự nhận diện).
-3. Không cần biến môi trường ở giai đoạn này (chưa dùng Supabase).
+3. Thêm 2 biến môi trường `NEXT_PUBLIC_SUPABASE_URL`/`NEXT_PUBLIC_SUPABASE_ANON_KEY`
+   (Project Settings → Environment Variables) — bắt buộc từ khi có đăng nhập.
 4. Deploy — Vercel sẽ tự tạo Preview URL cho mỗi nhánh/PR.
 
 > Lưu ý: tên `jp-go.vercel.app` có thể đã có người khác dùng trên Vercel,
