@@ -67,7 +67,7 @@ export function LevelAccordion({ countsByLevel }: LevelAccordionProps) {
             {isOpen && (
               <div className="border-t border-border py-1">
                 <SubjectRow label="Từ vựng" count={counts.vocab} href={`/vocabulary?level=${level}`} />
-                <SubjectRow label="Kanji" count={counts.kanji} />
+                <SubjectRow label="Kanji" count={counts.kanji} href={`/kanji?level=${level}`} />
                 <SubjectRow label="Ngữ pháp" count={counts.grammar} />
               </div>
             )}

@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 
 import { LevelAccordion } from "@/components/level-accordion";
 import { StatCard } from "@/components/stat-card";
+import { getKanjiLevelCounts } from "@/lib/data/kanji-service";
 import {
   completeStudyDay,
   getActiveStudyPlan,
@@ -25,12 +26,16 @@ export default function HomePage() {
   const [days, setDays] = useState<StudyDayRow[]>([]);
   const [loading, setLoading] = useState(true);
   const [completing, setCompleting] = useState(false);
+  const [kanjiCounts, setKanjiCounts] = useState<Record<JlptLevel, number> | null>(null);
 
   useEffect(() => {
     let cancelled = false;
 
     async function loadPlan() {
       const supabase = createClient();
+      const counts = await getKanjiLevelCounts(supabase);
+      if (!cancelled) setKanjiCounts(counts);
+
       const {
         data: { user },
       } = await supabase.auth.getUser();
@@ -75,7 +80,7 @@ export default function HomePage() {
       level,
       {
         vocab: words.filter((w) => w.jlpt === level && !w.isHidden).length,
-        kanji: 0,
+        kanji: kanjiCounts?.[level] ?? 0,
         grammar: 0,
       },
     ]),
