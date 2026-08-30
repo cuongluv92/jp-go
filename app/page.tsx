@@ -88,9 +88,9 @@ export default function HomePage() {
 
   return (
     <div className="flex flex-col gap-6">
-      <section>
+      <section className="bg-gradient-accent -mx-4 rounded-b-3xl px-4 pb-6 pt-2 text-accent-foreground shadow-lg shadow-accent/20 sm:mx-0 sm:rounded-3xl sm:px-6 sm:pt-6">
         <h1 className="text-xl font-bold">Xin chào 👋</h1>
-        <p className="mt-1 text-sm text-muted">Hôm nay bạn đã sẵn sàng học tiếng Nhật chưa?</p>
+        <p className="mt-1 text-sm text-white/80">Hôm nay bạn đã sẵn sàng học tiếng Nhật chưa?</p>
       </section>
 
       <section className="grid grid-cols-2 gap-3">

@@ -16,10 +16,10 @@ export function TopHeader() {
   }
 
   return (
-    <header className="sticky top-0 z-20 border-b border-border bg-surface/90 backdrop-blur">
+    <header className="safe-top sticky top-0 z-20 border-b border-border bg-surface/85 backdrop-blur-lg">
       <div className="mx-auto flex w-full max-w-md items-center justify-between px-4 py-3 sm:max-w-lg">
         <Link href="/" className="flex items-center gap-2">
-          <span className="flex h-8 w-8 items-center justify-center rounded-xl bg-accent text-sm font-bold text-accent-foreground">
+          <span className="flex h-8 w-8 items-center justify-center rounded-xl bg-gradient-accent text-sm font-bold text-accent-foreground shadow-sm shadow-accent/30">
             日
           </span>
           <span className="text-lg font-semibold tracking-tight">jp-go</span>
