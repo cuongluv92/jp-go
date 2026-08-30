@@ -1,6 +1,6 @@
 import type { SupabaseClient } from "@supabase/supabase-js";
 
-import { buildStudyDays, type DurationMonths, monthsToDays } from "@/lib/study-plan";
+import { buildMultiTypeStudyDays, type DurationMonths, monthsToDays } from "@/lib/study-plan";
 import type { JlptLevel } from "@/lib/types";
 
 export type StudyScope = "vocab" | "kanji" | "grammar";
@@ -23,7 +23,15 @@ export interface StudyDayRow {
   user_id: string;
   day_number: number;
   word_ids: string[];
+  kanji_ids: string[];
+  grammar_ids: string[];
   completed_at: string | null;
+}
+
+export interface StudyPlanItems {
+  vocab: string[];
+  kanji: string[];
+  grammar: string[];
 }
 
 /** Lộ trình đang hoạt động của user (nếu có), kèm toàn bộ các ngày đã sinh. */
@@ -51,8 +59,11 @@ export async function getActiveStudyPlan(
 }
 
 /**
- * Tạo lộ trình mới: tắt lộ trình cũ (nếu có), chia đều `wordIds` theo số
- * ngày tương ứng `durationMonths`, ghi vào `jp_study_plans` + `jp_study_days`.
+ * Tạo lộ trình mới: tắt lộ trình cũ (nếu có), chia đều `items` (từ vựng +
+ * kanji + ngữ pháp) theo số ngày tương ứng `durationMonths`, ghi vào
+ * `jp_study_plans` + `jp_study_days`. Gọi hàm này đồng nghĩa xác nhận dừng
+ * lộ trình cũ (nếu có) — UI gọi phía trên (Settings) phải tự hỏi xác nhận
+ * người dùng TRƯỚC khi gọi hàm này, hàm này không tự hỏi lại.
  */
 export async function createStudyPlan(
   supabase: SupabaseClient,
@@ -60,7 +71,7 @@ export async function createStudyPlan(
   level: JlptLevel,
   scope: StudyScope[],
   durationMonths: DurationMonths,
-  wordIds: string[],
+  items: StudyPlanItems,
 ): Promise<StudyPlanRow> {
   await supabase.from("jp_study_plans").update({ is_active: false }).eq("user_id", userId).eq("is_active", true);
 
@@ -78,12 +89,14 @@ export async function createStudyPlan(
     .single();
   if (planError || !plan) throw planError ?? new Error("Không tạo được lộ trình");
 
-  const dayGroups = buildStudyDays(wordIds, totalDays);
-  const dayRows = dayGroups.map((ids, index) => ({
+  const dayGroups = buildMultiTypeStudyDays(items, totalDays);
+  const dayRows = dayGroups.map((day, index) => ({
     plan_id: plan.id,
     user_id: userId,
     day_number: index + 1,
-    word_ids: ids,
+    word_ids: day.wordIds,
+    kanji_ids: day.kanjiIds,
+    grammar_ids: day.grammarIds,
   }));
   if (dayRows.length > 0) {
     const { error: daysError } = await supabase.from("jp_study_days").insert(dayRows);

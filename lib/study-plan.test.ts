@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest";
 
-import { buildStudyDays, computeStreak, distributeEvenly, monthsToDays } from "@/lib/study-plan";
+import { buildMultiTypeStudyDays, buildStudyDays, computeStreak, distributeEvenly, monthsToDays } from "@/lib/study-plan";
 
 describe("distributeEvenly", () => {
   it("chia đều khi total chia hết cho days", () => {
@@ -13,29 +13,55 @@ describe("distributeEvenly", () => {
     expect(counts).toHaveLength(60);
   });
 
-  it("chênh lệch giữa 2 ngày bất kỳ tối đa 1 (không dồn ngày quá tải, ngày quá ít)", () => {
+  it("số dư dồn hết vào ngày cuối cùng, các ngày trước đều bằng floor(total/days)", () => {
     const counts = distributeEvenly(1798, 60);
-    expect(Math.max(...counts) - Math.min(...counts)).toBeLessThanOrEqual(1);
+    const base = Math.floor(1798 / 60);
+    expect(counts.slice(0, -1).every((c) => c === base)).toBe(true);
+    expect(counts[counts.length - 1]).toBe(base + (1798 - base * 60));
   });
 
   it("total = 0 trả về toàn số 0", () => {
     expect(distributeEvenly(0, 5)).toEqual([0, 0, 0, 0, 0]);
   });
 
-  it("total nhỏ hơn days vẫn phân bổ hợp lý", () => {
+  it("total nhỏ hơn days: các ngày đầu = 0, dư dồn hết vào ngày cuối", () => {
     const counts = distributeEvenly(3, 10);
-    expect(counts.reduce((a, b) => a + b, 0)).toBe(3);
-    expect(Math.max(...counts)).toBeLessThanOrEqual(1);
+    expect(counts.slice(0, -1).every((c) => c === 0)).toBe(true);
+    expect(counts[9]).toBe(3);
   });
 });
 
 describe("buildStudyDays", () => {
-  it("cắt đúng danh sách id theo từng ngày, giữ nguyên thứ tự", () => {
-    const ids = Array.from({ length: 10 }, (_, i) => `w${i}`);
+  it("cắt đúng danh sách id theo từng ngày, giữ nguyên thứ tự, dư dồn ngày cuối", () => {
+    const ids = Array.from({ length: 12 }, (_, i) => `w${i}`);
     const days = buildStudyDays(ids, 5);
     expect(days).toHaveLength(5);
     expect(days.flat()).toEqual(ids);
-    expect(days.every((d) => d.length === 2)).toBe(true);
+    expect(days.slice(0, 4).every((d) => d.length === 2)).toBe(true);
+    expect(days[4]).toHaveLength(4);
+  });
+});
+
+describe("buildMultiTypeStudyDays", () => {
+  it("mỗi ngày có đủ cả 3 loại theo đúng tỉ lệ khi chọn phạm vi Tất cả", () => {
+    const vocab = Array.from({ length: 30 }, (_, i) => `v${i}`);
+    const kanji = Array.from({ length: 10 }, (_, i) => `k${i}`);
+    const grammar = Array.from({ length: 5 }, (_, i) => `g${i}`);
+    const result = buildMultiTypeStudyDays({ vocab, kanji, grammar }, 5);
+
+    expect(result).toHaveLength(5);
+    expect(result.flatMap((d) => d.wordIds)).toEqual(vocab);
+    expect(result.flatMap((d) => d.kanjiIds)).toEqual(kanji);
+    expect(result.flatMap((d) => d.grammarIds)).toEqual(grammar);
+    // Ngày đầu (không phải ngày cuối) phải có đủ cả 3 loại, không phải chỉ 1 loại.
+    expect(result[0].wordIds.length).toBeGreaterThan(0);
+    expect(result[0].kanjiIds.length).toBeGreaterThan(0);
+    expect(result[0].grammarIds.length).toBeGreaterThan(0);
+  });
+
+  it("thiếu 1 loại nội dung (chưa có kanji/ngữ pháp) vẫn chạy được, trả mảng rỗng cho loại đó", () => {
+    const result = buildMultiTypeStudyDays({ vocab: ["v1", "v2"], kanji: [], grammar: [] }, 2);
+    expect(result.every((d) => d.kanjiIds.length === 0 && d.grammarIds.length === 0)).toBe(true);
   });
 });
 

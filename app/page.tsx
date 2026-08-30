@@ -121,8 +121,9 @@ export default function HomePage() {
           </p>
         ) : (
           <div className="flex flex-col gap-3">
-            <p className="text-xs text-muted">
-              Ngày {todayDay.day_number}/{plan.total_days} · {todayWords.length} từ
+            <p className="text-xs text-muted">Ngày {todayDay.day_number}/{plan.total_days}</p>
+            <p className="text-xs font-semibold text-foreground">
+              {todayDay.word_ids.length} từ vựng · {todayDay.kanji_ids.length} kanji · {todayDay.grammar_ids.length} điểm ngữ pháp
             </p>
             <ul className="flex flex-col gap-2">
               {todayWords.map((word) => (
