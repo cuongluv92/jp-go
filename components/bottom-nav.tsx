@@ -70,16 +70,16 @@ export function BottomNav() {
   const pathname = usePathname();
 
   return (
-    <nav className="safe-bottom fixed inset-x-0 bottom-0 z-20 border-t border-border bg-surface/95 backdrop-blur">
+    <nav className="safe-bottom fixed inset-x-0 bottom-0 z-20 border-t border-border bg-surface/90 shadow-[0_-4px_16px_-8px_rgba(15,23,42,0.12)] backdrop-blur-lg">
       <ul className="mx-auto grid w-full max-w-md grid-cols-5 sm:max-w-lg">
         {NAV_ITEMS.map((item) => {
           const isActive = item.href === "/" ? pathname === "/" : pathname.startsWith(item.href);
           return (
-            <li key={item.href}>
+            <li key={item.href} className="flex justify-center py-1.5">
               <Link
                 href={item.href}
-                className={`flex flex-col items-center gap-1 py-2 text-xs font-medium transition ${
-                  isActive ? "text-accent" : "text-muted hover:text-foreground"
+                className={`flex flex-col items-center gap-0.5 rounded-2xl px-3.5 py-1.5 text-[11px] font-medium transition-colors ${
+                  isActive ? "bg-accent-soft text-accent" : "text-muted active:bg-slate-100"
                 }`}
                 aria-current={isActive ? "page" : undefined}
               >
