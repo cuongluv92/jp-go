@@ -4,19 +4,30 @@ import { useState } from "react";
 
 import type { KanjiQuestionRow } from "@/lib/data/kanji-service";
 
-/** Trình chạy bài tập Kanji — hỗ trợ trắc nghiệm (4 lựa chọn) và gõ đáp án (write_reading). */
+export interface KanjiQuizResult {
+  kanjiId: string;
+  correct: boolean;
+}
+
+/**
+ * Trình chạy bài tập Kanji — hỗ trợ trắc nghiệm (4 lựa chọn) và gõ đáp án
+ * (write_reading). Nhận `questions` từ 1 hoặc nhiều kanji trộn chung (dùng
+ * cho phiên ôn tập gộp nhiều kanji) — `onFinish` trả về cả kết quả từng câu
+ * kèm `kanjiId` để bên gọi tự nhóm lại và chấm SRS riêng cho từng kanji.
+ */
 export function KanjiQuizRunner({
   questions,
   onFinish,
 }: {
   questions: KanjiQuestionRow[];
-  onFinish: (correctCount: number, total: number) => void;
+  onFinish: (correctCount: number, total: number, results: KanjiQuizResult[]) => void;
 }) {
   const [index, setIndex] = useState(0);
   const [selected, setSelected] = useState<string | null>(null);
   const [typedInput, setTypedInput] = useState("");
   const [checked, setChecked] = useState(false);
   const [correctCount, setCorrectCount] = useState(0);
+  const [results, setResults] = useState<KanjiQuizResult[]>([]);
 
   const question = questions[index];
   const isTyped = question.question_type === "write_reading";
@@ -24,14 +35,18 @@ export function KanjiQuizRunner({
     (c): c is string => !!c,
   );
 
+  function recordAnswer(isCorrect: boolean) {
+    if (isCorrect) setCorrectCount((c) => c + 1);
+    setResults((prev) => [...prev, { kanjiId: question.kanji_id, correct: isCorrect }]);
+  }
+
   function submitTyped(e: React.FormEvent) {
     e.preventDefault();
     if (checked) {
       next();
       return;
     }
-    const isCorrect = typedInput.trim() === question.correct_answer.trim();
-    if (isCorrect) setCorrectCount((c) => c + 1);
+    recordAnswer(typedInput.trim() === question.correct_answer.trim());
     setChecked(true);
   }
 
@@ -39,7 +54,7 @@ export function KanjiQuizRunner({
     if (checked) return;
     setSelected(choice);
     setChecked(true);
-    if (choice === question.correct_answer) setCorrectCount((c) => c + 1);
+    recordAnswer(choice === question.correct_answer);
   }
 
   function next() {
@@ -47,7 +62,7 @@ export function KanjiQuizRunner({
     setTypedInput("");
     setChecked(false);
     if (index + 1 >= questions.length) {
-      onFinish(correctCount, questions.length);
+      onFinish(correctCount, questions.length, results);
       return;
     }
     setIndex((i) => i + 1);
