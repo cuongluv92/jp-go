@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useEffect, useState } from "react";
 
+import { KanjiQuizRunner } from "@/components/kanji-quiz-runner";
 import { getCached, setCached } from "@/lib/data/client-cache";
 import {
   gradeKanjiReview,
@@ -21,8 +22,6 @@ interface KanjiDetailCachedData {
 function kanjiDetailCacheKey(id: string): string {
   return `kanji-detail-${id}`;
 }
-
-import { KanjiQuizRunner } from "./kanji-quiz-runner";
 
 function wordsForReading(words: KanjiWordRow[], readingId: string): KanjiWordRow[] {
   return words.filter((w) => w.reading_id === readingId);

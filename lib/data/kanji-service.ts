@@ -208,3 +208,67 @@ export async function gradeKanjiReview(
     { onConflict: "user_id,kanji_id" },
   );
 }
+
+export interface DueKanjiRow {
+  kanji_id: string;
+  kanji_character: string;
+  han_viet: string;
+  level: JlptLevel;
+  status: KanjiProgressStatus;
+  next_review_at: string;
+}
+
+/**
+ * Kanji đến hạn ôn theo lịch 1-5-15 riêng của Kanji (`jp_kanji_progress.
+ * next_review_at`) — độc lập với lịch ôn từ vựng (`jp_review_schedules`).
+ * Kanji chưa từng học (chưa có dòng progress) không tính là "đến hạn".
+ */
+export async function getDueKanjiForReview(
+  supabase: SupabaseClient,
+  userId: string,
+  now: Date = new Date(),
+): Promise<DueKanjiRow[]> {
+  const { data, error } = await supabase
+    .from("jp_kanji_progress")
+    .select("kanji_id, status, next_review_at, kanji:jp_kanji(kanji_character, han_viet, level)")
+    .eq("user_id", userId)
+    .lte("next_review_at", now.toISOString())
+    .order("next_review_at", { ascending: true });
+  if (error) throw error;
+
+  type Row = { kanji_id: string; status: KanjiProgressStatus; next_review_at: string; kanji: { kanji_character: string; han_viet: string; level: JlptLevel } | null };
+  return ((data ?? []) as unknown as Row[])
+    .filter((row): row is Row & { kanji: NonNullable<Row["kanji"]> } => row.kanji !== null)
+    .map((row) => ({
+      kanji_id: row.kanji_id,
+      status: row.status,
+      next_review_at: row.next_review_at,
+      kanji_character: row.kanji.kanji_character,
+      han_viet: row.kanji.han_viet,
+      level: row.kanji.level,
+    }));
+}
+
+/** Kanji đang bị đánh dấu "hay sai" của user, không phụ thuộc lịch đến hạn — dùng cho mục Tự chọn ôn tập. */
+export async function listWrongKanjiForUser(supabase: SupabaseClient, userId: string, level: JlptLevel): Promise<KanjiRow[]> {
+  const { data: progressRows, error: progressError } = await supabase
+    .from("jp_kanji_progress")
+    .select("kanji_id")
+    .eq("user_id", userId)
+    .eq("status", "hay_sai");
+  if (progressError) throw progressError;
+  const kanjiIds = (progressRows ?? []).map((r: { kanji_id: string }) => r.kanji_id);
+  if (kanjiIds.length === 0) return [];
+
+  const { data, error } = await supabase.from("jp_kanji").select("*").eq("level", level).in("id", kanjiIds);
+  if (error) throw error;
+  return (data ?? []) as KanjiRow[];
+}
+
+/** Lấy toàn bộ câu hỏi (jp_kanji_questions) cho nhiều kanji cùng lúc — dùng cho phiên ôn tập gộp nhiều kanji. */
+export async function getQuestionsForKanjiIds(supabase: SupabaseClient, kanjiIds: string[]): Promise<KanjiQuestionRow[]> {
+  if (kanjiIds.length === 0) return [];
+  const { data, error } = await supabase.from("jp_kanji_questions").select("*").in("kanji_id", kanjiIds);
+  if (error) throw error;
+  return (data ?? []) as KanjiQuestionRow[];
+}
