@@ -20,3 +20,8 @@ export function getCached<T>(key: string): T | undefined {
 export function setCached<T>(key: string, value: T): void {
   cache.set(key, value);
 }
+
+/** Xoá 1 mục khỏi cache — dùng khi biết chắc dữ liệu cũ đã lỗi thời (vd vừa tạo lộ trình mới). */
+export function clearCached(key: string): void {
+  cache.delete(key);
+}
