@@ -415,11 +415,13 @@ function AddWordSection() {
             onChange={(e) => setForm((f) => ({ ...f, partOfSpeech: e.target.value as PartOfSpeech }))}
             className="rounded-lg border border-border px-2 py-2 text-xs"
           >
-            {Object.entries(PART_OF_SPEECH_LABELS).map(([value, label]) => (
-              <option key={value} value={value}>
-                {label}
-              </option>
-            ))}
+            {Object.entries(PART_OF_SPEECH_LABELS)
+              .filter(([value]) => value !== "unclassified")
+              .map(([value, label]) => (
+                <option key={value} value={value}>
+                  {label}
+                </option>
+              ))}
           </select>
           <select
             value={form.level}

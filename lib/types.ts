@@ -21,7 +21,9 @@ export type PartOfSpeech =
   | "adverb"
   | "conjunction"
   | "particle"
-  | "expression";
+  | "expression"
+  /** Chưa có dữ liệu phân loại nguồn (vd. N5 — PDF gốc không chia theo loại từ) — KHÔNG được coi là "danh từ" mặc định. */
+  | "unclassified";
 
 /** Nhãn hiển thị trên UI — dùng thuật ngữ tiếng Nhật ngắn gọn, không diễn giải dài dòng. */
 export const PART_OF_SPEECH_LABELS: Record<PartOfSpeech, string> = {
@@ -33,6 +35,7 @@ export const PART_OF_SPEECH_LABELS: Record<PartOfSpeech, string> = {
   conjunction: "接続詞",
   particle: "助詞",
   expression: "表現",
+  unclassified: "Chưa phân loại",
 };
 
 /** Chỉ có ý nghĩa khi part_of_speech = "verb". */

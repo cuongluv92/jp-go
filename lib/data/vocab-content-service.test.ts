@@ -53,9 +53,9 @@ describe("dbVocabRowToWord", () => {
     expect(dbVocabRowToWord(makeRow({ word_jp: "これ" })).kanji).toBe("");
   });
 
-  it("entry_type phrase → partOfSpeech mặc định expression, word → noun", () => {
+  it("entry_type phrase → partOfSpeech mặc định expression; word không có word_class (N5) → unclassified, KHÔNG được mặc định noun", () => {
     expect(dbVocabRowToWord(makeRow({ entry_type: "phrase" })).partOfSpeech).toBe("expression");
-    expect(dbVocabRowToWord(makeRow({ entry_type: "word" })).partOfSpeech).toBe("noun");
+    expect(dbVocabRowToWord(makeRow({ entry_type: "word", word_class: null })).partOfSpeech).toBe("unclassified");
   });
 
   it("N2 trở đi: lesson_no null → lessonNo undefined, word_class được map thẳng qua wordClass", () => {

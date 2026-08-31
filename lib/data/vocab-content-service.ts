@@ -81,16 +81,18 @@ const WORD_CLASS_TO_PART_OF_SPEECH: Record<string, PartOfSpeech> = {
 };
 
 /**
- * N5 (chưa có word_class trong nguồn PDF gốc — chỉ chia theo lesson_no) vẫn
- * phải mặc định trung tính "noun", không suy diễn bừa. N2 trở đi map đúng
- * theo word_class; riêng nhóm カタカナ đa số là danh từ mượn, trừ vài từ có
- * đuôi "な" rõ ràng là な形容詞 (ユニークな, ロマンチックな, ルーズな...).
+ * N5 chưa có word_class trong nguồn PDF gốc (chỉ chia theo lesson_no) —
+ * PHẢI trả "unclassified", KHÔNG được mặc định "noun" (lỗi cũ: fallback
+ * sai khiến UI hiện "danh từ" cho mọi từ N5 dù không hề có căn cứ). N2 trở
+ * đi map đúng theo word_class; riêng nhóm カタカナ đa số là danh từ mượn,
+ * trừ vài từ có đuôi "な" rõ ràng là な形容詞 (ユニークな, ロマンチックな, ルーズな...).
  */
 function guessPartOfSpeech(entryType: VocabEntryType, wordClass: string | null, wordJp: string): PartOfSpeech {
   if (entryType === "phrase") return "expression";
+  if (!wordClass) return "unclassified";
   if (wordClass === "カタカナ") return wordJp.endsWith("な") ? "na_adjective" : "noun";
-  if (wordClass && wordClass in WORD_CLASS_TO_PART_OF_SPEECH) return WORD_CLASS_TO_PART_OF_SPEECH[wordClass];
-  return "noun";
+  if (wordClass in WORD_CLASS_TO_PART_OF_SPEECH) return WORD_CLASS_TO_PART_OF_SPEECH[wordClass];
+  return "unclassified";
 }
 
 /**
