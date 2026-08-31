@@ -46,6 +46,7 @@ const PART_OF_SPEECH_VALUES: PartOfSpeech[] = [
   "conjunction",
   "particle",
   "expression",
+  "unclassified",
 ];
 
 const VERB_CLASS_VALUES: Exclude<VerbClass, null>[] = ["godan", "ichidan", "suru", "kuru"];
