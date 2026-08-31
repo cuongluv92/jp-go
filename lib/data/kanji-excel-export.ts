@@ -74,17 +74,19 @@ export async function fetchAllKanjiData(supabase: SupabaseClient): Promise<{
   progress: KanjiProgressRow[];
 }> {
   const [kanji, readings, words, questions] = await Promise.all([
-    fetchAllRows<KanjiRow>((from, to) => supabase.from("jp_kanji").select("*").order("level").order("created_at").range(from, to)),
-    fetchAllRows<KanjiReadingRow>((from, to) => supabase.from("jp_kanji_readings").select("*").range(from, to)),
-    fetchAllRows<KanjiWordRow>((from, to) => supabase.from("jp_kanji_words").select("*").range(from, to)),
-    fetchAllRows<KanjiQuestionRow>((from, to) => supabase.from("jp_kanji_questions").select("*").range(from, to)),
+    fetchAllRows<KanjiRow>((from, to) => supabase.from("jp_kanji").select("*", { count: "exact" }).order("level").order("created_at").range(from, to)),
+    fetchAllRows<KanjiReadingRow>((from, to) => supabase.from("jp_kanji_readings").select("*", { count: "exact" }).range(from, to)),
+    fetchAllRows<KanjiWordRow>((from, to) => supabase.from("jp_kanji_words").select("*", { count: "exact" }).range(from, to)),
+    fetchAllRows<KanjiQuestionRow>((from, to) => supabase.from("jp_kanji_questions").select("*", { count: "exact" }).range(from, to)),
   ]);
 
   const {
     data: { user },
   } = await supabase.auth.getUser();
   const progress = user
-    ? await fetchAllRows<KanjiProgressRow>((from, to) => supabase.from("jp_kanji_progress").select("*").eq("user_id", user.id).range(from, to))
+    ? await fetchAllRows<KanjiProgressRow>((from, to) =>
+        supabase.from("jp_kanji_progress").select("*", { count: "exact" }).eq("user_id", user.id).range(from, to),
+      )
     : [];
 
   return { kanji, readings, words, questions, progress };
