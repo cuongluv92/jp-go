@@ -32,6 +32,16 @@ function PencilIcon() {
   );
 }
 
+function PlanIcon() {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" className="h-5 w-5">
+      <rect x="4" y="4.5" width="16" height="15" rx="2" strokeLinecap="round" strokeLinejoin="round" />
+      <path strokeLinecap="round" strokeLinejoin="round" d="M8 3.5v3M16 3.5v3M4 10h16" />
+      <path strokeLinecap="round" strokeLinejoin="round" d="M8.5 14.5l2 2 4-4" />
+    </svg>
+  );
+}
+
 function ClockIcon() {
   return (
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" className="h-5 w-5">
@@ -49,10 +59,11 @@ function ChartIcon() {
   );
 }
 
-// Từ vựng không còn ở bottom nav — vào từ thẻ lớn ở Trang chủ, vì đó cũng
-// là nơi quản lý lộ trình học (StudyPlanPanel), tránh trùng lặp điều hướng.
+// "Lộ trình" trỏ vào /vocabulary — trang đó giờ có StudyPlanPanel (quản lý/
+// cài lộ trình) ở đầu trang, kèm danh sách từ vựng bên dưới.
 const NAV_ITEMS: NavItem[] = [
   { href: "/", label: "Trang chủ", icon: <HomeIcon /> },
+  { href: "/vocabulary", label: "Lộ trình", icon: <PlanIcon /> },
   { href: "/practice", label: "Luyện tập", icon: <PencilIcon /> },
   { href: "/review", label: "Ôn tập", icon: <ClockIcon /> },
   { href: "/progress", label: "Tiến độ", icon: <ChartIcon /> },
@@ -63,7 +74,7 @@ export function BottomNav() {
 
   return (
     <nav className="safe-bottom fixed inset-x-0 bottom-0 z-20 border-t border-border bg-surface/90 shadow-[0_-4px_16px_-8px_rgba(15,23,42,0.12)] backdrop-blur-lg">
-      <ul className="mx-auto grid w-full max-w-md grid-cols-4 sm:max-w-lg">
+      <ul className="mx-auto grid w-full max-w-md grid-cols-5 sm:max-w-lg">
         {NAV_ITEMS.map((item) => {
           const isActive = item.href === "/" ? pathname === "/" : pathname.startsWith(item.href);
           return (
