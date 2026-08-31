@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 import { ReviewFlashcardExercise } from "@/components/review-flashcard-exercise";
 import { ReviewMatchingExercise } from "@/components/review-matching-exercise";
 import { ReviewTypingExercise } from "@/components/review-typing-exercise";
+import { getCached, setCached } from "@/lib/data/client-cache";
 import { completeReviewSchedules, getDueReviewSchedules, type ReviewScheduleRow } from "@/lib/data/review-service";
 import { useVocabulary } from "@/lib/data/vocabulary-context";
 import { createClient } from "@/lib/supabase/client";
@@ -12,12 +13,20 @@ import type { VocabWord } from "@/lib/types";
 
 type ExerciseMode = "flashcard" | "typing" | "matching";
 
+const REVIEW_CACHE_KEY = "review-page-data";
+
+interface ReviewCachedData {
+  userId: string | null;
+  schedules: ReviewScheduleRow[];
+}
+
 export default function ReviewPage() {
   const { words } = useVocabulary();
-  const [userId, setUserId] = useState<string | null>(null);
-  const [schedules, setSchedules] = useState<ReviewScheduleRow[]>([]);
-  const [selected, setSelected] = useState<Set<string>>(new Set());
-  const [loading, setLoading] = useState(true);
+  const cached = getCached<ReviewCachedData>(REVIEW_CACHE_KEY);
+  const [userId, setUserId] = useState<string | null>(cached?.userId ?? null);
+  const [schedules, setSchedules] = useState<ReviewScheduleRow[]>(cached?.schedules ?? []);
+  const [selected, setSelected] = useState<Set<string>>(new Set((cached?.schedules ?? []).map((s) => s.id)));
+  const [loading, setLoading] = useState(!cached);
   const [mode, setMode] = useState<ExerciseMode | null>(null);
 
   useEffect(() => {
@@ -29,7 +38,10 @@ export default function ReviewPage() {
         data: { user },
       } = await supabase.auth.getUser();
       if (!user || cancelled) {
-        if (!cancelled) setLoading(false);
+        if (!cancelled) {
+          setLoading(false);
+          setCached<ReviewCachedData>(REVIEW_CACHE_KEY, { userId: null, schedules: [] });
+        }
         return;
       }
       setUserId(user.id);
@@ -38,6 +50,7 @@ export default function ReviewPage() {
       setSchedules(due);
       setSelected(new Set(due.map((s) => s.id)));
       setLoading(false);
+      setCached<ReviewCachedData>(REVIEW_CACHE_KEY, { userId: user.id, schedules: due });
     }
 
     void load();
@@ -80,6 +93,7 @@ export default function ReviewPage() {
     setSchedules(due);
     setSelected(new Set(due.map((s) => s.id)));
     setLoading(false);
+    setCached<ReviewCachedData>(REVIEW_CACHE_KEY, { userId, schedules: due });
   }
 
   if (mode && sessionWords.length > 0) {

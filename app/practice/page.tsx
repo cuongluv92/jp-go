@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 
 import { QuizRunner } from "@/components/quiz-runner";
+import { getCached, setCached } from "@/lib/data/client-cache";
 import {
   createCustomTest,
   deleteCustomTest,
@@ -19,9 +20,12 @@ import { JLPT_LEVELS, type JlptLevel } from "@/lib/types";
 
 type Tab = "auto" | "custom";
 
+const PRACTICE_USER_CACHE_KEY = "practice-user-id";
+const CUSTOM_TESTS_CACHE_PREFIX = "practice-custom-tests-";
+
 export default function PracticePage() {
   const [tab, setTab] = useState<Tab>("auto");
-  const [userId, setUserId] = useState<string | null>(null);
+  const [userId, setUserId] = useState<string | null>(getCached<string | null>(PRACTICE_USER_CACHE_KEY) ?? null);
 
   useEffect(() => {
     let cancelled = false;
@@ -30,7 +34,10 @@ export default function PracticePage() {
       const {
         data: { user },
       } = await supabase.auth.getUser();
-      if (!cancelled) setUserId(user?.id ?? null);
+      if (!cancelled) {
+        setUserId(user?.id ?? null);
+        setCached<string | null>(PRACTICE_USER_CACHE_KEY, user?.id ?? null);
+      }
     }
     void loadUser();
     return () => {
@@ -217,7 +224,9 @@ function emptyQuestion(): CustomTestQuestion {
 }
 
 function CustomTestsTab({ userId }: { userId: string | null }) {
-  const [tests, setTests] = useState<CustomTestRow[]>([]);
+  const [tests, setTests] = useState<CustomTestRow[]>(
+    userId ? (getCached<CustomTestRow[]>(CUSTOM_TESTS_CACHE_PREFIX + userId) ?? []) : [],
+  );
   const [creating, setCreating] = useState(false);
   const [title, setTitle] = useState("");
   const [level, setLevel] = useState<JlptLevel | "">("");
@@ -228,7 +237,10 @@ function CustomTestsTab({ userId }: { userId: string | null }) {
   useEffect(() => {
     if (!userId) return;
     const supabase = createClient();
-    void listCustomTests(supabase, userId).then(setTests);
+    void listCustomTests(supabase, userId).then((rows) => {
+      setTests(rows);
+      setCached<CustomTestRow[]>(CUSTOM_TESTS_CACHE_PREFIX + userId, rows);
+    });
   }, [userId]);
 
   function updateQuestion(index: number, patch: Partial<CustomTestQuestion>) {
@@ -247,7 +259,11 @@ function CustomTestsTab({ userId }: { userId: string | null }) {
     if (validQuestions.length === 0) return;
     const supabase = createClient();
     const created = await createCustomTest(supabase, userId, title.trim(), level || null, validQuestions);
-    setTests((prev) => [created, ...prev]);
+    setTests((prev) => {
+      const next = [created, ...prev];
+      setCached<CustomTestRow[]>(CUSTOM_TESTS_CACHE_PREFIX + userId, next);
+      return next;
+    });
     setCreating(false);
     setTitle("");
     setLevel("");
@@ -257,7 +273,11 @@ function CustomTestsTab({ userId }: { userId: string | null }) {
   async function handleDelete(id: string) {
     const supabase = createClient();
     await deleteCustomTest(supabase, id);
-    setTests((prev) => prev.filter((t) => t.id !== id));
+    setTests((prev) => {
+      const next = prev.filter((t) => t.id !== id);
+      if (userId) setCached<CustomTestRow[]>(CUSTOM_TESTS_CACHE_PREFIX + userId, next);
+      return next;
+    });
   }
 
   async function handleFinishRun(correctCount: number) {

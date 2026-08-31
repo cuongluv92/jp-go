@@ -4,11 +4,21 @@ import Link from "next/link";
 import { useSearchParams } from "next/navigation";
 import { Suspense, useEffect, useState } from "react";
 
+import { getCached, setCached } from "@/lib/data/client-cache";
 import { downloadBlob } from "@/lib/data/excel-export";
 import { buildKanjiWorkbook, fetchAllKanjiData } from "@/lib/data/kanji-excel-export";
 import { getKanjiLevelCounts, listKanjiByLevel, type KanjiRow } from "@/lib/data/kanji-service";
 import { createClient } from "@/lib/supabase/client";
 import { JLPT_LEVELS, type JlptLevel } from "@/lib/types";
+
+interface KanjiListCachedData {
+  kanjiList: KanjiRow[];
+  countsByLevel: Record<JlptLevel, number>;
+}
+
+function kanjiListCacheKey(level: JlptLevel): string {
+  return `kanji-list-${level}`;
+}
 
 export default function KanjiListPage() {
   return (
@@ -23,28 +33,43 @@ function KanjiListContent() {
   const initialLevel = searchParams.get("level");
   const isJlptLevel = (v: string | null): v is JlptLevel => !!v && (JLPT_LEVELS as readonly string[]).includes(v);
 
-  const [level, setLevel] = useState<JlptLevel>(isJlptLevel(initialLevel) ? initialLevel : "N5");
-  const [kanjiList, setKanjiList] = useState<KanjiRow[]>([]);
-  const [countsByLevel, setCountsByLevel] = useState<Record<JlptLevel, number> | null>(null);
-  const [loading, setLoading] = useState(true);
+  const initialLevelValue: JlptLevel = isJlptLevel(initialLevel) ? initialLevel : "N5";
+  const [level, setLevel] = useState<JlptLevel>(initialLevelValue);
+  const initialCached = getCached<KanjiListCachedData>(kanjiListCacheKey(initialLevelValue));
+  const [kanjiList, setKanjiList] = useState<KanjiRow[]>(initialCached?.kanjiList ?? []);
+  const [countsByLevel, setCountsByLevel] = useState<Record<JlptLevel, number> | null>(initialCached?.countsByLevel ?? null);
+  const [loading, setLoading] = useState(!initialCached);
   const [exporting, setExporting] = useState(false);
 
   useEffect(() => {
     let cancelled = false;
     async function load() {
-      setLoading(true);
       const supabase = createClient();
       const [list, counts] = await Promise.all([listKanjiByLevel(supabase, level), getKanjiLevelCounts(supabase)]);
       if (cancelled) return;
       setKanjiList(list);
       setCountsByLevel(counts);
       setLoading(false);
+      setCached<KanjiListCachedData>(kanjiListCacheKey(level), { kanjiList: list, countsByLevel: counts });
     }
     void load();
     return () => {
       cancelled = true;
     };
   }, [level]);
+
+  function selectLevel(newLevel: JlptLevel) {
+    const cached = getCached<KanjiListCachedData>(kanjiListCacheKey(newLevel));
+    if (cached) {
+      setKanjiList(cached.kanjiList);
+      setCountsByLevel(cached.countsByLevel);
+      setLoading(false);
+    } else {
+      setKanjiList([]);
+      setLoading(true);
+    }
+    setLevel(newLevel);
+  }
 
   async function handleExport() {
     setExporting(true);
@@ -83,7 +108,7 @@ function KanjiListContent() {
               key={lv}
               type="button"
               disabled={count === 0}
-              onClick={() => setLevel(lv)}
+              onClick={() => selectLevel(lv)}
               className={`shrink-0 rounded-full border px-3 py-1.5 text-xs font-semibold transition ${
                 level === lv
                   ? "border-accent bg-accent text-accent-foreground"

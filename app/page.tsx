@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 
 import { LevelAccordion } from "@/components/level-accordion";
 import { StatCard } from "@/components/stat-card";
+import { getCached, setCached } from "@/lib/data/client-cache";
 import { getKanjiLevelCounts } from "@/lib/data/kanji-service";
 import {
   completeStudyDay,
@@ -19,14 +20,24 @@ import type { JlptLevel } from "@/lib/types";
 
 const ALL_LEVELS: JlptLevel[] = ["N5", "N4", "N3", "N2", "N1"];
 
+const HOME_CACHE_KEY = "home-page-data";
+
+interface HomeCachedData {
+  userId: string | null;
+  plan: StudyPlanRow | null;
+  days: StudyDayRow[];
+  kanjiCounts: Record<JlptLevel, number> | null;
+}
+
 export default function HomePage() {
   const { words } = useVocabulary();
-  const [userId, setUserId] = useState<string | null>(null);
-  const [plan, setPlan] = useState<StudyPlanRow | null>(null);
-  const [days, setDays] = useState<StudyDayRow[]>([]);
-  const [loading, setLoading] = useState(true);
+  const cached = getCached<HomeCachedData>(HOME_CACHE_KEY);
+  const [userId, setUserId] = useState<string | null>(cached?.userId ?? null);
+  const [plan, setPlan] = useState<StudyPlanRow | null>(cached?.plan ?? null);
+  const [days, setDays] = useState<StudyDayRow[]>(cached?.days ?? []);
+  const [loading, setLoading] = useState(!cached);
   const [completing, setCompleting] = useState(false);
-  const [kanjiCounts, setKanjiCounts] = useState<Record<JlptLevel, number> | null>(null);
+  const [kanjiCounts, setKanjiCounts] = useState<Record<JlptLevel, number> | null>(cached?.kanjiCounts ?? null);
 
   useEffect(() => {
     let cancelled = false;
@@ -40,15 +51,21 @@ export default function HomePage() {
         data: { user },
       } = await supabase.auth.getUser();
       if (!user || cancelled) {
-        if (!cancelled) setLoading(false);
+        if (!cancelled) {
+          setLoading(false);
+          setCached<HomeCachedData>(HOME_CACHE_KEY, { userId: null, plan: null, days: [], kanjiCounts: counts });
+        }
         return;
       }
       setUserId(user.id);
       const result = await getActiveStudyPlan(supabase, user.id);
       if (cancelled) return;
-      setPlan(result?.plan ?? null);
-      setDays(result?.days ?? []);
+      const nextPlan = result?.plan ?? null;
+      const nextDays = result?.days ?? [];
+      setPlan(nextPlan);
+      setDays(nextDays);
       setLoading(false);
+      setCached<HomeCachedData>(HOME_CACHE_KEY, { userId: user.id, plan: nextPlan, days: nextDays, kanjiCounts: counts });
     }
 
     void loadPlan();
@@ -70,9 +87,12 @@ export default function HomePage() {
     const supabase = createClient();
     await completeStudyDay(supabase, userId, todayDay);
     const result = await getActiveStudyPlan(supabase, userId);
-    setPlan(result?.plan ?? null);
-    setDays(result?.days ?? []);
+    const nextPlan = result?.plan ?? null;
+    const nextDays = result?.days ?? [];
+    setPlan(nextPlan);
+    setDays(nextDays);
     setCompleting(false);
+    setCached<HomeCachedData>(HOME_CACHE_KEY, { userId, plan: nextPlan, days: nextDays, kanjiCounts });
   }
 
   const countsByLevel = Object.fromEntries(
