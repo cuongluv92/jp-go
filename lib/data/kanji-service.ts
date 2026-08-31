@@ -95,7 +95,7 @@ export interface KanjiDetail extends KanjiRow {
   questions: KanjiQuestionRow[];
 }
 
-/** Số lượng kanji đã có theo từng cấp độ — dùng cho LevelAccordion ở Trang chủ. */
+/** Số lượng kanji đã có theo từng cấp độ — dùng ở Trang chủ và trang danh sách Kanji. */
 export async function getKanjiLevelCounts(supabase: SupabaseClient): Promise<Record<JlptLevel, number>> {
   const counts: Record<JlptLevel, number> = { N5: 0, N4: 0, N3: 0, N2: 0, N1: 0 };
   const { data, error } = await supabase.from("jp_kanji").select("level");

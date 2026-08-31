@@ -4,13 +4,12 @@ import { useRouter } from "next/navigation";
 import { useEffect, useMemo, useState } from "react";
 
 import { createStudyPlan, getActiveStudyPlan, type StudyPlanItems, type StudyScope } from "@/lib/data/study-plan-service";
+import { getKanjiLevelCounts, listKanjiByLevel } from "@/lib/data/kanji-service";
 import { useVocabulary } from "@/lib/data/vocabulary-context";
 import { createClient } from "@/lib/supabase/client";
 import { distributeEvenly } from "@/lib/study-plan";
 import { JLPT_LEVELS, type JlptLevel } from "@/lib/types";
 
-/** Cấp độ nào có sẵn nội dung thật trong app — các cấp khác hiển thị "sắp có". */
-const AVAILABLE_LEVELS: JlptLevel[] = ["N3"];
 const DURATIONS = [1, 2, 3] as const;
 
 type ScopeChoice = "vocab" | "kanji" | "grammar" | "all";
@@ -21,8 +20,6 @@ const SCOPE_LABELS: Record<ScopeChoice, string> = {
   grammar: "Ngữ pháp",
   all: "Tất cả",
 };
-/** Chỉ Từ vựng có nội dung thật — Kanji/Ngữ pháp/Tất cả chưa biên soạn nên khoá. */
-const AVAILABLE_SCOPE_CHOICES: ScopeChoice[] = ["vocab"];
 
 function scopeChoiceToArray(choice: ScopeChoice): StudyScope[] {
   if (choice === "all") return ["vocab", "kanji", "grammar"];
@@ -48,14 +45,19 @@ export default function SettingsPage() {
   const [error, setError] = useState<string | null>(null);
   const [hasActivePlan, setHasActivePlan] = useState(false);
   const [overwriteConfirmed, setOverwriteConfirmed] = useState(false);
+  const [kanjiCountsByLevel, setKanjiCountsByLevel] = useState<Record<JlptLevel, number> | null>(null);
+  const [kanjiIdsForLevel, setKanjiIdsForLevel] = useState<string[]>([]);
 
   useEffect(() => {
     let cancelled = false;
     async function checkActivePlan() {
       const supabase = createClient();
-      const {
-        data: { user },
-      } = await supabase.auth.getUser();
+      const [{ data: { user } }, counts] = await Promise.all([
+        supabase.auth.getUser(),
+        getKanjiLevelCounts(supabase),
+      ]);
+      if (cancelled) return;
+      setKanjiCountsByLevel(counts);
       if (!user) return;
       const active = await getActiveStudyPlan(supabase, user.id);
       if (!cancelled) setHasActivePlan(active !== null);
@@ -66,12 +68,57 @@ export default function SettingsPage() {
     };
   }, []);
 
+  // Kanji id cần fetch riêng theo level đang chọn (nội dung Kanji nằm ở Supabase, không có sẵn trong context như từ vựng).
+  useEffect(() => {
+    let cancelled = false;
+    async function loadKanjiIds() {
+      const supabase = createClient();
+      const rows = await listKanjiByLevel(supabase, level);
+      if (!cancelled) setKanjiIdsForLevel(rows.map((r) => r.id));
+    }
+    void loadKanjiIds();
+    return () => {
+      cancelled = true;
+    };
+  }, [level]);
+
+  /** Cấp độ nào có sẵn nội dung thật (từ vựng HOẶC kanji) — cấp khác hiển thị "sắp có". */
+  const vocabCountByLevel = useMemo(() => {
+    const map = {} as Record<JlptLevel, number>;
+    for (const lv of JLPT_LEVELS) map[lv] = words.filter((w) => w.jlpt === lv && !w.isHidden).length;
+    return map;
+  }, [words]);
+
+  const availableLevels = useMemo(
+    () => JLPT_LEVELS.filter((lv) => vocabCountByLevel[lv] > 0 || (kanjiCountsByLevel?.[lv] ?? 0) > 0),
+    [vocabCountByLevel, kanjiCountsByLevel],
+  );
+
+  /** Phạm vi nào dùng được cho 1 level — chỉ cần SỐ LƯỢNG (đã có sẵn cho mọi level từ lúc mount), không cần fetch đủ id. */
+  function scopeAvailabilityFor(lv: JlptLevel): Record<ScopeChoice, boolean> {
+    const vocab = vocabCountByLevel[lv] > 0;
+    const kanji = (kanjiCountsByLevel?.[lv] ?? 0) > 0;
+    const grammar = false; // Ngữ pháp chưa có nội dung ở bất kỳ cấp nào trong app.
+    return { vocab, kanji, grammar, all: vocab || kanji || grammar };
+  }
+
+  const scopeAvailability = scopeAvailabilityFor(level);
+
+  /** Chọn level mới, đồng thời tự chuyển phạm vi đang chọn nếu nó không còn khả dụng ở level mới. */
+  function selectLevel(newLevel: JlptLevel) {
+    setLevel(newLevel);
+    const availability = scopeAvailabilityFor(newLevel);
+    if (!availability[scopeChoice]) {
+      const fallback = (["vocab", "kanji", "grammar", "all"] as ScopeChoice[]).find((s) => availability[s]);
+      if (fallback) setScopeChoice(fallback);
+    }
+  }
+
   const wordIdsForLevel = useMemo(
     () => words.filter((w) => w.jlpt === level && !w.isHidden).map((w) => w.id),
     [words, level],
   );
-  // Kanji/Ngữ pháp chưa có nội dung ở bất kỳ cấp nào trong app — không giả lập số liệu.
-  const kanjiIdsForLevel: string[] = [];
+  // Ngữ pháp chưa có nội dung ở bất kỳ cấp nào trong app — không giả lập số liệu.
   const grammarIdsForLevel: string[] = [];
 
   const totalDays = duration * 30;
@@ -154,13 +201,13 @@ export default function SettingsPage() {
           <h2 className="mb-2 text-sm font-semibold text-foreground">{STEP_TITLES[1]}</h2>
           <div className="grid grid-cols-5 gap-2">
             {JLPT_LEVELS.map((lv) => {
-              const available = AVAILABLE_LEVELS.includes(lv);
+              const available = availableLevels.includes(lv);
               return (
                 <button
                   key={lv}
                   type="button"
                   disabled={!available}
-                  onClick={() => setLevel(lv)}
+                  onClick={() => selectLevel(lv)}
                   className={`flex flex-col items-center gap-0.5 rounded-xl border px-2 py-2 text-sm font-semibold transition ${
                     level === lv
                       ? "border-accent bg-accent text-accent-foreground"
@@ -190,7 +237,7 @@ export default function SettingsPage() {
           <h2 className="mb-2 text-sm font-semibold text-foreground">{STEP_TITLES[2]}</h2>
           <div className="flex flex-col gap-2">
             {(Object.keys(SCOPE_LABELS) as ScopeChoice[]).map((s) => {
-              const available = AVAILABLE_SCOPE_CHOICES.includes(s);
+              const available = scopeAvailability[s];
               return (
                 <label
                   key={s}
@@ -212,8 +259,8 @@ export default function SettingsPage() {
             })}
           </div>
           <p className="mt-2 text-xs text-muted">
-            Chọn &quot;Tất cả&quot; để mỗi ngày học đồng thời cả Từ vựng, Kanji và Ngữ pháp theo đúng tỉ lệ — sẽ mở khi có
-            đủ nội dung Kanji/Ngữ pháp.
+            Chọn &quot;Tất cả&quot; để mỗi ngày học đồng thời mọi loại nội dung đang có ở cấp {level} theo đúng tỉ lệ (loại
+            nào chưa có nội dung ở cấp này sẽ tự bỏ qua, không bắt buộc phải đủ cả 3 loại).
           </p>
           <div className="mt-4 flex gap-2">
             <button

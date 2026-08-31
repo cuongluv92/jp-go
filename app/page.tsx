@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { useEffect, useState } from "react";
 
-import { LevelAccordion } from "@/components/level-accordion";
+import { SectionTiles } from "@/components/section-tiles";
 import { StatCard } from "@/components/stat-card";
 import { getCached, setCached } from "@/lib/data/client-cache";
 import { getKanjiLevelCounts } from "@/lib/data/kanji-service";
@@ -95,22 +95,19 @@ export default function HomePage() {
     setCached<HomeCachedData>(HOME_CACHE_KEY, { userId, plan: nextPlan, days: nextDays, kanjiCounts });
   }
 
-  const countsByLevel = Object.fromEntries(
-    ALL_LEVELS.map((level) => [
-      level,
-      {
-        vocab: words.filter((w) => w.jlpt === level && !w.isHidden).length,
-        kanji: kanjiCounts?.[level] ?? 0,
-        grammar: 0,
-      },
-    ]),
-  ) as Record<JlptLevel, { vocab: number; kanji: number; grammar: number }>;
+  const totalVocabCount = words.filter((w) => !w.isHidden).length;
+  const totalKanjiCount = kanjiCounts ? ALL_LEVELS.reduce((sum, lv) => sum + (kanjiCounts[lv] ?? 0), 0) : 0;
 
   return (
     <div className="flex flex-col gap-6">
       <section className="bg-gradient-accent -mx-4 rounded-b-3xl px-4 pb-6 pt-2 text-accent-foreground shadow-lg shadow-accent/20 sm:mx-0 sm:rounded-3xl sm:px-6 sm:pt-6">
         <h1 className="text-xl font-bold">Xin chào 👋</h1>
         <p className="mt-1 text-sm text-white/80">Hôm nay bạn đã sẵn sàng học tiếng Nhật chưa?</p>
+      </section>
+
+      <section>
+        <h2 className="mb-2 text-sm font-semibold text-foreground">Khám phá nội dung</h2>
+        <SectionTiles vocabCount={totalVocabCount} kanjiCount={totalKanjiCount} grammarCount={0} />
       </section>
 
       <section className="grid grid-cols-2 gap-3">
@@ -193,11 +190,6 @@ export default function HomePage() {
         >
           Ôn tập
         </Link>
-      </section>
-
-      <section>
-        <h2 className="mb-2 text-sm font-semibold text-foreground">Nội dung theo cấp độ</h2>
-        <LevelAccordion countsByLevel={countsByLevel} />
       </section>
     </div>
   );
