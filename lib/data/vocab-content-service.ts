@@ -9,13 +9,15 @@ export type VocabReviewStatus = "ok" | "needs_review";
 export interface VocabRow {
   id: string;
   level: JlptLevel;
-  lesson_no: number;
+  lesson_no: number | null;
   entry_type: VocabEntryType;
   word_jp: string;
   reading_furigana: string;
   meaning_vi: string;
   usage_note_vi: string | null;
   group_key: string | null;
+  /** Chỉ N2 trở đi — xem migration 0057. NULL với từ vựng N5 (dùng lesson_no thay). */
+  word_class: string | null;
   source_page: number | null;
   source_text: string | null;
   source_type: VocabContentSourceType;
@@ -47,8 +49,10 @@ export interface VocabQuestionRow {
   choice_3: string | null;
   choice_4: string | null;
   correct_answer: string;
-  source_type: "generated";
+  source_type: VocabContentSourceType;
   review_status: VocabReviewStatus;
+  /** Chỉ khi source_type='pdf' (16 câu hỏi thật trích từ PDF N2) — trang PDF chứa câu hỏi. */
+  source_page: number | null;
 }
 
 const DEFAULT_PROGRESS: LearningProgress = {
@@ -98,7 +102,8 @@ export function dbVocabRowToWord(row: VocabRow, partOfSpeechOverride?: PartOfSpe
     jlpt: row.level,
     needsReview: row.review_status === "needs_review",
     progress: { ...DEFAULT_PROGRESS },
-    lessonNo: row.lesson_no,
+    lessonNo: row.lesson_no ?? undefined,
+    wordClass: row.word_class,
     entryType: row.entry_type,
     groupKey: row.group_key,
     sourcePage: row.source_page,
@@ -137,7 +142,12 @@ export function vocabExampleRowToExample(row: VocabExampleRow, exampleNo: Exampl
 /** Toàn bộ từ vựng nạp từ DB (mọi cấp độ đã có), kèm câu ví dụ — dùng để merge vào VocabularyContext bên cạnh N3 JSON tĩnh. Public content, không cần đăng nhập. */
 export async function listAllDbVocab(supabase: SupabaseClient): Promise<{ words: VocabWord[]; examples: VocabExample[] }> {
   const [{ data: vocabRows, error: vocabError }, { data: exampleRows, error: exampleError }] = await Promise.all([
-    supabase.from("jp_vocab").select("*").order("level", { ascending: true }).order("lesson_no", { ascending: true }),
+    supabase
+      .from("jp_vocab")
+      .select("*")
+      .order("level", { ascending: true })
+      .order("lesson_no", { ascending: true, nullsFirst: false })
+      .order("word_class", { ascending: true, nullsFirst: false }),
     supabase.from("jp_vocab_examples").select("*"),
   ]);
   if (vocabError) throw vocabError;

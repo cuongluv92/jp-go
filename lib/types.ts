@@ -115,8 +115,10 @@ export interface VocabWord {
   // service.ts) — từ N3 JSON tĩnh luôn để trống các trường này. Additive,
   // không ảnh hưởng dữ liệu N3 hiện có.
   // -------------------------------------------------------------------------
-  /** Bài học gốc theo giáo trình (課 mấy trong PDF nguồn). */
+  /** Bài học gốc theo giáo trình (課 mấy trong PDF nguồn) — chỉ N5, không có ở N2 trở đi (xem wordClass). */
   lessonNo?: number;
+  /** Từ loại (chỉ N2 trở đi — PDF N2 nhóm từ theo từ loại thay vì theo bài học): 動詞/動名詞/名詞/い形容詞/な形容詞/副詞/接続詞/複合動詞/カタカナ. */
+  wordClass?: string | null;
   /** "phrase" = cụm/mẫu câu giao tiếp cố định (vd どうぞよろしくお願いします), khác với từ đơn thông thường. */
   entryType?: "word" | "phrase";
   /** Khoá nhóm các từ dễ nhầm/liên quan (vd これ/それ/あれ) — dùng để tạo bài tập phân biệt. */

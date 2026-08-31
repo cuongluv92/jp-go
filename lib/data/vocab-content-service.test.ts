@@ -13,6 +13,7 @@ function makeRow(overrides: Partial<VocabRow> = {}): VocabRow {
     meaning_vi: "cái này, đây",
     usage_note_vi: null,
     group_key: null,
+    word_class: null,
     source_page: 14,
     source_text: "これ",
     source_type: "pdf",
@@ -55,6 +56,12 @@ describe("dbVocabRowToWord", () => {
   it("entry_type phrase → partOfSpeech mặc định expression, word → noun", () => {
     expect(dbVocabRowToWord(makeRow({ entry_type: "phrase" })).partOfSpeech).toBe("expression");
     expect(dbVocabRowToWord(makeRow({ entry_type: "word" })).partOfSpeech).toBe("noun");
+  });
+
+  it("N2 trở đi: lesson_no null → lessonNo undefined, word_class được map thẳng qua wordClass", () => {
+    const word = dbVocabRowToWord(makeRow({ level: "N2", lesson_no: null, word_class: "動詞" }));
+    expect(word.lessonNo).toBeUndefined();
+    expect(word.wordClass).toBe("動詞");
   });
 
   it("progress mặc định là chưa học, không lẫn tiến độ giữa các từ", () => {
