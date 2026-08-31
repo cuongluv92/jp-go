@@ -1,8 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { Noto_Sans_JP, Noto_Sans } from "next/font/google";
 
-import { BottomNav } from "@/components/bottom-nav";
-import { TopHeader } from "@/components/top-header";
+import { AppChrome } from "@/components/app-chrome";
 import { VocabularyProvider } from "@/lib/data/vocabulary-context";
 
 import "./globals.css";
@@ -49,9 +48,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="vi" className={`${notoSans.variable} ${notoSansJp.variable} h-full`}>
       <body className="flex h-full min-h-dvh flex-col bg-background font-sans text-foreground antialiased">
         <VocabularyProvider>
-          <TopHeader />
-          <main className="mx-auto w-full max-w-md flex-1 px-4 pb-24 pt-4 sm:max-w-lg">{children}</main>
-          <BottomNav />
+          <AppChrome>{children}</AppChrome>
         </VocabularyProvider>
       </body>
     </html>
