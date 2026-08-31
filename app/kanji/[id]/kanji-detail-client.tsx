@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useEffect, useState } from "react";
 
+import { getCached, setCached } from "@/lib/data/client-cache";
 import {
   gradeKanjiReview,
   getKanjiDetail,
@@ -11,6 +12,15 @@ import {
   type KanjiWordRow,
 } from "@/lib/data/kanji-service";
 import { createClient } from "@/lib/supabase/client";
+
+interface KanjiDetailCachedData {
+  detail: KanjiDetail | null;
+  userId: string | null;
+}
+
+function kanjiDetailCacheKey(id: string): string {
+  return `kanji-detail-${id}`;
+}
 
 import { KanjiQuizRunner } from "./kanji-quiz-runner";
 
@@ -50,9 +60,10 @@ function ReadingBlock({ label, readings, words }: { label: string; readings: Kan
 }
 
 export function KanjiDetailClient({ id }: { id: string }) {
-  const [detail, setDetail] = useState<KanjiDetail | null>(null);
-  const [userId, setUserId] = useState<string | null>(null);
-  const [loading, setLoading] = useState(true);
+  const cached = getCached<KanjiDetailCachedData>(kanjiDetailCacheKey(id));
+  const [detail, setDetail] = useState<KanjiDetail | null>(cached?.detail ?? null);
+  const [userId, setUserId] = useState<string | null>(cached?.userId ?? null);
+  const [loading, setLoading] = useState(!cached);
   const [showAllWords, setShowAllWords] = useState(false);
   const [quizStarted, setQuizStarted] = useState(false);
   const [quizResult, setQuizResult] = useState<{ correct: number; total: number } | null>(null);
@@ -69,6 +80,7 @@ export function KanjiDetailClient({ id }: { id: string }) {
       setUserId(user?.id ?? null);
       setDetail(data);
       setLoading(false);
+      setCached<KanjiDetailCachedData>(kanjiDetailCacheKey(id), { detail: data, userId: user?.id ?? null });
     }
     void load();
     return () => {
