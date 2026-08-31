@@ -7,7 +7,8 @@ import { LevelChips } from "@/components/level-chips";
 import { SectionTiles } from "@/components/section-tiles";
 import { StatCard } from "@/components/stat-card";
 import { getCached, setCached } from "@/lib/data/client-cache";
-import { getKanjiLevelCounts } from "@/lib/data/kanji-service";
+import { getDueKanjiForReview, getKanjiLevelCounts } from "@/lib/data/kanji-service";
+import { getDueReviewSchedules } from "@/lib/data/review-service";
 import { getStudyPlanDays, listActiveStudyPlans, type StudyDayRow, type StudyPlanRow } from "@/lib/data/study-plan-service";
 import { useVocabulary } from "@/lib/data/vocabulary-context";
 import { createClient } from "@/lib/supabase/client";
@@ -20,6 +21,7 @@ interface HomeCachedData {
   plan: StudyPlanRow | null;
   days: StudyDayRow[];
   kanjiCounts: Record<JlptLevel, number> | null;
+  dueCount: number;
 }
 
 /**
@@ -27,7 +29,9 @@ interface HomeCachedData {
  * Ngữ pháp, thống kê tiến độ) — việc quản lý lộ trình thật sự ("Hôm nay học
  * gì", đánh dấu hoàn thành, đổi tên/dừng lộ trình...) nằm ở trang riêng
  * `/plan`. Thẻ "Tiến độ lộ trình" ở đây gộp TẤT CẢ lộ trình đang chạy song
- * song (nếu có nhiều), không chỉ 1 lộ trình.
+ * song (nếu có nhiều), không chỉ 1 lộ trình. Khi có mục đến hạn ôn tập,
+ * banner ở đầu trang nổi bật lên ngay để Trang chủ thực sự là nơi mở ra
+ * mọi thứ cần làm hôm nay, không chỉ là màn hình tĩnh.
  */
 export default function HomePage() {
   const { words } = useVocabulary();
@@ -35,6 +39,7 @@ export default function HomePage() {
   const [plan, setPlan] = useState<StudyPlanRow | null>(cached?.plan ?? null);
   const [days, setDays] = useState<StudyDayRow[]>(cached?.days ?? []);
   const [kanjiCounts, setKanjiCounts] = useState<Record<JlptLevel, number> | null>(cached?.kanjiCounts ?? null);
+  const [dueCount, setDueCount] = useState(cached?.dueCount ?? 0);
   const [selectedLevel, setSelectedLevel] = useState<JlptLevel>("N5");
 
   useEffect(() => {
@@ -49,17 +54,23 @@ export default function HomePage() {
         data: { user },
       } = await supabase.auth.getUser();
       if (!user || cancelled) {
-        if (!cancelled) setCached<HomeCachedData>(HOME_CACHE_KEY, { plan: null, days: [], kanjiCounts: counts });
+        if (!cancelled) setCached<HomeCachedData>(HOME_CACHE_KEY, { plan: null, days: [], kanjiCounts: counts, dueCount: 0 });
         return;
       }
-      const plans = await listActiveStudyPlans(supabase, user.id);
+      const [plans, dueSchedules, dueKanji] = await Promise.all([
+        listActiveStudyPlans(supabase, user.id),
+        getDueReviewSchedules(supabase, user.id),
+        getDueKanjiForReview(supabase, user.id),
+      ]);
       if (cancelled) return;
       const nextPlan = plans[0] ?? null;
       const allDays = (await Promise.all(plans.map((p) => getStudyPlanDays(supabase, p.id)))).flat();
       if (cancelled) return;
+      const nextDueCount = dueSchedules.length + dueKanji.length;
       setPlan(nextPlan);
       setDays(allDays);
-      setCached<HomeCachedData>(HOME_CACHE_KEY, { plan: nextPlan, days: allDays, kanjiCounts: counts });
+      setDueCount(nextDueCount);
+      setCached<HomeCachedData>(HOME_CACHE_KEY, { plan: nextPlan, days: allDays, kanjiCounts: counts, dueCount: nextDueCount });
     }
 
     void load();
@@ -80,6 +91,15 @@ export default function HomePage() {
       <section className="bg-gradient-accent -mx-4 rounded-b-3xl px-4 pb-6 pt-2 text-accent-foreground shadow-lg shadow-accent/20 sm:mx-0 sm:rounded-3xl sm:px-6 sm:pt-6">
         <h1 className="text-xl font-bold">Xin chào 👋</h1>
         <p className="mt-1 text-sm text-white/80">Hôm nay bạn đã sẵn sàng học tiếng Nhật chưa?</p>
+        {dueCount > 0 && (
+          <Link
+            href="/review"
+            className="mt-3 flex items-center justify-between gap-2 rounded-xl bg-white/15 px-3.5 py-2.5 text-sm font-semibold transition active:scale-[0.98]"
+          >
+            <span>🔔 {dueCount} mục đang đến hạn ôn tập</span>
+            <span className="text-xs">Ôn ngay →</span>
+          </Link>
+        )}
       </section>
 
       <section className="flex flex-col gap-3">
@@ -98,6 +118,18 @@ export default function HomePage() {
 
       <section className="grid grid-cols-2 gap-3">
         <Link
+          href="/plan"
+          className="flex items-center justify-center rounded-2xl border border-accent px-4 py-3 text-center text-sm font-semibold text-accent transition active:scale-[0.98]"
+        >
+          Lộ trình học
+        </Link>
+        <Link
+          href="/practice"
+          className="flex items-center justify-center rounded-2xl border border-accent px-4 py-3 text-center text-sm font-semibold text-accent transition active:scale-[0.98]"
+        >
+          Luyện tập
+        </Link>
+        <Link
           href="/flashcards"
           className="flex items-center justify-center rounded-2xl border border-accent px-4 py-3 text-center text-sm font-semibold text-accent transition active:scale-[0.98]"
         >
@@ -105,9 +137,14 @@ export default function HomePage() {
         </Link>
         <Link
           href="/review"
-          className="flex items-center justify-center rounded-2xl border border-accent px-4 py-3 text-center text-sm font-semibold text-accent transition active:scale-[0.98]"
+          className="relative flex items-center justify-center rounded-2xl border border-accent px-4 py-3 text-center text-sm font-semibold text-accent transition active:scale-[0.98]"
         >
           Ôn tập
+          {dueCount > 0 && (
+            <span className="absolute -top-1.5 -right-1.5 flex h-5 min-w-5 items-center justify-center rounded-full bg-accent px-1 text-[10px] font-bold text-accent-foreground">
+              {dueCount}
+            </span>
+          )}
         </Link>
       </section>
     </div>

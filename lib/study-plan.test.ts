@@ -1,6 +1,13 @@
 import { describe, expect, it } from "vitest";
 
-import { buildMultiTypeStudyDays, buildStudyDays, computeStreak, distributeEvenly, monthsToDays } from "@/lib/study-plan";
+import {
+  buildMultiTypeStudyDays,
+  buildStudyDays,
+  computePlanPace,
+  computeStreak,
+  distributeEvenly,
+  monthsToDays,
+} from "@/lib/study-plan";
 
 describe("distributeEvenly", () => {
   it("chia đều khi total chia hết cho days", () => {
@@ -102,5 +109,36 @@ describe("computeStreak", () => {
   it("nghỉ từ 2 ngày trước trở lên thì streak = 0", () => {
     const completed = ["2026-01-07T08:00:00Z"];
     expect(computeStreak(completed, now)).toBe(0);
+  });
+});
+
+describe("computePlanPace", () => {
+  const startedAt = "2026-01-01T00:00:00Z";
+
+  it("đúng tiến độ khi số ngày đã hoàn thành = số ngày đã trôi qua (trừ hôm nay)", () => {
+    const now = new Date("2026-01-06T12:00:00Z").getTime(); // ngày thứ 6 kể từ startedAt → expected = 5
+    const pace = computePlanPace(startedAt, 30, 5, now);
+    expect(pace.daysElapsed).toBe(6);
+    expect(pace.expectedCompletedByNow).toBe(5);
+    expect(pace.paceDiff).toBe(0);
+  });
+
+  it("chậm tiến độ khi hoàn thành ít hơn kỳ vọng", () => {
+    const now = new Date("2026-01-11T12:00:00Z").getTime(); // expected = 10
+    const pace = computePlanPace(startedAt, 30, 4, now);
+    expect(pace.paceDiff).toBe(-6);
+  });
+
+  it("vượt tiến độ khi hoàn thành nhiều hơn kỳ vọng", () => {
+    const now = new Date("2026-01-03T12:00:00Z").getTime(); // expected = 2
+    const pace = computePlanPace(startedAt, 30, 5, now);
+    expect(pace.paceDiff).toBe(3);
+  });
+
+  it("kỳ vọng không vượt quá total_days của lộ trình", () => {
+    const now = new Date("2026-06-01T12:00:00Z").getTime(); // đã qua rất lâu so với lộ trình 30 ngày
+    const pace = computePlanPace(startedAt, 30, 30, now);
+    expect(pace.expectedCompletedByNow).toBe(30);
+    expect(pace.paceDiff).toBe(0);
   });
 });

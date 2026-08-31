@@ -63,6 +63,24 @@ export function monthsToDays(months: DurationMonths): number {
   return months * 30;
 }
 
+export interface PlanPace {
+  daysElapsed: number;
+  expectedCompletedByNow: number;
+  paceDiff: number;
+}
+
+/**
+ * So ngày thực tế đã trôi qua kể từ `startedAt` với số ngày ĐÃ HOÀN THÀNH,
+ * để biết 1 lộ trình đang chậm/đúng/vượt tiến độ. `paceDiff` dương = vượt
+ * tiến độ, âm = chậm tiến độ. Hàm thuần dùng chung ở cả trang /plan lẫn
+ * trang Tiến độ, tránh lệch công thức giữa 2 nơi.
+ */
+export function computePlanPace(startedAt: string, totalDays: number, completedCount: number, now: number = Date.now()): PlanPace {
+  const daysElapsed = Math.floor((now - new Date(startedAt).getTime()) / 86400000) + 1;
+  const expectedCompletedByNow = Math.min(Math.max(daysElapsed - 1, 0), totalDays);
+  return { daysElapsed, expectedCompletedByNow, paceDiff: completedCount - expectedCompletedByNow };
+}
+
 function toDateKey(date: Date): string {
   return date.toISOString().slice(0, 10);
 }

@@ -7,6 +7,7 @@ import { KanjiReviewSession } from "@/components/kanji-review-session";
 import { ReviewFlashcardExercise } from "@/components/review-flashcard-exercise";
 import { ReviewMatchingExercise } from "@/components/review-matching-exercise";
 import { ReviewTypingExercise } from "@/components/review-typing-exercise";
+import { SegmentedTabs } from "@/components/segmented-tabs";
 import { getCached, setCached } from "@/lib/data/client-cache";
 import { getDueKanjiForReview, type DueKanjiRow } from "@/lib/data/kanji-service";
 import { completeReviewSchedules, getDueReviewSchedules, type ReviewScheduleRow } from "@/lib/data/review-service";
@@ -184,22 +185,14 @@ export default function ReviewPage() {
         </p>
       </div>
 
-      <div className="grid grid-cols-2 gap-2 rounded-xl border border-border bg-surface p-1">
-        <button
-          type="button"
-          onClick={() => setTab("due")}
-          className={`rounded-lg py-2 text-sm font-semibold transition ${tab === "due" ? "bg-accent text-accent-foreground" : "text-muted"}`}
-        >
-          Đến hạn
-        </button>
-        <button
-          type="button"
-          onClick={() => setTab("custom")}
-          className={`rounded-lg py-2 text-sm font-semibold transition ${tab === "custom" ? "bg-accent text-accent-foreground" : "text-muted"}`}
-        >
-          Tự chọn ôn tập
-        </button>
-      </div>
+      <SegmentedTabs
+        value={tab}
+        onChange={setTab}
+        options={[
+          { value: "due", label: "Đến hạn" },
+          { value: "custom", label: "Tự chọn ôn tập" },
+        ]}
+      />
 
       {tab === "due" ? (
         loading ? (
@@ -220,17 +213,23 @@ export default function ReviewPage() {
                   </button>
                 </div>
                 <ul className="flex flex-col gap-2">
-                  {schedules.map((s) => (
-                    <li key={s.id}>
-                      <label className="flex items-center gap-3 rounded-xl border border-border bg-surface px-4 py-3">
-                        <input type="checkbox" checked={selected.has(s.id)} onChange={() => toggleSelected(s.id)} />
-                        <span className="flex-1 text-sm">
-                          Ngày {s.study_day?.day_number ?? "?"} · ôn lại sau {s.stage} ngày
-                        </span>
-                        <span className="text-xs text-muted">{s.study_day?.word_ids.length ?? 0} từ</span>
-                      </label>
-                    </li>
-                  ))}
+                  {schedules.map((s) => {
+                    const planLabel = s.study_day?.plan
+                      ? (s.study_day.plan.name?.trim() || `Lộ trình ${s.study_day.plan.jlpt_level}`)
+                      : null;
+                    return (
+                      <li key={s.id}>
+                        <label className="flex items-center gap-3 rounded-xl border border-border bg-surface px-4 py-3 shadow-sm">
+                          <input type="checkbox" checked={selected.has(s.id)} onChange={() => toggleSelected(s.id)} />
+                          <span className="flex-1 text-sm">
+                            {planLabel && <span className="mr-1.5 rounded-md bg-accent-soft px-1.5 py-0.5 text-[10px] font-bold text-accent">{planLabel}</span>}
+                            Ngày {s.study_day?.day_number ?? "?"} · ôn lại sau {s.stage} ngày
+                          </span>
+                          <span className="text-xs text-muted">{s.study_day?.word_ids.length ?? 0} từ</span>
+                        </label>
+                      </li>
+                    );
+                  })}
                 </ul>
                 <div className="mt-3 grid grid-cols-1 gap-2">
                   <button
