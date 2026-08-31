@@ -11,7 +11,9 @@ import {
 } from "@/lib/data/excel-import";
 import { buildVocabularyWorkbook, downloadBlob } from "@/lib/data/excel-export";
 import { sampleImportExampleRows, sampleImportRows } from "@/lib/data/sample-import-rows";
+import { listAllVocabQuestions } from "@/lib/data/vocab-content-service";
 import { useVocabulary } from "@/lib/data/vocabulary-context";
+import { createClient } from "@/lib/supabase/client";
 import {
   JLPT_LEVELS,
   PART_OF_SPEECH_LABELS,
@@ -253,7 +255,9 @@ function ExportSection() {
   async function handleExport() {
     setIsExporting(true);
     try {
-      const blob = await buildVocabularyWorkbook(words, examples);
+      const supabase = createClient();
+      const vocabQuestions = await listAllVocabQuestions(supabase);
+      const blob = await buildVocabularyWorkbook(words, examples, vocabQuestions);
       downloadBlob(blob, `jp-go-vocabulary-${new Date().toISOString().slice(0, 10)}.xlsx`);
     } finally {
       setIsExporting(false);
@@ -264,7 +268,7 @@ function ExportSection() {
     <section className="flex flex-col gap-3">
       <h2 className="text-sm font-semibold">2. Xuất Excel</h2>
       <div className="rounded-2xl border border-border bg-surface p-4 text-sm text-muted shadow-sm">
-        <p>Xuất toàn bộ dữ liệu hiện tại thành 1 file .xlsx với 3 sheet: VOCAB, EXAMPLES, CONJUGATIONS.</p>
+        <p>Xuất toàn bộ dữ liệu hiện tại thành 1 file .xlsx với 4 sheet: VOCAB, EXAMPLES, CONJUGATIONS, QUESTIONS.</p>
         <button
           type="button"
           onClick={handleExport}

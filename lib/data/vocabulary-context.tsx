@@ -4,22 +4,25 @@ import { createContext, useCallback, useContext, useEffect, useMemo, useRef, use
 
 import { sampleExamples } from "@/lib/data/sample-examples";
 import { sampleWords } from "@/lib/data/sample-words";
+import { listAllDbVocab } from "@/lib/data/vocab-content-service";
 import { applyFlashcardGrade } from "@/lib/srs";
 import { createClient } from "@/lib/supabase/client";
 import type { FlashcardGrade, LearningProgress, LearningStatus, VocabExample, VocabWord } from "@/lib/types";
 
 /**
- * Nguồn dữ liệu từ vựng cho toàn bộ UI. Nội dung tĩnh (word/kanji/reading/
- * meaning/examples...) vẫn đóng gói dạng JSON trong app (`sample-words.json`)
- * — chưa đưa vào Supabase ở giai đoạn này. Chỉ `progress` (đã học, yêu
- * thích, lịch SRS...) của từng người dùng mới đồng bộ qua bảng
- * `jp_word_progress`, khớp `auth.uid()` hiện tại — đổi thiết bị vẫn thấy
- * cùng tiến độ.
+ * Nguồn dữ liệu từ vựng cho toàn bộ UI — GỘP 2 nguồn:
+ *   1. N3 (1798 từ, biên soạn đợt đầu) vẫn đóng gói dạng JSON tĩnh trong app
+ *      (`sample-words.json`/`sample-examples.json`) như trước, KHÔNG đổi.
+ *   2. N5 trở đi (từ PDF nguồn, xem `vocab-content-service.ts`) nạp trực
+ *      tiếp từ Supabase (`jp_vocab`/`jp_vocab_examples`), gộp thêm vào cùng
+ *      danh sách `words`/`examples` ngay sau khi tải xong.
+ * `progress` (đã học, yêu thích, lịch SRS...) của MỌI từ (bất kể nguồn 1
+ * hay 2) đều đồng bộ qua chung 1 bảng `jp_word_progress`, khớp `auth.uid()`
+ * hiện tại — đổi thiết bị vẫn thấy cùng tiến độ.
  *
  * `addWord`/`updateWord` (dùng khi nhập Excel ở trang Admin) hiện vẫn chỉ
- * sửa nội dung tĩnh trong state React (mất khi tải lại trang) — nội dung từ
- * vựng chưa có bảng Supabase riêng, đây là giới hạn đã biết của giai đoạn
- * hạ tầng này, không phải lỗi.
+ * sửa nội dung N3 trong state React (mất khi tải lại trang) — riêng cho N3,
+ * chưa áp dụng cho từ nạp từ DB, đây là giới hạn đã biết, không phải lỗi.
  */
 interface VocabularyContextValue {
   words: VocabWord[];
@@ -112,6 +115,52 @@ export function VocabularyProvider({ children }: { children: ReactNode }) {
     }
 
     void loadProgress();
+    return () => {
+      cancelled = true;
+    };
+  }, []);
+
+  // Nạp từ vựng nội dung DB (N5 trở đi, xem vocab-content-service.ts) và gộp
+  // vào cùng danh sách với N3 JSON tĩnh, để mọi UI/luyện tập/ôn tập hiện có
+  // hoạt động chung trên 1 danh sách duy nhất. Tự fetch tiến độ riêng cho
+  // đúng các từ vừa nạp (thay vì dựa vào effect loadProgress phía trên) vì
+  // 2 effect chạy song song, không đảm bảo thứ tự — nếu chỉ dựa effect kia,
+  // tiến độ của từ N5 có thể bị bỏ sót khi effect kia chạy xong trước lúc
+  // các từ N5 được thêm vào state.
+  useEffect(() => {
+    let cancelled = false;
+    const supabase = createClient();
+
+    async function loadDbVocab() {
+      const { words: dbWords, examples: dbExamples } = await listAllDbVocab(supabase);
+      if (cancelled || dbWords.length === 0) return;
+
+      const {
+        data: { user },
+      } = await supabase.auth.getUser();
+      let mergedWords = dbWords;
+      if (user && !cancelled) {
+        const dbWordIds = dbWords.map((w) => w.id);
+        const { data: rows } = await supabase
+          .from("jp_word_progress")
+          .select("*")
+          .eq("user_id", user.id)
+          .in("word_id", dbWordIds);
+        if (rows && rows.length > 0) {
+          const byWordId = new Map<string, WordProgressRow>(rows.map((r: WordProgressRow) => [r.word_id, r]));
+          mergedWords = dbWords.map((w) => {
+            const row = byWordId.get(w.id);
+            if (!row) return w;
+            return { ...w, progress: rowToProgress(row), isHidden: row.is_hidden };
+          });
+        }
+      }
+      if (cancelled) return;
+      setWords((prev) => [...prev, ...mergedWords]);
+      setExamples((prev) => [...prev, ...dbExamples]);
+    }
+
+    void loadDbVocab();
     return () => {
       cancelled = true;
     };

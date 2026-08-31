@@ -1,6 +1,7 @@
 import ExcelJS from "exceljs";
 
 import { exampleToRow, wordToVocabRow } from "@/lib/data/excel-import";
+import type { VocabQuestionRow } from "@/lib/data/vocab-content-service";
 import { getConjugation } from "@/lib/conjugation";
 import {
   EXAMPLE_COLUMNS,
@@ -9,6 +10,20 @@ import {
   type VocabExample,
   type VocabWord,
 } from "@/lib/types";
+
+/** Cột của sheet QUESTIONS — bài tập generated cho từ vựng nạp từ DB (N5 trở đi). Chỉ xuất, không có luồng nhập lại. */
+const QUESTION_COLUMNS = [
+  "vocab_id",
+  "question_type",
+  "question_text",
+  "choice_1",
+  "choice_2",
+  "choice_3",
+  "choice_4",
+  "correct_answer",
+  "source_type",
+  "review_status",
+] as const;
 
 /** Cột của sheet CONJUGATIONS — gộp chung cho verb/i_adjective/na_adjective, để trống ô không áp dụng. */
 const CONJUGATION_COLUMNS = [
@@ -37,7 +52,11 @@ const CONJUGATION_COLUMNS = [
  * .xlsx, cột tách rõ ràng — không gộp thành JSON trong 1 ô, đúng yêu cầu để
  * người dùng tải về, chỉnh sửa bằng Excel rồi import lại.
  */
-export async function buildVocabularyWorkbook(words: VocabWord[], examples: VocabExample[]): Promise<Blob> {
+export async function buildVocabularyWorkbook(
+  words: VocabWord[],
+  examples: VocabExample[],
+  vocabQuestions: VocabQuestionRow[] = [],
+): Promise<Blob> {
   const workbook = new ExcelJS.Workbook();
   workbook.creator = "jp-go";
   workbook.created = new Date();
@@ -88,7 +107,24 @@ export async function buildVocabularyWorkbook(words: VocabWord[], examples: Voca
     }
   }
 
-  for (const sheet of [vocabSheet, examplesSheet, conjugationSheet]) {
+  const questionsSheet = workbook.addWorksheet(EXCEL_SHEET_NAMES.questions);
+  questionsSheet.columns = QUESTION_COLUMNS.map((key) => ({ header: key, key, width: 22 }));
+  for (const q of vocabQuestions) {
+    questionsSheet.addRow({
+      vocab_id: q.vocab_id,
+      question_type: q.question_type,
+      question_text: q.question_text,
+      choice_1: q.choice_1 ?? "",
+      choice_2: q.choice_2 ?? "",
+      choice_3: q.choice_3 ?? "",
+      choice_4: q.choice_4 ?? "",
+      correct_answer: q.correct_answer,
+      source_type: q.source_type,
+      review_status: q.review_status,
+    });
+  }
+
+  for (const sheet of [vocabSheet, examplesSheet, conjugationSheet, questionsSheet]) {
     sheet.getRow(1).font = { bold: true };
   }
 

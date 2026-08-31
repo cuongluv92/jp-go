@@ -110,6 +110,22 @@ export interface VocabWord {
   /** Admin ẩn từ khỏi kho từ vựng (vẫn giữ dữ liệu, không xoá). Không thuộc dữ liệu Excel. */
   isHidden?: boolean;
 
+  // -------------------------------------------------------------------------
+  // Chỉ có ở từ vựng nạp từ Supabase (N5 trở đi, xem lib/data/vocab-content-
+  // service.ts) — từ N3 JSON tĩnh luôn để trống các trường này. Additive,
+  // không ảnh hưởng dữ liệu N3 hiện có.
+  // -------------------------------------------------------------------------
+  /** Bài học gốc theo giáo trình (課 mấy trong PDF nguồn). */
+  lessonNo?: number;
+  /** "phrase" = cụm/mẫu câu giao tiếp cố định (vd どうぞよろしくお願いします), khác với từ đơn thông thường. */
+  entryType?: "word" | "phrase";
+  /** Khoá nhóm các từ dễ nhầm/liên quan (vd これ/それ/あれ) — dùng để tạo bài tập phân biệt. */
+  groupKey?: string | null;
+  sourcePage?: number | null;
+  sourceText?: string | null;
+  /** "pdf" = lấy nguyên văn từ tài liệu nguồn, "generated" = Claude tự soạn (câu ví dụ, bài tập). */
+  contentSourceType?: "pdf" | "generated";
+
   progress: LearningProgress;
 }
 
@@ -213,11 +229,13 @@ export interface PracticeModeInfo {
 // Import/Export Excel
 // ---------------------------------------------------------------------------
 
-/** Tên 3 sheet dùng khi export/import — cố định để import lại đúng chỗ. */
+/** Tên sheet dùng khi export/import — cố định để import lại đúng chỗ. */
 export const EXCEL_SHEET_NAMES = {
   vocab: "VOCAB",
   examples: "EXAMPLES",
   conjugations: "CONJUGATIONS",
+  /** Bài tập generated cho từ vựng nạp từ DB (N5 trở đi) — chỉ xuất, không có luồng nhập. */
+  questions: "QUESTIONS",
 } as const;
 
 /** Cột của sheet VOCAB, đúng thứ tự khi export. */
