@@ -59,11 +59,12 @@ function ChartIcon() {
   );
 }
 
-// "Lộ trình" trỏ vào /vocabulary — trang đó giờ có StudyPlanPanel (quản lý/
-// cài lộ trình) ở đầu trang, kèm danh sách từ vựng bên dưới.
+// "Lộ trình" trỏ vào /plan (tab con "Học tiếp"/"Chọn lộ trình mới") — tách
+// riêng khỏi /vocabulary để Từ vựng (vào từ thẻ lớn ở Trang chủ) chỉ thuần
+// là danh sách từ vựng, không lẫn nội dung quản lý lộ trình.
 const NAV_ITEMS: NavItem[] = [
   { href: "/", label: "Trang chủ", icon: <HomeIcon /> },
-  { href: "/vocabulary", label: "Lộ trình", icon: <PlanIcon /> },
+  { href: "/plan", label: "Lộ trình", icon: <PlanIcon /> },
   { href: "/practice", label: "Luyện tập", icon: <PencilIcon /> },
   { href: "/review", label: "Ôn tập", icon: <ClockIcon /> },
   { href: "/progress", label: "Tiến độ", icon: <ChartIcon /> },

@@ -1,10 +1,9 @@
 "use client";
 
-import { useRouter } from "next/navigation";
 import { useEffect, useMemo, useState } from "react";
 
-import { createStudyPlan, getActiveStudyPlan, type StudyPlanItems, type StudyScope } from "@/lib/data/study-plan-service";
 import { getKanjiLevelCounts, listKanjiByLevel } from "@/lib/data/kanji-service";
+import { createStudyPlan, getActiveStudyPlan, type StudyPlanItems, type StudyScope } from "@/lib/data/study-plan-service";
 import { useVocabulary } from "@/lib/data/vocabulary-context";
 import { createClient } from "@/lib/supabase/client";
 import { distributeEvenly } from "@/lib/study-plan";
@@ -34,8 +33,12 @@ const STEP_TITLES: Record<Step, string> = {
   4: "4. Xem trước & xác nhận",
 };
 
-export default function SettingsPage() {
-  const router = useRouter();
+/**
+ * Wizard 4 bước tạo/đổi lộ trình học — tách riêng khỏi route để dùng được
+ * ở cả `/plan` (tab "Chọn lộ trình mới", gọi `onCreated` để chuyển về tab
+ * "Học tiếp" mà không rời trang) lẫn làm route độc lập nếu cần sau này.
+ */
+export function StudyPlanWizard({ onCreated }: { onCreated: () => void }) {
   const { words } = useVocabulary();
   const [step, setStep] = useState<Step>(1);
   const [level, setLevel] = useState<JlptLevel>("N3");
@@ -167,8 +170,7 @@ export default function SettingsPage() {
         grammar: includesGrammar ? grammarIdsForLevel : [],
       };
       await createStudyPlan(supabase, user.id, level, scopeChoiceToArray(scopeChoice), duration, items);
-      router.push("/");
-      router.refresh();
+      onCreated();
     } catch {
       setError("Không tạo được lộ trình, thử lại sau.");
     } finally {
@@ -178,13 +180,6 @@ export default function SettingsPage() {
 
   return (
     <div className="flex flex-col gap-6">
-      <section>
-        <h1 className="text-xl font-bold">Cài đặt lộ trình</h1>
-        <p className="mt-1 text-sm text-muted">
-          Chọn cấp độ, phạm vi và thời gian — hệ thống tự chia đều nội dung theo từng ngày.
-        </p>
-      </section>
-
       <div className="flex gap-1 text-xs font-semibold text-muted">
         {([1, 2, 3, 4] as Step[]).map((s) => (
           <span
@@ -358,7 +353,7 @@ export default function SettingsPage() {
             </button>
             <button
               type="button"
-              onClick={handleConfirmCreate}
+              onClick={() => void handleConfirmCreate()}
               disabled={submitting || !canCreate || (hasActivePlan && !overwriteConfirmed)}
               className="flex-1 rounded-xl bg-accent px-4 py-3 text-sm font-semibold text-accent-foreground transition disabled:opacity-60"
             >

@@ -29,11 +29,10 @@ async function loadTodayKanji(supabase: ReturnType<typeof createClient>, kanjiId
 }
 
 /**
- * Nơi quản lý lộ trình học ("Hôm nay học gì", tiến độ, đổi lộ trình) — đặt
- * ở đầu trang Từ vựng theo đúng yêu cầu: vào Từ vựng (từ thẻ lớn ở Trang
- * chủ) là nơi quản lý/cài lộ trình muốn học, không phải ở Trang chủ.
- * Mục "Hôm nay" liệt kê cả từ vựng LẪN kanji của ngày hiện tại thành từng
- * mục con bấm được (trước đây chỉ từ vựng có link, kanji chỉ hiện số đếm).
+ * Nội dung tab "Học tiếp" ở trang /plan — tiến độ lộ trình hiện tại +
+ * "Hôm nay học gì". Liệt kê cả từ vựng LẪN kanji của ngày hiện tại thành
+ * từng mục con bấm được (trước đây chỉ từ vựng có link, kanji chỉ hiện số
+ * đếm trơ).
  */
 export function StudyPlanPanel() {
   const { words } = useVocabulary();
@@ -103,20 +102,18 @@ export function StudyPlanPanel() {
   }
 
   return (
-    <section className="flex flex-col gap-3 rounded-2xl border border-border bg-surface p-4 shadow-sm">
-      <div className="flex items-center justify-between">
-        <h2 className="text-sm font-semibold text-foreground">Lộ trình của tôi</h2>
-        <Link href="/settings" className="text-xs font-medium text-accent">
-          {plan ? "Đổi lộ trình" : "Cài đặt lộ trình"}
-        </Link>
-      </div>
-
+    <div className="flex flex-col gap-3">
       {loading ? (
         <p className="text-sm text-muted">Đang tải...</p>
       ) : !plan ? (
-        <p className="text-sm text-muted">Bạn chưa có lộ trình học. Bấm &quot;Cài đặt lộ trình&quot; để bắt đầu.</p>
+        <p className="text-sm text-muted">
+          Bạn chưa có lộ trình học. Chuyển sang tab &quot;Chọn lộ trình mới&quot; để bắt đầu.
+        </p>
       ) : !todayDay ? (
-        <p className="text-sm text-muted">🎉 Bạn đã hoàn thành toàn bộ lộ trình {plan.jlpt_level}!</p>
+        <p className="text-sm text-muted">
+          🎉 Bạn đã hoàn thành toàn bộ lộ trình {plan.jlpt_level}! Sang tab &quot;Chọn lộ trình mới&quot; để tiếp tục với
+          lộ trình khác.
+        </p>
       ) : (
         <div className="flex flex-col gap-3">
           <p className="text-xs text-muted">
@@ -170,6 +167,6 @@ export function StudyPlanPanel() {
           </button>
         </div>
       )}
-    </section>
+    </div>
   );
 }
