@@ -8,6 +8,7 @@ export type StudyScope = "vocab" | "kanji" | "grammar";
 export interface StudyPlanRow {
   id: string;
   user_id: string;
+  name: string | null;
   jlpt_level: JlptLevel;
   scope: StudyScope[];
   duration_months: number;
@@ -34,36 +35,71 @@ export interface StudyPlanItems {
   grammar: string[];
 }
 
-/** Lộ trình đang hoạt động của user (nếu có), kèm toàn bộ các ngày đã sinh. */
-export async function getActiveStudyPlan(
-  supabase: SupabaseClient,
-  userId: string,
-): Promise<{ plan: StudyPlanRow; days: StudyDayRow[] } | null> {
-  const { data: plan } = await supabase
+/**
+ * Mọi lộ trình đang hoạt động của user (KHÔNG giới hạn 1 lộ trình — người
+ * dùng được phép chạy nhiều lộ trình song song, ví dụ Kanji N5 + Từ vựng
+ * N3 cùng lúc, hoặc 2 lộ trình giống hệt nhau cho 2 người dùng chung tài
+ * khoản). Sắp xếp mới nhất trước.
+ */
+export async function listActiveStudyPlans(supabase: SupabaseClient, userId: string): Promise<StudyPlanRow[]> {
+  const { data: plans } = await supabase
     .from("jp_study_plans")
     .select("*")
     .eq("user_id", userId)
     .eq("is_active", true)
-    .order("created_at", { ascending: false })
-    .limit(1)
-    .maybeSingle();
-  if (!plan) return null;
+    .order("created_at", { ascending: false });
 
+  return (plans ?? []) as StudyPlanRow[];
+}
+
+/** Toàn bộ các ngày đã sinh cho 1 lộ trình cụ thể. */
+export async function getStudyPlanDays(supabase: SupabaseClient, planId: string): Promise<StudyDayRow[]> {
   const { data: days } = await supabase
     .from("jp_study_days")
     .select("*")
-    .eq("plan_id", plan.id)
+    .eq("plan_id", planId)
     .order("day_number", { ascending: true });
 
-  return { plan: plan as StudyPlanRow, days: (days ?? []) as StudyDayRow[] };
+  return (days ?? []) as StudyDayRow[];
+}
+
+/** Số ngày đã hoàn thành của 1 lộ trình — dùng để hiển thị % tiến độ trên chip chuyển lộ trình mà không cần tải toàn bộ `word_ids`/`kanji_ids` của mọi lộ trình. */
+export async function countCompletedStudyDays(supabase: SupabaseClient, planId: string): Promise<number> {
+  const { count } = await supabase
+    .from("jp_study_days")
+    .select("id", { count: "exact", head: true })
+    .eq("plan_id", planId)
+    .not("completed_at", "is", null);
+  return count ?? 0;
+}
+
+/** Đổi tên 1 lộ trình — không giới hạn ký tự đặc biệt, chuỗi rỗng coi như bỏ tên (dùng tên mặc định theo cấp độ). */
+export async function renameStudyPlan(supabase: SupabaseClient, planId: string, name: string): Promise<void> {
+  const trimmed = name.trim();
+  const { error } = await supabase
+    .from("jp_study_plans")
+    .update({ name: trimmed.length > 0 ? trimmed : null })
+    .eq("id", planId);
+  if (error) throw error;
 }
 
 /**
- * Tạo lộ trình mới: tắt lộ trình cũ (nếu có), chia đều `items` (từ vựng +
- * kanji + ngữ pháp) theo số ngày tương ứng `durationMonths`, ghi vào
- * `jp_study_plans` + `jp_study_days`. Gọi hàm này đồng nghĩa xác nhận dừng
- * lộ trình cũ (nếu có) — UI gọi phía trên (Settings) phải tự hỏi xác nhận
- * người dùng TRƯỚC khi gọi hàm này, hàm này không tự hỏi lại.
+ * Dừng (ẩn) 1 lộ trình cụ thể — hành động CHỦ ĐỘNG do người dùng chọn khi
+ * họ tự muốn dừng, khác với trước đây (tự động tắt lộ trình cũ khi tạo lộ
+ * trình mới). Không xoá dữ liệu, chỉ set is_active=false nên có thể khôi
+ * phục lại bằng cách sửa trực tiếp trong DB nếu cần.
+ */
+export async function archiveStudyPlan(supabase: SupabaseClient, planId: string): Promise<void> {
+  const { error } = await supabase.from("jp_study_plans").update({ is_active: false }).eq("id", planId);
+  if (error) throw error;
+}
+
+/**
+ * Tạo lộ trình mới — KHÔNG đụng đến các lộ trình đang hoạt động khác của
+ * user, cho phép chạy song song nhiều lộ trình (kể cả nhiều lộ trình giống
+ * hệt nhau, ví dụ dùng chung tài khoản cho 2 người). Chia đều `items` (từ
+ * vựng + kanji + ngữ pháp) theo số ngày tương ứng `durationMonths`, ghi vào
+ * `jp_study_plans` + `jp_study_days`.
  */
 export async function createStudyPlan(
   supabase: SupabaseClient,
@@ -72,14 +108,15 @@ export async function createStudyPlan(
   scope: StudyScope[],
   durationMonths: DurationMonths,
   items: StudyPlanItems,
+  name?: string,
 ): Promise<StudyPlanRow> {
-  await supabase.from("jp_study_plans").update({ is_active: false }).eq("user_id", userId).eq("is_active", true);
-
   const totalDays = monthsToDays(durationMonths);
+  const trimmedName = name?.trim();
   const { data: plan, error: planError } = await supabase
     .from("jp_study_plans")
     .insert({
       user_id: userId,
+      name: trimmedName && trimmedName.length > 0 ? trimmedName : null,
       jlpt_level: level,
       scope,
       duration_months: durationMonths,
