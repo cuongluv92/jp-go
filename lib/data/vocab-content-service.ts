@@ -172,13 +172,13 @@ export async function listAllDbVocab(supabase: SupabaseClient): Promise<{ words:
     fetchAllRows<VocabRow>((from, to) =>
       supabase
         .from("jp_vocab")
-        .select("*")
+        .select("*", { count: "exact" })
         .order("level", { ascending: true })
         .order("lesson_no", { ascending: true, nullsFirst: false })
         .order("word_class", { ascending: true, nullsFirst: false })
         .range(from, to),
     ),
-    fetchAllRows<VocabExampleRow>((from, to) => supabase.from("jp_vocab_examples").select("*").range(from, to)),
+    fetchAllRows<VocabExampleRow>((from, to) => supabase.from("jp_vocab_examples").select("*", { count: "exact" }).range(from, to)),
   ]);
 
   const words = fillGroupSimilarWords(vocabRows.map((r) => dbVocabRowToWord(r)));
@@ -189,10 +189,12 @@ export async function listAllDbVocab(supabase: SupabaseClient): Promise<{ words:
 /** Toàn bộ câu hỏi generated cho 1 danh sách vocab_id — dùng cho quiz trắc nghiệm theo bài/theo lộ trình. */
 export async function getVocabQuestionsForIds(supabase: SupabaseClient, vocabIds: string[]): Promise<VocabQuestionRow[]> {
   if (vocabIds.length === 0) return [];
-  return fetchAllRows<VocabQuestionRow>((from, to) => supabase.from("jp_vocab_questions").select("*").in("vocab_id", vocabIds).range(from, to));
+  return fetchAllRows<VocabQuestionRow>((from, to) =>
+    supabase.from("jp_vocab_questions").select("*", { count: "exact" }).in("vocab_id", vocabIds).range(from, to),
+  );
 }
 
 /** Toàn bộ câu hỏi generated trong DB — dùng cho export Excel (sheet QUESTIONS). */
 export async function listAllVocabQuestions(supabase: SupabaseClient): Promise<VocabQuestionRow[]> {
-  return fetchAllRows<VocabQuestionRow>((from, to) => supabase.from("jp_vocab_questions").select("*").range(from, to));
+  return fetchAllRows<VocabQuestionRow>((from, to) => supabase.from("jp_vocab_questions").select("*", { count: "exact" }).range(from, to));
 }

@@ -88,18 +88,22 @@ export async function fetchAllGrammarData(supabase: SupabaseClient): Promise<{
   review: GrammarReviewRow[];
 }> {
   const [grammar, usages, examples, questions, relations] = await Promise.all([
-    fetchAllRows<GrammarRow>((from, to) => supabase.from("jp_grammar").select("*").order("level").order("created_at").range(from, to)),
-    fetchAllRows<GrammarUsageRow>((from, to) => supabase.from("jp_grammar_usages").select("*").range(from, to)),
-    fetchAllRows<GrammarExampleRow>((from, to) => supabase.from("jp_grammar_examples").select("*").range(from, to)),
-    fetchAllRows<GrammarQuestionRow>((from, to) => supabase.from("jp_grammar_questions").select("*").range(from, to)),
-    fetchAllRows<GrammarRelationRow>((from, to) => supabase.from("jp_grammar_relations").select("*").range(from, to)),
+    fetchAllRows<GrammarRow>((from, to) =>
+      supabase.from("jp_grammar").select("*", { count: "exact" }).order("level").order("created_at").range(from, to),
+    ),
+    fetchAllRows<GrammarUsageRow>((from, to) => supabase.from("jp_grammar_usages").select("*", { count: "exact" }).range(from, to)),
+    fetchAllRows<GrammarExampleRow>((from, to) => supabase.from("jp_grammar_examples").select("*", { count: "exact" }).range(from, to)),
+    fetchAllRows<GrammarQuestionRow>((from, to) => supabase.from("jp_grammar_questions").select("*", { count: "exact" }).range(from, to)),
+    fetchAllRows<GrammarRelationRow>((from, to) => supabase.from("jp_grammar_relations").select("*", { count: "exact" }).range(from, to)),
   ]);
 
   const {
     data: { user },
   } = await supabase.auth.getUser();
   const review = user
-    ? await fetchAllRows<GrammarReviewRow>((from, to) => supabase.from("jp_grammar_reviews").select("*").eq("user_id", user.id).range(from, to))
+    ? await fetchAllRows<GrammarReviewRow>((from, to) =>
+        supabase.from("jp_grammar_reviews").select("*", { count: "exact" }).eq("user_id", user.id).range(from, to),
+      )
     : [];
 
   return {
