@@ -5,6 +5,7 @@ import { useSearchParams } from "next/navigation";
 import { Suspense, useMemo, useState } from "react";
 
 import { StatusBadge } from "@/components/status-badge";
+import { StudyPlanPanel } from "@/components/study-plan-panel";
 import { filterWords, type VocabularyFilter } from "@/lib/data/selectors";
 import { useVocabulary } from "@/lib/data/vocabulary-context";
 import {
@@ -18,9 +19,12 @@ import {
 
 export default function VocabularyPage() {
   return (
-    <Suspense fallback={null}>
-      <VocabularyPageContent />
-    </Suspense>
+    <div className="flex flex-col gap-4">
+      <StudyPlanPanel />
+      <Suspense fallback={null}>
+        <VocabularyPageContent />
+      </Suspense>
+    </div>
   );
 }
 
