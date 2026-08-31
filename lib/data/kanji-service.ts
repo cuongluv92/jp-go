@@ -165,6 +165,29 @@ export async function getKanjiProgressMap(
   return map;
 }
 
+export interface KanjiProgressStats {
+  learned: number;
+  learning: number;
+  needsReview: number;
+  dueCount: number;
+}
+
+/** Tổng hợp tiến độ Kanji của user (dùng ở trang Tiến độ) — không phụ thuộc lộ trình cụ thể nào, gộp mọi kanji user từng học. */
+export async function getKanjiProgressStats(supabase: SupabaseClient, userId: string): Promise<KanjiProgressStats> {
+  const { data, error } = await supabase.from("jp_kanji_progress").select("status, next_review_at").eq("user_id", userId);
+  if (error) throw error;
+
+  const now = new Date();
+  const stats: KanjiProgressStats = { learned: 0, learning: 0, needsReview: 0, dueCount: 0 };
+  for (const row of (data ?? []) as { status: KanjiProgressStatus; next_review_at: string | null }[]) {
+    if (row.status === "da_nho") stats.learned += 1;
+    else if (row.status === "hay_sai") stats.needsReview += 1;
+    else stats.learning += 1;
+    if (row.next_review_at && new Date(row.next_review_at) <= now) stats.dueCount += 1;
+  }
+  return stats;
+}
+
 function nextStageAfterCorrect(current: KanjiProgressStatus): { status: KanjiProgressStatus; days: number } {
   if (current === "dang_hoc" || current === "da_nho") return { status: "da_nho", days: 15 };
   return { status: "dang_hoc", days: 5 };

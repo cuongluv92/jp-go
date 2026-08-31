@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 
 import { QuizRunner } from "@/components/quiz-runner";
+import { SegmentedTabs } from "@/components/segmented-tabs";
 import { getCached, setCached } from "@/lib/data/client-cache";
 import {
   createCustomTest,
@@ -13,6 +14,7 @@ import {
 } from "@/lib/data/custom-test-service";
 import { generatePracticeTest, type GeneratedSection, type GeneratedTest } from "@/lib/data/jlpt-practice-generator";
 import { savePracticeAttempt, type SectionResult } from "@/lib/data/practice-attempt-service";
+import { listActiveStudyPlans } from "@/lib/data/study-plan-service";
 import { useVocabulary } from "@/lib/data/vocabulary-context";
 import { createClient } from "@/lib/supabase/client";
 import { JLPT_BLUEPRINTS } from "@/lib/jlpt-blueprint";
@@ -52,22 +54,14 @@ export default function PracticePage() {
         <p className="mt-1 text-sm text-muted">Luyện đề theo cấu trúc JLPT, hoặc làm đề bạn tự đưa vào.</p>
       </div>
 
-      <div className="grid grid-cols-2 gap-2 rounded-xl border border-border bg-surface p-1">
-        <button
-          type="button"
-          onClick={() => setTab("auto")}
-          className={`rounded-lg py-2 text-sm font-semibold transition ${tab === "auto" ? "bg-accent text-accent-foreground" : "text-muted"}`}
-        >
-          Luyện đề tự động
-        </button>
-        <button
-          type="button"
-          onClick={() => setTab("custom")}
-          className={`rounded-lg py-2 text-sm font-semibold transition ${tab === "custom" ? "bg-accent text-accent-foreground" : "text-muted"}`}
-        >
-          Đề của tôi
-        </button>
-      </div>
+      <SegmentedTabs
+        value={tab}
+        onChange={setTab}
+        options={[
+          { value: "auto", label: "Luyện đề tự động" },
+          { value: "custom", label: "Đề của tôi" },
+        ]}
+      />
 
       {tab === "auto" ? <AutoPracticeTab userId={userId} /> : <CustomTestsTab userId={userId} />}
     </div>
@@ -81,10 +75,31 @@ export default function PracticePage() {
 function AutoPracticeTab({ userId }: { userId: string | null }) {
   const { words, examples } = useVocabulary();
   const [level, setLevel] = useState<JlptLevel>("N3");
+  const [levelAutoPicked, setLevelAutoPicked] = useState(false);
   const [test, setTest] = useState<GeneratedTest | null>(null);
   const [runIndex, setRunIndex] = useState(0);
   const [results, setResults] = useState<SectionResult[]>([]);
   const [summary, setSummary] = useState<SectionResult[] | null>(null);
+
+  // Mặc định chọn sẵn cấp độ của lộ trình đang học (nếu có) để luyện tập
+  // "khớp" với lộ trình thay vì luôn phải tự chọn lại N3 — vẫn cho đổi cấp
+  // độ tự do vì "Luyện đề tự động" độc lập với lộ trình, không bị khoá cứng.
+  useEffect(() => {
+    if (!userId) return;
+    let cancelled = false;
+    async function loadDefaultLevel() {
+      const supabase = createClient();
+      const plans = await listActiveStudyPlans(supabase, userId!);
+      if (!cancelled && plans.length > 0) {
+        setLevel(plans[0].jlpt_level);
+        setLevelAutoPicked(true);
+      }
+    }
+    void loadDefaultLevel();
+    return () => {
+      cancelled = true;
+    };
+  }, [userId]);
 
   const blueprint = JLPT_BLUEPRINTS[level];
   const availableSections = test?.sections.filter((s) => s.available) ?? [];
@@ -165,7 +180,10 @@ function AutoPracticeTab({ userId }: { userId: string | null }) {
             <button
               key={lv}
               type="button"
-              onClick={() => setLevel(lv)}
+              onClick={() => {
+                setLevel(lv);
+                setLevelAutoPicked(false);
+              }}
               className={`rounded-xl border px-2 py-2 text-sm font-semibold transition ${
                 level === lv ? "border-accent bg-accent text-accent-foreground" : "border-border bg-surface text-foreground"
               }`}
@@ -174,6 +192,7 @@ function AutoPracticeTab({ userId }: { userId: string | null }) {
             </button>
           ))}
         </div>
+        {levelAutoPicked && <p className="mt-2 text-xs text-accent">Đã chọn sẵn theo cấp độ lộ trình bạn đang học.</p>}
         {!blueprint.verified && (
           <p className="mt-2 text-xs text-muted">
             Cấu trúc đề {level} là mô phỏng gần đúng theo cấu trúc JLPT công khai (chỉ N2 lấy đúng từ đề thật) — có thể lệch vài

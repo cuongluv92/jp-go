@@ -17,6 +17,7 @@ import {
 } from "@/lib/data/study-plan-service";
 import { useVocabulary } from "@/lib/data/vocabulary-context";
 import { createClient } from "@/lib/supabase/client";
+import { computePlanPace } from "@/lib/study-plan";
 
 const CACHE_KEY = "study-plan-panel-data";
 
@@ -238,10 +239,7 @@ export function StudyPlanPanel() {
 
   const planProgressPercent = plan && plan.total_days > 0 ? Math.round((completedDays.length / plan.total_days) * 100) : 0;
 
-  // Cảnh báo tiến độ: ngày thực tế đã trôi qua kể từ started_at so với số ngày ĐÃ HOÀN THÀNH.
-  const daysElapsed = plan ? Math.floor((now - new Date(plan.started_at).getTime()) / 86400000) + 1 : 0;
-  const expectedCompletedByNow = plan ? Math.min(Math.max(daysElapsed - 1, 0), plan.total_days) : 0;
-  const paceDiff = completedDays.length - expectedCompletedByNow;
+  const paceDiff = plan ? computePlanPace(plan.started_at, plan.total_days, completedDays.length, now).paceDiff : 0;
 
   function progressPercentFor(p: StudyPlanRow): number {
     if (p.total_days <= 0) return 0;

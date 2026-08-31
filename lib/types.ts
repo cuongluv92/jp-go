@@ -195,12 +195,6 @@ export type Conjugation = VerbConjugation | IAdjectiveConjugation | NaAdjectiveC
 
 export type FlashcardGrade = "chua_nho" | "kho" | "da_nho";
 
-export interface PracticeDailyResult {
-  date: string;
-  correct: number;
-  total: number;
-}
-
 export type PracticeMode =
   | "chon_nghia"
   | "dien_tu"
