@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 
 import { StatCard } from "@/components/stat-card";
 import { getCached, setCached } from "@/lib/data/client-cache";
+import { getDueGrammarForReview, getGrammarProgressStats, type GrammarProgressStats } from "@/lib/data/grammar-service";
 import { getDueKanjiForReview, getKanjiProgressStats, type KanjiProgressStats } from "@/lib/data/kanji-service";
 import { getRecentPracticeAttempts, type PracticeDayResult } from "@/lib/data/practice-attempt-service";
 import { getDueReviewSchedules } from "@/lib/data/review-service";
@@ -28,10 +29,13 @@ interface ProgressCachedData {
   dueVocabCount: number;
   dueKanjiCount: number;
   kanjiStats: KanjiProgressStats;
+  dueGrammarCount: number;
+  grammarStats: GrammarProgressStats;
   practiceHistory: PracticeDayResult[];
 }
 
 const EMPTY_KANJI_STATS: KanjiProgressStats = { learned: 0, learning: 0, needsReview: 0, dueCount: 0 };
+const EMPTY_GRAMMAR_STATS: GrammarProgressStats = { learned: 0, learning: 0, needsReview: 0, dueCount: 0 };
 
 // Không dùng toLocaleDateString: dữ liệu ICU cho tên thứ có thể khác nhau giữa
 // server (Node) và trình duyệt, gây lỗi hydration mismatch.
@@ -58,6 +62,8 @@ export default function ProgressPage() {
   const [dueVocabCount, setDueVocabCount] = useState(cached?.dueVocabCount ?? 0);
   const [dueKanjiCount, setDueKanjiCount] = useState(cached?.dueKanjiCount ?? 0);
   const [kanjiStats, setKanjiStats] = useState<KanjiProgressStats>(cached?.kanjiStats ?? EMPTY_KANJI_STATS);
+  const [dueGrammarCount, setDueGrammarCount] = useState(cached?.dueGrammarCount ?? 0);
+  const [grammarStats, setGrammarStats] = useState<GrammarProgressStats>(cached?.grammarStats ?? EMPTY_GRAMMAR_STATS);
   const [practiceHistory, setPracticeHistory] = useState<PracticeDayResult[]>(cached?.practiceHistory ?? []);
   const [loading, setLoading] = useState(!cached);
 
@@ -74,11 +80,13 @@ export default function ProgressPage() {
         return;
       }
 
-      const [activePlans, dueSchedules, dueKanji, kStats, history] = await Promise.all([
+      const [activePlans, dueSchedules, dueKanji, kStats, dueGrammar, gStats, history] = await Promise.all([
         listActiveStudyPlans(supabase, user.id),
         getDueReviewSchedules(supabase, user.id),
         getDueKanjiForReview(supabase, user.id),
         getKanjiProgressStats(supabase, user.id),
+        getDueGrammarForReview(supabase, user.id),
+        getGrammarProgressStats(supabase, user.id),
         getRecentPracticeAttempts(supabase, user.id, 7),
       ]);
       if (cancelled) return;
@@ -92,6 +100,8 @@ export default function ProgressPage() {
       setDueVocabCount(dueSchedules.length);
       setDueKanjiCount(dueKanji.length);
       setKanjiStats(kStats);
+      setDueGrammarCount(dueGrammar.length);
+      setGrammarStats(gStats);
       setPracticeHistory(history);
       setLoading(false);
       setCached<ProgressCachedData>(PROGRESS_CACHE_KEY, {
@@ -100,6 +110,8 @@ export default function ProgressPage() {
         dueVocabCount: dueSchedules.length,
         dueKanjiCount: dueKanji.length,
         kanjiStats: kStats,
+        dueGrammarCount: dueGrammar.length,
+        grammarStats: gStats,
         practiceHistory: history,
       });
     }
@@ -113,7 +125,7 @@ export default function ProgressPage() {
   const visible = words.filter((w) => !w.isHidden);
   const stats = computeStats(visible);
 
-  const totalDueCount = dueVocabCount + dueKanjiCount;
+  const totalDueCount = dueVocabCount + dueKanjiCount + dueGrammarCount;
   const totalPlanDays = plans.reduce((sum, p) => sum + p.plan.total_days, 0);
   const totalCompletedDays = plans.reduce((sum, p) => sum + p.days.filter((d) => d.completed_at !== null).length, 0);
   const overallPlanPercent = totalPlanDays > 0 ? Math.round((totalCompletedDays / totalPlanDays) * 100) : 0;
@@ -141,6 +153,8 @@ export default function ProgressPage() {
               {dueVocabCount > 0 && `${dueVocabCount} lịch từ vựng`}
               {dueVocabCount > 0 && dueKanjiCount > 0 && " · "}
               {dueKanjiCount > 0 && `${dueKanjiCount} kanji`}
+              {(dueVocabCount > 0 || dueKanjiCount > 0) && dueGrammarCount > 0 && " · "}
+              {dueGrammarCount > 0 && `${dueGrammarCount} ngữ pháp`}
             </p>
           </div>
           <span className="shrink-0 rounded-lg bg-white/15 px-3 py-1.5 text-xs font-semibold">Ôn ngay →</span>
@@ -214,6 +228,15 @@ export default function ProgressPage() {
           <StatCard label="Đã nhớ" value={kanjiStats.learned} />
           <StatCard label="Đang học" value={kanjiStats.learning} />
           <StatCard label="Cần ôn" value={kanjiStats.dueCount} />
+        </div>
+      </section>
+
+      <section>
+        <h2 className="mb-2 text-sm font-semibold text-foreground">Ngữ pháp</h2>
+        <div className="grid grid-cols-3 gap-3">
+          <StatCard label="Đã nhớ" value={grammarStats.learned} />
+          <StatCard label="Đang học" value={grammarStats.learning} />
+          <StatCard label="Cần ôn" value={grammarStats.dueCount} />
         </div>
       </section>
 

@@ -2,12 +2,13 @@
 
 import { useEffect, useMemo, useState } from "react";
 
+import { getGrammarLevelCounts, listGrammarByLevel, listWrongGrammarForUser } from "@/lib/data/grammar-service";
 import { getKanjiLevelCounts, listKanjiByLevel, listWrongKanjiForUser } from "@/lib/data/kanji-service";
 import { useVocabulary } from "@/lib/data/vocabulary-context";
 import { createClient } from "@/lib/supabase/client";
 import { JLPT_LEVELS, type JlptLevel, type VocabWord } from "@/lib/types";
 
-type ContentType = "vocab" | "kanji";
+type ContentType = "vocab" | "kanji" | "grammar";
 type ExerciseMode = "flashcard" | "typing" | "matching";
 type Filter = "all" | "favorite" | "wrong";
 
@@ -26,9 +27,11 @@ const FILTER_LABELS: Record<Filter, string> = {
 export function CustomReviewPicker({
   onStartVocab,
   onStartKanji,
+  onStartGrammar,
 }: {
   onStartVocab: (words: VocabWord[], mode: ExerciseMode) => void;
   onStartKanji: (kanjiIds: string[]) => void;
+  onStartGrammar: (grammarIds: string[]) => void;
 }) {
   const { words } = useVocabulary();
   const [contentType, setContentType] = useState<ContentType>("vocab");
@@ -37,13 +40,19 @@ export function CustomReviewPicker({
   const [kanjiCountsByLevel, setKanjiCountsByLevel] = useState<Record<JlptLevel, number> | null>(null);
   const [kanjiIds, setKanjiIds] = useState<string[]>([]);
   const [kanjiLoading, setKanjiLoading] = useState(false);
+  const [grammarCountsByLevel, setGrammarCountsByLevel] = useState<Record<JlptLevel, number> | null>(null);
+  const [grammarIds, setGrammarIds] = useState<string[]>([]);
+  const [grammarLoading, setGrammarLoading] = useState(false);
 
   useEffect(() => {
     let cancelled = false;
     async function load() {
       const supabase = createClient();
-      const counts = await getKanjiLevelCounts(supabase);
-      if (!cancelled) setKanjiCountsByLevel(counts);
+      const [counts, grammarCounts] = await Promise.all([getKanjiLevelCounts(supabase), getGrammarLevelCounts(supabase)]);
+      if (!cancelled) {
+        setKanjiCountsByLevel(counts);
+        setGrammarCountsByLevel(grammarCounts);
+      }
     }
     void load();
     return () => {
@@ -57,15 +66,18 @@ export function CustomReviewPicker({
     return map;
   }, [words]);
 
-  const availableLevels =
-    contentType === "vocab"
-      ? JLPT_LEVELS.filter((lv) => vocabCountByLevel[lv] > 0)
-      : JLPT_LEVELS.filter((lv) => (kanjiCountsByLevel?.[lv] ?? 0) > 0);
+  function levelsForType(type: ContentType): JlptLevel[] {
+    if (type === "vocab") return JLPT_LEVELS.filter((lv) => vocabCountByLevel[lv] > 0);
+    if (type === "kanji") return JLPT_LEVELS.filter((lv) => (kanjiCountsByLevel?.[lv] ?? 0) > 0);
+    return JLPT_LEVELS.filter((lv) => (grammarCountsByLevel?.[lv] ?? 0) > 0);
+  }
+
+  const availableLevels = levelsForType(contentType);
 
   function selectContentType(type: ContentType) {
     setContentType(type);
     setFilter("all");
-    const levels = type === "vocab" ? JLPT_LEVELS.filter((lv) => vocabCountByLevel[lv] > 0) : JLPT_LEVELS.filter((lv) => (kanjiCountsByLevel?.[lv] ?? 0) > 0);
+    const levels = levelsForType(type);
     if (levels.length > 0 && !levels.includes(level)) setLevel(levels[0]);
   }
 
@@ -104,14 +116,42 @@ export function CustomReviewPicker({
     };
   }, [contentType, level, filter]);
 
-  const itemCount = contentType === "vocab" ? filteredVocabWords.length : kanjiIds.length;
+  // Ngữ pháp cần fetch async theo level + filter đang chọn — cùng cơ chế Kanji.
+  useEffect(() => {
+    if (contentType !== "grammar") return;
+    let cancelled = false;
+    async function load() {
+      setGrammarLoading(true);
+      const supabase = createClient();
+      const {
+        data: { user },
+      } = await supabase.auth.getUser();
+      if (!user || cancelled) {
+        if (!cancelled) {
+          setGrammarIds([]);
+          setGrammarLoading(false);
+        }
+        return;
+      }
+      const rows = filter === "wrong" ? await listWrongGrammarForUser(supabase, user.id, level) : await listGrammarByLevel(supabase, level);
+      if (cancelled) return;
+      setGrammarIds(rows.map((r) => r.id));
+      setGrammarLoading(false);
+    }
+    void load();
+    return () => {
+      cancelled = true;
+    };
+  }, [contentType, level, filter]);
+
+  const itemCount = contentType === "vocab" ? filteredVocabWords.length : contentType === "kanji" ? kanjiIds.length : grammarIds.length;
   const filterChoices: Filter[] = contentType === "vocab" ? ["all", "favorite", "wrong"] : ["all", "wrong"];
 
   return (
     <div className="flex flex-col gap-4">
       <section>
         <h2 className="mb-2 text-sm font-semibold text-foreground">1. Loại nội dung</h2>
-        <div className="grid grid-cols-2 gap-2">
+        <div className="grid grid-cols-3 gap-2">
           <button
             type="button"
             onClick={() => selectContentType("vocab")}
@@ -129,6 +169,15 @@ export function CustomReviewPicker({
             }`}
           >
             Kanji
+          </button>
+          <button
+            type="button"
+            onClick={() => selectContentType("grammar")}
+            className={`rounded-xl border px-4 py-2.5 text-sm font-semibold transition ${
+              contentType === "grammar" ? "border-accent bg-accent text-accent-foreground" : "border-border bg-surface text-foreground"
+            }`}
+          >
+            Ngữ pháp
           </button>
         </div>
       </section>
@@ -179,13 +228,13 @@ export function CustomReviewPicker({
       </section>
 
       <section className="rounded-xl border border-dashed border-border p-3 text-xs text-muted">
-        {contentType === "kanji" && kanjiLoading ? (
+        {(contentType === "kanji" && kanjiLoading) || (contentType === "grammar" && grammarLoading) ? (
           <p>Đang tải...</p>
         ) : itemCount === 0 ? (
           <p>Không có mục nào phù hợp lựa chọn hiện tại.</p>
         ) : (
           <p>
-            {itemCount} {contentType === "vocab" ? "từ" : "kanji"} phù hợp — sẵn sàng ôn tập.
+            {itemCount} {contentType === "vocab" ? "từ" : contentType === "kanji" ? "kanji" : "mẫu ngữ pháp"} phù hợp — sẵn sàng ôn tập.
           </p>
         )}
       </section>
@@ -220,7 +269,7 @@ export function CustomReviewPicker({
             </button>
           </div>
         </section>
-      ) : (
+      ) : contentType === "kanji" ? (
         <button
           type="button"
           disabled={itemCount === 0 || kanjiLoading}
@@ -228,6 +277,15 @@ export function CustomReviewPicker({
           className="rounded-xl bg-accent px-4 py-3 text-sm font-semibold text-accent-foreground disabled:opacity-50"
         >
           Bắt đầu ôn {itemCount} kanji
+        </button>
+      ) : (
+        <button
+          type="button"
+          disabled={itemCount === 0 || grammarLoading}
+          onClick={() => onStartGrammar(grammarIds)}
+          className="rounded-xl bg-accent px-4 py-3 text-sm font-semibold text-accent-foreground disabled:opacity-50"
+        >
+          Bắt đầu ôn {itemCount} mẫu ngữ pháp
         </button>
       )}
     </div>

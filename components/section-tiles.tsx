@@ -43,8 +43,7 @@ function GrammarIcon() {
  * vựng/Kanji/Ngữ pháp) thay vì phải mở rộng theo từng cấp độ trước. Mục nào
  * chưa có nội dung (count = 0) vẫn bấm được nhưng hiện nhãn "sắp có" và mờ đi.
  * `level` (chọn qua LevelChips cạnh bên) quyết định số lượng hiển thị và
- * link có kèm `?level=` để vào thẳng đúng cấp đang xem — Ngữ pháp chưa có
- * lọc theo cấp nên giữ nguyên link trơn.
+ * link có kèm `?level=` để vào thẳng đúng cấp đang xem.
  */
 export function SectionTiles({
   level,
@@ -60,7 +59,7 @@ export function SectionTiles({
   const tiles: SectionTile[] = [
     { label: "Từ vựng", count: vocabCount, href: `/vocabulary?level=${level}`, icon: <BookIcon /> },
     { label: "Kanji", count: kanjiCount, href: `/kanji?level=${level}`, icon: <KanjiIcon /> },
-    { label: "Ngữ pháp", count: grammarCount, href: "/grammar", icon: <GrammarIcon /> },
+    { label: "Ngữ pháp", count: grammarCount, href: `/grammar?level=${level}`, icon: <GrammarIcon /> },
   ];
 
   return (

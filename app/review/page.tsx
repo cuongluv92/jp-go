@@ -3,12 +3,14 @@
 import { useEffect, useState } from "react";
 
 import { CustomReviewPicker } from "@/components/custom-review-picker";
+import { GrammarReviewSession } from "@/components/grammar-review-session";
 import { KanjiReviewSession } from "@/components/kanji-review-session";
 import { ReviewFlashcardExercise } from "@/components/review-flashcard-exercise";
 import { ReviewMatchingExercise } from "@/components/review-matching-exercise";
 import { ReviewTypingExercise } from "@/components/review-typing-exercise";
 import { SegmentedTabs } from "@/components/segmented-tabs";
 import { getCached, setCached } from "@/lib/data/client-cache";
+import { getDueGrammarForReview, type DueGrammarRow } from "@/lib/data/grammar-service";
 import { getDueKanjiForReview, type DueKanjiRow } from "@/lib/data/kanji-service";
 import { completeReviewSchedules, getDueReviewSchedules, type ReviewScheduleRow } from "@/lib/data/review-service";
 import { useVocabulary } from "@/lib/data/vocabulary-context";
@@ -24,6 +26,7 @@ interface ReviewCachedData {
   userId: string | null;
   schedules: ReviewScheduleRow[];
   dueKanji: DueKanjiRow[];
+  dueGrammar: DueGrammarRow[];
 }
 
 export default function ReviewPage() {
@@ -32,15 +35,19 @@ export default function ReviewPage() {
   const [userId, setUserId] = useState<string | null>(cached?.userId ?? null);
   const [schedules, setSchedules] = useState<ReviewScheduleRow[]>(cached?.schedules ?? []);
   const [dueKanji, setDueKanji] = useState<DueKanjiRow[]>(cached?.dueKanji ?? []);
+  const [dueGrammar, setDueGrammar] = useState<DueGrammarRow[]>(cached?.dueGrammar ?? []);
   const [selected, setSelected] = useState<Set<string>>(new Set((cached?.schedules ?? []).map((s) => s.id)));
   const [selectedKanji, setSelectedKanji] = useState<Set<string>>(new Set((cached?.dueKanji ?? []).map((k) => k.kanji_id)));
+  const [selectedGrammar, setSelectedGrammar] = useState<Set<string>>(new Set((cached?.dueGrammar ?? []).map((g) => g.grammar_id)));
   const [loading, setLoading] = useState(!cached);
   const [mode, setMode] = useState<ExerciseMode | null>(null);
   const [kanjiSessionIds, setKanjiSessionIds] = useState<string[] | null>(null);
+  const [grammarSessionIds, setGrammarSessionIds] = useState<string[] | null>(null);
   const [tab, setTab] = useState<Tab>("due");
   const [customWords, setCustomWords] = useState<VocabWord[] | null>(null);
   const [customMode, setCustomMode] = useState<ExerciseMode | null>(null);
   const [customKanjiIds, setCustomKanjiIds] = useState<string[] | null>(null);
+  const [customGrammarIds, setCustomGrammarIds] = useState<string[] | null>(null);
 
   useEffect(() => {
     let cancelled = false;
@@ -53,19 +60,25 @@ export default function ReviewPage() {
       if (!user || cancelled) {
         if (!cancelled) {
           setLoading(false);
-          setCached<ReviewCachedData>(REVIEW_CACHE_KEY, { userId: null, schedules: [], dueKanji: [] });
+          setCached<ReviewCachedData>(REVIEW_CACHE_KEY, { userId: null, schedules: [], dueKanji: [], dueGrammar: [] });
         }
         return;
       }
       setUserId(user.id);
-      const [due, dueK] = await Promise.all([getDueReviewSchedules(supabase, user.id), getDueKanjiForReview(supabase, user.id)]);
+      const [due, dueK, dueG] = await Promise.all([
+        getDueReviewSchedules(supabase, user.id),
+        getDueKanjiForReview(supabase, user.id),
+        getDueGrammarForReview(supabase, user.id),
+      ]);
       if (cancelled) return;
       setSchedules(due);
       setSelected(new Set(due.map((s) => s.id)));
       setDueKanji(dueK);
       setSelectedKanji(new Set(dueK.map((k) => k.kanji_id)));
+      setDueGrammar(dueG);
+      setSelectedGrammar(new Set(dueG.map((g) => g.grammar_id)));
       setLoading(false);
-      setCached<ReviewCachedData>(REVIEW_CACHE_KEY, { userId: user.id, schedules: due, dueKanji: dueK });
+      setCached<ReviewCachedData>(REVIEW_CACHE_KEY, { userId: user.id, schedules: due, dueKanji: dueK, dueGrammar: dueG });
     }
 
     void load();
@@ -100,6 +113,19 @@ export default function ReviewPage() {
     setSelectedKanji((prev) => (prev.size === dueKanji.length ? new Set() : new Set(dueKanji.map((k) => k.kanji_id))));
   }
 
+  function toggleSelectedGrammar(id: string) {
+    setSelectedGrammar((prev) => {
+      const next = new Set(prev);
+      if (next.has(id)) next.delete(id);
+      else next.add(id);
+      return next;
+    });
+  }
+
+  function toggleSelectAllGrammar() {
+    setSelectedGrammar((prev) => (prev.size === dueGrammar.length ? new Set() : new Set(dueGrammar.map((g) => g.grammar_id))));
+  }
+
   const selectedWordIds = Array.from(
     new Set(
       schedules
@@ -114,13 +140,19 @@ export default function ReviewPage() {
   async function refreshDue(nextUserId: string) {
     const supabase = createClient();
     setLoading(true);
-    const [due, dueK] = await Promise.all([getDueReviewSchedules(supabase, nextUserId), getDueKanjiForReview(supabase, nextUserId)]);
+    const [due, dueK, dueG] = await Promise.all([
+      getDueReviewSchedules(supabase, nextUserId),
+      getDueKanjiForReview(supabase, nextUserId),
+      getDueGrammarForReview(supabase, nextUserId),
+    ]);
     setSchedules(due);
     setSelected(new Set(due.map((s) => s.id)));
     setDueKanji(dueK);
     setSelectedKanji(new Set(dueK.map((k) => k.kanji_id)));
+    setDueGrammar(dueG);
+    setSelectedGrammar(new Set(dueG.map((g) => g.grammar_id)));
     setLoading(false);
-    setCached<ReviewCachedData>(REVIEW_CACHE_KEY, { userId: nextUserId, schedules: due, dueKanji: dueK });
+    setCached<ReviewCachedData>(REVIEW_CACHE_KEY, { userId: nextUserId, schedules: due, dueKanji: dueK, dueGrammar: dueG });
   }
 
   async function handleExerciseComplete() {
@@ -135,10 +167,19 @@ export default function ReviewPage() {
     if (userId) await refreshDue(userId);
   }
 
+  async function handleGrammarSessionComplete() {
+    setGrammarSessionIds(null);
+    if (userId) await refreshDue(userId);
+  }
+
   // ---- Phiên đang chạy (ưu tiên hiển thị trước mọi thứ khác) ----
 
   if (kanjiSessionIds && userId) {
     return <KanjiReviewSession userId={userId} kanjiIds={kanjiSessionIds} onComplete={() => void handleKanjiSessionComplete()} />;
+  }
+
+  if (grammarSessionIds && userId) {
+    return <GrammarReviewSession userId={userId} grammarIds={grammarSessionIds} onComplete={() => void handleGrammarSessionComplete()} />;
   }
 
   if (mode && sessionWords.length > 0) {
@@ -175,6 +216,10 @@ export default function ReviewPage() {
     return <KanjiReviewSession userId={userId} kanjiIds={customKanjiIds} onComplete={() => setCustomKanjiIds(null)} />;
   }
 
+  if (customGrammarIds && userId) {
+    return <GrammarReviewSession userId={userId} grammarIds={customGrammarIds} onComplete={() => setCustomGrammarIds(null)} />;
+  }
+
   return (
     <div className="flex flex-col gap-6">
       <div>
@@ -197,7 +242,7 @@ export default function ReviewPage() {
       {tab === "due" ? (
         loading ? (
           <p className="rounded-2xl border border-dashed border-border p-4 text-sm text-muted">Đang tải...</p>
-        ) : schedules.length === 0 && dueKanji.length === 0 ? (
+        ) : schedules.length === 0 && dueKanji.length === 0 && dueGrammar.length === 0 ? (
           <p className="rounded-2xl border border-dashed border-border p-4 text-sm text-muted">
             Không có lịch ôn nào đến hạn. Tiếp tục học để tạo lịch ôn mới, hoặc sang tab &quot;Tự chọn ôn tập&quot; để ôn
             bất cứ lúc nào.
@@ -297,6 +342,46 @@ export default function ReviewPage() {
                 </button>
               </section>
             )}
+
+            {dueGrammar.length > 0 && (
+              <section>
+                <div className="mb-2 flex items-center justify-between">
+                  <h2 className="text-sm font-semibold text-foreground">Ngữ pháp ({dueGrammar.length} mẫu đến hạn)</h2>
+                  <button type="button" onClick={toggleSelectAllGrammar} className="text-xs font-medium text-accent">
+                    {selectedGrammar.size === dueGrammar.length ? "Bỏ chọn tất cả" : "Chọn tất cả"}
+                  </button>
+                </div>
+                <ul className="flex flex-col gap-2">
+                  {dueGrammar.map((g) => (
+                    <li key={g.grammar_id}>
+                      <label
+                        className={`flex items-center gap-3 rounded-xl border px-4 py-3 shadow-sm ${
+                          selectedGrammar.has(g.grammar_id) ? "border-accent bg-accent-soft" : "border-border bg-surface"
+                        }`}
+                      >
+                        <input
+                          type="checkbox"
+                          checked={selectedGrammar.has(g.grammar_id)}
+                          onChange={() => toggleSelectedGrammar(g.grammar_id)}
+                        />
+                        <span className="flex-1">
+                          <span className="font-jp block text-sm font-semibold">{g.grammar_pattern}</span>
+                          <span className="block text-xs text-muted">{g.meaning_vi}</span>
+                        </span>
+                      </label>
+                    </li>
+                  ))}
+                </ul>
+                <button
+                  type="button"
+                  disabled={selectedGrammar.size === 0}
+                  onClick={() => setGrammarSessionIds(Array.from(selectedGrammar))}
+                  className="mt-3 w-full rounded-xl bg-accent px-4 py-3 text-sm font-semibold text-accent-foreground disabled:opacity-50"
+                >
+                  Ôn {selectedGrammar.size} mẫu ngữ pháp đã chọn
+                </button>
+              </section>
+            )}
           </>
         )
       ) : (
@@ -306,6 +391,7 @@ export default function ReviewPage() {
             setCustomMode(exerciseMode);
           }}
           onStartKanji={setCustomKanjiIds}
+          onStartGrammar={setCustomGrammarIds}
         />
       )}
     </div>
