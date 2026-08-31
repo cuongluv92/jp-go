@@ -117,6 +117,14 @@ export async function listKanjiByLevel(supabase: SupabaseClient, level: JlptLeve
   return (data ?? []) as KanjiRow[];
 }
 
+/** Tra nhanh nhiều kanji theo id — dùng để hiện tên/mặt chữ kanji trong danh sách "Hôm nay" của lộ trình. */
+export async function getKanjiByIds(supabase: SupabaseClient, ids: string[]): Promise<KanjiRow[]> {
+  if (ids.length === 0) return [];
+  const { data, error } = await supabase.from("jp_kanji").select("*").in("id", ids);
+  if (error) throw error;
+  return (data ?? []) as KanjiRow[];
+}
+
 /** Chi tiết 1 kanji kèm đầy đủ âm đọc, từ ghép, bài tập. */
 export async function getKanjiDetail(supabase: SupabaseClient, kanjiId: string): Promise<KanjiDetail | null> {
   const { data: kanji, error: kanjiError } = await supabase.from("jp_kanji").select("*").eq("id", kanjiId).maybeSingle();
