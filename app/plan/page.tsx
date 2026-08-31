@@ -32,20 +32,24 @@ export default function PlanPage() {
         <p className="mt-1 text-sm text-muted">Theo dõi lộ trình đang học, hoặc chọn một lộ trình mới bất cứ lúc nào.</p>
       </div>
 
-      <div className="grid grid-cols-2 gap-2 rounded-xl border border-border bg-surface p-1">
+      <div className="grid grid-cols-2 gap-1 rounded-2xl border border-border bg-surface p-1 shadow-sm">
         <button
           type="button"
           onClick={() => setTab("current")}
-          className={`rounded-lg py-2 text-sm font-semibold transition ${tab === "current" ? "bg-accent text-accent-foreground" : "text-muted"}`}
+          className={`rounded-xl py-2.5 text-sm font-semibold transition ${
+            tab === "current" ? "bg-accent text-accent-foreground shadow-sm" : "text-muted"
+          }`}
         >
           Học tiếp
         </button>
         <button
           type="button"
           onClick={() => setTab("new")}
-          className={`rounded-lg py-2 text-sm font-semibold transition ${tab === "new" ? "bg-accent text-accent-foreground" : "text-muted"}`}
+          className={`rounded-xl py-2.5 text-sm font-semibold transition ${
+            tab === "new" ? "bg-accent text-accent-foreground shadow-sm" : "text-muted"
+          }`}
         >
-          Chọn lộ trình mới
+          + Lộ trình mới
         </button>
       </div>
 

@@ -3,7 +3,7 @@
 import { useEffect, useMemo, useState } from "react";
 
 import { getKanjiLevelCounts, listKanjiByLevel } from "@/lib/data/kanji-service";
-import { createStudyPlan, getActiveStudyPlan, type StudyPlanItems, type StudyScope } from "@/lib/data/study-plan-service";
+import { createStudyPlan, type StudyPlanItems, type StudyScope } from "@/lib/data/study-plan-service";
 import { useVocabulary } from "@/lib/data/vocabulary-context";
 import { createClient } from "@/lib/supabase/client";
 import { distributeEvenly } from "@/lib/study-plan";
@@ -44,28 +44,20 @@ export function StudyPlanWizard({ onCreated }: { onCreated: () => void }) {
   const [level, setLevel] = useState<JlptLevel>("N3");
   const [scopeChoice, setScopeChoice] = useState<ScopeChoice>("vocab");
   const [duration, setDuration] = useState<1 | 2 | 3>(1);
+  const [name, setName] = useState("");
   const [submitting, setSubmitting] = useState(false);
   const [error, setError] = useState<string | null>(null);
-  const [hasActivePlan, setHasActivePlan] = useState(false);
-  const [overwriteConfirmed, setOverwriteConfirmed] = useState(false);
   const [kanjiCountsByLevel, setKanjiCountsByLevel] = useState<Record<JlptLevel, number> | null>(null);
   const [kanjiIdsForLevel, setKanjiIdsForLevel] = useState<string[]>([]);
 
   useEffect(() => {
     let cancelled = false;
-    async function checkActivePlan() {
+    async function loadKanjiCounts() {
       const supabase = createClient();
-      const [{ data: { user } }, counts] = await Promise.all([
-        supabase.auth.getUser(),
-        getKanjiLevelCounts(supabase),
-      ]);
-      if (cancelled) return;
-      setKanjiCountsByLevel(counts);
-      if (!user) return;
-      const active = await getActiveStudyPlan(supabase, user.id);
-      if (!cancelled) setHasActivePlan(active !== null);
+      const counts = await getKanjiLevelCounts(supabase);
+      if (!cancelled) setKanjiCountsByLevel(counts);
     }
-    void checkActivePlan();
+    void loadKanjiCounts();
     return () => {
       cancelled = true;
     };
@@ -169,7 +161,7 @@ export function StudyPlanWizard({ onCreated }: { onCreated: () => void }) {
         kanji: includesKanji ? kanjiIdsForLevel : [],
         grammar: includesGrammar ? grammarIdsForLevel : [],
       };
-      await createStudyPlan(supabase, user.id, level, scopeChoiceToArray(scopeChoice), duration, items);
+      await createStudyPlan(supabase, user.id, level, scopeChoiceToArray(scopeChoice), duration, items, name);
       onCreated();
     } catch {
       setError("Không tạo được lộ trình, thử lại sau.");
@@ -180,14 +172,29 @@ export function StudyPlanWizard({ onCreated }: { onCreated: () => void }) {
 
   return (
     <div className="flex flex-col gap-6">
-      <div className="flex gap-1 text-xs font-semibold text-muted">
-        {([1, 2, 3, 4] as Step[]).map((s) => (
-          <span
-            key={s}
-            className={`rounded-full px-2 py-1 ${s === step ? "bg-accent text-accent-foreground" : "bg-slate-100"}`}
-          >
-            {s}
-          </span>
+      <div className="flex items-center">
+        {([1, 2, 3, 4] as Step[]).map((s, i) => (
+          <div key={s} className="flex flex-1 items-center last:flex-none">
+            <div className="flex flex-col items-center gap-1">
+              <span
+                className={`flex h-7 w-7 shrink-0 items-center justify-center rounded-full text-xs font-bold transition ${
+                  s === step
+                    ? "bg-accent text-accent-foreground shadow-sm shadow-accent/30"
+                    : s < step
+                      ? "bg-accent/15 text-accent"
+                      : "bg-slate-100 text-muted"
+                }`}
+              >
+                {s < step ? "✓" : s}
+              </span>
+              <span className={`text-[10px] font-medium ${s === step ? "text-foreground" : "text-muted"}`}>
+                {STEP_TITLES[s].replace(/^\d+\.\s*/, "")}
+              </span>
+            </div>
+            {i < 3 && (
+              <div className={`mx-1 h-0.5 flex-1 rounded-full transition ${s < step ? "bg-accent/40" : "bg-slate-100"}`} />
+            )}
+          </div>
         ))}
       </div>
 
@@ -326,20 +333,18 @@ export function StudyPlanWizard({ onCreated }: { onCreated: () => void }) {
             )}
           </div>
 
-          {hasActivePlan && (
-            <div className="rounded-xl border border-amber-300 bg-amber-50 p-3 text-xs text-amber-900">
-              <p className="font-semibold">Bạn đang có lộ trình đang chạy dở.</p>
-              <p className="mt-1">Lộ trình cũ sẽ bị dừng lại, bạn có chắc muốn tạo lộ trình mới?</p>
-              <label className="mt-2 flex items-center gap-2">
-                <input
-                  type="checkbox"
-                  checked={overwriteConfirmed}
-                  onChange={(e) => setOverwriteConfirmed(e.target.checked)}
-                />
-                Tôi hiểu, dừng lộ trình cũ và tạo lộ trình mới.
-              </label>
-            </div>
-          )}
+          <label className="flex flex-col gap-1.5">
+            <span className="text-xs font-semibold text-foreground">Tên lộ trình (tuỳ chọn)</span>
+            <input
+              type="text"
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+              placeholder={`${level} · ${SCOPE_LABELS[scopeChoice]}`}
+              maxLength={80}
+              className="rounded-xl border border-border bg-surface px-3.5 py-2.5 text-sm outline-none focus:border-accent"
+            />
+            <span className="text-[11px] text-muted">Đặt tên riêng để dễ phân biệt khi bạn chạy nhiều lộ trình cùng lúc.</span>
+          </label>
 
           {error && <p className="text-sm text-red-600">{error}</p>}
 
@@ -354,7 +359,7 @@ export function StudyPlanWizard({ onCreated }: { onCreated: () => void }) {
             <button
               type="button"
               onClick={() => void handleConfirmCreate()}
-              disabled={submitting || !canCreate || (hasActivePlan && !overwriteConfirmed)}
+              disabled={submitting || !canCreate}
               className="flex-1 rounded-xl bg-accent px-4 py-3 text-sm font-semibold text-accent-foreground transition disabled:opacity-60"
             >
               {submitting ? "Đang tạo lộ trình..." : "Xác nhận tạo lộ trình"}

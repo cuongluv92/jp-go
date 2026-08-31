@@ -8,7 +8,7 @@ import { SectionTiles } from "@/components/section-tiles";
 import { StatCard } from "@/components/stat-card";
 import { getCached, setCached } from "@/lib/data/client-cache";
 import { getKanjiLevelCounts } from "@/lib/data/kanji-service";
-import { getActiveStudyPlan, type StudyDayRow, type StudyPlanRow } from "@/lib/data/study-plan-service";
+import { getStudyPlanDays, listActiveStudyPlans, type StudyDayRow, type StudyPlanRow } from "@/lib/data/study-plan-service";
 import { useVocabulary } from "@/lib/data/vocabulary-context";
 import { createClient } from "@/lib/supabase/client";
 import { computeStreak } from "@/lib/study-plan";
@@ -25,9 +25,9 @@ interface HomeCachedData {
 /**
  * Trang chủ chỉ còn vai trò tổng quan + điều hướng (mục lớn Từ vựng/Kanji/
  * Ngữ pháp, thống kê tiến độ) — việc quản lý lộ trình thật sự ("Hôm nay học
- * gì", đánh dấu hoàn thành...) đã chuyển sang trang Từ vựng
- * (`StudyPlanPanel`) theo đúng yêu cầu: vào Từ vựng là nơi cài/quản lý lộ
- * trình, không phải ở Trang chủ.
+ * gì", đánh dấu hoàn thành, đổi tên/dừng lộ trình...) nằm ở trang riêng
+ * `/plan`. Thẻ "Tiến độ lộ trình" ở đây gộp TẤT CẢ lộ trình đang chạy song
+ * song (nếu có nhiều), không chỉ 1 lộ trình.
  */
 export default function HomePage() {
   const { words } = useVocabulary();
@@ -52,13 +52,14 @@ export default function HomePage() {
         if (!cancelled) setCached<HomeCachedData>(HOME_CACHE_KEY, { plan: null, days: [], kanjiCounts: counts });
         return;
       }
-      const result = await getActiveStudyPlan(supabase, user.id);
+      const plans = await listActiveStudyPlans(supabase, user.id);
       if (cancelled) return;
-      const nextPlan = result?.plan ?? null;
-      const nextDays = result?.days ?? [];
+      const nextPlan = plans[0] ?? null;
+      const allDays = (await Promise.all(plans.map((p) => getStudyPlanDays(supabase, p.id)))).flat();
+      if (cancelled) return;
       setPlan(nextPlan);
-      setDays(nextDays);
-      setCached<HomeCachedData>(HOME_CACHE_KEY, { plan: nextPlan, days: nextDays, kanjiCounts: counts });
+      setDays(allDays);
+      setCached<HomeCachedData>(HOME_CACHE_KEY, { plan: nextPlan, days: allDays, kanjiCounts: counts });
     }
 
     void load();
