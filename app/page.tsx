@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useEffect, useState } from "react";
 
+import { LevelChips } from "@/components/level-chips";
 import { SectionTiles } from "@/components/section-tiles";
 import { StatCard } from "@/components/stat-card";
 import { getCached, setCached } from "@/lib/data/client-cache";
@@ -12,8 +13,6 @@ import { useVocabulary } from "@/lib/data/vocabulary-context";
 import { createClient } from "@/lib/supabase/client";
 import { computeStreak } from "@/lib/study-plan";
 import type { JlptLevel } from "@/lib/types";
-
-const ALL_LEVELS: JlptLevel[] = ["N5", "N4", "N3", "N2", "N1"];
 
 const HOME_CACHE_KEY = "home-page-data";
 
@@ -36,6 +35,7 @@ export default function HomePage() {
   const [plan, setPlan] = useState<StudyPlanRow | null>(cached?.plan ?? null);
   const [days, setDays] = useState<StudyDayRow[]>(cached?.days ?? []);
   const [kanjiCounts, setKanjiCounts] = useState<Record<JlptLevel, number> | null>(cached?.kanjiCounts ?? null);
+  const [selectedLevel, setSelectedLevel] = useState<JlptLevel>("N5");
 
   useEffect(() => {
     let cancelled = false;
@@ -71,8 +71,8 @@ export default function HomePage() {
   const planProgressPercent = days.length > 0 ? Math.round((completedDays.length / days.length) * 100) : 0;
   const streak = computeStreak(completedDays.map((d) => d.completed_at as string));
 
-  const totalVocabCount = words.filter((w) => !w.isHidden).length;
-  const totalKanjiCount = kanjiCounts ? ALL_LEVELS.reduce((sum, lv) => sum + (kanjiCounts[lv] ?? 0), 0) : 0;
+  const vocabCountForLevel = words.filter((w) => w.jlpt === selectedLevel && !w.isHidden).length;
+  const kanjiCountForLevel = kanjiCounts?.[selectedLevel] ?? 0;
 
   return (
     <div className="flex flex-col gap-6">
@@ -81,9 +81,13 @@ export default function HomePage() {
         <p className="mt-1 text-sm text-white/80">Hôm nay bạn đã sẵn sàng học tiếng Nhật chưa?</p>
       </section>
 
-      <section>
-        <h2 className="mb-2 text-sm font-semibold text-foreground">Khám phá nội dung</h2>
-        <SectionTiles vocabCount={totalVocabCount} kanjiCount={totalKanjiCount} grammarCount={0} />
+      <section className="flex flex-col gap-3">
+        <div className="flex items-center justify-between">
+          <h2 className="text-sm font-semibold text-foreground">Khám phá nội dung</h2>
+          <span className="text-xs text-muted">Chọn cấp độ</span>
+        </div>
+        <LevelChips level={selectedLevel} onChange={setSelectedLevel} />
+        <SectionTiles level={selectedLevel} vocabCount={vocabCountForLevel} kanjiCount={kanjiCountForLevel} grammarCount={0} />
       </section>
 
       <section className="grid grid-cols-2 gap-3">
