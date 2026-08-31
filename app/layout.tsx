@@ -19,7 +19,7 @@ const notoSansJp = Noto_Sans_JP({
 });
 
 export const metadata: Metadata = {
-  title: "jp-go — Học tiếng Nhật",
+  title: "jp-go",
   description: "Ứng dụng học từ vựng tiếng Nhật: flashcard, luyện tập và ôn tập theo lịch lặp lại ngắt quãng.",
   manifest: "/manifest.webmanifest",
   appleWebApp: {
