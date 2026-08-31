@@ -68,7 +68,7 @@ const DEFAULT_PROGRESS: LearningProgress = {
   repetitions: 0,
 };
 
-/** N2 trở đi PDF phân loại rõ theo word_class (xem migration 0057) — map thẳng sang PartOfSpeech thay vì mặc định "noun". */
+/** N2 trở đi PDF phân loại rõ theo word_class (xem migration 0057, 0098) — map thẳng sang PartOfSpeech thay vì mặc định "noun". */
 const WORD_CLASS_TO_PART_OF_SPEECH: Record<string, PartOfSpeech> = {
   動詞: "verb",
   複合動詞: "verb",
@@ -78,6 +78,7 @@ const WORD_CLASS_TO_PART_OF_SPEECH: Record<string, PartOfSpeech> = {
   な形容詞: "na_adjective",
   副詞: "adverb",
   接続詞: "conjunction",
+  助詞: "particle",
 };
 
 /**
