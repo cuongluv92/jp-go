@@ -9,6 +9,7 @@ import type {
   GrammarRow,
   GrammarUsageRow,
 } from "@/lib/data/grammar-service";
+import { fetchAllRows } from "@/lib/data/supabase-pagination";
 
 const GRAMMAR_COLUMNS = [
   "id",
@@ -86,28 +87,28 @@ export async function fetchAllGrammarData(supabase: SupabaseClient): Promise<{
   relations: GrammarRelationRow[];
   review: GrammarReviewRow[];
 }> {
-  const [{ data: grammar }, { data: usages }, { data: examples }, { data: questions }, { data: relations }] = await Promise.all([
-    supabase.from("jp_grammar").select("*").order("level").order("created_at"),
-    supabase.from("jp_grammar_usages").select("*"),
-    supabase.from("jp_grammar_examples").select("*"),
-    supabase.from("jp_grammar_questions").select("*"),
-    supabase.from("jp_grammar_relations").select("*"),
+  const [grammar, usages, examples, questions, relations] = await Promise.all([
+    fetchAllRows<GrammarRow>((from, to) => supabase.from("jp_grammar").select("*").order("level").order("created_at").range(from, to)),
+    fetchAllRows<GrammarUsageRow>((from, to) => supabase.from("jp_grammar_usages").select("*").range(from, to)),
+    fetchAllRows<GrammarExampleRow>((from, to) => supabase.from("jp_grammar_examples").select("*").range(from, to)),
+    fetchAllRows<GrammarQuestionRow>((from, to) => supabase.from("jp_grammar_questions").select("*").range(from, to)),
+    fetchAllRows<GrammarRelationRow>((from, to) => supabase.from("jp_grammar_relations").select("*").range(from, to)),
   ]);
 
   const {
     data: { user },
   } = await supabase.auth.getUser();
-  const { data: review } = user
-    ? await supabase.from("jp_grammar_reviews").select("*").eq("user_id", user.id)
-    : { data: [] };
+  const review = user
+    ? await fetchAllRows<GrammarReviewRow>((from, to) => supabase.from("jp_grammar_reviews").select("*").eq("user_id", user.id).range(from, to))
+    : [];
 
   return {
-    grammar: (grammar ?? []) as GrammarRow[],
-    usages: (usages ?? []) as GrammarUsageRow[],
-    examples: (examples ?? []) as GrammarExampleRow[],
-    questions: (questions ?? []) as GrammarQuestionRow[],
-    relations: (relations ?? []) as GrammarRelationRow[],
-    review: (review ?? []) as GrammarReviewRow[],
+    grammar,
+    usages,
+    examples,
+    questions,
+    relations,
+    review,
   };
 }
 

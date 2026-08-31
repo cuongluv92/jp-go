@@ -2,6 +2,7 @@ import ExcelJS from "exceljs";
 import type { SupabaseClient } from "@supabase/supabase-js";
 
 import type { KanjiProgressRow, KanjiQuestionRow, KanjiReadingRow, KanjiRow, KanjiWordRow } from "@/lib/data/kanji-service";
+import { fetchAllRows } from "@/lib/data/supabase-pagination";
 
 const KANJI_COLUMNS = [
   "id",
@@ -72,27 +73,21 @@ export async function fetchAllKanjiData(supabase: SupabaseClient): Promise<{
   questions: KanjiQuestionRow[];
   progress: KanjiProgressRow[];
 }> {
-  const [{ data: kanji }, { data: readings }, { data: words }, { data: questions }] = await Promise.all([
-    supabase.from("jp_kanji").select("*").order("level").order("created_at"),
-    supabase.from("jp_kanji_readings").select("*"),
-    supabase.from("jp_kanji_words").select("*"),
-    supabase.from("jp_kanji_questions").select("*"),
+  const [kanji, readings, words, questions] = await Promise.all([
+    fetchAllRows<KanjiRow>((from, to) => supabase.from("jp_kanji").select("*").order("level").order("created_at").range(from, to)),
+    fetchAllRows<KanjiReadingRow>((from, to) => supabase.from("jp_kanji_readings").select("*").range(from, to)),
+    fetchAllRows<KanjiWordRow>((from, to) => supabase.from("jp_kanji_words").select("*").range(from, to)),
+    fetchAllRows<KanjiQuestionRow>((from, to) => supabase.from("jp_kanji_questions").select("*").range(from, to)),
   ]);
 
   const {
     data: { user },
   } = await supabase.auth.getUser();
-  const { data: progress } = user
-    ? await supabase.from("jp_kanji_progress").select("*").eq("user_id", user.id)
-    : { data: [] };
+  const progress = user
+    ? await fetchAllRows<KanjiProgressRow>((from, to) => supabase.from("jp_kanji_progress").select("*").eq("user_id", user.id).range(from, to))
+    : [];
 
-  return {
-    kanji: (kanji ?? []) as KanjiRow[],
-    readings: (readings ?? []) as KanjiReadingRow[],
-    words: (words ?? []) as KanjiWordRow[],
-    questions: (questions ?? []) as KanjiQuestionRow[],
-    progress: (progress ?? []) as KanjiProgressRow[],
-  };
+  return { kanji, readings, words, questions, progress };
 }
 
 /** Xuất toàn bộ dữ liệu Kanji thành 1 file .xlsx — 5 sheet, cột tách rõ ràng. Chỉ xuất, không có luồng import. */
