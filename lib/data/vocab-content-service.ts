@@ -1,5 +1,6 @@
 import type { SupabaseClient } from "@supabase/supabase-js";
 
+import { fetchAllRows } from "@/lib/data/supabase-pagination";
 import type { ExampleNo, JlptLevel, LearningProgress, PartOfSpeech, VocabExample, VocabWord } from "@/lib/types";
 
 export type VocabEntryType = "word" | "phrase";
@@ -159,36 +160,39 @@ export function vocabExampleRowToExample(row: VocabExampleRow, exampleNo: Exampl
   };
 }
 
-/** Toàn bộ từ vựng nạp từ DB (mọi cấp độ đã có), kèm câu ví dụ — dùng để merge vào VocabularyContext bên cạnh N3 JSON tĩnh. Public content, không cần đăng nhập. */
+/**
+ * Toàn bộ từ vựng nạp từ DB (mọi cấp độ đã có), kèm câu ví dụ — dùng để
+ * merge vào VocabularyContext bên cạnh N3 JSON tĩnh. Public content, không
+ * cần đăng nhập. Dùng fetchAllRows (phân trang .range()) vì tổng số dòng
+ * đã vượt 1000 (giới hạn mặc định của Supabase/PostgREST) từ khi có N2 —
+ * gọi .select("*") thẳng sẽ bị cắt bớt âm thầm, làm mất hẳn dữ liệu N5.
+ */
 export async function listAllDbVocab(supabase: SupabaseClient): Promise<{ words: VocabWord[]; examples: VocabExample[] }> {
-  const [{ data: vocabRows, error: vocabError }, { data: exampleRows, error: exampleError }] = await Promise.all([
-    supabase
-      .from("jp_vocab")
-      .select("*")
-      .order("level", { ascending: true })
-      .order("lesson_no", { ascending: true, nullsFirst: false })
-      .order("word_class", { ascending: true, nullsFirst: false }),
-    supabase.from("jp_vocab_examples").select("*"),
+  const [vocabRows, exampleRows] = await Promise.all([
+    fetchAllRows<VocabRow>((from, to) =>
+      supabase
+        .from("jp_vocab")
+        .select("*")
+        .order("level", { ascending: true })
+        .order("lesson_no", { ascending: true, nullsFirst: false })
+        .order("word_class", { ascending: true, nullsFirst: false })
+        .range(from, to),
+    ),
+    fetchAllRows<VocabExampleRow>((from, to) => supabase.from("jp_vocab_examples").select("*").range(from, to)),
   ]);
-  if (vocabError) throw vocabError;
-  if (exampleError) throw exampleError;
 
-  const words = fillGroupSimilarWords(((vocabRows ?? []) as VocabRow[]).map((r) => dbVocabRowToWord(r)));
-  const examples = ((exampleRows ?? []) as VocabExampleRow[]).map((r) => vocabExampleRowToExample(r));
+  const words = fillGroupSimilarWords(vocabRows.map((r) => dbVocabRowToWord(r)));
+  const examples = exampleRows.map((r) => vocabExampleRowToExample(r));
   return { words, examples };
 }
 
 /** Toàn bộ câu hỏi generated cho 1 danh sách vocab_id — dùng cho quiz trắc nghiệm theo bài/theo lộ trình. */
 export async function getVocabQuestionsForIds(supabase: SupabaseClient, vocabIds: string[]): Promise<VocabQuestionRow[]> {
   if (vocabIds.length === 0) return [];
-  const { data, error } = await supabase.from("jp_vocab_questions").select("*").in("vocab_id", vocabIds);
-  if (error) throw error;
-  return (data ?? []) as VocabQuestionRow[];
+  return fetchAllRows<VocabQuestionRow>((from, to) => supabase.from("jp_vocab_questions").select("*").in("vocab_id", vocabIds).range(from, to));
 }
 
 /** Toàn bộ câu hỏi generated trong DB — dùng cho export Excel (sheet QUESTIONS). */
 export async function listAllVocabQuestions(supabase: SupabaseClient): Promise<VocabQuestionRow[]> {
-  const { data, error } = await supabase.from("jp_vocab_questions").select("*");
-  if (error) throw error;
-  return (data ?? []) as VocabQuestionRow[];
+  return fetchAllRows<VocabQuestionRow>((from, to) => supabase.from("jp_vocab_questions").select("*").range(from, to));
 }

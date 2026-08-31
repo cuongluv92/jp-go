@@ -1,5 +1,6 @@
 import type { SupabaseClient } from "@supabase/supabase-js";
 
+import { fetchAllRows } from "@/lib/data/supabase-pagination";
 import type { JlptLevel } from "@/lib/types";
 
 export type KanjiReadingType = "on" | "kun";
@@ -95,12 +96,11 @@ export interface KanjiDetail extends KanjiRow {
   questions: KanjiQuestionRow[];
 }
 
-/** Số lượng kanji đã có theo từng cấp độ — dùng ở Trang chủ và trang danh sách Kanji. */
+/** Số lượng kanji đã có theo từng cấp độ — dùng ở Trang chủ và trang danh sách Kanji. Phân trang vì tổng mọi cấp độ có thể vượt 1000 dòng (giới hạn mặc định Supabase). */
 export async function getKanjiLevelCounts(supabase: SupabaseClient): Promise<Record<JlptLevel, number>> {
   const counts: Record<JlptLevel, number> = { N5: 0, N4: 0, N3: 0, N2: 0, N1: 0 };
-  const { data, error } = await supabase.from("jp_kanji").select("level");
-  if (error) throw error;
-  for (const row of (data ?? []) as { level: JlptLevel }[]) {
+  const rows = await fetchAllRows<{ level: JlptLevel }>((from, to) => supabase.from("jp_kanji").select("level").range(from, to));
+  for (const row of rows) {
     counts[row.level] += 1;
   }
   return counts;
