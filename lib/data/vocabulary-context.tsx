@@ -132,32 +132,39 @@ export function VocabularyProvider({ children }: { children: ReactNode }) {
     const supabase = createClient();
 
     async function loadDbVocab() {
-      const { words: dbWords, examples: dbExamples } = await listAllDbVocab(supabase);
-      if (cancelled || dbWords.length === 0) return;
+      try {
+        const { words: dbWords, examples: dbExamples } = await listAllDbVocab(supabase);
+        if (cancelled || dbWords.length === 0) return;
 
-      const {
-        data: { user },
-      } = await supabase.auth.getUser();
-      let mergedWords = dbWords;
-      if (user && !cancelled) {
-        const dbWordIds = dbWords.map((w) => w.id);
-        const { data: rows } = await supabase
-          .from("jp_word_progress")
-          .select("*")
-          .eq("user_id", user.id)
-          .in("word_id", dbWordIds);
-        if (rows && rows.length > 0) {
-          const byWordId = new Map<string, WordProgressRow>(rows.map((r: WordProgressRow) => [r.word_id, r]));
-          mergedWords = dbWords.map((w) => {
-            const row = byWordId.get(w.id);
-            if (!row) return w;
-            return { ...w, progress: rowToProgress(row), isHidden: row.is_hidden };
-          });
+        const {
+          data: { user },
+        } = await supabase.auth.getUser();
+        let mergedWords = dbWords;
+        if (user && !cancelled) {
+          const dbWordIds = dbWords.map((w) => w.id);
+          const { data: rows } = await supabase
+            .from("jp_word_progress")
+            .select("*")
+            .eq("user_id", user.id)
+            .in("word_id", dbWordIds);
+          if (rows && rows.length > 0) {
+            const byWordId = new Map<string, WordProgressRow>(rows.map((r: WordProgressRow) => [r.word_id, r]));
+            mergedWords = dbWords.map((w) => {
+              const row = byWordId.get(w.id);
+              if (!row) return w;
+              return { ...w, progress: rowToProgress(row), isHidden: row.is_hidden };
+            });
+          }
         }
+        if (cancelled) return;
+        setWords((prev) => [...prev, ...mergedWords]);
+        setExamples((prev) => [...prev, ...dbExamples]);
+      } catch (error) {
+        // Không để 1 lần fetch lỗi (mạng chập chờn, Supabase tạm gián đoạn...)
+        // âm thầm khiến từ vựng N5+ biến mất khỏi app cả phiên — log ra để
+        // còn thấy trong console khi debug, N3 tĩnh vẫn hoạt động bình thường.
+        console.error("Không tải được từ vựng DB (N5 trở đi):", error);
       }
-      if (cancelled) return;
-      setWords((prev) => [...prev, ...mergedWords]);
-      setExamples((prev) => [...prev, ...dbExamples]);
     }
 
     void loadDbVocab();

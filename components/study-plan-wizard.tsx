@@ -2,6 +2,7 @@
 
 import { useEffect, useMemo, useState } from "react";
 
+import { getGrammarLevelCounts, listGrammarByLevel } from "@/lib/data/grammar-service";
 import { getKanjiLevelCounts, listKanjiByLevel } from "@/lib/data/kanji-service";
 import { createStudyPlan, type StudyPlanItems, type StudyScope } from "@/lib/data/study-plan-service";
 import { useVocabulary } from "@/lib/data/vocabulary-context";
@@ -49,35 +50,43 @@ export function StudyPlanWizard({ onCreated }: { onCreated: () => void }) {
   const [error, setError] = useState<string | null>(null);
   const [kanjiCountsByLevel, setKanjiCountsByLevel] = useState<Record<JlptLevel, number> | null>(null);
   const [kanjiIdsForLevel, setKanjiIdsForLevel] = useState<string[]>([]);
+  const [grammarCountsByLevel, setGrammarCountsByLevel] = useState<Record<JlptLevel, number> | null>(null);
+  const [grammarIdsForLevel, setGrammarIdsForLevel] = useState<string[]>([]);
 
   useEffect(() => {
     let cancelled = false;
-    async function loadKanjiCounts() {
+    async function loadCounts() {
       const supabase = createClient();
-      const counts = await getKanjiLevelCounts(supabase);
-      if (!cancelled) setKanjiCountsByLevel(counts);
+      const [kanjiCounts, grammarCounts] = await Promise.all([getKanjiLevelCounts(supabase), getGrammarLevelCounts(supabase)]);
+      if (!cancelled) {
+        setKanjiCountsByLevel(kanjiCounts);
+        setGrammarCountsByLevel(grammarCounts);
+      }
     }
-    void loadKanjiCounts();
+    void loadCounts();
     return () => {
       cancelled = true;
     };
   }, []);
 
-  // Kanji id cần fetch riêng theo level đang chọn (nội dung Kanji nằm ở Supabase, không có sẵn trong context như từ vựng).
+  // Kanji/Ngữ pháp id cần fetch riêng theo level đang chọn (nội dung nằm ở Supabase, không có sẵn trong context như từ vựng).
   useEffect(() => {
     let cancelled = false;
-    async function loadKanjiIds() {
+    async function loadIds() {
       const supabase = createClient();
-      const rows = await listKanjiByLevel(supabase, level);
-      if (!cancelled) setKanjiIdsForLevel(rows.map((r) => r.id));
+      const [kanjiRows, grammarRows] = await Promise.all([listKanjiByLevel(supabase, level), listGrammarByLevel(supabase, level)]);
+      if (!cancelled) {
+        setKanjiIdsForLevel(kanjiRows.map((r) => r.id));
+        setGrammarIdsForLevel(grammarRows.map((r) => r.id));
+      }
     }
-    void loadKanjiIds();
+    void loadIds();
     return () => {
       cancelled = true;
     };
   }, [level]);
 
-  /** Cấp độ nào có sẵn nội dung thật (từ vựng HOẶC kanji) — cấp khác hiển thị "sắp có". */
+  /** Cấp độ nào có sẵn nội dung thật (từ vựng/kanji/ngữ pháp) — cấp khác hiển thị "sắp có". */
   const vocabCountByLevel = useMemo(() => {
     const map = {} as Record<JlptLevel, number>;
     for (const lv of JLPT_LEVELS) map[lv] = words.filter((w) => w.jlpt === lv && !w.isHidden).length;
@@ -85,15 +94,18 @@ export function StudyPlanWizard({ onCreated }: { onCreated: () => void }) {
   }, [words]);
 
   const availableLevels = useMemo(
-    () => JLPT_LEVELS.filter((lv) => vocabCountByLevel[lv] > 0 || (kanjiCountsByLevel?.[lv] ?? 0) > 0),
-    [vocabCountByLevel, kanjiCountsByLevel],
+    () =>
+      JLPT_LEVELS.filter(
+        (lv) => vocabCountByLevel[lv] > 0 || (kanjiCountsByLevel?.[lv] ?? 0) > 0 || (grammarCountsByLevel?.[lv] ?? 0) > 0,
+      ),
+    [vocabCountByLevel, kanjiCountsByLevel, grammarCountsByLevel],
   );
 
   /** Phạm vi nào dùng được cho 1 level — chỉ cần SỐ LƯỢNG (đã có sẵn cho mọi level từ lúc mount), không cần fetch đủ id. */
   function scopeAvailabilityFor(lv: JlptLevel): Record<ScopeChoice, boolean> {
     const vocab = vocabCountByLevel[lv] > 0;
     const kanji = (kanjiCountsByLevel?.[lv] ?? 0) > 0;
-    const grammar = false; // Ngữ pháp chưa có nội dung ở bất kỳ cấp nào trong app.
+    const grammar = (grammarCountsByLevel?.[lv] ?? 0) > 0;
     return { vocab, kanji, grammar, all: vocab || kanji || grammar };
   }
 
@@ -113,8 +125,6 @@ export function StudyPlanWizard({ onCreated }: { onCreated: () => void }) {
     () => words.filter((w) => w.jlpt === level && !w.isHidden).map((w) => w.id),
     [words, level],
   );
-  // Ngữ pháp chưa có nội dung ở bất kỳ cấp nào trong app — không giả lập số liệu.
-  const grammarIdsForLevel: string[] = [];
 
   const totalDays = duration * 30;
   const includesVocab = scopeChoice === "vocab" || scopeChoice === "all";
