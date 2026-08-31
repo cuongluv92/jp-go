@@ -67,9 +67,29 @@ const DEFAULT_PROGRESS: LearningProgress = {
   repetitions: 0,
 };
 
-/** 代名詞/表現 dùng cho phần lớn nội dung sơ cấp (đại từ, mẫu câu cố định) nạp từ DB — chi tiết ngữ pháp sâu hơn không có trong nguồn PDF nên để mặc định trung tính, không suy diễn. */
-function guessPartOfSpeech(entryType: VocabEntryType): PartOfSpeech {
-  return entryType === "phrase" ? "expression" : "noun";
+/** N2 trở đi PDF phân loại rõ theo word_class (xem migration 0057) — map thẳng sang PartOfSpeech thay vì mặc định "noun". */
+const WORD_CLASS_TO_PART_OF_SPEECH: Record<string, PartOfSpeech> = {
+  動詞: "verb",
+  複合動詞: "verb",
+  動名詞: "noun",
+  名詞: "noun",
+  い形容詞: "i_adjective",
+  な形容詞: "na_adjective",
+  副詞: "adverb",
+  接続詞: "conjunction",
+};
+
+/**
+ * N5 (chưa có word_class trong nguồn PDF gốc — chỉ chia theo lesson_no) vẫn
+ * phải mặc định trung tính "noun", không suy diễn bừa. N2 trở đi map đúng
+ * theo word_class; riêng nhóm カタカナ đa số là danh từ mượn, trừ vài từ có
+ * đuôi "な" rõ ràng là な形容詞 (ユニークな, ロマンチックな, ルーズな...).
+ */
+function guessPartOfSpeech(entryType: VocabEntryType, wordClass: string | null, wordJp: string): PartOfSpeech {
+  if (entryType === "phrase") return "expression";
+  if (wordClass === "カタカナ") return wordJp.endsWith("な") ? "na_adjective" : "noun";
+  if (wordClass && wordClass in WORD_CLASS_TO_PART_OF_SPEECH) return WORD_CLASS_TO_PART_OF_SPEECH[wordClass];
+  return "noun";
 }
 
 /**
@@ -88,7 +108,7 @@ export function dbVocabRowToWord(row: VocabRow, partOfSpeechOverride?: PartOfSpe
     kanji: hasKanji ? row.word_jp : "",
     reading: row.reading_furigana,
     meaningVi: row.meaning_vi,
-    partOfSpeech: partOfSpeechOverride ?? guessPartOfSpeech(row.entry_type),
+    partOfSpeech: partOfSpeechOverride ?? guessPartOfSpeech(row.entry_type, row.word_class, row.word_jp),
     verbClass: null,
     transitivity: null,
     particlePatterns: [],

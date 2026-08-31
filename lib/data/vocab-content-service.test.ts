@@ -64,6 +64,22 @@ describe("dbVocabRowToWord", () => {
     expect(word.wordClass).toBe("動詞");
   });
 
+  it("word_class N2 map đúng sang partOfSpeech thay vì mặc định noun", () => {
+    expect(dbVocabRowToWord(makeRow({ word_class: "動詞" })).partOfSpeech).toBe("verb");
+    expect(dbVocabRowToWord(makeRow({ word_class: "複合動詞" })).partOfSpeech).toBe("verb");
+    expect(dbVocabRowToWord(makeRow({ word_class: "動名詞" })).partOfSpeech).toBe("noun");
+    expect(dbVocabRowToWord(makeRow({ word_class: "名詞" })).partOfSpeech).toBe("noun");
+    expect(dbVocabRowToWord(makeRow({ word_class: "い形容詞" })).partOfSpeech).toBe("i_adjective");
+    expect(dbVocabRowToWord(makeRow({ word_class: "な形容詞" })).partOfSpeech).toBe("na_adjective");
+    expect(dbVocabRowToWord(makeRow({ word_class: "副詞" })).partOfSpeech).toBe("adverb");
+    expect(dbVocabRowToWord(makeRow({ word_class: "接続詞" })).partOfSpeech).toBe("conjunction");
+  });
+
+  it("word_class カタカナ mặc định là danh từ, trừ từ có đuôi な là な形容詞", () => {
+    expect(dbVocabRowToWord(makeRow({ word_class: "カタカナ", word_jp: "スタイル" })).partOfSpeech).toBe("noun");
+    expect(dbVocabRowToWord(makeRow({ word_class: "カタカナ", word_jp: "ユニークな" })).partOfSpeech).toBe("na_adjective");
+  });
+
   it("progress mặc định là chưa học, không lẫn tiến độ giữa các từ", () => {
     const word = dbVocabRowToWord(makeRow());
     expect(word.progress.status).toBe("chua_hoc");
