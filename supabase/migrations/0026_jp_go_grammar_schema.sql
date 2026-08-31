@@ -75,6 +75,8 @@ create table if not exists jp_grammar_examples (
   linked_vocab_id uuid references jp_vocab(id) on delete set null,
   source_type text not null default 'pdf' check (source_type in ('pdf', 'generated')),
   review_status text not null default 'ok' check (review_status in ('ok', 'needs_review')),
+  corrected_text text,
+  correction_note text,
   created_at timestamptz not null default now()
 );
 alter table jp_grammar_examples enable row level security;
