@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 
 import { KanjiQuizRunner } from "@/components/kanji-quiz-runner";
+import { KanjiStrokePractice } from "@/components/kanji-stroke-practice";
 import { getCached, setCached } from "@/lib/data/client-cache";
 import {
   gradeKanjiReview,
@@ -116,6 +117,8 @@ export function KanjiDetailClient({ id }: { id: string }) {
         <span className="text-sm font-semibold text-accent">{detail.han_viet}</span>
         {detail.meaning_vi_summary && <span className="text-sm text-muted">{detail.meaning_vi_summary}</span>}
       </div>
+
+      <KanjiStrokePractice character={detail.kanji_character} />
 
       <ReadingBlock label="Âm Kun" readings={kunReadings} words={detail.words} />
       <ReadingBlock label="Âm On" readings={onReadings} words={detail.words} />
