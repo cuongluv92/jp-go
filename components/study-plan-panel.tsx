@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 
 import { getCached, setCached } from "@/lib/data/client-cache";
+import { getGrammarByIds, type GrammarRow } from "@/lib/data/grammar-service";
 import { getKanjiByIds, type KanjiRow } from "@/lib/data/kanji-service";
 import {
   archiveStudyPlan,
@@ -27,10 +28,11 @@ interface CachedData {
   selectedPlanId: string | null;
   days: StudyDayRow[];
   todayKanji: KanjiRow[];
+  todayGrammar: GrammarRow[];
   completedCounts: Record<string, number>;
 }
 
-type SubTab = "overview" | "vocab" | "kanji";
+type SubTab = "overview" | "vocab" | "kanji" | "grammar";
 
 function planDisplayName(plan: StudyPlanRow): string {
   return plan.name && plan.name.trim().length > 0 ? plan.name : `Lộ trình ${plan.jlpt_level}`;
@@ -41,6 +43,11 @@ const SCOPE_LABELS: Record<string, string> = { vocab: "Từ vựng", kanji: "Kan
 async function loadTodayKanji(supabase: ReturnType<typeof createClient>, kanjiIds: string[]): Promise<KanjiRow[]> {
   if (kanjiIds.length === 0) return [];
   return getKanjiByIds(supabase, kanjiIds);
+}
+
+async function loadTodayGrammar(supabase: ReturnType<typeof createClient>, grammarIds: string[]): Promise<GrammarRow[]> {
+  if (grammarIds.length === 0) return [];
+  return getGrammarByIds(supabase, grammarIds);
 }
 
 function SubTabButton({ active, onClick, children }: { active: boolean; onClick: () => void; children: React.ReactNode }) {
@@ -126,6 +133,7 @@ export function StudyPlanPanel() {
   const [selectedPlanId, setSelectedPlanId] = useState<string | null>(cached?.selectedPlanId ?? null);
   const [days, setDays] = useState<StudyDayRow[]>(cached?.days ?? []);
   const [todayKanji, setTodayKanji] = useState<KanjiRow[]>(cached?.todayKanji ?? []);
+  const [todayGrammar, setTodayGrammar] = useState<GrammarRow[]>(cached?.todayGrammar ?? []);
   const [completedCounts, setCompletedCounts] = useState<Record<string, number>>(cached?.completedCounts ?? {});
   const [loading, setLoading] = useState(!cached);
   const [switching, setSwitching] = useState(false);
@@ -152,6 +160,7 @@ export function StudyPlanPanel() {
             selectedPlanId: null,
             days: [],
             todayKanji: [],
+            todayGrammar: [],
             completedCounts: {},
           });
         }
@@ -169,7 +178,10 @@ export function StudyPlanPanel() {
       ]);
       if (cancelled) return;
       const todayDay = nextDays.find((d) => d.completed_at === null) ?? null;
-      const nextTodayKanji = await loadTodayKanji(supabase, todayDay?.kanji_ids ?? []);
+      const [nextTodayKanji, nextTodayGrammar] = await Promise.all([
+        loadTodayKanji(supabase, todayDay?.kanji_ids ?? []),
+        loadTodayGrammar(supabase, todayDay?.grammar_ids ?? []),
+      ]);
       if (cancelled) return;
       const nextCounts: Record<string, number> = {};
       otherPlans.forEach((p, i) => {
@@ -180,6 +192,7 @@ export function StudyPlanPanel() {
       setSelectedPlanId(targetPlan?.id ?? null);
       setDays(nextDays);
       setTodayKanji(nextTodayKanji);
+      setTodayGrammar(nextTodayGrammar);
       setCompletedCounts(nextCounts);
       setLoading(false);
       setCached<CachedData>(CACHE_KEY, {
@@ -188,6 +201,7 @@ export function StudyPlanPanel() {
         selectedPlanId: targetPlan?.id ?? null,
         days: nextDays,
         todayKanji: nextTodayKanji,
+        todayGrammar: nextTodayGrammar,
         completedCounts: nextCounts,
       });
     }
@@ -208,11 +222,15 @@ export function StudyPlanPanel() {
     const supabase = createClient();
     const nextDays = await getStudyPlanDays(supabase, planId);
     const todayDay = nextDays.find((d) => d.completed_at === null) ?? null;
-    const nextTodayKanji = await loadTodayKanji(supabase, todayDay?.kanji_ids ?? []);
+    const [nextTodayKanji, nextTodayGrammar] = await Promise.all([
+      loadTodayKanji(supabase, todayDay?.kanji_ids ?? []),
+      loadTodayGrammar(supabase, todayDay?.grammar_ids ?? []),
+    ]);
     const nextCounts = { ...completedCounts, [planId]: nextDays.filter((d) => d.completed_at !== null).length };
     setSelectedPlanId(planId);
     setDays(nextDays);
     setTodayKanji(nextTodayKanji);
+    setTodayGrammar(nextTodayGrammar);
     setCompletedCounts(nextCounts);
     setSwitching(false);
     setCached<CachedData>(CACHE_KEY, {
@@ -221,6 +239,7 @@ export function StudyPlanPanel() {
       selectedPlanId: planId,
       days: nextDays,
       todayKanji: nextTodayKanji,
+      todayGrammar: nextTodayGrammar,
       completedCounts: nextCounts,
     });
   }
@@ -233,9 +252,12 @@ export function StudyPlanPanel() {
   const learnedWordsInPlan = completedDays.reduce((sum, d) => sum + d.word_ids.length, 0);
   const totalKanjiInPlan = days.reduce((sum, d) => sum + d.kanji_ids.length, 0);
   const learnedKanjiInPlan = completedDays.reduce((sum, d) => sum + d.kanji_ids.length, 0);
+  const totalGrammarInPlan = days.reduce((sum, d) => sum + d.grammar_ids.length, 0);
+  const learnedGrammarInPlan = completedDays.reduce((sum, d) => sum + d.grammar_ids.length, 0);
 
   const hasVocabTab = !!plan?.scope.includes("vocab") && totalWordsInPlan > 0;
   const hasKanjiTab = !!plan?.scope.includes("kanji") && totalKanjiInPlan > 0;
+  const hasGrammarTab = !!plan?.scope.includes("grammar") && totalGrammarInPlan > 0;
 
   const planProgressPercent = plan && plan.total_days > 0 ? Math.round((completedDays.length / plan.total_days) * 100) : 0;
 
@@ -254,10 +276,14 @@ export function StudyPlanPanel() {
     await completeStudyDay(supabase, userId, todayDay);
     const nextDays = await getStudyPlanDays(supabase, plan.id);
     const nextTodayDay = nextDays.find((d) => d.completed_at === null) ?? null;
-    const nextTodayKanji = await loadTodayKanji(supabase, nextTodayDay?.kanji_ids ?? []);
+    const [nextTodayKanji, nextTodayGrammar] = await Promise.all([
+      loadTodayKanji(supabase, nextTodayDay?.kanji_ids ?? []),
+      loadTodayGrammar(supabase, nextTodayDay?.grammar_ids ?? []),
+    ]);
     const nextCounts = { ...completedCounts, [plan.id]: nextDays.filter((d) => d.completed_at !== null).length };
     setDays(nextDays);
     setTodayKanji(nextTodayKanji);
+    setTodayGrammar(nextTodayGrammar);
     setCompletedCounts(nextCounts);
     setCompleting(false);
     setCached<CachedData>(CACHE_KEY, {
@@ -266,6 +292,7 @@ export function StudyPlanPanel() {
       selectedPlanId: plan.id,
       days: nextDays,
       todayKanji: nextTodayKanji,
+      todayGrammar: nextTodayGrammar,
       completedCounts: nextCounts,
     });
   }
@@ -284,7 +311,7 @@ export function StudyPlanPanel() {
     const nextPlans = plans.map((p) => (p.id === plan.id ? { ...p, name: nextName } : p));
     setPlans(nextPlans);
     setRenaming(false);
-    setCached<CachedData>(CACHE_KEY, { userId, plans: nextPlans, selectedPlanId, days, todayKanji, completedCounts });
+    setCached<CachedData>(CACHE_KEY, { userId, plans: nextPlans, selectedPlanId, days, todayKanji, todayGrammar, completedCounts });
   }
 
   async function handleArchive() {
@@ -298,7 +325,10 @@ export function StudyPlanPanel() {
     const nextPlan = remainingPlans[0] ?? null;
     const nextDays = nextPlan ? await getStudyPlanDays(supabase, nextPlan.id) : [];
     const nextTodayDay = nextDays.find((d) => d.completed_at === null) ?? null;
-    const nextTodayKanji = await loadTodayKanji(supabase, nextTodayDay?.kanji_ids ?? []);
+    const [nextTodayKanji, nextTodayGrammar] = await Promise.all([
+      loadTodayKanji(supabase, nextTodayDay?.kanji_ids ?? []),
+      loadTodayGrammar(supabase, nextTodayDay?.grammar_ids ?? []),
+    ]);
     const nextCounts = { ...completedCounts };
     delete nextCounts[plan.id];
     if (nextPlan) nextCounts[nextPlan.id] = nextDays.filter((d) => d.completed_at !== null).length;
@@ -306,6 +336,7 @@ export function StudyPlanPanel() {
     setSelectedPlanId(nextPlan?.id ?? null);
     setDays(nextDays);
     setTodayKanji(nextTodayKanji);
+    setTodayGrammar(nextTodayGrammar);
     setCompletedCounts(nextCounts);
     setArchiving(false);
     setCached<CachedData>(CACHE_KEY, {
@@ -314,6 +345,7 @@ export function StudyPlanPanel() {
       selectedPlanId: nextPlan?.id ?? null,
       days: nextDays,
       todayKanji: nextTodayKanji,
+      todayGrammar: nextTodayGrammar,
       completedCounts: nextCounts,
     });
   }
@@ -434,6 +466,11 @@ export function StudyPlanPanel() {
                 Kanji
               </SubTabButton>
             )}
+            {hasGrammarTab && (
+              <SubTabButton active={subTab === "grammar"} onClick={() => setSubTab("grammar")}>
+                Ngữ pháp
+              </SubTabButton>
+            )}
           </div>
 
           {subTab === "overview" && (
@@ -512,6 +549,33 @@ export function StudyPlanPanel() {
                             </div>
                           </div>
                           <span className="text-xs text-muted">{k.level}</span>
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              )}
+            </div>
+          )}
+
+          {subTab === "grammar" && (
+            <div className="flex flex-col gap-3">
+              <ContentProgressCard label="Ngữ pháp trong lộ trình" learned={learnedGrammarInPlan} total={totalGrammarInPlan} />
+              {todayGrammar.length > 0 && (
+                <div>
+                  <p className="mb-2 text-xs font-semibold text-foreground">Ngữ pháp hôm nay ({todayGrammar.length})</p>
+                  <ul className="flex flex-col gap-2">
+                    {todayGrammar.map((g) => (
+                      <li key={g.id}>
+                        <Link
+                          href={`/grammar/${g.id}`}
+                          className="flex items-center justify-between rounded-xl border border-border bg-surface px-4 py-3 shadow-sm transition active:scale-[0.99]"
+                        >
+                          <div className="min-w-0">
+                            <p className="font-jp truncate text-sm font-semibold">{g.grammar_pattern}</p>
+                            <p className="truncate text-xs text-muted">{g.meaning_vi}</p>
+                          </div>
+                          <span className="shrink-0 text-xs text-muted">{g.level}</span>
                         </Link>
                       </li>
                     ))}
