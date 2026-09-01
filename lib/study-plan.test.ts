@@ -20,32 +20,56 @@ describe("distributeEvenly", () => {
     expect(counts).toHaveLength(60);
   });
 
-  it("số dư dồn hết vào ngày cuối cùng, các ngày trước đều bằng floor(total/days)", () => {
-    const counts = distributeEvenly(1798, 60);
-    const base = Math.floor(1798 / 60);
-    expect(counts.slice(0, -1).every((c) => c === base)).toBe(true);
-    expect(counts[counts.length - 1]).toBe(base + (1798 - base * 60));
+  it("mọi ngày chênh nhau tối đa 1 mục và phần dư không dồn vào ngày cuối", () => {
+    const counts = distributeEvenly(12, 5);
+    expect(counts).toEqual([2, 2, 3, 2, 3]);
+    expect(Math.max(...counts) - Math.min(...counts)).toBeLessThanOrEqual(1);
+  });
+
+  it("khớp tải học N2 90 ngày đã chốt", () => {
+    const vocab = distributeEvenly(1193, 90);
+    const kanji = distributeEvenly(406, 90);
+    const grammar = distributeEvenly(112, 90);
+
+    expect(vocab.filter((n) => n === 14)).toHaveLength(23);
+    expect(vocab.filter((n) => n === 13)).toHaveLength(67);
+    expect(kanji.filter((n) => n === 5)).toHaveLength(46);
+    expect(kanji.filter((n) => n === 4)).toHaveLength(44);
+    expect(grammar.filter((n) => n === 2)).toHaveLength(22);
+    expect(grammar.filter((n) => n === 1)).toHaveLength(68);
+  });
+
+  it("khớp tải học N4 30 ngày đã chốt", () => {
+    const vocab = distributeEvenly(942, 30);
+    const kanji = distributeEvenly(208, 30);
+    const grammar = distributeEvenly(92, 30);
+
+    expect(vocab.filter((n) => n === 32)).toHaveLength(12);
+    expect(vocab.filter((n) => n === 31)).toHaveLength(18);
+    expect(kanji.filter((n) => n === 7)).toHaveLength(28);
+    expect(kanji.filter((n) => n === 6)).toHaveLength(2);
+    expect(grammar.filter((n) => n === 4)).toHaveLength(2);
+    expect(grammar.filter((n) => n === 3)).toHaveLength(28);
   });
 
   it("total = 0 trả về toàn số 0", () => {
     expect(distributeEvenly(0, 5)).toEqual([0, 0, 0, 0, 0]);
   });
 
-  it("total nhỏ hơn days: các ngày đầu = 0, dư dồn hết vào ngày cuối", () => {
+  it("total nhỏ hơn days: ngày có bài được rải đều thay vì dồn cuối", () => {
     const counts = distributeEvenly(3, 10);
-    expect(counts.slice(0, -1).every((c) => c === 0)).toBe(true);
-    expect(counts[9]).toBe(3);
+    expect(counts).toEqual([0, 0, 0, 1, 0, 0, 1, 0, 0, 1]);
+    expect(counts.reduce((a, b) => a + b, 0)).toBe(3);
   });
 });
 
 describe("buildStudyDays", () => {
-  it("cắt đúng danh sách id theo từng ngày, giữ nguyên thứ tự, dư dồn ngày cuối", () => {
+  it("cắt đúng danh sách id theo từng ngày, giữ nguyên thứ tự và tải cân bằng", () => {
     const ids = Array.from({ length: 12 }, (_, i) => `w${i}`);
     const days = buildStudyDays(ids, 5);
     expect(days).toHaveLength(5);
     expect(days.flat()).toEqual(ids);
-    expect(days.slice(0, 4).every((d) => d.length === 2)).toBe(true);
-    expect(days[4]).toHaveLength(4);
+    expect(days.map((d) => d.length)).toEqual([2, 2, 3, 2, 3]);
   });
 });
 
