@@ -4,19 +4,20 @@
  */
 
 /**
- * Chia `total` mục cho `days` ngày theo đúng công thức đã chốt:
- * mỗi ngày = floor(total / days), số dư (chia không hết) dồn hết vào NGÀY
- * CUỐI CÙNG — không rải số dư rải rác giữa chừng gây lệch ngày bất thường.
+ * Chia `total` mục cho `days` ngày sao cho tải học cân bằng nhất có thể:
+ * - tổng số mục luôn đúng bằng `total`;
+ * - số mục giữa hai ngày bất kỳ chênh nhau tối đa 1;
+ * - phần dư được rải đều xuyên suốt lộ trình, không dồn vào ngày cuối.
  */
 export function distributeEvenly(total: number, days: number): number[] {
   if (days <= 0) throw new Error("days phải lớn hơn 0");
   if (total < 0) throw new Error("total không được âm");
 
-  const base = Math.floor(total / days);
-  const remainder = total - base * days;
-  const counts = Array<number>(days).fill(base);
-  counts[days - 1] += remainder;
-  return counts;
+  return Array.from({ length: days }, (_, i) => {
+    const completedBefore = Math.floor((i * total) / days);
+    const completedThroughToday = Math.floor(((i + 1) * total) / days);
+    return completedThroughToday - completedBefore;
+  });
 }
 
 /** Chia danh sách id (từ vựng/kanji/ngữ pháp) thành từng ngày theo `distributeEvenly`. */

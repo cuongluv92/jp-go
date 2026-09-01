@@ -139,11 +139,13 @@ export function StudyPlanWizard({ onCreated }: { onCreated: () => void }) {
     if (!active) return null;
     if (total === 0) return `${label}: chưa có nội dung cho ${level}.`;
     const counts = distributeEvenly(total, totalDays);
-    const base = counts[0];
-    const lastDay = counts[counts.length - 1];
-    return lastDay === base
-      ? `${label}: ${total} mục → mỗi ngày ${base} mục.`
-      : `${label}: ${total} mục → mỗi ngày ${base} mục, riêng ngày cuối (ngày ${totalDays}) ${lastDay} mục (dồn số dư).`;
+    const minPerDay = Math.min(...counts);
+    const maxPerDay = Math.max(...counts);
+    if (minPerDay === maxPerDay) return `${label}: ${total} mục → mỗi ngày ${minPerDay} mục.`;
+
+    const maxDays = counts.filter((count) => count === maxPerDay).length;
+    const minDays = counts.filter((count) => count === minPerDay).length;
+    return `${label}: ${total} mục → ${maxDays} ngày × ${maxPerDay} mục + ${minDays} ngày × ${minPerDay} mục (rải đều trong lộ trình).`;
   }
 
   const previewLines = [
