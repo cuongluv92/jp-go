@@ -137,11 +137,12 @@ export function StudyPlanPanel() {
   const [completedCounts, setCompletedCounts] = useState<Record<string, number>>(cached?.completedCounts ?? {});
   const [loading, setLoading] = useState(!cached);
   const [switching, setSwitching] = useState(false);
-  const [completing, setCompleting] = useState(false);
+  const [completingDayId, setCompletingDayId] = useState<string | null>(null);
   const [subTab, setSubTab] = useState<SubTab>("overview");
   const [renaming, setRenaming] = useState(false);
   const [renameValue, setRenameValue] = useState("");
   const [archiving, setArchiving] = useState(false);
+  const [showAllDays, setShowAllDays] = useState(false);
 
   useEffect(() => {
     let cancelled = false;
@@ -269,11 +270,16 @@ export function StudyPlanPanel() {
     return Math.round((completed / p.total_days) * 100);
   }
 
-  async function handleCompleteToday() {
-    if (!userId || !todayDay || !plan) return;
-    setCompleting(true);
+  /**
+   * Đánh dấu hoàn thành 1 ngày BẤT KỲ (không bắt buộc phải là ngày sớm nhất
+   * chưa xong) — cho phép người học nhanh bấm xong nhiều ngày liên tiếp
+   * trong 1 lần ngồi học, thay vì bị khoá cứng chỉ 1 ngày mỗi lần.
+   */
+  async function handleCompleteDay(day: StudyDayRow) {
+    if (!userId || !plan) return;
+    setCompletingDayId(day.id);
     const supabase = createClient();
-    await completeStudyDay(supabase, userId, todayDay);
+    await completeStudyDay(supabase, userId, day);
     const nextDays = await getStudyPlanDays(supabase, plan.id);
     const nextTodayDay = nextDays.find((d) => d.completed_at === null) ?? null;
     const [nextTodayKanji, nextTodayGrammar] = await Promise.all([
@@ -285,7 +291,7 @@ export function StudyPlanPanel() {
     setTodayKanji(nextTodayKanji);
     setTodayGrammar(nextTodayGrammar);
     setCompletedCounts(nextCounts);
-    setCompleting(false);
+    setCompletingDayId(null);
     setCached<CachedData>(CACHE_KEY, {
       userId,
       plans,
@@ -488,13 +494,57 @@ export function StudyPlanPanel() {
                   </p>
                   <button
                     type="button"
-                    onClick={() => void handleCompleteToday()}
-                    disabled={completing}
+                    onClick={() => void handleCompleteDay(todayDay)}
+                    disabled={completingDayId !== null}
                     className="mt-3 w-full rounded-xl bg-accent px-4 py-3 text-sm font-semibold text-accent-foreground transition disabled:opacity-60"
                   >
-                    {completing ? "Đang lưu..." : "Đã học xong"}
+                    {completingDayId === todayDay.id ? "Đang lưu..." : "Đã học xong"}
                   </button>
                 </div>
+              )}
+
+              <button
+                type="button"
+                onClick={() => setShowAllDays((v) => !v)}
+                className="flex items-center justify-between rounded-xl border border-dashed border-border bg-surface px-4 py-2.5 text-xs font-semibold text-muted transition active:scale-[0.99]"
+              >
+                <span>Xem tất cả {days.length} ngày (học nhanh, chọn ngày khác để đánh dấu xong)</span>
+                <span>{showAllDays ? "▲" : "▼"}</span>
+              </button>
+
+              {showAllDays && (
+                <ul className="flex flex-col gap-2">
+                  {days.map((d) => {
+                    const isDone = d.completed_at !== null;
+                    return (
+                      <li
+                        key={d.id}
+                        className="flex items-center justify-between gap-3 rounded-xl border border-border bg-surface px-4 py-3 shadow-sm"
+                      >
+                        <div className="min-w-0">
+                          <p className="text-sm font-semibold text-foreground">Ngày {d.day_number}</p>
+                          <p className="truncate text-xs text-muted">
+                            {d.word_ids.length} từ vựng · {d.kanji_ids.length} kanji · {d.grammar_ids.length} điểm ngữ pháp
+                          </p>
+                        </div>
+                        {isDone ? (
+                          <span className="shrink-0 rounded-lg bg-emerald-50 px-2.5 py-1.5 text-xs font-semibold text-emerald-700">
+                            ✓ Đã xong
+                          </span>
+                        ) : (
+                          <button
+                            type="button"
+                            onClick={() => void handleCompleteDay(d)}
+                            disabled={completingDayId !== null}
+                            className="shrink-0 rounded-lg bg-accent px-2.5 py-1.5 text-xs font-semibold text-accent-foreground transition disabled:opacity-60"
+                          >
+                            {completingDayId === d.id ? "Đang lưu..." : "Đã học xong"}
+                          </button>
+                        )}
+                      </li>
+                    );
+                  })}
+                </ul>
               )}
             </div>
           )}
