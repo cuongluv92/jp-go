@@ -173,3 +173,18 @@ Repo này độc lập với `nhatkytrading`.
 >   `main` không, trạng thái là gì (Ready/Error) — nếu Error, xem Build Logs
 > - **Settings → General → Root Directory** phải để trống (project nằm ở
 >   gốc repo, không phải trong thư mục con)
+
+### Tránh vượt giới hạn build khi seed nhiều migration
+
+Vercel tự build lại mỗi khi có commit mới lên `main`, kể cả khi commit đó
+chỉ thêm file `.sql` seed dữ liệu (không đổi code app) — dễ vượt giới hạn
+số lượt build/ngày của gói miễn phí khi merge nhiều migration liên tiếp
+(ví dụ đợt seed N4/N2/N1 sau này). Để tránh:
+
+1. Vào **Vercel Dashboard → project jp-go → Settings → Git → Ignored Build
+   Step** → chọn **"Custom"**.
+2. Nhập: `bash scripts/vercel-ignore-build.sh`
+3. Lưu lại.
+
+Từ đó, commit nào chỉ đổi file trong `supabase/migrations/` sẽ bị Vercel bỏ
+qua build (không tốn lượt) — chỉ build thật khi có thay đổi code app.
