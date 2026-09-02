@@ -2,12 +2,16 @@
 
 import { useEffect, useMemo, useRef, useState, type PointerEvent as ReactPointerEvent } from "react";
 
+import { saveKanjiStrokeProgress } from "@/lib/data/kanji-stroke-service";
+import { scoreKanjiStroke, type StrokePoint } from "@/lib/kanji-stroke-score";
+import { createClient } from "@/lib/supabase/client";
+
 const KANJIVG_RELEASE = "r20260714";
 const KANJIVG_BASE_URL = `https://cdn.jsdelivr.net/gh/KanjiVG/kanjivg@${KANJIVG_RELEASE}/kanji`;
 
 type Mode = "watch" | "trace";
 type Speed = "slow" | "normal" | "fast";
-type Point = { x: number; y: number };
+type Point = StrokePoint;
 
 interface StrokeData {
   paths: string[];
@@ -53,7 +57,7 @@ function PracticeGrid() {
   );
 }
 
-export function KanjiStrokePractice({ character }: { character: string }) {
+export function KanjiStrokePractice({ character, userId }: { character: string; userId: string | null }) {
   const [data, setData] = useState<StrokeData | null>(null);
   const [error, setError] = useState(false);
   const [mode, setMode] = useState<Mode>("watch");
@@ -63,9 +67,16 @@ export function KanjiStrokePractice({ character }: { character: string }) {
   const [showNumbers, setShowNumbers] = useState(true);
   const [showGuide, setShowGuide] = useState(true);
   const [drawnLines, setDrawnLines] = useState<Point[][]>([]);
+  const [grading, setGrading] = useState(true);
+  const [gradedStroke, setGradedStroke] = useState(0);
+  const [strokeScores, setStrokeScores] = useState<number[]>([]);
+  const [feedback, setFeedback] = useState<string | null>(null);
+  const [savedResult, setSavedResult] = useState<{ score: number; best: number; count: number } | null>(null);
   const [animationRun, setAnimationRun] = useState(0);
   const drawingRef = useRef(false);
   const boardRef = useRef<SVGSVGElement>(null);
+  const guidePathRefs = useRef<Array<SVGPathElement | null>>([]);
+  const currentLineRef = useRef<Point[]>([]);
 
   const filename = useMemo(() => kanjiVgFilename(character), [character]);
 
@@ -115,15 +126,18 @@ export function KanjiStrokePractice({ character }: { character: string }) {
   }
 
   function startDrawing(event: ReactPointerEvent<SVGSVGElement>) {
-    if (mode !== "trace") return;
+    if (mode !== "trace" || (grading && data && gradedStroke >= data.paths.length)) return;
     event.currentTarget.setPointerCapture(event.pointerId);
     drawingRef.current = true;
-    setDrawnLines((lines) => [...lines, [pointFromEvent(event)]]);
+    const point = pointFromEvent(event);
+    currentLineRef.current = [point];
+    setDrawnLines((lines) => [...lines, [point]]);
   }
 
   function continueDrawing(event: ReactPointerEvent<SVGSVGElement>) {
     if (!drawingRef.current || mode !== "trace") return;
     const point = pointFromEvent(event);
+    currentLineRef.current = [...currentLineRef.current, point];
     setDrawnLines((lines) => {
       if (lines.length === 0) return [[point]];
       const next = [...lines];
@@ -132,8 +146,57 @@ export function KanjiStrokePractice({ character }: { character: string }) {
     });
   }
 
-  function stopDrawing() {
+  async function stopDrawing() {
     drawingRef.current = false;
+    if (!grading || !data || currentLineRef.current.length < 2) return;
+    const guidePath = guidePathRefs.current[gradedStroke];
+    if (!guidePath) return;
+    const length = guidePath.getTotalLength();
+    const guide = Array.from({ length: 26 }, (_, index) => {
+      const point = guidePath.getPointAtLength((length * index) / 25);
+      return { x: point.x, y: point.y };
+    });
+    const result = scoreKanjiStroke(currentLineRef.current, guide);
+    if (!result.accepted) {
+      setDrawnLines((lines) => lines.slice(0, -1));
+      setFeedback(
+        result.directionCorrect
+          ? `Nét ${gradedStroke + 1} chưa sát mẫu (${result.score} điểm). Hãy viết lại.`
+          : `Nét ${gradedStroke + 1} đang ngược hướng. Hãy viết lại.`,
+      );
+      currentLineRef.current = [];
+      return;
+    }
+
+    const nextScores = [...strokeScores, result.score];
+    setStrokeScores(nextScores);
+    setGradedStroke((value) => value + 1);
+    setFeedback(`✓ Nét ${gradedStroke + 1} đúng · ${result.score} điểm`);
+    currentLineRef.current = [];
+    if (gradedStroke + 1 === data.paths.length) {
+      const finalScore = Math.round(nextScores.reduce((sum, score) => sum + score, 0) / nextScores.length);
+      setFeedback(`Hoàn thành ${data.paths.length} nét · ${finalScore}/100`);
+      if (userId) {
+        try {
+          const saved = await saveKanjiStrokeProgress(createClient(), userId, character, finalScore);
+          setSavedResult({ score: saved.last_score, best: saved.best_score, count: saved.practice_count });
+        } catch {
+          setSavedResult({ score: finalScore, best: finalScore, count: 1 });
+          setFeedback(`Hoàn thành ${data.paths.length} nét · ${finalScore}/100 · Chưa đồng bộ được kết quả`);
+        }
+      } else {
+        setSavedResult({ score: finalScore, best: finalScore, count: 1 });
+      }
+    }
+  }
+
+  function resetTrace() {
+    setDrawnLines([]);
+    setGradedStroke(0);
+    setStrokeScores([]);
+    setFeedback(null);
+    setSavedResult(null);
+    currentLineRef.current = [];
   }
 
   if (error || !filename) {
@@ -168,6 +231,7 @@ export function KanjiStrokePractice({ character }: { character: string }) {
             onClick={() => {
               setMode("trace");
               setPlaying(false);
+              resetTrace();
             }}
             className={`rounded-md px-3 py-1.5 ${mode === "trace" ? "bg-surface text-accent shadow-sm" : "text-muted"}`}
           >
@@ -185,11 +249,11 @@ export function KanjiStrokePractice({ character }: { character: string }) {
           className={`aspect-square w-full select-none ${mode === "trace" ? "touch-none cursor-crosshair" : ""}`}
           onPointerDown={startDrawing}
           onPointerMove={continueDrawing}
-          onPointerUp={stopDrawing}
-          onPointerCancel={stopDrawing}
+          onPointerUp={() => void stopDrawing()}
+          onPointerCancel={() => void stopDrawing()}
         >
           <PracticeGrid />
-          {data && showGuide && (
+          {data && (
             <g fill="none" strokeLinecap="round" strokeLinejoin="round">
               {data.paths.map((path, index) => {
                 const current = mode === "watch" && playing && index === activeStroke;
@@ -197,17 +261,20 @@ export function KanjiStrokePractice({ character }: { character: string }) {
                 return (
                   <path
                     key={`${animationRun}-${index}`}
+                    ref={(element) => {
+                      guidePathRefs.current[index] = element;
+                    }}
                     d={path}
                     pathLength={1}
                     className={current ? "animate-kanji-stroke" : ""}
                     stroke={watched ? "#1e293b" : current ? "#4f46e5" : "#cbd5e1"}
                     strokeWidth={current ? 4 : mode === "trace" ? 3.4 : 3}
-                    opacity={mode === "trace" ? 0.34 : 1}
+                    opacity={showGuide ? (mode === "trace" ? 0.34 : 1) : 0}
                     style={current ? { animationDuration: `${SPEED_MS[speed]}ms` } : undefined}
                   />
                 );
               })}
-              {showNumbers &&
+              {showGuide && showNumbers &&
                 data.numbers.map((number) => (
                   <text key={`${number.value}-${number.transform}`} transform={number.transform} fill="#6366f1" fontSize="7">
                     {number.value}
@@ -285,22 +352,54 @@ export function KanjiStrokePractice({ character }: { character: string }) {
           </div>
         </div>
       ) : (
-        <div className="mt-4 flex items-center justify-between gap-3">
-          <button
-            type="button"
-            onClick={() => setShowGuide((value) => !value)}
-            className="rounded-xl border border-border px-3 py-2 text-xs font-semibold"
-          >
-            {showGuide ? "Ẩn chữ mẫu" : "Hiện chữ mẫu"}
-          </button>
-          <button
-            type="button"
-            onClick={() => setDrawnLines([])}
-            disabled={drawnLines.length === 0}
-            className="rounded-xl bg-accent px-4 py-2 text-xs font-semibold text-accent-foreground disabled:opacity-40"
-          >
-            Xóa nét đã viết
-          </button>
+        <div className="mt-4 flex flex-col gap-3">
+          <div className="flex items-center justify-between gap-3">
+            <button
+              type="button"
+              onClick={() => setShowGuide((value) => !value)}
+              className="rounded-xl border border-border px-3 py-2 text-xs font-semibold"
+            >
+              {showGuide ? "Ẩn chữ mẫu" : "Hiện chữ mẫu"}
+            </button>
+            <button
+              type="button"
+              onClick={resetTrace}
+              disabled={drawnLines.length === 0}
+              className="rounded-xl bg-accent px-4 py-2 text-xs font-semibold text-accent-foreground disabled:opacity-40"
+            >
+              Viết lại
+            </button>
+          </div>
+          <label className="flex items-center gap-2 text-xs text-muted">
+            <input
+              type="checkbox"
+              checked={grading}
+              onChange={(event) => {
+                setGrading(event.target.checked);
+                resetTrace();
+              }}
+            />
+            Chấm đúng thứ tự, hướng và độ sát nét
+          </label>
+          {grading && data && (
+            <p className="text-xs text-muted">Nét cần viết: {Math.min(gradedStroke + 1, data.paths.length)}/{data.paths.length}</p>
+          )}
+          {feedback && (
+            <p
+              className={`rounded-lg p-2 text-xs ${
+                feedback.startsWith("✓") || feedback.startsWith("Hoàn")
+                  ? "bg-emerald-50 text-emerald-700"
+                  : "bg-amber-50 text-amber-700"
+              }`}
+            >
+              {feedback}
+            </p>
+          )}
+          {savedResult && (
+            <p className="rounded-lg bg-indigo-50 p-2 text-xs text-indigo-700">
+              Lần này {savedResult.score}/100 · Cao nhất {savedResult.best}/100 · Đã luyện {savedResult.count} lần
+            </p>
+          )}
         </div>
       )}
 

@@ -46,7 +46,9 @@ function ReadingBlock({ label, readings, words }: { label: string; readings: Kan
               </p>
               {relatedWords.map((w) => (
                 <p key={w.id} className="mt-0.5 text-xs text-muted">
-                  <span className="font-jp text-foreground">{w.word_jp}</span>
+                  <Link href={`/vocabulary?query=${encodeURIComponent(w.word_jp)}`} className="font-jp font-medium text-accent underline decoration-dotted">
+                    {w.word_jp}
+                  </Link>
                   {w.word_furigana && ` (${w.word_furigana})`} — {w.meaning_vi}
                   {w.is_irregular && <span className="ml-1 text-amber-600">※bất quy tắc</span>}
                 </p>
@@ -118,7 +120,7 @@ export function KanjiDetailClient({ id }: { id: string }) {
         {detail.meaning_vi_summary && <span className="text-sm text-muted">{detail.meaning_vi_summary}</span>}
       </div>
 
-      <KanjiStrokePractice character={detail.kanji_character} />
+      <KanjiStrokePractice character={detail.kanji_character} userId={userId} />
 
       <ReadingBlock label="Âm Kun" readings={kunReadings} words={detail.words} />
       <ReadingBlock label="Âm On" readings={onReadings} words={detail.words} />
@@ -136,7 +138,9 @@ export function KanjiDetailClient({ id }: { id: string }) {
             <ul className="mt-2 flex flex-col gap-1.5">
               {remainingWords.map((w) => (
                 <li key={w.id} className="rounded-lg border border-border bg-surface px-3 py-1.5 text-xs">
-                  <span className="font-jp text-sm text-foreground">{w.word_jp}</span>
+                  <Link href={`/vocabulary?query=${encodeURIComponent(w.word_jp)}`} className="font-jp text-sm font-medium text-accent underline decoration-dotted">
+                    {w.word_jp}
+                  </Link>
                   {w.word_furigana && ` (${w.word_furigana})`} — <span className="text-muted">{w.meaning_vi}</span>
                   {w.is_irregular && <span className="ml-1 text-amber-600">※bất quy tắc</span>}
                 </li>

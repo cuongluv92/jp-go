@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 
 import { GrammarQuizRunner } from "@/components/grammar-quiz-runner";
+import { JapaneseSentence } from "@/components/japanese-sentence";
 import { PersonalExamples } from "@/components/personal-examples";
 import { getCached, setCached } from "@/lib/data/client-cache";
 import {
@@ -35,7 +36,7 @@ function ExampleList({ examples }: { examples: GrammarExampleRow[] }) {
       {examples.map((ex, i) => (
         <li key={ex.id} className="rounded-lg border border-border bg-surface px-3 py-2">
           <p className="text-xs font-semibold text-muted">Ví dụ {i + 1}</p>
-          <p className="font-jp mt-0.5 text-sm text-foreground">{ex.example_jp}</p>
+          <JapaneseSentence text={ex.example_jp} className="mt-0.5 text-sm text-foreground" />
           <p className="text-xs text-muted">{ex.example_vi}</p>
         </li>
       ))}
@@ -181,7 +182,7 @@ export function GrammarDetailClient({ id }: { id: string }) {
         </div>
       )}
 
-      <PersonalExamples targetType="grammar" targetId={detail.id} />
+      <PersonalExamples targetType="grammar" targetId={detail.id} focusText={detail.grammar_pattern} />
 
       <div>
         <h2 className="mb-2 text-sm font-semibold text-foreground">Bài tập</h2>

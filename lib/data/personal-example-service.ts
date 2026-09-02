@@ -13,6 +13,11 @@ export interface PersonalExampleRow {
   sentence_vi: string;
   highlight_text: string;
   note: string;
+  times_correct: number;
+  times_wrong: number;
+  last_reviewed_at: string | null;
+  next_review_at: string | null;
+  interval_days: number;
   created_at: string;
   updated_at: string;
 }
@@ -128,4 +133,48 @@ export async function updatePersonalExample(
 export async function deletePersonalExample(supabase: SupabaseClient, userId: string, id: string): Promise<void> {
   const { error } = await supabase.from("jp_personal_examples").delete().eq("id", id).eq("user_id", userId);
   if (error) throw error;
+}
+
+export async function gradePersonalExampleReview(
+  supabase: SupabaseClient,
+  userId: string,
+  example: PersonalExampleRow,
+  correct: boolean,
+): Promise<PersonalExampleRow> {
+  const now = new Date();
+  const intervalDays = correct ? Math.max(2, Math.min(30, example.interval_days * 2)) : 1;
+  const nextReview = new Date(now);
+  nextReview.setDate(nextReview.getDate() + intervalDays);
+  const { data, error } = await supabase
+    .from("jp_personal_examples")
+    .update({
+      times_correct: example.times_correct + (correct ? 1 : 0),
+      times_wrong: example.times_wrong + (correct ? 0 : 1),
+      last_reviewed_at: now.toISOString(),
+      next_review_at: nextReview.toISOString(),
+      interval_days: intervalDays,
+      updated_at: now.toISOString(),
+    })
+    .eq("id", example.id)
+    .eq("user_id", userId)
+    .select("*")
+    .single();
+  if (error) throw error;
+  return data as PersonalExampleRow;
+}
+
+export async function listDuePersonalExamples(
+  supabase: SupabaseClient,
+  userId: string,
+  now: Date = new Date(),
+): Promise<PersonalExampleRow[]> {
+  const { data, error } = await supabase
+    .from("jp_personal_examples")
+    .select("*")
+    .eq("user_id", userId)
+    .not("next_review_at", "is", null)
+    .lte("next_review_at", now.toISOString())
+    .order("next_review_at", { ascending: true });
+  if (error) throw error;
+  return (data ?? []) as PersonalExampleRow[];
 }

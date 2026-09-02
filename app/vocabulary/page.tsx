@@ -29,10 +29,11 @@ function VocabularyPageContent() {
   const visibleWords = useMemo(() => words.filter((w) => !w.isHidden), [words]);
   const searchParams = useSearchParams();
   const initialLevel = searchParams.get("level");
+  const initialQuery = searchParams.get("query")?.trim() || undefined;
   const isJlptLevel = (v: string | null): v is JlptLevel => !!v && (JLPT_LEVELS as readonly string[]).includes(v);
 
   const [filter, setFilter] = useState<VocabularyFilter>(
-    isJlptLevel(initialLevel) ? { level: initialLevel } : {},
+    { ...(isJlptLevel(initialLevel) ? { level: initialLevel } : {}), ...(initialQuery ? { query: initialQuery } : {}) },
   );
 
   const filtered = useMemo(() => filterWords(visibleWords, filter), [visibleWords, filter]);

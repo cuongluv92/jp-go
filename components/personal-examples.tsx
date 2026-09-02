@@ -2,6 +2,8 @@
 
 import { useEffect, useState, type FormEvent } from "react";
 
+import { JapaneseSentence } from "@/components/japanese-sentence";
+import { PersonalExampleExercise } from "@/components/personal-example-exercise";
 import {
   PERSONAL_EXAMPLE_TYPE_LABELS,
   createPersonalExample,
@@ -24,7 +26,15 @@ const EMPTY_INPUT: PersonalExampleInput = {
   note: "",
 };
 
-export function PersonalExamples({ targetType, targetId }: { targetType: PersonalExampleTarget; targetId: string }) {
+export function PersonalExamples({
+  targetType,
+  targetId,
+  focusText = "",
+}: {
+  targetType: PersonalExampleTarget;
+  targetId: string;
+  focusText?: string;
+}) {
   const [userId, setUserId] = useState<string | null>(null);
   const [examples, setExamples] = useState<PersonalExampleRow[]>([]);
   const [loading, setLoading] = useState(true);
@@ -32,6 +42,7 @@ export function PersonalExamples({ targetType, targetId }: { targetType: Persona
   const [editingId, setEditingId] = useState<string | null>(null);
   const [input, setInput] = useState<PersonalExampleInput>(EMPTY_INPUT);
   const [saving, setSaving] = useState(false);
+  const [exerciseId, setExerciseId] = useState<string | null>(null);
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
@@ -217,12 +228,37 @@ export function PersonalExamples({ targetType, targetId }: { targetType: Persona
                   </button>
                 </div>
               </div>
-              <p className="font-jp mt-2 text-sm leading-relaxed">{example.sentence_jp}</p>
+              <div className="mt-2">
+                <JapaneseSentence text={example.sentence_jp} className="text-sm" />
+              </div>
               {example.sentence_vi && <p className="mt-1 text-xs text-muted">{example.sentence_vi}</p>}
               {example.highlight_text && (
                 <p className="font-jp mt-2 rounded-lg bg-indigo-50 px-2 py-1 text-xs text-indigo-700">Chú ý: {example.highlight_text}</p>
               )}
               {example.note && <p className="mt-1 text-xs text-muted">📝 {example.note}</p>}
+              <div className="mt-2 flex items-center justify-between gap-2">
+                <span className="text-[10px] text-muted">
+                  Đúng {example.times_correct} · Sai {example.times_wrong}
+                  {example.next_review_at && ` · Ôn ${new Date(example.next_review_at).toLocaleDateString("vi-VN")}`}
+                </span>
+                <button
+                  type="button"
+                  onClick={() => setExerciseId((current) => (current === example.id ? null : example.id))}
+                  className="text-xs font-semibold text-accent"
+                >
+                  {exerciseId === example.id ? "Đóng bài tập" : "Tạo bài tập"}
+                </button>
+              </div>
+              {exerciseId === example.id && userId && (
+                <PersonalExampleExercise
+                  example={example}
+                  userId={userId}
+                  focusText={focusText}
+                  onGraded={(updated) =>
+                    setExamples((current) => current.map((item) => (item.id === updated.id ? updated : item)))
+                  }
+                />
+              )}
             </article>
           ))}
         </div>

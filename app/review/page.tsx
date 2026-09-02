@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 import { CustomReviewPicker } from "@/components/custom-review-picker";
 import { GrammarReviewSession } from "@/components/grammar-review-session";
 import { KanjiReviewSession } from "@/components/kanji-review-session";
+import { PersonalExampleReviewSection } from "@/components/personal-example-review-section";
 import { ReviewFlashcardExercise } from "@/components/review-flashcard-exercise";
 import { ReviewMatchingExercise } from "@/components/review-matching-exercise";
 import { ReviewTypingExercise } from "@/components/review-typing-exercise";
@@ -12,6 +13,7 @@ import { SegmentedTabs } from "@/components/segmented-tabs";
 import { getCached, setCached } from "@/lib/data/client-cache";
 import { getDueGrammarForReview, type DueGrammarRow } from "@/lib/data/grammar-service";
 import { getDueKanjiForReview, type DueKanjiRow } from "@/lib/data/kanji-service";
+import { listDuePersonalExamples, type PersonalExampleRow } from "@/lib/data/personal-example-service";
 import { completeReviewSchedules, getDueReviewSchedules, type ReviewScheduleRow } from "@/lib/data/review-service";
 import { useVocabulary } from "@/lib/data/vocabulary-context";
 import { createClient } from "@/lib/supabase/client";
@@ -27,6 +29,7 @@ interface ReviewCachedData {
   schedules: ReviewScheduleRow[];
   dueKanji: DueKanjiRow[];
   dueGrammar: DueGrammarRow[];
+  duePersonal: PersonalExampleRow[];
 }
 
 export default function ReviewPage() {
@@ -36,6 +39,7 @@ export default function ReviewPage() {
   const [schedules, setSchedules] = useState<ReviewScheduleRow[]>(cached?.schedules ?? []);
   const [dueKanji, setDueKanji] = useState<DueKanjiRow[]>(cached?.dueKanji ?? []);
   const [dueGrammar, setDueGrammar] = useState<DueGrammarRow[]>(cached?.dueGrammar ?? []);
+  const [duePersonal, setDuePersonal] = useState<PersonalExampleRow[]>(cached?.duePersonal ?? []);
   const [selected, setSelected] = useState<Set<string>>(new Set((cached?.schedules ?? []).map((s) => s.id)));
   const [selectedKanji, setSelectedKanji] = useState<Set<string>>(new Set((cached?.dueKanji ?? []).map((k) => k.kanji_id)));
   const [selectedGrammar, setSelectedGrammar] = useState<Set<string>>(new Set((cached?.dueGrammar ?? []).map((g) => g.grammar_id)));
@@ -60,15 +64,16 @@ export default function ReviewPage() {
       if (!user || cancelled) {
         if (!cancelled) {
           setLoading(false);
-          setCached<ReviewCachedData>(REVIEW_CACHE_KEY, { userId: null, schedules: [], dueKanji: [], dueGrammar: [] });
+          setCached<ReviewCachedData>(REVIEW_CACHE_KEY, { userId: null, schedules: [], dueKanji: [], dueGrammar: [], duePersonal: [] });
         }
         return;
       }
       setUserId(user.id);
-      const [due, dueK, dueG] = await Promise.all([
+      const [due, dueK, dueG, dueP] = await Promise.all([
         getDueReviewSchedules(supabase, user.id),
         getDueKanjiForReview(supabase, user.id),
         getDueGrammarForReview(supabase, user.id),
+        listDuePersonalExamples(supabase, user.id),
       ]);
       if (cancelled) return;
       setSchedules(due);
@@ -76,9 +81,10 @@ export default function ReviewPage() {
       setDueKanji(dueK);
       setSelectedKanji(new Set(dueK.map((k) => k.kanji_id)));
       setDueGrammar(dueG);
+      setDuePersonal(dueP);
       setSelectedGrammar(new Set(dueG.map((g) => g.grammar_id)));
       setLoading(false);
-      setCached<ReviewCachedData>(REVIEW_CACHE_KEY, { userId: user.id, schedules: due, dueKanji: dueK, dueGrammar: dueG });
+      setCached<ReviewCachedData>(REVIEW_CACHE_KEY, { userId: user.id, schedules: due, dueKanji: dueK, dueGrammar: dueG, duePersonal: dueP });
     }
 
     void load();
@@ -140,19 +146,21 @@ export default function ReviewPage() {
   async function refreshDue(nextUserId: string) {
     const supabase = createClient();
     setLoading(true);
-    const [due, dueK, dueG] = await Promise.all([
+    const [due, dueK, dueG, dueP] = await Promise.all([
       getDueReviewSchedules(supabase, nextUserId),
       getDueKanjiForReview(supabase, nextUserId),
       getDueGrammarForReview(supabase, nextUserId),
+      listDuePersonalExamples(supabase, nextUserId),
     ]);
     setSchedules(due);
     setSelected(new Set(due.map((s) => s.id)));
     setDueKanji(dueK);
     setSelectedKanji(new Set(dueK.map((k) => k.kanji_id)));
     setDueGrammar(dueG);
+    setDuePersonal(dueP);
     setSelectedGrammar(new Set(dueG.map((g) => g.grammar_id)));
     setLoading(false);
-    setCached<ReviewCachedData>(REVIEW_CACHE_KEY, { userId: nextUserId, schedules: due, dueKanji: dueK, dueGrammar: dueG });
+    setCached<ReviewCachedData>(REVIEW_CACHE_KEY, { userId: nextUserId, schedules: due, dueKanji: dueK, dueGrammar: dueG, duePersonal: dueP });
   }
 
   async function handleExerciseComplete() {
@@ -242,7 +250,7 @@ export default function ReviewPage() {
       {tab === "due" ? (
         loading ? (
           <p className="rounded-2xl border border-dashed border-border p-4 text-sm text-muted">Đang tải...</p>
-        ) : schedules.length === 0 && dueKanji.length === 0 && dueGrammar.length === 0 ? (
+        ) : schedules.length === 0 && dueKanji.length === 0 && dueGrammar.length === 0 && duePersonal.length === 0 ? (
           <p className="rounded-2xl border border-dashed border-border p-4 text-sm text-muted">
             Không có lịch ôn nào đến hạn. Tiếp tục học để tạo lịch ôn mới, hoặc sang tab &quot;Tự chọn ôn tập&quot; để ôn
             bất cứ lúc nào.
@@ -381,6 +389,10 @@ export default function ReviewPage() {
                   Ôn {selectedGrammar.size} mẫu ngữ pháp đã chọn
                 </button>
               </section>
+            )}
+
+            {duePersonal.length > 0 && userId && (
+              <PersonalExampleReviewSection initialExamples={duePersonal} userId={userId} />
             )}
           </>
         )

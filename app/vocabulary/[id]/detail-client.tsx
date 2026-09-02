@@ -3,6 +3,7 @@
 import Link from "next/link";
 
 import { PersonalExamples } from "@/components/personal-examples";
+import { JapaneseSentence } from "@/components/japanese-sentence";
 import { PronounceButton } from "@/components/pronounce-button";
 import { StatusBadge } from "@/components/status-badge";
 import { getConjugation } from "@/lib/conjugation";
@@ -137,15 +138,16 @@ export function VocabularyDetailClient({ id }: { id: string }) {
               <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-accent/10 text-xs font-semibold text-accent">
                 {example.exampleNo}
               </span>
-              <p className="font-jp flex-1 text-base leading-relaxed">{example.exampleJp}</p>
-              <PronounceButton text={example.exampleJp} className="h-7 w-7 shrink-0" />
+              <div className="flex-1">
+                <JapaneseSentence text={example.exampleJp} className="text-base" />
+              </div>
             </div>
             <p className="mt-1 pl-7 text-sm text-muted">{example.exampleVi}</p>
           </div>
         ))}
       </section>
 
-      <PersonalExamples targetType="vocab" targetId={word.id} />
+      <PersonalExamples targetType="vocab" targetId={word.id} focusText={word.word} />
     </div>
   );
 }
