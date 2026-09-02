@@ -3,6 +3,7 @@ import { describe, expect, it } from "vitest";
 import { generatePracticeTest } from "@/lib/data/jlpt-practice-generator";
 import { JLPT_BLUEPRINTS } from "@/lib/jlpt-blueprint";
 import type { LearningProgress, VocabExample, VocabWord } from "@/lib/types";
+import type { GrammarQuestionRow } from "@/lib/data/grammar-service";
 
 function makeProgress(): LearningProgress {
   return {
@@ -93,5 +94,28 @@ describe("generatePracticeTest", () => {
 
     expect(result.sections.find((section) => section.kind === "kanji_reading")?.available).toBe(false);
     expect(result.sections.find((section) => section.kind === "context_vocab")?.available).toBe(false);
+  });
+
+  it("đưa câu ngữ pháp đã kiểm tra vào đúng mục JLPT", () => {
+    const words = Array.from({ length: 24 }, (_, index) => makeWord(index));
+    const examples = words.map(makeExample);
+    const grammarQuestions: GrammarQuestionRow[] = Array.from({ length: 20 }, (_, index) => ({
+      id: `gq${index}`,
+      grammar_id: `g${index}`,
+      usage_id: null,
+      question_type: index < 15 ? "choose_pattern" : "reorder_sentence",
+      question_text: `文法問題 ${index}`,
+      choice_1: "A",
+      choice_2: "B",
+      choice_3: "C",
+      choice_4: "D",
+      correct_answer: "B",
+      source_type: "generated",
+      review_status: "ok",
+      created_at: "2026-01-01",
+    }));
+    const result = generatePracticeTest(JLPT_BLUEPRINTS.N3, words, examples, grammarQuestions);
+    expect(result.sections.find((section) => section.kind === "grammar1")?.available).toBe(true);
+    expect(result.sections.find((section) => section.kind === "grammar2")?.available).toBe(true);
   });
 });

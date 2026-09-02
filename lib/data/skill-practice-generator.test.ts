@@ -72,4 +72,10 @@ describe("generateSkillPractice", () => {
   it("không bịa câu khi cấp độ chưa có dữ liệu", () => {
     expect(generateSkillPractice("N1", words, examples, 10, () => 0.2).questions).toEqual([]);
   });
+
+  it("chỉ sinh các mục người học đã chọn", () => {
+    const result = generateSkillPractice("N5", words, examples, 6, () => 0.3, ["reading", "context"]);
+    expect(result.questions.length).toBeGreaterThan(0);
+    expect(result.questions.every((question) => question.kind === "reading" || question.kind === "context")).toBe(true);
+  });
 });

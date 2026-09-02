@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 
 import { KanjiQuizRunner } from "@/components/kanji-quiz-runner";
 import { KanjiStrokePractice } from "@/components/kanji-stroke-practice";
+import { MaziiLink } from "@/components/mazii-link";
 import { getCached, setCached } from "@/lib/data/client-cache";
 import {
   gradeKanjiReview,
@@ -118,6 +119,7 @@ export function KanjiDetailClient({ id }: { id: string }) {
         <span className="font-jp text-6xl font-bold">{detail.kanji_character}</span>
         <span className="text-sm font-semibold text-accent">{detail.han_viet}</span>
         {detail.meaning_vi_summary && <span className="text-sm text-muted">{detail.meaning_vi_summary}</span>}
+        <MaziiLink kind="kanji" query={detail.kanji_character} className="mt-2 rounded-lg border border-border px-3 py-1.5 text-xs font-semibold text-accent" />
       </div>
 
       <KanjiStrokePractice character={detail.kanji_character} userId={userId} />

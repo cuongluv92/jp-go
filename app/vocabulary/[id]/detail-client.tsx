@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 
+import { MaziiLink } from "@/components/mazii-link";
 import { PersonalExamples } from "@/components/personal-examples";
 import { JapaneseSentence } from "@/components/japanese-sentence";
 import { PronounceButton } from "@/components/pronounce-button";
@@ -86,14 +87,13 @@ export function VocabularyDetailClient({ id }: { id: string }) {
           >
             {word.progress.isFavorite ? "★ Đã yêu thích" : "☆ Yêu thích"}
           </button>
-          <a
-            href={`https://mazii.net/vi-VN/search/word/javi/${encodeURIComponent(word.word)}`}
-            target="_blank"
-            rel="noreferrer"
+          <MaziiLink
+            kind="word"
+            query={word.dictionaryForm || word.word}
             className="flex flex-1 items-center justify-center rounded-xl border border-border px-3 py-2 text-sm font-medium text-accent"
           >
-            Tra trên Mazii ↗
-          </a>
+            Mở trong Mazii ↗
+          </MaziiLink>
         </div>
 
         <div className="mt-2 grid grid-cols-3 gap-2">

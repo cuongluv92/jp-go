@@ -7,8 +7,16 @@ import { SegmentedTabs } from "@/components/segmented-tabs";
 import { getCached, setCached } from "@/lib/data/client-cache";
 import { createCustomTest, deleteCustomTest, listCustomTests, type CustomTestQuestion, type CustomTestRow } from "@/lib/data/custom-test-service";
 import { generatePracticeTest, type GeneratedSection, type GeneratedTest } from "@/lib/data/jlpt-practice-generator";
+import { listReviewedGrammarQuestionsByLevel } from "@/lib/data/grammar-service";
 import { savePracticeAttempt, type SectionResult } from "@/lib/data/practice-attempt-service";
-import { generateSkillPractice, SKILL_KIND_LABELS, type SkillPracticeSet } from "@/lib/data/skill-practice-generator";
+import {
+  ALL_SKILL_KINDS,
+  generateSkillPractice,
+  SKILL_KIND_DESCRIPTIONS,
+  SKILL_KIND_LABELS,
+  type SkillPracticeKind,
+  type SkillPracticeSet,
+} from "@/lib/data/skill-practice-generator";
 import { listActiveStudyPlans } from "@/lib/data/study-plan-service";
 import { useVocabulary } from "@/lib/data/vocabulary-context";
 import { createClient } from "@/lib/supabase/client";
@@ -76,6 +84,8 @@ function AutoPracticeTab({ userId }: { userId: string | null }) {
   const [runIndex, setRunIndex] = useState(0);
   const [results, setResults] = useState<SectionResult[]>([]);
   const [summary, setSummary] = useState<SectionResult[] | null>(null);
+  const [generating, setGenerating] = useState(false);
+  const [generateError, setGenerateError] = useState("");
 
   // Mặc định chọn sẵn cấp độ của lộ trình đang học (nếu có) để luyện tập
   // "khớp" với lộ trình thay vì luôn phải tự chọn lại N3 — vẫn cho đổi cấp
@@ -101,12 +111,21 @@ function AutoPracticeTab({ userId }: { userId: string | null }) {
   const availableSections = test?.sections.filter((s) => s.available) ?? [];
   const currentSection: GeneratedSection | undefined = availableSections[runIndex];
 
-  function handleGenerate() {
-    const generated = generatePracticeTest(blueprint, words, examples);
-    setTest(generated);
-    setRunIndex(0);
-    setResults([]);
-    setSummary(null);
+  async function handleGenerate() {
+    setGenerating(true);
+    setGenerateError("");
+    try {
+      const grammarQuestions = await listReviewedGrammarQuestionsByLevel(createClient(), level);
+      const generated = generatePracticeTest(blueprint, words, examples, grammarQuestions);
+      setTest(generated);
+      setRunIndex(0);
+      setResults([]);
+      setSummary(null);
+    } catch {
+      setGenerateError("Chưa tải được kho câu hỏi ngữ pháp. Hãy thử lại sau.");
+    } finally {
+      setGenerating(false);
+    }
   }
 
   async function handleSectionFinish(correctCount: number) {
@@ -201,11 +220,12 @@ function AutoPracticeTab({ userId }: { userId: string | null }) {
           ))}
         </div>
         {levelAutoPicked && <p className="mt-2 text-xs text-accent">Đã chọn sẵn theo cấp độ lộ trình bạn đang học.</p>}
-        {!blueprint.verified && (
-          <p className="mt-2 text-xs text-muted">
-            Cấu trúc đề {level} là mô phỏng gần đúng theo cấu trúc JLPT công khai (chỉ N2 lấy đúng từ đề thật) — có thể lệch vài câu so với đề thi thật.
-          </p>
-        )}
+        <p className="mt-2 text-xs leading-relaxed text-muted">
+          Loại mục và thời lượng bám cấu trúc JLPT công khai; số câu là mục tiêu mô phỏng và có thể khác kỳ thi thật.{" "}
+          <a href="https://www.jlpt.jp/e/guideline/testsections.html" target="_blank" rel="noreferrer" className="font-medium text-accent underline">
+            Xem nguồn chính thức ↗
+          </a>
+        </p>
       </div>
 
       <div className="rounded-xl border border-dashed border-border p-3 text-xs text-muted">
@@ -221,11 +241,14 @@ function AutoPracticeTab({ userId }: { userId: string | null }) {
 
       <button
         type="button"
-        onClick={handleGenerate}
+        onClick={() => void handleGenerate()}
+        disabled={generating}
         className="rounded-xl bg-accent px-4 py-3 text-sm font-semibold text-accent-foreground transition active:scale-[0.98]"
       >
-        Tạo đề luyện tập
+        {generating ? "Đang ghép đề..." : "Tạo đề luyện tập"}
       </button>
+
+      {generateError && <p className="rounded-xl border border-rose-200 bg-rose-50 p-3 text-sm text-rose-700">{generateError}</p>}
 
       {test && availableSections.length === 0 && (
         <p className="rounded-xl border border-dashed border-border p-4 text-sm text-muted">
@@ -235,7 +258,7 @@ function AutoPracticeTab({ userId }: { userId: string | null }) {
       {test && availableSections.length > 0 && (
         <p className="rounded-xl border border-dashed border-border p-3 text-xs text-muted">
           {availableSections.length}/{test.sections.length} phần có đủ nội dung để làm ngay ({availableSections.reduce((sum, s) => sum + s.questions.length, 0)}{" "}
-          câu) — các phần ngữ pháp/đọc hiểu còn thiếu sẽ được bổ sung sau khi nội dung được kiểm tra.
+          câu). Từ vựng, cách đọc, ngữ cảnh và ngữ pháp đủ chuẩn được trộn theo từng mục; phần đọc hiểu thiếu dữ liệu được ghi rõ, không tự bịa.
         </p>
       )}
     </div>
@@ -252,10 +275,19 @@ function SkillPracticeTab({ userId }: { userId: string | null }) {
   const [questionCount, setQuestionCount] = useState(15);
   const [practice, setPractice] = useState<SkillPracticeSet | null>(null);
   const [result, setResult] = useState<{ correct: number; total: number } | null>(null);
+  const [selectedKinds, setSelectedKinds] = useState<SkillPracticeKind[]>(ALL_SKILL_KINDS);
 
   function generate() {
-    setPractice(generateSkillPractice(level, words, examples, questionCount));
+    setPractice(generateSkillPractice(level, words, examples, questionCount, Math.random, selectedKinds));
     setResult(null);
+  }
+
+  function toggleKind(kind: SkillPracticeKind) {
+    setSelectedKinds((current) => {
+      if (current.includes(kind)) return current.length === 1 ? current : current.filter((item) => item !== kind);
+      return [...current, kind];
+    });
+    setPractice(null);
   }
 
   async function finish(correct: number) {
@@ -346,12 +378,36 @@ function SkillPracticeTab({ userId }: { userId: string | null }) {
         </div>
       </div>
 
+      <fieldset>
+        <legend className="mb-2 text-sm font-semibold">Chọn mục muốn luyện</legend>
+        <div className="grid gap-2 sm:grid-cols-2">
+          {ALL_SKILL_KINDS.map((kind) => {
+            const active = selectedKinds.includes(kind);
+            return (
+              <button
+                key={kind}
+                type="button"
+                aria-pressed={active}
+                onClick={() => toggleKind(kind)}
+                className={`rounded-xl border p-3 text-left transition ${active ? "border-accent bg-accent-soft" : "border-border bg-surface"}`}
+              >
+                <span className={`block text-sm font-semibold ${active ? "text-accent" : "text-foreground"}`}>
+                  {active ? "✓ " : ""}{SKILL_KIND_LABELS[kind]}
+                </span>
+                <span className="mt-0.5 block text-xs text-muted">{SKILL_KIND_DESCRIPTIONS[kind]}</span>
+              </button>
+            );
+          })}
+        </div>
+        <p className="mt-2 text-xs text-muted">Có thể chọn một mục để luyện sâu hoặc nhiều mục để luyện xen kẽ.</p>
+      </fieldset>
+
       <div className="rounded-xl border border-dashed border-border p-3 text-xs leading-relaxed text-muted">
-        Trộn chọn nghĩa, nhớ mặt chữ, đọc Kanji, điền từ theo ngữ cảnh, hiểu câu và chia từ. Hệ thống chỉ dùng dạng nào có đủ dữ liệu, không tự bịa phần ngữ pháp chưa được kiểm tra.
+        Buổi luyện chỉ lấy các mục đã chọn và luân phiên dạng câu để giảm lặp. Hệ thống chỉ dùng nội dung có đủ dữ liệu, không tự bịa đáp án.
       </div>
 
       <button type="button" onClick={generate} className="rounded-xl bg-accent px-4 py-3 text-sm font-semibold text-accent-foreground">
-        Bắt đầu luyện đa dạng
+        Bắt đầu {selectedKinds.length === 1 ? SKILL_KIND_LABELS[selectedKinds[0]].toLowerCase() : "luyện các mục đã chọn"}
       </button>
 
       {practice && practice.questions.length === 0 && (

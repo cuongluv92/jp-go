@@ -27,6 +27,17 @@ export const SKILL_KIND_LABELS: Record<SkillPracticeKind, string> = {
   conjugation: "Chia từ",
 };
 
+export const SKILL_KIND_DESCRIPTIONS: Record<SkillPracticeKind, string> = {
+  meaning: "Nhìn từ và chọn nghĩa Việt",
+  word: "Nhìn nghĩa và nhớ mặt chữ",
+  reading: "Chọn cách đọc của từ có Kanji",
+  context: "Điền từ đúng vào câu thực tế",
+  comprehension: "Đọc câu và chọn đúng ý",
+  conjugation: "Chia động từ, tính từ theo ngữ cảnh",
+};
+
+export const ALL_SKILL_KINDS = Object.keys(SKILL_KIND_LABELS) as SkillPracticeKind[];
+
 // Chỉ cần một kho ứng viên đủ rộng cho buổi tối đa 20 câu; không dựng hàng
 // nghìn object câu hỏi trên điện thoại mỗi lần người dùng bấm bắt đầu.
 const POOL_LIMIT = 80;
@@ -251,6 +262,7 @@ export function generateSkillPractice(
   examples: VocabExample[],
   count = 15,
   random: () => number = Math.random,
+  selectedKinds: SkillPracticeKind[] = ALL_SKILL_KINDS,
 ): SkillPracticeSet {
   const levelWords = words.filter((word) => word.jlpt === level && !word.isHidden);
   const ids = new Set(levelWords.map((word) => word.id));
@@ -265,7 +277,8 @@ export function generateSkillPractice(
     comprehension: buildComprehensionPool(levelExamples, wordsById, random),
     conjugation: buildConjugationPool(levelWords, random),
   };
-  const availableKinds = (Object.keys(pools) as SkillPracticeKind[]).filter((kind) => pools[kind].length > 0);
+  const selected = new Set(selectedKinds);
+  const availableKinds = ALL_SKILL_KINDS.filter((kind) => selected.has(kind) && pools[kind].length > 0);
   const questions: SkillPracticeQuestion[] = [];
   const usedVocabIds = new Set<string>();
 

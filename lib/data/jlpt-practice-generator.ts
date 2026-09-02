@@ -1,13 +1,41 @@
 import { normalizeDictionaryForm } from "@/lib/conjugation";
 import { GENERATABLE_KINDS, type BlueprintSection, type JlptBlueprint } from "@/lib/jlpt-blueprint";
+import type { GrammarQuestionRow } from "@/lib/data/grammar-service";
 import type { VocabExample, VocabWord } from "@/lib/types";
 
 export interface GeneratedQuestion {
-  vocabId: string;
+  vocabId?: string;
   prompt: string;
   options: string[];
   correctIndex: number;
   explanation?: string;
+}
+
+function generateGrammarQuestions(
+  count: number,
+  questions: GrammarQuestionRow[],
+  kind: "grammar1" | "grammar2",
+): GeneratedQuestion[] | null {
+  const candidates = questions.filter((question) => {
+    const isComposition = question.question_type === "reorder_sentence";
+    if ((kind === "grammar2") !== isComposition) return false;
+    const choices = [question.choice_1, question.choice_2, question.choice_3, question.choice_4].filter(
+      (choice): choice is string => Boolean(choice?.trim()),
+    );
+    return choices.length === 4 && new Set(choices).size === 4 && choices.includes(question.correct_answer);
+  });
+  const generated = shuffle(candidates)
+    .slice(0, count)
+    .map((question) => {
+      const options = shuffle([question.choice_1!, question.choice_2!, question.choice_3!, question.choice_4!]);
+      return {
+        prompt: question.question_text,
+        options,
+        correctIndex: options.indexOf(question.correct_answer),
+        explanation: `Đáp án: ${question.correct_answer}`,
+      } satisfies GeneratedQuestion;
+    });
+  return generated.length === count ? generated : null;
 }
 
 export interface GeneratedSection {
@@ -144,7 +172,12 @@ function generateContextVocabQuestions(count: number, examples: VocabExample[], 
 }
 
 /** Sinh một đề từ nội dung đúng cấp độ; phần thiếu dữ liệu được đánh dấu rõ, không bịa. */
-export function generatePracticeTest(blueprint: JlptBlueprint, words: VocabWord[], examples: VocabExample[]): GeneratedTest {
+export function generatePracticeTest(
+  blueprint: JlptBlueprint,
+  words: VocabWord[],
+  examples: VocabExample[],
+  grammarQuestions: GrammarQuestionRow[] = [],
+): GeneratedTest {
   const levelWords = words.filter((word) => word.jlpt === blueprint.level && !word.isHidden);
   const levelWordIds = new Set(levelWords.map((word) => word.id));
   const levelExamples = examples.filter((example) => levelWordIds.has(example.vocabId));
@@ -159,8 +192,9 @@ export function generatePracticeTest(blueprint: JlptBlueprint, words: VocabWord[
         available: false,
       };
     }
-    const questions =
-      section.kind === "kanji_reading"
+    const questions = section.kind === "grammar1" || section.kind === "grammar2"
+      ? generateGrammarQuestions(section.questionCount, grammarQuestions, section.kind)
+      : section.kind === "kanji_reading"
         ? generateKanjiReadingQuestions(section.questionCount, levelWords)
         : section.kind === "kanji_writing"
           ? generateKanjiWritingQuestions(section.questionCount, levelWords)

@@ -2,7 +2,9 @@ import type { JlptLevel } from "@/lib/types";
 
 /**
  * Cấu trúc đề JLPT theo từng cấp độ — không có phần Nghe (聴解, chưa có
- * audio). Nguồn dữ liệu:
+ * audio). Loại mục thi và thời lượng bám bảng cấu trúc công khai của JLPT.
+ * Số câu là mục tiêu mô phỏng; JLPT không cam kết số câu cố định cho mọi kỳ.
+ * Nguồn dữ liệu nội bộ trước đây:
  *  - N2: lấy ĐÚNG theo đề thật kỳ 2018-07 (người dùng gửi file PDF, đã đọc
  *    trực tiếp, không suy đoán) — 14 mục, 75 câu, 105 phút.
  *  - N1/N3/N4/N5: CHƯA có đề thật để đối chiếu — suy ra từ khung N2 thật ở
@@ -49,7 +51,7 @@ export interface JlptBlueprint {
  * Các phần ngữ pháp/đọc hiểu còn lại hiển
  * thị "chưa đủ nội dung" thay vì bịa câu hỏi.
  */
-export const GENERATABLE_KINDS: BlueprintSectionKind[] = ["kanji_reading", "kanji_writing", "context_vocab"];
+export const GENERATABLE_KINDS: BlueprintSectionKind[] = ["kanji_reading", "kanji_writing", "context_vocab", "grammar1", "grammar2"];
 
 export const JLPT_BLUEPRINTS: Record<JlptLevel, JlptBlueprint> = {
   N2: {

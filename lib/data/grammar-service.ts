@@ -332,3 +332,25 @@ export async function getQuestionsForGrammarIds(supabase: SupabaseClient, gramma
   if (error) throw error;
   return (data ?? []) as GrammarQuestionRow[];
 }
+
+/** Câu hỏi ngữ pháp đã kiểm tra của một cấp, dùng để ghép đề mô phỏng JLPT. */
+export async function listReviewedGrammarQuestionsByLevel(
+  supabase: SupabaseClient,
+  level: JlptLevel,
+): Promise<GrammarQuestionRow[]> {
+  const { data: grammarRows, error: grammarError } = await supabase
+    .from("jp_grammar")
+    .select("id")
+    .eq("level", level)
+    .eq("review_status", "ok");
+  if (grammarError) throw grammarError;
+  const ids = (grammarRows ?? []).map((row: { id: string }) => row.id);
+  if (ids.length === 0) return [];
+  const { data, error } = await supabase
+    .from("jp_grammar_questions")
+    .select("*")
+    .in("grammar_id", ids)
+    .eq("review_status", "ok");
+  if (error) throw error;
+  return (data ?? []) as GrammarQuestionRow[];
+}

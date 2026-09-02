@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 
 import { GrammarQuizRunner } from "@/components/grammar-quiz-runner";
 import { JapaneseSentence } from "@/components/japanese-sentence";
+import { MaziiLink } from "@/components/mazii-link";
 import { PersonalExamples } from "@/components/personal-examples";
 import { getCached, setCached } from "@/lib/data/client-cache";
 import {
@@ -130,6 +131,7 @@ export function GrammarDetailClient({ id }: { id: string }) {
         <span className="font-jp text-2xl font-bold">{detail.grammar_pattern}</span>
         <span className="text-sm text-muted">{detail.meaning_vi}</span>
         {detail.register && <span className="mt-1 text-xs text-accent">{detail.register}</span>}
+        <MaziiLink kind="grammar" query={detail.grammar_pattern} className="mt-2 rounded-lg border border-border px-3 py-1.5 text-xs font-semibold text-accent" />
       </div>
 
       {detail.memory_hint_vi && (
