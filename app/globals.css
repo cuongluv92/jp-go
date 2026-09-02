@@ -55,3 +55,25 @@ body {
 .bg-gradient-accent {
   background: var(--gradient-accent);
 }
+
+@keyframes kanji-stroke-draw {
+  from {
+    stroke-dashoffset: 1;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+.animate-kanji-stroke {
+  stroke-dasharray: 1;
+  animation-name: kanji-stroke-draw;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-kanji-stroke {
+    animation-duration: 1ms !important;
+  }
+}
