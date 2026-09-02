@@ -82,6 +82,8 @@ export interface LearningProgress {
 export interface VocabWord {
   id: string;
   word: string;
+  /** Dạng từ điển thuần để chia từ/tra cứu; không chứa nhãn phân biệt nghĩa như ①/②. */
+  dictionaryForm?: string;
   /** Phần kanji thuần (nếu có). Với từ thuần kana (アイデア...), để trống hoặc bằng `word`. */
   kanji: string;
   reading: string;
@@ -157,6 +159,12 @@ export interface VocabExample {
   clozeJp: string;
   /** Từ bị ẩn trong cloze — dùng để chấm bài điền từ. */
   answer: string;
+  /** Độ khó biên soạn: 1 cơ bản, 2 trung bình, 3 nâng cao. */
+  difficulty?: 1 | 2 | 3;
+  /** Trọng tâm cần học trong câu: trợ từ, sắc thái, collocation... */
+  focusNote?: string;
+  /** Token phiên âm đã kiểm tra; để trống thì UI chỉ hiện furigana cho từ đã nhận diện chắc chắn. */
+  furiganaTokens?: Array<{ surface: string; reading: string }>;
 }
 
 // ---------------------------------------------------------------------------
@@ -216,13 +224,7 @@ export type Conjugation = VerbConjugation | IAdjectiveConjugation | NaAdjectiveC
 
 export type FlashcardGrade = "chua_nho" | "kho" | "da_nho";
 
-export type PracticeMode =
-  | "chon_nghia"
-  | "dien_tu"
-  | "chon_tro_tu"
-  | "sap_xep_cau"
-  | "chon_cach_dung"
-  | "phan_biet_ngu_canh";
+export type PracticeMode = "chon_nghia" | "dien_tu" | "chon_tro_tu" | "sap_xep_cau" | "chon_cach_dung" | "phan_biet_ngu_canh";
 
 export interface PracticeModeInfo {
   mode: PracticeMode;
@@ -270,15 +272,7 @@ export type VocabColumn = (typeof VOCAB_COLUMNS)[number];
 /** Một dòng thô đọc từ sheet VOCAB (mọi giá trị là text, kể cả list đã join bằng "|"). */
 export type VocabExcelRow = Record<VocabColumn, string>;
 
-export const EXAMPLE_COLUMNS = [
-  "vocab_id",
-  "example_no",
-  "example_type",
-  "example_jp",
-  "example_vi",
-  "cloze_jp",
-  "answer",
-] as const;
+export const EXAMPLE_COLUMNS = ["vocab_id", "example_no", "example_type", "example_jp", "example_vi", "cloze_jp", "answer"] as const;
 
 export type ExampleColumn = (typeof EXAMPLE_COLUMNS)[number];
 export type ExampleExcelRow = Record<ExampleColumn, string>;

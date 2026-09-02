@@ -1,7 +1,7 @@
 import type { SupabaseClient } from "@supabase/supabase-js";
 
 import { fetchAllRows } from "@/lib/data/supabase-pagination";
-import type { ExampleNo, JlptLevel, LearningProgress, PartOfSpeech, VocabExample, VocabWord } from "@/lib/types";
+import type { ExampleNo, JlptLevel, LearningProgress, PartOfSpeech, Transitivity, VerbClass, VocabExample, VocabWord } from "@/lib/types";
 
 export type VocabEntryType = "word" | "phrase";
 export type VocabContentSourceType = "pdf" | "generated";
@@ -13,12 +13,15 @@ export interface VocabRow {
   lesson_no: number | null;
   entry_type: VocabEntryType;
   word_jp: string;
+  dictionary_form?: string | null;
   reading_furigana: string;
   meaning_vi: string;
   usage_note_vi: string | null;
   group_key: string | null;
   /** Chỉ N2 trở đi — xem migration 0057. NULL với từ vựng N5 (dùng lesson_no thay). */
   word_class: string | null;
+  verb_class?: Exclude<VerbClass, null> | null;
+  transitivity?: Exclude<Transitivity, null> | null;
   source_page: number | null;
   source_text: string | null;
   source_type: VocabContentSourceType;
@@ -35,6 +38,11 @@ export interface VocabExampleRow {
   example_vi: string;
   cloze_jp: string | null;
   answer: string | null;
+  example_no?: number | null;
+  example_type?: string | null;
+  difficulty?: number | null;
+  focus_note?: string | null;
+  furigana_tokens?: unknown;
   source_type: VocabContentSourceType;
 }
 
@@ -109,12 +117,13 @@ export function dbVocabRowToWord(row: VocabRow, partOfSpeechOverride?: PartOfSpe
   return {
     id: row.id,
     word: row.word_jp,
+    dictionaryForm: row.dictionary_form ?? row.word_jp.replace(/[①-⑳]+$/u, ""),
     kanji: hasKanji ? row.word_jp : "",
     reading: row.reading_furigana,
     meaningVi: row.meaning_vi,
     partOfSpeech: partOfSpeechOverride ?? guessPartOfSpeech(row.entry_type, row.word_class, row.word_jp),
-    verbClass: null,
-    transitivity: null,
+    verbClass: row.verb_class ?? null,
+    transitivity: row.transitivity ?? null,
     particlePatterns: [],
     usagePatterns: [],
     collocations: [],
@@ -152,14 +161,32 @@ export function fillGroupSimilarWords(words: VocabWord[]): VocabWord[] {
 }
 
 export function vocabExampleRowToExample(row: VocabExampleRow, exampleNo: ExampleNo = 1): VocabExample {
+  const storedExampleNo = row.example_no;
+  const resolvedNo: ExampleNo = storedExampleNo === 1 || storedExampleNo === 2 || storedExampleNo === 3 ? storedExampleNo : exampleNo;
+  const resolvedType = row.example_type === "exam" || row.example_type === "business" ? row.example_type : "daily";
+  const resolvedDifficulty = row.difficulty === 1 || row.difficulty === 2 || row.difficulty === 3 ? row.difficulty : undefined;
+  const furiganaTokens = Array.isArray(row.furigana_tokens)
+    ? row.furigana_tokens.filter(
+        (token): token is { surface: string; reading: string } =>
+          typeof token === "object" &&
+          token !== null &&
+          "surface" in token &&
+          "reading" in token &&
+          typeof token.surface === "string" &&
+          typeof token.reading === "string",
+      )
+    : undefined;
   return {
     vocabId: row.vocab_id,
-    exampleNo,
-    exampleType: "daily",
+    exampleNo: resolvedNo,
+    exampleType: resolvedType,
     exampleJp: row.example_jp,
     exampleVi: row.example_vi,
     clozeJp: row.cloze_jp ?? row.example_jp,
     answer: row.answer ?? "",
+    difficulty: resolvedDifficulty,
+    focusNote: row.focus_note ?? undefined,
+    furiganaTokens,
   };
 }
 

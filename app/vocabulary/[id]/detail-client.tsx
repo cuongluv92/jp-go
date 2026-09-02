@@ -139,7 +139,7 @@ export function VocabularyDetailClient({ id }: { id: string }) {
                 {example.exampleNo}
               </span>
               <div className="flex-1">
-                <JapaneseSentence text={example.exampleJp} className="text-base" />
+                <JapaneseSentence text={example.exampleJp} className="text-base" priorityWordId={word.id} />
               </div>
             </div>
             <p className="mt-1 pl-7 text-sm text-muted">{example.exampleVi}</p>

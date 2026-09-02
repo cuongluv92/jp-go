@@ -5,13 +5,7 @@ import { useEffect, useState } from "react";
 import { QuizRunner } from "@/components/quiz-runner";
 import { SegmentedTabs } from "@/components/segmented-tabs";
 import { getCached, setCached } from "@/lib/data/client-cache";
-import {
-  createCustomTest,
-  deleteCustomTest,
-  listCustomTests,
-  type CustomTestQuestion,
-  type CustomTestRow,
-} from "@/lib/data/custom-test-service";
+import { createCustomTest, deleteCustomTest, listCustomTests, type CustomTestQuestion, type CustomTestRow } from "@/lib/data/custom-test-service";
 import { generatePracticeTest, type GeneratedSection, type GeneratedTest } from "@/lib/data/jlpt-practice-generator";
 import { savePracticeAttempt, type SectionResult } from "@/lib/data/practice-attempt-service";
 import { listActiveStudyPlans } from "@/lib/data/study-plan-service";
@@ -115,7 +109,15 @@ function AutoPracticeTab({ userId }: { userId: string | null }) {
 
   async function handleSectionFinish(correctCount: number) {
     const section = currentSection!;
-    const nextResults = [...results, { kind: section.kind, title: section.title, correct: correctCount, total: section.questions.length }];
+    const nextResults = [
+      ...results,
+      {
+        kind: section.kind,
+        title: section.title,
+        correct: correctCount,
+        total: section.questions.length,
+      },
+    ];
     if (runIndex + 1 >= availableSections.length) {
       setResults(nextResults);
       setSummary(nextResults);
@@ -163,10 +165,7 @@ function AutoPracticeTab({ userId }: { userId: string | null }) {
     return (
       <div className="flex flex-col gap-3">
         <p className="text-xs font-semibold text-foreground">{currentSection.title}</p>
-        <QuizRunner
-          items={currentSection.questions}
-          onFinish={(correct) => void handleSectionFinish(correct)}
-        />
+        <QuizRunner key={currentSection.kind} items={currentSection.questions} onFinish={(correct) => void handleSectionFinish(correct)} />
       </div>
     );
   }
@@ -195,14 +194,15 @@ function AutoPracticeTab({ userId }: { userId: string | null }) {
         {levelAutoPicked && <p className="mt-2 text-xs text-accent">Đã chọn sẵn theo cấp độ lộ trình bạn đang học.</p>}
         {!blueprint.verified && (
           <p className="mt-2 text-xs text-muted">
-            Cấu trúc đề {level} là mô phỏng gần đúng theo cấu trúc JLPT công khai (chỉ N2 lấy đúng từ đề thật) — có thể lệch vài
-            câu so với đề thi thật.
+            Cấu trúc đề {level} là mô phỏng gần đúng theo cấu trúc JLPT công khai (chỉ N2 lấy đúng từ đề thật) — có thể lệch vài câu so với đề thi thật.
           </p>
         )}
       </div>
 
       <div className="rounded-xl border border-dashed border-border p-3 text-xs text-muted">
-        <p className="mb-1 font-semibold text-foreground">Cấu trúc đề {level} ({blueprint.minutes} phút):</p>
+        <p className="mb-1 font-semibold text-foreground">
+          Phần không nghe {level} ({blueprint.minutes} phút):
+        </p>
         {blueprint.sections.map((s) => (
           <p key={s.title}>
             {s.title}: {s.questionCount} câu
@@ -220,14 +220,13 @@ function AutoPracticeTab({ userId }: { userId: string | null }) {
 
       {test && availableSections.length === 0 && (
         <p className="rounded-xl border border-dashed border-border p-4 text-sm text-muted">
-          Chưa đủ nội dung ({level}) để tự sinh câu hỏi cho bất kỳ phần nào — hiện chỉ có từ vựng N3.
+          Chưa đủ nội dung đã kiểm tra ở cấp {level} để tự sinh câu hỏi có căn cứ.
         </p>
       )}
       {test && availableSections.length > 0 && (
         <p className="rounded-xl border border-dashed border-border p-3 text-xs text-muted">
-          {availableSections.length}/{test.sections.length} phần có đủ nội dung để làm ngay (
-          {availableSections.reduce((sum, s) => sum + s.questions.length, 0)} câu) — các phần còn lại (kanji/ngữ pháp/đọc hiểu)
-          chưa có nội dung, sẽ bổ sung sau.
+          {availableSections.length}/{test.sections.length} phần có đủ nội dung để làm ngay ({availableSections.reduce((sum, s) => sum + s.questions.length, 0)}{" "}
+          câu) — các phần ngữ pháp/đọc hiểu còn thiếu sẽ được bổ sung sau khi nội dung được kiểm tra.
         </p>
       )}
     </div>
@@ -243,15 +242,16 @@ function emptyQuestion(): CustomTestQuestion {
 }
 
 function CustomTestsTab({ userId }: { userId: string | null }) {
-  const [tests, setTests] = useState<CustomTestRow[]>(
-    userId ? (getCached<CustomTestRow[]>(CUSTOM_TESTS_CACHE_PREFIX + userId) ?? []) : [],
-  );
+  const [tests, setTests] = useState<CustomTestRow[]>(userId ? (getCached<CustomTestRow[]>(CUSTOM_TESTS_CACHE_PREFIX + userId) ?? []) : []);
   const [creating, setCreating] = useState(false);
   const [title, setTitle] = useState("");
   const [level, setLevel] = useState<JlptLevel | "">("");
   const [questions, setQuestions] = useState<CustomTestQuestion[]>([emptyQuestion()]);
   const [running, setRunning] = useState<CustomTestRow | null>(null);
-  const [summary, setSummary] = useState<{ correct: number; total: number } | null>(null);
+  const [summary, setSummary] = useState<{
+    correct: number;
+    total: number;
+  } | null>(null);
 
   useEffect(() => {
     if (!userId) return;
@@ -268,7 +268,14 @@ function CustomTestsTab({ userId }: { userId: string | null }) {
 
   function updateOption(qIndex: number, oIndex: number, value: string) {
     setQuestions((prev) =>
-      prev.map((q, i) => (i === qIndex ? { ...q, options: q.options.map((o, j) => (j === oIndex ? value : o)) } : q)),
+      prev.map((q, i) =>
+        i === qIndex
+          ? {
+              ...q,
+              options: q.options.map((o, j) => (j === oIndex ? value : o)),
+            }
+          : q,
+      ),
     );
   }
 
@@ -305,7 +312,12 @@ function CustomTestsTab({ userId }: { userId: string | null }) {
     if (userId) {
       const supabase = createClient();
       await savePracticeAttempt(supabase, userId, "custom", running!.jlpt_level, [
-        { kind: "custom", title: running!.title, correct: correctCount, total },
+        {
+          kind: "custom",
+          title: running!.title,
+          correct: correctCount,
+          total,
+        },
       ]);
     }
   }
@@ -337,11 +349,7 @@ function CustomTestsTab({ userId }: { userId: string | null }) {
   return (
     <div className="flex flex-col gap-4">
       {!creating ? (
-        <button
-          type="button"
-          onClick={() => setCreating(true)}
-          className="rounded-xl border border-accent px-4 py-3 text-sm font-semibold text-accent"
-        >
+        <button type="button" onClick={() => setCreating(true)} className="rounded-xl border border-accent px-4 py-3 text-sm font-semibold text-accent">
           + Tạo đề mới
         </button>
       ) : (
@@ -373,11 +381,7 @@ function CustomTestsTab({ userId }: { userId: string | null }) {
               <div className="flex items-center justify-between">
                 <span className="text-xs font-semibold text-muted">Câu {qIndex + 1}</span>
                 {questions.length > 1 && (
-                  <button
-                    type="button"
-                    onClick={() => setQuestions((prev) => prev.filter((_, i) => i !== qIndex))}
-                    className="text-xs text-rose-600"
-                  >
+                  <button type="button" onClick={() => setQuestions((prev) => prev.filter((_, i) => i !== qIndex))} className="text-xs text-rose-600">
                     Xoá
                   </button>
                 )}
@@ -421,11 +425,7 @@ function CustomTestsTab({ userId }: { userId: string | null }) {
             <button type="button" onClick={() => setCreating(false)} className="flex-1 rounded-lg border border-border py-2 text-sm text-muted">
               Huỷ
             </button>
-            <button
-              type="button"
-              onClick={() => void handleSave()}
-              className="flex-1 rounded-lg bg-accent py-2 text-sm font-semibold text-accent-foreground"
-            >
+            <button type="button" onClick={() => void handleSave()} className="flex-1 rounded-lg bg-accent py-2 text-sm font-semibold text-accent-foreground">
               Lưu đề
             </button>
           </div>
@@ -434,9 +434,7 @@ function CustomTestsTab({ userId }: { userId: string | null }) {
 
       <div className="flex flex-col gap-2">
         {tests.length === 0 ? (
-          <p className="rounded-xl border border-dashed border-border p-4 text-sm text-muted">
-            Bạn chưa có đề nào. Tạo đề mới để bắt đầu luyện tập.
-          </p>
+          <p className="rounded-xl border border-dashed border-border p-4 text-sm text-muted">Bạn chưa có đề nào. Tạo đề mới để bắt đầu luyện tập.</p>
         ) : (
           tests.map((t) => (
             <div key={t.id} className="flex items-center justify-between rounded-xl border border-border bg-surface px-4 py-3">
