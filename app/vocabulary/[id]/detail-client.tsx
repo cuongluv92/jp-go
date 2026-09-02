@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 
+import { PersonalExamples } from "@/components/personal-examples";
 import { PronounceButton } from "@/components/pronounce-button";
 import { StatusBadge } from "@/components/status-badge";
 import { getConjugation } from "@/lib/conjugation";
@@ -78,6 +79,14 @@ export function VocabularyDetailClient({ id }: { id: string }) {
           >
             {word.progress.isFavorite ? "★ Đã yêu thích" : "☆ Yêu thích"}
           </button>
+          <a
+            href={`https://mazii.net/vi-VN/search/word/javi/${encodeURIComponent(word.word)}`}
+            target="_blank"
+            rel="noreferrer"
+            className="flex flex-1 items-center justify-center rounded-xl border border-border px-3 py-2 text-sm font-medium text-accent"
+          >
+            Tra trên Mazii ↗
+          </a>
         </div>
 
         <div className="mt-2 grid grid-cols-3 gap-2">
@@ -135,6 +144,8 @@ export function VocabularyDetailClient({ id }: { id: string }) {
           </div>
         ))}
       </section>
+
+      <PersonalExamples targetType="vocab" targetId={word.id} />
     </div>
   );
 }

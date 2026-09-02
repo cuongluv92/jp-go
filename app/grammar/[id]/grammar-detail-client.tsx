@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 
 import { GrammarQuizRunner } from "@/components/grammar-quiz-runner";
+import { PersonalExamples } from "@/components/personal-examples";
 import { getCached, setCached } from "@/lib/data/client-cache";
 import {
   gradeGrammarReview,
@@ -179,6 +180,8 @@ export function GrammarDetailClient({ id }: { id: string }) {
           )}
         </div>
       )}
+
+      <PersonalExamples targetType="grammar" targetId={detail.id} />
 
       <div>
         <h2 className="mb-2 text-sm font-semibold text-foreground">Bài tập</h2>
