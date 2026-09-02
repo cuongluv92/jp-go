@@ -18,15 +18,15 @@ function makeProgress(): LearningProgress {
   };
 }
 
-function makeWord(id: string): VocabWord {
+function makeWord(index: number): VocabWord {
   return {
-    id,
-    word: id,
-    kanji: id,
-    reading: id,
-    meaningVi: `nghĩa ${id}`,
-    partOfSpeech: "noun",
-    verbClass: null,
+    id: `w${index}`,
+    word: `単語${index}`,
+    kanji: `単語${index}`,
+    reading: `たんご${index}`,
+    meaningVi: `nghĩa ${index}`,
+    partOfSpeech: index % 2 === 0 ? "noun" : "verb",
+    verbClass: index % 2 === 0 ? null : "godan",
     transitivity: null,
     particlePatterns: [],
     usagePatterns: [],
@@ -42,52 +42,56 @@ function makeWord(id: string): VocabWord {
   };
 }
 
-function makeExample(vocabId: string, answer: string): VocabExample {
+function makeExample(word: VocabWord, index: number): VocabExample {
   return {
-    vocabId,
+    vocabId: word.id,
     exampleNo: 1,
     exampleType: "exam",
-    exampleJp: `${answer}を使う。`,
-    exampleVi: "ví dụ",
-    clozeJp: "_____を使う。",
-    answer,
+    exampleJp: `例${index}で${word.word}を使う。`,
+    exampleVi: `ví dụ ${index}`,
+    clozeJp: `例${index}で_____を使う。`,
+    answer: word.word,
   };
 }
 
 describe("generatePracticeTest", () => {
-  it("sinh đủ câu hỏi cho phần context_vocab khi có đủ ví dụ", () => {
-    const words = Array.from({ length: 20 }, (_, i) => makeWord(`w${i}`));
-    const examples = words.map((w) => makeExample(w.id, `đáp án ${w.id}`));
-    const blueprint = JLPT_BLUEPRINTS.N3;
+  it("sinh ba dạng kanji đọc, kanji viết và điền theo ngữ cảnh", () => {
+    const words = Array.from({ length: 24 }, (_, index) => makeWord(index));
+    const examples = words.map(makeExample);
+    const result = generatePracticeTest(JLPT_BLUEPRINTS.N3, words, examples);
 
-    const result = generatePracticeTest(blueprint, words, examples);
-    const contextSection = result.sections.find((s) => s.kind === "context_vocab")!;
-
-    expect(contextSection.available).toBe(true);
-    expect(contextSection.questions.length).toBeGreaterThan(0);
-    for (const q of contextSection.questions) {
-      expect(q.options).toHaveLength(4);
-      expect(q.options[q.correctIndex]).toBeTruthy();
-      expect(q.prompt.replace("_____", q.options[q.correctIndex])).toContain(q.options[q.correctIndex]);
+    for (const kind of ["kanji_reading", "kanji_writing", "context_vocab"] as const) {
+      const section = result.sections.find((candidate) => candidate.kind === kind)!;
+      expect(section.available).toBe(true);
+      expect(section.questions.length).toBeGreaterThan(0);
+      expect(new Set(section.questions.map((question) => question.prompt)).size).toBe(section.questions.length);
+      for (const question of section.questions) {
+        expect(question.options).toHaveLength(4);
+        expect(new Set(question.options).size).toBe(4);
+        expect(question.options[question.correctIndex]).toBeTruthy();
+        expect(question.explanation).toBeTruthy();
+      }
     }
   });
 
-  it("đánh dấu chưa đủ nội dung cho các phần chưa sinh được (kanji/ngữ pháp/đọc hiểu...)", () => {
-    const words = [makeWord("w1")];
-    const examples = [makeExample("w1", "đáp án")];
+  it("ưu tiên nhiễu cùng từ loại cho câu ngữ cảnh khi đủ dữ liệu", () => {
+    const words = Array.from({ length: 24 }, (_, index) => makeWord(index));
+    const examples = words.map(makeExample);
     const result = generatePracticeTest(JLPT_BLUEPRINTS.N3, words, examples);
-
-    const kanjiSection = result.sections.find((s) => s.kind === "kanji_reading")!;
-    expect(kanjiSection.available).toBe(false);
-    expect(kanjiSection.questions).toHaveLength(0);
+    const context = result.sections.find((section) => section.kind === "context_vocab")!;
+    const bySurface = new Map(words.map((word) => [word.word, word]));
+    for (const question of context.questions) {
+      const target = words.find((word) => word.id === question.vocabId)!;
+      expect(question.options.every((option) => bySurface.get(option)?.partOfSpeech === target.partOfSpeech)).toBe(true);
+    }
   });
 
-  it("không đủ ví dụ cho context_vocab thì cũng báo chưa đủ nội dung thay vì bịa", () => {
-    const words = [makeWord("w1"), makeWord("w2")];
-    const examples = [makeExample("w1", "a"), makeExample("w2", "b")];
+  it("không đủ dữ liệu thì báo chưa đủ thay vì bịa", () => {
+    const words = [makeWord(1), makeWord(2)];
+    const examples = words.map(makeExample);
     const result = generatePracticeTest(JLPT_BLUEPRINTS.N3, words, examples);
 
-    const contextSection = result.sections.find((s) => s.kind === "context_vocab")!;
-    expect(contextSection.available).toBe(false);
+    expect(result.sections.find((section) => section.kind === "kanji_reading")?.available).toBe(false);
+    expect(result.sections.find((section) => section.kind === "context_vocab")?.available).toBe(false);
   });
 });

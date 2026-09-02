@@ -11,6 +11,7 @@ import { ReviewMatchingExercise } from "@/components/review-matching-exercise";
 import { ReviewTypingExercise } from "@/components/review-typing-exercise";
 import { SegmentedTabs } from "@/components/segmented-tabs";
 import { getCached, setCached } from "@/lib/data/client-cache";
+import { getDueWords } from "@/lib/data/selectors";
 import { getDueGrammarForReview, type DueGrammarRow } from "@/lib/data/grammar-service";
 import { getDueKanjiForReview, type DueKanjiRow } from "@/lib/data/kanji-service";
 import { listDuePersonalExamples, type PersonalExampleRow } from "@/lib/data/personal-example-service";
@@ -64,7 +65,13 @@ export default function ReviewPage() {
       if (!user || cancelled) {
         if (!cancelled) {
           setLoading(false);
-          setCached<ReviewCachedData>(REVIEW_CACHE_KEY, { userId: null, schedules: [], dueKanji: [], dueGrammar: [], duePersonal: [] });
+          setCached<ReviewCachedData>(REVIEW_CACHE_KEY, {
+            userId: null,
+            schedules: [],
+            dueKanji: [],
+            dueGrammar: [],
+            duePersonal: [],
+          });
         }
         return;
       }
@@ -84,7 +91,13 @@ export default function ReviewPage() {
       setDuePersonal(dueP);
       setSelectedGrammar(new Set(dueG.map((g) => g.grammar_id)));
       setLoading(false);
-      setCached<ReviewCachedData>(REVIEW_CACHE_KEY, { userId: user.id, schedules: due, dueKanji: dueK, dueGrammar: dueG, duePersonal: dueP });
+      setCached<ReviewCachedData>(REVIEW_CACHE_KEY, {
+        userId: user.id,
+        schedules: due,
+        dueKanji: dueK,
+        dueGrammar: dueG,
+        duePersonal: dueP,
+      });
     }
 
     void load();
@@ -132,16 +145,10 @@ export default function ReviewPage() {
     setSelectedGrammar((prev) => (prev.size === dueGrammar.length ? new Set() : new Set(dueGrammar.map((g) => g.grammar_id))));
   }
 
-  const selectedWordIds = Array.from(
-    new Set(
-      schedules
-        .filter((s) => selected.has(s.id))
-        .flatMap((s) => s.study_day?.word_ids ?? []),
-    ),
-  );
-  const sessionWords: VocabWord[] = selectedWordIds
-    .map((id) => words.find((w) => w.id === id))
-    .filter((w): w is VocabWord => Boolean(w) && !w!.isHidden);
+  const selectedWordIds = Array.from(new Set(schedules.filter((s) => selected.has(s.id)).flatMap((s) => s.study_day?.word_ids ?? [])));
+  const scheduledWords: VocabWord[] = selectedWordIds.map((id) => words.find((w) => w.id === id)).filter((w): w is VocabWord => Boolean(w) && !w!.isHidden);
+  const individualDueWords = getDueWords(words).filter((word) => !word.isHidden);
+  const sessionWords = Array.from(new Map([...scheduledWords, ...individualDueWords].map((word) => [word.id, word])).values());
 
   async function refreshDue(nextUserId: string) {
     const supabase = createClient();
@@ -160,7 +167,13 @@ export default function ReviewPage() {
     setDuePersonal(dueP);
     setSelectedGrammar(new Set(dueG.map((g) => g.grammar_id)));
     setLoading(false);
-    setCached<ReviewCachedData>(REVIEW_CACHE_KEY, { userId: nextUserId, schedules: due, dueKanji: dueK, dueGrammar: dueG, duePersonal: dueP });
+    setCached<ReviewCachedData>(REVIEW_CACHE_KEY, {
+      userId: nextUserId,
+      schedules: due,
+      dueKanji: dueK,
+      dueGrammar: dueG,
+      duePersonal: dueP,
+    });
   }
 
   async function handleExerciseComplete() {
@@ -233,8 +246,7 @@ export default function ReviewPage() {
       <div>
         <h1 className="text-xl font-bold">Ôn tập</h1>
         <p className="mt-1 text-sm text-muted">
-          Lịch ôn 1-5-15: học/nhớ đúng ngày nào thì 5 ngày sau và 15 ngày sau tự sinh lịch ôn lại. Hoặc tự chọn ôn riêng
-          bất cứ lúc nào, không cần chờ đến hạn.
+          SRS cá nhân đưa từ sai hoặc khó quay lại sớm; lịch 1-5-15 của lộ trình vẫn được gộp vào cùng buổi ôn. Bạn cũng có thể tự chọn nội dung bất cứ lúc nào.
         </p>
       </div>
 
@@ -250,40 +262,46 @@ export default function ReviewPage() {
       {tab === "due" ? (
         loading ? (
           <p className="rounded-2xl border border-dashed border-border p-4 text-sm text-muted">Đang tải...</p>
-        ) : schedules.length === 0 && dueKanji.length === 0 && dueGrammar.length === 0 && duePersonal.length === 0 ? (
+        ) : sessionWords.length === 0 && dueKanji.length === 0 && dueGrammar.length === 0 && duePersonal.length === 0 ? (
           <p className="rounded-2xl border border-dashed border-border p-4 text-sm text-muted">
-            Không có lịch ôn nào đến hạn. Tiếp tục học để tạo lịch ôn mới, hoặc sang tab &quot;Tự chọn ôn tập&quot; để ôn
-            bất cứ lúc nào.
+            Không có lịch ôn nào đến hạn. Tiếp tục học để tạo lịch ôn mới, hoặc sang tab &quot;Tự chọn ôn tập&quot; để ôn bất cứ lúc nào.
           </p>
         ) : (
           <>
-            {schedules.length > 0 && (
+            {sessionWords.length > 0 && (
               <section>
                 <div className="mb-2 flex items-center justify-between">
-                  <h2 className="text-sm font-semibold text-foreground">Từ vựng ({schedules.length} lịch đến hạn)</h2>
-                  <button type="button" onClick={toggleSelectAll} className="text-xs font-medium text-accent">
-                    {selected.size === schedules.length ? "Bỏ chọn tất cả" : "Chọn tất cả"}
-                  </button>
+                  <h2 className="text-sm font-semibold text-foreground">Từ vựng ({sessionWords.length} từ đến hạn)</h2>
+                  {schedules.length > 0 && (
+                    <button type="button" onClick={toggleSelectAll} className="text-xs font-medium text-accent">
+                      {selected.size === schedules.length ? "Bỏ chọn tất cả" : "Chọn tất cả"}
+                    </button>
+                  )}
                 </div>
-                <ul className="flex flex-col gap-2">
-                  {schedules.map((s) => {
-                    const planLabel = s.study_day?.plan
-                      ? (s.study_day.plan.name?.trim() || `Lộ trình ${s.study_day.plan.jlpt_level}`)
-                      : null;
-                    return (
-                      <li key={s.id}>
-                        <label className="flex items-center gap-3 rounded-xl border border-border bg-surface px-4 py-3 shadow-sm">
-                          <input type="checkbox" checked={selected.has(s.id)} onChange={() => toggleSelected(s.id)} />
-                          <span className="flex-1 text-sm">
-                            {planLabel && <span className="mr-1.5 rounded-md bg-accent-soft px-1.5 py-0.5 text-[10px] font-bold text-accent">{planLabel}</span>}
-                            Ngày {s.study_day?.day_number ?? "?"} · ôn lại sau {s.stage} ngày
-                          </span>
-                          <span className="text-xs text-muted">{s.study_day?.word_ids.length ?? 0} từ</span>
-                        </label>
-                      </li>
-                    );
-                  })}
-                </ul>
+                {individualDueWords.length > 0 && (
+                  <p className="mb-2 text-xs text-muted">{individualDueWords.length} từ được đưa lại theo kết quả đúng/sai cá nhân.</p>
+                )}
+                {schedules.length > 0 && (
+                  <ul className="flex flex-col gap-2">
+                    {schedules.map((s) => {
+                      const planLabel = s.study_day?.plan ? s.study_day.plan.name?.trim() || `Lộ trình ${s.study_day.plan.jlpt_level}` : null;
+                      return (
+                        <li key={s.id}>
+                          <label className="flex items-center gap-3 rounded-xl border border-border bg-surface px-4 py-3 shadow-sm">
+                            <input type="checkbox" checked={selected.has(s.id)} onChange={() => toggleSelected(s.id)} />
+                            <span className="flex-1 text-sm">
+                              {planLabel && (
+                                <span className="mr-1.5 rounded-md bg-accent-soft px-1.5 py-0.5 text-[10px] font-bold text-accent">{planLabel}</span>
+                              )}
+                              Ngày {s.study_day?.day_number ?? "?"} · ôn lại sau {s.stage} ngày
+                            </span>
+                            <span className="text-xs text-muted">{s.study_day?.word_ids.length ?? 0} từ</span>
+                          </label>
+                        </li>
+                      );
+                    })}
+                  </ul>
+                )}
                 <div className="mt-3 grid grid-cols-1 gap-2">
                   <button
                     type="button"
@@ -329,11 +347,7 @@ export default function ReviewPage() {
                           selectedKanji.has(k.kanji_id) ? "border-accent bg-accent-soft" : "border-border bg-surface"
                         }`}
                       >
-                        <input
-                          type="checkbox"
-                          checked={selectedKanji.has(k.kanji_id)}
-                          onChange={() => toggleSelectedKanji(k.kanji_id)}
-                        />
+                        <input type="checkbox" checked={selectedKanji.has(k.kanji_id)} onChange={() => toggleSelectedKanji(k.kanji_id)} />
                         <span className="font-jp text-base font-semibold">{k.kanji_character}</span>
                         <span className="text-xs text-muted">{k.han_viet}</span>
                       </label>
@@ -367,11 +381,7 @@ export default function ReviewPage() {
                           selectedGrammar.has(g.grammar_id) ? "border-accent bg-accent-soft" : "border-border bg-surface"
                         }`}
                       >
-                        <input
-                          type="checkbox"
-                          checked={selectedGrammar.has(g.grammar_id)}
-                          onChange={() => toggleSelectedGrammar(g.grammar_id)}
-                        />
+                        <input type="checkbox" checked={selectedGrammar.has(g.grammar_id)} onChange={() => toggleSelectedGrammar(g.grammar_id)} />
                         <span className="flex-1">
                           <span className="font-jp block text-sm font-semibold">{g.grammar_pattern}</span>
                           <span className="block text-xs text-muted">{g.meaning_vi}</span>
@@ -391,9 +401,7 @@ export default function ReviewPage() {
               </section>
             )}
 
-            {duePersonal.length > 0 && userId && (
-              <PersonalExampleReviewSection initialExamples={duePersonal} userId={userId} />
-            )}
+            {duePersonal.length > 0 && userId && <PersonalExampleReviewSection initialExamples={duePersonal} userId={userId} />}
           </>
         )
       ) : (

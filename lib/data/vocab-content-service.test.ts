@@ -85,6 +85,15 @@ describe("dbVocabRowToWord", () => {
     expect(word.progress.status).toBe("chua_hoc");
     expect(word.progress.repetitions).toBe(0);
   });
+
+  it("dùng dạng từ điển và nhóm động từ đã xác minh từ DB", () => {
+    const word = dbVocabRowToWord(
+      makeRow({ word_jp: "いただく①", dictionary_form: "いただく", word_class: "動詞", verb_class: "godan", transitivity: "transitive" }),
+    );
+    expect(word.dictionaryForm).toBe("いただく");
+    expect(word.verbClass).toBe("godan");
+    expect(word.transitivity).toBe("transitive");
+  });
 });
 
 describe("fillGroupSimilarWords", () => {
@@ -139,5 +148,29 @@ describe("vocabExampleRowToExample", () => {
     });
     expect(ex.clozeJp).toBe("これは_____です。");
     expect(ex.answer).toBe("本");
+  });
+
+  it("map metadata độ khó, loại ví dụ và furigana đã kiểm tra", () => {
+    const ex = vocabExampleRowToExample({
+      id: "e3",
+      vocab_id: "id-1",
+      example_jp: "資料を確認します。",
+      example_vi: "Tôi kiểm tra tài liệu.",
+      cloze_jp: "資料を_____。",
+      answer: "確認します",
+      source_type: "generated",
+      example_no: 3,
+      example_type: "business",
+      difficulty: 3,
+      focus_note: "Cụm 資料を確認する",
+      furigana_tokens: [{ surface: "資料", reading: "しりょう" }],
+    });
+    expect(ex).toMatchObject({
+      exampleNo: 3,
+      exampleType: "business",
+      difficulty: 3,
+      focusNote: "Cụm 資料を確認する",
+      furiganaTokens: [{ surface: "資料", reading: "しりょう" }],
+    });
   });
 });

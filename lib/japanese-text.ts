@@ -1,4 +1,4 @@
-import { getConjugation } from "@/lib/conjugation";
+import { getConjugation, normalizeDictionaryForm } from "@/lib/conjugation";
 import type { VocabWord } from "@/lib/types";
 
 export interface JapaneseTextSegment {
@@ -17,7 +17,8 @@ export function segmentJapaneseText(text: string, words: VocabWord[]): JapaneseT
   for (const word of words) {
     const conjugation = getConjugation(word);
     const forms = conjugation ? Object.values(conjugation).filter((value): value is string => typeof value === "string") : [];
-    const surfaces = new Set([word.word.trim(), ...forms]);
+    const dictionaryForm = normalizeDictionaryForm(word.dictionaryForm || word.word);
+    const surfaces = new Set([word.word.trim(), dictionaryForm, ...forms]);
     for (const surface of surfaces) {
       if (!surface || (surface.length === 1 && !/[一-鿿]/.test(surface))) continue;
       const first = Array.from(surface)[0];
@@ -58,5 +59,8 @@ export function segmentJapaneseText(text: string, words: VocabWord[]): JapaneseT
 }
 
 export function normalizeJapaneseAnswer(value: string): string {
-  return value.normalize("NFKC").replace(/[\s。、！？!?.,]/g, "").toLowerCase();
+  return value
+    .normalize("NFKC")
+    .replace(/[\s。、！？!?.,]/g, "")
+    .toLowerCase();
 }

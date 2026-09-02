@@ -2,6 +2,7 @@
 
 import { useMemo, useState } from "react";
 
+import { useVocabulary } from "@/lib/data/vocabulary-context";
 import type { VocabWord } from "@/lib/types";
 
 const ROUND_SIZE = 6;
@@ -17,6 +18,7 @@ function shuffle<T>(arr: T[]): T[] {
 
 /** Mini game nối từ ↔ nghĩa, chia thành từng đợt tối đa {@link ROUND_SIZE} cặp. */
 export function ReviewMatchingExercise({ words, onComplete }: { words: VocabWord[]; onComplete: () => void }) {
+  const { gradeFlashcard } = useVocabulary();
   const rounds = useMemo(() => {
     const chunks: VocabWord[][] = [];
     for (let i = 0; i < words.length; i += ROUND_SIZE) chunks.push(words.slice(i, i + ROUND_SIZE));
@@ -26,12 +28,13 @@ export function ReviewMatchingExercise({ words, onComplete }: { words: VocabWord
   const [roundIndex, setRoundIndex] = useState(0);
   const round = rounds[roundIndex];
 
-  const [leftOrder] = useState(() => shuffle(round.map((w) => w.id)));
+  const [leftOrder, setLeftOrder] = useState(() => shuffle(round.map((w) => w.id)));
   const [rightOrder, setRightOrder] = useState(() => shuffle(round.map((w) => w.id)));
   const [matchedIds, setMatchedIds] = useState<Set<string>>(new Set());
   const [selectedLeft, setSelectedLeft] = useState<string | null>(null);
   const [selectedRight, setSelectedRight] = useState<string | null>(null);
   const [wrongPair, setWrongPair] = useState<[string, string] | null>(null);
+  const [struggledIds, setStruggledIds] = useState<Set<string>>(new Set());
 
   const byId = new Map(round.map((w) => [w.id, w]));
 
@@ -50,6 +53,7 @@ export function ReviewMatchingExercise({ words, onComplete }: { words: VocabWord
 
   function evaluate(leftId: string, rightId: string) {
     if (leftId === rightId) {
+      gradeFlashcard(leftId, struggledIds.has(leftId) ? "kho" : "da_nho");
       const nextMatched = new Set(matchedIds);
       nextMatched.add(leftId);
       setMatchedIds(nextMatched);
@@ -61,11 +65,16 @@ export function ReviewMatchingExercise({ words, onComplete }: { words: VocabWord
         } else {
           const nextRound = rounds[roundIndex + 1];
           setRoundIndex((r) => r + 1);
+          setLeftOrder(shuffle(nextRound.map((w) => w.id)));
           setRightOrder(shuffle(nextRound.map((w) => w.id)));
           setMatchedIds(new Set());
+          setSelectedLeft(null);
+          setSelectedRight(null);
+          setWrongPair(null);
         }
       }
     } else {
+      setStruggledIds((current) => new Set([...current, leftId]));
       setWrongPair([leftId, rightId]);
       setSelectedLeft(null);
       setSelectedRight(null);

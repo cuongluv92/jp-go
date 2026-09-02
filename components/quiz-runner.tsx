@@ -6,24 +6,30 @@ export interface QuizItem {
   prompt: string;
   options: string[];
   correctIndex: number;
+  explanation?: string;
 }
 
 /** Trình chạy quiz trắc nghiệm dùng chung cho đề tự động JLPT và đề tự tạo. */
 export function QuizRunner({ items, onFinish }: { items: QuizItem[]; onFinish: (correctCount: number) => void }) {
+  const [queue, setQueue] = useState(() => items.map((item) => ({ item, isRetry: false })));
   const [index, setIndex] = useState(0);
   const [selected, setSelected] = useState<number | null>(null);
   const [correctCount, setCorrectCount] = useState(0);
 
-  const item = items[index];
+  const queued = queue[index];
+  const item = queued.item;
 
   function handleSelect(i: number) {
     if (selected !== null) return;
     setSelected(i);
-    if (i === item.correctIndex) setCorrectCount((c) => c + 1);
+    if (i === item.correctIndex && !queued.isRetry) setCorrectCount((count) => count + 1);
+    if (i !== item.correctIndex && !queued.isRetry) {
+      setQueue((current) => [...current, { item, isRetry: true }]);
+    }
   }
 
   function next() {
-    if (index + 1 >= items.length) {
+    if (index + 1 >= queue.length) {
       onFinish(correctCount);
       return;
     }
@@ -33,9 +39,7 @@ export function QuizRunner({ items, onFinish }: { items: QuizItem[]; onFinish: (
 
   return (
     <div className="flex flex-col gap-4">
-      <span className="text-xs text-muted">
-        Câu {index + 1}/{items.length}
-      </span>
+      <span className="text-xs text-muted">{queued.isRetry ? "Ôn lại câu đã sai" : `Câu ${index + 1}/${items.length}`}</span>
 
       <div className="rounded-2xl border border-border bg-surface p-5 shadow-sm">
         <p className="font-jp text-lg font-semibold leading-relaxed">{item.prompt}</p>
@@ -64,9 +68,15 @@ export function QuizRunner({ items, onFinish }: { items: QuizItem[]; onFinish: (
       </div>
 
       {selected !== null && (
-        <button type="button" onClick={next} className="rounded-xl bg-accent py-2.5 text-sm font-semibold text-accent-foreground">
-          {index + 1 >= items.length ? "Xem kết quả" : "Câu tiếp theo →"}
-        </button>
+        <div
+          className={`rounded-xl border p-3 text-sm ${selected === item.correctIndex ? "border-emerald-300 bg-emerald-50 text-emerald-800" : "border-rose-300 bg-rose-50 text-rose-800"}`}
+        >
+          <p className="font-semibold">{selected === item.correctIndex ? "Đúng" : `Chưa đúng · Đáp án: ${item.options[item.correctIndex]}`}</p>
+          {item.explanation && <p className="mt-1 whitespace-pre-line text-xs leading-relaxed">{item.explanation}</p>}
+          <button type="button" onClick={next} className="mt-3 w-full rounded-xl bg-accent py-2.5 text-sm font-semibold text-accent-foreground">
+            {index + 1 >= queue.length ? "Xem kết quả" : "Câu tiếp theo →"}
+          </button>
+        </div>
       )}
     </div>
   );

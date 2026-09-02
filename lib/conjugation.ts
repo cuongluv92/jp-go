@@ -1,11 +1,4 @@
-import type {
-  Conjugation,
-  IAdjectiveConjugation,
-  NaAdjectiveConjugation,
-  PartOfSpeech,
-  VerbClass,
-  VerbConjugation,
-} from "@/lib/types";
+import type { Conjugation, IAdjectiveConjugation, NaAdjectiveConjugation, PartOfSpeech, VerbClass, VerbConjugation } from "@/lib/types";
 
 /**
  * Bộ máy chia động từ/tính từ tiếng Nhật — đầy đủ các thể thường dùng để học
@@ -66,6 +59,13 @@ const GODAN_VOLITIONAL_STEM: Record<string, string> = {
   る: "ろ",
 };
 
+const TRAILING_SENSE_MARKERS = /[①-⑳]+$/u;
+
+/** Bỏ nhãn phân biệt nghĩa khỏi bề mặt hiển thị trước khi chia từ. */
+export function normalizeDictionaryForm(value: string): string {
+  return value.trim().replace(TRAILING_SENSE_MARKERS, "");
+}
+
 /** Âm tiện của て形/た形 theo nhóm phụ âm cuối, dùng chung logic cho cả hai. */
 function godanTeTaSuffix(lastKana: string): { te: string; ta: string } {
   switch (lastKana) {
@@ -108,8 +108,9 @@ function conjugateGodan(dictionaryForm: string): VerbConjugation {
     dictionaryForm,
     masuForm: `${stem}${masuStem}ます`,
     teForm: `${stem}${te}`,
-    naiForm: `${stem}${aStem}ない`,
-    naiTaForm: `${stem}${aStem}なかった`,
+    // ある là ngoại lệ: phủ định là ない/なかった, không phải あらない/あらなかった.
+    naiForm: dictionaryForm === "ある" ? "ない" : `${stem}${aStem}ない`,
+    naiTaForm: dictionaryForm === "ある" ? "なかった" : `${stem}${aStem}なかった`,
     taForm: `${stem}${ta}`,
     potentialForm: `${stem}${eStem}る`,
     volitionalForm: `${stem}${volitionalStem}う`,
@@ -185,15 +186,16 @@ function conjugateKuru(dictionaryForm: string): VerbConjugation {
 }
 
 export function conjugateVerb(dictionaryForm: string, verbClass: VerbClass): VerbConjugation {
+  const normalized = normalizeDictionaryForm(dictionaryForm);
   switch (verbClass) {
     case "godan":
-      return conjugateGodan(dictionaryForm);
+      return conjugateGodan(normalized);
     case "ichidan":
-      return conjugateIchidan(dictionaryForm);
+      return conjugateIchidan(normalized);
     case "suru":
-      return conjugateSuru(dictionaryForm);
+      return conjugateSuru(normalized);
     case "kuru":
-      return conjugateKuru(dictionaryForm);
+      return conjugateKuru(normalized);
     default:
       throw new Error(`Thiếu verbClass cho động từ "${dictionaryForm}"`);
   }
@@ -206,6 +208,7 @@ const I_ADJECTIVE_EXCEPTIONS: Record<string, string> = {
 };
 
 export function conjugateIAdjective(dictionaryForm: string): IAdjectiveConjugation {
+  dictionaryForm = normalizeDictionaryForm(dictionaryForm);
   const stem = I_ADJECTIVE_EXCEPTIONS[dictionaryForm] ?? dictionaryForm.slice(0, -1);
   return {
     kind: "i_adjective",
@@ -220,6 +223,7 @@ export function conjugateIAdjective(dictionaryForm: string): IAdjectiveConjugati
 
 /** `stem` là gốc な形容詞 chưa gắn だ, vd "静か" (không phải "静かだ"). */
 export function conjugateNaAdjective(stem: string): NaAdjectiveConjugation {
+  stem = normalizeDictionaryForm(stem).replace(/[なだ]$/u, "");
   return {
     kind: "na_adjective",
     dictionaryForm: `${stem}だ`,
@@ -235,19 +239,16 @@ export function conjugateNaAdjective(stem: string): NaAdjectiveConjugation {
  * Trả về bảng chia phù hợp với loại từ, hoặc `null` nếu loại từ đó không có
  * cách chia (danh từ, phó từ, liên từ, trợ từ, biểu hiện — theo mục 9 yêu cầu).
  */
-export function getConjugation(entry: {
-  word: string;
-  partOfSpeech: PartOfSpeech;
-  verbClass: VerbClass;
-}): Conjugation | null {
+export function getConjugation(entry: { word: string; dictionaryForm?: string; partOfSpeech: PartOfSpeech; verbClass: VerbClass }): Conjugation | null {
+  const dictionaryForm = normalizeDictionaryForm(entry.dictionaryForm || entry.word);
   if (entry.partOfSpeech === "verb" && entry.verbClass) {
-    return conjugateVerb(entry.word, entry.verbClass);
+    return conjugateVerb(dictionaryForm, entry.verbClass);
   }
   if (entry.partOfSpeech === "i_adjective") {
-    return conjugateIAdjective(entry.word);
+    return conjugateIAdjective(dictionaryForm);
   }
   if (entry.partOfSpeech === "na_adjective") {
-    return conjugateNaAdjective(entry.word);
+    return conjugateNaAdjective(dictionaryForm);
   }
   return null;
 }

@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest";
 
-import { conjugateIAdjective, conjugateNaAdjective, conjugateVerb } from "@/lib/conjugation";
+import { conjugateIAdjective, conjugateNaAdjective, conjugateVerb, getConjugation } from "@/lib/conjugation";
 
 describe("conjugateVerb — godan", () => {
   it("書く (く-ending, âm tiện いて/いた) — đầy đủ các thể", () => {
@@ -31,6 +31,19 @@ describe("conjugateVerb — godan", () => {
     expect(result.naiTaForm).toBe("行かなかった");
     expect(result.passiveForm).toBe("行かれる");
     expect(result.causativeForm).toBe("行かせる");
+  });
+
+  it("ある dùng phủ định bất quy tắc ない/なかった", () => {
+    const result = conjugateVerb("ある", "godan");
+    expect(result.naiForm).toBe("ない");
+    expect(result.naiTaForm).toBe("なかった");
+  });
+
+  it("bỏ nhãn phân biệt nghĩa ①/② trước khi chia", () => {
+    const result = conjugateVerb("いただく①", "godan");
+    expect(result.dictionaryForm).toBe("いただく");
+    expect(result.masuForm).toBe("いただきます");
+    expect(result.teForm).toBe("いただいて");
   });
 
   it("飲む (む-ending, âm tiện んで/んだ) — đầy đủ các thể", () => {
@@ -156,6 +169,10 @@ describe("conjugateIAdjective", () => {
       conditionalForm: "よければ",
     });
   });
+
+  it("không đưa nhãn nghĩa vào cách chia tính từ", () => {
+    expect(conjugateIAdjective("おかしい①").negativeForm).toBe("おかしくない");
+  });
 });
 
 describe("conjugateNaAdjective", () => {
@@ -169,5 +186,22 @@ describe("conjugateNaAdjective", () => {
       teForm: "静かで",
       conditionalForm: "静かなら",
     });
+  });
+
+  it("chấp nhận dữ liệu hiển thị có sẵn đuôi な", () => {
+    expect(conjugateNaAdjective("ユニークな").dictionaryForm).toBe("ユニークだ");
+  });
+});
+
+describe("getConjugation", () => {
+  it("ưu tiên dictionaryForm riêng thay vì nhãn hiển thị", () => {
+    const result = getConjugation({
+      word: "伺う①",
+      dictionaryForm: "伺う",
+      partOfSpeech: "verb",
+      verbClass: "godan",
+    });
+    expect(result?.kind).toBe("verb");
+    if (result?.kind === "verb") expect(result.masuForm).toBe("伺います");
   });
 });
