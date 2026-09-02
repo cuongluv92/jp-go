@@ -8,13 +8,14 @@ import { getCached, setCached } from "@/lib/data/client-cache";
 import { createCustomTest, deleteCustomTest, listCustomTests, type CustomTestQuestion, type CustomTestRow } from "@/lib/data/custom-test-service";
 import { generatePracticeTest, type GeneratedSection, type GeneratedTest } from "@/lib/data/jlpt-practice-generator";
 import { savePracticeAttempt, type SectionResult } from "@/lib/data/practice-attempt-service";
+import { generateSkillPractice, SKILL_KIND_LABELS, type SkillPracticeSet } from "@/lib/data/skill-practice-generator";
 import { listActiveStudyPlans } from "@/lib/data/study-plan-service";
 import { useVocabulary } from "@/lib/data/vocabulary-context";
 import { createClient } from "@/lib/supabase/client";
 import { JLPT_BLUEPRINTS } from "@/lib/jlpt-blueprint";
 import { JLPT_LEVELS, type JlptLevel } from "@/lib/types";
 
-type Tab = "auto" | "custom";
+type Tab = "auto" | "skills" | "custom";
 
 const PRACTICE_USER_CACHE_KEY = "practice-user-id";
 const CUSTOM_TESTS_CACHE_PREFIX = "practice-custom-tests-";
@@ -52,12 +53,13 @@ export default function PracticePage() {
         value={tab}
         onChange={setTab}
         options={[
-          { value: "auto", label: "Luyện đề tự động" },
+          { value: "auto", label: "Đề JLPT" },
+          { value: "skills", label: "Luyện đa dạng" },
           { value: "custom", label: "Đề của tôi" },
         ]}
       />
 
-      {tab === "auto" ? <AutoPracticeTab userId={userId} /> : <CustomTestsTab userId={userId} />}
+      {tab === "auto" ? <AutoPracticeTab userId={userId} /> : tab === "skills" ? <SkillPracticeTab userId={userId} /> : <CustomTestsTab userId={userId} />}
     </div>
   );
 }
@@ -67,7 +69,7 @@ export default function PracticePage() {
 // ---------------------------------------------------------------------------
 
 function AutoPracticeTab({ userId }: { userId: string | null }) {
-  const { words, examples } = useVocabulary();
+  const { words, examples, gradeFlashcard } = useVocabulary();
   const [level, setLevel] = useState<JlptLevel>("N3");
   const [levelAutoPicked, setLevelAutoPicked] = useState(false);
   const [test, setTest] = useState<GeneratedTest | null>(null);
@@ -165,7 +167,14 @@ function AutoPracticeTab({ userId }: { userId: string | null }) {
     return (
       <div className="flex flex-col gap-3">
         <p className="text-xs font-semibold text-foreground">{currentSection.title}</p>
-        <QuizRunner key={currentSection.kind} items={currentSection.questions} onFinish={(correct) => void handleSectionFinish(correct)} />
+        <QuizRunner
+          key={`${currentSection.kind}-${runIndex}`}
+          items={currentSection.questions}
+          onAnswer={(item, correct) => {
+            if (item.vocabId) gradeFlashcard(item.vocabId, correct ? "da_nho" : "chua_nho");
+          }}
+          onFinish={(correct) => void handleSectionFinish(correct)}
+        />
       </div>
     );
   }
@@ -228,6 +237,125 @@ function AutoPracticeTab({ userId }: { userId: string | null }) {
           {availableSections.length}/{test.sections.length} phần có đủ nội dung để làm ngay ({availableSections.reduce((sum, s) => sum + s.questions.length, 0)}{" "}
           câu) — các phần ngữ pháp/đọc hiểu còn thiếu sẽ được bổ sung sau khi nội dung được kiểm tra.
         </p>
+      )}
+    </div>
+  );
+}
+
+// ---------------------------------------------------------------------------
+// Luyện nhiều kỹ năng — không giả làm cấu trúc đề JLPT
+// ---------------------------------------------------------------------------
+
+function SkillPracticeTab({ userId }: { userId: string | null }) {
+  const { words, examples, gradeFlashcard } = useVocabulary();
+  const [level, setLevel] = useState<JlptLevel>("N3");
+  const [questionCount, setQuestionCount] = useState(15);
+  const [practice, setPractice] = useState<SkillPracticeSet | null>(null);
+  const [result, setResult] = useState<{ correct: number; total: number } | null>(null);
+
+  function generate() {
+    setPractice(generateSkillPractice(level, words, examples, questionCount));
+    setResult(null);
+  }
+
+  async function finish(correct: number) {
+    const total = practice?.questions.length ?? 0;
+    setResult({ correct, total });
+    if (userId && total > 0) {
+      await savePracticeAttempt(createClient(), userId, "skill_mix", level, [
+        { kind: "skill_mix", title: "Luyện nhiều kỹ năng", correct, total },
+      ]);
+    }
+  }
+
+  if (practice && practice.questions.length > 0 && !result) {
+    return (
+      <div className="flex flex-col gap-3">
+        <div className="flex flex-wrap gap-1.5 text-[11px] text-muted">
+          {Object.entries(practice.countsByKind).map(([kind, count]) => (
+            <span key={kind} className="rounded-full bg-slate-100 px-2 py-1">
+              {SKILL_KIND_LABELS[kind as keyof typeof SKILL_KIND_LABELS]} · {count}
+            </span>
+          ))}
+        </div>
+        <QuizRunner
+          items={practice.questions}
+          onAnswer={(item, correct) => {
+            if (item.vocabId) gradeFlashcard(item.vocabId, correct ? "da_nho" : "chua_nho");
+          }}
+          onFinish={(correct) => void finish(correct)}
+        />
+      </div>
+    );
+  }
+
+  if (result) {
+    return (
+      <div className="flex flex-col items-center gap-4 py-10 text-center">
+        <p className="text-4xl">✅</p>
+        <p className="text-sm">Hoàn thành {result.total} câu · đúng {result.correct}/{result.total}.</p>
+        <p className="text-xs text-muted">Câu sai đã quay lại cuối buổi và được đưa vào lịch ôn sớm.</p>
+        <button
+          type="button"
+          onClick={() => {
+            setPractice(null);
+            setResult(null);
+          }}
+          className="text-sm font-medium text-accent"
+        >
+          ← Tạo buổi khác
+        </button>
+      </div>
+    );
+  }
+
+  return (
+    <div className="flex flex-col gap-4">
+      <div>
+        <h2 className="mb-2 text-sm font-semibold">Chọn cấp độ</h2>
+        <div className="grid grid-cols-5 gap-2">
+          {JLPT_LEVELS.map((item) => (
+            <button
+              key={item}
+              type="button"
+              onClick={() => {
+                setLevel(item);
+                setPractice(null);
+              }}
+              className={`rounded-xl border px-2 py-2 text-sm font-semibold ${level === item ? "border-accent bg-accent text-accent-foreground" : "border-border bg-surface"}`}
+            >
+              {item}
+            </button>
+          ))}
+        </div>
+      </div>
+
+      <div>
+        <h2 className="mb-2 text-sm font-semibold">Số câu</h2>
+        <div className="grid grid-cols-3 gap-2">
+          {[10, 15, 20].map((count) => (
+            <button
+              key={count}
+              type="button"
+              onClick={() => setQuestionCount(count)}
+              className={`rounded-xl border py-2 text-sm font-semibold ${questionCount === count ? "border-accent bg-accent-soft text-accent" : "border-border bg-surface"}`}
+            >
+              {count} câu
+            </button>
+          ))}
+        </div>
+      </div>
+
+      <div className="rounded-xl border border-dashed border-border p-3 text-xs leading-relaxed text-muted">
+        Trộn chọn nghĩa, nhớ mặt chữ, đọc Kanji, điền từ theo ngữ cảnh, hiểu câu và chia từ. Hệ thống chỉ dùng dạng nào có đủ dữ liệu, không tự bịa phần ngữ pháp chưa được kiểm tra.
+      </div>
+
+      <button type="button" onClick={generate} className="rounded-xl bg-accent px-4 py-3 text-sm font-semibold text-accent-foreground">
+        Bắt đầu luyện đa dạng
+      </button>
+
+      {practice && practice.questions.length === 0 && (
+        <p className="rounded-xl border border-dashed border-border p-4 text-sm text-muted">Cấp {level} chưa có đủ nội dung đã kiểm tra để tạo buổi luyện.</p>
       )}
     </div>
   );

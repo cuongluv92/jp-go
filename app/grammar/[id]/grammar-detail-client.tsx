@@ -30,17 +30,29 @@ function examplesForUsage(examples: GrammarExampleRow[], usageId: string | null)
 }
 
 function ExampleList({ examples }: { examples: GrammarExampleRow[] }) {
-  if (examples.length === 0) return null;
   return (
-    <ul className="mt-2 flex flex-col gap-2">
-      {examples.map((ex, i) => (
+    <div className="mt-2">
+      {examples.length < 3 && (
+        <p className="mb-2 rounded-lg border border-amber-200 bg-amber-50 p-2 text-[11px] text-amber-900">
+          Mới có {examples.length}/3 ngữ cảnh đã kiểm tra; chưa tự điền câu còn thiếu.
+        </p>
+      )}
+      <ul className="flex flex-col gap-2">
+        {examples.map((ex, i) => (
         <li key={ex.id} className="rounded-lg border border-border bg-surface px-3 py-2">
-          <p className="text-xs font-semibold text-muted">Ví dụ {i + 1}</p>
+          <div className="flex flex-wrap items-center gap-1.5 text-[10px] font-semibold">
+            <span className="text-muted">Ví dụ {i + 1}</span>
+            <span className="rounded-full bg-accent-soft px-2 py-0.5 text-accent">
+              {ex.example_type === "standard" ? "Chuẩn mẫu" : ex.example_type === "business" ? "Công việc" : "Đời thường"}
+            </span>
+            {ex.review_status === "needs_review" && <span className="rounded-full bg-amber-100 px-2 py-0.5 text-amber-800">Cần kiểm tra</span>}
+          </div>
           <JapaneseSentence text={ex.example_jp} className="mt-0.5 text-sm text-foreground" />
           <p className="text-xs text-muted">{ex.example_vi}</p>
         </li>
-      ))}
-    </ul>
+        ))}
+      </ul>
+    </div>
   );
 }
 

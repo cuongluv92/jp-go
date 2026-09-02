@@ -3,6 +3,7 @@
 import { useState } from "react";
 
 import type { GrammarQuestionRow } from "@/lib/data/grammar-service";
+import { normalizeJapaneseAnswer } from "@/lib/japanese-text";
 
 export interface GrammarQuizResult {
   grammarId: string;
@@ -49,7 +50,7 @@ export function GrammarQuizRunner({
       next();
       return;
     }
-    recordAnswer(typedInput.trim() === question.correct_answer.trim());
+    recordAnswer(normalizeJapaneseAnswer(typedInput) === normalizeJapaneseAnswer(question.correct_answer));
     setChecked(true);
   }
 
@@ -95,10 +96,10 @@ export function GrammarQuizRunner({
           {checked && (
             <p
               className={`text-center text-sm font-medium ${
-                typedInput.trim() === question.correct_answer.trim() ? "text-emerald-700" : "text-rose-600"
+                normalizeJapaneseAnswer(typedInput) === normalizeJapaneseAnswer(question.correct_answer) ? "text-emerald-700" : "text-rose-600"
               }`}
             >
-              {typedInput.trim() === question.correct_answer.trim()
+              {normalizeJapaneseAnswer(typedInput) === normalizeJapaneseAnswer(question.correct_answer)
                 ? "Chính xác! 🎉"
                 : `Chưa đúng — đáp án: ${question.correct_answer}`}
             </p>

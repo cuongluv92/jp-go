@@ -3,6 +3,7 @@
 import { useState } from "react";
 
 import type { KanjiQuestionRow } from "@/lib/data/kanji-service";
+import { normalizeJapaneseAnswer } from "@/lib/japanese-text";
 
 export interface KanjiQuizResult {
   kanjiId: string;
@@ -46,7 +47,7 @@ export function KanjiQuizRunner({
       next();
       return;
     }
-    recordAnswer(typedInput.trim() === question.correct_answer.trim());
+    recordAnswer(normalizeJapaneseAnswer(typedInput) === normalizeJapaneseAnswer(question.correct_answer));
     setChecked(true);
   }
 
@@ -92,10 +93,10 @@ export function KanjiQuizRunner({
           {checked && (
             <p
               className={`text-center text-sm font-medium ${
-                typedInput.trim() === question.correct_answer.trim() ? "text-emerald-700" : "text-rose-600"
+                normalizeJapaneseAnswer(typedInput) === normalizeJapaneseAnswer(question.correct_answer) ? "text-emerald-700" : "text-rose-600"
               }`}
             >
-              {typedInput.trim() === question.correct_answer.trim()
+              {normalizeJapaneseAnswer(typedInput) === normalizeJapaneseAnswer(question.correct_answer)
                 ? "Chính xác! 🎉"
                 : `Chưa đúng — đáp án: ${question.correct_answer}`}
             </p>

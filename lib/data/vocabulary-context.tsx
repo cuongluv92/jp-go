@@ -4,6 +4,7 @@ import { createContext, useCallback, useContext, useEffect, useMemo, useRef, use
 
 import { sampleExamples } from "@/lib/data/sample-examples";
 import { sampleWords } from "@/lib/data/sample-words";
+import { fetchAllRows } from "@/lib/data/supabase-pagination";
 import { listAllDbVocab } from "@/lib/data/vocab-content-service";
 import { applyFlashcardGrade } from "@/lib/srs";
 import { createClient } from "@/lib/supabase/client";
@@ -68,6 +69,16 @@ function rowToProgress(row: WordProgressRow): LearningProgress {
   };
 }
 
+function listAllWordProgress(supabase: ReturnType<typeof createClient>, userId: string): Promise<WordProgressRow[]> {
+  return fetchAllRows<WordProgressRow>((from, to) =>
+    supabase
+      .from("jp_word_progress")
+      .select("*", { count: "exact" })
+      .eq("user_id", userId)
+      .range(from, to),
+  );
+}
+
 function progressToRow(userId: string, wordId: string, progress: LearningProgress, isHidden: boolean) {
   return {
     user_id: userId,
@@ -101,8 +112,8 @@ export function VocabularyProvider({ children }: { children: ReactNode }) {
       if (!user || cancelled) return;
       userIdRef.current = user.id;
 
-      const { data: rows } = await supabase.from("jp_word_progress").select("*").eq("user_id", user.id);
-      if (!rows || cancelled) return;
+      const rows = await listAllWordProgress(supabase, user.id);
+      if (cancelled) return;
 
       const byWordId = new Map<string, WordProgressRow>(rows.map((r: WordProgressRow) => [r.word_id, r]));
       setWords((prev) =>
@@ -141,13 +152,9 @@ export function VocabularyProvider({ children }: { children: ReactNode }) {
         } = await supabase.auth.getUser();
         let mergedWords = dbWords;
         if (user && !cancelled) {
-          const dbWordIds = dbWords.map((w) => w.id);
-          const { data: rows } = await supabase
-            .from("jp_word_progress")
-            .select("*")
-            .eq("user_id", user.id)
-            .in("word_id", dbWordIds);
-          if (rows && rows.length > 0) {
+          userIdRef.current = user.id;
+          const rows = await listAllWordProgress(supabase, user.id);
+          if (rows.length > 0) {
             const byWordId = new Map<string, WordProgressRow>(rows.map((r: WordProgressRow) => [r.word_id, r]));
             mergedWords = dbWords.map((w) => {
               const row = byWordId.get(w.id);
@@ -157,8 +164,10 @@ export function VocabularyProvider({ children }: { children: ReactNode }) {
           }
         }
         if (cancelled) return;
-        setWords((prev) => [...prev, ...mergedWords]);
-        setExamples((prev) => [...prev, ...dbExamples]);
+        setWords((prev) => [...new Map([...prev, ...mergedWords].map((word) => [word.id, word])).values()]);
+        setExamples((prev) => [
+          ...new Map([...prev, ...dbExamples].map((example) => [`${example.vocabId}:${example.exampleNo}`, example])).values(),
+        ]);
       } catch (error) {
         // Không để 1 lần fetch lỗi (mạng chập chờn, Supabase tạm gián đoạn...)
         // âm thầm khiến từ vựng N5+ biến mất khỏi app cả phiên — log ra để

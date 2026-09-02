@@ -9,13 +9,19 @@ import { StatusBadge } from "@/components/status-badge";
 import { getConjugation } from "@/lib/conjugation";
 import { getExamplesForWord } from "@/lib/data/selectors";
 import { useVocabulary } from "@/lib/data/vocabulary-context";
-import { PART_OF_SPEECH_LABELS, type Conjugation, type LearningStatus } from "@/lib/types";
+import { PART_OF_SPEECH_LABELS, type Conjugation, type ExampleType, type LearningStatus } from "@/lib/types";
 
 const STATUS_OPTIONS: { value: LearningStatus; label: string }[] = [
   { value: "chua_hoc", label: "Chưa nhớ" },
   { value: "dang_hoc", label: "Đang học" },
   { value: "da_nho", label: "Đã nhớ" },
 ];
+
+const EXAMPLE_TYPE_LABELS: Record<ExampleType, string> = {
+  exam: "Dạng đề thi",
+  daily: "Đời thường",
+  business: "Công việc",
+};
 
 export function VocabularyDetailClient({ id }: { id: string }) {
   const { getWordById, toggleFavorite, setStatus, examples: allExamples } = useVocabulary();
@@ -132,14 +138,28 @@ export function VocabularyDetailClient({ id }: { id: string }) {
 
       <section className="flex flex-col gap-3">
         <h2 className="text-sm font-semibold">Ví dụ</h2>
+        {examples.length < 3 && (
+          <p className="rounded-xl border border-amber-200 bg-amber-50 p-3 text-xs leading-relaxed text-amber-900">
+            Hiện có {examples.length}/3 ngữ cảnh. Phần còn thiếu chưa được tự điền để tránh đưa câu chưa kiểm chứng vào bài học.
+          </p>
+        )}
+        {examples.length === 0 && <p className="rounded-xl border border-dashed border-border p-3 text-xs text-muted">Chưa có ví dụ đã kiểm tra.</p>}
         {examples.map((example) => (
           <div key={example.exampleNo} className="rounded-2xl border border-border bg-surface p-4 shadow-sm">
-            <div className="flex items-start justify-between gap-2">
-              <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-accent/10 text-xs font-semibold text-accent">
-                {example.exampleNo}
-              </span>
+            <div className="mb-2 flex flex-wrap items-center gap-1.5 pl-7 text-[10px] font-semibold">
+              <span className="rounded-full bg-accent-soft px-2 py-0.5 text-accent">{EXAMPLE_TYPE_LABELS[example.exampleType]}</span>
+              {example.difficulty && <span className="rounded-full bg-slate-100 px-2 py-0.5 text-muted">Mức {example.difficulty}/3</span>}
+              {example.focusNote && <span className="rounded-full bg-amber-50 px-2 py-0.5 text-amber-800">{example.focusNote}</span>}
+            </div>
+            <div className="flex items-start gap-2">
+              <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-accent/10 text-xs font-semibold text-accent">{example.exampleNo}</span>
               <div className="flex-1">
-                <JapaneseSentence text={example.exampleJp} className="text-base" priorityWordId={word.id} />
+                <JapaneseSentence
+                  text={example.exampleJp}
+                  className="text-base"
+                  priorityWordId={word.id}
+                  furiganaTokens={example.furiganaTokens}
+                />
               </div>
             </div>
             <p className="mt-1 pl-7 text-sm text-muted">{example.exampleVi}</p>

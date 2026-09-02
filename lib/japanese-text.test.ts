@@ -30,4 +30,10 @@ describe("segmentJapaneseText", () => {
     expect(result.find((part) => part.word)?.text).toBe("伺う");
     expect(result.find((part) => part.word)?.word?.id).toBe("1");
   });
+
+  it("ưu tiên phiên âm đã kiểm tra và vẫn giữ liên kết từ khi tìm được", () => {
+    const target = { ...word("1", "資料"), reading: "しりょう" };
+    const result = segmentJapaneseText("資料を確認します。", [target], [{ surface: "資料", reading: "しりょう" }]);
+    expect(result[0]).toMatchObject({ text: "資料", reading: "しりょう", word: { id: "1" } });
+  });
 });

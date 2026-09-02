@@ -60,7 +60,7 @@ export async function getRecentPracticeAttempts(
 export async function savePracticeAttempt(
   supabase: SupabaseClient,
   userId: string,
-  testType: "auto_jlpt" | "custom",
+  testType: "auto_jlpt" | "skill_mix" | "custom",
   jlptLevel: JlptLevel | null,
   sections: SectionResult[],
 ): Promise<void> {

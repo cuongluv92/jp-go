@@ -3,6 +3,7 @@
 import { useState } from "react";
 
 export interface QuizItem {
+  vocabId?: string;
   prompt: string;
   options: string[];
   correctIndex: number;
@@ -10,7 +11,16 @@ export interface QuizItem {
 }
 
 /** Trình chạy quiz trắc nghiệm dùng chung cho đề tự động JLPT và đề tự tạo. */
-export function QuizRunner({ items, onFinish }: { items: QuizItem[]; onFinish: (correctCount: number) => void }) {
+export function QuizRunner({
+  items,
+  onFinish,
+  onAnswer,
+}: {
+  items: QuizItem[];
+  onFinish: (correctCount: number) => void;
+  /** Chỉ gọi ở lượt đầu của mỗi câu, không chấm SRS lần nữa khi câu sai quay lại cuối hàng đợi. */
+  onAnswer?: (item: QuizItem, correct: boolean) => void;
+}) {
   const [queue, setQueue] = useState(() => items.map((item) => ({ item, isRetry: false })));
   const [index, setIndex] = useState(0);
   const [selected, setSelected] = useState<number | null>(null);
@@ -22,9 +32,11 @@ export function QuizRunner({ items, onFinish }: { items: QuizItem[]; onFinish: (
   function handleSelect(i: number) {
     if (selected !== null) return;
     setSelected(i);
-    if (i === item.correctIndex && !queued.isRetry) setCorrectCount((count) => count + 1);
-    if (i !== item.correctIndex && !queued.isRetry) {
-      setQueue((current) => [...current, { item, isRetry: true }]);
+    if (!queued.isRetry) {
+      const correct = i === item.correctIndex;
+      if (correct) setCorrectCount((count) => count + 1);
+      else setQueue((current) => [...current, { item, isRetry: true }]);
+      onAnswer?.(item, correct);
     }
   }
 
@@ -56,7 +68,7 @@ export function QuizRunner({ items, onFinish }: { items: QuizItem[]; onFinish: (
           }
           return (
             <button
-              key={option}
+              key={`${option}-${i}`}
               type="button"
               onClick={() => handleSelect(i)}
               className={`font-jp rounded-xl border px-4 py-3 text-left text-sm transition ${style}`}

@@ -2,6 +2,7 @@
 
 import { useMemo, useState } from "react";
 
+import { ContentQualityDashboard } from "@/components/content-quality-dashboard";
 import {
   exampleRowToExample,
   findDuplicateIdsWithinRows,
@@ -45,6 +46,7 @@ export default function AdminPage() {
         </p>
       </div>
 
+      <ContentQualityDashboard />
       <ImportSection />
       <ExportSection />
       <ManageWordsSection />

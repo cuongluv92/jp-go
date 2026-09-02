@@ -8,7 +8,19 @@ import { useVocabulary } from "@/lib/data/vocabulary-context";
 import { segmentJapaneseText } from "@/lib/japanese-text";
 import { speakJapanese, type JapaneseSpeechRate } from "@/lib/speech";
 
-export function JapaneseSentence({ text, className = "", priorityWordId }: { text: string; className?: string; priorityWordId?: string }) {
+const EMPTY_FURIGANA_TOKENS: Array<{ surface: string; reading: string }> = [];
+
+export function JapaneseSentence({
+  text,
+  className = "",
+  priorityWordId,
+  furiganaTokens = EMPTY_FURIGANA_TOKENS,
+}: {
+  text: string;
+  className?: string;
+  priorityWordId?: string;
+  furiganaTokens?: Array<{ surface: string; reading: string }>;
+}) {
   const { words, toggleFavorite } = useVocabulary();
   const [selectedId, setSelectedId] = useState<string | null>(null);
   const [rate, setRate] = useState<JapaneseSpeechRate>(1);
@@ -20,7 +32,7 @@ export function JapaneseSentence({ text, className = "", priorityWordId }: { tex
     () => (priorityWordId ? [...words].sort((a, b) => Number(b.id === priorityWordId) - Number(a.id === priorityWordId)) : words),
     [priorityWordId, words],
   );
-  const segments = useMemo(() => segmentJapaneseText(text, segmentWords), [text, segmentWords]);
+  const segments = useMemo(() => segmentJapaneseText(text, segmentWords, furiganaTokens), [text, segmentWords, furiganaTokens]);
   const selected = selectedId ? (words.find((word) => word.id === selectedId) ?? null) : null;
 
   useEffect(() => () => stopRef.current?.(), []);
@@ -46,7 +58,16 @@ export function JapaneseSentence({ text, className = "", priorityWordId }: { tex
 
   const conjugation = selected ? getConjugation(selected) : null;
 
-  function renderSegmentText(segmentText: string, word: NonNullable<(typeof segments)[number]["word"]>) {
+  function renderSegmentText(segmentText: string, word: (typeof segments)[number]["word"], verifiedReading?: string) {
+    if (showFurigana && verifiedReading) {
+      return (
+        <ruby>
+          {segmentText}
+          <rt className="text-[0.58em] font-normal text-muted">{verifiedReading}</rt>
+        </ruby>
+      );
+    }
+    if (!word) return segmentText;
     const dictionaryForm = normalizeDictionaryForm(word.dictionaryForm || word.word);
     const reading = normalizeDictionaryForm(word.reading);
     const canShowReading = showFurigana && segmentText === dictionaryForm && /[一-鿿]/u.test(segmentText) && reading;
@@ -73,11 +94,11 @@ export function JapaneseSentence({ text, className = "", priorityWordId }: { tex
                 onClick={() => setSelectedId(segment.word!.id)}
                 className={`rounded px-0.5 underline decoration-dotted underline-offset-4 ${active ? "bg-amber-200" : "hover:bg-accent-soft"}`}
               >
-                {renderSegmentText(segment.text, segment.word)}
+                {renderSegmentText(segment.text, segment.word, segment.reading)}
               </button>
             ) : (
               <span key={`${segment.start}-${index}`} className={active ? "rounded bg-amber-200" : ""}>
-                {segment.text}
+                {renderSegmentText(segment.text, null, segment.reading)}
               </span>
             );
           })}
