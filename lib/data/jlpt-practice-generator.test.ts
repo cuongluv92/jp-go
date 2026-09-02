@@ -68,8 +68,8 @@ describe("generatePracticeTest", () => {
       expect(new Set(section.questions.map((question) => question.prompt)).size).toBe(section.questions.length);
       for (const question of section.questions) {
         expect(question.options).toHaveLength(4);
-        expect(new Set(question.options).size).toBe(4);
-        expect(question.options[question.correctIndex]).toBeTruthy();
+        expect(new Set(question.options!).size).toBe(4);
+        expect(question.options![question.correctIndex!]).toBeTruthy();
         expect(question.explanation).toBeTruthy();
       }
     }
@@ -83,7 +83,7 @@ describe("generatePracticeTest", () => {
     const bySurface = new Map(words.map((word) => [word.word, word]));
     for (const question of context.questions) {
       const target = words.find((word) => word.id === question.vocabId)!;
-      expect(question.options.every((option) => bySurface.get(option)?.partOfSpeech === target.partOfSpeech)).toBe(true);
+      expect(question.options!.every((option) => bySurface.get(option)?.partOfSpeech === target.partOfSpeech)).toBe(true);
     }
   });
 
@@ -105,10 +105,10 @@ describe("generatePracticeTest", () => {
       usage_id: null,
       question_type: index < 15 ? "choose_pattern" : "reorder_sentence",
       question_text: `文法問題 ${index}`,
-      choice_1: "A",
-      choice_2: "B",
-      choice_3: "C",
-      choice_4: "D",
+      choice_1: index < 15 ? "A" : null,
+      choice_2: index < 15 ? "B" : null,
+      choice_3: index < 15 ? "C" : null,
+      choice_4: index < 15 ? "D" : null,
       correct_answer: "B",
       source_type: "generated",
       review_status: "ok",
@@ -117,5 +117,6 @@ describe("generatePracticeTest", () => {
     const result = generatePracticeTest(JLPT_BLUEPRINTS.N3, words, examples, grammarQuestions);
     expect(result.sections.find((section) => section.kind === "grammar1")?.available).toBe(true);
     expect(result.sections.find((section) => section.kind === "grammar2")?.available).toBe(true);
+    expect(result.sections.find((section) => section.kind === "grammar2")?.questions[0].answer).toBe("B");
   });
 });

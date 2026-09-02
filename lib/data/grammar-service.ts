@@ -74,6 +74,12 @@ export interface GrammarQuestionRow {
   source_type: GrammarSourceType;
   review_status: GrammarReviewStatus;
   created_at: string;
+  explanation_vi?: string | null;
+  difficulty?: number | null;
+  skill_tag?: string | null;
+  grammar_pattern?: string;
+  grammar_meaning_vi?: string;
+  grammar_connection?: string | null;
 }
 
 export interface GrammarRelationRow {
@@ -340,11 +346,12 @@ export async function listReviewedGrammarQuestionsByLevel(
 ): Promise<GrammarQuestionRow[]> {
   const { data: grammarRows, error: grammarError } = await supabase
     .from("jp_grammar")
-    .select("id")
+    .select("id,grammar_pattern,meaning_vi,connection")
     .eq("level", level)
     .eq("review_status", "ok");
   if (grammarError) throw grammarError;
-  const ids = (grammarRows ?? []).map((row: { id: string }) => row.id);
+  const grammars = (grammarRows ?? []) as Array<{ id: string; grammar_pattern: string; meaning_vi: string; connection: string | null }>;
+  const ids = grammars.map((row) => row.id);
   if (ids.length === 0) return [];
   const { data, error } = await supabase
     .from("jp_grammar_questions")
@@ -352,5 +359,14 @@ export async function listReviewedGrammarQuestionsByLevel(
     .in("grammar_id", ids)
     .eq("review_status", "ok");
   if (error) throw error;
-  return (data ?? []) as GrammarQuestionRow[];
+  const grammarById = new Map(grammars.map((grammar) => [grammar.id, grammar]));
+  return ((data ?? []) as GrammarQuestionRow[]).map((question) => {
+    const grammar = grammarById.get(question.grammar_id);
+    return {
+      ...question,
+      grammar_pattern: grammar?.grammar_pattern,
+      grammar_meaning_vi: grammar?.meaning_vi,
+      grammar_connection: grammar?.connection,
+    };
+  });
 }

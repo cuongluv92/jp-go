@@ -6,8 +6,9 @@ import type { VocabExample, VocabWord } from "@/lib/types";
 export interface GeneratedQuestion {
   vocabId?: string;
   prompt: string;
-  options: string[];
-  correctIndex: number;
+  options?: string[];
+  correctIndex?: number;
+  answer?: string;
   explanation?: string;
 }
 
@@ -22,17 +23,28 @@ function generateGrammarQuestions(
     const choices = [question.choice_1, question.choice_2, question.choice_3, question.choice_4].filter(
       (choice): choice is string => Boolean(choice?.trim()),
     );
-    return choices.length === 4 && new Set(choices).size === 4 && choices.includes(question.correct_answer);
+    const isTyped = choices.length === 0 && Boolean(question.correct_answer.trim());
+    return isTyped || (choices.length === 4 && new Set(choices).size === 4 && choices.includes(question.correct_answer));
   });
   const generated = shuffle(candidates)
     .slice(0, count)
     .map((question) => {
-      const options = shuffle([question.choice_1!, question.choice_2!, question.choice_3!, question.choice_4!]);
+      const choices = [question.choice_1, question.choice_2, question.choice_3, question.choice_4].filter(
+        (choice): choice is string => Boolean(choice?.trim()),
+      );
+      const options = choices.length === 4 ? shuffle(choices) : undefined;
+      const context = [
+        question.grammar_pattern && `${question.grammar_pattern}: ${question.grammar_meaning_vi ?? ""}`.trim(),
+        question.grammar_connection && `Cách nối: ${question.grammar_connection}`,
+        question.explanation_vi,
+        `Đáp án: ${question.correct_answer}`,
+      ].filter(Boolean).join("\n");
       return {
         prompt: question.question_text,
         options,
-        correctIndex: options.indexOf(question.correct_answer),
-        explanation: `Đáp án: ${question.correct_answer}`,
+        correctIndex: options?.indexOf(question.correct_answer),
+        answer: options ? undefined : question.correct_answer,
+        explanation: context,
       } satisfies GeneratedQuestion;
     });
   return generated.length === count ? generated : null;

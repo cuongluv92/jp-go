@@ -2,11 +2,14 @@
 
 import { useState } from "react";
 
+import { normalizeJapaneseAnswer } from "@/lib/japanese-text";
+
 export interface QuizItem {
   vocabId?: string;
   prompt: string;
-  options: string[];
-  correctIndex: number;
+  options?: string[];
+  correctIndex?: number;
+  answer?: string;
   explanation?: string;
 }
 
@@ -24,10 +27,14 @@ export function QuizRunner({
   const [queue, setQueue] = useState(() => items.map((item) => ({ item, isRetry: false })));
   const [index, setIndex] = useState(0);
   const [selected, setSelected] = useState<number | null>(null);
+  const [typedInput, setTypedInput] = useState("");
+  const [typedChecked, setTypedChecked] = useState(false);
   const [correctCount, setCorrectCount] = useState(0);
 
   const queued = queue[index];
   const item = queued.item;
+  const options = item.options ?? [];
+  const isTyped = options.length === 0 && Boolean(item.answer);
 
   function handleSelect(i: number) {
     if (selected !== null) return;
@@ -40,12 +47,30 @@ export function QuizRunner({
     }
   }
 
+  function handleTypedSubmit(event: React.FormEvent) {
+    event.preventDefault();
+    if (typedChecked) {
+      next();
+      return;
+    }
+    if (!item.answer || !typedInput.trim()) return;
+    const correct = normalizeJapaneseAnswer(typedInput) === normalizeJapaneseAnswer(item.answer);
+    if (!queued.isRetry) {
+      if (correct) setCorrectCount((count) => count + 1);
+      else setQueue((current) => [...current, { item, isRetry: true }]);
+      onAnswer?.(item, correct);
+    }
+    setTypedChecked(true);
+  }
+
   function next() {
     if (index + 1 >= queue.length) {
       onFinish(correctCount);
       return;
     }
     setSelected(null);
+    setTypedInput("");
+    setTypedChecked(false);
     setIndex((i) => i + 1);
   }
 
@@ -57,8 +82,32 @@ export function QuizRunner({
         <p className="font-jp text-lg font-semibold leading-relaxed">{item.prompt}</p>
       </div>
 
+      {isTyped ? (
+        <form onSubmit={handleTypedSubmit} className="flex flex-col gap-3">
+          <input
+            value={typedInput}
+            onChange={(event) => setTypedInput(event.target.value)}
+            disabled={typedChecked}
+            autoFocus
+            inputMode="text"
+            placeholder="Nhập đáp án tiếng Nhật..."
+            className="rounded-xl border border-border bg-surface px-3 py-3 text-center font-jp text-lg outline-none focus:border-accent disabled:opacity-70"
+          />
+          {typedChecked && (
+            <div className={`rounded-xl border p-3 text-sm ${normalizeJapaneseAnswer(typedInput) === normalizeJapaneseAnswer(item.answer!) ? "border-emerald-300 bg-emerald-50 text-emerald-800" : "border-rose-300 bg-rose-50 text-rose-800"}`}>
+              <p className="font-semibold">
+                {normalizeJapaneseAnswer(typedInput) === normalizeJapaneseAnswer(item.answer!) ? "Đúng" : `Chưa đúng · Đáp án: ${item.answer}`}
+              </p>
+              {item.explanation && <p className="mt-1 whitespace-pre-line text-xs leading-relaxed">{item.explanation}</p>}
+            </div>
+          )}
+          <button type="submit" disabled={!typedInput.trim()} className="rounded-xl bg-accent px-4 py-3 text-sm font-semibold text-accent-foreground disabled:opacity-50">
+            {typedChecked ? (index + 1 >= queue.length ? "Xem kết quả" : "Câu tiếp theo →") : "Kiểm tra"}
+          </button>
+        </form>
+      ) : (
       <div className="flex flex-col gap-2">
-        {item.options.map((option, i) => {
+        {options.map((option, i) => {
           const isCorrect = i === item.correctIndex;
           const isSelected = i === selected;
           let style = "border-border bg-surface";
@@ -78,12 +127,13 @@ export function QuizRunner({
           );
         })}
       </div>
+      )}
 
-      {selected !== null && (
+      {!isTyped && selected !== null && (
         <div
           className={`rounded-xl border p-3 text-sm ${selected === item.correctIndex ? "border-emerald-300 bg-emerald-50 text-emerald-800" : "border-rose-300 bg-rose-50 text-rose-800"}`}
         >
-          <p className="font-semibold">{selected === item.correctIndex ? "Đúng" : `Chưa đúng · Đáp án: ${item.options[item.correctIndex]}`}</p>
+          <p className="font-semibold">{selected === item.correctIndex ? "Đúng" : `Chưa đúng · Đáp án: ${options[item.correctIndex!]}`}</p>
           {item.explanation && <p className="mt-1 whitespace-pre-line text-xs leading-relaxed">{item.explanation}</p>}
           <button type="button" onClick={next} className="mt-3 w-full rounded-xl bg-accent py-2.5 text-sm font-semibold text-accent-foreground">
             {index + 1 >= queue.length ? "Xem kết quả" : "Câu tiếp theo →"}
