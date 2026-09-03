@@ -131,17 +131,19 @@ export async function getKanjiDetail(supabase: SupabaseClient, kanjiId: string):
   if (kanjiError) throw kanjiError;
   if (!kanji) return null;
 
-  const [{ data: readings }, { data: words }, { data: questions }] = await Promise.all([
+  const [readingsResult, wordsResult, questionsResult] = await Promise.all([
     supabase.from("jp_kanji_readings").select("*").eq("kanji_id", kanjiId).order("is_main", { ascending: false }),
     supabase.from("jp_kanji_words").select("*").eq("kanji_id", kanjiId).order("created_at", { ascending: true }),
     supabase.from("jp_kanji_questions").select("*").eq("kanji_id", kanjiId),
   ]);
+  const detailError = readingsResult.error ?? wordsResult.error ?? questionsResult.error;
+  if (detailError) throw detailError;
 
   return {
     ...(kanji as KanjiRow),
-    readings: (readings ?? []) as KanjiReadingRow[],
-    words: (words ?? []) as KanjiWordRow[],
-    questions: (questions ?? []) as KanjiQuestionRow[],
+    readings: (readingsResult.data ?? []) as KanjiReadingRow[],
+    words: (wordsResult.data ?? []) as KanjiWordRow[],
+    questions: (questionsResult.data ?? []) as KanjiQuestionRow[],
   };
 }
 

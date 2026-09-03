@@ -3,13 +3,11 @@
 Web app học tiếng Nhật, ưu tiên điện thoại, giao diện tiếng Việt. Xây bằng
 Next.js App Router + TypeScript + Supabase (Auth + Postgres).
 
-> **Hiện trạng nội dung**: chỉ có từ vựng N3 (1798 từ, `lib/data/sample-words.json`
-> + `sample-examples.json`, mỗi từ 3 ví dụ exam/daily/business đã kiểm chứng
-> cloze). N5/N4/N2/N1 và toàn bộ Kanji/Ngữ pháp (mọi cấp) **chưa có** — đây là
-> một dự án biên soạn nội dung riêng, làm sau theo từng đợt. Hạ tầng (đăng
-> nhập, đồng bộ, lộ trình, ôn tập, luyện đề) đã xây xong và chạy trên nền dữ
-> liệu N3 hiện có; Settings/luyện đề chỉ cho chọn N3 ở các phần chưa có nội
-> dung, hiển thị "sắp có" cho N5/N4/N2/N1.
+> **Hiện trạng nội dung (2026-09-03)**: từ vựng N5 có 850 từ × 3 ví dụ,
+> N4 có 942 từ, N3 có 1.798 từ × 3 ví dụ và N2 có 1.193 từ. Kho Kanji đã có
+> đủ metadata/cách đọc/từ ghép/bài tập cho N5 (98), N4 (208), N2 (406).
+> Kho ngữ pháp hiện có N5 (98), N4 (92), N2 (112). N1 và phần nghe JLPT
+> chưa có nội dung hoàn chỉnh.
 
 ## Bắt đầu
 
@@ -23,15 +21,15 @@ npm run test        # Vitest
 npm run build       # Next.js production build
 ```
 
-Chạy migration `supabase/migrations/0001_jp_go_init.sql` qua Supabase SQL
-Editor trước khi dùng — xem mục Supabase bên dưới.
+Chạy các migration trong `supabase/migrations/` theo thứ tự tên file trước
+khi dùng — xem mục Supabase bên dưới.
 
 ## Cấu trúc dự án
 
 ```
 app/
   login/page.tsx           Đăng nhập / đăng ký (email + mật khẩu)
-  settings/page.tsx         Cài đặt lộ trình học (cấp độ/phạm vi/thời gian)
+  plan/page.tsx             Cài đặt lộ trình học (cấp độ/phạm vi/thời gian)
   page.tsx                  Trang chủ: tiến độ lộ trình, streak, "Hôm nay", N1-N5 dạng xổ (≡)
   vocabulary/page.tsx       Kho từ vựng: tìm kiếm + lọc
   vocabulary/[id]/          Chi tiết một từ (server page + client component)
@@ -61,7 +59,6 @@ lib/
     sample-words.ts               Wrapper import + cast (JSON literal quá lớn khiến tsc lỗi TS2590)
     sample-examples.json/.ts      3 ví dụ/từ (exam/daily/business) + cloze, có test round-trip
     sample-import-rows.ts         Dữ liệu mẫu giả lập "đọc từ Excel" cho trang admin
-    activity.ts                    Streak + lịch sử luyện tập mẫu (trang Tiến độ)
     selectors.ts                   Lọc / tìm kiếm / thống kê — hàm thuần, có test
     excel-import.ts                Map VOCAB row ↔ VocabWord, validate, đọc file .xlsx, phát hiện trùng ID
     excel-export.ts                Xuất VOCAB/EXAMPLES/CONJUGATIONS ra 1 file .xlsx (exceljs)
@@ -72,9 +69,7 @@ lib/
     practice-attempt-service.ts     Lưu kết quả luyện đề (Supabase)
     custom-test-service.ts          CRUD đề tự tạo (Supabase)
 
-supabase/migrations/
-  0001_jp_go_init.sql        Migration additive: jp_word_progress, jp_study_plans, jp_study_days,
-                               jp_review_schedules, jp_practice_attempts, jp_custom_tests + RLS
+supabase/migrations/          Schema, RLS và dữ liệu nội dung jp-go; chạy theo thứ tự tên file
 ```
 
 ## Schema dữ liệu & nhập/xuất Excel
@@ -101,18 +96,15 @@ Trang `/admin`:
   cột thiếu/giá trị enum sai, báo ID trùng trong file hoặc trùng với kho hiện
   có (cho chọn Cập nhật/Bỏ qua), rồi mới nhập — không ghi đè bừa.
 
-> Lưu ý: `addWord`/`updateWord`/`upsertExamples` (dùng ở trang Admin) hiện chỉ
-> sửa nội dung tĩnh trong state React của phiên hiện tại — nội dung từ vựng
-> chưa có bảng Supabase riêng nên các thay đổi này **không** đồng bộ/lưu lại
-> khi tải lại trang. Chỉ `progress` (tiến độ học) mới đồng bộ qua Supabase.
+> N3 vẫn được đóng gói trong JSON tĩnh. Nội dung N5/N4/N2 và tiến độ người
+> học được lưu trong các bảng Supabase có tiền tố `jp_`.
 
 ## Tài khoản, lộ trình học, ôn tập, luyện đề
 
 - **Đăng nhập** (`/login`): email + mật khẩu qua Supabase Auth. `proxy.ts`
   (tương đương middleware.ts của Next < 16) bắt buộc đăng nhập cho mọi trang.
-- **Cài đặt lộ trình** (`/settings`): chọn cấp độ (chỉ N3 khả dụng), phạm vi
-  (chỉ Từ vựng khả dụng), thời gian 1-3 tháng → `lib/study-plan.ts` chia đều
-  từ vựng theo từng ngày (chênh lệch tối đa 1 từ/ngày).
+- **Cài đặt lộ trình** (`/plan`): chọn cấp độ, phạm vi nội dung đang có và
+  thời gian học → `lib/study-plan.ts` chia đều nội dung theo từng ngày.
 - **Trang chủ**: hiển thị đúng nội dung ngày hiện tại, nút "Đã học xong" mở
   khoá ngày kế tiếp và tự sinh 2 lịch ôn tập (5 ngày và 15 ngày sau).
 - **Ôn tập** (`/review`): liệt kê lịch ôn đến hạn, chọn 1/nhiều/tất cả, rồi
@@ -144,8 +136,8 @@ tuyệt đối:
 **Thiết lập:**
 
 1. Bật Supabase Auth → Providers → Email cho project đang dùng.
-2. Chạy nguyên file `supabase/migrations/0001_jp_go_init.sql` trong Supabase
-   Dashboard → SQL Editor.
+2. Chạy các file trong `supabase/migrations/` theo đúng thứ tự tên trong
+   Supabase Dashboard → SQL Editor (môi trường production đã được áp dụng).
 3. Copy `NEXT_PUBLIC_SUPABASE_URL`/`NEXT_PUBLIC_SUPABASE_ANON_KEY` (Project
    Settings → API) — dùng đúng giá trị đang dùng cho `nhatkytrading` — vào
    `.env.local` (dev) và biến môi trường Vercel (production).

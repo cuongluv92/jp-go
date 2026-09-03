@@ -119,6 +119,12 @@ export function KanjiDetailClient({ id }: { id: string }) {
         <span className="font-jp text-6xl font-bold">{detail.kanji_character}</span>
         <span className="text-sm font-semibold text-accent">{detail.han_viet}</span>
         {detail.meaning_vi_summary && <span className="text-sm text-muted">{detail.meaning_vi_summary}</span>}
+        {(detail.stroke_count || detail.radical) && (
+          <div className="mt-1 flex flex-wrap justify-center gap-2 text-xs text-muted">
+            {detail.stroke_count && <span className="rounded-full bg-slate-100 px-2.5 py-1">{detail.stroke_count} nét</span>}
+            {detail.radical && <span className="rounded-full bg-slate-100 px-2.5 py-1">Bộ {detail.radical}</span>}
+          </div>
+        )}
         <MaziiLink kind="kanji" query={detail.kanji_character} className="mt-2 rounded-lg border border-border px-3 py-1.5 text-xs font-semibold text-accent" />
       </div>
 

@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
-import { Suspense, useEffect, useState } from "react";
+import { Suspense, useEffect, useMemo, useState } from "react";
 
 import { getCached, setCached } from "@/lib/data/client-cache";
 import { downloadBlob } from "@/lib/data/excel-export";
@@ -40,6 +40,17 @@ function KanjiListContent() {
   const [countsByLevel, setCountsByLevel] = useState<Record<JlptLevel, number> | null>(initialCached?.countsByLevel ?? null);
   const [loading, setLoading] = useState(!initialCached);
   const [exporting, setExporting] = useState(false);
+  const [query, setQuery] = useState("");
+
+  const filteredKanji = useMemo(() => {
+    const normalized = query.trim().toLocaleLowerCase("vi");
+    if (!normalized) return kanjiList;
+    return kanjiList.filter((kanji) =>
+      [kanji.kanji_character, kanji.han_viet, kanji.meaning_vi_summary ?? ""].some((value) =>
+        value.toLocaleLowerCase("vi").includes(normalized),
+      ),
+    );
+  }, [kanjiList, query]);
 
   useEffect(() => {
     let cancelled = false;
@@ -123,15 +134,30 @@ function KanjiListContent() {
         })}
       </div>
 
+      <label className="relative block">
+        <span className="sr-only">Tìm Kanji</span>
+        <input
+          type="search"
+          value={query}
+          onChange={(event) => setQuery(event.target.value)}
+          placeholder="Tìm theo Kanji, Hán Việt hoặc nghĩa..."
+          className="w-full rounded-xl border border-border bg-surface px-4 py-3 text-sm outline-none transition focus:border-accent"
+        />
+      </label>
+
       {loading ? (
         <p className="rounded-2xl border border-dashed border-border p-4 text-sm text-muted">Đang tải...</p>
       ) : kanjiList.length === 0 ? (
         <p className="rounded-2xl border border-dashed border-border p-4 text-sm text-muted">
           Chưa có nội dung Kanji cho cấp {level}.
         </p>
+      ) : filteredKanji.length === 0 ? (
+        <p className="rounded-2xl border border-dashed border-border p-4 text-sm text-muted">
+          Không tìm thấy Kanji phù hợp.
+        </p>
       ) : (
         <ul className="grid grid-cols-3 gap-2 sm:grid-cols-4">
-          {kanjiList.map((k) => (
+          {filteredKanji.map((k) => (
             <li key={k.id}>
               <Link
                 href={`/kanji/${k.id}`}
@@ -139,6 +165,7 @@ function KanjiListContent() {
               >
                 <span className="font-jp text-2xl font-semibold">{k.kanji_character}</span>
                 <span className="text-[11px] font-medium text-muted">{k.han_viet}</span>
+                <span className="line-clamp-1 text-[10px] text-muted">{k.meaning_vi_summary}</span>
               </Link>
             </li>
           ))}
