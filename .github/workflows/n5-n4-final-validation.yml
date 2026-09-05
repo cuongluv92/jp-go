@@ -37,3 +37,84 @@ jobs:
 
       - name: Build
         run: npm run build
+
+      - name: Build rollback-only SQL audit batch
+        shell: bash
+        run: |
+          set -euo pipefail
+          out=audit-batch.sql
+          printf '%s\n' 'BEGIN;' > "$out"
+          files=(
+            quality/n4_vocab_lesson26_examples.sql
+            quality/n4_vocab_lesson27_examples.sql
+            quality/n4_vocab_lesson28_examples.sql
+            quality/n4_vocab_lesson29_examples.sql
+            quality/n4_vocab_lesson30_examples.sql
+            quality/n4_vocab_lesson31_examples.sql
+            quality/n4_vocab_lesson32_examples.sql
+            quality/n4_vocab_lessons33_34_examples.sql
+            quality/n4_vocab_lessons35_36_examples.sql
+            quality/n4_vocab_lessons37_38_examples.sql
+            quality/n4_vocab_lessons39_40_examples.sql
+            quality/n4_vocab_lesson41_examples.sql
+            quality/n4_vocab_lesson42_examples.sql
+            quality/n4_vocab_lessons43_44_examples.sql
+            quality/n4_vocab_lessons45_46_examples.sql
+            quality/n4_vocab_lessons47_48_examples.sql
+            quality/n4_vocab_lessons49_50_examples.sql
+            quality/n4_grammar_example_roles.sql
+            quality/n4_grammar_business_part1.sql
+            quality/n4_grammar_business_part2.sql
+            quality/n5_grammar_business_quality.sql
+            quality/n5_core_content_corrections.sql
+            quality/n4_grammar_core_corrections.sql
+            quality/n5_grammar_duplicate_and_alignment_fix.sql
+            quality/n4_vocab_certain_meaning_fixes.sql
+            quality/n4_vocab_duplicate_example_fixes.sql
+            quality/n4_vocab_particle_and_translation_fixes.sql
+            quality/n4_review_status_resolutions.sql
+            quality/n5_n4_verb_class_completion.sql
+            quality/n4_vocab_question_meaning_sync.sql
+            quality/n5_n4_question_quality_fixes.sql
+            quality/kanji_n5_n4_reading_question_fixes.sql
+            quality/zz_kanji_n5_n4_final_compound_coverage.sql
+            quality/kanji_n5_n4_vocab_link_sync.sql
+            quality/zz_n5_n4_final_language_polish.sql
+            quality/zzzz_n5_n4_final_cloze_alignment.sql
+            quality/validate_n5_n4_content.sql
+            quality/validate_n5_n4_practice.sql
+            quality/validate_n5_n4_final_context_alignment.sql
+            quality/validate_kanji_n5_n4.sql
+            quality/validate_kanji_n5_n4_final_coverage.sql
+          )
+          for file in "${files[@]}"; do
+            printf '\n-- BEGIN FILE: %s\n' "$file" >> "$out"
+            cat "$file" >> "$out"
+            printf '\n-- END FILE: %s\n' "$file" >> "$out"
+          done
+          cat >> "$out" <<'SQL'
+
+-- AUDIT FINAL COUNTS (still inside rollback transaction)
+select jsonb_build_object(
+  'kanji', (select jsonb_object_agg(level,n) from (select level,count(*) n from public.jp_kanji where level in ('N5','N4') group by level) s),
+  'vocab', (select jsonb_object_agg(level,n) from (select level,count(*) n from public.jp_vocab where level in ('N5','N4') group by level) s),
+  'grammar_patterns', (select jsonb_object_agg(level,n) from (select level,count(*) n from public.jp_grammar where level in ('N5','N4') group by level) s),
+  'vocab_examples', (select count(*) from public.jp_vocab_examples e join public.jp_vocab v on v.id=e.vocab_id where v.level in ('N5','N4')),
+  'grammar_examples', (select count(*) from public.jp_grammar_examples e join public.jp_grammar g on g.id=e.grammar_id where g.level in ('N5','N4')),
+  'vocab_questions', (select count(*) from public.jp_vocab_questions q join public.jp_vocab v on v.id=q.vocab_id where v.level in ('N5','N4')),
+  'grammar_questions', (select count(*) from public.jp_grammar_questions q join public.jp_grammar g on g.id=q.grammar_id where g.level in ('N5','N4')),
+  'kanji_questions', (select count(*) from public.jp_kanji_questions q join public.jp_kanji k on k.id=q.kanji_id where k.level in ('N5','N4'))
+) as audit_final_counts;
+
+ROLLBACK;
+SQL
+          test "$(grep -c '^-- BEGIN FILE:' "$out")" -eq 41
+          ! grep -Eiq '^[[:space:]]*(COMMIT|END)[[:space:]]*;' "${files[@]}"
+
+      - name: Upload rollback-only SQL audit batch
+        uses: actions/upload-artifact@v4
+        with:
+          name: n5-n4-audit-batch
+          path: audit-batch.sql
+          if-no-files-found: error
+          retention-days: 1
