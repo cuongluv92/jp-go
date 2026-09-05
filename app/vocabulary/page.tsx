@@ -35,16 +35,12 @@ function VocabularyPageContent() {
   const searchParams = useSearchParams();
   const initialLevel = searchParams.get("level");
   const requestedCollection = searchParams.get("collection");
-  const collection = requestedCollection === "tango-n3" || requestedCollection === "n2-chua-dat"
-    ? requestedCollection
-    : initialLevel === "N3" ? "tango-n3" : initialLevel === "N2" ? "n2-chua-dat" : "current";
+  const collection = requestedCollection === "tango-n3" || requestedCollection === "n2-chua-dat" ? requestedCollection : "current";
   const currentCollection = VOCABULARY_COLLECTIONS.find((item) => item.id === collection)!;
-  const visibleWords = useMemo(
-    () => (collection === "n2-chua-dat" ? archivedWords : words).filter(
-      (word) => !word.isHidden && getVocabularyCollection(word) === collection,
-    ),
-    [words, archivedWords, collection],
-  );
+  const visibleWords = useMemo(() => {
+    const source = collection === "n2-chua-dat" ? archivedWords : words;
+    return source.filter((word) => !word.isHidden && getVocabularyCollection(word) === collection);
+  }, [words, archivedWords, collection]);
   const initialQuery = searchParams.get("query")?.trim() || undefined;
   const isJlptLevel = (v: string | null): v is JlptLevel => !!v && (JLPT_LEVELS as readonly string[]).includes(v);
 
@@ -75,23 +71,17 @@ function VocabularyPageContent() {
       </nav>
       {collection === "tango-n3" && (
         <p className="rounded-xl border border-border bg-surface p-3 text-sm text-muted">
-          Bộ từ vựng N3 hiện tại được giữ riêng. Bộ N3 đầy đủ theo giáo trình sẽ được bổ sung sau.
+          Bộ 単語 N3 hiện tại được giữ riêng, không tính vào kho N3 mới.
         </p>
       )}
       {collection === "n2-chua-dat" && (
         <p className="rounded-xl border border-amber-200 bg-amber-50 p-3 text-sm text-amber-800">
-          N2 chưa đạt · Bản cũ đã lưu ngày 05/09/2026 để tra lại. Đang chờ bộ N2 thay thế.
+          N2 dữ liệu cũ · Được giữ riêng để tra lại, không tính vào bộ N2 mới.
         </p>
       )}
 
       <div className="relative">
-        <svg
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="1.8"
-          className="pointer-events-none absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-muted"
-        >
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" className="pointer-events-none absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-muted">
           <circle cx="11" cy="11" r="7" />
           <path strokeLinecap="round" d="M21 21l-3.5-3.5" />
         </svg>
@@ -105,12 +95,14 @@ function VocabularyPageContent() {
       </div>
 
       <div className="-mx-4 flex gap-2 overflow-x-auto px-4 pb-1">
-        {collection === "current" && <SelectChip
-          label="Cấp độ"
-          value={filter.level}
-          options={JLPT_LEVELS.filter((level) => level !== "N3" && level !== "N2").map((level) => ({ value: level, label: level }))}
-          onChange={(v) => setFilter((f) => ({ ...f, level: (v as JlptLevel) || undefined }))}
-        />}
+        {collection === "current" && (
+          <SelectChip
+            label="Cấp độ"
+            value={filter.level}
+            options={JLPT_LEVELS.map((level) => ({ value: level, label: level }))}
+            onChange={(v) => setFilter((f) => ({ ...f, level: (v as JlptLevel) || undefined }))}
+          />
+        )}
         <SelectChip
           label="Loại từ"
           value={filter.partOfSpeech}
@@ -128,67 +120,38 @@ function VocabularyPageContent() {
       <ul className="flex flex-col gap-2">
         {filtered.map((word) => (
           <li key={word.id}>
-            <Link
-              href={`/vocabulary/${word.id}`}
-              className="flex items-center justify-between gap-3 rounded-xl border border-border bg-surface px-4 py-3 shadow-sm transition active:scale-[0.99]"
-            >
+            <Link href={`/vocabulary/${word.id}`} className="flex items-center justify-between gap-3 rounded-xl border border-border bg-surface px-4 py-3 shadow-sm transition active:scale-[0.99]">
               <div className="min-w-0">
                 <div className="flex items-center gap-2">
                   <p className="font-jp truncate text-base font-semibold">{word.word}</p>
                   {word.progress.isFavorite && <span aria-hidden>⭐</span>}
                 </div>
-                <p className="truncate text-xs text-muted">
-                  {word.reading} · {word.meaningVi}
-                </p>
+                <p className="truncate text-xs text-muted">{word.reading} · {word.meaningVi}</p>
               </div>
               <StatusBadge status={word.progress.status} />
             </Link>
           </li>
         ))}
         {filtered.length === 0 && (
-          <li className="rounded-xl border border-dashed border-border p-6 text-center text-sm text-muted">
-            Không tìm thấy từ nào phù hợp.
-          </li>
+          <li className="rounded-xl border border-dashed border-border p-6 text-center text-sm text-muted">Chưa có dữ liệu ở mục này.</li>
         )}
       </ul>
     </div>
   );
 }
 
-function SelectChip({
-  label,
-  value,
-  options,
-  onChange,
-}: {
-  label: string;
-  value?: string;
-  options: { value: string; label: string }[];
-  onChange: (value: string) => void;
-}) {
+function SelectChip({ label, value, options, onChange }: { label: string; value?: string; options: { value: string; label: string }[]; onChange: (value: string) => void }) {
   return (
     <label className="relative shrink-0">
       <select
         value={value ?? ""}
         onChange={(e) => onChange(e.target.value)}
-        className={`appearance-none rounded-full border px-3 py-1.5 pr-7 text-xs font-medium shadow-sm outline-none ${
-          value ? "border-accent bg-accent/10 text-accent" : "border-border bg-surface text-muted"
-        }`}
+        className={`appearance-none rounded-full border px-3 py-1.5 pr-7 text-xs font-medium shadow-sm outline-none ${value ? "border-accent bg-accent/10 text-accent" : "border-border bg-surface text-muted"}`}
       >
         <option value="">{label}</option>
-        {options.map((opt) => (
-          <option key={opt.value} value={opt.value}>
-            {opt.label}
-          </option>
-        ))}
+        {options.map((opt) => <option key={opt.value} value={opt.value}>{opt.label}</option>)}
       </select>
-      <svg
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="2"
-        className="pointer-events-none absolute right-2 top-1/2 h-3 w-3 -translate-y-1/2"
-      >
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="pointer-events-none absolute right-2 top-1/2 h-3 w-3 -translate-y-1/2">
         <path strokeLinecap="round" strokeLinejoin="round" d="M6 9l6 6 6-6" />
       </svg>
     </label>
