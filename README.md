@@ -180,3 +180,5 @@ số lượt build/ngày của gói miễn phí khi merge nhiều migration liê
 
 Từ đó, commit nào chỉ đổi file trong `supabase/migrations/` sẽ bị Vercel bỏ
 qua build (không tốn lượt) — chỉ build thật khi có thay đổi code app.
+
+<!-- redeploy trigger 2026-09-05 -->
