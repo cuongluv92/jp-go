@@ -26,6 +26,9 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
+      - name: Validate curated N5 practice bank
+        run: node quality/n5_practice_bank/validate_n5_practice_bank.mjs
+
       - name: Lint
         run: npm run lint
 
