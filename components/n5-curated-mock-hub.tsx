@@ -169,10 +169,7 @@ function ListeningRunner({
           total: familyItems.length,
         };
       });
-      await savePracticeAttempt(createClient(), userId, "auto_jlpt", "N5", [
-        { kind: "n5_listening_curated", title: "N5 聴解模試 01", correct: correctCount, total: items.length },
-        ...familyResults,
-      ]);
+      await savePracticeAttempt(createClient(), userId, "auto_jlpt", "N5", familyResults);
     }
   }
 
