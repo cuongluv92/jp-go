@@ -76,25 +76,33 @@ const DEFAULT_PROGRESS: LearningProgress = {
   repetitions: 0,
 };
 
-/** N2 trở đi PDF phân loại rõ theo word_class (xem migration 0057, 0098) — map thẳng sang PartOfSpeech thay vì mặc định "noun". */
+/**
+ * Map lớp từ nguồn sang nhóm PartOfSpeech mà app hiện hỗ trợ. `wordClass` gốc
+ * vẫn được giữ nguyên trên VocabWord nên export/QA không mất độ chính xác.
+ * 代名詞 có hành vi danh từ; 動名詞 hiện cũng thuộc nhóm noun trong UI.
+ * 感動詞／連体詞／表現 không có bảng chia nên gom vào expression thay vì
+ * rơi về "unclassified".
+ */
 const WORD_CLASS_TO_PART_OF_SPEECH: Record<string, PartOfSpeech> = {
   動詞: "verb",
   複合動詞: "verb",
   動名詞: "noun",
   名詞: "noun",
+  代名詞: "noun",
   い形容詞: "i_adjective",
   な形容詞: "na_adjective",
   副詞: "adverb",
   接続詞: "conjunction",
   助詞: "particle",
+  感動詞: "expression",
+  連体詞: "expression",
+  表現: "expression",
 };
 
 /**
- * N5 chưa có word_class trong nguồn PDF gốc (chỉ chia theo lesson_no) —
- * PHẢI trả "unclassified", KHÔNG được mặc định "noun" (lỗi cũ: fallback
- * sai khiến UI hiện "danh từ" cho mọi từ N5 dù không hề có căn cứ). N2 trở
- * đi map đúng theo word_class; riêng nhóm カタカナ đa số là danh từ mượn,
- * trừ vài từ có đuôi "な" rõ ràng là な形容詞 (ユニークな, ロマンチックな, ルーズな...).
+ * Không có word_class thì PHẢI trả "unclassified", KHÔNG mặc định noun.
+ * Riêng カタカナ nguồn cũ: đa số là danh từ mượn; từ có đuôi な được giữ
+ * cách xử lý tương thích hiện tại.
  */
 function guessPartOfSpeech(entryType: VocabEntryType, wordClass: string | null, wordJp: string): PartOfSpeech {
   if (entryType === "phrase") return "expression";
@@ -108,7 +116,7 @@ function guessPartOfSpeech(entryType: VocabEntryType, wordClass: string | null, 
  * Map 1 dòng `jp_vocab` sang đúng shape `VocabWord` để dùng chung được với
  * toàn bộ UI/luyện tập/ôn tập hiện có (vốn thiết kế cho từ vựng N3 tĩnh).
  * Cố tình TÁI SỬ DỤNG các trường sẵn có thay vì thêm field mới vào UI:
- *   - usageNote  ← usage_note_vi (đúng đúng vị trí "Cách dùng thực tế" đã có UI)
+ *   - usageNote  ← usage_note_vi (nếu trống sẽ được fallback từ focus_note đã review)
  *   - similarWords ← liệt kê nhanh group_key (để hiện trong "Lưu ý/từ dễ nhầm")
  *   - needsReview ← review_status === 'needs_review'
  */
@@ -211,8 +219,27 @@ export async function listAllDbVocab(supabase: SupabaseClient): Promise<{ words:
     fetchAllRows<VocabExampleRow>((from, to) => supabase.from("jp_vocab_examples").select("*", { count: "exact" }).range(from, to)),
   ]);
 
-  const words = fillGroupSimilarWords(vocabRows.map((r) => dbVocabRowToWord(r)));
   const examples = exampleRows.map((r) => vocabExampleRowToExample(r));
+
+  // Không sinh usage note mới. Khi cột usage_note_vi chưa có nội dung, dùng
+  // chính focus_note đã được review trong bộ 3 ví dụ làm fallback hiển thị.
+  const reviewedFocusByVocab = new Map<string, string[]>();
+  for (const example of examples) {
+    const note = example.focusNote?.trim();
+    if (!note) continue;
+    const current = reviewedFocusByVocab.get(example.vocabId) ?? [];
+    if (!current.includes(note)) reviewedFocusByVocab.set(example.vocabId, [...current, note]);
+  }
+
+  const words = fillGroupSimilarWords(
+    vocabRows.map((row) => {
+      const word = dbVocabRowToWord(row);
+      if (word.usageNote.trim()) return word;
+      const reviewedNotes = reviewedFocusByVocab.get(word.id) ?? [];
+      return reviewedNotes.length > 0 ? { ...word, usageNote: reviewedNotes.join(" · ") } : word;
+    }),
+  );
+
   return { words, examples };
 }
 

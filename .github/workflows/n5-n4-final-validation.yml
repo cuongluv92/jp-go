@@ -1,0 +1,110 @@
+name: N5 N4 Final Validation
+
+on:
+  push:
+    branches:
+      - chatgpt/n5-n4-content-quality
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Lint
+        run: npm run lint
+
+      - name: Typecheck
+        run: npm run typecheck
+
+      - name: Test
+        run: npm run test
+
+      - name: Build
+        run: npm run build
+
+      - name: Build rollback-only SQL audit batch
+        shell: bash
+        run: |
+          set -euo pipefail
+          out=audit-batch.sql
+          printf '%s\n' 'BEGIN;' > "$out"
+          files=(
+            quality/n4_vocab_lesson26_examples.sql
+            quality/n4_vocab_lesson27_examples.sql
+            quality/n4_vocab_lesson28_examples.sql
+            quality/n4_vocab_lesson29_examples.sql
+            quality/n4_vocab_lesson30_examples.sql
+            quality/n4_vocab_lesson31_examples.sql
+            quality/n4_vocab_lesson32_examples.sql
+            quality/n4_vocab_lessons33_34_examples.sql
+            quality/n4_vocab_lessons35_36_examples.sql
+            quality/n4_vocab_lessons37_38_examples.sql
+            quality/n4_vocab_lessons39_40_examples.sql
+            quality/n4_vocab_lesson41_examples.sql
+            quality/n4_vocab_lesson42_examples.sql
+            quality/n4_vocab_lessons43_44_examples.sql
+            quality/n4_vocab_lessons45_46_examples.sql
+            quality/n4_vocab_lessons47_48_examples.sql
+            quality/n4_vocab_lessons49_50_examples.sql
+            quality/n4_grammar_example_roles.sql
+            quality/n4_grammar_business_part1.sql
+            quality/n4_grammar_business_part2.sql
+            quality/n5_grammar_business_quality.sql
+            quality/n5_grammar_example_roles_completion.sql
+            quality/n5_core_content_corrections.sql
+            quality/n4_grammar_core_corrections.sql
+            quality/n5_grammar_duplicate_and_alignment_fix.sql
+            quality/n4_vocab_certain_meaning_fixes.sql
+            quality/n4_vocab_duplicate_example_fixes.sql
+            quality/n4_vocab_particle_and_translation_fixes.sql
+            quality/n4_review_status_resolutions.sql
+            quality/n5_n4_verb_class_completion.sql
+            quality/n4_vocab_question_meaning_sync.sql
+            quality/n5_n4_question_quality_fixes.sql
+            quality/n5_vocab_mcq_completion.sql
+            quality/kanji_n5_n4_reading_question_fixes.sql
+            quality/zz_kanji_n5_n4_final_compound_coverage.sql
+            quality/kanji_n5_n4_vocab_link_sync.sql
+            quality/zz_n5_n4_final_language_polish.sql
+            quality/zzzz_n5_n4_final_cloze_alignment.sql
+            quality/validate_n5_n4_content.sql
+            quality/validate_n5_n4_practice.sql
+            quality/validate_n5_n4_final_context_alignment.sql
+            quality/validate_kanji_n5_n4.sql
+            quality/validate_kanji_n5_n4_final_coverage.sql
+          )
+          for file in "${files[@]}"; do
+            printf '\n-- BEGIN FILE: %s\n' "$file" >> "$out"
+            cat "$file" >> "$out"
+            printf '\n-- END FILE: %s\n' "$file" >> "$out"
+          done
+          printf '\nROLLBACK;\n' >> "$out"
+          test "$(grep -c '^-- BEGIN FILE:' "$out")" -eq 43
+          if grep -Eiq '^[[:space:]]*COMMIT([[:space:]]*;|[[:space:]]*$)' "${files[@]}"; then
+            echo 'Unsafe COMMIT found inside canonical SQL files' >&2
+            exit 1
+          fi
+
+      - name: Upload rollback-only SQL audit batch
+        uses: actions/upload-artifact@v4
+        with:
+          name: n5-n4-audit-batch
+          path: audit-batch.sql
+          if-no-files-found: error
+          retention-days: 1

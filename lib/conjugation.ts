@@ -59,6 +59,18 @@ const GODAN_VOLITIONAL_STEM: Record<string, string> = {
   る: "ろ",
 };
 
+/**
+ * 五段ラ行 nhưng ます形/命令形 có dạng kính ngữ cố định đặc biệt.
+ * Các thể còn lại (おっしゃらない／いらっしゃって...) theo quy tắc ラ行.
+ */
+const HONORIFIC_RU_SPECIALS: Record<string, { masuForm: string; imperativeForm: string }> = {
+  "下さる": { masuForm: "下さいます", imperativeForm: "下さい" },
+  "くださる": { masuForm: "くださいます", imperativeForm: "ください" },
+  "なさる": { masuForm: "なさいます", imperativeForm: "なさい" },
+  "いらっしゃる": { masuForm: "いらっしゃいます", imperativeForm: "いらっしゃい" },
+  "おっしゃる": { masuForm: "おっしゃいます", imperativeForm: "おっしゃい" },
+};
+
 const TRAILING_SENSE_MARKERS = /[①-⑳]+$/u;
 
 /** Bỏ nhãn phân biệt nghĩa khỏi bề mặt hiển thị trước khi chia từ. */
@@ -88,6 +100,22 @@ function godanTeTaSuffix(lastKana: string): { te: string; ta: string } {
   }
 }
 
+/**
+ * 行く và các cụm て行く／ていく dùng 行って／いって, không phải 行いて／いいて.
+ * Chỉ nhận dạng đúng các bề mặt 行く hoặc auxiliary て/で + いく để tránh
+ * biến mọi từ kết thúc bằng chuỗi "いく" thành ngoại lệ.
+ */
+function usesIkuTeTaException(dictionaryForm: string): boolean {
+  return (
+    dictionaryForm === "行く" ||
+    dictionaryForm.endsWith("て行く") ||
+    dictionaryForm.endsWith("で行く") ||
+    dictionaryForm === "いく" ||
+    dictionaryForm.endsWith("ていく") ||
+    dictionaryForm.endsWith("でいく")
+  );
+}
+
 function conjugateGodan(dictionaryForm: string): VerbConjugation {
   const stem = dictionaryForm.slice(0, -1);
   const last = dictionaryForm.slice(-1);
@@ -100,13 +128,13 @@ function conjugateGodan(dictionaryForm: string): VerbConjugation {
     throw new Error(`"${dictionaryForm}" không phải động từ godan hợp lệ (đuôi "${last}")`);
   }
 
-  // Ngoại lệ bất quy tắc: 行く chia て/た theo う/つ/る (行って/行った), không theo quy tắc く thường.
-  const { te, ta } = dictionaryForm === "行く" ? { te: "って", ta: "った" } : godanTeTaSuffix(last);
+  const { te, ta } = usesIkuTeTaException(dictionaryForm) ? { te: "って", ta: "った" } : godanTeTaSuffix(last);
+  const honorific = HONORIFIC_RU_SPECIALS[dictionaryForm];
 
   return {
     kind: "verb",
     dictionaryForm,
-    masuForm: `${stem}${masuStem}ます`,
+    masuForm: honorific?.masuForm ?? `${stem}${masuStem}ます`,
     teForm: `${stem}${te}`,
     // ある là ngoại lệ: phủ định là ない/なかった, không phải あらない/あらなかった.
     naiForm: dictionaryForm === "ある" ? "ない" : `${stem}${aStem}ない`,
@@ -117,7 +145,7 @@ function conjugateGodan(dictionaryForm: string): VerbConjugation {
     passiveForm: `${stem}${aStem}れる`,
     causativeForm: `${stem}${aStem}せる`,
     causativePassiveForm: `${stem}${aStem}せられる`,
-    imperativeForm: `${stem}${eStem}`,
+    imperativeForm: honorific?.imperativeForm ?? `${stem}${eStem}`,
     conditionalForm: `${stem}${eStem}ば`,
   };
 }
