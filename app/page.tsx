@@ -18,6 +18,7 @@ import { computeStreak } from "@/lib/study-plan";
 import type { JlptLevel } from "@/lib/types";
 
 const HOME_CACHE_KEY = "home-page-data";
+// Deployment marker: N2/N3 content separation is ready for production.
 
 interface HomeCachedData {
   plan: StudyPlanRow | null;
