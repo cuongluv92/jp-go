@@ -1,0 +1,103 @@
+{
+  "version": "1.0",
+  "level": "N5",
+  "source_set": "n5-listening-01",
+  "replacements": [
+    {
+      "id": "N5-L01-025",
+      "problem_family": "quick_response",
+      "difficulty": 2,
+      "prompt_ja": "「明日、いっしょに映画を見ませんか。」",
+      "audio_script_ja": "明日、いっしょに映画を見ませんか。",
+      "choices": ["いいですね。見ましょう", "はい、映画を見ました", "いいえ、映画ではありません", "明日は何曜日ですか"],
+      "correct_answer": "いいですね。見ましょう",
+      "explanation_vi": "Đây là lời rủ rê Vませんか. Trong các lựa chọn chỉ 「いいですね。見ましょう」 là phản hồi trực tiếp và tự nhiên cho lời mời.",
+      "targets": ["Vませんか", "Vましょう"],
+      "skills": ["jlpt_listening_quick_response", "invitation"]
+    },
+    {
+      "id": "N5-L01-026",
+      "problem_family": "quick_response",
+      "difficulty": 2,
+      "prompt_ja": "「もう昼ご飯を食べましたか。」",
+      "audio_script_ja": "もう昼ご飯を食べましたか。",
+      "choices": ["はい、もう食べました", "はい、昼ご飯です", "三時からです", "ここで食べてください"],
+      "correct_answer": "はい、もう食べました",
+      "explanation_vi": "「もうVましたか」 hỏi việc đã hoàn tất chưa; đáp án phù hợp là 「はい、もうVました」.",
+      "targets": ["もうVましたか"],
+      "skills": ["jlpt_listening_quick_response", "aspect"]
+    },
+    {
+      "id": "N5-L01-027",
+      "problem_family": "quick_response",
+      "difficulty": 2,
+      "prompt_ja": "「この漢字の読み方を教えてください。」",
+      "audio_script_ja": "この漢字の読み方を教えてください。",
+      "choices": ["はい、いいですよ", "この漢字は大きいです", "昨日、漢字を書きました", "読み方はどこですか"],
+      "correct_answer": "はい、いいですよ",
+      "explanation_vi": "Đây là lời nhờ chỉ cách đọc. 「はい、いいですよ」 là phản hồi nhận lời phù hợp nhất.",
+      "targets": ["読み方", "教える", "Vてください"],
+      "skills": ["jlpt_listening_quick_response", "request_response"]
+    },
+    {
+      "id": "N5-L01-028",
+      "problem_family": "quick_response",
+      "difficulty": 2,
+      "prompt_ja": "「今日は寒いですね。」",
+      "audio_script_ja": "今日は寒いですね。",
+      "choices": ["そうですね", "いただきます", "いってらっしゃい", "おめでとうございます"],
+      "correct_answer": "そうですね",
+      "explanation_vi": "Người nói đưa ra nhận xét và tìm sự đồng tình; 「そうですね」 là phản hồi tự nhiên nhất.",
+      "targets": ["寒い", "そうですね"],
+      "skills": ["jlpt_listening_quick_response", "agreement"]
+    },
+    {
+      "id": "N5-L01-029",
+      "problem_family": "quick_response",
+      "difficulty": 2,
+      "prompt_ja": "「すみません、駅はどこですか。」",
+      "audio_script_ja": "すみません、駅はどこですか。",
+      "choices": ["あの信号を右に曲がってください", "はい、駅です", "駅で友達に会いました", "明日は電車で行きます"],
+      "correct_answer": "あの信号を右に曲がってください",
+      "explanation_vi": "Được hỏi vị trí nhà ga nên phải trả lời bằng thông tin chỉ đường.",
+      "targets": ["駅", "信号", "右", "曲がる"],
+      "skills": ["jlpt_listening_quick_response", "directions"]
+    },
+    {
+      "id": "N5-L01-030",
+      "problem_family": "quick_response",
+      "difficulty": 2,
+      "prompt_ja": "「コーヒー、もう一杯いかがですか。」",
+      "audio_script_ja": "コーヒー、もう一杯いかがですか。",
+      "choices": ["はい、お願いします", "コーヒーは机の上です", "一杯は百円でした", "朝、コーヒーを飲みました"],
+      "correct_answer": "はい、お願いします",
+      "explanation_vi": "Đây là lời mời thêm cà phê; 「はい、お願いします」 là lời nhận phù hợp nhất trong các lựa chọn.",
+      "targets": ["いかがですか", "お願いします"],
+      "skills": ["jlpt_listening_quick_response", "offer_response"]
+    },
+    {
+      "id": "N5-L01-031",
+      "problem_family": "quick_response",
+      "difficulty": 2,
+      "prompt_ja": "「明日の会議は十時からでいいですか。」",
+      "audio_script_ja": "明日の会議は十時からでいいですか。",
+      "choices": ["はい、大丈夫です", "会議室は三階です", "昨日は休みでした", "資料を読みました"],
+      "correct_answer": "はい、大丈夫です",
+      "explanation_vi": "Đây là câu xác nhận thời gian cuộc họp; 「はい、大丈夫です」 trả lời đúng trọng tâm.",
+      "targets": ["会議", "大丈夫"],
+      "skills": ["jlpt_listening_quick_response", "confirmation"]
+    },
+    {
+      "id": "N5-L01-032",
+      "problem_family": "quick_response",
+      "difficulty": 2,
+      "prompt_ja": "「荷物、持ちましょうか。」",
+      "audio_script_ja": "荷物、持ちましょうか。",
+      "choices": ["ありがとうございます。お願いします", "荷物は大きいです", "昨日、荷物を送りました", "駅まで十分です"],
+      "correct_answer": "ありがとうございます。お願いします",
+      "explanation_vi": "Được đề nghị giúp mang hành lý; cảm ơn và nhận lời là phản hồi phù hợp nhất.",
+      "targets": ["荷物", "Vましょうか", "お願いします"],
+      "skills": ["jlpt_listening_quick_response", "offer_response"]
+    }
+  ]
+}
