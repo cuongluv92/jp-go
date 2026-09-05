@@ -76,5 +76,6 @@ Run all of these after every mutation above:
 3. `validate_n5_n4_final_context_alignment.sql`
 4. `validate_kanji_n5_n4.sql`
 5. `validate_kanji_n5_n4_final_coverage.sql`
+6. `validate_n5_n4_cross_level_duplicates.sql`
 
 Any raised exception means **NOT READY**. Do not merge/deploy/import until all validators pass and the GitHub validation workflow passes lint, typecheck, test, and build.
