@@ -22,8 +22,8 @@ set example_jp='無理をすると、体を壊します。',
 where id='4b016318-ea22-4f69-9f46-8de885093f9e'::uuid;
 
 -- ---------------------------------------------------------------------------
--- Grammar: when the cloze already contains sentence-final か, the answer must
--- not contain another か. Otherwise the reconstructed prompt becomes かか.
+-- Grammar: when the blank itself is immediately followed by sentence-final か,
+-- the answer must not contain another か. Otherwise it reconstructs as かか.
 -- ---------------------------------------------------------------------------
 with fixes(id,answer,note) as (values
  ('f384ccc7-47a2-4cc9-bfa3-1efe4d9e2d9f'::uuid,'できます','Cloze đã có か; đáp án chỉ điền できます.'),
@@ -66,9 +66,9 @@ begin
   if exists (
     select 1 from public.jp_grammar_examples e join public.jp_grammar g on g.id=e.grammar_id
     where g.level in ('N5','N4')
-      and e.cloze_jp ~ 'か[。！？!?]?$'
+      and e.cloze_jp ~ '(_{3,}|＿{3,})か[。！？!?]?$'
       and e.answer ~ 'か$'
-  ) then raise exception 'Grammar cloze already contains か but answer also ends in か'; end if;
+  ) then raise exception 'Grammar blank is followed by final か but answer also ends in か'; end if;
 
   if exists (
     select 1 from public.jp_grammar_examples e join public.jp_grammar g on g.id=e.grammar_id
