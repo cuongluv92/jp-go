@@ -13,7 +13,7 @@ export function VocabularyDetailExercises({ id }: { id: string }) {
 
   const wordExamples = getExamplesForWord(examples, word.id);
   const contextItems = buildVocabContextExercises(wordExamples, 3);
-  const targets = [word.word, word.dictionaryForm, word.kanji].filter(Boolean);
+  const targets = [word.word, word.dictionaryForm, word.kanji].filter((value): value is string => Boolean(value));
   const practiceItems = getCuratedN5ExercisesForTargets(targets, {
     domain: "vocab",
     modes: ["practice"],
