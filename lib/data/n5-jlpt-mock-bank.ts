@@ -17,7 +17,10 @@ export interface N5JlptMockItem {
   prompt_ja?: string;
   target_text?: string;
   audio_script_ja?: string;
-  choices: string[];
+  choices?: string[];
+  pieces?: string[];
+  correct_order?: string[];
+  star_position?: number;
   correct_answer: string;
   explanation_vi?: string;
   targets?: string[];
