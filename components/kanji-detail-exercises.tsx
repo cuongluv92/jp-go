@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 
 import { DetailExercisePanel } from "@/components/detail-exercise-panel";
 import { getKanjiContextExercises, type ContextExerciseItem } from "@/lib/data/context-exercises";
+import { buildKanjiFallbackChallenge } from "@/lib/data/detail-challenge-builders";
 import { getKanjiDetail, type KanjiDetail } from "@/lib/data/kanji-service";
 import { getN5KanjiExtraContexts } from "@/lib/data/n5-kanji-extra-contexts";
 import { getCuratedN5ExercisesForTargets } from "@/lib/data/n5-curated-exercises";
@@ -43,17 +44,21 @@ export function KanjiDetailExercises({ id }: { id: string }) {
     contains: true,
     limit: 2,
   });
-  const challengeItems = getCuratedN5ExercisesForTargets(targets, {
+  const curatedChallenge = getCuratedN5ExercisesForTargets(targets, {
     domain: "kanji",
     modes: ["challenge"],
     contains: true,
-    limit: 3,
+    limit: 2,
   });
+  const fallbackChallenge = buildKanjiFallbackChallenge(contextItems, detail.kanji_character, detail.id);
+  const challengeItems = Array.from(
+    new Map([...curatedChallenge, ...(fallbackChallenge ? [fallbackChallenge] : [])].map((item) => [item.id, item])).values(),
+  ).slice(0, 2);
 
   return (
     <DetailExercisePanel
       title={`Bài tập Kanji · ${detail.kanji_character}`}
-      description="Mỗi chữ có tới 4 câu Kanji trong từ/câu thật; luyện viết đã nằm ngay phía trên, còn câu phân biệt/suy luận khó hơn được gắn vào Challenge. Không hỏi Hán Việt, ON/KUN hay nghĩa chữ trực tiếp."
+      description="Mỗi chữ có 4 câu Kanji trong từ/câu thật + luyện viết phía trên + Challenge nhiều ngữ cảnh. Không hỏi Hán Việt, ON/KUN hay nghĩa chữ trực tiếp."
       contextItems={contextItems}
       practiceItems={practiceItems}
       challengeItems={challengeItems}
