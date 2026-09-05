@@ -77,6 +77,7 @@ jobs:
             quality/n5_n4_verb_class_completion.sql
             quality/n4_vocab_question_meaning_sync.sql
             quality/n5_n4_question_quality_fixes.sql
+            quality/n5_vocab_mcq_completion.sql
             quality/kanji_n5_n4_reading_question_fixes.sql
             quality/zz_kanji_n5_n4_final_compound_coverage.sql
             quality/kanji_n5_n4_vocab_link_sync.sql
@@ -94,7 +95,7 @@ jobs:
             printf '\n-- END FILE: %s\n' "$file" >> "$out"
           done
           printf '\nROLLBACK;\n' >> "$out"
-          test "$(grep -c '^-- BEGIN FILE:' "$out")" -eq 42
+          test "$(grep -c '^-- BEGIN FILE:' "$out")" -eq 43
           if grep -Eiq '^[[:space:]]*COMMIT([[:space:]]*;|[[:space:]]*$)' "${files[@]}"; then
             echo 'Unsafe COMMIT found inside canonical SQL files' >&2
             exit 1
