@@ -29,8 +29,7 @@ UPDATE public.jp_vocab_examples e
 SET example_jp = f.example_jp,
     example_vi = f.example_vi,
     cloze_jp = f.cloze_jp,
-    answer = f.answer,
-    correction_note = concat_ws('; ', nullif(e.correction_note,''), 'Loại trùng nguyên câu xuyên cấp N5/N4; giữ đúng từ mục tiêu và tăng độ phân hóa N4')
+    answer = f.answer
 FROM fixes f
 WHERE e.id = f.id;
 
