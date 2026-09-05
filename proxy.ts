@@ -9,10 +9,9 @@ export async function proxy(request: NextRequest) {
 export const config = {
   matcher: [
     /*
-     * Áp dụng cho mọi route trừ static assets/ảnh/favicon. Route quality
-     * bên dưới chỉ mở tạm trên branch kiểm định để đối chiếu read-only với
-     * KANJIDIC; sẽ được xóa ngay sau khi hoàn tất audit.
+     * Áp dụng cho mọi route trừ static assets/ảnh/favicon — không cần bảo vệ
+     * các file tĩnh, chỉ cần bảo vệ trang thực sự render nội dung app.
      */
-    "/((?!api/quality/kanji-source-audit|_next/static|_next/image|favicon.ico|.*\\.(?:svg|png|jpg|jpeg|gif|webp)$).*)",
+    "/((?!_next/static|_next/image|favicon.ico|.*\\.(?:svg|png|jpg|jpeg|gif|webp)$).*)",
   ],
 };
