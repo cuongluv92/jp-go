@@ -78,10 +78,9 @@ body {
   }
 }
 
-/* N5 detail pages use the new context-first exercise panels below each item.
-   Hide the legacy last-child quiz blocks that contain direct meaning/reading
-   drills; the learning content above them remains unchanged. */
-.grammar-detail-v2 > div:first-child > div:last-child,
-.kanji-detail-v2 > div:first-child > div:last-child {
+/* Chỉ khi panel bài tập N5 mới thực sự render (direct child <section>) mới
+   ẩn quiz legacy cuối trang. N4/N3/N2/N1 không có panel mới nên giữ nguyên. */
+.grammar-detail-v2:has(> section) > div:first-child > div:last-child,
+.kanji-detail-v2:has(> section) > div:first-child > div:last-child {
   display: none;
 }
