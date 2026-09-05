@@ -50,9 +50,8 @@ export function CuratedExerciseRunner({
   }
 
   function next() {
-    const finalCorrect = correctCount + (checked && currentIsCorrect() ? 0 : 0);
     if (index + 1 >= items.length) {
-      onFinish?.(finalCorrect, items.length);
+      onFinish?.(correctCount, items.length);
       return;
     }
     setIndex((value) => value + 1);
@@ -76,7 +75,8 @@ export function CuratedExerciseRunner({
       </div>
 
       <div className="rounded-2xl border border-border bg-surface p-4 shadow-sm">
-        {item.instruction_ja && <p className="mb-2 text-xs font-medium text-muted">{item.instruction_ja}</p>}
+        {item.instruction_ja && <p className="mb-1 text-xs font-medium text-muted">{item.instruction_ja}</p>}
+        {item.instruction_vi && <p className="mb-2 text-xs leading-relaxed text-foreground">{item.instruction_vi}</p>}
         {item.stimulus_ja && <p className="font-jp whitespace-pre-line text-base font-semibold leading-relaxed">{item.stimulus_ja}</p>}
         {item.prompt_ja && <p className="font-jp mt-2 whitespace-pre-line text-sm leading-relaxed">{item.prompt_ja}</p>}
       </div>
@@ -112,7 +112,11 @@ export function CuratedExerciseRunner({
               <select
                 value={multiSelected[slot] ?? ""}
                 disabled={checked}
-                onChange={(event) => setMultiSelected((current) => current.map((value, i) => (i === slot ? event.target.value : value)).concat(current.length <= slot ? Array.from({ length: slot + 1 - current.length }, (_, i) => (i === slot - current.length ? event.target.value : "")) : []))}
+                onChange={(event) => setMultiSelected((current) => {
+                  const next = [...current];
+                  next[slot] = event.target.value;
+                  return next;
+                })}
                 className="rounded-xl border border-border bg-surface px-3 py-2.5 font-jp outline-none focus:border-accent"
               >
                 <option value="">Chọn đáp án</option>
