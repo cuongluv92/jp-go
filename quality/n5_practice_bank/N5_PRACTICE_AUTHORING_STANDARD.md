@@ -1,33 +1,122 @@
 # N5 practice bank — authoring standard
 
-Scope: N5 only. This folder is content-first preparation for later Codex import/UI work. Do not apply it to production Supabase yet.
+Scope: N5 only. Content-first preparation for later Codex import/UI work. Do not apply it to production Supabase yet.
 
-## 1. Four modes
+## 1. Learner-facing placement
 
-### 練習 / practice
-Build usable knowledge through context. Do not ask isolated flashcard questions such as “X means what?” or “How is X read?” unless the item is explicitly part of JLPT 模試.
+There are only two main learner-facing exercise surfaces:
 
-Primary item families:
+1. **Detail page exercise block** under every vocabulary item, Kanji, and grammar usage.
+2. **Luyện tập** page for cumulative review by Day / Lesson / vocabulary chunk, plus JLPT practice.
+
+`challenge` remains an internal content mode/difficulty label, but it is **not a separate top-level learner destination**. Challenge items are rendered inside the relevant vocabulary/Kanji/grammar detail exercise block after normal contextual practice.
+
+See `N5_EXERCISE_PLACEMENT_SPEC.md` for the final placement rules.
+
+## 2. Detail-page exercise principle
+
+The learning content already shows meaning, readings, ON/KUN, Hán Việt, connection/form, nuance and examples. Therefore the exercise block must test **use**, not re-ask the explanation.
+
+Forbidden outside official JLPT mock:
+- `この言葉の意味は？`
+- isolated vocabulary reading recall
+- `Hán Việt của Kanji này là gì?`
+- `Âm ON/KUN là gì?`
+- `Kanji này nghĩa là gì?`
+- trivial Kanji composition such as `学 + 校 = ?`
+- `Mẫu ngữ pháp này nghĩa là gì?`
+- standalone formula-definition matching
+
+Preferred detail-page tasks:
 - context cloze
 - particle/collocation contrast
 - near-word contrast
 - transitive/intransitive contrast
-- kanji-in-context contrast
+- Kanji-in-context contrast
 - controlled dialogue response
+- error detection/correction
 - sentence transformation
-- short reading / information use
+- sentence composition/reordering
+- short contextual inference
+- production without choices
 
-### チャレンジ / challenge
-Difficulty must come from reasoning and production while staying inside N5 vocabulary/grammar. Do not make it “hard” by importing N3/N2 language.
+## 3. Vocabulary detail target
 
-Minimum expectations per set:
+Normally 5–8 useful questions per vocabulary item. Do not force every subtype onto every word.
+
+Good progression:
+1. context use
+2. particle/collocation
+3. natural sentence choice
+4. near-word/homophone contrast where relevant
+5. dialogue or repair
+6. controlled transformation
+7. 1–2 Challenge items combining multiple known skills
+
+## 4. Kanji detail target
+
+Normally 5–7 contextual questions per Kanji plus optional handwriting.
+
+Preferred:
+- correct Kanji inside a sentence
+- similar-Kanji contrast in context
+- real N5 word containing the Kanji
+- reading inside a real word/sentence
+- compound/word usage
+- Challenge paired sentences with confusing Kanji
+- handwriting/stroke production
+
+ON/KUN, Hán Việt, radical, stroke count and meanings remain learning information, not the main drill.
+
+## 5. Grammar detail target
+
+Normally 6–10 questions per grammar usage.
+
+Preferred progression:
+1. complete pattern in context
+2. correct connection/form
+3. particle/form interaction
+4. situation-based use
+5. contrast with a nearby N5 pattern
+6. error correction
+7. sentence reordering/composition
+8. transformation
+9. dialogue/mini-passage use
+10. Challenge combining grammar with vocabulary/tense/particle/another learned pattern
+
+Meaning and formula are explained above; exercises test use.
+
+## 6. Challenge authoring
+
+Difficulty must come from reasoning and production while staying inside N5 vocabulary/grammar. Do not make N5 “hard” by importing N3/N2 language.
+
+For any challenge-heavy block:
 - at least 30% non-MCQ or multi-step
 - at least 25% test two or more skills together
-- error correction, transformation, contrast and inference must be present
+- include correction, transformation, contrast or inference
 - distractors must be plausible Japanese, not nonsense fillers
 
-### JLPT模試 / jlpt_mock
-Follow the official N5 text item families:
+Challenge items are attached to the relevant learning item whenever possible.
+
+## 7. Luyện tập page
+
+The Practice page is cumulative review, not isolated single-item drilling.
+
+Primary groupings:
+- Day 1 / Day 2 / Day 3 ... according to the roadmap
+- Lesson 1 / Lesson 2 / Lesson 3 ...
+- vocabulary 1–10 / 11–20 / 21–30 ...
+- cumulative Day 1–3 / Lessons 1–5 / first 50 words
+- weak points / mistakes / today’s SRS
+- JLPT mini mock / listening mock / later full mock
+
+A normal cumulative session should mix vocabulary, grammar, Kanji, dialogue/error-repair, and short reading/information use.
+
+Do not mechanically ask one fixed question per word in order. Reuse difficult targets only through a different task type.
+
+## 8. JLPT mock
+
+Official N5 text families:
 
 Vocabulary:
 1. Kanji reading
@@ -36,8 +125,8 @@ Vocabulary:
 4. Paraphrases
 
 Grammar:
-1. Sentential grammar 1 — selecting grammar form
-2. Sentential grammar 2 — sentence composition
+1. Selecting grammar form
+2. Sentence composition
 3. Text grammar
 
 Reading:
@@ -45,93 +134,88 @@ Reading:
 2. Mid-size passages
 3. Information retrieval
 
-### 聴解模試 / listening_mock
-Follow the official N5 listening families:
+Official N5 listening families:
 1. Task-based comprehension / 課題理解
 2. Comprehension of key points / ポイント理解
 3. Verbal expressions / 発話表現
 4. Quick response / 即時応答
 
-Authoring rules for listening:
-- `audio_script_ja` is QA/source material and must be hidden while the learner answers.
-- Task-based items must require choosing an action, order, destination, deadline, route, etc., not merely recognizing one word.
-- Key-point items must make the learner select the requested reason/preference/main point from a coherent utterance.
-- Verbal-expression items must include a clear `scene_ja`; future UI may render an illustration, but the authored scene must already establish only one best expression.
-- Quick-response items must have exactly one best response. Do not include both an equally natural acceptance and rejection as separate choices.
-- Distractors should be natural Japanese but wrong for the communicative function; avoid joke/nonsense strings.
-- Audio production/TTS comes after script QA. Do not treat visible text as listening in the final app.
+Simple recognition such as Kanji reading/orthography is allowed here because it is part of the real exam format. This exception must not leak into ordinary detail-page exercises.
 
-## 2. Anti-monotony rules
+## 9. Listening authoring rules
 
-A question is rejected if it can be answered only by seeing one isolated word and recalling a dictionary pair, except in `jlpt_mock` where that item family is part of the official format.
+- `audio_script_ja` is hidden while answering.
+- Task-based items test action/order/destination/deadline/route, not one-word recognition.
+- Key-point items test reason/preference/main point.
+- Verbal-expression items require a clear scene with one best expression.
+- Quick-response items require exactly one best response.
+- Distractors should be natural Japanese but wrong for the communicative function.
+- Audio/TTS production comes only after script QA.
 
-Reject:
-- repeated “この言葉の意味は？” patterns in practice/challenge
-- repeated “読み方は？” patterns in practice/challenge
-- templates that only substitute one noun while keeping the same sentence
-- distractors that are obviously impossible by grammar or semantic category
-- questions with more than one defensible answer
-- questions whose difficulty comes from vocabulary above N5 rather than from reasoning
-- listening items whose transcript gives away the answer only through one isolated keyword when a richer task is appropriate
+## 10. Difficulty
 
-Prefer:
-- the same knowledge returning later through a different task
-- a word first used in context, later tested for particle/collocation, then later contrasted with a near word
-- grammar tested through meaning + connection + actual sentence production
-- kanji tested inside real words/sentences rather than isolated ON/KUN recall
-- listening that tests action, reason, sequence, viewpoint, time/budget or social response
-
-## 3. Difficulty
-
-- 1 = guided N5 practice
+- 1 = guided N5 context practice
 - 2 = JLPT-like N5 reasoning
-- 3 = challenge: production, correction, close contrasts, multi-condition inference
+- 3 = Challenge: production, correction, close contrasts, multi-condition inference
 
-Difficulty 3 must remain linguistically N5. JLPT text/listening mocks should normally remain difficulty 1–2.
+Difficulty 3 must remain linguistically N5.
 
-## 4. Item schema used by JSON files
+## 11. Item schema
 
-Each item uses stable fields where applicable:
-
+Stable fields where applicable:
 - `id`
 - `mode`: `practice` | `challenge` | `jlpt_mock` | `listening_mock`
 - `domain`: `vocab` | `kanji` | `grammar` | `dialogue` | `reading` | `integrated`
 - `subtype`
-- `problem_family` for official mock families
-- `difficulty`: 1..3
+- `problem_family`
+- `difficulty`
 - `instruction_ja`
-- `instruction_vi` (practice/challenge only when useful)
+- `instruction_vi`
 - `stimulus_ja`
 - `prompt_ja`
-- `scene_ja` for verbal-expression listening items
-- `audio_script_ja` for listening authoring
-- `choices`: optional array
-- `correct_answer`: string or array
-- `accepted_answers`: optional array for free response
+- `scene_ja`
+- `audio_script_ja`
+- `choices`
+- `correct_answer`
+- `accepted_answers`
 - `explanation_vi`
-- `targets`: explicit target vocabulary/grammar/kanji
+- `targets`
 - `skills`
-- `lesson_refs`: N5 lesson numbers where relevant
+- `lesson_refs`
+- future placement/link fields such as target vocabulary/Kanji/grammar IDs
 
-Passage/information items may share a `group_id` and the same `stimulus_ja`.
+## 12. Quality gate before import
 
-## 5. Quality gate before import
+Every authored item must pass:
+1. natural Japanese
+2. genuine N5 scope
+3. one defensible MCQ answer
+4. explicit accepted answers for free response
+5. no exact duplicate prompt
+6. no low-information template domination
+7. reading includes inference/information combination
+8. mock uses only official N5 families
+9. Challenge does not become N3
+10. detail drills do not regress into definition/reading flashcards
+11. listening script reviewed before audio
+12. content reviewed before production migration
 
-For every set:
-1. Japanese is natural and grammatically correct.
-2. Target knowledge is genuinely N5.
-3. Exactly one answer is intended for MCQ.
-4. Free-response accepted answers are explicit.
-5. No exact duplicate prompt.
-6. No repeated low-information template family dominates a set.
-7. Reading questions include at least some inference/information-combination items, not only keyword copy.
-8. `jlpt_mock` and `listening_mock` use only official N5 families.
-9. `challenge` does not become an N3 test.
-10. Listening scripts are hidden in answer mode and reviewed before audio generation.
-11. Content is reviewed before any production migration.
+## 13. SRS rule
 
-## 6. Official alignment note
+Wrong answers should return later through a different task:
+- context error → new context
+- particle/collocation error → same target, new sentence
+- Kanji confusion → contrast pair
+- grammar-form error → transformation or correction
 
-The current official JLPT N5 structure uses 20 minutes for Language Knowledge (Vocabulary), 40 minutes for Language Knowledge (Grammar)・Reading, and 30 minutes for Listening. N5 vocabulary has Kanji reading, Orthography, Contextually-defined expressions and Paraphrases; grammar has Selecting grammar form, Sentence composition and Text grammar; reading has Short passages, Mid-size passages and Information retrieval. Listening has Task-based comprehension, Comprehension of key points, Verbal expressions and Quick response.
+Do not repeat the exact prompt unless intentionally checking immediate correction.
 
-This folder uses those official families for `jlpt_mock`/`listening_mock`, while `practice` and `challenge` deliberately add richer learning tasks.
+## 14. Final learning logic
+
+**Learning page** shows the information.
+
+**Detail exercise block** proves the learner can USE that item.
+
+**Luyện tập** proves the learner can RETRIEVE and COMBINE a completed Day/Lesson/10-word chunk.
+
+**JLPT mock inside Luyện tập** proves the learner can handle the exam format.
