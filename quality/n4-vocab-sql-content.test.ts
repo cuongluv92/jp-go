@@ -23,14 +23,10 @@ function lessonNumbersFromFile(file: string): number[] {
   return Array.from({ length: last - first + 1 }, (_, i) => first + i);
 }
 
-/** Parse one SQL VALUES tuple while respecting single-quoted strings and ''. */
 function parseTuple(tuple: string): string[] {
   let text = tuple.trim();
-  if (!text.startsWith("(") || !text.endsWith(")")) {
-    throw new Error(`Invalid SQL tuple: ${tuple}`);
-  }
+  if (!text.startsWith("(") || !text.endsWith(")")) throw new Error(`Invalid SQL tuple: ${tuple}`);
   text = text.slice(1, -1);
-
   const fields: string[] = [];
   let current = "";
   let quoted = false;
@@ -40,9 +36,7 @@ function parseTuple(tuple: string): string[] {
       if (quoted && text[i + 1] === "'") {
         current += "'";
         i += 1;
-      } else {
-        quoted = !quoted;
-      }
+      } else quoted = !quoted;
       continue;
     }
     if (char === "," && !quoted) {
@@ -57,11 +51,6 @@ function parseTuple(tuple: string): string[] {
   return fields;
 }
 
-/**
- * Extract every tuple from the CTE VALUES block. This deliberately scans the
- * whole block instead of assuming one tuple per physical line, because a
- * reviewed SQL row may be formatted across multiple lines.
- */
 function extractValueTuples(sql: string): string[] {
   const valuesMatch = /\bvalues\b/iu.exec(sql);
   if (!valuesMatch) throw new Error("VALUES block not found");
@@ -69,24 +58,18 @@ function extractValueTuples(sql: string): string[] {
   const insertMatch = /\n\)\s*\ninsert\s+into\s+public\.jp_vocab_examples/iu.exec(sql.slice(start));
   if (!insertMatch) throw new Error("End of vocabulary VALUES block not found");
   const body = sql.slice(start, start + insertMatch.index);
-
   const tuples: string[] = [];
   let tupleStart = -1;
   let depth = 0;
   let quoted = false;
-
   for (let i = 0; i < body.length; i += 1) {
     const char = body[i];
     if (char === "'") {
-      if (quoted && body[i + 1] === "'") {
-        i += 1;
-      } else {
-        quoted = !quoted;
-      }
+      if (quoted && body[i + 1] === "'") i += 1;
+      else quoted = !quoted;
       continue;
     }
     if (quoted) continue;
-
     if (char === "(") {
       if (depth === 0) tupleStart = i;
       depth += 1;
@@ -101,33 +84,29 @@ function extractValueTuples(sql: string): string[] {
       }
     }
   }
-
-  if (quoted || depth !== 0 || tupleStart !== -1) {
-    throw new Error("Unclosed SQL tuple/string in VALUES block");
-  }
+  if (quoted || depth !== 0 || tupleStart !== -1) throw new Error("Unclosed SQL tuple/string in VALUES block");
   return tuples;
 }
 
 function loadGeneratedRows(): Row[] {
   const qualityDir = path.join(process.cwd(), "quality");
-  const files = fs
-    .readdirSync(qualityDir)
+  const files = fs.readdirSync(qualityDir)
     .filter((name) => /^n4_vocab_lessons?\d+(?:_\d+)?_examples\.sql$/.test(name))
     .sort((a, b) => a.localeCompare(b, "en", { numeric: true }));
-
   const coveredLessons = [...new Set(files.flatMap(lessonNumbersFromFile))].sort((a, b) => a - b);
   expect(coveredLessons).toEqual(Array.from({ length: 25 }, (_, i) => 26 + i));
 
   const rows: Row[] = [];
+  const fileCounts: Record<string, number> = {};
   for (const file of files) {
     const sql = fs.readFileSync(path.join(qualityDir, file), "utf8");
-    for (const tuple of extractValueTuples(sql)) {
+    const tuples = extractValueTuples(sql);
+    fileCounts[file] = tuples.length;
+    for (const tuple of tuples) {
       const fields = parseTuple(tuple);
       if (fields.length !== 9) throw new Error(`Cannot parse 9 fields in ${file}: ${tuple}`);
       const exampleType = fields[2];
-      if (exampleType !== "exam" && exampleType !== "business") {
-        throw new Error(`Unexpected example type in ${file}: ${exampleType}`);
-      }
+      if (exampleType !== "exam" && exampleType !== "business") throw new Error(`Unexpected example type in ${file}: ${exampleType}`);
       rows.push({
         vocabId: fields[0].replace(/::uuid$/u, ""),
         exampleNo: Number(fields[1]),
@@ -141,6 +120,8 @@ function loadGeneratedRows(): Row[] {
       });
     }
   }
+  console.info("N4_GENERATED_FILE_COUNTS", JSON.stringify(fileCounts));
+  console.info("N4_GENERATED_UNIQUE_IDS", new Set(rows.map((row) => row.vocabId)).size);
   return rows;
 }
 
@@ -152,14 +133,15 @@ describe("N4 generated vocabulary SQL examples", () => {
   const rows = loadGeneratedRows();
 
   it("covers all 942 vocabulary IDs with exactly one exam and one business example", () => {
-    expect(rows).toHaveLength(942 * 2);
     const grouped = new Map<string, Row[]>();
     for (const row of rows) grouped.set(row.vocabId, [...(grouped.get(row.vocabId) ?? []), row]);
-    if (grouped.size !== 942) throw new Error(`Expected 942 vocab IDs, parsed ${grouped.size}`);
     const badGroups = [...grouped.entries()].filter(([, group]) => {
       const roles = group.map((row) => `${row.exampleNo}:${row.exampleType}`).sort();
       return group.length !== 2 || roles.join("|") !== "1:exam|3:business";
     });
+    console.info("N4_GENERATED_BAD_GROUPS", JSON.stringify(badGroups.map(([vocabId, group]) => ({ vocabId, roles: group.map((row) => `${row.exampleNo}:${row.exampleType}`) }))));
+    expect(rows).toHaveLength(942 * 2);
+    expect(grouped.size).toBe(942);
     expect(badGroups).toEqual([]);
   });
 
