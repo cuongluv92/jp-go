@@ -81,6 +81,9 @@ describe("segmentJapaneseText", () => {
   it("dùng reading đầy đủ cho dạng chia khi verb_class đã được xác định", () => {
     const target = readableWord("1", "書く", "かく", "verb", "godan");
     const result = segmentJapaneseText("報告書を書きます。", [target]);
-    expect(result.find((part) => part.word?.id === "1")).toMatchObject({ text: "書きます", reading: "かきます" });
+    const linked = result.filter((part) => part.word?.id === "1");
+    expect(linked).toHaveLength(1);
+    expect(linked[0]).toMatchObject({ text: "書きます", reading: "かきます" });
+    expect(result[0]).toMatchObject({ text: "報告書を", word: null });
   });
 });
