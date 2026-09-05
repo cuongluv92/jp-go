@@ -77,3 +77,11 @@ body {
     animation-duration: 1ms !important;
   }
 }
+
+/* N5 detail pages use the new context-first exercise panels below each item.
+   Hide the legacy last-child quiz blocks that contain direct meaning/reading
+   drills; the learning content above them remains unchanged. */
+.grammar-detail-v2 > div:first-child > div:last-child,
+.kanji-detail-v2 > div:first-child > div:last-child {
+  display: none;
+}
