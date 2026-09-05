@@ -92,24 +92,12 @@ jobs:
             cat "$file" >> "$out"
             printf '\n-- END FILE: %s\n' "$file" >> "$out"
           done
-          cat >> "$out" <<'SQL'
-          
-          -- AUDIT FINAL COUNTS (still inside rollback transaction)
-          select jsonb_build_object(
-            'kanji', (select jsonb_object_agg(level,n) from (select level,count(*) n from public.jp_kanji where level in ('N5','N4') group by level) s),
-            'vocab', (select jsonb_object_agg(level,n) from (select level,count(*) n from public.jp_vocab where level in ('N5','N4') group by level) s),
-            'grammar_patterns', (select jsonb_object_agg(level,n) from (select level,count(*) n from public.jp_grammar where level in ('N5','N4') group by level) s),
-            'vocab_examples', (select count(*) from public.jp_vocab_examples e join public.jp_vocab v on v.id=e.vocab_id where v.level in ('N5','N4')),
-            'grammar_examples', (select count(*) from public.jp_grammar_examples e join public.jp_grammar g on g.id=e.grammar_id where g.level in ('N5','N4')),
-            'vocab_questions', (select count(*) from public.jp_vocab_questions q join public.jp_vocab v on v.id=q.vocab_id where v.level in ('N5','N4')),
-            'grammar_questions', (select count(*) from public.jp_grammar_questions q join public.jp_grammar g on g.id=q.grammar_id where g.level in ('N5','N4')),
-            'kanji_questions', (select count(*) from public.jp_kanji_questions q join public.jp_kanji k on k.id=q.kanji_id where k.level in ('N5','N4'))
-          ) as audit_final_counts;
-          
-          ROLLBACK;
-          SQL
+          printf '\nROLLBACK;\n' >> "$out"
           test "$(grep -c '^-- BEGIN FILE:' "$out")" -eq 41
-          ! grep -Eiq '^[[:space:]]*COMMIT([[:space:]]*;|[[:space:]]*$)' "${files[@]}"
+          if grep -Eiq '^[[:space:]]*COMMIT([[:space:]]*;|[[:space:]]*$)' "${files[@]}"; then
+            echo 'Unsafe COMMIT found inside canonical SQL files' >&2
+            exit 1
+          fi
 
       - name: Upload rollback-only SQL audit batch
         uses: actions/upload-artifact@v4
