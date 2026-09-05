@@ -123,6 +123,20 @@ function addCandidate(byFirst: Map<string, SegmentCandidate[]>, candidate: Segme
 }
 
 /**
+ * Kanji đơn như stem 書[か] chỉ là fallback khi chưa xác định được đầy đủ dạng
+ * chia. Không được nhận nó bên trong từ ghép như 報告書/図書館, nếu không UI
+ * sẽ gắn furigana và liên kết từ sai vị trí trước khi tới động từ thật.
+ */
+function candidateMatchesAt(text: string, index: number, candidate: SegmentCandidate): boolean {
+  if (!text.startsWith(candidate.surface, index)) return false;
+  if (candidate.surface.length !== 1 || !hasKanji(candidate.surface)) return true;
+
+  const previous = index > 0 ? text[index - 1] : "";
+  const next = text[index + candidate.surface.length] ?? "";
+  return !hasKanji(previous) && !hasKanji(next);
+}
+
+/**
  * Tách câu theo từ vựng đã có trong jp-go bằng cách ưu tiên từ dài nhất.
  * Furigana chỉ được hiển thị khi reading xuất phát từ reading_furigana đã lưu
  * hoặc token đã kiểm tra tay. Không dùng bộ phân tích hình thái/dịch tự động
@@ -186,7 +200,7 @@ export function segmentJapaneseText(
 
   while (index < text.length) {
     const candidates = byFirst.get(text[index]) ?? [];
-    const match = candidates.find((candidate) => text.startsWith(candidate.surface, index));
+    const match = candidates.find((candidate) => candidateMatchesAt(text, index, candidate));
     if (match) {
       flushPlain();
       segments.push({ text: match.surface, start: index, word: match.word, reading: match.reading });
