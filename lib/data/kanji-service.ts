@@ -96,6 +96,16 @@ export interface KanjiDetail extends KanjiRow {
   questions: KanjiQuestionRow[];
 }
 
+const KANJI_ID_BATCH_SIZE = 200;
+
+function chunkIds(ids: string[]): string[][] {
+  const chunks: string[][] = [];
+  for (let index = 0; index < ids.length; index += KANJI_ID_BATCH_SIZE) {
+    chunks.push(ids.slice(index, index + KANJI_ID_BATCH_SIZE));
+  }
+  return chunks;
+}
+
 /** Số lượng kanji đã có theo từng cấp độ — dùng ở Trang chủ và trang danh sách Kanji. Phân trang vì tổng mọi cấp độ có thể vượt 1000 dòng (giới hạn mặc định Supabase). */
 export async function getKanjiLevelCounts(supabase: SupabaseClient): Promise<Record<JlptLevel, number>> {
   const counts: Record<JlptLevel, number> = { N5: 0, N4: 0, N3: 0, N2: 0, N1: 0 };
@@ -120,9 +130,10 @@ export async function listKanjiByLevel(supabase: SupabaseClient, level: JlptLeve
 /** Tra nhanh nhiều kanji theo id — dùng để hiện tên/mặt chữ kanji trong danh sách "Hôm nay" của lộ trình. */
 export async function getKanjiByIds(supabase: SupabaseClient, ids: string[]): Promise<KanjiRow[]> {
   if (ids.length === 0) return [];
-  const { data, error } = await supabase.from("jp_kanji").select("*").in("id", ids);
-  if (error) throw error;
-  return (data ?? []) as KanjiRow[];
+  const batches = await Promise.all(
+    chunkIds(ids).map((batch) => fetchAllRows<KanjiRow>((from, to) => supabase.from("jp_kanji").select("*", { count: "exact" }).in("id", batch).range(from, to))),
+  );
+  return batches.flat();
 }
 
 /** Chi tiết 1 kanji kèm đầy đủ âm đọc, từ ghép, bài tập. */
@@ -154,14 +165,15 @@ export async function getKanjiProgressMap(
   kanjiIds: string[],
 ): Promise<Record<string, KanjiProgressRow>> {
   if (kanjiIds.length === 0) return {};
-  const { data, error } = await supabase
-    .from("jp_kanji_progress")
-    .select("*")
-    .eq("user_id", userId)
-    .in("kanji_id", kanjiIds);
-  if (error) throw error;
+  const batches = await Promise.all(
+    chunkIds(kanjiIds).map((batch) =>
+      fetchAllRows<KanjiProgressRow>((from, to) =>
+        supabase.from("jp_kanji_progress").select("*", { count: "exact" }).eq("user_id", userId).in("kanji_id", batch).range(from, to),
+      ),
+    ),
+  );
   const map: Record<string, KanjiProgressRow> = {};
-  for (const row of (data ?? []) as KanjiProgressRow[]) {
+  for (const row of batches.flat()) {
     map[row.kanji_id] = row;
   }
   return map;
@@ -174,14 +186,15 @@ export interface KanjiProgressStats {
   dueCount: number;
 }
 
-/** Tổng hợp tiến độ Kanji của user (dùng ở trang Tiến độ) — không phụ thuộc lộ trình cụ thể nào, gộp mọi kanji user từng học. */
+/** Tổng hợp tiến độ Kanji của user (dùng ở trang Tiến độ) — phân trang để không mất dữ liệu khi tổng Kanji vượt 1000. */
 export async function getKanjiProgressStats(supabase: SupabaseClient, userId: string): Promise<KanjiProgressStats> {
-  const { data, error } = await supabase.from("jp_kanji_progress").select("status, next_review_at").eq("user_id", userId);
-  if (error) throw error;
+  const rows = await fetchAllRows<{ status: KanjiProgressStatus; next_review_at: string | null }>((from, to) =>
+    supabase.from("jp_kanji_progress").select("status, next_review_at", { count: "exact" }).eq("user_id", userId).range(from, to),
+  );
 
   const now = new Date();
   const stats: KanjiProgressStats = { learned: 0, learning: 0, needsReview: 0, dueCount: 0 };
-  for (const row of (data ?? []) as { status: KanjiProgressStatus; next_review_at: string | null }[]) {
+  for (const row of rows) {
     if (row.status === "da_nho") stats.learned += 1;
     else if (row.status === "hay_sai") stats.needsReview += 1;
     else stats.learning += 1;
@@ -196,9 +209,8 @@ function nextStageAfterCorrect(current: KanjiProgressStatus): { status: KanjiPro
 }
 
 /**
- * Chấm 1 lượt ôn tập kanji — đúng thì tiến theo lịch 1-5-15 (chưa học/đang
- * học → đang học (+5 ngày) → đã nhớ (+15 ngày), lặp lại +15 mỗi lần đúng
- * tiếp theo); sai thì đánh dấu "hay sai" và hẹn ôn lại ngày mai.
+ * Chấm 1 lượt ôn tập kanji — đúng thì tiến theo lịch 1-5-15; mọi lỗi đọc/ghi
+ * progress đều được ném ra cho UI xử lý, không được báo hoàn tất âm thầm.
  */
 export async function gradeKanjiReview(
   supabase: SupabaseClient,
@@ -206,12 +218,13 @@ export async function gradeKanjiReview(
   kanjiId: string,
   correct: boolean,
 ): Promise<void> {
-  const { data: existing } = await supabase
+  const { data: existing, error: existingError } = await supabase
     .from("jp_kanji_progress")
     .select("*")
     .eq("user_id", userId)
     .eq("kanji_id", kanjiId)
     .maybeSingle();
+  if (existingError) throw existingError;
 
   const row = existing as KanjiProgressRow | null;
   const correctCount = (row?.correct_count ?? 0) + (correct ? 1 : 0);
@@ -228,7 +241,7 @@ export async function gradeKanjiReview(
   const nextReviewAt = new Date();
   nextReviewAt.setDate(nextReviewAt.getDate() + days);
 
-  await supabase.from("jp_kanji_progress").upsert(
+  const { error: upsertError } = await supabase.from("jp_kanji_progress").upsert(
     {
       user_id: userId,
       kanji_id: kanjiId,
@@ -240,6 +253,7 @@ export async function gradeKanjiReview(
     },
     { onConflict: "user_id,kanji_id" },
   );
+  if (upsertError) throw upsertError;
 }
 
 export interface DueKanjiRow {
@@ -251,26 +265,24 @@ export interface DueKanjiRow {
   next_review_at: string;
 }
 
-/**
- * Kanji đến hạn ôn theo lịch 1-5-15 riêng của Kanji (`jp_kanji_progress.
- * next_review_at`) — độc lập với lịch ôn từ vựng (`jp_review_schedules`).
- * Kanji chưa từng học (chưa có dòng progress) không tính là "đến hạn".
- */
+/** Kanji đến hạn ôn theo lịch 1-5-15 riêng của Kanji, phân trang toàn bộ kết quả. */
 export async function getDueKanjiForReview(
   supabase: SupabaseClient,
   userId: string,
   now: Date = new Date(),
 ): Promise<DueKanjiRow[]> {
-  const { data, error } = await supabase
-    .from("jp_kanji_progress")
-    .select("kanji_id, status, next_review_at, kanji:jp_kanji(kanji_character, han_viet, level)")
-    .eq("user_id", userId)
-    .lte("next_review_at", now.toISOString())
-    .order("next_review_at", { ascending: true });
-  if (error) throw error;
-
   type Row = { kanji_id: string; status: KanjiProgressStatus; next_review_at: string; kanji: { kanji_character: string; han_viet: string; level: JlptLevel } | null };
-  return ((data ?? []) as unknown as Row[])
+  const rows = await fetchAllRows<Row>((from, to) =>
+    supabase
+      .from("jp_kanji_progress")
+      .select("kanji_id, status, next_review_at, kanji:jp_kanji(kanji_character, han_viet, level)", { count: "exact" })
+      .eq("user_id", userId)
+      .lte("next_review_at", now.toISOString())
+      .order("next_review_at", { ascending: true })
+      .range(from, to) as unknown as PromiseLike<{ data: Row[] | null; error: import("@supabase/supabase-js").PostgrestError | null; count?: number | null }>,
+  );
+
+  return rows
     .filter((row): row is Row & { kanji: NonNullable<Row["kanji"]> } => row.kanji !== null)
     .map((row) => ({
       kanji_id: row.kanji_id,
@@ -284,24 +296,31 @@ export async function getDueKanjiForReview(
 
 /** Kanji đang bị đánh dấu "hay sai" của user, không phụ thuộc lịch đến hạn — dùng cho mục Tự chọn ôn tập. */
 export async function listWrongKanjiForUser(supabase: SupabaseClient, userId: string, level: JlptLevel): Promise<KanjiRow[]> {
-  const { data: progressRows, error: progressError } = await supabase
-    .from("jp_kanji_progress")
-    .select("kanji_id")
-    .eq("user_id", userId)
-    .eq("status", "hay_sai");
-  if (progressError) throw progressError;
-  const kanjiIds = (progressRows ?? []).map((r: { kanji_id: string }) => r.kanji_id);
+  const progressRows = await fetchAllRows<{ kanji_id: string }>((from, to) =>
+    supabase.from("jp_kanji_progress").select("kanji_id", { count: "exact" }).eq("user_id", userId).eq("status", "hay_sai").range(from, to),
+  );
+  const kanjiIds = progressRows.map((row) => row.kanji_id);
   if (kanjiIds.length === 0) return [];
-
-  const { data, error } = await supabase.from("jp_kanji").select("*").eq("level", level).in("id", kanjiIds);
-  if (error) throw error;
-  return (data ?? []) as KanjiRow[];
+  const batches = await Promise.all(
+    chunkIds(kanjiIds).map((batch) =>
+      fetchAllRows<KanjiRow>((from, to) => supabase.from("jp_kanji").select("*", { count: "exact" }).eq("level", level).in("id", batch).range(from, to)),
+    ),
+  );
+  return batches.flat();
 }
 
-/** Lấy toàn bộ câu hỏi (jp_kanji_questions) cho nhiều kanji cùng lúc — dùng cho phiên ôn tập gộp nhiều kanji. */
+/**
+ * Lấy toàn bộ câu hỏi cho nhiều Kanji. Phân nhóm ID + phân trang để phiên ôn
+ * N5+N4 (306 Kanji = 1.224 câu) không bị PostgREST cắt âm thầm ở 1.000 dòng.
+ */
 export async function getQuestionsForKanjiIds(supabase: SupabaseClient, kanjiIds: string[]): Promise<KanjiQuestionRow[]> {
   if (kanjiIds.length === 0) return [];
-  const { data, error } = await supabase.from("jp_kanji_questions").select("*").in("kanji_id", kanjiIds);
-  if (error) throw error;
-  return (data ?? []) as KanjiQuestionRow[];
+  const batches = await Promise.all(
+    chunkIds(kanjiIds).map((batch) =>
+      fetchAllRows<KanjiQuestionRow>((from, to) =>
+        supabase.from("jp_kanji_questions").select("*", { count: "exact" }).in("kanji_id", batch).range(from, to),
+      ),
+    ),
+  );
+  return batches.flat();
 }
