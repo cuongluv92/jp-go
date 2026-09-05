@@ -91,10 +91,7 @@ export default function N5SummaryPracticePage() {
   }, []);
 
   useEffect(() => {
-    if (!selectedPlanId) {
-      setDays([]);
-      return;
-    }
+    if (!selectedPlanId) return;
     let cancelled = false;
     void getStudyPlanDays(createClient(), selectedPlanId).then((rows) => {
       if (!cancelled) {
@@ -194,7 +191,7 @@ export default function N5SummaryPracticePage() {
   if (quiz && !result) {
     return (
       <div className="flex flex-col gap-4">
-        <Link href="/practice/summary" onClick={() => setQuiz(null)} className="text-xs font-semibold text-accent">← Chọn lại phạm vi</Link>
+        <button type="button" onClick={() => setQuiz(null)} className="self-start text-xs font-semibold text-accent">← Chọn lại phạm vi</button>
         <QuizRunner
           items={quiz}
           onAnswer={(item, correct) => {
