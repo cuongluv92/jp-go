@@ -17,7 +17,7 @@ export interface N5JlptMockItem {
   prompt_ja?: string;
   target_text?: string;
   audio_script_ja?: string;
-  choices?: string[];
+  choices: string[];
   pieces?: string[];
   correct_order?: string[];
   star_position?: number;
@@ -28,21 +28,23 @@ export interface N5JlptMockItem {
   lesson_refs?: number[];
 }
 
+type RawN5JlptMockItem = Omit<N5JlptMockItem, "choices"> & { choices?: string[] };
+
 interface TextMockDoc {
   set_id: string;
   title_ja: string;
-  items: N5JlptMockItem[];
+  items: RawN5JlptMockItem[];
 }
 
 interface ListeningMockDoc {
   set_id: string;
   title_ja: string;
   title_vi?: string;
-  items: N5JlptMockItem[];
+  items: RawN5JlptMockItem[];
 }
 
 interface QaDoc {
-  replacements?: N5JlptMockItem[];
+  replacements?: RawN5JlptMockItem[];
 }
 
 export interface N5JlptMockSet {
@@ -51,12 +53,20 @@ export interface N5JlptMockSet {
   items: N5JlptMockItem[];
 }
 
+function normalizeItem(item: RawN5JlptMockItem): N5JlptMockItem {
+  const choices = item.choices ?? item.pieces ?? [];
+  if (!choices.includes(item.correct_answer)) {
+    throw new Error(`N5 mock item ${item.id}: correct answer is not selectable`);
+  }
+  return { ...item, choices };
+}
+
 function applyReplacements<T extends TextMockDoc | ListeningMockDoc>(doc: T, qa?: QaDoc): N5JlptMockSet {
   const replacements = new Map((qa?.replacements ?? []).map((item) => [item.id, item]));
   return {
     id: doc.set_id,
     title: doc.title_ja,
-    items: doc.items.map((item) => replacements.get(item.id) ?? item),
+    items: doc.items.map((item) => normalizeItem(replacements.get(item.id) ?? item)),
   };
 }
 
