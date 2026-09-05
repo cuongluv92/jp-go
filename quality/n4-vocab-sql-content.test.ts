@@ -19,14 +19,23 @@ function unquote(value: string): string {
   return value.replace(/''/g, "'");
 }
 
+function lessonNumbersFromFile(file: string): number[] {
+  const match = file.match(/^n4_vocab_lessons?(\d+)(?:_(\d+))?_examples\.sql$/);
+  if (!match) return [];
+  const first = Number(match[1]);
+  const last = match[2] ? Number(match[2]) : first;
+  return Array.from({ length: last - first + 1 }, (_, i) => first + i);
+}
+
 function loadGeneratedRows(): Row[] {
   const qualityDir = path.join(process.cwd(), "quality");
   const files = fs
     .readdirSync(qualityDir)
-    .filter((name) => /^n4_vocab_lesson\d+_examples\.sql$/.test(name))
+    .filter((name) => /^n4_vocab_lessons?\d+(?:_\d+)?_examples\.sql$/.test(name))
     .sort((a, b) => a.localeCompare(b, "en", { numeric: true }));
 
-  expect(files).toHaveLength(25);
+  const coveredLessons = [...new Set(files.flatMap(lessonNumbersFromFile))].sort((a, b) => a - b);
+  expect(coveredLessons).toEqual(Array.from({ length: 25 }, (_, i) => 26 + i));
 
   const rowPattern = /\('([0-9a-f-]{36})'::uuid,\s*([13]),\s*'(exam|business)',\s*'((?:''|[^'])*)',\s*'((?:''|[^'])*)',\s*'((?:''|[^'])*)',\s*'((?:''|[^'])*)',\s*([123]),\s*'((?:''|[^'])*)'\)/g;
   const rows: Row[] = [];
