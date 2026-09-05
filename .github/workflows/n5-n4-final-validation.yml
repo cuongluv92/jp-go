@@ -66,6 +66,7 @@ jobs:
             quality/n4_grammar_business_part1.sql
             quality/n4_grammar_business_part2.sql
             quality/n5_grammar_business_quality.sql
+            quality/n5_grammar_example_roles_completion.sql
             quality/n5_core_content_corrections.sql
             quality/n4_grammar_core_corrections.sql
             quality/n5_grammar_duplicate_and_alignment_fix.sql
@@ -93,7 +94,7 @@ jobs:
             printf '\n-- END FILE: %s\n' "$file" >> "$out"
           done
           printf '\nROLLBACK;\n' >> "$out"
-          test "$(grep -c '^-- BEGIN FILE:' "$out")" -eq 41
+          test "$(grep -c '^-- BEGIN FILE:' "$out")" -eq 42
           if grep -Eiq '^[[:space:]]*COMMIT([[:space:]]*;|[[:space:]]*$)' "${files[@]}"; then
             echo 'Unsafe COMMIT found inside canonical SQL files' >&2
             exit 1
