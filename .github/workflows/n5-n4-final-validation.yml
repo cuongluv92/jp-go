@@ -109,7 +109,7 @@ select jsonb_build_object(
 ROLLBACK;
 SQL
           test "$(grep -c '^-- BEGIN FILE:' "$out")" -eq 41
-          ! grep -Eiq '^[[:space:]]*(COMMIT|END)[[:space:]]*;' "${files[@]}"
+          ! grep -Eiq '^[[:space:]]*COMMIT([[:space:]]*;|[[:space:]]*$)' "${files[@]}"
 
       - name: Upload rollback-only SQL audit batch
         uses: actions/upload-artifact@v4
