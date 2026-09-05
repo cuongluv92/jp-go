@@ -52,6 +52,8 @@ where id='f1729948-20bd-4270-a042-4b106f86ff80'::uuid;
 
 -- ---------------------------------------------------------------------------
 -- N4 vocabulary examples inserted by the lesson quality files.
+-- jp_vocab_examples intentionally has no review/correction metadata columns;
+-- update only columns that actually exist in the production schema.
 -- ---------------------------------------------------------------------------
 -- 空を飛びます: keep the target phrase intact and make the workplace context natural.
 update public.jp_vocab_examples
@@ -59,10 +61,7 @@ set example_jp='点検用のドローンが空を飛びます。',
     example_vi='Drone dùng để kiểm tra bay trên bầu trời.',
     cloze_jp='点検用のドローンが＿＿＿。',
     answer='空を飛びます',
-    focus_note='空を飛ぶ＝bay trên bầu trời; 点検用のドローン là drone dùng cho kiểm tra.',
-    review_status='ok',
-    corrected_text='点検用のドローンが空を飛びます。',
-    correction_note=concat_ws('; ', nullif(correction_note,''), 'Final polish: bỏ 「工場の上の空」 không tự nhiên, giữ nguyên cụm mục tiêu 「空を飛びます」.')
+    focus_note='空を飛ぶ＝bay trên bầu trời; 点検用のドローン là drone dùng cho kiểm tra.'
 where vocab_id='4ee88e09-4d03-4f22-896c-737796d67fe2'::uuid
   and example_type='business';
 
@@ -72,17 +71,13 @@ set example_jp='この会社は、昔は小さな町工場でした。',
     example_vi='Công ty này trước đây từng là một xưởng nhỏ.',
     cloze_jp='この会社は、＿＿＿は小さな町工場でした。',
     answer='昔',
-    focus_note='昔は～だった＝trước đây từng là ~; 町工場＝xưởng/nhà máy nhỏ địa phương.',
-    review_status='ok',
-    corrected_text='この会社は、昔は小さな町工場でした。',
-    correction_note=concat_ws('; ', nullif(correction_note,''), 'Final polish: công ty-history phrasing tự nhiên hơn và vẫn giữ trọng tâm 昔.')
+    focus_note='昔は～だった＝trước đây từng là ~; 町工場＝xưởng/nhà máy nhỏ địa phương.'
 where vocab_id='0e118dcf-5dd1-4f80-a726-70d1cda9f31f'::uuid
   and example_type='business';
 
 -- 出来る: 前 means “in front of”, not “before”.
 update public.jp_vocab_examples
-set example_vi='Nghe nói phía trước nhà ga sẽ có một thư viện mới.',
-    correction_note=concat_ws('; ', nullif(correction_note,''), 'Final polish: 駅の前 = phía trước nhà ga; sửa bản dịch tránh hiểu thành “trước ga” theo thời gian.')
+set example_vi='Nghe nói phía trước nhà ga sẽ có một thư viện mới.'
 where vocab_id='8aaabfc0-957b-4df0-bd1a-113713f1384a'::uuid
   and example_type='exam';
 
@@ -92,10 +87,7 @@ set example_jp='鳥が設備の中に入らないように対策をします。'
     example_vi='Chúng tôi sẽ thực hiện biện pháp để chim không bay vào bên trong thiết bị.',
     cloze_jp='＿＿＿が設備の中に入らないように対策をします。',
     answer='鳥',
-    focus_note='鳥が入らないように対策をする＝thực hiện biện pháp để chim không vào.',
-    review_status='ok',
-    corrected_text='鳥が設備の中に入らないように対策をします。',
-    correction_note=concat_ws('; ', nullif(correction_note,''), 'Final polish: 「対策します」→N4でも自然で明確な「対策をします」。')
+    focus_note='鳥が入らないように対策をする＝thực hiện biện pháp để chim không vào.'
 where vocab_id='a91a149f-0628-42e7-8971-5164b63e8ab3'::uuid
   and example_type='business';
 
@@ -105,9 +97,6 @@ set example_jp='夏になると、この川の近くで花火大会がありま�
     example_vi='Khi mùa hè đến, gần con sông này có lễ hội pháo hoa.',
     cloze_jp='夏になると、この川の近くで＿＿＿大会があります。',
     answer='花火',
-    focus_note='花火大会がある／花火を見る。場所には「川の近くで」などを使う。',
-    review_status='ok',
-    corrected_text='夏になると、この川の近くで花火大会があります。',
-    correction_note=concat_ws('; ', nullif(correction_note,''), 'Final polish: 「川で花火大会」より位置関係が明確な「川の近くで」。')
+    focus_note='花火大会がある／花火を見る。場所には「川の近くで」などを使う。'
 where e.vocab_id='3df62dfc-7874-4b6d-a59a-2d4b1f5f5e3c'::uuid
   and e.example_type='exam';
