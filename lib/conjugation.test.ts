@@ -22,7 +22,7 @@ describe("conjugateVerb — godan", () => {
     });
   });
 
-  it("行く là ngoại lệ duy nhất của nhóm く: 行って/行った, các thể khác vẫn theo quy tắc thường", () => {
+  it("行く là ngoại lệ của nhóm く: 行って/行った, các thể khác vẫn theo quy tắc thường", () => {
     const result = conjugateVerb("行く", "godan");
     expect(result.teForm).toBe("行って");
     expect(result.taForm).toBe("行った");
@@ -31,6 +31,24 @@ describe("conjugateVerb — godan", () => {
     expect(result.naiTaForm).toBe("行かなかった");
     expect(result.passiveForm).toBe("行かれる");
     expect(result.causativeForm).toBe("行かせる");
+  });
+
+  it("cụm て行く／ていく cũng dùng って/った", () => {
+    expect(conjugateVerb("持って行く", "godan").teForm).toBe("持って行って");
+    expect(conjugateVerb("持って行く", "godan").taForm).toBe("持って行った");
+    expect(conjugateVerb("連れていく", "godan").teForm).toBe("連れていって");
+    expect(conjugateVerb("連れていく", "godan").taForm).toBe("連れていった");
+  });
+
+  it("kính ngữ godan đặc biệt dùng い trước ます và 命令形 cố định", () => {
+    expect(conjugateVerb("下さる", "godan").masuForm).toBe("下さいます");
+    expect(conjugateVerb("下さる", "godan").imperativeForm).toBe("下さい");
+    expect(conjugateVerb("なさる", "godan").masuForm).toBe("なさいます");
+    expect(conjugateVerb("なさる", "godan").imperativeForm).toBe("なさい");
+    expect(conjugateVerb("いらっしゃる", "godan").masuForm).toBe("いらっしゃいます");
+    expect(conjugateVerb("いらっしゃる", "godan").imperativeForm).toBe("いらっしゃい");
+    expect(conjugateVerb("おっしゃる", "godan").masuForm).toBe("おっしゃいます");
+    expect(conjugateVerb("おっしゃる", "godan").imperativeForm).toBe("おっしゃい");
   });
 
   it("ある dùng phủ định bất quy tắc ない/なかった", () => {
@@ -142,6 +160,14 @@ describe("conjugateVerb — kuru", () => {
       imperativeForm: "来い",
       conditionalForm: "来れば",
     });
+  });
+
+  it("từ ghép + 来る chỉ chia phần 来る", () => {
+    const result = conjugateVerb("持って来る", "kuru");
+    expect(result.masuForm).toBe("持って来ます");
+    expect(result.teForm).toBe("持って来て");
+    expect(result.naiForm).toBe("持って来ない");
+    expect(result.taForm).toBe("持って来た");
   });
 });
 
