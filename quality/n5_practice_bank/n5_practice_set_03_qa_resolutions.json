@@ -1,0 +1,25 @@
+{
+  "version": "1.0",
+  "level": "N5",
+  "applies_to": "n5-practice-03",
+  "policy": "This replacement supersedes the same-id authoring row before final materialization/import.",
+  "replacements": [
+    {
+      "id": "N5-P03-013",
+      "mode": "practice",
+      "domain": "reading",
+      "subtype": "weekday_schedule_reasoning",
+      "difficulty": 2,
+      "instruction_ja": "予定を読んで答えてください。",
+      "instruction_vi": "Dùng thứ trong tuần và lịch để suy luận.",
+      "stimulus_ja": "月曜日：会議\n火曜日：休み\n水曜日：試験\n木曜日：会議\n金曜日：休み",
+      "prompt_ja": "この予定の中で、最初に「会議の次の日が休み」になるのは何曜日の会議ですか。",
+      "correct_answer": "月曜日の会議です。",
+      "accepted_answers": ["月曜日", "月曜日の会議です。"],
+      "explanation_vi": "Cả thứ Hai và thứ Năm đều có ngày kế tiếp là ngày nghỉ, nhưng câu hỏi hỏi trường hợp đầu tiên trong lịch nên đáp án duy nhất là cuộc họp thứ Hai.",
+      "targets": ["曜日", "会議", "休み"],
+      "skills": ["schedule", "weekday", "reasoning"],
+      "lesson_refs": [5]
+    }
+  ]
+}
