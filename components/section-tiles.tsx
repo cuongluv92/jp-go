@@ -38,13 +38,6 @@ function GrammarIcon() {
   );
 }
 
-/**
- * Các mục lớn ở Trang chủ — bấm vào đi thẳng vào từng mảng nội dung (Từ
- * vựng/Kanji/Ngữ pháp) thay vì phải mở rộng theo từng cấp độ trước. Mục nào
- * chưa có nội dung (count = 0) vẫn bấm được nhưng hiện nhãn "sắp có" và mờ đi.
- * `level` (chọn qua LevelChips cạnh bên) quyết định số lượng hiển thị và
- * link có kèm `?level=` để vào thẳng đúng cấp đang xem.
- */
 export function SectionTiles({
   level,
   vocabCount,
@@ -57,15 +50,13 @@ export function SectionTiles({
   grammarCount: number;
 }) {
   const tiles: SectionTile[] = [
-    ...(level === "N3" || level === "N2"
-      ? []
-      : [{ label: "Từ vựng", count: vocabCount, href: `/vocabulary?level=${level}`, icon: <BookIcon /> }]),
+    { label: "Từ vựng", count: vocabCount, href: `/vocabulary?level=${level}`, icon: <BookIcon /> },
     { label: "Kanji", count: kanjiCount, href: `/kanji?level=${level}`, icon: <KanjiIcon /> },
     { label: "Ngữ pháp", count: grammarCount, href: `/grammar?level=${level}`, icon: <GrammarIcon /> },
   ];
 
   return (
-    <div className={`grid gap-3 ${tiles.length === 2 ? "grid-cols-2" : "grid-cols-3"}`}>
+    <div className="grid grid-cols-3 gap-3">
       {tiles.map((tile) => (
         <Link
           key={tile.label}
