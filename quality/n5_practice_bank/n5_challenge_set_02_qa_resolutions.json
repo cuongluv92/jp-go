@@ -1,0 +1,57 @@
+{
+  "version": "1.0",
+  "level": "N5",
+  "applies_to": "n5-challenge-02",
+  "policy": "These replacements supersede same-id authoring rows before final materialization/import.",
+  "replacements": [
+    {
+      "id": "N5-C02-001",
+      "mode": "challenge",
+      "domain": "vocab",
+      "subtype": "hayai_semantic_contrast",
+      "difficulty": 3,
+      "instruction_ja": "同じ「はやい」でも、文に合う漢字を選んでください。",
+      "instruction_vi": "Phân biệt “sớm” và “nhanh” qua cả câu.",
+      "stimulus_ja": "① 今日は会議があるので、いつもより＿＿時間に家を出ました。\n② 電車はバスよりずっと＿＿です。",
+      "choices": ["早い", "速い"],
+      "correct_answer": ["早い", "速い"],
+      "explanation_vi": "早い = sớm về thời điểm; 速い = nhanh về tốc độ. Cả 電車 và バス đều nằm trong kho N5 hiện tại.",
+      "targets": ["早い", "速い", "時間", "電車", "バス"],
+      "skills": ["homophone_disambiguation", "kanji_context", "semantic_contrast"],
+      "lesson_refs": [6, 12]
+    },
+    {
+      "id": "N5-C02-002",
+      "mode": "challenge",
+      "domain": "grammar",
+      "subtype": "error_correction_quantity_adjective",
+      "difficulty": 3,
+      "instruction_ja": "自然な日本語に直してください。",
+      "instruction_vi": "Sửa cách dùng 多い trong câu.",
+      "stimulus_ja": "× この町は多い人が住んでいます。",
+      "correct_answer": "この町には人がたくさん住んでいます。",
+      "accepted_answers": ["この町には人がたくさん住んでいます。", "この町は人が多いです。"],
+      "explanation_vi": "多い không thường trực tiếp đứng trước danh từ theo kiểu 多い人 để nói “nhiều người”. Cách N5 tự nhiên là 人が多い hoặc 人がたくさん住んでいる.",
+      "targets": ["多い", "たくさん", "住む"],
+      "skills": ["error_correction", "naturalness", "quantity_expression"],
+      "lesson_refs": [12, 15]
+    },
+    {
+      "id": "N5-C02-013",
+      "mode": "challenge",
+      "domain": "grammar",
+      "subtype": "tari_vs_te_sequence",
+      "difficulty": 3,
+      "instruction_ja": "二つの文を比べて、使い方の違いを答えてください。",
+      "instruction_vi": "Phân biệt liệt kê ví dụ với chuỗi có thứ tự.",
+      "stimulus_ja": "① 日曜日は本を読んだり、音楽を聞いたりします。（いくつかの例）\n② 朝、顔を洗って、朝ご飯を食べて、会社へ行きます。（順番）",
+      "prompt_ja": "①と②では、どうして形が違いますか。",
+      "correct_answer": "①は例を挙げるので～たり、②は順番があるので～てを使います。",
+      "accepted_answers": ["①は～たり、②は～てです。", "①はいくつかの例で、②は順番です。"],
+      "explanation_vi": "～たり nêu vài hành động tiêu biểu không nhấn thứ tự; ～て nối chuỗi hành động theo trình tự.",
+      "targets": ["VたりVたりします", "VてVて"],
+      "skills": ["grammar_contrast", "sequence", "metalinguistic_reasoning"],
+      "lesson_refs": [19]
+    }
+  ]
+}
