@@ -11,6 +11,7 @@ import { getDueGrammarForReview, getGrammarLevelCounts } from "@/lib/data/gramma
 import { getDueKanjiForReview, getKanjiLevelCounts } from "@/lib/data/kanji-service";
 import { getDueReviewSchedules } from "@/lib/data/review-service";
 import { getStudyPlanDays, listActiveStudyPlans, type StudyDayRow, type StudyPlanRow } from "@/lib/data/study-plan-service";
+import { getVocabularyCollection } from "@/lib/data/vocabulary-collections";
 import { useVocabulary } from "@/lib/data/vocabulary-context";
 import { createClient } from "@/lib/supabase/client";
 import { computeStreak } from "@/lib/study-plan";
@@ -26,15 +27,6 @@ interface HomeCachedData {
   dueCount: number;
 }
 
-/**
- * Trang chủ chỉ còn vai trò tổng quan + điều hướng (mục lớn Từ vựng/Kanji/
- * Ngữ pháp, thống kê tiến độ) — việc quản lý lộ trình thật sự ("Hôm nay học
- * gì", đánh dấu hoàn thành, đổi tên/dừng lộ trình...) nằm ở trang riêng
- * `/plan`. Thẻ "Tiến độ lộ trình" ở đây gộp TẤT CẢ lộ trình đang chạy song
- * song (nếu có nhiều), không chỉ 1 lộ trình. Khi có mục đến hạn ôn tập,
- * banner ở đầu trang nổi bật lên ngay để Trang chủ thực sự là nơi mở ra
- * mọi thứ cần làm hôm nay, không chỉ là màn hình tĩnh.
- */
 export default function HomePage() {
   const { words, archivedWords } = useVocabulary();
   const cached = getCached<HomeCachedData>(HOME_CACHE_KEY);
@@ -98,7 +90,11 @@ export default function HomePage() {
   const planProgressPercent = days.length > 0 ? Math.round((completedDays.length / days.length) * 100) : 0;
   const streak = computeStreak(completedDays.map((d) => d.completed_at as string));
 
-  const vocabCountForLevel = (selectedLevel === "N2" ? archivedWords : words).filter((w) => w.jlpt === selectedLevel && !w.isHidden).length;
+  const vocabCountForLevel = words.filter(
+    (w) => w.jlpt === selectedLevel && !w.isHidden && getVocabularyCollection(w) === "current",
+  ).length;
+  const tangoN3Count = words.filter((w) => !w.isHidden && getVocabularyCollection(w) === "tango-n3").length;
+  const oldN2VocabCount = archivedWords.filter((w) => !w.isHidden).length;
   const kanjiCountForLevel = kanjiCounts?.[selectedLevel] ?? 0;
   const grammarCountForLevel = grammarCounts?.[selectedLevel] ?? 0;
 
@@ -108,30 +104,29 @@ export default function HomePage() {
         <h1 className="text-xl font-bold">Xin chào 👋</h1>
         <p className="mt-1 text-sm text-white/80">Hôm nay bạn đã sẵn sàng học tiếng Nhật chưa?</p>
         {dueCount > 0 && (
-          <Link
-            href="/review"
-            className="mt-3 flex items-center justify-between gap-2 rounded-xl bg-white/15 px-3.5 py-2.5 text-sm font-semibold transition active:scale-[0.98]"
-          >
+          <Link href="/review" className="mt-3 flex items-center justify-between gap-2 rounded-xl bg-white/15 px-3.5 py-2.5 text-sm font-semibold transition active:scale-[0.98]">
             <span>🔔 {dueCount} mục đang đến hạn ôn tập</span>
             <span className="text-xs">Ôn ngay →</span>
           </Link>
         )}
       </section>
 
-      <section className="grid grid-cols-2 gap-3">
-        <Link
-          href="/vocabulary?collection=tango-n3"
-          className="rounded-2xl border border-border bg-surface px-4 py-4 text-center shadow-sm"
-        >
-          <span className="font-jp block text-base font-bold">単語 N3</span>
-          <span className="mt-1 block text-xs text-muted">Bộ N3 riêng</span>
+      <section className="grid grid-cols-4 gap-2">
+        <Link href="/vocabulary?collection=tango-n3" className="rounded-xl border border-border bg-surface px-2 py-2 text-center shadow-sm">
+          <span className="font-jp block text-xs font-bold">単語 N3</span>
+          <span className="mt-0.5 block text-[10px] text-muted">{tangoN3Count}</span>
         </Link>
-        <Link
-          href="/vocabulary?collection=n2-chua-dat"
-          className="rounded-2xl border border-amber-200 bg-amber-50 px-4 py-4 text-center shadow-sm"
-        >
-          <span className="block text-base font-bold text-amber-800">N2 chưa đạt</span>
-          <span className="mt-1 block text-xs text-amber-700">Tạm lưu để thay mới</span>
+        <div className="rounded-xl border border-border bg-slate-50 px-2 py-2 text-center opacity-60">
+          <span className="font-jp block text-xs font-bold">単語 N2</span>
+          <span className="mt-0.5 block text-[10px] text-muted">sắp có</span>
+        </div>
+        <div className="rounded-xl border border-border bg-slate-50 px-2 py-2 text-center opacity-60">
+          <span className="font-jp block text-xs font-bold">単語 N1</span>
+          <span className="mt-0.5 block text-[10px] text-muted">sắp có</span>
+        </div>
+        <Link href="/n2-legacy" className="rounded-xl border border-amber-200 bg-amber-50 px-2 py-2 text-center shadow-sm">
+          <span className="block text-xs font-bold text-amber-800">N2 cũ</span>
+          <span className="mt-0.5 block text-[10px] text-amber-700">{oldN2VocabCount} từ</span>
         </Link>
       </section>
 
@@ -155,34 +150,12 @@ export default function HomePage() {
       </section>
 
       <section className="grid grid-cols-2 gap-3">
-        <Link
-          href="/plan"
-          className="flex items-center justify-center rounded-2xl border border-accent px-4 py-3 text-center text-sm font-semibold text-accent transition active:scale-[0.98]"
-        >
-          Lộ trình học
-        </Link>
-        <Link
-          href="/practice"
-          className="flex items-center justify-center rounded-2xl border border-accent px-4 py-3 text-center text-sm font-semibold text-accent transition active:scale-[0.98]"
-        >
-          Luyện tập
-        </Link>
-        <Link
-          href="/flashcards"
-          className="flex items-center justify-center rounded-2xl border border-accent px-4 py-3 text-center text-sm font-semibold text-accent transition active:scale-[0.98]"
-        >
-          Học bằng Flashcard
-        </Link>
-        <Link
-          href="/review"
-          className="relative flex items-center justify-center rounded-2xl border border-accent px-4 py-3 text-center text-sm font-semibold text-accent transition active:scale-[0.98]"
-        >
+        <Link href="/plan" className="flex items-center justify-center rounded-2xl border border-accent px-4 py-3 text-center text-sm font-semibold text-accent transition active:scale-[0.98]">Lộ trình học</Link>
+        <Link href="/practice" className="flex items-center justify-center rounded-2xl border border-accent px-4 py-3 text-center text-sm font-semibold text-accent transition active:scale-[0.98]">Luyện tập</Link>
+        <Link href="/flashcards" className="flex items-center justify-center rounded-2xl border border-accent px-4 py-3 text-center text-sm font-semibold text-accent transition active:scale-[0.98]">Học bằng Flashcard</Link>
+        <Link href="/review" className="relative flex items-center justify-center rounded-2xl border border-accent px-4 py-3 text-center text-sm font-semibold text-accent transition active:scale-[0.98]">
           Ôn tập
-          {dueCount > 0 && (
-            <span className="absolute -top-1.5 -right-1.5 flex h-5 min-w-5 items-center justify-center rounded-full bg-accent px-1 text-[10px] font-bold text-accent-foreground">
-              {dueCount}
-            </span>
-          )}
+          {dueCount > 0 && <span className="absolute -top-1.5 -right-1.5 flex h-5 min-w-5 items-center justify-center rounded-full bg-accent px-1 text-[10px] font-bold text-accent-foreground">{dueCount}</span>}
         </Link>
       </section>
     </div>
