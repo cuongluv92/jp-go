@@ -84,3 +84,13 @@ body {
 .kanji-detail-v2:has(> section) > div:first-child > div:last-child {
   display: none;
 }
+
+/* Challenge đã chuyển về từng từ/Kanji/ngữ pháp. Trên /practice chỉ giữ
+   Tổng kết (card phía trên), Đề JLPT và Đề của tôi; ẩn tab skill-mix cũ. */
+.practice-main-content > div > div:nth-child(2) {
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+}
+
+.practice-main-content > div > div:nth-child(2) > button:nth-child(2) {
+  display: none;
+}
