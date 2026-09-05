@@ -151,6 +151,7 @@ function ListeningRunner({
   const [selected, setSelected] = useState<number | null>(null);
   const [checked, setChecked] = useState(false);
   const [correctCount, setCorrectCount] = useState(0);
+  const [familyCorrect, setFamilyCorrect] = useState<Record<string, number>>({});
   const [done, setDone] = useState(false);
   const item = items[index];
   const correctIndex = item ? item.choices.indexOf(item.correct_answer) : -1;
@@ -164,11 +165,10 @@ function ListeningRunner({
         return {
           kind: `n5_listening_${family}`,
           title: N5_LISTENING_FAMILY_LABELS[family] ?? family,
-          correct: 0,
+          correct: familyCorrect[family] ?? 0,
           total: familyItems.length,
         };
       });
-      // Tổng điểm chính xác được lưu ở hàng tổng; breakdown family giữ tổng số câu để không giả suy ra điểm từng family từ state tối giản này.
       await savePracticeAttempt(createClient(), userId, "auto_jlpt", "N5", [
         { kind: "n5_listening_curated", title: "N5 聴解模試 01", correct: correctCount, total: items.length },
         ...familyResults,
@@ -178,7 +178,13 @@ function ListeningRunner({
 
   function check() {
     if (selected === null || checked) return;
-    if (selected === correctIndex) setCorrectCount((value) => value + 1);
+    if (selected === correctIndex) {
+      setCorrectCount((value) => value + 1);
+      setFamilyCorrect((current) => ({
+        ...current,
+        [item.problem_family]: (current[item.problem_family] ?? 0) + 1,
+      }));
+    }
     setChecked(true);
   }
 
@@ -199,6 +205,11 @@ function ListeningRunner({
         <p className="text-4xl">🎧</p>
         <h3 className="text-base font-bold">Hoàn thành N5 聴解模試 01</h3>
         <p className="text-sm">Đúng {correctCount}/{items.length} câu.</p>
+        <div className="w-full rounded-xl border border-border bg-surface p-3 text-left text-xs text-muted">
+          {Object.keys(N5_LISTENING_FAMILY_LABELS).map((family) => (
+            <p key={family}>{N5_LISTENING_FAMILY_LABELS[family]}: {familyCorrect[family] ?? 0}/{items.filter((candidate) => candidate.problem_family === family).length}</p>
+          ))}
+        </div>
         <p className="text-xs leading-relaxed text-muted">Audio dùng giọng Nhật có sẵn trên thiết bị/trình duyệt, không tải file âm thanh lên Supabase.</p>
         <button type="button" onClick={onExit} className="w-full rounded-xl border border-accent px-4 py-2.5 text-sm font-semibold text-accent">Về danh sách đề</button>
       </div>
