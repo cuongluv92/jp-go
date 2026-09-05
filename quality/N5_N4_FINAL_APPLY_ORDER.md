@@ -49,6 +49,7 @@ Meaning changes must be complete before question synchronization.
 
 1. `n4_vocab_question_meaning_sync.sql`
 2. `n5_n4_question_quality_fixes.sql`
+3. `n5_vocab_mcq_completion.sql`
 
 ## 5. Kanji corrections and representative word coverage
 
