@@ -149,10 +149,15 @@ function generateKanjiWritingQuestions(count: number, words: VocabWord[]): Gener
   return questions.length === count ? questions : null;
 }
 
+/** Cả dữ liệu cũ lẫn dữ liệu mới đều hợp lệ: hỗ trợ _____ và ＿＿＿. */
+function hasClozeBlank(value: string): boolean {
+  return /_{3,}|＿{3,}/u.test(value);
+}
+
 /** Sinh câu 文脈規定; nhiễu ưu tiên cùng từ loại rồi mới dùng từ loại khác. */
 function generateContextVocabQuestions(count: number, examples: VocabExample[], wordsById: Map<string, VocabWord>): GeneratedQuestion[] | null {
   const usableExamples = uniqueBy(
-    examples.filter((example) => example.clozeJp.includes("_____") && example.answer.trim().length > 0),
+    examples.filter((example) => hasClozeBlank(example.clozeJp) && example.answer.trim().length > 0),
     (example) => example.clozeJp,
   );
   if (usableExamples.length < count || usableExamples.length < 4) return null;
