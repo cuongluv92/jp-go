@@ -1,0 +1,24 @@
+{
+  "version": "1.0",
+  "level": "N5",
+  "applies_to": "n5-jlpt-mini-01",
+  "policy": "These replacements supersede same-id authoring rows before final materialization/import. No row with review_status=review may be imported.",
+  "replacements": [
+    {
+      "id": "N5-J01-033",
+      "group_id": "N5-J01-IR01",
+      "section": "読解",
+      "problem_family": "information_retrieval",
+      "difficulty": 2,
+      "instruction_ja": "表を見て、質問に答えてください。",
+      "stimulus_ja": "駅前スポーツセンター\nプール：月・水・金 18:00～21:00　800円\nヨガ：火・木 19:00～20:00　1,200円\nバドミントン：土 10:00～12:00　1,000円\n※参加する人は、始まる時間までに来てください。\n\n田中さんは月曜日と水曜日は20時まで仕事です。火曜日は18時に仕事が終わります。1,000円より高いクラスには行きたくありません。",
+      "prompt_ja": "田中さんが平日に参加できるものはどれですか。",
+      "choices": ["月曜日のプール", "水曜日のプール", "火曜日のヨガ", "平日に参加できるものはありません"],
+      "correct_answer": "平日に参加できるものはありません",
+      "explanation_vi": "Mon/Wed pool bắt đầu 18:00 nhưng Tanaka làm đến 20:00 nên không thể đến đúng giờ bắt đầu. Tue yoga bắt đầu 19:00 nhưng giá 1,200円, vượt giới hạn 1,000円. Vì vậy không có lớp ngày thường nào thỏa tất cả điều kiện.",
+      "targets": ["時間", "仕事", "高い"],
+      "skills": ["jlpt_information_retrieval", "multi_condition"],
+      "lesson_refs": [4, 5, 9]
+    }
+  ]
+}
