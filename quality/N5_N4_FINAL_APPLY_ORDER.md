@@ -63,6 +63,9 @@ The Kanji package intentionally does **not** attempt to import every dictionary 
 
 1. `zz_n5_n4_final_language_polish.sql`
 2. `zzzz_n5_n4_final_cloze_alignment.sql`
+3. `zzzzz_n5_n4_cross_level_duplicate_polish.sql`
+
+The last polish file removes exact sentence reuse across N5/N4 after all earlier wording/cloze corrections have settled.
 
 ## 7. Final read-only validators
 
