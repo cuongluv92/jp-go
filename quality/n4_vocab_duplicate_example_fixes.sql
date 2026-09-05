@@ -63,7 +63,19 @@ values
  'Trước chuyến đi, tôi đã ghi lại lịch trình vào sổ.',
  '旅行前に＿＿＿をノートにまとめました。',
  'スケジュール',1,
- 'スケジュールを立てる／確認する／まとめる。')
+ 'スケジュールを立てる／確認する／まとめる。'),
+('e6563bae-6ba1-4230-a14b-3d77f509df84'::uuid,1,'exam',
+ '京都を観光するため、英語を話せるガイドをお願いしました。',
+ 'Để tham quan Kyoto, tôi đã nhờ một hướng dẫn viên nói được tiếng Anh.',
+ '京都を観光するため、英語を話せる＿＿＿をお願いしました。',
+ 'ガイド',1,
+ 'ガイドをお願いする／頼む＝nhờ, thuê hướng dẫn viên.'),
+('8b856b37-8e77-4c8b-b0db-8150566ea965'::uuid,3,'business',
+ '本日担当いたします、佐藤と申します。',
+ 'Tôi là Sato, phụ trách hôm nay ạ.',
+ '本日担当いたします、佐藤と＿＿＿。',
+ '申します',2,
+ '申す＝言う の謙譲語。自己紹介で「〜と申します」。')
 )
 update public.jp_vocab_examples e
 set example_jp = f.example_jp,
