@@ -15,12 +15,13 @@ export async function saveKanjiStrokeProgress(
   character: string,
   score: number,
 ): Promise<KanjiStrokeProgressRow> {
-  const { data: existing } = await supabase
+  const { data: existing, error: existingError } = await supabase
     .from("jp_kanji_stroke_progress")
     .select("*")
     .eq("user_id", userId)
     .eq("kanji_character", character)
     .maybeSingle();
+  if (existingError) throw existingError;
 
   const previous = existing as KanjiStrokeProgressRow | null;
   const { data, error } = await supabase
