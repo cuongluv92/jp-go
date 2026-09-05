@@ -1,0 +1,93 @@
+{
+  "version": "1.0",
+  "level": "N5",
+  "source_set": "n5-jlpt-mini-03",
+  "replacements": [
+    {
+      "id": "N5-J03-012",
+      "section": "文字・語彙",
+      "problem_family": "contextually_defined_expression",
+      "difficulty": 2,
+      "instruction_ja": "（　）に何を入れますか。一番いいものを一つ選んでください。",
+      "stimulus_ja": "この電車は十時に駅に（　）ます。",
+      "choices": ["着き", "乗り", "渡り", "曲がり"],
+      "correct_answer": "着き",
+      "explanation_vi": "Đến ga → 駅に着きます. Bỏ từ 予定 để giữ phạm vi từ vựng N5 hiện tại.",
+      "targets": ["着く", "駅"],
+      "skills": ["jlpt_context_vocab", "collocation"],
+      "lesson_refs": [25]
+    },
+    {
+      "id": "N5-J03-014",
+      "section": "文字・語彙",
+      "problem_family": "contextually_defined_expression",
+      "difficulty": 2,
+      "instruction_ja": "（　）に何を入れますか。一番いいものを一つ選んでください。",
+      "stimulus_ja": "この辞書は日本語の勉強にとても（　）。",
+      "choices": ["役に立ちます", "気を付けます", "勝ちます", "負けます"],
+      "correct_answer": "役に立ちます",
+      "explanation_vi": "Từ điển hữu ích cho việc học → 勉強に役に立つ. Các lựa chọn đều dùng từ đã có trong kho N5.",
+      "targets": ["役に立つ", "辞書"],
+      "skills": ["jlpt_context_vocab", "collocation"],
+      "lesson_refs": [2, 21]
+    },
+    {
+      "id": "N5-J03-016",
+      "section": "文字・語彙",
+      "problem_family": "paraphrase",
+      "difficulty": 2,
+      "instruction_ja": "＿＿＿とだいたい同じ意味の文があります。一番いいものを一つ選んでください。",
+      "stimulus_ja": "この町は交通が不便です。",
+      "choices": ["この町は電車やバスが少なくて、いろいろな所へ行くのが大変です。", "この町は電車やバスがとても多いです。", "この町には人がいません。", "この町は駅の中にあります。"],
+      "correct_answer": "この町は電車やバスが少なくて、いろいろな所へ行くのが大変です。",
+      "explanation_vi": "交通が不便 = giao thông/đi lại bất tiện; diễn đạt lại bằng ít phương tiện và đi nhiều nơi khó khăn.",
+      "targets": ["不便", "交通", "大変"],
+      "skills": ["jlpt_paraphrase", "contextual_equivalence"],
+      "lesson_refs": [21, 22]
+    },
+    {
+      "id": "N5-J03-028",
+      "group_id": "N5-J03-TG01",
+      "section": "文法",
+      "problem_family": "text_grammar",
+      "difficulty": 2,
+      "instruction_ja": "文章を読んで、（28）に入るものを選んでください。",
+      "stimulus_ja": "私は料理があまり上手ではありません。（27）、週末はよく自分で料理します。簡単な料理を作って、少しずつ練習しています。（28）、前より上手になりました。",
+      "choices": ["ですから", "ですが", "そして", "までに"],
+      "correct_answer": "ですから",
+      "explanation_vi": "Luyện tập từng chút một, vì thế giỏi hơn trước → ですから. Thay それで để bám mẫu N5 hiện có.",
+      "targets": ["ですから", "text_grammar"],
+      "skills": ["jlpt_text_grammar", "cohesion"]
+    },
+    {
+      "id": "N5-J03-031",
+      "group_id": "N5-J03-RM01",
+      "section": "読解",
+      "problem_family": "mid_size_passage",
+      "difficulty": 2,
+      "instruction_ja": "つぎの文を読んで、質問に答えてください。",
+      "stimulus_ja": "私は毎朝七時に起きます。前は何も食べないで会社へ行きました。午前中はおなかがすいて、仕事が大変でした。今は少し早く起きて、パンを食べて牛乳を飲んでから家を出ます。それから駅まで歩きます。今は前より元気です。朝の仕事も前ほど大変ではありません。",
+      "prompt_ja": "この人は今、会社へ行く前に何をしますか。",
+      "choices": ["パンを食べて牛乳を飲み、駅まで歩きます", "何も食べないでタクシーに乗ります", "会社で朝ご飯を作ります", "駅で昼ご飯を買います"],
+      "correct_answer": "パンを食べて牛乳を飲み、駅まで歩きます",
+      "explanation_vi": "Hiện tại người này ăn bánh mì, uống sữa rồi đi bộ đến ga.",
+      "targets": ["パン", "牛乳", "歩く", "会社"],
+      "skills": ["jlpt_mid_reading", "sequence"]
+    },
+    {
+      "id": "N5-J03-032",
+      "group_id": "N5-J03-RM01",
+      "section": "読解",
+      "problem_family": "mid_size_passage",
+      "difficulty": 2,
+      "instruction_ja": "つぎの文を読んで、質問に答えてください。",
+      "stimulus_ja": "私は毎朝七時に起きます。前は何も食べないで会社へ行きました。午前中はおなかがすいて、仕事が大変でした。今は少し早く起きて、パンを食べて牛乳を飲んでから家を出ます。それから駅まで歩きます。今は前より元気です。朝の仕事も前ほど大変ではありません。",
+      "prompt_ja": "今の朝の仕事について、正しいものはどれですか。",
+      "choices": ["前ほど大変ではありません", "前より大変です", "朝は仕事をしません", "会社へ行きません"],
+      "correct_answer": "前ほど大変ではありません",
+      "explanation_vi": "Cuối đoạn nói trực tiếp công việc buổi sáng hiện không vất vả như trước.",
+      "targets": ["前", "大変", "仕事"],
+      "skills": ["jlpt_mid_reading", "comparison"]
+    }
+  ]
+}
