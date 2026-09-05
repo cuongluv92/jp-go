@@ -1,5 +1,5 @@
--- jp-go N4: remove exact duplicated daily example sentences while preserving source lesson entries.
--- Idempotent: updates six known existing example rows by stable UUID.
+-- jp-go N4: remove exact duplicated example sentences while preserving source lesson entries.
+-- Idempotent: updates known existing example rows/slots only.
 
 with fixes(id, example_jp, example_vi, cloze_jp, answer, focus_note) as (
 values
@@ -48,3 +48,26 @@ set example_jp = f.example_jp,
     focus_note = f.focus_note
 from fixes f
 where e.id = f.id;
+
+-- GENERATED_EXAMPLE_FIXES_BEGIN
+with generated_fixes(vocab_id,example_no,example_type,example_jp,example_vi,cloze_jp,answer,difficulty,focus_note) as (
+values
+('52733857-5c14-4bbe-9c74-be045f53cb01'::uuid,1,'exam',
+ '夜は明るくて安全な道を通るようにしています。',
+ 'Buổi tối tôi cố gắng đi theo những con đường sáng và an toàn.',
+ '夜は明るくて＿＿＿な道を通るようにしています。',
+ '安全',1,
+ '安全だ／安全なN／安全にV。日常の移動で使う。')
+)
+update public.jp_vocab_examples e
+set example_jp = f.example_jp,
+    example_vi = f.example_vi,
+    cloze_jp = f.cloze_jp,
+    answer = f.answer,
+    difficulty = f.difficulty,
+    focus_note = f.focus_note
+from generated_fixes f
+where e.vocab_id = f.vocab_id
+  and e.example_no = f.example_no
+  and e.example_type = f.example_type;
+-- GENERATED_EXAMPLE_FIXES_END
