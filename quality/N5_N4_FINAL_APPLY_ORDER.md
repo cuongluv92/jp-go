@@ -30,6 +30,7 @@ Run all lesson files in lesson order. These add the missing `exam` and `business
 2. `n4_grammar_business_part1.sql`
 3. `n4_grammar_business_part2.sql`
 4. `n5_grammar_business_quality.sql`
+5. `n5_grammar_example_roles_completion.sql`
 
 ## 3. Core language/data corrections
 
