@@ -23,12 +23,12 @@ function lessonNumbersFromFile(file: string): number[] {
   return Array.from({ length: last - first + 1 }, (_, i) => first + i);
 }
 
-/** Parse one VALUES tuple while respecting SQL single-quoted strings and ''. */
-function parseTupleLine(line: string): string[] | null {
-  let text = line.trim();
-  if (!text.startsWith("(")) return null;
-  if (text.endsWith(",")) text = text.slice(0, -1).trimEnd();
-  if (!text.endsWith(")")) return null;
+/** Parse one SQL VALUES tuple while respecting single-quoted strings and ''. */
+function parseTuple(tuple: string): string[] {
+  let text = tuple.trim();
+  if (!text.startsWith("(") || !text.endsWith(")")) {
+    throw new Error(`Invalid SQL tuple: ${tuple}`);
+  }
   text = text.slice(1, -1);
 
   const fields: string[] = [];
@@ -52,9 +52,60 @@ function parseTupleLine(line: string): string[] | null {
     }
     current += char;
   }
-  if (quoted) throw new Error(`Unclosed SQL string: ${line}`);
+  if (quoted) throw new Error(`Unclosed SQL string: ${tuple}`);
   fields.push(current.trim());
   return fields;
+}
+
+/**
+ * Extract every tuple from the CTE VALUES block. This deliberately scans the
+ * whole block instead of assuming one tuple per physical line, because a
+ * reviewed SQL row may be formatted across multiple lines.
+ */
+function extractValueTuples(sql: string): string[] {
+  const valuesMatch = /\bvalues\b/iu.exec(sql);
+  if (!valuesMatch) throw new Error("VALUES block not found");
+  const start = valuesMatch.index + valuesMatch[0].length;
+  const insertMatch = /\n\)\s*\ninsert\s+into\s+public\.jp_vocab_examples/iu.exec(sql.slice(start));
+  if (!insertMatch) throw new Error("End of vocabulary VALUES block not found");
+  const body = sql.slice(start, start + insertMatch.index);
+
+  const tuples: string[] = [];
+  let tupleStart = -1;
+  let depth = 0;
+  let quoted = false;
+
+  for (let i = 0; i < body.length; i += 1) {
+    const char = body[i];
+    if (char === "'") {
+      if (quoted && body[i + 1] === "'") {
+        i += 1;
+      } else {
+        quoted = !quoted;
+      }
+      continue;
+    }
+    if (quoted) continue;
+
+    if (char === "(") {
+      if (depth === 0) tupleStart = i;
+      depth += 1;
+      continue;
+    }
+    if (char === ")") {
+      depth -= 1;
+      if (depth < 0) throw new Error("Unexpected closing parenthesis in VALUES block");
+      if (depth === 0 && tupleStart >= 0) {
+        tuples.push(body.slice(tupleStart, i + 1));
+        tupleStart = -1;
+      }
+    }
+  }
+
+  if (quoted || depth !== 0 || tupleStart !== -1) {
+    throw new Error("Unclosed SQL tuple/string in VALUES block");
+  }
+  return tuples;
 }
 
 function loadGeneratedRows(): Row[] {
@@ -70,12 +121,13 @@ function loadGeneratedRows(): Row[] {
   const rows: Row[] = [];
   for (const file of files) {
     const sql = fs.readFileSync(path.join(qualityDir, file), "utf8");
-    for (const line of sql.split(/\r?\n/u)) {
-      if (!line.includes("'exam'") && !line.includes("'business'")) continue;
-      const fields = parseTupleLine(line);
-      if (!fields || fields.length !== 9) throw new Error(`Cannot parse example tuple in ${file}: ${line}`);
+    for (const tuple of extractValueTuples(sql)) {
+      const fields = parseTuple(tuple);
+      if (fields.length !== 9) throw new Error(`Cannot parse 9 fields in ${file}: ${tuple}`);
       const exampleType = fields[2];
-      if (exampleType !== "exam" && exampleType !== "business") continue;
+      if (exampleType !== "exam" && exampleType !== "business") {
+        throw new Error(`Unexpected example type in ${file}: ${exampleType}`);
+      }
       rows.push({
         vocabId: fields[0].replace(/::uuid$/u, ""),
         exampleNo: Number(fields[1]),
