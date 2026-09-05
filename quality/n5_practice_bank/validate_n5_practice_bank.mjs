@@ -7,9 +7,10 @@
  * - duplicate IDs
  * - unresolved review rows after QA replacements
  * - invalid MCQ answers
- * - invented item families inside JLPT mock
+ * - invented item families inside JLPT text/listening mocks
  * - isolated flashcard-style tasks leaking into practice/challenge
  * - Challenge sets becoming mostly recognition MCQ
+ * - listening rows missing an audio authoring script
  *
  * Run from repository root:
  *   node quality/n5_practice_bank/validate_n5_practice_bank.mjs
@@ -21,10 +22,10 @@ import { fileURLToPath } from 'node:url';
 
 const dir = path.dirname(fileURLToPath(import.meta.url));
 
-const SET_RE = /^n5_(practice_set|challenge_set|jlpt_mini_mock)_\d+\.json$/;
+const SET_RE = /^n5_(practice_set|challenge_set|jlpt_mini_mock|listening_mock)_\d+\.json$/;
 const QA_RE = /_qa_resolutions\.json$/;
 
-const OFFICIAL_N5_MOCK_FAMILIES = new Set([
+const OFFICIAL_N5_TEXT_MOCK_FAMILIES = new Set([
   'kanji_reading',
   'orthography',
   'contextually_defined_expression',
@@ -35,6 +36,13 @@ const OFFICIAL_N5_MOCK_FAMILIES = new Set([
   'short_passage',
   'mid_size_passage',
   'information_retrieval',
+]);
+
+const OFFICIAL_N5_LISTENING_FAMILIES = new Set([
+  'task_based_comprehension',
+  'key_point_comprehension',
+  'verbal_expressions',
+  'quick_response',
 ]);
 
 const FORBIDDEN_PRACTICE_CHALLENGE_SUBTYPES = new Set([
@@ -84,7 +92,7 @@ for (const file of files) {
   const items = (doc.items ?? []).map((item) => replacementById.get(item.id) ?? item);
   const mode = doc.mode;
 
-  if (!['practice', 'challenge', 'jlpt_mock'].includes(mode)) {
+  if (!['practice', 'challenge', 'jlpt_mock', 'listening_mock'].includes(mode)) {
     fail(errors, `${file}: invalid mode ${mode}`);
   }
 
@@ -105,8 +113,11 @@ for (const file of files) {
       fail(errors, `${file}: unresolved review item ${item.id}`);
     }
 
-    if (!item.stimulus_ja && !item.prompt_ja) {
-      fail(errors, `${file}: ${item.id} has no Japanese stimulus/prompt`);
+    const hasJapaneseAuthoringText = Boolean(
+      item.stimulus_ja || item.prompt_ja || item.audio_script_ja || item.scene_ja,
+    );
+    if (!hasJapaneseAuthoringText) {
+      fail(errors, `${file}: ${item.id} has no Japanese authoring text`);
     }
     if (item.difficulty != null && ![1, 2, 3].includes(item.difficulty)) {
       fail(errors, `${file}: ${item.id} invalid difficulty ${item.difficulty}`);
@@ -123,14 +134,30 @@ for (const file of files) {
       if (!item.choices.includes(item.correct_answer)) {
         fail(errors, `${file}: ${item.id} correct_answer is not one of choices`);
       }
+      if (new Set(item.choices).size !== item.choices.length) {
+        fail(errors, `${file}: ${item.id} has duplicate choices`);
+      }
     }
 
     if (mode === 'jlpt_mock') {
-      if (!OFFICIAL_N5_MOCK_FAMILIES.has(item.problem_family)) {
-        fail(errors, `${file}: ${item.id} non-official N5 mock family ${item.problem_family}`);
+      if (!OFFICIAL_N5_TEXT_MOCK_FAMILIES.has(item.problem_family)) {
+        fail(errors, `${file}: ${item.id} non-official N5 text mock family ${item.problem_family}`);
       }
       if (item.difficulty === 3) {
         fail(errors, `${file}: ${item.id} mock item marked challenge difficulty 3`);
+      }
+    } else if (mode === 'listening_mock') {
+      if (!OFFICIAL_N5_LISTENING_FAMILIES.has(item.problem_family)) {
+        fail(errors, `${file}: ${item.id} non-official N5 listening family ${item.problem_family}`);
+      }
+      if (!item.audio_script_ja) {
+        fail(errors, `${file}: ${item.id} listening item missing audio_script_ja`);
+      }
+      if (item.problem_family === 'verbal_expressions' && !item.scene_ja) {
+        fail(errors, `${file}: ${item.id} verbal expression missing scene_ja`);
+      }
+      if (item.difficulty === 3) {
+        fail(errors, `${file}: ${item.id} listening mock item marked challenge difficulty 3`);
       }
     } else {
       if (FORBIDDEN_PRACTICE_CHALLENGE_SUBTYPES.has(item.subtype)) {
@@ -149,8 +176,19 @@ for (const file of files) {
       fail(errors, `${file}: challenge non-MCQ ratio ${(nonMcqRatio * 100).toFixed(1)}% < 30%`);
     }
     if (integratedRatio < 0.20) {
-      // 20% is a mechanical proxy; semantic multi-skill QA remains manual.
       fail(errors, `${file}: challenge integrated proxy ${(integratedRatio * 100).toFixed(1)}% < 20%`);
+    }
+  }
+
+  if (mode === 'listening_mock' && items.length > 0) {
+    const familyCounts = new Map();
+    for (const item of items) {
+      familyCounts.set(item.problem_family, (familyCounts.get(item.problem_family) ?? 0) + 1);
+    }
+    for (const family of OFFICIAL_N5_LISTENING_FAMILIES) {
+      if (!familyCounts.get(family)) {
+        fail(errors, `${file}: listening family ${family} has zero items`);
+      }
     }
   }
 
