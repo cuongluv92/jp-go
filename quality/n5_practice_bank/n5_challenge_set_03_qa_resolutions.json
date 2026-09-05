@@ -1,0 +1,73 @@
+{
+  "version": "1.0",
+  "level": "N5",
+  "applies_to": "n5-challenge-03",
+  "policy": "These replacements supersede same-id authoring rows before final materialization/import.",
+  "replacements": [
+    {
+      "id": "N5-C03-003",
+      "mode": "challenge",
+      "domain": "dialogue",
+      "subtype": "polite_location_question_free",
+      "difficulty": 3,
+      "instruction_ja": "ホテルのフロントで、丁寧に場所を聞いてください。",
+      "instruction_vi": "Tự nói câu hỏi vị trí lịch sự trong khách sạn; không chọn từ các distractor giả.",
+      "stimulus_ja": "ホテルのフロントで、お手洗いの場所が分かりません。",
+      "correct_answer": "すみません、お手洗いはどちらですか。",
+      "accepted_answers": ["すみません、お手洗いはどちらですか。", "お手洗いはどちらですか。", "すみません、お手洗いはどこですか。", "お手洗いはどこですか。"],
+      "explanation_vi": "どちら lịch sự hơn どこ trong ngữ cảnh dịch vụ, nhưng cả hai đều có thể tự nhiên nên free-response chấp nhận cả hai thay vì ép một lựa chọn giả.",
+      "targets": ["どこ／どちらですか", "お手洗い", "フロント"],
+      "skills": ["pragmatics", "politeness", "location_question", "production"],
+      "lesson_refs": [3]
+    },
+    {
+      "id": "N5-C03-020",
+      "mode": "challenge",
+      "domain": "dialogue",
+      "subtype": "indirect_answer_from_context",
+      "difficulty": 3,
+      "instruction_ja": "Bさんが言いたいことを答えてください。",
+      "instruction_vi": "Hiểu ý trả lời gián tiếp từ ngữ cảnh.",
+      "stimulus_ja": "A：明日の会議、出ることができますか。\nB：すみません。明日は病院へ行かなければならなくて……。",
+      "correct_answer": "Bさんは会議に出ることができません。",
+      "accepted_answers": ["Bさんは会議に出ることができません。", "会議に出ることができません。"],
+      "explanation_vi": "B không nói thẳng “không”, nhưng nghĩa vụ đi bệnh viện cho thấy B không thể dự họp. Đáp án giữ đúng mẫu khả năng `Vことができます` đang có trong N5 của app.",
+      "targets": ["Vなければなりません", "Vことができます", "会議", "病院"],
+      "skills": ["dialogue", "pragmatics", "inference", "grammar_integration"],
+      "lesson_refs": [1, 5, 17, 18]
+    },
+    {
+      "id": "N5-C03-021",
+      "mode": "challenge",
+      "domain": "integrated",
+      "subtype": "schedule_duration_chain",
+      "difficulty": 3,
+      "instruction_ja": "時間を計算して答えてください。",
+      "instruction_vi": "Tính chuỗi thời gian gồm đi bộ + chờ + tàu.",
+      "stimulus_ja": "家から駅まで歩いて10分です。駅で電車を5分待ちます。電車は25分です。会社には8時50分までに着きたいです。",
+      "prompt_ja": "遅くても何時に家を出ればいいですか。",
+      "correct_answer": "8時10分",
+      "accepted_answers": ["8時10分", "8時10分です。"],
+      "explanation_vi": "Tổng 10 + 5 + 25 = 40 phút. 8:50 - 40 phút = 8:10.",
+      "targets": ["～までに", "歩く", "電車", "待つ", "会社"],
+      "skills": ["time_calculation", "deadline", "reading", "multi_step_reasoning", "transport"],
+      "lesson_refs": [5, 6, 14, 17, 23]
+    },
+    {
+      "id": "N5-C03-029",
+      "mode": "challenge",
+      "domain": "integrated",
+      "subtype": "free_response_multi_constraint",
+      "difficulty": 3,
+      "instruction_ja": "条件を全部使って、二文で書いてください。",
+      "instruction_vi": "Viết 2 câu: hôm qua vì mưa nên không đi đâu; ở nhà học tiếng Nhật.",
+      "stimulus_ja": "使うもの：昨日／雨／～から／どこへも行かない／うち／日本語／勉強する",
+      "correct_answer": "昨日は雨でしたから、どこへも行きませんでした。うちで日本語を勉強しました。",
+      "accepted_answers": ["昨日は雨でしたから、どこへも行きませんでした。うちで日本語を勉強しました。"],
+      "explanation_vi": "Giữ toàn bộ trong cấu trúc đã có ở N5: `S1からS2`, `どこへも行きません`, quá khứ ます và `どこでNをVます`. Không dùng đáp án phụ có cấu trúc cao hơn chỉ để tăng độ khó.",
+      "targets": ["から", "どこへも行きません", "うち", "勉強する", "過去形"],
+      "skills": ["production", "reason", "negative", "location", "tense", "multi_clause"],
+      "lesson_refs": [3, 5, 12]
+    }
+  ]
+}
