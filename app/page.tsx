@@ -36,7 +36,7 @@ interface HomeCachedData {
  * mọi thứ cần làm hôm nay, không chỉ là màn hình tĩnh.
  */
 export default function HomePage() {
-  const { words } = useVocabulary();
+  const { words, archivedWords } = useVocabulary();
   const cached = getCached<HomeCachedData>(HOME_CACHE_KEY);
   const [plan, setPlan] = useState<StudyPlanRow | null>(cached?.plan ?? null);
   const [days, setDays] = useState<StudyDayRow[]>(cached?.days ?? []);
@@ -98,7 +98,7 @@ export default function HomePage() {
   const planProgressPercent = days.length > 0 ? Math.round((completedDays.length / days.length) * 100) : 0;
   const streak = computeStreak(completedDays.map((d) => d.completed_at as string));
 
-  const vocabCountForLevel = words.filter((w) => w.jlpt === selectedLevel && !w.isHidden).length;
+  const vocabCountForLevel = (selectedLevel === "N2" ? archivedWords : words).filter((w) => w.jlpt === selectedLevel && !w.isHidden).length;
   const kanjiCountForLevel = kanjiCounts?.[selectedLevel] ?? 0;
   const grammarCountForLevel = grammarCounts?.[selectedLevel] ?? 0;
 
@@ -116,6 +116,23 @@ export default function HomePage() {
             <span className="text-xs">Ôn ngay →</span>
           </Link>
         )}
+      </section>
+
+      <section className="grid grid-cols-2 gap-3">
+        <Link
+          href="/vocabulary?collection=tango-n3"
+          className="rounded-2xl border border-border bg-surface px-4 py-4 text-center shadow-sm"
+        >
+          <span className="font-jp block text-base font-bold">単語 N3</span>
+          <span className="mt-1 block text-xs text-muted">Bộ N3 riêng</span>
+        </Link>
+        <Link
+          href="/vocabulary?collection=n2-chua-dat"
+          className="rounded-2xl border border-amber-200 bg-amber-50 px-4 py-4 text-center shadow-sm"
+        >
+          <span className="block text-base font-bold text-amber-800">N2 chưa đạt</span>
+          <span className="mt-1 block text-xs text-amber-700">Tạm lưu để thay mới</span>
+        </Link>
       </section>
 
       <section className="flex flex-col gap-3">

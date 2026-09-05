@@ -7,6 +7,7 @@ import { Suspense, useMemo, useState } from "react";
 import { StatusBadge } from "@/components/status-badge";
 import { filterWords, type VocabularyFilter } from "@/lib/data/selectors";
 import { useVocabulary } from "@/lib/data/vocabulary-context";
+import { getVocabularyCollection, VOCABULARY_COLLECTIONS } from "@/lib/data/vocabulary-collections";
 import {
   JLPT_LEVELS,
   LEARNING_STATUS_LABELS,
@@ -19,16 +20,31 @@ import {
 export default function VocabularyPage() {
   return (
     <Suspense fallback={null}>
-      <VocabularyPageContent />
+      <VocabularyPageRoute />
     </Suspense>
   );
 }
 
+function VocabularyPageRoute() {
+  const searchParams = useSearchParams();
+  return <VocabularyPageContent key={searchParams.toString()} />;
+}
+
 function VocabularyPageContent() {
-  const { words } = useVocabulary();
-  const visibleWords = useMemo(() => words.filter((w) => !w.isHidden), [words]);
+  const { words, archivedWords } = useVocabulary();
   const searchParams = useSearchParams();
   const initialLevel = searchParams.get("level");
+  const requestedCollection = searchParams.get("collection");
+  const collection = requestedCollection === "tango-n3" || requestedCollection === "n2-chua-dat"
+    ? requestedCollection
+    : initialLevel === "N3" ? "tango-n3" : initialLevel === "N2" ? "n2-chua-dat" : "current";
+  const currentCollection = VOCABULARY_COLLECTIONS.find((item) => item.id === collection)!;
+  const visibleWords = useMemo(
+    () => (collection === "n2-chua-dat" ? archivedWords : words).filter(
+      (word) => !word.isHidden && getVocabularyCollection(word) === collection,
+    ),
+    [words, archivedWords, collection],
+  );
   const initialQuery = searchParams.get("query")?.trim() || undefined;
   const isJlptLevel = (v: string | null): v is JlptLevel => !!v && (JLPT_LEVELS as readonly string[]).includes(v);
 
@@ -41,9 +57,32 @@ function VocabularyPageContent() {
   return (
     <div className="flex flex-col gap-4">
       <div>
-        <h1 className="text-xl font-bold">Kho từ vựng</h1>
+        <h1 className="text-xl font-bold">{collection === "current" ? "Kho từ vựng" : currentCollection.label}</h1>
         <p className="mt-1 text-sm text-muted">{visibleWords.length} từ · đang hiển thị {filtered.length}</p>
       </div>
+
+      <nav aria-label="Bộ từ vựng" className="flex gap-2 overflow-x-auto pb-1">
+        {VOCABULARY_COLLECTIONS.map((item) => (
+          <Link
+            key={item.id}
+            href={item.href}
+            aria-current={collection === item.id ? "page" : undefined}
+            className={`shrink-0 rounded-xl border px-3 py-2 text-sm font-semibold ${collection === item.id ? "border-accent bg-accent text-accent-foreground" : "border-border bg-surface text-muted"}`}
+          >
+            {item.label}
+          </Link>
+        ))}
+      </nav>
+      {collection === "tango-n3" && (
+        <p className="rounded-xl border border-border bg-surface p-3 text-sm text-muted">
+          Bộ từ vựng N3 hiện tại được giữ riêng. Bộ N3 đầy đủ theo giáo trình sẽ được bổ sung sau.
+        </p>
+      )}
+      {collection === "n2-chua-dat" && (
+        <p className="rounded-xl border border-amber-200 bg-amber-50 p-3 text-sm text-amber-800">
+          N2 chưa đạt · Bản cũ đã lưu ngày 05/09/2026 để tra lại. Đang chờ bộ N2 thay thế.
+        </p>
+      )}
 
       <div className="relative">
         <svg
@@ -66,12 +105,12 @@ function VocabularyPageContent() {
       </div>
 
       <div className="-mx-4 flex gap-2 overflow-x-auto px-4 pb-1">
-        <SelectChip
+        {collection === "current" && <SelectChip
           label="Cấp độ"
           value={filter.level}
-          options={JLPT_LEVELS.map((level) => ({ value: level, label: level }))}
+          options={JLPT_LEVELS.filter((level) => level !== "N3" && level !== "N2").map((level) => ({ value: level, label: level }))}
           onChange={(v) => setFilter((f) => ({ ...f, level: (v as JlptLevel) || undefined }))}
-        />
+        />}
         <SelectChip
           label="Loại từ"
           value={filter.partOfSpeech}

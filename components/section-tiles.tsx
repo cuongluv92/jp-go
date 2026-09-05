@@ -57,13 +57,15 @@ export function SectionTiles({
   grammarCount: number;
 }) {
   const tiles: SectionTile[] = [
-    { label: "Từ vựng", count: vocabCount, href: `/vocabulary?level=${level}`, icon: <BookIcon /> },
+    ...(level === "N3" || level === "N2"
+      ? []
+      : [{ label: "Từ vựng", count: vocabCount, href: `/vocabulary?level=${level}`, icon: <BookIcon /> }]),
     { label: "Kanji", count: kanjiCount, href: `/kanji?level=${level}`, icon: <KanjiIcon /> },
     { label: "Ngữ pháp", count: grammarCount, href: `/grammar?level=${level}`, icon: <GrammarIcon /> },
   ];
 
   return (
-    <div className="grid grid-cols-3 gap-3">
+    <div className={`grid gap-3 ${tiles.length === 2 ? "grid-cols-2" : "grid-cols-3"}`}>
       {tiles.map((tile) => (
         <Link
           key={tile.label}

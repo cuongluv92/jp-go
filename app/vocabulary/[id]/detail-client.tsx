@@ -10,6 +10,7 @@ import { StatusBadge } from "@/components/status-badge";
 import { getConjugation } from "@/lib/conjugation";
 import { getExamplesForWord } from "@/lib/data/selectors";
 import { useVocabulary } from "@/lib/data/vocabulary-context";
+import { getVocabularyCollection, VOCABULARY_COLLECTIONS } from "@/lib/data/vocabulary-collections";
 import { PART_OF_SPEECH_LABELS, type Conjugation, type ExampleType, type LearningStatus } from "@/lib/types";
 
 const STATUS_OPTIONS: { value: LearningStatus; label: string }[] = [
@@ -40,14 +41,20 @@ export function VocabularyDetailClient({ id }: { id: string }) {
   }
 
   const examples = getExamplesForWord(allExamples, word.id);
+  const collection = VOCABULARY_COLLECTIONS.find((item) => item.id === getVocabularyCollection(word))!;
   const conjugation = getConjugation(word);
   const notes = [word.commonMistake, word.similarWords, word.naturalnessNote].filter((n) => n.trim().length > 0);
 
   return (
     <div className="flex flex-col gap-5 pb-6">
-      <Link href="/vocabulary" className="text-sm text-muted">
-        ← Kho từ vựng
+      <Link href={collection.href} className="text-sm text-muted">
+        ← {collection.label}
       </Link>
+      {collection.id === "n2-chua-dat" && (
+        <p className="rounded-xl border border-amber-200 bg-amber-50 p-3 text-sm text-amber-800">
+          N2 chưa đạt · Bản lưu để tra lại, đang chờ bộ N2 thay thế.
+        </p>
+      )}
 
       <section className="rounded-2xl border border-border bg-surface p-5 shadow-sm">
         <div className="flex items-start justify-between gap-3">

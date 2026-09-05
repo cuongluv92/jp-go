@@ -4,6 +4,7 @@ import { createContext, useCallback, useContext, useEffect, useMemo, useRef, use
 
 import { sampleExamples } from "@/lib/data/sample-examples";
 import { sampleWords } from "@/lib/data/sample-words";
+import { getVocabularyCollection } from "@/lib/data/vocabulary-collections";
 import { fetchAllRows } from "@/lib/data/supabase-pagination";
 import { listAllDbVocab } from "@/lib/data/vocab-content-service";
 import { applyFlashcardGrade } from "@/lib/srs";
@@ -27,6 +28,7 @@ import type { FlashcardGrade, LearningProgress, LearningStatus, VocabExample, Vo
  */
 interface VocabularyContextValue {
   words: VocabWord[];
+  archivedWords: VocabWord[];
   examples: VocabExample[];
   getWordById: (id: string) => VocabWord | undefined;
   toggleFavorite: (id: string) => void;
@@ -264,10 +266,13 @@ export function VocabularyProvider({ children }: { children: ReactNode }) {
   }, []);
 
   const getWordById = useCallback((id: string) => words.find((w) => w.id === id), [words]);
+  const activeWords = useMemo(() => words.filter((word) => getVocabularyCollection(word) !== "n2-chua-dat"), [words]);
+  const archivedWords = useMemo(() => words.filter((word) => getVocabularyCollection(word) === "n2-chua-dat"), [words]);
 
   const value = useMemo(
     () => ({
-      words,
+      words: activeWords,
+      archivedWords,
       examples,
       getWordById,
       toggleFavorite,
@@ -278,7 +283,7 @@ export function VocabularyProvider({ children }: { children: ReactNode }) {
       setHidden,
       upsertExamples,
     }),
-    [words, examples, getWordById, toggleFavorite, setStatus, gradeFlashcard, addWord, updateWord, setHidden, upsertExamples],
+    [activeWords, archivedWords, examples, getWordById, toggleFavorite, setStatus, gradeFlashcard, addWord, updateWord, setHidden, upsertExamples],
   );
 
   return <VocabularyContext.Provider value={value}>{children}</VocabularyContext.Provider>;
