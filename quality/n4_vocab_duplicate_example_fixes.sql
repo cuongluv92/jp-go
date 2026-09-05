@@ -57,7 +57,13 @@ values
  'Buổi tối tôi cố gắng đi theo những con đường sáng và an toàn.',
  '夜は明るくて＿＿＿な道を通るようにしています。',
  '安全',1,
- '安全だ／安全なN／安全にV。日常の移動で使う。')
+ '安全だ／安全なN／安全にV。日常の移動で使う。'),
+('26190d19-605c-47cb-81a2-a933b57ddc17'::uuid,1,'exam',
+ '旅行前にスケジュールをノートにまとめました。',
+ 'Trước chuyến đi, tôi đã ghi lại lịch trình vào sổ.',
+ '旅行前に＿＿＿をノートにまとめました。',
+ 'スケジュール',1,
+ 'スケジュールを立てる／確認する／まとめる。')
 )
 update public.jp_vocab_examples e
 set example_jp = f.example_jp,
