@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 
 import { DetailExercisePanel } from "@/components/detail-exercise-panel";
 import { buildGrammarContextExercises, buildGrammarScenarioExercises } from "@/lib/data/context-exercises";
+import { buildGrammarFallbackChallenge } from "@/lib/data/detail-challenge-builders";
 import { getGrammarDetail, type GrammarDetail } from "@/lib/data/grammar-service";
 import { getCuratedN5ExercisesForTargets, type CuratedN5Exercise } from "@/lib/data/n5-curated-exercises";
 import { createClient } from "@/lib/supabase/client";
@@ -61,7 +62,7 @@ export function GrammarDetailExercises({ id }: { id: string }) {
     domain: "grammar",
     modes: ["challenge"],
     contains: true,
-    limit: 3,
+    limit: 2,
   });
 
   const units = detail.usages.length > 0
@@ -72,7 +73,7 @@ export function GrammarDetailExercises({ id }: { id: string }) {
     <section className="flex flex-col gap-3">
       <div className="px-1">
         <h2 className="text-sm font-bold">Bài tập ngữ pháp</h2>
-        <p className="mt-1 text-xs leading-relaxed text-muted">Mỗi cách dùng có tối thiểu 5 bài dựa trên đúng 3 ví dụ đã kiểm định. Không hỏi “mẫu này nghĩa là gì”.</p>
+        <p className="mt-1 text-xs leading-relaxed text-muted">Mỗi cách dùng có tối thiểu 5 bài từ đúng 3 ví dụ đã kiểm định và luôn có Challenge trong chính mục đó. Không hỏi “mẫu này nghĩa là gì”.</p>
       </div>
 
       {units.map((unit, index) => {
@@ -87,16 +88,23 @@ export function GrammarDetailExercises({ id }: { id: string }) {
           contains: true,
           limit: 1,
         });
+        const fallbackChallenge = buildGrammarFallbackChallenge(usageExamples, detail.grammar_pattern, unit.id ?? detail.id);
         const practiceItems = Array.from(new Map([...scenarioItems, ...dbItems, ...curatedPractice].map((item) => [item.id, item])).values()).slice(0, 3);
+        const challengeItems = Array.from(
+          new Map([
+            ...(index === 0 ? overallChallenge : []),
+            ...(fallbackChallenge ? [fallbackChallenge] : []),
+          ].map((item) => [item.id, item])).values(),
+        ).slice(0, 2);
 
         return (
           <DetailExercisePanel
             key={unit.id ?? "root"}
             title={units.length > 1 ? `Cách dùng ${unit.usageNo} · ${detail.grammar_pattern}` : `Bài tập · ${detail.grammar_pattern}`}
-            description="3 câu điền theo ngữ cảnh + 2 câu chọn tình huống là nền bắt buộc; câu nối mẫu/sắp xếp và Challenge được thêm khi có dữ liệu đã kiểm định."
+            description="3 câu điền theo ngữ cảnh + 2 câu chọn tình huống là nền bắt buộc; sau đó có câu nối/sắp xếp nếu phù hợp và Challenge nhiều ngữ cảnh."
             contextItems={contextItems}
             practiceItems={practiceItems}
-            challengeItems={index === 0 ? overallChallenge : []}
+            challengeItems={challengeItems}
           />
         );
       })}
