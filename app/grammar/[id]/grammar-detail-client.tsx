@@ -119,7 +119,7 @@ export function GrammarDetailClient({ id }: { id: string }) {
 
   const hasMultipleUsages = detail.usages.length > 0;
   const rootExamples = examplesForUsage(detail.examples, null);
-  const hasNotesBlock = !!detail.common_mistake || detail.similar_patterns.length > 0 || !!detail.notes;
+  const hasNotesBlock = !!detail.common_mistake || detail.similar_patterns.length > 0 || !!detail.notes || !!detail.difference_note;
 
   return (
     <div className="flex flex-col gap-5">
@@ -168,6 +168,11 @@ export function GrammarDetailClient({ id }: { id: string }) {
         <div className="rounded-xl border border-amber-200 bg-amber-50 p-3 text-xs text-amber-900">
           {detail.notes && !hasMultipleUsages && <p className="whitespace-pre-line">{detail.notes}</p>}
           {detail.common_mistake && <p className={detail.notes && !hasMultipleUsages ? "mt-1" : ""}>⚠️ {detail.common_mistake}</p>}
+          {detail.difference_note && (
+            <p className="mt-1">
+              🔎 <span className="font-semibold">Phân biệt:</span> {detail.difference_note}
+            </p>
+          )}
           {detail.similar_patterns.length > 0 && (
             <p className="mt-1">
               <span className="font-semibold">Mẫu gần nghĩa:</span> <span className="font-jp">{detail.similar_patterns.join(" ⇄ ")}</span>
