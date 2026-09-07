@@ -68,30 +68,48 @@ function exampleTypeLabel(type: string | null): string {
 
 function RelatedWordRow({
   word,
+  level,
   enhancedN3,
   linkedVocabById,
   examplesByVocabId,
 }: {
   word: KanjiWordRow;
+  level: string;
   enhancedN3: boolean;
   linkedVocabById: Record<string, LinkedVocabPreview>;
   examplesByVocabId: Record<string, LinkedVocabExample[]>;
 }) {
   const linkedVocab = word.linked_vocab_id ? linkedVocabById[word.linked_vocab_id] : undefined;
-  const example = enhancedN3 && word.linked_vocab_id ? preferredExample(examplesByVocabId[word.linked_vocab_id]) : null;
+  const example = word.linked_vocab_id ? preferredExample(examplesByVocabId[word.linked_vocab_id]) : null;
+  const sourceLevel = linkedVocab?.level && linkedVocab.level !== level ? linkedVocab.level : null;
 
   if (!enhancedN3) {
     return (
-      <p className="mt-0.5 text-xs text-muted">
-        <Link
-          href={`/vocabulary?query=${encodeURIComponent(word.word_jp)}`}
-          className="font-jp font-medium text-accent underline decoration-dotted"
-        >
-          {word.word_jp}
-        </Link>
-        {word.word_furigana && ` (${word.word_furigana})`} — {word.meaning_vi}
-        {word.is_irregular && <span className="ml-1 text-amber-600">※biến âm/đọc đặc biệt</span>}
-      </p>
+      <div className="border-t border-border/60 py-1.5 first:border-t-0 first:pt-0 last:pb-0">
+        <div className="flex flex-wrap items-baseline gap-x-1.5 gap-y-0.5 text-xs text-muted">
+          <Link
+            href={`/vocabulary?query=${encodeURIComponent(word.word_jp)}`}
+            className="font-jp text-sm font-medium text-accent underline decoration-dotted underline-offset-2"
+          >
+            {word.word_jp}
+          </Link>
+          {word.word_furigana && <span className="font-jp text-[11px] text-foreground/70">（{word.word_furigana}）</span>}
+          {word.meaning_vi && <span>— {word.meaning_vi}</span>}
+          {sourceLevel && <span className="rounded-full bg-slate-100 px-1.5 py-0.5 text-[10px] font-medium">từ {sourceLevel}</span>}
+          {word.is_irregular && <span className="text-[10px] font-semibold text-amber-700">※đọc đặc biệt</span>}
+        </div>
+        {example && (
+          <div className="mt-1 rounded-lg bg-slate-50 px-2.5 py-1.5">
+            <JapaneseSentence
+              text={example.example_jp}
+              className="text-[13px] leading-6 text-foreground"
+              priorityWordId={linkedVocab?.id}
+              furiganaTokens={example.furigana_tokens ?? []}
+            />
+            <p className="mt-0.5 text-[11px] leading-5 text-foreground/65">→ {example.example_vi}</p>
+          </div>
+        )}
+      </div>
     );
   }
 
@@ -106,6 +124,7 @@ function RelatedWordRow({
         </Link>
         {word.word_furigana && <span className="font-jp text-xs font-medium text-foreground/70">{word.word_furigana}</span>}
         {word.meaning_vi && <span className="text-xs text-foreground/75">— {word.meaning_vi}</span>}
+        {sourceLevel && <span className="rounded-full bg-slate-100 px-1.5 py-0.5 text-[10px] font-medium text-muted">từ {sourceLevel}</span>}
         {word.is_irregular && <span className="text-[10px] font-semibold text-amber-700">※đọc đặc biệt</span>}
       </div>
 
@@ -131,6 +150,7 @@ function RelatedWordRow({
 
 function ReadingBlock({
   label,
+  level,
   readings,
   words,
   enhancedN3,
@@ -138,6 +158,7 @@ function ReadingBlock({
   examplesByVocabId,
 }: {
   label: string;
+  level: string;
   readings: KanjiReadingRow[];
   words: KanjiWordRow[];
   enhancedN3: boolean;
@@ -146,12 +167,13 @@ function ReadingBlock({
 }) {
   if (readings.length === 0) return null;
   const limit = enhancedN3 ? 4 : 2;
+  const sortedReadings = [...readings].sort((a, b) => Number(b.is_main) - Number(a.is_main));
 
   return (
     <div>
       <h3 className="mb-1.5 text-xs font-semibold uppercase tracking-wide text-muted">{label}</h3>
       <div className="flex flex-col gap-2">
-        {readings.map((reading) => {
+        {sortedReadings.map((reading) => {
           const allRelatedWords = wordsForReading(words, reading.id);
           const relatedWords = allRelatedWords.slice(0, limit);
           const totalRelatedWords = allRelatedWords.length;
@@ -167,24 +189,25 @@ function ReadingBlock({
               <div className="flex items-center justify-between gap-2">
                 <p className={enhancedN3 ? "font-jp text-xl font-bold text-foreground" : "font-jp text-lg font-semibold"}>
                   {reading.reading_kana}
-                  {reading.is_main && (
-                    <span className="ml-2 align-middle font-sans text-[10px] font-semibold text-accent">ưu tiên N3</span>
-                  )}
+                  {reading.is_main ? (
+                    <span className="ml-2 align-middle font-sans text-[10px] font-semibold text-accent">ưu tiên {level}</span>
+                  ) : totalRelatedWords > 0 ? (
+                    <span className="ml-2 align-middle font-sans text-[10px] font-medium text-blue-700">âm bổ trợ</span>
+                  ) : null}
                   {reading.review_status === "needs_review" && (
                     <span className="ml-2 align-middle font-sans text-[10px] font-normal text-amber-600">cần kiểm tra lại</span>
                   )}
                 </p>
-                {enhancedN3 && totalRelatedWords > 0 && (
-                  <span className="shrink-0 text-[10px] font-medium text-muted">{totalRelatedWords} từ</span>
-                )}
+                {totalRelatedWords > 0 && <span className="shrink-0 text-[10px] font-medium text-muted">{totalRelatedWords} từ</span>}
               </div>
 
               {relatedWords.length > 0 && (
-                <div className={enhancedN3 ? "mt-1.5" : ""}>
+                <div className="mt-1.5">
                   {relatedWords.map((word) => (
                     <RelatedWordRow
                       key={word.id}
                       word={word}
+                      level={level}
                       enhancedN3={enhancedN3}
                       linkedVocabById={linkedVocabById}
                       examplesByVocabId={examplesByVocabId}
@@ -193,7 +216,7 @@ function ReadingBlock({
                 </div>
               )}
 
-              {enhancedN3 && totalRelatedWords > relatedWords.length && (
+              {totalRelatedWords > relatedWords.length && (
                 <p className="mt-1.5 text-[10px] text-muted">+ {totalRelatedWords - relatedWords.length} từ khác ở mục “Xem thêm từ ghép” bên dưới</p>
               )}
             </div>
@@ -229,29 +252,25 @@ export function KanjiDetailClient({ id }: { id: string }) {
       let nextLinkedVocabById: Record<string, LinkedVocabPreview> = {};
       let nextExamplesByVocabId: Record<string, LinkedVocabExample[]> = {};
 
-      // Chỉ N3 dùng lớp ví dụ/furigana nâng cao. N4/N5 giữ giao diện gọn cũ
-      // và không phải tải thêm dữ liệu chỉ vì component Kanji dùng chung.
-      if (data?.level === "N3") {
-        const linkedIds = Array.from(
-          new Set((data.words ?? []).map((word) => word.linked_vocab_id).filter((vocabId): vocabId is string => Boolean(vocabId))),
-        );
+      const linkedIds = Array.from(
+        new Set((data?.words ?? []).map((word) => word.linked_vocab_id).filter((vocabId): vocabId is string => Boolean(vocabId))),
+      );
 
-        if (linkedIds.length > 0) {
-          const [vocabResult, exampleResult] = await Promise.all([
-            supabase.from("jp_vocab").select("id, level, word_jp, reading_furigana, meaning_vi").in("id", linkedIds),
-            supabase
-              .from("jp_vocab_examples")
-              .select("id, vocab_id, example_no, example_type, example_jp, example_vi, furigana_tokens")
-              .in("vocab_id", linkedIds)
-              .order("example_no", { ascending: true }),
-          ]);
-          const linkedError = vocabResult.error ?? exampleResult.error;
-          if (linkedError) throw linkedError;
+      if (linkedIds.length > 0) {
+        const [vocabResult, exampleResult] = await Promise.all([
+          supabase.from("jp_vocab").select("id, level, word_jp, reading_furigana, meaning_vi").in("id", linkedIds),
+          supabase
+            .from("jp_vocab_examples")
+            .select("id, vocab_id, example_no, example_type, example_jp, example_vi, furigana_tokens")
+            .in("vocab_id", linkedIds)
+            .order("example_no", { ascending: true }),
+        ]);
+        const linkedError = vocabResult.error ?? exampleResult.error;
+        if (linkedError) throw linkedError;
 
-          nextLinkedVocabById = Object.fromEntries(((vocabResult.data ?? []) as LinkedVocabPreview[]).map((row) => [row.id, row]));
-          for (const example of (exampleResult.data ?? []) as LinkedVocabExample[]) {
-            nextExamplesByVocabId[example.vocab_id] = [...(nextExamplesByVocabId[example.vocab_id] ?? []), example];
-          }
+        nextLinkedVocabById = Object.fromEntries(((vocabResult.data ?? []) as LinkedVocabPreview[]).map((row) => [row.id, row]));
+        for (const example of (exampleResult.data ?? []) as LinkedVocabExample[]) {
+          nextExamplesByVocabId[example.vocab_id] = [...(nextExamplesByVocabId[example.vocab_id] ?? []), example];
         }
       }
 
@@ -288,12 +307,8 @@ export function KanjiDetailClient({ id }: { id: string }) {
 
   const enhancedN3 = detail.level === "N3";
   const linkedReadingIds = new Set(detail.words.map((word) => word.reading_id).filter((readingId): readingId is string => Boolean(readingId)));
-  const learningReadings = enhancedN3
-    ? detail.readings.filter((reading) => reading.is_main || linkedReadingIds.has(reading.id))
-    : detail.readings;
-  const extendedReadings = enhancedN3
-    ? detail.readings.filter((reading) => !learningReadings.some((item) => item.id === reading.id))
-    : [];
+  const learningReadings = detail.readings.filter((reading) => reading.is_main || linkedReadingIds.has(reading.id));
+  const extendedReadings = detail.readings.filter((reading) => !learningReadings.some((item) => item.id === reading.id));
   const kunReadings = learningReadings.filter((reading) => reading.reading_type === "kun");
   const onReadings = learningReadings.filter((reading) => reading.reading_type === "on");
   const extendedKunReadings = extendedReadings.filter((reading) => reading.reading_type === "kun");
@@ -329,14 +344,13 @@ export function KanjiDetailClient({ id }: { id: string }) {
 
       <KanjiStrokePractice character={detail.kanji_character} userId={userId} />
 
-      {enhancedN3 && (
-        <p className="rounded-xl border border-accent/20 bg-accent-soft px-3 py-2 text-xs leading-5 text-foreground/70">
-          N3: ưu tiên âm đang dùng trong từ học thật. Ví dụ được thu gọn; mở “Ví dụ” khi cần để xem furigana, nghe và bấm vào từ.
-        </p>
-      )}
+      <p className="rounded-xl border border-accent/20 bg-accent-soft px-3 py-2 text-xs leading-5 text-foreground/70">
+        {detail.level}: ưu tiên âm đang dùng trong từ học thật. Mỗi từ liên kết hiển thị một ví dụ; âm từ điển chưa cần học được thu gọn riêng.
+      </p>
 
       <ReadingBlock
         label={enhancedN3 ? "Âm Kun（訓読み）" : "Âm Kun"}
+        level={detail.level}
         readings={kunReadings}
         words={detail.words}
         enhancedN3={enhancedN3}
@@ -345,6 +359,7 @@ export function KanjiDetailClient({ id }: { id: string }) {
       />
       <ReadingBlock
         label={enhancedN3 ? "Âm On（音読み）" : "Âm On"}
+        level={detail.level}
         readings={onReadings}
         words={detail.words}
         enhancedN3={enhancedN3}
@@ -363,22 +378,24 @@ export function KanjiDetailClient({ id }: { id: string }) {
           </button>
           {showExtendedReadings && (
             <div className="mt-3 flex flex-col gap-4">
-              <p className="text-xs text-muted">Giữ để tra cứu, nhưng không đặt ngang hàng với âm đang dùng trong từ N3 hiện tại.</p>
+              <p className="text-xs text-muted">Giữ để tra cứu, nhưng không đặt ngang hàng với âm ưu tiên và âm có từ học thực tế.</p>
               <ReadingBlock
                 label="Kun mở rộng"
+                level={detail.level}
                 readings={extendedKunReadings}
                 words={detail.words}
                 enhancedN3={false}
-                linkedVocabById={{}}
-                examplesByVocabId={{}}
+                linkedVocabById={linkedVocabById}
+                examplesByVocabId={examplesByVocabId}
               />
               <ReadingBlock
                 label="On mở rộng"
+                level={detail.level}
                 readings={extendedOnReadings}
                 words={detail.words}
                 enhancedN3={false}
-                linkedVocabById={{}}
-                examplesByVocabId={{}}
+                linkedVocabById={linkedVocabById}
+                examplesByVocabId={examplesByVocabId}
               />
             </div>
           )}
@@ -392,23 +409,22 @@ export function KanjiDetailClient({ id }: { id: string }) {
             onClick={() => setShowAllWords((value) => !value)}
             className="text-xs font-semibold text-accent"
           >
-            {showAllWords ? "Thu gọn ▲" : `Xem thêm ${remainingWords.length} từ ghép ▼`}
+            {showAllWords ? "Thu gọn ▲" : `Xem thêm ${remainingWords.length} từ / cách đọc đặc biệt ▼`}
           </button>
           {showAllWords && (
-            <ul className="mt-2 flex flex-col gap-1.5">
+            <div className="mt-2 flex flex-col gap-1.5">
               {remainingWords.map((word) => (
-                <li key={word.id} className="rounded-lg border border-border bg-surface px-3 py-1.5 text-xs">
-                  <Link
-                    href={`/vocabulary?query=${encodeURIComponent(word.word_jp)}`}
-                    className="font-jp text-sm font-medium text-accent underline decoration-dotted"
-                  >
-                    {word.word_jp}
-                  </Link>
-                  {word.word_furigana && ` (${word.word_furigana})`} — <span className="text-muted">{word.meaning_vi}</span>
-                  {word.is_irregular && <span className="ml-1 text-amber-600">※biến âm/đọc đặc biệt</span>}
-                </li>
+                <div key={word.id} className="rounded-lg border border-border bg-surface px-3 py-2 text-xs">
+                  <RelatedWordRow
+                    word={word}
+                    level={detail.level}
+                    enhancedN3={enhancedN3}
+                    linkedVocabById={linkedVocabById}
+                    examplesByVocabId={examplesByVocabId}
+                  />
+                </div>
               ))}
-            </ul>
+            </div>
           )}
         </div>
       )}
