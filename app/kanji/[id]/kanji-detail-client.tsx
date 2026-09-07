@@ -41,6 +41,7 @@ function ReadingBlock({ label, readings, words }: { label: string; readings: Kan
             <div key={r.id} className="rounded-xl border border-border bg-surface px-3 py-2">
               <p className="font-jp text-lg font-semibold">
                 {r.reading_kana}
+                {r.is_main && <span className="ml-2 align-middle text-[10px] font-normal text-accent">ưu tiên N3</span>}
                 {r.review_status === "needs_review" && (
                   <span className="ml-2 align-middle text-[10px] font-normal text-amber-600">cần kiểm tra lại</span>
                 )}
@@ -51,7 +52,7 @@ function ReadingBlock({ label, readings, words }: { label: string; readings: Kan
                     {w.word_jp}
                   </Link>
                   {w.word_furigana && ` (${w.word_furigana})`} — {w.meaning_vi}
-                  {w.is_irregular && <span className="ml-1 text-amber-600">※bất quy tắc</span>}
+                  {w.is_irregular && <span className="ml-1 text-amber-600">※biến âm/đọc đặc biệt</span>}
                 </p>
               ))}
             </div>
@@ -68,6 +69,7 @@ export function KanjiDetailClient({ id }: { id: string }) {
   const [userId, setUserId] = useState<string | null>(cached?.userId ?? null);
   const [loading, setLoading] = useState(!cached);
   const [showAllWords, setShowAllWords] = useState(false);
+  const [showExtendedReadings, setShowExtendedReadings] = useState(false);
   const [quizStarted, setQuizStarted] = useState(false);
   const [quizResult, setQuizResult] = useState<{ correct: number; total: number } | null>(null);
 
@@ -102,8 +104,14 @@ export function KanjiDetailClient({ id }: { id: string }) {
   if (loading) return <p className="rounded-2xl border border-dashed border-border p-4 text-sm text-muted">Đang tải...</p>;
   if (!detail) return <p className="rounded-2xl border border-dashed border-border p-4 text-sm text-muted">Không tìm thấy kanji.</p>;
 
-  const kunReadings = detail.readings.filter((r) => r.reading_type === "kun");
-  const onReadings = detail.readings.filter((r) => r.reading_type === "on");
+  const linkedReadingIds = new Set(detail.words.map((word) => word.reading_id).filter((readingId): readingId is string => Boolean(readingId)));
+  const learningReadings =
+    detail.level === "N3" ? detail.readings.filter((reading) => reading.is_main || linkedReadingIds.has(reading.id)) : detail.readings;
+  const extendedReadings = detail.level === "N3" ? detail.readings.filter((reading) => !learningReadings.some((item) => item.id === reading.id)) : [];
+  const kunReadings = learningReadings.filter((r) => r.reading_type === "kun");
+  const onReadings = learningReadings.filter((r) => r.reading_type === "on");
+  const extendedKunReadings = extendedReadings.filter((r) => r.reading_type === "kun");
+  const extendedOnReadings = extendedReadings.filter((r) => r.reading_type === "on");
   const shownWordIds = new Set(
     [...kunReadings, ...onReadings].flatMap((r) => wordsForReading(detail.words, r.id).slice(0, 2).map((w) => w.id)),
   );
@@ -130,8 +138,29 @@ export function KanjiDetailClient({ id }: { id: string }) {
 
       <KanjiStrokePractice character={detail.kanji_character} userId={userId} />
 
+      {detail.level === "N3" && (
+        <p className="rounded-xl border border-accent/20 bg-accent-soft px-3 py-2 text-xs text-muted">
+          Âm dưới đây ưu tiên những cách đọc đang dùng trong từ N3 của app. Âm từ điển hiếm hoặc chưa cần cho N3 được giữ ở mục mở rộng để tra cứu, không bắt bạn học ngang hàng.
+        </p>
+      )}
+
       <ReadingBlock label="Âm Kun" readings={kunReadings} words={detail.words} />
       <ReadingBlock label="Âm On" readings={onReadings} words={detail.words} />
+
+      {extendedReadings.length > 0 && (
+        <div className="rounded-xl border border-dashed border-border p-3">
+          <button type="button" onClick={() => setShowExtendedReadings((value) => !value)} className="text-xs font-semibold text-accent">
+            {showExtendedReadings ? "Ẩn âm từ điển mở rộng ▲" : `Xem ${extendedReadings.length} âm từ điển mở rộng ▼`}
+          </button>
+          {showExtendedReadings && (
+            <div className="mt-3 flex flex-col gap-4">
+              <p className="text-xs text-muted">Các âm này vẫn là dữ liệu từ điển, nhưng không được ưu tiên học ở N3 khi chưa có từ học hiện tại làm căn cứ.</p>
+              <ReadingBlock label="Kun mở rộng" readings={extendedKunReadings} words={detail.words} />
+              <ReadingBlock label="On mở rộng" readings={extendedOnReadings} words={detail.words} />
+            </div>
+          )}
+        </div>
+      )}
 
       {remainingWords.length > 0 && (
         <div>
@@ -150,7 +179,7 @@ export function KanjiDetailClient({ id }: { id: string }) {
                     {w.word_jp}
                   </Link>
                   {w.word_furigana && ` (${w.word_furigana})`} — <span className="text-muted">{w.meaning_vi}</span>
-                  {w.is_irregular && <span className="ml-1 text-amber-600">※bất quy tắc</span>}
+                  {w.is_irregular && <span className="ml-1 text-amber-600">※biến âm/đọc đặc biệt</span>}
                 </li>
               ))}
             </ul>
