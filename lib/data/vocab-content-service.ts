@@ -17,6 +17,9 @@ export interface VocabRow {
   reading_furigana: string;
   meaning_vi: string;
   usage_note_vi: string | null;
+  particle_patterns?: string[] | null;
+  usage_patterns?: string[] | null;
+  collocations?: string[] | null;
   group_key: string | null;
   /** Chỉ N2 trở đi — xem migration 0057. NULL với từ vựng N5 (dùng lesson_no thay). */
   word_class: string | null;
@@ -114,11 +117,9 @@ function guessPartOfSpeech(entryType: VocabEntryType, wordClass: string | null, 
 
 /**
  * Map 1 dòng `jp_vocab` sang đúng shape `VocabWord` để dùng chung được với
- * toàn bộ UI/luyện tập/ôn tập hiện có (vốn thiết kế cho từ vựng N3 tĩnh).
- * Cố tình TÁI SỬ DỤNG các trường sẵn có thay vì thêm field mới vào UI:
- *   - usageNote  ← usage_note_vi (nếu trống sẽ được fallback từ focus_note đã review)
- *   - similarWords ← liệt kê nhanh group_key (để hiện trong "Lưu ý/từ dễ nhầm")
- *   - needsReview ← review_status === 'needs_review'
+ * toàn bộ UI/luyện tập/ôn tập hiện có.
+ * Các mảng particle/usage/collocation chỉ dùng dữ liệu đã lưu và kiểm định
+ * trong DB; không suy diễn thêm ở client.
  */
 export function dbVocabRowToWord(row: VocabRow, partOfSpeechOverride?: PartOfSpeech): VocabWord {
   const hasKanji = /[一-鿿]/.test(row.word_jp);
@@ -132,9 +133,9 @@ export function dbVocabRowToWord(row: VocabRow, partOfSpeechOverride?: PartOfSpe
     partOfSpeech: partOfSpeechOverride ?? guessPartOfSpeech(row.entry_type, row.word_class, row.word_jp),
     verbClass: row.verb_class ?? null,
     transitivity: row.transitivity ?? null,
-    particlePatterns: [],
-    usagePatterns: [],
-    collocations: [],
+    particlePatterns: row.particle_patterns ?? [],
+    usagePatterns: row.usage_patterns ?? [],
+    collocations: row.collocations ?? [],
     register: "neutral",
     usageNote: row.usage_note_vi ?? "",
     commonMistake: "",
