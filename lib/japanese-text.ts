@@ -67,9 +67,15 @@ function deriveVerifiedReading(word: VocabWord, dictionaryForm: string, surface:
     return surface.startsWith(surfaceStem) ? `${readingStem}${surface.slice(surfaceStem.length)}` : undefined;
   }
 
-  // な形容詞: 静か→静かだった / 安全→安全です (phần gốc không đổi cách đọc).
-  if (word.partOfSpeech === "na_adjective" && surface.startsWith(dictionaryForm)) {
-    return `${dictionaryReading}${surface.slice(dictionaryForm.length)}`;
+  // な形容詞: nguồn có thể lưu 静かな/熱心な nhưng dạng dùng thực tế là
+  // 静かで・熱心に・安全だった... Chỉ bỏ đúng な/だ cuối đã xác minh,
+  // giữ nguyên reading của phần gốc rồi nối hậu tố kana có trên bề mặt.
+  if (word.partOfSpeech === "na_adjective") {
+    const surfaceStem = dictionaryForm.replace(/[なだ]$/u, "");
+    const readingStem = dictionaryReading.replace(/[なだ]$/u, "");
+    if (surfaceStem && readingStem && surface.startsWith(surfaceStem)) {
+      return `${readingStem}${surface.slice(surfaceStem.length)}`;
+    }
   }
 
   // Động từ thường và い形容詞: bỏ đúng 1 kana cuối của dạng từ điển/read rồi
@@ -99,6 +105,12 @@ function safeStemCandidate(word: VocabWord, dictionaryForm: string): { surface: 
   if (dictionaryForm.endsWith("する") && dictionaryReading.endsWith("する")) {
     const surface = dictionaryForm.slice(0, -2);
     const reading = dictionaryReading.slice(0, -2);
+    return surface && reading && hasKanji(surface) ? { surface, reading } : null;
+  }
+
+  if (word.partOfSpeech === "na_adjective") {
+    const surface = dictionaryForm.replace(/[なだ]$/u, "");
+    const reading = dictionaryReading.replace(/[なだ]$/u, "");
     return surface && reading && hasKanji(surface) ? { surface, reading } : null;
   }
 
