@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useEffect, useState } from "react";
 
+import { JapaneseSentence } from "@/components/japanese-sentence";
 import { KanjiQuizRunner } from "@/components/kanji-quiz-runner";
 import { KanjiStrokePractice } from "@/components/kanji-stroke-practice";
 import { MaziiLink } from "@/components/mazii-link";
@@ -31,6 +32,7 @@ interface LinkedVocabExample {
   example_type: string | null;
   example_jp: string;
   example_vi: string;
+  furigana_tokens: Array<{ surface: string; reading: string }> | null;
 }
 
 interface KanjiDetailCachedData {
@@ -111,7 +113,14 @@ function WordLearningCard({
       {example && (
         <div className="mt-3 rounded-lg border border-accent/15 bg-accent-soft/40 p-2.5">
           <p className="text-[10px] font-bold uppercase tracking-wide text-accent">Ví dụ {exampleTypeLabel(example.example_type)}</p>
-          <p className="mt-1 font-jp text-sm font-semibold leading-6 text-foreground">{example.example_jp}</p>
+          <div className="mt-1">
+            <JapaneseSentence
+              text={example.example_jp}
+              className="text-sm font-semibold leading-7 text-foreground"
+              priorityWordId={linkedVocab?.id}
+              furiganaTokens={example.furigana_tokens ?? []}
+            />
+          </div>
           <p className="mt-1 text-xs leading-5 text-foreground/80">{example.example_vi}</p>
         </div>
       )}
@@ -225,7 +234,7 @@ export function KanjiDetailClient({ id }: { id: string }) {
           supabase.from("jp_vocab").select("id, level, word_jp, reading_furigana, meaning_vi").in("id", linkedIds),
           supabase
             .from("jp_vocab_examples")
-            .select("id, vocab_id, example_no, example_type, example_jp, example_vi")
+            .select("id, vocab_id, example_no, example_type, example_jp, example_vi, furigana_tokens")
             .in("vocab_id", linkedIds)
             .order("example_no", { ascending: true }),
         ]);
