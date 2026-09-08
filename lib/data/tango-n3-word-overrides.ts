@@ -1,9 +1,17 @@
 import type { VocabWord } from "@/lib/types";
 
 import { TANGO_N3_VERB_COLLOCATIONS } from "./tango-n3-verb-collocations";
+import { TANGO_N3_VERB_COLLOCATIONS_2 } from "./tango-n3-verb-collocations-2";
+import { TANGO_N3_VERB_COLLOCATIONS_3 } from "./tango-n3-verb-collocations-3";
 
 const SENSE_MARKERS = /[①-⑳]+$/u;
 const PURE_KANA = /^[\p{Script=Hiragana}\p{Script=Katakana}ー・]+$/u;
+
+const REVIEWED_VERB_COLLOCATIONS: Record<string, string[]> = {
+  ...TANGO_N3_VERB_COLLOCATIONS,
+  ...TANGO_N3_VERB_COLLOCATIONS_2,
+  ...TANGO_N3_VERB_COLLOCATIONS_3,
+};
 
 /**
  * Override có kiểm định cho bộ 単語 N3 tĩnh.
@@ -60,14 +68,18 @@ export const TANGO_N3_WORD_OVERRIDES: Record<string, Partial<VocabWord>> = {
       "邪魔 là ［名・形動］: 邪魔をする／邪魔になる và 邪魔な物 đều tự nhiên. Entry này giữ nhãn 名詞, còn cách dùng な được ghi rõ ở đây.",
     naturalnessNote: "",
   },
-  hougaku: {
-    needsReview: false,
-    naturalnessNote: "",
-  },
-  toshishita: {
-    needsReview: false,
-    naturalnessNote: "",
-  },
+  hougaku: { needsReview: false, naturalnessNote: "" },
+  toshishita: { needsReview: false, naturalnessNote: "" },
+
+  instantshokuhin: { reading: "インスタントしょくひん" },
+  manaita: { reading: "まないた" },
+  shikataganai: { reading: "しかたがない", dictionaryForm: "しかたがない" },
+  daga: { reading: "だが／ですが" },
+  are: { reading: "あれ／あれっ" },
+
+  kaku1: { word: "かく①", dictionaryForm: "かく", reading: "かく" },
+  kaku2: { word: "かく②", dictionaryForm: "かく", reading: "かく" },
+
   shaberu: {
     transitivity: "transitive",
     particlePatterns: ["人としゃべる", "内容をしゃべる"],
@@ -79,6 +91,13 @@ export const TANGO_N3_WORD_OVERRIDES: Record<string, Partial<VocabWord>> = {
     usageNote:
       "間違う は本来 自動詞。現代語では 答えを間違う・道を間違う のように他動詞的にも非常によく使うため、を があるだけで別の他動詞と決めつけない。",
   },
+  gorannireru: {
+    word: "ご覧に入れる",
+    dictionaryForm: "ご覧に入れる",
+    reading: "ごらんにいれる",
+    particlePatterns: ["〜をご覧に入れる"],
+    usageNote: "ご覧に入れる は『見せる』の謙譲語。お目にかける と同じ方向の敬語表現。",
+  },
 };
 
 export function applyTangoN3WordOverride(input: VocabWord): VocabWord {
@@ -86,11 +105,10 @@ export function applyTangoN3WordOverride(input: VocabWord): VocabWord {
   const cleanWord = input.word.replace(SENSE_MARKERS, "");
   const sourceReading = input.reading.trim().replace(SENSE_MARKERS, "");
   const safeKanaReading = !sourceReading && PURE_KANA.test(cleanWord) ? cleanWord : sourceReading;
-  const reviewedCollocations = override.collocations ?? TANGO_N3_VERB_COLLOCATIONS[input.id] ?? input.collocations;
+  const reviewedCollocations = override.collocations ?? REVIEWED_VERB_COLLOCATIONS[input.id] ?? input.collocations;
 
   return {
     ...input,
-    // Chỉ tự điền reading khi headword thuần kana/katakana; từ có Kanji phải override riêng.
     reading: safeKanaReading,
     ...override,
     collocations: reviewedCollocations,
