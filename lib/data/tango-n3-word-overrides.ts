@@ -79,6 +79,12 @@ export const TANGO_N3_WORD_OVERRIDES: Record<string, Partial<VocabWord>> = {
 
   kaku1: { word: "かく①", dictionaryForm: "かく", reading: "かく" },
   kaku2: { word: "かく②", dictionaryForm: "かく", reading: "かく" },
+  okashii1: { dictionaryForm: "おかしい", reading: "おかしい" },
+  okashii2: { dictionaryForm: "おかしい", reading: "おかしい" },
+  itadaku1: { dictionaryForm: "いただく", reading: "いただく" },
+  itadaku2: { dictionaryForm: "いただく", reading: "いただく" },
+  ukagau1: { dictionaryForm: "伺う", reading: "うかがう" },
+  ukagau2: { dictionaryForm: "伺う", reading: "うかがう" },
 
   shaberu: {
     transitivity: "transitive",
