@@ -1,5 +1,6 @@
 import { sampleExamples } from "@/lib/data/sample-examples";
 import { sampleWords } from "@/lib/data/sample-words";
+import { getConjugation } from "@/lib/conjugation";
 
 export const dynamic = "force-static";
 
@@ -29,7 +30,15 @@ export default function TangoN3AuditPage() {
   const duplicateWordReading = countBy(sampleWords, (word) => `${word.word}\u0000${word.reading}`).filter(([, count]) => count > 1);
   const exactExampleDuplicates = countBy(sampleExamples, (example) => example.exampleJp).filter(([, count]) => count > 1);
   const nearExampleDuplicates = countBy(sampleExamples, (example) => normalizeJapanese(example.exampleJp)).filter(([, count]) => count > 1);
-  const translationDuplicates = countBy(sampleExamples, (example) => example.exampleVi.trim()).filter(([, count]) => count > 1);
+
+  const translationDuplicateKeys = countBy(sampleExamples, (example) => example.exampleVi.trim()).filter(([, count]) => count > 1);
+  const translationDuplicateRefs = translationDuplicateKeys.map(([vi]) => ({
+    vi,
+    refs: sampleExamples.filter((example) => example.exampleVi.trim() === vi).map((example) => {
+      const word = sampleWords.find((item) => item.id === example.vocabId);
+      return { id: `${example.vocabId}#${example.exampleNo}`, word: word?.word, type: example.exampleType, jp: example.exampleJp };
+    }),
+  }));
 
   const badExampleDistribution = sampleWords.filter((word) => {
     const examples = examplesByWord.get(word.id) ?? [];
@@ -39,24 +48,60 @@ export default function TangoN3AuditPage() {
   const blankExamples = sampleExamples.filter((example) => !example.exampleJp.trim() || !example.exampleVi.trim() || !example.clozeJp.trim() || !example.answer.trim());
 
   const verbs = sampleWords.filter((word) => word.partOfSpeech === "verb");
-  const remainingVerbCollocations = verbs.filter((word) => word.collocations.length === 0).map((word) => ({
-    id: word.id,
-    word: word.word,
-    reading: word.reading,
-    meaning: word.meaningVi,
-    vclass: word.verbClass,
-    trans: word.transitivity,
-    particles: word.particlePatterns,
-    examples: (examplesByWord.get(word.id) ?? []).map((example) => `${example.exampleType}:${example.exampleJp}`),
-  }));
+  const iAdjectives = sampleWords.filter((word) => word.partOfSpeech === "i_adjective");
+  const naAdjectives = sampleWords.filter((word) => word.partOfSpeech === "na_adjective");
+  const remainingVerbCollocations = verbs.filter((word) => word.collocations.length === 0);
 
-  const blankReadingWords = sampleWords.filter((word) => !word.reading.trim()).map((word) => ({
+  const conjugationErrors: Array<{ id: string; word: string; pos: string; error: string }> = [];
+  for (const word of [...verbs, ...iAdjectives, ...naAdjectives]) {
+    try {
+      getConjugation(word);
+    } catch (error) {
+      conjugationErrors.push({ id: word.id, word: word.word, pos: word.partOfSpeech, error: error instanceof Error ? error.message : String(error) });
+    }
+  }
+
+  const blankReadingWords = sampleWords.filter((word) => !word.reading.trim());
+  const markedHeadwords = sampleWords.filter((word) => /[①-⑳]/u.test(word.word)).map((word) => ({
     id: word.id,
     word: word.word,
+    dictionaryForm: word.dictionaryForm ?? null,
+    reading: word.reading,
     meaning: word.meaningVi,
     pos: word.partOfSpeech,
   }));
-  const markedHeadwords = sampleWords.filter((word) => /[①-⑳]/u.test(word.word)).map((word) => ({ id: word.id, word: word.word, reading: word.reading, meaning: word.meaningVi, pos: word.partOfSpeech }));
+
+  const daily = sampleExamples.filter((e) => e.exampleType === "daily");
+  const business = sampleExamples.filter((e) => e.exampleType === "business");
+  const exam = sampleExamples.filter((e) => e.exampleType === "exam");
+
+  const toneRules: Array<[string, RegExp]> = [
+    ["よね", /よね[。！？!?]?$/u],
+    ["じゃん", /じゃん[。！？!?]?$/u],
+    ["かな", /かな[。！？!?]?$/u],
+    ["んだ", /んだ(?:よ|ね)?[。！？!?]?$/u],
+    ["だよ", /だよ[。！？!?]?$/u],
+    ["だね", /だね[。！？!?]?$/u],
+    ["よ", /(?<!です|ます)よ[。！？!?]?$/u],
+    ["ね", /(?<!です|ます)ね[。！？!?]?$/u],
+  ];
+  const dailyToneCounts = toneRules.map(([label, re]) => [label, daily.filter((e) => re.test(e.exampleJp)).length]);
+
+  const tooCasualForBusiness = business.filter((e) => /(?:じゃん|ちゃった|だよ|だね|かな|んだよ|てるよ|てるね)[。！？!?]?$/u.test(e.exampleJp));
+  const tooCasualForExam = exam.filter((e) => /(?:じゃん|ちゃった|だよ|だね|かな|んだよ|てるよ|てるね)[。！？!?]?$/u.test(e.exampleJp));
+  const tooFormalForDaily = daily.filter((e) => /(?:でございます|いたします|しております|でしょうか|くださいませ|いただけますでしょうか)/u.test(e.exampleJp));
+  const personalBusiness = business.filter((e) => /(?:友達|彼女|彼氏|妻|夫|母|父|兄|姉|弟|妹|猫|犬|家族)/u.test(e.exampleJp));
+
+  const businessStyleCounts = [
+    ["しております", business.filter((e) => /しております。?$/u.test(e.exampleJp)).length],
+    ["いたします", business.filter((e) => /いたします。?$/u.test(e.exampleJp)).length],
+    ["です", business.filter((e) => /です。?$/u.test(e.exampleJp)).length],
+    ["ます", business.filter((e) => /ます。?$/u.test(e.exampleJp)).length],
+    ["plain", business.filter((e) => /(?:だ|た|る|ない|いる|ある)。?$/u.test(e.exampleJp)).length],
+  ];
+
+  const collocationBlankByPos = countBy(sampleWords.filter((w) => w.collocations.length === 0), (w) => w.partOfSpeech);
+  const particleBlankByPos = countBy(sampleWords.filter((w) => w.particlePatterns.length === 0), (w) => w.partOfSpeech);
 
   const summary = {
     words: sampleWords.length,
@@ -69,21 +114,34 @@ export default function TangoN3AuditPage() {
     duplicateWordReadingGroups: duplicateWordReading.length,
     exactExampleDuplicateGroups: exactExampleDuplicates.length,
     nearExampleDuplicateGroups: nearExampleDuplicates.length,
-    translationDuplicateGroups: translationDuplicates.length,
+    translationDuplicateGroups: translationDuplicateRefs.length,
     verbs: verbs.length,
+    iAdjectives: iAdjectives.length,
+    naAdjectives: naAdjectives.length,
     verbMissingClassCount: verbs.filter((word) => !word.verbClass).length,
     verbMissingTransitivityCount: verbs.filter((word) => !word.transitivity).length,
     verbMissingParticlesCount: verbs.filter((word) => word.particlePatterns.length === 0).length,
     verbMissingCollocationsCount: remainingVerbCollocations.length,
+    conjugationErrorCount: conjugationErrors.length,
     markedHeadwordCount: markedHeadwords.length,
+    businessCasualCandidateCount: tooCasualForBusiness.length,
+    examCasualCandidateCount: tooCasualForExam.length,
+    dailyOverformalCandidateCount: tooFormalForDaily.length,
+    personalBusinessCandidateCount: personalBusiness.length,
+    dailyToneCounts,
+    businessStyleCounts,
+    collocationBlankByPos,
+    particleBlankByPos,
   };
 
   logSection("SUMMARY", summary);
-  logSection("REVIEWS_REMAINING", reviewWords.map((word) => ({ id: word.id, word: word.word, reading: word.reading, note: word.naturalnessNote || word.usageNote })));
-  for (let i = 0; i < remainingVerbCollocations.length; i += 10) logSection(`COLLOC_REMAIN_${String(i / 10 + 1).padStart(2, "0")}`, remainingVerbCollocations.slice(i, i + 10));
-  for (let i = 0; i < blankReadingWords.length; i += 20) logSection(`READING_REMAIN_${String(i / 20 + 1).padStart(2, "0")}`, blankReadingWords.slice(i, i + 20));
+  logSection("TRANSLATION_DUP_REFS", translationDuplicateRefs);
+  logSection("BUSINESS_CASUAL", tooCasualForBusiness.map((e) => ({ id: `${e.vocabId}#${e.exampleNo}`, jp: e.exampleJp, vi: e.exampleVi })));
+  logSection("EXAM_CASUAL", tooCasualForExam.map((e) => ({ id: `${e.vocabId}#${e.exampleNo}`, jp: e.exampleJp, vi: e.exampleVi })));
+  logSection("DAILY_OVERFORMAL", tooFormalForDaily.map((e) => ({ id: `${e.vocabId}#${e.exampleNo}`, jp: e.exampleJp, vi: e.exampleVi })));
+  logSection("PERSONAL_BUSINESS", personalBusiness.map((e) => ({ id: `${e.vocabId}#${e.exampleNo}`, jp: e.exampleJp, vi: e.exampleVi })));
+  logSection("CONJ_ERRORS", conjugationErrors);
   logSection("MARKED_HEADWORDS", markedHeadwords);
-  logSection("DUP_EXAMPLES_REMAIN", exactExampleDuplicates);
 
   return <pre style={{ whiteSpace: "pre-wrap", fontSize: 12 }}>{JSON.stringify(summary, null, 2)}</pre>;
 }
