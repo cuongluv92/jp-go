@@ -1,5 +1,7 @@
 import type { VocabWord } from "@/lib/types";
 
+import { TANGO_N3_VERB_COLLOCATIONS } from "./tango-n3-verb-collocations";
+
 const SENSE_MARKERS = /[①-⑳]+$/u;
 const PURE_KANA = /^[\p{Script=Hiragana}\p{Script=Katakana}ー・]+$/u;
 
@@ -84,11 +86,13 @@ export function applyTangoN3WordOverride(input: VocabWord): VocabWord {
   const cleanWord = input.word.replace(SENSE_MARKERS, "");
   const sourceReading = input.reading.trim().replace(SENSE_MARKERS, "");
   const safeKanaReading = !sourceReading && PURE_KANA.test(cleanWord) ? cleanWord : sourceReading;
+  const reviewedCollocations = override.collocations ?? TANGO_N3_VERB_COLLOCATIONS[input.id] ?? input.collocations;
 
   return {
     ...input,
     // Chỉ tự điền reading khi headword thuần kana/katakana; từ có Kanji phải override riêng.
     reading: safeKanaReading,
     ...override,
+    collocations: reviewedCollocations,
   };
 }
