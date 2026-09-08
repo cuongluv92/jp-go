@@ -6,15 +6,23 @@ import { MaziiLink } from "@/components/mazii-link";
 import { PersonalExamples } from "@/components/personal-examples";
 import { JapaneseSentence } from "@/components/japanese-sentence";
 import { PronounceButton } from "@/components/pronounce-button";
-import { StatusBadge } from "@/components/status-badge";
 import { getContextualConjugation } from "@/lib/conjugation-context";
 import { getExamplesForWord } from "@/lib/data/selectors";
 import { useVocabulary } from "@/lib/data/vocabulary-context";
 import { getVocabularyCollection, VOCABULARY_COLLECTIONS } from "@/lib/data/vocabulary-collections";
-import { PART_OF_SPEECH_LABELS, type Conjugation, type ExampleType, type LearningStatus, type Transitivity } from "@/lib/types";
+import {
+  LEARNING_STATUS_LABELS,
+  PART_OF_SPEECH_LABELS,
+  type Conjugation,
+  type ExampleType,
+  type LearningStatus,
+  type PartOfSpeech,
+  type Transitivity,
+  type VerbClass,
+} from "@/lib/types";
 
 const STATUS_OPTIONS: { value: LearningStatus; label: string }[] = [
-  { value: "chua_hoc", label: "Chưa nhớ" },
+  { value: "chua_hoc", label: "Chưa học" },
   { value: "dang_hoc", label: "Đang học" },
   { value: "da_nho", label: "Đã nhớ" },
 ];
@@ -44,6 +52,9 @@ export function VocabularyDetailClient({ id }: { id: string }) {
   const collection = VOCABULARY_COLLECTIONS.find((item) => item.id === getVocabularyCollection(word))!;
   const conjugation = getContextualConjugation(word);
   const notes = [word.commonMistake, word.similarWords, word.naturalnessNote].filter((n) => n.trim().length > 0);
+  const grammarLabel = getPrimaryGrammarLabel(word.partOfSpeech, word.transitivity, word.usageNote);
+  const statusLabel = LEARNING_STATUS_LABELS[word.progress.status];
+  const verbGroup = word.partOfSpeech === "verb" ? getVerbGroupDisplay(word.verbClass) : "";
 
   return (
     <div className="flex flex-col gap-5 pb-6">
@@ -68,13 +79,9 @@ export function VocabularyDetailClient({ id }: { id: string }) {
         <p className="mt-3 text-lg">{word.meaningVi}</p>
 
         <div className="mt-3 flex flex-wrap items-center gap-2">
-          <span className="rounded-full bg-slate-100 px-2.5 py-0.5 text-xs font-medium text-slate-600">
-            {PART_OF_SPEECH_LABELS[word.partOfSpeech]}
+          <span className="rounded-full bg-slate-100 px-3 py-1 text-xs font-semibold text-slate-700">
+            {grammarLabel}・{word.jlpt}・{statusLabel}
           </span>
-          <span className="rounded-full bg-slate-100 px-2.5 py-0.5 text-xs font-medium text-slate-600">
-            {word.jlpt}
-          </span>
-          <StatusBadge status={word.progress.status} />
           {word.needsReview && (
             <span className="rounded-full bg-amber-100 px-2.5 py-0.5 text-xs font-medium text-amber-700">
               ⚠ Cần kiểm tra lại
@@ -124,15 +131,8 @@ export function VocabularyDetailClient({ id }: { id: string }) {
       <section className="rounded-2xl border border-border bg-surface p-5 shadow-sm">
         <h2 className="text-sm font-semibold">Cách dùng</h2>
         <dl className="mt-3 flex flex-col gap-3 text-sm">
-          <UsageRow label="Loại từ" value={PART_OF_SPEECH_LABELS[word.partOfSpeech]} />
-          {word.partOfSpeech === "verb" && (
-            <UsageRow
-              label="Tự / tha động từ（自動詞・他動詞）"
-              value={getTransitivityDisplay(word.transitivity, word.usageNote)}
-            />
-          )}
+          {verbGroup && <UsageRow label="Nhóm động từ" value={verbGroup} />}
           <UsageListRow label="Trợ từ / mẫu thường đi kèm" items={word.particlePatterns} />
-          <UsageListRow label="Mẫu dùng" items={word.usagePatterns} />
           <UsageListRow label="Cụm thường gặp" items={word.collocations} />
           {conjugation && (
             <ConjugationTable conjugation={conjugation} meaningVi={word.meaningVi} transitivity={word.transitivity} />
@@ -158,16 +158,24 @@ export function VocabularyDetailClient({ id }: { id: string }) {
             Hiện có {examples.length}/3 ngữ cảnh. Phần còn thiếu chưa được tự điền để tránh đưa câu chưa kiểm chứng vào bài học.
           </p>
         )}
-        {examples.length === 0 && <p className="rounded-xl border border-dashed border-border p-3 text-xs text-muted">Chưa có ví dụ đã kiểm tra.</p>}
+        {examples.length === 0 && (
+          <p className="rounded-xl border border-dashed border-border p-3 text-xs text-muted">Chưa có ví dụ đã kiểm tra.</p>
+        )}
         {examples.map((example) => (
           <div key={example.exampleNo} className="rounded-2xl border border-border bg-surface p-4 shadow-sm">
             <div className="mb-2 flex flex-wrap items-center gap-1.5 pl-7 text-[10px] font-semibold">
               <span className="rounded-full bg-accent-soft px-2 py-0.5 text-accent">{EXAMPLE_TYPE_LABELS[example.exampleType]}</span>
-              {example.difficulty && <span className="rounded-full bg-slate-100 px-2 py-0.5 text-muted">Mức {example.difficulty}/3</span>}
-              {example.focusNote && <span className="rounded-full bg-amber-50 px-2 py-0.5 text-amber-800">{example.focusNote}</span>}
+              {example.difficulty && (
+                <span className="rounded-full bg-slate-100 px-2 py-0.5 text-muted">Mức {example.difficulty}/3</span>
+              )}
+              {example.focusNote && (
+                <span className="rounded-full bg-amber-50 px-2 py-0.5 text-amber-800">{example.focusNote}</span>
+              )}
             </div>
             <div className="flex items-start gap-2">
-              <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-accent/10 text-xs font-semibold text-accent">{example.exampleNo}</span>
+              <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-accent/10 text-xs font-semibold text-accent">
+                {example.exampleNo}
+              </span>
               <div className="flex-1">
                 <JapaneseSentence
                   text={example.exampleJp}
@@ -213,18 +221,32 @@ function UsageListRow({ label, items }: { label: string; items: string[] }) {
   );
 }
 
-function getTransitivityDisplay(transitivity: Transitivity, usageNote: string): string {
-  if (transitivity === "intransitive") return "Tự động từ（自動詞）";
-  if (transitivity === "transitive") return "Tha động từ（他動詞）";
+function getPrimaryGrammarLabel(partOfSpeech: PartOfSpeech, transitivity: Transitivity, usageNote: string): string {
+  if (partOfSpeech !== "verb") return PART_OF_SPEECH_LABELS[partOfSpeech];
+  if (transitivity === "intransitive") return "自動詞";
+  if (transitivity === "transitive") return "他動詞";
 
   const note = usageNote.toLowerCase();
   const explicitlyBoth =
     (usageNote.includes("自動詞") && usageNote.includes("他動詞")) ||
     (note.includes("tự động từ") && note.includes("tha động từ")) ||
     usageNote.includes("自他");
-  if (explicitlyBoth) return "Cả tự động từ và tha động từ（自動詞・他動詞）— tùy nghĩa/cấu trúc";
+  return explicitlyBoth ? "自動詞・他動詞" : "動詞";
+}
 
-  return "Không gán một nhãn đơn — học theo nghĩa, trợ từ và mẫu câu của entry này";
+function getVerbGroupDisplay(verbClass: VerbClass): string {
+  switch (verbClass) {
+    case "godan":
+      return "Nhóm 1 / 五段動詞";
+    case "ichidan":
+      return "Nhóm 2 / 一段動詞";
+    case "suru":
+      return "Nhóm 3 / 不規則動詞（する）";
+    case "kuru":
+      return "Nhóm 3 / 不規則動詞（来る）";
+    default:
+      return "";
+  }
 }
 
 const VERB_ROWS: { key: keyof Extract<Conjugation, { kind: "verb" }>; label: string }[] = [
@@ -270,7 +292,9 @@ function getConjugationGloss(
   meaningVi: string,
   transitivity: Transitivity,
 ): string {
-  if (value === "—" || value.split("／").every((part) => part === "—")) return "thường không dùng trong cách dùng này";
+  if (value === "—" || value.split("／").every((part) => part === "—")) {
+    return "thường không dùng trong cách dùng này";
+  }
   const base = compactMeaning(meaningVi);
 
   if (conjugation.kind === "verb") {
@@ -353,11 +377,16 @@ function ConjugationTable({
       <dt className="text-xs font-medium text-muted">Các thể（各活用形）</dt>
       <dd className="mt-1 grid grid-cols-1 gap-2 rounded-lg bg-slate-50 p-3 text-sm">
         {rows.map((row) => (
-          <div key={row.label} className="grid grid-cols-[minmax(0,1fr)_minmax(0,1fr)] items-start gap-3 border-b border-slate-100 pb-2 last:border-b-0 last:pb-0">
+          <div
+            key={row.label}
+            className="grid grid-cols-[minmax(0,1fr)_minmax(0,1fr)] items-start gap-3 border-b border-slate-100 pb-2 last:border-b-0 last:pb-0"
+          >
             <span className="text-xs leading-relaxed text-muted">{row.label}</span>
             <span className="min-w-0 text-right">
               <span className="font-jp block break-words font-medium">{row.value}</span>
-              <span className="mt-0.5 block break-words font-sans text-xs font-normal leading-relaxed text-muted">（{row.gloss}）</span>
+              <span className="mt-0.5 block break-words font-sans text-xs font-normal leading-relaxed text-muted">
+                （{row.gloss}）
+              </span>
             </span>
           </div>
         ))}
