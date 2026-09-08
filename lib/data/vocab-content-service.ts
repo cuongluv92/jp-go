@@ -1,6 +1,7 @@
 import type { SupabaseClient } from "@supabase/supabase-js";
 
 import { fetchAllRows } from "@/lib/data/supabase-pagination";
+import { addTransitivityNote } from "@/lib/transitivity-note";
 import type { ExampleNo, JlptLevel, LearningProgress, PartOfSpeech, Transitivity, VerbClass, VocabExample, VocabWord } from "@/lib/types";
 
 export type VocabEntryType = "word" | "phrase";
@@ -222,8 +223,8 @@ export async function listAllDbVocab(supabase: SupabaseClient): Promise<{ words:
 
   const examples = exampleRows.map((r) => vocabExampleRowToExample(r));
 
-  // Không sinh usage note mới. Khi cột usage_note_vi chưa có nội dung, dùng
-  // chính focus_note đã được review trong bộ 3 ví dụ làm fallback hiển thị.
+  // Khi usage_note_vi trống, dùng focus_note đã review làm fallback trước.
+  // Sau đó mới gắn nhãn 自動詞／他動詞 để không làm mất fallback này.
   const reviewedFocusByVocab = new Map<string, string[]>();
   for (const example of examples) {
     const note = example.focusNote?.trim();
@@ -235,9 +236,12 @@ export async function listAllDbVocab(supabase: SupabaseClient): Promise<{ words:
   const words = fillGroupSimilarWords(
     vocabRows.map((row) => {
       const word = dbVocabRowToWord(row);
-      if (word.usageNote.trim()) return word;
       const reviewedNotes = reviewedFocusByVocab.get(word.id) ?? [];
-      return reviewedNotes.length > 0 ? { ...word, usageNote: reviewedNotes.join(" · ") } : word;
+      const usageNote = word.usageNote.trim() ? word.usageNote : reviewedNotes.join(" · ");
+      return {
+        ...word,
+        usageNote: addTransitivityNote(word.partOfSpeech, word.transitivity, usageNote),
+      };
     }),
   );
 
