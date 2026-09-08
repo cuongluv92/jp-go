@@ -22,7 +22,6 @@ export interface VocabRow {
   usage_patterns?: string[] | null;
   collocations?: string[] | null;
   group_key: string | null;
-  /** Chỉ N2 trở đi — xem migration 0057. NULL với từ vựng N5 (dùng lesson_no thay). */
   word_class: string | null;
   verb_class?: Exclude<VerbClass, null> | null;
   transitivity?: Exclude<Transitivity, null> | null;
@@ -64,7 +63,6 @@ export interface VocabQuestionRow {
   correct_answer: string;
   source_type: VocabContentSourceType;
   review_status: VocabReviewStatus;
-  /** Chỉ khi source_type='pdf' (16 câu hỏi thật trích từ PDF N2) — trang PDF chứa câu hỏi. */
   source_page: number | null;
 }
 
@@ -80,13 +78,6 @@ const DEFAULT_PROGRESS: LearningProgress = {
   repetitions: 0,
 };
 
-/**
- * Map lớp từ nguồn sang nhóm PartOfSpeech mà app hiện hỗ trợ. `wordClass` gốc
- * vẫn được giữ nguyên trên VocabWord nên export/QA không mất độ chính xác.
- * 代名詞 có hành vi danh từ; 動名詞 hiện cũng thuộc nhóm noun trong UI.
- * 感動詞／連体詞／表現 không có bảng chia nên gom vào expression thay vì
- * rơi về "unclassified".
- */
 const WORD_CLASS_TO_PART_OF_SPEECH: Record<string, PartOfSpeech> = {
   動詞: "verb",
   複合動詞: "verb",
@@ -104,24 +95,19 @@ const WORD_CLASS_TO_PART_OF_SPEECH: Record<string, PartOfSpeech> = {
 };
 
 /**
- * Không có word_class thì PHẢI trả "unclassified", KHÔNG mặc định noun.
- * Riêng カタカナ nguồn cũ: đa số là danh từ mượn; từ có đuôi な được giữ
- * cách xử lý tương thích hiện tại.
+ * `word_class` là phân loại ngôn ngữ đã được kiểm định nên phải ưu tiên hơn
+ * nhãn cấu trúc `entry_type`. Một phrase vẫn có thể là 動詞 (住んでいる,
+ * 夢を見る, お目にかかる...) và cần bảng chia + nhãn 自動詞／他動詞.
+ * Chỉ khi không có word_class rõ mới dùng entry_type=phrase làm expression.
  */
 function guessPartOfSpeech(entryType: VocabEntryType, wordClass: string | null, wordJp: string): PartOfSpeech {
+  if (wordClass === "カタカナ") return wordJp.endsWith("な") ? "na_adjective" : "noun";
+  if (wordClass && wordClass in WORD_CLASS_TO_PART_OF_SPEECH) return WORD_CLASS_TO_PART_OF_SPEECH[wordClass];
   if (entryType === "phrase") return "expression";
   if (!wordClass) return "unclassified";
-  if (wordClass === "カタカナ") return wordJp.endsWith("な") ? "na_adjective" : "noun";
-  if (wordClass in WORD_CLASS_TO_PART_OF_SPEECH) return WORD_CLASS_TO_PART_OF_SPEECH[wordClass];
   return "unclassified";
 }
 
-/**
- * Map 1 dòng `jp_vocab` sang đúng shape `VocabWord` để dùng chung được với
- * toàn bộ UI/luyện tập/ôn tập hiện có.
- * Các mảng particle/usage/collocation chỉ dùng dữ liệu đã lưu và kiểm định
- * trong DB; không suy diễn thêm ở client.
- */
 export function dbVocabRowToWord(row: VocabRow, partOfSpeechOverride?: PartOfSpeech): VocabWord {
   const hasKanji = /[一-鿿]/.test(row.word_jp);
   return {
@@ -155,7 +141,6 @@ export function dbVocabRowToWord(row: VocabRow, partOfSpeechOverride?: PartOfSpe
   };
 }
 
-/** Điền `similarWords` bằng danh sách các word_jp khác cùng group_key — gọi sau khi đã có toàn bộ mảng words của cùng 1 level. */
 export function fillGroupSimilarWords(words: VocabWord[]): VocabWord[] {
   const byGroup = new Map<string, string[]>();
   for (const w of words) {
@@ -200,13 +185,6 @@ export function vocabExampleRowToExample(row: VocabExampleRow, exampleNo: Exampl
   };
 }
 
-/**
- * Toàn bộ từ vựng nạp từ DB (mọi cấp độ đã có), kèm câu ví dụ — dùng để
- * merge vào VocabularyContext bên cạnh N3 JSON tĩnh. Public content, không
- * cần đăng nhập. Dùng fetchAllRows (phân trang .range()) vì tổng số dòng
- * đã vượt 1000 (giới hạn mặc định của Supabase/PostgREST) từ khi có N2 —
- * gọi .select("*") thẳng sẽ bị cắt bớt âm thầm, làm mất hẳn dữ liệu N5.
- */
 export async function listAllDbVocab(supabase: SupabaseClient): Promise<{ words: VocabWord[]; examples: VocabExample[] }> {
   const [vocabRows, exampleRows] = await Promise.all([
     fetchAllRows<VocabRow>((from, to) =>
@@ -222,9 +200,6 @@ export async function listAllDbVocab(supabase: SupabaseClient): Promise<{ words:
   ]);
 
   const examples = exampleRows.map((r) => vocabExampleRowToExample(r));
-
-  // Khi usage_note_vi trống, dùng focus_note đã review làm fallback trước.
-  // Sau đó mới gắn nhãn 自動詞／他動詞 để không làm mất fallback này.
   const reviewedFocusByVocab = new Map<string, string[]>();
   for (const example of examples) {
     const note = example.focusNote?.trim();
@@ -238,17 +213,13 @@ export async function listAllDbVocab(supabase: SupabaseClient): Promise<{ words:
       const word = dbVocabRowToWord(row);
       const reviewedNotes = reviewedFocusByVocab.get(word.id) ?? [];
       const usageNote = word.usageNote.trim() ? word.usageNote : reviewedNotes.join(" · ");
-      return {
-        ...word,
-        usageNote: addTransitivityNote(word.partOfSpeech, word.transitivity, usageNote),
-      };
+      return { ...word, usageNote: addTransitivityNote(word.partOfSpeech, word.transitivity, usageNote) };
     }),
   );
 
   return { words, examples };
 }
 
-/** Toàn bộ câu hỏi generated cho 1 danh sách vocab_id — dùng cho quiz trắc nghiệm theo bài/theo lộ trình. */
 export async function getVocabQuestionsForIds(supabase: SupabaseClient, vocabIds: string[]): Promise<VocabQuestionRow[]> {
   if (vocabIds.length === 0) return [];
   return fetchAllRows<VocabQuestionRow>((from, to) =>
@@ -256,7 +227,6 @@ export async function getVocabQuestionsForIds(supabase: SupabaseClient, vocabIds
   );
 }
 
-/** Toàn bộ câu hỏi generated trong DB — dùng cho export Excel (sheet QUESTIONS). */
 export async function listAllVocabQuestions(supabase: SupabaseClient): Promise<VocabQuestionRow[]> {
   return fetchAllRows<VocabQuestionRow>((from, to) => supabase.from("jp_vocab_questions").select("*", { count: "exact" }).range(from, to));
 }
