@@ -125,6 +125,12 @@ export function VocabularyDetailClient({ id }: { id: string }) {
         <h2 className="text-sm font-semibold">Cách dùng</h2>
         <dl className="mt-3 flex flex-col gap-3 text-sm">
           <UsageRow label="Loại từ" value={PART_OF_SPEECH_LABELS[word.partOfSpeech]} />
+          {word.partOfSpeech === "verb" && (
+            <UsageRow
+              label="Tự / tha động từ（自動詞・他動詞）"
+              value={getTransitivityDisplay(word.transitivity, word.usageNote)}
+            />
+          )}
           <UsageListRow label="Trợ từ / mẫu thường đi kèm" items={word.particlePatterns} />
           <UsageListRow label="Mẫu dùng" items={word.usagePatterns} />
           <UsageListRow label="Cụm thường gặp" items={word.collocations} />
@@ -205,6 +211,20 @@ function UsageListRow({ label, items }: { label: string; items: string[] }) {
       </dd>
     </div>
   );
+}
+
+function getTransitivityDisplay(transitivity: Transitivity, usageNote: string): string {
+  if (transitivity === "intransitive") return "Tự động từ（自動詞）";
+  if (transitivity === "transitive") return "Tha động từ（他動詞）";
+
+  const note = usageNote.toLowerCase();
+  const explicitlyBoth =
+    (usageNote.includes("自動詞") && usageNote.includes("他動詞")) ||
+    (note.includes("tự động từ") && note.includes("tha động từ")) ||
+    usageNote.includes("自他");
+  if (explicitlyBoth) return "Cả tự động từ và tha động từ（自動詞・他動詞）— tùy nghĩa/cấu trúc";
+
+  return "Không gán một nhãn đơn — học theo nghĩa, trợ từ và mẫu câu của entry này";
 }
 
 const VERB_ROWS: { key: keyof Extract<Conjugation, { kind: "verb" }>; label: string }[] = [
