@@ -104,6 +104,12 @@ export const TANGO_N3_WORD_OVERRIDES: Record<string, Partial<VocabWord>> = {
     particlePatterns: ["〜をご覧に入れる"],
     usageNote: "ご覧に入れる は『見せる』の謙譲語。お目にかける と同じ方向の敬語表現。",
   },
+  engine: {
+    collocations: ["エンジンをかける"],
+  },
+  degozaimasu: {
+    meaningVi: "là (cách nói cực kỳ lịch sự, trang trọng)",
+  },
 };
 
 export function applyTangoN3WordOverride(input: VocabWord): VocabWord {
