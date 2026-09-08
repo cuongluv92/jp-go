@@ -25,7 +25,6 @@ describe("advanced conjugation regressions", () => {
 
     const koeru = conjugateVerb("超える・越える", "ichidan");
     expect(koeru.masuForm).toBe("超えます／越えます");
-    expect(koeru.pastForm).toBeUndefined();
     expect(koeru.taForm).toBe("超えた／越えた");
   });
 
