@@ -1,12 +1,9 @@
 import type { Conjugation, IAdjectiveConjugation, NaAdjectiveConjugation, PartOfSpeech, VerbClass, VerbConjugation } from "@/lib/types";
 
 /**
- * Bộ máy chia động từ/tính từ tiếng Nhật — đầy đủ các thể thường dùng để học
- * (không chỉ 6-7 thể cơ bản): 辞書形/ます形/て形/ない形/なかった形/た形/可能形/
- * 意向形/受身形/使役形/使役受身形/命令形/ば形. Theo quy tắc âm tiện (音便)
- * chuẩn — không cắt chuỗi máy móc. `verbClass` luôn được truyền vào (không tự
- * suy đoán từ chính tả) vì động từ 一段/五段 tận cùng bằng る không thể phân
- * biệt chỉ bằng mặt chữ (vd 食べる là 一段, 帰る là 五段).
+ * Bộ máy chia động từ/tính từ tiếng Nhật — đầy đủ các thể thường dùng để học.
+ * `verbClass` luôn được truyền vào (không tự suy đoán từ chính tả) vì động từ
+ * 一段/五段 tận cùng bằng る không thể phân biệt chỉ bằng mặt chữ.
  */
 
 const GODAN_MASU_STEM: Record<string, string> = {
@@ -21,7 +18,6 @@ const GODAN_MASU_STEM: Record<string, string> = {
   る: "り",
 };
 
-/** あ段: dùng cho ない形/なかった形/受身形/使役形/使役受身形 (う → わ, không phải あ). */
 const GODAN_A_STEM: Record<string, string> = {
   う: "わ",
   く: "か",
@@ -34,7 +30,6 @@ const GODAN_A_STEM: Record<string, string> = {
   る: "ら",
 };
 
-/** え段: dùng cho 可能形/命令形/ば形. */
 const GODAN_E_STEM: Record<string, string> = {
   う: "え",
   く: "け",
@@ -59,26 +54,30 @@ const GODAN_VOLITIONAL_STEM: Record<string, string> = {
   る: "ろ",
 };
 
-/**
- * 五段ラ行 nhưng ます形/命令形 có dạng kính ngữ cố định đặc biệt.
- * Các thể còn lại (おっしゃらない／いらっしゃって...) theo quy tắc ラ行.
- */
+/** 五段ラ行 kính ngữ có ます形/命令形 cố định. */
 const HONORIFIC_RU_SPECIALS: Record<string, { masuForm: string; imperativeForm: string }> = {
-  "下さる": { masuForm: "下さいます", imperativeForm: "下さい" },
-  "くださる": { masuForm: "くださいます", imperativeForm: "ください" },
-  "なさる": { masuForm: "なさいます", imperativeForm: "なさい" },
-  "いらっしゃる": { masuForm: "いらっしゃいます", imperativeForm: "いらっしゃい" },
-  "おっしゃる": { masuForm: "おっしゃいます", imperativeForm: "おっしゃい" },
+  下さる: { masuForm: "下さいます", imperativeForm: "下さい" },
+  くださる: { masuForm: "くださいます", imperativeForm: "ください" },
+  なさる: { masuForm: "なさいます", imperativeForm: "なさい" },
+  いらっしゃる: { masuForm: "いらっしゃいます", imperativeForm: "いらっしゃい" },
+  おっしゃる: { masuForm: "おっしゃいます", imperativeForm: "おっしゃい" },
 };
 
 const TRAILING_SENSE_MARKERS = /[①-⑳]+$/u;
+const VARIANT_SEPARATOR = /[・／]/u;
+const UNAVAILABLE_FORM = "—";
 
-/** Bỏ nhãn phân biệt nghĩa khỏi bề mặt hiển thị trước khi chia từ. */
 export function normalizeDictionaryForm(value: string): string {
   return value.trim().replace(TRAILING_SENSE_MARKERS, "");
 }
 
-/** Âm tiện của て形/た形 theo nhóm phụ âm cuối, dùng chung logic cho cả hai. */
+function splitVariants(value: string): string[] {
+  return normalizeDictionaryForm(value)
+    .split(VARIANT_SEPARATOR)
+    .map((part) => part.trim())
+    .filter(Boolean);
+}
+
 function godanTeTaSuffix(lastKana: string): { te: string; ta: string } {
   switch (lastKana) {
     case "く":
@@ -100,11 +99,7 @@ function godanTeTaSuffix(lastKana: string): { te: string; ta: string } {
   }
 }
 
-/**
- * 行く và các cụm て行く／ていく dùng 行って／いって, không phải 行いて／いいて.
- * Chỉ nhận dạng đúng các bề mặt 行く hoặc auxiliary て/で + いく để tránh
- * biến mọi từ kết thúc bằng chuỗi "いく" thành ngoại lệ.
- */
+/** 行く và auxiliary て/で行く・て/でいく dùng って/った. */
 function usesIkuTeTaException(dictionaryForm: string): boolean {
   return (
     dictionaryForm === "行く" ||
@@ -130,28 +125,29 @@ function conjugateGodan(dictionaryForm: string): VerbConjugation {
 
   const { te, ta } = usesIkuTeTaException(dictionaryForm) ? { te: "って", ta: "った" } : godanTeTaSuffix(last);
   const honorific = HONORIFIC_RU_SPECIALS[dictionaryForm];
+  const isAru = dictionaryForm === "ある";
 
   return {
     kind: "verb",
     dictionaryForm,
     masuForm: honorific?.masuForm ?? `${stem}${masuStem}ます`,
     teForm: `${stem}${te}`,
-    // ある là ngoại lệ: phủ định là ない/なかった, không phải あらない/あらなかった.
-    naiForm: dictionaryForm === "ある" ? "ない" : `${stem}${aStem}ない`,
-    naiTaForm: dictionaryForm === "ある" ? "なかった" : `${stem}${aStem}なかった`,
+    naiForm: isAru ? "ない" : `${stem}${aStem}ない`,
+    naiTaForm: isAru ? "なかった" : `${stem}${aStem}なかった`,
     taForm: `${stem}${ta}`,
-    potentialForm: `${stem}${eStem}る`,
+    // ある không có bộ 可能/受身/使役 tự nhiên để dạy như một bảng chia thông thường.
+    potentialForm: isAru ? UNAVAILABLE_FORM : `${stem}${eStem}る`,
     volitionalForm: `${stem}${volitionalStem}う`,
-    passiveForm: `${stem}${aStem}れる`,
-    causativeForm: `${stem}${aStem}せる`,
-    causativePassiveForm: `${stem}${aStem}せられる`,
+    passiveForm: isAru ? UNAVAILABLE_FORM : `${stem}${aStem}れる`,
+    causativeForm: isAru ? UNAVAILABLE_FORM : `${stem}${aStem}せる`,
+    causativePassiveForm: isAru ? UNAVAILABLE_FORM : `${stem}${aStem}せられる`,
     imperativeForm: honorific?.imperativeForm ?? `${stem}${eStem}`,
     conditionalForm: `${stem}${eStem}ば`,
   };
 }
 
 function conjugateIchidan(dictionaryForm: string): VerbConjugation {
-  const stem = dictionaryForm.slice(0, -1); // bỏ る
+  const stem = dictionaryForm.slice(0, -1);
   return {
     kind: "verb",
     dictionaryForm,
@@ -162,7 +158,6 @@ function conjugateIchidan(dictionaryForm: string): VerbConjugation {
     taForm: `${stem}た`,
     potentialForm: `${stem}られる`,
     volitionalForm: `${stem}よう`,
-    // 一段動詞: 受身形 và 可能形 trùng nhau về mặt chữ (られる), phân biệt bằng ngữ cảnh.
     passiveForm: `${stem}られる`,
     causativeForm: `${stem}させる`,
     causativePassiveForm: `${stem}させられる`,
@@ -172,8 +167,9 @@ function conjugateIchidan(dictionaryForm: string): VerbConjugation {
 }
 
 function conjugateSuru(dictionaryForm: string): VerbConjugation {
-  // Từ ghép + する (vd 確認する) chỉ chia phần する; する đứng một mình thì stem rỗng.
   const stem = dictionaryForm.endsWith("する") ? dictionaryForm.slice(0, -2) : "";
+  // Nをする → Nができる ở 可能形; tránh dạng sai như お話をできる.
+  const potentialStem = stem.endsWith("を") ? `${stem.slice(0, -1)}が` : stem;
   return {
     kind: "verb",
     dictionaryForm,
@@ -182,7 +178,7 @@ function conjugateSuru(dictionaryForm: string): VerbConjugation {
     naiForm: `${stem}しない`,
     naiTaForm: `${stem}しなかった`,
     taForm: `${stem}した`,
-    potentialForm: `${stem}できる`,
+    potentialForm: `${potentialStem}できる`,
     volitionalForm: `${stem}しよう`,
     passiveForm: `${stem}される`,
     causativeForm: `${stem}させる`,
@@ -193,7 +189,6 @@ function conjugateSuru(dictionaryForm: string): VerbConjugation {
 }
 
 function conjugateKuru(dictionaryForm: string): VerbConjugation {
-  // 来る bất quy tắc: đọc thay đổi theo từng dạng chia (来[き]ます, 来[こ]ない...).
   const stem = dictionaryForm.endsWith("来る") ? dictionaryForm.slice(0, -2) : "";
   return {
     kind: "verb",
@@ -213,31 +208,68 @@ function conjugateKuru(dictionaryForm: string): VerbConjugation {
   };
 }
 
-export function conjugateVerb(dictionaryForm: string, verbClass: VerbClass): VerbConjugation {
-  const normalized = normalizeDictionaryForm(dictionaryForm);
+function conjugateSingleVerb(dictionaryForm: string, verbClass: VerbClass): VerbConjugation {
   switch (verbClass) {
     case "godan":
-      return conjugateGodan(normalized);
+      return conjugateGodan(dictionaryForm);
     case "ichidan":
-      return conjugateIchidan(normalized);
+      return conjugateIchidan(dictionaryForm);
     case "suru":
-      return conjugateSuru(normalized);
+      return conjugateSuru(dictionaryForm);
     case "kuru":
-      return conjugateKuru(normalized);
+      return conjugateKuru(dictionaryForm);
     default:
       throw new Error(`Thiếu verbClass cho động từ "${dictionaryForm}"`);
   }
 }
 
-/** 良い/いい là ngoại lệ duy nhất trong い形容詞: chia theo gốc よ, không theo mặt chữ 良い. */
-const I_ADJECTIVE_EXCEPTIONS: Record<string, string> = {
-  良い: "よ",
-  いい: "よ",
-};
+function joinVerbVariants(forms: VerbConjugation[]): VerbConjugation {
+  const join = (key: keyof VerbConjugation) => forms.map((form) => String(form[key])).join("／");
+  return {
+    kind: "verb",
+    dictionaryForm: join("dictionaryForm"),
+    masuForm: join("masuForm"),
+    teForm: join("teForm"),
+    naiForm: join("naiForm"),
+    naiTaForm: join("naiTaForm"),
+    taForm: join("taForm"),
+    potentialForm: join("potentialForm"),
+    volitionalForm: join("volitionalForm"),
+    passiveForm: join("passiveForm"),
+    causativeForm: join("causativeForm"),
+    causativePassiveForm: join("causativePassiveForm"),
+    imperativeForm: join("imperativeForm"),
+    conditionalForm: join("conditionalForm"),
+  };
+}
+
+export function conjugateVerb(dictionaryForm: string, verbClass: VerbClass): VerbConjugation {
+  const variants = splitVariants(dictionaryForm);
+  const forms = variants.map((variant) => conjugateSingleVerb(variant, verbClass));
+  if (forms.length === 0) throw new Error(`Dạng từ điển rỗng: "${dictionaryForm}"`);
+  return forms.length === 1 ? forms[0] : joinVerbVariants(forms);
+}
+
+/**
+ * 良い/いい chia theo gốc よ. Với cụm có 良い/いい là tính từ cuối
+ * (気分がいい, 体にいい, かっこいい...), phần 良い cũng đổi thành よ.
+ * Không áp dụng bừa cho かわいい.
+ */
+const II_DERIVED_LEXEMES = new Set(["かっこいい", "ちょうどいい"]);
+const II_PHRASE_ENDING = /(?:が|に|の|は|も|で)いい$/u;
+
+function iAdjectiveStem(dictionaryForm: string): string {
+  if (dictionaryForm === "良い" || dictionaryForm === "いい") return "よ";
+  if (dictionaryForm.endsWith("良い")) return `${dictionaryForm.slice(0, -2)}よ`;
+  if (II_DERIVED_LEXEMES.has(dictionaryForm) || II_PHRASE_ENDING.test(dictionaryForm)) {
+    return `${dictionaryForm.slice(0, -2)}よ`;
+  }
+  return dictionaryForm.slice(0, -1);
+}
 
 export function conjugateIAdjective(dictionaryForm: string): IAdjectiveConjugation {
   dictionaryForm = normalizeDictionaryForm(dictionaryForm);
-  const stem = I_ADJECTIVE_EXCEPTIONS[dictionaryForm] ?? dictionaryForm.slice(0, -1);
+  const stem = iAdjectiveStem(dictionaryForm);
   return {
     kind: "i_adjective",
     dictionaryForm,
@@ -249,7 +281,6 @@ export function conjugateIAdjective(dictionaryForm: string): IAdjectiveConjugati
   };
 }
 
-/** `stem` là gốc な形容詞 chưa gắn だ, vd "静か" (không phải "静かだ"). */
 export function conjugateNaAdjective(stem: string): NaAdjectiveConjugation {
   stem = normalizeDictionaryForm(stem).replace(/[なだ]$/u, "");
   return {
@@ -263,10 +294,6 @@ export function conjugateNaAdjective(stem: string): NaAdjectiveConjugation {
   };
 }
 
-/**
- * Trả về bảng chia phù hợp với loại từ, hoặc `null` nếu loại từ đó không có
- * cách chia (danh từ, phó từ, liên từ, trợ từ, biểu hiện — theo mục 9 yêu cầu).
- */
 export function getConjugation(entry: { word: string; dictionaryForm?: string; partOfSpeech: PartOfSpeech; verbClass: VerbClass }): Conjugation | null {
   const dictionaryForm = normalizeDictionaryForm(entry.dictionaryForm || entry.word);
   if (entry.partOfSpeech === "verb" && entry.verbClass) {
