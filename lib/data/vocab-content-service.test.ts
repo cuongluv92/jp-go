@@ -53,9 +53,30 @@ describe("dbVocabRowToWord", () => {
     expect(dbVocabRowToWord(makeRow({ word_jp: "これ" })).kanji).toBe("");
   });
 
-  it("entry_type phrase → partOfSpeech mặc định expression; word không có word_class (N5) → unclassified, KHÔNG được mặc định noun", () => {
-    expect(dbVocabRowToWord(makeRow({ entry_type: "phrase" })).partOfSpeech).toBe("expression");
+  it("phrase không có word_class rõ → expression; word không có word_class → unclassified", () => {
+    expect(dbVocabRowToWord(makeRow({ entry_type: "phrase", word_class: null })).partOfSpeech).toBe("expression");
     expect(dbVocabRowToWord(makeRow({ entry_type: "word", word_class: null })).partOfSpeech).toBe("unclassified");
+  });
+
+  it("phrase có word_class 動詞 đã kiểm định vẫn phải map thành verb", () => {
+    const word = dbVocabRowToWord(
+      makeRow({
+        entry_type: "phrase",
+        word_jp: "住んでいる",
+        dictionary_form: "住む",
+        word_class: "動詞",
+        verb_class: "godan",
+        transitivity: "intransitive",
+      }),
+    );
+    expect(word.partOfSpeech).toBe("verb");
+    expect(word.dictionaryForm).toBe("住む");
+    expect(word.verbClass).toBe("godan");
+    expect(word.transitivity).toBe("intransitive");
+  });
+
+  it("phrase có word_class 名詞 đã kiểm định ưu tiên noun thay vì expression", () => {
+    expect(dbVocabRowToWord(makeRow({ entry_type: "phrase", word_jp: "会議資料", word_class: "名詞" })).partOfSpeech).toBe("noun");
   });
 
   it("N2 trở đi: lesson_no null → lessonNo undefined, word_class được map thẳng qua wordClass", () => {
@@ -64,7 +85,7 @@ describe("dbVocabRowToWord", () => {
     expect(word.wordClass).toBe("動詞");
   });
 
-  it("word_class N2 map đúng sang partOfSpeech thay vì mặc định noun", () => {
+  it("word_class map đúng sang partOfSpeech thay vì mặc định noun", () => {
     expect(dbVocabRowToWord(makeRow({ word_class: "動詞" })).partOfSpeech).toBe("verb");
     expect(dbVocabRowToWord(makeRow({ word_class: "複合動詞" })).partOfSpeech).toBe("verb");
     expect(dbVocabRowToWord(makeRow({ word_class: "動名詞" })).partOfSpeech).toBe("noun");
