@@ -76,6 +76,68 @@ const FINAL_CONTEXT_OVERRIDES: Record<string, ExampleOverride> = {
     clozeJp: "会議の内容を_____としか覚えていません。",
     answer: "ぼんやり",
   },
+
+  // Business context: các câu trước đây đúng ngữ pháp nhưng thực chất chỉ là chuyện cá nhân.
+  "propose#3": {
+    exampleJp: "結婚式場では、プロポーズの演出についての相談も受け付けています。",
+    exampleVi: "Tại địa điểm tổ chức cưới, chúng tôi cũng tiếp nhận tư vấn về cách dàn dựng màn cầu hôn.",
+    clozeJp: "結婚式場では、_____の演出についての相談も受け付けています。",
+    answer: "プロポーズ",
+  },
+  "drive#3": {
+    exampleJp: "観光会社では、海岸沿いをドライブするツアーを企画しています。",
+    exampleVi: "Công ty du lịch đang lên kế hoạch cho tour lái xe dọc bờ biển.",
+    clozeJp: "観光会社では、海岸沿いを_____するツアーを企画しています。",
+    answer: "ドライブ",
+  },
+  "koibito#3": {
+    exampleJp: "結婚相談所では、恋人との関係について相談を受けることもあります。",
+    exampleVi: "Tại dịch vụ tư vấn hôn nhân, đôi khi chúng tôi cũng tiếp nhận tư vấn về mối quan hệ với người yêu.",
+    clozeJp: "結婚相談所では、_____との関係について相談を受けることもあります。",
+    answer: "恋人",
+  },
+  "shinseki#3": {
+    exampleJp: "人事部に、親戚が取引先に勤めていることを申告しました。",
+    exampleVi: "Tôi đã khai báo với phòng nhân sự rằng người thân của mình đang làm việc tại một đối tác kinh doanh.",
+    clozeJp: "人事部に、_____が取引先に勤めていることを申告しました。",
+    answer: "親戚",
+  },
+  "musume#3": {
+    exampleJp: "保育園では、保護者から娘の園での様子について相談を受けました。",
+    exampleVi: "Tại nhà trẻ, chúng tôi đã nhận được câu hỏi của phụ huynh về tình hình của con gái họ ở trường.",
+    clozeJp: "保育園では、保護者から_____の園での様子について相談を受けました。",
+    answer: "娘",
+  },
+  "ensoku#3": {
+    exampleJp: "旅行会社が学校の遠足用にバスを手配しました。",
+    exampleVi: "Công ty du lịch đã bố trí xe buýt cho chuyến dã ngoại của trường.",
+    clozeJp: "旅行会社が学校の_____用にバスを手配しました。",
+    answer: "遠足",
+  },
+  "kozukai#3": {
+    exampleJp: "銀行の金融教育セミナーでは、子供の小遣い管理を例にお金の使い方を説明しています。",
+    exampleVi: "Trong hội thảo giáo dục tài chính của ngân hàng, việc quản lý tiền tiêu vặt của trẻ được dùng làm ví dụ để giải thích cách sử dụng tiền.",
+    clozeJp: "銀行の金融教育セミナーでは、子供の_____管理を例にお金の使い方を説明しています。",
+    answer: "小遣い",
+  },
+  "tennou#3": {
+    exampleJp: "会社の年間カレンダーでは、天皇誕生日を祝日として休業日に設定しています。",
+    exampleVi: "Trong lịch năm của công ty, ngày sinh Nhật hoàng được đặt là ngày nghỉ lễ.",
+    clozeJp: "会社の年間カレンダーでは、_____誕生日を祝日として休業日に設定しています。",
+    answer: "天皇",
+  },
+  "tip#3": {
+    exampleJp: "ホテルでは、チップの受け取りに関する社内規定を確認してください。",
+    exampleVi: "Tại khách sạn, hãy kiểm tra quy định nội bộ về việc nhận tiền boa.",
+    clozeJp: "ホテルでは、_____の受け取りに関する社内規定を確認してください。",
+    answer: "チップ",
+  },
+  "hebi#3": {
+    exampleJp: "工事現場の周辺で蛇が見つかったため、安全確認を行いました。",
+    exampleVi: "Vì phát hiện rắn quanh công trường nên chúng tôi đã tiến hành kiểm tra an toàn.",
+    clozeJp: "工事現場の周辺で_____が見つかったため、安全確認を行いました。",
+    answer: "蛇",
+  },
 };
 
 export function applyTangoN3FinalContextOverride(input: VocabExample): VocabExample {

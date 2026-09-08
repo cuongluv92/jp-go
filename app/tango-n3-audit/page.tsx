@@ -6,10 +6,11 @@ import { getContextualConjugation } from "@/lib/conjugation-context";
 export const dynamic = "force-static";
 
 const SENSE_MARKER = /[①-⑳]+$/u;
-const WORK_CONTEXT = /(会社|職場|業務|会議|部署|部長|課長|上司|部下|同僚|社員|工場|作業|製品|商品|顧客|お客様|取引|契約|納期|出荷|納品|在庫|倉庫|事務|営業|勤務|出張|研修|報告|資料|書類|メール|電話|面接|採用|入社|退職|シフト|プロジェクト|システム|サービス|店員|ホテル|受付|予約|工事|現場|機械|設備|安全|品質|売上|予算|コスト|注文|請求|会計|説明会|企画|開発|生産|担当|当社|弊社|御社|社内|朝礼|店舗|経営|発表|手続き|投資|支店|本社|出勤|早退|残業|勤務先|取引先|新人|接客|客先|納期|工程|広告|制作|運営)/u;
-const PERSONAL_CONTEXT = /(家族|母|父|姉|兄|弟|妹|祖父|祖母|叔父|叔母|友達|恋人|彼氏|彼女|子供|赤ちゃん|犬|猫|映画|旅行|休日|休みの日|家で|自宅|学校|宿題|誕生日|公園|買い物|風呂|散歩|遊び|結婚|写真|海|山|雪|歌|漫画|梅干し|料理|デート)/u;
+const WORK_CONTEXT = /(会社|職場|業務|会議|部署|部長|課長|上司|部下|同僚|社員|工場|作業|製品|商品|顧客|お客様|取引|契約|納期|出荷|納品|在庫|倉庫|事務|営業|勤務|出張|研修|報告|資料|書類|メール|電話|面接|採用|入社|退職|シフト|プロジェクト|システム|サービス|店員|ホテル|受付|予約|工事|現場|機械|設備|安全|品質|売上|予算|コスト|注文|請求|会計|説明会|企画|開発|生産|担当|当社|弊社|御社|社内|朝礼|店舗|経営|発表|手続き|投資|支店|本社|出勤|早退|残業|勤務先|取引先|新人|接客|客先|工程|広告|制作|運営|人事|銀行|金融|旅行会社|保育園|学校|式場|相談所)/u;
+const PERSONAL_CONTEXT = /(家族|母|父|姉|兄|弟|妹|祖父|祖母|叔父|叔母|親戚|娘|息子|妻|夫|友達|恋人|彼氏|彼女|子供|赤ちゃん|犬|猫|ペット|映画|旅行|休日|休みの日|家で|自宅|実家|学校|宿題|誕生日|公園|買い物|風呂|散歩|遊び|結婚|結婚式|恋愛|プロポーズ|写真|海|山|雪|歌|漫画|梅干し|料理|デート|ドライブ|遠足|小遣い|趣味|スポーツ|キャンプ|温泉|ゲーム|テレビ|コンサート|祭り|食事|レストラン|蛇|天皇|チップ)/u;
 const CASUAL_END = /(?:じゃん|ちゃった|だよ|だね|かな|んだよ|てるよ|てるね)[。！？!?]?$/u;
 const DAILY_FORMAL = /(?:でございます|いたします|しております|でしょうか|くださいませ|いただけますでしょうか)/u;
+const CONJUGATABLE = new Set(["verb", "i_adjective", "na_adjective"]);
 
 function normalizeJapanese(text: string) {
   return text.replace(/[。！？!?、\s]/gu, "").trim();
@@ -22,13 +23,7 @@ function countBy<T>(items: T[], key: (item: T) => string) {
 }
 
 function logSection(name: string, value: unknown) {
-  console.log(`INDEPENDENT_TANGO_N3_${name}`, JSON.stringify(value));
-}
-
-function chunks<T>(items: T[], size: number) {
-  const out: T[][] = [];
-  for (let i = 0; i < items.length; i += size) out.push(items.slice(i, i + size));
-  return out;
+  console.log(`FINAL_TANGO_N3_${name}`, JSON.stringify(value));
 }
 
 export default function TangoN3AuditPage() {
@@ -72,7 +67,7 @@ export default function TangoN3AuditPage() {
     }
   }
 
-  const senseDictionaryIssues = sampleWords.filter((w) => SENSE_MARKER.test(w.word) && (!w.dictionaryForm || SENSE_MARKER.test(w.dictionaryForm)));
+  const senseDictionaryIssues = sampleWords.filter((w) => CONJUGATABLE.has(w.partOfSpeech) && SENSE_MARKER.test(w.word) && (!w.dictionaryForm || SENSE_MARKER.test(w.dictionaryForm)));
   const reviewWords = sampleWords.filter((w) => w.needsReview);
   const verbMetadataIssues = verbs.filter((w) => !w.verbClass || !w.transitivity || w.particlePatterns.length === 0 || w.collocations.length === 0);
   const duplicateCollocations = sampleWords.filter((w) => new Set(w.collocations).size !== w.collocations.length);
@@ -85,13 +80,7 @@ export default function TangoN3AuditPage() {
   const businessCasual = business.filter((e) => CASUAL_END.test(e.exampleJp));
   const examCasual = exam.filter((e) => CASUAL_END.test(e.exampleJp));
   const dailyFormal = daily.filter((e) => DAILY_FORMAL.test(e.exampleJp));
-
   const templateGroups = countBy(sampleExamples, (e) => e.clozeJp.replace(/[0-9０-９]+/gu, "#")).filter(([, n]) => n >= 3);
-
-  const honorificIds = new Set(["itadaku1","itadaku2","ukagau1","ukagau2","itasu","mairu","haikensuru","orimasu","irassharu","ossharu","meshiagaru","goranninaru","omenikakaru","gorannireru"]);
-  const honorificConjugations = sampleWords
-    .filter((w) => honorificIds.has(w.id) || /(尊敬語|謙譲語)/u.test(w.usageNote))
-    .map((w) => ({ id: w.id, word: w.word, dictionaryForm: w.dictionaryForm ?? w.word, conjugation: getContextualConjugation(w) }));
 
   const summary = {
     words: sampleWords.length,
@@ -119,32 +108,30 @@ export default function TangoN3AuditPage() {
   };
 
   logSection("SUMMARY", summary);
-  logSection("SAME_SURFACE", sameSurface.map((rows) => rows.map((w) => ({ id: w.id, word: w.word, reading: w.reading, meaning: w.meaningVi, dictionaryForm: w.dictionaryForm ?? null }))));
-  logSection("STRUCTURE_ISSUES", {
+  logSection("STRUCTURE", {
     reviewWords: reviewWords.map((w) => ({ id: w.id, word: w.word })),
     idDuplicates,
     badDistribution: badDistribution.map((w) => ({ id: w.id, word: w.word })),
     clozeMismatch: clozeMismatch.map((e) => `${e.vocabId}#${e.exampleNo}`),
     blankCountIssue: blankCountIssue.map((e) => `${e.vocabId}#${e.exampleNo}`),
     senseDictionaryIssues: senseDictionaryIssues.map((w) => ({ id: w.id, word: w.word, dictionaryForm: w.dictionaryForm ?? null })),
-    verbMetadataIssues: verbMetadataIssues.map((w) => ({ id: w.id, word: w.word, verbClass: w.verbClass, transitivity: w.transitivity, particles: w.particlePatterns, collocations: w.collocations })),
+    verbMetadataIssues: verbMetadataIssues.map((w) => ({ id: w.id, word: w.word })),
+    conjErrors,
+    contextualConjErrors,
   });
-  logSection("DUPLICATES", { exactExampleDuplicates, nearExampleDuplicates, duplicateCollocations: duplicateCollocations.map((w) => ({ id: w.id, word: w.word, collocations: w.collocations })) });
+  logSection("DUPLICATES", {
+    exactExampleDuplicates,
+    nearExampleDuplicates,
+    duplicateCollocations: duplicateCollocations.map((w) => ({ id: w.id, word: w.word, collocations: w.collocations })),
+    sameSurface: sameSurface.map((rows) => rows.map((w) => ({ id: w.id, word: w.word, reading: w.reading, meaning: w.meaningVi, dictionaryForm: w.dictionaryForm ?? null }))),
+  });
   logSection("REGISTER", {
     businessCasual: businessCasual.map((e) => ({ id: `${e.vocabId}#${e.exampleNo}`, jp: e.exampleJp })),
     examCasual: examCasual.map((e) => ({ id: `${e.vocabId}#${e.exampleNo}`, jp: e.exampleJp })),
     dailyFormal: dailyFormal.map((e) => ({ id: `${e.vocabId}#${e.exampleNo}`, jp: e.exampleJp })),
   });
-  logSection("CONJ_ERRORS", { conjErrors, contextualConjErrors });
-  logSection("HONORIFIC_CONJ", honorificConjugations);
-  logSection("TEMPLATE_GROUPS", templateGroups.slice(0, 80));
-
-  for (const [i, rows] of chunks(businessPersonalNoWork, 40).entries()) {
-    logSection(`BUSINESS_PERSONAL_${String(i + 1).padStart(2, "0")}`, rows.map((e) => ({ id: `${e.vocabId}#${e.exampleNo}`, jp: e.exampleJp, vi: e.exampleVi })));
-  }
-  for (const [i, rows] of chunks(businessNoWorkMarker, 50).entries()) {
-    logSection(`BUSINESS_NO_WORK_${String(i + 1).padStart(2, "0")}`, rows.map((e) => ({ id: `${e.vocabId}#${e.exampleNo}`, jp: e.exampleJp })));
-  }
+  logSection("BUSINESS_PERSONAL", businessPersonalNoWork.map((e) => ({ id: `${e.vocabId}#${e.exampleNo}`, jp: e.exampleJp, vi: e.exampleVi })));
+  logSection("TEMPLATE_GROUPS", templateGroups.slice(0, 20));
 
   return <pre style={{ whiteSpace: "pre-wrap", fontSize: 12 }}>{JSON.stringify(summary, null, 2)}</pre>;
 }
