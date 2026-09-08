@@ -13,6 +13,10 @@ function countBy<T>(items: T[], key: (item: T) => string) {
   return [...map.entries()].sort((a, b) => b[1] - a[1]);
 }
 
+function logSection(name: string, value: unknown) {
+  console.log(`TANGO_N3_${name}`, JSON.stringify(value));
+}
+
 export default function TangoN3AuditPage() {
   const examplesByWord = new Map<string, typeof sampleExamples>();
   for (const example of sampleExamples) {
@@ -80,41 +84,35 @@ export default function TangoN3AuditPage() {
     posDistribution,
     transitivityDistribution,
     reviewCount: reviewWords.length,
-    reviewWords: reviewWords.slice(0, 200),
     badExampleDistributionCount: badExampleDistribution.length,
-    badExampleDistribution: badExampleDistribution.slice(0, 100),
     clozeMismatchCount: clozeMismatch.length,
-    clozeMismatch: clozeMismatch.slice(0, 100),
     blankExamplesCount: blankExamples.length,
     duplicateWordReadingGroups: duplicateWordReading.length,
-    duplicateWordReading: duplicateWordReading.slice(0, 100),
     exactExampleDuplicateGroups: exactExampleDuplicates.length,
-    exactExampleDuplicates: exactExampleDuplicates.slice(0, 100),
     nearExampleDuplicateGroups: nearExampleDuplicates.length,
-    nearExampleDuplicates: nearExampleDuplicates.slice(0, 100),
     translationDuplicateGroups: translationDuplicates.length,
-    translationDuplicates: translationDuplicates.slice(0, 100),
     verbs: verbs.length,
     verbMissingClassCount: verbMissingClass.length,
-    verbMissingClass: verbMissingClass.slice(0, 100),
     verbMissingTransitivityCount: verbMissingTransitivity.length,
-    verbMissingTransitivity: verbMissingTransitivity.slice(0, 100),
     verbMissingParticlesCount: verbMissingParticles.length,
-    verbMissingParticles: verbMissingParticles.slice(0, 100),
     verbMissingCollocationsCount: verbMissingCollocations.length,
-    verbMissingCollocations: verbMissingCollocations.slice(0, 100),
     nonVerbWithVerbClassCount: nonVerbWithVerbClass.length,
-    nonVerbWithVerbClass: nonVerbWithVerbClass.slice(0, 100),
     suspiciousIAdjectiveCount: suspiciousIAdjectives.length,
-    suspiciousIAdjectives: suspiciousIAdjectives.slice(0, 100),
     wrapperCandidateCount: wrapperCandidates.length,
-    wrapperCandidates: wrapperCandidates.slice(0, 100),
     dailyExamples: dailyExamples.length,
     conversationalDaily,
     politeDaily,
   };
 
-  console.log("TANGO_N3_AUDIT", JSON.stringify(summary));
+  logSection("SUMMARY", summary);
+  logSection("REVIEWS", reviewWords);
+  logSection("DUP_WORDS", duplicateWordReading);
+  logSection("DUP_EXAMPLES", exactExampleDuplicates);
+  logSection("DUP_TRANSLATIONS", translationDuplicates.slice(0, 200));
+  logSection("VERB_ISSUES", { verbMissingClass, verbMissingTransitivity, verbMissingParticles, verbMissingCollocations });
+  logSection("CLASS_ISSUES", { nonVerbWithVerbClass, suspiciousIAdjectives });
+  logSection("WRAPPERS", wrapperCandidates);
+  logSection("STRUCTURE", { badExampleDistribution, clozeMismatch, blankExamples, nearExampleDuplicates });
 
   return <pre style={{ whiteSpace: "pre-wrap", fontSize: 12 }}>{JSON.stringify(summary, null, 2)}</pre>;
 }
