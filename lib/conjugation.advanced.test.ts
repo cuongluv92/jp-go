@@ -13,6 +13,14 @@ describe("advanced conjugation regressions", () => {
     expect(conjugateIAdjective("かわいい").negativeForm).toBe("かわいくない");
   });
 
+  it("chia đúng âm tiện của 行く trong うまくいく", () => {
+    const result = conjugateVerb("うまくいく", "godan");
+    expect(result.masuForm).toBe("うまくいきます");
+    expect(result.naiForm).toBe("うまくいかない");
+    expect(result.teForm).toBe("うまくいって");
+    expect(result.taForm).toBe("うまくいった");
+  });
+
   it("chia riêng từng chính tả trong entry nhiều biến thể", () => {
     const mixed = conjugateVerb("交ざる・混ざる", "godan");
     expect(mixed.masuForm).toBe("交ざります／混ざります");
