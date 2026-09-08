@@ -35,9 +35,15 @@ export function addTransitivityNote(
 
   const note = usageNote.trim();
   if (transitivity === "intransitive") {
+    if (note.includes("自動詞") || note.toLowerCase().includes("tự động từ")) {
+      return `Tự/tha: ${note}`;
+    }
     return `Tự/tha: Tự động từ（自動詞）.${note ? ` ${note}` : ""}`;
   }
   if (transitivity === "transitive") {
+    if (note.includes("他動詞") || note.toLowerCase().includes("tha động từ")) {
+      return `Tự/tha: ${note}`;
+    }
     return `Tự/tha: Tha động từ（他動詞）.${note ? ` ${note}` : ""}`;
   }
   if (isBothTransitivityExplicit(note)) {
