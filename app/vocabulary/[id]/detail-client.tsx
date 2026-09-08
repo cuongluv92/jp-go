@@ -11,7 +11,7 @@ import { getConjugation } from "@/lib/conjugation";
 import { getExamplesForWord } from "@/lib/data/selectors";
 import { useVocabulary } from "@/lib/data/vocabulary-context";
 import { getVocabularyCollection, VOCABULARY_COLLECTIONS } from "@/lib/data/vocabulary-collections";
-import { PART_OF_SPEECH_LABELS, type Conjugation, type ExampleType, type LearningStatus } from "@/lib/types";
+import { PART_OF_SPEECH_LABELS, type Conjugation, type ExampleType, type LearningStatus, type Transitivity } from "@/lib/types";
 
 const STATUS_OPTIONS: { value: LearningStatus; label: string }[] = [
   { value: "chua_hoc", label: "Chưa nhớ" },
@@ -128,7 +128,9 @@ export function VocabularyDetailClient({ id }: { id: string }) {
           <UsageListRow label="Trợ từ / mẫu thường đi kèm" items={word.particlePatterns} />
           <UsageListRow label="Mẫu dùng" items={word.usagePatterns} />
           <UsageListRow label="Cụm thường gặp" items={word.collocations} />
-          {conjugation && <ConjugationTable conjugation={conjugation} />}
+          {conjugation && (
+            <ConjugationTable conjugation={conjugation} meaningVi={word.meaningVi} transitivity={word.transitivity} />
+          )}
           <UsageRow label="Cách dùng thực tế" value={word.usageNote} />
           {notes.length > 0 && (
             <div>
@@ -206,47 +208,137 @@ function UsageListRow({ label, items }: { label: string; items: string[] }) {
 }
 
 const VERB_ROWS: { key: keyof Extract<Conjugation, { kind: "verb" }>; label: string }[] = [
-  { key: "dictionaryForm", label: "辞書形" },
-  { key: "masuForm", label: "ます形" },
-  { key: "teForm", label: "て形" },
-  { key: "naiForm", label: "ない形" },
-  { key: "naiTaForm", label: "なかった形" },
-  { key: "taForm", label: "た形" },
-  { key: "potentialForm", label: "可能形" },
-  { key: "volitionalForm", label: "意向形" },
-  { key: "passiveForm", label: "受身形" },
-  { key: "causativeForm", label: "使役形" },
-  { key: "causativePassiveForm", label: "使役受身形" },
-  { key: "imperativeForm", label: "命令形" },
-  { key: "conditionalForm", label: "ば形" },
+  { key: "dictionaryForm", label: "Dạng từ điển（辞書形）" },
+  { key: "masuForm", label: "Dạng lịch sự（ます形）" },
+  { key: "teForm", label: "Thể て（て形）" },
+  { key: "naiForm", label: "Phủ định hiện tại（現在否定形／ない形）" },
+  { key: "naiTaForm", label: "Phủ định quá khứ（過去否定形／なかった形）" },
+  { key: "taForm", label: "Quá khứ（過去形／た形）" },
+  { key: "potentialForm", label: "Khả năng（可能形）" },
+  { key: "volitionalForm", label: "Ý chí / rủ rê（意向形）" },
+  { key: "passiveForm", label: "Bị động（受身形）" },
+  { key: "causativeForm", label: "Sai khiến（使役形）" },
+  { key: "causativePassiveForm", label: "Sai khiến bị động（使役受身形）" },
+  { key: "imperativeForm", label: "Mệnh lệnh（命令形）" },
+  { key: "conditionalForm", label: "Điều kiện（条件形／ば形）" },
 ];
 
 const ADJECTIVE_ROWS: {
   key: keyof Extract<Conjugation, { kind: "i_adjective" | "na_adjective" }>;
   label: string;
 }[] = [
-  { key: "dictionaryForm", label: "辞書形" },
-  { key: "negativeForm", label: "否定形" },
-  { key: "pastForm", label: "過去形" },
-  { key: "negativePastForm", label: "過去否定形" },
-  { key: "teForm", label: "て形" },
-  { key: "conditionalForm", label: "条件形" },
+  { key: "dictionaryForm", label: "Dạng gốc（辞書形）" },
+  { key: "negativeForm", label: "Phủ định hiện tại（現在否定形）" },
+  { key: "pastForm", label: "Quá khứ（過去形）" },
+  { key: "negativePastForm", label: "Phủ định quá khứ（過去否定形）" },
+  { key: "teForm", label: "Dạng nối（て形）" },
+  { key: "conditionalForm", label: "Điều kiện（条件形）" },
 ];
 
-function ConjugationTable({ conjugation }: { conjugation: Conjugation }) {
+function compactMeaning(meaningVi: string): string {
+  const parts = meaningVi
+    .split(/[;；]/u)
+    .map((part) => part.trim())
+    .filter(Boolean);
+  return (parts.slice(0, 2).join(" / ") || meaningVi.trim()).replace(/[。.]$/u, "");
+}
+
+function getConjugationGloss(
+  conjugation: Conjugation,
+  key: string,
+  value: string,
+  meaningVi: string,
+  transitivity: Transitivity,
+): string {
+  if (value === "—" || value.split("／").every((part) => part === "—")) return "thường không dùng";
+  const base = compactMeaning(meaningVi);
+
+  if (conjugation.kind === "verb") {
+    switch (key) {
+      case "dictionaryForm":
+        return base;
+      case "masuForm":
+        return `${base} — lịch sự`;
+      case "teForm":
+        return `${base}; dạng nối / dùng trong nhiều mẫu câu`;
+      case "naiForm":
+        return `không ${base}`;
+      case "naiTaForm":
+        return `đã không ${base}`;
+      case "taForm":
+        return `đã ${base}`;
+      case "potentialForm":
+        return `có thể ${base}`;
+      case "volitionalForm":
+        return `cùng/hãy ${base}; sẽ ${base} thôi`;
+      case "passiveForm":
+        return transitivity === "transitive" ? `được/bị ${base}` : `bị ảnh hưởng bởi việc ${base}`;
+      case "causativeForm":
+        return `bắt/cho ai ${base}`;
+      case "causativePassiveForm":
+        return `bị bắt phải ${base}`;
+      case "imperativeForm":
+        return `hãy ${base}! — mệnh lệnh mạnh`;
+      case "conditionalForm":
+        return `nếu ${base}`;
+      default:
+        return base;
+    }
+  }
+
+  switch (key) {
+    case "dictionaryForm":
+      return base;
+    case "negativeForm":
+      return `không ${base}`;
+    case "pastForm":
+      return `đã ${base}`;
+    case "negativePastForm":
+      return `đã không ${base}`;
+    case "teForm":
+      return `${base}, và/vì…`;
+    case "conditionalForm":
+      return `nếu ${base}`;
+    default:
+      return base;
+  }
+}
+
+function ConjugationTable({
+  conjugation,
+  meaningVi,
+  transitivity,
+}: {
+  conjugation: Conjugation;
+  meaningVi: string;
+  transitivity: Transitivity;
+}) {
   const rows =
     conjugation.kind === "verb"
-      ? VERB_ROWS.map((r) => ({ label: r.label, value: conjugation[r.key] }))
-      : ADJECTIVE_ROWS.map((r) => ({ label: r.label, value: conjugation[r.key] }));
+      ? VERB_ROWS.map((r) => ({
+          key: r.key,
+          label: r.label,
+          value: conjugation[r.key],
+          gloss: getConjugationGloss(conjugation, r.key, conjugation[r.key], meaningVi, transitivity),
+        }))
+      : ADJECTIVE_ROWS.map((r) => ({
+          key: r.key,
+          label: r.label,
+          value: conjugation[r.key],
+          gloss: getConjugationGloss(conjugation, r.key, conjugation[r.key], meaningVi, transitivity),
+        }));
 
   return (
     <div>
-      <dt className="text-xs font-medium text-muted">Cách chia</dt>
-      <dd className="font-jp mt-1 grid grid-cols-1 gap-x-3 gap-y-1.5 rounded-lg bg-slate-50 p-3 text-sm">
+      <dt className="text-xs font-medium text-muted">Các thể（各活用形）</dt>
+      <dd className="mt-1 grid grid-cols-1 gap-2 rounded-lg bg-slate-50 p-3 text-sm">
         {rows.map((row) => (
-          <div key={row.label} className="flex items-baseline justify-between gap-3">
-            <span className="shrink-0 text-muted">{row.label}</span>
-            <span className="text-right font-medium">{row.value}</span>
+          <div key={row.label} className="grid grid-cols-[minmax(0,1fr)_minmax(0,1fr)] items-start gap-3 border-b border-slate-100 pb-2 last:border-b-0 last:pb-0">
+            <span className="text-xs leading-relaxed text-muted">{row.label}</span>
+            <span className="min-w-0 text-right">
+              <span className="font-jp block break-words font-medium">{row.value}</span>
+              <span className="mt-0.5 block break-words font-sans text-xs font-normal leading-relaxed text-muted">（{row.gloss}）</span>
+            </span>
           </div>
         ))}
       </dd>
