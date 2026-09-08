@@ -7,7 +7,7 @@ import { PersonalExamples } from "@/components/personal-examples";
 import { JapaneseSentence } from "@/components/japanese-sentence";
 import { PronounceButton } from "@/components/pronounce-button";
 import { StatusBadge } from "@/components/status-badge";
-import { getConjugation } from "@/lib/conjugation";
+import { getContextualConjugation } from "@/lib/conjugation-context";
 import { getExamplesForWord } from "@/lib/data/selectors";
 import { useVocabulary } from "@/lib/data/vocabulary-context";
 import { getVocabularyCollection, VOCABULARY_COLLECTIONS } from "@/lib/data/vocabulary-collections";
@@ -42,7 +42,7 @@ export function VocabularyDetailClient({ id }: { id: string }) {
 
   const examples = getExamplesForWord(allExamples, word.id);
   const collection = VOCABULARY_COLLECTIONS.find((item) => item.id === getVocabularyCollection(word))!;
-  const conjugation = getConjugation(word);
+  const conjugation = getContextualConjugation(word);
   const notes = [word.commonMistake, word.similarWords, word.naturalnessNote].filter((n) => n.trim().length > 0);
 
   return (
@@ -250,7 +250,7 @@ function getConjugationGloss(
   meaningVi: string,
   transitivity: Transitivity,
 ): string {
-  if (value === "—" || value.split("／").every((part) => part === "—")) return "thường không dùng";
+  if (value === "—" || value.split("／").every((part) => part === "—")) return "thường không dùng trong cách dùng này";
   const base = compactMeaning(meaningVi);
 
   if (conjugation.kind === "verb") {
