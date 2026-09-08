@@ -27,10 +27,45 @@ export default function TangoN3AuditPage() {
 
   const reviewWords = sampleWords
     .filter((word) => word.needsReview || /cần|xác nhận|không chắc|chưa chắc|người bản ngữ/iu.test(`${word.usageNote} ${word.naturalnessNote}`))
-    .map((word) => ({ id: word.id, word: word.word, reading: word.reading, pos: word.partOfSpeech, note: word.naturalnessNote || word.usageNote }));
+    .map((word) => ({
+      id: word.id,
+      word: word.word,
+      reading: word.reading,
+      meaning: word.meaningVi,
+      pos: word.partOfSpeech,
+      vclass: word.verbClass,
+      trans: word.transitivity,
+      particles: word.particlePatterns,
+      collocations: word.collocations,
+      usage: word.usageNote,
+      naturalness: word.naturalnessNote,
+      needsReview: word.needsReview,
+    }));
 
-  const duplicateWordReading = countBy(sampleWords, (word) => `${word.word}\u0000${word.reading}`).filter(([, count]) => count > 1);
-  const exactExampleDuplicates = countBy(sampleExamples, (example) => example.exampleJp).filter(([, count]) => count > 1);
+  const duplicateWordReadingKeys = countBy(sampleWords, (word) => `${word.word}\u0000${word.reading}`).filter(([, count]) => count > 1);
+  const duplicateWordReading = duplicateWordReadingKeys.map(([key]) => {
+    const [word, reading] = key.split("\u0000");
+    return sampleWords.filter((item) => item.word === word && item.reading === reading).map((item) => ({
+      id: item.id,
+      word: item.word,
+      reading: item.reading,
+      meaning: item.meaningVi,
+      pos: item.partOfSpeech,
+      vclass: item.verbClass,
+      trans: item.transitivity,
+      particles: item.particlePatterns,
+    }));
+  });
+
+  const exactExampleDuplicateKeys = countBy(sampleExamples, (example) => example.exampleJp).filter(([, count]) => count > 1);
+  const exactExampleDuplicates = exactExampleDuplicateKeys.map(([jp]) => ({
+    jp,
+    refs: sampleExamples.filter((example) => example.exampleJp === jp).map((example) => {
+      const word = sampleWords.find((item) => item.id === example.vocabId);
+      return { vocabId: example.vocabId, word: word?.word, meaning: word?.meaningVi, no: example.exampleNo, type: example.exampleType, vi: example.exampleVi, cloze: example.clozeJp, answer: example.answer };
+    }),
+  }));
+
   const nearExampleDuplicates = countBy(sampleExamples, (example) => normalizeJapanese(example.exampleJp)).filter(([, count]) => count > 1);
   const translationDuplicates = countBy(sampleExamples, (example) => example.exampleVi.trim()).filter(([, count]) => count > 1);
 
@@ -56,13 +91,27 @@ export default function TangoN3AuditPage() {
   const verbMissingParticles = verbs.filter((word) => word.particlePatterns.length === 0).map((word) => ({ id: word.id, word: word.word }));
   const verbMissingCollocations = verbs.filter((word) => word.collocations.length === 0).map((word) => ({ id: word.id, word: word.word }));
 
+  const verbAuditRows = verbs.map((word) => ({
+    id: word.id,
+    word: word.word,
+    reading: word.reading,
+    meaning: word.meaningVi,
+    vclass: word.verbClass,
+    trans: word.transitivity,
+    particles: word.particlePatterns,
+    examples: (examplesByWord.get(word.id) ?? []).map((example) => `${example.exampleType}:${example.exampleJp}`),
+  }));
+
   const nonVerbWithVerbClass = sampleWords
     .filter((word) => word.partOfSpeech !== "verb" && word.verbClass)
     .map((word) => ({ id: word.id, word: word.word, pos: word.partOfSpeech, verbClass: word.verbClass }));
 
   const suspiciousIAdjectives = sampleWords
-    .filter((word) => word.partOfSpeech === "i_adjective" && !word.word.endsWith("い"))
-    .map((word) => ({ id: word.id, word: word.word, reading: word.reading }));
+    .filter((word) => word.partOfSpeech === "i_adjective" && (!word.word.replace(/[①-⑳]/gu, "").endsWith("い") || !word.reading.trim()))
+    .map((word) => ({ id: word.id, word: word.word, reading: word.reading, meaning: word.meaningVi, particles: word.particlePatterns, note: word.usageNote }));
+
+  const blankReadingWords = sampleWords.filter((word) => !word.reading.trim()).map((word) => ({ id: word.id, word: word.word, meaning: word.meaningVi, pos: word.partOfSpeech }));
+  const markedHeadwords = sampleWords.filter((word) => /[①-⑳]/u.test(word.word)).map((word) => ({ id: word.id, word: word.word, reading: word.reading, meaning: word.meaningVi, pos: word.partOfSpeech }));
 
   const dailyExamples = sampleExamples.filter((example) => example.exampleType === "daily");
   const conversationalDaily = dailyExamples.filter((example) => /(?:よ|ね|よね|んだ|んだよ|じゃん|かな|かも|って|だよ)[。！!?]?$/u.test(example.exampleJp)).length;
@@ -87,6 +136,8 @@ export default function TangoN3AuditPage() {
     badExampleDistributionCount: badExampleDistribution.length,
     clozeMismatchCount: clozeMismatch.length,
     blankExamplesCount: blankExamples.length,
+    blankReadingCount: blankReadingWords.length,
+    markedHeadwordCount: markedHeadwords.length,
     duplicateWordReadingGroups: duplicateWordReading.length,
     exactExampleDuplicateGroups: exactExampleDuplicates.length,
     nearExampleDuplicateGroups: nearExampleDuplicates.length,
@@ -105,14 +156,13 @@ export default function TangoN3AuditPage() {
   };
 
   logSection("SUMMARY", summary);
-  logSection("REVIEWS", reviewWords);
-  logSection("DUP_WORDS", duplicateWordReading);
-  logSection("DUP_EXAMPLES", exactExampleDuplicates);
-  logSection("DUP_TRANSLATIONS", translationDuplicates.slice(0, 200));
-  logSection("VERB_ISSUES", { verbMissingClass, verbMissingTransitivity, verbMissingParticles, verbMissingCollocations });
-  logSection("CLASS_ISSUES", { nonVerbWithVerbClass, suspiciousIAdjectives });
+  logSection("REVIEWS_FULL", reviewWords);
+  logSection("DUP_WORD_REFS", duplicateWordReading);
+  logSection("DUP_EXAMPLE_REFS", exactExampleDuplicates);
+  logSection("CLASS_ISSUES_FULL", { nonVerbWithVerbClass, suspiciousIAdjectives, blankReadingWords, markedHeadwords });
   logSection("WRAPPERS", wrapperCandidates);
   logSection("STRUCTURE", { badExampleDistribution, clozeMismatch, blankExamples, nearExampleDuplicates });
+  for (let i = 0; i < verbAuditRows.length; i += 20) logSection(`VERBS_${String(i / 20 + 1).padStart(2, "0")}`, verbAuditRows.slice(i, i + 20));
 
   return <pre style={{ whiteSpace: "pre-wrap", fontSize: 12 }}>{JSON.stringify(summary, null, 2)}</pre>;
 }
