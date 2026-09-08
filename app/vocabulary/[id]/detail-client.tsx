@@ -55,6 +55,7 @@ export function VocabularyDetailClient({ id }: { id: string }) {
   const grammarLabel = getPrimaryGrammarLabel(word.partOfSpeech, word.transitivity, word.usageNote);
   const statusLabel = LEARNING_STATUS_LABELS[word.progress.status];
   const verbGroup = word.partOfSpeech === "verb" ? getVerbGroupDisplay(word.verbClass) : "";
+  const topBadge = [grammarLabel, verbGroup, word.jlpt, statusLabel].filter(Boolean).join("・");
 
   return (
     <div className="flex flex-col gap-5 pb-6">
@@ -80,7 +81,7 @@ export function VocabularyDetailClient({ id }: { id: string }) {
 
         <div className="mt-3 flex flex-wrap items-center gap-2">
           <span className="rounded-full bg-slate-100 px-3 py-1 text-xs font-semibold text-slate-700">
-            {grammarLabel}・{word.jlpt}・{statusLabel}
+            {topBadge}
           </span>
           {word.needsReview && (
             <span className="rounded-full bg-amber-100 px-2.5 py-0.5 text-xs font-medium text-amber-700">
@@ -131,7 +132,6 @@ export function VocabularyDetailClient({ id }: { id: string }) {
       <section className="rounded-2xl border border-border bg-surface p-5 shadow-sm">
         <h2 className="text-sm font-semibold">Cách dùng</h2>
         <dl className="mt-3 flex flex-col gap-3 text-sm">
-          {verbGroup && <UsageRow label="Nhóm động từ" value={verbGroup} />}
           <UsageListRow label="Trợ từ / mẫu thường đi kèm" items={word.particlePatterns} />
           <UsageListRow label="Cụm thường gặp" items={word.collocations} />
           {conjugation && (
@@ -237,13 +237,12 @@ function getPrimaryGrammarLabel(partOfSpeech: PartOfSpeech, transitivity: Transi
 function getVerbGroupDisplay(verbClass: VerbClass): string {
   switch (verbClass) {
     case "godan":
-      return "Nhóm 1 / 五段動詞";
+      return "Nhóm 1";
     case "ichidan":
-      return "Nhóm 2 / 一段動詞";
+      return "Nhóm 2";
     case "suru":
-      return "Nhóm 3 / 不規則動詞（する）";
     case "kuru":
-      return "Nhóm 3 / 不規則動詞（来る）";
+      return "Nhóm 3";
     default:
       return "";
   }
