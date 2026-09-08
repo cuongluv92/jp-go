@@ -13,6 +13,16 @@ describe("addTransitivityNote", () => {
       .toBe("Tự/tha: Tha động từ（他動詞）. ドアを開ける。");
   });
 
+  it("không lặp nhãn nếu DB đã ghi rõ tự động từ", () => {
+    expect(addTransitivityNote("verb", "intransitive", "Tự động từ（自動詞）. 道を歩く。"))
+      .toBe("Tự/tha: Tự động từ（自動詞）. 道を歩く。");
+  });
+
+  it("không lặp nhãn nếu DB đã ghi rõ tha động từ", () => {
+    expect(addTransitivityNote("verb", "transitive", "Tha động từ（他動詞）. Nを申し込む。"))
+      .toBe("Tự/tha: Tha động từ（他動詞）. Nを申し込む。");
+  });
+
   it("không ép nhãn với động từ thực sự có cả hai cách dùng", () => {
     const note = "「休む」 có cả tự động từ và tha động từ tùy cấu trúc.";
     expect(addTransitivityNote("verb", null, note)).toContain("Có cả tự động từ và tha động từ（自動詞・他動詞）");
