@@ -1,0 +1,36 @@
+name: Tango N3 runtime audit export
+
+on:
+  push:
+    branches:
+      - audit/tango-n3-runtime-20260909
+    paths-ignore:
+      - "audit-output/**"
+
+permissions:
+  contents: write
+
+jobs:
+  export-runtime:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: audit/tango-n3-runtime-20260909
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npx vitest run lib/data/tango-audit-export.test.ts
+      - name: Commit resolved runtime export
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add audit-output
+          if git diff --cached --quiet; then
+            echo "No audit output changes"
+          else
+            git commit -m "chore(audit): export resolved Tango N3 runtime data"
+            git push origin HEAD:audit/tango-n3-runtime-20260909
+          fi
