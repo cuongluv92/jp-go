@@ -7,7 +7,7 @@ import { sampleExamples } from "./sample-examples";
 import { sampleWords } from "./sample-words";
 
 const outDir = join(process.cwd(), "audit-output");
-const casual = /(じゃん|だよね|だよ[。！]?|だね[。！]?|だぞ|だぜ|ちゃう|ちゃった|ごめん(?:ね)?|またね|何で|なんで)/;
+const casual = /(じゃん(?=[。！？、」』]|$)|だよね|だよ[。！]?|だね[。！]?|だぞ|だぜ|ちゃう|ちゃった|ごめん(?:ね)?|またね|何で|なんで)/;
 const explicitInternal = /(同僚|親しい|先輩|後輩|同期|チームメンバー|社内|職場の仲間|新人)/;
 const SENSE_MARKERS = /[①-⑳]+$/u;
 
@@ -124,6 +124,11 @@ describe("Tango N3 focused runtime audit details", () => {
       templates,
     };
     writeFileSync(join(outDir, "detail-report.json"), JSON.stringify(report, null, 2) + "\n", "utf8");
+    writeFileSync(
+      join(outDir, "template-summary.txt"),
+      templates.map((t, i) => `${i + 1}. [${t.count}] ${t.key}\n   ${t.rows.map((r) => `${r.vocabId}:${r.word}`).join(" | ")}`).join("\n") + "\n",
+      "utf8",
+    );
 
     expect(collisions.length).toBeGreaterThanOrEqual(0);
   });
