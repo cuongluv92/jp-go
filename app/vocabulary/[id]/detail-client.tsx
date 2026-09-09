@@ -277,11 +277,17 @@ const ADJECTIVE_ROWS: {
 ];
 
 function compactMeaning(meaningVi: string): string {
-  const parts = meaningVi
-    .split(/[;；]/u)
+  const primary = meaningVi
+    .split(/[;；,，]/u)
     .map((part) => part.trim())
-    .filter(Boolean);
-  return (parts.slice(0, 2).join(" / ") || meaningVi.trim()).replace(/[。.]$/u, "");
+    .find(Boolean);
+  return (primary || meaningVi.trim()).replace(/[。.]$/u, "");
+}
+
+function negateMeaning(base: string): string {
+  if (/^có thể\b/iu.test(base)) return base.replace(/^có thể\b/iu, "không thể");
+  if (/^có\b/iu.test(base)) return base.replace(/^có\b/iu, "không có");
+  return `không ${base}`;
 }
 
 function getConjugationGloss(
@@ -303,19 +309,19 @@ function getConjugationGloss(
       case "masuForm":
         return `${base} — lịch sự`;
       case "teForm":
-        return `${base}; dạng nối / dùng trong nhiều mẫu câu`;
+        return `${base}; dạng nối`;
       case "naiForm":
-        return `không ${base}`;
+        return negateMeaning(base);
       case "naiTaForm":
-        return `đã không ${base}`;
+        return `đã ${negateMeaning(base)}`;
       case "taForm":
         return `đã ${base}`;
       case "potentialForm":
-        return `có thể ${base}`;
+        return /^có thể\b/iu.test(base) ? "khả năng thực hiện" : `có thể ${base}`;
       case "volitionalForm":
-        return `cùng/hãy ${base}; sẽ ${base} thôi`;
+        return `hãy/cùng ${base}`;
       case "passiveForm":
-        return transitivity === "transitive" ? `được/bị ${base}` : `bị ảnh hưởng bởi việc ${base}`;
+        return transitivity === "transitive" ? `được/bị ${base}` : "bị động gián tiếp; tùy ngữ cảnh";
       case "causativeForm":
         return `bắt/cho ai ${base}`;
       case "causativePassiveForm":
@@ -333,13 +339,13 @@ function getConjugationGloss(
     case "dictionaryForm":
       return base;
     case "negativeForm":
-      return `không ${base}`;
+      return negateMeaning(base);
     case "pastForm":
-      return `đã ${base}`;
+      return `trước đó ${base}`;
     case "negativePastForm":
-      return `đã không ${base}`;
+      return `trước đó ${negateMeaning(base)}`;
     case "teForm":
-      return `${base}, và/vì…`;
+      return `${base}; dạng nối`;
     case "conditionalForm":
       return `nếu ${base}`;
     default:
