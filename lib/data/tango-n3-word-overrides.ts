@@ -118,10 +118,12 @@ export function applyTangoN3WordOverride(input: VocabWord): VocabWord {
   const sourceReading = input.reading.trim().replace(SENSE_MARKERS, "");
   const safeKanaReading = !sourceReading && PURE_KANA.test(cleanWord) ? cleanWord : sourceReading;
   const reviewedCollocations = override.collocations ?? REVIEWED_VERB_COLLOCATIONS[input.id] ?? input.collocations;
+  const safeDictionaryForm = input.dictionaryForm ?? (input.partOfSpeech === "verb" ? cleanWord : undefined);
 
   return {
     ...input,
     reading: safeKanaReading,
+    dictionaryForm: safeDictionaryForm,
     ...override,
     collocations: reviewedCollocations,
   };
