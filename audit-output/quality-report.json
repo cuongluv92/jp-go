@@ -526,7 +526,7 @@
         "vocabId": "kouji",
         "word": "工事",
         "jp": "工事期間中はご不便をおかけいたします。",
-        "vi": "Trong thời gian thi công, chúng tôi xin lỗi vì sự bất tiện này。"
+        "vi": "Trong thời gian thi công, chúng tôi thành thật xin lỗi vì đã gây bất tiện."
       },
       {
         "vocabId": "koudou",
@@ -640,7 +640,7 @@
         "vocabId": "sawagi",
         "word": "騒ぎ",
         "jp": "誤報が社内で大きな騒ぎとなりました。",
-        "vi": "Tin đồn sai sự thật đã gây ra sự xáo trộn lớn trong công ty."
+        "vi": "Một tin báo sai đã gây xôn xao lớn trong công ty."
       },
       {
         "vocabId": "sanka",
@@ -664,7 +664,7 @@
         "vocabId": "sankou",
         "word": "参考",
         "jp": "他社事例を参考に新しい制度を検討しています。",
-        "vi": "Chúng tôi đang xem xét chế độ mới dựa trên tham khảo các trường hợp của công ty khác."
+        "vi": "Chúng tôi đang tham khảo các trường hợp của công ty khác để xem xét một hệ thống mới."
       },
       {
         "vocabId": "sansei",
@@ -699,8 +699,8 @@
       {
         "vocabId": "jijou",
         "word": "事情",
-        "jp": "事情を説明の上、ご理解いただけますと幸いです。",
-        "vi": "Sau khi giải thích hoàn cảnh, mong quý vị thông cảm."
+        "jp": "事情をご説明した上で、ご理解いただけますと幸いです。",
+        "vi": "Sau khi trình bày hoàn cảnh, chúng tôi rất mong quý vị thông cảm."
       },
       {
         "vocabId": "jishin1",
@@ -724,7 +724,7 @@
         "vocabId": "jitsuryoku",
         "word": "実力",
         "jp": "実力主義の評価制度を導入しました。",
-        "vi": "Chúng tôi đã áp dụng chế độ đánh giá theo chủ nghĩa thực lực."
+        "vi": "Chúng tôi đã áp dụng hệ thống đánh giá dựa trên năng lực thực tế."
       },
       {
         "vocabId": "shiten",
@@ -1492,7 +1492,7 @@
         "vocabId": "henka",
         "word": "変化",
         "jp": "市場の変化に迅速に対応してまいります。",
-        "vi": "Chúng tôi sẽ ứng phó nhanh chóng với sự thay đổi của thị trường。"
+        "vi": "Chúng tôi sẽ nhanh chóng ứng phó với những thay đổi của thị trường."
       },
       {
         "vocabId": "pointer",
