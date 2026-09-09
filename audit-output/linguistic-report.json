@@ -1,0 +1,318 @@
+{
+  "jpPunctuationInViCount": 19,
+  "replacementCharCount": 0,
+  "vietnameseCharsInJpCount": 0,
+  "asciiOnlyJpCount": 0,
+  "suspiciousViLiteralCount": 5,
+  "suspiciousJpLiteralCount": 1,
+  "wordMetadataJpPunctuationInViCount": 6,
+  "jpPunctuation": [
+    {
+      "vocabId": "itazura",
+      "word": "いたずら",
+      "meaningVi": "trò nghịch ngợm",
+      "type": "business",
+      "jp": "彼のいたずらのせいで、会議が中断してしまった。",
+      "vi": "Vì trò nghịch ngợm của anh ấy mà cuộc họp đã bị gián đoạn。",
+      "cloze": "彼の_____のせいで、会議が中断してしまった。",
+      "answer": "いたずら"
+    },
+    {
+      "vocabId": "ichibu",
+      "word": "一部",
+      "meaningVi": "một phần",
+      "type": "exam",
+      "jp": "この意見は学生の一部にすぎない。",
+      "vi": "Ý kiến này chỉ là của một bộ phận nhỏ sinh viên thôi。",
+      "cloze": "この意見は学生の_____にすぎない。",
+      "answer": "一部"
+    },
+    {
+      "vocabId": "kouji",
+      "word": "工事",
+      "meaningVi": "thi công",
+      "type": "business",
+      "jp": "工事期間中はご不便をおかけいたします。",
+      "vi": "Trong thời gian thi công, chúng tôi xin lỗi vì sự bất tiện này。",
+      "cloze": "_____期間中はご不便をおかけいたします。",
+      "answer": "工事"
+    },
+    {
+      "vocabId": "kokusan",
+      "word": "国産",
+      "meaningVi": "sản xuất trong nước",
+      "type": "daily",
+      "jp": "やっぱり国産のほうが安心だよね。",
+      "vi": "Dù sao hàng nội địa vẫn yên tâm hơn nhỉ。",
+      "cloze": "やっぱり_____のほうが安心だよね。",
+      "answer": "国産"
+    },
+    {
+      "vocabId": "sangyou",
+      "word": "産業",
+      "meaningVi": "ngành nghề",
+      "type": "daily",
+      "jp": "IT産業、これからも伸びそうだね。",
+      "vi": "Ngành IT có vẻ sẽ còn phát triển nữa nhỉ。",
+      "cloze": "IT_____、これからも伸びそうだね。",
+      "answer": "産業"
+    },
+    {
+      "vocabId": "zangyou",
+      "word": "残業",
+      "meaningVi": "làm thêm giờ",
+      "type": "daily",
+      "jp": "また残業?大変だね。",
+      "vi": "Lại làm thêm giờ à? Vất vả nhỉ。",
+      "cloze": "また_____?大変だね。",
+      "answer": "残業"
+    },
+    {
+      "vocabId": "jinsei",
+      "word": "人生",
+      "meaningVi": "cuộc đời",
+      "type": "daily",
+      "jp": "人生、いろいろあるよね。",
+      "vi": "Cuộc đời có nhiều chuyện lắm nhỉ。",
+      "cloze": "_____、いろいろあるよね。",
+      "answer": "人生"
+    },
+    {
+      "vocabId": "style",
+      "word": "スタイル",
+      "meaningVi": "phong cách",
+      "type": "daily",
+      "jp": "このスタイル、今流行ってるよね。",
+      "vi": "Phong cách này đang thịnh hành nhỉ。",
+      "cloze": "この_____、今流行ってるよね。",
+      "answer": "スタイル"
+    },
+    {
+      "vocabId": "seigen",
+      "word": "制限",
+      "meaningVi": "hạn chế",
+      "type": "daily",
+      "jp": "時間制限、厳しいね。",
+      "vi": "Giới hạn thời gian nghiêm ngặt nhỉ。",
+      "cloze": "時間_____、厳しいね。",
+      "answer": "制限"
+    },
+    {
+      "vocabId": "seizou",
+      "word": "製造",
+      "meaningVi": "chế tạo",
+      "type": "daily",
+      "jp": "製造過程、見てみたいな。",
+      "vi": "Muốn xem thử quá trình chế tạo ghê。",
+      "cloze": "_____過程、見てみたいな。",
+      "answer": "製造"
+    },
+    {
+      "vocabId": "seichou",
+      "word": "成長",
+      "meaningVi": "phát triển",
+      "type": "exam",
+      "jp": "子供の成長は早いですね。",
+      "vi": "Trẻ con lớn nhanh nhỉ。",
+      "cloze": "子供の_____は早いですね。",
+      "answer": "成長"
+    },
+    {
+      "vocabId": "seichou",
+      "word": "成長",
+      "meaningVi": "phát triển",
+      "type": "daily",
+      "jp": "最近、すごく成長したね。",
+      "vi": "Dạo này bạn trưởng thành hẳn ra nhỉ。",
+      "cloze": "最近、すごく_____したね。",
+      "answer": "成長"
+    },
+    {
+      "vocabId": "seiyou",
+      "word": "西洋",
+      "meaningVi": "phương Tây",
+      "type": "daily",
+      "jp": "これ、西洋風のデザインだね。",
+      "vi": "Cái này thiết kế kiểu phương Tây nhỉ。",
+      "cloze": "これ、_____風のデザインだね。",
+      "answer": "西洋"
+    },
+    {
+      "vocabId": "sekiyu",
+      "word": "石油",
+      "meaningVi": "dầu mỏ",
+      "type": "daily",
+      "jp": "石油の値段、また上がったね。",
+      "vi": "Giá dầu mỏ lại tăng nữa rồi nhỉ。",
+      "cloze": "_____の値段、また上がったね。",
+      "answer": "石油"
+    },
+    {
+      "vocabId": "zentai",
+      "word": "全体",
+      "meaningVi": "toàn thể",
+      "type": "daily",
+      "jp": "全体的に見て、いい感じだね。",
+      "vi": "Nhìn tổng thể thì thấy ổn nhỉ。",
+      "cloze": "_____的に見て、いい感じだね。",
+      "answer": "全体"
+    },
+    {
+      "vocabId": "sotogawa",
+      "word": "外側",
+      "meaningVi": "bên ngoài",
+      "type": "daily",
+      "jp": "このコート、外側が汚れてるよ。",
+      "vi": "Áo khoác này bên ngoài bị bẩn kìa。",
+      "cloze": "このコート、_____が汚れてるよ。",
+      "answer": "外側"
+    },
+    {
+      "vocabId": "dai1",
+      "word": "台",
+      "meaningVi": "cái, giá",
+      "type": "daily",
+      "jp": "車、もう1台買おうかな。",
+      "vi": "Chắc mua thêm 1 chiếc xe nữa quá。",
+      "cloze": "車、もう1_____買おうかな。",
+      "answer": "台"
+    },
+    {
+      "vocabId": "taikai",
+      "word": "大会",
+      "meaningVi": "đại hội",
+      "type": "daily",
+      "jp": "大会、優勝できるといいね。",
+      "vi": "Mong là vô địch được đại hội này nhỉ。",
+      "cloze": "_____、優勝できるといいね。",
+      "answer": "大会"
+    },
+    {
+      "vocabId": "henka",
+      "word": "変化",
+      "meaningVi": "thay đổi",
+      "type": "business",
+      "jp": "市場の変化に迅速に対応してまいります。",
+      "vi": "Chúng tôi sẽ ứng phó nhanh chóng với sự thay đổi của thị trường。",
+      "cloze": "市場の_____に迅速に対応してまいります。",
+      "answer": "変化"
+    }
+  ],
+  "replacement": [],
+  "viCharsInJp": [],
+  "asciiJp": [],
+  "literalVi": [
+    {
+      "vocabId": "kouji",
+      "word": "工事",
+      "meaningVi": "thi công",
+      "type": "business",
+      "jp": "工事期間中はご不便をおかけいたします。",
+      "vi": "Trong thời gian thi công, chúng tôi xin lỗi vì sự bất tiện này。",
+      "cloze": "_____期間中はご不便をおかけいたします。",
+      "answer": "工事"
+    },
+    {
+      "vocabId": "sawagi",
+      "word": "騒ぎ",
+      "meaningVi": "sự ồn ào",
+      "type": "business",
+      "jp": "誤報が社内で大きな騒ぎとなりました。",
+      "vi": "Tin đồn sai sự thật đã gây ra sự xáo trộn lớn trong công ty.",
+      "cloze": "誤報が社内で大きな_____となりました。",
+      "answer": "騒ぎ"
+    },
+    {
+      "vocabId": "sankou",
+      "word": "参考",
+      "meaningVi": "tham khảo",
+      "type": "business",
+      "jp": "他社事例を参考に新しい制度を検討しています。",
+      "vi": "Chúng tôi đang xem xét chế độ mới dựa trên tham khảo các trường hợp của công ty khác.",
+      "cloze": "他社事例を_____に新しい制度を検討しています。",
+      "answer": "参考"
+    },
+    {
+      "vocabId": "jitsuryoku",
+      "word": "実力",
+      "meaningVi": "thực lực",
+      "type": "business",
+      "jp": "実力主義の評価制度を導入しました。",
+      "vi": "Chúng tôi đã áp dụng chế độ đánh giá theo chủ nghĩa thực lực.",
+      "cloze": "_____主義の評価制度を導入しました。",
+      "answer": "実力"
+    },
+    {
+      "vocabId": "kako",
+      "word": "過去",
+      "meaningVi": "quá khứ",
+      "type": "business",
+      "jp": "過去のデータを参考に分析いたしました。",
+      "vi": "Chúng tôi đã phân tích dựa trên tham khảo dữ liệu quá khứ.",
+      "cloze": "_____のデータを参考に分析いたしました。",
+      "answer": "過去"
+    }
+  ],
+  "literalJp": [
+    {
+      "vocabId": "jijou",
+      "word": "事情",
+      "meaningVi": "hoàn cảnh",
+      "type": "business",
+      "jp": "事情を説明の上、ご理解いただけますと幸いです。",
+      "vi": "Sau khi giải thích hoàn cảnh, mong quý vị thông cảm.",
+      "cloze": "_____を説明の上、ご理解いただけますと幸いです。",
+      "answer": "事情"
+    }
+  ],
+  "wordsWithJpPunctuationInVi": [
+    {
+      "id": "service",
+      "word": "サービス",
+      "meaningVi": "dịch vụ",
+      "usageNote": "Cũng dùng nghĩa 'miễn phí/tặng kèm' trong ngữ cảnh mua bán (これ、サービスです = cái này tặng kèm).",
+      "commonMistake": "",
+      "similarWords": ""
+    },
+    {
+      "id": "tai1",
+      "word": "対",
+      "meaningVi": "đối",
+      "usageNote": "Dùng để biểu thị tỷ số/so sánh giữa hai bên (3対2、賛成対反対).",
+      "commonMistake": "",
+      "similarWords": ""
+    },
+    {
+      "id": "touzen",
+      "word": "当然",
+      "meaningVi": "đương nhiên",
+      "usageNote": "Dùng cả như な形容詞 (当然だ/当然の結果) và phó từ (当然、～する) chỉ điều hiển nhiên.",
+      "commonMistake": "",
+      "similarWords": ""
+    },
+    {
+      "id": "shaberu",
+      "word": "しゃべる",
+      "meaningVi": "nói chuyện",
+      "usageNote": "喋る（しゃべる）は国語辞典では他動詞。人としゃべる の と は相手を示し、内容をしゃべる のように を も取れる。",
+      "commonMistake": "",
+      "similarWords": ""
+    },
+    {
+      "id": "machigau",
+      "word": "間違う",
+      "meaningVi": "nhầm, sai",
+      "usageNote": "間違う は本来 自動詞。現代語では 答えを間違う・道を間違う のように他動詞的にも非常によく使うため、を があるだけで別の他動詞と決めつけない。",
+      "commonMistake": "",
+      "similarWords": ""
+    },
+    {
+      "id": "gorannireru",
+      "word": "ご覧に入れる",
+      "meaningVi": "cho xem (khiêm nhượng ngữ)",
+      "usageNote": "ご覧に入れる は『見せる』の謙譲語。お目にかける と同じ方向の敬語表現。",
+      "commonMistake": "",
+      "similarWords": ""
+    }
+  ]
+}
