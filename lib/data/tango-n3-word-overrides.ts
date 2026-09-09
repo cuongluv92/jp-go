@@ -71,6 +71,23 @@ export const TANGO_N3_WORD_OVERRIDES: Record<string, Partial<VocabWord>> = {
   hougaku: { needsReview: false, naturalnessNote: "" },
   toshishita: { needsReview: false, naturalnessNote: "" },
 
+  // Nghĩa Việt được chỉnh sau khi đọc tay toàn bộ 5.394 ví dụ runtime.
+  jimu: { meaningVi: "công việc hành chính, văn phòng" },
+  sangyou: { meaningVi: "ngành công nghiệp, ngành kinh tế" },
+  seishitsu: { meaningVi: "tính chất, bản tính" },
+  taikai: { meaningVi: "giải đấu, đại hội" },
+  safe: { meaningVi: "an toàn; hợp lệ; kịp/thoát" },
+  kousai: { meaningVi: "quan hệ, giao du; hẹn hò" },
+  tezukuri: { meaningVi: "làm thủ công, handmade" },
+  kin_en: { meaningVi: "cấm hút thuốc; bỏ/kiêng hút thuốc" },
+  seikeigeka: { meaningVi: "khoa chấn thương chỉnh hình, ngoại chỉnh hình" },
+  kokugo: { meaningVi: "môn tiếng Nhật, quốc văn Nhật" },
+  daigakuin: { meaningVi: "trường/bậc cao học, sau đại học" },
+  lesson: { meaningVi: "buổi học, buổi hướng dẫn" },
+  kudari: { meaningVi: "tuyến/chuyến đi xuống, rời trung tâm" },
+  jikoku: { meaningVi: "giờ, thời điểm" },
+  stand: { meaningVi: "đèn bàn; giá, chân đỡ" },
+
   instantshokuhin: { reading: "インスタントしょくひん" },
   manaita: { reading: "まないた" },
   shikataganai: { reading: "しかたがない", dictionaryForm: "しかたがない" },
