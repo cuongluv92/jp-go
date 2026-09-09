@@ -82,6 +82,8 @@ export function GrammarDetailClient({ id }: { id: string }) {
   const [detail, setDetail] = useState<GrammarDetail | null>(cached?.detail ?? null);
   const [userId, setUserId] = useState<string | null>(cached?.userId ?? null);
   const [loading, setLoading] = useState(!cached);
+  const [loadError, setLoadError] = useState<string | null>(null);
+  const [reloadKey, setReloadKey] = useState(0);
   const [notesExpanded, setNotesExpanded] = useState(false);
   const [quizStarted, setQuizStarted] = useState(false);
   const [quizResult, setQuizResult] = useState<{ correct: number; total: number } | null>(null);
@@ -90,21 +92,34 @@ export function GrammarDetailClient({ id }: { id: string }) {
     let cancelled = false;
     async function load() {
       const supabase = createClient();
-      const {
-        data: { user },
-      } = await supabase.auth.getUser();
-      const data = await getGrammarDetail(supabase, id);
-      if (cancelled) return;
-      setUserId(user?.id ?? null);
-      setDetail(data);
-      setLoading(false);
-      setCached<GrammarDetailCachedData>(grammarDetailCacheKey(id), { detail: data, userId: user?.id ?? null });
+      try {
+        const {
+          data: { user },
+        } = await supabase.auth.getUser();
+        const data = await getGrammarDetail(supabase, id);
+        if (cancelled) return;
+        setUserId(user?.id ?? null);
+        setDetail(data);
+        setLoadError(null);
+        setCached<GrammarDetailCachedData>(grammarDetailCacheKey(id), { detail: data, userId: user?.id ?? null });
+      } catch {
+        if (cancelled) return;
+        setLoadError("Không tải được chi tiết Ngữ pháp. Vui lòng thử lại.");
+      } finally {
+        if (!cancelled) setLoading(false);
+      }
     }
     void load();
     return () => {
       cancelled = true;
     };
-  }, [id]);
+  }, [id, reloadKey]);
+
+  function retryLoad() {
+    setLoadError(null);
+    setLoading(detail === null);
+    setReloadKey((value) => value + 1);
+  }
 
   async function handleQuizFinish(correct: number, total: number) {
     setQuizResult({ correct, total });
@@ -115,6 +130,16 @@ export function GrammarDetailClient({ id }: { id: string }) {
   }
 
   if (loading) return <p className="rounded-2xl border border-dashed border-border p-4 text-sm text-muted">Đang tải...</p>;
+  if (loadError && !detail) {
+    return (
+      <div className="rounded-2xl border border-amber-200 bg-amber-50 p-4 text-sm text-amber-900">
+        <p>{loadError}</p>
+        <button type="button" onClick={retryLoad} className="mt-2 font-semibold text-accent">
+          Thử lại
+        </button>
+      </div>
+    );
+  }
   if (!detail) return <p className="rounded-2xl border border-dashed border-border p-4 text-sm text-muted">Không tìm thấy mẫu ngữ pháp.</p>;
 
   const hasMultipleUsages = detail.usages.length > 0;
@@ -126,6 +151,15 @@ export function GrammarDetailClient({ id }: { id: string }) {
       <Link href={`/grammar?level=${detail.level}`} className="text-xs font-medium text-accent">
         ← Danh sách Ngữ pháp {detail.level}
       </Link>
+
+      {loadError && (
+        <div className="flex items-center justify-between gap-3 rounded-xl border border-amber-200 bg-amber-50 p-3 text-xs text-amber-900">
+          <span>{loadError} Đang hiển thị dữ liệu đã lưu tạm.</span>
+          <button type="button" onClick={retryLoad} className="shrink-0 font-semibold text-accent">
+            Thử lại
+          </button>
+        </div>
+      )}
 
       <div className="flex flex-col items-center gap-1 rounded-2xl border border-border bg-surface p-6 text-center shadow-sm">
         <span className="font-jp text-2xl font-bold">{detail.grammar_pattern}</span>
