@@ -1,0 +1,181 @@
+row	vocabId	type	word	reading	meaningVi	exampleJp	exampleVi
+4321	sumu2	exam	済む	すむ	xong	用事が済んだ。	Việc cần làm đã xong.
+4322	sumu2	daily	済む	すむ	xong	もう済んだ?	Xong chưa vậy?
+4323	sumu2	business	済む	すむ	xong	手続きは既に済んでおります。	Thủ tục đã được hoàn tất.
+4324	sodateru	exam	育てる	そだてる	nuôi dưỡng	子供を育てた。	Tôi đã nuôi dưỡng con.
+4325	sodateru	daily	育てる	そだてる	nuôi dưỡng	植物、育ててるの?	Cậu đang trồng cây à?
+4326	sodateru	business	育てる	そだてる	nuôi dưỡng	若手社員を育てております。	Chúng tôi đang đào tạo nhân viên trẻ.
+4327	sonaeru	exam	備える	そなえる	chuẩn bị	地震に備えた。	Tôi đã chuẩn bị phòng khi động đất.
+4328	sonaeru	daily	備える	そなえる	chuẩn bị	ちゃんと備えておこうね。	Chuẩn bị sẵn cho chu đáo nhé.
+4329	sonaeru	business	備える	そなえる	chuẩn bị	災害に備えて備蓄しております。	Chúng tôi tích trữ để phòng thiên tai.
+4330	someru	exam	染める	そめる	nhuộm	髪を染めた。	Tôi đã nhuộm tóc.
+4331	someru	daily	染める	そめる	nhuộm	何色に染める?	Nhuộm màu gì đây?
+4332	someru	business	染める	そめる	nhuộm	天然素材で染めております。	Chúng tôi nhuộm bằng nguyên liệu tự nhiên.
+4333	soru	exam	そる	そる	cạo	ひげをそった。	Tôi đã cạo râu.
+4334	soru	daily	そる	そる	cạo	そってないの?	Chưa cạo à?
+4335	soru	business	そる	そる	cạo	清潔感を保つためひげをそっております。	Để giữ vẻ ngoài sạch sẽ, chúng tôi cạo râu.
+4336	soroeru	exam	そろえる	そろえる	sắp xếp (cho đều)	靴をそろえた。	Tôi đã sắp xếp ngay ngắn giày.
+4337	soroeru	daily	そろえる	そろえる	sắp xếp (cho đều)	サイズ、そろえておいてね。	Sắp xếp theo kích cỡ giúp tớ nhé.
+4338	soroeru	business	そろえる	そろえる	sắp xếp (cho đều)	商品のラインナップをそろえております。	Chúng tôi sắp xếp đầy đủ dòng sản phẩm.
+4339	taosu	exam	倒す	たおす	làm đổ	木を倒した。	Tôi đã làm đổ cây.
+4340	taosu	daily	倒す	たおす	làm đổ	それ、倒さないでね。	Đừng làm đổ cái đó nhé.
+4341	taosu	business	倒す	たおす	làm đổ	展示用パネルを倒さないよう固定しております。	Chúng tôi cố định tấm bảng trưng bày để nó không bị đổ.
+4342	taku	exam	炊く	たく	nấu cơm	ご飯を炊いた。	Tôi đã nấu cơm.
+4343	taku	daily	炊く	たく	nấu cơm	もうご飯、炊いた?	Cơm nấu chưa vậy?
+4344	taku	business	炊く	たく	nấu cơm	新米を炊いてご提供しております。	Chúng tôi nấu gạo mới để phục vụ.
+4345	daku	exam	抱く	だく	ôm	赤ちゃんを抱いた。	Tôi đã bế em bé.
+4346	daku	daily	抱く	だく	ôm	抱いてあげようか。	Để tớ bế cho nhé?
+4347	daku	business	抱く	だく	ôm	保育スタッフが赤ちゃんを抱いております。	Nhân viên trông trẻ đang bế em bé.
+4348	tashikameru	exam	確かめる	たしかめる	kiểm tra, xác nhận	事実を確かめた。	Tôi đã xác nhận sự thật.
+4349	tashikameru	daily	確かめる	たしかめる	kiểm tra, xác nhận	もう一度確かめてね。	Kiểm tra lại một lần nữa nhé.
+4350	tashikameru	business	確かめる	たしかめる	kiểm tra, xác nhận	内容を再度確かめております。	Chúng tôi đang xác nhận lại nội dung.
+4351	tasu	exam	足す	たす	thêm	塩を少し足した。	Tôi đã thêm một chút muối.
+4352	tasu	daily	足す	たす	thêm	水が少ないから、もう少し足して。	Nước hơi ít, thêm một chút nữa đi.
+4353	tasu	business	足す	たす	thêm	不足分を足しております。	Chúng tôi bổ sung phần còn thiếu.
+4354	tasukeru	exam	助ける	たすける	cứu	友達を助けた。	Tôi đã giúp đỡ bạn.
+4355	tasukeru	daily	助ける	たすける	cứu	助けてくれてありがとう。	Cảm ơn vì đã giúp tớ.
+4356	tasukeru	business	助ける	たすける	cứu	困っているお客様を助けております。	Chúng tôi giúp đỡ khách hàng đang gặp khó khăn.
+4357	tazuneru1	exam	訪ねる	たずねる	thăm	恩師を訪ねた。	Tôi đã đến thăm thầy cô cũ.
+4358	tazuneru1	daily	訪ねる	たずねる	thăm	今度、訪ねてみようかな。	Lần tới thử ghé thăm xem sao.
+4359	tazuneru1	business	訪ねる	たずねる	thăm	来週、貴社を訪ねる予定です。	Tuần sau tôi dự định đến thăm quý công ty.
+4360	tazuneru2	exam	尋ねる	たずねる	hỏi	道を尋ねた。	Tôi đã hỏi đường.
+4361	tazuneru2	daily	尋ねる	たずねる	hỏi	尋ねてみたら教えてくれたよ。	Hỏi thử thì được chỉ cho đấy.
+4362	tazuneru2	business	尋ねる	たずねる	hỏi	詳細をお尋ねしたく存じます。	Tôi muốn hỏi thêm chi tiết.
+4363	tatakau	exam	戦う	たたかう	chiến đấu	敵と戦った。	Tôi đã chiến đấu với kẻ địch.
+4364	tatakau	daily	戦う	たたかう	chiến đấu	最後まで戦おう。	Chiến đấu đến cùng nào.
+4365	tatakau	business	戦う	たたかう	chiến đấu	厳しい市場競争と戦っております。	Chúng tôi đang chiến đấu với cạnh tranh thị trường khốc liệt.
+4366	tataku	exam	たたく	たたく	đánh, gõ	ドアをたたいた。	Tôi đã gõ cửa.
+4367	tataku	daily	たたく	たたく	đánh, gõ	肩、たたいてあげようか。	Để tớ đấm lưng cho nhé?
+4368	tataku	business	たたく	たたく	đánh, gõ	太鼓をたたいて演奏しております。	Họ đang biểu diễn bằng cách đánh trống.
+4369	tatamu	exam	畳む	たたむ	gấp	洗濯物を畳んだ。	Tôi đã gấp quần áo.
+4370	tatamu	daily	畳む	たたむ	gấp	服、畳んでおいたよ。	Tớ đã gấp quần áo sẵn rồi đấy.
+4371	tatamu	business	畳む	たたむ	gấp	シートを畳んで収納しております。	Chúng tôi gấp tấm phủ lại để cất giữ.
+4372	tachiagaru	exam	立ち上がる	たちあがる	đứng lên	椅子から立ち上がった。	Tôi đã đứng dậy khỏi ghế.
+4373	tachiagaru	daily	立ち上がる	たちあがる	đứng lên	さあ、立ち上がろう。	Nào, đứng dậy thôi.
+4374	tachiagaru	business	立ち上がる	たちあがる	đứng lên	新プロジェクトが立ち上がっております。	Dự án mới đang được khởi động.
+4375	tachidomaru	exam	立ち止まる	たちどまる	dừng lại	信号で立ち止まった。	Tôi đã dừng lại ở đèn tín hiệu.
+4376	tachidomaru	daily	立ち止まる	たちどまる	dừng lại	ちょっと立ち止まろうか。	Dừng lại một chút nhé?
+4377	tachidomaru	business	立ち止まる	たちどまる	dừng lại	危険箇所の手前で立ち止まっております。	Chúng tôi dừng lại trước khu vực nguy hiểm.
+4378	tanoshimu	exam	楽しむ	たのしむ	tận hưởng	旅行を楽しんだ。	Tôi đã tận hưởng chuyến du lịch.
+4379	tanoshimu	daily	楽しむ	たのしむ	tận hưởng	楽しんでる?	Cậu có vui không?
+4380	tanoshimu	business	楽しむ	たのしむ	tận hưởng	お客様に楽しんでいただけるよう努めております。	Chúng tôi nỗ lực để khách hàng được tận hưởng.
+4381	damaru	exam	黙る	だまる	im lặng	彼は黙った。	Anh ấy đã im lặng.
+4382	damaru	daily	黙る	だまる	im lặng	ちょっと黙ってて。	Im lặng một chút đi.
+4383	damaru	business	黙る	だまる	im lặng	会議中は黙って聞いております。	Trong cuộc họp chúng tôi im lặng lắng nghe.
+4384	tameru	exam	ためる	ためる	tiết kiệm, tích trữ	お金をためた。	Tôi đã tiết kiệm tiền.
+4385	tameru	daily	ためる	ためる	tiết kiệm, tích trữ	貯金、ためてる?	Cậu có tiết kiệm tiền không?
+4386	tameru	business	ためる	ためる	tiết kiệm, tích trữ	ポイントをためております。	Chúng tôi đang tích điểm.
+4387	tariru	exam	足りる	たりる	đủ	お金が足りた。	Tiền đủ rồi.
+4388	tariru	daily	足りる	たりる	đủ	これで足りる?	Thế này đủ không?
+4389	tariru	business	足りる	たりる	đủ	人手が足りておりません。	Nhân lực đang không đủ.
+4390	chikazuku	exam	近づく	ちかづく	đến gần	台風が近づいた。	Bão đang đến gần.
+4391	chikazuku	daily	近づく	ちかづく	đến gần	だんだん近づいてきたね。	Càng ngày càng đến gần rồi nhỉ.
+4392	chikazuku	business	近づく	ちかづく	đến gần	締め切りが近づいております。	Hạn chót đang đến gần.
+4393	chikayoru	exam	近寄る	ちかよる	lại gần	そっと近寄った。	Tôi đã lặng lẽ lại gần.
+4394	chikayoru	daily	近寄る	ちかよる	lại gần	あんまり近寄らないで。	Đừng lại gần quá.
+4395	chikayoru	business	近寄る	ちかよる	lại gần	危険な場所には近寄らないようご注意ください。	Xin vui lòng chú ý không lại gần khu vực nguy hiểm.
+4396	chirakaru	exam	散らかる	ちらかる	bừa bộn	部屋が散らかった。	Căn phòng bừa bộn.
+4397	chirakaru	daily	散らかる	ちらかる	bừa bộn	散らかってるね、片付けよう。	Bừa quá nhỉ, dọn dẹp thôi.
+4398	chirakaru	business	散らかる	ちらかる	bừa bộn	資材が散らかっております。	Vật liệu đang để bừa bộn.
+4399	chiru	exam	散る	ちる	rơi, rụng	桜が散った。	Hoa anh đào đã rụng.
+4400	chiru	daily	散る	ちる	rơi, rụng	花びら、散ってるね。	Cánh hoa đang rơi rụng nhỉ.
+4401	chiru	business	散る	ちる	rơi, rụng	落ち葉が敷地内に散っております。	Lá rụng đang rải rác trong khuôn viên.
+4402	tsuujiru	exam	通じる	つうじる	thông, liên lạc được	電話が通じた。	Điện thoại đã liên lạc được.
+4403	tsuujiru	daily	通じる	つうじる	thông, liên lạc được	この道、通じてるの?	Đường này thông không?
+4404	tsuujiru	business	通じる	つうじる	thông, liên lạc được	この地域では携帯電話がよく通じます。	Ở khu vực này điện thoại di động bắt sóng khá tốt.
+4405	tsukamaru	exam	捕まる	つかまる	bị bắt	犯人が捕まった。	Thủ phạm đã bị bắt.
+4406	tsukamaru	daily	捕まる	つかまる	bị bắt	やっと捕まったね。	Cuối cùng cũng bị bắt rồi nhỉ.
+4407	tsukamaru	business	捕まる	つかまる	bị bắt	容疑者が警察に捕まっております。	Nghi phạm đã bị cảnh sát bắt giữ.
+4408	tsukamu	exam	つかむ	つかむ	nắm, bắt lấy	チャンスをつかんだ。	Tôi đã nắm bắt cơ hội.
+4409	tsukamu	daily	つかむ	つかむ	nắm, bắt lấy	しっかりつかんでて。	Nắm chắc vào nhé.
+4410	tsukamu	business	つかむ	つかむ	nắm, bắt lấy	顧客のニーズをつかんでおります。	Chúng tôi nắm bắt nhu cầu khách hàng.
+4411	tsukiau	exam	付き合う	つきあう	hẹn hò, giao du	彼女と付き合った。	Tôi đã yêu cô ấy.
+4412	tsukiau	daily	付き合う	つきあう	hẹn hò, giao du	二人、付き合ってるの?	Hai người đang yêu nhau à?
+4413	tsukiau	business	付き合う	つきあう	hẹn hò, giao du	長年お付き合いいただいております。	Chúng tôi đã được hợp tác lâu năm.
+4414	tsuku2	exam	付く	つく	dính	服にインクが付いた。	Mực dính vào quần áo.
+4415	tsuku2	daily	付く	つく	dính	これ、汚れが付いてるよ。	Cái này dính bẩn kìa.
+4416	tsuku2	business	付く	つく	dính	表面に傷が付いております。	Bề mặt bị trầy xước.
+4417	tsukeru2	exam	着ける	つける	đeo	マスクを着けた。	Tôi đã đeo khẩu trang.
+4418	tsukeru2	daily	着ける	つける	đeo	シートベルト、着けてね。	Thắt dây an toàn nhé.
+4419	tsukeru2	business	着ける	つける	đeo	従業員は名札を着けております。	Nhân viên đeo bảng tên.
+4420	tsutawaru	exam	伝わる	つたわる	được truyền	気持ちが伝わった。	Tình cảm đã được truyền đạt.
+4421	tsutawaru	daily	伝わる	つたわる	được truyền	ちゃんと伝わってる?	Có truyền đạt đúng không?
+4422	tsutawaru	business	伝わる	つたわる	được truyền	情報が正しく伝わっております。	Thông tin đang được truyền đạt chính xác.
+4423	tsubureru	exam	潰れる	つぶれる	bẹp, nát	箱が潰れた。	Chiếc hộp bị bẹp.
+4424	tsubureru	daily	潰れる	つぶれる	bẹp, nát	これ、潰れてるよ。	Cái này bị bẹp rồi kìa.
+4425	tsubureru	business	潰れる	つぶれる	bẹp, nát	会社が潰れることのないよう経営を見直しております。	Chúng tôi đang xem xét lại việc kinh doanh để công ty không bị phá sản.
+4426	tsumu2	exam	積む	つむ	chất	トラックに荷物を積んだ。	Tôi đã chất đồ lên xe tải.
+4427	tsumu2	daily	積む	つむ	chất	もっと積める?	Chất thêm được không?
+4428	tsumu2	business	積む	つむ	chất	経験を積んでおります。	Chúng tôi đang tích lũy kinh nghiệm.
+4429	tsumeru	exam	詰める	つめる	nhồi, đóng	箱に荷物を詰めた。	Tôi đã nhồi đồ vào hộp.
+4430	tsumeru	daily	詰める	つめる	nhồi, đóng	これも詰めておいて。	Nhồi cả cái này vào giúp tớ.
+4431	tsumeru	business	詰める	つめる	nhồi, đóng	丁寧に商品を詰めております。	Chúng tôi đóng gói sản phẩm cẩn thận.
+4432	tsumoru	exam	積もる	つもる	tích tụ	雪が積もった。	Tuyết đã tích tụ.
+4433	tsumoru	daily	積もる	つもる	tích tụ	すごく積もってるね。	Chất đống nhiều thật nhỉ.
+4434	tsumoru	business	積もる	つもる	tích tụ	倉庫の棚にほこりが積もっております。	Bụi đang bám dày trên kệ trong kho.
+4435	deau	exam	出会う	であう	gặp	運命の人に出会った。	Tôi đã gặp được người định mệnh.
+4436	deau	daily	出会う	であう	gặp	どこで出会ったの?	Gặp nhau ở đâu vậy?
+4437	deau	business	出会う	であう	gặp	多くのお客様と出会っております。	Chúng tôi được gặp gỡ nhiều khách hàng.
+4438	dekiagaru	exam	できあがる	できあがる	hoàn thành	料理ができあがった。	Món ăn đã hoàn thành.
+4439	dekiagaru	daily	できあがる	できあがる	hoàn thành	もうできあがった?	Xong chưa vậy?
+4440	dekiagaru	business	できあがる	できあがる	hoàn thành	新製品ができあがっております。	Sản phẩm mới đã hoàn thành.
+4441	teru2	exam	照る	てる	chiếu sáng (mặt trời)	太陽が明るく照っている。	Mặt trời đang chiếu sáng rực rỡ.
+4442	teru2	daily	照る	てる	chiếu sáng (mặt trời)	今日は日が照っていて暑い。	Hôm nay nắng chiếu nên nóng.
+4443	teru2	business	照る	てる	chiếu sáng (mặt trời)	明日は晴れて日が照るでしょう。	Ngày mai trời sẽ quang và có nắng.
+4444	toku2	exam	溶く	とく	hòa tan, quấy (bột, màu)	絵の具を水で溶いて使う。	Hòa màu vẽ với nước rồi dùng.
+4445	toku2	daily	溶く	とく	hòa tan, quấy (bột, màu)	卵を溶いてから焼く。	Đánh trứng rồi mới chiên.
+4446	toku2	business	溶く	とく	hòa tan, quấy (bột, màu)	粉末を溶いてから塗布してください。	Vui lòng hòa tan bột trước khi thoa.
+4447	doku	exam	どく	どく	tránh ra, dời ra	「どいてください」と言われた。	Tôi bị bảo "hãy tránh ra".
+4448	doku	daily	どく	どく	tránh ra, dời ra	邪魔だからどいてね。	Vướng lắm nên tránh ra nhé.
+4449	doku	business	どく	どく	tránh ra, dời ra	作業員が通れるようにどいてください。	Vui lòng tránh ra để công nhân đi qua.
+4450	tokeru2	exam	溶ける	とける	tan chảy, hòa tan	氷が溶けて水になった。	Đá tan chảy thành nước.
+4451	tokeru2	daily	溶ける	とける	tan chảy, hòa tan	雪がすぐに溶けた。	Tuyết tan rất nhanh.
+4452	tokeru2	business	溶ける	とける	tan chảy, hòa tan	砂糖は水によく溶ける。	Đường tan tốt trong nước.
+4453	dokeru	exam	どける	どける	dời đi, tránh ra	荷物をどけてください。	Vui lòng dời hành lý ra.
+4454	dokeru	daily	どける	どける	dời đi, tránh ra	椅子をどけて掃除した。	Dời ghế ra rồi dọn dẹp.
+4455	dokeru	business	どける	どける	dời đi, tránh ra	通路の荷物をどけておいてください。	Vui lòng dời hành lý ở lối đi ra trước.
+4456	tojiru	exam	閉じる	とじる	đóng, khép lại	本を閉じてください。	Vui lòng gấp sách lại.
+4457	tojiru	daily	閉じる	とじる	đóng, khép lại	目を閉じて考えた。	Nhắm mắt lại suy nghĩ.
+4458	tojiru	business	閉じる	とじる	đóng, khép lại	会議の最後に議長がファイルを閉じた。	Cuối cuộc họp chủ tọa đã đóng tệp lại.
+4459	tobikomu	exam	飛び込む	とびこむ	nhảy vào, lao vào	彼はプールに飛び込んだ。	Anh ấy nhảy xuống hồ bơi.
+4460	tobikomu	daily	飛び込む	とびこむ	nhảy vào, lao vào	子供が川に飛び込んで遊んだ。	Đứa trẻ nhảy xuống sông chơi.
+4461	tobikomu	business	飛び込む	とびこむ	nhảy vào, lao vào	新事業に飛び込む決断をした。	Đã quyết định lao vào lĩnh vực kinh doanh mới.
+4462	tobidasu	exam	飛び出す	とびだす	lao ra, phóng ra	猫が急に飛び出してきた。	Con mèo đột nhiên lao ra.
+4463	tobidasu	daily	飛び出す	とびだす	lao ra, phóng ra	子供が道路に飛び出した。	Đứa trẻ lao ra đường.
+4464	tobidasu	business	飛び出す	とびだす	lao ra, phóng ra	彼は会議室を飛び出して行った。	Anh ấy đã lao ra khỏi phòng họp.
+4465	toriageru	exam	取り上げる	とりあげる	lấy đi, đưa ra bàn (đề tài)	先生は生徒からスマホを取り上げた。	Giáo viên đã tịch thu điện thoại của học sinh.
+4466	toriageru	daily	取り上げる	とりあげる	lấy đi, đưa ra bàn (đề tài)	その話題をニュースが取り上げた。	Tin tức đã đề cập đến chủ đề đó.
+4467	toriageru	business	取り上げる	とりあげる	lấy đi, đưa ra bàn (đề tài)	会議でその提案を取り上げて議論した。	Đã đưa đề xuất đó ra thảo luận trong cuộc họp.
+4468	torikesu	exam	取り消す	とりけす	hủy bỏ	予約を取り消した。	Đã hủy đặt chỗ.
+4469	torikesu	daily	取り消す	とりけす	hủy bỏ	約束を取り消してごめん。	Xin lỗi vì đã hủy lời hẹn.
+4470	torikesu	business	取り消す	とりけす	hủy bỏ	契約を取り消す手続きを行った。	Đã tiến hành thủ tục hủy hợp đồng.
+4471	toridasu	exam	取り出す	とりだす	lấy ra	財布から金を取り出した。	Lấy tiền ra từ ví.
+4472	toridasu	daily	取り出す	とりだす	lấy ra	冷蔵庫から牛乳を取り出して飲んだ。	Lấy sữa từ tủ lạnh ra uống.
+4473	toridasu	business	取り出す	とりだす	lấy ra	書類をファイルから取り出してください。	Vui lòng lấy tài liệu ra khỏi tệp.
+4474	toru_catch	exam	捕る	とる	bắt (chim, cá, thú)	漁師が魚を捕った。	Ngư dân bắt được cá.
+4475	toru_catch	daily	捕る	とる	bắt (chim, cá, thú)	猫がネズミを捕って持ってきた。	Con mèo bắt chuột rồi mang về.
+4476	toru_catch	business	捕る	とる	bắt (chim, cá, thú)	その地域では違法に鳥を捕ることが問題になっている。	Việc bắt chim trái phép ở khu vực đó đang là vấn đề.
+4477	toreru	exam	取れる	とれる	tuột ra, rơi ra; đạt được	ボタンが取れてしまった。	Nút áo bị rơi mất.
+4478	toreru	daily	取れる	とれる	tuột ra, rơi ra; đạt được	汚れがきれいに取れた。	Vết bẩn đã sạch hẳn.
+4479	toreru	business	取れる	とれる	tuột ra, rơi ra; đạt được	今月は予算が取れなかった。	Tháng này không xin được ngân sách.
+4480	nagareru	exam	流れる	ながれる	chảy, trôi, lan truyền	川が海に流れている。	Sông chảy ra biển.
+4481	nagareru	daily	流れる	ながれる	chảy, trôi, lan truyền	涙が頬を流れた。	Nước mắt chảy trên má.
+4482	nagareru	business	流れる	ながれる	chảy, trôi, lan truyền	そのニュースは世界中に流れた。	Tin tức đó đã lan truyền khắp thế giới.
+4483	naguru	exam	殴る	なぐる	đánh, đấm	彼は相手を殴ってしまった。	Anh ấy đã đấm đối phương.
+4484	naguru	daily	殴る	なぐる	đánh, đấm	弟を殴るのはよくない。	Đánh em trai là không tốt.
+4485	naguru	business	殴る	なぐる	đánh, đấm	従業員を殴った上司が処分された。	Cấp trên đánh nhân viên đã bị xử lý kỷ luật.
+4486	nayamu	exam	悩む	なやむ	lo lắng, phiền muộn	進路について悩んでいる。	Đang lo lắng về hướng đi tương lai.
+4487	nayamu	daily	悩む	なやむ	lo lắng, phiền muộn	そんなに悩まないで。	Đừng lo lắng nhiều như vậy.
+4488	nayamu	business	悩む	なやむ	lo lắng, phiền muộn	経営方針について長く悩んだ末に決断した。	Sau khi trăn trở lâu về phương châm kinh doanh, đã đưa ra quyết định.
+4489	naru_fruit	exam	生る	なる	ra quả, kết trái	庭の木にたくさん実が生った。	Cây trong vườn ra rất nhiều quả.
+4490	naru_fruit	daily	生る	なる	ra quả, kết trái	柿が赤く生っている。	Quả hồng chín đỏ trên cây.
+4491	naru_fruit	business	生る	なる	ra quả, kết trái	今年はりんごがよく生った。	Năm nay táo ra quả nhiều.
+4492	niau	exam	似合う	にあう	hợp, xứng	その服はあなたに似合っている。	Bộ đồ đó hợp với bạn.
+4493	niau	daily	似合う	にあう	hợp, xứng	髪型が似合ってるね。	Kiểu tóc hợp đấy.
+4494	niau	business	似合う	にあう	hợp, xứng	新しいロゴは会社のイメージに似合う。	Logo mới hợp với hình ảnh công ty.
+4495	nigiru	exam	握る	にぎる	nắm, cầm chặt	彼はハンドルをしっかり握った。	Anh ấy nắm chắc tay lái.
+4496	nigiru	daily	握る	にぎる	nắm, cầm chặt	母の手を握って歩いた。	Nắm tay mẹ rồi đi bộ.
+4497	nigiru	business	握る	にぎる	nắm, cầm chặt	社長が経営権を握っている。	Chủ tịch đang nắm quyền quản lý.
+4498	niru_boil	exam	煮る	にる	ninh, hầm, nấu	野菜を煮て食べる。	Ninh rau rồi ăn.
+4499	niru_boil	daily	煮る	にる	ninh, hầm, nấu	大根を柔らかく煮た。	Đã ninh củ cải cho mềm.
+4500	niru_boil	business	煮る	にる	ninh, hầm, nấu	このスープは三時間煮て作ります。	Món súp này được ninh trong ba tiếng.

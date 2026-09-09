@@ -1,0 +1,181 @@
+row	vocabId	type	word	reading	meaningVi	exampleJp	exampleVi
+0721	suri	exam	すり	すり	móc túi	電車の中ですりに気をつけてください。	Vui lòng cẩn thận móc túi trên tàu điện.
+0722	suri	daily	すり	すり	móc túi	財布、すりに盗られたかも。	Ví có khi bị móc túi lấy mất rồi.
+0723	suri	business	すり	すり	móc túi	混雑時はすり被害にご注意ください。	Trong lúc đông đúc xin chú ý đề phòng móc túi.
+0724	seigen	exam	制限	せいげん	hạn chế	このプランには利用制限があります。	Gói này có giới hạn sử dụng.
+0725	seigen	daily	制限	せいげん	hạn chế	時間制限、厳しいね。	Giới hạn thời gian khá gắt nhỉ.
+0726	seigen	business	制限	せいげん	hạn chế	アクセス制限を一部解除いたしました。	Chúng tôi đã gỡ bỏ một phần giới hạn truy cập.
+0727	seikou	exam	成功	せいこう	thành công	プロジェクトは成功しました。	Dự án đã thành công.
+0728	seikou	daily	成功	せいこう	thành công	やった、成功した!	Yay, thành công rồi!
+0729	seikou	business	成功	せいこう	thành công	新製品の開発が成功し、来月発売されます。	Việc phát triển sản phẩm mới đã thành công và sẽ ra mắt vào tháng sau.
+0730	seisan1	exam	生産	せいさん	sản xuất	この工場で自動車を生産しています。	Nhà máy này sản xuất ô tô.
+0731	seisan1	daily	生産	せいさん	sản xuất	生産、追いついてないんだって。	Nghe nói sản xuất không kịp đó.
+0732	seisan1	business	生産	せいさん	sản xuất	生産ラインの効率を向上させる施策を実施します。	Chúng tôi sẽ thực hiện biện pháp nâng cao hiệu quả dây chuyền sản xuất.
+0733	seiji	exam	政治	せいじ	chính trị	彼は政治に興味があります。	Anh ấy quan tâm đến chính trị.
+0734	seiji	daily	政治	せいじ	chính trị	政治の話は苦手なんだ。	Tôi không giỏi nói chuyện chính trị đâu.
+0735	seiji	business	政治	せいじ	chính trị	政治情勢が経済に与える影響を分析しています。	Chúng tôi đang phân tích ảnh hưởng của tình hình chính trị đến kinh tế.
+0736	seishitsu	exam	性質	せいしつ	tính chất	この物質は特殊な性質を持っている。	Chất này có tính chất đặc biệt.
+0737	seishitsu	daily	性質	せいしつ	tính chất	彼、そういう性質だから仕方ないよ。	Anh ấy tính cách vậy nên đành chịu thôi.
+0738	seishitsu	business	性質	せいしつ	tính chất	素材の性質を考慮して設計してください。	Vui lòng thiết kế có xem xét đến tính chất của vật liệu.
+0739	seizou	exam	製造	せいぞう	chế tạo	この製品は日本で製造されています。	Sản phẩm này được sản xuất tại Nhật Bản.
+0740	seizou	daily	製造	せいぞう	chế tạo	製造過程、見てみたいな。	Mình muốn xem thử quá trình sản xuất ghê.
+0741	seizou	business	製造	せいぞう	chế tạo	製造コストの削減に取り組んでいます。	Chúng tôi đang nỗ lực cắt giảm chi phí sản xuất.
+0742	seichou	exam	成長	せいちょう	phát triển	子供の成長は早いですね。	Trẻ con lớn nhanh thật nhỉ.
+0743	seichou	daily	成長	せいちょう	phát triển	最近、すごく成長したね。	Dạo này bạn trưởng thành hẳn ra nhỉ.
+0744	seichou	business	成長	せいちょう	phát triển	企業の成長戦略について議論しました。	Chúng tôi đã thảo luận về chiến lược tăng trưởng của doanh nghiệp.
+0745	seido	exam	制度	せいど	chế độ	この会社には独自の制度があります。	Công ty này có chế độ riêng.
+0746	seido	daily	制度	せいど	chế độ	その制度、いつからできたの?	Chế độ đó có từ khi nào vậy?
+0747	seido	business	制度	せいど	chế độ	新しい人事制度を来月から導入します。	Chúng tôi sẽ áp dụng chế độ nhân sự mới từ tháng sau.
+0748	seitou	exam	政党	せいとう	đảng phái	彼はある政党を支持しています。	Anh ấy ủng hộ một đảng phái nào đó.
+0749	seitou	daily	政党	せいとう	đảng phái	どの政党に投票するか迷ってる。	Tôi đang phân vân bỏ phiếu cho đảng phái nào.
+0750	seitou	business	政党	せいとう	đảng phái	各政党の政策を比較した資料を作成しました。	Chúng tôi đã làm tài liệu so sánh chính sách của các đảng phái.
+0751	seihin	exam	製品	せいひん	sản phẩm	この製品は人気があります。	Sản phẩm này được ưa chuộng.
+0752	seihin	daily	製品	せいひん	sản phẩm	新製品、もう見た?	Sản phẩm mới xem chưa?
+0753	seihin	business	製品	せいひん	sản phẩm	製品の品質管理を徹底しています。	Chúng tôi thực hiện triệt để việc quản lý chất lượng sản phẩm.
+0754	seifu	exam	政府	せいふ	chính phủ	政府は新しい政策を発表した。	Chính phủ đã công bố chính sách mới.
+0755	seifu	daily	政府	せいふ	chính phủ	政府の対応、遅くない?	Phản ứng của chính phủ không chậm à?
+0756	seifu	business	政府	せいふ	chính phủ	政府の規制強化に対応する必要があります。	Cần phải ứng phó với việc tăng cường quy định của chính phủ.
+0757	seiyou	exam	西洋	せいよう	phương Tây	西洋の文化に興味があります。	Tôi quan tâm đến văn hóa phương Tây.
+0758	seiyou	daily	西洋	せいよう	phương Tây	これ、西洋風のデザインだね。	Cái này có thiết kế kiểu phương Tây nhỉ.
+0759	seiyou	business	西洋	せいよう	phương Tây	西洋と東洋の商習慣の違いを研究しています。	Chúng tôi đang nghiên cứu sự khác biệt trong tập quán kinh doanh giữa phương Tây và phương Đông.
+0760	seiri	exam	整理	せいり	sắp xếp	部屋を整理しました。	Tôi đã dọn dẹp sắp xếp phòng.
+0761	seiri	daily	整理	せいり	sắp xếp	机の上、整理したほうがいいよ。	Nên sắp xếp lại trên bàn đi đó.
+0762	seiri	business	整理	せいり	sắp xếp	データの整理を進めております。	Chúng tôi đang tiến hành sắp xếp dữ liệu.
+0763	safe	exam	セーフ	セーフ	an toàn	ぎりぎりセーフだった。	Suýt nữa thì không kịp, may mà an toàn.
+0764	safe	daily	セーフ	セーフ	an toàn	今のセーフ?アウト?	Vừa rồi safe hay out vậy?
+0765	safe	business	セーフ	セーフ	an toàn	判定はセーフでした。	Phán quyết là an toàn (safe).
+0766	sale	exam	セール	セール	giảm giá	今、セール中です。	Hiện đang giảm giá.
+0767	sale	daily	セール	セール	giảm giá	このセール、いつまで?	Đợt giảm giá này đến khi nào vậy?
+0768	sale	business	セール	セール	giảm giá	夏のセールを来週から開始いたします。	Chúng tôi sẽ bắt đầu đợt giảm giá mùa hè từ tuần sau.
+0769	sekitan	exam	石炭	せきたん	than đá	昔は石炭を燃料として使っていた。	Ngày xưa người ta dùng than đá làm nhiên liệu.
+0770	sekitan	daily	石炭	せきたん	than đá	石炭ストーブ、見たことある?	Bạn đã từng thấy lò sưởi than đá chưa?
+0771	sekitan	business	石炭	せきたん	than đá	石炭の輸入価格が上昇しています。	Giá nhập khẩu than đá đang tăng.
+0772	sekinin	exam	責任	せきにん	trách nhiệm	これは私の責任です。	Đây là trách nhiệm của tôi.
+0773	sekinin	daily	責任	せきにん	trách nhiệm	誰が責任取るの?	Ai sẽ chịu trách nhiệm đây?
+0774	sekinin	business	責任	せきにん	trách nhiệm	品質管理の責任者を新たに任命しました。	Chúng tôi đã bổ nhiệm mới người phụ trách quản lý chất lượng.
+0775	sekiyu	exam	石油	せきゆ	dầu mỏ	この国は石油を輸出しています。	Nước này xuất khẩu dầu mỏ.
+0776	sekiyu	daily	石油	せきゆ	dầu mỏ	石油の値段、また上がったね。	Giá dầu mỏ lại tăng nữa rồi nhỉ.
+0777	sekiyu	business	石油	せきゆ	dầu mỏ	石油価格の高騰が輸送コストに影響しています。	Giá dầu tăng cao đang ảnh hưởng đến chi phí vận chuyển.
+0778	senkyo	exam	選挙	せんきょ	bầu cử	来月、選挙があります。	Tháng sau có bầu cử.
+0779	senkyo	daily	選挙	せんきょ	bầu cử	選挙、行った?	Đã đi bầu cử chưa?
+0780	senkyo	business	選挙	せんきょ	bầu cử	選挙結果を受けて新体制が発表されました。	Sau kết quả bầu cử, thể chế mới đã được công bố.
+0781	zenshin	exam	前進	ぜんしん	tiến lên	計画は少しずつ前進しています。	Kế hoạch đang tiến triển từng chút một.
+0782	zenshin	daily	前進	ぜんしん	tiến lên	一歩前進できたね!	Đã tiến được một bước rồi đó!
+0783	zenshin	business	前進	ぜんしん	tiến lên	交渉は前進していると評価されています。	Cuộc đàm phán được đánh giá là đang có tiến triển.
+0784	zentai	exam	全体	ぜんたい	toàn thể	全体の意見をまとめました。	Tôi đã tổng hợp ý kiến của toàn thể.
+0785	zentai	daily	全体	ぜんたい	toàn thể	全体的に見て、いい感じだね。	Nhìn tổng thể thì khá ổn nhỉ.
+0786	zentai	business	全体	ぜんたい	toàn thể	全体の予算を見直す必要があります。	Cần phải xem lại toàn bộ ngân sách.
+0787	senden	exam	宣伝	せんでん	quảng cáo	新商品を宣伝しています。	Chúng tôi đang quảng cáo sản phẩm mới.
+0788	senden	daily	宣伝	せんでん	quảng cáo	それ、自己宣伝じゃない?	Đó chẳng phải là tự quảng cáo bản thân à?
+0789	senden	business	宣伝	せんでん	quảng cáo	SNSを活用した宣伝活動を強化します。	Chúng tôi sẽ tăng cường hoạt động quảng bá sử dụng mạng xã hội.
+0790	zenryoku	exam	全力	ぜんりょく	toàn lực	全力で頑張ります。	Tôi sẽ cố gắng hết sức.
+0791	zenryoku	daily	全力	ぜんりょく	toàn lực	全力出し切った!	Đã dốc hết toàn lực rồi!
+0792	zenryoku	business	全力	ぜんりょく	toàn lực	目標達成に向けて全力を尽くしてまいります。	Chúng tôi sẽ dốc hết toàn lực để đạt được mục tiêu.
+0793	zouka	exam	増加	ぞうか	gia tăng	人口が増加しています。	Dân số đang gia tăng.
+0794	zouka	daily	増加	ぞうか	gia tăng	体重、また増加した気がする。	Có cảm giác cân nặng lại tăng nữa rồi.
+0795	zouka	business	増加	ぞうか	gia tăng	売上高が前年比10%増加しました。	Doanh thu đã tăng 10% so với năm trước.
+0796	soushiki	exam	葬式	そうしき	đám tang	昨日、祖父の葬式がありました。	Hôm qua có đám tang của ông tôi.
+0797	soushiki	daily	葬式	そうしき	đám tang	葬式、何を着ていけばいい?	Đám tang nên mặc gì đi vậy?
+0798	soushiki	business	葬式	そうしき	đám tang	社員のご家族の葬式には慶弔休暇を適用いたします。	Chúng tôi sẽ áp dụng ngày nghỉ tang lễ khi gia đình nhân viên có đám tang.
+0799	soushin	exam	送信	そうしん	gửi (mail)	メールを送信しました。	Tôi đã gửi email.
+0800	soushin	daily	送信	そうしん	gửi (mail)	あ、まだ送信してなかった!	A, tôi vẫn chưa gửi đi!
+0801	soushin	business	送信	そうしん	gửi (mail)	誤って送信したメールの取り消しを試みました。	Tôi đã thử thu hồi email gửi nhầm.
+0802	souzou	exam	想像	そうぞう	tưởng tượng	結果は想像できます。	Tôi có thể tưởng tượng ra kết quả.
+0803	souzou	daily	想像	そうぞう	tưởng tượng	それは想像もしてなかった。	Cái đó tôi không hề tưởng tượng ra.
+0804	souzou	business	想像	そうぞう	tưởng tượng	将来の需要を想像しながら計画を立てています。	Chúng tôi đang lập kế hoạch trong khi hình dung nhu cầu tương lai.
+0805	soubetsukai	exam	送別会	そうべつかい	tiệc chia tay	今度、送別会を開きます。	Lần tới chúng tôi sẽ tổ chức tiệc chia tay.
+0806	soubetsukai	daily	送別会	そうべつかい	tiệc chia tay	送別会、参加する?	Có tham gia tiệc chia tay không?
+0807	soubetsukai	business	送別会	そうべつかい	tiệc chia tay	退職者のための送別会を来週末に開催します。	Chúng tôi sẽ tổ chức tiệc chia tay cho người nghỉ việc vào cuối tuần sau.
+0808	sokutatsu	exam	速達	そくたつ	chuyển phát nhanh	速達でお願いします。	Vui lòng gửi chuyển phát nhanh giúp tôi.
+0809	sokutatsu	daily	速達	そくたつ	chuyển phát nhanh	速達なら明日届くよね?	Chuyển phát nhanh thì mai đến phải không?
+0810	sokutatsu	business	速達	そくたつ	chuyển phát nhanh	重要書類は速達で発送してください。	Tài liệu quan trọng xin gửi bằng chuyển phát nhanh.
+0811	sotogawa	exam	外側	そとがわ	bên ngoài	箱の外側に名前を書いた。	Tôi đã ghi tên lên bên ngoài hộp.
+0812	sotogawa	daily	外側	そとがわ	bên ngoài	このコート、外側が汚れてるよ。	Áo khoác này bị bẩn ở mặt ngoài kìa.
+0813	sotogawa	business	外側	そとがわ	bên ngoài	建物の外側の塗装工事を行います。	Chúng tôi sẽ tiến hành thi công sơn bên ngoài tòa nhà.
+0814	sonota	exam	その他	そのた	ngoài ra	その他の質問はありますか。	Có câu hỏi nào khác không?
+0815	sonota	daily	その他	そのた	ngoài ra	その他、特にないかな。	Ngoài ra thì cũng không có gì đặc biệt.
+0816	sonota	business	その他	そのた	ngoài ra	その他の詳細については別紙をご覧ください。	Về các chi tiết khác, xin vui lòng xem tài liệu đính kèm.
+0817	sonkei	exam	尊敬	そんけい	tôn trọng	私は父を尊敬しています。	Tôi tôn trọng cha tôi.
+0818	sonkei	daily	尊敬	そんけい	tôn trọng	あの先輩、マジ尊敬するわ。	Người tiền bối đó, thật sự đáng nể phục đó.
+0819	sonkei	business	尊敬	そんけい	tôn trọng	お客様を尊敬の念を持って接客いたします。	Chúng tôi phục vụ khách hàng với lòng tôn trọng.
+0820	tai1	exam	対	たい	đối	試合は3対2で終わった。	Trận đấu kết thúc với tỷ số 3-2.
+0821	tai1	daily	対	たい	đối	今、何対何?	Bây giờ tỷ số bao nhiêu?
+0822	tai1	business	対	たい	đối	賛成対反対の割合を集計しました。	Chúng tôi đã tổng hợp tỷ lệ tán thành đối phản đối.
+0823	dai1	exam	台	だい	cái, giá	荷物をここの台に置いてください。	Vui lòng đặt hành lý lên cái bệ này.
+0824	dai1	daily	台	だい	cái, giá	車、もう1台買おうかな。	Hay là mua thêm một chiếc xe nữa nhỉ.
+0825	dai1	business	台	だい	cái, giá	社用車を新たに2台導入いたしました。	Chúng tôi đã đưa vào sử dụng mới thêm 2 chiếc xe công ty.
+0826	dai2	exam	題	だい	đề tài	この作文の題は何にしますか。	Đề tài bài văn này bạn định đặt là gì?
+0827	dai2	daily	題	だい	đề tài	いい題、思いついた!	Tôi đã nghĩ ra đề tài hay rồi!
+0828	dai2	business	題	だい	đề tài	レポートの題を「市場動向分析」としました。	Chúng tôi đã đặt tiêu đề báo cáo là "Phân tích xu hướng thị trường".
+0829	taikai	exam	大会	たいかい	đại hội	来月、スポーツ大会があります。	Tháng sau có đại hội thể thao.
+0830	taikai	daily	大会	たいかい	đại hội	大会、優勝できるといいね。	Mong là mình có thể vô địch giải đấu này.
+0831	taikai	business	大会	たいかい	đại hội	全国大会の開催に向けて準備を進めています。	Chúng tôi đang chuẩn bị cho việc tổ chức đại hội toàn quốc.
+0832	taisou	exam	体操	たいそう	thể dục	毎朝、ラジオ体操をしています。	Mỗi sáng tôi đều tập thể dục theo radio.
+0833	taisou	daily	体操	たいそう	thể dục	体操、久しぶりにやったら疲れた。	Lâu rồi mới tập thể dục nên thấy mệt.
+0834	taisou	business	体操	たいそう	thể dục	始業前に軽い体操を実施しています。	Chúng tôi thực hiện bài thể dục nhẹ trước giờ làm việc.
+0835	taido	exam	態度	たいど	thái độ	彼の態度が気になる。	Tôi để ý đến thái độ của anh ấy.
+0836	taido	daily	態度	たいど	thái độ	その態度、ちょっとひどくない?	Thái độ đó hơi quá đáng không?
+0837	taido	business	態度	たいど	thái độ	お客様には誠実な態度で対応してください。	Vui lòng đối xử với khách hàng bằng thái độ chân thành.
+0838	title	exam	タイトル	タイトル	tiêu đề	この本のタイトルは何ですか。	Tựa đề cuốn sách này là gì?
+0839	title	daily	タイトル	タイトル	tiêu đề	タイトル、まだ決まってないんだ。	Tựa đề vẫn chưa quyết định được.
+0840	title	business	タイトル	タイトル	tiêu đề	プレゼン資料のタイトルを分かりやすく修正しました。	Chúng tôi đã sửa lại tiêu đề tài liệu thuyết trình cho dễ hiểu hơn.
+0841	daibubun	exam	大部分	だいぶぶん	phần lớn	参加者の大部分は学生だった。	Phần lớn người tham gia là sinh viên.
+0842	daibubun	daily	大部分	だいぶぶん	phần lớn	作業の大部分はもう終わったよ。	Phần lớn công việc đã xong rồi đó.
+0843	daibubun	business	大部分	だいぶぶん	phần lớn	予算の大部分は人件費に充てられています。	Phần lớn ngân sách được dùng cho chi phí nhân sự.
+0844	taiho	exam	逮捕	たいほ	bắt giữ	犯人はその場で逮捕された。	Thủ phạm đã bị bắt giữ ngay tại chỗ.
+0845	taiho	daily	逮捕	たいほ	bắt giữ	昨日、近所で逮捕があったらしいよ。	Nghe nói hôm qua có vụ bắt giữ ở gần nhà đó.
+0846	taiho	business	逮捕	たいほ	bắt giữ	不正取引に関与した社員が逮捕されました。	Nhân viên liên quan đến giao dịch gian lận đã bị bắt giữ.
+0847	daimei	exam	題名	だいめい	tên, tiêu đề	この小説の題名を覚えていますか。	Bạn có nhớ tên cuốn tiểu thuyết này không?
+0848	daimei	daily	題名	だいめい	tên, tiêu đề	その映画の題名、なんだっけ?	Tên bộ phim đó là gì nhỉ?
+0849	daimei	business	題名	だいめい	tên, tiêu đề	報告書の題名を分かりやすく変更しました。	Tôi đã đổi tên báo cáo cho dễ hiểu hơn.
+0850	download	exam	ダウンロード	ダウンロード	tải xuống	このアプリは無料でダウンロードできる。	Ứng dụng này có thể tải xuống miễn phí.
+0851	download	daily	ダウンロード	ダウンロード	tải xuống	この曲、まだダウンロードしてないの?	Bài hát này bạn vẫn chưa tải xuống à?
+0852	download	business	ダウンロード	ダウンロード	tải xuống	資料は下記URLからダウンロードしてください。	Vui lòng tải tài liệu từ URL bên dưới.
+0853	tanomi	exam	頼み	たのみ	nhờ vả	彼に一つ頼みがある。	Tôi có một việc muốn nhờ anh ấy.
+0854	tanomi	daily	頼み	たのみ	nhờ vả	ちょっと頼みがあるんだけど、いい?	Tôi có việc muốn nhờ chút, được không?
+0855	tanomi	business	頼み	たのみ	nhờ vả	一つ頼みがあるのですが、お時間よろしいですか。	Tôi có một việc muốn nhờ, anh/chị có thời gian không ạ?
+0856	double	exam	ダブル	ダブル	phòng đôi	二人ならダブルの部屋が便利だ。	Nếu hai người thì phòng đôi tiện hơn.
+0857	double	daily	ダブル	ダブル	phòng đôi	ダブルの部屋、空いてるかな?	Không biết phòng đôi còn trống không nhỉ?
+0858	double	business	ダブル	ダブル	phòng đôi	ダブルルームを2部屋ご用意いたしました。	Chúng tôi đã chuẩn bị 2 phòng đôi.
+0859	tama	exam	玉	たま	quả, viên	このお菓子は玉の形をしている。	Món bánh này có hình viên tròn.
+0860	tama	daily	玉	たま	quả, viên	飴の玉、一つちょうだい。	Cho tớ một viên kẹo với.
+0861	tama	business	玉	たま	quả, viên	製品には小さな玉状の部品が使われています。	Sản phẩm sử dụng các linh kiện dạng viên nhỏ.
+0862	tantou	exam	担当	たんとう	phụ trách	この件は田中さんが担当している。	Việc này do anh Tanaka phụ trách.
+0863	tantou	daily	担当	たんとう	phụ trách	今日の受付、誰が担当なの?	Hôm nay ai phụ trách lễ tân vậy?
+0864	tantou	business	担当	たんとう	phụ trách	本件の担当を私が引き継ぐことになりました。	Tôi đã tiếp nhận phụ trách việc này.
+0865	check	exam	チェック	チェック	kiểm tra	答案を出す前にもう一度チェックしなさい。	Hãy kiểm tra lại bài làm một lần nữa trước khi nộp.
+0866	check	daily	チェック	チェック	kiểm tra	荷物、忘れ物ないかチェックした?	Cậu kiểm tra hành lý có bỏ quên gì không chưa?
+0867	check	business	チェック	チェック	kiểm tra	提出前に必ず内容をチェックしてください。	Vui lòng kiểm tra nội dung trước khi nộp.
+0868	checkout	exam	チェックアウト	チェックアウト	trả phòng	チェックアウトは何時までですか。	Trả phòng đến mấy giờ vậy?
+0869	checkout	daily	チェックアウト	チェックアウト	trả phòng	明日の朝、早めにチェックアウトしよう。	Sáng mai mình trả phòng sớm nhé.
+0870	checkout	business	チェックアウト	チェックアウト	trả phòng	チェックアウトの際はフロントにお立ち寄りください。	Khi trả phòng, xin vui lòng ghé qua quầy lễ tân.
+0871	checkin	exam	チェックイン	チェックイン	làm thủ tục	ホテルのチェックインは午後3時からです。	Nhận phòng khách sạn bắt đầu từ 3 giờ chiều.
+0872	checkin	daily	チェックイン	チェックイン	làm thủ tục	まだチェックインしてないから、荷物持ったままだよ。	Vì chưa nhận phòng nên vẫn đang xách hành lý đây.
+0873	checkin	business	チェックイン	チェックイン	làm thủ tục	オンラインチェックインをご利用いただけます。	Quý khách có thể sử dụng dịch vụ làm thủ tục trực tuyến.
+0874	chigai	exam	違い	ちがい	sự khác nhau	この二つの単語の違いを説明しなさい。	Hãy giải thích sự khác nhau giữa hai từ này.
+0875	chigai	daily	違い	ちがい	sự khác nhau	二つ、何が違いなの?	Hai cái này khác nhau ở chỗ nào vậy?
+0876	chigai	business	違い	ちがい	sự khác nhau	両プランの違いを表にまとめました。	Tôi đã tổng hợp sự khác nhau giữa hai gói thành bảng.
+0877	chance	exam	チャンス	チャンス	cơ hội	これは絶好のチャンスだ。	Đây là cơ hội tuyệt vời.
+0878	chance	daily	チャンス	チャンス	cơ hội	今がチャンスだよ、行こう!	Bây giờ là cơ hội đấy, đi thôi!
+0879	chance	business	チャンス	チャンス	cơ hội	海外進出の大きなチャンスだと考えています。	Chúng tôi cho rằng đây là cơ hội lớn để mở rộng ra nước ngoài.
+0880	chuumoku	exam	注目	ちゅうもく	chú ý	彼の研究は世界から注目されている。	Nghiên cứu của anh ấy đang được thế giới chú ý.
+0881	chuumoku	daily	注目	ちゅうもく	chú ý	最近、この店が注目されてるらしいよ。	Nghe nói dạo này quán này đang được chú ý đó.
+0882	chuumoku	business	注目	ちゅうもく	chú ý	新製品は業界内で大きな注目を集めています。	Sản phẩm mới đang thu hút sự chú ý lớn trong ngành.
+0883	chuumon	exam	注文	ちゅうもん	đặt hàng	レストランで料理を注文した。	Tôi đã gọi món ở nhà hàng.
+0884	chuumon	daily	注文	ちゅうもん	đặt hàng	もう注文した?何にする?	Cậu gọi món chưa? Lấy gì vậy?
+0885	chuumon	business	注文	ちゅうもん	đặt hàng	ご注文の商品は明日発送いたします。	Sản phẩm quý khách đặt sẽ được gửi vào ngày mai.
+0886	choukan	exam	朝刊	ちょうかん	báo sáng	毎朝、朝刊に目を通す。	Mỗi sáng tôi đều đọc lướt qua báo sáng.
+0887	choukan	daily	朝刊	ちょうかん	báo sáng	朝刊、もう読んだ?	Báo sáng đọc chưa?
+0888	choukan	business	朝刊	ちょうかん	báo sáng	本件は本日の朝刊にも掲載される予定です。	Việc này dự kiến cũng sẽ được đăng trên báo sáng hôm nay.
+0889	chousa	exam	調査	ちょうさ	điều tra	アンケート調査の結果をまとめた。	Tôi đã tổng hợp kết quả khảo sát.
+0890	chousa	daily	調査	ちょうさ	điều tra	この件、ちゃんと調査した方がいいよ。	Việc này nên điều tra kỹ hơn đó.
+0891	chousa	business	調査	ちょうさ	điều tra	市場調査の結果を来週ご報告いたします。	Tôi sẽ báo cáo kết quả khảo sát thị trường vào tuần sau.
+0892	choushi	exam	調子	ちょうし	tình trạng	体の調子がいいので、今日は走れそうだ。	Vì tình trạng cơ thể tốt nên hôm nay có vẻ chạy được.
+0893	choushi	daily	調子	ちょうし	tình trạng	最近、調子どう?	Dạo này tình hình sao rồi?
+0894	choushi	business	調子	ちょうし	tình trạng	機械の調子が悪いため、点検を依頼しました。	Vì máy móc không ổn nên chúng tôi đã yêu cầu kiểm tra.
+0895	tour	exam	ツアー	ツアー	tour	来月、京都のツアーに参加する予定だ。	Tháng sau tôi dự định tham gia tour Kyoto.
+0896	tour	daily	ツアー	ツアー	tour	今度の旅行、ツアーで行く?自由旅行にする?	Chuyến đi lần này đi tour hay tự túc?
+0897	tour	business	ツアー	ツアー	tour	団体様向けの特別ツアーをご用意しております。	Chúng tôi có chuẩn bị tour đặc biệt dành cho đoàn khách.
+0898	tsuika	exam	追加	ついか	thêm	メニューに新しい料理が追加された。	Một món ăn mới đã được thêm vào thực đơn.
+0899	tsuika	daily	追加	ついか	thêm	もう一品、追加していい?	Gọi thêm một món nữa được không?
+0900	tsuika	business	追加	ついか	thêm	契約内容に一条項を追加いたします。	Chúng tôi sẽ thêm một điều khoản vào nội dung hợp đồng.

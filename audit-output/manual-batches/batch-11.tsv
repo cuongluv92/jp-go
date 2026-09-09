@@ -1,0 +1,181 @@
+row	vocabId	type	word	reading	meaningVi	exampleJp	exampleVi
+1801	nobori	exam	上り	のぼり	chiều lên (vào trung tâm)	上りの電車に乗り換えた。	Tôi đã đổi sang chuyến tàu đi lên.
+1802	nobori	daily	上り	のぼり	chiều lên (vào trung tâm)	上りは混んでるよね。	Chiều lên đông người nhỉ.
+1803	nobori	business	上り	のぼり	chiều lên (vào trung tâm)	上り線のダイヤが変更されました。	Lịch trình tuyến chiều lên đã được thay đổi.
+1804	hassha	exam	発車	はっしゃ	khởi hành (xe)	電車が発車した。	Tàu điện đã khởi hành.
+1805	hassha	daily	発車	はっしゃ	khởi hành (xe)	もうすぐ発車するよ、急いで!	Sắp khởi hành rồi, nhanh lên!
+1806	hassha	business	発車	はっしゃ	khởi hành (xe)	定刻通り発車いたしますのでご注意ください。	Xin lưu ý là sẽ khởi hành đúng giờ.
+1807	patocar	exam	パトカー	パトカー	xe cảnh sát	パトカーがサイレンを鳴らして走った。	Xe cảnh sát đã chạy với còi hú vang.
+1808	patocar	daily	パトカー	パトカー	xe cảnh sát	あそこにパトカー止まってるね。	Ở kia có xe cảnh sát đậu kìa.
+1809	patocar	business	パトカー	パトカー	xe cảnh sát	事故現場にはパトカーが数台来ていました。	Có mấy chiếc xe cảnh sát đã đến hiện trường tai nạn.
+1810	handle	exam	ハンドル	ハンドル	tay lái, vô lăng	ハンドルをしっかり握った。	Tôi đã nắm chắc tay lái.
+1811	handle	daily	ハンドル	ハンドル	tay lái, vô lăng	ハンドル、重くない?	Tay lái không nặng à?
+1812	handle	business	ハンドル	ハンドル	tay lái, vô lăng	運転中はハンドル操作にご注意ください。	Xin vui lòng chú ý thao tác tay lái khi lái xe.
+1813	bin	exam	便	びん	chuyến (bay/xe)	次の便に乗ることにした。	Tôi đã quyết định đi chuyến tiếp theo.
+1814	bin	daily	便	びん	chuyến (bay/xe)	何便で帰るの?	Cậu về bằng chuyến nào?
+1815	bin	business	便	びん	chuyến (bay/xe)	午後便への変更を承りました。	Chúng tôi đã tiếp nhận yêu cầu đổi sang chuyến buổi chiều.
+1816	brake	exam	ブレーキ	ブレーキ	phanh	急にブレーキをかけた。	Tôi đã phanh gấp.
+1817	brake	daily	ブレーキ	ブレーキ	phanh	ブレーキ、効かないんだけど。	Phanh không ăn.
+1818	brake	business	ブレーキ	ブレーキ	phanh	ブレーキの点検を定期的に実施しております。	Chúng tôi kiểm tra phanh định kỳ.
+1819	home	exam	ホーム	ホーム	sân ga	ホームで電車を待った。	Tôi đã đợi tàu điện ở sân ga.
+1820	home	daily	ホーム	ホーム	sân ga	何番ホームだっけ?	Sân ga số mấy nhỉ?
+1821	home	business	ホーム	ホーム	sân ga	電車は3番ホームに到着いたします。	Tàu điện sẽ đến sân ga số 3.
+1822	yuki	exam	行き	ゆき	hướng đi, chuyến đi	東京行きの電車に乗った。	Tôi đã lên tàu điện hướng đi Tokyo.
+1823	yuki	daily	行き	ゆき	hướng đi, chuyến đi	行きは電車で帰りはバスにしよう。	Chiều đi thì đi tàu, chiều về thì đi xe buýt nhé.
+1824	yuki	business	行き	ゆき	hướng đi, chuyến đi	会場行きのシャトルバスをご用意しております。	Chúng tôi có chuẩn bị xe buýt đưa đón đến hội trường.
+1825	rush	exam	ラッシュ	ラッシュ	giờ cao điểm	朝のラッシュを避けて出勤した。	Tôi đã đi làm tránh giờ cao điểm buổi sáng.
+1826	rush	daily	ラッシュ	ラッシュ	giờ cao điểm	この時間、ラッシュだから混むよ。	Giờ này là giờ cao điểm nên đông lắm.
+1827	rush	business	ラッシュ	ラッシュ	giờ cao điểm	ラッシュ時の混雑緩和のため増便いたします。	Chúng tôi sẽ tăng chuyến để giảm bớt đông đúc vào giờ cao điểm.
+1828	rail	exam	レール	レール	đường ray	レールの上を電車が走る。	Tàu điện chạy trên đường ray.
+1829	rail	daily	レール	レール	đường ray	このレール、錆びてるね。	Đường ray này bị gỉ rồi nhỉ.
+1830	rail	business	レール	レール	đường ray	レールの交換工事を来週実施いたします。	Công việc thay thế đường ray sẽ được thực hiện vào tuần sau.
+1831	dump	exam	ダンプ	ダンプ	xe ben	工事現場にダンプが出入りしている。	Xe ben ra vào công trường xây dựng.
+1832	dump	daily	ダンプ	ダンプ	xe ben	大きいダンプ、通るから気をつけて。	Có xe ben lớn đi qua nên chú ý nhé.
+1833	dump	business	ダンプ	ダンプ	xe ben	土砂の運搬にはダンプを使用いたします。	Chúng tôi sẽ dùng xe ben để vận chuyển đất đá.
+1834	truck	exam	トラック	トラック	xe tải	荷物をトラックで運んだ。	Tôi đã dùng xe tải để chở đồ.
+1835	truck	daily	トラック	トラック	xe tải	大きいトラック、来たね。	Xe tải lớn đến rồi kìa.
+1836	truck	business	トラック	トラック	xe tải	商品はトラックにて配送いたします。	Sản phẩm sẽ được giao bằng xe tải.
+1837	helicopter	exam	ヘリコプター	ヘリコプター	trực thăng	ヘリコプターが空を飛んでいる。	Máy bay trực thăng đang bay trên trời.
+1838	helicopter	daily	ヘリコプター	ヘリコプター	trực thăng	ヘリコプターの音、聞こえる?	Nghe thấy tiếng trực thăng không?
+1839	helicopter	business	ヘリコプター	ヘリコプター	trực thăng	救助活動にはヘリコプターを使用いたします。	Chúng tôi sẽ sử dụng trực thăng cho hoạt động cứu hộ.
+1840	boat	exam	ボート	ボート	thuyền	湖でボートに乗った。	Tôi đã đi thuyền trên hồ.
+1841	boat	daily	ボート	ボート	thuyền	ボート、楽しかったね。	Đi thuyền vui thật nhỉ.
+1842	boat	business	ボート	ボート	thuyền	レジャー用ボートの販売を開始いたしました。	Chúng tôi đã bắt đầu bán thuyền giải trí.
+1843	monorail	exam	モノレール	モノレール	tàu điện một ray	空港までモノレールで行った。	Tôi đã đi đến sân bay bằng tàu điện một ray.
+1844	monorail	daily	モノレール	モノレール	tàu điện một ray	モノレール、初めて乗る。	Đây là lần đầu tớ đi tàu một ray.
+1845	monorail	business	モノレール	モノレール	tàu điện một ray	新モノレール路線が来年開通いたします。	Tuyến tàu điện một ray mới sẽ khai thông vào năm sau.
+1846	rocket	exam	ロケット	ロケット	tên lửa	ロケットが打ち上げられた。	Tên lửa đã được phóng lên.
+1847	rocket	daily	ロケット	ロケット	tên lửa	ロケットの発射、見たことある?	Cậu từng xem phóng tên lửa chưa?
+1848	rocket	business	ロケット	ロケット	tên lửa	新型ロケットの開発に成功いたしました。	Chúng tôi đã thành công trong việc phát triển tên lửa kiểu mới.
+1849	ase	exam	汗	あせ	mồ hôi	運動して汗をかいた。	Tôi đã đổ mồ hôi sau khi tập thể dục.
+1850	ase	daily	汗	あせ	mồ hôi	暑くて汗が止まらない。	Nóng quá mồ hôi không ngừng ra.
+1851	ase	business	汗	あせ	mồ hôi	緊張で手に汗をかいてしまいました。	Vì hồi hộp nên tôi đã đổ mồ hôi tay.
+1852	allergy	exam	アレルギー	アレルギー	dị ứng	彼は卵にアレルギーがある。	Anh ấy bị dị ứng với trứng.
+1853	allergy	daily	アレルギー	アレルギー	dị ứng	アレルギーがあるから、この料理の材料を確認したい。	Vì mình bị dị ứng nên muốn kiểm tra nguyên liệu của món này.
+1854	allergy	business	アレルギー	アレルギー	dị ứng	アレルギー成分の表示を強化いたしました。	Chúng tôi đã tăng cường ghi chú thành phần gây dị ứng.
+1855	iin	exam	医院	いいん	phòng khám	近くの医院で診てもらった。	Tôi đã được khám ở phòng khám gần nhà.
+1856	iin	daily	医院	いいん	phòng khám	その医院、評判良いらしいよ。	Nghe nói phòng khám đó có tiếng tốt.
+1857	iin	business	医院	いいん	phòng khám	提携医院にて健康診断を受けられます。	Quý vị có thể khám sức khỏe tại phòng khám liên kết.
+1858	iki	exam	息	いき	hơi thở	深く息を吸った。	Tôi đã hít một hơi thật sâu.
+1859	iki	daily	息	いき	hơi thở	ちょっと息切れしてきた。	Tớ bắt đầu hụt hơi rồi.
+1860	iki	business	息	いき	hơi thở	緊張すると息が浅くなるそうです。	Nghe nói khi hồi hộp thì hơi thở sẽ nông hơn.
+1861	inemuri	exam	居眠り	いねむり	ngủ gật	授業中に居眠りしてしまった。	Tôi đã lỡ ngủ gật trong giờ học.
+1862	inemuri	daily	居眠り	いねむり	ngủ gật	電車で居眠りして乗り過ごした。	Ngủ gật trên tàu nên đi quá bến.
+1863	inemuri	business	居眠り	いねむり	ngủ gật	会議中の居眠りは厳禁とされています。	Ngủ gật trong cuộc họp là điều tuyệt đối cấm kỵ.
+1864	inochi	exam	命	いのち	sinh mạng	医者が彼の命を救った。	Bác sĩ đã cứu sống anh ấy.
+1865	inochi	daily	命	いのち	sinh mạng	命があって良かったね。	May mà còn giữ được mạng sống.
+1866	inochi	business	命	いのち	sinh mạng	安全は命にかかわる最重要事項です。	An toàn là vấn đề quan trọng nhất liên quan đến tính mạng.
+1867	influenza	exam	インフルエンザ	インフルエンザ	cúm	インフルエンザにかかってしまった。	Tôi đã bị mắc cúm.
+1868	influenza	daily	インフルエンザ	インフルエンザ	cúm	インフルエンザ、流行ってるらしいよ。	Nghe nói cúm đang lây lan đấy.
+1869	influenza	business	インフルエンザ	インフルエンザ	cúm	インフルエンザ予防のためワクチン接種を推奨いたします。	Chúng tôi khuyến khích tiêm vắc-xin để phòng ngừa cúm.
+1870	virus	exam	ウイルス	ウイルス	virus	ウイルスに感染した。	Tôi đã bị nhiễm virus.
+1871	virus	daily	ウイルス	ウイルス	virus	パソコン、ウイルスに感染したかも。	Máy tính có thể đã bị nhiễm virus rồi.
+1872	virus	business	ウイルス	ウイルス	virus	ウイルス対策ソフトを全社に導入いたしました。	Chúng tôi đã triển khai phần mềm diệt virus cho toàn công ty.
+1873	ugai	exam	うがい	うがい	súc miệng	帰宅後、手洗いとうがいをした。	Sau khi về nhà tôi đã rửa tay và súc miệng.
+1874	ugai	daily	うがい	うがい	súc miệng	うがい、ちゃんとしてる?	Cậu có súc miệng đầy đủ không?
+1875	ugai	business	うがい	うがい	súc miệng	感染予防のためうがいと手洗いを徹底してください。	Xin vui lòng thực hiện nghiêm túc việc súc miệng và rửa tay để phòng ngừa lây nhiễm.
+1876	kaori	exam	香り	かおり	mùi hương	花のいい香りがする。	Có mùi hương hoa thơm dễ chịu.
+1877	kaori	daily	香り	かおり	mùi hương	このコーヒー、香りがいいね。	Ly cà phê này thơm ghê.
+1878	kaori	business	香り	かおり	mùi hương	新製品は自然な香りを再現しております。	Sản phẩm mới tái hiện mùi hương tự nhiên.
+1879	kafunshou	exam	花粉症	かふんしょう	dị ứng phấn hoa	春になると花粉症がつらい。	Đến mùa xuân là dị ứng phấn hoa rất khổ sở.
+1880	kafunshou	daily	花粉症	かふんしょう	dị ứng phấn hoa	花粉症、大丈夫?	Dị ứng phấn hoa của cậu ổn không?
+1881	kafunshou	business	花粉症	かふんしょう	dị ứng phấn hoa	花粉症対策グッズの需要が高まっています。	Nhu cầu về các sản phẩm chống dị ứng phấn hoa đang tăng cao.
+1882	kaminoke	exam	髪の毛	かみのけ	tóc	髪の毛を切りに行った。	Tôi đã đi cắt tóc.
+1883	kaminoke	daily	髪の毛	かみのけ	tóc	髪の毛、伸びたね。	Tóc cậu dài ra rồi nhỉ.
+1884	kaminoke	business	髪の毛	かみのけ	tóc	本製品は髪の毛のダメージを補修します。	Sản phẩm này phục hồi hư tổn của tóc.
+1885	gan	exam	がん	がん	ung thư	祖父はがんで亡くなった。	Ông tôi đã qua đời vì ung thư.
+1886	gan	daily	がん	がん	ung thư	定期的にがん検診受けた方がいいよ。	Nên đi khám tầm soát ung thư định kỳ.
+1887	gan	business	がん	がん	ung thư	社員のがん検診費用を補助しております。	Chúng tôi hỗ trợ chi phí khám tầm soát ung thư cho nhân viên.
+1888	kanja	exam	患者	かんじゃ	bệnh nhân	病院には多くの患者がいた。	Ở bệnh viện có rất nhiều bệnh nhân.
+1889	kanja	daily	患者	かんじゃ	bệnh nhân	今日、患者さん多かった?	Hôm nay bệnh nhân đông không?
+1890	kanja	business	患者	かんじゃ	bệnh nhân	患者様の情報は厳重に管理しております。	Thông tin bệnh nhân được chúng tôi quản lý nghiêm ngặt.
+1891	kizu	exam	傷	きず	vết thương	転んで足に傷ができた。	Bị ngã nên chân có vết thương.
+1892	kizu	daily	傷	きず	vết thương	傷、大丈夫?痛くない?	Vết thương ổn không? Có đau không?
+1893	kizu	business	傷	きず	vết thương	製品の傷の有無を出荷前に確認しております。	Chúng tôi kiểm tra sản phẩm có vết trầy xước hay không trước khi xuất hàng.
+1894	kyuubyou	exam	急病	きゅうびょう	bệnh đột ngột	急病で会議を欠席した。	Tôi đã vắng mặt cuộc họp vì bệnh đột ngột.
+1895	kyuubyou	daily	急病	きゅうびょう	bệnh đột ngột	急病人が出たみたいだよ。	Hình như có người bị bệnh đột ngột đấy.
+1896	kyuubyou	business	急病	きゅうびょう	bệnh đột ngột	急病のため本日の出勤を見合わせます。	Vì bệnh đột ngột nên tôi xin phép nghỉ làm hôm nay.
+1897	kin_en	exam	禁煙	きんえん	cấm hút thuốc	この店内は禁煙です。	Bên trong cửa hàng này cấm hút thuốc.
+1898	kin_en	daily	禁煙	きんえん	cấm hút thuốc	禁煙、決めたの?	Cậu quyết định bỏ thuốc rồi à?
+1899	kin_en	business	禁煙	きんえん	cấm hút thuốc	館内は全面禁煙とさせていただいております。	Bên trong tòa nhà được quy định cấm hút thuốc hoàn toàn.
+1900	kinshi_b15	exam	禁止	きんし	cấm	ここは駐車禁止です。	Nơi đây cấm đỗ xe.
+1901	kinshi_b15	daily	禁止	きんし	cấm	それ、禁止されてるよ。	Cái đó bị cấm rồi đó.
+1902	kinshi_b15	business	禁止	きんし	cấm	社内での私用スマホの使用を禁止しております。	Chúng tôi cấm sử dụng điện thoại cá nhân trong công ty.
+1903	kushami	exam	くしゃみ	くしゃみ	hắt hơi	急にくしゃみが出た。	Tự nhiên bị hắt hơi.
+1904	kushami	daily	くしゃみ	くしゃみ	hắt hơi	くしゃみ、止まらないの?	Hắt hơi không dừng lại à?
+1905	kushami	business	くしゃみ	くしゃみ	hắt hơi	マスク着用によりくしゃみの飛沫を防止いたします。	Việc đeo khẩu trang giúp ngăn ngừa giọt bắn khi hắt hơi.
+1906	ketsuatsu	exam	血圧	けつあつ	huyết áp	毎朝、血圧を測っている。	Mỗi sáng tôi đều đo huyết áp.
+1907	ketsuatsu	daily	血圧	けつあつ	huyết áp	最近、血圧高いんだよね。	Dạo này huyết áp tớ cao đấy.
+1908	ketsuatsu	business	血圧	けつあつ	huyết áp	健康診断で血圧の測定を実施いたします。	Chúng tôi sẽ đo huyết áp trong đợt khám sức khỏe.
+1909	ketsueki	exam	血液	けつえき	máu	検査のため血液を採取した。	Máu đã được lấy để xét nghiệm.
+1910	ketsueki	daily	血液	けつえき	máu	血液型、何型?	Nhóm máu của cậu là gì?
+1911	ketsueki	business	血液	けつえき	máu	本検査では血液サンプルを使用いたします。	Xét nghiệm này sẽ sử dụng mẫu máu.
+1912	geri	exam	下痢	げり	tiêu chảy	食べ過ぎて下痢になった。	Vì ăn quá nhiều nên bị tiêu chảy.
+1913	geri	daily	下痢	げり	tiêu chảy	下痢、大丈夫?病院行った?	Tiêu chảy ổn không? Đi khám chưa?
+1914	geri	business	下痢	げり	tiêu chảy	食品衛生管理の不備により下痢症状の報告がありました。	Đã có báo cáo về triệu chứng tiêu chảy do thiếu sót trong quản lý vệ sinh thực phẩm.
+1915	kenkou	exam	健康	けんこう	sức khỏe	健康のために運動している。	Tôi tập thể dục vì sức khỏe.
+1916	kenkou	daily	健康	けんこう	sức khỏe	最近、健康に気をつけてるよ。	Dạo này tớ chú ý đến sức khỏe lắm.
+1917	kenkou	business	健康	けんこう	sức khỏe	社員の健康管理を重視しております。	Chúng tôi coi trọng việc quản lý sức khỏe của nhân viên.
+1918	kensa	exam	検査	けんさ	kiểm tra (y tế)	病院で検査を受けた。	Tôi đã đi kiểm tra ở bệnh viện.
+1919	kensa	daily	検査	けんさ	kiểm tra (y tế)	検査の結果、どうだった?	Kết quả kiểm tra thế nào?
+1920	kensa	business	検査	けんさ	kiểm tra (y tế)	品質検査を全数実施しております。	Chúng tôi thực hiện kiểm tra chất lượng trên toàn bộ số lượng.
+1921	kokyuu	exam	呼吸	こきゅう	hô hấp	深呼吸をして落ち着いた。	Tôi đã hít thở sâu để bình tĩnh lại.
+1922	kokyuu	daily	呼吸	こきゅう	hô hấp	呼吸、楽になった?	Hô hấp dễ chịu hơn chưa?
+1923	kokyuu	business	呼吸	こきゅう	hô hấp	患者様の呼吸状態を常時モニタリングしております。	Chúng tôi luôn theo dõi tình trạng hô hấp của bệnh nhân.
+1924	kossetsu	exam	骨折	こっせつ	gãy xương	転んで足を骨折した。	Bị ngã nên gãy chân.
+1925	kossetsu	daily	骨折	こっせつ	gãy xương	骨折して入院してるんだって。	Nghe nói bị gãy xương phải nhập viện đấy.
+1926	kossetsu	business	骨折	こっせつ	gãy xương	労災による骨折の事例が報告されました。	Đã có báo cáo về trường hợp gãy xương do tai nạn lao động.
+1927	contact	exam	コンタクト	コンタクト	kính áp tròng	コンタクトをつけて出かけた。	Tôi đã đeo kính áp tròng rồi ra ngoài.
+1928	contact	daily	コンタクト	コンタクト	kính áp tròng	コンタクト、なくしちゃった。	Tớ làm mất kính áp tròng rồi.
+1929	contact	business	コンタクト	コンタクト	kính áp tròng	コンタクトレンズの新商品を発売いたします。	Chúng tôi sẽ ra mắt sản phẩm kính áp tròng mới.
+1930	shibou	exam	死亡	しぼう	tử vong	事故で死亡した人がいた。	Đã có người tử vong trong vụ tai nạn.
+1931	shibou	daily	死亡	しぼう	tử vong	そのニュース、死亡者出たらしいよ。	Nghe nói tin đó có người tử vong đấy.
+1932	shibou	business	死亡	しぼう	tử vong	本件に関する死亡事故は確認されておりません。	Chưa xác nhận có tai nạn tử vong liên quan đến việc này.
+1933	shujutsu	exam	手術	しゅじゅつ	phẫu thuật	来月、手術を受ける予定だ。	Tháng sau tôi dự định phẫu thuật.
+1934	shujutsu	daily	手術	しゅじゅつ	phẫu thuật	手術、無事に終わったって。	Nghe nói phẫu thuật đã kết thúc an toàn.
+1935	shujutsu	business	手術	しゅじゅつ	phẫu thuật	手術後の経過は良好とのことです。	Theo báo cáo, tình trạng sau phẫu thuật đang tốt.
+1936	shukketsu	exam	出血	しゅっけつ	xuất huyết	傷口から出血していた。	Vết thương đang bị xuất huyết.
+1937	shukketsu	daily	出血	しゅっけつ	xuất huyết	出血、止まった?	Máu ngừng chảy chưa?
+1938	shukketsu	business	出血	しゅっけつ	xuất huyết	出血が続く場合は速やかに受診してください。	Nếu xuất huyết kéo dài, xin vui lòng đi khám ngay.
+1939	shoujou	exam	症状	しょうじょう	triệu chứng	風邪の症状が出てきた。	Đã xuất hiện triệu chứng cảm cúm.
+1940	shoujou	daily	症状	しょうじょう	triệu chứng	どんな症状があるの?	Có triệu chứng gì vậy?
+1941	shoujou	business	症状	しょうじょう	triệu chứng	症状が改善しない場合は再度ご相談ください。	Nếu triệu chứng không cải thiện, xin vui lòng liên hệ lại.
+1942	shoudoku	exam	消毒	しょうどく	khử trùng	傷口を消毒した。	Tôi đã khử trùng vết thương.
+1943	shoudoku	daily	消毒	しょうどく	khử trùng	手、ちゃんと消毒した?	Tay khử trùng đầy đủ chưa?
+1944	shoudoku	business	消毒	しょうどく	khử trùng	入口に消毒液を設置しております。	Chúng tôi đã đặt dung dịch khử trùng ở lối vào.
+1945	shokuchuudoku	exam	食中毒	しょくちゅうどく	ngộ độc thực phẩm	古い魚を食べて食中毒になった。	Tôi bị ngộ độc thực phẩm vì ăn cá cũ.
+1946	shokuchuudoku	daily	食中毒	しょくちゅうどく	ngộ độc thực phẩm	夏は食中毒に気をつけてね。	Mùa hè phải chú ý ngộ độc thực phẩm nhé.
+1947	shokuchuudoku	business	食中毒	しょくちゅうどく	ngộ độc thực phẩm	食中毒予防のため衛生管理を徹底しております。	Chúng tôi triệt để thực hiện quản lý vệ sinh để phòng ngừa ngộ độc thực phẩm.
+1948	shokuyoku	exam	食欲	しょくよく	sự thèm ăn	最近、食欲がない。	Dạo này tôi không có cảm giác thèm ăn.
+1949	shokuyoku	daily	食欲	しょくよく	sự thèm ăn	食欲、戻ってきた?	Cảm giác thèm ăn trở lại chưa?
+1950	shokuyoku	business	食欲	しょくよく	sự thèm ăn	ストレスで食欲が落ちる人も多いそうです。	Nghe nói nhiều người bị giảm cảm giác thèm ăn vì căng thẳng.
+1951	shiraga	exam	白髪	しらが	tóc bạc	白髪が増えてきた。	Tóc bạc ngày càng nhiều lên.
+1952	shiraga	daily	白髪	しらが	tóc bạc	白髪、染めた方がいい?	Có nên nhuộm tóc bạc không?
+1953	shiraga	business	白髪	しらが	tóc bạc	白髪染め専用の新製品を開発いたしました。	Chúng tôi đã phát triển sản phẩm mới chuyên dùng để nhuộm tóc bạc.
+1954	shinkei	exam	神経	しんけい	thần kinh	神経を使う仕事で疲れた。	Tôi đã mệt vì công việc phải dùng nhiều thần kinh.
+1955	shinkei	daily	神経	しんけい	thần kinh	そんなに神経質にならなくても。	Không cần căng thẳng thần kinh đến vậy đâu.
+1956	shinkei	business	神経	しんけい	thần kinh	細部にまで神経を配って作業しております。	Chúng tôi làm việc chú ý cẩn thận đến từng chi tiết nhỏ.
+1957	shinsatsu	exam	診察	しんさつ	khám bệnh	病院で診察を受けた。	Tôi đã đi khám bệnh ở bệnh viện.
+1958	shinsatsu	daily	診察	しんさつ	khám bệnh	診察、まだ終わらないの?	Khám bệnh vẫn chưa xong à?
+1959	shinsatsu	business	診察	しんさつ	khám bệnh	本日の診察は予約制となっております。	Khám bệnh hôm nay được thực hiện theo hình thức đặt hẹn trước.
+1960	shindansho	exam	診断書	しんだんしょ	giấy chứng nhận y tế	会社に診断書を提出した。	Tôi đã nộp giấy chứng nhận y tế cho công ty.
+1961	shindansho	daily	診断書	しんだんしょ	giấy chứng nhận y tế	診断書、もらってきた?	Cậu đã lấy giấy chứng nhận y tế chưa?
+1962	shindansho	business	診断書	しんだんしょ	giấy chứng nhận y tế	欠勤には医師の診断書が必要です。	Nghỉ làm cần có giấy chứng nhận y tế của bác sĩ.
+1963	shinchou	exam	身長	しんちょう	chiều cao	身長を測ってもらった。	Tôi đã được đo chiều cao.
+1964	shinchou	daily	身長	しんちょう	chiều cao	身長、伸びた?	Cậu cao lên rồi à?
+1965	shinchou	business	身長	しんちょう	chiều cao	制服のサイズは身長に基づいて選定してください。	Xin vui lòng chọn kích cỡ đồng phục dựa theo chiều cao.
+1966	suimin	exam	睡眠	すいみん	giấc ngủ	十分な睡眠を取っている。	Tôi ngủ đủ giấc.
+1967	suimin	daily	睡眠	すいみん	giấc ngủ	睡眠不足で眠いよ。	Vì thiếu ngủ nên buồn ngủ quá.
+1968	suimin	business	睡眠	すいみん	giấc ngủ	十分な睡眠時間の確保を推奨しております。	Chúng tôi khuyến khích đảm bảo đủ thời gian ngủ.
+1969	zutsuu	exam	頭痛	ずつう	đau đầu	頭痛がひどくて薬を飲んだ。	Vì đau đầu dữ dội nên tôi đã uống thuốc.
+1970	zutsuu	daily	頭痛	ずつう	đau đầu	頭痛、まだ治らないの?	Đau đầu vẫn chưa khỏi à?
+1971	zutsuu	business	頭痛	ずつう	đau đầu	頭痛を訴える社員には休憩を促しております。	Chúng tôi khuyến khích nhân viên bị đau đầu nghỉ ngơi.
+1972	stress	exam	ストレス	ストレス	căng thẳng	仕事でストレスがたまっている。	Tôi đang tích tụ căng thẳng vì công việc.
+1973	stress	daily	ストレス	ストレス	căng thẳng	最近、ストレス多くない?	Dạo này cậu căng thẳng nhiều không?
+1974	stress	business	ストレス	ストレス	căng thẳng	従業員のストレス軽減に取り組んでおります。	Chúng tôi đang nỗ lực giảm bớt căng thẳng cho nhân viên.
+1975	seki_b15	exam	せき	せき	ho	風邪でせきが出る。	Bị ho vì cảm cúm.
+1976	seki_b15	daily	せき	せき	ho	せき、ひどいね。大丈夫?	Ho nặng thế. Ổn không?
+1977	seki_b15	business	せき	せき	ho	せきが続く場合はマスクの着用をお願いいたします。	Nếu ho kéo dài, xin vui lòng đeo khẩu trang.
+1978	diet	exam	ダイエット	ダイエット	giảm cân	健康のためダイエットを始めた。	Tôi đã bắt đầu giảm cân vì sức khỏe.
+1979	diet	daily	ダイエット	ダイエット	giảm cân	最近、ダイエットしてるの?	Dạo này cậu đang giảm cân à?
+1980	diet	business	ダイエット	ダイエット	giảm cân	健康経営の一環で社員向けダイエット講座を実施しました。	Chúng tôi đã tổ chức lớp giảm cân cho nhân viên như một phần của quản trị sức khỏe.

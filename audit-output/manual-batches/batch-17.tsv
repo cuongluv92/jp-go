@@ -1,0 +1,181 @@
+row	vocabId	type	word	reading	meaningVi	exampleJp	exampleVi
+2881	tip	exam	チップ	チップ	tiền tip	レストランでチップを渡した。	Tôi đã đưa tiền tip ở nhà hàng.
+2882	tip	daily	チップ	チップ	tiền tip	チップ、いくら渡せばいい?	Đưa tiền tip bao nhiêu là được?
+2883	tip	business	チップ	チップ	tiền tip	ホテルでは、チップの受け取りに関する社内規定を確認してください。	Tại khách sạn, hãy kiểm tra quy định nội bộ về việc nhận tiền boa.
+2884	charge	exam	チャージ	チャージ	nạp tiền	カードにチャージした。	Tôi đã nạp tiền vào thẻ.
+2885	charge	daily	チャージ	チャージ	nạp tiền	このカード、チャージしといた?	Cái thẻ này cậu nạp tiền chưa?
+2886	charge	business	チャージ	チャージ	nạp tiền	電子マネーのチャージ機を設置いたしました。	Chúng tôi đã lắp đặt máy nạp tiền điện tử.
+2887	chokin	exam	貯金	ちょきん	tiết kiệm	将来のために貯金している。	Tôi tiết kiệm cho tương lai.
+2888	chokin	daily	貯金	ちょきん	tiết kiệm	貯金、いくらある?	Cậu tiết kiệm được bao nhiêu rồi?
+2889	chokin	business	貯金	ちょきん	tiết kiệm	積立貯金プランをご案内いたします。	Chúng tôi xin giới thiệu gói tiết kiệm tích lũy.
+2890	tsuuchou	exam	通帳	つうちょう	sổ ngân hàng	銀行で通帳を作った。	Tôi đã làm sổ ngân hàng ở ngân hàng.
+2891	tsuuchou	daily	通帳	つうちょう	sổ ngân hàng	通帳、記帳してくる。	Tớ đi cập nhật sổ ngân hàng đây.
+2892	tsuuchou	business	通帳	つうちょう	sổ ngân hàng	通帳を紛失された場合は再発行が可能です。	Nếu làm mất sổ ngân hàng, có thể được cấp lại.
+2893	teika_b21	exam	定価	ていか	giá niêm yết	定価より安く買った。	Tôi đã mua với giá rẻ hơn giá niêm yết.
+2894	teika_b21	daily	定価	ていか	giá niêm yết	これ、定価いくらなの?	Cái này giá niêm yết bao nhiêu vậy?
+2895	teika_b21	business	定価	ていか	giá niêm yết	定価から20%割引にてご提供いたします。	Chúng tôi cung cấp với mức giảm 20% từ giá niêm yết.
+2896	toku	exam	得	とく	có lợi	まとめて買うと得だ。	Mua một lần nhiều thì có lợi.
+2897	toku	daily	得	とく	có lợi	これ、お得だよ!	Cái này lời lắm đấy!
+2898	toku	business	得	とく	có lợi	まとめて購入した方が得です。	Mua gộp một lần sẽ có lợi hơn.
+2899	tokubai	exam	特売	とくばい	bán giảm giá	スーパーで特売をしていた。	Siêu thị đang có chương trình bán giảm giá.
+2900	tokubai	daily	特売	とくばい	bán giảm giá	今日、特売あるらしいよ。	Nghe nói hôm nay có bán giảm giá đấy.
+2901	tokubai	business	特売	とくばい	bán giảm giá	週末に特売セールを実施いたします。	Chúng tôi sẽ tổ chức chương trình bán giảm giá vào cuối tuần.
+2902	neagari	exam	値上がり	ねあがり	tăng giá	ガソリンが値上がりした。	Giá xăng đã tăng lên.
+2903	neagari	daily	値上がり	ねあがり	tăng giá	また値上がりしたの?	Lại tăng giá nữa à?
+2904	neagari	business	値上がり	ねあがり	tăng giá	原材料費の値上がりにより価格改定いたします。	Chúng tôi sẽ điều chỉnh giá do nguyên vật liệu tăng giá.
+2905	hiyou	exam	費用	ひよう	chi phí	引っ越しの費用を計算した。	Tôi đã tính chi phí chuyển nhà.
+2906	hiyou	daily	費用	ひよう	chi phí	費用、どれくらいかかる?	Chi phí khoảng bao nhiêu vậy?
+2907	hiyou	business	費用	ひよう	chi phí	本プロジェクトの費用を見積もっております。	Chúng tôi đang ước tính chi phí cho dự án này.
+2908	bukka	exam	物価	ぶっか	giá cả (thị trường)	最近、物価が上がっている。	Dạo này giá cả đang tăng.
+2909	bukka	daily	物価	ぶっか	giá cả (thị trường)	物価高、大変だよね。	Giá cả cao thật vất vả nhỉ.
+2910	bukka	business	物価	ぶっか	giá cả (thị trường)	物価上昇を踏まえ価格を見直します。	Chúng tôi sẽ xem xét lại giá dựa trên tình hình giá cả tăng.
+2911	bonus	exam	ボーナス	ボーナス	tiền thưởng	今年のボーナスが増えた。	Tiền thưởng năm nay đã tăng lên.
+2912	bonus	daily	ボーナス	ボーナス	tiền thưởng	ボーナス、何に使う?	Tiền thưởng cậu dùng vào việc gì?
+2913	bonus	business	ボーナス	ボーナス	tiền thưởng	業績に応じたボーナスを支給いたします。	Chúng tôi sẽ chi trả tiền thưởng dựa trên hiệu quả kinh doanh.
+2914	hoken	exam	保険	ほけん	bảo hiểm	健康保険に入っている。	Tôi có tham gia bảo hiểm y tế.
+2915	hoken	daily	保険	ほけん	bảo hiểm	保険、入った方がいいよ。	Nên tham gia bảo hiểm đấy.
+2916	hoken	business	保険	ほけん	bảo hiểm	団体保険への加入をご案内いたします。	Chúng tôi xin hướng dẫn tham gia bảo hiểm tập thể.
+2917	maeuri	exam	前売り	まえうり	bán trước (vé)	コンサートの前売り券を買った。	Tôi đã mua vé bán trước cho buổi hòa nhạc.
+2918	maeuri	daily	前売り	まえうり	bán trước (vé)	前売り、まだ買える?	Vé bán trước vẫn mua được à?
+2919	maeuri	business	前売り	まえうり	bán trước (vé)	前売り券は本日より発売開始いたします。	Vé bán trước sẽ bắt đầu bán từ hôm nay.
+2920	muryou	exam	無料	むりょう	miễn phí	このイベントは入場無料です。	Sự kiện này được vào cửa miễn phí.
+2921	muryou	daily	無料	むりょう	miễn phí	これ、無料なの?	Cái này miễn phí à?
+2922	muryou	business	無料	むりょう	miễn phí	初回相談は無料で承っております。	Lần tư vấn đầu tiên chúng tôi tiếp nhận miễn phí.
+2923	yachin	exam	家賃	やちん	tiền thuê nhà	毎月、家賃を払っている。	Mỗi tháng tôi đóng tiền thuê nhà.
+2924	yachin	daily	家賃	やちん	tiền thuê nhà	この部屋、家賃いくら?	Phòng này tiền thuê bao nhiêu?
+2925	yachin	business	家賃	やちん	tiền thuê nhà	家賃の口座振替をご利用いただけます。	Quý khách có thể sử dụng dịch vụ chuyển khoản tự động tiền thuê nhà.
+2926	yuuryou	exam	有料	ゆうりょう	mất phí	この駐車場は有料だ。	Bãi đỗ xe này mất phí.
+2927	yuuryou	daily	有料	ゆうりょう	mất phí	有料なの?知らなかった。	Mất phí à? Tớ không biết đấy.
+2928	yuuryou	business	有料	ゆうりょう	mất phí	有料オプションとしてご提供しております。	Chúng tôi cung cấp dưới dạng tùy chọn có tính phí.
+2929	yokin	exam	預金	よきん	tiền gửi	銀行に預金をしている。	Tôi có tiền gửi ở ngân hàng.
+2930	yokin	daily	預金	よきん	tiền gửi	預金、いくらあるの?	Cậu có bao nhiêu tiền gửi?
+2931	yokin	business	預金	よきん	tiền gửi	定期預金の金利についてご案内いたします。	Chúng tôi xin giới thiệu về lãi suất tiền gửi định kỳ.
+2932	yosan	exam	予算	よさん	ngân sách	旅行の予算を決めた。	Tôi đã quyết định ngân sách cho chuyến du lịch.
+2933	yosan	daily	予算	よさん	ngân sách	予算、オーバーしちゃった。	Đã vượt ngân sách mất rồi.
+2934	yosan	business	予算	よさん	ngân sách	来期の予算案を作成いたしました。	Chúng tôi đã lập dự thảo ngân sách cho kỳ tới.
+2935	ryougae	exam	両替	りょうがえ	đổi tiền	空港で両替をした。	Tôi đã đổi tiền ở sân bay.
+2936	ryougae	daily	両替	りょうがえ	đổi tiền	両替、どこでできる?	Đổi tiền ở đâu được vậy?
+2937	ryougae	business	両替	りょうがえ	đổi tiền	外貨両替サービスをご利用いただけます。	Quý khách có thể sử dụng dịch vụ đổi ngoại tệ.
+2938	ryoukin	exam	料金	りょうきん	phí	電気の料金を払った。	Tôi đã đóng phí điện.
+2939	ryoukin	daily	料金	りょうきん	phí	この料金、高くない?	Phí này không cao à?
+2940	ryoukin	business	料金	りょうきん	phí	料金プランを見直すことで節約が可能です。	Có thể tiết kiệm bằng cách xem xét lại gói cước.
+2941	ryoushuusho	exam	領収書	りょうしゅうしょ	hóa đơn	タクシーの領収書をもらった。	Tôi đã nhận hóa đơn taxi.
+2942	ryoushuusho	daily	領収書	りょうしゅうしょ	hóa đơn	領収書、いる?	Cậu cần hóa đơn không?
+2943	ryoushuusho	business	領収書	りょうしゅうしょ	hóa đơn	経費精算には領収書が必要です。	Cần có hóa đơn để thanh toán chi phí.
+2944	receipt	exam	レシート	レシート	biên lai	レシートを財布にしまった。	Tôi đã cất biên lai vào ví.
+2945	receipt	daily	レシート	レシート	biên lai	レシート、捨てちゃった。	Tớ vứt biên lai mất rồi.
+2946	receipt	business	レシート	レシート	biên lai	返品にはレシートの提示が必要です。	Cần xuất trình biên lai để trả hàng.
+2947	loan	exam	ローン	ローン	khoản vay	家を買うためにローンを組んだ。	Tôi đã vay để mua nhà.
+2948	loan	daily	ローン	ローン	khoản vay	ローン、いつまで払うの?	Cậu trả khoản vay đến khi nào vậy?
+2949	loan	business	ローン	ローン	khoản vay	低金利ローンのご案内をいたします。	Chúng tôi xin giới thiệu khoản vay lãi suất thấp.
+2950	warikan	exam	割り勘	わりかん	chia tiền	飲み会の代金は割り勘にした。	Tiền buổi nhậu đã được chia đều.
+2951	warikan	daily	割り勘	わりかん	chia tiền	今回、割り勘でいい?	Lần này chia tiền được không?
+2952	warikan	business	割り勘	わりかん	chia tiền	懇親会の費用は割り勘とさせていただきます。	Chi phí buổi giao lưu sẽ được chia đều.
+2953	waribiki	exam	割引	わりびき	giảm giá	会員は割引が受けられる。	Hội viên có thể được giảm giá.
+2954	waribiki	daily	割引	わりびき	giảm giá	割引、使える?	Dùng giảm giá được không?
+2955	waribiki	business	割引	わりびき	giảm giá	早期予約割引を実施しております。	Chúng tôi đang áp dụng giảm giá đặt trước.
+2956	iwa	exam	岩	いわ	tảng đá	大きな岩が道をふさいでいた。	Tảng đá lớn chắn ngang đường.
+2957	iwa	daily	岩	いわ	tảng đá	この岩、登れそう?	Tảng đá này trèo được không?
+2958	iwa	business	岩	いわ	tảng đá	現地調査にて岩盤の強度を確認いたしました。	Chúng tôi đã kiểm tra độ chắc của nền đá qua khảo sát thực địa.
+2959	uchuu	exam	宇宙	うちゅう	vũ trụ	宇宙に興味がある。	Tôi quan tâm đến vũ trụ.
+2960	uchuu	daily	宇宙	うちゅう	vũ trụ	宇宙って不思議だよね。	Vũ trụ kỳ bí thật nhỉ.
+2961	uchuu	business	宇宙	うちゅう	vũ trụ	宇宙関連事業への参入を検討しております。	Chúng tôi đang xem xét việc tham gia lĩnh vực kinh doanh liên quan đến vũ trụ.
+2962	ekitai	exam	液体	えきたい	chất lỏng	この液体は何ですか。	Chất lỏng này là gì vậy?
+2963	ekitai	daily	液体	えきたい	chất lỏng	この液体、こぼれてるよ。	Chất lỏng này bị đổ ra kìa.
+2964	ekitai	business	液体	えきたい	chất lỏng	液体成分の含有量を検査しております。	Chúng tôi đang kiểm tra hàm lượng thành phần chất lỏng.
+2965	esa	exam	餌	えさ	thức ăn (cho vật nuôi)	犬に餌をあげた。	Tôi đã cho chó ăn.
+2966	esa	daily	餌	えさ	thức ăn (cho vật nuôi)	餌、もうあげた?	Cho ăn chưa vậy?
+2967	esa	business	餌	えさ	thức ăn (cho vật nuôi)	ペット用の餌の需要が伸びています。	Nhu cầu thức ăn cho thú cưng đang tăng.
+2968	eda	exam	枝	えだ	cành cây	木の枝が折れた。	Cành cây đã bị gãy.
+2969	eda	daily	枝	えだ	cành cây	この枝、邪魔だね。	Cành cây này vướng thật nhỉ.
+2970	eda	business	枝	えだ	cành cây	落下防止のため枝を剪定いたしました。	Chúng tôi đã tỉa cành để phòng ngừa rơi rụng.
+2971	ooame	exam	大雨	おおあめ	mưa to	昨夜、大雨が降った。	Đêm qua trời mưa to.
+2972	ooame	daily	大雨	おおあめ	mưa to	昨日の大雨で電車が止まったね。	Hôm qua vì mưa lớn mà tàu dừng chạy nhỉ.
+2973	ooame	business	大雨	おおあめ	mưa to	大雨の影響で配送が遅れる可能性がございます。	Có khả năng giao hàng bị trễ do ảnh hưởng của mưa to.
+2974	ooyuki	exam	大雪	おおゆき	tuyết lớn	北海道は大雪だった。	Hokkaido có tuyết rơi dày.
+2975	ooyuki	daily	大雪	おおゆき	tuyết lớn	大雪で電車止まってるらしいよ。	Nghe nói tàu điện dừng vì tuyết lớn đấy.
+2976	ooyuki	business	大雪	おおゆき	tuyết lớn	大雪の予報により出荷を延期いたします。	Chúng tôi sẽ hoãn giao hàng do dự báo tuyết lớn.
+2977	onsen	exam	温泉	おんせん	suối nước nóng	旅行の最後に温泉に入った。	Cuối chuyến đi tôi đã ngâm mình ở suối nước nóng.
+2978	onsen	daily	温泉	おんせん	suối nước nóng	温泉、気持ちよかったね。	Tắm suối nước nóng dễ chịu thật nhỉ.
+2979	onsen	business	温泉	おんせん	suối nước nóng	社員旅行で温泉地を訪れる予定です。	Dự kiến chuyến du lịch nhân viên sẽ đến khu suối nước nóng.
+2980	ondo	exam	温度	おんど	nhiệt độ	室内の温度を調節した。	Tôi đã điều chỉnh nhiệt độ trong phòng.
+2981	ondo	daily	温度	おんど	nhiệt độ	温度、下げてもいい?	Hạ nhiệt độ được không?
+2982	ondo	business	温度	おんど	nhiệt độ	保管温度を一定に保つよう管理しております。	Chúng tôi quản lý để giữ nhiệt độ bảo quản ổn định.
+2983	kaichuudentou	exam	懐中電灯	かいちゅうでんとう	đèn pin	停電したので懐中電灯を使った。	Vì mất điện nên tôi đã dùng đèn pin.
+2984	kaichuudentou	daily	懐中電灯	かいちゅうでんとう	đèn pin	停電に備えて、懐中電灯を玄関に置いてある。	Để phòng mất điện, tôi để đèn pin ở lối vào.
+2985	kaichuudentou	business	懐中電灯	かいちゅうでんとう	đèn pin	防災用に懐中電灯を各部署に配布いたしました。	Chúng tôi đã phát đèn pin cho mỗi phòng ban để phòng chống thiên tai.
+2986	kage	exam	影	かげ	bóng (đổ)	木の影で休んだ。	Tôi đã nghỉ ngơi dưới bóng cây.
+2987	kage	daily	影	かげ	bóng (đổ)	影、長くなったね。	Bóng đổ dài ra rồi nhỉ.
+2988	kage	business	影	かげ	bóng (đổ)	光の当たり方で影の形が変わります。	Hình dạng bóng đổ thay đổi tùy theo cách ánh sáng chiếu vào.
+2989	kazan	exam	火山	かざん	núi lửa	日本には火山が多い。	Nhật Bản có nhiều núi lửa.
+2990	kazan	daily	火山	かざん	núi lửa	あの山、火山なんだって。	Nghe nói núi đó là núi lửa đấy.
+2991	kazan	business	火山	かざん	núi lửa	火山活動の状況を継続して観測しております。	Chúng tôi tiếp tục quan sát tình hình hoạt động núi lửa.
+2992	kaminari	exam	雷	かみなり	sấm sét	遠くで雷が鳴っている。	Có tiếng sấm vang ở xa.
+2993	kaminari	daily	雷	かみなり	sấm sét	雷、怖いよね。	Sấm sét đáng sợ thật nhỉ.
+2994	kaminari	business	雷	かみなり	sấm sét	雷による停電のリスクに備えております。	Chúng tôi chuẩn bị trước rủi ro mất điện do sấm sét.
+2995	kawa2	exam	皮	かわ	vỏ	りんごの皮をむいた。	Tôi đã gọt vỏ táo.
+2996	kawa2	daily	皮	かわ	vỏ	皮、食べても大丈夫?	Ăn cả vỏ được không?
+2997	kawa2	business	皮	かわ	vỏ	本製品は皮ごと食べられる仕様です。	Sản phẩm này được thiết kế có thể ăn cả vỏ.
+2998	kankyou	exam	環境	かんきょう	môi trường	環境問題について考えた。	Tôi đã suy nghĩ về vấn đề môi trường.
+2999	kankyou	daily	環境	かんきょう	môi trường	作業環境、良くなったね。	Môi trường làm việc đã tốt hơn rồi nhỉ.
+3000	kankyou	business	環境	かんきょう	môi trường	環境に配慮した製品開発を進めております。	Chúng tôi đang thúc đẩy phát triển sản phẩm thân thiện với môi trường.
+3001	kansou_b22	exam	乾燥	かんそう	khô	冬は空気が乾燥する。	Mùa đông không khí khô.
+3002	kansou_b22	daily	乾燥	かんそう	khô	肌が乾燥してるな。	Da đang bị khô đấy.
+3003	kansou_b22	business	乾燥	かんそう	khô	乾燥対策として加湿器を設置いたしました。	Chúng tôi đã lắp đặt máy tạo ẩm như biện pháp chống khô.
+3004	kandenchi	exam	乾電池	かんでんち	pin khô	懐中電灯の乾電池を交換した。	Tôi đã thay pin khô cho đèn pin.
+3005	kandenchi	daily	乾電池	かんでんち	pin khô	リモコンの乾電池、もう切れてる。	Pin khô của điều khiển hết rồi.
+3006	kandenchi	business	乾電池	かんでんち	pin khô	防災用の乾電池を備蓄しております。	Chúng tôi tích trữ pin khô để phòng chống thiên tai.
+3007	kion	exam	気温	きおん	nhiệt độ không khí	今日の気温は30度だ。	Nhiệt độ không khí hôm nay là 30 độ.
+3008	kion	daily	気温	きおん	nhiệt độ không khí	気温、上がってきたね。	Nhiệt độ tăng lên rồi nhỉ.
+3009	kion	business	気温	きおん	nhiệt độ không khí	気温上昇に伴い空調管理を徹底しております。	Chúng tôi triệt để quản lý điều hòa theo sự tăng nhiệt độ.
+3010	kikou	exam	気候	きこう	khí hậu	この地域は温暖な気候だ。	Khu vực này có khí hậu ôn hòa.
+3011	kikou	daily	気候	きこう	khí hậu	気候、変わってきたよね。	Khí hậu thay đổi rồi nhỉ.
+3012	kikou	business	気候	きこう	khí hậu	気候変動への対応を経営方針に盛り込んでおります。	Chúng tôi đã đưa việc ứng phó với biến đổi khí hậu vào phương châm kinh doanh.
+3013	kitai_b22	exam	気体	きたい	thể khí	水は気体になると水蒸気になる。	Nước khi thành thể khí sẽ trở thành hơi nước.
+3014	kitai_b22	daily	気体	きたい	thể khí	これ、気体だから見えないんだね。	Cái này là thể khí nên không nhìn thấy được nhỉ.
+3015	kitai_b22	business	気体	きたい	thể khí	気体成分の漏洩がないか点検しております。	Chúng tôi đang kiểm tra xem có rò rỉ thành phần khí hay không.
+3016	kusa	exam	草	くさ	cỏ	庭の草を刈った。	Tôi đã cắt cỏ trong vườn.
+3017	kusa	daily	草	くさ	cỏ	草、伸びてきたね。	Cỏ mọc dài ra rồi nhỉ.
+3018	kusa	business	草	くさ	cỏ	敷地内の草刈りを定期的に実施しております。	Chúng tôi thực hiện cắt cỏ trong khuôn viên định kỳ.
+3019	keihou	exam	警報	けいほう	cảnh báo	大雨警報が出た。	Cảnh báo mưa lớn đã được ban hành.
+3020	keihou	daily	警報	けいほう	cảnh báo	警報、鳴ってるよ。	Còi cảnh báo đang kêu kìa.
+3021	keihou	business	警報	けいほう	cảnh báo	警報発令時の対応マニュアルを整備しております。	Chúng tôi đang hoàn thiện sổ tay ứng phó khi có cảnh báo.
+3022	kemuri	exam	煙	けむり	khói	煙が部屋に充満していた。	Khói đã tràn ngập trong phòng.
+3023	kemuri	daily	煙	けむり	khói	煙、すごいね。何かあった?	Khói nhiều ghê. Có chuyện gì vậy?
+3024	kemuri	business	煙	けむり	khói	煙感知器を各フロアに設置しております。	Chúng tôi lắp đặt cảm biến khói ở mỗi tầng.
+3025	kouzui	exam	洪水	こうずい	lũ lụt	大雨で洪水が起きた。	Mưa lớn đã gây ra lũ lụt.
+3026	kouzui	daily	洪水	こうずい	lũ lụt	洪水、大丈夫だった?	Lũ lụt có ổn không?
+3027	kouzui	business	洪水	こうずい	lũ lụt	洪水対策として堤防を強化しております。	Chúng tôi đang củng cố đê để phòng chống lũ lụt.
+3028	kouyou	exam	紅葉	こうよう	lá đỏ (mùa thu)	秋に紅葉を見に行った。	Vào mùa thu tôi đã đi ngắm lá đỏ.
+3029	kouyou	daily	紅葉	こうよう	lá đỏ (mùa thu)	紅葉、きれいだったね。	Lá đỏ đẹp thật nhỉ.
+3030	kouyou	business	紅葉	こうよう	lá đỏ (mùa thu)	紅葉シーズンに合わせたツアーを企画しております。	Chúng tôi đang lên kế hoạch tour phù hợp với mùa lá đỏ.
+3031	kotai	exam	固体	こたい	thể rắn	氷は水が固体になったものだ。	Băng là nước ở thể rắn.
+3032	kotai	daily	固体	こたい	thể rắn	これ、固体だから溶けないよ。	Cái này thể rắn nên không tan đâu.
+3033	kotai	business	固体	こたい	thể rắn	固体燃料の使用を検討しております。	Chúng tôi đang xem xét sử dụng nhiên liệu thể rắn.
+3034	sanso	exam	酸素	さんそ	oxy	酸素マスクをつけた。	Tôi đã đeo mặt nạ oxy.
+3035	sanso	daily	酸素	さんそ	oxy	酸素、足りてる?	Oxy có đủ không?
+3036	sanso	business	酸素	さんそ	oxy	酸素濃度を定期的に測定しております。	Chúng tôi đo nồng độ oxy định kỳ.
+3037	shizen	exam	自然	しぜん	tự nhiên	自然の中でリラックスした。	Tôi đã thư giãn giữa thiên nhiên.
+3038	shizen	daily	自然	しぜん	tự nhiên	自然に囲まれていいところだね。	Nơi này được thiên nhiên bao quanh, đẹp thật nhỉ.
+3039	shizen	business	自然	しぜん	tự nhiên	自然素材を使用した商品を展開しております。	Chúng tôi đang triển khai sản phẩm sử dụng nguyên liệu tự nhiên.
+3040	shitsudo	exam	湿度	しつど	độ ẩm	今日は湿度が高い。	Hôm nay độ ẩm cao.
+3041	shitsudo	daily	湿度	しつど	độ ẩm	湿度、すごいね。じめじめする。	Độ ẩm cao ghê. Ẩm ướt thật.
+3042	shitsudo	business	湿度	しつど	độ ẩm	保管環境の湿度を一定に管理しております。	Chúng tôi quản lý độ ẩm môi trường bảo quản ở mức ổn định.
+3043	shibafu	exam	芝生	しばふ	bãi cỏ	公園の芝生に座った。	Tôi đã ngồi trên bãi cỏ công viên.
+3044	shibafu	daily	芝生	しばふ	bãi cỏ	芝生、気持ちいいね。	Bãi cỏ dễ chịu thật nhỉ.
+3045	shibafu	business	芝生	しばふ	bãi cỏ	敷地内の芝生を定期的に管理しております。	Chúng tôi quản lý bãi cỏ trong khuôn viên định kỳ.
+3046	shoukaki	exam	消火器	しょうかき	bình cứu hỏa	消火器の使い方を確認した。	Tôi đã kiểm tra cách sử dụng bình cứu hỏa.
+3047	shoukaki	daily	消火器	しょうかき	bình cứu hỏa	家の消火器、使用期限を確認した？	Bình chữa cháy ở nhà, bạn đã kiểm tra hạn sử dụng chưa?
+3048	shoukaki	business	消火器	しょうかき	bình cứu hỏa	各フロアに消火器を設置しております。	Chúng tôi lắp đặt bình cứu hỏa ở mỗi tầng.
+3049	shokubutsu	exam	植物	しょくぶつ	thực vật	植物を育てるのが好きだ。	Tôi thích trồng thực vật.
+3050	shokubutsu	daily	植物	しょくぶつ	thực vật	この植物、名前なんだっけ?	Loài thực vật này tên gì nhỉ?
+3051	shokubutsu	business	植物	しょくぶつ	thực vật	オフィスに植物を配置し環境を整えております。	Chúng tôi đặt cây cối trong văn phòng để tạo môi trường tốt.
+3052	shindo	exam	震度	しんど	độ rung (động đất)	震度5の地震があった。	Đã có trận động đất độ rung 5.
+3053	shindo	daily	震度	しんど	độ rung (động đất)	震度、どれくらいだった?	Độ rung khoảng bao nhiêu vậy?
+3054	shindo	business	震度	しんど	độ rung (động đất)	震度情報をリアルタイムで配信しております。	Chúng tôi phát thông tin độ rung theo thời gian thực.
+3055	shinrin	exam	森林	しんりん	rừng	森林の中を散歩した。	Tôi đã đi dạo trong rừng.
+3056	shinrin	daily	森林	しんりん	rừng	森林、涼しくて気持ちいいね。	Trong rừng mát mẻ dễ chịu thật nhỉ.
+3057	shinrin	business	森林	しんりん	rừng	森林保護活動に協賛しております。	Chúng tôi tài trợ cho hoạt động bảo vệ rừng.
+3058	seibutsu	exam	生物	せいぶつ	sinh vật	海には様々な生物がいる。	Ở biển có nhiều loài sinh vật khác nhau.
+3059	seibutsu	daily	生物	せいぶつ	sinh vật	生物の授業、面白いよね。	Tiết sinh vật thú vị thật nhỉ.
+3060	seibutsu	business	生物	せいぶつ	sinh vật	生物多様性への配慮を経営方針に加えております。	Chúng tôi đã thêm việc quan tâm đến đa dạng sinh vật vào phương châm kinh doanh.

@@ -1,0 +1,181 @@
+row	vocabId	type	word	reading	meaningVi	exampleJp	exampleVi
+2341	fan	exam	ファン	ファン	người hâm mộ	彼のファンになった。	Tôi đã trở thành người hâm mộ của anh ấy.
+2342	fan	daily	ファン	ファン	người hâm mộ	このバンドのファンなんだ。	Tớ là fan của ban nhạc này đấy.
+2343	fan	business	ファン	ファン	người hâm mộ	ファンの皆様へ感謝の気持ちをお伝えいたします。	Chúng tôi xin gửi lời cảm ơn đến toàn thể người hâm mộ.
+2344	fuufu	exam	夫婦	ふうふ	vợ chồng	あの夫婦は仲がいい。	Cặp vợ chồng đó rất hòa thuận.
+2345	fuufu	daily	夫婦	ふうふ	vợ chồng	二人、夫婦みたいだね。	Hai người trông như vợ chồng vậy nhỉ.
+2346	fuufu	business	夫婦	ふうふ	vợ chồng	夫婦向けのプランをご用意しております。	Chúng tôi có chuẩn bị gói dịch vụ dành cho cặp vợ chồng.
+2347	fubo	exam	父母	ふぼ	cha mẹ	父母の同意が必要だ。	Cần có sự đồng ý của cha mẹ.
+2348	fubo	daily	父母	ふぼ	cha mẹ	父母参観日、来てくれる?	Ngày dự giờ phụ huynh cậu đến được không?
+2349	fubo	business	父母	ふぼ	cha mẹ	学校では、父母会からのご意見を運営の参考にしています。	Nhà trường tham khảo ý kiến từ hội phụ huynh trong công tác vận hành.
+2350	pro	exam	プロ	プロ	chuyên nghiệp	彼はプロの選手になった。	Anh ấy đã trở thành vận động viên chuyên nghiệp.
+2351	pro	daily	プロ	プロ	chuyên nghiệp	もうプロ級の腕前だね。	Tay nghề đã đạt đến trình độ chuyên nghiệp rồi nhỉ.
+2352	pro	business	プロ	プロ	chuyên nghiệp	プロの視点から改善案をご提案いたします。	Chúng tôi xin đề xuất phương án cải tiến từ góc nhìn chuyên nghiệp.
+2353	honnin	exam	本人	ほんにん	chính người đó	本人に確認した方がいい。	Nên xác nhận trực tiếp với chính người đó.
+2354	honnin	daily	本人	ほんにん	chính người đó	それ、本人に聞いてみたら?	Cái đó hỏi trực tiếp người đó xem sao?
+2355	honnin	business	本人	ほんにん	chính người đó	本人確認のため身分証をご提示ください。	Xin vui lòng xuất trình giấy tờ tùy thân để xác minh danh tính.
+2356	maigo	exam	迷子	まいご	trẻ lạc đường	デパートで迷子になった。	Tôi bị lạc ở trung tâm thương mại.
+2357	maigo	daily	迷子	まいご	trẻ lạc đường	迷子にならないように気をつけてね。	Chú ý đừng để bị lạc nhé.
+2358	maigo	business	迷子	まいご	trẻ lạc đường	迷子案内のアナウンスを館内で流しております。	Chúng tôi phát thông báo tìm trẻ lạc trong tòa nhà.
+2359	chichioya	exam	父親	ちちおや	bố	父親と一緒に釣りに行った。	Tôi đã đi câu cá cùng bố.
+2360	chichioya	daily	父親	ちちおや	bố	父親、厳しい人なの?	Bố cậu là người nghiêm khắc à?
+2361	chichioya	business	父親	ちちおや	bố	育児商品の企画会議で、父親の立場から意見を述べました。	Trong cuộc họp lên kế hoạch sản phẩm chăm sóc trẻ, tôi phát biểu từ góc nhìn của một người cha.
+2362	hahaoya	exam	母親	ははおや	mẹ	母親に相談した。	Tôi đã hỏi ý kiến mẹ.
+2363	hahaoya	daily	母親	ははおや	mẹ	母親、心配してたよ。	Mẹ cậu lo lắng lắm đấy.
+2364	hahaoya	business	母親	ははおや	mẹ	母親目線での商品開発を心がけています。	Chúng tôi chú trọng phát triển sản phẩm từ góc nhìn của người mẹ.
+2365	sofu	exam	祖父	そふ	ông	祖父は毎朝散歩している。	Ông tôi đi bộ mỗi sáng.
+2366	sofu	daily	祖父	そふ	ông	祖父、元気にしてる?	Ông cậu có khỏe không?
+2367	sofu	business	祖父	そふ	ông	創業者である祖父から会社を引き継ぎました。	Tôi đã tiếp quản công ty từ ông tôi, người sáng lập công ty.
+2368	sobo	exam	祖母	そぼ	bà	祖母の手料理が食べたい。	Tôi muốn ăn món ăn tay bà làm.
+2369	sobo	daily	祖母	そぼ	bà	祖母、優しい人だったよ。	Bà tớ là người rất hiền.
+2370	sobo	business	祖母	そぼ	bà	祖母が始めた店を、今は私が経営しています。	Cửa hàng do bà tôi mở giờ do tôi điều hành.
+2371	chounan	exam	長男	ちょうなん	trưởng nam	彼は長男として生まれた。	Anh ấy sinh ra là con trai trưởng.
+2372	chounan	daily	長男	ちょうなん	trưởng nam	長男だから責任感あるよね。	Vì là con trưởng nên có trách nhiệm nhỉ.
+2373	chounan	business	長男	ちょうなん	trưởng nam	長男が家業を継ぐことになりました。	Con trai trưởng sẽ tiếp nối công việc gia đình.
+2374	choujo	exam	長女	ちょうじょ	trưởng nữ	長女は結婚して家を出た。	Con gái trưởng đã kết hôn và ra riêng.
+2375	choujo	daily	長女	ちょうじょ	trưởng nữ	長女なんだよね、しっかりしてる。	Là con gái trưởng nên chững chạc nhỉ.
+2376	choujo	business	長女	ちょうじょ	trưởng nữ	社長の長女が来年から会社を継ぐ予定です。	Con gái trưởng của giám đốc dự kiến sẽ kế nghiệp công ty từ năm sau.
+2377	jinan	exam	次男	じなん	con trai thứ	次男は海外に住んでいる。	Con trai thứ hai sống ở nước ngoài.
+2378	jinan	daily	次男	じなん	con trai thứ	次男、まだ学生なの?	Con trai thứ vẫn còn là học sinh à?
+2379	jinan	business	次男	じなん	con trai thứ	次男が新規事業を立ち上げました。	Con trai thứ đã khởi nghiệp một dự án mới.
+2380	jijo	exam	次女	じじょ	con gái thứ	次女は活発な性格だ。	Con gái thứ hai có tính cách năng động.
+2381	jijo	daily	次女	じじょ	con gái thứ	次女、可愛いよね。	Con gái thứ dễ thương nhỉ.
+2382	jijo	business	次女	じじょ	con gái thứ	次女が今年から社会人になりました。	Con gái thứ đã đi làm từ năm nay.
+2383	mago	exam	孫	まご	cháu	孫と公園で遊んだ。	Tôi đã chơi với cháu ở công viên.
+2384	mago	daily	孫	まご	cháu	孫、かわいいでしょ?	Cháu dễ thương nhỉ?
+2385	mago	business	孫	まご	cháu	孫の成長が何よりの楽しみです。	Sự trưởng thành của cháu là niềm vui lớn nhất của tôi.
+2386	oi	exam	おい	おい	cháu trai	おいが遊びに来た。	Cháu trai đã đến chơi.
+2387	oi	daily	おい	おい	cháu trai	おい、大きくなったね。	Cháu trai lớn rồi nhỉ.
+2388	oi	business	おい	おい	cháu trai	おいが弊社に入社することになりました。	Cháu trai tôi sẽ vào làm việc tại công ty chúng tôi.
+2389	mei	exam	めい	めい	cháu gái	めいの誕生日を祝った。	Tôi đã chúc mừng sinh nhật cháu gái.
+2390	mei	daily	めい	めい	cháu gái	めい、もう学校行ってるの?	Cháu gái đi học rồi à?
+2391	mei	business	めい	めい	cháu gái	めいが留学することになりました。	Cháu gái tôi sẽ đi du học.
+2392	itoko	exam	いとこ	いとこ	anh em họ	いとこと一緒に育った。	Tôi đã lớn lên cùng anh em họ.
+2393	itoko	daily	いとこ	いとこ	anh em họ	いとこ、何人いるの?	Cậu có mấy anh em họ vậy?
+2394	itoko	business	いとこ	いとこ	anh em họ	いとこが同じ業界で働いています。	Anh em họ của tôi làm việc trong cùng ngành.
+2395	minzoku	exam	民族	みんぞく	dân tộc	この国には様々な民族が住んでいる。	Đất nước này có nhiều dân tộc sinh sống.
+2396	minzoku	daily	民族	みんぞく	dân tộc	その民族の文化、面白いね。	Văn hóa của dân tộc đó thú vị nhỉ.
+2397	minzoku	business	民族	みんぞく	dân tộc	多民族国家での事業展開を検討しております。	Chúng tôi đang xem xét triển khai kinh doanh ở quốc gia đa dân tộc.
+2398	musuko	exam	息子	むすこ	con trai	息子は大学生だ。	Con trai tôi là sinh viên đại học.
+2399	musuko	daily	息子	むすこ	con trai	息子、元気にしてる?	Con trai cậu khỏe không?
+2400	musuko	business	息子	むすこ	con trai	社長の息子が新しい事業責任者として入社しました。	Con trai của giám đốc đã vào công ty với vai trò người phụ trách mảng kinh doanh mới.
+2401	musume	exam	娘	むすめ	con gái	娘は今年小学校に入る。	Con gái tôi sẽ vào tiểu học năm nay.
+2402	musume	daily	娘	むすめ	con gái	娘さん、大きくなったね。	Con gái cậu lớn rồi nhỉ.
+2403	musume	business	娘	むすめ	con gái	保育園では、保護者から娘の園での様子について相談を受けました。	Tại nhà trẻ, chúng tôi đã nhận được câu hỏi của phụ huynh về tình hình của con gái họ ở trường.
+2404	meue	exam	目上	めうえ	bề trên	目上の人には敬語を使う。	Với bề trên thì dùng kính ngữ.
+2405	meue	daily	目上	めうえ	bề trên	目上の人にはちゃんと挨拶してね。	Nhớ chào hỏi tử tế với bề trên nhé.
+2406	meue	business	目上	めうえ	bề trên	目上の方への言葉遣いに注意しております。	Chúng tôi chú ý cách dùng từ với người bề trên.
+2407	member	exam	メンバー	メンバー	thành viên	チームのメンバーを紹介する。	Tôi sẽ giới thiệu các thành viên trong đội.
+2408	member	daily	メンバー	メンバー	thành viên	新しいメンバー、誰なの?	Thành viên mới là ai vậy?
+2409	member	business	メンバー	メンバー	thành viên	プロジェクトメンバーを追加募集いたします。	Chúng tôi sẽ tuyển thêm thành viên dự án.
+2410	yuujin	exam	友人	ゆうじん	bạn bè	古い友人に再会した。	Tôi đã gặp lại bạn cũ.
+2411	yuujin	daily	友人	ゆうじん	bạn bè	友人から連絡があったよ。	Có liên lạc từ bạn bè đấy.
+2412	yuujin	business	友人	ゆうじん	bạn bè	友人代表としてスピーチをいたしました。	Tôi đã phát biểu với tư cách đại diện bạn bè.
+2413	leader	exam	リーダー	リーダー	lãnh đạo	彼はチームのリーダーだ。	Anh ấy là người lãnh đạo của đội.
+2414	leader	daily	リーダー	リーダー	lãnh đạo	次のリーダー、誰にする?	Người lãnh đạo tiếp theo là ai vậy?
+2415	leader	business	リーダー	リーダー	lãnh đạo	チームリーダーとしての役割を担っております。	Tôi đảm nhận vai trò là người lãnh đạo nhóm.
+2416	rirekisho	exam	履歴書	りれきしょ	sơ yếu lý lịch	履歴書を書いて送った。	Tôi đã viết và gửi sơ yếu lý lịch.
+2417	rirekisho	daily	履歴書	りれきしょ	sơ yếu lý lịch	履歴書、まだ書いてないの?	Cậu vẫn chưa viết sơ yếu lý lịch à?
+2418	rirekisho	business	履歴書	りれきしょ	sơ yếu lý lịch	履歴書と職務経歴書をご提出ください。	Xin vui lòng nộp sơ yếu lý lịch và bản tóm tắt quá trình làm việc.
+2419	roujin	exam	老人	ろうじん	người già	老人ホームでボランティアをした。	Tôi đã làm tình nguyện ở nhà dưỡng lão.
+2420	roujin	daily	老人	ろうじん	người già	電車で老人に席を譲った。	Tôi đã nhường ghế cho người già trên tàu điện.
+2421	roujin	business	老人	ろうじん	người già	老人福祉に関する事業を展開しております。	Chúng tôi đang triển khai kinh doanh liên quan đến phúc lợi người già.
+2422	wakamono	exam	若者	わかもの	giới trẻ	若者の間で人気がある。	Được ưa chuộng trong giới trẻ.
+2423	wakamono	daily	若者	わかもの	giới trẻ	最近の若者、すごいよね。	Giới trẻ dạo này giỏi thật nhỉ.
+2424	wakamono	business	若者	わかもの	giới trẻ	若者向けの新サービスを開発しております。	Chúng tôi đang phát triển dịch vụ mới dành cho giới trẻ.
+2425	engineer	exam	エンジニア	エンジニア	kỹ sư	彼はソフトウェアエンジニアだ。	Anh ấy là kỹ sư phần mềm.
+2426	engineer	daily	エンジニア	エンジニア	kỹ sư	エンジニアになりたいんだ。	Tớ muốn trở thành kỹ sư đấy.
+2427	engineer	business	エンジニア	エンジニア	kỹ sư	経験豊富なエンジニアを募集しております。	Chúng tôi đang tuyển kỹ sư có nhiều kinh nghiệm.
+2428	gaka	exam	画家	がか	họa sĩ	彼女は有名な画家だ。	Cô ấy là họa sĩ nổi tiếng.
+2429	gaka	daily	画家	がか	họa sĩ	将来、画家になりたい。	Sau này tớ muốn trở thành họa sĩ.
+2430	gaka	business	画家	がか	họa sĩ	著名な画家の作品を展示いたします。	Chúng tôi sẽ trưng bày tác phẩm của họa sĩ nổi tiếng.
+2431	kashu	exam	歌手	かしゅ	ca sĩ	彼は人気の歌手だ。	Anh ấy là ca sĩ nổi tiếng.
+2432	kashu	daily	歌手	かしゅ	ca sĩ	あの歌手の歌、好きだな。	Tớ thích bài hát của ca sĩ đó lắm.
+2433	kashu	business	歌手	かしゅ	ca sĩ	人気歌手を招いたイベントを企画しております。	Chúng tôi đang lên kế hoạch tổ chức sự kiện mời ca sĩ nổi tiếng.
+2434	kangoshi	exam	看護師	かんごし	y tá	彼女は看護師として働いている。	Cô ấy làm việc với vai trò y tá.
+2435	kangoshi	daily	看護師	かんごし	y tá	看護師さん、優しかったよ。	Cô y tá tốt bụng lắm.
+2436	kangoshi	business	看護師	かんごし	y tá	看護師の人材確保に努めております。	Chúng tôi đang nỗ lực đảm bảo nguồn nhân lực y tá.
+2437	kisha	exam	記者	きしゃ	nhà báo	記者が質問した。	Nhà báo đã đặt câu hỏi.
+2438	kisha	daily	記者	きしゃ	nhà báo	記者会見、見た?	Cậu xem họp báo chưa?
+2439	kisha	business	記者	きしゃ	nhà báo	記者からの取材に対応いたしました。	Chúng tôi đã trả lời phỏng vấn từ nhà báo.
+2440	kyoushi	exam	教師	きょうし	giáo viên	彼は英語の教師だ。	Anh ấy là giáo viên tiếng Anh.
+2441	kyoushi	daily	教師	きょうし	giáo viên	教師になるのが夢なんだ。	Ước mơ của tớ là trở thành giáo viên.
+2442	kyoushi	business	教師	きょうし	giáo viên	教師向けの研修プログラムを実施いたします。	Chúng tôi sẽ tổ chức chương trình đào tạo dành cho giáo viên.
+2443	koumuin	exam	公務員	こうむいん	công chức	兄は市役所で公務員として働いています。	Anh trai tôi làm công chức tại tòa thị chính.
+2444	koumuin	daily	公務員	こうむいん	công chức	公務員試験、受けるの?	Cậu định thi công chức à?
+2445	koumuin	business	公務員	こうむいん	công chức	公務員向けの制度改正が予定されています。	Dự kiến có cải cách chế độ dành cho công chức.
+2446	cook	exam	コック	コック	đầu bếp	彼はホテルのコックだ。	Anh ấy là đầu bếp khách sạn.
+2447	cook	daily	コック	コック	đầu bếp	あのコックさん、腕がいいね。	Ông đầu bếp đó tay nghề giỏi nhỉ.
+2448	cook	business	コック	コック	đầu bếp	経験豊富なコックを採用いたしました。	Chúng tôi đã tuyển được đầu bếp giàu kinh nghiệm.
+2449	joyuu	exam	女優	じょゆう	nữ diễn viên	その女優は海外でも高く評価されている。	Nữ diễn viên đó cũng được đánh giá cao ở nước ngoài.
+2450	joyuu	daily	女優	じょゆう	nữ diễn viên	あの女優、演技うまいよね。	Nữ diễn viên đó diễn hay thật nhỉ.
+2451	joyuu	business	女優	じょゆう	nữ diễn viên	人気女優を起用した広告を制作いたしました。	Chúng tôi đã sản xuất quảng cáo sử dụng nữ diễn viên nổi tiếng.
+2452	daiku	exam	大工	だいく	thợ mộc	大工が家を建てている。	Thợ mộc đang xây nhà.
+2453	daiku	daily	大工	だいく	thợ mộc	大工の仕事、大変そうだね。	Công việc thợ mộc trông vất vả nhỉ.
+2454	daiku	business	大工	だいく	thợ mộc	地元の大工と提携し施工しております。	Chúng tôi thi công hợp tác với thợ mộc địa phương.
+2455	tsuuyaku	exam	通訳	つうやく	thông dịch	会議で通訳を頼んだ。	Tôi đã nhờ thông dịch trong cuộc họp.
+2456	tsuuyaku	daily	通訳	つうやく	thông dịch	通訳、大変そうだったね。	Việc thông dịch trông vất vả nhỉ.
+2457	tsuuyaku	business	通訳	つうやく	thông dịch	商談には通訳を同席させます。	Chúng tôi sẽ để phiên dịch cùng tham dự buổi đàm phán.
+2458	designer	exam	デザイナー	デザイナー	nhà thiết kế	彼女はファッションデザイナーだ。	Cô ấy là nhà thiết kế thời trang.
+2459	designer	daily	デザイナー	デザイナー	nhà thiết kế	将来、デザイナーになりたいな。	Sau này tớ muốn trở thành nhà thiết kế.
+2460	designer	business	デザイナー	デザイナー	nhà thiết kế	経験豊富なデザイナーを募集しております。	Chúng tôi đang tuyển nhà thiết kế giàu kinh nghiệm.
+2461	haiyuu	exam	俳優	はいゆう	diễn viên	彼は舞台俳優だ。	Anh ấy là diễn viên sân khấu.
+2462	haiyuu	daily	俳優	はいゆう	diễn viên	あの俳優、演技すごいね。	Diễn viên đó diễn giỏi ghê.
+2463	haiyuu	business	俳優	はいゆう	diễn viên	著名な俳優を起用したCMを放映いたします。	Chúng tôi sẽ phát sóng quảng cáo sử dụng diễn viên nổi tiếng.
+2464	pilot	exam	パイロット	パイロット	phi công	彼はパイロットになった。	Anh ấy đã trở thành phi công.
+2465	pilot	daily	パイロット	パイロット	phi công	パイロットって格好いいよね。	Phi công ngầu thật nhỉ.
+2466	pilot	business	パイロット	パイロット	phi công	経験豊富なパイロットを採用しております。	Chúng tôi đang tuyển phi công giàu kinh nghiệm.
+2467	bengoshi	exam	弁護士	べんごし	luật sư	弁護士に相談した。	Tôi đã tư vấn với luật sư.
+2468	bengoshi	daily	弁護士	べんごし	luật sư	弁護士、紹介してもらえる?	Cậu giới thiệu giúp luật sư được không?
+2469	bengoshi	business	弁護士	べんごし	luật sư	顧問弁護士に確認をお願いしております。	Chúng tôi đang nhờ luật sư cố vấn xác nhận.
+2470	ensoku	exam	遠足	えんそく	dã ngoại	来週、学校の遠足がある。	Tuần sau trường tổ chức dã ngoại.
+2471	ensoku	daily	遠足	えんそく	dã ngoại	遠足、楽しみだね。	Dã ngoại thật mong chờ nhỉ.
+2472	ensoku	business	遠足	えんそく	dã ngoại	旅行会社が学校の遠足用にバスを手配しました。	Công ty du lịch đã bố trí xe buýt cho chuyến dã ngoại của trường.
+2473	kaitou	exam	解答	かいとう	đáp án	テストの解答を確認した。	Tôi đã kiểm tra đáp án bài kiểm tra.
+2474	kaitou	daily	解答	かいとう	đáp án	解答、合ってた?	Đáp án đúng không?
+2475	kaitou	business	解答	かいとう	đáp án	お問い合わせへの解答をメールにて送付いたします。	Chúng tôi sẽ gửi câu trả lời cho thắc mắc qua email.
+2476	gakushuu	exam	学習	がくしゅう	học tập	毎日、英語の学習をしている。	Mỗi ngày tôi đều học tiếng Anh.
+2477	gakushuu	daily	学習	がくしゅう	học tập	学習アプリ、使ってる?	Cậu có dùng ứng dụng học tập không?
+2478	gakushuu	business	学習	がくしゅう	học tập	オンライン学習システムを導入いたしました。	Chúng tôi đã triển khai hệ thống học tập trực tuyến.
+2479	gakunen	exam	学年	がくねん	niên khóa, khối lớp	彼とは同じ学年だ。	Tôi cùng khối lớp với anh ấy.
+2480	gakunen	daily	学年	がくねん	niên khóa, khối lớp	何年生?学年、教えて。	Học lớp mấy vậy? Cho tớ biết khối lớp đi.
+2481	gakunen	business	学年	がくねん	niên khóa, khối lớp	学年ごとにカリキュラムを設計しております。	Chúng tôi thiết kế chương trình học theo từng khối lớp.
+2482	gakuryoku	exam	学力	がくりょく	học lực	学力を伸ばすために勉強した。	Tôi đã học để nâng cao học lực.
+2483	gakuryoku	daily	学力	がくりょく	học lực	学力テスト、緊張するね。	Kiểm tra học lực hồi hộp thật nhỉ.
+2484	gakuryoku	business	学力	がくりょく	học lực	学力向上のための教材を開発しております。	Chúng tôi đang phát triển tài liệu để nâng cao học lực.
+2485	gakki	exam	学期	がっき	học kỳ	新学期が始まった。	Học kỳ mới đã bắt đầu.
+2486	gakki	daily	学期	がっき	học kỳ	今学期、忙しかったね。	Học kỳ này bận rộn nhỉ.
+2487	gakki	business	学期	がっき	học kỳ	来学期のカリキュラムを見直しております。	Chúng tôi đang xem xét lại chương trình học của học kỳ tới.
+2488	kamoku	exam	科目	かもく	môn học	好きな科目は数学だ。	Môn học yêu thích của tôi là toán.
+2489	kamoku	daily	科目	かもく	môn học	苦手な科目、ある?	Cậu có môn học nào sợ không?
+2490	kamoku	business	科目	かもく	môn học	必修科目の一覧を配布いたします。	Chúng tôi sẽ phát danh sách các môn học bắt buộc.
+2491	gansho	exam	願書	がんしょ	đơn xin nhập học	大学に願書を提出した。	Tôi đã nộp đơn xin nhập học cho trường đại học.
+2492	gansho	daily	願書	がんしょ	đơn xin nhập học	願書、もう出した?	Đơn xin nhập học nộp chưa?
+2493	gansho	business	願書	がんしょ	đơn xin nhập học	願書の締め切りは今月末です。	Hạn nộp đơn xin nhập học là cuối tháng này.
+2494	cunning	exam	カンニング	カンニング	quay cóp	試験でカンニングをしてはいけない。	Không được quay cóp trong kỳ thi.
+2495	cunning	daily	カンニング	カンニング	quay cóp	カンニングして怒られたらしいよ。	Nghe nói bị mắng vì quay cóp đấy.
+2496	cunning	business	カンニング	カンニング	quay cóp	カンニング防止のため座席を離しております。	Chúng tôi giãn cách chỗ ngồi để phòng chống quay cóp.
+2497	campus	exam	キャンパス	キャンパス	cơ sở trường học	大学のキャンパスを見学した。	Tôi đã tham quan cơ sở trường đại học.
+2498	campus	daily	キャンパス	キャンパス	cơ sở trường học	キャンパスの中にカフェがいくつもある。	Trong khuôn viên trường có mấy quán cà phê.
+2499	campus	business	キャンパス	キャンパス	cơ sở trường học	新キャンパスの開設を予定しております。	Chúng tôi dự định mở cơ sở trường mới.
+2500	kyuushoku	exam	給食	きゅうしょく	bữa ăn (trường học)	小学校の給食を食べた。	Tôi đã ăn bữa trưa ở trường tiểu học.
+2501	kyuushoku	daily	給食	きゅうしょく	bữa ăn (trường học)	今日の給食、美味しかった?	Bữa ăn trường hôm nay có ngon không?
+2502	kyuushoku	business	給食	きゅうしょく	bữa ăn (trường học)	給食メニューの見直しを行っております。	Chúng tôi đang xem xét lại thực đơn bữa ăn trường học.
+2503	kyoukasho	exam	教科書	きょうかしょ	sách giáo khoa	教科書を開いてください。	Xin vui lòng mở sách giáo khoa ra.
+2504	kyoukasho	daily	教科書	きょうかしょ	sách giáo khoa	教科書、忘れちゃった。	Tớ quên sách giáo khoa mất rồi.
+2505	kyoukasho	business	教科書	きょうかしょ	sách giáo khoa	新しい教科書を来年度から導入いたします。	Chúng tôi sẽ áp dụng sách giáo khoa mới từ năm học sau.
+2506	quiz	exam	クイズ	クイズ	câu đố	クイズに正解した。	Tôi đã trả lời đúng câu đố.
+2507	quiz	daily	クイズ	クイズ	câu đố	このクイズ、難しいね。	Câu đố này khó thật nhỉ.
+2508	quiz	business	クイズ	クイズ	câu đố	研修にクイズ形式を取り入れております。	Chúng tôi áp dụng hình thức câu đố vào đào tạo.
+2509	kumi	exam	組	くみ	tổ, nhóm (lớp)	彼とは同じ組だ。	Tôi cùng tổ với anh ấy.
+2510	kumi	daily	組	くみ	tổ, nhóm (lớp)	何組だっけ?	Tổ mấy nhỉ?
+2511	kumi	business	組	くみ	tổ, nhóm (lớp)	作業は2組に分かれて実施いたします。	Công việc sẽ được chia thành 2 nhóm để thực hiện.
+2512	club	exam	クラブ	クラブ	câu lạc bộ	テニスクラブに入った。	Tôi đã gia nhập câu lạc bộ tennis.
+2513	club	daily	クラブ	クラブ	câu lạc bộ	どのクラブに入るの?	Cậu vào câu lạc bộ nào vậy?
+2514	club	business	クラブ	クラブ	câu lạc bộ	社内クラブ活動を支援しております。	Chúng tôi hỗ trợ hoạt động câu lạc bộ trong công ty.
+2515	graph	exam	グラフ	グラフ	biểu đồ	データをグラフにした。	Tôi đã chuyển dữ liệu thành biểu đồ.
+2516	graph	daily	グラフ	グラフ	biểu đồ	このグラフ、見やすいね。	Biểu đồ này dễ nhìn nhỉ.
+2517	graph	business	グラフ	グラフ	biểu đồ	売上推移をグラフで示しております。	Chúng tôi thể hiện xu hướng doanh thu bằng biểu đồ.
+2518	keisan	exam	計算	けいさん	tính toán	計算を間違えた。	Tôi đã tính toán sai.
+2519	keisan	daily	計算	けいさん	tính toán	この計算、合ってる?	Phép tính này đúng không?
+2520	keisan	business	計算	けいさん	tính toán	経費の計算を再確認いたしました。	Chúng tôi đã kiểm tra lại việc tính toán chi phí.

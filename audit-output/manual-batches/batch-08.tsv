@@ -1,0 +1,181 @@
+row	vocabId	type	word	reading	meaningVi	exampleJp	exampleVi
+1261	mane	exam	まね	まね	bắt chước	子供は親のまねをする。	Trẻ con bắt chước bố mẹ.
+1262	mane	daily	まね	まね	bắt chước	それ、先生のまねでしょ?	Đó là bắt chước thầy giáo phải không?
+1263	mane	business	まね	まね	bắt chước	他社のまねではなく独自の技術を追求します。	Chúng tôi theo đuổi công nghệ riêng chứ không bắt chước công ty khác.
+1264	manin	exam	満員	まんいん	đông kín	電車は満員だった。	Tàu điện đông kín người.
+1265	manin	daily	満員	まんいん	đông kín	このバス、いつも満員だよね。	Xe buýt này lúc nào cũng đông kín nhỉ.
+1266	manin	business	満員	まんいん	đông kín	会場は満員となりましたので受付を締め切ります。	Hội trường đã đông kín nên chúng tôi kết thúc phần tiếp nhận.
+1267	miss	exam	ミス	ミス	lỗi, sai sót	計算のミスに気づいた。	Tôi đã nhận ra lỗi tính toán.
+1268	miss	daily	ミス	ミス	lỗi, sai sót	またミスしちゃった。	Lại làm sai nữa rồi.
+1269	miss	business	ミス	ミス	lỗi, sai sót	入力ミスがございましたので訂正いたします。	Vì có sai sót nhập liệu nên chúng tôi xin đính chính.
+1270	minshushugi	exam	民主主義	みんしゅしゅぎ	dân chủ	民主主義の歴史を学んだ。	Tôi đã học về lịch sử của nền dân chủ.
+1271	minshushugi	daily	民主主義	みんしゅしゅぎ	dân chủ	民主主義について話すの、難しいね。	Nói về dân chủ khó thật nhỉ.
+1272	minshushugi	business	民主主義	みんしゅしゅぎ	dân chủ	本講演では民主主義の発展について解説いたします。	Bài giảng này sẽ giải thích về sự phát triển của nền dân chủ.
+1273	muchuu	exam	夢中	むちゅう	say mê	子供はゲームに夢中だ。	Đứa trẻ đang say mê chơi game.
+1274	muchuu	daily	夢中	むちゅう	say mê	最近、何かに夢中なの?	Dạo này cậu đang say mê cái gì đó à?
+1275	muchuu	business	夢中	むちゅう	say mê	新製品の開発に夢中で取り組んでいます。	Chúng tôi đang say mê phát triển sản phẩm mới.
+1276	meisho	exam	名所	めいしょ	danh lam	京都には名所がたくさんある。	Kyoto có rất nhiều danh lam thắng cảnh.
+1277	meisho	daily	名所	めいしょ	danh lam	近くの名所、行ってみない?	Đi thử danh lam gần đây không?
+1278	meisho	business	名所	めいしょ	danh lam	地域の観光名所を紹介するパンフレットを作成しました。	Chúng tôi đã tạo tờ rơi giới thiệu các danh lam du lịch của khu vực.
+1279	meibutsu	exam	名物	めいぶつ	đặc sản	この地方の名物は温泉まんじゅうだ。	Đặc sản của vùng này là bánh bao suối nước nóng.
+1280	meibutsu	daily	名物	めいぶつ	đặc sản	ここの名物、何?	Đặc sản ở đây là gì vậy?
+1281	meibutsu	business	名物	めいぶつ	đặc sản	地元の名物商品を全国に販売しております。	Chúng tôi đang bán sản phẩm đặc sản địa phương ra toàn quốc.
+1282	meirei	exam	命令	めいれい	mệnh lệnh	上官の命令に従った。	Tôi đã tuân theo mệnh lệnh của cấp trên.
+1283	meirei	daily	命令	めいれい	mệnh lệnh	そんな命令、聞きたくないよ。	Tớ không muốn nghe cái mệnh lệnh đó đâu.
+1284	meirei	business	命令	めいれい	mệnh lệnh	業務命令として本件を対応いたします。	Chúng tôi sẽ xử lý việc này như một mệnh lệnh công việc.
+1285	mailaddress	exam	メールアドレス	メールアドレス	địa chỉ email	メールアドレスを教えてください。	Xin cho tôi biết địa chỉ email của bạn.
+1286	mailaddress	daily	メールアドレス	メールアドレス	địa chỉ email	メールアドレス、変わったの?	Địa chỉ email của cậu đổi rồi à?
+1287	mailaddress	business	メールアドレス	メールアドレス	địa chỉ email	登録メールアドレスの変更方法をご案内いたします。	Chúng tôi xin hướng dẫn cách thay đổi địa chỉ email đã đăng ký.
+1288	medal	exam	メダル	メダル	huy chương	彼は金メダルを取った。	Anh ấy đã giành huy chương vàng.
+1289	medal	daily	メダル	メダル	huy chương	このメダル、ずっしりしていて本格的だね。	Tấm huy chương này nặng chắc tay, trông rất xịn nhỉ.
+1290	medal	business	メダル	メダル	huy chương	本大会の優勝者にはメダルを授与いたします。	Chúng tôi sẽ trao huy chương cho người chiến thắng đại hội này.
+1291	memo	exam	メモ	メモ	ghi chú	大事なことをメモした。	Tôi đã ghi chú lại điều quan trọng.
+1292	memo	daily	メモ	メモ	ghi chú	忘れないうちにメモしておこう。	Ghi chú lại trước khi quên nhé.
+1293	memo	business	メモ	メモ	ghi chú	会議の内容をメモして共有いたします。	Tôi sẽ ghi chú nội dung cuộc họp và chia sẻ.
+1294	menkyo	exam	免許	めんきょ	giấy phép	来月、運転免許を取る予定だ。	Tháng sau tôi dự định lấy bằng lái xe.
+1295	menkyo	daily	免許	めんきょ	giấy phép	免許、まだ取ってないの?	Cậu vẫn chưa lấy bằng lái à?
+1296	menkyo	business	免許	めんきょ	giấy phép	業務には特定の免許が必要となります。	Công việc này cần có giấy phép cụ thể.
+1297	mensetsu	exam	面接	めんせつ	phỏng vấn	来週、面接がある。	Tuần sau tôi có buổi phỏng vấn.
+1298	mensetsu	daily	面接	めんせつ	phỏng vấn	面接、緊張する?	Phỏng vấn có hồi hộp không?
+1299	mensetsu	business	面接	めんせつ	phỏng vấn	来週火曜日に面接をお願いできますでしょうか。	Tôi có thể xin phỏng vấn vào thứ Ba tuần sau được không ạ?
+1300	moushikomi	exam	申し込み	もうしこみ	đăng ký	講座の申し込みをした。	Tôi đã đăng ký khóa học.
+1301	moushikomi	daily	申し込み	もうしこみ	đăng ký	申し込み、もうした?	Đăng ký chưa vậy?
+1302	moushikomi	business	申し込み	もうしこみ	đăng ký	お申し込みは本日中にお願いいたします。	Xin vui lòng đăng ký trong hôm nay.
+1303	mokuji	exam	目次	もくじ	mục lục	本の目次を見て構成を確認した。	Tôi đã xem mục lục sách để kiểm tra cấu trúc.
+1304	mokuji	daily	目次	もくじ	mục lục	目次、見ればどこにあるか分かるよ。	Nhìn mục lục là biết ở đâu ngay.
+1305	mokuji	business	目次	もくじ	mục lục	報告書の目次を先にご確認ください。	Xin vui lòng kiểm tra mục lục báo cáo trước.
+1306	mokuteki	exam	目的	もくてき	mục đích	この旅行の目的は何ですか。	Mục đích của chuyến đi này là gì?
+1307	mokuteki	daily	目的	もくてき	mục đích	何のためにやるの?目的は?	Làm để làm gì? Mục đích là gì?
+1308	mokuteki	business	目的	もくてき	mục đích	本プロジェクトの目的を改めて共有いたします。	Tôi xin chia sẻ lại mục đích của dự án này.
+1309	mochimono	exam	持ち物	もちもの	đồ mang theo	遠足の持ち物を確認した。	Tôi đã kiểm tra đồ mang theo cho buổi dã ngoại.
+1310	mochimono	daily	持ち物	もちもの	đồ mang theo	持ち物、忘れてない?	Đồ mang theo không quên gì chứ?
+1311	mochimono	business	持ち物	もちもの	đồ mang theo	当日の持ち物リストをお送りいたします。	Chúng tôi sẽ gửi danh sách đồ cần mang theo cho ngày hôm đó.
+1312	monogatari	exam	物語	ものがたり	câu chuyện	この物語は昔から伝わっている。	Câu chuyện này được truyền lại từ xưa.
+1313	monogatari	daily	物語	ものがたり	câu chuyện	この物語、感動するよ。	Câu chuyện này cảm động lắm.
+1314	monogatari	business	物語	ものがたり	câu chuyện	会社の歴史を物語として社内報にまとめました。	Chúng tôi đã tổng hợp lịch sử công ty thành câu chuyện trong bản tin nội bộ.
+1315	moyou	exam	模様	もよう	hoa văn	この皿には花の模様がある。	Chiếc đĩa này có hoa văn hình hoa.
+1316	moyou	daily	模様	もよう	hoa văn	この服、模様が可愛いね。	Bộ đồ này hoa văn dễ thương ghê.
+1317	moyou	business	模様	もよう	hoa văn	製品の模様デザインを刷新いたしました。	Chúng tôi đã đổi mới thiết kế hoa văn sản phẩm.
+1318	yaku	exam	約	やく	khoảng	会場には約100人が集まった。	Khoảng 100 người đã tập trung tại hội trường.
+1319	yaku	daily	約	やく	khoảng	駅まで約10分だよ。	Đến ga khoảng 10 phút đó.
+1320	yaku	business	約	やく	khoảng	本製品は約2週間でお届けいたします。	Sản phẩm này sẽ được giao trong khoảng 2 tuần.
+1321	yuuki	exam	勇気	ゆうき	dũng khí	彼女に告白する勇気が出た。	Tôi đã có đủ dũng khí để thổ lộ với cô ấy.
+1322	yuuki	daily	勇気	ゆうき	dũng khí	勇気出して聞いてみたら?	Sao không lấy hết dũng khí hỏi thử xem?
+1323	yuuki	business	勇気	ゆうき	dũng khí	新しい挑戦には勇気が必要です。	Thử thách mới cần có dũng khí.
+1324	yuushou	exam	優勝	ゆうしょう	vô địch	チームは大会で優勝した。	Đội đã vô địch giải đấu.
+1325	yuushou	daily	優勝	ゆうしょう	vô địch	優勝したの、すごいね!	Vô địch rồi à, ghê thật đấy!
+1326	yuushou	business	優勝	ゆうしょう	vô địch	弊社製品がコンテストで優勝いたしました。	Sản phẩm của công ty chúng tôi đã giành chiến thắng trong cuộc thi.
+1327	yuujou	exam	友情	ゆうじょう	tình bạn	二人の友情は変わらない。	Tình bạn của hai người không thay đổi.
+1328	yuujou	daily	友情	ゆうじょう	tình bạn	友情って大事だよね。	Tình bạn quan trọng thật nhỉ.
+1329	yuujou	business	友情	ゆうじょう	tình bạn	長年の友情に感謝いたします。	Tôi xin cảm ơn tình bạn nhiều năm qua.
+1330	yuubin	exam	郵便	ゆうびん	bưu điện	郵便で荷物を送った。	Tôi đã gửi đồ qua bưu điện.
+1331	yuubin	daily	郵便	ゆうびん	bưu điện	郵便、まだ届いてないよ。	Bưu phẩm vẫn chưa đến đâu.
+1332	yuubin	business	郵便	ゆうびん	bưu điện	書類は郵便にて送付いたします。	Tài liệu sẽ được gửi qua đường bưu điện.
+1333	youkyuu	exam	要求	ようきゅう	yêu cầu	相手の要求を断った。	Tôi đã từ chối yêu cầu của đối phương.
+1334	youkyuu	daily	要求	ようきゅう	yêu cầu	そんな要求、無理だよ。	Yêu cầu đó thì không được đâu.
+1335	youkyuu	business	要求	ようきゅう	yêu cầu	お客様からの要求に迅速に対応いたします。	Chúng tôi sẽ nhanh chóng đáp ứng yêu cầu từ khách hàng.
+1336	youshi	exam	用紙	ようし	giấy (mẫu đơn)	申込用紙に記入した。	Tôi đã điền vào mẫu đơn đăng ký.
+1337	youshi	daily	用紙	ようし	giấy (mẫu đơn)	用紙、もう一枚もらえる?	Cho tớ xin thêm một tờ giấy được không?
+1338	youshi	business	用紙	ようし	giấy (mẫu đơn)	申請用紙は下記からダウンロードできます。	Mẫu đơn đăng ký có thể tải xuống từ bên dưới.
+1339	yousu	exam	様子	ようす	tình hình	子供の様子を見に行った。	Tôi đã đi xem tình hình của con.
+1340	yousu	daily	様子	ようす	tình hình	なんか様子がおかしいよ。	Có gì đó không ổn thì phải.
+1341	yousu	business	様子	ようす	tình hình	現場の様子を写真で共有いたします。	Tôi sẽ chia sẻ tình hình hiện trường bằng hình ảnh.
+1342	yosou	exam	予想	よそう	dự đoán	試験の結果を予想した。	Tôi đã dự đoán kết quả kỳ thi.
+1343	yosou	daily	予想	よそう	dự đoán	予想通りだったね。	Đúng như dự đoán nhỉ.
+1344	yosou	business	予想	よそう	dự đoán	売上の予想を上方修正いたしました。	Chúng tôi đã điều chỉnh dự đoán doanh thu theo hướng tăng lên.
+1345	yohou	exam	予報	よほう	dự báo	天気予報によると明日は雨だ。	Theo dự báo thời tiết thì mai trời mưa.
+1346	yohou	daily	予報	よほう	dự báo	予報、当たったね。	Dự báo đúng thật nhỉ.
+1347	yohou	business	予報	よほう	dự báo	天気予報を踏まえてイベントの実施を判断いたします。	Chúng tôi sẽ quyết định tổ chức sự kiện dựa trên dự báo thời tiết.
+1348	rainichi	exam	来日	らいにち	sang Nhật	有名な歌手が来日した。	Ca sĩ nổi tiếng đã sang Nhật.
+1349	rainichi	daily	来日	らいにち	sang Nhật	あの俳優、来日するらしいよ。	Nghe nói diễn viên đó sẽ sang Nhật đấy.
+1350	rainichi	business	来日	らいにち	sang Nhật	海外顧客の来日に合わせて会議を設定いたします。	Chúng tôi sẽ sắp xếp cuộc họp trùng với thời điểm khách hàng nước ngoài sang Nhật.
+1351	rikai	exam	理解	りかい	hiểu	この説明で理解できましたか。	Bạn đã hiểu qua lời giải thích này chưa?
+1352	rikai	daily	理解	りかい	hiểu	うーん、ちょっと理解できないな。	Ừm, tớ hơi không hiểu.
+1353	rikai	business	理解	りかい	hiểu	ご理解いただきありがとうございます。	Xin cảm ơn quý khách đã thấu hiểu.
+1354	rhythm	exam	リズム	リズム	nhịp điệu	この曲はリズムが速い。	Bài hát này có nhịp điệu nhanh.
+1355	rhythm	daily	リズム	リズム	nhịp điệu	このリズム、好きだな。	Tớ thích nhịp điệu này ghê.
+1356	rhythm	business	リズム	リズム	nhịp điệu	作業のリズムを整えて効率を上げましょう。	Hãy điều chỉnh nhịp độ làm việc để nâng cao hiệu quả.
+1357	risou	exam	理想	りそう	lý tưởng	理想の生活について考えた。	Tôi đã suy nghĩ về cuộc sống lý tưởng.
+1358	risou	daily	理想	りそう	lý tưởng	理想が高すぎるんじゃない?	Lý tưởng của cậu cao quá không?
+1359	risou	business	理想	りそう	lý tưởng	理想的な人材像を明確にいたしました。	Chúng tôi đã làm rõ hình mẫu nhân tài lý tưởng.
+1360	ryuukou	exam	流行	りゅうこう	lưu hành, thịnh hành	今年流行しているファッションを調べた。	Tôi đã tìm hiểu về thời trang đang thịnh hành năm nay.
+1361	ryuukou	daily	流行	りゅうこう	lưu hành, thịnh hành	このスタイル、今流行してるよね。	Phong cách này đang thịnh hành nhỉ.
+1362	ryuukou	business	流行	りゅうこう	lưu hành, thịnh hành	流行の変化に合わせて商品ラインを見直します。	Chúng tôi sẽ xem xét lại dòng sản phẩm theo sự thay đổi của xu hướng.
+1363	ryou	exam	量	りょう	lượng	食べる量を減らしている。	Tôi đang giảm lượng ăn.
+1364	ryou	daily	量	りょう	lượng	この量、多すぎない?	Lượng này nhiều quá không?
+1365	ryou	business	量	りょう	lượng	生産量を来月から増やす予定です。	Chúng tôi dự định tăng sản lượng từ tháng sau.
+1366	ryougawa	exam	両側	りょうがわ	hai bên	道の両側に木が並んでいる。	Cây cối xếp hàng ở hai bên đường.
+1367	ryougawa	daily	両側	りょうがわ	hai bên	両側から挟まれてる感じ。	Cảm giác bị kẹp giữa hai bên.
+1368	ryougawa	business	両側	りょうがわ	hai bên	会場の両側に案内板を設置いたします。	Chúng tôi sẽ đặt bảng chỉ dẫn ở hai bên hội trường.
+1369	ryoken	exam	旅券	りょけん	hộ chiếu	旅券の有効期限を確認した。	Tôi đã kiểm tra thời hạn hộ chiếu.
+1370	ryoken	daily	旅券	りょけん	hộ chiếu	旅券、更新した?	Hộ chiếu gia hạn chưa?
+1371	ryoken	business	旅券	りょけん	hộ chiếu	渡航には有効な旅券が必要です。	Đi nước ngoài cần có hộ chiếu còn hiệu lực.
+1372	rule	exam	ルール	ルール	quy định	このゲームのルールを説明する。	Tôi sẽ giải thích luật chơi của trò chơi này.
+1373	rule	daily	ルール	ルール	quy định	ルール、守ってよね。	Nhớ tuân thủ quy định nhé.
+1374	rule	business	ルール	ルール	quy định	社内ルールを改めて周知いたします。	Chúng tôi sẽ thông báo lại về các quy định nội bộ công ty.
+1375	rusuban	exam	留守番	るすばん	trông nhà	子供が一人で留守番している。	Đứa trẻ đang trông nhà một mình.
+1376	rusuban	daily	留守番	るすばん	trông nhà	今日、留守番よろしくね。	Hôm nay nhờ trông nhà nhé.
+1377	rusuban	business	留守番	るすばん	trông nhà	出張中はオフィスの留守番を頼みました。	Trong lúc đi công tác, tôi đã nhờ ai đó trông văn phòng.
+1378	rei	exam	例	れい	ví dụ	具体的な例を挙げてください。	Vui lòng đưa ra ví dụ cụ thể.
+1379	rei	daily	例	れい	ví dụ	例えば?何か例ある?	Ví dụ như thế nào? Có ví dụ gì không?
+1380	rei	business	例	れい	ví dụ	過去の成功例を参考にいたします。	Chúng tôi sẽ tham khảo các ví dụ thành công trước đây.
+1381	reigai	exam	例外	れいがい	ngoại lệ	このルールに例外はない。	Quy định này không có ngoại lệ.
+1382	reigai	daily	例外	れいがい	ngoại lệ	今回だけ例外にして。	Lần này chỉ ngoại lệ thôi nhé.
+1383	reigai	business	例外	れいがい	ngoại lệ	本ケースは例外として処理いたします。	Trường hợp này chúng tôi sẽ xử lý như một ngoại lệ.
+1384	retsu	exam	列	れつ	hàng (xếp hàng)	レジの前に列ができている。	Có hàng người xếp trước quầy thu ngân.
+1385	retsu	daily	列	れつ	hàng (xếp hàng)	列、長いね。並ぼうか。	Hàng dài nhỉ. Xếp hàng thôi nhé.
+1386	retsu	business	列	れつ	hàng (xếp hàng)	受付では列に並んでお待ちください。	Xin vui lòng xếp hàng chờ tại quầy tiếp nhận.
+1387	level	exam	レベル	レベル	mức độ	このクラスはレベルが高い。	Lớp này có trình độ cao.
+1388	level	daily	レベル	レベル	mức độ	このゲーム、レベル上がった?	Trò chơi này lên cấp chưa?
+1389	level	business	レベル	レベル	mức độ	業務レベルの向上を目指しております。	Chúng tôi hướng đến nâng cao trình độ công việc.
+1390	ren_ai	exam	恋愛	れんあい	tình yêu	二人は恋愛関係にある。	Hai người đang trong mối quan hệ yêu đương.
+1391	ren_ai	daily	恋愛	れんあい	tình yêu	最近、恋愛してる?	Dạo này cậu có yêu đương gì không?
+1392	ren_ai	business	恋愛	れんあい	tình yêu	社内恋愛は禁止されている会社もあります。	Có công ty cấm yêu đương trong nội bộ.
+1393	renzoku	exam	連続	れんぞく	liên tiếp	3日連続で雨が降った。	Trời mưa liên tiếp 3 ngày.
+1394	renzoku	daily	連続	れんぞく	liên tiếp	このドラマ、連続で見ちゃった。	Bộ phim này tớ xem liền tù tì luôn.
+1395	renzoku	business	連続	れんぞく	liên tiếp	3か月連続で売上が増加しております。	Doanh thu đã tăng liên tiếp trong 3 tháng.
+1396	roudou	exam	労働	ろうどう	lao động	この国は労働時間が長い。	Nước này có thời gian lao động dài.
+1397	roudou	daily	労働	ろうどう	lao động	今日も労働、疲れたなあ。	Hôm nay cũng làm việc, mệt ghê.
+1398	roudou	business	労働	ろうどう	lao động	労働環境の改善に取り組んでおります。	Chúng tôi đang nỗ lực cải thiện môi trường lao động.
+1399	rokuon	exam	録音	ろくおん	ghi âm	会議の内容を録音した。	Tôi đã ghi âm lại nội dung cuộc họp.
+1400	rokuon	daily	録音	ろくおん	ghi âm	この曲、録音しておいた?	Bài hát này ghi âm lại chưa?
+1401	rokuon	business	録音	ろくおん	ghi âm	通話内容は録音させていただいております。	Nội dung cuộc gọi sẽ được chúng tôi ghi âm lại.
+1402	rokuga	exam	録画	ろくが	ghi hình	好きな番組を録画した。	Tôi đã ghi hình chương trình yêu thích.
+1403	rokuga	daily	録画	ろくが	ghi hình	そのドラマ、録画しといたよ。	Bộ phim đó tớ ghi hình sẵn rồi đấy.
+1404	rokuga	business	録画	ろくが	ghi hình	本セミナーは録画にて後日配信いたします。	Buổi hội thảo này sẽ được ghi hình và phát lại sau.
+1405	locker	exam	ロッカー	ロッカー	tủ đồ	荷物をロッカーに預けた。	Tôi đã gửi đồ vào tủ đồ.
+1406	locker	daily	ロッカー	ロッカー	tủ đồ	ロッカー、空いてるかな?	Không biết tủ đồ còn trống không nhỉ.
+1407	locker	business	ロッカー	ロッカー	tủ đồ	貴重品はロッカーにて保管をお願いいたします。	Xin vui lòng cất giữ đồ có giá trị trong tủ đồ.
+1408	wadai	exam	話題	わだい	chủ đề	その映画は今、話題になっている。	Bộ phim đó đang là chủ đề bàn tán hiện nay.
+1409	wadai	daily	話題	わだい	chủ đề	何か話題ある?	Có chủ đề gì hay ho không?
+1410	wadai	business	話題	わだい	chủ đề	新製品が業界内で話題を呼んでいます。	Sản phẩm mới đang gây chú ý trong ngành.
+1411	wariai	exam	割合	わりあい	tỷ lệ	女性の割合が増えている。	Tỷ lệ nữ giới đang tăng lên.
+1412	wariai	daily	割合	わりあい	tỷ lệ	賛成の割合、どれくらいだった?	Tỷ lệ tán thành khoảng bao nhiêu vậy?
+1413	wariai	business	割合	わりあい	tỷ lệ	不良品の割合を1%以下に抑えております。	Chúng tôi giữ tỷ lệ hàng lỗi dưới 1%.
+1414	warukuchi	exam	悪口	わるくち	nói xấu	人の悪口を言うのはよくない。	Nói xấu người khác là không tốt.
+1415	warukuchi	daily	悪口	わるくち	nói xấu	裏で悪口言うの、やめなよ。	Đừng nói xấu sau lưng người ta nữa.
+1416	warukuchi	business	悪口	わるくち	nói xấu	陰で悪口を言うのは職場の雰囲気を悪くします。	Nói xấu sau lưng làm xấu đi bầu không khí nơi làm việc.
+1417	atari	exam	辺り	あたり	khu vực	この辺りに公園がある。	Khu vực này có công viên.
+1418	atari	daily	辺り	あたり	khu vực	この辺り、あんまり来たことないな。	Khu vực này tớ ít khi đến.
+1419	atari	business	辺り	あたり	khu vực	このあたりの土地の相場について調査いたしました。	Chúng tôi đã điều tra về giá đất ở khu vực này.
+1420	ichi	exam	位置	いち	vị trí	地図で現在地の位置を確認した。	Tôi đã kiểm tra vị trí hiện tại trên bản đồ.
+1421	ichi	daily	位置	いち	vị trí	ここ、いい位置だね。	Chỗ này vị trí đẹp nhỉ.
+1422	ichi	business	位置	いち	vị trí	当社は駅前の好立地に位置しております。	Công ty chúng tôi nằm ở vị trí thuận lợi trước ga.
+1423	ichiba	exam	市場	いちば	chợ	朝、市場で魚を買った。	Sáng tôi đã mua cá ở chợ.
+1424	ichiba	daily	市場	いちば	chợ	この市場、新鮮なものが多いよ。	Chợ này có nhiều đồ tươi lắm.
+1425	ichiba	business	市場	いちば	chợ	地元市場との連携を強化しております。	Chúng tôi đang tăng cường liên kết với chợ địa phương.
+1426	inaka	exam	田舎	いなか	quê	田舎でのんびり暮らしたい。	Tôi muốn sống thong thả ở quê.
+1427	inaka	daily	田舎	いなか	quê	田舎、帰りたくなったよ。	Tự nhiên muốn về quê ghê.
+1428	inaka	business	田舎	いなか	quê	田舎に新しい工場を建設する計画があります。	Có kế hoạch xây dựng nhà máy mới ở vùng quê.
+1429	oku	exam	奥	おく	phía trong	本棚の奥に隠しておいた。	Tôi đã giấu ở phía trong kệ sách.
+1430	oku	daily	奥	おく	phía trong	もっと奥に座ろう。	Ngồi vào sâu bên trong hơn nữa nhé.
+1431	oku	business	奥	おく	phía trong	会議室は廊下の奥にございます。	Phòng họp nằm ở phía trong hành lang.
+1432	office	exam	オフィス	オフィス	văn phòng	毎日オフィスに通っている。	Tôi đi làm ở văn phòng mỗi ngày.
+1433	office	daily	オフィス	オフィス	văn phòng	今、オフィスにいる?	Cậu đang ở văn phòng à?
+1434	office	business	オフィス	オフィス	văn phòng	来月、オフィスを移転いたします。	Chúng tôi sẽ chuyển văn phòng vào tháng sau.
+1435	kaigai	exam	海外	かいがい	nước ngoài	来年、海外に留学する予定だ。	Sang năm tôi dự định du học nước ngoài.
+1436	kaigai	daily	海外	かいがい	nước ngoài	海外旅行、行ったことある?	Cậu từng đi du lịch nước ngoài chưa?
+1437	kaigai	business	海外	かいがい	nước ngoài	海外事業の拡大を計画しております。	Chúng tôi đang lên kế hoạch mở rộng kinh doanh ở nước ngoài.
+1438	counter	exam	カウンター	カウンター	quầy	受付カウンターで名前を伝えた。	Tôi đã báo tên tại quầy lễ tân.
+1439	counter	daily	カウンター	カウンター	quầy	カウンターに座って食べようよ。	Ngồi ở quầy ăn nhé.
+1440	counter	business	カウンター	カウンター	quầy	お問い合わせはカウンターまでお越しください。	Xin vui lòng đến quầy để được hỗ trợ thắc mắc.

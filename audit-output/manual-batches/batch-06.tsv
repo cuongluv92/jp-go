@@ -1,0 +1,181 @@
+row	vocabId	type	word	reading	meaningVi	exampleJp	exampleVi
+0901	twin	exam	ツイン	ツイン	phòng đôi	ツインの部屋を予約した。	Tôi đã đặt phòng đôi (twin).
+0902	twin	daily	ツイン	ツイン	phòng đôi	ツインとダブル、どっちにする?	Chọn phòng twin hay phòng đôi (double)?
+0903	twin	business	ツイン	ツイン	phòng đôi	ツインルームを3室ご手配可能です。	Chúng tôi có thể sắp xếp 3 phòng twin.
+0904	tsuukin	exam	通勤	つうきん	đi làm	電車で通勤している。	Tôi đi làm bằng tàu điện.
+0905	tsuukin	daily	通勤	つうきん	đi làm	通勤、大変じゃない?	Đi làm có vất vả không?
+0906	tsuukin	business	通勤	つうきん	đi làm	在宅勤務のため通勤時間が減りました。	Nhờ làm việc tại nhà nên thời gian đi làm đã giảm.
+0907	tsuuchi	exam	通知	つうち	thông báo	学校から欠席の通知が来た。	Trường đã gửi thông báo về việc nghỉ học.
+0908	tsuuchi	daily	通知	つうち	thông báo	スマホに通知が来たよ、見て。	Có thông báo tới điện thoại kìa, xem đi.
+0909	tsuuchi	business	通知	つうち	thông báo	結果は来週メールにて通知いたします。	Kết quả sẽ được thông báo qua email vào tuần sau.
+0910	tsuuwa	exam	通話	つうわ	gọi điện	友達と1時間も通話した。	Tôi đã gọi điện với bạn suốt 1 tiếng đồng hồ.
+0911	tsuuwa	daily	通話	つうわ	gọi điện	通話中だから、後でかけ直すね。	Đang bận điện thoại nên lát nữa gọi lại nhé.
+0912	tsuuwa	business	通話	つうわ	gọi điện	通話内容は品質向上のため録音される場合がございます。	Nội dung cuộc gọi có thể được ghi âm để nâng cao chất lượng.
+0913	tsugou	exam	都合	つごう	tiện	明日の午後は都合が悪い。	Chiều mai tôi không tiện.
+0914	tsugou	daily	都合	つごう	tiện	今週、都合いい日ある?	Tuần này có ngày nào cậu tiện không?
+0915	tsugou	business	都合	つごう	tiện	ご都合のよろしい日時をお知らせください。	Xin cho biết ngày giờ tiện lợi của quý khách.
+0916	tsuzuki	exam	続き	つづき	tiếp theo	この話の続きが気になる。	Tôi tò mò về phần tiếp theo của câu chuyện này.
+0917	tsuzuki	daily	続き	つづき	tiếp theo	続きはまた明日ね。	Phần tiếp theo để mai nhé.
+0918	tsuzuki	business	続き	つづき	tiếp theo	続きの手続きは担当者よりご案内いたします。	Thủ tục tiếp theo sẽ được người phụ trách hướng dẫn.
+0919	tsutome	exam	勤め	つとめ	công việc	毎朝9時に勤めに出る。	Mỗi sáng 9 giờ tôi đi làm.
+0920	tsutome	daily	勤め	つとめ	công việc	勤めはどう、慣れた?	Công việc thế nào, quen chưa?
+0921	tsutome	business	勤め	つとめ	công việc	長年の勤めを終え、来月退職いたします。	Sau nhiều năm làm việc, tôi sẽ nghỉ hưu vào tháng sau.
+0922	teiin	exam	定員	ていいん	sức chứa	このバスの定員は40人です。	Sức chứa của xe buýt này là 40 người.
+0923	teiin	daily	定員	ていいん	sức chứa	このエレベーター、定員何人だっけ?	Thang máy này sức chứa bao nhiêu người nhỉ?
+0924	teiin	business	定員	ていいん	sức chứa	会場の定員を超えないようご注意ください。	Xin lưu ý không vượt quá sức chứa của hội trường.
+0925	teika	exam	低下	ていか	giảm	最近、視力が低下してきた。	Gần đây thị lực của tôi đã giảm sút.
+0926	teika	daily	低下	ていか	giảm	なんか集中力が低下してる気がする。	Cảm giác như khả năng tập trung đang giảm ấy.
+0927	teika	business	低下	ていか	giảm	売上の低下が続いており、対策が必要です。	Doanh thu tiếp tục giảm nên cần có biện pháp.
+0928	teishutsu	exam	提出	ていしゅつ	nộp	レポートは金曜日までに提出してください。	Vui lòng nộp báo cáo trước thứ Sáu.
+0929	teishutsu	daily	提出	ていしゅつ	nộp	宿題、もう提出した?	Bài tập cậu nộp chưa?
+0930	teishutsu	business	提出	ていしゅつ	nộp	必要書類は本日中にご提出ください。	Xin vui lòng nộp các giấy tờ cần thiết trong hôm nay.
+0931	teido	exam	程度	ていど	mức độ	どの程度の英語力が必要ですか。	Cần trình độ tiếng Anh ở mức độ nào?
+0932	teido	daily	程度	ていど	mức độ	ある程度は分かるけど、完璧じゃない。	Tôi hiểu ở một mức độ nào đó, nhưng chưa hoàn hảo.
+0933	teido	business	程度	ていど	mức độ	被害の程度を現在調査しております。	Chúng tôi hiện đang điều tra mức độ thiệt hại.
+0934	theme	exam	テーマ	テーマ	chủ đề	今日の授業のテーマは環境問題だ。	Chủ đề bài học hôm nay là vấn đề môi trường.
+0935	theme	daily	テーマ	テーマ	chủ đề	次の飲み会、何かテーマ決める?	Buổi nhậu tới có đặt chủ đề gì không?
+0936	theme	business	テーマ	テーマ	chủ đề	今回の企画のテーマは「持続可能性」です。	Chủ đề của dự án lần này là 'tính bền vững'.
+0937	dekigoto	exam	出来事	できごと	sự việc	今日あった出来事を日記に書いた。	Tôi đã ghi lại những sự việc xảy ra hôm nay vào nhật ký.
+0938	dekigoto	daily	出来事	できごと	sự việc	今日、変な出来事があったんだよ。	Hôm nay có chuyện lạ xảy ra đấy.
+0939	dekigoto	business	出来事	できごと	sự việc	今回の出来事について経緯をご説明いたします。	Tôi xin giải thích diễn biến sự việc lần này.
+0940	design	exam	デザイン	デザイン	thiết kế	このポスターのデザインは彼が担当した。	Anh ấy phụ trách thiết kế cho poster này.
+0941	design	daily	デザイン	デザイン	thiết kế	このデザイン、かわいいね。	Thiết kế này dễ thương ghê.
+0942	design	business	デザイン	デザイン	thiết kế	新製品のデザインを来週提案いたします。	Tôi sẽ đề xuất thiết kế sản phẩm mới vào tuần sau.
+0943	digital	exam	デジタル	デジタル	kỹ thuật số	デジタル技術が急速に発展している。	Công nghệ kỹ thuật số đang phát triển nhanh chóng.
+0944	digital	daily	デジタル	デジタル	kỹ thuật số	もうデジタルの時計しか使ってないよ。	Giờ mình chỉ dùng đồng hồ kỹ thuật số thôi.
+0945	digital	business	デジタル	デジタル	kỹ thuật số	業務のデジタル化を推進しております。	Chúng tôi đang thúc đẩy số hóa công việc.
+0946	tetsu	exam	鉄	てつ	sắt	このドアは鉄でできている。	Cánh cửa này được làm bằng sắt.
+0947	tetsu	daily	鉄	てつ	sắt	このフライパン、鉄製で重いね。	Cái chảo này bằng sắt nên nặng ghê.
+0948	tetsu	business	鉄	てつ	sắt	当社は鉄を主原料とした製品を製造しています。	Công ty chúng tôi sản xuất các sản phẩm lấy sắt làm nguyên liệu chính.
+0949	tezukuri	exam	手作り	てづくり	làm tay	母の手作りの料理が好きだ。	Tôi thích món ăn mẹ làm tay.
+0950	tezukuri	daily	手作り	てづくり	làm tay	これ、手作りのケーキだよ。	Đây là bánh mình làm bằng tay đó.
+0951	tezukuri	business	手作り	てづくり	làm tay	当店は全て手作りにこだわっております。	Cửa hàng chúng tôi luôn chú trọng làm hoàn toàn thủ công.
+0952	tetsudai	exam	手伝い	てつだい	giúp đỡ	母に食事の手伝いを頼まれた。	Tôi được mẹ nhờ giúp việc bếp núc.
+0953	tetsudai	daily	手伝い	てつだい	giúp đỡ	手伝い、してほしいことある?	Có việc gì cần giúp không?
+0954	tetsudai	business	手伝い	てつだい	giúp đỡ	急な依頼で恐縮ですが、お手伝いいただけますか。	Xin lỗi vì yêu cầu gấp, anh/chị có thể giúp đỡ được không ạ?
+0955	tetsuzuki	exam	手続き	てつづき	thủ tục	入学の手続きを済ませた。	Tôi đã hoàn tất thủ tục nhập học.
+0956	tetsuzuki	daily	手続き	てつづき	thủ tục	この手続き、意外と面倒だね。	Thủ tục này rắc rối hơn mình tưởng.
+0957	tetsuzuki	business	手続き	てつづき	thủ tục	必要な手続きにつきましてはメールでご案内いたします。	Về các thủ tục cần thiết, chúng tôi sẽ hướng dẫn qua email.
+0958	demukae	exam	出迎え	でむかえ	đón	空港まで出迎えに行った。	Tôi đã ra sân bay đón.
+0959	demukae	daily	出迎え	でむかえ	đón	駅まで出迎え、行こうか?	Ra ga đón nhé?
+0960	demukae	business	出迎え	でむかえ	đón	お客様の出迎えは私が担当いたします。	Tôi sẽ phụ trách việc đón khách.
+0961	ten	exam	点	てん	điểm	テストでいい点を取った。	Tôi đã đạt điểm cao trong bài kiểm tra.
+0962	ten	daily	点	てん	điểm	この点、ちょっと分かりにくいな。	Điểm này hơi khó hiểu nhỉ.
+0963	ten	business	点	てん	điểm	その点については後ほどご説明いたします。	Về điểm đó, chúng tôi sẽ giải thích sau.
+0964	dengen	exam	電源	でんげん	nguồn điện	使う前に電源を入れてください。	Vui lòng bật nguồn trước khi sử dụng.
+0965	dengen	daily	電源	でんげん	nguồn điện	電源、切っておいてね。	Nhớ tắt nguồn nhé.
+0966	dengen	business	電源	でんげん	nguồn điện	機器の電源が入らない場合はサポートまでご連絡ください。	Nếu thiết bị không lên nguồn, xin liên hệ bộ phận hỗ trợ.
+0967	dengon	exam	伝言	でんごん	lời nhắn	彼に伝言を残しておいた。	Tôi đã để lại lời nhắn cho anh ấy.
+0968	dengon	daily	伝言	でんごん	lời nhắn	伝言、聞いた?	Cậu nghe lời nhắn chưa?
+0969	dengon	business	伝言	でんごん	lời nhắn	ご不在でしたので、伝言をお願いいたしました。	Vì quý khách vắng mặt nên tôi đã nhờ để lại lời nhắn.
+0970	dentou	exam	伝統	でんとう	truyền thống	この祭りは古くからの伝統だ。	Lễ hội này là truyền thống từ lâu đời.
+0971	dentou	daily	伝統	でんとう	truyền thống	これ、うちの伝統料理なんだ。	Đây là món ăn truyền thống của nhà mình đó.
+0972	dentou	business	伝統	でんとう	truyền thống	伝統と革新を両立させた製品を目指します。	Chúng tôi hướng đến sản phẩm dung hòa cả truyền thống và đổi mới.
+0973	denpa	exam	電波	でんぱ	sóng	この地域は電波が弱い。	Khu vực này sóng yếu.
+0974	denpa	daily	電波	でんぱ	sóng	ここ、電波届かないね。	Ở đây không bắt được sóng nhỉ.
+0975	denpa	business	電波	でんぱ	sóng	電波状況により通信が不安定になる場合がございます。	Tùy tình trạng sóng mà kết nối có thể không ổn định.
+0976	dou	exam	銅	どう	đồng (kim loại)	この像は銅でできている。	Bức tượng này được làm bằng đồng.
+0977	dou	daily	銅	どう	đồng (kim loại)	このコイン、銅かな?	Đồng xu này là đồng à?
+0978	dou	business	銅	どう	đồng (kim loại)	当社は銅を使った工芸品を扱っております。	Công ty chúng tôi kinh doanh các sản phẩm thủ công làm từ đồng.
+0979	touzen	exam	当然	とうぜん	đương nhiên	努力すれば結果が出るのは当然だ。	Nỗ lực thì có kết quả là đương nhiên.
+0980	touzen	daily	当然	とうぜん	đương nhiên	そんなの当然じゃん。	Chuyện đó đương nhiên rồi mà.
+0981	touzen	business	当然	とうぜん	đương nhiên	品質管理は当然の責務と考えております。	Chúng tôi coi quản lý chất lượng là trách nhiệm đương nhiên.
+0982	touhyou	exam	投票	とうひょう	bỏ phiếu	選挙で投票した。	Tôi đã bỏ phiếu trong cuộc bầu cử.
+0983	touhyou	daily	投票	とうひょう	bỏ phiếu	もう投票行った?	Cậu đi bỏ phiếu chưa?
+0984	touhyou	business	投票	とうひょう	bỏ phiếu	本議案について投票をお願いいたします。	Xin mời bỏ phiếu về đề án này.
+0985	tokushoku	exam	特色	とくしょく	đặc sắc	この地方の料理には独自の特色がある。	Món ăn của vùng này có nét đặc sắc riêng.
+0986	tokushoku	daily	特色	とくしょく	đặc sắc	この店、何か特色あるの?	Quán này có gì đặc sắc không?
+0987	tokushoku	business	特色	とくしょく	đặc sắc	弊社製品の特色を改めてご紹介いたします。	Tôi xin giới thiệu lại nét đặc sắc của sản phẩm công ty chúng tôi.
+0988	tokuchou	exam	特徴	とくちょう	đặc điểm	この動物の特徴を説明しなさい。	Hãy giải thích đặc điểm của loài động vật này.
+0989	tokuchou	daily	特徴	とくちょう	đặc điểm	彼の特徴って何かある?	Anh ấy có đặc điểm gì nổi bật không?
+0990	tokuchou	business	特徴	とくちょう	đặc điểm	新モデルの特徴を資料にまとめました。	Tôi đã tổng hợp đặc điểm của mẫu mới vào tài liệu.
+0991	tokorodokoro	exam	ところどころ	ところどころ	chỗ chỗ, đây đó	ところどころ雪が残っている。	Tuyết vẫn còn sót lại đây đó.
+0992	tokorodokoro	daily	ところどころ	ところどころ	chỗ chỗ, đây đó	このレポート、ところどころ間違ってるよ。	Bản báo cáo này chỗ chỗ có sai sót đấy.
+0993	tokorodokoro	business	ところどころ	ところどころ	chỗ chỗ, đây đó	資料はところどころ修正が必要です。	Tài liệu cần chỉnh sửa ở một vài chỗ.
+0994	tochuu	exam	途中	とちゅう	giữa chừng	駅に行く途中でコンビニに寄った。	Trên đường đi ga tôi đã ghé cửa hàng tiện lợi.
+0995	tochuu	daily	途中	とちゅう	giữa chừng	映画、途中で寝ちゃった。	Xem phim mà ngủ quên giữa chừng.
+0996	tochuu	business	途中	とちゅう	giữa chừng	プロジェクトは途中で方針を変更しました。	Dự án đã thay đổi phương hướng giữa chừng.
+0997	top	exam	トップ	トップ	cao nhất, đứng đầu	彼はクラスでトップの成績だ。	Anh ấy có thành tích đứng đầu lớp.
+0998	top	daily	トップ	トップ	cao nhất, đứng đầu	このランキング、トップになったよ!	Bảng xếp hạng này lên top rồi đó!
+0999	top	business	トップ	トップ	cao nhất, đứng đầu	当社は業界トップのシェアを誇ります。	Công ty chúng tôi tự hào có thị phần đứng đầu ngành.
+1000	todoke	exam	届け	とどけ	đơn (khai báo)	市役所に転居届けを出した。	Tôi đã nộp đơn khai chuyển nhà ở tòa thị chính.
+1001	todoke	daily	届け	とどけ	đơn (khai báo)	結婚届け、もう出した?	Đơn đăng ký kết hôn nộp chưa?
+1002	todoke	business	届け	とどけ	đơn (khai báo)	休職届けを人事部に提出してください。	Vui lòng nộp đơn xin nghỉ việc tạm thời cho phòng nhân sự.
+1003	doryoku	exam	努力	どりょく	nỗ lực	合格するには努力が必要だ。	Để đỗ cần phải nỗ lực.
+1004	doryoku	daily	努力	どりょく	nỗ lực	もっと努力しなきゃな。	Phải nỗ lực nhiều hơn nữa thôi.
+1005	doryoku	business	努力	どりょく	nỗ lực	チーム一丸となって努力してまいります。	Chúng tôi sẽ cùng nhau nỗ lực với tư cách là một đội.
+1006	training	exam	トレーニング	トレーニング	luyện tập	毎朝トレーニングをしている。	Mỗi sáng tôi đều luyện tập.
+1007	training	daily	トレーニング	トレーニング	luyện tập	今日、ジムでトレーニングした?	Hôm nay tập ở phòng gym chưa?
+1008	training	business	トレーニング	トレーニング	luyện tập	新入社員向けのトレーニングを実施いたします。	Chúng tôi sẽ tổ chức khóa đào tạo cho nhân viên mới.
+1009	naiyou	exam	内容	ないよう	nội dung	この本の内容を要約しなさい。	Hãy tóm tắt nội dung cuốn sách này.
+1010	naiyou	daily	内容	ないよう	nội dung	会議の内容、教えてくれる?	Cho tớ biết nội dung cuộc họp được không?
+1011	naiyou	business	内容	ないよう	nội dung	契約内容についてご確認をお願いいたします。	Xin vui lòng xác nhận nội dung hợp đồng.
+1012	nylon	exam	ナイロン	ナイロン	ni lông (vải)	このシャツはナイロン製だ。	Chiếc áo sơ mi này làm bằng ni lông (vải nylon).
+1013	nylon	daily	ナイロン	ナイロン	ni lông (vải)	このバッグ、ナイロンだから軽いよ。	Cái túi này bằng nylon nên nhẹ lắm.
+1014	nylon	business	ナイロン	ナイロン	ni lông (vải)	当社はナイロン素材の製品も取り扱っております。	Công ty chúng tôi cũng kinh doanh các sản phẩm chất liệu nylon.
+1015	nanani	exam	何々	なになに	v.v., cái này cái kia	履歴書には何々を書けばいいですか。	Trong sơ yếu lý lịch cần viết những gì?
+1016	nanani	daily	何々	なになに	v.v., cái này cái kia	何々が必要なのか、リストにしてよ。	Cần những cái gì thì liệt kê ra đi.
+1017	nanani	business	何々	なになに	v.v., cái này cái kia	申請には何々の書類が必要かご案内します。	Chúng tôi sẽ hướng dẫn cần những giấy tờ gì cho việc đăng ký.
+1018	nama	exam	生	なま	tươi sống	生野菜は体にいい。	Rau sống tốt cho sức khỏe.
+1019	nama	daily	生	なま	tươi sống	今夜は生ビールで乾杯しよう。	Tối nay cụng ly với bia tươi nhé.
+1020	nama	business	生	なま	tươi sống	本イベントは生放送でお届けします。	Sự kiện này sẽ được phát sóng trực tiếp.
+1021	nisemono	exam	偽物	にせもの	hàng giả	これは偽物のブランド品だ。	Đây là hàng hiệu giả.
+1022	nisemono	daily	偽物	にせもの	hàng giả	このバッグ、偽物じゃない?	Cái túi này không phải hàng giả chứ?
+1023	nisemono	business	偽物	にせもの	hàng giả	市場には偽物が出回っておりますのでご注意ください。	Xin lưu ý vì hàng giả đang lưu hành trên thị trường.
+1024	nyuujou	exam	入場	にゅうじょう	vào (khu vực)	入場は9時からです。	Vào cửa bắt đầu từ 9 giờ.
+1025	nyuujou	daily	入場	にゅうじょう	vào (khu vực)	もう入場した?	Cậu vào rồi à?
+1026	nyuujou	business	入場	にゅうじょう	vào (khu vực)	入場の際はチケットをご提示ください。	Khi vào cửa, xin vui lòng xuất trình vé.
+1027	ninki	exam	人気	にんき	nổi tiếng, được yêu thích	この歌手は若者に人気がある。	Ca sĩ này được giới trẻ yêu thích.
+1028	ninki	daily	人気	にんき	nổi tiếng, được yêu thích	このお店、最近人気だよね。	Quán này dạo này nổi tiếng nhỉ.
+1029	ninki	business	人気	にんき	nổi tiếng, được yêu thích	新商品は発売直後から人気を集めています。	Sản phẩm mới thu hút sự chú ý ngay sau khi ra mắt.
+1030	net	exam	ネット	ネット	mạng	ネットで情報を調べた。	Tôi đã tra thông tin trên mạng.
+1031	net	daily	ネット	ネット	mạng	それ、ネットで買ったの?	Cái đó cậu mua trên mạng à?
+1032	net	business	ネット	ネット	mạng	ネット通販の売上が伸びています。	Doanh thu bán hàng trực tuyến đang tăng.
+1033	nebou	exam	寝坊	ねぼう	ngủ quên	今朝、寝坊して遅刻した。	Sáng nay tôi ngủ quên nên đi trễ.
+1034	nebou	daily	寝坊	ねぼう	ngủ quên	また寝坊しちゃった。	Lại ngủ quên nữa rồi.
+1035	nebou	business	寝坊	ねぼう	ngủ quên	寝坊による遅刻は評価に影響いたします。	Đi trễ do ngủ quên sẽ ảnh hưởng đến đánh giá.
+1036	nengajou	exam	年賀状	ねんがじょう	thiệp năm mới	毎年、年賀状を書いている。	Mỗi năm tôi đều viết thiệp chúc mừng năm mới.
+1037	nengajou	daily	年賀状	ねんがじょう	thiệp năm mới	年賀状、もう出した?	Thiệp năm mới gửi chưa?
+1038	nengajou	business	年賀状	ねんがじょう	thiệp năm mới	日頃の感謝を込めて年賀状をお送りいたします。	Chúng tôi gửi thiệp năm mới để bày tỏ lòng biết ơn thường ngày.
+1039	nougyou	exam	農業	のうぎょう	nông nghiệp	この地域は農業が盛んだ。	Khu vực này nông nghiệp phát triển mạnh.
+1040	nougyou	daily	農業	のうぎょう	nông nghiệp	将来、農業やりたいんだよね。	Sau này tớ muốn làm nông nghiệp đó.
+1041	nougyou	business	農業	のうぎょう	nông nghiệp	弊社は農業分野への投資を拡大しております。	Công ty chúng tôi đang mở rộng đầu tư vào lĩnh vực nông nghiệp.
+1042	nouritsu	exam	能率	のうりつ	hiệu suất	作業の能率を上げたい。	Tôi muốn nâng cao hiệu suất công việc.
+1043	nouritsu	daily	能率	のうりつ	hiệu suất	このやり方、能率悪くない?	Cách làm này hiệu suất không tệ à?
+1044	nouritsu	business	能率	のうりつ	hiệu suất	新システム導入により能率が大幅に向上しました。	Nhờ triển khai hệ thống mới, hiệu suất đã cải thiện đáng kể.
+1045	knock	exam	ノック	ノック	gõ cửa	入る前にドアをノックした。	Tôi đã gõ cửa trước khi vào.
+1046	knock	daily	ノック	ノック	gõ cửa	ノックしてから入ってね。	Gõ cửa rồi mới vào nhé.
+1047	knock	business	ノック	ノック	gõ cửa	入室の際は必ずノックをお願いいたします。	Khi vào phòng, xin vui lòng gõ cửa trước.
+1048	haitatsu	exam	配達	はいたつ	giao hàng	新聞は毎朝配達される。	Báo được giao mỗi sáng.
+1049	haitatsu	daily	配達	はいたつ	giao hàng	荷物、まだ配達されてないよ。	Đồ vẫn chưa được giao đến đấy.
+1050	haitatsu	business	配達	はいたつ	giao hàng	ご注文の商品は明日配達いたします。	Sản phẩm quý khách đặt sẽ được giao vào ngày mai.
+1051	hakushu	exam	拍手	はくしゅ	vỗ tay	演奏が終わると拍手が起きた。	Khi buổi biểu diễn kết thúc, tiếng vỗ tay vang lên.
+1052	hakushu	daily	拍手	はくしゅ	vỗ tay	みんな、拍手して!	Mọi người vỗ tay nào!
+1053	hakushu	business	拍手	はくしゅ	vỗ tay	発表の後、会場から大きな拍手が送られました。	Sau bài phát biểu, hội trường đã dành tràng vỗ tay lớn.
+1054	passport	exam	パスポート	パスポート	hộ chiếu	海外旅行にはパスポートが必要だ。	Đi du lịch nước ngoài cần hộ chiếu.
+1055	passport	daily	パスポート	パスポート	hộ chiếu	パスポート、期限切れてない?	Hộ chiếu chưa hết hạn chứ?
+1056	passport	business	パスポート	パスポート	hộ chiếu	出張の際はパスポートをご持参ください。	Khi đi công tác, xin vui lòng mang theo hộ chiếu.
+1057	password	exam	パスワード	パスワード	mật khẩu	パスワードを忘れてしまった。	Tôi đã quên mất mật khẩu.
+1058	password	daily	パスワード	パスワード	mật khẩu	このWi-Fiのパスワード、知ってる?	Cậu biết mật khẩu Wi-Fi này không?
+1059	password	business	パスワード	パスワード	mật khẩu	初回ログイン後はパスワードを変更してください。	Sau lần đăng nhập đầu tiên, xin vui lòng đổi mật khẩu.
+1060	hata	exam	旗	はた	cờ	国旗を掲げた。	Tôi đã treo lá quốc kỳ.
+1061	hata	daily	旗	はた	cờ	みんな、旗を振って応援しよう。	Mọi người cùng vẫy cờ cổ vũ nào.
+1062	hata	business	旗	はた	cờ	会場入口に社旗を掲揚いたします。	Chúng tôi sẽ treo cờ công ty ở lối vào hội trường.
+1063	hakken	exam	発見	はっけん	phát hiện	新しい星を発見した。	Người ta đã phát hiện ra một ngôi sao mới.
+1064	hakken	daily	発見	はっけん	phát hiện	面白いお店、発見したよ!	Tớ phát hiện ra một quán hay ho đấy!
+1065	hakken	business	発見	はっけん	phát hiện	調査の結果、新たな課題を発見いたしました。	Qua kết quả điều tra, chúng tôi đã phát hiện ra vấn đề mới.
+1066	hatsugen	exam	発言	はつげん	phát biểu	会議で自由に発言してください。	Xin vui lòng phát biểu tự do trong cuộc họp.
+1067	hatsugen	daily	発言	はつげん	phát biểu	さっきの発言、ちょっと変じゃない?	Phát biểu vừa nãy có hơi lạ không?
+1068	hatsugen	business	発言	はつげん	phát biểu	会議での発言は議事録に記録されます。	Các phát biểu trong cuộc họp sẽ được ghi vào biên bản.
+1069	hakkou	exam	発行	はっこう	phát hành	この雑誌は月に一度発行される。	Tạp chí này được phát hành mỗi tháng một lần.
+1070	hakkou	daily	発行	はっこう	phát hành	このチケット、いつ発行されたの?	Vé này được phát hành lúc nào vậy?
+1071	hakkou	business	発行	はっこう	phát hành	請求書を発行いたしましたのでご確認ください。	Chúng tôi đã phát hành hóa đơn, xin vui lòng kiểm tra.
+1072	hassei	exam	発生	はっせい	phát sinh	事故が発生した場所を確認した。	Tôi đã kiểm tra địa điểm xảy ra tai nạn.
+1073	hassei	daily	発生	はっせい	phát sinh	なんかエラーが発生してるみたい。	Hình như có lỗi phát sinh đấy.
+1074	hassei	business	発生	はっせい	phát sinh	システムに障害が発生しております。	Hệ thống đang phát sinh sự cố.
+1075	hattatsu	exam	発達	はったつ	phát triển	子供の言語発達には個人差がある。	Sự phát triển ngôn ngữ của trẻ có sự khác biệt cá nhân.
+1076	hattatsu	daily	発達	はったつ	phát triển	このゲーム、技術がすごく発達してるね。	Trò chơi này công nghệ phát triển ghê nhỉ.
+1077	hattatsu	business	発達	はったつ	phát triển	AI技術の発達により業務が大きく変化しています。	Nhờ sự phát triển của công nghệ AI, công việc đang thay đổi lớn.
+1078	hatsubai	exam	発売	はつばい	bán ra	新製品は来月発売される。	Sản phẩm mới sẽ được bán ra vào tháng sau.
+1079	hatsubai	daily	発売	はつばい	bán ra	そのゲーム、もう発売した?	Trò chơi đó bán ra chưa?
+1080	hatsubai	business	発売	はつばい	bán ra	新商品を来週より発売いたします。	Chúng tôi sẽ bán ra sản phẩm mới từ tuần sau.

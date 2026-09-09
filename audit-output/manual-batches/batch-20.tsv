@@ -1,0 +1,181 @@
+row	vocabId	type	word	reading	meaningVi	exampleJp	exampleVi
+3421	fukusou	exam	服装	ふくそう	trang phục	式典にふさわしい服装で行った。	Tôi đã đi với trang phục phù hợp buổi lễ.
+3422	fukusou	daily	服装	ふくそう	trang phục	今日の服装、いいね。	Trang phục hôm nay đẹp đấy.
+3423	fukusou	business	服装	ふくそう	trang phục	面接時の服装についてご案内いたします。	Chúng tôi xin hướng dẫn về trang phục khi phỏng vấn.
+3424	houseki	exam	宝石	ほうせき	đá quý	宝石のような瞳だ。	Đôi mắt đẹp như đá quý.
+3425	houseki	daily	宝石	ほうせき	đá quý	この宝石、本物?	Đá quý này là hàng thật à?
+3426	houseki	business	宝石	ほうせき	đá quý	高級宝石の展示販売会を開催いたします。	Chúng tôi sẽ tổ chức triển lãm bán đá quý cao cấp.
+3427	make	exam	メーク	メークアップ	trang điểm	メークをして出かけた。	Tôi đã trang điểm rồi ra ngoài.
+3428	make	daily	メーク	メークアップ	trang điểm	今日のメーク、いいね。	Trang điểm hôm nay đẹp đấy.
+3429	make	business	メーク	メークアップ	trang điểm	新作メークアップ商品を発売いたします。	Chúng tôi sẽ ra mắt sản phẩm trang điểm mới.
+3430	ribbon	exam	リボン	リボン	nơ	プレゼントにリボンをつけた。	Tôi đã thắt nơ vào món quà.
+3431	ribbon	daily	リボン	リボン	nơ	プレゼントに赤いリボンを結んだ。	Tôi buộc một chiếc nơ đỏ vào món quà.
+3432	ribbon	business	リボン	リボン	nơ	ギフト用にリボンを追加いたします。	Chúng tôi sẽ thêm nơ cho quà tặng.
+3433	belt	exam	ベルト	ベルト	thắt lưng	ズボンにベルトをした。	Tôi đã đeo thắt lưng vào quần.
+3434	belt	daily	ベルト	ベルト	thắt lưng	そのベルト、今日の服に合ってるね。	Chiếc thắt lưng đó hợp với bộ đồ hôm nay nhỉ.
+3435	belt	business	ベルト	ベルト	thắt lưng	新作ベルトのラインナップを追加いたしました。	Chúng tôi đã thêm dòng thắt lưng mới.
+3436	muffler	exam	マフラー	マフラー	khăn quàng (mùa đông)	寒いのでマフラーを巻いた。	Vì lạnh nên tôi đã quàng khăn.
+3437	muffler	daily	マフラー	マフラー	khăn quàng (mùa đông)	寒いからマフラー巻いていこう。	Trời lạnh nên quàng khăn rồi đi thôi.
+3438	muffler	business	マフラー	マフラー	khăn quàng (mùa đông)	冬季限定のマフラーを発売いたします。	Chúng tôi sẽ ra mắt khăn quàng chỉ bán mùa đông.
+3439	eri	exam	襟	えり	cổ áo	シャツの襟を直した。	Tôi đã chỉnh lại cổ áo sơ mi.
+3440	eri	daily	襟	えり	cổ áo	襟、曲がってるよ。	Cổ áo bị lệch kìa.
+3441	eri	business	襟	えり	cổ áo	制服の襟デザインを一新いたしました。	Chúng tôi đã làm mới thiết kế cổ áo đồng phục.
+3442	sode	exam	袖	そで	tay áo	暑いので袖をまくった。	Vì nóng nên tôi đã xắn tay áo.
+3443	sode	daily	袖	そで	tay áo	袖、長すぎない?	Tay áo không dài quá à?
+3444	sode	business	袖	そで	tay áo	袖丈の調整サービスを行っております。	Chúng tôi cung cấp dịch vụ chỉnh sửa độ dài tay áo.
+3445	fastener	exam	ファスナー	ファスナー	khóa kéo	バッグのファスナーが壊れた。	Khóa kéo túi đã bị hỏng.
+3446	fastener	daily	ファスナー	ファスナー	khóa kéo	ファスナー、閉まらないよ。	Khóa kéo không kéo lại được.
+3447	fastener	business	ファスナー	ファスナー	khóa kéo	ファスナー部分の耐久性を強化いたしました。	Chúng tôi đã tăng cường độ bền phần khóa kéo.
+3448	wool	exam	ウール	ウール	len (vải)	このセーターはウール製だ。	Chiếc áo len này làm từ chất liệu len.
+3449	wool	daily	ウール	ウール	len (vải)	ウールのコート、暖かいね。	Áo khoác len ấm thật nhỉ.
+3450	wool	business	ウール	ウール	len (vải)	高級ウール素材を使用しております。	Chúng tôi sử dụng chất liệu len cao cấp.
+3451	keito	exam	毛糸	けいと	len (sợi để đan)	毛糸でマフラーを編んだ。	Tôi đã đan khăn quàng bằng len.
+3452	keito	daily	毛糸	けいと	len (sợi để đan)	この毛糸、柔らかいね。	Sợi len này mềm thật nhỉ.
+3453	keito	business	毛糸	けいと	len (sợi để đan)	天然毛糸を使用した商品を展開しております。	Chúng tôi đang triển khai sản phẩm sử dụng len tự nhiên.
+3454	cotton	exam	コットン	コットン	bông (vải)	コットンのシャツを買った。	Tôi đã mua áo sơ mi vải bông.
+3455	cotton	daily	コットン	コットン	bông (vải)	このコットン、肌触りいいね。	Bông này chạm vào dễ chịu nhỉ.
+3456	cotton	business	コットン	コットン	bông (vải)	オーガニックコットンを使用しております。	Chúng tôi sử dụng bông hữu cơ.
+3457	silk	exam	シルク	シルク	lụa	シルクのスカーフをもらった。	Tôi đã được tặng khăn lụa.
+3458	silk	daily	シルク	シルク	lụa	このシルク、光沢がすごいね。	Lụa này bóng đẹp ghê.
+3459	silk	business	シルク	シルク	lụa	高級シルク素材を使用した商品です。	Đây là sản phẩm sử dụng chất liệu lụa cao cấp.
+3460	waist	exam	ウエスト	ウエスト	vòng eo	ウエストを測った。	Tôi đã đo vòng eo.
+3461	waist	daily	ウエスト	ウエスト	vòng eo	ウエスト、細くなったね。	Vòng eo nhỏ lại rồi nhỉ.
+3462	waist	business	ウエスト	ウエスト	vòng eo	ウエストサイズ別に商品をご用意しております。	Chúng tôi có chuẩn bị sản phẩm theo từng kích cỡ vòng eo.
+3463	bust	exam	バスト	バスト	vòng ngực	バストのサイズを測った。	Tôi đã đo kích cỡ vòng ngực.
+3464	bust	daily	バスト	バスト	vòng ngực	バストサイズ、合ってる?	Kích cỡ vòng ngực có vừa không?
+3465	bust	business	バスト	バスト	vòng ngực	バストサイズに応じたラインナップをご用意しております。	Chúng tôi có chuẩn bị dòng sản phẩm theo kích cỡ vòng ngực.
+3466	hip	exam	ヒップ	ヒップ	vòng mông	ヒップのラインが気になる。	Tôi để ý đến đường nét vòng mông.
+3467	hip	daily	ヒップ	ヒップ	vòng mông	このパンツ、ヒップにフィットするね。	Cái quần này ôm vòng mông vừa vặn nhỉ.
+3468	hip	business	ヒップ	ヒップ	vòng mông	ヒップサイズを考慮した設計となっております。	Đây là thiết kế có cân nhắc kích cỡ vòng mông.
+3469	kagu	exam	家具	かぐ	đồ gia dụng, nội thất	引っ越しに合わせて家具をそろえた。	Tôi đã sắm đồ nội thất nhân dịp chuyển nhà.
+3470	kagu	daily	家具	かぐ	đồ gia dụng, nội thất	この家具、素敵だね。	Món nội thất này đẹp thật nhỉ.
+3471	kagu	business	家具	かぐ	đồ gia dụng, nội thất	オフィス家具の入れ替えを実施いたします。	Chúng tôi sẽ thay thế nội thất văn phòng.
+3472	garage	exam	ガレージ	ガレージ	gara	車をガレージに入れた。	Tôi đã đưa xe vào gara.
+3473	garage	daily	ガレージ	ガレージ	gara	ガレージ、片付けなきゃ。	Phải dọn dẹp gara thôi.
+3474	garage	business	ガレージ	ガレージ	gara	社用車はガレージにて保管しております。	Xe công ty được bảo quản trong gara.
+3475	juutaku	exam	住宅	じゅうたく	nhà ở	新しい住宅を購入した。	Tôi đã mua nhà mới.
+3476	juutaku	daily	住宅	じゅうたく	nhà ở	この住宅、広いね。	Ngôi nhà này rộng nhỉ.
+3477	juutaku	business	住宅	じゅうたく	nhà ở	新規住宅ローンの取り扱いを開始いたしました。	Chúng tôi đã bắt đầu triển khai khoản vay mua nhà mới.
+3478	chime	exam	チャイム	チャイム	chuông (cửa)	チャイムが鳴った。	Chuông đã reo.
+3479	chime	daily	チャイム	チャイム	chuông (cửa)	チャイム、聞こえた?	Cậu có nghe tiếng chuông không?
+3480	chime	business	チャイム	チャイム	chuông (cửa)	来客時はチャイムを鳴らしてください。	Khi có khách đến, xin vui lòng bấm chuông.
+3481	tenjou	exam	天井	てんじょう	trần nhà	天井が高い部屋だ。	Đây là căn phòng có trần cao.
+3482	tenjou	daily	天井	てんじょう	trần nhà	天井、シミがあるね。	Trần nhà có vết ố kìa.
+3483	tenjou	business	天井	てんじょう	trần nhà	天井照明のデザインを刷新いたしました。	Chúng tôi đã đổi mới thiết kế đèn trần.
+3484	todana	exam	戸棚	とだな	tủ	戸棚に食器をしまった。	Tôi đã cất bát đĩa vào tủ.
+3485	todana	daily	戸棚	とだな	tủ	戸棚、開けてくれる?	Mở giúp tớ cái tủ được không?
+3486	todana	business	戸棚	とだな	tủ	備品は戸棚にて保管しております。	Vật dụng được bảo quản trong tủ.
+3487	hashira	exam	柱	はしら	cột	柱にもたれて休んだ。	Tôi đã dựa vào cột để nghỉ.
+3488	hashira	daily	柱	はしら	cột	この柱、太いね。	Cây cột này to nhỉ.
+3489	hashira	business	柱	はしら	cột	建物の柱の強度を検査いたしました。	Chúng tôi đã kiểm tra độ chắc của cột tòa nhà.
+3490	bath	exam	バス	バス	bồn tắm	バスにゆっくり浸かった。	Tôi đã ngâm mình thư thái trong bồn tắm.
+3491	bath	daily	バス	バス	bồn tắm	バス、お湯溜めておいたよ。	Tớ đã xả nước nóng vào bồn tắm rồi đấy.
+3492	bath	business	バス	バス	bồn tắm	客室にはバス付きのお部屋もございます。	Có cả phòng khách có kèm bồn tắm.
+3493	yane	exam	屋根	やね	mái nhà	屋根の修理をした。	Tôi đã sửa mái nhà.
+3494	yane	daily	屋根	やね	mái nhà	屋根、雨漏りしてるよ。	Mái nhà bị dột kìa.
+3495	yane	business	屋根	やね	mái nhà	建物の屋根は、台風シーズン前に専門業者が点検します。	Mái của tòa nhà được đơn vị chuyên môn kiểm tra trước mùa bão.
+3496	yuka	exam	床	ゆか	sàn nhà	床を掃除した。	Tôi đã lau sàn nhà.
+3497	yuka	daily	床	ゆか	sàn nhà	床、滑るから気をつけて。	Sàn trơn nên chú ý nhé.
+3498	yuka	business	床	ゆか	sàn nhà	床材を新しくリフォームいたしました。	Chúng tôi đã cải tạo lại vật liệu sàn.
+3499	youshitsu	exam	洋室	ようしつ	phòng kiểu Tây	この家には洋室が二つある。	Ngôi nhà này có hai phòng kiểu Tây.
+3500	youshitsu	daily	洋室	ようしつ	phòng kiểu Tây	洋室の方が過ごしやすいよね。	Phòng kiểu Tây dễ sinh hoạt hơn nhỉ.
+3501	youshitsu	business	洋室	ようしつ	phòng kiểu Tây	洋室タイプの客室もご用意しております。	Chúng tôi cũng có chuẩn bị phòng khách kiểu Tây.
+3502	living	exam	リビング	リビング	phòng khách	家族はリビングでくつろいでいる。	Gia đình đang thư giãn ở phòng khách.
+3503	living	daily	リビング	リビング	phòng khách	リビング、片付けようか。	Dọn dẹp phòng khách nhé.
+3504	living	business	リビング	リビング	phòng khách	リビングスペースを広く設計いたしました。	Chúng tôi đã thiết kế không gian phòng khách rộng rãi.
+3505	ryou_b25	exam	寮	りょう	ký túc xá	大学の寮に住んでいる。	Tôi đang sống ở ký túc xá đại học.
+3506	ryou_b25	daily	寮	りょう	ký túc xá	寮、快適?	Ký túc xá thoải mái không?
+3507	ryou_b25	business	寮	りょう	ký túc xá	新入社員用の社員寮を完備しております。	Chúng tôi có đầy đủ ký túc xá công ty dành cho nhân viên mới.
+3508	washitsu	exam	和室	わしつ	phòng kiểu Nhật	和室で正座をした。	Tôi đã ngồi kiểu quỳ trong phòng kiểu Nhật.
+3509	washitsu	daily	和室	わしつ	phòng kiểu Nhật	和室、落ち着くよね。	Phòng kiểu Nhật thư thái thật nhỉ.
+3510	washitsu	business	和室	わしつ	phòng kiểu Nhật	和室タイプの宴会場もご利用いただけます。	Quý khách cũng có thể sử dụng phòng tiệc kiểu Nhật.
+3511	otearai	exam	お手洗い	おてあらい	nhà vệ sinh	お手洗いに行ってきます。	Tôi đi vệ sinh một lát.
+3512	otearai	daily	お手洗い	おてあらい	nhà vệ sinh	お手洗い、どこにある?	Nhà vệ sinh ở đâu vậy?
+3513	otearai	business	お手洗い	おてあらい	nhà vệ sinh	お手洗いは1階にございます。	Nhà vệ sinh nằm ở tầng 1.
+3514	carpet	exam	カーペット	カーペット	thảm	床にカーペットを敷いた。	Tôi đã trải thảm lên sàn.
+3515	carpet	daily	カーペット	カーペット	thảm	このカーペット、ふかふかだね。	Tấm thảm này mềm mại ghê.
+3516	carpet	business	カーペット	カーペット	thảm	会場にはカーペットを敷いております。	Chúng tôi đã trải thảm ở hội trường.
+3517	kitchen	exam	キッチン	キッチン	bếp	キッチンで料理をしている。	Tôi đang nấu ăn trong bếp.
+3518	kitchen	daily	キッチン	キッチン	bếp	このキッチン、使いやすいね。	Cái bếp này dễ dùng nhỉ.
+3519	kitchen	business	キッチン	キッチン	bếp	キッチン設備を最新のものに更新いたしました。	Chúng tôi đã cập nhật thiết bị bếp lên phiên bản mới nhất.
+3520	shutter	exam	シャッター	シャッター	cửa cuốn	店のシャッターを下ろした。	Tôi đã kéo cửa cuốn của cửa hàng xuống.
+3521	shutter	daily	シャッター	シャッター	cửa cuốn	シャッター、閉まってるよ。	Cửa cuốn đã đóng rồi đấy.
+3522	shutter	business	シャッター	シャッター	cửa cuốn	台風に備えてシャッターを設置いたしました。	Chúng tôi đã lắp đặt cửa cuốn để đề phòng bão.
+3523	shinshitsu	exam	寝室	しんしつ	phòng ngủ	寝室で本を読んだ。	Tôi đã đọc sách trong phòng ngủ.
+3524	shinshitsu	daily	寝室	しんしつ	phòng ngủ	寝室、片付けなきゃ。	Phải dọn dẹp phòng ngủ thôi.
+3525	shinshitsu	business	寝室	しんしつ	phòng ngủ	客室は寝室と居間が分かれております。	Phòng khách sạn có phòng ngủ và phòng khách riêng biệt.
+3526	senmenjo	exam	洗面所	せんめんじょ	nơi rửa mặt	朝、洗面所で歯を磨いた。	Sáng tôi đã đánh răng ở nơi rửa mặt.
+3527	senmenjo	daily	洗面所	せんめんじょ	nơi rửa mặt	洗面所、使ってもいい?	Dùng nơi rửa mặt được không?
+3528	senmenjo	business	洗面所	せんめんじょ	nơi rửa mặt	洗面所の設備を新しくいたしました。	Chúng tôi đã làm mới thiết bị ở nơi rửa mặt.
+3529	sofa	exam	ソファー	ソファー	ghế sofa	ソファーに座ってくつろいだ。	Tôi đã ngồi trên ghế sofa thư giãn.
+3530	sofa	daily	ソファー	ソファー	ghế sofa	このソファー、座り心地いいね。	Cái ghế sofa này ngồi êm thật nhỉ.
+3531	sofa	business	ソファー	ソファー	ghế sofa	応接室に新しいソファーを設置いたしました。	Chúng tôi đã lắp đặt ghế sofa mới ở phòng tiếp khách.
+3532	tansu	exam	たんす	たんす	tủ (đựng quần áo)	たんすに服をしまった。	Tôi đã cất quần áo vào tủ.
+3533	tansu	daily	たんす	たんす	tủ (đựng quần áo)	このたんす、古いね。	Cái tủ này cũ nhỉ.
+3534	tansu	business	たんす	たんす	tủ (đựng quần áo)	和風のたんすを取り扱っております。	Chúng tôi kinh doanh tủ kiểu Nhật.
+3535	nagashi	exam	流し	ながし	bồn rửa (bếp)	流しで食器を洗った。	Tôi đã rửa bát đĩa ở bồn rửa.
+3536	nagashi	daily	流し	ながし	bồn rửa (bếp)	流し、詰まってるよ。	Bồn rửa bị nghẹt rồi đấy.
+3537	nagashi	business	流し	ながし	bồn rửa (bếp)	流しの排水管を点検いたしました。	Chúng tôi đã kiểm tra ống thoát nước của bồn rửa.
+3538	veranda	exam	ベランダ	ベランダ	ban công	ベランダで洗濯物を干した。	Tôi đã phơi quần áo ở ban công.
+3539	veranda	daily	ベランダ	ベランダ	ban công	ベランダ、風気持ちいいね。	Ở ban công gió mát dễ chịu nhỉ.
+3540	veranda	business	ベランダ	ベランダ	ban công	全室にベランダを完備しております。	Tất cả các phòng đều có đầy đủ ban công.
+3541	benjo	exam	便所	べんじょ	nhà vệ sinh	公園の便所を使った。	Tôi đã dùng nhà vệ sinh ở công viên.
+3542	benjo	daily	便所	べんじょ	nhà vệ sinh	便所、どこ?	Nhà vệ sinh ở đâu?
+3543	benjo	business	便所	べんじょ	nhà vệ sinh	館内の便所は各階に設置されております。	Nhà vệ sinh trong tòa nhà được lắp đặt ở mỗi tầng.
+3544	monooki	exam	物置	ものおき	kho chứa	物置に道具をしまった。	Tôi đã cất dụng cụ vào kho chứa.
+3545	monooki	daily	物置	ものおき	kho chứa	物置がいっぱいだから、週末に整理しよう。	Kho chứa đồ đầy rồi nên cuối tuần dọn lại nhé.
+3546	monooki	business	物置	ものおき	kho chứa	備品は物置にて管理しております。	Vật dụng được quản lý trong kho chứa.
+3547	instantshokuhin	exam	インスタント食品	インスタントしょくひん	thực phẩm ăn liền	忙しい時はインスタント食品に頼る。	Lúc bận rộn tôi phụ thuộc vào thực phẩm ăn liền.
+3548	instantshokuhin	daily	インスタント食品	インスタントしょくひん	thực phẩm ăn liền	インスタント食品、体に良くないよね。	Thực phẩm ăn liền không tốt cho cơ thể nhỉ.
+3549	instantshokuhin	business	インスタント食品	インスタントしょくひん	thực phẩm ăn liền	インスタント食品の需要が高まっています。	Nhu cầu thực phẩm ăn liền đang tăng cao.
+3550	eiyou	exam	栄養	えいよう	dinh dưỡng	栄養のバランスを考えて食事した。	Tôi đã ăn có cân nhắc sự cân bằng dinh dưỡng.
+3551	eiyou	daily	栄養	えいよう	dinh dưỡng	栄養、しっかり取ってる?	Cậu có bổ sung dinh dưỡng đầy đủ không?
+3552	eiyou	business	栄養	えいよう	dinh dưỡng	栄養バランスに配慮した商品を開発しております。	Chúng tôi đang phát triển sản phẩm quan tâm đến cân bằng dinh dưỡng.
+3553	okazu	exam	おかず	おかず	thức ăn (món mặn ăn kèm cơm)	今日のおかずは魚だ。	Món ăn hôm nay là cá.
+3554	okazu	daily	おかず	おかず	thức ăn (món mặn ăn kèm cơm)	おかず、もう一品欲しいな。	Tớ muốn thêm một món ăn nữa.
+3555	okazu	business	おかず	おかず	thức ăn (món mặn ăn kèm cơm)	社員食堂では日替わりのおかずを三種類用意しています。	Căng-tin công ty chuẩn bị ba món ăn kèm thay đổi theo ngày.
+3556	okawari	exam	お代わり	おかわり	ăn thêm (lấy thêm phần)	ご飯のお代わりをした。	Tôi đã ăn thêm cơm.
+3557	okawari	daily	お代わり	おかわり	ăn thêm (lấy thêm phần)	お代わり、いる?	Cậu có muốn ăn thêm không?
+3558	okawari	business	お代わり	おかわり	ăn thêm (lấy thêm phần)	こちらのメニューはお代わり無料です。	Món này được ăn thêm miễn phí.
+3559	icecream	exam	アイスクリーム	アイスクリーム	kem	暑いのでアイスクリームを食べた。	Vì nóng nên tôi đã ăn kem.
+3560	icecream	daily	アイスクリーム	アイスクリーム	kem	アイスクリーム、買ってきて。	Mua kem giúp tớ nhé.
+3561	icecream	business	アイスクリーム	アイスクリーム	kem	新フレーバーのアイスクリームを発売いたします。	Chúng tôi sẽ ra mắt kem hương vị mới.
+3562	whiskey	exam	ウイスキー	ウイスキー	rượu whisky	父はウイスキーが好きだ。	Bố tôi thích rượu whisky.
+3563	whiskey	daily	ウイスキー	ウイスキー	rượu whisky	ウイスキー、飲む?	Uống whisky không?
+3564	whiskey	business	ウイスキー	ウイスキー	rượu whisky	高級ウイスキーの取り扱いを開始いたしました。	Chúng tôi đã bắt đầu kinh doanh rượu whisky cao cấp.
+3565	udon	exam	うどん	うどん	mì udon	昼食にうどんを食べた。	Tôi đã ăn mì udon vào bữa trưa.
+3566	udon	daily	うどん	うどん	mì udon	このうどん、コシがあるね。	Mì udon này dai thật nhỉ.
+3567	udon	business	うどん	うどん	mì udon	名物うどんを新メニューとして追加いたします。	Chúng tôi sẽ thêm mì udon đặc sản vào thực đơn mới.
+3568	orange	exam	オレンジ	オレンジ	cam	朝食にオレンジを食べた。	Tôi đã ăn cam vào bữa sáng.
+3569	orange	daily	オレンジ	オレンジ	cam	このオレンジ、甘いね。	Quả cam này ngọt thật nhỉ.
+3570	orange	business	オレンジ	オレンジ	cam	国産オレンジを使用したジュースを販売しております。	Chúng tôi đang bán nước ép sử dụng cam trong nước.
+3571	gum_b26	exam	ガム	ガム	kẹo cao su	運転中にガムを噛んだ。	Trong lúc lái xe tôi đã nhai kẹo cao su.
+3572	gum_b26	daily	ガム	ガム	kẹo cao su	ガム、一つちょうだい。	Cho tớ một viên kẹo cao su.
+3573	gum_b26	business	ガム	ガム	kẹo cao su	新フレーバーのガムを発売いたします。	Chúng tôi sẽ ra mắt kẹo cao su hương vị mới.
+3574	kanzume	exam	缶詰	かんづめ	đồ hộp	缶詰のツナを買った。	Tôi đã mua cá ngừ đóng hộp.
+3575	kanzume	daily	缶詰	かんづめ	đồ hộp	缶詰、まだ賞味期限大丈夫?	Đồ hộp này còn hạn sử dụng chứ?
+3576	kanzume	business	缶詰	かんづめ	đồ hộp	非常食として缶詰を備蓄しております。	Chúng tôi tích trữ đồ hộp làm thực phẩm dự phòng khẩn cấp.
+3577	komugiko	exam	小麦粉	こむぎこ	bột mì	小麦粉でパンを作った。	Tôi đã làm bánh mì bằng bột mì.
+3578	komugiko	daily	小麦粉	こむぎこ	bột mì	小麦粉、まだ残ってる?	Bột mì vẫn còn không?
+3579	komugiko	business	小麦粉	こむぎこ	bột mì	国産小麦粉を使用した商品を展開しております。	Chúng tôi đang triển khai sản phẩm sử dụng bột mì nội địa.
+3580	sashimi	exam	刺身	さしみ	sashimi	新鮮な刺身を食べた。	Tôi đã ăn sashimi tươi.
+3581	sashimi	daily	刺身	さしみ	sashimi	この刺身、美味しいね。	Sashimi này ngon thật nhỉ.
+3582	sashimi	business	刺身	さしみ	sashimi	本日のおすすめは刺身盛り合わせです。	Món đề xuất hôm nay là sashimi thập cẩm.
+3583	soup	exam	スープ	スープ	súp	温かいスープを飲んだ。	Tôi đã uống súp ấm.
+3584	soup	daily	スープ	スープ	súp	このスープ、美味しいね。	Súp này ngon thật nhỉ.
+3585	soup	business	スープ	スープ	súp	新メニューとしてスープを追加いたします。	Chúng tôi sẽ thêm súp vào thực đơn mới.
+3586	sausage	exam	ソーセージ	ソーセージ	xúc xích	朝食にソーセージを焼いた。	Tôi đã nướng xúc xích cho bữa sáng.
+3587	sausage	daily	ソーセージ	ソーセージ	xúc xích	朝ごはんにソーセージを焼いた。	Tôi nướng xúc xích cho bữa sáng.
+3588	sausage	business	ソーセージ	ソーセージ	xúc xích	国産豚肉を使用したソーセージを販売しております。	Chúng tôi đang bán xúc xích sử dụng thịt lợn nội địa.
+3589	soba	exam	そば	そば	mì soba	昼食にそばを食べた。	Tôi đã ăn mì soba vào bữa trưa.
+3590	soba	daily	そば	そば	mì soba	このそば、コシがあるね。	Mì soba này dai thật nhỉ.
+3591	soba	business	そば	そば	mì soba	名物そばを新メニューとして追加いたします。	Chúng tôi sẽ thêm mì soba đặc sản vào thực đơn mới.
+3592	cheese	exam	チーズ	チーズ	phô mai	チーズをパンに乗せた。	Tôi đã đặt phô mai lên bánh mì.
+3593	cheese	daily	チーズ	チーズ	phô mai	このチーズ、パンと一緒に食べるとよく合うね。	Phô mai này ăn cùng bánh mì rất hợp nhỉ.
+3594	cheese	business	チーズ	チーズ	phô mai	輸入チーズの取り扱いを開始いたしました。	Chúng tôi đã bắt đầu kinh doanh phô mai nhập khẩu.
+3595	oyatsu	exam	おやつ	おやつ	đồ ăn nhẹ	子供におやつをあげた。	Tôi đã cho con ăn đồ ăn nhẹ.
+3596	oyatsu	daily	おやつ	おやつ	đồ ăn nhẹ	おやつ、何かある?	Có đồ ăn nhẹ gì không?
+3597	oyatsu	business	おやつ	おやつ	đồ ăn nhẹ	午後のおやつタイムを楽しみにしています。	Tôi mong chờ khoảng thời gian ăn nhẹ buổi chiều.
+3598	gaishoku	exam	外食	がいしょく	ăn ngoài	たまには外食もいいね。	Thỉnh thoảng ăn ngoài cũng tốt nhỉ.
+3599	gaishoku	daily	外食	がいしょく	ăn ngoài	今夜、外食しない?	Tối nay ăn ngoài không?
+3600	gaishoku	business	外食	がいしょく	ăn ngoài	接待での外食費用を精算いたします。	Chúng tôi sẽ thanh toán chi phí ăn ngoài cho việc tiếp khách.

@@ -1,0 +1,181 @@
+row	vocabId	type	word	reading	meaningVi	exampleJp	exampleVi
+3601	cream	exam	クリーム	クリーム	kem (dùng cho bánh)	ケーキにクリームを塗った。	Tôi đã phết kem lên bánh.
+3602	cream	daily	クリーム	クリーム	kem (dùng cho bánh)	このクリーム、甘すぎない?	Kem này không ngọt quá à?
+3603	cream	business	クリーム	クリーム	kem (dùng cho bánh)	低糖質クリームを使用した商品を開発いたしました。	Chúng tôi đã phát triển sản phẩm sử dụng kem ít đường.
+3604	koori	exam	氷	こおり	đá	飲み物に氷を入れた。	Tôi đã cho đá vào đồ uống.
+3605	koori	daily	氷	こおり	đá	氷、溶けちゃったよ。	Đá tan mất rồi.
+3606	koori	business	氷	こおり	đá	衛生管理された氷を使用しております。	Chúng tôi sử dụng đá được quản lý vệ sinh.
+3607	toriniku	exam	とり肉	とりにく	thịt gà	とり肉を焼いて食べた。	Tôi đã nướng thịt gà để ăn.
+3608	toriniku	daily	とり肉	とりにく	thịt gà	このとり肉、弱火で煮たからすごく柔らかい。	Thịt gà này được ninh lửa nhỏ nên rất mềm.
+3609	toriniku	business	とり肉	とりにく	thịt gà	国産とり肉を使用したメニューをご提供しております。	Chúng tôi cung cấp thực đơn sử dụng thịt gà nội địa.
+3610	donburi	exam	丼	どんぶり	bát tô (cơm)	丼にご飯を盛った。	Tôi đã múc cơm vào bát tô.
+3611	donburi	daily	丼	どんぶり	bát tô (cơm)	この丼、大盛りだね。	Bát tô này phần to thật nhỉ.
+3612	donburi	business	丼	どんぶり	bát tô (cơm)	新メニューとして丼物を追加いたします。	Chúng tôi sẽ thêm món cơm tô vào thực đơn mới.
+3613	pasta	exam	パスタ	パスタ	mì Ý	トマトソースのパスタを作った。	Tôi đã làm mì Ý sốt cà chua.
+3614	pasta	daily	パスタ	パスタ	mì Ý	今日は家でパスタを作ってみた。	Hôm nay tôi thử làm mì Ý ở nhà.
+3615	pasta	business	パスタ	パスタ	mì Ý	新作パスタをメニューに追加いたします。	Chúng tôi sẽ thêm mì Ý mới vào thực đơn.
+3616	binzume	exam	瓶詰	びんづめ	đóng chai	瓶詰のジャムを買った。	Tôi đã mua mứt đóng chai.
+3617	binzume	daily	瓶詰	びんづめ	đóng chai	瓶詰、開けにくいね。	Đồ đóng chai khó mở thật nhỉ.
+3618	binzume	business	瓶詰	びんづめ	đóng chai	瓶詰商品のラインナップを拡充いたしました。	Chúng tôi đã mở rộng dòng sản phẩm đóng chai.
+3619	fruit	exam	フルーツ	フルーツ	trái cây	朝食にフルーツを食べた。	Tôi đã ăn trái cây vào bữa sáng.
+3620	fruit	daily	フルーツ	フルーツ	trái cây	このフルーツ、甘いね。	Trái cây này ngọt thật nhỉ.
+3621	fruit	business	フルーツ	フルーツ	trái cây	国産フルーツを使用したデザートを開発しております。	Chúng tôi đang phát triển món tráng miệng sử dụng trái cây nội địa.
+3622	pork	exam	ポーク	ポーク	thịt heo	ポークソテーを注文した。	Tôi đã gọi món thịt heo áp chảo.
+3623	pork	daily	ポーク	ポーク	thịt heo	このポーク、箸で切れるくらい柔らかいね。	Thịt heo này mềm đến mức dùng đũa cũng cắt được nhỉ.
+3624	pork	business	ポーク	ポーク	thịt heo	当店ではポークを低温でじっくり調理しています。	Tại cửa hàng chúng tôi, thịt heo được nấu chậm ở nhiệt độ thấp.
+3625	mame	exam	豆	まめ	đậu	豆を煮て食べた。	Tôi đã ninh đậu để ăn.
+3626	mame	daily	豆	まめ	đậu	この豆、煮るとほくほくするね。	Loại đậu này nấu lên bùi nhỉ.
+3627	mame	business	豆	まめ	đậu	国産大豆を使用した商品を開発しております。	Chúng tôi đang phát triển sản phẩm sử dụng đậu nành nội địa.
+3628	mochi	exam	餅	もち	bánh mochi	正月に餅を食べる。	Vào dịp Tết tôi ăn bánh mochi.
+3629	mochi	daily	餅	もち	bánh mochi	この餅、伸びるね。	Bánh mochi này dai thật nhỉ.
+3630	mochi	business	餅	もち	bánh mochi	手作りの餅を販売いたします。	Chúng tôi sẽ bán bánh mochi làm thủ công.
+3631	rice2	exam	ライス	ライス	cơm	カレーにライスを添えた。	Tôi đã ăn kèm cơm với cà ri.
+3632	rice2	daily	ライス	ライス	cơm	ライス、大盛りにできる?	Cơm có thể làm phần to hơn không?
+3633	rice2	business	ライス	ライス	cơm	ライスの量を選べるメニューをご用意しております。	Chúng tôi có chuẩn bị thực đơn có thể chọn lượng cơm.
+3634	wine	exam	ワイン	ワイン	rượu vang	食事にワインを合わせた。	Tôi đã kết hợp rượu vang với bữa ăn.
+3635	wine	daily	ワイン	ワイン	rượu vang	このワイン、香りがすごくいいね。	Rượu vang này có mùi thơm rất dễ chịu nhỉ.
+3636	wine	business	ワイン	ワイン	rượu vang	高級ワインの取り扱いを開始いたしました。	Chúng tôi đã bắt đầu kinh doanh rượu vang cao cấp.
+3637	gochisou	exam	ごちそう	ごちそう	tiệc, bữa ăn thịnh soạn	誕生日にごちそうを作った。	Tôi đã làm tiệc thịnh soạn cho sinh nhật.
+3638	gochisou	daily	ごちそう	ごちそう	tiệc, bữa ăn thịnh soạn	ごちそうさまでした!	Cảm ơn vì bữa ăn ngon!
+3639	gochisou	business	ごちそう	ごちそう	tiệc, bữa ăn thịnh soạn	取引先からごちそうしていただきました。	Chúng tôi được đối tác mời một bữa tiệc thịnh soạn.
+3640	shokuhin	exam	食品	しょくひん	thực phẩm	健康的な食品を選んでいる。	Tôi chọn thực phẩm tốt cho sức khỏe.
+3641	shokuhin	daily	食品	しょくひん	thực phẩm	この食品、賞味期限いつ?	Thực phẩm này hạn sử dụng đến khi nào?
+3642	shokuhin	business	食品	しょくひん	thực phẩm	食品安全管理を徹底しております。	Chúng tôi triệt để thực hiện quản lý an toàn thực phẩm.
+3643	shokuryou	exam	食料	しょくりょう	lương thực	災害用に食料を備蓄している。	Tôi tích trữ lương thực cho thiên tai.
+3644	shokuryou	daily	食料	しょくりょう	lương thực	食料、まだ足りてる?	Lương thực còn đủ không?
+3645	shokuryou	business	食料	しょくりょう	lương thực	非常用食料の備蓄を推奨しております。	Chúng tôi khuyến khích tích trữ lương thực khẩn cấp.
+3646	shokki	exam	食器	しょっき	bát đĩa	食器を洗った。	Tôi đã rửa bát đĩa.
+3647	shokki	daily	食器	しょっき	bát đĩa	この食器、可愛いね。	Bộ bát đĩa này dễ thương ghê.
+3648	shokki	business	食器	しょっき	bát đĩa	業務用食器を新調いたしました。	Chúng tôi đã sắm mới bát đĩa dùng cho kinh doanh.
+3649	jelly	exam	ゼリー	ゼリー	thạch	おやつにゼリーを食べた。	Tôi đã ăn thạch làm đồ ăn nhẹ.
+3650	jelly	daily	ゼリー	ゼリー	thạch	冷蔵庫にゼリーがあるよ。	Trong tủ lạnh có thạch đấy.
+3651	jelly	business	ゼリー	ゼリー	thạch	新商品のゼリーは冷蔵コーナーで販売しています。	Sản phẩm thạch mới đang được bán tại quầy hàng lạnh.
+3652	choumiryou	exam	調味料	ちょうみりょう	gia vị	料理に調味料を加えた。	Tôi đã thêm gia vị vào món ăn.
+3653	choumiryou	daily	調味料	ちょうみりょう	gia vị	この調味料、どこの?	Gia vị này của hãng nào vậy?
+3654	choumiryou	business	調味料	ちょうみりょう	gia vị	天然調味料のみを使用しております。	Chúng tôi chỉ sử dụng gia vị tự nhiên.
+3655	teishoku	exam	定食	ていしょく	suất ăn (set)	焼き魚定食を注文した。	Tôi đã gọi suất ăn cá nướng.
+3656	teishoku	daily	定食	ていしょく	suất ăn (set)	今日の定食、何?	Suất ăn hôm nay là gì vậy?
+3657	teishoku	business	定食	ていしょく	suất ăn (set)	新メニューとして日替わり定食を追加いたします。	Chúng tôi sẽ thêm suất ăn thay đổi hàng ngày vào thực đơn.
+3658	menu	exam	メニュー	メニュー	thực đơn	メニューを見て注文した。	Tôi đã xem thực đơn rồi gọi món.
+3659	menu	daily	メニュー	メニュー	thực đơn	メニュー、見せて。	Cho tớ xem thực đơn.
+3660	menu	business	メニュー	メニュー	thực đơn	季節限定メニューを追加いたしました。	Chúng tôi đã thêm thực đơn theo mùa.
+3661	reitou	exam	冷凍	れいとう	đông lạnh	肉を冷凍しておいた。	Tôi đã đông lạnh thịt sẵn.
+3662	reitou	daily	冷凍	れいとう	đông lạnh	冷凍食品、ストックしてる?	Cậu có trữ sẵn thực phẩm đông lạnh không?
+3663	reitou	business	冷凍	れいとう	đông lạnh	冷凍保存が可能な商品を開発いたしました。	Chúng tôi đã phát triển sản phẩm có thể bảo quản đông lạnh.
+3664	abura	exam	油	あぶら	dầu	フライパンに油を引いた。	Tôi đã cho dầu vào chảo.
+3665	abura	daily	油	あぶら	dầu	この揚げ物、油っこいね。	Món chiên này nhiều dầu mỡ nhỉ.
+3666	abura	business	油	あぶら	dầu	健康志向の油を使用しております。	Chúng tôi sử dụng loại dầu tốt cho sức khỏe.
+3667	koshou_b26	exam	こしょう	こしょう	tiêu	スープにこしょうをかけた。	Tôi đã rắc tiêu vào súp.
+3668	koshou_b26	daily	こしょう	こしょう	tiêu	こしょう、もっとかける?	Rắc thêm tiêu không?
+3669	koshou_b26	business	こしょう	こしょう	tiêu	こだわりのこしょうを使用しております。	Chúng tôi sử dụng loại tiêu được lựa chọn kỹ.
+3670	su	exam	酢	す	giấm	サラダに酢をかけた。	Tôi đã rưới giấm lên salad.
+3671	su	daily	酢	す	giấm	この酢、酸っぱいね。	Giấm này chua thật nhỉ.
+3672	su	business	酢	す	giấm	天然醸造の酢を使用しております。	Chúng tôi sử dụng giấm lên men tự nhiên.
+3673	sauce	exam	ソース	ソース	nước sốt	肉にソースをかけた。	Tôi đã rưới nước sốt lên thịt.
+3674	sauce	daily	ソース	ソース	nước sốt	このソース、少し辛いけど料理に合う。	Nước sốt này hơi cay nhưng hợp với món ăn.
+3675	sauce	business	ソース	ソース	nước sốt	自家製ソースを使用しております。	Chúng tôi sử dụng nước sốt tự làm.
+3676	miso	exam	みそ	みそ	tương (miso)	朝、みそ汁を飲んだ。	Sáng tôi đã uống canh miso.
+3677	miso	daily	みそ	みそ	tương (miso)	みそを少し足したら、味がちょうどよくなった。	Thêm một chút miso vào thì vị vừa đẹp.
+3678	miso	business	みそ	みそ	tương (miso)	伝統製法のみそを使用しております。	Chúng tôi sử dụng tương miso theo phương pháp truyền thống.
+3679	choushoku	exam	朝食	ちょうしょく	bữa sáng	朝食をしっかり食べた。	Tôi đã ăn bữa sáng đầy đủ.
+3680	choushoku	daily	朝食	ちょうしょく	bữa sáng	朝食、何食べた?	Cậu ăn gì cho bữa sáng vậy?
+3681	choushoku	business	朝食	ちょうしょく	bữa sáng	朝食付きのプランをご用意しております。	Chúng tôi có chuẩn bị gói dịch vụ kèm bữa sáng.
+3682	chuushoku	exam	昼食	ちゅうしょく	bữa trưa	昼食は外で食べた。	Tôi đã ăn trưa ở ngoài.
+3683	chuushoku	daily	昼食	ちゅうしょく	bữa trưa	昼食、一緒に食べない?	Ăn trưa cùng nhau không?
+3684	chuushoku	business	昼食	ちゅうしょく	bữa trưa	昼食休憩は12時からとなっております。	Giờ nghỉ trưa bắt đầu từ 12 giờ.
+3685	yuushoku	exam	夕食	ゆうしょく	bữa tối	夕食は家族と食べる。	Tôi ăn tối cùng gia đình.
+3686	yuushoku	daily	夕食	ゆうしょく	bữa tối	夕食、何にする?	Tối nay ăn gì vậy?
+3687	yuushoku	business	夕食	ゆうしょく	bữa tối	夕食付きのプランをご案内いたします。	Chúng tôi xin giới thiệu gói dịch vụ kèm bữa tối.
+3688	dessert	exam	デザート	デザート	tráng miệng	食後にデザートを食べた。	Sau bữa ăn tôi đã ăn tráng miệng.
+3689	dessert	daily	デザート	デザート	tráng miệng	デザート、頼もうよ。	Gọi món tráng miệng đi.
+3690	dessert	business	デザート	デザート	tráng miệng	新作デザートをメニューに追加いたしました。	Chúng tôi đã thêm món tráng miệng mới vào thực đơn.
+3691	lunch	exam	ランチ	ランチ	bữa trưa	会社の近くでランチを食べた。	Tôi đã ăn trưa gần công ty.
+3692	lunch	daily	ランチ	ランチ	bữa trưa	今日のランチ、何にする?	Bữa trưa hôm nay ăn gì đây?
+3693	lunch	business	ランチ	ランチ	bữa trưa	ランチミーティングを開催いたします。	Chúng tôi sẽ tổ chức buổi họp trong giờ ăn trưa.
+3694	alarm	exam	アラーム	アラーム	chuông báo thức	6時にアラームをセットした。	Tôi đã đặt chuông báo thức lúc 6 giờ.
+3695	alarm	daily	アラーム	アラーム	chuông báo thức	アラーム、鳴らなかったよ。	Chuông báo thức không kêu.
+3696	alarm	business	アラーム	アラーム	chuông báo thức	防犯アラームを新たに設置いたしました。	Chúng tôi đã lắp đặt mới chuông báo động chống trộm.
+3697	ito	exam	糸	いと	sợi chỉ	針に糸を通した。	Tôi đã xỏ chỉ vào kim.
+3698	ito	daily	糸	いと	sợi chỉ	この糸、切れちゃった。	Sợi chỉ này bị đứt rồi.
+3699	ito	business	糸	いと	sợi chỉ	高品質な糸を使用しております。	Chúng tôi sử dụng sợi chỉ chất lượng cao.
+3700	enogu	exam	絵の具	えのぐ	màu vẽ	絵の具で絵を描いた。	Tôi đã vẽ tranh bằng màu vẽ.
+3701	enogu	daily	絵の具	えのぐ	màu vẽ	青い絵の具がなくなったから、買い足した。	Màu vẽ xanh hết rồi nên tôi mua thêm.
+3702	enogu	business	絵の具	えのぐ	màu vẽ	子供向けの安全な絵の具を開発いたしました。	Chúng tôi đã phát triển màu vẽ an toàn dành cho trẻ em.
+3703	ondokei	exam	温度計	おんどけい	nhiệt kế	温度計で室温を測った。	Tôi đã đo nhiệt độ phòng bằng nhiệt kế.
+3704	ondokei	daily	温度計	おんどけい	nhiệt kế	部屋に温度計を置いている。	Tôi đặt một nhiệt kế trong phòng.
+3705	ondokei	business	温度計	おんどけい	nhiệt kế	各部屋に温度計を設置しております。	Chúng tôi lắp đặt nhiệt kế ở mỗi phòng.
+3706	kagami	exam	鏡	かがみ	gương	鏡を見て身支度をした。	Tôi đã nhìn gương để chuẩn bị trang phục.
+3707	kagami	daily	鏡	かがみ	gương	この鏡、大きいね。	Cái gương này to nhỉ.
+3708	kagami	business	鏡	かがみ	gương	試着室に鏡を設置いたしました。	Chúng tôi đã lắp đặt gương trong phòng thử đồ.
+3709	cover	exam	カバー	カバー	vỏ bọc	本にカバーをかけた。	Tôi đã bọc bìa cho sách.
+3710	cover	daily	カバー	カバー	vỏ bọc	このカバー、可愛いね。	Cái vỏ bọc này dễ thương ghê.
+3711	cover	business	カバー	カバー	vỏ bọc	製品保護のためカバーを同梱しております。	Chúng tôi đính kèm vỏ bọc để bảo vệ sản phẩm.
+3712	kan	exam	缶	かん	lon	缶に入ったジュースを飲んだ。	Tôi đã uống nước ép đóng lon.
+3713	kan	daily	缶	かん	lon	この缶、開けにくいね。	Cái lon này khó mở thật nhỉ.
+3714	kan	business	缶	かん	lon	缶入り商品のラインナップを拡充いたしました。	Chúng tôi đã mở rộng dòng sản phẩm đóng lon.
+3715	keikoutou	exam	蛍光灯	けいこうとう	đèn huỳnh quang	蛍光灯を交換した。	Tôi đã thay đèn huỳnh quang.
+3716	keikoutou	daily	蛍光灯	けいこうとう	đèn huỳnh quang	蛍光灯、切れてるよ。	Đèn huỳnh quang bị cháy rồi kìa.
+3717	keikoutou	business	蛍光灯	けいこうとう	đèn huỳnh quang	省エネ蛍光灯へ交換いたしました。	Chúng tôi đã thay sang đèn huỳnh quang tiết kiệm điện.
+3718	case	exam	ケース	ケース	hộp, vỏ đựng	眼鏡をケースにしまった。	Tôi đã cất kính vào hộp.
+3719	case	daily	ケース	ケース	hộp, vỏ đựng	スマホのケースを新しいのに替えた。	Tôi đã đổi ốp điện thoại sang cái mới.
+3720	case	business	ケース	ケース	hộp, vỏ đựng	製品保護用のケースを同梱しております。	Chúng tôi đính kèm hộp bảo vệ sản phẩm.
+3721	spray	exam	スプレー	スプレー	bình xịt	虫よけスプレーをかけた。	Tôi đã xịt thuốc chống côn trùng.
+3722	spray	daily	スプレー	スプレー	bình xịt	このスプレー、いい匂いだね。	Bình xịt này thơm ghê.
+3723	spray	business	スプレー	スプレー	bình xịt	除菌スプレーを各所に設置しております。	Chúng tôi đặt bình xịt khử trùng ở nhiều nơi.
+3724	senzai	exam	洗剤	せんざい	chất tẩy rửa	洗剤で食器を洗った。	Tôi đã rửa bát bằng chất tẩy rửa.
+3725	senzai	daily	洗剤	せんざい	chất tẩy rửa	洗剤、もうないよ。	Chất tẩy rửa hết rồi đấy.
+3726	senzai	business	洗剤	せんざい	chất tẩy rửa	環境に優しい洗剤を採用しております。	Chúng tôi sử dụng chất tẩy rửa thân thiện với môi trường.
+3727	zoukin	exam	雑巾	ぞうきん	giẻ lau	雑巾で床を拭いた。	Tôi đã lau sàn bằng giẻ lau.
+3728	zoukin	daily	雑巾	ぞうきん	giẻ lau	雑巾、洗っておくね。	Tớ sẽ giặt giẻ lau nhé.
+3729	zoukin	business	雑巾	ぞうきん	giẻ lau	清掃用の雑巾を定期的に交換しております。	Chúng tôi thay giẻ lau dọn dẹp định kỳ.
+3730	obon	exam	お盆	おぼん	cái khay	お盆にお茶を乗せて運んだ。	Tôi đã đặt trà lên khay để mang đi.
+3731	obon	daily	お盆	おぼん	cái khay	お盆にお茶を載せて、居間まで運んだ。	Tôi đặt trà lên khay rồi mang vào phòng khách.
+3732	obon	business	お盆	おぼん	cái khay	配膳用のお盆をご用意しております。	Chúng tôi có chuẩn bị khay dùng để bưng bê.
+3733	glass	exam	グラス	グラス	ly (thủy tinh)	グラスにワインを注いだ。	Tôi đã rót rượu vang vào ly.
+3734	glass	daily	グラス	グラス	ly (thủy tinh)	このグラス、きれいだね。	Cái ly này đẹp thật nhỉ.
+3735	glass	business	グラス	グラス	ly (thủy tinh)	割れやすいグラスは専用箱に入れて発送してください。	Vui lòng cho những chiếc ly dễ vỡ vào hộp chuyên dụng trước khi gửi đi.
+3736	konro	exam	コンロ	コンロ	bếp (nấu)	コンロで湯を沸かした。	Tôi đã đun nước sôi bằng bếp.
+3737	konro	daily	コンロ	コンロ	bếp (nấu)	コンロ、火がつかないよ。	Bếp không bắt lửa được.
+3738	konro	business	コンロ	コンロ	bếp (nấu)	業務用コンロを新設いたしました。	Chúng tôi đã lắp đặt mới bếp dùng cho kinh doanh.
+3739	saji	exam	さじ	さじ	thìa	さじで薬を測った。	Tôi đã đong thuốc bằng thìa.
+3740	saji	daily	さじ	さじ	thìa	砂糖をさじ一杯だけ入れた。	Tôi chỉ cho vào một thìa đường.
+3741	saji	business	さじ	さじ	thìa	計量さじを商品に同梱しております。	Chúng tôi đính kèm thìa đong vào sản phẩm.
+3742	suihanki	exam	炊飯器	すいはんき	nồi cơm điện	炊飯器でご飯を炊いた。	Tôi đã nấu cơm bằng nồi cơm điện.
+3743	suihanki	daily	炊飯器	すいはんき	nồi cơm điện	炊飯器、新しいの買った?	Cậu đã mua nồi cơm điện mới chưa?
+3744	suihanki	business	炊飯器	すいはんき	nồi cơm điện	新型炊飯器を来月発売いたします。	Chúng tôi sẽ ra mắt nồi cơm điện kiểu mới vào tháng sau.
+3745	straw	exam	ストロー	ストロー	ống hút	ジュースをストローで飲んだ。	Tôi đã uống nước ép bằng ống hút.
+3746	straw	daily	ストロー	ストロー	ống hút	ストロー、もらえる?	Cho tớ xin cái ống hút được không?
+3747	straw	business	ストロー	ストロー	ống hút	環境配慮から紙製ストローを採用しております。	Chúng tôi sử dụng ống hút giấy vì quan tâm đến môi trường.
+3748	napkin	exam	ナプキン	ナプキン	khăn ăn	ナプキンで口を拭いた。	Tôi đã lau miệng bằng khăn ăn.
+3749	napkin	daily	ナプキン	ナプキン	khăn ăn	ナプキン、もらえる?	Cho tớ xin khăn ăn được không?
+3750	napkin	business	ナプキン	ナプキン	khăn ăn	テーブルにナプキンをご用意しております。	Chúng tôi có chuẩn bị khăn ăn trên bàn.
+3751	nabe	exam	鍋	なべ	nồi	鍋でスープを作った。	Tôi đã nấu súp bằng nồi.
+3752	nabe	daily	鍋	なべ	nồi	冬は鍋がいいね。	Mùa đông ăn lẩu thích nhỉ.
+3753	nabe	business	鍋	なべ	nồi	業務用の鍋を新調いたしました。	Chúng tôi đã sắm mới nồi dùng cho kinh doanh.
+3754	frypan	exam	フライパン	フライパン	chảo	フライパンで卵を焼いた。	Tôi đã chiên trứng bằng chảo.
+3755	frypan	daily	フライパン	フライパン	chảo	このフライパン、くっつかないね。	Cái chảo này không dính thật nhỉ.
+3756	frypan	business	フライパン	フライパン	chảo	新素材のフライパンを発売いたします。	Chúng tôi sẽ ra mắt chảo chất liệu mới.
+3757	houchou	exam	包丁	ほうちょう	dao (bếp)	包丁で野菜を切った。	Tôi đã cắt rau bằng dao.
+3758	houchou	daily	包丁	ほうちょう	dao (bếp)	この包丁、よく切れるね。	Con dao này sắc thật nhỉ.
+3759	houchou	business	包丁	ほうちょう	dao (bếp)	プロ仕様の包丁を取り扱っております。	Chúng tôi kinh doanh dao chuẩn chuyên nghiệp.
+3760	pot	exam	ポット	ポット	bình nước (giữ nhiệt)	ポットでお湯を沸かした。	Tôi đã đun sôi nước bằng bình.
+3761	pot	daily	ポット	ポット	bình nước (giữ nhiệt)	ポット、お湯入ってる?	Bình nước có nước nóng không?
+3762	pot	business	ポット	ポット	bình nước (giữ nhiệt)	客室に電気ポットを完備しております。	Phòng khách sạn có đầy đủ bình đun nước điện.
+3763	manaita	exam	まな板	まないた	thớt	まな板で野菜を切った。	Tôi đã cắt rau trên thớt.
+3764	manaita	daily	まな板	まないた	thớt	まな板、洗っておいたよ。	Tớ đã rửa thớt sẵn rồi.
+3765	manaita	business	まな板	まないた	thớt	衛生的なまな板を導入いたしました。	Chúng tôi đã đưa vào sử dụng thớt hợp vệ sinh.
+3766	yakan	exam	やかん	やかん	ấm nước (đun bếp)	やかんでお湯を沸かした。	Tôi đã đun sôi nước bằng ấm.
+3767	yakan	daily	やかん	やかん	ấm nước (đun bếp)	やかん、火にかけたよ。	Tớ đã đặt ấm lên bếp đun rồi.
+3768	yakan	business	やかん	やかん	ấm nước (đun bếp)	業務用のやかんを新調いたしました。	Chúng tôi đã sắm mới ấm nước dùng cho kinh doanh.
+3769	range	exam	レンジ	レンジ	lò vi sóng	レンジで温めた。	Tôi đã hâm nóng bằng lò vi sóng.
+3770	range	daily	レンジ	レンジ	lò vi sóng	レンジ、使っていい?	Dùng lò vi sóng được không?
+3771	range	business	レンジ	レンジ	lò vi sóng	休憩室にレンジを設置しております。	Chúng tôi lắp đặt lò vi sóng ở phòng nghỉ.
+3772	soujiyougu	exam	掃除用具	そうじようぐ	dụng cụ dọn vệ sinh	掃除用具を揃えた。	Tôi đã chuẩn bị đầy đủ dụng cụ dọn vệ sinh.
+3773	soujiyougu	daily	掃除用具	そうじようぐ	dụng cụ dọn vệ sinh	掃除用具、どこにしまった?	Cậu cất dụng cụ dọn vệ sinh ở đâu vậy?
+3774	soujiyougu	business	掃除用具	そうじようぐ	dụng cụ dọn vệ sinh	各フロアに掃除用具を配備しております。	Chúng tôi trang bị dụng cụ dọn vệ sinh ở mỗi tầng.
+3775	timer	exam	タイマー	タイマー	hẹn giờ	10分でタイマーをセットした。	Tôi đã đặt hẹn giờ 10 phút.
+3776	timer	daily	タイマー	タイマー	hẹn giờ	タイマー、鳴ったよ。	Hẹn giờ đã kêu rồi đấy.
+3777	timer	business	タイマー	タイマー	hẹn giờ	作業効率化のためタイマーを活用しております。	Chúng tôi tận dụng hẹn giờ để nâng cao hiệu quả làm việc.
+3778	dannboru	exam	段ボール	だんボール	thùng carton	段ボールに荷物を詰めた。	Tôi đã đóng gói đồ vào thùng carton.
+3779	dannboru	daily	段ボール	だんボール	thùng carton	引っ越しに使う段ボール、まだ残ってる？	Thùng các-tông dùng để chuyển nhà vẫn còn chứ?
+3780	dannboru	business	段ボール	だんボール	thùng carton	段ボール箱にて配送いたします。	Chúng tôi sẽ giao hàng bằng thùng carton.

@@ -1,0 +1,181 @@
+row	vocabId	type	word	reading	meaningVi	exampleJp	exampleVi
+1441	gasstand	exam	ガソリンスタンド	ガソリンスタンド	cây xăng	車をガソリンスタンドで止めた。	Tôi đã dừng xe ở cây xăng.
+1442	gasstand	daily	ガソリンスタンド	ガソリンスタンド	cây xăng	そろそろガソリンスタンド寄ろうか。	Ghé cây xăng đi thôi nhỉ.
+1443	gasstand	business	ガソリンスタンド	ガソリンスタンド	cây xăng	配送車は近くのガソリンスタンドで給油いたします。	Xe giao hàng sẽ đổ xăng tại cây xăng gần đó.
+1444	kanban	exam	看板	かんばん	biển hiệu	店の前に看板を出した。	Tôi đã đặt biển hiệu trước cửa hàng.
+1445	kanban	daily	看板	かんばん	biển hiệu	あの看板、目立つね。	Biển hiệu kia nổi bật nhỉ.
+1446	kanban	business	看板	かんばん	biển hiệu	新店舗の看板デザインを検討しております。	Chúng tôi đang xem xét thiết kế biển hiệu cho cửa hàng mới.
+1447	kitsuenjo	exam	喫煙所	きつえんじょ	nơi hút thuốc	駅には喫煙所がある。	Ở ga có nơi hút thuốc.
+1448	kitsuenjo	daily	喫煙所	きつえんじょ	nơi hút thuốc	喫煙所、どこにある?	Nơi hút thuốc ở đâu vậy?
+1449	kitsuenjo	business	喫煙所	きつえんじょ	nơi hút thuốc	館内の喫煙所は3階に設置しております。	Nơi hút thuốc trong tòa nhà được bố trí ở tầng 3.
+1450	kissaten	exam	喫茶店	きっさてん	quán cà phê	駅前の喫茶店でコーヒーを飲んだ。	Tôi đã uống cà phê ở quán cà phê trước ga.
+1451	kissaten	daily	喫茶店	きっさてん	quán cà phê	あの喫茶店、雰囲気いいよね。	Quán cà phê đó có bầu không khí tốt nhỉ.
+1452	kissaten	business	喫茶店	きっさてん	quán cà phê	打ち合わせは近くの喫茶店で行いましょう。	Chúng ta hãy gặp mặt ở quán cà phê gần đó nhé.
+1453	ground	exam	グラウンド	グラウンド	sân (thể thao)	学校のグラウンドで練習した。	Tôi đã luyện tập ở sân trường.
+1454	ground	daily	グラウンド	グラウンド	sân (thể thao)	今日、グラウンド使える?	Hôm nay dùng sân được không?
+1455	ground	business	グラウンド	グラウンド	sân (thể thao)	イベントは市営グラウンドにて開催いたします。	Sự kiện sẽ được tổ chức tại sân vận động thành phố.
+1456	keisatsusho	exam	警察署	けいさつしょ	đồn cảnh sát	警察署に届けを出した。	Tôi đã nộp đơn khai báo ở đồn cảnh sát.
+1457	keisatsusho	daily	警察署	けいさつしょ	đồn cảnh sát	財布拾ったから警察署に届けよう。	Nhặt được ví nên đem nộp cho đồn cảnh sát thôi.
+1458	keisatsusho	business	警察署	けいさつしょ	đồn cảnh sát	不審者情報を警察署に通報いたしました。	Chúng tôi đã báo cáo thông tin người khả nghi cho đồn cảnh sát.
+1459	keijiban	exam	掲示板	けいじばん	bảng thông báo	掲示板にお知らせを貼った。	Tôi đã dán thông báo lên bảng thông báo.
+1460	keijiban	daily	掲示板	けいじばん	bảng thông báo	掲示板、見た?新しいお知らせあったよ。	Xem bảng thông báo chưa? Có thông báo mới đấy.
+1461	keijiban	business	掲示板	けいじばん	bảng thông báo	詳細は社内掲示板にてご確認ください。	Xin vui lòng kiểm tra chi tiết trên bảng thông báo nội bộ công ty.
+1462	gekijou	exam	劇場	げきじょう	nhà hát	劇場で芝居を見た。	Tôi đã xem kịch ở nhà hát.
+1463	gekijou	daily	劇場	げきじょう	nhà hát	あの劇場、行ったことある?	Cậu từng đến nhà hát đó chưa?
+1464	gekijou	business	劇場	げきじょう	nhà hát	本公演は国立劇場にて上演いたします。	Buổi biểu diễn này sẽ được trình diễn tại nhà hát quốc gia.
+1465	coinlaundry	exam	コインランドリー	コインランドリー	tiệm giặt tự động	コインランドリーで毛布を洗った。	Tôi đã giặt chăn ở tiệm giặt tự động.
+1466	coinlaundry	daily	コインランドリー	コインランドリー	tiệm giặt tự động	近くにコインランドリーある?	Gần đây có tiệm giặt tự động không?
+1467	coinlaundry	business	コインランドリー	コインランドリー	tiệm giặt tự động	宿泊施設内にコインランドリーを完備しております。	Cơ sở lưu trú có đầy đủ tiệm giặt tự động.
+1468	kougai	exam	郊外	こうがい	ngoại ô	郊外に引っ越すことにした。	Tôi đã quyết định chuyển ra ngoại ô.
+1469	kougai	daily	郊外	こうがい	ngoại ô	郊外って静かでいいよね。	Ngoại ô yên tĩnh dễ chịu nhỉ.
+1470	kougai	business	郊外	こうがい	ngoại ô	郊外に新しい物流拠点を建設いたします。	Chúng tôi sẽ xây dựng cơ sở hậu cần mới ở ngoại ô.
+1471	koushuutoilet	exam	公衆トイレ	こうしゅうトイレ	nhà vệ sinh công cộng	公園に公衆トイレがある。	Ở công viên có nhà vệ sinh công cộng.
+1472	koushuutoilet	daily	公衆トイレ	こうしゅうトイレ	nhà vệ sinh công cộng	公衆トイレ、どこか近くにある?	Gần đây có nhà vệ sinh công cộng không?
+1473	koushuutoilet	business	公衆トイレ	こうしゅうトイレ	nhà vệ sinh công cộng	駅構内の公衆トイレを改修いたしました。	Chúng tôi đã cải tạo nhà vệ sinh công cộng trong ga.
+1474	konzatsu	exam	混雑	こんざつ	đông đúc	朝の電車はいつも混雑している。	Tàu điện buổi sáng lúc nào cũng đông đúc.
+1475	konzatsu	daily	混雑	こんざつ	đông đúc	今日、道混雑してるね。	Hôm nay đường đông đúc nhỉ.
+1476	konzatsu	business	混雑	こんざつ	đông đúc	混雑を避けるため時差出勤を推奨しております。	Chúng tôi khuyến khích đi làm lệch giờ để tránh đông đúc.
+1477	conveni	exam	コンビニ	コンビニ	cửa hàng tiện lợi	コンビニで弁当を買った。	Tôi đã mua cơm hộp ở cửa hàng tiện lợi.
+1478	conveni	daily	コンビニ	コンビニ	cửa hàng tiện lợi	コンビニ寄ってから帰ろう。	Ghé cửa hàng tiện lợi rồi về nhé.
+1479	conveni	business	コンビニ	コンビニ	cửa hàng tiện lợi	コンビニ向けの新商品を開発しております。	Chúng tôi đang phát triển sản phẩm mới dành cho cửa hàng tiện lợi.
+1480	saibansho	exam	裁判所	さいばんしょ	tòa án	裁判所で判決が出た。	Bản án đã được tuyên tại tòa án.
+1481	saibansho	daily	裁判所	さいばんしょ	tòa án	裁判所に行ったことある?	Cậu từng đến tòa án chưa?
+1482	saibansho	business	裁判所	さいばんしょ	tòa án	本件は裁判所に提訴することになりました。	Vụ việc này sẽ được đưa ra tòa án khởi kiện.
+1483	saka	exam	坂	さか	dốc	急な坂を上った。	Tôi đã leo lên con dốc gấp.
+1484	saka	daily	坂	さか	dốc	この坂、きついね。	Con dốc này khó leo nhỉ.
+1485	saka	business	坂	さか	dốc	坂の多い地域のため配送に時間がかかります。	Vì khu vực nhiều dốc nên việc giao hàng mất thời gian.
+1486	sayuu	exam	左右	さゆう	trái phải	車の左右を確認してから渡った。	Tôi đã kiểm tra hai bên trái phải xe rồi mới băng qua.
+1487	sayuu	daily	左右	さゆう	trái phải	左右、よく見てね。	Nhìn kỹ hai bên nhé.
+1488	sayuu	business	左右	さゆう	trái phải	この決定が今後の経営を左右いたします。	Quyết định này sẽ chi phối việc kinh doanh sau này.
+1489	jidouhanbaiki	exam	自動販売機	じどうはんばいき	máy bán hàng tự động	自動販売機でジュースを買った。	Tôi đã mua nước ép ở máy bán hàng tự động.
+1490	jidouhanbaiki	daily	自動販売機	じどうはんばいき	máy bán hàng tự động	この辺に自動販売機ないかな。	Gần đây không biết có máy bán hàng tự động không.
+1491	jidouhanbaiki	business	自動販売機	じどうはんばいき	máy bán hàng tự động	社内に自動販売機を新設いたしました。	Chúng tôi đã lắp đặt mới máy bán hàng tự động trong công ty.
+1492	shuu	exam	州	しゅう	bang	彼はカリフォルニア州に住んでいる。	Anh ấy sống ở bang California.
+1493	shuu	daily	州	しゅう	bang	どの州に住んでるの?	Cậu sống ở bang nào vậy?
+1494	shuu	business	州	しゅう	bang	本製品は複数の州で販売されています。	Sản phẩm này được bán ở nhiều bang.
+1495	shuui	exam	周囲	しゅうい	xung quanh	周囲の人に相談した。	Tôi đã hỏi ý kiến những người xung quanh.
+1496	shuui	daily	周囲	しゅうい	xung quanh	周囲の目、気にしすぎだよ。	Cậu để ý ánh mắt xung quanh nhiều quá đấy.
+1497	shuui	business	周囲	しゅうい	xung quanh	周囲の状況を確認の上、対応いたします。	Chúng tôi sẽ xử lý sau khi kiểm tra tình hình xung quanh.
+1498	shuto	exam	首都	しゅと	thủ đô	日本の首都は東京だ。	Thủ đô của Nhật Bản là Tokyo.
+1499	shuto	daily	首都	しゅと	thủ đô	その国の首都、知ってる?	Cậu biết thủ đô nước đó không?
+1500	shuto	business	首都	しゅと	thủ đô	首都圏を中心に事業を展開しております。	Chúng tôi đang triển khai kinh doanh chủ yếu ở khu vực thủ đô.
+1501	shouten	exam	商店	しょうてん	cửa hàng	商店街には小さな商店が並んでいる。	Trong phố mua sắm có các cửa hàng nhỏ san sát nhau.
+1502	shouten	daily	商店	しょうてん	cửa hàng	この商店、昔からあるんだよ。	Cửa hàng này có từ lâu rồi đấy.
+1503	shouten	business	商店	しょうてん	cửa hàng	地元商店との協力体制を築いております。	Chúng tôi đang xây dựng cơ chế hợp tác với cửa hàng địa phương.
+1504	shoutengai	exam	商店街	しょうてんがい	phố mua sắm	商店街を歩いて買い物をした。	Tôi đã đi dạo mua sắm ở phố mua sắm.
+1505	shoutengai	daily	商店街	しょうてんがい	phố mua sắm	この商店街、活気あるね。	Phố mua sắm này náo nhiệt nhỉ.
+1506	shoutengai	business	商店街	しょうてんがい	phố mua sắm	地域の商店街活性化に協力しております。	Chúng tôi đang hợp tác để làm sôi động lại phố mua sắm địa phương.
+1507	shouboushos	exam	消防署	しょうぼうしょ	trạm cứu hỏa	近くに消防署がある。	Gần đây có trạm cứu hỏa.
+1508	shouboushos	daily	消防署	しょうぼうしょ	trạm cứu hỏa	消防署の前、いつも救急車いるね。	Trước trạm cứu hỏa lúc nào cũng có xe cấp cứu nhỉ.
+1509	shouboushos	business	消防署	しょうぼうしょ	trạm cứu hỏa	消防署の指導のもと避難訓練を実施いたします。	Chúng tôi sẽ tổ chức diễn tập sơ tán dưới sự hướng dẫn của trạm cứu hỏa.
+1510	shoten	exam	書店	しょてん	hiệu sách	書店で新しい本を買った。	Tôi đã mua sách mới ở hiệu sách.
+1511	shoten	daily	書店	しょてん	hiệu sách	駅前の書店、閉店しちゃったね。	Hiệu sách trước ga đóng cửa rồi nhỉ.
+1512	shoten	business	書店	しょてん	hiệu sách	本書は全国の書店にてお求めいただけます。	Cuốn sách này có thể mua tại các hiệu sách trên toàn quốc.
+1513	shiro	exam	城	しろ	lâu đài	この城は江戸時代に建てられた。	Lâu đài này được xây dựng vào thời Edo.
+1514	shiro	daily	城	しろ	lâu đài	あの城、きれいだったよ。	Lâu đài đó đẹp lắm.
+1515	shiro	business	城	しろ	lâu đài	本ツアーでは有名な城を巡ります。	Tour này sẽ tham quan các lâu đài nổi tiếng.
+1516	sumi	exam	隅	すみ	góc	部屋の隅に荷物を置いた。	Tôi đã để đồ ở góc phòng.
+1517	sumi	daily	隅	すみ	góc	隅の方に座ろうか。	Ngồi ở phía góc nhé.
+1518	sumi	business	隅	すみ	góc	倉庫の隅に在庫を保管しております。	Chúng tôi bảo quản hàng tồn kho ở góc kho.
+1519	zeikan	exam	税関	ぜいかん	hải quan	空港の税関で荷物を調べられた。	Hành lý đã bị kiểm tra ở hải quan sân bay.
+1520	zeikan	daily	税関	ぜいかん	hải quan	税関、時間かかったよ。	Qua hải quan mất nhiều thời gian đấy.
+1521	zeikan	business	税関	ぜいかん	hải quan	輸入品は税関での手続きが必要です。	Hàng nhập khẩu cần làm thủ tục tại hải quan.
+1522	seki	exam	席	せき	chỗ ngồi	電車で席を譲った。	Tôi đã nhường chỗ ngồi trên tàu điện.
+1523	seki	daily	席	せき	chỗ ngồi	この席、空いてる?	Chỗ này còn trống không?
+1524	seki	business	席	せき	chỗ ngồi	会議室の席をあらかじめご用意いたします。	Chúng tôi sẽ chuẩn bị chỗ ngồi trong phòng họp trước.
+1525	zengo	exam	前後	ぜんご	trước sau	3時前後に到着する予定だ。	Dự kiến đến vào khoảng 3 giờ.
+1526	zengo	daily	前後	ぜんご	trước sau	10人前後は来ると思うよ。	Tớ nghĩ khoảng 10 người sẽ đến đấy.
+1527	zengo	business	前後	ぜんご	trước sau	納期は来週前後を予定しております。	Dự kiến thời hạn giao hàng khoảng tuần sau.
+1528	zenkoku	exam	全国	ぜんこく	toàn quốc	この商品は全国で販売されている。	Sản phẩm này được bán trên toàn quốc.
+1529	zenkoku	daily	全国	ぜんこく	toàn quốc	全国大会に出るんだって!	Nghe nói tham gia giải toàn quốc đấy!
+1530	zenkoku	business	全国	ぜんこく	toàn quốc	全国の店舗で同時にセールを実施いたします。	Chúng tôi sẽ đồng loạt tổ chức khuyến mãi tại các cửa hàng trên toàn quốc.
+1531	center	exam	センター	センター	trung tâm	駅前のセンターで買い物をした。	Tôi đã mua sắm ở trung tâm trước ga.
+1532	center	daily	センター	センター	trung tâm	そのセンター、大きいらしいよ。	Nghe nói trung tâm đó lớn lắm.
+1533	center	business	センター	センター	trung tâm	カスタマーセンターまでお問い合わせください。	Xin vui lòng liên hệ với trung tâm chăm sóc khách hàng.
+1534	danchi	exam	団地	だんち	khu chung cư	団地に住んでいる。	Tôi sống ở khu chung cư.
+1535	danchi	daily	団地	だんち	khu chung cư	この団地、古いけど広いよ。	Khu chung cư này cũ nhưng rộng lắm.
+1536	danchi	business	団地	だんち	khu chung cư	団地の再開発プロジェクトに参画しております。	Chúng tôi đang tham gia dự án tái phát triển khu chung cư.
+1537	chiiki	exam	地域	ちいき	khu vực	この地域は自然が豊かだ。	Khu vực này có thiên nhiên phong phú.
+1538	chiiki	daily	地域	ちいき	khu vực	地域のイベント、行く?	Đi sự kiện của khu vực không?
+1539	chiiki	business	地域	ちいき	khu vực	地域社会への貢献を大切にしております。	Chúng tôi coi trọng đóng góp cho cộng đồng địa phương.
+1540	chika	exam	地下	ちか	dưới lòng đất	地下に駐車場がある。	Có bãi đỗ xe ở tầng hầm.
+1541	chika	daily	地下	ちか	dưới lòng đất	地下のお店、行ってみようよ。	Đi thử cửa hàng ở tầng hầm đi.
+1542	chika	business	地下	ちか	dưới lòng đất	地下フロアに新しい休憩室を設置いたしました。	Chúng tôi đã lắp đặt phòng nghỉ mới ở tầng hầm.
+1543	chihou	exam	地方	ちほう	địa phương	地方で農業を営んでいる。	Tôi làm nông nghiệp ở địa phương.
+1544	chihou	daily	地方	ちほう	địa phương	地方出身なんだ。	Tớ là người từ địa phương lên đấy.
+1545	chihou	business	地方	ちほう	địa phương	地方支社の業績も好調です。	Kết quả kinh doanh của chi nhánh địa phương cũng khả quan.
+1546	chimei	exam	地名	ちめい	tên địa danh	この地名の由来を調べた。	Tôi đã tìm hiểu nguồn gốc tên địa danh này.
+1547	chimei	daily	地名	ちめい	tên địa danh	この地名、読みにくいね。	Tên địa danh này khó đọc nhỉ.
+1548	chimei	business	地名	ちめい	tên địa danh	配送先の地名を正確にご記入ください。	Xin vui lòng ghi chính xác tên địa danh nơi giao hàng.
+1549	chuuou	exam	中央	ちゅうおう	trung tâm	駅の中央に時計がある。	Có đồng hồ ở trung tâm nhà ga.
+1550	chuuou	daily	中央	ちゅうおう	trung tâm	中央に集まって。	Tập trung vào giữa nào.
+1551	chuuou	business	中央	ちゅうおう	trung tâm	本社は市の中央区に位置しております。	Trụ sở chính nằm ở khu trung tâm của thành phố.
+1552	chuushin	exam	中心	ちゅうしん	trung tâm	街の中心にある公園に行った。	Tôi đã đi công viên nằm ở trung tâm thành phố.
+1553	chuushin	daily	中心	ちゅうしん	trung tâm	いつも自分中心なんだから。	Lúc nào cũng lấy mình làm trung tâm cả.
+1554	chuushin	business	中心	ちゅうしん	trung tâm	顧客中心の考え方を大切にしております。	Chúng tôi coi trọng tư duy lấy khách hàng làm trung tâm.
+1555	tsukiatari	exam	突き当たり	つきあたり	cuối đường	突き当たりを右に曲がってください。	Xin vui lòng rẽ phải ở cuối đường.
+1556	tsukiatari	daily	突き当たり	つきあたり	cuối đường	突き当たりにコンビニあるよ。	Cuối đường có cửa hàng tiện lợi đấy.
+1557	tsukiatari	business	突き当たり	つきあたり	cuối đường	廊下の突き当たりが会議室でございます。	Phòng họp nằm ở cuối hành lang.
+1558	deiriguchi	exam	出入口	でいりぐち	cửa ra vào	建物の出入口を確認した。	Tôi đã kiểm tra cửa ra vào của tòa nhà.
+1559	deiriguchi	daily	出入口	でいりぐち	cửa ra vào	出入口、こっちだよ。	Cửa ra vào ở bên này đó.
+1560	deiriguchi	business	出入口	でいりぐち	cửa ra vào	非常時の出入口を全員で確認しましょう。	Hãy cùng kiểm tra cửa ra vào khẩn cấp.
+1561	temae	exam	手前	てまえ	phía trước, phía bên này	橋の手前で車を止めた。	Tôi đã dừng xe ở phía trước cây cầu.
+1562	temae	daily	手前	てまえ	phía trước, phía bên này	もうちょっと手前に来て。	Lại gần đây thêm chút nữa đi.
+1563	temae	business	手前	てまえ	phía trước, phía bên này	会場の手前で受付を行っております。	Chúng tôi tiếp nhận đăng ký ở phía trước hội trường.
+1564	denchuu	exam	電柱	でんちゅう	cột điện	電柱にポスターが貼ってある。	Có dán áp phích trên cột điện.
+1565	denchuu	daily	電柱	でんちゅう	cột điện	あの電柱、曲がってない?	Cột điện kia bị nghiêng à?
+1566	denchuu	business	電柱	でんちゅう	cột điện	電柱の位置を地図に記載いたしました。	Chúng tôi đã ghi vị trí cột điện lên bản đồ.
+1567	tokai	exam	都会	とかい	thành phố	彼は都会で働いている。	Anh ấy đang làm việc ở thành phố.
+1568	tokai	daily	都会	とかい	thành phố	都会の生活、疲れない?	Cuộc sống thành phố không mệt à?
+1569	tokai	business	都会	とかい	thành phố	都会と地方、両方に拠点を持っております。	Chúng tôi có cơ sở ở cả thành phố lẫn địa phương.
+1570	tokoya	exam	床屋	とこや	tiệm cắt tóc	床屋で髪を切ってもらった。	Tôi đã được cắt tóc ở tiệm cắt tóc.
+1571	tokoya	daily	床屋	とこや	tiệm cắt tóc	そろそろ床屋行かなきゃ。	Sắp phải đi tiệm cắt tóc rồi.
+1572	tokoya	business	床屋	とこや	tiệm cắt tóc	駅前に新しい床屋がオープンしました。	Có một tiệm cắt tóc mới đã khai trương trước ga.
+1573	toshi	exam	都市	とし	đô thị	この都市は人口が多い。	Đô thị này có dân số đông.
+1574	toshi	daily	都市	とし	đô thị	大都市に住むの、憧れる。	Ước gì được sống ở đô thị lớn.
+1575	toshi	business	都市	とし	đô thị	主要都市への出店を計画しております。	Chúng tôi đang lên kế hoạch mở cửa hàng tại các đô thị lớn.
+1576	tochi	exam	土地	とち	đất	この土地は祖父から受け継いだ。	Mảnh đất này được thừa kế từ ông tôi.
+1577	tochi	daily	土地	とち	đất	この土地、駅から近いのに静かだね。	Mảnh đất này gần ga mà vẫn yên tĩnh nhỉ.
+1578	tochi	business	土地	とち	đất	新工場建設のため土地を取得いたしました。	Chúng tôi đã mua đất để xây dựng nhà máy mới.
+1579	naname	exam	斜め	ななめ	chéo	この絵は斜めにかかっている。	Bức tranh này treo bị lệch.
+1580	naname	daily	斜め	ななめ	chéo	写真、ちょっと斜めじゃない?	Bức ảnh có hơi bị nghiêng không?
+1581	naname	business	斜め	ななめ	chéo	看板が斜めになっているため修正いたします。	Vì biển hiệu bị nghiêng nên chúng tôi sẽ chỉnh lại.
+1582	bar	exam	バー	バー	quán bar	仕事帰りにバーに寄った。	Trên đường về sau giờ làm tôi đã ghé quán bar.
+1583	bar	daily	バー	バー	quán bar	今夜、バーでも行く?	Tối nay đi quán bar không?
+1584	bar	business	バー	バー	quán bar	懇親会は近くのバーで行う予定です。	Buổi giao lưu dự kiến sẽ tổ chức tại quán bar gần đó.
+1585	baiten	exam	売店	ばいてん	quầy bán hàng	駅の売店で新聞を買った。	Tôi đã mua báo ở quầy bán hàng trong ga.
+1586	baiten	daily	売店	ばいてん	quầy bán hàng	売店でお菓子買おうよ。	Mua bánh kẹo ở quầy bán hàng đi.
+1587	baiten	business	売店	ばいてん	quầy bán hàng	館内の売店で記念品を販売しております。	Chúng tôi đang bán quà lưu niệm tại quầy bán hàng trong tòa nhà.
+1588	haka	exam	墓	はか	mộ	お盆にお墓参りに行った。	Vào dịp Obon tôi đã đi viếng mộ.
+1589	haka	daily	墓	はか	mộ	今度、一緒にお墓参り行かない?	Lần tới cùng đi viếng mộ không?
+1590	haka	business	墓	はか	mộ	先祖の墓を大切に守っています。	Chúng tôi gìn giữ mộ tổ tiên cẩn thận.
+1591	hakubutsukan	exam	博物館	はくぶつかん	bảo tàng	週末に博物館へ行った。	Cuối tuần tôi đã đi bảo tàng.
+1592	hakubutsukan	daily	博物館	はくぶつかん	bảo tàng	この博物館、無料なんだって。	Nghe nói bảo tàng này miễn phí đấy.
+1593	hakubutsukan	business	博物館	はくぶつかん	bảo tàng	団体様向けに博物館の見学ツアーをご用意しております。	Chúng tôi có chuẩn bị tour tham quan bảo tàng dành cho đoàn khách.
+1594	hijouguchi	exam	非常口	ひじょうぐち	cửa thoát hiểm	非常口の場所を確認しておいた。	Tôi đã kiểm tra trước vị trí cửa thoát hiểm.
+1595	hijouguchi	daily	非常口	ひじょうぐち	cửa thoát hiểm	非常口、こっちにあるよ。	Cửa thoát hiểm ở bên này đó.
+1596	hijouguchi	business	非常口	ひじょうぐち	cửa thoát hiểm	非常口の位置を全従業員に周知しております。	Chúng tôi đã thông báo vị trí cửa thoát hiểm cho toàn bộ nhân viên.
+1597	hiroba	exam	広場	ひろば	quảng trường	駅前の広場で待ち合わせた。	Tôi đã hẹn gặp ở quảng trường trước ga.
+1598	hiroba	daily	広場	ひろば	quảng trường	広場でイベントやってるよ。	Có sự kiện đang diễn ra ở quảng trường đó.
+1599	hiroba	business	広場	ひろば	quảng trường	市の広場にてキャンペーンを実施いたします。	Chúng tôi sẽ tổ chức chiến dịch tại quảng trường của thành phố.
+1600	front	exam	フロント	フロント	quầy lễ tân	ホテルのフロントで鍵をもらった。	Tôi đã nhận chìa khóa ở quầy lễ tân khách sạn.
+1601	front	daily	フロント	フロント	quầy lễ tân	フロントに聞いてみようよ。	Thử hỏi quầy lễ tân xem sao.
+1602	front	business	フロント	フロント	quầy lễ tân	フロントにて手続きを承っております。	Chúng tôi tiếp nhận thủ tục tại quầy lễ tân.
+1603	bench	exam	ベンチ	ベンチ	ghế dài	公園のベンチに座った。	Tôi đã ngồi trên ghế dài ở công viên.
+1604	bench	daily	ベンチ	ベンチ	ghế dài	このベンチ、座っていい?	Ghế dài này ngồi được không?
+1605	bench	business	ベンチ	ベンチ	ghế dài	休憩スペースにベンチを新設いたしました。	Chúng tôi đã lắp đặt mới ghế dài ở khu vực nghỉ ngơi.
+1606	hougaku	exam	方角	ほうがく	phương hướng	方角を確認してから歩き出した。	Tôi đã kiểm tra phương hướng rồi mới bắt đầu đi.
+1607	hougaku	daily	方角	ほうがく	phương hướng	こっちの方角で合ってる?	Phương hướng này đúng không?
+1608	hougaku	business	方角	ほうがく	phương hướng	風水では建物の方角も重要視されます。	Trong phong thủy, phương hướng của tòa nhà cũng được coi trọng.
+1609	houkou	exam	方向	ほうこう	hướng	駅は反対方向にある。	Nhà ga nằm theo hướng ngược lại.
+1610	houkou	daily	方向	ほうこう	hướng	どっちの方向に行けばいいの?	Nên đi theo hướng nào vậy?
+1611	houkou	business	方向	ほうこう	hướng	事業の方向性を見直すことにいたしました。	Chúng tôi đã quyết định xem xét lại hướng đi kinh doanh.
+1612	houmen	exam	方面	ほうめん	phía	新宿方面の電車に乗った。	Tôi đã lên tàu điện đi hướng Shinjuku.
+1613	houmen	daily	方面	ほうめん	phía	そっちの方面、詳しくないんだよね。	Mình không rành về phía đó lắm.
+1614	houmen	business	方面	ほうめん	phía	関東方面への配送は翌日到着となります。	Giao hàng đến khu vực Kanto sẽ đến nơi vào ngày hôm sau.
+1615	hall	exam	ホール	ホール	hội trường	市民ホールでコンサートを開いた。	Buổi hòa nhạc đã được tổ chức tại hội trường thành phố.
+1616	hall	daily	ホール	ホール	hội trường	そのホール、大きいの?	Hội trường đó lớn không?
+1617	hall	business	ホール	ホール	hội trường	説明会は本社1階のホールにて開催いたします。	Buổi giải thích sẽ được tổ chức tại hội trường tầng 1 trụ sở chính.
+1618	machiaishitsu	exam	待合室	まちあいしつ	phòng chờ	病院の待合室で名前を呼ばれた。	Tôi đã được gọi tên ở phòng chờ bệnh viện.
+1619	machiaishitsu	daily	待合室	まちあいしつ	phòng chờ	待合室、混んでたよ。	Phòng chờ đông lắm.
+1620	machiaishitsu	business	待合室	まちあいしつ	phòng chờ	待合室にてお呼びするまでお待ちください。	Xin vui lòng chờ ở phòng chờ cho đến khi được gọi.

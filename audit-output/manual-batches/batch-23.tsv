@@ -1,0 +1,181 @@
+row	vocabId	type	word	reading	meaningVi	exampleJp	exampleVi
+3961	dentaku	exam	電卓	でんたく	máy tính (bỏ túi)	電卓で計算した。	Tôi đã tính bằng máy tính bỏ túi.
+3962	dentaku	daily	電卓	でんたく	máy tính (bỏ túi)	合計を出すのに電卓を使った。	Tôi dùng máy tính để tính tổng.
+3963	dentaku	business	電卓	でんたく	máy tính (bỏ túi)	経理部門では電卓を使用しております。	Phòng kế toán sử dụng máy tính bỏ túi.
+3964	nori	exam	のり	のり	hồ dán	のりで紙を貼った。	Tôi đã dán giấy bằng hồ dán.
+3965	nori	daily	のり	のり	hồ dán	のり、乾いたら剥がれるよ。	Hồ dán khô rồi sẽ bị bong đấy.
+3966	nori	business	のり	のり	hồ dán	強力なのりを使用しております。	Chúng tôi sử dụng hồ dán dính chắc.
+3967	hasami	exam	はさみ	はさみ	kéo	はさみで紙を切った。	Tôi đã cắt giấy bằng kéo.
+3968	hasami	daily	はさみ	はさみ	kéo	はさみ、貸して。	Cho tớ mượn cái kéo.
+3969	hasami	business	はさみ	はさみ	kéo	事務用のはさみを支給しております。	Chúng tôi cấp kéo dùng cho văn phòng.
+3970	binsen	exam	便せん	びんせん	giấy viết thư	便せんに手紙を書いた。	Tôi đã viết thư trên giấy viết thư.
+3971	binsen	daily	便せん	びんせん	giấy viết thư	この便せん、手紙を書くのが楽しくなりそう。	Giấy viết thư này trông như sẽ khiến việc viết thư thú vị hơn.
+3972	binsen	business	便せん	びんせん	giấy viết thư	記念品として便せんセットを配布いたします。	Chúng tôi sẽ phát bộ giấy viết thư làm quà lưu niệm.
+3973	wagomu	exam	輪ゴム	わゴム	dây chun	輪ゴムで束ねた。	Tôi đã bó lại bằng dây chun.
+3974	wagomu	daily	輪ゴム	わゴム	dây chun	輪ゴム、切れちゃった。	Dây chun bị đứt mất rồi.
+3975	wagomu	business	輪ゴム	わゴム	dây chun	梱包に輪ゴムを使用しております。	Chúng tôi sử dụng dây chun trong đóng gói.
+3976	aisuru	exam	愛する	あいする	yêu	彼は妻を心から愛している。	Anh ấy yêu vợ mình từ tận đáy lòng.
+3977	aisuru	daily	愛する	あいする	yêu	本当に愛してるよ。	Anh yêu em thật lòng đấy.
+3978	aisuru	business	愛する	あいする	yêu	お客様に愛される製品づくりを目指しております。	Chúng tôi hướng đến việc tạo ra sản phẩm được khách hàng yêu mến.
+3979	akirameru	exam	諦める	あきらめる	từ bỏ	彼は夢を諦めなかった。	Anh ấy đã không từ bỏ giấc mơ.
+3980	akirameru	daily	諦める	あきらめる	từ bỏ	もう諦めた方がいいよ。	Nên từ bỏ đi thôi.
+3981	akirameru	business	諦める	あきらめる	từ bỏ	この案件は簡単には諦められません。	Việc này không thể dễ dàng từ bỏ được.
+3982	akiru	exam	飽きる	あきる	chán	同じ料理に飽きてきた。	Tôi bắt đầu chán món ăn giống nhau.
+3983	akiru	daily	飽きる	あきる	chán	このゲーム、もう飽きたよ。	Trò chơi này tớ chán rồi.
+3984	akiru	business	飽きる	あきる	chán	お客様に飽きられない商品開発を心がけております。	Chúng tôi chú trọng phát triển sản phẩm không khiến khách hàng nhàm chán.
+3985	azukaru	exam	預かる	あずかる	giữ, trông (hộ)	友達の荷物を預かった。	Tôi đã giữ hộ đồ của bạn.
+3986	azukaru	daily	預かる	あずかる	giữ, trông (hộ)	ちょっとこれ、預かっててくれる?	Giữ giúp tớ cái này chút được không?
+3987	azukaru	business	預かる	あずかる	giữ, trông (hộ)	貴重品はフロントにてお預かりいたします。	Chúng tôi sẽ giữ hộ đồ có giá trị tại quầy lễ tân.
+3988	azukeru	exam	預ける	あずける	gửi (cho người khác giữ)	荷物をホテルに預けた。	Tôi đã gửi đồ ở khách sạn.
+3989	azukeru	daily	預ける	あずける	gửi (cho người khác giữ)	荷物、フロントに預けてきた。	Tớ đã gửi đồ ở quầy lễ tân rồi.
+3990	azukeru	business	預ける	あずける	gửi (cho người khác giữ)	お荷物はクロークにお預けください。	Xin vui lòng gửi hành lý ở quầy giữ đồ.
+3991	atatameru1	exam	暖める	あたためる	làm ấm	部屋を暖めるために暖房をつけた。	Tôi đã bật máy sưởi để làm ấm phòng.
+3992	atatameru1	daily	暖める	あたためる	làm ấm	部屋、暖めておいたよ。	Tớ đã làm ấm phòng sẵn rồi đấy.
+3993	atatameru1	business	暖める	あたためる	làm ấm	会議室を事前に暖めております。	Chúng tôi đã làm ấm phòng họp trước.
+3994	atatameru2	exam	温める	あたためる	làm nóng	電子レンジで料理を温めた。	Tôi đã hâm nóng món ăn bằng lò vi sóng.
+3995	atatameru2	daily	温める	あたためる	làm nóng	これ、温めてくれる?	Hâm nóng cái này giúp tớ được không?
+3996	atatameru2	business	温める	あたためる	làm nóng	ご注文の品は温めてご提供いたします。	Chúng tôi sẽ hâm nóng món quý khách đặt trước khi phục vụ.
+3997	ataru	exam	当たる	あたる	trúng	宝くじが当たった。	Tôi đã trúng xổ số.
+3998	ataru	daily	当たる	あたる	trúng	このボール、当たったら痛いよ。	Quả bóng này trúng vào là đau đấy.
+3999	ataru	business	当たる	あたる	trúng	予測が当たっております。	Dự đoán đã trúng.
+4000	amaru	exam	余る	あまる	dư	予算が余った。	Ngân sách còn dư.
+4001	amaru	daily	余る	あまる	dư	時間、余ってるね。	Thời gian còn dư nhỉ.
+4002	amaru	business	余る	あまる	dư	在庫が余っております。	Hàng tồn kho đang dư.
+4003	amu	exam	編む	あむ	đan	セーターを編んだ。	Tôi đã đan áo len.
+4004	amu	daily	編む	あむ	đan	これ、編んだの?すごいね。	Cậu đan cái này à? Giỏi thật đấy.
+4005	amu	business	編む	あむ	đan	職人が丁寧に編んでおります。	Người thợ thủ công đan tỉ mỉ.
+4006	arawareru	exam	現れる	あらわれる	xuất hiện	突然、彼が現れた。	Đột nhiên anh ấy xuất hiện.
+4007	arawareru	daily	現れる	あらわれる	xuất hiện	あ、現れたよ!	A, xuất hiện rồi kìa!
+4008	arawareru	business	現れる	あらわれる	xuất hiện	新たな課題が現れております。	Vấn đề mới đang xuất hiện.
+4009	awaseru	exam	合わせる	あわせる	kết hợp	二つの色を合わせた。	Tôi đã kết hợp hai màu.
+4010	awaseru	daily	合わせる	あわせる	kết hợp	予定、合わせようよ。	Khớp lịch với nhau đi.
+4011	awaseru	business	合わせる	あわせる	kết hợp	ご都合に合わせて日程を調整いたします。	Chúng tôi sẽ điều chỉnh lịch trình theo thời gian thuận tiện của quý khách.
+4012	awateru	exam	慌てる	あわてる	vội vàng	電話に驚いて慌てた。	Tôi hoảng hốt vì tiếng chuông điện thoại.
+4013	awateru	daily	慌てる	あわてる	vội vàng	そんなに慌てないで。	Đừng vội vàng như vậy.
+4014	awateru	business	慌てる	あわてる	vội vàng	慌てず落ち着いて対応いたします。	Chúng tôi sẽ xử lý bình tĩnh, không vội vàng.
+4015	ikasu	exam	生かす	いかす	phát huy	経験を生かして成功した。	Tôi đã thành công nhờ phát huy kinh nghiệm.
+4016	ikasu	daily	生かす	いかす	phát huy	その経験、生かせるといいね。	Nếu phát huy được kinh nghiệm đó thì tốt nhỉ.
+4017	ikasu	business	生かす	いかす	phát huy	過去の知見を生かして業務を改善いたします。	Chúng tôi sẽ cải thiện công việc bằng cách phát huy kiến thức tích lũy trước đây.
+4018	ijimeru	exam	いじめる	いじめる	bắt nạt	弟をいじめてはいけない。	Không được bắt nạt em trai.
+4019	ijimeru	daily	いじめる	いじめる	bắt nạt	いじめるの、やめなよ。	Đừng có bắt nạt người ta nữa.
+4020	ijimeru	business	いじめる	いじめる	bắt nạt	このような行為でいじめられる従業員がいないよう努めております。	Chúng tôi nỗ lực để không có nhân viên nào bị bắt nạt bởi hành vi như vậy.
+4021	itameru	exam	炒める	いためる	xào	野菜を炒めた。	Tôi đã xào rau.
+4022	itameru	daily	炒める	いためる	xào	これ、炒めるだけでいいの?	Chỉ cần xào cái này thôi là được à?
+4023	itameru	business	炒める	いためる	xào	野菜は強火で炒めております。	Rau được xào trên lửa lớn.
+4024	inoru	exam	祈る	いのる	cầu nguyện	家族の無事を祈った。	Tôi đã cầu nguyện cho sự bình an của gia đình.
+4025	inoru	daily	祈る	いのる	cầu nguyện	うまくいくように祈ってるよ。	Tớ đang cầu nguyện cho việc suôn sẻ đấy.
+4026	inoru	business	祈る	いのる	cầu nguyện	皆様のご健勝をお祈り申し上げます。	Chúng tôi xin cầu chúc sức khỏe cho quý vị.
+4027	iyagaru	exam	嫌がる	いやがる	ghét (tỏ vẻ không thích)	子供が注射を嫌がった。	Đứa trẻ tỏ ra ghét việc tiêm thuốc.
+4028	iyagaru	daily	嫌がる	いやがる	ghét (tỏ vẻ không thích)	そんなに嫌がらないでよ。	Đừng có tỏ ra ghét như vậy chứ.
+4029	iyagaru	business	嫌がる	いやがる	ghét (tỏ vẻ không thích)	お客様が嫌がる対応は避けております。	Chúng tôi tránh những cách xử lý khiến khách hàng khó chịu.
+4030	iraira	exam	いらいらする	いらいらする	bồn chồn, khó chịu	渋滞でいらいらした。	Tôi bực bội vì tắc đường.
+4031	iraira	daily	いらいらする	いらいらする	bồn chồn, khó chịu	なんかいらいらするな。	Tự nhiên thấy khó chịu ghê.
+4032	iraira	business	いらいらする	いらいらする	bồn chồn, khó chịu	お客様をいらいらさせないよう配慮しております。	Chúng tôi chú ý để không làm khách hàng khó chịu.
+4033	iwau	exam	祝う	いわう	chúc mừng	みんなで誕生日を祝った。	Mọi người đã cùng chúc mừng sinh nhật.
+4034	iwau	daily	祝う	いわう	chúc mừng	合格、祝おうよ!	Ăn mừng đỗ đi nào!
+4035	iwau	business	祝う	いわう	chúc mừng	創立記念日を祝う式典を開催いたします。	Chúng tôi sẽ tổ chức buổi lễ kỷ niệm ngày thành lập.
+4036	ueru	exam	植える	うえる	trồng	庭に木を植えた。	Tôi đã trồng cây trong vườn.
+4037	ueru	daily	植える	うえる	trồng	花、植えようよ。	Trồng hoa đi.
+4038	ueru	business	植える	うえる	trồng	敷地内に樹木を植えております。	Chúng tôi trồng cây trong khuôn viên.
+4039	ukaru	exam	受かる	うかる	đỗ	試験に受かった。	Tôi đã đỗ kỳ thi.
+4040	ukaru	daily	受かる	うかる	đỗ	受かったら教えてね。	Nếu đỗ thì báo tớ nhé.
+4041	ukaru	business	受かる	うかる	đỗ	多くの応募者が採用試験に受かっております。	Nhiều ứng viên đã đỗ kỳ thi tuyển dụng.
+4042	uku	exam	浮く	うく	nổi	木の葉が水に浮いた。	Chiếc lá nổi trên mặt nước.
+4043	uku	daily	浮く	うく	nổi	これ、水に浮くよ。	Cái này nổi trên nước đấy.
+4044	uku	business	浮く	うく	nổi	この素材は水面に浮くよう設計されております。	Chất liệu này được thiết kế để nổi trên mặt nước.
+4045	uketsukeru	exam	受け付ける	うけつける	tiếp nhận	申し込みを受け付けた。	Đã tiếp nhận đơn đăng ký.
+4046	uketsukeru	daily	受け付ける	うけつける	tiếp nhận	まだ受け付けてる?	Vẫn còn tiếp nhận không?
+4047	uketsukeru	business	受け付ける	うけつける	tiếp nhận	お申し込みを受け付けております。	Chúng tôi đang tiếp nhận đăng ký.
+4048	uketoru	exam	受け取る	うけとる	nhận	荷物を受け取った。	Tôi đã nhận đồ.
+4049	uketoru	daily	受け取る	うけとる	nhận	メール、受け取った?	Nhận được email chưa?
+4050	uketoru	business	受け取る	うけとる	nhận	ご注文の商品を受け取りました。	Chúng tôi đã nhận được sản phẩm quý khách đặt.
+4051	ugokasu	exam	動かす	うごかす	di chuyển (vật gì)	机を動かした。	Tôi đã di chuyển cái bàn.
+4052	ugokasu	daily	動かす	うごかす	di chuyển (vật gì)	これ、動かしていい?	Di chuyển cái này được không?
+4053	ugokasu	business	動かす	うごかす	di chuyển (vật gì)	システムを安定して動かしております。	Chúng tôi đang vận hành hệ thống ổn định.
+4054	utsusu	exam	移す	うつす	chuyển (vật gì)	荷物を別の部屋に移した。	Tôi đã chuyển đồ sang phòng khác.
+4055	utsusu	daily	移す	うつす	chuyển (vật gì)	これ、あっちに移してくれる?	Chuyển cái này sang đó giúp tớ được không?
+4056	utsusu	business	移す	うつす	chuyển (vật gì)	データを新システムに移しております。	Chúng tôi đang chuyển dữ liệu sang hệ thống mới.
+4057	utsuru	exam	写る	うつる	lên ảnh	写真にきれいに写った。	Tôi lên ảnh đẹp.
+4058	utsuru	daily	写る	うつる	lên ảnh	これ、うまく写ってるね。	Cái này lên ảnh đẹp thật nhỉ.
+4059	utsuru	business	写る	うつる	lên ảnh	背景がきれいに写るよう撮影しております。	Chúng tôi chụp sao cho background lên ảnh đẹp.
+4060	uragaesu	exam	裏返す	うらがえす	lật (mặt trái)	服を裏返して干した。	Tôi đã lộn mặt trái quần áo rồi phơi.
+4061	uragaesu	daily	裏返す	うらがえす	lật (mặt trái)	それ、裏返してみて。	Lật mặt trái cái đó ra xem thử.
+4062	uragaesu	business	裏返す	うらがえす	lật (mặt trái)	商品は裏返して梱包しております。	Sản phẩm được lộn mặt trái trước khi đóng gói.
+4063	urikireru	exam	売り切れる	うりきれる	bán hết	チケットが売り切れた。	Vé đã bán hết.
+4064	urikireru	daily	売り切れる	うりきれる	bán hết	もう売り切れたの?	Bán hết rồi à?
+4065	urikireru	business	売り切れる	うりきれる	bán hết	人気商品のため早期に売り切れております。	Vì là sản phẩm được ưa chuộng nên đã bán hết sớm.
+4066	ureru	exam	売れる	うれる	bán chạy	この商品はよく売れた。	Sản phẩm này bán rất chạy.
+4067	ureru	daily	売れる	うれる	bán chạy	最近、売れてる?	Dạo này bán chạy không?
+4068	ureru	business	売れる	うれる	bán chạy	新商品が好調に売れております。	Sản phẩm mới đang bán chạy tốt.
+4069	erabu	exam	選ぶ	えらぶ	chọn	好きな色を選んだ。	Tôi đã chọn màu mình thích.
+4070	erabu	daily	選ぶ	えらぶ	chọn	どれ、選ぶ?	Chọn cái nào đây?
+4071	erabu	business	選ぶ	えらぶ	chọn	品質の良い素材を選んでおります。	Chúng tôi chọn chất liệu chất lượng tốt.
+4072	oikakeru	exam	追いかける	おいかける	đuổi theo	犬が猫を追いかけた。	Con chó đuổi theo con mèo.
+4073	oikakeru	daily	追いかける	おいかける	đuổi theo	夢を追いかけてるんだ。	Tớ đang đuổi theo ước mơ đấy.
+4074	oikakeru	business	追いかける	おいかける	đuổi theo	常に最新技術を追いかけております。	Chúng tôi luôn theo đuổi công nghệ mới nhất.
+4075	oikosu	exam	追い越す	おいこす	vượt (qua)	前の車を追い越した。	Tôi đã vượt qua chiếc xe phía trước.
+4076	oikosu	daily	追い越す	おいこす	vượt (qua)	あの人、追い越されたよ。	Người đó bị vượt qua rồi kìa.
+4077	oikosu	business	追い越す	おいこす	vượt (qua)	競合他社を追い越すことを目標としております。	Chúng tôi đặt mục tiêu vượt qua đối thủ cạnh tranh.
+4078	oitsuku	exam	追いつく	おいつく	đuổi kịp	ようやく追いついた。	Cuối cùng tôi cũng đuổi kịp.
+4079	oitsuku	daily	追いつく	おいつく	đuổi kịp	早く追いつこうよ。	Nhanh lên bắt kịp đi.
+4080	oitsuku	business	追いつく	おいつく	đuổi kịp	需要の増加に生産が追いついておりません。	Sản xuất chưa theo kịp sự gia tăng nhu cầu.
+4081	ou2	exam	追う	おう	đuổi	犯人を追った。	Tôi đã đuổi theo tội phạm.
+4082	ou2	daily	追う	おう	đuổi	夢を追うのは大事だよ。	Theo đuổi ước mơ là điều quan trọng đó.
+4083	ou2	business	追う	おう	đuổi	業界の最新動向を追っております。	Chúng tôi theo dõi xu hướng mới nhất của ngành.
+4084	okuru2	exam	贈る	おくる	tặng	母に花を贈った。	Tôi đã tặng hoa cho mẹ.
+4085	okuru2	daily	贈る	おくる	tặng	何か贈ろうかな。	Không biết nên tặng gì nhỉ.
+4086	okuru2	business	贈る	おくる	tặng	お客様に記念品を贈っております。	Chúng tôi tặng quà kỷ niệm cho khách hàng.
+4087	okonau	exam	行う	おこなう	tiến hành	会議を行った。	Chúng tôi đã tiến hành cuộc họp.
+4088	okonau	daily	行う	おこなう	tiến hành	いつ行うの?	Khi nào thì tiến hành vậy?
+4089	okonau	business	行う	おこなう	tiến hành	定期点検を毎月行っております。	Chúng tôi tiến hành kiểm tra định kỳ hàng tháng.
+4090	osaeru	exam	押さえる	おさえる	giữ, ấn giữ	傷口を押さえた。	Tôi đã ấn giữ vết thương.
+4091	osaeru	daily	押さえる	おさえる	giữ, ấn giữ	ここ、押さえてて。	Giữ chỗ này giúp tớ nhé.
+4092	osaeru	business	押さえる	おさえる	giữ, ấn giữ	重要なポイントを押さえております。	Chúng tôi nắm bắt các điểm quan trọng.
+4093	ochitsuku	exam	落ち着く	おちつく	bình tĩnh	ようやく落ち着いた。	Cuối cùng tôi cũng đã bình tĩnh lại.
+4094	ochitsuku	daily	落ち着く	おちつく	bình tĩnh	落ち着いて、大丈夫だから。	Bình tĩnh lại đi, không sao đâu.
+4095	ochitsuku	business	落ち着く	おちつく	bình tĩnh	状況は落ち着いております。	Tình hình đã ổn định.
+4096	oboreru	exam	溺れる	おぼれる	chết đuối	川で子供が溺れた。	Đứa trẻ bị đuối nước ở sông.
+4097	oboreru	daily	溺れる	おぼれる	chết đuối	溺れそうになったよ。	Suýt nữa thì bị đuối nước đấy.
+4098	oboreru	business	溺れる	おぼれる	chết đuối	遊泳中に溺れる事故が報告されました。	Đã có báo cáo về tai nạn đuối nước khi bơi.
+4099	omoitsuku	exam	思いつく	おもいつく	nghĩ ra	いいアイデアを思いついた。	Tôi đã nghĩ ra một ý tưởng hay.
+4100	omoitsuku	daily	思いつく	おもいつく	nghĩ ra	何か思いついたら教えて。	Nếu nghĩ ra gì thì báo tớ nhé.
+4101	omoitsuku	business	思いつく	おもいつく	nghĩ ra	改善案を思いつき次第ご報告いたします。	Ngay khi nghĩ ra phương án cải tiến, chúng tôi sẽ báo cáo.
+4102	oreru	exam	折れる	おれる	gãy	枝が折れた。	Cành cây đã gãy.
+4103	oreru	daily	折れる	おれる	gãy	骨、折れてない?	Xương không bị gãy chứ?
+4104	oreru	business	折れる	おれる	gãy	強風で看板が折れております。	Biển hiệu bị gãy do gió mạnh.
+4105	orosu	exam	下ろす	おろす	hạ xuống	銀行でお金を下ろした。	Tôi đã rút tiền ở ngân hàng.
+4106	orosu	daily	下ろす	おろす	hạ xuống	荷物、下ろしてくれる?	Hạ đồ xuống giúp tớ được không?
+4107	orosu	business	下ろす	おろす	hạ xuống	必要な現金は事前に下ろしております。	Chúng tôi đã rút sẵn tiền mặt cần thiết.
+4108	kau2	exam	飼う	かう	nuôi (thú)	犬を飼っている。	Tôi đang nuôi chó.
+4109	kau2	daily	飼う	かう	nuôi (thú)	猫、飼いたいな。	Tớ muốn nuôi mèo quá.
+4110	kau2	business	飼う	かう	nuôi (thú)	ペットを飼っているお客様も多いです。	Cũng có nhiều khách hàng đang nuôi thú cưng.
+4111	kaeru2	exam	返る	かえる	được trả lại	貸したお金が返ってきた。	Số tiền tôi cho vay đã được trả lại.
+4112	kaeru2	daily	返る	かえる	được trả lại	これ、返ってきたよ。	Cái này được trả lại rồi đấy.
+4113	kaeru2	business	返る	かえる	được trả lại	ご記入いただいた書類が返ってまいりました。	Tài liệu quý khách đã điền đã được gửi trả lại.
+4114	kagayaku	exam	輝く	かがやく	tỏa sáng	星が輝いていた。	Những ngôi sao đang tỏa sáng.
+4115	kagayaku	daily	輝く	かがやく	tỏa sáng	その笑顔、輝いてるね。	Nụ cười đó rạng rỡ thật nhỉ.
+4116	kagayaku	business	輝く	かがやく	tỏa sáng	お客様が輝ける社会を目指しております。	Chúng tôi hướng đến một xã hội nơi khách hàng có thể tỏa sáng.
+4117	kakaru2	exam	かかる	かかる	mắc (bệnh), tốn (thời gian/tiền)	風邪にかかった。	Tôi đã bị cảm.
+4118	kakaru2	daily	かかる	かかる	mắc (bệnh), tốn (thời gian/tiền)	これ、時間かかるよ。	Cái này tốn thời gian đấy.
+4119	kakaru2	business	かかる	かかる	mắc (bệnh), tốn (thời gian/tiền)	手続きには数日かかっております。	Thủ tục đang mất vài ngày.
+4120	kaku1	exam	かく①	かく	ra (mồ hôi)	緊張すると汗をかくことがある。	Có lúc căng thẳng làm tôi toát mồ hôi.
+4121	kaku1	daily	かく①	かく	ra (mồ hôi)	緊張で汗かいちゃった。	Vì hồi hộp nên đổ mồ hôi mất rồi.
+4122	kaku1	business	かく①	かく	ra (mồ hôi)	暑さで汗をかく社員が増えております。	Số nhân viên đổ mồ hôi vì nóng đang tăng lên.
+4123	kaku2	exam	かく②	かく	gãi	頭をかいた。	Tôi đã gãi đầu.
+4124	kaku2	daily	かく②	かく	gãi	かゆいところ、かいてあげようか。	Để tớ gãi chỗ ngứa cho nhé?
+4125	kaku2	business	かく②	かく	gãi	緊張すると頭をかく癖があります。	Tôi có thói quen gãi đầu khi hồi hộp.
+4126	kagu2	exam	かぐ	かぐ	ngửi	花の匂いをかいだ。	Tôi đã ngửi mùi hương của hoa.
+4127	kagu2	daily	かぐ	かぐ	ngửi	これ、かいでみて。	Ngửi thử cái này xem.
+4128	kagu2	business	かぐ	かぐ	ngửi	香りをかいで確認しております。	Chúng tôi kiểm tra bằng cách ngửi mùi hương.
+4129	kakusu	exam	隠す	かくす	giấu	本音を隠した。	Tôi đã giấu suy nghĩ thật.
+4130	kakusu	daily	隠す	かくす	giấu	それ、隠さなくていいよ。	Không cần giấu cái đó đâu.
+4131	kakusu	business	隠す	かくす	giấu	情報を隠すことなく開示しております。	Chúng tôi công khai thông tin mà không giấu diếm.
+4132	kakomu	exam	囲む	かこむ	bao quanh	家族で食卓を囲んだ。	Cả gia đình đã quây quần bên bàn ăn.
+4133	kakomu	daily	囲む	かこむ	bao quanh	みんなで囲んで座ろうよ。	Mọi người ngồi quây quần lại nào.
+4134	kakomu	business	囲む	かこむ	bao quanh	緑に囲まれたオフィスでございます。	Đây là văn phòng được bao quanh bởi cây xanh.
+4135	kasaneru	exam	重ねる	かさねる	chồng lên	皿を重ねた。	Tôi đã chồng đĩa lên nhau.
+4136	kasaneru	daily	重ねる	かさねる	chồng lên	努力を重ねてきたね。	Cậu đã nỗ lực bền bỉ nhỉ.
+4137	kasaneru	business	重ねる	かさねる	chồng lên	経験を重ねてスキルを高めております。	Chúng tôi tích lũy kinh nghiệm để nâng cao kỹ năng.
+4138	kazoeru	exam	数える	かぞえる	đếm	人数を数えた。	Tôi đã đếm số người.
+4139	kazoeru	daily	数える	かぞえる	đếm	一緒に数えようよ。	Cùng đếm nào.
+4140	kazoeru	business	数える	かぞえる	đếm	在庫数を正確に数えております。	Chúng tôi đếm chính xác số lượng hàng tồn kho.

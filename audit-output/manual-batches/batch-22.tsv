@@ -1,0 +1,181 @@
+row	vocabId	type	word	reading	meaningVi	exampleJp	exampleVi
+3781	chain	exam	チェーン	チェーン	dây xích	自転車のチェーンが外れた。	Dây xích xe đạp bị tuột.
+3782	chain	daily	チェーン	チェーン	dây xích	このチェーン、錆びてるね。	Dây xích này bị gỉ rồi nhỉ.
+3783	chain	business	チェーン	チェーン	dây xích	搬送装置のチェーンは、作業開始前に摩耗を確認してください。	Với xích của thiết bị vận chuyển, hãy kiểm tra độ mòn trước khi bắt đầu làm việc.
+3784	techou	exam	手帳	てちょう	sổ tay	手帳に予定を書いた。	Tôi đã ghi lịch trình vào sổ tay.
+3785	techou	daily	手帳	てちょう	sổ tay	手帳、なくしちゃった。	Tớ làm mất sổ tay rồi.
+3786	techou	business	手帳	てちょう	sổ tay	新年度用の手帳を配布いたします。	Chúng tôi sẽ phát sổ tay cho năm học/tài khóa mới.
+3787	denshirange	exam	電子レンジ	でんしレンジ	lò vi sóng	電子レンジで温めた。	Tôi đã hâm nóng bằng lò vi sóng.
+3788	denshirange	daily	電子レンジ	でんしレンジ	lò vi sóng	電子レンジ、使っていい?	Dùng lò vi sóng được không?
+3789	denshirange	business	電子レンジ	でんしレンジ	lò vi sóng	休憩室に電子レンジを設置しております。	Chúng tôi lắp đặt lò vi sóng ở phòng nghỉ.
+3790	nuno	exam	布	ぬの	vải	布でカバーを作った。	Tôi đã làm vỏ bọc bằng vải.
+3791	nuno	daily	布	ぬの	vải	この布、柔らかいね。	Vải này mềm thật nhỉ.
+3792	nuno	business	布	ぬの	vải	高品質な布を使用した製品です。	Đây là sản phẩm sử dụng vải chất lượng cao.
+3793	hamigaki	exam	歯磨き	はみがき	đánh răng	寝る前に歯磨きをした。	Trước khi ngủ tôi đã đánh răng.
+3794	hamigaki	daily	歯磨き	はみがき	đánh răng	歯磨き、忘れないでね。	Đừng quên đánh răng nhé.
+3795	hamigaki	business	歯磨き	はみがき	đánh răng	歯磨き粉の新商品を発売いたします。	Chúng tôi sẽ ra mắt sản phẩm kem đánh răng mới.
+3796	hari	exam	針	はり	kim	針で穴を開けた。	Tôi đã đục lỗ bằng kim.
+3797	hari	daily	針	はり	kim	針、なくさないでね。	Đừng làm mất kim nhé.
+3798	hari	business	針	はり	kim	製造には専用の針を使用しております。	Chúng tôi sử dụng kim chuyên dụng trong sản xuất.
+3799	hanko	exam	判こ	はんこ	con dấu	書類に判こを押した。	Tôi đã đóng dấu vào tài liệu.
+3800	hanko	daily	判こ	はんこ	con dấu	判こ、玄関の引き出しに入れておいたよ。	Con dấu mình để sẵn trong ngăn kéo ở cửa ra vào rồi đấy.
+3801	hanko	business	判こ	はんこ	con dấu	契約書には判この押印が必要です。	Hợp đồng cần đóng dấu con dấu.
+3802	bin2	exam	瓶	びん	chai	瓶にジャムを入れた。	Tôi đã cho mứt vào chai.
+3803	bin2	daily	瓶	びん	chai	この瓶、開かないよ。	Cái chai này không mở được.
+3804	bin2	business	瓶	びん	chai	リサイクル可能な瓶を使用しております。	Chúng tôi sử dụng chai có thể tái chế.
+3805	file	exam	ファイル	ファイル	tệp, cặp hồ sơ	書類をファイルにまとめた。	Tôi đã sắp xếp tài liệu vào tệp.
+3806	file	daily	ファイル	ファイル	tệp, cặp hồ sơ	そのファイル、開ける?	Mở tệp đó được không?
+3807	file	business	ファイル	ファイル	tệp, cặp hồ sơ	関連ファイルを添付いたします。	Chúng tôi sẽ đính kèm tệp liên quan.
+3808	iron	exam	アイロン	アイロン	bàn ủi	シャツにアイロンをかけた。	Tôi đã ủi áo sơ mi.
+3809	iron	daily	アイロン	アイロン	bàn ủi	アイロン、使う?	Dùng bàn ủi không?
+3810	iron	business	アイロン	アイロン	bàn ủi	業務用アイロンを導入いたしました。	Chúng tôi đã đưa vào sử dụng bàn ủi cho kinh doanh.
+3811	earphone	exam	イヤホン	イヤホン	tai nghe	イヤホンをつけて音楽を聴いた。	Tôi đã đeo tai nghe để nghe nhạc.
+3812	earphone	daily	イヤホン	イヤホン	tai nghe	イヤホン、片方壊れちゃった。	Một bên tai nghe bị hỏng rồi.
+3813	earphone	business	イヤホン	イヤホン	tai nghe	新型ワイヤレスイヤホンを発売いたします。	Chúng tôi sẽ ra mắt tai nghe không dây kiểu mới.
+3814	aircon	exam	エアコン	エアコン	điều hòa	暑いのでエアコンをつけた。	Vì nóng nên tôi đã bật điều hòa.
+3815	aircon	daily	エアコン	エアコン	điều hòa	エアコン、効いてる?	Điều hòa có mát không?
+3816	aircon	business	エアコン	エアコン	điều hòa	全社員向けにエアコンの温度設定を統一いたします。	Chúng tôi sẽ thống nhất cài đặt nhiệt độ điều hòa cho toàn nhân viên.
+3817	cord	exam	コード	コード	dây điện (cable)	コードが絡まっている。	Dây điện bị rối.
+3818	cord	daily	コード	コード	dây điện (cable)	このコード、長いね。	Sợi dây này dài thật nhỉ.
+3819	cord	business	コード	コード	dây điện (cable)	延長コードを各机に配布いたしました。	Chúng tôi đã phát dây nối dài cho mỗi bàn.
+3820	outlet	exam	コンセント	コンセント	ổ cắm	コンセントに差し込んだ。	Tôi đã cắm vào ổ điện.
+3821	outlet	daily	コンセント	コンセント	ổ cắm	コンセント、空いてる?	Ổ cắm còn trống không?
+3822	outlet	business	コンセント	コンセント	ổ cắm	客室に複数のコンセントを設置しております。	Chúng tôi lắp đặt nhiều ổ cắm trong phòng khách.
+3823	switch	exam	スイッチ	スイッチ	công tắc	スイッチを入れた。	Tôi đã bật công tắc.
+3824	switch	daily	スイッチ	スイッチ	công tắc	スイッチ、どこ?	Công tắc ở đâu vậy?
+3825	switch	business	スイッチ	スイッチ	công tắc	電源スイッチの位置を分かりやすく表示いたしました。	Chúng tôi đã hiển thị vị trí công tắc nguồn dễ nhìn hơn.
+3826	stand	exam	スタンド	スタンド	chân đèn (đèn bàn)	机にスタンドを置いた。	Tôi đã đặt đèn bàn trên bàn học.
+3827	stand	daily	スタンド	スタンド	chân đèn (đèn bàn)	このスタンド、明るいね。	Cái đèn bàn này sáng thật nhỉ.
+3828	stand	business	スタンド	スタンド	chân đèn (đèn bàn)	省エネスタンドを社内に導入いたしました。	Chúng tôi đã đưa vào sử dụng đèn bàn tiết kiệm điện trong công ty.
+3829	speaker	exam	スピーカー	スピーカー	loa	スピーカーで音楽を流した。	Tôi đã phát nhạc qua loa.
+3830	speaker	daily	スピーカー	スピーカー	loa	このスピーカー、音いいね。	Loa này âm thanh hay ghê.
+3831	speaker	business	スピーカー	スピーカー	loa	会議室にスピーカーを設置いたしました。	Chúng tôi đã lắp đặt loa trong phòng họp.
+3832	senpuuki	exam	扇風機	せんぷうき	quạt	暑いので扇風機をつけた。	Vì nóng nên tôi đã bật quạt.
+3833	senpuuki	daily	扇風機	せんぷうき	quạt	暑いから、扇風機つけてもいい？	Nóng quá, bật quạt lên được không?
+3834	senpuuki	business	扇風機	せんぷうき	quạt	省エネ型の扇風機を導入いたしました。	Chúng tôi đã đưa vào sử dụng quạt kiểu tiết kiệm điện.
+3835	digicame	exam	デジカメ	デジカメ	máy ảnh kỹ thuật số	デジカメで写真を撮った。	Tôi đã chụp ảnh bằng máy ảnh kỹ thuật số.
+3836	digicame	daily	デジカメ	デジカメ	máy ảnh kỹ thuật số	旅行用にデジカメの充電をしておいた。	Mình đã sạc sẵn máy ảnh kỹ thuật số để đi du lịch.
+3837	digicame	business	デジカメ	デジカメ	máy ảnh kỹ thuật số	新型デジカメを来月発売いたします。	Chúng tôi sẽ ra mắt máy ảnh kỹ thuật số kiểu mới vào tháng sau.
+3838	denkyuu	exam	電球	でんきゅう	bóng đèn	電球を交換した。	Tôi đã thay bóng đèn.
+3839	denkyuu	daily	電球	でんきゅう	bóng đèn	電球、切れてるよ。	Bóng đèn bị cháy rồi kìa.
+3840	denkyuu	business	電球	でんきゅう	bóng đèn	省エネ電球へ切り替えいたしました。	Chúng tôi đã chuyển sang dùng bóng đèn tiết kiệm điện.
+3841	plug	exam	プラグ	プラグ	phích cắm	プラグをコンセントに差した。	Tôi đã cắm phích vào ổ điện.
+3842	plug	daily	プラグ	プラグ	phích cắm	プラグ、抜いておいて。	Rút phích cắm ra giúp tớ nhé.
+3843	plug	business	プラグ	プラグ	phích cắm	プラグの規格をご確認ください。	Xin vui lòng kiểm tra tiêu chuẩn của phích cắm.
+3844	headphone	exam	ヘッドホン	ヘッドホン	tai nghe (chụp tai)	ヘッドホンをつけて映画を見た。	Tôi đã đeo tai nghe để xem phim.
+3845	headphone	daily	ヘッドホン	ヘッドホン	tai nghe (chụp tai)	そのヘッドホン、音いいね。	Cái tai nghe đó âm thanh hay ghê.
+3846	headphone	business	ヘッドホン	ヘッドホン	tai nghe (chụp tai)	新型ノイズキャンセリングヘッドホンを発売いたします。	Chúng tôi sẽ ra mắt tai nghe chống ồn kiểu mới.
+3847	mic	exam	マイク	マイクロホン	micro	マイクを使って話した。	Tôi đã dùng micro để nói.
+3848	mic	daily	マイク	マイクロホン	micro	マイク、聞こえてる?	Micro có nghe rõ không?
+3849	mic	business	マイク	マイクロホン	micro	会場にワイヤレスマイクを設置いたしました。	Chúng tôi đã lắp đặt micro không dây tại hội trường.
+3850	light	exam	ライト	ライト	đèn	暗いのでライトをつけた。	Vì tối nên tôi đã bật đèn.
+3851	light	daily	ライト	ライト	đèn	そのライト、明るいね。	Cái đèn đó sáng thật nhỉ.
+3852	light	business	ライト	ライト	đèn	LEDライトを全館に導入いたしました。	Chúng tôi đã đưa vào sử dụng đèn LED cho toàn bộ tòa nhà.
+3853	remote	exam	リモコン	リモコン	điều khiển từ xa	リモコンでテレビをつけた。	Tôi đã bật TV bằng điều khiển từ xa.
+3854	remote	daily	リモコン	リモコン	điều khiển từ xa	リモコン、どこ置いた?	Cậu để điều khiển ở đâu vậy?
+3855	remote	business	リモコン	リモコン	điều khiển từ xa	客室にリモコンの使い方を掲示しております。	Chúng tôi có dán hướng dẫn sử dụng điều khiển trong phòng khách.
+3856	fuusen	exam	風船	ふうせん	bóng bay	誕生日会で風船を飾った。	Tôi đã trang trí bóng bay cho tiệc sinh nhật.
+3857	fuusen	daily	風船	ふうせん	bóng bay	風船、割れちゃった。	Bóng bay bị vỡ mất rồi.
+3858	fuusen	business	風船	ふうせん	bóng bay	イベント会場を風船で装飾いたしました。	Chúng tôi đã trang trí hội trường sự kiện bằng bóng bay.
+3859	fukuro	exam	袋	ふくろ	túi	買い物袋に品物を入れた。	Tôi đã cho hàng vào túi mua sắm.
+3860	fukuro	daily	袋	ふくろ	túi	袋、もう一枚もらえる?	Cho tớ xin thêm một cái túi được không?
+3861	fukuro	business	袋	ふくろ	túi	レジ袋は有料となっております。	Túi mua hàng có tính phí.
+3862	fude	exam	筆	ふで	bút lông	筆で字を書いた。	Tôi đã viết chữ bằng bút lông.
+3863	fude	daily	筆	ふで	bút lông	この筆、書きやすいね。	Cây bút lông này dễ viết thật nhỉ.
+3864	fude	business	筆	ふで	bút lông	伝統工芸の筆を取り扱っております。	Chúng tôi kinh doanh bút lông thủ công truyền thống.
+3865	buhin	exam	部品	ぶひん	linh kiện	機械の部品を交換した。	Tôi đã thay linh kiện của máy.
+3866	buhin	daily	部品	ぶひん	linh kiện	この部品、どこで買えるの?	Linh kiện này mua ở đâu vậy?
+3867	buhin	business	部品	ぶひん	linh kiện	純正部品のみを使用しております。	Chúng tôi chỉ sử dụng linh kiện chính hãng.
+3868	brush	exam	ブラシ	ブラシ	bàn chải	ブラシで髪をとかした。	Tôi đã chải tóc bằng bàn chải.
+3869	brush	daily	ブラシ	ブラシ	bàn chải	このブラシ、使いやすいね。	Cái bàn chải này dễ dùng nhỉ.
+3870	brush	business	ブラシ	ブラシ	bàn chải	専用ブラシを商品に同梱しております。	Chúng tôi đính kèm bàn chải chuyên dụng vào sản phẩm.
+3871	bunbougu	exam	文房具	ぶんぼうぐ	văn phòng phẩm	文房具を買いに行った。	Tôi đã đi mua văn phòng phẩm.
+3872	bunbougu	daily	文房具	ぶんぼうぐ	văn phòng phẩm	この文房具屋、品揃えいいね。	Tiệm văn phòng phẩm này hàng phong phú nhỉ.
+3873	bunbougu	business	文房具	ぶんぼうぐ	văn phòng phẩm	新入社員に文房具一式を支給いたします。	Chúng tôi sẽ cấp bộ văn phòng phẩm cho nhân viên mới.
+3874	penki	exam	ペンキ	ペンキ	sơn	壁にペンキを塗った。	Tôi đã sơn tường.
+3875	penki	daily	ペンキ	ペンキ	sơn	このペンキ、まだ乾いてないよ。	Sơn này vẫn chưa khô đâu.
+3876	penki	business	ペンキ	ペンキ	sơn	外壁のペンキ塗装を実施いたします。	Chúng tôi sẽ thực hiện sơn tường ngoài.
+3877	mouse	exam	マウス	マウス	chuột (máy tính)	マウスでクリックした。	Tôi đã nhấp chuột.
+3878	mouse	daily	マウス	マウス	chuột (máy tính)	このマウス、使いにくいな。	Con chuột này khó dùng thật.
+3879	mouse	business	マウス	マウス	chuột (máy tính)	ワイヤレスマウスを全社員に配布いたしました。	Chúng tôi đã phát chuột không dây cho toàn bộ nhân viên.
+3880	meishi	exam	名刺	めいし	danh thiếp	初対面で名刺を交換した。	Chúng tôi đã trao đổi danh thiếp khi gặp lần đầu.
+3881	meishi	daily	名刺	めいし	danh thiếp	名刺、切らしちゃった。	Danh thiếp hết mất rồi.
+3882	meishi	business	名刺	めいし	danh thiếp	名刺を頂戴できますでしょうか。	Tôi có thể xin danh thiếp của quý vị được không ạ?
+3883	meter	exam	メーター	メーター	công tơ, đồng hồ đo	電気のメーターを確認した。	Tôi đã kiểm tra công tơ điện.
+3884	meter	daily	メーター	メーター	công tơ, đồng hồ đo	メーター、動いてないよ。	Đồng hồ đo không nhích đâu.
+3885	meter	business	メーター	メーター	công tơ, đồng hồ đo	メーター検針を月一回実施しております。	Chúng tôi kiểm tra chỉ số công tơ mỗi tháng một lần.
+3886	album	exam	アルバム	アルバム	album	旅行の写真をアルバムに入れた。	Tôi đã cho ảnh du lịch vào album.
+3887	album	daily	アルバム	アルバム	album	このアルバム、懐かしいね。	Album này gợi nhớ kỷ niệm ghê.
+3888	album	business	アルバム	アルバム	album	記念アルバムを制作いたしました。	Chúng tôi đã sản xuất album kỷ niệm.
+3889	sheet	exam	シーツ	シーツ	ga trải giường	シーツを洗濯した。	Tôi đã giặt ga trải giường.
+3890	sheet	daily	シーツ	シーツ	ga trải giường	シーツ、新しいの?	Ga trải giường mới à?
+3891	sheet	business	シーツ	シーツ	ga trải giường	客室のシーツは毎日交換しております。	Ga trải giường trong phòng khách được thay mỗi ngày.
+3892	sensu	exam	扇子	せんす	quạt giấy	暑いので扇子であおいだ。	Vì nóng nên tôi đã quạt bằng quạt giấy.
+3893	sensu	daily	扇子	せんす	quạt giấy	暑いから、その扇子ちょっと借りてもいい？	Nóng quá, cho mình mượn chiếc quạt xếp đó một chút được không?
+3894	sensu	business	扇子	せんす	quạt giấy	記念品として扇子を配布いたします。	Chúng tôi sẽ phát quạt giấy làm quà lưu niệm.
+3895	towel	exam	タオル	タオル	khăn	タオルで顔を拭いた。	Tôi đã lau mặt bằng khăn.
+3896	towel	daily	タオル	タオル	khăn	シャワーのあと、新しいタオルを使った。	Sau khi tắm, tôi dùng một chiếc khăn mới.
+3897	towel	business	タオル	タオル	khăn	客室に清潔なタオルをご用意しております。	Chúng tôi có chuẩn bị khăn sạch trong phòng khách.
+3898	tissue	exam	ティッシュ	ティッシュ	giấy ăn	ティッシュで鼻をかんだ。	Tôi đã xì mũi bằng giấy ăn.
+3899	tissue	daily	ティッシュ	ティッシュ	giấy ăn	ティッシュ、ちょうだい。	Cho tớ xin giấy ăn.
+3900	tissue	business	ティッシュ	ティッシュ	giấy ăn	各机にティッシュを配備しております。	Chúng tôi trang bị khăn giấy ở mỗi bàn.
+3901	denchi	exam	電池	でんち	pin	リモコンの電池が切れた。	Pin của điều khiển từ xa đã hết.
+3902	denchi	daily	電池	でんち	pin	電池、換えなきゃ。	Phải thay pin thôi.
+3903	denchi	business	電池	でんち	pin	防災用に電池を備蓄しております。	Chúng tôi tích trữ pin để phòng chống thiên tai.
+3904	bucket	exam	バケツ	バケツ	thùng, xô	バケツに水を汲んだ。	Tôi đã múc nước vào xô.
+3905	bucket	daily	バケツ	バケツ	thùng, xô	ベランダを掃除するから、バケツに水をくんで。	Tôi sắp dọn ban công, múc nước vào xô giúp nhé.
+3906	bucket	business	バケツ	バケツ	thùng, xô	清掃用のバケツを各フロアに配備しております。	Chúng tôi trang bị xô dọn vệ sinh ở mỗi tầng.
+3907	hanger	exam	ハンガー	ハンガー	móc áo	服をハンガーにかけた。	Tôi đã treo quần áo lên móc.
+3908	hanger	daily	ハンガー	ハンガー	móc áo	ハンガー、足りないよ。	Móc áo không đủ đâu.
+3909	hanger	business	ハンガー	ハンガー	móc áo	客室に十分な数のハンガーをご用意しております。	Chúng tôi có chuẩn bị đủ số lượng móc áo trong phòng khách.
+3910	himo	exam	ひも	ひも	dây	段ボール箱をひもでしっかり結んだ。	Tôi buộc chặt thùng carton bằng dây.
+3911	himo	daily	ひも	ひも	dây	ひも、ほどけてるよ。	Dây bị tuột rồi kìa.
+3912	himo	business	ひも	ひも	dây	梱包用のひもを使用しております。	Chúng tôi sử dụng dây đóng gói.
+3913	pin	exam	ピン	ピン	ghim	紙をピンで留めた。	Tôi đã ghim giấy lại bằng ghim.
+3914	pin	daily	ピン	ピン	ghim	この写真、ピンで壁に留めてもいい？	Tấm ảnh này, ghim lên tường bằng ghim được không?
+3915	pin	business	ピン	ピン	ghim	掲示物はピンで固定してください。	Xin vui lòng cố định vật dán thông báo bằng ghim.
+3916	futa	exam	ふた	ふた	nắp	鍋のふたを開けた。	Tôi đã mở nắp nồi.
+3917	futa	daily	ふた	ふた	nắp	ふた、閉めて。	Đóng nắp lại nhé.
+3918	futa	business	ふた	ふた	nắp	容器のふたはしっかり閉めてください。	Xin vui lòng đóng chặt nắp hộp đựng.
+3919	hose	exam	ホース	ホース	vòi (nước)	ホースで庭に水をまいた。	Tôi đã tưới nước cho vườn bằng vòi.
+3920	hose	daily	ホース	ホース	vòi (nước)	庭の花にホースで水をやった。	Tôi tưới hoa trong vườn bằng vòi nước.
+3921	hose	business	ホース	ホース	vòi (nước)	消火用のホースを各フロアに設置しております。	Chúng tôi lắp đặt vòi chữa cháy ở mỗi tầng.
+3922	pump	exam	ポンプ	ポンプ	cái bơm	ポンプで水をくみ上げた。	Tôi đã bơm nước lên bằng máy bơm.
+3923	pump	daily	ポンプ	ポンプ	cái bơm	このポンプ、壊れてるよ。	Cái bơm này bị hỏng rồi.
+3924	pump	business	ポンプ	ポンプ	cái bơm	給水ポンプの点検を実施いたしました。	Chúng tôi đã thực hiện kiểm tra máy bơm nước.
+3925	makura	exam	枕	まくら	gối	枕を高くして寝た。	Tôi đã ngủ với gối kê cao.
+3926	makura	daily	枕	まくら	gối	新しい枕、思ったより柔らかくて寝やすい。	Chiếc gối mới mềm hơn mình tưởng nên khá dễ ngủ.
+3927	makura	business	枕	まくら	gối	客室に予備の枕をご用意しております。	Chúng tôi có chuẩn bị gối dự phòng trong phòng khách.
+3928	mezamashi	exam	目覚まし	めざまし	đồng hồ báo thức	目覚ましをセットして寝た。	Tôi đã đặt báo thức rồi đi ngủ.
+3929	mezamashi	daily	目覚まし	めざまし	đồng hồ báo thức	目覚まし、鳴らなかったの?	Báo thức không kêu à?
+3930	mezamashi	business	目覚まし	めざまし	đồng hồ báo thức	スマホアプリの目覚まし機能を活用しております。	Chúng tôi tận dụng tính năng báo thức của ứng dụng điện thoại.
+3931	moufu	exam	毛布	もうふ	chăn	寒いので毛布をかけた。	Vì lạnh nên tôi đã đắp chăn.
+3932	moufu	daily	毛布	もうふ	chăn	毛布、もう一枚欲しい。	Muốn thêm một cái chăn nữa.
+3933	moufu	business	毛布	もうふ	chăn	客室に予備の毛布をご用意しております。	Chúng tôi có chuẩn bị chăn dự phòng trong phòng khách.
+3934	lighter	exam	ライター	ライター	bật lửa	ライターでろうそくに火をつけた。	Tôi đã dùng bật lửa để thắp nến.
+3935	lighter	daily	ライター	ライター	bật lửa	ライター、どこに置いたっけ？	Cái bật lửa mình để đâu rồi nhỉ?
+3936	lighter	business	ライター	ライター	bật lửa	ライターの携帯には規則があります。	Việc mang theo bật lửa có quy định riêng.
+3937	lamp	exam	ランプ	ランプ	đèn (lamp)	部屋にランプを置いた。	Tôi đã đặt đèn trong phòng.
+3938	lamp	daily	ランプ	ランプ	đèn (lamp)	このランプ、雰囲気いいね。	Cái đèn này tạo bầu không khí đẹp nhỉ.
+3939	lamp	business	ランプ	ランプ	đèn (lamp)	省エネランプへ切り替えいたしました。	Chúng tôi đã chuyển sang dùng đèn tiết kiệm điện.
+3940	backpack	exam	リュック	リュック	ba lô	リュックを背負って登山した。	Tôi đã đeo ba lô để leo núi.
+3941	backpack	daily	リュック	リュック	ba lô	そのリュック、大きいね。	Cái ba lô đó to thật nhỉ.
+3942	backpack	business	リュック	リュック	ba lô	新作リュックは来週から全国の店舗で販売します。	Ba lô mẫu mới sẽ được bán tại các cửa hàng trên toàn quốc từ tuần sau.
+3943	lever	exam	レバー	レバー	cần gạt	レバーを引いてドアを開けた。	Tôi đã kéo cần gạt để mở cửa.
+3944	lever	daily	レバー	レバー	cần gạt	このレバー、固いね。	Cần gạt này cứng thật nhỉ.
+3945	lever	business	レバー	レバー	cần gạt	操作レバーの位置を改良いたしました。	Chúng tôi đã cải tiến vị trí cần gạt vận hành.
+3946	lens	exam	レンズ	レンズ	ống kính	カメラのレンズを拭いた。	Tôi đã lau ống kính máy ảnh.
+3947	lens	daily	レンズ	レンズ	ống kính	このレンズ、曇ってるよ。	Ống kính này bị mờ rồi kìa.
+3948	lens	business	レンズ	レンズ	ống kính	高性能レンズを搭載した新製品です。	Đây là sản phẩm mới trang bị ống kính hiệu năng cao.
+3949	rope	exam	ロープ	ロープ	dây thừng	ロープで荷物を固定した。	Tôi đã cố định đồ bằng dây thừng.
+3950	rope	daily	ロープ	ロープ	dây thừng	ロープ、しっかり結んでね。	Nhớ buộc chặt dây thừng nhé.
+3951	rope	business	ロープ	ロープ	dây thừng	高所作業では、安全基準を満たした丈夫なロープを使用しています。	Khi làm việc trên cao, chúng tôi sử dụng dây thừng chắc chắn đáp ứng tiêu chuẩn an toàn.
+3952	robot	exam	ロボット	ロボット	robot	工場でロボットが働いている。	Robot đang làm việc ở nhà máy.
+3953	robot	daily	ロボット	ロボット	robot	このロボット、すごいね。	Robot này ghê thật nhỉ.
+3954	robot	business	ロボット	ロボット	robot	自動化ロボットの導入を検討しております。	Chúng tôi đang xem xét triển khai robot tự động hóa.
+3955	ink	exam	インク	インク	mực	プリンターのインクが切れた。	Mực máy in đã hết.
+3956	ink	daily	インク	インク	mực	インク、買ってきて。	Mua mực giúp tớ nhé.
+3957	ink	business	インク	インク	mực	純正インクのご使用をお勧めいたします。	Chúng tôi khuyến khích sử dụng mực chính hãng.
+3958	jougi	exam	定規	じょうぎ	thước	定規で線を引いた。	Tôi đã kẻ đường thẳng bằng thước.
+3959	jougi	daily	定規	じょうぎ	thước	この線、定規を使ってまっすぐ引いて。	Đường này dùng thước kẻ cho thẳng nhé.
+3960	jougi	business	定規	じょうぎ	thước	精密な定規を製造しております。	Chúng tôi sản xuất thước chính xác.

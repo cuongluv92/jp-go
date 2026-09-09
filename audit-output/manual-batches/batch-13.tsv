@@ -1,0 +1,181 @@
+row	vocabId	type	word	reading	meaningVi	exampleJp	exampleVi
+2161	koibito	exam	恋人	こいびと	người yêu	彼女は恋人と旅行に行った。	Cô ấy đã đi du lịch cùng người yêu.
+2162	koibito	daily	恋人	こいびと	người yêu	恋人できたの?	Cậu có người yêu rồi à?
+2163	koibito	business	恋人	こいびと	người yêu	結婚相談所では、恋人との関係について相談を受けることもあります。	Tại dịch vụ tư vấn hôn nhân, đôi khi chúng tôi cũng tiếp nhận tư vấn về mối quan hệ với người yêu.
+2164	coach	exam	コーチ	コーチ	huấn luyện viên	コーチの指導で上達した。	Nhờ sự chỉ dẫn của huấn luyện viên mà tôi đã tiến bộ.
+2165	coach	daily	コーチ	コーチ	huấn luyện viên	新しいコーチ、厳しいらしいよ。	Nghe nói huấn luyện viên mới nghiêm khắc lắm.
+2166	coach	business	コーチ	コーチ	huấn luyện viên	専属コーチによる指導を導入いたしました。	Chúng tôi đã áp dụng chỉ dẫn từ huấn luyện viên riêng.
+2167	kokuou	exam	国王	こくおう	quốc vương	この国は国王が治めている。	Đất nước này do quốc vương cai trị.
+2168	kokuou	daily	国王	こくおう	quốc vương	国王のニュース、見た?	Cậu xem tin tức về quốc vương chưa?
+2169	kokuou	business	国王	こくおう	quốc vương	両国王室の交流が続いています。	Sự giao lưu giữa hoàng gia hai nước vẫn tiếp tục.
+2170	kokuseki	exam	国籍	こくせき	quốc tịch	彼はアメリカの国籍を持っている。	Anh ấy mang quốc tịch Mỹ.
+2171	kokuseki	daily	国籍	こくせき	quốc tịch	国籍、どこなの?	Cậu quốc tịch nước nào vậy?
+2172	kokuseki	business	国籍	こくせき	quốc tịch	応募資格に国籍の制限はございません。	Điều kiện ứng tuyển không giới hạn quốc tịch.
+2173	kokumin	exam	国民	こくみん	người dân (quốc dân)	国民の意見を聞くべきだ。	Nên lắng nghe ý kiến của người dân.
+2174	kokumin	daily	国民	こくみん	người dân (quốc dân)	国民みんなが注目してるよね。	Toàn dân đều đang chú ý đến việc này nhỉ.
+2175	kokumin	business	国民	こくみん	người dân (quốc dân)	国民生活への影響を最小限に抑えます。	Chúng tôi sẽ giảm thiểu tối đa ảnh hưởng đến đời sống người dân.
+2176	kojin	exam	個人	こじん	cá nhân	これは個人の意見です。	Đây là ý kiến cá nhân.
+2177	kojin	daily	個人	こじん	cá nhân	個人的にはいいと思うよ。	Riêng cá nhân tớ thì thấy được đấy.
+2178	kojin	business	個人	こじん	cá nhân	個人情報の取り扱いには十分注意しております。	Chúng tôi rất cẩn thận trong việc xử lý thông tin cá nhân.
+2179	kosei	exam	個性	こせい	cá tính	彼女は個性が強い。	Cô ấy có cá tính mạnh.
+2180	kosei	daily	個性	こせい	cá tính	その服、個性的だね。	Bộ đồ đó cá tính thật nhỉ.
+2181	kosei	business	個性	こせい	cá tính	社員一人ひとりの個性を尊重しております。	Chúng tôi tôn trọng cá tính của từng nhân viên.
+2182	sainou	exam	才能	さいのう	tài năng	彼には音楽の才能がある。	Anh ấy có tài năng âm nhạc.
+2183	sainou	daily	才能	さいのう	tài năng	すごい才能だね!	Tài năng ghê thật đấy!
+2184	sainou	business	才能	さいのう	tài năng	若手の才能を発掘するプログラムを実施しております。	Chúng tôi thực hiện chương trình phát hiện tài năng trẻ.
+2185	sakusha	exam	作者	さくしゃ	tác giả	この作品の作者は誰ですか。	Tác giả của tác phẩm này là ai?
+2186	sakusha	daily	作者	さくしゃ	tác giả	作者、有名な人なの?	Tác giả là người nổi tiếng à?
+2187	sakusha	business	作者	さくしゃ	tác giả	作者の意向を尊重し企画を進めます。	Chúng tôi sẽ triển khai dự án tôn trọng ý muốn của tác giả.
+2188	sakka	exam	作家	さっか	nhà văn	彼女は有名な作家だ。	Cô ấy là nhà văn nổi tiếng.
+2189	sakka	daily	作家	さっか	nhà văn	将来、作家になりたいんだ。	Sau này tớ muốn trở thành nhà văn.
+2190	sakka	business	作家	さっか	nhà văn	著名な作家との対談企画を予定しております。	Chúng tôi dự định tổ chức buổi phỏng vấn với nhà văn nổi tiếng.
+2191	salaryman	exam	サラリーマン	サラリーマン	nhân viên văn phòng	彼はサラリーマンとして働いている。	Anh ấy làm việc với vai trò nhân viên văn phòng.
+2192	salaryman	daily	サラリーマン	サラリーマン	nhân viên văn phòng	サラリーマンって大変だよね。	Làm nhân viên văn phòng vất vả thật nhỉ.
+2193	salaryman	business	サラリーマン	サラリーマン	nhân viên văn phòng	一般的なサラリーマンの生活を調査いたしました。	Chúng tôi đã khảo sát cuộc sống của nhân viên văn phòng nói chung.
+2194	shikai	exam	司会	しかい	người dẫn chương trình	結婚式の司会を頼まれた。	Tôi được nhờ dẫn chương trình đám cưới.
+2195	shikai	daily	司会	しかい	người dẫn chương trình	今日の司会、誰がやるの?	Hôm nay ai dẫn chương trình vậy?
+2196	shikai	business	司会	しかい	người dẫn chương trình	本イベントの司会を務めさせていただきます。	Tôi xin phép đảm nhận vai trò dẫn chương trình cho sự kiện này.
+2197	shikaku	exam	資格	しかく	tư cách, chứng chỉ	看護師の資格を取った。	Tôi đã lấy được chứng chỉ y tá.
+2198	shikaku	daily	資格	しかく	tư cách, chứng chỉ	何か資格持ってるの?	Cậu có chứng chỉ gì không?
+2199	shikaku	business	資格	しかく	tư cách, chứng chỉ	応募には特定の資格が必要です。	Ứng tuyển cần có chứng chỉ nhất định.
+2200	shimei	exam	氏名	しめい	họ tên	用紙に氏名を記入した。	Tôi đã ghi họ tên vào mẫu đơn.
+2201	shimei	daily	氏名	しめい	họ tên	氏名、フルネームで書いてね。	Ghi họ tên đầy đủ nhé.
+2202	shimei	business	氏名	しめい	họ tên	申込書に氏名と連絡先をご記入ください。	Xin vui lòng điền họ tên và thông tin liên lạc vào đơn đăng ký.
+2203	shain	exam	社員	しゃいん	nhân viên (công ty)	彼は新入社員だ。	Anh ấy là nhân viên mới.
+2204	shain	daily	社員	しゃいん	nhân viên (công ty)	社員のみんな、集まって!	Toàn bộ nhân viên tập trung lại!
+2205	shain	business	社員	しゃいん	nhân viên (công ty)	全社員を対象に研修を実施いたします。	Chúng tôi sẽ tổ chức đào tạo cho toàn bộ nhân viên.
+2206	juumin	exam	住民	じゅうみん	cư dân	この地域の住民と交流した。	Tôi đã giao lưu với cư dân khu vực này.
+2207	juumin	daily	住民	じゅうみん	cư dân	近所の住民、みんな親切だよ。	Cư dân xung quanh đều tốt bụng cả.
+2208	juumin	business	住民	じゅうみん	cư dân	住民説明会を来週開催いたします。	Chúng tôi sẽ tổ chức buổi giải thích cho cư dân vào tuần sau.
+2209	shushou	exam	首相	しゅしょう	thủ tướng	新しい首相が選ばれた。	Thủ tướng mới đã được chọn.
+2210	shushou	daily	首相	しゅしょう	thủ tướng	首相のニュース、見た?	Cậu xem tin tức về thủ tướng chưa?
+2211	shushou	business	首相	しゅしょう	thủ tướng	首相の発言が経済界に影響を与えています。	Phát biểu của thủ tướng đang ảnh hưởng đến giới kinh tế.
+2212	shusshin	exam	出身	しゅっしん	xuất thân	彼女は大阪出身だ。	Cô ấy xuất thân từ Osaka.
+2213	shusshin	daily	出身	しゅっしん	xuất thân	出身どこなの?	Cậu xuất thân từ đâu vậy?
+2214	shusshin	business	出身	しゅっしん	xuất thân	出身地に関わらず採用しております。	Chúng tôi tuyển dụng không phân biệt xuất thân.
+2215	shufu	exam	主婦	しゅふ	nội trợ	彼女は専業主婦だ。	Cô ấy là nội trợ toàn thời gian.
+2216	shufu	daily	主婦	しゅふ	nội trợ	主婦って忙しいよね。	Làm nội trợ bận rộn thật nhỉ.
+2217	shufu	business	主婦	しゅふ	nội trợ	主婦向けのパートタイム募集を開始いたしました。	Chúng tôi đã bắt đầu tuyển dụng bán thời gian dành cho nội trợ.
+2218	shoujo	exam	少女	しょうじょ	thiếu nữ	少女が公園で遊んでいる。	Thiếu nữ đang chơi ở công viên.
+2219	shoujo	daily	少女	しょうじょ	thiếu nữ	あの少女、可愛いね。	Cô bé đó dễ thương nhỉ.
+2220	shoujo	business	少女	しょうじょ	thiếu nữ	本作品は少女時代の思い出を描いています。	Tác phẩm này mô tả kỷ niệm thời thiếu nữ.
+2221	shounen	exam	少年	しょうねん	thiếu niên	少年は夢を語った。	Thiếu niên đã kể về ước mơ của mình.
+2222	shounen	daily	少年	しょうねん	thiếu niên	あの少年、元気だね。	Cậu bé đó năng động nhỉ.
+2223	shounen	business	少年	しょうねん	thiếu niên	少年向けの教育プログラムを開発しております。	Chúng tôi đang phát triển chương trình giáo dục dành cho thiếu niên.
+2224	joou	exam	女王	じょおう	nữ hoàng	彼女は美の女王と呼ばれている。	Cô ấy được gọi là nữ hoàng sắc đẹp.
+2225	joou	daily	女王	じょおう	nữ hoàng	まるで女王様みたいだね。	Y như nữ hoàng vậy nhỉ.
+2226	joou	business	女王	じょおう	nữ hoàng	女王陛下の訪問に合わせ準備を進めております。	Chúng tôi đang chuẩn bị đón chuyến thăm của nữ hoàng.
+2227	shokugyou	exam	職業	しょくぎょう	nghề nghiệp	将来の職業について考えた。	Tôi đã suy nghĩ về nghề nghiệp tương lai.
+2228	shokugyou	daily	職業	しょくぎょう	nghề nghiệp	職業、何にするか決めた?	Cậu quyết định làm nghề gì chưa?
+2229	shokugyou	business	職業	しょくぎょう	nghề nghiệp	職業別の統計データを分析いたしました。	Chúng tôi đã phân tích dữ liệu thống kê theo nghề nghiệp.
+2230	joshi	exam	女子	じょし	nữ	女子チームが優勝した。	Đội nữ đã vô địch.
+2231	joshi	daily	女子	じょし	nữ	女子会、いつやる?	Buổi tụ họp con gái khi nào tổ chức?
+2232	joshi	business	女子	じょし	nữ	女子選手の育成に力を入れております。	Chúng tôi đang nỗ lực phát triển vận động viên nữ.
+2233	shinseki	exam	親戚	しんせき	họ hàng	お正月に親戚が集まった。	Vào dịp Tết họ hàng đã tụ họp.
+2234	shinseki	daily	親戚	しんせき	họ hàng	その人、親戚なの?	Người đó là họ hàng à?
+2235	shinseki	business	親戚	しんせき	họ hàng	人事部に、親戚が取引先に勤めていることを申告しました。	Tôi đã khai báo với phòng nhân sự rằng người thân của mình đang làm việc tại một đối tác kinh doanh.
+2236	shinyuu	exam	親友	しんゆう	bạn thân	彼は私の親友だ。	Anh ấy là bạn thân của tôi.
+2237	shinyuu	daily	親友	しんゆう	bạn thân	親友に相談してみたら?	Sao không thử hỏi ý kiến bạn thân?
+2238	shinyuu	business	親友	しんゆう	bạn thân	大学時代の親友と今も連絡を取っています。	Tôi vẫn còn liên lạc với người bạn thân thời đại học.
+2239	star	exam	スター	スター	ngôi sao (người nổi tiếng)	彼女は映画スターになった。	Cô ấy đã trở thành ngôi sao điện ảnh.
+2240	star	daily	スター	スター	ngôi sao (người nổi tiếng)	あの人、スターみたいだね。	Người đó giống ngôi sao ghê.
+2241	star	business	スター	スター	ngôi sao (người nổi tiếng)	人気スターを起用した広告を制作いたしました。	Chúng tôi đã sản xuất quảng cáo sử dụng ngôi sao nổi tiếng.
+2242	sei	exam	姓	せい	họ (surname)	結婚して姓が変わった。	Sau khi kết hôn, họ của tôi đã thay đổi.
+2243	sei	daily	姓	せい	họ (surname)	姓、なんて読むの?	Đọc họ này như thế nào vậy?
+2244	sei	business	姓	せい	họ (surname)	書類には姓と名を分けてご記入ください。	Xin vui lòng ghi họ và tên riêng biệt vào giấy tờ.
+2245	seikaku	exam	性格	せいかく	tính cách	彼女は明るい性格だ。	Cô ấy có tính cách vui vẻ.
+2246	seikaku	daily	性格	せいかく	tính cách	性格、似てるよね。	Tính cách giống nhau nhỉ.
+2247	seikaku	business	性格	せいかく	tính cách	性格診断テストを社員研修に導入いたしました。	Chúng tôi đã đưa bài kiểm tra tính cách vào đào tạo nhân viên.
+2248	seijin	exam	成人	せいじん	người trưởng thành	彼は成人になった。	Anh ấy đã trở thành người trưởng thành.
+2249	seijin	daily	成人	せいじん	người trưởng thành	もう成人したんだね。	Cậu trưởng thành rồi nhỉ.
+2250	seijin	business	成人	せいじん	người trưởng thành	成人向けの商品ラインを拡充いたします。	Chúng tôi sẽ mở rộng dòng sản phẩm dành cho người trưởng thành.
+2251	seinen	exam	青年	せいねん	thanh niên	青年たちが集まって話し合った。	Các thanh niên đã tụ họp và thảo luận.
+2252	seinen	daily	青年	せいねん	thanh niên	あの青年、礼儀正しいね。	Chàng thanh niên đó lễ phép nhỉ.
+2253	seinen	business	青年	せいねん	thanh niên	青年層をターゲットにしたマーケティングを展開いたします。	Chúng tôi sẽ triển khai marketing nhắm đến tầng lớp thanh niên.
+2254	seinengappi	exam	生年月日	せいねんがっぴ	ngày sinh	申込書に生年月日を書いた。	Tôi đã viết ngày sinh vào đơn đăng ký.
+2255	seinengappi	daily	生年月日	せいねんがっぴ	ngày sinh	生年月日、教えてくれる?	Cho tớ biết ngày sinh được không?
+2256	seinengappi	business	生年月日	せいねんがっぴ	ngày sinh	本人確認のため生年月日をご入力ください。	Xin vui lòng nhập ngày sinh để xác nhận danh tính.
+2257	seibetsu	exam	性別	せいべつ	giới tính	申込書に性別を記入する欄がある。	Có mục ghi giới tính trong đơn đăng ký.
+2258	seibetsu	daily	性別	せいべつ	giới tính	性別、聞いてもいい?	Hỏi giới tính được không?
+2259	seibetsu	business	性別	せいべつ	giới tính	本アンケートは性別を問わずご回答いただけます。	Khảo sát này có thể trả lời không phân biệt giới tính.
+2260	zen_in	exam	全員	ぜんいん	tất cả (mọi người)	クラス全員が集まった。	Toàn bộ lớp đã tụ họp.
+2261	zen_in	daily	全員	ぜんいん	tất cả (mọi người)	全員、準備できた?	Mọi người chuẩn bị xong chưa?
+2262	zen_in	business	全員	ぜんいん	tất cả (mọi người)	会議には全員のご出席をお願いいたします。	Xin vui lòng tất cả mọi người tham dự cuộc họp.
+2263	senshu	exam	選手	せんしゅ	vận động viên	彼は有名な選手だ。	Anh ấy là vận động viên nổi tiếng.
+2264	senshu	daily	選手	せんしゅ	vận động viên	あの選手、すごいよね。	Vận động viên đó giỏi thật nhỉ.
+2265	senshu	business	選手	せんしゅ	vận động viên	代表選手の育成に注力しております。	Chúng tôi tập trung vào việc đào tạo vận động viên đại diện.
+2266	souridaijin	exam	総理大臣	そうりだいじん	thủ tướng	総理大臣が演説をした。	Thủ tướng đã có bài phát biểu.
+2267	souridaijin	daily	総理大臣	そうりだいじん	thủ tướng	総理大臣、変わったんだって。	Nghe nói thủ tướng đã thay đổi.
+2268	souridaijin	business	総理大臣	そうりだいじん	thủ tướng	総理大臣官邸のホームページで発表されました。	Thông tin đã được công bố trên trang web văn phòng thủ tướng.
+2269	daijin	exam	大臣	だいじん	bộ trưởng	大臣が記者会見を開いた。	Bộ trưởng đã tổ chức họp báo.
+2270	daijin	daily	大臣	だいじん	bộ trưởng	新しい大臣、誰になったの?	Bộ trưởng mới là ai vậy?
+2271	daijin	business	大臣	だいじん	bộ trưởng	経済産業大臣が本件についてコメントいたしました。	Bộ trưởng kinh tế đã bình luận về việc này.
+2272	daitouryou	exam	大統領	だいとうりょう	tổng thống	大統領が来日した。	Tổng thống đã sang Nhật.
+2273	daitouryou	daily	大統領	だいとうりょう	tổng thống	大統領選挙、盛り上がってるね。	Bầu cử tổng thống sôi nổi thật nhỉ.
+2274	daitouryou	business	大統領	だいとうりょう	tổng thống	両国大統領の会談が実現いたしました。	Cuộc gặp gỡ giữa tổng thống hai nước đã thành hiện thực.
+2275	tanin	exam	他人	たにん	người khác	他人の意見も聞くべきだ。	Nên lắng nghe cả ý kiến người khác.
+2276	tanin	daily	他人	たにん	người khác	他人のことは気にしないで。	Đừng bận tâm chuyện của người khác.
+2277	tanin	business	他人	たにん	người khác	他人の個人情報を無断で使用しないでください。	Xin vui lòng không sử dụng thông tin cá nhân của người khác khi chưa được phép.
+2278	talent	exam	タレント	タレント	người nổi tiếng (trên TV)	彼女はテレビのタレントだ。	Cô ấy là người nổi tiếng trên truyền hình.
+2279	talent	daily	タレント	タレント	người nổi tiếng (trên TV)	あのタレント、好きなんだ。	Tớ thích người nổi tiếng đó đấy.
+2280	talent	business	タレント	タレント	người nổi tiếng (trên TV)	人気タレントを起用したCMを放映いたします。	Chúng tôi sẽ phát sóng quảng cáo sử dụng người nổi tiếng.
+2281	danshi	exam	男子	だんし	nam	男子チームが試合に勝った。	Đội nam đã thắng trận đấu.
+2282	danshi	daily	男子	だんし	nam	男子って単純だよね。	Con trai đơn giản thật nhỉ.
+2283	danshi	business	男子	だんし	nam	男子学生を対象にした調査を実施いたしました。	Chúng tôi đã thực hiện khảo sát dành cho học sinh nam.
+2284	tansho	exam	短所	たんしょ	khuyết điểm	自分の短所を直したい。	Tôi muốn sửa khuyết điểm của mình.
+2285	tansho	daily	短所	たんしょ	khuyết điểm	短所、教えてよ。	Nói cho tớ biết khuyết điểm của tớ đi.
+2286	tansho	business	短所	たんしょ	khuyết điểm	自己分析では長所と短所を明確にしましょう。	Trong phân tích bản thân, hãy làm rõ điểm mạnh và điểm yếu.
+2287	dantai	exam	団体	だんたい	tập thể	団体で旅行に行った。	Chúng tôi đã đi du lịch theo đoàn.
+2288	dantai	daily	団体	だんたい	tập thể	団体で予約した方が安いよ。	Đặt theo đoàn sẽ rẻ hơn đấy.
+2289	dantai	business	団体	だんたい	tập thể	団体割引を適用させていただきます。	Chúng tôi sẽ áp dụng giảm giá theo đoàn.
+2290	team	exam	チーム	チーム	đội	新しいチームに入った。	Tôi đã gia nhập đội mới.
+2291	team	daily	チーム	チーム	đội	うちのチーム、強いよね。	Đội của tụi mình mạnh thật nhỉ.
+2292	team	business	チーム	チーム	đội	プロジェクトチームを新たに編成いたしました。	Chúng tôi đã thành lập mới nhóm dự án.
+2293	chuunen	exam	中年	ちゅうねん	trung niên	中年になって体力が落ちた。	Đến tuổi trung niên thì thể lực giảm sút.
+2294	chuunen	daily	中年	ちゅうねん	trung niên	もう中年だからね。	Vì đã trung niên rồi mà.
+2295	chuunen	business	中年	ちゅうねん	trung niên	中年層向けの健康食品を開発しております。	Chúng tôi đang phát triển thực phẩm chức năng dành cho tầng lớp trung niên.
+2296	chousho	exam	長所	ちょうしょ	sở trường	彼の長所は優しさだ。	Điểm mạnh của anh ấy là sự tốt bụng.
+2297	chousho	daily	長所	ちょうしょ	sở trường	長所、たくさんあるよ。	Cậu có nhiều điểm mạnh lắm đó.
+2298	chousho	business	長所	ちょうしょ	sở trường	面接では長所を具体的に伝えましょう。	Trong buổi phỏng vấn, hãy trình bày cụ thể điểm mạnh.
+2299	tensai	exam	天才	てんさい	thiên tài	彼は音楽の天才だ。	Anh ấy là thiên tài âm nhạc.
+2300	tensai	daily	天才	てんさい	thiên tài	天才かと思った!	Tớ tưởng cậu là thiên tài đấy!
+2301	tensai	business	天才	てんさい	thiên tài	天才的な発想で問題を解決いたしました。	Chúng tôi đã giải quyết vấn đề bằng ý tưởng thiên tài.
+2302	tennou	exam	天皇	てんのう	thiên hoàng	天皇陛下が式典に出席された。	Thiên hoàng đã tham dự buổi lễ.
+2303	tennou	daily	天皇	てんのう	thiên hoàng	天皇に関するニュースが朝から報道されている。	Tin tức liên quan đến Thiên hoàng được đưa tin từ sáng.
+2304	tennou	business	天皇	てんのう	thiên hoàng	会社の年間カレンダーでは、天皇誕生日を祝日として休業日に設定しています。	Trong lịch năm của công ty, ngày sinh Nhật hoàng được đặt là ngày nghỉ lễ.
+2305	touban	exam	当番	とうばん	trực, phiên	今日は掃除の当番だ。	Hôm nay là phiên trực dọn dẹp.
+2306	touban	daily	当番	とうばん	trực, phiên	当番、代わってくれる?	Cậu đổi ca trực giúp tớ được không?
+2307	touban	business	当番	とうばん	trực, phiên	週末の当番表を作成いたしました。	Chúng tôi đã lập bảng phân công trực cuối tuần.
+2308	tokugi	exam	特技	とくぎ	kỹ năng đặc biệt	彼の特技は料理だ。	Kỹ năng đặc biệt của anh ấy là nấu ăn.
+2309	tokugi	daily	特技	とくぎ	kỹ năng đặc biệt	何か特技ある?	Cậu có kỹ năng đặc biệt gì không?
+2310	tokugi	business	特技	とくぎ	kỹ năng đặc biệt	履歴書には特技も記載してください。	Xin vui lòng ghi cả kỹ năng đặc biệt vào sơ yếu lý lịch.
+2311	dokushin	exam	独身	どくしん	độc thân	彼はまだ独身だ。	Anh ấy vẫn còn độc thân.
+2312	dokushin	daily	独身	どくしん	độc thân	独身生活、楽しんでる?	Cuộc sống độc thân có vui không?
+2313	dokushin	business	独身	どくしん	độc thân	独身寮を完備しております。	Chúng tôi có đầy đủ ký túc xá cho nhân viên độc thân.
+2314	toshiue	exam	年上	としうえ	lớn tuổi hơn	彼は私より年上だ。	Anh ấy lớn tuổi hơn tôi.
+2315	toshiue	daily	年上	としうえ	lớn tuổi hơn	年上なのに若く見えるね。	Lớn tuổi hơn mà trông trẻ nhỉ.
+2316	toshiue	business	年上	としうえ	lớn tuổi hơn	年上の部下への対応に悩む管理職も多いです。	Nhiều quản lý cũng gặp khó khăn khi đối xử với cấp dưới lớn tuổi hơn.
+2317	toshishita	exam	年下	としした	ít tuổi hơn	彼女は私より年下だ。	Cô ấy ít tuổi hơn tôi.
+2318	toshishita	daily	年下	としした	ít tuổi hơn	年下だけど、しっかりしてるね。	Tuy ít tuổi hơn nhưng chững chạc nhỉ.
+2319	toshishita	business	年下	としした	ít tuổi hơn	年下の社員にも敬意を持って接しております。	Chúng tôi cũng đối xử tôn trọng với nhân viên ít tuổi hơn.
+2320	toshiyori	exam	年寄り	としより	người cao tuổi	電車で年寄りに席を譲った。	Tôi đã nhường ghế cho người cao tuổi trên tàu điện.
+2321	toshiyori	daily	年寄り	としより	người cao tuổi	あの年寄り、元気だね。	Cụ già đó khỏe mạnh nhỉ.
+2322	toshiyori	business	年寄り	としより	người cao tuổi	年寄りにも使いやすい製品を開発しております。	Chúng tôi đang phát triển sản phẩm dễ sử dụng cho cả người cao tuổi.
+2323	driver	exam	ドライバー	ドライバー	người lái xe	タクシーのドライバーに道を聞いた。	Tôi đã hỏi đường người lái xe taxi.
+2324	driver	daily	ドライバー	ドライバー	người lái xe	このバスのドライバー、運転上手だね。	Tài xế xe buýt này lái xe giỏi nhỉ.
+2325	driver	business	ドライバー	ドライバー	người lái xe	配送ドライバーを募集しております。	Chúng tôi đang tuyển tài xế giao hàng.
+2326	nakama	exam	仲間	なかま	bạn, đồng bọn	仲間と一緒に頑張った。	Tôi đã cố gắng cùng với bạn bè.
+2327	nakama	daily	仲間	なかま	bạn, đồng bọn	仲間に入れてよ。	Cho tớ vào nhóm với.
+2328	nakama	business	仲間	なかま	bạn, đồng bọn	同期の仲間とは今も交流があります。	Tôi vẫn còn giao lưu với các đồng nghiệp vào cùng đợt.
+2329	nakayoshi	exam	仲良し	なかよし	thân thiết	二人は仲良しだ。	Hai người rất thân thiết.
+2330	nakayoshi	daily	仲良し	なかよし	thân thiết	昔から仲良しなんだよね。	Thân thiết từ lâu rồi mà.
+2331	nakayoshi	business	仲良し	なかよし	thân thiết	部署間の仲良しな関係が業務効率を高めます。	Mối quan hệ thân thiết giữa các phòng ban giúp nâng cao hiệu quả công việc.
+2332	ningen	exam	人間	にんげん	con người	人間は誰でも失敗する。	Con người ai cũng có lúc mắc sai lầm.
+2333	ningen	daily	人間	にんげん	con người	人間っておもしろいよね。	Con người thú vị thật nhỉ.
+2334	ningen	business	人間	にんげん	con người	人間関係の構築を重視しております。	Chúng tôi coi trọng việc xây dựng quan hệ giữa con người với nhau.
+2335	nenrei	exam	年齢	ねんれい	tuổi	年齢を聞くのは失礼かもしれない。	Hỏi tuổi có thể là bất lịch sự.
+2336	nenrei	daily	年齢	ねんれい	tuổi	年齢、教えてくれる?	Cho tớ biết tuổi được không?
+2337	nenrei	business	年齢	ねんれい	tuổi	本商品は年齢を問わずご利用いただけます。	Sản phẩm này có thể sử dụng không phân biệt độ tuổi.
+2338	nouryoku	exam	能力	のうりょく	năng lực	彼には高い能力がある。	Anh ấy có năng lực cao.
+2339	nouryoku	daily	能力	のうりょく	năng lực	能力、発揮できたね。	Cậu đã phát huy được năng lực rồi nhỉ.
+2340	nouryoku	business	能力	のうりょく	năng lực	社員の能力を最大限に引き出す環境を整えます。	Chúng tôi sẽ tạo môi trường phát huy tối đa năng lực nhân viên.

@@ -1,0 +1,181 @@
+row	vocabId	type	word	reading	meaningVi	exampleJp	exampleVi
+4861	gutaiteki	exam	具体的	ぐたいてき	cụ thể	説明が具体的だ。	Phần giải thích cụ thể.
+4862	gutaiteki	daily	具体的	ぐたいてき	cụ thể	具体的な例を挙げた。	Đã đưa ra ví dụ cụ thể.
+4863	gutaiteki	business	具体的	ぐたいてき	cụ thể	計画を具体的に説明します。	Tôi sẽ giải thích kế hoạch một cách cụ thể.
+4864	keizaiteki	exam	経済的	けいざいてき	kinh tế, tiết kiệm	この方法は経済的だ。	Phương pháp này tiết kiệm.
+4865	keizaiteki	daily	経済的	けいざいてき	kinh tế, tiết kiệm	経済的な理由で断念した。	Đã từ bỏ vì lý do kinh tế.
+4866	keizaiteki	business	経済的	けいざいてき	kinh tế, tiết kiệm	経済的に自立することを目指す。	Hướng tới việc tự lập về kinh tế.
+4867	koufuku	exam	幸福	こうふく	hạnh phúc	家族は幸福だ。	Gia đình hạnh phúc.
+4868	koufuku	daily	幸福	こうふく	hạnh phúc	幸福な人生を送りたい。	Muốn sống một cuộc đời hạnh phúc.
+4869	koufuku	business	幸福	こうふく	hạnh phúc	社員の幸福度を重視する。	Coi trọng mức độ hạnh phúc của nhân viên.
+4870	kokusaiteki	exam	国際的	こくさいてき	quốc tế	この賞は国際的だ。	Giải thưởng này mang tính quốc tế.
+4871	kokusaiteki	daily	国際的	こくさいてき	quốc tế	国際的な視野を持ちたい。	Muốn có tầm nhìn quốc tế.
+4872	kokusaiteki	business	国際的	こくさいてき	quốc tế	事業を国際的に展開する。	Triển khai kinh doanh trên quy mô quốc tế.
+4873	sakan	exam	盛ん	さかん	phát triển, thịnh hành, sôi nổi	この町では観光業が盛んだ。	Ở thành phố này ngành du lịch rất phát triển.
+4874	sakan	daily	盛ん	さかん	phát triển, thịnh hành, sôi nổi	盛んな議論が交わされた。	Đã diễn ra cuộc tranh luận sôi nổi.
+4875	sakan	business	盛ん	さかん	phát triển, thịnh hành, sôi nổi	貿易が盛んに行われている。	Việc buôn bán diễn ra sôi động.
+4876	samazama	exam	さまざま	さまざま	đa dạng	意見はさまざまだ。	Ý kiến rất đa dạng.
+4877	samazama	daily	さまざま	さまざま	đa dạng	さまざまな問題が起きた。	Đã xảy ra nhiều vấn đề đa dạng.
+4878	samazama	business	さまざま	さまざま	đa dạng	展示会でさまざまな商品を紹介しています。	Chúng tôi giới thiệu nhiều loại sản phẩm khác nhau tại triển lãm.
+4879	shiawase	exam	幸せ	しあわせ	hạnh phúc	今とても幸せだ。	Bây giờ tôi rất hạnh phúc.
+4880	shiawase	daily	幸せ	しあわせ	hạnh phúc	幸せな家庭を築きたい。	Muốn xây dựng một gia đình hạnh phúc.
+4881	shiawase	business	幸せ	しあわせ	hạnh phúc	このサービスでお客様に幸せを感じていただきたいです。	Chúng tôi mong khách hàng cảm nhận được niềm hạnh phúc qua dịch vụ này.
+4882	jimi	exam	地味	じみ	giản dị, kín đáo	彼女の服装は地味だ。	Trang phục của cô ấy giản dị.
+4883	jimi	daily	地味	じみ	giản dị, kín đáo	地味な色を選んだ。	Đã chọn màu sắc kín đáo.
+4884	jimi	business	地味	じみ	giản dị, kín đáo	この作業は地味ですが、品質を守るために重要です。	Công việc này khá âm thầm nhưng rất quan trọng để bảo đảm chất lượng.
+4885	juudai	exam	重大	じゅうだい	trọng đại, nghiêm trọng	これは重大な問題だ。	Đây là vấn đề nghiêm trọng.
+4886	juudai	daily	重大	じゅうだい	trọng đại, nghiêm trọng	事態は重大だ。	Tình hình rất nghiêm trọng.
+4887	juudai	business	重大	じゅうだい	trọng đại, nghiêm trọng	重大に受け止めるべきだ。	Nên tiếp nhận một cách nghiêm túc.
+4888	juuyou	exam	重要	じゅうよう	quan trọng	この会議は重要だ。	Cuộc họp này quan trọng.
+4889	juuyou	daily	重要	じゅうよう	quan trọng	重要な決定をした。	Đã đưa ra quyết định quan trọng.
+4890	juuyou	business	重要	じゅうよう	quan trọng	品質管理は非常に重要です。	Quản lý chất lượng là việc cực kỳ quan trọng.
+4891	shoukyokuteki	exam	消極的	しょうきょくてき	tiêu cực, thụ động	彼の返事は消極的だった。	Câu trả lời của anh ấy khá tiêu cực.
+4892	shoukyokuteki	daily	消極的	しょうきょくてき	tiêu cực, thụ động	消極的な態度はよくない。	Thái độ tiêu cực thì không tốt.
+4893	shoukyokuteki	business	消極的	しょうきょくてき	tiêu cực, thụ động	会議で消極的な態度を取ってしまいました。	Trong cuộc họp tôi đã thể hiện thái độ khá thụ động.
+4894	shinsen	exam	新鮮	しんせん	tươi, mới mẻ	この魚は新鮮だ。	Con cá này tươi.
+4895	shinsen	daily	新鮮	しんせん	tươi, mới mẻ	新鮮な野菜を買った。	Đã mua rau tươi.
+4896	shinsen	business	新鮮	しんせん	tươi, mới mẻ	新鮮な視点を企画に取り入れたいです。	Tôi muốn đưa một góc nhìn mới mẻ vào kế hoạch.
+4897	suteki	exam	素敵	すてき	đẹp, tuyệt vời	そのドレスは素敵だ。	Chiếc váy đó thật đẹp.
+4898	suteki	daily	素敵	すてき	đẹp, tuyệt vời	素敵な景色を見た。	Đã nhìn thấy phong cảnh tuyệt đẹp.
+4899	suteki	business	素敵	すてき	đẹp, tuyệt vời	受付の方が素敵な笑顔で迎えてくれました。	Nhân viên lễ tân đã đón chúng tôi bằng một nụ cười rất duyên.
+4900	supesharu	exam	スペシャル	スペシャル	đặc biệt	今日はスペシャルな日だ。	Hôm nay là ngày đặc biệt.
+4901	supesharu	daily	スペシャル	スペシャル	đặc biệt	スペシャルメニューを注文した。	Đã gọi món trong thực đơn đặc biệt.
+4902	supesharu	business	スペシャル	スペシャル	đặc biệt	今回はスペシャルな特典をご用意しました。	Lần này chúng tôi đã chuẩn bị một ưu đãi đặc biệt.
+4903	seikaku2	exam	正確	せいかく	chính xác	この時計は正確だ。	Đồng hồ này chính xác.
+4904	seikaku2	daily	正確	せいかく	chính xác	正確なデータを提出してください。	Vui lòng nộp dữ liệu chính xác.
+4905	seikaku2	business	正確	せいかく	chính xác	数字を正確に記録する。	Ghi lại con số một cách chính xác.
+4906	zeitaku	exam	ぜいたく	ぜいたく	xa xỉ	この旅行はぜいたくだ。	Chuyến du lịch này khá xa xỉ.
+4907	zeitaku	daily	ぜいたく	ぜいたく	xa xỉ	ぜいたくな暮らしをしている。	Đang sống cuộc sống xa hoa.
+4908	zeitaku	business	ぜいたく	ぜいたく	xa xỉ	ホテルでは少しぜいたくなプランも用意しています。	Khách sạn cũng có chuẩn bị những gói dịch vụ hơi sang trọng một chút.
+4909	sekkyokuteki	exam	積極的	せっきょくてき	tích cực, chủ động	彼は積極的だ。	Anh ấy rất tích cực.
+4910	sekkyokuteki	daily	積極的	せっきょくてき	tích cực, chủ động	積極的な姿勢を評価された。	Thái độ tích cực đã được đánh giá cao.
+4911	sekkyokuteki	business	積極的	せっきょくてき	tích cực, chủ động	会議に積極的に参加してください。	Vui lòng tham gia tích cực vào cuộc họp.
+4912	sokkuri	exam	そっくり	そっくり	giống hệt	二人はそっくりだ。	Hai người giống hệt nhau.
+4913	sokkuri	daily	そっくり	そっくり	giống hệt	母にそっくりな顔をしている。	Có khuôn mặt giống hệt mẹ.
+4914	sokkuri	business	そっくり	そっくり	giống hệt	新しいロゴが競合他社のデザインにそっくりです。	Logo mới trông giống hệt thiết kế của công ty đối thủ.
+4915	sofuto	exam	ソフト	ソフト	mềm, nhẹ nhàng	この枕はソフトだ。	Cái gối này mềm.
+4916	sofuto	daily	ソフト	ソフト	mềm, nhẹ nhàng	ソフトな口調で話した。	Đã nói bằng giọng điệu nhẹ nhàng.
+4917	sofuto	business	ソフト	ソフト	mềm, nhẹ nhàng	お客様にはソフトに対応する。	Xử lý nhẹ nhàng với khách hàng.
+4918	taikutsu	exam	退屈	たいくつ	chán, buồn tẻ	授業が退屈だ。	Tiết học thật chán.
+4919	taikutsu	daily	退屈	たいくつ	chán, buồn tẻ	退屈な毎日を過ごしている。	Đang trải qua những ngày nhàm chán.
+4920	taikutsu	business	退屈	たいくつ	chán, buồn tẻ	会議が退屈に感じられた。	Cuộc họp cảm thấy nhàm chán.
+4921	tashika	exam	確か	たしか	chắc chắn, hình như	彼の記憶は確かだ。	Trí nhớ của anh ấy chính xác.
+4922	tashika	daily	確か	たしか	chắc chắn, hình như	確かな証拠を見つけた。	Đã tìm thấy bằng chứng chắc chắn.
+4923	tashika	business	確か	たしか	chắc chắn, hình như	確かに、その意見は正しい。	Đúng vậy, ý kiến đó là đúng.
+4924	tanjun	exam	単純	たんじゅん	đơn giản	問題は単純だ。	Vấn đề đơn giản.
+4925	tanjun	daily	単純	たんじゅん	đơn giản	単純なミスをしてしまった。	Đã mắc một lỗi đơn giản.
+4926	tanjun	business	単純	たんじゅん	đơn giản	手続きをできるだけ単純な流れに整理しました。	Chúng tôi đã sắp xếp quy trình thành luồng đơn giản nhất có thể.
+4927	tekitou	exam	適当	てきとう	thích hợp; qua loa	適当な人を選んだ。	Đã chọn người thích hợp.
+4928	tekitou	daily	適当	てきとう	thích hợp; qua loa	彼の返事は適当だった。	Câu trả lời của anh ấy khá qua loa.
+4929	tekitou	business	適当	てきとう	thích hợp; qua loa	仕事を適当に済ませてはいけない。	Không được làm việc một cách qua loa.
+4930	tokui	exam	得意	とくい	giỏi, sở trường	数学が得意だ。	Giỏi môn toán.
+4931	tokui	daily	得意	とくい	giỏi, sở trường	得意な料理を作った。	Đã làm món ăn sở trường.
+4932	tokui	business	得意	とくい	giỏi, sở trường	彼は営業が得意でよく成果を出す。	Anh ấy giỏi kinh doanh và thường đạt thành tích tốt.
+4933	nigate	exam	苦手	にがて	kém, không giỏi, ngại	英語が苦手だ。	Kém tiếng Anh.
+4934	nigate	daily	苦手	にがて	kém, không giỏi, ngại	苦手な分野を克服した。	Đã khắc phục lĩnh vực yếu kém.
+4935	nigate	business	苦手	にがて	kém, không giỏi, ngại	人前で話すのが苦手で緊張する。	Ngại nói trước đám đông nên hay căng thẳng.
+4936	hade	exam	派手	はで	sặc sỡ, phô trương	彼女の服は派手だ。	Quần áo của cô ấy sặc sỡ.
+4937	hade	daily	派手	はで	sặc sỡ, phô trương	派手な色は好きではない。	Không thích màu sắc sặc sỡ.
+4938	hade	business	派手	はで	sặc sỡ, phô trương	派手に宣伝するつもりはない。	Không có ý định quảng cáo rầm rộ.
+4939	binbou	exam	貧乏	びんぼう	nghèo	昔は貧乏だった。	Ngày xưa từng nghèo.
+4940	binbou	daily	貧乏	びんぼう	nghèo	貧乏な生活を経験した。	Đã trải qua cuộc sống nghèo khó.
+4941	binbou	business	貧乏	びんぼう	nghèo	創業当時は社長も貧乏で、自宅の一室を事務所にしていました。	Khi mới khởi nghiệp, giám đốc cũng nghèo và dùng một phòng trong nhà làm văn phòng.
+4942	fuan	exam	不安	ふあん	lo lắng, bất an	将来が不安だ。	Lo lắng về tương lai.
+4943	fuan	daily	不安	ふあん	lo lắng, bất an	不安な気持ちを抱えている。	Đang ôm mối lo trong lòng.
+4944	fuan	business	不安	ふあん	lo lắng, bất an	新しいシステムの導入が少し不安です。	Tôi hơi lo về việc đưa hệ thống mới vào sử dụng.
+4945	fukisoku	exam	不規則	ふきそく	không đều, thất thường	生活が不規則だ。	Cuộc sống không có quy củ.
+4946	fukisoku	daily	不規則	ふきそく	không đều, thất thường	不規則な生活を改めたい。	Muốn thay đổi cuộc sống thất thường.
+4947	fukisoku	business	不規則	ふきそく	không đều, thất thường	シフトが不規則に変わる。	Ca làm việc thay đổi thất thường.
+4948	fukuzatsu	exam	複雑	ふくざつ	phức tạp	手続きが複雑だ。	Thủ tục phức tạp.
+4949	fukuzatsu	daily	複雑	ふくざつ	phức tạp	複雑な問題を解決した。	Đã giải quyết vấn đề phức tạp.
+4950	fukuzatsu	business	複雑	ふくざつ	phức tạp	状況が複雑に絡み合っている。	Tình hình đang rối rắm phức tạp.
+4951	fukou	exam	不幸	ふこう	bất hạnh	それは不幸な出来事だった。	Đó là một sự việc bất hạnh.
+4952	fukou	daily	不幸	ふこう	bất hạnh	彼女の人生は不幸だった。	Cuộc đời cô ấy đã bất hạnh.
+4953	fukou	business	不幸	ふこう	bất hạnh	不幸にも事故に巻き込まれた。	Không may bị cuốn vào vụ tai nạn.
+4954	buji	exam	無事	ぶじ	bình an, an toàn	全員無事だった。	Tất cả mọi người đều bình an.
+4955	buji	daily	無事	ぶじ	bình an, an toàn	無事な帰国を祈る。	Cầu mong việc trở về nước bình an.
+4956	buji	business	無事	ぶじ	bình an, an toàn	プロジェクトは無事に完了した。	Dự án đã hoàn thành suôn sẻ.
+4957	fushigi	exam	不思議	ふしぎ	kỳ lạ, khó hiểu	不思議な現象が起きた。	Đã xảy ra hiện tượng kỳ lạ.
+4958	fushigi	daily	不思議	ふしぎ	kỳ lạ, khó hiểu	その話は不思議だった。	Câu chuyện đó thật kỳ lạ.
+4959	fushigi	business	不思議	ふしぎ	kỳ lạ, khó hiểu	この不具合が再現しないのは不思議です。	Thật khó hiểu khi lỗi này không tái hiện lại.
+4960	fuman	exam	不満	ふまん	bất mãn, không hài lòng	給料に不満だ。	Bất mãn về lương.
+4961	fuman	daily	不満	ふまん	bất mãn, không hài lòng	不満な様子を見せた。	Đã thể hiện vẻ bất mãn.
+4962	fuman	business	不満	ふまん	bất mãn, không hài lòng	顧客が不満に思っている。	Khách hàng đang cảm thấy bất mãn.
+4963	heiwa	exam	平和	へいわ	hòa bình	世界は平和だ。	Thế giới hòa bình.
+4964	heiwa	daily	平和	へいわ	hòa bình	平和な時代を望む。	Mong muốn một thời đại hòa bình.
+4965	heiwa	business	平和	へいわ	hòa bình	今日はトラブルもなく、職場は平和です。	Hôm nay không có sự cố gì, chỗ làm khá yên ổn.
+4966	makka	exam	真っ赤	まっか	đỏ rực	夕焼けが真っ赤だ。	Ráng chiều đỏ rực.
+4967	makka	daily	真っ赤	まっか	đỏ rực	真っ赤なりんごを買った。	Đã mua quả táo đỏ rực.
+4968	makka	business	真っ赤	まっか	đỏ rực	課長はミスの報告を聞いて、顔を真っ赤にして怒りました。	Trưởng bộ phận nghe báo cáo sai sót thì đỏ bừng mặt vì giận.
+4969	makkura	exam	真っ暗	まっくら	tối om	部屋の中は真っ暗だった。	Bên trong phòng tối om.
+4970	makkura	daily	真っ暗	まっくら	tối om	真っ暗な道を歩いた。	Đã đi bộ trên con đường tối om.
+4971	makkura	business	真っ暗	まっくら	tối om	停電で辺りが真っ暗になった。	Mất điện nên xung quanh trở nên tối om.
+4972	massao	exam	真っ青	まっさお	xanh ngắt; tái mét	空が真っ青だ。	Bầu trời xanh ngắt.
+4973	massao	daily	真っ青	まっさお	xanh ngắt; tái mét	真っ青な海を眺めた。	Đã ngắm nhìn biển xanh ngắt.
+4974	massao	business	真っ青	まっさお	xanh ngắt; tái mét	売上の急減を見て、担当者は真っ青になりました。	Thấy doanh số sụt mạnh, người phụ trách tái mét mặt.
+4975	manzoku	exam	満足	まんぞく	hài lòng, thỏa mãn	結果に満足だ。	Hài lòng với kết quả.
+4976	manzoku	daily	満足	まんぞく	hài lòng, thỏa mãn	今日の結果には満足してる。	Tôi hài lòng với kết quả hôm nay.
+4977	manzoku	business	満足	まんぞく	hài lòng, thỏa mãn	お客様に満足していただけるサービスを目指します。	Chúng tôi hướng tới dịch vụ có thể làm khách hàng hài lòng.
+4978	muda	exam	無駄	むだ	lãng phí, vô ích	それは無駄だ。	Điều đó là lãng phí.
+4979	muda	daily	無駄	むだ	lãng phí, vô ích	無駄な時間を過ごした。	Đã trải qua thời gian lãng phí.
+4980	muda	business	無駄	むだ	lãng phí, vô ích	コストを無駄に使わないよう注意する。	Chú ý không sử dụng chi phí một cách lãng phí.
+4981	meiwaku	exam	迷惑	めいわく	làm phiền, phiền toái	隣の騒音が迷惑だ。	Tiếng ồn nhà bên thật phiền.
+4982	meiwaku	daily	迷惑	めいわく	làm phiền, phiền toái	迷惑な電話がかかってきた。	Đã có cuộc gọi làm phiền gọi đến.
+4983	meiwaku	business	迷惑	めいわく	làm phiền, phiền toái	周りに迷惑をかけないよう、通路に物を置かないでください。	Để không gây phiền cho người xung quanh, xin đừng đặt đồ ở lối đi.
+4984	mendou	exam	面倒	めんどう	phiền phức	手続きが面倒だ。	Thủ tục phiền phức.
+4985	mendou	daily	面倒	めんどう	phiền phức	面倒な仕事を頼まれた。	Đã được nhờ làm việc phiền phức.
+4986	mendou	business	面倒	めんどう	phiền phức	この手続きは面倒ですが、省略できません。	Thủ tục này phiền phức nhưng không thể bỏ qua.
+4987	yuushuu	exam	優秀	ゆうしゅう	xuất sắc	彼女はとても優秀な研究者です。	Cô ấy là một nhà nghiên cứu rất xuất sắc.
+4988	yuushuu	daily	優秀	ゆうしゅう	xuất sắc	優秀な成績を収めた。	Đã đạt được thành tích xuất sắc.
+4989	yuushuu	business	優秀	ゆうしゅう	xuất sắc	優秀な社員が育つ環境を作りたいです。	Chúng tôi muốn tạo môi trường để những nhân viên xuất sắc có thể trưởng thành.
+4990	yutaka	exam	豊か	ゆたか	phong phú, giàu có	資源が豊かだ。	Tài nguyên phong phú.
+4991	yutaka	daily	豊か	ゆたか	phong phú, giàu có	豊かな自然に恵まれている。	Được thiên nhiên phong phú ưu đãi.
+4992	yutaka	business	豊か	ゆたか	phong phú, giàu có	福利厚生を充実させ、社員の生活を豊かにしたいです。	Chúng tôi muốn cải thiện phúc lợi để đời sống nhân viên phong phú hơn.
+4993	yobun	exam	余分	よぶん	dư thừa	これは余分だ。	Cái này thừa.
+4994	yobun	daily	余分	よぶん	dư thừa	余分な荷物は持たない。	Không mang theo hành lý thừa.
+4995	yobun	business	余分	よぶん	dư thừa	余分に注文してしまった。	Đã lỡ đặt hàng dư ra.
+4996	raku	exam	楽	らく	thoải mái, dễ dàng	この椅子は楽だ。	Cái ghế này thoải mái.
+4997	raku	daily	楽	らく	thoải mái, dễ dàng	楽な姿勢で座った。	Đã ngồi ở tư thế thoải mái.
+4998	raku	business	楽	らく	thoải mái, dễ dàng	新しい方法で作業が楽になった。	Công việc đã trở nên nhẹ nhàng hơn nhờ phương pháp mới.
+4999	wagamama	exam	わがまま	わがまま	ích kỷ, tùy hứng	わがままな態度は周りの人を困らせます。	Thái độ ích kỷ, chỉ làm theo ý mình sẽ gây khó xử cho những người xung quanh.
+5000	wagamama	daily	わがまま	わがまま	ích kỷ, tùy hứng	わがままな態度を注意された。	Đã bị nhắc nhở vì thái độ ích kỷ.
+5001	wagamama	business	わがまま	わがまま	ích kỷ, tùy hứng	職場でわがままに振る舞うのはよくありません。	Cư xử ích kỷ theo ý mình ở nơi làm việc là không tốt.
+5002	ichiji	exam	一時	いちじ	tạm thời, nhất thời	一時中断します。	Sẽ tạm ngừng.
+5003	ichiji	daily	一時	いちじ	tạm thời, nhất thời	一時的に値上がりした。	Đã tăng giá tạm thời.
+5004	ichiji	business	一時	いちじ	tạm thời, nhất thời	システムを一時停止して、点検を行います。	Chúng tôi sẽ tạm dừng hệ thống để kiểm tra.
+5005	ichidoni	exam	一度に	いちどに	cùng một lúc	荷物を一度に運んだ。	Đã chuyển hành lý cùng một lúc.
+5006	ichidoni	daily	一度に	いちどに	cùng một lúc	一度にたくさん食べないで。	Đừng ăn nhiều một lúc.
+5007	ichidoni	business	一度に	いちどに	cùng một lúc	複数の案件を一度に処理する。	Xử lý nhiều dự án cùng một lúc.
+5008	itsuka	exam	いつか	いつか	một lúc nào đó, một ngày nào đó	いつかまた会いましょう。	Hẹn gặp lại vào một lúc nào đó nhé.
+5009	itsuka	daily	いつか	いつか	một lúc nào đó, một ngày nào đó	いつか留学したいと思っている。	Đang nghĩ muốn đi du học vào một ngày nào đó.
+5010	itsuka	business	いつか	いつか	một lúc nào đó, một ngày nào đó	いつか実現する日が来るでしょう。	Chắc sẽ có ngày điều đó trở thành hiện thực.
+5011	itsunomanika	exam	いつのまにか	いつのまにか	lúc nào không hay	いつのまにか眠ってしまった。	Không biết từ lúc nào đã ngủ mất.
+5012	itsunomanika	daily	いつのまにか	いつのまにか	lúc nào không hay	いつのまにか春になっていた。	Không hay biết mùa xuân đã đến.
+5013	itsunomanika	business	いつのまにか	いつのまにか	lúc nào không hay	いつのまにか売上が伸びていた。	Không hay biết doanh số đã tăng lên từ lúc nào.
+5014	itsumademo	exam	いつまでも	いつまでも	mãi mãi	いつまでも忘れない。	Sẽ không bao giờ quên.
+5015	itsumademo	daily	いつまでも	いつまでも	mãi mãi	いつまでも若くいたい。	Muốn trẻ mãi.
+5016	itsumademo	business	いつまでも	いつまでも	mãi mãi	この関係がいつまでも続くことを願う。	Mong muốn mối quan hệ này tiếp tục mãi mãi.
+5017	imanimo	exam	今にも	いまにも	sắp, ngay bây giờ	今にも雨が降りそうだ。	Trời có vẻ sắp mưa.
+5018	imanimo	daily	今にも	いまにも	sắp, ngay bây giờ	今にも倒れそうな様子だった。	Trông có vẻ sắp ngã đến nơi.
+5019	imanimo	business	今にも	いまにも	sắp, ngay bây giờ	今にも発表が始まりそうです。	Buổi thuyết trình có vẻ sắp bắt đầu.
+5020	iyoiyo	exam	いよいよ	いよいよ	cuối cùng, rốt cuộc	いよいよ試験の日が来た。	Cuối cùng ngày thi cũng đã đến.
+5021	iyoiyo	daily	いよいよ	いよいよ	cuối cùng, rốt cuộc	いよいよ明日出発する。	Cuối cùng ngày mai sẽ khởi hành.
+5022	iyoiyo	business	いよいよ	いよいよ	cuối cùng, rốt cuộc	いよいよ新製品を発売いたします。	Cuối cùng chúng tôi sẽ ra mắt sản phẩm mới.
+5023	ukkari	exam	うっかり	うっかり	lỡ, sơ ý	うっかり忘れてしまった。	Lỡ quên mất rồi.
+5024	ukkari	daily	うっかり	うっかり	lỡ, sơ ý	うっかりミスをした。	Đã lỡ mắc lỗi sơ ý.
+5025	ukkari	business	うっかり	うっかり	lỡ, sơ ý	うっかり資料を提出し忘れた。	Đã sơ ý quên nộp tài liệu.
+5026	osoraku	exam	恐らく	おそらく	có lẽ, có thể	恐らく明日は雨だろう。	Có lẽ ngày mai sẽ mưa.
+5027	osoraku	daily	恐らく	おそらく	có lẽ, có thể	恐らく彼は来ないと思う。	Tôi nghĩ có lẽ anh ấy sẽ không đến.
+5028	osoraku	business	恐らく	おそらく	có lẽ, có thể	恐らく予定通りに進むでしょう。	Có lẽ mọi thứ sẽ tiến triển theo đúng kế hoạch.
+5029	otagaini	exam	お互いに	おたがいに	lẫn nhau	お互いに助け合おう。	Hãy giúp đỡ lẫn nhau nhé.
+5030	otagaini	daily	お互いに	おたがいに	lẫn nhau	お互いに連絡先を交換した。	Đã trao đổi thông tin liên lạc với nhau.
+5031	otagaini	business	お互いに	おたがいに	lẫn nhau	お互いに理解を深めることが重要だ。	Việc hiểu nhau sâu sắc hơn là quan trọng.
+5032	omoikitte	exam	思い切って	おもいきって	quyết tâm, mạnh dạn	思い切って告白した。	Đã mạnh dạn tỏ tình.
+5033	omoikitte	daily	思い切って	おもいきって	quyết tâm, mạnh dạn	思い切って新しい仕事を始めた。	Đã quyết tâm bắt đầu công việc mới.
+5034	omoikitte	business	思い切って	おもいきって	quyết tâm, mạnh dạn	思い切って投資することにした。	Đã quyết định mạnh dạn đầu tư.
+5035	kaette	exam	かえって	かえって	ngược lại, trái lại	薬を飲んだらかえって悪化した。	Uống thuốc vào thì ngược lại bệnh nặng hơn.
+5036	kaette	daily	かえって	かえって	ngược lại, trái lại	手伝ったらかえって迷惑をかけた。	Giúp đỡ thì lại gây phiền hà ngược lại.
+5037	kaette	business	かえって	かえって	ngược lại, trái lại	値下げがかえって売上を減らす結果になった。	Việc giảm giá lại dẫn đến kết quả làm giảm doanh số.
+5038	kanari	exam	かなり	かなり	khá, đáng kể	今日はかなり暑い。	Hôm nay khá nóng.
+5039	kanari	daily	かなり	かなり	khá, đáng kể	かなり疲れた。	Đã khá mệt.
+5040	kanari	business	かなり	かなり	khá, đáng kể	今期はかなりの利益が出た。	Kỳ này đã có lợi nhuận đáng kể.

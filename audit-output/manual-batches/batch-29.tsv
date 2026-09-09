@@ -1,0 +1,181 @@
+row	vocabId	type	word	reading	meaningVi	exampleJp	exampleVi
+5041	kichinto	exam	きちんと	きちんと	gọn gàng, đàng hoàng	部屋をきちんと片付けた。	Đã dọn dẹp phòng gọn gàng.
+5042	kichinto	daily	きちんと	きちんと	gọn gàng, đàng hoàng	きちんと挨拶しなさい。	Hãy chào hỏi cho đàng hoàng.
+5043	kichinto	business	きちんと	きちんと	gọn gàng, đàng hoàng	書類はきちんと整理してください。	Vui lòng sắp xếp tài liệu gọn gàng.
+5044	kirakira	exam	きらきら	きらきら	lấp lánh	星がきらきら光っている。	Các vì sao đang lấp lánh.
+5045	kirakira	daily	きらきら	きらきら	lấp lánh	湖面がきらきら輝いていた。	Mặt hồ đã lấp lánh tỏa sáng.
+5046	kirakira	business	きらきら	きらきら	lấp lánh	新製品はきらきらとした光沢がある。	Sản phẩm mới có độ bóng lấp lánh.
+5047	guuzen	exam	偶然	ぐうぜん	ngẫu nhiên, tình cờ	駅で偶然会った。	Đã tình cờ gặp nhau ở ga.
+5048	guuzen	daily	偶然	ぐうぜん	ngẫu nhiên, tình cờ	それは偶然の一致だった。	Đó là một sự trùng hợp ngẫu nhiên.
+5049	guuzen	business	偶然	ぐうぜん	ngẫu nhiên, tình cờ	偶然にも同じ会社の出身だった。	Thật ngẫu nhiên là cùng xuất thân từ một công ty.
+5050	guzuguzu	exam	ぐずぐず	ぐずぐず	chậm chạp, lề mề	ぐずぐずしないで早く来て。	Đừng chậm chạp nữa, mau đến đây.
+5051	guzuguzu	daily	ぐずぐず	ぐずぐず	chậm chạp, lề mề	いつまでもぐずぐずしている。	Cứ chần chừ mãi.
+5052	guzuguzu	business	ぐずぐず	ぐずぐず	chậm chạp, lề mề	決定をぐずぐず先延ばしにしてはいけない。	Không được trì hoãn quyết định một cách chậm chạp.
+5053	gussuri	exam	ぐっすり	ぐっすり	ngủ say	昨夜はぐっすり眠れた。	Đêm qua đã ngủ rất ngon.
+5054	gussuri	daily	ぐっすり	ぐっすり	ngủ say	子供はぐっすり寝ている。	Đứa trẻ đang ngủ say.
+5055	gussuri	business	ぐっすり	ぐっすり	ngủ say	出張中もぐっすり休むことができた。	Kể cả trong chuyến công tác cũng có thể nghỉ ngơi ngon giấc.
+5056	kurukuru	exam	くるくる	くるくる	quay tròn nhanh	風車がくるくる回る。	Cối xay gió quay tròn nhanh.
+5057	kurukuru	daily	くるくる	くるくる	quay tròn nhanh	子供がくるくる回って遊んでいる。	Đứa trẻ đang xoay tròn để chơi.
+5058	kurukuru	business	くるくる	くるくる	quay tròn nhanh	方針がくるくる変わって困る。	Phương châm cứ thay đổi liên tục nên khó xử.
+5059	guruguru	exam	ぐるぐる	ぐるぐる	quay vòng vòng, loanh quanh	頭の中がぐるぐるする。	Trong đầu cứ quay cuồng.
+5060	guruguru	daily	ぐるぐる	ぐるぐる	quay vòng vòng, loanh quanh	同じ場所をぐるぐる歩いた。	Đã đi loanh quanh cùng một chỗ.
+5061	guruguru	business	ぐるぐる	ぐるぐる	quay vòng vòng, loanh quanh	議論がぐるぐる回って結論が出ない。	Cuộc thảo luận cứ luẩn quẩn không đi đến kết luận.
+5062	kekkyoku	exam	けっきょく	けっきょく	cuối cùng, rốt cuộc	けっきょく彼は来なかった。	Cuối cùng anh ấy đã không đến.
+5063	kekkyoku	daily	けっきょく	けっきょく	cuối cùng, rốt cuộc	けっきょくどうすればいいの。	Rốt cuộc thì nên làm thế nào đây?
+5064	kekkyoku	business	けっきょく	けっきょく	cuối cùng, rốt cuộc	けっきょく計画は中止になった。	Cuối cùng kế hoạch đã bị hủy bỏ.
+5065	shinto	exam	しんと	しんと	im lặng, tĩnh lặng	教室はしんと静まり返った。	Lớp học im lặng như tờ.
+5066	shinto	daily	しんと	しんと	im lặng, tĩnh lặng	夜の街はしんとしていた。	Con phố ban đêm rất tĩnh lặng.
+5067	shinto	business	しんと	しんと	im lặng, tĩnh lặng	会場はしんと静まった。	Hội trường đã im lặng hoàn toàn.
+5068	shidaini	exam	次第に	しだいに	dần dần	天気は次第に良くなった。	Thời tiết đã dần dần tốt lên.
+5069	shidaini	daily	次第に	しだいに	dần dần	次第に慣れてきた。	Đã dần dần quen.
+5070	shidaini	business	次第に	しだいに	dần dần	売上は次第に回復している。	Doanh số đang dần dần phục hồi.
+5071	jitto	exam	じっと	じっと	đứng yên, chăm chú	じっと座っていた。	Đã ngồi yên bất động.
+5072	jitto	daily	じっと	じっと	đứng yên, chăm chú	彼はじっと私を見つめた。	Anh ấy đã nhìn chằm chằm vào tôi.
+5073	jitto	business	じっと	じっと	đứng yên, chăm chú	結果が出るまでじっと待つしかない。	Chỉ còn cách chờ đợi im lặng cho đến khi có kết quả.
+5074	jitsuwa	exam	実は	じつは	thực ra	実は彼が犯人だった。	Thực ra thủ phạm chính là anh ta.
+5075	jitsuwa	daily	実は	じつは	thực ra	実は昨日会っていたんだ。	Thực ra hôm qua đã gặp rồi đấy.
+5076	jitsuwa	business	実は	じつは	thực ra	実は御社に提案がございます。	Thực ra chúng tôi có một đề xuất với quý công ty.
+5077	shoushou	exam	少々	しょうしょう	một chút, ít nhiều	少々お待ちください。	Xin vui lòng đợi một chút.
+5078	shoushou	daily	少々	しょうしょう	một chút, ít nhiều	少々値段が高い。	Giá hơi cao một chút.
+5079	shoushou	business	少々	しょうしょう	một chút, ít nhiều	少々問題がございます。	Có một chút vấn đề.
+5080	sukoshimo	exam	少しも	すこしも	một chút cũng (không)	少しも疲れていない。	Không mệt chút nào.
+5081	sukoshimo	daily	少しも	すこしも	một chút cũng (không)	少しも変わっていない。	Không thay đổi chút nào.
+5082	sukoshimo	business	少しも	すこしも	một chút cũng (không)	このプランには少しも問題がない。	Kế hoạch này không có vấn đề gì cả.
+5083	subete	exam	全て	すべて	tất cả	全て終わった。	Mọi thứ đã xong.
+5084	subete	daily	全て	すべて	tất cả	全ての人に感謝する。	Cảm ơn tất cả mọi người.
+5085	subete	business	全て	すべて	tất cả	全ての工程を見直す必要がある。	Cần xem xét lại toàn bộ quy trình.
+5086	surasura	exam	すらすら	すらすら	trôi chảy	彼はすらすら答えた。	Anh ấy đã trả lời trôi chảy.
+5087	surasura	daily	すらすら	すらすら	trôi chảy	すらすら読めるようになった。	Đã có thể đọc trôi chảy.
+5088	surasura	business	すらすら	すらすら	trôi chảy	新人が製品説明をすらすらできるようになりました。	Nhân viên mới đã có thể giới thiệu sản phẩm một cách trôi chảy.
+5089	sekkaku	exam	せっかく	せっかく	mất công, khó khăn lắm mới	せっかく作ったのに食べてくれない。	Mất công làm mà không chịu ăn.
+5090	sekkaku	daily	せっかく	せっかく	mất công, khó khăn lắm mới	せっかくの休みを無駄にした。	Đã lãng phí ngày nghỉ hiếm có.
+5091	sekkaku	business	せっかく	せっかく	mất công, khó khăn lắm mới	せっかくのご提案ですが、今回は見送ります。	Dù là đề xuất quý giá nhưng lần này chúng tôi xin bỏ qua.
+5092	zettai	exam	絶対	ぜったい	tuyệt đối	絶対に成功させる。	Nhất định sẽ làm cho thành công.
+5093	zettai	daily	絶対	ぜったい	tuyệt đối	絶対にうそをつかない。	Tuyệt đối không nói dối.
+5094	zettai	business	絶対	ぜったい	tuyệt đối	納期は絶対に守ってください。	Xin hãy tuyệt đối tuân thủ thời hạn giao hàng.
+5095	sotto	exam	そっと	そっと	nhẹ nhàng, lặng lẽ	そっとドアを閉めた。	Đã nhẹ nhàng đóng cửa.
+5096	sotto	daily	そっと	そっと	nhẹ nhàng, lặng lẽ	そっと近づいて驚かせた。	Đã lặng lẽ đến gần rồi làm giật mình.
+5097	sotto	business	そっと	そっと	nhẹ nhàng, lặng lẽ	新人には答えを教えすぎず、そっと見守ることも大切です。	Với nhân viên mới, đôi khi cũng cần âm thầm quan sát thay vì chỉ hết mọi đáp án.
+5098	sonouchi	exam	そのうち	そのうち	sớm muộn, chẳng bao lâu nữa	そのうち慣れるだろう。	Chắc sớm muộn cũng sẽ quen thôi.
+5099	sonouchi	daily	そのうち	そのうち	sớm muộn, chẳng bao lâu nữa	そのうち会いに行くよ。	Sớm muộn gì tôi cũng sẽ đến gặp bạn.
+5100	sonouchi	business	そのうち	そのうち	sớm muộn, chẳng bao lâu nữa	新機能については、そのうち社内で発表されるでしょう。	Tính năng mới có lẽ sẽ được công bố nội bộ trong thời gian tới.
+5101	sonomama	exam	そのまま	そのまま	giữ nguyên trạng	そのまま待っていて。	Cứ đợi nguyên vậy nhé.
+5102	sonomama	daily	そのまま	そのまま	giữ nguyên trạng	荷物はそのまま置いておいた。	Đã để hành lý nguyên chỗ cũ.
+5103	sonomama	business	そのまま	そのまま	giữ nguyên trạng	データはそのまま保存してください。	Vui lòng lưu dữ liệu nguyên trạng.
+5104	sorezore	exam	それぞれ	それぞれ	mỗi, từng	それぞれ意見が違う。	Mỗi người có ý kiến khác nhau.
+5105	sorezore	daily	それぞれ	それぞれ	mỗi, từng	それぞれの好みがある。	Mỗi người có sở thích riêng.
+5106	sorezore	business	それぞれ	それぞれ	mỗi, từng	各部署がそれぞれの目標を設定した。	Mỗi bộ phận đã đặt ra mục tiêu riêng của mình.
+5107	sorosoro	exam	そろそろ	そろそろ	sắp, đã đến lúc	そろそろ出かけよう。	Sắp phải đi rồi đấy.
+5108	sorosoro	daily	そろそろ	そろそろ	sắp, đã đến lúc	そろそろ帰る時間だ。	Sắp đến giờ về rồi.
+5109	sorosoro	business	そろそろ	そろそろ	sắp, đã đến lúc	そろそろ結論を出す必要がある。	Đã đến lúc cần đưa ra kết luận.
+5110	tatta	exam	たった	たった	chỉ (có)	たった一人で戦った。	Đã một mình chiến đấu.
+5111	tatta	daily	たった	たった	chỉ (có)	たった五分で終わった。	Chỉ mất năm phút là xong.
+5112	tatta	business	たった	たった	chỉ (có)	たった一つのミスで失敗した。	Chỉ vì một lỗi nhỏ mà thất bại.
+5113	tatoe	exam	たとえ	たとえ	dù, cho dù	たとえ雨でも行く。	Dù có mưa cũng đi.
+5114	tatoe	daily	たとえ	たとえ	dù, cho dù	たとえ失敗しても諦めない。	Dù có thất bại cũng không bỏ cuộc.
+5115	tatoe	business	たとえ	たとえ	dù, cho dù	たとえ困難でも挑戦する価値はある。	Dù khó khăn đến đâu cũng đáng để thử thách.
+5116	tabitabi	exam	たびたび	たびたび	thường xuyên, nhiều lần	たびたび注意された。	Đã nhiều lần bị nhắc nhở.
+5117	tabitabi	daily	たびたび	たびたび	thường xuyên, nhiều lần	たびたび遅刻する。	Thường xuyên đi trễ.
+5118	tabitabi	business	たびたび	たびたび	thường xuyên, nhiều lần	同様の問題がたびたび発生している。	Vấn đề tương tự đang xảy ra thường xuyên.
+5119	tamani	exam	たまに	たまに	thỉnh thoảng	たまに映画を見る。	Thỉnh thoảng xem phim.
+5120	tamani	daily	たまに	たまに	thỉnh thoảng	たまにしか会えない。	Chỉ thỉnh thoảng mới gặp được.
+5121	tamani	business	たまに	たまに	thỉnh thoảng	たまに海外出張がある。	Thỉnh thoảng có chuyến công tác nước ngoài.
+5122	chanto	exam	ちゃんと	ちゃんと	đàng hoàng, cẩn thận	ちゃんと勉強しなさい。	Hãy học hành đàng hoàng.
+5123	chanto	daily	ちゃんと	ちゃんと	đàng hoàng, cẩn thận	ちゃんと片付けた。	Đã dọn dẹp gọn gàng.
+5124	chanto	business	ちゃんと	ちゃんと	đàng hoàng, cẩn thận	手続きはちゃんと済ませてください。	Vui lòng hoàn tất thủ tục cho đàng hoàng.
+5125	chokusetsu	exam	直接	ちょくせつ	trực tiếp	直接会って話そう。	Hãy gặp trực tiếp để nói chuyện.
+5126	chokusetsu	daily	直接	ちょくせつ	trực tiếp	直接電話してみた。	Đã thử gọi điện trực tiếp.
+5127	chokusetsu	business	直接	ちょくせつ	trực tiếp	直接お客様に確認いたします。	Tôi sẽ xác nhận trực tiếp với khách hàng.
+5128	tsugitsugi	exam	次々	つぎつぎ	liên tiếp	アイデアが次々浮かんだ。	Ý tưởng nảy ra liên tiếp.
+5129	tsugitsugi	daily	次々	つぎつぎ	liên tiếp	次々と質問が出た。	Câu hỏi liên tiếp được đưa ra.
+5130	tsugitsugi	business	次々	つぎつぎ	liên tiếp	新製品を次々と発売する。	Liên tục cho ra mắt sản phẩm mới.
+5131	douka	exam	どうか	どうか	xin (hãy)	どうか許してください。	Xin hãy tha thứ cho tôi.
+5132	douka	daily	どうか	どうか	xin (hãy)	どうかお元気で。	Mong bạn luôn khỏe mạnh.
+5133	douka	business	どうか	どうか	xin (hãy)	どうかご検討のほどよろしくお願いいたします。	Kính mong quý vị xem xét giúp cho.
+5134	doushitemo	exam	どうしても	どうしても	nhất định, dù thế nào cũng	どうしても行きたい。	Nhất định muốn đi.
+5135	doushitemo	daily	どうしても	どうしても	nhất định, dù thế nào cũng	どうしても分からない。	Dù thế nào cũng không hiểu được.
+5136	doushitemo	business	どうしても	どうしても	nhất định, dù thế nào cũng	どうしても納期に間に合わない。	Dù thế nào cũng không kịp thời hạn giao hàng.
+5137	dokidoki	exam	どきどき	どきどき	hồi hộp, đập thình thịch	発表の前はどきどきした。	Trước khi thuyết trình đã hồi hộp.
+5138	dokidoki	daily	どきどき	どきどき	hồi hộp, đập thình thịch	胸がどきどきしている。	Tim đang đập thình thịch.
+5139	dokidoki	business	どきどき	どきどき	hồi hộp, đập thình thịch	結果発表を前にどきどきしている。	Đang hồi hộp trước khi công bố kết quả.
+5140	totsuzen	exam	突然	とつぜん	đột nhiên	突然雨が降ってきた。	Trời đột nhiên đổ mưa.
+5141	totsuzen	daily	突然	とつぜん	đột nhiên	突然電話が鳴った。	Điện thoại đột nhiên reo lên.
+5142	totsuzen	business	突然	とつぜん	đột nhiên	突然の訪問に驚いた。	Đã bất ngờ vì cuộc viếng thăm đột ngột.
+5143	donnani	exam	どんなに	どんなに	dù thế nào, cho dù bao nhiêu	どんなに疲れても頑張る。	Dù có mệt đến đâu cũng cố gắng.
+5144	donnani	daily	どんなに	どんなに	dù thế nào, cho dù bao nhiêu	どんなに頼んでも聞いてくれない。	Dù có van xin thế nào cũng không nghe.
+5145	donnani	business	どんなに	どんなに	dù thế nào, cho dù bao nhiêu	どんなに困難でも解決策はある。	Dù khó khăn đến mức nào cũng có giải pháp.
+5146	naruhodo	exam	なるほど	なるほど	quả nhiên, thì ra là vậy	なるほど、それは名案だ。	Quả nhiên, đó là một ý hay.
+5147	naruhodo	daily	なるほど	なるほど	quả nhiên, thì ra là vậy	なるほどと納得した。	Đã hiểu ra và cảm thấy thuyết phục.
+5148	naruhodo	business	なるほど	なるほど	quả nhiên, thì ra là vậy	なるほど、ご説明で理解できました。	Quả đúng vậy, nhờ giải thích mà tôi đã hiểu.
+5149	nande	exam	何で	なんで	tại sao, vì sao	何で遅れたの。	Tại sao lại trễ vậy?
+5150	nande	daily	何で	なんで	tại sao, vì sao	何でそんなことを言うの。	Sao lại nói điều đó vậy?
+5151	nande	business	何で	なんで	tại sao, vì sao	同僚に「何でこの数値が変わったの？」と聞かれました。	Một đồng nghiệp hỏi tôi: 'Sao con số này lại thay đổi vậy?'
+5152	nantonaku	exam	何となく	なんとなく	không hiểu sao, tự nhiên	何となく不安だ。	Không hiểu sao lại thấy bất an.
+5153	nantonaku	daily	何となく	なんとなく	không hiểu sao, tự nhiên	何となく分かる気がする。	Có cảm giác như hiểu được một cách mơ hồ.
+5154	nantonaku	business	何となく	なんとなく	không hiểu sao, tự nhiên	何となく彼の意図が伝わってきた。	Tôi mơ hồ cảm nhận được ý định của anh ấy.
+5155	nikoniko	exam	にこにこ	にこにこ	cười tươi, mỉm cười	彼女はにこにこ笑っている。	Cô ấy đang cười tươi.
+5156	nikoniko	daily	にこにこ	にこにこ	cười tươi, mỉm cười	赤ちゃんがにこにこしている。	Em bé đang cười tươi.
+5157	nikoniko	business	にこにこ	にこにこ	cười tươi, mỉm cười	店員はにこにこと接客していた。	Nhân viên đã tiếp khách với nụ cười tươi.
+5158	nidoto	exam	二度と	にどと	không bao giờ nữa	二度と会わない。	Sẽ không bao giờ gặp lại nữa.
+5159	nidoto	daily	二度と	にどと	không bao giờ nữa	二度としないと約束した。	Đã hứa sẽ không bao giờ làm điều đó nữa.
+5160	nidoto	business	二度と	にどと	không bao giờ nữa	このようなミスは二度と繰り返しません。	Sẽ không bao giờ lặp lại lỗi như thế này nữa.
+5161	nenjuu	exam	年中	ねんじゅう	quanh năm	この店は年中無休だ。	Cửa hàng này mở cửa quanh năm không nghỉ.
+5162	nenjuu	daily	年中	ねんじゅう	quanh năm	年中忙しい仕事だ。	Đây là công việc bận rộn quanh năm.
+5163	nenjuu	business	年中	ねんじゅう	quanh năm	この工場は年中稼働しています。	Nhà máy này hoạt động quanh năm.
+5164	nochini	exam	後に	のちに	sau này	後に有名になった。	Sau này đã trở nên nổi tiếng.
+5165	nochini	daily	後に	のちに	sau này	この技術は後に広まった。	Kỹ thuật này sau đó đã được phổ biến.
+5166	nochini	business	後に	のちに	sau này	詳細は後に報告いたします。	Chi tiết tôi sẽ báo cáo sau.
+5167	nonbiri	exam	のんびり	のんびり	thong thả, thư thái	休日はのんびり過ごした。	Đã trải qua ngày nghỉ một cách thong thả.
+5168	nonbiri	daily	のんびり	のんびり	thong thả, thư thái	のんびりお茶を飲んだ。	Đã thong thả uống trà.
+5169	nonbiri	business	のんびり	のんびり	thong thả, thư thái	繁忙期が終わったので、今日は少しのんびり作業できます。	Mùa cao điểm đã qua nên hôm nay có thể làm việc thong thả hơn một chút.
+5170	barabara	exam	ばらばら	ばらばら	rời rạc, tản mát	意見がばらばらだ。	Ý kiến rời rạc mỗi người một kiểu.
+5171	barabara	daily	ばらばら	ばらばら	rời rạc, tản mát	資料がばらばらになった。	Tài liệu đã bị tản mát lung tung.
+5172	barabara	business	ばらばら	ばらばら	rời rạc, tản mát	チームの方針がばらばらでまとまらない。	Phương châm của đội rời rạc nên không thống nhất được.
+5173	pikapika	exam	ぴかぴか	ぴかぴか	sáng bóng	靴をぴかぴかに磨いた。	Đã đánh giày cho sáng bóng.
+5174	pikapika	daily	ぴかぴか	ぴかぴか	sáng bóng	新しい車がぴかぴか光っている。	Chiếc xe mới đang sáng bóng.
+5175	pikapika	business	ぴかぴか	ぴかぴか	sáng bóng	床をぴかぴかにする清掃を行った。	Đã tiến hành vệ sinh làm sàn nhà sáng bóng.
+5176	pittari	exam	ぴったり	ぴったり	vừa khít, chính xác	このサイズはぴったりだ。	Kích cỡ này vừa khít.
+5177	pittari	daily	ぴったり	ぴったり	vừa khít, chính xác	服がぴったり合っている。	Quần áo vừa khít.
+5178	pittari	business	ぴったり	ぴったり	vừa khít, chính xác	予算にぴったり合う提案をした。	Đã đưa ra đề xuất khớp chính xác với ngân sách.
+5179	furafura	exam	ふらふら	ふらふら	choáng váng, lảo đảo	熱でふらふらする。	Vì sốt nên choáng váng.
+5180	furafura	daily	ふらふら	ふらふら	choáng váng, lảo đảo	疲れて足がふらふらだった。	Mệt đến mức đôi chân lảo đảo.
+5181	furafura	business	ふらふら	ふらふら	choáng váng, lảo đảo	社員がふらふらしていたので、休憩を取らせました。	Thấy nhân viên lảo đảo nên tôi đã cho họ nghỉ giải lao.
+5182	burabura	exam	ぶらぶら	ぶらぶら	đi dạo lang thang; đung đưa	公園をぶらぶら歩いた。	Đã đi dạo lang thang trong công viên.
+5183	burabura	daily	ぶらぶら	ぶらぶら	đi dạo lang thang; đung đưa	休日は街をぶらぶらする。	Ngày nghỉ thì đi lang thang trong phố.
+5184	burabura	business	ぶらぶら	ぶらぶら	đi dạo lang thang; đung đưa	休憩中、腕をぶらぶらさせて肩をほぐしました。	Trong giờ nghỉ, tôi thả lỏng hai tay và làm giãn vai.
+5185	pekopeko	exam	ぺこぺこ	ぺこぺこ	đói meo; khúm núm	おなかがぺこぺこだ。	Bụng đói meo.
+5186	pekopeko	daily	ぺこぺこ	ぺこぺこ	đói meo; khúm núm	彼はぺこぺこ頭を下げた。	Anh ấy đã khúm núm cúi đầu.
+5187	pekopeko	business	ぺこぺこ	ぺこぺこ	đói meo; khúm núm	取引先にぺこぺこする必要はない。	Không cần phải khúm núm với đối tác.
+5188	perapera	exam	ぺらぺら	ぺらぺら	nói trôi chảy (ngoại ngữ); mỏng	彼は英語がぺらぺらだ。	Anh ấy nói tiếng Anh trôi chảy.
+5189	perapera	daily	ぺらぺら	ぺらぺら	nói trôi chảy (ngoại ngữ); mỏng	中国語をぺらぺら話す。	Nói tiếng Trung trôi chảy.
+5190	perapera	business	ぺらぺら	ぺらぺら	nói trôi chảy (ngoại ngữ); mỏng	面接で外国語をぺらぺらと話した。	Đã nói ngoại ngữ trôi chảy trong buổi phỏng vấn.
+5191	hotto	exam	ほっと	ほっと	nhẹ nhõm	無事に着いてほっとした。	Đã đến nơi an toàn nên cảm thấy nhẹ nhõm.
+5192	hotto	daily	ほっと	ほっと	nhẹ nhõm	結果を聞いてほっとした。	Nghe kết quả xong thì thấy nhẹ cả người.
+5193	hotto	business	ほっと	ほっと	nhẹ nhõm	プロジェクトが完了しほっと胸をなでおろした。	Dự án đã hoàn thành nên thở phào nhẹ nhõm.
+5194	bonyari	exam	ぼんやり	ぼんやり	mơ hồ, lơ đãng	窓の外をぼんやり見ていた。	Đã nhìn ra ngoài cửa sổ một cách lơ đãng.
+5195	bonyari	daily	ぼんやり	ぼんやり	mơ hồ, lơ đãng	疲れてぼんやりしてしまった。	Mệt quá nên đầu óc mơ hồ.
+5196	bonyari	business	ぼんやり	ぼんやり	mơ hồ, lơ đãng	会議の内容をぼんやりとしか覚えていません。	Tôi chỉ nhớ mang máng nội dung cuộc họp.
+5197	maamaa	exam	まあまあ	まあまあ	bình thường, tạm được	味はまあまあだった。	Hương vị thì tạm được.
+5198	maamaa	daily	まあまあ	まあまあ	bình thường, tạm được	成績はまあまあだ。	Thành tích khá bình thường.
+5199	maamaa	business	まあまあ	まあまあ	bình thường, tạm được	今期の業績はまあまあの結果だった。	Kết quả kinh doanh kỳ này là ở mức tạm ổn.
+5200	mattaku	exam	全く	まったく	hoàn toàn	全く分からない。	Hoàn toàn không hiểu.
+5201	mattaku	daily	全く	まったく	hoàn toàn	全くその通りだ。	Đúng hoàn toàn như vậy.
+5202	mattaku	business	全く	まったく	hoàn toàn	全く問題ございません。	Hoàn toàn không có vấn đề gì.
+5203	mamonaku	exam	間もなく	まもなく	sắp, chẳng bao lâu nữa	間もなく電車が到着します。	Tàu điện sắp đến.
+5204	mamonaku	daily	間もなく	まもなく	sắp, chẳng bao lâu nữa	間もなく春が来る。	Mùa xuân sắp đến rồi.
+5205	mamonaku	business	間もなく	まもなく	sắp, chẳng bao lâu nữa	間もなく新サービスを開始いたします。	Chúng tôi sắp cho ra mắt dịch vụ mới.
+5206	marude	exam	まるで	まるで	như thể, hệt như	まるで夢のようだ。	Cứ như là một giấc mơ.
+5207	marude	daily	まるで	まるで	như thể, hệt như	彼はまるで子供みたいだ。	Anh ấy cứ như một đứa trẻ vậy.
+5208	marude	business	まるで	まるで	như thể, hệt như	新しい画面は、まるで別の製品のように見えます。	Màn hình mới trông cứ như một sản phẩm hoàn toàn khác.
+5209	mettani	exam	めったに	めったに	hiếm khi	めったに怒らない人だ。	Là người hiếm khi tức giận.
+5210	mettani	daily	めったに	めったに	hiếm khi	めったに会えない友達だ。	Là người bạn hiếm khi gặp được.
+5211	mettani	business	めったに	めったに	hiếm khi	このような機会はめったにありません。	Cơ hội như thế này hiếm khi có.
+5212	mottomo	exam	最も	もっとも	nhất	これが最もいい方法だ。	Đây là phương pháp tốt nhất.
+5213	mottomo	daily	最も	もっとも	nhất	最も重要な点を説明する。	Giải thích điểm quan trọng nhất.
+5214	mottomo	business	最も	もっとも	nhất	最も効果的な対策を検討する。	Xem xét biện pháp hiệu quả nhất.
+5215	wariaini	exam	割合に	わりあいに	tương đối	今日は割合に涼しい。	Hôm nay tương đối mát mẻ.
+5216	wariaini	daily	割合に	わりあいに	tương đối	この本は割合に読みやすい。	Cuốn sách này tương đối dễ đọc.
+5217	wariaini	business	割合に	わりあいに	tương đối	今年は割合に順調に進んでいる。	Năm nay mọi việc đang tiến triển tương đối thuận lợi.
+5218	aru_prenominal	exam	ある	ある	một... nào đó	ある日、彼から手紙が届いた。	Một ngày nọ, tôi nhận được thư từ anh ấy.
+5219	aru_prenominal	daily	ある	ある	một... nào đó	ある人がそう言っていた。	Có một người nào đó đã nói như vậy.
+5220	aru_prenominal	business	ある	ある	một... nào đó	ある会社との取引を検討している。	Đang xem xét giao dịch với một công ty nào đó.

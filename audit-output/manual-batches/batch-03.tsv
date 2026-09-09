@@ -1,0 +1,181 @@
+row	vocabId	type	word	reading	meaningVi	exampleJp	exampleVi
+0361	kesseki	exam	欠席	けっせき	vắng mặt	明日は欠席します。	Ngày mai tôi sẽ vắng mặt.
+0362	kesseki	daily	欠席	けっせき	vắng mặt	今日、誰か欠席してる?	Hôm nay có ai vắng mặt không?
+0363	kesseki	business	欠席	けっせき	vắng mặt	会議を欠席する場合は事前にご連絡ください。	Nếu vắng mặt buổi họp, vui lòng liên hệ trước.
+0364	kettei	exam	決定	けってい	quyết định	まだ何も決定していません。	Vẫn chưa quyết định gì cả.
+0365	kettei	daily	決定	けってい	quyết định	もう決定したの?早くない?	Quyết định rồi à? Nhanh vậy?
+0366	kettei	business	決定	けってい	quyết định	来期の予算が正式に決定しました。	Ngân sách kỳ tới đã được quyết định chính thức.
+0367	ketten	exam	欠点	けってん	khuyết điểm	誰にでも欠点はあります。	Ai cũng có khuyết điểm.
+0368	ketten	daily	欠点	けってん	khuyết điểm	それ、私の一番の欠点なんだよね。	Đó là khuyết điểm lớn nhất của tôi đó.
+0369	ketten	business	欠点	けってん	khuyết điểm	この製品の欠点を改善するよう開発チームに依頼しました。	Tôi đã yêu cầu đội phát triển cải thiện khuyết điểm của sản phẩm này.
+0370	ketsuron	exam	結論	けつろん	kết luận	結論はまだ出ていません。	Vẫn chưa có kết luận.
+0371	ketsuron	daily	結論	けつろん	kết luận	結局、結論はどうなったの?	Rốt cuộc kết luận thế nào rồi?
+0372	ketsuron	business	結論	けつろん	kết luận	長時間の議論の末、ようやく結論に達しました。	Sau thời gian dài thảo luận, cuối cùng chúng tôi cũng đạt được kết luận.
+0373	ken1	exam	券	けん	vé	映画の券を2枚買った。	Tôi đã mua 2 vé xem phim.
+0374	ken1	daily	券	けん	vé	この券、まだ使える?	Vé này còn dùng được không?
+0375	ken1	business	券	けん	vé	商品券を進呈いたします。	Chúng tôi xin tặng phiếu mua hàng.
+0376	kengaku	exam	見学	けんがく	tham quan học tập	明日、工場を見学します。	Ngày mai chúng tôi sẽ tham quan nhà máy.
+0377	kengaku	daily	見学	けんがく	tham quan học tập	今度、大学の見学に行くんだ。	Lần tới tôi sẽ đi tham quan trường đại học.
+0378	kengaku	business	見学	けんがく	tham quan học tập	新入社員向けに工場見学会を実施します。	Chúng tôi sẽ tổ chức buổi tham quan nhà máy dành cho nhân viên mới.
+0379	kenshuu	exam	研修	けんしゅう	thực tập, đào tạo	来週、新人研修があります。	Tuần sau có khóa đào tạo cho nhân viên mới.
+0380	kenshuu	daily	研修	けんしゅう	thực tập, đào tạo	あの研修、正直つまらなかった。	Thành thật mà nói buổi đào tạo đó nhàm chán.
+0381	kenshuu	business	研修	けんしゅう	thực tập, đào tạo	全社員を対象に安全研修を実施いたします。	Chúng tôi sẽ tổ chức đào tạo an toàn cho toàn thể nhân viên.
+0382	kensetsu	exam	建設	けんせつ	xây dựng	新しいビルを建設しています。	Họ đang xây dựng một tòa nhà mới.
+0383	kensetsu	daily	建設	けんせつ	xây dựng	あそこ、また建設始まったね。	Ở đó lại bắt đầu xây dựng nữa rồi nhỉ.
+0384	kensetsu	business	建設	けんせつ	xây dựng	新工場の建設計画が正式に承認されました。	Kế hoạch xây dựng nhà máy mới đã được phê duyệt chính thức.
+0385	kenchiku	exam	建築	けんちく	kiến trúc	彼は建築を専攻しています。	Anh ấy học chuyên ngành kiến trúc.
+0386	kenchiku	daily	建築	けんちく	kiến trúc	この建築、デザインがすごいね。	Công trình kiến trúc này thiết kế đẹp ghê.
+0387	kenchiku	business	建築	けんちく	kiến trúc	有名な建築家に新社屋の設計を依頼しました。	Chúng tôi đã nhờ một kiến trúc sư nổi tiếng thiết kế trụ sở mới.
+0388	kenpou	exam	憲法	けんぽう	hiến pháp	日本国憲法について学びます。	Chúng ta sẽ học về Hiến pháp Nhật Bản.
+0389	kenpou	daily	憲法	けんぽう	hiến pháp	憲法って改正できるの?	Hiến pháp có thể sửa đổi được à?
+0390	kenpou	business	憲法	けんぽう	hiến pháp	憲法に定められた権利について解説します。	Chúng tôi sẽ giải thích về các quyền được quy định trong Hiến pháp.
+0391	kenri	exam	権利	けんり	quyền lợi	誰にでも自由に生きる権利がある。	Ai cũng có quyền được tự do sống.
+0392	kenri	daily	権利	けんり	quyền lợi	それ、あなたの権利だよ。	Đó là quyền của bạn đó.
+0393	kenri	business	権利	けんり	quyền lợi	従業員の権利を守るための規定を整備しました。	Chúng tôi đã hoàn thiện quy định để bảo vệ quyền lợi nhân viên.
+0394	genryou	exam	原料	げんりょう	nguyên liệu	小麦はパンの原料です。	Lúa mì là nguyên liệu của bánh mì.
+0395	genryou	daily	原料	げんりょう	nguyên liệu	この石鹸、原料にこだわってるんだって。	Nghe nói xà phòng này chú trọng nguyên liệu đó.
+0396	genryou	business	原料	げんりょう	nguyên liệu	原料価格の高騰が製造コストに影響しています。	Giá nguyên liệu tăng cao đang ảnh hưởng đến chi phí sản xuất.
+0397	kouen1	exam	講演	こうえん	bài diễn thuyết	有名な学者の講演を聞きに行った。	Tôi đã đi nghe bài diễn thuyết của một học giả nổi tiếng.
+0398	kouen1	daily	講演	こうえん	bài diễn thuyết	あの講演、すごくためになったよ。	Bài diễn thuyết đó thật sự hữu ích đó.
+0399	kouen1	business	講演	こうえん	bài diễn thuyết	来月、業界専門家による講演会を開催します。	Tháng sau chúng tôi sẽ tổ chức buổi diễn thuyết bởi chuyên gia trong ngành.
+0400	kouka	exam	効果	こうか	hiệu quả	この薬は効果があります。	Loại thuốc này có hiệu quả.
+0401	kouka	daily	効果	こうか	hiệu quả	ダイエット、全然効果出ないんだけど。	Ăn kiêng chẳng thấy hiệu quả gì cả.
+0402	kouka	business	効果	こうか	hiệu quả	広告の効果を数値で検証しています。	Chúng tôi đang kiểm chứng hiệu quả quảng cáo bằng số liệu.
+0403	koukan	exam	交換	こうかん	trao đổi	サイズが合わないので交換したいです。	Vì không vừa size nên tôi muốn đổi hàng.
+0404	koukan	daily	交換	こうかん	trao đổi	連絡先、交換しようよ。	Trao đổi thông tin liên lạc đi.
+0405	koukan	business	交換	こうかん	trao đổi	名刺交換の後、名前を確認しておきましょう。	Sau khi trao đổi danh thiếp, hãy xác nhận lại tên nhé.
+0406	kougyou	exam	工業	こうぎょう	công nghiệp	この地域は工業が発展している。	Khu vực này công nghiệp phát triển.
+0407	kougyou	daily	工業	こうぎょう	công nghiệp	ここ、昔は工業地帯だったんだって。	Nghe nói nơi này trước đây là khu công nghiệp đó.
+0408	kougyou	business	工業	こうぎょう	công nghiệp	工業製品の輸出が好調に推移しています。	Xuất khẩu sản phẩm công nghiệp đang diễn biến thuận lợi.
+0409	koukuubin	exam	航空便	こうくうびん	đường hàng không	この荷物を航空便で送りたいです。	Tôi muốn gửi kiện hàng này bằng đường hàng không.
+0410	koukuubin	daily	航空便	こうくうびん	đường hàng không	航空便だと届くの早いよね。	Gửi đường hàng không thì đến nhanh nhỉ.
+0411	koukuubin	business	航空便	こうくうびん	đường hàng không	至急の書類は航空便で発送してください。	Tài liệu gấp xin gửi bằng đường hàng không.
+0412	goukei	exam	合計	ごうけい	tổng cộng	合計でいくらになりますか。	Tổng cộng hết bao nhiêu vậy?
+0413	goukei	daily	合計	ごうけい	tổng cộng	合計すると、意外と高いね。	Cộng lại thì đắt hơn tưởng nhỉ.
+0414	goukei	business	合計	ごうけい	tổng cộng	合計金額をご確認の上お振込みください。	Xin vui lòng xác nhận tổng số tiền trước khi chuyển khoản.
+0415	koukoku	exam	広告	こうこく	quảng cáo	テレビでこの商品の広告を見た。	Tôi đã xem quảng cáo sản phẩm này trên TV.
+0416	koukoku	daily	広告	こうこく	quảng cáo	この広告、めっちゃ印象に残るね。	Quảng cáo này ấn tượng ghê nhỉ.
+0417	koukoku	business	広告	こうこく	quảng cáo	SNSで新商品の広告を出す予定です。	Chúng tôi dự định đăng quảng cáo sản phẩm mới trên mạng xã hội.
+0418	kousai	exam	交際	こうさい	giao tiếp, quan hệ	二人は3年前から交際しています。	Hai người đã hẹn hò từ 3 năm trước.
+0419	kousai	daily	交際	こうさい	giao tiếp, quan hệ	え、二人って交際してるの?	Ơ, hai người đó đang hẹn hò à?
+0420	kousai	business	交際	こうさい	giao tiếp, quan hệ	交際費の精算は月末までにお願いします。	Việc thanh toán chi phí giao tế xin thực hiện trước cuối tháng.
+0421	kouji	exam	工事	こうじ	thi công	この道路は工事中です。	Con đường này đang thi công.
+0422	kouji	daily	工事	こうじ	thi công	隣のビル、また工事始まったね。	Tòa nhà bên cạnh lại bắt đầu thi công rồi nhỉ.
+0423	kouji	business	工事	こうじ	thi công	工事期間中はご不便をおかけいたします。	Trong thời gian thi công, chúng tôi thành thật xin lỗi vì đã gây bất tiện.
+0424	koudou	exam	行動	こうどう	hành động	彼はいつも行動が早い。	Anh ấy lúc nào cũng hành động nhanh.
+0425	koudou	daily	行動	こうどう	hành động	考えてないで、まず行動しようよ。	Đừng suy nghĩ nữa, hành động trước đi.
+0426	koudou	business	行動	こうどう	hành động	迅速な行動が求められる状況です。	Đây là tình huống đòi hỏi hành động nhanh chóng.
+0427	kouritsu1	exam	公立	こうりつ	công lập	娘は公立の小学校に通っています。	Con gái tôi đang học trường tiểu học công lập.
+0428	kouritsu1	daily	公立	こうりつ	công lập	そこ、公立?私立?	Chỗ đó công lập hay tư thục vậy?
+0429	kouritsu1	business	公立	こうりつ	công lập	公立学校との連携プログラムを開始しました。	Chúng tôi đã bắt đầu chương trình hợp tác với các trường công lập.
+0430	kouryuu	exam	交流	こうりゅう	giao lưu	他部署の人との交流が少ない。	Ít giao lưu với người ở phòng ban khác.
+0431	kouryuu	daily	交流	こうりゅう	giao lưu	今度、交流会あるらしいよ。	Nghe nói sắp có buổi giao lưu đó.
+0432	kouryuu	business	交流	こうりゅう	giao lưu	異文化交流を目的としたイベントを企画しています。	Chúng tôi đang lên kế hoạch sự kiện nhằm mục đích giao lưu văn hóa.
+0433	course	exam	コース	コース	khóa học, lộ trình	このレストラン、コースを頼んだ。	Nhà hàng này tôi đã gọi set course.
+0434	course	daily	コース	コース	khóa học, lộ trình	マラソンのコース、けっこう坂多いね。	Lộ trình chạy marathon có khá nhiều dốc nhỉ.
+0435	course	business	コース	コース	khóa học, lộ trình	新しい研修コースを来月から開始します。	Chúng tôi sẽ bắt đầu khóa đào tạo mới từ tháng sau.
+0436	corner	exam	コーナー	コーナー	góc	果物コーナーはどこですか。	Khu vực trái cây ở đâu vậy?
+0437	corner	daily	コーナー	コーナー	góc	このコーナー、いつも混んでるね。	Góc này lúc nào cũng đông nhỉ.
+0438	corner	business	コーナー	コーナー	góc	新商品コーナーを店舗入口に設置しました。	Chúng tôi đã bố trí khu vực sản phẩm mới ở lối vào cửa hàng.
+0439	goal	exam	ゴール	ゴール	đích	あと少しでゴールです。	Còn một chút nữa là đến đích rồi.
+0440	goal	daily	ゴール	ゴール	đích	やったー、ゴールした!	Yay, về đích rồi!
+0441	goal	business	ゴール	ゴール	đích	プロジェクトのゴールを明確に設定しましょう。	Hãy xác định rõ mục tiêu (đích đến) của dự án.
+0442	gokai	exam	誤解	ごかい	hiểu lầm	それは誤解です。	Đó là hiểu lầm thôi.
+0443	gokai	daily	誤解	ごかい	hiểu lầm	ちょっと待って、誤解だよ!	Đợi đã, hiểu lầm rồi đó!
+0444	gokai	business	誤解	ごかい	hiểu lầm	説明不足が誤解を招く結果となりました。	Việc giải thích thiếu sót đã dẫn đến hiểu lầm.
+0445	kogata	exam	小型	こがた	cỡ nhỏ	小型の車を買いました。	Tôi đã mua một chiếc xe cỡ nhỏ.
+0446	kogata	daily	小型	こがた	cỡ nhỏ	これ、小型でめっちゃ便利!	Cái này nhỏ gọn tiện lợi ghê!
+0447	kogata	business	小型	こがた	cỡ nhỏ	小型家電の需要が増加しています。	Nhu cầu về đồ điện gia dụng cỡ nhỏ đang tăng.
+0448	kokusan	exam	国産	こくさん	sản xuất trong nước	これは国産の野菜です。	Đây là rau sản xuất trong nước.
+0449	kokusan	daily	国産	こくさん	sản xuất trong nước	やっぱり国産のほうが安心だよね。	Đúng là hàng sản xuất trong nước vẫn khiến mình yên tâm hơn nhỉ.
+0450	kokusan	business	国産	こくさん	sản xuất trong nước	国産材料のみを使用した商品を開発しました。	Chúng tôi đã phát triển sản phẩm chỉ sử dụng nguyên liệu trong nước.
+0451	kokuritsu	exam	国立	こくりつ	quốc lập	彼は国立大学に通っています。	Anh ấy đang học trường đại học quốc lập.
+0452	kokuritsu	daily	国立	こくりつ	quốc lập	国立の病院ってどこにあるの?	Bệnh viện quốc lập ở đâu vậy?
+0453	kokuritsu	business	国立	こくりつ	quốc lập	国立研究機関との共同プロジェクトを進めています。	Chúng tôi đang tiến hành dự án hợp tác với cơ quan nghiên cứu quốc lập.
+0454	kokoro	exam	心	こころ	trái tim, tâm	心を込めて作りました。	Tôi đã làm với cả tấm lòng.
+0455	kokoro	daily	心	こころ	trái tim, tâm	その話、心に響いたよ。	Câu chuyện đó chạm đến trái tim tôi đó.
+0456	kokoro	business	心	こころ	trái tim, tâm	お客様の心に残るサービスを目指しています。	Chúng tôi hướng đến dịch vụ để lại ấn tượng sâu sắc trong lòng khách hàng.
+0457	koshou	exam	故障	こしょう	hỏng	エアコンが故障してしまった。	Máy lạnh đã bị hỏng mất rồi.
+0458	koshou	daily	故障	こしょう	hỏng	またパソコン故障したの?	Máy tính lại hỏng nữa à?
+0459	koshou	business	故障	こしょう	hỏng	機械の故障により生産ラインを一時停止しました。	Do máy móc bị hỏng nên chúng tôi đã tạm dừng dây chuyền sản xuất.
+0460	kokkai	exam	国会	こっかい	quốc hội	国会で新しい法案が議論されている。	Dự luật mới đang được thảo luận tại Quốc hội.
+0461	kokkai	daily	国会	こっかい	quốc hội	国会中継、見た?	Xem trực tiếp phiên họp Quốc hội chưa?
+0462	kokkai	business	国会	こっかい	quốc hội	国会で可決された法律の施行日が発表されました。	Ngày thi hành luật được Quốc hội thông qua đã được công bố.
+0463	kozutsumi	exam	小包	こづつみ	bưu kiện	小包が届きました。	Bưu kiện đã đến rồi.
+0464	kozutsumi	daily	小包	こづつみ	bưu kiện	小包、まだ届かないんだけど。	Bưu kiện vẫn chưa tới nè.
+0465	kozutsumi	business	小包	こづつみ	bưu kiện	小包は営業所での受け取りも可能です。	Bưu kiện cũng có thể nhận tại bưu cục.
+0466	kona	exam	粉	こな	bột	小麦粉を100グラム入れてください。	Vui lòng cho vào 100 gram bột mì.
+0467	kona	daily	粉	こな	bột	顔に粉ついてるよ。	Trên mặt bạn có dính bột kìa.
+0468	kona	business	粉	こな	bột	原料の粉を均一に混ぜる工程が重要です。	Công đoạn trộn đều bột nguyên liệu rất quan trọng.
+0469	gobusata	exam	ご無沙汰	ごぶさた	lâu không liên lạc	ご無沙汰しております、お元気でしたか。	Đã lâu không liên lạc, dạo này anh/chị có khỏe không ạ?
+0470	gobusata	daily	ご無沙汰	ごぶさた	lâu không liên lạc	ほんとにご無沙汰！元気だった？	Lâu quá không gặp! Dạo này khỏe không?
+0471	gobusata	business	ご無沙汰	ごぶさた	lâu không liên lạc	長らくご無沙汰しており、申し訳ございません。	Tôi thành thật xin lỗi vì đã lâu không liên lạc với quý vị.
+0472	communication	exam	コミュニケーション	コミュニケーション	giao tiếp	家族とのコミュニケーションを大切にしています。	Tôi coi trọng việc giao tiếp với gia đình.
+0473	communication	daily	コミュニケーション	コミュニケーション	giao tiếp	もっとコミュニケーション取ろうよ。	Giao tiếp nhiều hơn đi chứ.
+0474	communication	business	コミュニケーション	コミュニケーション	giao tiếp	円滑なコミュニケーションが業務効率を高めます。	Giao tiếp trôi chảy giúp nâng cao hiệu quả công việc.
+0475	gum	exam	ゴム	ゴム	cao su	このタイヤはゴムでできている。	Lốp xe này được làm bằng cao su.
+0476	gum	daily	ゴム	ゴム	cao su	輪ゴム、ある?	Có dây thun không?
+0477	gum	business	ゴム	ゴム	cao su	ゴム製品の耐久性を試験しています。	Chúng tôi đang thử nghiệm độ bền của sản phẩm cao su.
+0478	komugi	exam	小麦	こむぎ	lúa mì	この地域では小麦を栽培しています。	Khu vực này trồng lúa mì.
+0479	komugi	daily	小麦	こむぎ	lúa mì	小麦アレルギーなんだ、気をつけて。	Tôi bị dị ứng lúa mì, chú ý giúp nhé.
+0480	komugi	business	小麦	こむぎ	lúa mì	小麦価格の変動が原材料費に直結しています。	Biến động giá lúa mì ảnh hưởng trực tiếp đến chi phí nguyên liệu.
+0481	concours	exam	コンクール	コンクール	cuộc thi	ピアノのコンクールに出場した。	Tôi đã tham gia cuộc thi piano.
+0482	concours	daily	コンクール	コンクール	cuộc thi	このコンクール、レベル高そう。	Cuộc thi này trình độ chắc cao đó.
+0483	concours	business	コンクール	コンクール	cuộc thi	社内アイデアコンクールを毎年開催しています。	Chúng tôi tổ chức cuộc thi ý tưởng nội bộ hàng năm.
+0484	concrete	exam	コンクリート	コンクリート	bê tông	この橋はコンクリートでできている。	Cây cầu này được làm bằng bê tông.
+0485	concrete	daily	コンクリート	コンクリート	bê tông	このコンクリート、まだ乾いてないよ。	Bê tông này vẫn chưa khô đâu.
+0486	concrete	business	コンクリート	コンクリート	bê tông	コンクリートの強度検査を実施しました。	Chúng tôi đã tiến hành kiểm tra độ bền của bê tông.
+0487	service	exam	サービス	サービス	dịch vụ	このホテルはサービスがいい。	Khách sạn này dịch vụ tốt.
+0488	service	daily	サービス	サービス	dịch vụ	これ、サービスにしときますね。	Cái này tôi tặng kèm cho anh/chị nhé.
+0489	service	business	サービス	サービス	dịch vụ	顧客満足度向上のためサービス内容を見直しました。	Để nâng cao mức độ hài lòng của khách hàng, chúng tôi đã xem lại nội dung dịch vụ.
+0490	saikou	exam	最高	さいこう	cao nhất	今年は過去最高の売り上げでした。	Năm nay doanh số cao nhất từ trước đến nay.
+0491	saikou	daily	最高	さいこう	cao nhất	この景色、最高だね!	Phong cảnh này tuyệt vời quá!
+0492	saikou	business	最高	さいこう	cao nhất	今期は最高益を更新する見込みです。	Kỳ này dự kiến sẽ đạt lợi nhuận cao kỷ lục.
+0493	saidai	exam	最大	さいだい	lớn nhất	これは世界最大の建物です。	Đây là tòa nhà lớn nhất thế giới.
+0494	saidai	daily	最大	さいだい	lớn nhất	今年最大のイベントだよ、これ。	Đây là sự kiện lớn nhất năm nay đó.
+0495	saidai	business	最大	さいだい	lớn nhất	最大限の努力をしてまいります。	Chúng tôi sẽ nỗ lực hết mức có thể.
+0496	saitei	exam	最低	さいてい	thấp nhất	今日は今年最低の気温でした。	Hôm nay là nhiệt độ thấp nhất năm nay.
+0497	saitei	daily	最低	さいてい	thấp nhất	あの人の態度、最低だよね。	Thái độ người đó tệ thật đấy.
+0498	saitei	business	最低	さいてい	thấp nhất	最低限の情報だけ共有してください。	Vui lòng chỉ chia sẻ những thông tin tối thiểu cần thiết.
+0499	saiban	exam	裁判	さいばん	xét xử	この事件は裁判になった。	Vụ việc này đã đưa ra xét xử.
+0500	saiban	daily	裁判	さいばん	xét xử	あの裁判、結局どうなったの?	Vụ xét xử đó rốt cuộc thế nào rồi?
+0501	saiban	business	裁判	さいばん	xét xử	契約トラブルが裁判に発展する可能性があります。	Rắc rối hợp đồng có khả năng dẫn đến kiện tụng.
+0502	zairyou	exam	材料	ざいりょう	nguyên liệu	料理の材料を買いに行った。	Tôi đã đi mua nguyên liệu nấu ăn.
+0503	zairyou	daily	材料	ざいりょう	nguyên liệu	この材料、どこで買ったの?	Nguyên liệu này mua ở đâu vậy?
+0504	zairyou	business	材料	ざいりょう	nguyên liệu	高品質な材料のみを厳選して使用しています。	Chúng tôi chỉ tuyển chọn sử dụng nguyên liệu chất lượng cao.
+0505	siren	exam	サイレン	サイレン	còi báo động	遠くでサイレンが鳴っている。	Có tiếng còi báo động vang lên từ xa.
+0506	siren	daily	サイレン	サイレン	còi báo động	あ、サイレンの音、何かあったのかな。	A, tiếng còi báo động, có chuyện gì vậy nhỉ.
+0507	siren	business	サイレン	サイレン	còi báo động	避難訓練の際はサイレンが鳴ります。	Trong lúc diễn tập sơ tán sẽ có còi báo động vang lên.
+0508	sign	exam	サイン	サイン	chữ ký	ここにサインをお願いします。	Vui lòng ký tên vào đây.
+0509	sign	daily	サイン	サイン	chữ ký	有名人のサイン、もらっちゃった!	Tôi đã xin được chữ ký của người nổi tiếng đó!
+0510	sign	business	サイン	サイン	chữ ký	契約書にサインをいただけますでしょうか。	Quý khách có thể ký vào hợp đồng được không ạ?
+0511	sagyou	exam	作業	さぎょう	công việc	この作業は時間がかかります。	Công việc này tốn thời gian.
+0512	sagyou	daily	作業	さぎょう	công việc	作業、順調に進んでる?	Công việc tiến triển thuận lợi không?
+0513	sagyou	business	作業	さぎょう	công việc	安全第一で作業を進めてください。	Vui lòng tiến hành công việc với an toàn là trên hết.
+0514	sakuhin	exam	作品	さくひん	tác phẩm	これは有名な作家の作品です。	Đây là tác phẩm của một nhà văn nổi tiếng.
+0515	sakuhin	daily	作品	さくひん	tác phẩm	この作品、めっちゃ感動した。	Tác phẩm này khiến tôi cảm động ghê.
+0516	sakuhin	business	作品	さくひん	tác phẩm	コンテストに応募する作品を選定しています。	Chúng tôi đang chọn lựa tác phẩm để dự thi.
+0517	satsuei	exam	撮影	さつえい	quay phim, chụp ảnh	ここで写真の撮影をしてもいいですか。	Ở đây có thể chụp ảnh được không?
+0518	satsuei	daily	撮影	さつえい	quay phim, chụp ảnh	明日、撮影あるから早く寝なきゃ。	Ngày mai có quay phim nên phải ngủ sớm.
+0519	satsuei	business	撮影	さつえい	quay phim, chụp ảnh	新商品の撮影を来週実施する予定です。	Chúng tôi dự định thực hiện chụp ảnh sản phẩm mới vào tuần sau.
+0520	sawagi	exam	騒ぎ	さわぎ	sự ồn ào	何の騒ぎですか。	Ồn ào chuyện gì vậy?
+0521	sawagi	daily	騒ぎ	さわぎ	sự ồn ào	また騒ぎ起こしたの?	Lại gây ồn ào nữa à?
+0522	sawagi	business	騒ぎ	さわぎ	sự ồn ào	誤報が社内で大きな騒ぎとなりました。	Một tin báo sai đã gây xôn xao lớn trong công ty.
+0523	sanka	exam	参加	さんか	tham gia	イベントに参加します。	Tôi sẽ tham gia sự kiện.
+0524	sanka	daily	参加	さんか	tham gia	今度の飲み会、参加する?	Buổi nhậu lần này, có tham gia không?
+0525	sanka	business	参加	さんか	tham gia	セミナーへの参加を希望する方はお申し込みください。	Những ai mong muốn tham gia hội thảo xin vui lòng đăng ký.
+0526	sangyou	exam	産業	さんぎょう	ngành nghề	この国の主要産業は農業です。	Ngành công nghiệp chính của nước này là nông nghiệp.
+0527	sangyou	daily	産業	さんぎょう	ngành nghề	IT産業、これからも伸びそうだね。	Ngành công nghiệp IT có vẻ sẽ còn phát triển nữa nhỉ.
+0528	sangyou	business	産業	さんぎょう	ngành nghề	観光産業の活性化に向けた施策を検討しています。	Chúng tôi đang xem xét biện pháp thúc đẩy ngành du lịch.
+0529	zangyou	exam	残業	ざんぎょう	làm thêm giờ	今日は残業しなければなりません。	Hôm nay tôi phải làm thêm giờ.
+0530	zangyou	daily	残業	ざんぎょう	làm thêm giờ	また残業?大変だね。	Lại làm thêm giờ à? Vất vả nhỉ.
+0531	zangyou	business	残業	ざんぎょう	làm thêm giờ	残業時間の削減に向けて取り組んでいます。	Chúng tôi đang nỗ lực để giảm thời gian làm thêm giờ.
+0532	sankou	exam	参考	さんこう	tham khảo	この本、参考にしてください。	Xin hãy tham khảo cuốn sách này.
+0533	sankou	daily	参考	さんこう	tham khảo	すごく参考になったよ、ありがとう。	Rất hữu ích để tham khảo đó, cảm ơn nhé.
+0534	sankou	business	参考	さんこう	tham khảo	他社事例を参考に新しい制度を検討しています。	Chúng tôi đang tham khảo các trường hợp của công ty khác để xem xét một hệ thống mới.
+0535	sansei	exam	賛成	さんせい	tán thành	その意見に賛成です。	Tôi tán thành ý kiến đó.
+0536	sansei	daily	賛成	さんせい	tán thành	それ、私も賛成!	Cái đó tôi cũng tán thành!
+0537	sansei	business	賛成	さんせい	tán thành	提案に賛成する方は挙手をお願いします。	Những ai tán thành đề xuất xin vui lòng giơ tay.
+0538	sanchi	exam	産地	さんち	nơi sản xuất	このお米の産地はどこですか。	Nơi sản xuất gạo này là ở đâu?
+0539	sanchi	daily	産地	さんち	nơi sản xuất	産地直送だから新鮮だよ。	Vì gửi trực tiếp từ nơi sản xuất nên tươi lắm đó.
+0540	sanchi	business	産地	さんち	nơi sản xuất	全商品に産地情報を表示するよう義務付けられています。	Quy định bắt buộc phải ghi rõ thông tin nơi sản xuất trên tất cả sản phẩm.

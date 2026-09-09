@@ -1,0 +1,181 @@
+row	vocabId	type	word	reading	meaningVi	exampleJp	exampleVi
+0541	shigen	exam	資源	しげん	tài nguyên	日本は資源が少ない国です。	Nhật Bản là nước ít tài nguyên.
+0542	shigen	daily	資源	しげん	tài nguyên	水も貴重な資源だよね。	Nước cũng là tài nguyên quý giá nhỉ.
+0543	shigen	business	資源	しげん	tài nguyên	限られた資源を有効に活用する必要があります。	Cần phải sử dụng hiệu quả nguồn tài nguyên có hạn.
+0544	jiken	exam	事件	じけん	sự việc	昨夜、近所で事件があった。	Đêm qua có vụ việc xảy ra gần nhà.
+0545	jiken	daily	事件	じけん	sự việc	あの事件、ニュースで見た?	Vụ đó bạn xem tin chưa?
+0546	jiken	business	事件	じけん	sự việc	情報漏洩事件を受けてセキュリティを強化しました。	Sau sự cố rò rỉ thông tin, chúng tôi đã tăng cường bảo mật.
+0547	shiji1	exam	指示	しじ	chỉ thị	上司の指示に従ってください。	Vui lòng làm theo chỉ thị của cấp trên.
+0548	shiji1	daily	指示	しじ	chỉ thị	え、そんな指示あった?	Ơ, có chỉ thị đó à?
+0549	shiji1	business	指示	しじ	chỉ thị	詳細な指示は追ってメールでお送りします。	Chỉ thị chi tiết sẽ được gửi qua email sau.
+0550	jijitsu	exam	事実	じじつ	sự thật	それは事実です。	Đó là sự thật.
+0551	jijitsu	daily	事実	じじつ	sự thật	え、それ事実なの?	Ơ, cái đó là thật à?
+0552	jijitsu	business	事実	じじつ	sự thật	調査の結果、事実関係が明らかになりました。	Qua kết quả điều tra, các tình tiết sự việc đã được làm rõ.
+0553	jijou	exam	事情	じじょう	hoàn cảnh	家庭の事情で欠席します。	Vì hoàn cảnh gia đình nên tôi xin vắng mặt.
+0554	jijou	daily	事情	じじょう	hoàn cảnh	いろいろ事情があってさ。	Có nhiều lý do khách quan lắm.
+0555	jijou	business	事情	じじょう	hoàn cảnh	事情をご説明した上で、ご理解いただけますと幸いです。	Sau khi trình bày hoàn cảnh, chúng tôi rất mong quý vị thông cảm.
+0556	jishin1	exam	自信	じしん	tự tin	彼はいつも自信を持って話す。	Anh ấy luôn nói chuyện với sự tự tin.
+0557	jishin1	daily	自信	じしん	tự tin	ちょっと自信ないんだよね。	Tôi hơi thiếu tự tin đó.
+0558	jishin1	business	自信	じしん	tự tin	この製品の品質には自信を持っております。	Chúng tôi tự tin vào chất lượng của sản phẩm này.
+0559	jisoku	exam	時速	じそく	vận tốc	この電車は時速120キロで走ります。	Tàu này chạy với vận tốc 120km/h.
+0560	jisoku	daily	時速	じそく	vận tốc	時速どれくらい出てた?	Vận tốc lúc đó khoảng bao nhiêu?
+0561	jisoku	business	時速	じそく	vận tốc	時速80キロを超える走行は禁止されています。	Việc lái xe vượt quá vận tốc 80km/h bị cấm.
+0562	shitaku	exam	支度	したく	chuẩn bị	もう出かける支度はできましたか。	Đã chuẩn bị xong để ra ngoài chưa?
+0563	shitaku	daily	支度	したく	chuẩn bị	早く支度しないと遅れるよ。	Không chuẩn bị nhanh là trễ đó.
+0564	shitaku	business	支度	したく	chuẩn bị	出張の支度は前日までに済ませてください。	Vui lòng hoàn tất việc chuẩn bị cho chuyến công tác trước một ngày.
+0565	shitsugyou	exam	失業	しつぎょう	thất nghiệp	彼は先月、失業した。	Tháng trước anh ấy đã thất nghiệp.
+0566	shitsugyou	daily	失業	しつぎょう	thất nghiệp	失業したらどうしよう…。	Nếu thất nghiệp thì phải làm sao đây...
+0567	shitsugyou	business	失業	しつぎょう	thất nghiệp	景気の悪化により失業率が上昇しています。	Do kinh tế suy thoái, tỷ lệ thất nghiệp đang tăng lên.
+0568	jissai	exam	実際	じっさい	thực tế	実際に行ってみないと分からない。	Không đi thực tế thì không biết được.
+0569	jissai	daily	実際	じっさい	thực tế	実際どうだった?	Thực tế thì thế nào?
+0570	jissai	business	実際	じっさい	thực tế	実際の運用状況を確認してから判断しましょう。	Hãy xác nhận tình trạng vận hành thực tế trước khi đưa ra quyết định.
+0571	jitsuryoku	exam	実力	じつりょく	thực lực	彼は実力のある選手です。	Anh ấy là vận động viên có thực lực.
+0572	jitsuryoku	daily	実力	じつりょく	thực lực	本番で実力出せるといいね。	Mong là phát huy được thực lực trong ngày thi đấu chính thức.
+0573	jitsuryoku	business	実力	じつりょく	thực lực	実力主義の評価制度を導入しました。	Chúng tôi đã áp dụng hệ thống đánh giá dựa trên năng lực thực tế.
+0574	shiten	exam	支店	してん	chi nhánh	この銀行の支店はどこにありますか。	Chi nhánh của ngân hàng này ở đâu?
+0575	shiten	daily	支店	してん	chi nhánh	支店異動になったんだって。	Nghe nói anh ấy bị chuyển sang chi nhánh khác.
+0576	shiten	business	支店	してん	chi nhánh	大阪支店との連携を強化する必要があります。	Cần phải tăng cường phối hợp với chi nhánh Osaka.
+0577	shidou	exam	指導	しどう	hướng dẫn	先生から指導を受けています。	Tôi đang được thầy hướng dẫn.
+0578	shidou	daily	指導	しどう	hướng dẫn	監督の指導、厳しいんだって。	Nghe nói sự chỉ dạy của huấn luyện viên nghiêm khắc lắm.
+0579	shidou	business	指導	しどう	hướng dẫn	新入社員に丁寧な指導を行っています。	Chúng tôi đang hướng dẫn tận tình cho nhân viên mới.
+0580	jimu	exam	事務	じむ	văn phòng	彼女は事務の仕事をしています。	Cô ấy làm công việc văn phòng.
+0581	jimu	daily	事務	じむ	văn phòng	事務作業、意外と多いね。	Công việc giấy tờ nhiều hơn tôi tưởng nhỉ.
+0582	jimu	business	事務	じむ	văn phòng	事務手続きはオンラインでも可能です。	Thủ tục hành chính cũng có thể thực hiện trực tuyến.
+0583	shimekiri	exam	締め切り	しめきり	hạn chót	レポートの締め切りは金曜日です。	Hạn nộp báo cáo là thứ Sáu.
+0584	shimekiri	daily	締め切り	しめきり	hạn chót	締め切りに間に合わなかった。	Tôi đã không kịp hạn chót.
+0585	shimekiri	business	締め切り	しめきり	hạn chót	締め切りを過ぎた場合はご連絡ください。	Nếu quá hạn nộp, vui lòng liên hệ với chúng tôi.
+0586	jama	exam	邪魔	じゃま	làm phiền	ここに置くと邪魔になります。	Để ở đây thì sẽ vướng đó.
+0587	jama	daily	邪魔	じゃま	làm phiền	ちょっと邪魔しないでよ。	Đừng có làm phiền chút xíu đi mà.
+0588	jama	business	邪魔	じゃま	làm phiền	通路の邪魔にならないよう荷物を整理してください。	Vui lòng sắp xếp hành lý để không cản trở lối đi.
+0589	janken	exam	じゃんけん	じゃんけん	oẳn tù tì	じゃんけんで決めよう。	Quyết định bằng oẳn tù tì đi.
+0590	janken	daily	じゃんけん	じゃんけん	oẳn tù tì	じゃんけんぽん!	Kéo búa bao!
+0591	janken	business	じゃんけん	じゃんけん	oẳn tù tì	順番はじゃんけんで公平に決めましょう。	Hãy quyết định thứ tự công bằng bằng oẳn tù tì.
+0592	shuukai	exam	集会	しゅうかい	cuộc họp	明日、住民集会があります。	Ngày mai có cuộc họp dân cư.
+0593	shuukai	daily	集会	しゅうかい	cuộc họp	あの集会、何のためだったの?	Cuộc họp đó là vì mục đích gì vậy?
+0594	shuukai	business	集会	しゅうかい	cuộc họp	緊急集会を招集し、対応方針を協議しました。	Chúng tôi đã triệu tập cuộc họp khẩn cấp để bàn phương hướng xử lý.
+0595	shuukyou	exam	宗教	しゅうきょう	tôn giáo	世界にはさまざまな宗教がある。	Trên thế giới có nhiều tôn giáo khác nhau.
+0596	shuukyou	daily	宗教	しゅうきょう	tôn giáo	宗教の話、ちょっと苦手かも。	Nói về tôn giáo tôi hơi ngại đó.
+0597	shuukyou	business	宗教	しゅうきょう	tôn giáo	社員やお客様の宗教上の理由による食事制限に配慮しています。	Chúng tôi lưu ý đến các hạn chế ăn uống vì lý do tôn giáo của nhân viên và khách hàng.
+0598	shuugou	exam	集合	しゅうごう	tập hợp, tập trung	明日は9時に集合してください。	Ngày mai xin tập trung lúc 9 giờ.
+0599	shuugou	daily	集合	しゅうごう	tập hợp, tập trung	集合時間、何時だっけ?	Giờ tập trung là mấy giờ nhỉ?
+0600	shuugou	business	集合	しゅうごう	tập hợp, tập trung	出発前に駐車場に集合をお願いします。	Xin vui lòng tập trung tại bãi đỗ xe trước khi khởi hành.
+0601	shuushoku	exam	就職	しゅうしょく	xin việc, đi làm	来年、就職する予定です。	Sang năm tôi dự định đi làm.
+0602	shuushoku	daily	就職	しゅうしょく	xin việc, đi làm	就職活動、順調?	Việc tìm việc có thuận lợi không?
+0603	shuushoku	business	就職	しゅうしょく	xin việc, đi làm	新卒者の就職支援プログラムを実施しています。	Chúng tôi đang thực hiện chương trình hỗ trợ việc làm cho sinh viên mới tốt nghiệp.
+0604	shuuchuu	exam	集中	しゅうちゅう	tập trung	勉強に集中できない。	Tôi không thể tập trung học được.
+0605	shuuchuu	daily	集中	しゅうちゅう	tập trung	今、集中してるから話しかけないで。	Giờ tôi đang tập trung nên đừng bắt chuyện.
+0606	shuuchuu	business	集中	しゅうちゅう	tập trung	業務に集中できる環境を整備しています。	Chúng tôi đang hoàn thiện môi trường để có thể tập trung vào công việc.
+0607	juuden	exam	充電	じゅうでん	sạc điện	スマホの充電が切れそう。	Điện thoại sắp hết pin rồi.
+0608	juuden	daily	充電	じゅうでん	sạc điện	これ、充電した?	Cái này sạc chưa?
+0609	juuden	business	充電	じゅうでん	sạc điện	会議室に充電スペースを設置しました。	Chúng tôi đã lắp đặt khu vực sạc pin trong phòng họp.
+0610	shuuri	exam	修理	しゅうり	sửa chữa	自転車を修理に出した。	Tôi đã đem xe đạp đi sửa.
+0611	shuuri	daily	修理	しゅうり	sửa chữa	これ、修理できるかな。	Cái này sửa được không nhỉ?
+0612	shuuri	business	修理	しゅうり	sửa chữa	故障した機械の修理を業者に依頼しました。	Chúng tôi đã yêu cầu đơn vị sửa chữa máy móc bị hỏng.
+0613	shugi	exam	主義	しゅぎ	chủ nghĩa	彼は完璧主義です。	Anh ấy là người theo chủ nghĩa hoàn hảo.
+0614	shugi	daily	主義	しゅぎ	chủ nghĩa	それって、あなたの主義なの?	Đó là nguyên tắc sống của bạn à?
+0615	shugi	business	主義	しゅぎ	chủ nghĩa	弊社は成果主義を採用しています。	Công ty chúng tôi áp dụng chủ nghĩa thành quả.
+0616	shukushou	exam	縮小	しゅくしょう	thu nhỏ	画像を縮小してください。	Vui lòng thu nhỏ hình ảnh.
+0617	shukushou	daily	縮小	しゅくしょう	thu nhỏ	予算、縮小されちゃったんだって。	Nghe nói ngân sách bị cắt giảm rồi đó.
+0618	shukushou	business	縮小	しゅくしょう	thu nhỏ	不採算事業の縮小を検討しています。	Chúng tôi đang xem xét thu hẹp mảng kinh doanh không có lãi.
+0619	jushin	exam	受信	じゅしん	nhận (tin, mail)	メールを受信しました。	Đã nhận được email.
+0620	jushin	daily	受信	じゅしん	nhận (tin, mail)	電波、受信できてる?	Có bắt được sóng không?
+0621	jushin	business	受信	じゅしん	nhận (tin, mail)	システムがメッセージを正常に受信しました。	Hệ thống đã nhận tin nhắn bình thường.
+0622	shukkin	exam	出勤	しゅっきん	đi làm	明日は9時に出勤します。	Ngày mai tôi sẽ đi làm lúc 9 giờ.
+0623	shukkin	daily	出勤	しゅっきん	đi làm	今日、出勤早いね。	Hôm nay đi làm sớm nhỉ.
+0624	shukkin	business	出勤	しゅっきん	đi làm	台風のため、出勤時間を変更いたします。	Do bão nên chúng tôi sẽ thay đổi giờ đi làm.
+0625	shutsujou	exam	出場	しゅつじょう	tham gia (thi đấu)	大会に出場します。	Tôi sẽ tham gia thi đấu giải này.
+0626	shutsujou	daily	出場	しゅつじょう	tham gia (thi đấu)	次の試合、出場するの?	Trận tiếp theo bạn có thi đấu không?
+0627	shutsujou	business	出場	しゅつじょう	tham gia (thi đấu)	全国大会への出場を目指して練習しています。	Chúng tôi đang luyện tập nhắm đến việc tham gia giải toàn quốc.
+0628	shucchou	exam	出張	しゅっちょう	công tác	来週、大阪に出張します。	Tuần sau tôi sẽ đi công tác Osaka.
+0629	shucchou	daily	出張	しゅっちょう	công tác	また出張?忙しいね。	Lại đi công tác à? Bận thật nhỉ.
+0630	shucchou	business	出張	しゅっちょう	công tác	出張費用の精算は経理部にご提出ください。	Vui lòng nộp bảng thanh toán chi phí công tác cho phòng kế toán.
+0631	shurui	exam	種類	しゅるい	loại	この店は種類が豊富です。	Cửa hàng này có nhiều loại phong phú.
+0632	shurui	daily	種類	しゅるい	loại	何種類あるの、これ?	Cái này có mấy loại vậy?
+0633	shurui	business	種類	しゅるい	loại	商品の種類ごとに在庫を管理しています。	Chúng tôi quản lý tồn kho theo từng loại sản phẩm.
+0634	junjo	exam	順序	じゅんじょ	thứ tự	作業の順序を確認してください。	Vui lòng xác nhận thứ tự các bước công việc.
+0635	junjo	daily	順序	じゅんじょ	thứ tự	あれ、順序逆じゃない?	Ơ, thứ tự bị ngược rồi mà?
+0636	junjo	business	順序	じゅんじょ	thứ tự	手続きは正しい順序で進めてください。	Vui lòng tiến hành thủ tục theo đúng trình tự.
+0637	junban	exam	順番	じゅんばん	lượt, thứ tự	順番に並んでください。	Vui lòng xếp hàng theo thứ tự.
+0638	junban	daily	順番	じゅんばん	lượt, thứ tự	次、私の順番だよね?	Tiếp theo là lượt của tôi phải không?
+0639	junban	business	順番	じゅんばん	lượt, thứ tự	お客様は受付順に順番をお呼びします。	Chúng tôi sẽ gọi khách hàng theo thứ tự đăng ký.
+0640	shiyou1	exam	使用	しよう	sử dụng	このトイレは使用中です。	Nhà vệ sinh này đang được sử dụng.
+0641	shiyou1	daily	使用	しよう	sử dụng	これ、使用してもいい?	Cái này dùng được không?
+0642	shiyou1	business	使用	しよう	sử dụng	社用車の使用は事前に申請してください。	Vui lòng đăng ký trước khi sử dụng xe công ty.
+0643	shougyou	exam	商業	しょうぎょう	thương mại	この辺りは商業が盛んです。	Khu vực này thương mại phát triển.
+0644	shougyou	daily	商業	しょうぎょう	thương mại	あそこ、大きい商業施設ができるらしいよ。	Nghe nói ở đó sắp có khu thương mại lớn đó.
+0645	shougyou	business	商業	しょうぎょう	thương mại	新しい商業施設の開発計画が発表されました。	Kế hoạch phát triển khu thương mại mới đã được công bố.
+0646	jouken	exam	条件	じょうけん	điều kiện	この仕事にはいくつか条件があります。	Công việc này có vài điều kiện.
+0647	jouken	daily	条件	じょうけん	điều kiện	その条件なら、私もいいよ。	Với điều kiện đó thì tôi cũng đồng ý.
+0648	jouken	business	条件	じょうけん	điều kiện	契約条件について再度確認させてください。	Xin cho tôi xác nhận lại điều kiện hợp đồng một lần nữa.
+0649	joushiki	exam	常識	じょうしき	kiến thức thường thức	公共の場所で静かにするのは常識です。	Giữ yên lặng ở nơi công cộng là điều thường thức.
+0650	joushiki	daily	常識	じょうしき	kiến thức thường thức	それ、常識でしょ。	Cái đó ai cũng biết mà.
+0651	joushiki	business	常識	じょうしき	kiến thức thường thức	ビジネスマナーは社会人としての常識です。	Phép tắc kinh doanh là kiến thức cơ bản của người đi làm.
+0652	shoutai	exam	招待	しょうたい	mời	パーティーに招待されました。	Tôi đã được mời đến bữa tiệc.
+0653	shoutai	daily	招待	しょうたい	mời	招待状、届いた?	Thiệp mời tới chưa?
+0654	shoutai	business	招待	しょうたい	mời	主要取引先を式典にご招待いたします。	Chúng tôi xin mời các đối tác chính đến buổi lễ.
+0655	joutai	exam	状態	じょうたい	trạng thái	商品の状態を確認してください。	Vui lòng kiểm tra tình trạng sản phẩm.
+0656	joutai	daily	状態	じょうたい	trạng thái	体調、どんな状態?	Sức khỏe tình trạng thế nào?
+0657	joutai	business	状態	じょうたい	trạng thái	機器の状態を定期的に点検しています。	Chúng tôi kiểm tra tình trạng thiết bị định kỳ.
+0658	joudan	exam	冗談	じょうだん	nói đùa	それは冗談ですよね?	Đó là bạn nói đùa thôi phải không?
+0659	joudan	daily	冗談	じょうだん	nói đùa	冗談やめてよ、ビックリした。	Đừng đùa nữa, giật cả mình.
+0660	joudan	business	冗談	じょうだん	nói đùa	会議中の冗談は控えるようにしましょう。	Hãy hạn chế nói đùa trong lúc họp.
+0661	shouchi	exam	承知	しょうち	chấp nhận, hiểu	規則を承知の上で参加してください。	Vui lòng tham gia với sự hiểu rõ quy định.
+0662	shouchi	daily	承知	しょうち	chấp nhận, hiểu	承知!すぐやるね。	Rõ rồi! Tôi làm ngay đây.
+0663	shouchi	business	承知	しょうち	chấp nhận, hiểu	ご依頼の件、承知いたしました。	Về việc quý vị yêu cầu, tôi đã rõ ạ.
+0664	shouhin	exam	商品	しょうひん	hàng hóa	この商品はいくらですか。	Sản phẩm này giá bao nhiêu?
+0665	shouhin	daily	商品	しょうひん	hàng hóa	この商品、めっちゃ売れてるらしいよ。	Nghe nói sản phẩm này bán chạy lắm đó.
+0666	shouhin	business	商品	しょうひん	hàng hóa	新商品の発売日が正式に決定しました。	Ngày ra mắt sản phẩm mới đã được quyết định chính thức.
+0667	jouhou	exam	情報	じょうほう	thông tin	もっと情報が必要です。	Cần thêm thông tin nữa.
+0668	jouhou	daily	情報	じょうほう	thông tin	その情報、どこで知ったの?	Thông tin đó bạn biết ở đâu vậy?
+0669	jouhou	business	情報	じょうほう	thông tin	個人情報の取り扱いには十分ご注意ください。	Xin hãy cẩn thận trong việc xử lý thông tin cá nhân.
+0670	shoumeisho	exam	証明書	しょうめいしょ	giấy chứng nhận	卒業証明書が必要です。	Cần có giấy chứng nhận tốt nghiệp.
+0671	shoumeisho	daily	証明書	しょうめいしょ	giấy chứng nhận	証明書、もう取った?	Giấy chứng nhận lấy chưa?
+0672	shoumeisho	business	証明書	しょうめいしょ	giấy chứng nhận	在職証明書の発行を人事部に依頼してください。	Vui lòng yêu cầu phòng nhân sự cấp giấy xác nhận đang làm việc.
+0673	shoumen	exam	正面	しょうめん	phía trước	建物の正面で待っています。	Tôi đang đợi ở phía trước tòa nhà.
+0674	shoumen	daily	正面	しょうめん	phía trước	正面から撮った写真、いいね。	Ảnh chụp từ phía trước đẹp đó.
+0675	shoumen	business	正面	しょうめん	phía trước	正面玄関からお入りください。	Xin vui lòng vào từ cổng chính phía trước.
+0676	shokuba	exam	職場	しょくば	nơi làm việc	新しい職場はどうですか。	Nơi làm việc mới thế nào?
+0677	shokuba	daily	職場	しょくば	nơi làm việc	職場の人間関係、ちょっと疲れる。	Quan hệ giữa mọi người ở chỗ làm khiến tôi hơi mệt.
+0678	shokuba	business	職場	しょくば	nơi làm việc	働きやすい職場環境を整備しています。	Chúng tôi đang hoàn thiện môi trường làm việc dễ chịu.
+0679	shock	exam	ショック	ショック	sốc	そのニュースにショックを受けた。	Tôi đã bị sốc bởi tin đó.
+0680	shock	daily	ショック	ショック	sốc	え、ショック…。	Ơ, sốc quá...
+0681	shock	business	ショック	ショック	sốc	予想外の結果に社内は大きなショックを受けました。	Cả công ty đã rất sốc trước kết quả ngoài dự kiến.
+0682	shomei	exam	署名	しょめい	chữ ký	ここに署名をお願いします。	Vui lòng ký tên vào đây.
+0683	shomei	daily	署名	しょめい	chữ ký	署名、どこにすればいい?	Ký tên ở đâu vậy?
+0684	shomei	business	署名	しょめい	chữ ký	契約書へのご署名をお願いいたします。	Kính mong quý khách ký tên vào hợp đồng.
+0685	shorui	exam	書類	しょるい	giấy tờ	必要な書類を準備してください。	Vui lòng chuẩn bị các giấy tờ cần thiết.
+0686	shorui	daily	書類	しょるい	giấy tờ	あの書類、どこに置いたっけ?	Giấy tờ đó tôi để đâu rồi nhỉ?
+0687	shorui	business	書類	しょるい	giấy tờ	提出書類に不備がないかご確認ください。	Xin vui lòng kiểm tra giấy tờ nộp có thiếu sót gì không.
+0688	shiritsu	exam	私立	しりつ	tư lập	息子は私立中学に通っています。	Con trai tôi đang học trường trung học tư thục.
+0689	shiritsu	daily	私立	しりつ	tư lập	そこ、私立?公立?	Chỗ đó tư thục hay công lập?
+0690	shiritsu	business	私立	しりつ	tư lập	私立学校との提携プログラムを検討しています。	Chúng tôi đang xem xét chương trình hợp tác với các trường tư thục.
+0691	shiryou	exam	資料	しりょう	tài liệu	会議の資料を準備してください。	Vui lòng chuẩn bị tài liệu cho cuộc họp.
+0692	shiryou	daily	資料	しりょう	tài liệu	この資料、まだできてないの?	Tài liệu này vẫn chưa xong à?
+0693	shiryou	business	資料	しりょう	tài liệu	参考資料を添付いたしましたのでご確認ください。	Tôi đã đính kèm tài liệu tham khảo, xin vui lòng kiểm tra.
+0694	shirushi	exam	印	しるし	dấu, ký hiệu	大事なところに印をつけた。	Tôi đã đánh dấu vào chỗ quan trọng.
+0695	shirushi	daily	印	しるし	dấu, ký hiệu	これ、何の印?	Đây là dấu gì vậy?
+0696	shirushi	business	印	しるし	dấu, ký hiệu	承認済みの書類には印を付けてください。	Vui lòng đánh dấu vào các tài liệu đã được phê duyệt.
+0697	single	exam	シングル	シングル	đơn, phòng đơn	シングルルームを予約しました。	Tôi đã đặt phòng đơn.
+0698	single	daily	シングル	シングル	đơn, phòng đơn	シングルとダブル、どっちがいい?	Phòng đơn hay đôi, cái nào tốt hơn?
+0699	single	business	シングル	シングル	đơn, phòng đơn	出張時はシングルルームを手配しております。	Khi đi công tác chúng tôi sắp xếp phòng đơn.
+0700	jinsei	exam	人生	じんせい	cuộc đời	これは一度きりの人生です。	Đây là cuộc đời chỉ có một lần.
+0701	jinsei	daily	人生	じんせい	cuộc đời	人生、いろいろあるよね。	Cuộc đời có đủ chuyện xảy ra nhỉ.
+0702	jinsei	business	人生	じんせい	cuộc đời	社員一人ひとりの人生を尊重する企業文化を目指します。	Chúng tôi hướng đến văn hóa doanh nghiệp tôn trọng cuộc sống của từng nhân viên.
+0703	shinpo	exam	進歩	しんぽ	tiến bộ	技術は日々進歩しています。	Công nghệ đang tiến bộ từng ngày.
+0704	shinpo	daily	進歩	しんぽ	tiến bộ	最近、料理の腕が進歩したよ。	Dạo này tay nghề nấu ăn tiến bộ đó.
+0705	shinpo	business	進歩	しんぽ	tiến bộ	AI技術の進歩により業務が効率化されています。	Nhờ sự tiến bộ của công nghệ AI, công việc đã trở nên hiệu quả hơn.
+0706	shinyou	exam	信用	しんよう	tin tưởng	彼のことは信用しています。	Tôi tin tưởng anh ấy.
+0707	shinyou	daily	信用	しんよう	tin tưởng	もう信用できないよ、あの人。	Người đó không thể tin tưởng được nữa rồi.
+0708	shinyou	business	信用	しんよう	tin tưởng	長年の実績によりお客様からの信用を得ています。	Nhờ thành tích nhiều năm, chúng tôi đã có được sự tin tưởng từ khách hàng.
+0709	shinri	exam	心理	しんり	tâm lý	彼の心理が理解できない。	Tôi không hiểu được tâm lý của anh ấy.
+0710	shinri	daily	心理	しんり	tâm lý	これ、心理テストなんだって。	Nghe nói cái này là bài kiểm tra tâm lý đó.
+0711	shinri	business	心理	しんり	tâm lý	消費者心理を分析してマーケティング戦略を立てます。	Chúng tôi sẽ phân tích tâm lý người tiêu dùng để lập chiến lược marketing.
+0712	schedule	exam	スケジュール	スケジュール	lịch trình	今週のスケジュールを教えてください。	Cho tôi biết lịch trình tuần này với.
+0713	schedule	daily	スケジュール	スケジュール	lịch trình	スケジュール、変更になったんだって。	Nghe nói lịch trình đã thay đổi đó.
+0714	schedule	business	スケジュール	スケジュール	lịch trình	プロジェクトのスケジュールを再調整する必要があります。	Cần phải điều chỉnh lại lịch trình dự án.
+0715	style	exam	スタイル	スタイル	phong cách	彼女はいつもスタイルがいい。	Cô ấy lúc nào cũng có dáng đẹp.
+0716	style	daily	スタイル	スタイル	phong cách	このスタイル、今流行ってるよね。	Phong cách này đang thịnh hành nhỉ.
+0717	style	business	スタイル	スタイル	phong cách	新しい働き方のスタイルを導入しました。	Chúng tôi đã áp dụng phong cách làm việc mới.
+0718	speech	exam	スピーチ	スピーチ	bài phát biểu	結婚式でスピーチをしました。	Tôi đã phát biểu tại đám cưới.
+0719	speech	daily	スピーチ	スピーチ	bài phát biểu	あのスピーチ、感動したよ。	Bài phát biểu đó khiến tôi cảm động đó.
+0720	speech	business	スピーチ	スピーチ	bài phát biểu	社長が新年のスピーチを行いました。	Giám đốc đã có bài phát biểu đầu năm.

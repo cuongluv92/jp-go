@@ -1,0 +1,181 @@
+row	vocabId	type	word	reading	meaningVi	exampleJp	exampleVi
+4501	nuu	exam	縫う	ぬう	khâu, may	母が服を縫ってくれた。	Mẹ đã may đồ cho tôi.
+4502	nuu	daily	縫う	ぬう	khâu, may	ボタンを自分で縫った。	Tự mình khâu lại nút áo.
+4503	nuu	business	縫う	ぬう	khâu, may	職人が丁寧に生地を縫う。	Người thợ tỉ mỉ may vải.
+4504	nuku	exam	抜く	ぬく	rút ra, nhổ ra, loại bỏ	歯を抜いてもらった。	Được nhổ răng giúp.
+4505	nuku	daily	抜く	ぬく	rút ra, nhổ ra, loại bỏ	雑草を抜いた。	Đã nhổ cỏ dại.
+4506	nuku	business	抜く	ぬく	rút ra, nhổ ra, loại bỏ	無駄な工程を抜いて効率化した。	Đã loại bỏ công đoạn thừa để tối ưu hóa.
+4507	nureru	exam	ぬれる	ぬれる	bị ướt	雨で服がぬれてしまった。	Quần áo bị ướt vì mưa.
+4508	nureru	daily	ぬれる	ぬれる	bị ướt	靴がぬれたので着替えた。	Vì giày bị ướt nên đã thay.
+4509	nureru	business	ぬれる	ぬれる	bị ướt	商品が水にぬれないよう梱包する。	Đóng gói để hàng hóa không bị ướt nước.
+4510	negau	exam	願う	ねがう	mong muốn, cầu mong	合格を願っている。	Đang cầu mong đỗ đạt.
+4511	negau	daily	願う	ねがう	mong muốn, cầu mong	健康を願って手を合わせた。	Chắp tay cầu mong sức khỏe.
+4512	negau	business	願う	ねがう	mong muốn, cầu mong	皆様のご協力を願います。	Kính mong sự hợp tác của quý vị.
+4513	nokosu	exam	残す	のこす	để lại, giữ lại	食べ物を残してはいけない。	Không được để thừa đồ ăn.
+4514	nokosu	daily	残す	のこす	để lại, giữ lại	弟にケーキを残しておいた。	Đã để dành bánh cho em trai.
+4515	nokosu	business	残す	のこす	để lại, giữ lại	記録を後世に残す。	Lưu lại ghi chép cho hậu thế.
+4516	noseru	exam	載せる	のせる	đặt lên, chở, đăng (bài)	荷物をトラックに載せた。	Đã chất hàng lên xe tải.
+4517	noseru	daily	載せる	のせる	đặt lên, chở, đăng (bài)	旅行の写真をSNSに載せたよ。	Tớ đăng ảnh chuyến đi lên mạng xã hội rồi đấy.
+4518	noseru	business	載せる	のせる	đặt lên, chở, đăng (bài)	その記事を雑誌に載せることにした。	Đã quyết định đăng bài báo đó lên tạp chí.
+4519	nobiru_grow	exam	伸びる	のびる	dài ra, tăng trưởng	身長がぐんと伸びた。	Chiều cao đã tăng vọt.
+4520	nobiru_grow	daily	伸びる	のびる	dài ra, tăng trưởng	髪が伸びてきた。	Tóc đã dài ra.
+4521	nobiru_grow	business	伸びる	のびる	dài ra, tăng trưởng	今期は売上が伸びている。	Doanh số kỳ này đang tăng trưởng.
+4522	nobiru_postpone	exam	延びる	のびる	bị hoãn, kéo dài (thời gian)	試験の日程が延びた。	Lịch thi đã bị hoãn lại.
+4523	nobiru_postpone	daily	延びる	のびる	bị hoãn, kéo dài (thời gian)	旅行が延びてしまった。	Chuyến du lịch bị hoãn mất rồi.
+4524	nobiru_postpone	business	延びる	のびる	bị hoãn, kéo dài (thời gian)	納期が一週間延びる見込みです。	Dự kiến hạn giao hàng sẽ kéo dài thêm một tuần.
+4525	noboru_rise	exam	昇る	のぼる	mọc lên, thăng tiến	太陽が東から昇る。	Mặt trời mọc từ hướng đông.
+4526	noboru_rise	daily	昇る	のぼる	mọc lên, thăng tiến	朝日が昇ってきた。	Ánh mặt trời buổi sáng đã lên.
+4527	noboru_rise	business	昇る	のぼる	mọc lên, thăng tiến	彼は社長の座に昇った。	Anh ấy đã lên đến vị trí chủ tịch.
+4528	norikosu	exam	乗り越す	のりこす	đi quá bến (tàu, xe)	うっかり乗り越してしまった。	Lỡ đi quá bến mất rồi.
+4529	norikosu	daily	乗り越す	のりこす	đi quá bến (tàu, xe)	寝ていて駅を乗り越した。	Ngủ quên nên đi quá ga.
+4530	norikosu	business	乗り越す	のりこす	đi quá bến (tàu, xe)	乗り越した場合は精算してください。	Nếu đi quá bến, vui lòng thanh toán lại.
+4531	haeru	exam	生える	はえる	mọc (tóc, cỏ, răng)	庭に雑草が生えている。	Cỏ dại mọc trong vườn.
+4532	haeru	daily	生える	はえる	mọc (tóc, cỏ, răng)	赤ちゃんに歯が生えてきた。	Em bé đã mọc răng.
+4533	haeru	business	生える	はえる	mọc (tóc, cỏ, răng)	この土地にはキノコがよく生える。	Nấm thường mọc nhiều ở khu đất này.
+4534	hakaru	exam	測る	はかる	đo, đo lường	体温を測った。	Đã đo thân nhiệt.
+4535	hakaru	daily	測る	はかる	đo, đo lường	体重を量って記録した。	Cân trọng lượng rồi ghi lại.
+4536	hakaru	business	測る	はかる	đo, đo lường	作業時間を計って報告する。	Đo thời gian làm việc rồi báo cáo.
+4537	haku_sweep	exam	掃く	はく	quét (nhà, sân)	部屋を掃いて掃除した。	Quét phòng để dọn dẹp.
+4538	haku_sweep	daily	掃く	はく	quét (nhà, sân)	庭を掃いた。	Đã quét sân.
+4539	haku_sweep	business	掃く	はく	quét (nhà, sân)	店の前を毎朝掃く。	Mỗi sáng quét trước cửa hàng.
+4540	haku_vomit	exam	吐く	はく	nôn, nhổ, thở ra, thốt ra	気分が悪くて吐いてしまった。	Khó chịu trong người nên đã nôn.
+4541	haku_vomit	daily	吐く	はく	nôn, nhổ, thở ra, thốt ra	息を大きく吐いた。	Đã thở ra thật mạnh.
+4542	haku_vomit	business	吐く	はく	nôn, nhổ, thở ra, thốt ra	彼は不満を吐くように話した。	Anh ấy nói như trút hết bất mãn ra.
+4543	hasamu	exam	挟む	はさむ	kẹp, xen vào giữa	パンに具を挟んで食べる。	Kẹp nhân vào bánh mì rồi ăn.
+4544	hasamu	daily	挟む	はさむ	kẹp, xen vào giữa	指を挟んでしまった。	Bị kẹp ngón tay mất rồi.
+4545	hasamu	business	挟む	はさむ	kẹp, xen vào giữa	資料の間にメモを挟んでおいた。	Đã kẹp ghi chú vào giữa tài liệu.
+4546	hazusu	exam	外す	はずす	tháo ra, rời khỏi (chỗ ngồi)	眼鏡を外して顔を洗った。	Tháo kính ra rồi rửa mặt.
+4547	hazusu	daily	外す	はずす	tháo ra, rời khỏi (chỗ ngồi)	マスクを外してもいいですか。	Tôi có thể tháo khẩu trang được không?
+4548	hazusu	business	外す	はずす	tháo ra, rời khỏi (chỗ ngồi)	席を外している間に電話があった。	Có điện thoại gọi đến trong lúc tôi rời khỏi chỗ ngồi.
+4549	hazureru	exam	外れる	はずれる	tuột ra, trật, sai (dự đoán)	ボタンが外れてしまった。	Cúc áo bị tuột mất rồi.
+4550	hazureru	daily	外れる	はずれる	tuột ra, trật, sai (dự đoán)	天気予報が外れた。	Dự báo thời tiết đã sai.
+4551	hazureru	business	外れる	はずれる	tuột ra, trật, sai (dự đoán)	予測が大きく外れる結果になった。	Kết quả đã lệch lớn so với dự đoán.
+4552	hanashiau	exam	話し合う	はなしあう	bàn bạc, thảo luận	二人でよく話し合った。	Hai người đã bàn bạc kỹ với nhau.
+4553	hanashiau	daily	話し合う	はなしあう	bàn bạc, thảo luận	家族で話し合って決めた。	Cả nhà bàn bạc rồi quyết định.
+4554	hanashiau	business	話し合う	はなしあう	bàn bạc, thảo luận	双方が話し合う場を設けた。	Đã tạo cơ hội để hai bên trao đổi.
+4555	hanashikakeru	exam	話しかける	はなしかける	bắt chuyện, gợi chuyện	知らない人に話しかけられた。	Bị người lạ bắt chuyện.
+4556	hanashikakeru	daily	話しかける	はなしかける	bắt chuyện, gợi chuyện	隣の席の人に話しかけてみた。	Đã thử bắt chuyện với người ngồi bên cạnh.
+4557	hanashikakeru	business	話しかける	はなしかける	bắt chuyện, gợi chuyện	上司に話しかけるタイミングを見計らった。	Đã canh thời điểm để bắt chuyện với cấp trên.
+4558	hanareru	exam	離れる	はなれる	rời xa, tách khỏi	故郷を離れて十年になる。	Đã 10 năm kể từ khi rời quê hương.
+4559	hanareru	daily	離れる	はなれる	rời xa, tách khỏi	子供が親から離れたがらない。	Đứa trẻ không muốn rời xa cha mẹ.
+4560	hanareru	business	離れる	はなれる	rời xa, tách khỏi	本社から離れた場所に工場がある。	Nhà máy nằm ở nơi cách xa trụ sở chính.
+4561	hameru	exam	はめる	はめる	đeo vào, lắp vào	指輪を指にはめた。	Đã đeo nhẫn vào ngón tay.
+4562	hameru	daily	はめる	はめる	đeo vào, lắp vào	手袋をはめて出かけた。	Đeo găng tay rồi đi ra ngoài.
+4563	hameru	business	はめる	はめる	đeo vào, lắp vào	部品を正確にはめる作業だ。	Đây là công việc lắp linh kiện chính xác.
+4564	hayaru	exam	流行る	はやる	thịnh hành, được ưa chuộng	今このスタイルが流行っている。	Kiểu này đang thịnh hành.
+4565	hayaru	daily	流行る	はやる	thịnh hành, được ưa chuộng	去年流行った歌だ。	Đây là bài hát thịnh hành năm ngoái.
+4566	hayaru	business	流行る	はやる	thịnh hành, được ưa chuộng	このデザインは若者の間で流行るだろう。	Thiết kế này chắc sẽ thịnh hành trong giới trẻ.
+4567	haraimodosu	exam	払い戻す	はらいもどす	hoàn tiền	料金を払い戻してもらった。	Đã được hoàn lại tiền phí.
+4568	haraimodosu	daily	払い戻す	はらいもどす	hoàn tiền	チケット代を払い戻した。	Đã hoàn tiền vé.
+4569	haraimodosu	business	払い戻す	はらいもどす	hoàn tiền	不良品は全額払い戻す方針です。	Chính sách là hoàn lại toàn bộ tiền cho hàng lỗi.
+4570	hareru_swell	exam	腫れる	はれる	sưng lên	足首が腫れてしまった。	Mắt cá chân đã bị sưng.
+4571	hareru_swell	daily	腫れる	はれる	sưng lên	目が腫れている。	Mắt đang bị sưng.
+4572	hareru_swell	business	腫れる	はれる	sưng lên	患部が腫れる場合は受診してください。	Nếu vùng bị thương sưng lên, vui lòng đi khám.
+4573	hikiukeru	exam	引き受ける	ひきうける	đảm nhận, nhận lời	その仕事を引き受けた。	Đã nhận công việc đó.
+4574	hikiukeru	daily	引き受ける	ひきうける	đảm nhận, nhận lời	頼まれて引き受けてしまった。	Được nhờ nên đã nhận lời.
+4575	hikiukeru	business	引き受ける	ひきうける	đảm nhận, nhận lời	弊社がこの案件を引き受けます。	Công ty chúng tôi sẽ nhận dự án này.
+4576	hikidasu	exam	引き出す	ひきだす	rút ra (tiền), khơi gợi	銀行でお金を引き出した。	Đã rút tiền ở ngân hàng.
+4577	hikidasu	daily	引き出す	ひきだす	rút ra (tiền), khơi gợi	ATMで現金を引き出してきた。	Đã rút tiền mặt ở ATM.
+4578	hikidasu	business	引き出す	ひきだす	rút ra (tiền), khơi gợi	社員の潜在能力を引き出す研修だ。	Đây là khóa đào tạo nhằm khơi dậy tiềm năng của nhân viên.
+4579	hiku2	exam	引く	ひく	kéo, kẻ, bị (cảm)	ロープを引いて動かした。	Kéo dây thừng để di chuyển.
+4580	hiku2	daily	引く	ひく	kéo, kẻ, bị (cảm)	風邪を引いてしまった。	Đã bị cảm mất rồi.
+4581	hiku2	business	引く	ひく	kéo, kẻ, bị (cảm)	定規で線を引く作業をした。	Đã làm công việc kẻ đường thẳng bằng thước.
+4582	hikkurikaesu	exam	引っ繰り返す	ひっくりかえす	lật ngược, đảo lộn	テーブルの上のコップを引っ繰り返してしまった。	Đã làm lật đổ cốc trên bàn mất rồi.
+4583	hikkurikaesu	daily	引っ繰り返す	ひっくりかえす	lật ngược, đảo lộn	箱を引っ繰り返して中身を出した。	Lật ngược cái hộp để lấy đồ bên trong ra.
+4584	hikkurikaesu	business	引っ繰り返す	ひっくりかえす	lật ngược, đảo lộn	前回の決定を引っ繰り返す提案がなされた。	Đã có đề xuất lật ngược quyết định lần trước.
+4585	hipparu	exam	引っ張る	ひっぱる	kéo, lôi, dẫn dắt	綱を強く引っ張った。	Đã kéo mạnh sợi dây thừng.
+4586	hipparu	daily	引っ張る	ひっぱる	kéo, lôi, dẫn dắt	犬がリードを引っ張っている。	Con chó đang kéo dây dắt.
+4587	hipparu	business	引っ張る	ひっぱる	kéo, lôi, dẫn dắt	チームを引っ張るリーダーが必要だ。	Cần có người lãnh đạo dẫn dắt cả đội.
+4588	hiyasu	exam	冷やす	ひやす	làm lạnh, làm mát	飲み物を冷蔵庫で冷やした。	Đã làm lạnh đồ uống trong tủ lạnh.
+4589	hiyasu	daily	冷やす	ひやす	làm lạnh, làm mát	頭を冷やして考えよう。	Hãy bình tĩnh lại rồi suy nghĩ.
+4590	hiyasu	business	冷やす	ひやす	làm lạnh, làm mát	製品を十分に冷やす工程が必要だ。	Cần có công đoạn làm lạnh sản phẩm đầy đủ.
+4591	hirogeru	exam	広げる	ひろげる	mở rộng, trải ra	地図を机に広げた。	Đã trải bản đồ ra bàn.
+4592	hirogeru	daily	広げる	ひろげる	mở rộng, trải ra	新聞を広げて読んだ。	Trải báo ra đọc.
+4593	hirogeru	business	広げる	ひろげる	mở rộng, trải ra	事業を海外に広げる計画だ。	Đây là kế hoạch mở rộng kinh doanh ra nước ngoài.
+4594	hiromeru	exam	広める	ひろめる	phổ biến, quảng bá	彼はその技術を広めた。	Anh ấy đã phổ biến kỹ thuật đó.
+4595	hiromeru	daily	広める	ひろめる	phổ biến, quảng bá	良い習慣を広めていきたい。	Tôi muốn tiếp tục lan tỏa thói quen tốt.
+4596	hiromeru	business	広める	ひろめる	phổ biến, quảng bá	新製品の認知度を広める活動を行う。	Tiến hành hoạt động quảng bá độ nhận diện sản phẩm mới.
+4597	fuku2	exam	拭く	ふく	lau, chùi	テーブルを拭いてきれいにした。	Lau bàn cho sạch sẽ.
+4598	fuku2	daily	拭く	ふく	lau, chùi	汗を拭いた。	Đã lau mồ hôi.
+4599	fuku2	business	拭く	ふく	lau, chùi	窓を毎日拭く担当だ。	Là người phụ trách lau cửa sổ hàng ngày.
+4600	fukuramu	exam	膨らむ	ふくらむ	phồng lên, nở ra	風船が膨らんだ。	Quả bóng bay đã phồng lên.
+4601	fukuramu	daily	膨らむ	ふくらむ	phồng lên, nở ra	パンの生地が膨らんできた。	Bột bánh mì đã nở ra.
+4602	fukuramu	business	膨らむ	ふくらむ	phồng lên, nở ra	期待が膨らむ一方だ。	Kỳ vọng chỉ có tăng thêm.
+4603	fusegu	exam	防ぐ	ふせぐ	ngăn chặn, phòng tránh	事故を防いだ。	Đã ngăn chặn được tai nạn.
+4604	fusegu	daily	防ぐ	ふせぐ	ngăn chặn, phòng tránh	風邪を防ぐためマスクをする。	Đeo khẩu trang để phòng cảm cúm.
+4605	fusegu	business	防ぐ	ふせぐ	ngăn chặn, phòng tránh	リスクを未然に防ぐ対策を講じる。	Thực hiện biện pháp phòng ngừa rủi ro từ trước.
+4606	butsukaru	exam	ぶつかる	ぶつかる	va vào, va chạm	車と車がぶつかった。	Hai xe ô tô đã va vào nhau.
+4607	butsukaru	daily	ぶつかる	ぶつかる	va vào, va chạm	自転車にぶつかってしまった。	Đã va phải xe đạp mất rồi.
+4608	butsukaru	business	ぶつかる	ぶつかる	va vào, va chạm	意見がぶつかることもある。	Cũng có lúc ý kiến xung đột nhau.
+4609	fuyasu	exam	増やす	ふやす	làm tăng	貯金を増やした。	Đã tăng tiền tiết kiệm.
+4610	fuyasu	daily	増やす	ふやす	làm tăng	運動の時間を増やしている。	Đang tăng thời gian tập thể dục.
+4611	fuyasu	business	増やす	ふやす	làm tăng	売上を増やす戦略を検討する。	Xem xét chiến lược tăng doanh số.
+4612	furimuku	exam	振り向く	ふりむく	ngoảnh lại, quay lại	名前を呼ばれて振り向いた。	Được gọi tên nên đã quay lại.
+4613	furimuku	daily	振り向く	ふりむく	ngoảnh lại, quay lại	彼女は振り向いて笑った。	Cô ấy quay lại và cười.
+4614	furimuku	business	振り向く	ふりむく	ngoảnh lại, quay lại	誰も振り向くことなく通り過ぎた。	Không ai quay lại nhìn mà đi qua.
+4615	furu_wave	exam	振る	ふる	vẫy, lắc, rắc	手を振って別れた。	Vẫy tay chào tạm biệt.
+4616	furu_wave	daily	振る	ふる	vẫy, lắc, rắc	犬がしっぽを振った。	Con chó đã vẫy đuôi.
+4617	furu_wave	business	振る	ふる	vẫy, lắc, rắc	塩を少し振る。	Rắc một ít muối.
+4618	furueru	exam	震える	ふるえる	run, run rẩy	寒さで体が震えた。	Cơ thể run lên vì lạnh.
+4619	furueru	daily	震える	ふるえる	run, run rẩy	怖くて声が震えている。	Sợ đến mức giọng nói đang run.
+4620	furueru	business	震える	ふるえる	run, run rẩy	緊張で手が震える。	Tay run vì căng thẳng.
+4621	heru_decrease	exam	減る	へる	giảm	体重が減った。	Cân nặng đã giảm.
+4622	heru_decrease	daily	減る	へる	giảm	お客さんが減ってきた。	Khách hàng đã giảm dần.
+4623	heru_decrease	business	減る	へる	giảm	今後、需要が減ると予測される。	Dự đoán nhu cầu sẽ giảm trong tương lai.
+4624	hoeru	exam	ほえる	ほえる	sủa (chó)	犬が大きくほえた。	Con chó sủa to.
+4625	hoeru	daily	ほえる	ほえる	sủa (chó)	隣の犬がいつもほえている。	Con chó nhà bên lúc nào cũng sủa.
+4626	hoeru	business	ほえる	ほえる	sủa (chó)	警備犬が知らない人にほえることがあります。	Chó bảo vệ đôi khi sủa người lạ.
+4627	hosu	exam	干す	ほす	phơi	洗濯物を庭に干した。	Đã phơi đồ giặt ở sân.
+4628	hosu	daily	干す	ほす	phơi	布団を干しておいた。	Đã phơi chăn sẵn rồi.
+4629	hosu	business	干す	ほす	phơi	天日で魚を干す。	Phơi cá dưới ánh nắng mặt trời.
+4630	horu	exam	掘る	ほる	đào	庭に穴を掘った。	Đã đào một cái hố trong sân.
+4631	horu	daily	掘る	ほる	đào	芋を掘って収穫した。	Đào khoai lên thu hoạch.
+4632	horu	business	掘る	ほる	đào	井戸を掘る工事が始まった。	Công trình đào giếng đã bắt đầu.
+4633	mageru	exam	曲げる	まげる	bẻ, uốn cong, bóp méo	針金を曲げた。	Đã bẻ cong sợi dây thép.
+4634	mageru	daily	曲げる	まげる	bẻ, uốn cong, bóp méo	膝を曲げて座った。	Gập đầu gối rồi ngồi xuống.
+4635	mageru	business	曲げる	まげる	bẻ, uốn cong, bóp méo	事実を曲げて伝えるべきではない。	Không nên bóp méo sự thật khi truyền đạt.
+4636	mazeru	exam	混ぜる	まぜる	trộn	卵と砂糖を混ぜた。	Đã trộn trứng với đường.
+4637	mazeru	daily	混ぜる	まぜる	trộn	よくかき混ぜてから飲む。	Khuấy đều rồi mới uống.
+4638	mazeru	business	混ぜる	まぜる	trộn	二つの材料を均等に混ぜる。	Trộn đều hai nguyên liệu.
+4639	machiawaseru	exam	待ち合わせる	まちあわせる	hẹn gặp	駅で待ち合わせた。	Đã hẹn gặp ở nhà ga.
+4640	machiawaseru	daily	待ち合わせる	まちあわせる	hẹn gặp	友達とカフェで待ち合わせている。	Đang hẹn gặp bạn ở quán cà phê.
+4641	machiawaseru	business	待ち合わせる	まちあわせる	hẹn gặp	十時にロビーで待ち合わせる予定です。	Dự định hẹn gặp ở sảnh lúc 10 giờ.
+4642	machigau	exam	間違う	まちがう	nhầm, sai	答えを間違ってしまった。	Đã trả lời sai mất rồi.
+4643	machigau	daily	間違う	まちがう	nhầm, sai	道を間違った。	Đã đi nhầm đường.
+4644	machigau	business	間違う	まちがう	nhầm, sai	判断を間違うと大きな損失になる。	Nếu phán đoán sai sẽ dẫn đến tổn thất lớn.
+4645	matomeru	exam	まとめる	まとめる	tóm tắt, tổng hợp, gom lại	レポートをまとめた。	Đã tổng hợp báo cáo.
+4646	matomeru	daily	まとめる	まとめる	tóm tắt, tổng hợp, gom lại	意見をまとめてから発表する。	Tổng hợp ý kiến rồi mới trình bày.
+4647	matomeru	business	まとめる	まとめる	tóm tắt, tổng hợp, gom lại	会議の内容をまとめる係だ。	Là người phụ trách tổng hợp nội dung cuộc họp.
+4648	manabu	exam	学ぶ	まなぶ	học, học hỏi	大学で経済学を学んだ。	Đã học kinh tế học ở đại học.
+4649	manabu	daily	学ぶ	まなぶ	học, học hỏi	毎日新しいことを学んでいる。	Mỗi ngày đang học điều mới.
+4650	manabu	business	学ぶ	まなぶ	học, học hỏi	失敗から学ぶ姿勢が大切だ。	Thái độ học hỏi từ thất bại rất quan trọng.
+4651	mamoru	exam	守る	まもる	bảo vệ, giữ (lời hứa)	約束を守った。	Đã giữ lời hứa.
+4652	mamoru	daily	守る	まもる	bảo vệ, giữ (lời hứa)	家族を守っていきたい。	Tôi muốn tiếp tục bảo vệ gia đình.
+4653	mamoru	business	守る	まもる	bảo vệ, giữ (lời hứa)	規則を守る義務がある。	Có nghĩa vụ tuân thủ quy tắc.
+4654	mawasu	exam	回す	まわす	xoay, quay, chuyền, xoay vòng	ハンドルを右に回した。	Đã xoay vô lăng sang phải.
+4655	mawasu	daily	回す	まわす	xoay, quay, chuyền, xoay vòng	資料を皆に回している。	Đang chuyền tài liệu cho mọi người.
+4656	mawasu	business	回す	まわす	xoay, quay, chuyền, xoay vòng	資金をうまく回す必要がある。	Cần phải xoay vòng vốn một cách hợp lý.
+4657	miokuru	exam	見送る	みおくる	tiễn, hoãn lại (kế hoạch)	空港で友人を見送った。	Đã tiễn bạn ở sân bay.
+4658	miokuru	daily	見送る	みおくる	tiễn, hoãn lại (kế hoạch)	涙を流しながら見送ってくれた。	Đã tiễn tôi trong nước mắt.
+4659	miokuru	business	見送る	みおくる	tiễn, hoãn lại (kế hoạch)	今回の案件は見送ることにした。	Đã quyết định gác lại dự án lần này.
+4660	minaosu	exam	見直す	みなおす	xem lại, xem xét lại	予算を見直した。	Đã xem xét lại ngân sách.
+4661	minaosu	daily	見直す	みなおす	xem lại, xem xét lại	計画をもう一度見直している。	Đang xem lại kế hoạch một lần nữa.
+4662	minaosu	business	見直す	みなおす	xem lại, xem xét lại	業務フローを見直す必要がある。	Cần xem xét lại quy trình công việc.
+4663	miru_exam	exam	診る	みる	khám (bệnh)	医者が患者を診た。	Bác sĩ đã khám cho bệnh nhân.
+4664	miru_exam	daily	診る	みる	khám (bệnh)	先生に診てもらった。	Đã được bác sĩ khám cho.
+4665	miru_exam	business	診る	みる	khám (bệnh)	この症状は専門医が診るべきだ。	Triệu chứng này nên được bác sĩ chuyên khoa khám.
+4666	mukau	exam	向かう	むかう	hướng đến, đi về phía	駅に向かった。	Đã hướng về phía ga.
+4667	mukau	daily	向かう	むかう	hướng đến, đi về phía	目的地に向かっている。	Đang hướng đến điểm đến.
+4668	mukau	business	向かう	むかう	hướng đến, đi về phía	担当者は今、取引先へ向かっております。	Người phụ trách hiện đang trên đường đến chỗ đối tác.
+4669	muku_face	exam	向く	むく	hướng về, quay về, hợp với	彼はこちらを向いた。	Anh ấy đã quay mặt về phía này.
+4670	muku_face	daily	向く	むく	hướng về, quay về, hợp với	花が太陽の方を向いている。	Bông hoa đang hướng về phía mặt trời.
+4671	muku_face	business	向く	むく	hướng về, quay về, hợp với	この仕事は几帳面な人に向く。	Công việc này hợp với người tỉ mỉ.
+4672	muku_peel	exam	むく	むく	gọt, bóc (vỏ)	母はじゃがいもの皮をむいている。	Mẹ đang gọt vỏ khoai tây.
+4673	muku_peel	daily	むく	むく	gọt, bóc (vỏ)	みかんをむいて食べた。	Bóc vỏ quýt rồi ăn.
+4674	muku_peel	business	むく	むく	gọt, bóc (vỏ)	野菜の皮をむく作業を手伝う。	Giúp đỡ công việc gọt vỏ rau củ.
+4675	musu	exam	蒸す	むす	hấp	野菜を蒸した。	Đã hấp rau.
+4676	musu	daily	蒸す	むす	hấp	肉まんを蒸して食べる。	Hấp bánh bao nhân thịt rồi ăn.
+4677	musu	business	蒸す	むす	hấp	このレシピでは十分蒸す必要がある。	Với công thức này cần hấp đủ thời gian.
+4678	musubu	exam	結ぶ	むすぶ	buộc, kết (hợp đồng)	靴ひもを結んだ。	Đã buộc dây giày.
+4679	musubu	daily	結ぶ	むすぶ	buộc, kết (hợp đồng)	リボンを結んでプレゼントにした。	Buộc nơ rồi làm quà tặng.
+4680	musubu	business	結ぶ	むすぶ	buộc, kết (hợp đồng)	両社は業務提携を結ぶことで合意した。	Hai công ty đã đồng ý ký kết hợp tác kinh doanh.

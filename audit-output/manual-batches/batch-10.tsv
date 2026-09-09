@@ -1,0 +1,181 @@
+row	vocabId	type	word	reading	meaningVi	exampleJp	exampleVi
+1621	madoguchi	exam	窓口	まどぐち	quầy giao dịch	銀行の窓口で手続きをした。	Tôi đã làm thủ tục ở quầy giao dịch ngân hàng.
+1622	madoguchi	daily	窓口	まどぐち	quầy giao dịch	窓口、まだ開いてるかな。	Không biết quầy giao dịch còn mở không nhỉ.
+1623	madoguchi	business	窓口	まどぐち	quầy giao dịch	お問い合わせ窓口を新たに設置いたしました。	Chúng tôi đã thiết lập thêm quầy hỗ trợ thắc mắc mới.
+1624	mawari	exam	周り	まわり	xung quanh	家の周りを掃除した。	Tôi đã dọn dẹp xung quanh nhà.
+1625	mawari	daily	周り	まわり	xung quanh	周りをよく見て歩いてね。	Đi đường nhớ nhìn xung quanh cẩn thận nhé.
+1626	mawari	business	周り	まわり	xung quanh	建物の周りに案内表示を設置いたします。	Chúng tôi sẽ lắp đặt bảng chỉ dẫn xung quanh tòa nhà.
+1627	mansion	exam	マンション	マンション	chung cư (cao cấp)	駅近くのマンションに住んでいる。	Tôi sống ở chung cư gần ga.
+1628	mansion	daily	マンション	マンション	chung cư (cao cấp)	そのマンション、家賃高くない?	Chung cư đó tiền thuê không cao à?
+1629	mansion	business	マンション	マンション	chung cư (cao cấp)	新築マンションの販売を開始いたしました。	Chúng tôi đã bắt đầu bán chung cư xây mới.
+1630	mukai	exam	向かい	むかい	đối diện	向かいの家に新しい人が引っ越してきた。	Có người mới chuyển đến nhà đối diện.
+1631	mukai	daily	向かい	むかい	đối diện	向かいの席、座っていい?	Ngồi ở chỗ đối diện được không?
+1632	mukai	business	向かい	むかい	đối diện	本社は駅の向かいに位置しております。	Trụ sở chính nằm đối diện nhà ga.
+1633	muki	exam	向き	むき	hướng, phù hợp	この部屋は南向きで明るい。	Phòng này hướng nam nên sáng.
+1634	muki	daily	向き	むき	hướng, phù hợp	これ、初心者向きだよ。	Cái này phù hợp cho người mới bắt đầu đó.
+1635	muki	business	向き	むき	hướng, phù hợp	本商品は法人向きの仕様となっております。	Sản phẩm này có thông số kỹ thuật phù hợp cho doanh nghiệp.
+1636	yakusho	exam	役所	やくしょ	cơ quan hành chính	市の役所で住民票を取った。	Tôi đã lấy giấy chứng nhận cư trú ở cơ quan hành chính thành phố.
+1637	yakusho	daily	役所	やくしょ	cơ quan hành chính	役所の手続き、面倒だよね。	Thủ tục ở cơ quan hành chính rắc rối thật nhỉ.
+1638	yakusho	business	役所	やくしょ	cơ quan hành chính	必要書類は役所にて取得してください。	Xin vui lòng lấy các giấy tờ cần thiết tại cơ quan hành chính.
+1639	yakkyoku	exam	薬局	やっきょく	hiệu thuốc	薬局で薬をもらった。	Tôi đã nhận thuốc ở hiệu thuốc.
+1640	yakkyoku	daily	薬局	やっきょく	hiệu thuốc	近くに薬局ある?	Gần đây có hiệu thuốc không?
+1641	yakkyoku	business	薬局	やっきょく	hiệu thuốc	処方箋は最寄りの薬局にてお渡しください。	Xin vui lòng đưa đơn thuốc tại hiệu thuốc gần nhất.
+1642	yuuenchi	exam	遊園地	ゆうえんち	khu vui chơi	子供と遊園地に行った。	Tôi đã đi khu vui chơi cùng con.
+1643	yuuenchi	daily	遊園地	ゆうえんち	khu vui chơi	今度、遊園地行こうよ。	Lần sau đi khu vui chơi đi.
+1644	yuuenchi	business	遊園地	ゆうえんち	khu vui chơi	遊園地とのタイアップ企画を実施いたします。	Chúng tôi sẽ triển khai chương trình hợp tác với khu vui chơi.
+1645	ryokan	exam	旅館	りょかん	nhà trọ kiểu Nhật	温泉旅館に泊まった。	Tôi đã ở lại nhà trọ kiểu Nhật có suối nước nóng.
+1646	ryokan	daily	旅館	りょかん	nhà trọ kiểu Nhật	その旅館、料理おいしいらしいよ。	Nghe nói nhà trọ đó có món ăn ngon lắm.
+1647	ryokan	business	旅館	りょかん	nhà trọ kiểu Nhật	出張の宿泊先として老舗旅館を手配いたしました。	Chúng tôi đã sắp xếp nhà trọ lâu đời làm nơi lưu trú cho chuyến công tác.
+1648	lobby	exam	ロビー	ロビー	sảnh	ホテルのロビーで待っていた。	Tôi đã đợi ở sảnh khách sạn.
+1649	lobby	daily	ロビー	ロビー	sảnh	ロビーに集合しようか。	Tập trung ở sảnh nhé.
+1650	lobby	business	ロビー	ロビー	sảnh	受付は1階ロビーにございます。	Quầy lễ tân nằm ở sảnh tầng 1.
+1651	amidana	exam	網棚	あみだな	giá để hành lý	荷物を網棚に置いた。	Tôi đã để hành lý lên giá để hành lý.
+1652	amidana	daily	網棚	あみだな	giá để hành lý	傘、網棚に忘れちゃった。	Tớ để quên ô trên giá hành lý rồi.
+1653	amidana	business	網棚	あみだな	giá để hành lý	網棚の荷物にはお気をつけください。	Xin vui lòng chú ý hành lý trên giá để hành lý.
+1654	idou	exam	移動	いどう	di chuyển	電車でオフィスまで移動した。	Tôi đã di chuyển đến văn phòng bằng tàu điện.
+1655	idou	daily	移動	いどう	di chuyển	次の場所に移動しようか。	Di chuyển đến chỗ tiếp theo nhé.
+1656	idou	business	移動	いどう	di chuyển	会議室へ移動をお願いいたします。	Xin vui lòng di chuyển đến phòng họp.
+1657	untenmenkyo	exam	運転免許	うんてんめんきょ	bằng lái xe	18歳で運転免許を取った。	Tôi đã lấy bằng lái xe năm 18 tuổi.
+1658	untenmenkyo	daily	運転免許	うんてんめんきょ	bằng lái xe	運転免許、更新しに行かなきゃ。	Phải đi gia hạn bằng lái xe thôi.
+1659	untenmenkyo	business	運転免許	うんてんめんきょ	bằng lái xe	業務では運転免許の提示が必要です。	Công việc này cần xuất trình bằng lái xe.
+1660	engine	exam	エンジン	エンジン	động cơ	車のエンジンをかけた。	Tôi đã khởi động động cơ xe.
+1661	engine	daily	エンジン	エンジン	động cơ	エンジン、かからないんだけど。	Động cơ không nổ máy được.
+1662	engine	business	エンジン	エンジン	động cơ	エンジンの点検を定期的に実施しております。	Chúng tôi kiểm tra động cơ định kỳ.
+1663	oudan	exam	横断	おうだん	băng qua	横断歩道を渡った。	Tôi đã băng qua vạch kẻ đường dành cho người đi bộ.
+1664	oudan	daily	横断	おうだん	băng qua	そこ、横断禁止だよ。	Chỗ đó cấm băng qua đấy.
+1665	oudan	business	横断	おうだん	băng qua	本調査は全国を横断して実施いたしました。	Cuộc khảo sát này được thực hiện xuyên suốt toàn quốc.
+1666	oufuku	exam	往復	おうふく	khứ hồi	往復のチケットを買った。	Tôi đã mua vé khứ hồi.
+1667	oufuku	daily	往復	おうふく	khứ hồi	往復で3時間かかるよ。	Đi khứ hồi mất 3 tiếng đấy.
+1668	oufuku	business	往復	おうふく	khứ hồi	往復の交通費を支給いたします。	Chúng tôi sẽ chi trả tiền đi lại khứ hồi.
+1669	kaisatsu	exam	改札	かいさつ	cửa soát vé	改札を出て待ち合わせた。	Tôi đã ra khỏi cửa soát vé rồi hẹn gặp.
+1670	kaisatsu	daily	改札	かいさつ	cửa soát vé	改札の前で待ってるね。	Tớ đợi trước cửa soát vé nhé.
+1671	kaisatsu	business	改札	かいさつ	cửa soát vé	改札口付近に案内係を配置いたします。	Chúng tôi sẽ bố trí nhân viên hướng dẫn gần cửa soát vé.
+1672	kaisuuken	exam	回数券	かいすうけん	vé nhiều lần	バスの回数券を買った。	Tôi đã mua vé xe buýt nhiều lần.
+1673	kaisuuken	daily	回数券	かいすうけん	vé nhiều lần	回数券、まだ残ってる?	Vé nhiều lần vẫn còn không?
+1674	kaisuuken	business	回数券	かいすうけん	vé nhiều lần	回数券は窓口にて販売しております。	Vé nhiều lần được bán tại quầy giao dịch.
+1675	katamichi	exam	片道	かたみち	một chiều	片道の運賃を調べた。	Tôi đã tìm hiểu giá vé một chiều.
+1676	katamichi	daily	片道	かたみち	một chiều	片道でいいよね?	Một chiều là được nhỉ?
+1677	katamichi	business	片道	かたみち	một chiều	片道分の交通費を精算いたします。	Chúng tôi sẽ thanh toán tiền đi lại một chiều.
+1678	kyuukyuusha	exam	救急車	きゅうきゅうしゃ	xe cấp cứu	救急車を呼んだ。	Tôi đã gọi xe cấp cứu.
+1679	kyuukyuusha	daily	救急車	きゅうきゅうしゃ	xe cấp cứu	救急車のサイレン、聞こえる?	Nghe thấy còi xe cấp cứu không?
+1680	kyuukyuusha	business	救急車	きゅうきゅうしゃ	xe cấp cứu	緊急時は速やかに救急車を手配いたします。	Trong trường hợp khẩn cấp, chúng tôi sẽ nhanh chóng gọi xe cấp cứu.
+1681	kudari	exam	下り	くだり	xuống, chuyến về ngoại thành	下りの電車に乗った。	Tôi đã lên chuyến tàu đi xuống.
+1682	kudari	daily	下り	くだり	xuống, chuyến về ngoại thành	下りだから空いてるよ。	Vì là chuyến xuống nên vắng đấy.
+1683	kudari	business	下り	くだり	xuống, chuyến về ngoại thành	下り線の運行状況をご確認ください。	Xin vui lòng kiểm tra tình trạng vận hành của tuyến đi xuống.
+1684	keiyu	exam	経由	けいゆ	quá cảnh, qua	大阪経由で東京に行った。	Tôi đã đi Tokyo qua ngả Osaka.
+1685	keiyu	daily	経由	けいゆ	quá cảnh, qua	どこ経由で行くの?	Đi qua ngả nào vậy?
+1686	keiyu	business	経由	けいゆ	quá cảnh, qua	メール経由でご連絡いたします。	Chúng tôi sẽ liên hệ qua email.
+1687	koukuuki	exam	航空機	こうくうき	máy bay	航空機の到着が遅れた。	Máy bay đã đến trễ.
+1688	koukuuki	daily	航空機	こうくうき	máy bay	この航空機、大きいね。	Máy bay này lớn nhỉ.
+1689	koukuuki	business	航空機	こうくうき	máy bay	貨物は航空機にて輸送いたします。	Hàng hóa sẽ được vận chuyển bằng máy bay.
+1690	kousokudouro	exam	高速道路	こうそくどうろ	đường cao tốc	高速道路を使って移動した。	Tôi đã di chuyển bằng đường cao tốc.
+1691	kousokudouro	daily	高速道路	こうそくどうろ	đường cao tốc	高速道路、混んでた?	Đường cao tốc có đông không?
+1692	kousokudouro	business	高速道路	こうそくどうろ	đường cao tốc	高速道路経由での配送を検討しております。	Chúng tôi đang xem xét giao hàng qua đường cao tốc.
+1693	koutsuukikan	exam	交通機関	こうつうきかん	phương tiện giao thông	公共の交通機関を利用した。	Tôi đã sử dụng phương tiện giao thông công cộng.
+1694	koutsuukikan	daily	交通機関	こうつうきかん	phương tiện giao thông	交通機関、止まってるらしいよ。	Nghe nói phương tiện giao thông đang dừng hoạt động đấy.
+1695	koutsuukikan	business	交通機関	こうつうきかん	phương tiện giao thông	交通機関の乱れにより到着が遅れる場合がございます。	Có thể đến trễ do sự cố phương tiện giao thông.
+1696	koutsuujiko	exam	交通事故	こうつうじこ	tai nạn giao thông	交通事故を目撃した。	Tôi đã chứng kiến tai nạn giao thông.
+1697	koutsuujiko	daily	交通事故	こうつうじこ	tai nạn giao thông	そこで交通事故があったんだって。	Nghe nói có tai nạn giao thông ở đó đấy.
+1698	koutsuujiko	business	交通事故	こうつうじこ	tai nạn giao thông	交通事故防止のため安全運転を徹底しております。	Chúng tôi triệt để thực hiện lái xe an toàn để phòng chống tai nạn giao thông.
+1699	zaseki	exam	座席	ざせき	chỗ ngồi	座席番号を確認した。	Tôi đã kiểm tra số ghế.
+1700	zaseki	daily	座席	ざせき	chỗ ngồi	座席、どこだっけ?	Chỗ ngồi ở đâu nhỉ?
+1701	zaseki	business	座席	ざせき	chỗ ngồi	座席の予約は事前にお願いいたします。	Xin vui lòng đặt trước chỗ ngồi.
+1702	seatbelt	exam	シートベルト	シートベルト	dây an toàn	シートベルトを締めた。	Tôi đã thắt dây an toàn.
+1703	seatbelt	daily	シートベルト	シートベルト	dây an toàn	シートベルト、ちゃんとして。	Nhớ thắt dây an toàn cẩn thận nhé.
+1704	seatbelt	business	シートベルト	シートベルト	dây an toàn	走行中はシートベルトの着用をお願いいたします。	Xin vui lòng thắt dây an toàn trong lúc di chuyển.
+1705	jikokuhyou	exam	時刻表	じこくひょう	bảng giờ	バスの時刻表を確認した。	Tôi đã kiểm tra bảng giờ xe buýt.
+1706	jikokuhyou	daily	時刻表	じこくひょう	bảng giờ	時刻表、見た方がいいよ。	Nên xem bảng giờ đấy.
+1707	jikokuhyou	business	時刻表	じこくひょう	bảng giờ	最新の時刻表をホームページに掲載いたしました。	Chúng tôi đã đăng bảng giờ mới nhất lên trang web.
+1708	shitetsu	exam	私鉄	してつ	đường sắt tư nhân	私鉄に乗り換えた。	Tôi đã đổi sang tuyến đường sắt tư nhân.
+1709	shitetsu	daily	私鉄	してつ	đường sắt tư nhân	私鉄の方が安いよ。	Đường sắt tư nhân rẻ hơn đấy.
+1710	shitetsu	business	私鉄	してつ	đường sắt tư nhân	本社へは私鉄の利用が便利です。	Đến trụ sở chính thì đi bằng đường sắt tư nhân sẽ tiện lợi.
+1711	shako	exam	車庫	しゃこ	bãi xe, nhà để xe	車を車庫に入れた。	Tôi đã đưa xe vào nhà để xe.
+1712	shako	daily	車庫	しゃこ	bãi xe, nhà để xe	車庫、狭くない?	Nhà để xe không hẹp à?
+1713	shako	business	車庫	しゃこ	bãi xe, nhà để xe	車両は専用車庫にて保管しております。	Xe được bảo quản trong nhà để xe chuyên dụng.
+1714	juutai	exam	渋滞	じゅうたい	tắc đường	高速道路で渋滞に巻き込まれた。	Tôi đã bị kẹt vào cảnh tắc đường trên cao tốc.
+1715	juutai	daily	渋滞	じゅうたい	tắc đường	この時間、渋滞するよね。	Giờ này hay tắc đường nhỉ.
+1716	juutai	business	渋滞	じゅうたい	tắc đường	渋滞状況を踏まえ出発時刻を早めます。	Chúng tôi sẽ đẩy sớm giờ khởi hành dựa trên tình hình tắc đường.
+1717	joushaken	exam	乗車券	じょうしゃけん	vé xe (lên tàu)	乗車券を改札で見せた。	Tôi đã trình vé xe tại cửa soát vé.
+1718	joushaken	daily	乗車券	じょうしゃけん	vé xe (lên tàu)	乗車券、なくさないでね。	Đừng làm mất vé xe nhé.
+1719	joushaken	business	乗車券	じょうしゃけん	vé xe (lên tàu)	乗車券は事前にご購入ください。	Xin vui lòng mua vé xe trước.
+1720	shinkansen	exam	新幹線	しんかんせん	tàu cao tốc	新幹線で大阪に行った。	Tôi đã đi Osaka bằng tàu cao tốc.
+1721	shinkansen	daily	新幹線	しんかんせん	tàu cao tốc	新幹線、速いよね。	Tàu cao tốc nhanh thật nhỉ.
+1722	shinkansen	business	新幹線	しんかんせん	tàu cao tốc	出張には新幹線を利用いたします。	Chúng tôi sẽ sử dụng tàu cao tốc để đi công tác.
+1723	stop	exam	ストップ	ストップ	dừng	車が急にストップした。	Chiếc xe đột nhiên dừng lại.
+1724	stop	daily	ストップ	ストップ	dừng	ちょっとストップ、待って!	Dừng lại chút, đợi đã!
+1725	stop	business	ストップ	ストップ	dừng	システムに問題が発生し、処理をストップいたしました。	Vì hệ thống gặp sự cố nên chúng tôi đã dừng xử lý.
+1726	speed	exam	スピード	スピード	tốc độ	車のスピードを落とした。	Tôi đã giảm tốc độ xe.
+1727	speed	daily	スピード	スピード	tốc độ	スピード出しすぎだよ!	Chạy nhanh quá đấy!
+1728	speed	business	スピード	スピード	tốc độ	作業スピードの向上に取り組んでおります。	Chúng tôi đang nỗ lực nâng cao tốc độ làm việc.
+1729	sokudo	exam	速度	そくど	tốc độ	この道は速度制限がある。	Con đường này có giới hạn tốc độ.
+1730	sokudo	daily	速度	そくど	tốc độ	速度、出しすぎじゃない?	Tốc độ có nhanh quá không?
+1731	sokudo	business	速度	そくど	tốc độ	処理速度を改善するための対策を進めております。	Chúng tôi đang thúc đẩy biện pháp cải thiện tốc độ xử lý.
+1732	tire	exam	タイヤ	タイヤ	lốp xe	タイヤがパンクした。	Lốp xe bị thủng.
+1733	tire	daily	タイヤ	タイヤ	lốp xe	タイヤ、交換した方がいいよ。	Nên thay lốp xe đi.
+1734	tire	business	タイヤ	タイヤ	lốp xe	定期点検にてタイヤの摩耗を確認いたします。	Chúng tôi sẽ kiểm tra độ mòn lốp xe trong đợt kiểm tra định kỳ.
+1735	chikamichi	exam	近道	ちかみち	đường tắt	近道をして早く着いた。	Tôi đã đi đường tắt nên đến sớm.
+1736	chikamichi	daily	近道	ちかみち	đường tắt	この道、近道になるよ。	Đường này là đường tắt đó.
+1737	chikamichi	business	近道	ちかみち	đường tắt	効率化への近道は業務の見直しです。	Đường tắt để hiệu quả hóa là xem xét lại công việc.
+1738	chuusha	exam	駐車	ちゅうしゃ	đỗ xe	ここに駐車してもいいですか。	Ở đây có đỗ xe được không?
+1739	chuusha	daily	駐車	ちゅうしゃ	đỗ xe	駐車、どこにする?	Đỗ xe ở đâu vậy?
+1740	chuusha	business	駐車	ちゅうしゃ	đỗ xe	来客用の駐車スペースをご用意しております。	Chúng tôi có chuẩn bị chỗ đỗ xe dành cho khách.
+1741	tsuuka	exam	通過	つうか	đi qua	電車は次の駅を通過した。	Tàu điện đã đi qua ga tiếp theo.
+1742	tsuuka	daily	通過	つうか	đi qua	この電車、あの駅通過するよ。	Chuyến tàu này chạy thẳng qua ga đó đấy.
+1743	tsuuka	business	通過	つうか	đi qua	審査を通過した案件のみ次工程に進みます。	Chỉ những hồ sơ đã qua thẩm định mới chuyển sang giai đoạn tiếp theo.
+1744	tsurikawa	exam	つり革	つりかわ	tay vịn (trên tàu)	電車の中でつり革につかまった。	Trong tàu điện tôi đã bám vào tay vịn.
+1745	tsurikawa	daily	つり革	つりかわ	tay vịn (trên tàu)	つり革、ちゃんと持って。	Nắm chắc tay vịn nhé.
+1746	tsurikawa	business	つり革	つりかわ	tay vịn (trên tàu)	満員電車ではつり革を取り合うこともあります。	Trên tàu đông nghịt đôi khi phải tranh nhau tay vịn.
+1747	teikiken	exam	定期券	ていきけん	vé tháng	定期券を使って通学している。	Tôi dùng vé tháng để đi học.
+1748	teikiken	daily	定期券	ていきけん	vé tháng	定期券、切れてない?	Vé tháng chưa hết hạn chứ?
+1749	teikiken	business	定期券	ていきけん	vé tháng	通勤定期券は会社が負担いたします。	Công ty sẽ chi trả vé tháng đi làm.
+1750	oodoori	exam	大通り	おおどおり	đường lớn	大通りに面したビルに入った。	Tôi đã vào tòa nhà nằm mặt tiền đường lớn.
+1751	oodoori	daily	大通り	おおどおり	đường lớn	大通りを渡って向こうに行こう。	Băng qua đường lớn rồi đi sang bên kia nào.
+1752	oodoori	business	大通り	おおどおり	đường lớn	新店舗は駅前の大通り沿いに出店いたします。	Cửa hàng mới sẽ được mở dọc theo đường lớn trước ga.
+1753	hodoukyou	exam	歩道橋	ほどうきょう	cầu đi bộ	歩道橋を渡って学校に行く。	Tôi đi qua cầu đi bộ để đến trường.
+1754	hodoukyou	daily	歩道橋	ほどうきょう	cầu đi bộ	歩道橋、階段きついね。	Cầu đi bộ này bậc thang mệt nhỉ.
+1755	hodoukyou	business	歩道橋	ほどうきょう	cầu đi bộ	駅前に歩道橋の設置を計画しております。	Chúng tôi đang lên kế hoạch lắp đặt cầu đi bộ trước ga.
+1756	tunnel	exam	トンネル	トンネル	đường hầm	トンネルを抜けると景色が変わった。	Qua khỏi đường hầm thì cảnh vật đã thay đổi.
+1757	tunnel	daily	トンネル	トンネル	đường hầm	このトンネル、長いね。	Đường hầm này dài nhỉ.
+1758	tunnel	business	トンネル	トンネル	đường hầm	トンネル工事のため一部区間を通行止めにしております。	Vì công trình đường hầm nên một số đoạn đường bị cấm lưu thông.
+1759	shingou	exam	信号	しんごう	đèn tín hiệu	赤信号で止まった。	Tôi đã dừng lại khi gặp đèn đỏ.
+1760	shingou	daily	信号	しんごう	đèn tín hiệu	信号、青になったよ。	Đèn xanh rồi kìa.
+1761	shingou	business	信号	しんごう	đèn tín hiệu	交差点の信号が新しく設置されました。	Đèn tín hiệu ở ngã tư đã được lắp đặt mới.
+1762	oudanhodou	exam	横断歩道	おうだんほどう	vạch qua đường	横断歩道を渡って向こうへ行った。	Tôi đã băng qua vạch qua đường để sang bên kia.
+1763	oudanhodou	daily	横断歩道	おうだんほどう	vạch qua đường	横断歩道、ここにあるよ。	Vạch qua đường ở đây này.
+1764	oudanhodou	business	横断歩道	おうだんほどう	vạch qua đường	横断歩道付近での駐車はご遠慮ください。	Xin vui lòng không đỗ xe gần vạch qua đường.
+1765	kousaten	exam	交差点	こうさてん	ngã tư	次の交差点を右に曲がる。	Tôi rẽ phải ở ngã tư tiếp theo.
+1766	kousaten	daily	交差点	こうさてん	ngã tư	この交差点、いつも混んでるね。	Ngã tư này lúc nào cũng đông nhỉ.
+1767	kousaten	business	交差点	こうさてん	ngã tư	事故が多発している交差点に信号を設置いたします。	Chúng tôi sẽ lắp đèn tín hiệu tại ngã tư thường xảy ra tai nạn.
+1768	hodou	exam	歩道	ほどう	vỉa hè	歩道を歩いて駅まで行った。	Tôi đã đi bộ trên vỉa hè đến ga.
+1769	hodou	daily	歩道	ほどう	vỉa hè	自転車、歩道走っちゃだめだよ。	Xe đạp không được chạy trên vỉa hè đâu.
+1770	hodou	business	歩道	ほどう	vỉa hè	歩道の拡張工事が来月始まります。	Công trình mở rộng vỉa hè sẽ bắt đầu vào tháng sau.
+1771	basutei	exam	バス停	バスてい	trạm xe buýt	バス停でバスを待った。	Tôi đã đợi xe buýt ở trạm xe buýt.
+1772	basutei	daily	バス停	バスてい	trạm xe buýt	次のバス停で降りようか。	Xuống ở trạm xe buýt tiếp theo nhé.
+1773	basutei	business	バス停	バスてい	trạm xe buýt	最寄りのバス停までの地図をお送りいたします。	Chúng tôi sẽ gửi bản đồ đến trạm xe buýt gần nhất.
+1774	senro	exam	線路	せんろ	đường ray	線路に沿って歩いた。	Tôi đã đi bộ dọc theo đường ray.
+1775	senro	daily	線路	せんろ	đường ray	線路、近づいちゃだめだよ。	Không được lại gần đường ray đâu.
+1776	senro	business	線路	せんろ	đường ray	線路の点検作業を夜間に実施いたします。	Công việc kiểm tra đường ray sẽ được thực hiện vào ban đêm.
+1777	fumikiri	exam	踏切	ふみきり	đường giao cắt	踏切で電車が通過するのを待った。	Tôi đã đợi tàu điện đi qua ở đường giao cắt.
+1778	fumikiri	daily	踏切	ふみきり	đường giao cắt	踏切、開くの遅いね。	Đường giao cắt mở chậm nhỉ.
+1779	fumikiri	business	踏切	ふみきり	đường giao cắt	踏切付近での事故防止対策を強化しております。	Chúng tôi đang tăng cường biện pháp phòng chống tai nạn gần đường giao cắt.
+1780	teisha	exam	停車	ていしゃ	dừng xe	電車が駅に停車した。	Tàu điện đã dừng lại ở ga.
+1781	teisha	daily	停車	ていしゃ	dừng xe	ここ、しばらく停車するみたい。	Ở đây có vẻ sẽ dừng một lúc.
+1782	teisha	business	停車	ていしゃ	dừng xe	本列車は次の駅に一時停車いたします。	Chuyến tàu này sẽ tạm dừng ở ga tiếp theo.
+1783	tetsudou	exam	鉄道	てつどう	đường sắt	鉄道を使って旅行した。	Tôi đã đi du lịch bằng đường sắt.
+1784	tetsudou	daily	鉄道	てつどう	đường sắt	鉄道、好きなんだ。	Tớ thích đường sắt lắm.
+1785	tetsudou	business	鉄道	てつどう	đường sắt	鉄道会社と共同でキャンペーンを実施いたします。	Chúng tôi sẽ triển khai chiến dịch hợp tác với công ty đường sắt.
+1786	touchaku	exam	到着	とうちゃく	đến nơi	飛行機は予定通り到着した。	Máy bay đã đến đúng giờ dự kiến.
+1787	touchaku	daily	到着	とうちゃく	đến nơi	到着したら連絡してね。	Đến nơi thì báo cho tớ nhé.
+1788	touchaku	business	到着	とうちゃく	đến nơi	商品は明日中に到着する予定です。	Sản phẩm dự kiến sẽ đến trong ngày mai.
+1789	douro	exam	道路	どうろ	đường	道路を横断する時は注意する。	Khi băng qua đường thì phải chú ý.
+1790	douro	daily	道路	どうろ	đường	この道路、工事してるね。	Con đường này đang thi công nhỉ.
+1791	douro	business	道路	どうろ	đường	道路状況を確認の上、配送ルートを決定いたします。	Chúng tôi sẽ quyết định tuyến giao hàng sau khi kiểm tra tình trạng đường.
+1792	drive	exam	ドライブ	ドライブ	lái xe đi chơi	週末に海までドライブした。	Cuối tuần tôi đã lái xe ra biển chơi.
+1793	drive	daily	ドライブ	ドライブ	lái xe đi chơi	今度、ドライブ行かない?	Lần tới đi lái xe chơi không?
+1794	drive	business	ドライブ	ドライブ	lái xe đi chơi	観光会社では、海岸沿いをドライブするツアーを企画しています。	Công ty du lịch đang lên kế hoạch cho tour lái xe dọc bờ biển.
+1795	driveinn	exam	ドライブイン	ドライブイン	trạm dừng chân	ドライブインで休憩した。	Tôi đã nghỉ ngơi ở trạm dừng chân.
+1796	driveinn	daily	ドライブイン	ドライブイン	trạm dừng chân	次のドライブインで休もうか。	Nghỉ ở trạm dừng chân tiếp theo nhé.
+1797	driveinn	business	ドライブイン	ドライブイン	trạm dừng chân	出張中、高速道路沿いのドライブインで休憩しました。	Trong chuyến công tác, tôi đã nghỉ tại một trạm dừng chân ven đường cao tốc.
+1798	number	exam	ナンバー	ナンバー	số (biển số)	車のナンバーを控えた。	Tôi đã ghi lại biển số xe.
+1799	number	daily	ナンバー	ナンバー	số (biển số)	このナンバー、見たことある。	Biển số này tớ từng thấy rồi.
+1800	number	business	ナンバー	ナンバー	số (biển số)	車両ナンバーをご確認の上ご入庫ください。	Xin vui lòng kiểm tra biển số xe trước khi vào bãi.

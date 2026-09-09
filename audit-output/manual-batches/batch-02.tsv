@@ -1,0 +1,181 @@
+row	vocabId	type	word	reading	meaningVi	exampleJp	exampleVi
+0181	kami	exam	神	かみ	thần	神に願いをかけた。	Tôi đã cầu nguyện với thần linh.
+0182	kami	daily	神	かみ	thần	これはもう神対応だね!	Đây đúng là cách xử lý thần thánh luôn!
+0183	kami	business	神	かみ	thần	各国の神話には神々についての物語がある。	Trong thần thoại của các nước đều có những câu chuyện về các vị thần.
+0184	kara	exam	空	から	trống, rỗng	このペットボトルは空です。	Chai nhựa này rỗng.
+0185	kara	daily	空	から	trống, rỗng	財布の中が空になっちゃった。	Trong ví đã trống rỗng mất rồi.
+0186	kara	business	空	から	trống, rỗng	空の容器はこちらに回収してください。	Vui lòng để các vỏ hộp rỗng vào đây để thu gom.
+0187	kawa	exam	革	かわ	da	これは本物の革のかばんです。	Đây là túi làm từ da thật.
+0188	kawa	daily	革	かわ	da	この財布、革の匂いがいいね。	Cái ví này mùi da thơm ghê.
+0189	kawa	business	革	かわ	da	新商品には高級な革素材を使用しています。	Sản phẩm mới sử dụng chất liệu da cao cấp.
+0190	kangei	exam	歓迎	かんげい	hoan nghênh	新入生を心から歓迎します。	Chúng tôi hoan nghênh sinh viên mới từ tận đáy lòng.
+0191	kangei	daily	歓迎	かんげい	hoan nghênh	今度、新人の歓迎会あるらしいよ。	Nghe nói sắp có tiệc chào mừng nhân viên mới đó.
+0192	kangei	business	歓迎	かんげい	hoan nghênh	新規のお取引を歓迎いたします。	Chúng tôi hoan nghênh giao dịch mới.
+0193	kankou	exam	観光	かんこう	tham quan	京都を観光するならどこがいいですか。	Nếu tham quan Kyoto thì nên đi đâu?
+0194	kankou	daily	観光	かんこう	tham quan	週末、ちょっと観光しようよ。	Cuối tuần đi tham quan chút đi.
+0195	kankou	business	観光	かんこう	tham quan	インバウンド観光客向けの案内板を設置しました。	Chúng tôi đã lắp đặt bảng chỉ dẫn dành cho khách du lịch nước ngoài.
+0196	kansatsu	exam	観察	かんさつ	quan sát	植物の成長を観察しています。	Tôi đang quan sát sự phát triển của cây.
+0197	kansatsu	daily	観察	かんさつ	quan sát	子供の様子、よく観察してるね。	Bạn quan sát trẻ con kỹ ghê.
+0198	kansatsu	business	観察	かんさつ	quan sát	市場動向を継続的に観察する必要があります。	Cần phải quan sát liên tục xu hướng thị trường.
+0199	kanji2	exam	感じ	かんじ	cảm giác	何か変な感じがする。	Có cảm giác gì đó lạ lạ.
+0200	kanji2	daily	感じ	かんじ	cảm giác	この店、いい感じじゃん。	Quán này cảm giác được đó.
+0201	kanji2	business	感じ	かんじ	cảm giác	新しいオフィスはとても開放的な感じです。	Văn phòng mới có cảm giác rất thoáng đãng.
+0202	kansha	exam	感謝	かんしゃ	biết ơn	いつも感謝しています。	Tôi luôn biết ơn.
+0203	kansha	daily	感謝	かんしゃ	biết ơn	本当に感謝してるよ、ありがとう。	Thật sự biết ơn cậu lắm, cảm ơn nhé.
+0204	kansha	business	感謝	かんしゃ	biết ơn	日頃のご愛顧に感謝申し上げます。	Chúng tôi xin bày tỏ lòng biết ơn đến sự ủng hộ thường ngày của quý khách.
+0205	kanjou	exam	感情	かんじょう	cảm xúc	感情を顔に出さないようにした。	Tôi đã cố không để lộ cảm xúc ra mặt.
+0206	kanjou	daily	感情	かんじょう	cảm xúc	そんなに感情的にならないでよ。	Đừng có xúc động thái quá vậy chứ.
+0207	kanjou	business	感情	かんじょう	cảm xúc	交渉の場では感情的にならないよう注意しましょう。	Trong các cuộc đàm phán, hãy chú ý đừng để cảm xúc chi phối.
+0208	kanshin1	exam	感心	かんしん	cảm phục	彼の努力には感心します。	Tôi cảm phục sự nỗ lực của anh ấy.
+0209	kanshin1	daily	感心	かんしん	cảm phục	すごいね、感心しちゃった。	Giỏi thật đó, tôi phải cảm phục luôn.
+0210	kanshin1	business	感心	かんしん	cảm phục	若手社員の成長ぶりに感心しました。	Tôi đã cảm phục trước sự trưởng thành của nhân viên trẻ.
+0211	kanshin2	exam	関心	かんしん	quan tâm	環境問題に関心があります。	Tôi quan tâm đến vấn đề môi trường.
+0212	kanshin2	daily	関心	かんしん	quan tâm	最近、料理に関心持ち始めたんだ。	Dạo này tôi bắt đầu quan tâm đến nấu ăn.
+0213	kanshin2	business	関心	かんしん	quan tâm	消費者の関心が高い分野に投資しています。	Chúng tôi đang đầu tư vào lĩnh vực mà người tiêu dùng quan tâm nhiều.
+0214	kansei	exam	完成	かんせい	hoàn thành	この作品はまだ完成していません。	Tác phẩm này vẫn chưa hoàn thành.
+0215	kansei	daily	完成	かんせい	hoàn thành	やっと完成した!見て見て!	Cuối cùng cũng xong rồi! Xem đi xem đi!
+0216	kansei	business	完成	かんせい	hoàn thành	新製品は来月末に完成する予定です。	Sản phẩm mới dự kiến sẽ hoàn thành vào cuối tháng sau.
+0217	kansou	exam	感想	かんそう	cảm tưởng	映画の感想を聞かせてください。	Hãy cho tôi nghe cảm tưởng về bộ phim.
+0218	kansou	daily	感想	かんそう	cảm tưởng	読んでみて、感想教えて。	Đọc thử rồi cho tớ biết cảm tưởng nhé.
+0219	kansou	business	感想	かんそう	cảm tưởng	研修後にアンケートで感想を集めています。	Sau khóa đào tạo, chúng tôi thu thập cảm tưởng qua bảng khảo sát.
+0220	kandou	exam	感動	かんどう	cảm động	その話を聞いて感動した。	Nghe câu chuyện đó tôi đã cảm động.
+0221	kandou	daily	感動	かんどう	cảm động	このドラマ、めっちゃ感動するよ。	Bộ phim này cảm động lắm đó.
+0222	kandou	business	感動	かんどう	cảm động	お客様からの感謝の手紙に社員一同感動しました。	Toàn thể nhân viên đã cảm động trước lá thư cảm ơn từ khách hàng.
+0223	kanpai	exam	乾杯	かんぱい	nâng ly	それでは、乾杯しましょう!	Vậy thì, chúng ta cùng nâng ly nào!
+0224	kanpai	daily	乾杯	かんぱい	nâng ly	乾杯!お疲れ様!	Cạn ly! Vất vả rồi!
+0225	kanpai	business	乾杯	かんぱい	nâng ly	部長に乾杯の音頭を取っていただきます。	Chúng tôi mời trưởng phòng phát biểu và nâng ly khai tiệc.
+0226	kanri	exam	管理	かんり	quản lý	このデータは誰が管理していますか。	Dữ liệu này ai đang quản lý vậy?
+0227	kanri	daily	管理	かんり	quản lý	自己管理、ちゃんとしなよ。	Phải tự quản lý bản thân cho tốt chứ.
+0228	kanri	business	管理	かんり	quản lý	在庫管理システムを新しく導入しました。	Chúng tôi đã đưa vào sử dụng hệ thống quản lý tồn kho mới.
+0229	kanren	exam	関連	かんれん	liên quan	この二つの事件は関連していますか。	Hai vụ việc này có liên quan với nhau không?
+0230	kanren	daily	関連	かんれん	liên quan	それとこれ、関連あるの?	Cái đó với cái này có liên quan gì không?
+0231	kanren	business	関連	かんれん	liên quan	関連部署に情報を共有してください。	Vui lòng chia sẻ thông tin cho các bộ phận liên quan.
+0232	kikai1	exam	機会	きかい	cơ hội	またお会いできる機会を楽しみにしています。	Tôi mong chờ cơ hội được gặp lại.
+0233	kikai1	daily	機会	きかい	cơ hội	せっかくの機会、逃したくないな。	Cơ hội hiếm có, không muốn bỏ lỡ đâu.
+0234	kikai1	business	機会	きかい	cơ hội	この機会にぜひ弊社の新サービスをご検討ください。	Nhân dịp này, kính mong quý khách cân nhắc dịch vụ mới của công ty chúng tôi.
+0235	kikime	exam	効き目	ききめ	tác dụng	この薬は効き目が早い。	Loại thuốc này có tác dụng nhanh.
+0236	kikime	daily	効き目	ききめ	tác dụng	全然効き目ないんだけど。	Chẳng có tác dụng gì cả.
+0237	kikime	business	効き目	ききめ	tác dụng	この広告施策の効き目を検証する必要があります。	Cần phải kiểm chứng hiệu quả của chiến dịch quảng cáo này.
+0238	kikoku	exam	帰国	きこく	về nước	来月、日本に帰国します。	Tháng sau tôi sẽ về nước Nhật.
+0239	kikoku	daily	帰国	きこく	về nước	いつ帰国するの?	Khi nào bạn về nước?
+0240	kikoku	business	帰国	きこく	về nước	海外赴任者の帰国手続きについてご案内します。	Chúng tôi xin hướng dẫn về thủ tục hồi hương cho nhân viên công tác nước ngoài.
+0241	kiji	exam	記事	きじ	bài báo	この記事を読んでみてください。	Hãy đọc thử bài báo này.
+0242	kiji	daily	記事	きじ	bài báo	あの記事、めっちゃバズってたね。	Bài báo đó viral dữ ghê nhỉ.
+0243	kiji	business	記事	きじ	bài báo	新製品に関する記事がニュースサイトに掲載されました。	Bài viết về sản phẩm mới đã được đăng trên trang tin tức.
+0244	gijutsu	exam	技術	ぎじゅつ	kỹ thuật	新しい技術を身につけたい。	Tôi muốn học được kỹ thuật mới.
+0245	gijutsu	daily	技術	ぎじゅつ	kỹ thuật	この技術、まだ発展途上なんだって。	Nghe nói kỹ thuật này vẫn đang phát triển.
+0246	gijutsu	business	技術	ぎじゅつ	kỹ thuật	弊社は独自の技術で業界をリードしています。	Công ty chúng tôi dẫn đầu ngành bằng công nghệ độc quyền.
+0247	kitai	exam	期待	きたい	kỳ vọng	結果に期待しています。	Tôi đang kỳ vọng vào kết quả.
+0248	kitai	daily	期待	きたい	kỳ vọng	すごい期待してたのに、ちょっと残念。	Đã kỳ vọng nhiều lắm mà, hơi tiếc.
+0249	kitai	business	期待	きたい	kỳ vọng	お客様のご期待に応えられるよう努めます。	Chúng tôi sẽ nỗ lực để đáp ứng kỳ vọng của quý khách.
+0250	kitaku	exam	帰宅	きたく	về nhà	何時に帰宅しましたか。	Bạn đã về nhà lúc mấy giờ?
+0251	kitaku	daily	帰宅	きたく	về nhà	疲れたから早く帰宅したい。	Mệt quá nên muốn về nhà sớm.
+0252	kitaku	business	帰宅	きたく	về nhà	台風接近のため、本日は早めに帰宅してください。	Do bão đang tới gần, hôm nay xin hãy về nhà sớm hơn.
+0253	kichouhin	exam	貴重品	きちょうひん	đồ quý	貴重品はここに保管してください。	Vui lòng cất đồ quý giá ở đây.
+0254	kichouhin	daily	貴重品	きちょうひん	đồ quý	貴重品、ちゃんと持った?	Đồ quý giá mang theo đủ chưa?
+0255	kichouhin	business	貴重品	きちょうひん	đồ quý	セキュリティのため、貴重品は金庫に入れてください。	Vì lý do an ninh, xin hãy để đồ có giá trị vào két sắt.
+0256	kinyuu	exam	記入	きにゅう	ghi vào	ここに名前を記入してください。	Vui lòng ghi tên vào đây.
+0257	kinyuu	daily	記入	きにゅう	ghi vào	この欄、記入しなくていいの?	Ô này không cần điền à?
+0258	kinyuu	business	記入	きにゅう	ghi vào	申込書の必要事項をご記入ください。	Vui lòng điền các mục cần thiết vào đơn đăng ký.
+0259	kinen	exam	記念	きねん	kỷ niệm	これは結婚記念に買った指輪です。	Đây là nhẫn tôi mua để kỷ niệm kết hôn.
+0260	kinen	daily	記念	きねん	kỷ niệm	記念に写真撮ろうよ。	Chụp ảnh để kỷ niệm đi.
+0261	kinen	business	記念	きねん	kỷ niệm	創立10周年を記念してイベントを開催します。	Chúng tôi sẽ tổ chức sự kiện để kỷ niệm 10 năm thành lập.
+0262	kibou	exam	希望	きぼう	hy vọng	将来に希望を持っています。	Tôi có hy vọng vào tương lai.
+0263	kibou	daily	希望	きぼう	hy vọng	諦めないで、希望はあるよ。	Đừng bỏ cuộc, vẫn còn hy vọng mà.
+0264	kibou	business	希望	きぼう	hy vọng	ご希望の日時をお知らせください。	Xin vui lòng cho biết ngày giờ mong muốn.
+0265	kihon	exam	基本	きほん	cơ bản	まずは基本から学びましょう。	Trước tiên hãy học từ những điều cơ bản.
+0266	kihon	daily	基本	きほん	cơ bản	それ、基本だよ、常識。	Cái đó là cơ bản mà, ai cũng biết.
+0267	kihon	business	基本	きほん	cơ bản	基本料金に加えて、オプション料金がかかります。	Ngoài phí cơ bản, còn phát sinh phí tùy chọn.
+0268	gimu	exam	義務	ぎむ	nghĩa vụ	税金を納めるのは国民の義務です。	Đóng thuế là nghĩa vụ của công dân.
+0269	gimu	daily	義務	ぎむ	nghĩa vụ	それって義務なの?任意じゃなくて?	Cái đó là bắt buộc à? Không phải tự nguyện sao?
+0270	gimu	business	義務	ぎむ	nghĩa vụ	全社員に研修受講の義務があります。	Tất cả nhân viên đều có nghĩa vụ tham gia khóa đào tạo.
+0271	gimon	exam	疑問	ぎもん	nghi vấn	この点について疑問があります。	Tôi có nghi vấn về điểm này.
+0272	gimon	daily	疑問	ぎもん	nghi vấn	それ、ちょっと疑問なんだけど。	Cái đó tôi hơi nghi ngờ đó.
+0273	gimon	business	疑問	ぎもん	nghi vấn	ご不明な点やご疑問があればお問い合わせください。	Nếu có điểm chưa rõ hoặc thắc mắc, xin vui lòng liên hệ.
+0274	kyuukei	exam	休憩	きゅうけい	nghỉ giải lao	少し休憩しましょう。	Chúng ta nghỉ giải lao một chút nhé.
+0275	kyuukei	daily	休憩	きゅうけい	nghỉ giải lao	そろそろ休憩したくない?	Sắp muốn nghỉ giải lao rồi phải không?
+0276	kyuukei	business	休憩	きゅうけい	nghỉ giải lao	午後3時に15分間の休憩を挟みます。	Chúng ta sẽ có 15 phút nghỉ giải lao vào lúc 3 giờ chiều.
+0277	kyuuyou	exam	急用	きゅうよう	việc gấp	急用ができて、行けなくなりました。	Có việc gấp nên tôi không đi được nữa.
+0278	kyuuyou	daily	急用	きゅうよう	việc gấp	ごめん、急用が入っちゃって。	Xin lỗi, có việc gấp phát sinh.
+0279	kyuuyou	business	急用	きゅうよう	việc gấp	急用のため、本日は早退させていただきます。	Vì có việc gấp nên hôm nay tôi xin phép về sớm.
+0280	gyouji	exam	行事	ぎょうじ	sự kiện	来月、学校の行事があります。	Tháng sau có sự kiện của trường.
+0281	gyouji	daily	行事	ぎょうじ	sự kiện	今度の行事、参加する?	Sự kiện lần này, bạn tham gia không?
+0282	gyouji	business	行事	ぎょうじ	sự kiện	年間行事のスケジュールを社内に共有しました。	Chúng tôi đã chia sẻ lịch các sự kiện trong năm cho nội bộ công ty.
+0283	kyousou	exam	競争	きょうそう	cạnh tranh	この業界は競争が激しい。	Ngành này cạnh tranh gay gắt.
+0284	kyousou	daily	競争	きょうそう	cạnh tranh	そんなに競争しなくてもいいのに。	Không cần phải cạnh tranh dữ vậy đâu.
+0285	kyousou	business	競争	きょうそう	cạnh tranh	価格競争が激化し、利益率が下がっています。	Cạnh tranh giá cả ngày càng gay gắt, tỷ suất lợi nhuận đang giảm.
+0286	kyoutsuu	exam	共通	きょうつう	chung	二人には共通の趣味がある。	Hai người có sở thích chung.
+0287	kyoutsuu	daily	共通	きょうつう	chung	それ、みんなの共通の悩みだよね。	Đó là nỗi lo chung của mọi người mà.
+0288	kyoutsuu	business	共通	きょうつう	chung	両社の共通目標を明確にしましょう。	Hãy làm rõ mục tiêu chung của hai công ty.
+0289	kyouryoku	exam	協力	きょうりょく	hợp tác	みんなで協力しましょう。	Hãy cùng nhau hợp tác nào.
+0290	kyouryoku	daily	協力	きょうりょく	hợp tác	手伝ってくれて、協力感謝だよ。	Cảm ơn đã giúp đỡ, cảm ơn sự hợp tác nhé.
+0291	kyouryoku	business	協力	きょうりょく	hợp tác	関係部署のご協力をお願いいたします。	Kính mong sự hợp tác của các bộ phận liên quan.
+0292	gyouretsu	exam	行列	ぎょうれつ	hàng người	あの店の前に行列ができている。	Trước cửa hàng đó đang có một hàng dài người xếp hàng.
+0293	gyouretsu	daily	行列	ぎょうれつ	hàng người	すごい行列だね、並ぶ?	Xếp hàng dài dữ ghê, có xếp không?
+0294	gyouretsu	business	行列	ぎょうれつ	hàng người	開店前から長い行列ができていました。	Trước khi mở cửa đã có hàng dài người xếp hàng.
+0295	kyoka	exam	許可	きょか	cho phép	撮影には許可が必要です。	Cần có sự cho phép để quay phim/chụp ảnh.
+0296	kyoka	daily	許可	きょか	cho phép	先生に許可もらった?	Đã xin phép thầy chưa?
+0297	kyoka	business	許可	きょか	cho phép	上長の許可を得てから提出してください。	Vui lòng nộp sau khi đã được cấp trên cho phép.
+0298	gyogyou	exam	漁業	ぎょぎょう	ngư nghiệp	この町は漁業が盛んです。	Thị trấn này ngư nghiệp rất phát triển.
+0299	gyogyou	daily	漁業	ぎょぎょう	ngư nghiệp	おじいちゃん、昔漁業やってたんだって。	Nghe nói ông ngày xưa làm nghề đánh cá đó.
+0300	gyogyou	business	漁業	ぎょぎょう	ngư nghiệp	漁業関連企業への投資を検討しています。	Chúng tôi đang xem xét đầu tư vào các doanh nghiệp liên quan đến ngư nghiệp.
+0301	kyori	exam	距離	きょり	khoảng cách	駅までの距離はどのくらいですか。	Khoảng cách đến ga là bao xa?
+0302	kyori	daily	距離	きょり	khoảng cách	ちょっと距離置きたい気分。	Cảm thấy muốn giữ khoảng cách một chút.
+0303	kyori	business	距離	きょり	khoảng cách	取引先との適切な距離感を保つよう心がけています。	Chúng tôi luôn chú ý giữ khoảng cách phù hợp với đối tác.
+0304	kiroku	exam	記録	きろく	ghi chép	大会新記録が出ました。	Đã có kỷ lục mới của giải đấu.
+0305	kiroku	daily	記録	きろく	ghi chép	この体重、記録しとかなきゃ。	Cân nặng này phải ghi lại mới được.
+0306	kiroku	business	記録	きろく	ghi chép	会議の内容は議事録として記録してください。	Vui lòng ghi lại nội dung cuộc họp dưới dạng biên bản.
+0307	kin	exam	金	きん	vàng	この指輪は金でできている。	Chiếc nhẫn này được làm bằng vàng.
+0308	kin	daily	金	きん	vàng	金の値段、上がってるらしいよ。	Nghe nói giá vàng đang tăng đó.
+0309	kin	business	金	きん	vàng	金の含有量を証明書に明記しています。	Hàm lượng vàng được ghi rõ trong giấy chứng nhận.
+0310	gin	exam	銀	ぎん	bạc	このネックレスは銀でできています。	Chiếc vòng cổ này được làm bằng bạc.
+0311	gin	daily	銀	ぎん	bạc	銀のアクセサリー、シンプルでいいね。	Trang sức bạc, đơn giản mà đẹp nhỉ.
+0312	gin	business	銀	ぎん	bạc	銀メダルを獲得した選手にインタビューしました。	Chúng tôi đã phỏng vấn vận động viên giành huy chương bạc.
+0313	kinko	exam	金庫	きんこ	két sắt	貴重品は金庫に入れてください。	Vui lòng cất đồ quý giá vào két sắt.
+0314	kinko	daily	金庫	きんこ	két sắt	この金庫、開け方分かる?	Cái két sắt này bạn biết cách mở không?
+0315	kinko	business	金庫	きんこ	két sắt	現金は必ず金庫で保管してください。	Tiền mặt phải luôn được bảo quản trong két sắt.
+0316	kinshi	exam	近視	きんし	cận thị	私は近視なので、眼鏡が必要です。	Tôi bị cận thị nên cần đeo kính.
+0317	kinshi	daily	近視	きんし	cận thị	最近、近視が進んだ気がする。	Dạo này cảm thấy cận thị nặng hơn.
+0318	kinshi	business	近視	きんし	cận thị	健康診断で近視の進行が確認されました。	Qua khám sức khỏe đã xác nhận tình trạng cận thị tiến triển.
+0319	kinzoku	exam	金属	きんぞく	kim loại	これは金属でできている。	Cái này được làm bằng kim loại.
+0320	kinzoku	daily	金属	きんぞく	kim loại	このお皿、金属っぽい音がするね。	Cái đĩa này phát ra âm thanh giống kim loại nhỉ.
+0321	kinzoku	business	金属	きんぞく	kim loại	金属部品の品質検査を強化しています。	Chúng tôi đang tăng cường kiểm tra chất lượng linh kiện kim loại.
+0322	kinchou	exam	緊張	きんちょう	căng thẳng	面接前はいつも緊張します。	Trước khi phỏng vấn tôi luôn căng thẳng.
+0323	kinchou	daily	緊張	きんちょう	căng thẳng	そんなに緊張しないで、大丈夫だよ。	Đừng căng thẳng vậy, ổn mà.
+0324	kinchou	business	緊張	きんちょう	căng thẳng	プレゼン前は誰でも緊張するものです。	Trước khi thuyết trình, ai cũng sẽ căng thẳng thôi.
+0325	guai	exam	具合	ぐあい	tình trạng	具合が悪いので早退します。	Vì không khỏe nên tôi xin về sớm.
+0326	guai	daily	具合	ぐあい	tình trạng	具合どう?大丈夫?	Tình trạng sao rồi? Ổn không?
+0327	guai	business	具合	ぐあい	tình trạng	機械の具合が悪いので点検を依頼しました。	Vì máy móc gặp trục trặc nên chúng tôi đã yêu cầu kiểm tra.
+0328	kufuu	exam	工夫	くふう	sáng tạo	もう少し工夫が必要ですね。	Cần thêm chút sáng tạo nữa nhỉ.
+0329	kufuu	daily	工夫	くふう	sáng tạo	この収納、工夫してるね!	Cách sắp xếp đồ này sáng tạo ghê!
+0330	kufuu	business	工夫	くふう	sáng tạo	コスト削減のため、様々な工夫を行っています。	Chúng tôi đang thực hiện nhiều sáng kiến để cắt giảm chi phí.
+0331	kubetsu	exam	区別	くべつ	phân biệt	この二つは区別がつきにくい。	Hai cái này khó phân biệt.
+0332	kubetsu	daily	区別	くべつ	phân biệt	双子だから区別つかないよね。	Vì là sinh đôi nên không phân biệt được nhỉ.
+0333	kubetsu	business	区別	くべつ	phân biệt	公私の区別をしっかりつけましょう。	Hãy phân biệt rõ ràng chuyện công việc và cá nhân.
+0334	cleaning	exam	クリーニング	クリーニング	giặt là	このスーツ、クリーニングに出さないと。	Bộ vest này phải đem đi giặt là mới được.
+0335	cleaning	daily	クリーニング	クリーニング	giặt là	クリーニング、いつ取りに行く?	Đồ giặt là khi nào đi lấy?
+0336	cleaning	business	クリーニング	クリーニング	giặt là	制服のクリーニング代は会社が負担します。	Công ty sẽ chi trả phí giặt là đồng phục.
+0337	click	exam	クリック	クリック	nhấp chuột	このボタンをクリックしてください。	Vui lòng nhấp vào nút này.
+0338	click	daily	クリック	クリック	nhấp chuột	あ、間違えてクリックしちゃった。	Á, tôi lỡ nhấp nhầm rồi.
+0339	click	business	クリック	クリック	nhấp chuột	リンクをクリックすると詳細ページに移動します。	Khi nhấp vào liên kết, bạn sẽ được chuyển đến trang chi tiết.
+0340	kurou	exam	苦労	くろう	vất vả	引っ越しはとても苦労しました。	Việc chuyển nhà rất vất vả.
+0341	kurou	daily	苦労	くろう	vất vả	子育て、苦労するよね。	Nuôi con vất vả thật nhỉ.
+0342	kurou	business	苦労	くろう	vất vả	新規事業の立ち上げには大変苦労しました。	Việc khởi động dự án kinh doanh mới rất vất vả.
+0343	keiei	exam	経営	けいえい	kinh doanh	彼は小さい店を経営しています。	Anh ấy đang kinh doanh một cửa hàng nhỏ.
+0344	keiei	daily	経営	けいえい	kinh doanh	あの人、会社経営してるらしいよ。	Nghe nói người đó đang kinh doanh công ty đó.
+0345	keiei	business	経営	けいえい	kinh doanh	新しい経営方針を全社員に説明しました。	Chúng tôi đã giải thích phương châm kinh doanh mới cho toàn thể nhân viên.
+0346	keigo	exam	敬語	けいご	kính ngữ	敬語の使い方を勉強しています。	Tôi đang học cách dùng kính ngữ.
+0347	keigo	daily	敬語	けいご	kính ngữ	敬語って難しいよね。	Kính ngữ khó thật nhỉ.
+0348	keigo	business	敬語	けいご	kính ngữ	お客様には正しい敬語で対応してください。	Vui lòng dùng kính ngữ đúng chuẩn khi tiếp khách hàng.
+0349	keiji	exam	掲示	けいじ	thông báo	詳細は掲示板をご覧ください。	Chi tiết xin xem trên bảng thông báo.
+0350	keiji	daily	掲示	けいじ	thông báo	あ、新しい掲示が出てる。	A, có thông báo mới rồi kìa.
+0351	keiji	business	掲示	けいじ	thông báo	変更事項は社内掲示板に掲示いたします。	Nội dung thay đổi sẽ được thông báo trên bảng tin nội bộ.
+0352	keshiki	exam	景色	けしき	phong cảnh	この山からの景色は最高です。	Phong cảnh nhìn từ ngọn núi này tuyệt đẹp.
+0353	keshiki	daily	景色	けしき	phong cảnh	わあ、景色きれい!	Ồ, phong cảnh đẹp quá!
+0354	keshiki	business	景色	けしき	phong cảnh	会議室から見える景色がお客様に好評です。	Phong cảnh nhìn thấy từ phòng họp rất được khách hàng khen ngợi.
+0355	kekka	exam	結果	けっか	kết quả	テストの結果はどうでしたか。	Kết quả bài kiểm tra thế nào?
+0356	kekka	daily	結果	けっか	kết quả	結果、どうだった?	Kết quả thế nào rồi?
+0357	kekka	business	結果	けっか	kết quả	調査結果を来週の会議で報告します。	Tôi sẽ báo cáo kết quả khảo sát trong cuộc họp tuần sau.
+0358	kesshin	exam	決心	けっしん	quyết tâm	留学することを決心しました。	Tôi đã quyết tâm đi du học.
+0359	kesshin	daily	決心	けっしん	quyết tâm	やっと決心ついたよ。	Cuối cùng cũng quyết tâm được rồi.
+0360	kesshin	business	決心	けっしん	quyết tâm	事業を拡大する決心を固めました。	Chúng tôi đã củng cố quyết tâm mở rộng kinh doanh.

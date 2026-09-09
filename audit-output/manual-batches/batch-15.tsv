@@ -1,0 +1,181 @@
+row	vocabId	type	word	reading	meaningVi	exampleJp	exampleVi
+2521	goukaku	exam	合格	ごうかく	đỗ	試験に合格した。	Tôi đã đỗ kỳ thi.
+2522	goukaku	daily	合格	ごうかく	đỗ	合格おめでとう!	Chúc mừng cậu đã đỗ!
+2523	goukaku	business	合格	ごうかく	đỗ	審査に合格した案件のみ進めます。	Chỉ những hồ sơ đã qua thẩm định mới được tiến hành.
+2524	kougi	exam	講義	こうぎ	bài giảng	大学で講義を受けた。	Tôi đã nghe bài giảng ở trường đại học.
+2525	kougi	daily	講義	こうぎ	bài giảng	今日の講義、眠かったな。	Bài giảng hôm nay buồn ngủ thật đấy.
+2526	kougi	business	講義	こうぎ	bài giảng	専門家による講義を実施いたします。	Chúng tôi sẽ tổ chức bài giảng bởi chuyên gia.
+2527	kouza	exam	講座	こうざ	khóa học	英会話の講座に通っている。	Tôi đang theo học khóa hội thoại tiếng Anh.
+2528	kouza	daily	講座	こうざ	khóa học	その講座、面白そうだね。	Khóa học đó có vẻ thú vị nhỉ.
+2529	kouza	business	講座	こうざ	khóa học	新しい社員向け講座を開講いたします。	Chúng tôi sẽ mở khóa học mới dành cho nhân viên.
+2530	koushuu	exam	講習	こうしゅう	khóa đào tạo	安全講習を受けた。	Tôi đã tham gia khóa đào tạo an toàn.
+2531	koushuu	daily	講習	こうしゅう	khóa đào tạo	講習、何時に終わる?	Khóa đào tạo mấy giờ kết thúc vậy?
+2532	koushuu	business	講習	こうしゅう	khóa đào tạo	新入社員向け講習を来週実施いたします。	Chúng tôi sẽ tổ chức khóa đào tạo dành cho nhân viên mới vào tuần sau.
+2533	circle	exam	サークル	サークル	câu lạc bộ (đại học)	大学でサークルに入った。	Tôi đã gia nhập câu lạc bộ ở đại học.
+2534	circle	daily	サークル	サークル	câu lạc bộ (đại học)	どんなサークルなの?	Câu lạc bộ đó là gì vậy?
+2535	circle	business	サークル	サークル	câu lạc bộ (đại học)	学生時代のサークル仲間と今も交流があります。	Tôi vẫn còn giao lưu với bạn bè câu lạc bộ thời sinh viên.
+2536	sankaku	exam	三角	さんかく	tam giác	三角の図形を描いた。	Tôi đã vẽ hình tam giác.
+2537	sankaku	daily	三角	さんかく	tam giác	これ、三角に切って。	Cắt cái này thành hình tam giác nhé.
+2538	sankaku	business	三角	さんかく	tam giác	三角形の面積を計算いたしました。	Chúng tôi đã tính diện tích hình tam giác.
+2539	jikanwari	exam	時間割	じかんわり	thời khóa biểu	新しい時間割をもらった。	Tôi đã nhận được thời khóa biểu mới.
+2540	jikanwari	daily	時間割	じかんわり	thời khóa biểu	時間割、見せて。	Cho tớ xem thời khóa biểu.
+2541	jikanwari	business	時間割	じかんわり	thời khóa biểu	来学期の時間割を作成しております。	Chúng tôi đang lập thời khóa biểu cho học kỳ tới.
+2542	jishuu	exam	自習	じしゅう	tự học	図書館で自習した。	Tôi đã tự học ở thư viện.
+2543	jishuu	daily	自習	じしゅう	tự học	自習室、混んでる?	Phòng tự học có đông không?
+2544	jishuu	business	自習	じしゅう	tự học	自習時間を確保するようスケジュールを調整いたします。	Chúng tôi sẽ điều chỉnh lịch trình để đảm bảo thời gian tự học.
+2545	jikken	exam	実験	じっけん	thí nghiệm	理科の実験をした。	Tôi đã làm thí nghiệm khoa học.
+2546	jikken	daily	実験	じっけん	thí nghiệm	実験、うまくいった?	Thí nghiệm có thành công không?
+2547	jikken	business	実験	じっけん	thí nghiệm	新製品の実験データを分析しております。	Chúng tôi đang phân tích dữ liệu thí nghiệm sản phẩm mới.
+2548	jisshuu	exam	実習	じっしゅう	thực tập	病院で実習をしている。	Tôi đang thực tập ở bệnh viện.
+2549	jisshuu	daily	実習	じっしゅう	thực tập	実習、大変だった?	Thực tập có vất vả không?
+2550	jisshuu	business	実習	じっしゅう	thực tập	新入社員に現場実習を実施いたします。	Chúng tôi sẽ tổ chức thực tập hiện trường cho nhân viên mới.
+2551	juken	exam	受験	じゅけん	thi (dự thi)	来年、大学を受験する。	Sang năm tôi sẽ thi đại học.
+2552	juken	daily	受験	じゅけん	thi (dự thi)	受験、頑張ってね。	Cố gắng thi tốt nhé.
+2553	juken	business	受験	じゅけん	thi (dự thi)	受験対策講座を開講いたします。	Chúng tôi sẽ mở khóa học luyện thi.
+2554	shougakusei	exam	小学生	しょうがくせい	học sinh tiểu học	彼は小学生だ。	Cậu ấy là học sinh tiểu học.
+2555	shougakusei	daily	小学生	しょうがくせい	học sinh tiểu học	小学生の頃、よく遊んだね。	Hồi tiểu học tụi mình hay chơi với nhau nhỉ.
+2556	shougakusei	business	小学生	しょうがくせい	học sinh tiểu học	小学生向けの教材を開発しております。	Chúng tôi đang phát triển tài liệu học tập dành cho học sinh tiểu học.
+2557	shokyuu	exam	初級	しょきゅう	sơ cấp	日本語の初級クラスに通っている。	Tôi đang học lớp tiếng Nhật sơ cấp.
+2558	shokyuu	daily	初級	しょきゅう	sơ cấp	まだ初級だから難しいよ。	Vì vẫn còn sơ cấp nên khó lắm.
+2559	shokyuu	business	初級	しょきゅう	sơ cấp	初級レベルの研修から開始いたします。	Chúng tôi sẽ bắt đầu từ đào tạo trình độ sơ cấp.
+2560	shingaku	exam	進学	しんがく	học lên	大学院に進学することにした。	Tôi đã quyết định học lên cao học.
+2561	shingaku	daily	進学	しんがく	học lên	進学するか就職するか迷ってる。	Tớ đang phân vân giữa học lên hay đi làm.
+2562	shingaku	business	進学	しんがく	học lên	進学希望者向けの説明会を開催いたします。	Chúng tôi sẽ tổ chức buổi giải thích dành cho người muốn học lên.
+2563	zu	exam	図	ず	hình, sơ đồ	説明のために図を描いた。	Tôi đã vẽ sơ đồ để giải thích.
+2564	zu	daily	図	ず	hình, sơ đồ	この図、分かりやすいね。	Hình này dễ hiểu nhỉ.
+2565	zu	business	図	ず	hình, sơ đồ	構成図を資料に追加いたしました。	Chúng tôi đã thêm sơ đồ cấu trúc vào tài liệu.
+2566	suuji	exam	数字	すうじ	con số	数字を大きく書いた。	Tôi đã viết con số to lên.
+2567	suuji	daily	数字	すうじ	con số	この数字、間違ってない?	Con số này không sai chứ?
+2568	suuji	business	数字	すうじ	con số	数字の根拠を明確にしてください。	Xin vui lòng làm rõ căn cứ của các con số.
+2569	seikai	exam	正解	せいかい	đáp án đúng	正解は3番だ。	Đáp án đúng là số 3.
+2570	seikai	daily	正解	せいかい	đáp án đúng	正解、当たった?	Trả lời đúng chưa?
+2571	seikai	business	正解	せいかい	đáp án đúng	正解率を分析し教材を改善いたします。	Chúng tôi sẽ phân tích tỷ lệ trả lời đúng để cải thiện tài liệu học.
+2572	seiseki	exam	成績	せいせき	thành tích	テストの成績が上がった。	Thành tích bài kiểm tra đã tăng lên.
+2573	seiseki	daily	成績	せいせき	thành tích	成績、どうだった?	Thành tích thế nào rồi?
+2574	seiseki	business	成績	せいせき	thành tích	業績成績を四半期ごとに評価しております。	Chúng tôi đánh giá thành tích kinh doanh theo từng quý.
+2575	semi	exam	ゼミ	ゼミ	hội thảo (đại học)	大学のゼミに参加した。	Tôi đã tham gia hội thảo ở đại học.
+2576	semi	daily	ゼミ	ゼミ	hội thảo (đại học)	今日のゼミ、発表が多くて疲れた。	Buổi seminar hôm nay có nhiều phần thuyết trình nên mệt thật.
+2577	semi	business	ゼミ	ゼミ	hội thảo (đại học)	大学時代のゼミ仲間と再会しました。	Tôi đã gặp lại bạn bè hội thảo thời đại học.
+2578	senmon	exam	専門	せんもん	chuyên môn	彼の専門は経済学だ。	Chuyên môn của anh ấy là kinh tế học.
+2579	senmon	daily	専門	せんもん	chuyên môn	それ、専門外なんだ。	Cái đó ngoài chuyên môn của tớ.
+2580	senmon	business	専門	せんもん	chuyên môn	専門知識を活かした提案をいたします。	Chúng tôi sẽ đề xuất dựa trên kiến thức chuyên môn.
+2581	soutai	exam	早退	そうたい	về sớm	体調が悪くて早退した。	Vì sức khỏe không tốt nên tôi đã về sớm.
+2582	soutai	daily	早退	そうたい	về sớm	今日、早退してもいい?	Hôm nay tớ về sớm được không?
+2583	soutai	business	早退	そうたい	về sớm	早退される場合は上長にご報告ください。	Nếu về sớm, xin vui lòng báo cáo cấp trên.
+2584	taiseki	exam	体積	たいせき	thể tích	立方体の体積を求めた。	Tôi đã tính thể tích khối lập phương.
+2585	taiseki	daily	体積	たいせき	thể tích	この箱、体積どれくらい?	Cái hộp này thể tích khoảng bao nhiêu?
+2586	taiseki	business	体積	たいせき	thể tích	製品の体積を測定し梱包を最適化いたします。	Chúng tôi sẽ đo thể tích sản phẩm để tối ưu hóa đóng gói.
+2587	tango	exam	単語	たんご	từ vựng	毎日、新しい単語を覚えている。	Mỗi ngày tôi đều học từ vựng mới.
+2588	tango	daily	単語	たんご	từ vựng	この単語、意味わかる?	Từ này nghĩa là gì cậu biết không?
+2589	tango	business	単語	たんご	từ vựng	専門単語のリストを配布いたします。	Chúng tôi sẽ phát danh sách từ vựng chuyên ngành.
+2590	tannin	exam	担任	たんにん	giáo viên chủ nhiệm	担任の先生に相談した。	Tôi đã hỏi ý kiến giáo viên chủ nhiệm.
+2591	tannin	daily	担任	たんにん	giáo viên chủ nhiệm	担任、変わったんだって。	Nghe nói giáo viên chủ nhiệm đã đổi.
+2592	tannin	business	担任	たんにん	giáo viên chủ nhiệm	担任からの連絡事項をお伝えいたします。	Tôi xin truyền đạt thông báo từ giáo viên chủ nhiệm.
+2593	chishiki	exam	知識	ちしき	kiến thức	彼は幅広い知識を持っている。	Anh ấy có kiến thức rộng.
+2594	chishiki	daily	知識	ちしき	kiến thức	知識、増えたね。	Kiến thức của cậu tăng lên rồi nhỉ.
+2595	chishiki	business	知識	ちしき	kiến thức	専門知識を活かして業務に取り組んでおります。	Chúng tôi làm việc dựa trên kiến thức chuyên môn.
+2596	chuukyuu	exam	中級	ちゅうきゅう	trung cấp	中級クラスに進んだ。	Tôi đã lên lớp trung cấp.
+2597	chuukyuu	daily	中級	ちゅうきゅう	trung cấp	もう中級レベルなの?すごいね。	Đã đến trình độ trung cấp rồi à? Giỏi thật đấy.
+2598	chuukyuu	business	中級	ちゅうきゅう	trung cấp	中級者向けの研修コースを新設いたしました。	Chúng tôi đã mở mới khóa đào tạo dành cho người trình độ trung cấp.
+2599	tsuugaku	exam	通学	つうがく	đi học (từ nhà đến trường)	バスで通学している。	Tôi đi học bằng xe buýt.
+2600	tsuugaku	daily	通学	つうがく	đi học (từ nhà đến trường)	通学、時間かかる?	Đi học có mất nhiều thời gian không?
+2601	tsuugaku	business	通学	つうがく	đi học (từ nhà đến trường)	通学定期券の割引制度がございます。	Có chế độ giảm giá vé tháng đi học.
+2602	tensuu	exam	点数	てんすう	điểm số	テストの点数を確認した。	Tôi đã kiểm tra điểm số bài kiểm tra.
+2603	tensuu	daily	点数	てんすう	điểm số	点数、良かった?	Điểm số tốt không?
+2604	tensuu	business	点数	てんすう	điểm số	評価点数を基準に判定いたします。	Chúng tôi sẽ đánh giá dựa trên điểm số.
+2605	batsu	exam	ばつ	ばつ	dấu X (sai)	間違った答えにばつをつけた。	Tôi đã đánh dấu X vào câu trả lời sai.
+2606	batsu	daily	ばつ	ばつ	dấu X (sai)	これ、ばつだよ。	Cái này bị đánh dấu sai đó.
+2607	batsu	business	ばつ	ばつ	dấu X (sai)	不備がある項目にばつを記載しております。	Chúng tôi ghi dấu X vào các mục còn thiếu sót.
+2608	hyakkajiten	exam	百科事典	ひゃっかじてん	từ điển bách khoa	百科事典で調べた。	Tôi đã tra cứu trong từ điển bách khoa.
+2609	hyakkajiten	daily	百科事典	ひゃっかじてん	từ điển bách khoa	百科事典、家にあるよ。	Nhà tớ có từ điển bách khoa đấy.
+2610	hyakkajiten	business	百科事典	ひゃっかじてん	từ điển bách khoa	オンライン百科事典を業務に活用しております。	Chúng tôi sử dụng từ điển bách khoa trực tuyến trong công việc.
+2611	hyou	exam	表	ひょう	bảng	データを表にまとめた。	Tôi đã tổng hợp dữ liệu thành bảng.
+2612	hyou	daily	表	ひょう	bảng	この表、見やすいね。	Bảng này dễ nhìn nhỉ.
+2613	hyou	business	表	ひょう	bảng	比較表を資料に添付いたします。	Chúng tôi sẽ đính kèm bảng so sánh vào tài liệu.
+2614	plus	exam	プラス	プラス	cộng, thêm	5にプラス3をした。	Tôi đã cộng thêm 3 vào 5.
+2615	plus	daily	プラス	プラス	cộng, thêm	それ、プラスになるよね。	Cái đó là điểm cộng đúng không?
+2616	plus	business	プラス	プラス	cộng, thêm	この経験は今後のキャリアにプラスになります。	Kinh nghiệm này sẽ là điểm cộng cho sự nghiệp sau này.
+2617	bun	exam	文	ぶん	câu	短い文を作った。	Tôi đã đặt một câu ngắn.
+2618	bun	daily	文	ぶん	câu	この文、意味わかる?	Câu này nghĩa là gì cậu hiểu không?
+2619	bun	business	文	ぶん	câu	例文を追加して分かりやすくいたしました。	Chúng tôi đã thêm câu ví dụ để dễ hiểu hơn.
+2620	kakko	exam	括弧	かっこ	dấu ngoặc	括弧の中に答えを書いた。	Tôi đã viết đáp án vào trong dấu ngoặc.
+2621	kakko	daily	括弧	かっこ	dấu ngoặc	括弧、閉じ忘れてるよ。	Cậu quên đóng dấu ngoặc rồi kìa.
+2622	kakko	business	括弧	かっこ	dấu ngoặc	注釈は括弧内に記載してください。	Xin vui lòng ghi chú thích trong dấu ngoặc.
+2623	shikaku2	exam	四角	しかく	hình vuông, tứ giác	紙を四角に切った。	Tôi đã cắt tờ giấy thành hình vuông.
+2624	shikaku2	daily	四角	しかく	hình vuông, tứ giác	これ、四角くない?	Cái này không phải hình vuông à?
+2625	shikaku2	business	四角	しかく	hình vuông, tứ giác	四角形のロゴにデザインを変更いたします。	Chúng tôi sẽ đổi thiết kế logo sang hình tứ giác.
+2626	yajirushi	exam	矢印	やじるし	mũi tên	矢印の方向に進んでください。	Xin vui lòng đi theo hướng mũi tên.
+2627	yajirushi	daily	矢印	やじるし	mũi tên	矢印、どっち向いてるの?	Mũi tên chỉ hướng nào vậy?
+2628	yajirushi	business	矢印	やじるし	mũi tên	案内図に矢印を追加いたしました。	Chúng tôi đã thêm mũi tên vào sơ đồ hướng dẫn.
+2629	en	exam	円	えん	hình tròn	コンパスで円を描いた。	Tôi đã dùng compa để vẽ hình tròn.
+2630	en	daily	円	えん	hình tròn	これ、きれいな円だね。	Cái này là hình tròn đẹp thật nhỉ.
+2631	en	business	円	えん	hình tròn	円のグラフで割合を表しております。	Chúng tôi thể hiện tỷ lệ bằng biểu đồ hình tròn.
+2632	kyokusen	exam	曲線	きょくせん	đường cong	グラフは曲線を描いている。	Biểu đồ vẽ theo đường cong.
+2633	kyokusen	daily	曲線	きょくせん	đường cong	この道、曲線が多いね。	Con đường này nhiều đoạn cong nhỉ.
+2634	kyokusen	business	曲線	きょくせん	đường cong	需要曲線の変化を分析いたしました。	Chúng tôi đã phân tích sự thay đổi của đường cong nhu cầu.
+2635	chokusen	exam	直線	ちょくせん	đường thẳng	定規で直線を引いた。	Tôi đã kẻ đường thẳng bằng thước.
+2636	chokusen	daily	直線	ちょくせん	đường thẳng	この線、直線になってない。	Đường này không thẳng.
+2637	chokusen	business	直線	ちょくせん	đường thẳng	最短の直線ルートで配送いたします。	Chúng tôi sẽ giao hàng theo tuyến đường thẳng ngắn nhất.
+2638	tensen	exam	点線	てんせん	đường chấm	点線に沿って切ってください。	Xin vui lòng cắt theo đường chấm.
+2639	tensen	daily	点線	てんせん	đường chấm	点線のところ、切っていいよ。	Chỗ đường chấm này cắt được đó.
+2640	tensen	business	点線	てんせん	đường chấm	点線部分にご署名をお願いいたします。	Xin vui lòng ký tên vào phần đường chấm.
+2641	kasen	exam	下線	かせん	gạch chân	大事な部分に下線を引いた。	Tôi đã gạch chân vào phần quan trọng.
+2642	kasen	daily	下線	かせん	gạch chân	下線のところ、覚えてね。	Nhớ phần gạch chân đó nhé.
+2643	kasen	business	下線	かせん	gạch chân	重要事項には下線を引いております。	Chúng tôi đã gạch chân các mục quan trọng.
+2644	hankei	exam	半径	はんけい	bán kính	円の半径を求めた。	Tôi đã tính bán kính hình tròn.
+2645	hankei	daily	半径	はんけい	bán kính	この円の半径、いくつ?	Bán kính hình tròn này là bao nhiêu?
+2646	hankei	business	半径	はんけい	bán kính	作業半径を考慮し配置を決定いたしました。	Chúng tôi đã quyết định vị trí sắp xếp có cân nhắc bán kính hoạt động.
+2647	chokkei	exam	直径	ちょっけい	đường kính	直径10センチの円を描いた。	Tôi đã vẽ hình tròn có đường kính 10cm.
+2648	chokkei	daily	直径	ちょっけい	đường kính	この管、直径どれくらい?	Đường ống này đường kính khoảng bao nhiêu?
+2649	chokkei	business	直径	ちょっけい	đường kính	部品の直径を規格に合わせて調整いたしました。	Chúng tôi đã điều chỉnh đường kính linh kiện theo tiêu chuẩn.
+2650	hoikusho	exam	保育所	ほいくしょ	nhà trẻ	子供を保育所に預けた。	Tôi đã gửi con vào nhà trẻ.
+2651	hoikusho	daily	保育所	ほいくしょ	nhà trẻ	保育所、決まった?	Đã tìm được nhà trẻ chưa?
+2652	hoikusho	business	保育所	ほいくしょ	nhà trẻ	社内に保育所を新設いたしました。	Chúng tôi đã lập mới nhà trẻ trong công ty.
+2653	minus	exam	マイナス	マイナス	trừ	5からマイナス3をした。	Tôi đã trừ 3 từ 5.
+2654	minus	daily	マイナス	マイナス	trừ	それ、マイナスになるよ。	Cái đó sẽ trở thành điểm trừ đấy.
+2655	minus	business	マイナス	マイナス	trừ	今期はマイナス成長となりました。	Kỳ này đã tăng trưởng âm.
+2656	maru	exam	丸	まる	hình tròn, dấu tròn (đúng)	正しい答えに丸をつけた。	Tôi đã khoanh tròn vào đáp án đúng.
+2657	maru	daily	丸	まる	hình tròn, dấu tròn (đúng)	これ、丸だよ!	Cái này đúng đấy!
+2658	maru	business	丸	まる	hình tròn, dấu tròn (đúng)	合格項目には丸を記載しております。	Chúng tôi ghi dấu tròn vào các mục đạt yêu cầu.
+2659	menseki	exam	面積	めんせき	diện tích	部屋の面積を測った。	Tôi đã đo diện tích căn phòng.
+2660	menseki	daily	面積	めんせき	diện tích	この部屋、面積どれくらい?	Phòng này diện tích khoảng bao nhiêu?
+2661	menseki	business	面積	めんせき	diện tích	店舗面積を拡大する計画があります。	Có kế hoạch mở rộng diện tích cửa hàng.
+2662	moji	exam	文字	もじ	chữ cái	小さい文字で書かれている。	Được viết bằng chữ nhỏ.
+2663	moji	daily	文字	もじ	chữ cái	この文字、読めないよ。	Chữ này tớ không đọc được.
+2664	moji	business	文字	もじ	chữ cái	文字サイズを見やすく調整いたしました。	Chúng tôi đã điều chỉnh cỡ chữ cho dễ nhìn hơn.
+2665	ryuugaku	exam	留学	りゅうがく	du học	来年、アメリカに留学する。	Sang năm tôi sẽ du học Mỹ.
+2666	ryuugaku	daily	留学	りゅうがく	du học	留学、楽しかった?	Du học có vui không?
+2667	ryuugaku	business	留学	りゅうがく	du học	留学経験者を積極的に採用しております。	Chúng tôi tích cực tuyển dụng người có kinh nghiệm du học.
+2668	lesson	exam	レッスン	レッスン	bài học	ピアノのレッスンを受けている。	Tôi đang học đàn piano.
+2669	lesson	daily	レッスン	レッスン	bài học	今日、レッスンあるの?	Hôm nay có bài học không?
+2670	lesson	business	レッスン	レッスン	bài học	無料体験レッスンをご用意しております。	Chúng tôi có chuẩn bị bài học trải nghiệm miễn phí.
+2671	report	exam	レポート	レポート	báo cáo	レポートを書き終えた。	Tôi đã viết xong báo cáo.
+2672	report	daily	レポート	レポート	báo cáo	レポート、まだ終わってないの?	Báo cáo vẫn chưa xong à?
+2673	report	business	レポート	レポート	báo cáo	月次レポートを本日中に提出いたします。	Chúng tôi sẽ nộp báo cáo hàng tháng trong hôm nay.
+2674	roomaji	exam	ローマ字	ローマじ	chữ La tinh	名前をローマ字で書いた。	Tôi đã viết tên bằng chữ La tinh.
+2675	roomaji	daily	ローマ字	ローマじ	chữ La tinh	ローマ字、まだ覚えてないの?	Cậu vẫn chưa nhớ chữ La tinh à?
+2676	roomaji	business	ローマ字	ローマじ	chữ La tinh	パスポートの氏名はローマ字で表記されます。	Họ tên trên hộ chiếu được ghi bằng chữ La tinh.
+2677	senmongakkou	exam	専門学校	せんもんがっこう	trường chuyên môn	専門学校で美容を学んでいる。	Tôi đang học ngành làm đẹp ở trường chuyên môn.
+2678	senmongakkou	daily	専門学校	せんもんがっこう	trường chuyên môn	専門学校、どこに通ってるの?	Cậu học trường chuyên môn nào vậy?
+2679	senmongakkou	business	専門学校	せんもんがっこう	trường chuyên môn	専門学校卒業生の採用を強化しております。	Chúng tôi đang tăng cường tuyển dụng sinh viên tốt nghiệp trường chuyên môn.
+2680	daigakuin	exam	大学院	だいがくいん	cao học	彼は大学院で経済学を研究している。	Anh ấy đang nghiên cứu kinh tế học ở bậc cao học.
+2681	daigakuin	daily	大学院	だいがくいん	cao học	大学院、大変そうだね。	Cao học có vẻ vất vả nhỉ.
+2682	daigakuin	business	大学院	だいがくいん	cao học	大学院卒の人材を積極的に採用しております。	Chúng tôi tích cực tuyển dụng nhân tài tốt nghiệp cao học.
+2683	tandai	exam	短大	たんだい	cao đẳng	短大で栄養学を学んだ。	Tôi đã học dinh dưỡng học ở trường cao đẳng.
+2684	tandai	daily	短大	たんだい	cao đẳng	短大出身なんだ。	Tớ tốt nghiệp cao đẳng đấy.
+2685	tandai	business	短大	たんだい	cao đẳng	短大卒以上を応募条件としております。	Điều kiện ứng tuyển là tốt nghiệp cao đẳng trở lên.
+2686	youchien	exam	幼稚園	ようちえん	mẫu giáo	娘を幼稚園に迎えに行った。	Tôi đã đi đón con gái ở trường mẫu giáo.
+2687	youchien	daily	幼稚園	ようちえん	mẫu giáo	幼稚園、楽しかった?	Ở trường mẫu giáo vui không?
+2688	youchien	business	幼稚園	ようちえん	mẫu giáo	幼稚園向けの安全対策商品を開発しております。	Chúng tôi đang phát triển sản phẩm an toàn dành cho trường mẫu giáo.
+2689	kagaku	exam	化学	かがく	hóa học	化学の実験をした。	Tôi đã làm thí nghiệm hóa học.
+2690	kagaku	daily	化学	かがく	hóa học	化学、苦手なんだよね。	Tớ sợ môn hóa học lắm.
+2691	kagaku	business	化学	かがく	hóa học	化学分野での研究を進めております。	Chúng tôi đang tiến hành nghiên cứu trong lĩnh vực hóa học.
+2692	kokugo	exam	国語	こくご	quốc ngữ (môn tiếng Nhật)	国語のテストがある。	Có bài kiểm tra môn quốc ngữ.
+2693	kokugo	daily	国語	こくご	quốc ngữ (môn tiếng Nhật)	国語、得意なんだ。	Tớ giỏi môn quốc ngữ đấy.
+2694	kokugo	business	国語	こくご	quốc ngữ (môn tiếng Nhật)	国語力向上のための教材を開発しております。	Chúng tôi đang phát triển tài liệu để nâng cao năng lực quốc ngữ.
+2695	taiiku	exam	体育	たいいく	thể dục	体育の授業でサッカーをした。	Tôi đã chơi bóng đá trong giờ thể dục.
+2696	taiiku	daily	体育	たいいく	thể dục	体育、今日あったっけ?	Hôm nay có tiết thể dục không nhỉ?
+2697	taiiku	business	体育	たいいく	thể dục	社員向け体育館を新たに設置いたしました。	Chúng tôi đã lắp đặt mới nhà thi đấu thể dục dành cho nhân viên.
+2698	butsuri	exam	物理	ぶつり	vật lý	物理の公式を覚えた。	Tôi đã học thuộc công thức vật lý.
+2699	butsuri	daily	物理	ぶつり	vật lý	物理、難しいよね。	Môn vật lý khó thật nhỉ.
+2700	butsuri	business	物理	ぶつり	vật lý	物理学の専門家に監修を依頼いたしました。	Chúng tôi đã nhờ chuyên gia vật lý học giám sát.

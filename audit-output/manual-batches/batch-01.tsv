@@ -1,0 +1,181 @@
+row	vocabId	type	word	reading	meaningVi	exampleJp	exampleVi
+0001	ai	exam	愛	あい	tình yêu	彼は家族への愛を大切にしている。	Anh ấy trân trọng tình yêu dành cho gia đình.
+0002	ai	daily	愛	あい	tình yêu	この曲、愛について歌ってるんだよ。	Bài hát này hát về tình yêu đó.
+0003	ai	business	愛	あい	tình yêu	私たちは、お客様への愛を込めてサービスを提供しています。	Chúng tôi cung cấp dịch vụ với tất cả tình yêu dành cho khách hàng.
+0004	aijou	exam	愛情	あいじょう	tình yêu thương, tình cảm	親は子供に深い愛情を持っている。	Cha mẹ có tình yêu thương sâu sắc dành cho con cái.
+0005	aijou	daily	愛情	あいじょう	tình yêu thương, tình cảm	このぬいぐるみ、愛情込めて作ったんだ。	Con thú nhồi bông này mình làm với cả tình yêu thương đó.
+0006	aijou	business	愛情	あいじょう	tình yêu thương, tình cảm	弊社は一つ一つの商品に愛情を持って製造しています。	Công ty chúng tôi sản xuất từng sản phẩm với tất cả sự tâm huyết.
+0007	aidea	exam	アイデア	アイデア	ý tưởng	何かいいアイデアがあったら教えてください。	Nếu có ý tưởng hay nào thì hãy cho tôi biết.
+0008	aidea	daily	アイデア	アイデア	ý tưởng	このアイデア、めっちゃいいじゃん!	Ý tưởng này hay quá đi mất!
+0009	aidea	business	アイデア	アイデア	ý tưởng	会議で新商品のアイデアをいくつか出しました。	Trong cuộc họp, tôi đã đưa ra vài ý tưởng cho sản phẩm mới.
+0010	akushu	exam	握手	あくしゅ	bắt tay	二人の代表は笑顔で握手をした。	Hai vị đại diện đã bắt tay nhau với nụ cười.
+0011	akushu	daily	握手	あくしゅ	bắt tay	久しぶりに会った友達と握手した。	Tôi đã bắt tay người bạn lâu ngày mới gặp.
+0012	akushu	business	握手	あくしゅ	bắt tay	契約成立後、両社の代表が握手を交わした。	Sau khi ký kết hợp đồng, đại diện hai công ty đã bắt tay nhau.
+0013	akusesu	exam	アクセス	アクセス	truy cập	このサイトには誰でも自由にアクセスできます。	Trang web này ai cũng có thể tự do truy cập.
+0014	akusesu	daily	アクセス	アクセス	truy cập	Wi-Fiがなくてサイトにアクセスできない。	Không có Wi-Fi nên không truy cập được trang web.
+0015	akusesu	business	アクセス	アクセス	truy cập	システムへのアクセス権限を申請してください。	Vui lòng xin cấp quyền truy cập vào hệ thống.
+0016	akusento	exam	アクセント	アクセント	trọng âm	この単語のアクセントはどこにありますか。	Trọng âm của từ này nằm ở đâu?
+0017	akusento	daily	アクセント	アクセント	trọng âm	彼、関西のアクセントが残ってるね。	Anh ấy vẫn còn giọng vùng Kansai nhỉ.
+0018	akusento	business	アクセント	アクセント	trọng âm	プレゼン資料は色でアクセントをつけると見やすくなります。	Nếu nhấn màu tạo điểm nhấn trong tài liệu thuyết trình sẽ dễ nhìn hơn.
+0019	achirakochira	exam	あちらこちら	あちらこちら	khắp nơi, đây đó	資料をあちらこちらに置き忘れてしまった。	Tôi đã để quên tài liệu ở khắp nơi.
+0020	achirakochira	daily	あちらこちら	あちらこちら	khắp nơi, đây đó	休みの日はあちらこちらへ出かけるのが好き。	Ngày nghỉ tôi thích đi đây đi đó.
+0021	achirakochira	business	あちらこちら	あちらこちら	khắp nơi, đây đó	会場のあちらこちらに案内板を設置しました。	Chúng tôi đã đặt bảng hướng dẫn ở nhiều chỗ trong hội trường.
+0022	atsumari	exam	集まり	あつまり	sự tụ tập, buổi gặp mặt	今週末、町内の集まりがあります。	Cuối tuần này có buổi tụ họp của khu phố.
+0023	atsumari	daily	集まり	あつまり	sự tụ tập, buổi gặp mặt	今度の集まり、行く?	Buổi tụ tập lần này, đi không?
+0024	atsumari	business	集まり	あつまり	sự tụ tập, buổi gặp mặt	部署の集まりで今後の方針について話し合った。	Tại buổi họp mặt của phòng ban, mọi người đã bàn về phương hướng sắp tới.
+0025	atena	exam	宛名	あてな	tên, địa chỉ người nhận	封筒に宛名を正しく書いてください。	Hãy ghi đúng tên người nhận lên phong bì.
+0026	atena	daily	宛名	あてな	tên, địa chỉ người nhận	あ、宛名書くの忘れてた!	A, tôi quên ghi tên người nhận rồi!
+0027	atena	business	宛名	あてな	tên, địa chỉ người nhận	案内状の宛名は役職名まで正確に記載してください。	Vui lòng ghi chính xác cả chức danh trong tên người nhận của thư mời.
+0028	atokatazuke	exam	後片付け	あとかたづけ	dọn dẹp	食事の後片付けは私がします。	Việc dọn dẹp sau bữa ăn để tôi làm.
+0029	atokatazuke	daily	後片付け	あとかたづけ	dọn dẹp	パーティーの後片付け、手伝って!	Giúp tôi dọn dẹp sau bữa tiệc với!
+0030	atokatazuke	business	後片付け	あとかたづけ	dọn dẹp	イベント終了後の後片付けは業者に依頼した。	Việc dọn dẹp sau khi sự kiện kết thúc đã được thuê đơn vị ngoài xử lý.
+0031	adobaisu	exam	アドバイス	アドバイス	lời khuyên	先生に進路についてアドバイスをもらった。	Tôi đã nhận được lời khuyên từ thầy giáo về hướng đi tương lai.
+0032	adobaisu	daily	アドバイス	アドバイス	lời khuyên	いいアドバイスありがとう、助かった!	Cảm ơn lời khuyên hay nhé, giúp mình nhiều lắm!
+0033	adobaisu	business	アドバイス	アドバイス	lời khuyên	上司から資料の作り方についてアドバイスを受けた。	Tôi đã nhận được lời khuyên từ cấp trên về cách làm tài liệu.
+0034	ana	exam	穴	あな	lỗ, hố	壁に穴を開けてしまった。	Tôi đã lỡ khoan một lỗ trên tường.
+0035	ana	daily	穴	あな	lỗ, hố	靴下に穴が空いてる!	Tất bị thủng lỗ rồi kìa!
+0036	ana	business	穴	あな	lỗ, hố	このスケジュールには穴があるので見直しましょう。	Lịch trình này có lỗ hổng nên hãy xem lại.
+0037	amari	exam	余り	あまり	phần còn lại, dư	十を三で割ると、余りは一です。	Mười chia ba thì số dư là một.
+0038	amari	daily	余り	あまり	phần còn lại, dư	材料の余りでもう一品作ろう。	Dùng nguyên liệu còn dư làm thêm một món nữa đi.
+0039	amari	business	余り	あまり	phần còn lại, dư	予算の余りは来期に繰り越します。	Phần ngân sách còn dư sẽ được chuyển sang kỳ sau.
+0040	anketo	exam	アンケート	アンケート	bảng khảo sát	学生にアンケートを実施した。	Chúng tôi đã thực hiện khảo sát với sinh viên.
+0041	anketo	daily	アンケート	アンケート	bảng khảo sát	このアンケート、答えると割引券がもらえるよ。	Trả lời bảng khảo sát này thì được tặng phiếu giảm giá đó.
+0042	anketo	business	アンケート	アンケート	bảng khảo sát	顧客満足度アンケートの結果を来週報告します。	Tuần sau tôi sẽ báo cáo kết quả khảo sát mức độ hài lòng của khách hàng.
+0043	itazura	exam	いたずら	いたずら	trò nghịch ngợm	子供が壁にいたずら書きをした。	Đứa trẻ đã vẽ bậy (nghịch) lên tường.
+0044	itazura	daily	いたずら	いたずら	trò nghịch ngợm	またいたずらして!もう!	Lại nghịch nữa rồi! Thôi nào!
+0045	itazura	business	いたずら	いたずら	trò nghịch ngợm	彼のいたずらのせいで、会議が中断してしまった。	Vì trò nghịch của anh ấy mà cuộc họp đã bị gián đoạn.
+0046	ichibu	exam	一部	いちぶ	một phần	この意見は学生の一部の意見にすぎない。	Ý kiến này chỉ là ý kiến của một bộ phận sinh viên.
+0047	ichibu	daily	一部	いちぶ	một phần	荷物の一部がまだ届いてないんだ。	Một phần hành lý vẫn chưa tới nơi.
+0048	ichibu	business	一部	いちぶ	một phần	今回のプロジェクトの一部を外部に委託します。	Một phần của dự án lần này sẽ được giao cho bên ngoài.
+0049	isshun	exam	一瞬	いっしゅん	khoảnh khắc	花火は一瞬で消えてしまった。	Pháo hoa đã tắt chỉ trong khoảnh khắc.
+0050	isshun	daily	一瞬	いっしゅん	khoảnh khắc	一瞬、誰か分からなかった。	Trong khoảnh khắc đó, tôi không nhận ra là ai.
+0051	isshun	business	一瞬	いっしゅん	khoảnh khắc	一瞬の判断ミスが大きな損失につながった。	Một sai lầm trong khoảnh khắc đã dẫn đến tổn thất lớn.
+0052	ihan	exam	違反	いはん	vi phạm	スピード違反で捕まった。	Tôi đã bị bắt vì vi phạm tốc độ.
+0053	ihan	daily	違反	いはん	vi phạm	それ、校則違反じゃない?	Cái đó không phải vi phạm nội quy trường à?
+0054	ihan	business	違反	いはん	vi phạm	契約違反があった場合、直ちにご連絡ください。	Nếu có vi phạm hợp đồng, vui lòng liên hệ ngay lập tức.
+0055	event	exam	イベント	イベント	sự kiện	来月、大きいイベントがある。	Tháng sau có một sự kiện lớn.
+0056	event	daily	イベント	イベント	sự kiện	このイベント、めっちゃ楽しみ!	Sự kiện này, tớ mong chờ lắm luôn!
+0057	event	business	イベント	イベント	sự kiện	新商品発表のイベントを来週開催します。	Chúng tôi sẽ tổ chức sự kiện ra mắt sản phẩm mới vào tuần sau.
+0058	image	exam	イメージ	イメージ	hình ảnh, ấn tượng	この会社のイメージはどうですか。	Ấn tượng của bạn về công ty này thế nào?
+0059	image	daily	イメージ	イメージ	hình ảnh, ấn tượng	思ってたのと全然イメージが違った。	Hoàn toàn khác với những gì tôi tưởng tượng.
+0060	image	business	イメージ	イメージ	hình ảnh, ấn tượng	新しいロゴで会社のイメージを一新したい。	Chúng tôi muốn làm mới hình ảnh công ty bằng logo mới.
+0061	insatsu	exam	印刷	いんさつ	in ấn	この資料を10部印刷してください。	Hãy in tài liệu này thành 10 bản.
+0062	insatsu	daily	印刷	いんさつ	in ấn	プリンターの調子が悪くて印刷できない。	Máy in bị trục trặc nên không in được.
+0063	insatsu	business	印刷	いんさつ	in ấn	パンフレットの印刷を業者に発注しました。	Tôi đã đặt in tờ rơi từ nhà cung cấp.
+0064	inshou	exam	印象	いんしょう	ấn tượng	彼の第一印象はとても良かった。	Ấn tượng đầu tiên về anh ấy rất tốt.
+0065	inshou	daily	印象	いんしょう	ấn tượng	あの映画、印象に残るシーンが多かった。	Bộ phim đó có nhiều cảnh gây ấn tượng ghê.
+0066	inshou	business	印象	いんしょう	ấn tượng	面接では第一印象がとても重要です。	Trong phỏng vấn, ấn tượng đầu tiên rất quan trọng.
+0067	intabyuu	exam	インタビュー	インタビュー	phỏng vấn	有名な俳優にインタビューした。	Tôi đã phỏng vấn một diễn viên nổi tiếng.
+0068	intabyuu	daily	インタビュー	インタビュー	phỏng vấn	あの番組のインタビュー、見た?	Xem cái phỏng vấn trong chương trình đó chưa?
+0069	intabyuu	business	インタビュー	インタビュー	phỏng vấn	新製品についてメディアからインタビューを受けました。	Chúng tôi đã được truyền thông phỏng vấn về sản phẩm mới.
+0070	uso	exam	うそ	うそ	nói dối	うそをつくのは良くないです。	Nói dối là không tốt.
+0071	uso	daily	うそ	うそ	nói dối	えー、うそでしょ?	Ơ, nói dối à?
+0072	uso	business	うそ	うそ	nói dối	経歴にうそがあったことが発覚し、大問題になった。	Việc phát hiện có sự gian dối trong lý lịch đã trở thành vấn đề lớn.
+0073	uchigawa	exam	内側	うちがわ	phía bên trong	線の内側に立ってください。	Vui lòng đứng bên trong vạch kẻ.
+0074	uchigawa	daily	内側	うちがわ	phía bên trong	このジャケット、内側がふわふわで暖かい。	Cái áo khoác này bên trong mềm mại và ấm áp.
+0075	uchigawa	business	内側	うちがわ	phía bên trong	安全のため、黄色い線の内側でお待ちください。	Vì an toàn, xin vui lòng đợi phía trong vạch vàng.
+0076	airmail	exam	エアメール	エアメール	thư đường hàng không	この手紙をエアメールで送りたいです。	Tôi muốn gửi lá thư này bằng đường hàng không.
+0077	airmail	daily	エアメール	エアメール	thư đường hàng không	エアメールって高くない?	Gửi thư hàng không không đắt à?
+0078	airmail	business	エアメール	エアメール	thư đường hàng không	海外支店へはエアメールで書類を送付しています。	Chúng tôi gửi tài liệu đến chi nhánh nước ngoài bằng đường thư hàng không.
+0079	eikyou	exam	影響	えいきょう	ảnh hưởng	天候が農作物に影響する。	Thời tiết ảnh hưởng đến nông sản.
+0080	eikyou	daily	影響	えいきょう	ảnh hưởng	親の影響で音楽が好きになった。	Do ảnh hưởng từ bố mẹ mà tôi thích âm nhạc.
+0081	eikyou	business	影響	えいきょう	ảnh hưởng	為替の変動が売り上げに影響を与えている。	Biến động tỷ giá đang ảnh hưởng đến doanh số.
+0082	eigyou	exam	営業	えいぎょう	kinh doanh	この店は何時まで営業していますか。	Cửa hàng này mở cửa đến mấy giờ?
+0083	eigyou	daily	営業	えいぎょう	kinh doanh	彼、今は営業やってるんだって。	Nghe nói anh ấy giờ đang làm sale đó.
+0084	eigyou	business	営業	えいぎょう	kinh doanh	来月から新規顧客への営業を強化します。	Từ tháng sau chúng tôi sẽ tăng cường hoạt động tiếp cận khách hàng mới.
+0085	eco	exam	エコ	エコ	sinh thái	最近はエコな商品が増えている。	Gần đây các sản phẩm thân thiện môi trường ngày càng nhiều.
+0086	eco	daily	エコ	エコ	sinh thái	エコバッグ持ってきた?	Mang túi eco theo chưa?
+0087	eco	business	エコ	エコ	sinh thái	弊社は梱包資材をエコ素材に切り替えました。	Công ty chúng tôi đã chuyển sang dùng vật liệu đóng gói thân thiện môi trường.
+0088	energy	exam	エネルギー	エネルギー	năng lượng	太陽光は再生可能エネルギーの一つです。	Ánh sáng mặt trời là một trong những năng lượng tái tạo.
+0089	energy	daily	エネルギー	エネルギー	năng lượng	最近、エネルギー切れって感じ…。	Dạo này thấy như hết năng lượng vậy đó.
+0090	energy	business	エネルギー	エネルギー	năng lượng	工場の消費エネルギーを削減する計画です。	Đây là kế hoạch giảm năng lượng tiêu thụ của nhà máy.
+0091	oil	exam	オイル	オイル	dầu, dầu mỏ	エンジンオイルを交換してもらった。	Tôi đã nhờ thay dầu động cơ.
+0092	oil	daily	オイル	オイル	dầu, dầu mỏ	このオイル、肌にすごくいいんだよ。	Loại dầu này rất tốt cho da đó.
+0093	oil	business	オイル	オイル	dầu, dầu mỏ	定期的にオイルの状態を点検しています。	Chúng tôi kiểm tra tình trạng dầu định kỳ.
+0094	oiwai	exam	お祝い	おいわい	chúc mừng, quà chúc mừng	誕生日のお祝いに花を贈った。	Tôi đã tặng hoa để chúc mừng sinh nhật.
+0095	oiwai	daily	お祝い	おいわい	chúc mừng, quà chúc mừng	今度、昇進のお祝いしようよ。	Lần tới mình tổ chức chúc mừng thăng chức đi.
+0096	oiwai	business	お祝い	おいわい	chúc mừng, quà chúc mừng	創業のお祝いとして記念品をお渡ししております。	Chúng tôi tặng quà lưu niệm để chúc mừng dịp thành lập công ty.
+0097	ouen	exam	応援	おうえん	cổ vũ	一生懸命応援します!	Tôi sẽ cổ vũ hết mình!
+0098	ouen	daily	応援	おうえん	cổ vũ	明日の試合、応援に行こうよ。	Trận đấu ngày mai, đi cổ vũ đi.
+0099	ouen	business	応援	おうえん	cổ vũ	新入社員の挑戦をチーム一丸となって応援します。	Cả đội sẽ đồng lòng cổ vũ cho thử thách của nhân viên mới.
+0100	ogata	exam	大型	おおがた	cỡ lớn	大型の台風が接近しています。	Một cơn bão lớn đang tới gần.
+0101	ogata	daily	大型	おおがた	cỡ lớn	このスーパー、大型店だから何でもあるよ。	Siêu thị này là cửa hàng lớn nên có đủ thứ luôn đó.
+0102	ogata	business	大型	おおがた	cỡ lớn	大型連休中の営業時間を変更いたします。	Chúng tôi sẽ thay đổi giờ mở cửa trong kỳ nghỉ dài.
+0103	okay	exam	オーケー	オーケー	đồng ý	これでオーケーですか。	Như vậy có được không?
+0104	okay	daily	オーケー	オーケー	đồng ý	オーケー、了解!	Ok, hiểu rồi!
+0105	okay	business	オーケー	オーケー	đồng ý	部長からオーケーが出ました。	Trưởng phòng đã đồng ý rồi.
+0106	ojigi	exam	おじぎ	おじぎ	cúi chào	先生に会ったらおじぎをしましょう。	Khi gặp thầy cô thì hãy cúi chào nhé.
+0107	ojigi	daily	おじぎ	おじぎ	cúi chào	深々とおじぎされて、ちょっと恐縮した。	Bị cúi chào rất sâu nên tôi hơi ngại.
+0108	ojigi	business	おじぎ	おじぎ	cúi chào	名刺交換の際は丁寧におじぎをしてください。	Khi trao đổi danh thiếp, vui lòng cúi chào lịch sự.
+0109	oshaberi	exam	おしゃべり	おしゃべり	tán gẫu	授業中のおしゃべりは禁止です。	Cấm nói chuyện riêng trong giờ học.
+0110	oshaberi	daily	おしゃべり	おしゃべり	tán gẫu	久しぶりに友達とおしゃべりして楽しかった。	Lâu rồi mới tán gẫu với bạn, vui ghê.
+0111	oshaberi	business	おしゃべり	おしゃべり	tán gẫu	休憩中のおしゃべりも大事なコミュニケーションです。	Việc trò chuyện trong giờ nghỉ cũng là giao tiếp quan trọng.
+0112	otoshimono	exam	落とし物	おとしもの	đồ đánh rơi	落とし物センターはどこですか。	Trung tâm đồ thất lạc ở đâu ạ?
+0113	otoshimono	daily	落とし物	おとしもの	đồ đánh rơi	あ、誰かの落とし物だ!	A, đồ ai đó đánh rơi nè!
+0114	otoshimono	business	落とし物	おとしもの	đồ đánh rơi	お客様の落とし物は受付までお持ちください。	Nếu nhặt được đồ khách đánh rơi, xin mang đến quầy lễ tân.
+0115	omoide	exam	思い出	おもいで	kỉ niệm	この写真は大切な思い出です。	Bức ảnh này là kỷ niệm quý giá.
+0116	omoide	daily	思い出	おもいで	kỉ niệm	一緒にいい思い出作ろうね。	Cùng nhau tạo kỷ niệm đẹp nhé.
+0117	omoide	business	思い出	おもいで	kỉ niệm	退職する社員のために、思い出のアルバムを作成した。	Chúng tôi đã làm một album kỷ niệm cho nhân viên sắp nghỉ việc.
+0118	olympic	exam	オリンピック	オリンピック	thế vận hội	次のオリンピックはどこで開催されますか。	Thế vận hội tiếp theo sẽ tổ chức ở đâu?
+0119	olympic	daily	オリンピック	オリンピック	thế vận hội	オリンピック、テレビで見た?	Xem Olympic trên TV chưa?
+0120	olympic	business	オリンピック	オリンピック	thế vận hội	弊社はオリンピックの公式スポンサーです。	Công ty chúng tôi là nhà tài trợ chính thức của Thế vận hội.
+0121	card	exam	カード	カード	thẻ	お支払いはカードでお願いします。	Vui lòng thanh toán bằng thẻ.
+0122	card	daily	カード	カード	thẻ	このカード、ポイントたまるよ。	Thẻ này tích điểm được đó.
+0123	card	business	カード	カード	thẻ	会議室のカードキーはフロントでお受け取りください。	Vui lòng nhận thẻ khóa phòng họp tại quầy lễ tân.
+0124	kaikai	exam	開会	かいかい	khai mạc	それでは開会のあいさつをお願いします。	Vậy thì xin mời phát biểu khai mạc.
+0125	kaikai	daily	開会	かいかい	khai mạc	開会式、もう始まった?	Lễ khai mạc bắt đầu chưa?
+0126	kaikai	business	開会	かいかい	khai mạc	定刻通りに開会いたします。	Chúng tôi sẽ khai mạc đúng giờ đã định.
+0127	kaiketsu	exam	解決	かいけつ	giải quyết	この問題はどう解決すればいいですか。	Vấn đề này nên giải quyết thế nào?
+0128	kaiketsu	daily	解決	かいけつ	giải quyết	やっと解決して、ほっとした。	Cuối cùng cũng giải quyết xong, nhẹ cả người.
+0129	kaiketsu	business	解決	かいけつ	giải quyết	クレーム対応チームが迅速に問題を解決しました。	Đội xử lý khiếu nại đã giải quyết vấn đề một cách nhanh chóng.
+0130	gaishutsu	exam	外出	がいしゅつ	đi ra ngoài	今日は一日中外出していました。	Hôm nay tôi đã ra ngoài cả ngày.
+0131	gaishutsu	daily	外出	がいしゅつ	đi ra ngoài	ちょっと外出してくるね。	Tôi ra ngoài một chút nhé.
+0132	gaishutsu	business	外出	がいしゅつ	đi ra ngoài	只今、外出中のため折り返しご連絡いたします。	Hiện tôi đang ra ngoài nên sẽ gọi lại cho quý khách sau.
+0133	kaisei	exam	改正	かいせい	sửa đổi	来年、法律が改正される予定です。	Năm sau, luật dự kiến sẽ được sửa đổi.
+0134	kaisei	daily	改正	かいせい	sửa đổi	またルール改正があったらしいよ。	Nghe nói lại có sửa đổi quy định nữa đó.
+0135	kaisei	business	改正	かいせい	sửa đổi	就業規則の改正について社員に説明しました。	Chúng tôi đã giải thích cho nhân viên về việc sửa đổi nội quy lao động.
+0136	kaisetsu	exam	解説	かいせつ	giải thích	このニュースについて詳しく解説してください。	Hãy giải thích chi tiết về tin tức này.
+0137	kaisetsu	daily	解説	かいせつ	giải thích	解説者の話、分かりやすかったね。	Lời giải thích của bình luận viên dễ hiểu nhỉ.
+0138	kaisetsu	business	解説	かいせつ	giải thích	新機能について詳しい解説資料を用意しました。	Chúng tôi đã chuẩn bị tài liệu giải thích chi tiết về tính năng mới.
+0139	kaiten	exam	回転	かいてん	xoay, quay vòng	この椅子は360度回転する。	Chiếc ghế này xoay được 360 độ.
+0140	kaiten	daily	回転	かいてん	xoay, quay vòng	回転寿司、久しぶりに行きたいな。	Lâu rồi mới muốn đi ăn sushi băng chuyền ghê.
+0141	kaiten	business	回転	かいてん	xoay, quay vòng	在庫の回転率を上げる必要があります。	Cần phải tăng vòng quay tồn kho.
+0142	guidebook	exam	ガイドブック	ガイドブック	sách hướng dẫn	旅行前にガイドブックを買った。	Trước khi đi du lịch tôi đã mua sách hướng dẫn.
+0143	guidebook	daily	ガイドブック	ガイドブック	sách hướng dẫn	このガイドブック、写真多くて見やすいね。	Cuốn sách hướng dẫn này nhiều ảnh nên dễ xem nhỉ.
+0144	guidebook	business	ガイドブック	ガイドブック	sách hướng dẫn	新入社員向けの業務ガイドブックを作成しました。	Chúng tôi đã làm sách hướng dẫn công việc dành cho nhân viên mới.
+0145	kakitome	exam	書留	かきとめ	thư đảm bảo	この書類は書留で送ってください。	Vui lòng gửi tài liệu này bằng thư đảm bảo.
+0146	kakitome	daily	書留	かきとめ	thư đảm bảo	書留って郵便局の窓口でしか出せないの?	Thư đảm bảo chỉ gửi được ở quầy bưu điện thôi à?
+0147	kakitome	business	書留	かきとめ	thư đảm bảo	契約書は書留郵便で送付いたします。	Chúng tôi sẽ gửi hợp đồng bằng thư đảm bảo.
+0148	kakudai	exam	拡大	かくだい	mở rộng, phóng to	写真を拡大して見せてください。	Hãy phóng to bức ảnh cho tôi xem.
+0149	kakudai	daily	拡大	かくだい	mở rộng, phóng to	会社、事業を拡大するらしいよ。	Nghe nói công ty sắp mở rộng kinh doanh đó.
+0150	kakudai	business	拡大	かくだい	mở rộng, phóng to	来期は海外市場への事業拡大を計画しています。	Kỳ tới chúng tôi dự định mở rộng kinh doanh sang thị trường nước ngoài.
+0151	kaji	exam	家事	かじ	việc nhà	毎日家事をするのは大変です。	Làm việc nhà mỗi ngày rất vất vả.
+0152	kaji	daily	家事	かじ	việc nhà	家事、半分手伝ってよ。	Phụ giúp việc nhà một nửa đi chứ.
+0153	kaji	business	家事	かじ	việc nhà	育児と家事の両立支援制度を導入しました。	Chúng tôi đã áp dụng chế độ hỗ trợ cân bằng giữa nuôi con và việc nhà.
+0154	kashidashi	exam	貸し出し	かしだし	cho mượn	この本は貸し出し中です。	Cuốn sách này đang được mượn.
+0155	kashidashi	daily	貸し出し	かしだし	cho mượn	傘の貸し出し、やってるんだって。	Nghe nói có dịch vụ cho mượn ô đó.
+0156	kashidashi	business	貸し出し	かしだし	cho mượn	会議室のプロジェクター貸し出しは総務部までご連絡ください。	Việc mượn máy chiếu phòng họp, vui lòng liên hệ phòng tổng vụ.
+0157	kazu	exam	数	かず	số lượng	参加者の数を数えてください。	Hãy đếm số lượng người tham gia.
+0158	kazu	daily	数	かず	số lượng	意外と数少ないんだね。	Ít hơn tôi tưởng nhỉ.
+0159	kazu	business	数	かず	số lượng	在庫の数を毎週確認しています。	Chúng tôi kiểm tra số lượng tồn kho mỗi tuần.
+0160	kata	exam	型	かた	kiểu, loại	この機械は古い型です。	Cái máy này là kiểu cũ.
+0161	kata	daily	型	かた	kiểu, loại	血液型を調べたことある?	Bạn đã từng kiểm tra nhóm máu chưa?
+0162	kata	business	型	かた	kiểu, loại	新型のプリンターを導入しました。	Chúng tôi đã đưa vào sử dụng máy in kiểu mới.
+0163	katahou	exam	片方	かたほう	một bên	靴下の片方がない!	Mất một chiếc tất rồi!
+0164	katahou	daily	片方	かたほう	một bên	イヤホンの片方、聞こえないんだけど。	Một bên tai nghe không nghe được nè.
+0165	katahou	business	片方	かたほう	một bên	資料は片方の面のみ印刷してください。	Vui lòng chỉ in một mặt của tài liệu.
+0166	catalog	exam	カタログ	カタログ	catalogue	商品のカタログを見せてください。	Cho tôi xem catalogue sản phẩm với.
+0167	catalog	daily	カタログ	カタログ	catalogue	このカタログ、写真がきれいだね。	Cái catalogue này ảnh đẹp ghê.
+0168	catalog	business	カタログ	カタログ	catalogue	最新のカタログを取引先に送付しました。	Chúng tôi đã gửi catalogue mới nhất cho đối tác.
+0169	kachi	exam	価値	かち	giá trị	この絵には価値がある。	Bức tranh này có giá trị.
+0170	kachi	daily	価値	かち	giá trị	それ、見る価値あるよ。	Cái đó đáng xem lắm đó.
+0171	kachi	business	価値	かち	giá trị	当社のブランド価値を高める施策を検討しています。	Chúng tôi đang xem xét biện pháp nâng cao giá trị thương hiệu của công ty.
+0172	cut	exam	カット	カット	cắt	髪を短くカットしてもらった。	Tôi đã nhờ cắt tóc ngắn.
+0173	cut	daily	カット	カット	cắt	このシーン、カットされちゃったんだって。	Nghe nói cảnh này bị cắt đi rồi đó.
+0174	cut	business	カット	カット	cắt	コスト削減のため、不要な工程をカットしました。	Để cắt giảm chi phí, chúng tôi đã loại bỏ những công đoạn không cần thiết.
+0175	katsudou	exam	活動	かつどう	hoạt động	クラブ活動は何をしていますか。	Bạn đang tham gia hoạt động câu lạc bộ gì?
+0176	katsudou	daily	活動	かつどう	hoạt động	最近、サークル活動サボりがちなんだ。	Dạo này hay trốn hoạt động câu lạc bộ ghê.
+0177	katsudou	business	活動	かつどう	hoạt động	地域貢献活動の一環としてボランティアを募集しています。	Chúng tôi đang tuyển tình nguyện viên như một phần của hoạt động đóng góp cho cộng đồng.
+0178	gaman	exam	我慢	がまん	chịu đựng	痛くてもう我慢できない。	Đau quá không chịu đựng nổi nữa rồi.
+0179	gaman	daily	我慢	がまん	chịu đựng	ちょっとだけ我慢してね。	Cố chịu một chút thôi nhé.
+0180	gaman	business	我慢	がまん	chịu đựng	繁忙期はしばらく我慢が必要です。	Trong mùa cao điểm cần phải chịu đựng một thời gian.

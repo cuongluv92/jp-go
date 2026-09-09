@@ -1,0 +1,175 @@
+row	vocabId	type	word	reading	meaningVi	exampleJp	exampleVi
+5221	ippou2	exam	一方	いっぽう	mặt khác	兄は医者で、一方弟は教師だ。	Anh trai là bác sĩ, còn em trai thì là giáo viên.
+5222	ippou2	daily	一方	いっぽう	mặt khác	売上は伸びる一方、コストも増えた。	Doanh số tăng, nhưng mặt khác chi phí cũng tăng theo.
+5223	ippou2	business	一方	いっぽう	mặt khác	一方で、新しい課題も見つかった。	Mặt khác, cũng đã phát hiện ra vấn đề mới.
+5224	sate	exam	さて	さて	à mà, giờ thì	さて、本題に入りましょう。	Giờ thì, chúng ta vào vấn đề chính nhé.
+5225	sate	daily	さて	さて	à mà, giờ thì	さて、次は何をしようか。	À, tiếp theo thì làm gì đây nhỉ.
+5226	sate	business	さて	さて	à mà, giờ thì	さて、会議を始めさせていただきます。	Vậy thì, xin phép bắt đầu cuộc họp.
+5227	suruto	exam	すると	すると	và rồi, thì	ドアを開けた。すると猫が飛び出してきた。	Đã mở cửa. Và rồi con mèo lao ra.
+5228	suruto	daily	すると	すると	và rồi, thì	ボタンを押した。すると音楽が鳴り始めた。	Đã nhấn nút. Rồi nhạc bắt đầu vang lên.
+5229	suruto	business	すると	すると	và rồi, thì	価格を下げた。すると売上が伸びた。	Đã giảm giá. Kết quả là doanh số tăng lên.
+5230	souieba	exam	そういえば	そういえば	nói mới nhớ	そういえば、彼はどうしているの。	Nói mới nhớ, anh ấy dạo này thế nào rồi nhỉ.
+5231	souieba	daily	そういえば	そういえば	nói mới nhớ	そういえば、明日は休みだった。	Nói mới nhớ, mai là ngày nghỉ.
+5232	souieba	business	そういえば	そういえば	nói mới nhớ	そういえば、先日の件はどうなりましたか。	Nói mới nhớ, việc hôm trước thế nào rồi ạ?
+5233	sokode	exam	そこで	そこで	do đó, vì thế	雨が降ってきた。そこで傘を買った。	Trời đổ mưa. Do đó tôi đã mua ô.
+5234	sokode	daily	そこで	そこで	do đó, vì thế	予算が足りない。そこで計画を見直した。	Ngân sách không đủ. Vì thế đã xem lại kế hoạch.
+5235	sokode	business	そこで	そこで	do đó, vì thế	需要が増えた。そこで生産を拡大することにした。	Nhu cầu tăng lên. Do đó đã quyết định mở rộng sản xuất.
+5236	sonoue	exam	そのうえ	そのうえ	hơn nữa	安いし、そのうえおいしい。	Vừa rẻ, hơn nữa lại ngon.
+5237	sonoue	daily	そのうえ	そのうえ	hơn nữa	忙しいし、そのうえ体調も悪い。	Bận rộn, hơn nữa sức khỏe cũng không tốt.
+5238	sonoue	business	そのうえ	そのうえ	hơn nữa	コストが削減され、そのうえ品質も向上した。	Chi phí đã giảm, hơn nữa chất lượng cũng được cải thiện.
+5239	sonotame	exam	そのため	そのため	vì vậy	台風が来た。そのため電車が止まった。	Bão đến. Vì vậy tàu điện đã dừng chạy.
+5240	sonotame	daily	そのため	そのため	vì vậy	忙しかった。そのため連絡が遅れた。	Đã bận rộn. Vì vậy việc liên lạc bị chậm trễ.
+5241	sonotame	business	そのため	そのため	vì vậy	需要が急増した。そのため価格が上昇した。	Nhu cầu tăng vọt. Vì vậy giá cả đã tăng lên.
+5242	sorede	exam	それで	それで	nên, rồi thì	道に迷った。それで遅刻した。	Đã lạc đường. Nên bị trễ.
+5243	sorede	daily	それで	それで	nên, rồi thì	熱があった。それで学校を休んだ。	Đã bị sốt. Nên nghỉ học.
+5244	sorede	business	それで	それで	nên, rồi thì	それで、結論はどうなりましたか。	Vậy thì, kết luận thế nào rồi ạ?
+5245	soretomo	exam	それとも	それとも	hay là	コーヒーにしますか、それとも紅茶にしますか。	Bạn dùng cà phê hay là trà?
+5246	soretomo	daily	それとも	それとも	hay là	電車で行く、それとも歩いて行く。	Đi bằng tàu điện, hay là đi bộ?
+5247	soretomo	business	それとも	それとも	hay là	契約を継続しますか、それとも解除しますか。	Quý vị muốn tiếp tục hợp đồng, hay là hủy bỏ?
+5248	sorenara	exam	それなら	それなら	nếu vậy	それなら、早く言ってよ。	Nếu vậy thì nói sớm đi chứ.
+5249	sorenara	daily	それなら	それなら	nếu vậy	それなら安心だ。	Nếu vậy thì yên tâm rồi.
+5250	sorenara	business	それなら	それなら	nếu vậy	それなら別の案を検討しましょう。	Nếu vậy hãy xem xét phương án khác.
+5251	soreni	exam	それに	それに	hơn nữa	高いし、それに味も良くない。	Vừa đắt, hơn nữa vị cũng không ngon.
+5252	soreni	daily	それに	それに	hơn nữa	遠いし、それに時間もかかる。	Vừa xa, hơn nữa lại tốn thời gian.
+5253	soreni	business	それに	それに	hơn nữa	品質が良く、それに価格も手頃だ。	Chất lượng tốt, hơn nữa giá cả cũng phải chăng.
+5254	daga	exam	だが／ですが	だが／ですが	nhưng	高い。だが品質はいい。	Đắt. Nhưng chất lượng tốt.
+5255	daga	daily	だが／ですが	だが／ですが	nhưng	頑張った。だが結果は出なかった。	Đã cố gắng. Nhưng không có kết quả.
+5256	daga	business	だが／ですが	だが／ですが	nhưng	少し値段は高いですが、品質は確かです。	Giá hơi cao nhưng chất lượng thì chắc chắn.
+5257	tsumari	exam	つまり	つまり	tức là	つまり、こういうことだ。	Tức là, chuyện là như thế này.
+5258	tsumari	daily	つまり	つまり	tức là	彼は私の母の弟、つまり叔父だ。	Anh ấy là em trai của mẹ tôi, tức là chú tôi.
+5259	tsumari	business	つまり	つまり	tức là	つまり、今回の提案は却下ということですね。	Tức là, đề xuất lần này bị bác bỏ phải không ạ.
+5260	desukara	exam	ですから	ですから	vì thế	雨です。ですから傘を持って行きます。	Trời mưa. Vì thế tôi sẽ mang ô đi.
+5261	desukara	daily	ですから	ですから	vì thế	予算が限られています。ですから慎重に検討します。	Ngân sách bị hạn chế. Vì thế chúng tôi sẽ xem xét thận trọng.
+5262	desukara	business	ですから	ですから	vì thế	ですから、この件はもう少しお時間をください。	Vì thế, xin cho tôi thêm chút thời gian về việc này.
+5263	tokoroga	exam	ところが	ところが	tuy nhiên, thế nhưng	晴れると思った。ところが雨が降った。	Tưởng là sẽ nắng. Thế nhưng trời lại mưa.
+5264	tokoroga	daily	ところが	ところが	tuy nhiên, thế nhưng	成功すると思っていた。ところが失敗した。	Đã nghĩ là sẽ thành công. Thế nhưng lại thất bại.
+5265	tokoroga	business	ところが	ところが	tuy nhiên, thế nhưng	順調に進むはずだった。ところが問題が発生した。	Lẽ ra mọi việc phải tiến triển suôn sẻ. Tuy nhiên vấn đề đã phát sinh.
+5266	tokorode	exam	ところで	ところで	à mà, nhân tiện	ところで、今日は何日ですか。	À mà, hôm nay là ngày mấy nhỉ?
+5267	tokorode	daily	ところで	ところで	à mà, nhân tiện	ところで、あの件はどうなった。	Nhân tiện, việc đó thế nào rồi?
+5268	tokorode	business	ところで	ところで	à mà, nhân tiện	ところで、来月の会議の件ですが。	Nhân tiện, về việc cuộc họp tháng sau.
+5269	nazenara	exam	なぜなら	なぜなら	bởi vì	彼は遅刻した。なぜなら電車が止まったからだ。	Anh ấy đã đến trễ. Bởi vì tàu điện đã dừng chạy.
+5270	nazenara	daily	なぜなら	なぜなら	bởi vì	参加できない。なぜなら出張があるからだ。	Không thể tham gia được. Bởi vì có chuyến công tác.
+5271	nazenara	business	なぜなら	なぜなら	bởi vì	計画を延期した。なぜなら予算が確保できなかったからだ。	Đã hoãn kế hoạch. Bởi vì không đảm bảo được ngân sách.
+5272	mataha	exam	または	または	hoặc	ペン、または鉛筆を使ってください。	Hãy dùng bút mực, hoặc bút chì.
+5273	mataha	daily	または	または	hoặc	電話、またはメールで連絡してください。	Hãy liên lạc bằng điện thoại, hoặc email.
+5274	mataha	business	または	または	hoặc	現金、または振込でお支払いください。	Xin vui lòng thanh toán bằng tiền mặt, hoặc chuyển khoản.
+5275	oidininaru	exam	おいでになる	おいでになる	đến, đi, ở (kính ngữ)	先生がおいでになった。	Thầy giáo đã đến.
+5276	oidininaru	daily	おいでになる	おいでになる	đến, đi, ở (kính ngữ)	どちらからおいでになりましたか。	Ngài từ đâu đến ạ?
+5277	oidininaru	business	おいでになる	おいでになる	đến, đi, ở (kính ngữ)	明日はご在宅でおいでになりますか。	Ngày mai ngài có ở nhà không ạ?
+5278	oyasumininaru	exam	お休みになる	おやすみになる	ngủ, nghỉ (kính ngữ)	社長はもうお休みになりました。	Giám đốc đã đi nghỉ rồi ạ.
+5279	oyasumininaru	daily	お休みになる	おやすみになる	ngủ, nghỉ (kính ngữ)	先生はいつもお休みになる前に本を読まれる。	Thầy luôn đọc sách trước khi nghỉ ngơi.
+5280	oyasumininaru	business	お休みになる	おやすみになる	ngủ, nghỉ (kính ngữ)	どうぞごゆっくりお休みになってください。	Xin mời ngài nghỉ ngơi thật thoải mái.
+5281	omeshininaru	exam	お召しになる	おめしになる	mặc (kính ngữ)	素敵な服をお召しになっていますね。	Ngài đang mặc bộ đồ thật đẹp nhỉ.
+5282	omeshininaru	daily	お召しになる	おめしになる	mặc (kính ngữ)	会長はいつも和服をお召しになる。	Chủ tịch luôn mặc trang phục truyền thống.
+5283	omeshininaru	business	お召しになる	おめしになる	mặc (kính ngữ)	どちらのスーツをお召しになりますか。	Ngài sẽ mặc bộ vest nào ạ?
+5284	gorannaru	exam	ご覧になる	ごらんになる	xem (kính ngữ)	資料をご覧になりましたか。	Ngài đã xem tài liệu chưa ạ?
+5285	gorannaru	daily	ご覧になる	ごらんになる	xem (kính ngữ)	こちらをご覧になってください。	Xin mời ngài xem chỗ này.
+5286	gorannaru	business	ご覧になる	ごらんになる	xem (kính ngữ)	展示会をご覧になる予定ですか。	Ngài có dự định xem triển lãm không ạ?
+5287	meshiagaru	exam	召し上がる	めしあがる	ăn, uống (kính ngữ)	どうぞ召し上がってください。	Xin mời ngài dùng bữa.
+5288	meshiagaru	daily	召し上がる	めしあがる	ăn, uống (kính ngữ)	コーヒーを召し上がりますか。	Ngài có dùng cà phê không ạ?
+5289	meshiagaru	business	召し上がる	めしあがる	ăn, uống (kính ngữ)	先ほどお菓子を召し上がりました。	Vừa nãy ngài đã dùng bánh kẹo rồi ạ.
+5290	itasu	exam	いたす	いたす	làm (khiêm nhượng ngữ)	私がご案内いたします。	Tôi xin phép hướng dẫn quý vị.
+5291	itasu	daily	いたす	いたす	làm (khiêm nhượng ngữ)	ホテルで「すぐに確認いたします」と言われた。	Ở khách sạn, tôi được nhân viên nói: 'Chúng tôi sẽ kiểm tra ngay ạ.'
+5292	itasu	business	いたす	いたす	làm (khiêm nhượng ngữ)	何かございましたらご連絡いたします。	Nếu có việc gì tôi sẽ liên lạc lại.
+5293	itadaku1	exam	いただく①	いただく	ăn, uống (khiêm nhượng ngữ)	それでは、いただきます。	Vậy thì, tôi xin phép dùng bữa.
+5294	itadaku1	daily	いただく①	いただく	ăn, uống (khiêm nhượng ngữ)	おいしくいただきました。	Tôi đã ăn rất ngon miệng.
+5295	itadaku1	business	いただく①	いただく	ăn, uống (khiêm nhượng ngữ)	こちらのお茶をいただいてもよろしいですか。	Tôi có thể dùng trà này được không ạ?
+5296	itadaku2	exam	いただく②	いただく	nhận (khiêm nhượng ngữ)	資料をいただきました。	Tôi đã nhận được tài liệu.
+5297	itadaku2	daily	いただく②	いただく	nhận (khiêm nhượng ngữ)	お時間をいただけますか。	Ngài có thể cho tôi chút thời gian được không ạ?
+5298	itadaku2	business	いただく②	いただく	nhận (khiêm nhượng ngữ)	ご協力いただき、誠にありがとうございます。	Chân thành cảm ơn sự hợp tác của quý vị.
+5299	ukagau1	exam	伺う①	うかがう	hỏi (khiêm nhượng ngữ)	一つ伺ってもよろしいですか。	Tôi xin phép hỏi một câu được không ạ?
+5300	ukagau1	daily	伺う①	うかがう	hỏi (khiêm nhượng ngữ)	ご意見を伺いたいと思います。	Tôi muốn được nghe ý kiến của quý vị.
+5301	ukagau1	business	伺う①	うかがう	hỏi (khiêm nhượng ngữ)	お名前を伺ってもよろしいでしょうか。	Tôi có thể hỏi quý danh được không ạ?
+5302	ukagau2	exam	伺う②	うかがう	đến thăm (khiêm nhượng ngữ)	明日、御社に伺います。	Ngày mai tôi sẽ đến thăm quý công ty.
+5303	ukagau2	daily	伺う②	うかがう	đến thăm (khiêm nhượng ngữ)	美容院に「午後三時に伺ってもいいですか」と電話した。	Tôi gọi cho tiệm làm tóc hỏi: 'Tôi đến lúc 3 giờ chiều có được không ạ?'
+5304	ukagau2	business	伺う②	うかがう	đến thăm (khiêm nhượng ngữ)	来週、そちらに伺う予定です。	Tuần sau tôi dự định sẽ đến bên đó.
+5305	omenikakaru	exam	お目にかかる	おめにかかる	gặp (khiêm nhượng ngữ)	お目にかかれて光栄です。	Tôi rất vinh dự được gặp ngài.
+5306	omenikakaru	daily	お目にかかる	おめにかかる	gặp (khiêm nhượng ngữ)	いつかお目にかかりたいです。	Tôi mong một ngày nào đó được gặp ngài.
+5307	omenikakaru	business	お目にかかる	おめにかかる	gặp (khiêm nhượng ngữ)	先日はお目にかかれず残念でした。	Hôm trước rất tiếc là không được gặp ngài.
+5308	omenikakeru	exam	お目にかける	おめにかける	cho xem (khiêm nhượng ngữ)	サンプルをお目にかけます。	Tôi xin phép cho quý vị xem mẫu sản phẩm.
+5309	omenikakeru	daily	お目にかける	おめにかける	cho xem (khiêm nhượng ngữ)	新しい商品をお目にかけたいと思います。	Tôi muốn cho quý vị xem sản phẩm mới.
+5310	omenikakeru	business	お目にかける	おめにかける	cho xem (khiêm nhượng ngữ)	完成品をお目にかける機会をいただきました。	Tôi đã có cơ hội cho quý vị xem sản phẩm hoàn thiện.
+5311	gorannireru	exam	ご覧に入れる	ごらんにいれる	cho xem (khiêm nhượng ngữ)	資料をご覧に入れます。	Tôi xin trình tài liệu để ngài xem.
+5312	gorannireru	daily	ご覧に入れる	ごらんにいれる	cho xem (khiêm nhượng ngữ)	実物をご覧に入れたいと思います。	Tôi muốn được trình vật thật để anh/chị xem.
+5313	gorannireru	business	ご覧に入れる	ごらんにいれる	cho xem (khiêm nhượng ngữ)	詳細な資料をご覧に入れる予定です。	Chúng tôi dự định trình tài liệu chi tiết để quý vị xem.
+5314	mairu	exam	参る	まいる	đến, đi (khiêm nhượng ngữ)	すぐに参ります。	Tôi sẽ đến ngay.
+5315	mairu	daily	参る	まいる	đến, đi (khiêm nhượng ngữ)	明日、御社へ参ります。	Ngày mai tôi sẽ đến quý công ty.
+5316	mairu	business	参る	まいる	đến, đi (khiêm nhượng ngữ)	ただいま参りますので、少々お待ちください。	Tôi sẽ đến ngay bây giờ, xin quý vị chờ một chút.
+5317	degozaimasu	exam	でございます	でございます	là (cách nói cực kỳ lịch sự, trang trọng)	こちらが会議室でございます。	Đây là phòng họp ạ.
+5318	degozaimasu	daily	でございます	でございます	là (cách nói cực kỳ lịch sự, trang trọng)	ホテルで「こちらが朝食会場でございます」と案内された。	Ở khách sạn, tôi được hướng dẫn: 'Đây là khu vực ăn sáng ạ.'
+5319	degozaimasu	business	でございます	でございます	là (cách nói cực kỳ lịch sự, trang trọng)	この商品が新製品でございます。	Đây là sản phẩm mới ạ.
+5320	oagarikudasai1	exam	お上がりください①	おあがりください	xin mời dùng	お料理ができました。どうぞお上がりください。	Món ăn đã xong rồi. Xin mời dùng.
+5321	oagarikudasai1	daily	お上がりください①	おあがりください	xin mời dùng	温かいうちにお上がりください。	Xin mời dùng khi còn nóng.
+5322	oagarikudasai1	business	お上がりください①	おあがりください	xin mời dùng	お客様に「どうぞお菓子をお上がりください」と勧めました。	Tôi mời khách: 'Xin mời dùng bánh ạ.'
+5323	oagarikudasai2	exam	お上がりください②	おあがりください	xin mời vào	寒いですから、どうぞ中へお上がりください。	Trời lạnh, xin mời vào trong.
+5324	oagarikudasai2	daily	お上がりください②	おあがりください	xin mời vào	靴を脱いでお上がりください。	Xin cởi giày rồi mời vào.
+5325	oagarikudasai2	business	お上がりください②	おあがりください	xin mời vào	訪問先で「どうぞお上がりください」と言われました。	Tại nơi đến thăm, tôi được mời: 'Xin mời vào ạ.'
+5326	oidekudasai	exam	おいでください	おいでください	xin hãy đến	またおいでください。	Xin hãy ghé lại lần nữa.
+5327	oidekudasai	daily	おいでください	おいでください	xin hãy đến	明日、ぜひおいでください。	Ngày mai, xin nhất định hãy đến.
+5328	oidekudasai	business	おいでください	おいでください	xin hãy đến	お時間のある時にぜひおいでください。	Khi nào có thời gian xin hãy ghé qua.
+5329	okamainaku	exam	お構いなく	おかまいなく	đừng bận tâm	どうぞお構いなく。	Xin đừng bận tâm.
+5330	okamainaku	daily	お構いなく	おかまいなく	đừng bận tâm	お構いなく、すぐ帰りますので。	Đừng bận tâm, tôi về ngay đây.
+5331	okamainaku	business	お構いなく	おかまいなく	đừng bận tâm	私にはお構いなく、お仕事を続けてください。	Xin đừng bận tâm đến tôi, hãy tiếp tục công việc của quý vị.
+5332	ogenkide	exam	お元気で	おげんきで	giữ gìn sức khỏe	それでは、お元気で。	Vậy thì, giữ gìn sức khỏe nhé.
+5333	ogenkide	daily	お元気で	おげんきで	giữ gìn sức khỏe	いつまでもお元気で。	Mãi mãi giữ gìn sức khỏe nhé.
+5334	ogenkide	business	お元気で	おげんきで	giữ gìn sức khỏe	帰国されても、どうぞお元気で。	Dù đã về nước rồi cũng xin giữ gìn sức khỏe.
+5335	osakini	exam	お先に	おさきに	xin phép về/làm trước	お先に失礼します。	Xin phép tôi về trước.
+5336	osakini	daily	お先に	おさきに	xin phép về/làm trước	お先にどうぞ。	Mời bạn trước.
+5337	osakini	business	お先に	おさきに	xin phép về/làm trước	今日はお先に失礼します。	Hôm nay tôi xin phép về trước.
+5338	ojamashimasu	exam	おじゃまします	おじゃまします	xin phép làm phiền	おじゃまします。	Xin phép làm phiền ạ.
+5339	ojamashimasu	daily	おじゃまします	おじゃまします	xin phép làm phiền	それでは、おじゃまします。	Vậy thì, xin phép làm phiền.
+5340	ojamashimasu	business	おじゃまします	おじゃまします	xin phép làm phiền	お忙しいところ、おじゃまします。	Xin lỗi đã làm phiền lúc quý vị đang bận.
+5341	osewaninarimashita	exam	お世話になりました	おせわになりました	cảm ơn vì đã giúp đỡ	長い間お世話になりました。	Cảm ơn đã giúp đỡ tôi trong suốt thời gian dài.
+5342	osewaninarimashita	daily	お世話になりました	おせわになりました	cảm ơn vì đã giúp đỡ	大変お世話になりました。	Tôi thực sự đã được giúp đỡ rất nhiều.
+5343	osewaninarimashita	business	お世話になりました	おせわになりました	cảm ơn vì đã giúp đỡ	在職中は大変お世話になりました。	Trong thời gian làm việc tôi đã được giúp đỡ rất nhiều.
+5344	otsukaresamadeshita	exam	お疲れ様でした	おつかれさまでした	cảm ơn vì vất vả	皆さん、お疲れ様でした。	Mọi người vất vả rồi.
+5345	otsukaresamadeshita	daily	お疲れ様でした	おつかれさまでした	cảm ơn vì vất vả	今日も一日お疲れ様でした。	Hôm nay cũng đã vất vả cả ngày rồi.
+5346	otsukaresamadeshita	business	お疲れ様でした	おつかれさまでした	cảm ơn vì vất vả	長時間の会議、お疲れ様でした。	Cuộc họp kéo dài, mọi người vất vả rồi.
+5347	omataseshimashita	exam	お待たせしました	おまたせしました	xin lỗi đã để chờ	お待たせしました。	Xin lỗi đã để quý vị chờ lâu.
+5348	omataseshimashita	daily	お待たせしました	おまたせしました	xin lỗi đã để chờ	お待たせしました。席の準備ができました。	Xin lỗi đã để quý khách chờ. Chỗ ngồi đã chuẩn bị xong rồi ạ.
+5349	omataseshimashita	business	お待たせしました	おまたせしました	xin lỗi đã để chờ	お待たせしました、こちらへどうぞ。	Xin lỗi đã để quý vị chờ, mời đi lối này.
+5350	omachidoosama	exam	お待ちどおさま	おまちどおさま	cảm ơn đã chờ	お待ちどおさま、どうぞ。	Xin lỗi đã để chờ, mời dùng.
+5351	omachidoosama	daily	お待ちどおさま	おまちどおさま	cảm ơn đã chờ	お待ちどおさまでした。	Xin lỗi đã để quý khách chờ lâu.
+5352	omachidoosama	business	お待ちどおさま	おまちどおさま	cảm ơn đã chờ	お待ちどおさま、ご注文の品です。	Xin lỗi đã để chờ, đây là món quý khách đã gọi.
+5353	omedetougozaimasu	exam	おめでとうございます	おめでとうございます	chúc mừng	ご結婚おめでとうございます。	Chúc mừng đám cưới của bạn.
+5354	omedetougozaimasu	daily	おめでとうございます	おめでとうございます	chúc mừng	合格おめでとうございます。	Chúc mừng bạn đã đỗ.
+5355	omedetougozaimasu	business	おめでとうございます	おめでとうございます	chúc mừng	この度はご昇進、誠におめでとうございます。	Lần này thành thật chúc mừng ngài được thăng chức.
+5356	kamaimasen	exam	かまいません	かまいません	không sao	それでもかまいません。	Như vậy cũng không sao.
+5357	kamaimasen	daily	かまいません	かまいません	không sao	少し遅れてもかまいませんか。	Đến trễ một chút có được không ạ?
+5358	kamaimasen	business	かまいません	かまいません	không sao	日程を変更してもかまいませんか。	Tôi thay đổi lịch có được không?
+5359	goenryonaku	exam	ご遠慮なく	ごえんりょなく	xin cứ tự nhiên	どうぞご遠慮なく。	Xin cứ tự nhiên.
+5360	goenryonaku	daily	ご遠慮なく	ごえんりょなく	xin cứ tự nhiên	ご遠慮なくお申し付けください。	Xin cứ tự nhiên yêu cầu.
+5361	goenryonaku	business	ご遠慮なく	ごえんりょなく	xin cứ tự nhiên	ご質問があれば、ご遠慮なくどうぞ。	Nếu có câu hỏi, xin cứ tự nhiên hỏi.
+5362	gomeiwakuookakeshimashita	exam	ご迷惑をおかけしました	ごめいわくをおかけしました	xin lỗi vì làm phiền	ご迷惑をおかけしましたことをお詫び申し上げます。	Chúng tôi thành thật xin lỗi vì đã gây phiền hà.
+5363	gomeiwakuookakeshimashita	daily	ご迷惑をおかけしました	ごめいわくをおかけしました	xin lỗi vì làm phiền	修理の人に「昨日はご迷惑をおかけしました」と伝えた。	Tôi đã nói với người đến sửa rằng: “Hôm qua tôi đã làm phiền anh/chị.”
+5364	gomeiwakuookakeshimashita	business	ご迷惑をおかけしました	ごめいわくをおかけしました	xin lỗi vì làm phiền	この度はご迷惑をおかけしました、深くお詫び申し上げます。	Lần này đã gây phiền phức cho quý vị, tôi xin thành thật xin lỗi.
+5365	gomen	exam	ごめん	ごめん	xin lỗi (thân mật)	遅刻したので、友達に「ごめん」と謝った。	Vì đến muộn nên tôi đã nói 'xin lỗi' với bạn.
+5366	gomen	daily	ごめん	ごめん	xin lỗi (thân mật)	本当にごめんね。	Thật xin lỗi cậu nhé.
+5367	gomen	business	ごめん	ごめん	xin lỗi (thân mật)	同僚に「ごめん、確認を忘れた」と謝った。	Tôi xin lỗi một đồng nghiệp: 'Xin lỗi, tôi quên kiểm tra mất rồi.'
+5368	sumanai	exam	すまない	すまない	xin lỗi (thân mật, nam tính)	すまない、ちょっと待ってくれ。	Xin lỗi, chờ tôi một chút.
+5369	sumanai	daily	すまない	すまない	xin lỗi (thân mật, nam tính)	すまないが、手伝ってくれないか。	Xin lỗi nhưng cậu có thể giúp tôi không?
+5370	sumanai	business	すまない	すまない	xin lỗi (thân mật, nam tính)	部長は部下に「急な変更ですまない」と声をかけた。	Trưởng phòng nói với cấp dưới: 'Xin lỗi vì thay đổi đột ngột.'
+5371	sorewaikemasenne	exam	それはいけませんね	それはいけませんね	không được rồi	熱があるの？それはいけませんね。	Bạn bị sốt à? Vậy thì không được rồi nhé.
+5372	sorewaikemasenne	daily	それはいけませんね	それはいけませんね	không được rồi	それはいけませんね、早く病院へ行ってください。	Không được rồi, hãy mau đến bệnh viện đi.
+5373	sorewaikemasenne	business	それはいけませんね	それはいけませんね	không được rồi	社員が体調不良を訴えたので、「それはいけませんね。今日は休んでください」と伝えました。	Một nhân viên báo không khỏe nên tôi nói: 'Thế thì không ổn rồi. Hôm nay hãy nghỉ đi.'
+5374	matane	exam	またね	またね	hẹn gặp lại	じゃあ、またね。	Vậy thì, hẹn gặp lại nhé.
+5375	matane	daily	またね	またね	hẹn gặp lại	元気でね、またね。	Giữ gìn sức khỏe nhé, hẹn gặp lại.
+5376	matane	business	またね	またね	hẹn gặp lại	親しい同僚に「じゃあ、またね」と言って退社しました。	Tôi chào một đồng nghiệp thân 'thế nhé, hẹn gặp lại' rồi ra về.
+5377	moushiwakearimasen	exam	申し訳ありません	もうしわけありません	xin lỗi (trang trọng)	申し訳ありません、遅れました。	Xin lỗi, tôi đã đến trễ.
+5378	moushiwakearimasen	daily	申し訳ありません	もうしわけありません	xin lỗi (trang trọng)	大変申し訳ありません。	Thành thật xin lỗi.
+5379	moushiwakearimasen	business	申し訳ありません	もうしわけありません	xin lỗi (trang trọng)	ご迷惑をおかけして、誠に申し訳ありません。	Đã gây phiền phức cho quý vị, tôi thành thật xin lỗi.
+5380	youkoso	exam	ようこそ	ようこそ	chào mừng	ようこそ、日本へ。	Chào mừng đến với Nhật Bản.
+5381	youkoso	daily	ようこそ	ようこそ	chào mừng	ようこそお越しくださいました。	Chào mừng quý vị đã đến.
+5382	youkoso	business	ようこそ	ようこそ	chào mừng	ようこそ、当社の説明会へ。	Chào mừng quý vị đến với buổi giới thiệu của công ty chúng tôi.
+5383	yokuirasshaimashita	exam	よくいらっしゃいました	よくいらっしゃいました	cảm ơn đã đến	よくいらっしゃいました、どうぞお入りください。	Cảm ơn quý vị đã đến, xin mời vào.
+5384	yokuirasshaimashita	daily	よくいらっしゃいました	よくいらっしゃいました	cảm ơn đã đến	遠いところ、よくいらっしゃいました。	Từ xa xôi mà quý vị đã đến, cảm ơn nhiều.
+5385	yokuirasshaimashita	business	よくいらっしゃいました	よくいらっしゃいました	cảm ơn đã đến	よくいらっしゃいました、お待ちしておりました。	Cảm ơn đã đến, chúng tôi đã chờ đợi quý vị.
+5386	are	exam	あれ／あれっ	あれ／あれっ	ô, ơ (ngạc nhiên)	あれ、財布がない。	Ơ, ví tiền không có.
+5387	are	daily	あれ／あれっ	あれ／あれっ	ô, ơ (ngạc nhiên)	あれっ、電気が消えている。	Ơ, đèn đã tắt rồi.
+5388	are	business	あれ／あれっ	あれ／あれっ	ô, ơ (ngạc nhiên)	会議中、資料が見つからず「あれ、どこだ？」と探しました。	Trong cuộc họp tôi không tìm thấy tài liệu nên lẩm bẩm 'ơ, ở đâu rồi nhỉ?' và đi tìm.
+5389	eeto	exam	ええと	ええと	ừm, để xem	ええと、名前は何でしたっけ。	Ừm, tên là gì nhỉ.
+5390	eeto	daily	ええと	ええと	ừm, để xem	ええと、少し考えさせてください。	Ừm, xin cho tôi suy nghĩ một chút.
+5391	eeto	business	ええと	ええと	ừm, để xem	ええと、資料はこちらでよろしいでしょうか。	Ừm, tài liệu như thế này có được không ạ?
+5392	banzai	exam	万歳	ばんざい	muôn năm	合格だ、万歳！	Đỗ rồi, muôn năm!
+5393	banzai	daily	万歳	ばんざい	muôn năm	皆で万歳を三唱した。	Mọi người đã hô muôn năm ba lần.
+5394	banzai	business	万歳	ばんざい	muôn năm	優勝を祝って万歳を叫んだ。	Đã hô muôn năm để chúc mừng chiến thắng.

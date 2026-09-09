@@ -1,0 +1,181 @@
+row	vocabId	type	word	reading	meaningVi	exampleJp	exampleVi
+2701	rika	exam	理科	りか	khoa học tự nhiên	理科の実験が楽しかった。	Thí nghiệm khoa học tự nhiên rất thú vị.
+2702	rika	daily	理科	りか	khoa học tự nhiên	理科、好きな科目だよ。	Khoa học tự nhiên là môn tớ thích đó.
+2703	rika	business	理科	りか	khoa học tự nhiên	理科教育に力を入れた学校です。	Đây là trường học chú trọng giáo dục khoa học tự nhiên.
+2704	anime	exam	アニメ	アニメ	hoạt hình	子供とアニメを見た。	Tôi đã xem hoạt hình cùng con.
+2705	anime	daily	アニメ	アニメ	hoạt hình	そのアニメ、面白いよね。	Bộ hoạt hình đó thú vị nhỉ.
+2706	anime	business	アニメ	アニメ	hoạt hình	アニメとのコラボ商品を発売いたします。	Chúng tôi sẽ bán sản phẩm hợp tác với hoạt hình.
+2707	ensou	exam	演奏	えんそう	biểu diễn (nhạc)	ピアノの演奏をした。	Tôi đã biểu diễn piano.
+2708	ensou	daily	演奏	えんそう	biểu diễn (nhạc)	演奏、素晴らしかったね。	Buổi biểu diễn tuyệt vời thật nhỉ.
+2709	ensou	business	演奏	えんそう	biểu diễn (nhạc)	式典にてバイオリンの演奏を披露いたします。	Chúng tôi sẽ trình diễn violin tại buổi lễ.
+2710	kaisuiyoku	exam	海水浴	かいすいよく	tắm biển	夏に海水浴に行った。	Vào mùa hè tôi đã đi tắm biển.
+2711	kaisuiyoku	daily	海水浴	かいすいよく	tắm biển	今年、海水浴行った?	Năm nay cậu đã đi tắm biển chưa?
+2712	kaisuiyoku	business	海水浴	かいすいよく	tắm biển	海水浴シーズン向けの商品を展開しております。	Chúng tôi đang triển khai sản phẩm cho mùa tắm biển.
+2713	kashi	exam	歌詞	かし	lời bài hát	この曲の歌詞が好きだ。	Tôi thích lời bài hát này.
+2714	kashi	daily	歌詞	かし	lời bài hát	歌詞、覚えた?	Cậu thuộc lời bài hát chưa?
+2715	kashi	business	歌詞	かし	lời bài hát	歌詞の著作権について確認いたしました。	Chúng tôi đã kiểm tra bản quyền lời bài hát.
+2716	gakki2	exam	楽器	がっき	nhạc cụ	何か楽器できる?	Cậu chơi được nhạc cụ nào không?
+2717	gakki2	daily	楽器	がっき	nhạc cụ	この楽器、難しそうだね。	Nhạc cụ này trông có vẻ khó nhỉ.
+2718	gakki2	business	楽器	がっき	nhạc cụ	楽器メーカーとのコラボ企画を進めております。	Chúng tôi đang triển khai dự án hợp tác với hãng nhạc cụ.
+2719	camp	exam	キャンプ	キャンプ	cắm trại	家族でキャンプに行った。	Cả gia đình đã đi cắm trại.
+2720	camp	daily	キャンプ	キャンプ	cắm trại	今度、キャンプしない?	Lần tới cắm trại không?
+2721	camp	business	キャンプ	キャンプ	cắm trại	社員研修としてキャンプ活動を実施いたしました。	Chúng tôi đã tổ chức hoạt động cắm trại như một khóa đào tạo nhân viên.
+2722	kyoku	exam	曲	きょく	ca khúc	好きな曲を歌った。	Tôi đã hát bài hát yêu thích.
+2723	kyoku	daily	曲	きょく	ca khúc	この曲、知ってる?	Cậu biết ca khúc này không?
+2724	kyoku	business	曲	きょく	ca khúc	CM用の曲を新たに制作いたしました。	Chúng tôi đã sáng tác mới ca khúc dùng cho quảng cáo.
+2725	geijutsu	exam	芸術	げいじゅつ	nghệ thuật	彼は芸術に興味がある。	Anh ấy quan tâm đến nghệ thuật.
+2726	geijutsu	daily	芸術	げいじゅつ	nghệ thuật	芸術って奥が深いよね。	Nghệ thuật thâm sâu thật nhỉ.
+2727	geijutsu	business	芸術	げいじゅつ	nghệ thuật	芸術性の高いデザインを目指しております。	Chúng tôi hướng đến thiết kế có tính nghệ thuật cao.
+2728	geki	exam	劇	げき	kịch	学校で劇をした。	Chúng tôi đã diễn kịch ở trường.
+2729	geki	daily	劇	げき	kịch	その劇、面白かった?	Vở kịch đó có hay không?
+2730	geki	business	劇	げき	kịch	社員研修に劇形式のロールプレイを取り入れました。	Chúng tôi đã đưa hình thức đóng vai kiểu kịch vào đào tạo nhân viên.
+2731	concert	exam	コンサート	コンサート	buổi hòa nhạc	コンサートに行った。	Tôi đã đi xem buổi hòa nhạc.
+2732	concert	daily	コンサート	コンサート	buổi hòa nhạc	コンサート、チケット取れた?	Vé buổi hòa nhạc lấy được chưa?
+2733	concert	business	コンサート	コンサート	buổi hòa nhạc	記念コンサートを開催いたします。	Chúng tôi sẽ tổ chức buổi hòa nhạc kỷ niệm.
+2734	sakkyoku	exam	作曲	さっきょく	sáng tác nhạc	彼はこの曲を作曲した。	Anh ấy đã sáng tác ca khúc này.
+2735	sakkyoku	daily	作曲	さっきょく	sáng tác nhạc	作曲、できるの?すごいね。	Cậu sáng tác nhạc được à? Giỏi thật đấy.
+2736	sakkyoku	business	作曲	さっきょく	sáng tác nhạc	CM曲の作曲を専門家に依頼いたしました。	Chúng tôi đã nhờ chuyên gia sáng tác nhạc quảng cáo.
+2737	shi	exam	詩	し	thơ	彼女は詩を書くのが好きだ。	Cô ấy thích viết thơ.
+2738	shi	daily	詩	し	thơ	この詩、素敵だね。	Bài thơ này hay thật nhỉ.
+2739	shi	business	詩	し	thơ	社内報に詩を掲載しました。	Chúng tôi đã đăng bài thơ trên bản tin nội bộ.
+2740	ticket	exam	チケット	チケット	vé	映画のチケットを買った。	Tôi đã mua vé xem phim.
+2741	ticket	daily	チケット	チケット	vé	チケット、まだある?	Vé còn không?
+2742	ticket	business	チケット	チケット	vé	記念イベントのチケットを販売いたします。	Chúng tôi sẽ bán vé sự kiện kỷ niệm.
+2743	dokusho	exam	読書	どくしょ	đọc sách	休日は読書をしている。	Ngày nghỉ tôi thường đọc sách.
+2744	dokusho	daily	読書	どくしょ	đọc sách	読書、好きなんだ。	Tớ thích đọc sách lắm.
+2745	dokusho	business	読書	どくしょ	đọc sách	社員の読書習慣を促進する取り組みを行っております。	Chúng tôi đang thực hiện các sáng kiến thúc đẩy thói quen đọc sách của nhân viên.
+2746	tozan	exam	登山	とざん	leo núi	週末に登山に行った。	Cuối tuần tôi đã đi leo núi.
+2747	tozan	daily	登山	とざん	leo núi	登山、疲れたね。	Leo núi mệt thật nhỉ.
+2748	tozan	business	登山	とざん	leo núi	社員向け登山イベントを企画いたしました。	Chúng tôi đã lên kế hoạch sự kiện leo núi cho nhân viên.
+2749	drama	exam	ドラマ	ドラマ	phim (truyền hình)	毎晩ドラマを見ている。	Mỗi tối tôi đều xem phim truyền hình.
+2750	drama	daily	ドラマ	ドラマ	phim (truyền hình)	そのドラマ、面白いよね。	Bộ phim đó hay thật nhỉ.
+2751	drama	business	ドラマ	ドラマ	phim (truyền hình)	本ドラマのタイアップ企画を実施いたします。	Chúng tôi sẽ triển khai dự án hợp tác với bộ phim này.
+2752	barbecue	exam	バーベキュー	バーベキュー	tiệc nướng	庭でバーベキューをした。	Tôi đã tổ chức tiệc nướng ở sân.
+2753	barbecue	daily	バーベキュー	バーベキュー	tiệc nướng	今度、バーベキューしない?	Lần tới tổ chức tiệc nướng không?
+2754	barbecue	business	バーベキュー	バーベキュー	tiệc nướng	懇親会としてバーベキューを企画しております。	Chúng tôi đang lên kế hoạch tiệc nướng như một buổi giao lưu.
+2755	hanabi	exam	花火	はなび	pháo hoa	夏祭りで花火を見た。	Tôi đã xem pháo hoa ở lễ hội mùa hè.
+2756	hanabi	daily	花火	はなび	pháo hoa	花火、きれいだったね。	Pháo hoa đẹp thật nhỉ.
+2757	hanabi	business	花火	はなび	pháo hoa	記念イベントで花火大会を開催いたします。	Chúng tôi sẽ tổ chức lễ hội pháo hoa cho sự kiện kỷ niệm.
+2758	bijutsu	exam	美術	びじゅつ	mỹ thuật	美術館で絵画を見た。	Tôi đã xem tranh ở bảo tàng mỹ thuật.
+2759	bijutsu	daily	美術	びじゅつ	mỹ thuật	美術、得意なの?	Cậu giỏi mỹ thuật à?
+2760	bijutsu	business	美術	びじゅつ	mỹ thuật	美術品の展示会を開催いたします。	Chúng tôi sẽ tổ chức triển lãm tác phẩm mỹ thuật.
+2761	leisure	exam	レジャー	レジャー	giải trí	休日はレジャーを楽しんでいる。	Ngày nghỉ tôi tận hưởng giải trí.
+2762	leisure	daily	レジャー	レジャー	giải trí	たまにはレジャーもいいよね。	Thỉnh thoảng giải trí cũng tốt nhỉ.
+2763	leisure	business	レジャー	レジャー	giải trí	レジャー業界向けのサービスを展開しております。	Chúng tôi đang triển khai dịch vụ dành cho ngành giải trí.
+2764	sumou	exam	相撲	すもう	sumo	相撲を見に行った。	Tôi đã đi xem sumo.
+2765	sumou	daily	相撲	すもう	sumo	相撲、子どものころからよく見てる。	Mình xem sumo thường xuyên từ hồi còn nhỏ.
+2766	sumou	business	相撲	すもう	sumo	相撲観戦は日本文化を知るいい機会です。	Xem sumo là cơ hội tốt để hiểu văn hóa Nhật Bản.
+2767	takkyuu	exam	卓球	たっきゅう	bóng bàn	卓球の試合に出た。	Tôi đã tham gia trận đấu bóng bàn.
+2768	takkyuu	daily	卓球	たっきゅう	bóng bàn	卓球、やらない?	Chơi bóng bàn không?
+2769	takkyuu	business	卓球	たっきゅう	bóng bàn	社内に卓球台を設置いたしました。	Chúng tôi đã lắp đặt bàn bóng bàn trong công ty.
+2770	tsuri	exam	釣り	つり	câu cá	週末に釣りに行った。	Cuối tuần tôi đã đi câu cá.
+2771	tsuri	daily	釣り	つり	câu cá	最近、休みの日は釣りに行くことが多い。	Dạo này vào ngày nghỉ mình thường đi câu cá.
+2772	tsuri	business	釣り	つり	câu cá	釣りが趣味の社員も多いです。	Cũng có nhiều nhân viên có sở thích câu cá.
+2773	hiking	exam	ハイキング	ハイキング	đi bộ đường dài	山でハイキングをした。	Tôi đã đi bộ đường dài trên núi.
+2774	hiking	daily	ハイキング	ハイキング	đi bộ đường dài	今度、ハイキング行かない?	Lần tới đi bộ đường dài không?
+2775	hiking	business	ハイキング	ハイキング	đi bộ đường dài	社員向けハイキングイベントを企画いたしました。	Chúng tôi đã lên kế hoạch sự kiện đi bộ đường dài cho nhân viên.
+2776	bat	exam	バット	バット	gậy bóng chày	バットでボールを打った。	Tôi đã đánh bóng bằng gậy bóng chày.
+2777	bat	daily	バット	バット	gậy bóng chày	このバット、重いね。	Cây gậy này nặng thật nhỉ.
+2778	bat	business	バット	バット	gậy bóng chày	新しいバットの販売を開始いたしました。	Chúng tôi đã bắt đầu bán gậy bóng chày mới.
+2779	picnic	exam	ピクニック	ピクニック	dã ngoại	公園でピクニックをした。	Tôi đã đi dã ngoại ở công viên.
+2780	picnic	daily	ピクニック	ピクニック	dã ngoại	今度、ピクニック行こうよ。	Lần tới đi dã ngoại đi.
+2781	picnic	business	ピクニック	ピクニック	dã ngoại	社員親睦会としてピクニックを企画しております。	Chúng tôi đang lên kế hoạch dã ngoại như một buổi giao lưu nhân viên.
+2782	marathon	exam	マラソン	マラソン	chạy marathon	マラソン大会に出た。	Tôi đã tham gia giải chạy marathon.
+2783	marathon	daily	マラソン	マラソン	chạy marathon	マラソン、走ったことある?	Cậu từng chạy marathon chưa?
+2784	marathon	business	マラソン	マラソン	chạy marathon	チャリティーマラソンを主催いたします。	Chúng tôi sẽ tổ chức giải chạy marathon từ thiện.
+2785	racket	exam	ラケット	ラケット	vợt	テニスのラケットを買った。	Tôi đã mua vợt tennis.
+2786	racket	daily	ラケット	ラケット	vợt	このラケット、軽いね。	Cây vợt này nhẹ thật nhỉ.
+2787	racket	business	ラケット	ラケット	vợt	新型ラケットの販売を開始いたします。	Chúng tôi sẽ bắt đầu bán vợt kiểu mới.
+2788	running	exam	ランニング	ランニング	chạy bộ	毎朝ランニングをしている。	Mỗi sáng tôi đều chạy bộ.
+2789	running	daily	ランニング	ランニング	chạy bộ	一緒にランニングしない?	Cùng chạy bộ không?
+2790	running	business	ランニング	ランニング	chạy bộ	社員の健康促進のためランニング講座を開催いたします。	Chúng tôi sẽ tổ chức lớp học chạy bộ để thúc đẩy sức khỏe nhân viên.
+2791	rock	exam	ロック	ロック	nhạc rock	彼はロックが好きだ。	Anh ấy thích nhạc rock.
+2792	rock	daily	ロック	ロック	nhạc rock	このロック、かっこいいね。	Bản rock này ngầu thật nhỉ.
+2793	rock	business	ロック	ロック	nhạc rock	ロックフェスとのタイアップ企画を実施いたします。	Chúng tôi sẽ triển khai dự án hợp tác với lễ hội nhạc rock.
+2794	akaji	exam	赤字	あかじ	lỗ	今月の家計は赤字だ。	Chi tiêu gia đình tháng này bị lỗ.
+2795	akaji	daily	赤字	あかじ	lỗ	今月、赤字かも。	Tháng này có thể bị âm mất.
+2796	akaji	business	赤字	あかじ	lỗ	当期は赤字を計上する見込みです。	Kỳ này dự kiến sẽ ghi nhận khoản lỗ.
+2797	urikire	exam	売り切れ	うりきれ	bán hết	そのチケットは売り切れだった。	Vé đó đã bán hết.
+2798	urikire	daily	売り切れ	うりきれ	bán hết	もう売り切れなの?	Bán hết rồi à?
+2799	urikire	business	売り切れ	うりきれ	bán hết	人気商品のため早期に売り切れとなりました。	Vì là sản phẩm được ưa chuộng nên đã bán hết sớm.
+2800	atm	exam	ATM	エーティーエム	máy ATM	ATMでお金を下ろした。	Tôi đã rút tiền ở máy ATM.
+2801	atm	daily	ATM	エーティーエム	máy ATM	近くにATM、ある?	Gần đây có máy ATM không?
+2802	atm	business	ATM	エーティーエム	máy ATM	店舗内にATMを設置しております。	Chúng tôi có lắp đặt máy ATM trong cửa hàng.
+2803	kaikei	exam	会計	かいけい	tính tiền	レストランで会計を済ませた。	Tôi đã thanh toán ở nhà hàng.
+2804	kaikei	daily	会計	かいけい	tính tiền	会計、先に済ませてくるね。	Tớ đi thanh toán trước nhé.
+2805	kaikei	business	会計	かいけい	tính tiền	会計処理を月末に締め切ります。	Chúng tôi sẽ chốt xử lý kế toán vào cuối tháng.
+2806	kaihi	exam	会費	かいひ	hội phí	クラブの会費を払った。	Tôi đã đóng hội phí câu lạc bộ.
+2807	kaihi	daily	会費	かいひ	hội phí	会費、いくらだっけ?	Hội phí bao nhiêu nhỉ?
+2808	kaihi	business	会費	かいひ	hội phí	年会費は口座から自動引き落としとなります。	Hội phí hàng năm sẽ được tự động trừ từ tài khoản.
+2809	gakuhi	exam	学費	がくひ	học phí	大学の学費を払った。	Tôi đã đóng học phí đại học.
+2810	gakuhi	daily	学費	がくひ	học phí	学費、高いよね。	Học phí cao thật nhỉ.
+2811	gakuhi	business	学費	がくひ	học phí	学費の分割払いに対応しております。	Chúng tôi hỗ trợ trả góp học phí.
+2812	gakuwari	exam	学割	がくわり	giảm giá học sinh	映画館で学割を使った。	Tôi đã dùng giảm giá học sinh ở rạp phim.
+2813	gakuwari	daily	学割	がくわり	giảm giá học sinh	学割、使える?	Dùng giảm giá học sinh được không?
+2814	gakuwari	business	学割	がくわり	giảm giá học sinh	学割プランをご用意しております。	Chúng tôi có chuẩn bị gói giảm giá dành cho học sinh sinh viên.
+2815	kyuuryou	exam	給料	きゅうりょう	lương	今月の給料が入った。	Lương tháng này đã vào tài khoản.
+2816	kyuuryou	daily	給料	きゅうりょう	lương	給料日、いつだっけ?	Ngày lãnh lương là khi nào nhỉ?
+2817	kyuuryou	business	給料	きゅうりょう	lương	給料は毎月25日に支給いたします。	Lương sẽ được chi trả vào ngày 25 hàng tháng.
+2818	kingaku	exam	金額	きんがく	số tiền	支払う金額を確認した。	Tôi đã kiểm tra số tiền phải thanh toán.
+2819	kingaku	daily	金額	きんがく	số tiền	金額、間違ってない?	Số tiền không sai chứ?
+2820	kingaku	business	金額	きんがく	số tiền	請求金額に相違がないかご確認ください。	Xin vui lòng kiểm tra số tiền yêu cầu thanh toán có sai lệch hay không.
+2821	kuroji	exam	黒字	くろじ	lãi	今期は黒字だった。	Kỳ này có lãi.
+2822	kuroji	daily	黒字	くろじ	lãi	やっと黒字になったよ。	Cuối cùng cũng có lãi rồi.
+2823	kuroji	business	黒字	くろじ	lãi	来期は黒字転換を目指しております。	Chúng tôi hướng đến chuyển sang có lãi trong kỳ tới.
+2824	keiki	exam	景気	けいき	tình hình kinh tế	最近、景気が良くない。	Dạo này kinh tế không tốt lắm.
+2825	keiki	daily	景気	けいき	tình hình kinh tế	景気、どう?	Kinh tế dạo này sao rồi?
+2826	keiki	business	景気	けいき	tình hình kinh tế	景気動向を踏まえて投資計画を見直します。	Chúng tôi sẽ xem xét lại kế hoạch đầu tư dựa trên xu hướng kinh tế.
+2827	keizai	exam	経済	けいざい	kinh tế	経済のニュースを見た。	Tôi đã xem tin tức kinh tế.
+2828	keizai	daily	経済	けいざい	kinh tế	経済、勉強してるの?	Cậu đang học kinh tế à?
+2829	keizai	business	経済	けいざい	kinh tế	経済状況を分析し戦略を立てております。	Chúng tôi đang phân tích tình hình kinh tế để lập chiến lược.
+2830	genkin	exam	現金	げんきん	tiền mặt	現金で支払った。	Tôi đã thanh toán bằng tiền mặt.
+2831	genkin	daily	現金	げんきん	tiền mặt	現金、持ってる?	Cậu có tiền mặt không?
+2832	genkin	business	現金	げんきん	tiền mặt	現金でのお支払いも承っております。	Chúng tôi cũng chấp nhận thanh toán bằng tiền mặt.
+2833	kozukai	exam	小遣い	こづかい	tiền tiêu vặt	子供に小遣いをあげた。	Tôi đã cho con tiền tiêu vặt.
+2834	kozukai	daily	小遣い	こづかい	tiền tiêu vặt	今月の小遣い、もうないよ。	Tiền tiêu vặt tháng này hết rồi.
+2835	kozukai	business	小遣い	こづかい	tiền tiêu vặt	銀行の金融教育セミナーでは、子供の小遣い管理を例にお金の使い方を説明しています。	Trong hội thảo giáo dục tài chính của ngân hàng, việc quản lý tiền tiêu vặt của trẻ được dùng làm ví dụ để giải thích cách sử dụng tiền.
+2836	zaisan	exam	財産	ざいさん	tài sản	財産を子供に残した。	Tôi đã để lại tài sản cho con.
+2837	zaisan	daily	財産	ざいさん	tài sản	財産、どうするか考えてる?	Cậu đang nghĩ xem làm gì với tài sản à?
+2838	zaisan	business	財産	ざいさん	tài sản	財産管理に関するご相談も承っております。	Chúng tôi cũng tiếp nhận tư vấn về quản lý tài sản.
+2839	osatsu	exam	お札	おさつ	tiền giấy	財布にお札が入っている。	Trong ví có tiền giấy.
+2840	osatsu	daily	お札	おさつ	tiền giấy	お札、崩してくれる?	Đổi tiền giấy lẻ giúp tớ được không?
+2841	osatsu	business	お札	おさつ	tiền giấy	新デザインのお札が発行されました。	Tiền giấy với thiết kế mới đã được phát hành.
+2842	shishutsu	exam	支出	ししゅつ	chi tiêu	毎月の支出を記録している。	Tôi ghi chép chi tiêu hàng tháng.
+2843	shishutsu	daily	支出	ししゅつ	chi tiêu	今月、支出が多いな。	Tháng này chi tiêu nhiều thật.
+2844	shishutsu	business	支出	ししゅつ	chi tiêu	経費支出の削減に取り組んでおります。	Chúng tôi đang nỗ lực cắt giảm chi tiêu chi phí.
+2845	shiharai	exam	支払い	しはらい	thanh toán	家賃の支払いを済ませた。	Tôi đã hoàn tất thanh toán tiền thuê nhà.
+2846	shiharai	daily	支払い	しはらい	thanh toán	支払い、どうする?現金?	Thanh toán thế nào? Tiền mặt à?
+2847	shiharai	business	支払い	しはらい	thanh toán	お支払いはクレジットカードでも可能です。	Có thể thanh toán bằng thẻ tín dụng.
+2848	shuukin	exam	集金	しゅうきん	thu tiền	会費の集金を頼まれた。	Tôi được nhờ thu hội phí.
+2849	shuukin	daily	集金	しゅうきん	thu tiền	集金、誰がやるの?	Ai đi thu tiền vậy?
+2850	shuukin	business	集金	しゅうきん	thu tiền	集金業務を委託しております。	Chúng tôi ủy thác nghiệp vụ thu tiền.
+2851	shuunyuu	exam	収入	しゅうにゅう	thu nhập	毎月の収入を計算した。	Tôi đã tính thu nhập hàng tháng.
+2852	shuunyuu	daily	収入	しゅうにゅう	thu nhập	収入、増えた?	Thu nhập tăng chưa?
+2853	shuunyuu	business	収入	しゅうにゅう	thu nhập	副収入の申告についてご案内いたします。	Chúng tôi xin hướng dẫn về việc khai báo thu nhập phụ.
+2854	shougakukin	exam	奨学金	しょうがくきん	học bổng	奨学金をもらって留学した。	Tôi đã nhận học bổng để du học.
+2855	shougakukin	daily	奨学金	しょうがくきん	học bổng	奨学金、申し込んだ?	Cậu đã đăng ký học bổng chưa?
+2856	shougakukin	business	奨学金	しょうがくきん	học bổng	奨学金制度の詳細をご説明いたします。	Tôi xin giải thích chi tiết về chế độ học bổng.
+2857	shoukin	exam	賞金	しょうきん	tiền thưởng (giải)	コンテストで賞金を獲得した。	Tôi đã giành được tiền thưởng trong cuộc thi.
+2858	shoukin	daily	賞金	しょうきん	tiền thưởng (giải)	賞金、いくらだったの?	Tiền thưởng bao nhiêu vậy?
+2859	shoukin	business	賞金	しょうきん	tiền thưởng (giải)	優勝者には賞金を授与いたします。	Chúng tôi sẽ trao tiền thưởng cho người chiến thắng.
+2860	shouhi	exam	消費	しょうひ	tiêu dùng	電気の消費を抑えている。	Tôi đang hạn chế tiêu thụ điện.
+2861	shouhi	daily	消費	しょうひ	tiêu dùng	消費税、上がったよね。	Thuế tiêu dùng đã tăng nhỉ.
+2862	shouhi	business	消費	しょうひ	tiêu dùng	消費動向を分析し商品開発に活かします。	Chúng tôi sẽ phân tích xu hướng tiêu dùng để áp dụng vào phát triển sản phẩm.
+2863	seikyuusho	exam	請求書	せいきゅうしょ	hóa đơn	電気代の請求書が届いた。	Hóa đơn tiền điện đã đến.
+2864	seikyuusho	daily	請求書	せいきゅうしょ	hóa đơn	請求書、確認した?	Cậu kiểm tra hóa đơn chưa?
+2865	seikyuusho	business	請求書	せいきゅうしょ	hóa đơn	請求書を月末までにご送付いたします。	Chúng tôi sẽ gửi hóa đơn trước cuối tháng.
+2866	zeikin	exam	税金	ぜいきん	thuế	毎年、税金を払っている。	Tôi đóng thuế mỗi năm.
+2867	zeikin	daily	税金	ぜいきん	thuế	税金、高いよね。	Thuế cao thật nhỉ.
+2868	zeikin	business	税金	ぜいきん	thuế	税金対策についてご相談を承っております。	Chúng tôi tiếp nhận tư vấn về các biện pháp thuế.
+2869	souryou	exam	送料	そうりょう	phí vận chuyển	送料が高くて驚いた。	Tôi ngạc nhiên vì phí vận chuyển cao.
+2870	souryou	daily	送料	そうりょう	phí vận chuyển	送料、無料になるかな?	Không biết có được miễn phí vận chuyển không nhỉ.
+2871	souryou	business	送料	そうりょう	phí vận chuyển	一定額以上のご購入で送料が無料になります。	Mua hàng đạt một số tiền nhất định trở lên sẽ được miễn phí vận chuyển.
+2872	son	exam	損	そん	tổn thất, lỗ	この取引は損だ。	Giao dịch này bị lỗ.
+2873	son	daily	損	そん	tổn thất, lỗ	それ、損じゃない?	Cái đó không phải bị thiệt à?
+2874	son	business	損	そん	tổn thất, lỗ	早期解約は損になる可能性があります。	Hủy hợp đồng sớm có thể dẫn đến thiệt hại.
+2875	takarakuji	exam	宝くじ	たからくじ	xổ số	宝くじを買った。	Tôi đã mua vé số.
+2876	takarakuji	daily	宝くじ	たからくじ	xổ số	宝くじ、当たった?	Trúng số chưa?
+2877	takarakuji	business	宝くじ	たからくじ	xổ số	年末は宝くじ売り場に長い行列ができます。	Cuối năm quầy vé số thường có hàng dài người xếp hàng.
+2878	tada	exam	ただ	ただ	miễn phí	このイベントはただで参加できる。	Sự kiện này có thể tham gia miễn phí.
+2879	tada	daily	ただ	ただ	miễn phí	これ、ただでもらったんだ。	Cái này tớ được cho không đấy.
+2880	tada	business	ただ	ただ	miễn phí	初回相談はただでご利用いただけます。	Lần tư vấn đầu tiên có thể sử dụng miễn phí.

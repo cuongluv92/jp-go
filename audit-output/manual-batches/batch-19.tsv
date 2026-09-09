@@ -1,0 +1,181 @@
+row	vocabId	type	word	reading	meaningVi	exampleJp	exampleVi
+3241	jisa	exam	時差	じさ	múi giờ chênh lệch	日本とアメリカには時差がある。	Nhật Bản và Mỹ có múi giờ chênh lệch.
+3242	jisa	daily	時差	じさ	múi giờ chênh lệch	時差ぼけで眠いよ。	Buồn ngủ vì lệch múi giờ.
+3243	jisa	business	時差	じさ	múi giờ chênh lệch	時差を考慮して会議時間を調整いたします。	Chúng tôi sẽ điều chỉnh giờ họp có cân nhắc múi giờ chênh lệch.
+3244	shuu_b24	exam	週	しゅう	tuần	来週の予定を確認した。	Tôi đã kiểm tra lịch trình tuần sau.
+3245	shuu_b24	daily	週	しゅう	tuần	今週、忙しかったね。	Tuần này bận rộn nhỉ.
+3246	shuu_b24	business	週	しゅう	tuần	週ごとの進捗を報告いたします。	Tôi sẽ báo cáo tiến độ theo từng tuần.
+3247	shuumatsu	exam	週末	しゅうまつ	cuối tuần	週末は家族と過ごす。	Cuối tuần tôi ở bên gia đình.
+3248	shuumatsu	daily	週末	しゅうまつ	cuối tuần	週末、何する?	Cuối tuần cậu làm gì?
+3249	shuumatsu	business	週末	しゅうまつ	cuối tuần	週末の営業時間についてご案内いたします。	Chúng tôi xin thông báo giờ hoạt động vào cuối tuần.
+3250	shuuryou	exam	終了	しゅうりょう	kết thúc	授業が終了した。	Giờ học đã kết thúc.
+3251	shuuryou	daily	終了	しゅうりょう	kết thúc	もう終了したの?	Kết thúc rồi à?
+3252	shuuryou	business	終了	しゅうりょう	kết thúc	本セールは今月末をもって終了いたします。	Chương trình khuyến mãi này sẽ kết thúc vào cuối tháng.
+3253	shougo	exam	正午	しょうご	giữa trưa	正午にランチに行った。	Tôi đã đi ăn trưa vào giữa trưa.
+3254	shougo	daily	正午	しょうご	giữa trưa	もう正午だよ、お腹すいた。	Đã giữa trưa rồi, đói bụng quá.
+3255	shougo	business	正午	しょうご	giữa trưa	受付は正午まで対応しております。	Chúng tôi tiếp nhận đến giữa trưa.
+3256	joujun	exam	上旬	じょうじゅん	thượng tuần (đầu tháng)	来月上旬に旅行する。	Tôi sẽ đi du lịch vào đầu tháng sau.
+3257	joujun	daily	上旬	じょうじゅん	thượng tuần (đầu tháng)	今月上旬、忙しかったな。	Đầu tháng này bận rộn thật đấy.
+3258	joujun	business	上旬	じょうじゅん	thượng tuần (đầu tháng)	納品は来月上旬を予定しております。	Dự kiến giao hàng vào đầu tháng sau.
+3259	shinnen	exam	新年	しんねん	năm mới	新年を家族で祝った。	Tôi đã đón năm mới cùng gia đình.
+3260	shinnen	daily	新年	しんねん	năm mới	新年、おめでとう!	Chúc mừng năm mới!
+3261	shinnen	business	新年	しんねん	năm mới	新年のご挨拶を申し上げます。	Chúng tôi xin gửi lời chào mừng năm mới.
+3262	shinya	exam	深夜	しんや	nửa đêm, khuya	深夜まで仕事をした。	Tôi đã làm việc đến khuya.
+3263	shinya	daily	深夜	しんや	nửa đêm, khuya	深夜に電話してごめんね。	Xin lỗi vì gọi điện lúc khuya.
+3264	shinya	business	深夜	しんや	nửa đêm, khuya	深夜の対応が必要な場合はご連絡ください。	Nếu cần hỗ trợ vào ban đêm, xin vui lòng liên hệ.
+3265	start	exam	スタート	スタート	bắt đầu	レースがスタートした。	Cuộc đua đã bắt đầu.
+3266	start	daily	スタート	スタート	bắt đầu	もうスタートしてる?	Bắt đầu rồi à?
+3267	start	business	スタート	スタート	bắt đầu	新プロジェクトが来月スタートいたします。	Dự án mới sẽ bắt đầu vào tháng sau.
+3268	senjitsu	exam	先日	せんじつ	hôm trước	先日、彼に会った。	Hôm trước tôi đã gặp anh ấy.
+3269	senjitsu	daily	先日	せんじつ	hôm trước	先日はありがとう。	Cảm ơn hôm trước nhé.
+3270	senjitsu	business	先日	せんじつ	hôm trước	先日はお時間をいただきありがとうございました。	Cảm ơn quý vị đã dành thời gian hôm trước.
+3271	zenhan	exam	前半	ぜんはん	nửa đầu	試合の前半は互角だった。	Nửa đầu trận đấu cân bằng.
+3272	zenhan	daily	前半	ぜんはん	nửa đầu	前半、良かったね。	Nửa đầu tốt thật nhỉ.
+3273	zenhan	business	前半	ぜんはん	nửa đầu	今年度前半の業績をご報告いたします。	Tôi xin báo cáo kết quả kinh doanh nửa đầu năm nay.
+3274	chikoku	exam	遅刻	ちこく	đi muộn	電車が遅れて遅刻した。	Vì tàu điện trễ nên tôi đã đi muộn.
+3275	chikoku	daily	遅刻	ちこく	đi muộn	また遅刻したの?	Lại đi muộn nữa à?
+3276	chikoku	business	遅刻	ちこく	đi muộn	遅刻される場合は事前にご連絡ください。	Nếu đến muộn, xin vui lòng liên hệ trước.
+3277	chuujun	exam	中旬	ちゅうじゅん	trung tuần (giữa tháng)	今月中旬に引っ越す。	Tôi sẽ chuyển nhà vào giữa tháng này.
+3278	chuujun	daily	中旬	ちゅうじゅん	trung tuần (giữa tháng)	来月中旬、都合いい?	Giữa tháng sau cậu tiện không?
+3279	chuujun	business	中旬	ちゅうじゅん	trung tuần (giữa tháng)	中旬までにご回答をお願いいたします。	Xin vui lòng trả lời trước giữa tháng.
+3280	teikyuubi	exam	定休日	ていきゅうび	ngày nghỉ định kỳ	この店は月曜が定休日だ。	Cửa hàng này nghỉ định kỳ vào thứ Hai.
+3281	teikyuubi	daily	定休日	ていきゅうび	ngày nghỉ định kỳ	今日、定休日だったんだ。	Hôm nay là ngày nghỉ định kỳ à.
+3282	teikyuubi	business	定休日	ていきゅうび	ngày nghỉ định kỳ	定休日は水曜日とさせていただいております。	Ngày nghỉ định kỳ của chúng tôi là thứ Tư.
+3283	douji	exam	同時	どうじ	đồng thời	二つのことを同時にした。	Tôi đã làm hai việc cùng lúc.
+3284	douji	daily	同時	どうじ	đồng thời	同時に来ちゃったね。	Cùng đến một lúc luôn nhỉ.
+3285	douji	business	同時	どうじ	đồng thời	複数のタスクを同時に進めております。	Chúng tôi đang triển khai đồng thời nhiều công việc.
+3286	toujitsu	exam	当日	とうじつ	ngày hôm đó	当日は雨だった。	Ngày hôm đó trời mưa.
+3287	toujitsu	daily	当日	とうじつ	ngày hôm đó	当日、忘れないでね。	Ngày hôm đó đừng quên nhé.
+3288	toujitsu	business	当日	とうじつ	ngày hôm đó	当日券も販売いたします。	Chúng tôi cũng bán vé ngay trong ngày.
+3289	nichiji	exam	日時	にちじ	ngày giờ	会議の日時を決めた。	Tôi đã quyết định ngày giờ họp.
+3290	nichiji	daily	日時	にちじ	ngày giờ	日時、まだ決まってないの?	Ngày giờ vẫn chưa quyết định à?
+3291	nichiji	business	日時	にちじ	ngày giờ	詳細な日時は追ってご連絡いたします。	Chúng tôi sẽ thông báo ngày giờ cụ thể sau.
+3292	nendai	exam	年代	ねんだい	thời đại, thập niên	1980年代の音楽が好きだ。	Tôi thích âm nhạc thập niên 1980.
+3293	nendai	daily	年代	ねんだい	thời đại, thập niên	この曲、何年代の?	Bài hát này thuộc thập niên nào vậy?
+3294	nendai	business	年代	ねんだい	thời đại, thập niên	年代別の消費傾向を分析いたしました。	Chúng tôi đã phân tích xu hướng tiêu dùng theo từng thế hệ.
+3295	hantoshi	exam	半年	はんとし	nửa năm	半年で日本語が上達した。	Tiếng Nhật của tôi đã tiến bộ sau nửa năm.
+3296	hantoshi	daily	半年	はんとし	nửa năm	半年ぶりに会ったね。	Lâu rồi mới gặp lại nhau, nửa năm rồi nhỉ.
+3297	hantoshi	business	半年	はんとし	nửa năm	半年ごとに評価を実施しております。	Chúng tôi thực hiện đánh giá theo mỗi nửa năm.
+3298	hannichi	exam	半日	はんにち	nửa ngày	半日休みを取った。	Tôi đã xin nghỉ nửa ngày.
+3299	hannichi	daily	半日	はんにち	nửa ngày	半日で終わるかな。	Không biết nửa ngày có xong không nhỉ.
+3300	hannichi	business	半日	はんにち	nửa ngày	半日研修を実施いたします。	Chúng tôi sẽ tổ chức đào tạo nửa ngày.
+3301	hiduke	exam	日付	ひづけ	ngày tháng	書類に日付を書いた。	Tôi đã ghi ngày tháng vào tài liệu.
+3302	hiduke	daily	日付	ひづけ	ngày tháng	日付、間違えてない?	Không nhầm ngày tháng chứ?
+3303	hiduke	business	日付	ひづけ	ngày tháng	契約書の日付をご確認ください。	Xin vui lòng kiểm tra ngày tháng trên hợp đồng.
+3304	hinichi	exam	日にち	ひにち	ngày	会う日にちを決めよう。	Hãy quyết định ngày gặp nhau nhé.
+3305	hinichi	daily	日にち	ひにち	ngày	日にち、まだ決まってないの?	Ngày vẫn chưa quyết định à?
+3306	hinichi	business	日にち	ひにち	ngày	日にちが決まり次第ご連絡いたします。	Chúng tôi sẽ liên hệ ngay khi ngày được quyết định.
+3307	heijitsu	exam	平日	へいじつ	ngày thường	平日は仕事がある。	Ngày thường tôi có việc phải làm.
+3308	heijitsu	daily	平日	へいじつ	ngày thường	平日の方が空いてるよ。	Ngày thường sẽ vắng hơn đó.
+3309	heijitsu	business	平日	へいじつ	ngày thường	平日限定の割引プランをご用意しております。	Chúng tôi có chuẩn bị gói giảm giá chỉ áp dụng ngày thường.
+3310	honjitsu	exam	本日	ほんじつ	hôm nay	本日は晴れです。	Hôm nay trời nắng.
+3311	honjitsu	daily	本日	ほんじつ	hôm nay	本日、予定ある?	Hôm nay cậu có lịch gì không?
+3312	honjitsu	business	本日	ほんじつ	hôm nay	本日をもちまして受付を終了いたします。	Chúng tôi sẽ kết thúc tiếp nhận vào hôm nay.
+3313	mirai	exam	未来	みらい	tương lai	明るい未来を信じている。	Tôi tin vào tương lai tươi sáng.
+3314	mirai	daily	未来	みらい	tương lai	未来のこと、考えてる?	Cậu có nghĩ đến tương lai không?
+3315	mirai	business	未来	みらい	tương lai	未来を見据えた投資を行っております。	Chúng tôi thực hiện đầu tư hướng tới tương lai.
+3316	yonaka	exam	夜中	よなか	nửa đêm	夜中に目が覚めた。	Tôi đã tỉnh giấc lúc nửa đêm.
+3317	yonaka	daily	夜中	よなか	nửa đêm	夜中まで起きてたの?	Cậu thức đến tận nửa đêm à?
+3318	yonaka	business	夜中	よなか	nửa đêm	夜中の緊急対応にも備えております。	Chúng tôi cũng chuẩn bị sẵn sàng cho việc ứng phó khẩn cấp vào nửa đêm.
+3319	rinji	exam	臨時	りんじ	tạm thời	臨時休業のお知らせを出した。	Chúng tôi đã ra thông báo nghỉ tạm thời.
+3320	rinji	daily	臨時	りんじ	tạm thời	臨時のバイト、探してるんだ。	Tớ đang tìm việc làm thêm tạm thời.
+3321	rinji	business	臨時	りんじ	tạm thời	臨時の対応チームを編成いたしました。	Chúng tôi đã thành lập nhóm ứng phó tạm thời.
+3322	renkyuu	exam	連休	れんきゅう	kỳ nghỉ dài (liên tiếp)	連休に旅行に行った。	Tôi đã đi du lịch vào kỳ nghỉ dài.
+3323	renkyuu	daily	連休	れんきゅう	kỳ nghỉ dài (liên tiếp)	今度の連休、何する?	Kỳ nghỉ dài lần tới cậu làm gì?
+3324	renkyuu	business	連休	れんきゅう	kỳ nghỉ dài (liên tiếp)	連休中の営業時間についてご案内いたします。	Chúng tôi xin thông báo giờ hoạt động trong kỳ nghỉ dài.
+3325	kigae	exam	着替え	きがえ	thay quần áo	運動の後、着替えをした。	Sau khi tập thể dục tôi đã thay đồ.
+3326	kigae	daily	着替え	きがえ	thay quần áo	着替え、持ってきた?	Cậu mang theo đồ để thay chưa?
+3327	kigae	business	着替え	きがえ	thay quần áo	着替えスペースをご用意しております。	Chúng tôi có chuẩn bị khu vực thay đồ.
+3328	keshou	exam	化粧	けしょう	trang điểm	出かける前に化粧をした。	Trước khi ra ngoài tôi đã trang điểm.
+3329	keshou	daily	化粧	けしょう	trang điểm	化粧、濃くない?	Trang điểm không đậm quá à?
+3330	keshou	business	化粧	けしょう	trang điểm	化粧品の新シリーズを発売いたします。	Chúng tôi sẽ ra mắt dòng mỹ phẩm mới.
+3331	kousui	exam	香水	こうすい	nước hoa	彼女は香水をつけている。	Cô ấy có xịt nước hoa.
+3332	kousui	daily	香水	こうすい	nước hoa	いい香水の匂いがするね。	Có mùi nước hoa thơm nhỉ.
+3333	kousui	business	香水	こうすい	nước hoa	新作の香水を展示いたします。	Chúng tôi sẽ trưng bày dòng nước hoa mới.
+3334	size	exam	サイズ	サイズ	kích cỡ	服のサイズを測った。	Tôi đã đo kích cỡ quần áo.
+3335	size	daily	サイズ	サイズ	kích cỡ	サイズ、合ってる?	Kích cỡ vừa không?
+3336	size	business	サイズ	サイズ	kích cỡ	サイズ展開を拡大いたしました。	Chúng tôi đã mở rộng dải kích cỡ sản phẩm.
+3337	apron	exam	エプロン	エプロン	tạp dề	料理をするときエプロンをつける。	Khi nấu ăn thì đeo tạp dề.
+3338	apron	daily	エプロン	エプロン	tạp dề	そのエプロン、可愛いね。	Cái tạp dề đó dễ thương ghê.
+3339	apron	business	エプロン	エプロン	tạp dề	従業員にはエプロンを支給しております。	Chúng tôi cấp tạp dề cho nhân viên.
+3340	coat	exam	コート	コート	áo khoác	寒いのでコートを着た。	Vì lạnh nên tôi đã mặc áo khoác.
+3341	coat	daily	コート	コート	áo khoác	そのコート、暖かそうだね。	Cái áo khoác đó trông ấm áp nhỉ.
+3342	coat	business	コート	コート	áo khoác	冬物コートの新作を入荷いたしました。	Chúng tôi đã nhập hàng áo khoác mùa đông mới.
+3343	sandal	exam	サンダル	サンダル	dép	夏はサンダルを履く。	Mùa hè tôi đi dép.
+3344	sandal	daily	サンダル	サンダル	dép	そのサンダル、涼しそうだね。	Đôi dép đó trông mát mẻ nhỉ.
+3345	sandal	business	サンダル	サンダル	dép	夏季限定のサンダルを販売いたします。	Chúng tôi sẽ bán dép chỉ có trong mùa hè.
+3346	jeans	exam	ジーンズ	ジーンズ	quần bò	ジーンズをはいて出かけた。	Tôi đã mặc quần bò ra ngoài.
+3347	jeans	daily	ジーンズ	ジーンズ	quần bò	そのジーンズ、似合ってるね。	Quần bò đó hợp với cậu ghê.
+3348	jeans	business	ジーンズ	ジーンズ	quần bò	新作ジーンズのラインナップを拡充いたしました。	Chúng tôi đã mở rộng dòng sản phẩm quần bò mới.
+3349	jacket	exam	ジャケット	ジャケット	áo khoác (jacket)	ジャケットを羽織った。	Tôi đã khoác áo jacket.
+3350	jacket	daily	ジャケット	ジャケット	áo khoác (jacket)	そのジャケット、かっこいいね。	Áo jacket đó ngầu ghê.
+3351	jacket	business	ジャケット	ジャケット	áo khoác (jacket)	ビジネスジャケットの新色を発売いたします。	Chúng tôi sẽ ra mắt áo jacket công sở màu mới.
+3352	jumper	exam	ジャンパー	ジャンパー	áo gió	寒い日はジャンパーを着る。	Ngày lạnh thì mặc áo gió.
+3353	jumper	daily	ジャンパー	ジャンパー	áo gió	そのジャンパー、暖かそう。	Cái áo gió đó trông ấm ghê.
+3354	jumper	business	ジャンパー	ジャンパー	áo gió	作業用ジャンパーを支給しております。	Chúng tôi cấp áo gió dùng cho công việc.
+3355	stocking	exam	ストッキング	ストッキング	tất dài	ストッキングが伝線した。	Tất dài của tôi bị rách sợi.
+3356	stocking	daily	ストッキング	ストッキング	tất dài	ストッキング、予備ある?	Có tất dài dự phòng không?
+3357	stocking	business	ストッキング	ストッキング	tất dài	制服用のストッキングを支給いたします。	Chúng tôi cấp tất dài dùng cho đồng phục.
+3358	sneaker	exam	スニーカー	スニーカー	giày thể thao	スニーカーで走った。	Tôi đã chạy bằng giày thể thao.
+3359	sneaker	daily	スニーカー	スニーカー	giày thể thao	そのスニーカー、新しいの?	Đôi giày thể thao đó mới à?
+3360	sneaker	business	スニーカー	スニーカー	giày thể thao	新作スニーカーを来週発売いたします。	Chúng tôi sẽ ra mắt giày thể thao mới vào tuần sau.
+3361	slacks	exam	スラックス	スラックス	quần tây	スラックスを新調した。	Tôi đã sắm quần tây mới.
+3362	slacks	daily	スラックス	スラックス	quần tây	そのスラックス、似合ってるね。	Quần tây đó hợp với cậu ghê.
+3363	slacks	business	スラックス	スラックス	quần tây	ビジネス用スラックスを支給しております。	Chúng tôi cấp quần tây dùng cho công sở.
+3364	socks	exam	ソックス	ソックス	tất	新しいソックスを買った。	Tôi đã mua tất mới.
+3365	socks	daily	ソックス	ソックス	tất	そのソックス、可愛いね。	Đôi tất đó dễ thương ghê.
+3366	socks	business	ソックス	ソックス	tất	制服用のソックスをご支給いたします。	Chúng tôi sẽ cấp tất dùng cho đồng phục.
+3367	dress	exam	ドレス	ドレス	váy dạ hội	結婚式でドレスを着た。	Tôi đã mặc váy dạ hội trong lễ cưới.
+3368	dress	daily	ドレス	ドレス	váy dạ hội	そのドレス、素敵だね。	Chiếc váy đó đẹp thật nhỉ.
+3369	dress	business	ドレス	ドレス	váy dạ hội	レンタルドレスのサービスを提供しております。	Chúng tôi cung cấp dịch vụ cho thuê váy dạ hội.
+3370	pajama	exam	パジャマ	パジャマ	đồ ngủ	パジャマに着替えて寝た。	Tôi đã thay đồ ngủ rồi đi ngủ.
+3371	pajama	daily	パジャマ	パジャマ	đồ ngủ	新しいパジャマ、着心地がすごくいい。	Bộ đồ ngủ mới mặc rất thoải mái.
+3372	pajama	business	パジャマ	パジャマ	đồ ngủ	新作パジャマのラインナップを追加いたしました。	Chúng tôi đã thêm dòng đồ ngủ mới.
+3373	shitagi	exam	下着	したぎ	đồ lót	新しい下着を買った。	Tôi đã mua đồ lót mới.
+3374	shitagi	daily	下着	したぎ	đồ lót	下着、洗濯した?	Đồ lót giặt chưa?
+3375	shitagi	business	下着	したぎ	đồ lót	機能性下着の新商品を発売いたします。	Chúng tôi sẽ ra mắt sản phẩm đồ lót chức năng mới.
+3376	seifuku	exam	制服	せいふく	đồng phục	学校の制服を着た。	Tôi đã mặc đồng phục học sinh.
+3377	seifuku	daily	制服	せいふく	đồng phục	制服、似合ってるね。	Đồng phục hợp với cậu ghê.
+3378	seifuku	business	制服	せいふく	đồng phục	新デザインの制服を導入いたします。	Chúng tôi sẽ áp dụng đồng phục thiết kế mới.
+3379	diamond	exam	ダイヤ	ダイヤモンド	kim cương	彼女にダイヤの指輪を贈った。	Tôi đã tặng cô ấy nhẫn kim cương.
+3380	diamond	daily	ダイヤ	ダイヤモンド	kim cương	そのダイヤ、大きいね。	Viên kim cương đó to thật nhỉ.
+3381	diamond	business	ダイヤ	ダイヤモンド	kim cương	ダイヤモンドの品質を厳しく検査しております。	Chúng tôi kiểm tra nghiêm ngặt chất lượng kim cương.
+3382	fashion	exam	ファッション	ファッション	thời trang	彼女はファッションに詳しい。	Cô ấy am hiểu về thời trang.
+3383	fashion	daily	ファッション	ファッション	thời trang	今年のファッション、どう思う?	Cậu nghĩ sao về thời trang năm nay?
+3384	fashion	business	ファッション	ファッション	thời trang	最新ファッショントレンドを取り入れております。	Chúng tôi áp dụng xu hướng thời trang mới nhất.
+3385	pantsu	exam	パンツ	パンツ	quần lót, quần dài	洗濯物にパンツが混ざっていた。	Có lẫn quần lót trong đồ giặt.
+3386	pantsu	daily	パンツ	パンツ	quần lót, quần dài	そのパンツ、どこで買ったの?	Cái quần đó mua ở đâu vậy?
+3387	pantsu	business	パンツ	パンツ	quần lót, quần dài	カジュアルなパンツの新作を展開いたします。	Chúng tôi sẽ triển khai dòng quần casual mới.
+3388	boots	exam	ブーツ	ブーツ	bốt (giày boot)	冬はブーツを履く。	Mùa đông tôi đi bốt.
+3389	boots	daily	ブーツ	ブーツ	bốt (giày boot)	そのブーツ、暖かそう。	Đôi bốt đó trông ấm ghê.
+3390	boots	business	ブーツ	ブーツ	bốt (giày boot)	冬季限定のブーツを発売いたします。	Chúng tôi sẽ ra mắt bốt chỉ bán trong mùa đông.
+3391	blouse	exam	ブラウス	ブラウス	áo blouse	白いブラウスを着た。	Tôi đã mặc áo blouse trắng.
+3392	blouse	daily	ブラウス	ブラウス	áo blouse	そのブラウス、春らしくてよく似合ってるね。	Chiếc áo blouse đó trông rất hợp mùa xuân và rất hợp với bạn.
+3393	blouse	business	ブラウス	ブラウス	áo blouse	新作ブラウスのカタログをお送りいたします。	Chúng tôi sẽ gửi catalogue áo blouse mới.
+3394	mizugi	exam	水着	みずぎ	đồ bơi	海に行くので水着を買った。	Vì đi biển nên tôi đã mua đồ bơi.
+3395	mizugi	daily	水着	みずぎ	đồ bơi	水着、持った?	Cậu mang đồ bơi chưa?
+3396	mizugi	business	水着	みずぎ	đồ bơi	夏季限定の水着を販売いたします。	Chúng tôi sẽ bán đồ bơi chỉ có trong mùa hè.
+3397	raincoat	exam	レインコート	レインコート	áo mưa	雨なのでレインコートを着た。	Vì trời mưa nên tôi đã mặc áo mưa.
+3398	raincoat	daily	レインコート	レインコート	áo mưa	レインコート、持ってきた?	Cậu mang áo mưa chưa?
+3399	raincoat	business	レインコート	レインコート	áo mưa	従業員には防水レインコートを支給しております。	Chúng tôi cấp áo mưa chống nước cho nhân viên.
+3400	onepiece	exam	ワンピース	ワンピース	váy liền	デートにワンピースを着ていった。	Tôi đã mặc váy liền đi hẹn hò.
+3401	onepiece	daily	ワンピース	ワンピース	váy liền	そのワンピース、素敵だね。	Chiếc váy liền đó đẹp thật nhỉ.
+3402	onepiece	business	ワンピース	ワンピース	váy liền	新作ワンピースの入荷情報をお知らせいたします。	Chúng tôi xin thông báo thông tin hàng mới về váy liền.
+3403	kuchibeni	exam	口紅	くちべに	son môi	口紅をつけて出かけた。	Tôi đã tô son môi rồi ra ngoài.
+3404	kuchibeni	daily	口紅	くちべに	son môi	その口紅の色、可愛いね。	Màu son môi đó dễ thương ghê.
+3405	kuchibeni	business	口紅	くちべに	son môi	新色口紅を来月発売いたします。	Chúng tôi sẽ ra mắt son môi màu mới vào tháng sau.
+3406	sunglasses	exam	サングラス	サングラス	kính râm	眩しいのでサングラスをかけた。	Vì chói mắt nên tôi đã đeo kính râm.
+3407	sunglasses	daily	サングラス	サングラス	kính râm	そのサングラス、かっこいいね。	Kính râm đó ngầu ghê.
+3408	sunglasses	business	サングラス	サングラス	kính râm	売り場ではサングラスの試着用サンプルもご用意しています。	Tại quầy bán hàng, chúng tôi cũng chuẩn bị mẫu kính râm để khách thử.
+3409	scarf	exam	スカーフ	スカーフ	khăn quàng (thời trang)	首にスカーフを巻いた。	Tôi đã quàng khăn quanh cổ.
+3410	scarf	daily	スカーフ	スカーフ	khăn quàng (thời trang)	そのスカーフ、秋のコートによく合ってるね。	Chiếc khăn quàng đó rất hợp với áo khoác mùa thu nhỉ.
+3411	scarf	business	スカーフ	スカーフ	khăn quàng (thời trang)	新作スカーフのラインナップを拡充いたしました。	Chúng tôi đã mở rộng dòng khăn quàng mới.
+3412	necklace	exam	ネックレス	ネックレス	dây chuyền	誕生日にネックレスをもらった。	Tôi đã được tặng dây chuyền nhân sinh nhật.
+3413	necklace	daily	ネックレス	ネックレス	dây chuyền	そのネックレス、今日の服にすごく合ってる。	Sợi dây chuyền đó rất hợp với bộ đồ hôm nay.
+3414	necklace	business	ネックレス	ネックレス	dây chuyền	新作ネックレスの展示会を開催いたします。	Chúng tôi sẽ tổ chức triển lãm dây chuyền mới.
+3415	bag	exam	バッグ	バッグ	túi	旅行に使える大きなバッグを探しています。	Tôi đang tìm một chiếc túi lớn có thể dùng khi đi du lịch.
+3416	bag	daily	バッグ	バッグ	túi	このバッグ、見た目よりたくさん入るね。	Cái túi này đựng được nhiều hơn vẻ ngoài nhỉ.
+3417	bag	business	バッグ	バッグ	túi	新作バッグのカタログをお送りいたします。	Chúng tôi sẽ gửi catalogue túi mới.
+3418	brooch	exam	ブローチ	ブローチ	ghim cài	スーツにブローチをつけた。	Tôi đã cài ghim lên bộ vest.
+3419	brooch	daily	ブローチ	ブローチ	ghim cài	そのブローチ、光が当たるときれいだね。	Chiếc ghim cài áo đó khi gặp ánh sáng trông đẹp nhỉ.
+3420	brooch	business	ブローチ	ブローチ	ghim cài	記念品としてブローチを贈呈いたします。	Chúng tôi sẽ tặng ghim cài như một món quà kỷ niệm.

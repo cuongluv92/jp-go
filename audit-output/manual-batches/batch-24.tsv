@@ -1,0 +1,181 @@
+row	vocabId	type	word	reading	meaningVi	exampleJp	exampleVi
+4141	katamaru	exam	固まる	かたまる	cứng lại, đông lại	セメントが固まった。	Xi măng đã đông cứng lại.
+4142	katamaru	daily	固まる	かたまる	cứng lại, đông lại	まだ固まってないよ。	Vẫn chưa đông cứng đâu.
+4143	katamaru	business	固まる	かたまる	cứng lại, đông lại	方針が固まっております。	Phương châm đã được thống nhất.
+4144	katamuku	exam	傾く	かたむく	nghiêng, lệch	棚が傾いた。	Cái kệ bị nghiêng.
+4145	katamuku	daily	傾く	かたむく	nghiêng, lệch	家、ちょっと傾いてない?	Nhà hơi nghiêng không?
+4146	katamuku	business	傾く	かたむく	nghiêng, lệch	建物が傾いております。	Tòa nhà đang bị nghiêng.
+4147	gakkari	exam	がっかりする	がっかりする	thất vọng	結果にがっかりした。	Tôi đã thất vọng vì kết quả.
+4148	gakkari	daily	がっかりする	がっかりする	thất vọng	そんなにがっかりしないで。	Đừng thất vọng như vậy.
+4149	gakkari	business	がっかりする	がっかりする	thất vọng	お客様をがっかりさせないよう努めております。	Chúng tôi nỗ lực để không làm khách hàng thất vọng.
+4150	kamu	exam	かむ	かむ	cắn, nhai	ガムをかんだ。	Tôi đã nhai kẹo cao su.
+4151	kamu	daily	かむ	かむ	cắn, nhai	よくかんで食べてね。	Nhai kỹ rồi ăn nhé.
+4152	kamu	business	かむ	かむ	cắn, nhai	しっかりかんで食べることを推奨しております。	Chúng tôi khuyến khích nhai kỹ khi ăn.
+4153	kayou	exam	通う	かよう	đi lại, theo học	毎日、学校に通った。	Mỗi ngày tôi đều đi học.
+4154	kayou	daily	通う	かよう	đi lại, theo học	どこに通ってるの?	Cậu đang theo học ở đâu vậy?
+4155	kayou	business	通う	かよう	đi lại, theo học	多くの学生がこの学校に通っております。	Nhiều học sinh đang theo học tại trường này.
+4156	kareru	exam	枯れる	かれる	héo	花が枯れた。	Hoa đã héo.
+4157	kareru	daily	枯れる	かれる	héo	この植物、枯れてきたね。	Cây này héo dần rồi nhỉ.
+4158	kareru	business	枯れる	かれる	héo	水やり不足で植物が枯れております。	Cây bị héo do thiếu nước tưới.
+4159	kawaigaru	exam	かわいがる	かわいがる	nuông chiều, yêu chiều	祖母は孫をかわいがった。	Bà nội đã nuông chiều cháu.
+4160	kawaigaru	daily	かわいがる	かわいがる	nuông chiều, yêu chiều	すごくかわいがってるね。	Cậu chiều nó ghê nhỉ.
+4161	kawaigaru	business	かわいがる	かわいがる	nuông chiều, yêu chiều	新入社員をかわいがる先輩が多いです。	Có nhiều tiền bối yêu quý nhân viên mới.
+4162	kawakasu	exam	乾かす	かわかす	làm khô	髪を乾かした。	Tôi đã làm khô tóc.
+4163	kawakasu	daily	乾かす	かわかす	làm khô	洗濯物、乾かしておいたよ。	Tớ đã phơi khô quần áo sẵn rồi đấy.
+4164	kawakasu	business	乾かす	かわかす	làm khô	洗った器具はしっかり乾かしております。	Dụng cụ sau khi rửa được làm khô kỹ lưỡng.
+4165	kawaru	exam	代わる	かわる	thay đổi, thay thế	担当者が代わった。	Người phụ trách đã thay đổi.
+4166	kawaru	daily	代わる	かわる	thay đổi, thay thế	次、代わろうか。	Lần tới đổi phiên nhé?
+4167	kawaru	business	代わる	かわる	thay đổi, thay thế	担当者が代わっております。	Người phụ trách đã được thay đổi.
+4168	kanjiru	exam	感じる	かんじる	cảm thấy	寒さを感じた。	Tôi đã cảm thấy lạnh.
+4169	kanjiru	daily	感じる	かんじる	cảm thấy	何か感じない?	Cậu có cảm thấy gì không?
+4170	kanjiru	business	感じる	かんじる	cảm thấy	お客様のニーズを常に感じております。	Chúng tôi luôn cảm nhận nhu cầu của khách hàng.
+4171	kiku2	exam	効く	きく	có tác dụng	この薬はよく効いた。	Loại thuốc này rất có tác dụng.
+4172	kiku2	daily	効く	きく	có tác dụng	全然効かないよ。	Không có tác dụng gì cả.
+4173	kiku2	business	効く	きく	có tác dụng	冷房が効いております。	Máy lạnh đang có tác dụng tốt.
+4174	kiseru	exam	着せる	きせる	mặc cho (người khác)	子供に服を着せた。	Tôi đã mặc đồ cho con.
+4175	kiseru	daily	着せる	きせる	mặc cho (người khác)	これ、着せてあげようか。	Để mặc cái này cho nó nhé?
+4176	kiseru	business	着せる	きせる	mặc cho (người khác)	モデルに新作を着せて撮影いたしました。	Chúng tôi đã cho người mẫu mặc sản phẩm mới để chụp ảnh.
+4177	kizuku	exam	気づく	きづく	nhận ra	間違いに気づいた。	Tôi đã nhận ra sai lầm.
+4178	kizuku	daily	気づく	きづく	nhận ra	気づいてよかった。	May mà nhận ra kịp thời.
+4179	kizuku	business	気づく	きづく	nhận ra	問題点に早期に気づいております。	Chúng tôi đã nhận ra vấn đề từ sớm.
+4180	kiniiru	exam	気に入る	きにいる	thích	この服が気に入った。	Tôi đã thích bộ quần áo này.
+4181	kiniiru	daily	気に入る	きにいる	thích	これ、気に入ってる?	Cậu có thích cái này không?
+4182	kiniiru	business	気に入る	きにいる	thích	お客様に気に入っていただけるよう努めております。	Chúng tôi nỗ lực để khách hàng hài lòng.
+4183	kireru	exam	切れる	きれる	đứt	糸が切れた。	Sợi chỉ đã đứt.
+4184	kireru	daily	切れる	きれる	đứt	電池、切れてるよ。	Pin hết rồi kìa.
+4185	kireru	business	切れる	きれる	đứt	在庫が切れております。	Hàng tồn kho đã hết.
+4186	kiwotsukeru	exam	気をつける	きをつける	chú ý, cẩn thận	車に気をつけた。	Tôi đã chú ý xe cộ.
+4187	kiwotsukeru	daily	気をつける	きをつける	chú ý, cẩn thận	気をつけてね。	Cẩn thận nhé.
+4188	kiwotsukeru	business	気をつける	きをつける	chú ý, cẩn thận	安全に十分気をつけております。	Chúng tôi hết sức chú ý đến an toàn.
+4189	kusaru	exam	腐る	くさる	thiu, hỏng	牛乳が腐った。	Sữa đã bị hỏng.
+4190	kusaru	daily	腐る	くさる	thiu, hỏng	これ、腐ってない?	Cái này không bị thiu chứ?
+4191	kusaru	business	腐る	くさる	thiu, hỏng	食品が腐らないよう管理しております。	Chúng tôi quản lý để thực phẩm không bị hỏng.
+4192	kuzureru	exam	崩れる	くずれる	đổ xuống, sụp	山が崩れた。	Núi bị sụp lở.
+4193	kuzureru	daily	崩れる	くずれる	đổ xuống, sụp	天気、崩れてきたね。	Thời tiết bắt đầu xấu đi rồi nhỉ.
+4194	kuzureru	business	崩れる	くずれる	đổ xuống, sụp	バランスが崩れております。	Sự cân bằng đang bị phá vỡ.
+4195	kubaru	exam	配る	くばる	phát, phân phát	チラシを配った。	Tôi đã phát tờ rơi.
+4196	kubaru	daily	配る	くばる	phát, phân phát	これ、配ってくれる?	Phát cái này giúp tớ được không?
+4197	kubaru	business	配る	くばる	phát, phân phát	資料を各部署に配っております。	Chúng tôi đang phát tài liệu đến các phòng ban.
+4198	kurasu	exam	暮らす	くらす	sinh sống	田舎で暮らした。	Tôi đã sống ở quê.
+4199	kurasu	daily	暮らす	くらす	sinh sống	楽しく暮らしてる?	Cậu sống có vui vẻ không?
+4200	kurasu	business	暮らす	くらす	sinh sống	地域の皆様が快適に暮らしております。	Người dân trong khu vực đang sống thoải mái.
+4201	kuraberu	exam	比べる	くらべる	so sánh	二つの商品を比べた。	Tôi đã so sánh hai sản phẩm.
+4202	kuraberu	daily	比べる	くらべる	so sánh	比べてみようよ。	Thử so sánh xem sao.
+4203	kuraberu	business	比べる	くらべる	so sánh	昨年と比べて売上が増加しております。	Doanh thu đã tăng so với năm ngoái.
+4204	kurikaesu	exam	繰り返す	くりかえす	lặp lại	同じミスを繰り返した。	Tôi đã lặp lại cùng một sai lầm.
+4205	kurikaesu	daily	繰り返す	くりかえす	lặp lại	繰り返して言うね。	Tớ nói lại lần nữa nhé.
+4206	kurikaesu	business	繰り返す	くりかえす	lặp lại	同様の確認を繰り返しております。	Chúng tôi lặp lại việc kiểm tra tương tự.
+4207	kurushimu	exam	苦しむ	くるしむ	đau khổ	病気で苦しんだ。	Tôi đã đau khổ vì bệnh tật.
+4208	kurushimu	daily	苦しむ	くるしむ	đau khổ	そんなに苦しんでるの?	Cậu đau khổ đến vậy à?
+4209	kurushimu	business	苦しむ	くるしむ	đau khổ	経営難に苦しんでおります。	Chúng tôi đang khổ sở vì khó khăn kinh doanh.
+4210	kureru2	exam	暮れる	くれる	trời tối	日が暮れた。	Trời đã tối.
+4211	kureru2	daily	暮れる	くれる	trời tối	もう暮れてきたね。	Trời sắp tối rồi nhỉ.
+4212	kureru2	business	暮れる	くれる	trời tối	日が暮れる前に作業を終える予定です。	Dự kiến sẽ hoàn thành công việc trước khi trời tối.
+4213	kuwaeru	exam	加える	くわえる	thêm vào	砂糖を加えた。	Tôi đã thêm đường vào.
+4214	kuwaeru	daily	加える	くわえる	thêm vào	最後に塩を少し加えてみて。	Cuối cùng thử thêm một chút muối vào nhé.
+4215	kuwaeru	business	加える	くわえる	thêm vào	新機能を加えております。	Chúng tôi đang thêm tính năng mới.
+4216	kezuru	exam	削る	けずる	gọt	鉛筆を削った。	Tôi đã gọt bút chì.
+4217	kezuru	daily	削る	けずる	gọt	予算、削ろうか。	Cắt bớt ngân sách đi nhé?
+4218	kezuru	business	削る	けずる	gọt	経費を削っております。	Chúng tôi đang cắt giảm chi phí.
+4219	keru	exam	蹴る	ける	đá	ボールを蹴った。	Tôi đã đá quả bóng.
+4220	keru	daily	蹴る	ける	đá	強く蹴ってみて。	Đá mạnh thử xem.
+4221	keru	business	蹴る	ける	đá	選手がボールを力強く蹴っております。	Vận động viên đang đá bóng đầy mạnh mẽ.
+4222	koeru	exam	越える	こえる	vượt qua	山を越えた。	Tôi đã vượt qua ngọn núi.
+4223	koeru	daily	越える	こえる	vượt qua	目標、越えられそう?	Có vẻ vượt được mục tiêu không?
+4224	koeru	business	越える	こえる	vượt qua	売上目標を越えております。	Doanh thu đã vượt mục tiêu.
+4225	kooru	exam	凍る	こおる	đóng băng	池が凍った。	Ao nước đã đóng băng.
+4226	kooru	daily	凍る	こおる	đóng băng	これ、凍ってるよ。	Cái này đóng băng rồi kìa.
+4227	kooru	business	凍る	こおる	đóng băng	道路が凍っております。	Đường xá đang bị đóng băng.
+4228	kogu	exam	こぐ	こぐ	chèo, đạp	自転車をこいだ。	Tôi đã đạp xe đạp.
+4229	kogu	daily	こぐ	こぐ	chèo, đạp	もっと速くこいで。	Đạp nhanh hơn nữa đi.
+4230	kogu	business	こぐ	こぐ	chèo, đạp	ボートをこいで進んでおります。	Chúng tôi đang chèo thuyền tiến lên.
+4231	kogeru	exam	焦げる	こげる	cháy (khét)	パンが焦げた。	Bánh mì đã bị cháy.
+4232	kogeru	daily	焦げる	こげる	cháy (khét)	なんか焦げてない?	Có gì đó bị cháy khét không?
+4233	kogeru	business	焦げる	こげる	cháy (khét)	火加減に注意し焦げないよう調理しております。	Chúng tôi nấu chú ý lửa để không bị cháy.
+4234	koshikakeru	exam	腰掛ける	こしかける	ngồi	ベンチに腰掛けた。	Tôi đã ngồi trên ghế dài.
+4235	koshikakeru	daily	腰掛ける	こしかける	ngồi	ここ、腰掛けていいよ。	Ngồi ở đây được đó.
+4236	koshikakeru	business	腰掛ける	こしかける	ngồi	待合室の椅子に腰掛けてお待ちください。	Xin vui lòng ngồi ghế ở phòng chờ để đợi.
+4237	kosu	exam	越す	こす	vượt	期限を越した。	Tôi đã vượt quá thời hạn.
+4238	kosu	daily	越す	こす	vượt	もう越しちゃったの?	Vượt qua rồi à?
+4239	kosu	business	越す	こす	vượt	目標を大きく越しております。	Chúng tôi đã vượt xa mục tiêu.
+4240	kotowaru	exam	断る	ことわる	từ chối	誘いを断った。	Tôi đã từ chối lời mời.
+4241	kotowaru	daily	断る	ことわる	từ chối	断ってもいいよ。	Từ chối cũng được đấy.
+4242	kotowaru	business	断る	ことわる	từ chối	誠に恐縮ですが、今回は断らせていただきます。	Thành thật xin lỗi, nhưng lần này chúng tôi xin từ chối.
+4243	koboreru	exam	こぼれる	こぼれる	đổ ra (chất lỏng)	コーヒーがこぼれた。	Cà phê đã bị đổ ra.
+4244	koboreru	daily	こぼれる	こぼれる	đổ ra (chất lỏng)	あ、こぼれてるよ!	A, đổ ra kìa!
+4245	koboreru	business	こぼれる	こぼれる	đổ ra (chất lỏng)	液体がこぼれないよう蓋を密閉しております。	Chúng tôi đóng chặt nắp để chất lỏng không bị đổ ra.
+4246	komu2	exam	混む	こむ	đông	電車が混んだ。	Tàu điện đã đông người.
+4247	komu2	daily	混む	こむ	đông	今日、混んでるね。	Hôm nay đông người nhỉ.
+4248	komu2	business	混む	こむ	đông	週末は混んでおります。	Cuối tuần thường đông khách.
+4249	korogaru	exam	転がる	ころがる	lăn	ボールが転がった。	Quả bóng đã lăn đi.
+4250	korogaru	daily	転がる	ころがる	lăn	これ、転がってるよ。	Cái này đang lăn kìa.
+4251	korogaru	business	転がる	ころがる	lăn	商品が転がらないよう固定しております。	Chúng tôi cố định để sản phẩm không bị lăn.
+4252	korosu	exam	殺す	ころす	giết	虫を殺した。	Tôi đã giết con côn trùng.
+4253	korosu	daily	殺す	ころす	giết	殺さないで!	Đừng giết nó!
+4254	korosu	business	殺す	ころす	giết	害虫を薬剤で殺しております。	Chúng tôi diệt côn trùng gây hại bằng thuốc.
+4255	korobu	exam	転ぶ	ころぶ	ngã	道で転んだ。	Tôi đã ngã trên đường.
+4256	korobu	daily	転ぶ	ころぶ	ngã	転ばないでね。	Đừng ngã nhé.
+4257	korobu	business	転ぶ	ころぶ	ngã	高齢者が転ばないよう手すりを設置しております。	Chúng tôi lắp tay vịn để người cao tuổi không bị ngã.
+4258	sagasu	exam	探す	さがす	tìm	鍵を探した。	Tôi đã tìm chìa khóa.
+4259	sagasu	daily	探す	さがす	tìm	一緒に探そうか。	Cùng tìm nhé?
+4260	sagasu	business	探す	さがす	tìm	最適な人材を探しております。	Chúng tôi đang tìm nhân tài phù hợp nhất.
+4261	sakebu	exam	叫ぶ	さけぶ	hét	大声で叫んだ。	Tôi đã hét lớn.
+4262	sakebu	daily	叫ぶ	さけぶ	hét	そんなに叫ばないで。	Đừng hét lớn như vậy.
+4263	sakebu	business	叫ぶ	さけぶ	hét	緊急時は大声で叫ぶよう指導しております。	Chúng tôi hướng dẫn hét to trong trường hợp khẩn cấp.
+4264	sasu1	exam	刺す	さす	đâm	蜂に刺された。	Tôi đã bị ong đốt.
+4265	sasu1	daily	刺す	さす	đâm	針で刺しちゃった。	Lỡ bị kim đâm rồi.
+4266	sasu1	business	刺す	さす	đâm	蚊に刺されないよう対策しております。	Chúng tôi có biện pháp để không bị muỗi đốt.
+4267	sasu2	exam	指す	さす	chỉ	地図で場所を指した。	Tôi đã chỉ vị trí trên bản đồ.
+4268	sasu2	daily	指す	さす	chỉ	これ、指してみて。	Chỉ thử cái này xem.
+4269	sasu2	business	指す	さす	chỉ	該当箇所を指しております。	Chúng tôi đang chỉ ra phần liên quan.
+4270	sasu3	exam	差す	さす	cắm, che (dù)	傘を差した。	Tôi đã che dù.
+4271	sasu3	daily	差す	さす	cắm, che (dù)	傘、差そうか。	Che dù nhé?
+4272	sasu3	business	差す	さす	cắm, che (dù)	日差しが強いので日傘を差しております。	Vì nắng gắt nên chúng tôi che dù chống nắng.
+4273	sasou	exam	誘う	さそう	rủ	友達を食事に誘った。	Tôi đã rủ bạn đi ăn.
+4274	sasou	daily	誘う	さそう	rủ	今度、誘ってよ。	Lần tới rủ tớ nhé.
+4275	sasou	business	誘う	さそう	rủ	イベントへの参加をお誘いしております。	Chúng tôi mời quý vị tham gia sự kiện.
+4276	sappari	exam	さっぱりする	さっぱりする	thoải mái, sảng khoái	シャワーを浴びてさっぱりした。	Tôi đã tắm vòi sen và thấy sảng khoái.
+4277	sappari	daily	さっぱりする	さっぱりする	thoải mái, sảng khoái	髪切ったら、さっぱりしたね。	Cắt tóc xong thấy nhẹ nhõm hẳn nhỉ.
+4278	sappari	business	さっぱりする	さっぱりする	thoải mái, sảng khoái	お客様にさっぱりした使い心地をご提供いたします。	Chúng tôi mang đến cảm giác sử dụng sảng khoái cho khách hàng.
+4279	sameru1	exam	覚める	さめる	tỉnh giấc	目覚まし時計が鳴る前に目が覚めた。	Tôi tỉnh giấc trước khi đồng hồ báo thức reo.
+4280	sameru1	daily	覚める	さめる	tỉnh giấc	もう覚めた?	Tỉnh chưa?
+4281	sameru1	business	覚める	さめる	tỉnh giấc	早朝に目が覚めております。	Tôi tỉnh giấc từ sáng sớm.
+4282	sameru2	exam	冷める	さめる	nguội	スープが冷めた。	Súp đã nguội.
+4283	sameru2	daily	冷める	さめる	nguội	早く食べないと冷めるよ。	Không ăn nhanh là nguội đấy.
+4284	sameru2	business	冷める	さめる	nguội	料理が冷める前にご提供いたします。	Chúng tôi sẽ phục vụ món ăn trước khi nguội.
+4285	shiku	exam	敷く	しく	trải	布団を敷いた。	Tôi đã trải nệm futon.
+4286	shiku	daily	敷く	しく	trải	マット、敷いておいたよ。	Tớ đã trải thảm sẵn rồi đấy.
+4287	shiku	business	敷く	しく	trải	会場にシートを敷いております。	Chúng tôi đã trải tấm phủ ở hội trường.
+4288	shizumu	exam	沈む	しずむ	chìm	船が沈んだ。	Con tàu đã chìm.
+4289	shizumu	daily	沈む	しずむ	chìm	太陽が沈んできたね。	Mặt trời bắt đầu lặn rồi nhỉ.
+4290	shizumu	business	沈む	しずむ	chìm	夕日が沈む美しい景色です。	Đây là cảnh đẹp mặt trời lặn.
+4291	shiharau	exam	支払う	しはらう	chi trả	代金を支払った。	Tôi đã thanh toán tiền hàng.
+4292	shiharau	daily	支払う	しはらう	chi trả	もう支払ったよ。	Trả tiền rồi đấy.
+4293	shiharau	business	支払う	しはらう	chi trả	料金は月末までに支払っております。	Chúng tôi thanh toán phí trước cuối tháng.
+4294	shibaru	exam	縛る	しばる	buộc	ひもで荷物を縛った。	Tôi đã buộc đồ bằng dây.
+4295	shibaru	daily	縛る	しばる	buộc	しっかり縛ってね。	Buộc chặt vào nhé.
+4296	shibaru	business	縛る	しばる	buộc	荷物をしっかり縛っております。	Chúng tôi buộc chặt hàng hóa.
+4297	shimau	exam	しまう	しまう	cất	本を棚にしまった。	Tôi đã cất sách vào kệ.
+4298	shimau	daily	しまう	しまう	cất	それ、しまっておいて。	Cất cái đó đi giúp tớ.
+4299	shimau	business	しまう	しまう	cất	貴重品は金庫にしまっております。	Đồ có giá trị được cất trong két sắt.
+4300	shaberu	exam	しゃべる	しゃべる	nói chuyện	友達と長時間しゃべった。	Tôi đã nói chuyện với bạn suốt thời gian dài.
+4301	shaberu	daily	しゃべる	しゃべる	nói chuyện	そんなにしゃべらないで。	Đừng nói nhiều như vậy.
+4302	shaberu	business	しゃべる	しゃべる	nói chuyện	お客様と気軽にしゃべっております。	Chúng tôi trò chuyện thoải mái với khách hàng.
+4303	shinjiru	exam	信じる	しんじる	tin	彼を信じた。	Tôi đã tin anh ấy.
+4304	shinjiru	daily	信じる	しんじる	tin	信じてるよ。	Tớ tin cậu đấy.
+4305	shinjiru	business	信じる	しんじる	tin	お客様の声を信じて改善しております。	Chúng tôi cải thiện dựa trên niềm tin vào ý kiến khách hàng.
+4306	sugiru	exam	過ぎる	すぎる	quá	時間が過ぎた。	Thời gian đã trôi qua.
+4307	sugiru	daily	過ぎる	すぎる	quá	もう過ぎちゃったね。	Qua rồi nhỉ.
+4308	sugiru	business	過ぎる	すぎる	quá	締め切りが過ぎております。	Đã quá hạn chót.
+4309	sugosu	exam	過ごす	すごす	trải qua	休日を家族と過ごした。	Tôi đã dành ngày nghỉ cùng gia đình.
+4310	sugosu	daily	過ごす	すごす	trải qua	楽しく過ごしてね。	Chúc bạn có khoảng thời gian vui vẻ.
+4311	sugosu	business	過ごす	すごす	trải qua	快適な時間をお過ごしいただけます。	Quý khách có thể trải qua khoảng thời gian thoải mái.
+4312	susumu	exam	進む	すすむ	tiến	計画が進んだ。	Kế hoạch đã tiến triển.
+4313	susumu	daily	進む	すすむ	tiến	順調に進んでる?	Có tiến triển thuận lợi không?
+4314	susumu	business	進む	すすむ	tiến	プロジェクトは予定通り進んでおります。	Dự án đang tiến triển đúng như kế hoạch.
+4315	susumeru	exam	勧める	すすめる	khuyên	友人に本を勧めた。	Tôi đã giới thiệu sách cho bạn.
+4316	susumeru	daily	勧める	すすめる	khuyên	これ、勧めるよ。	Tớ khuyên cậu cái này đấy.
+4317	susumeru	business	勧める	すすめる	khuyên	お客様に新商品をお勧めしております。	Chúng tôi giới thiệu sản phẩm mới đến khách hàng.
+4318	suberu	exam	滑る	すべる	trượt	道で滑った。	Tôi đã trượt ngã trên đường.
+4319	suberu	daily	滑る	すべる	trượt	ここ、滑るから気をつけて。	Chỗ này trơn nên cẩn thận nhé.
+4320	suberu	business	滑る	すべる	trượt	床が濡れて滑っております。	Sàn ướt nên đang trơn trượt.

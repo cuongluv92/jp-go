@@ -1,0 +1,181 @@
+row	vocabId	type	word	reading	meaningVi	exampleJp	exampleVi
+1081	happyou	exam	発表	はっぴょう	công bố, phát biểu	研究の成果を発表した。	Tôi đã công bố thành quả nghiên cứu.
+1082	happyou	daily	発表	はっぴょう	công bố, phát biểu	結果、いつ発表されるの?	Kết quả khi nào được công bố vậy?
+1083	happyou	business	発表	はっぴょう	công bố, phát biểu	新製品を来月正式に発表いたします。	Chúng tôi sẽ chính thức công bố sản phẩm mới vào tháng sau.
+1084	hatsumei	exam	発明	はつめい	phát minh	電球はエジソンが発明した。	Bóng đèn được Edison phát minh ra.
+1085	hatsumei	daily	発明	はつめい	phát minh	これ、誰の発明なんだろう。	Cái này không biết là phát minh của ai nhỉ.
+1086	hatsumei	business	発明	はつめい	phát minh	新技術の発明により特許を取得しました。	Nhờ phát minh công nghệ mới, chúng tôi đã lấy được bằng sáng chế.
+1087	haba	exam	幅	はば	độ rộng	この道路は幅が広い。	Con đường này có bề rộng lớn.
+1088	haba	daily	幅	はば	độ rộng	この棚、幅どれくらい?	Cái kệ này rộng khoảng bao nhiêu?
+1089	haba	business	幅	はば	độ rộng	製品の幅を5センチ縮小いたしました。	Chúng tôi đã thu nhỏ chiều rộng sản phẩm 5cm.
+1090	bamen	exam	場面	ばめん	cảnh	その場面がとても印象的だった。	Cảnh đó rất ấn tượng.
+1091	bamen	daily	場面	ばめん	cảnh	あの場面、感動したよね。	Cảnh đó cảm động thật nhỉ.
+1092	bamen	business	場面	ばめん	cảnh	状況に応じて場面ごとに対応いたします。	Chúng tôi sẽ ứng phó theo từng tình huống cụ thể.
+1093	hayaoki	exam	早起き	はやおき	dậy sớm	健康のために早起きを心がけている。	Tôi cố gắng dậy sớm vì sức khỏe.
+1094	hayaoki	daily	早起き	はやおき	dậy sớm	明日は早起きしないとね。	Mai phải dậy sớm mới được.
+1095	hayaoki	business	早起き	はやおき	dậy sớm	早起きを習慣づけることで業務効率が上がりました。	Nhờ tạo thói quen dậy sớm, hiệu suất công việc đã tăng lên.
+1096	hanzai	exam	犯罪	はんざい	tội phạm (hành vi)	この地域は犯罪が少ない。	Khu vực này ít tội phạm.
+1097	hanzai	daily	犯罪	はんざい	tội phạm (hành vi)	最近、犯罪のニュース多いね。	Dạo này tin tức về tội phạm nhiều nhỉ.
+1098	hanzai	business	犯罪	はんざい	tội phạm (hành vi)	社内の犯罪防止対策を強化しております。	Chúng tôi đang tăng cường biện pháp phòng chống tội phạm trong công ty.
+1099	hansei	exam	反省	はんせい	kiểm điểm	失敗を反省して次に生かす。	Kiểm điểm thất bại để phát huy cho lần sau.
+1100	hansei	daily	反省	はんせい	kiểm điểm	ちゃんと反省してる?	Cậu có kiểm điểm nghiêm túc không đấy?
+1101	hansei	business	反省	はんせい	kiểm điểm	今回のミスについて深く反省しております。	Chúng tôi thành thật kiểm điểm sâu sắc về sai sót lần này.
+1102	handan	exam	判断	はんだん	phán đoán	状況を見て自分で判断してください。	Hãy nhìn tình huống rồi tự phán đoán.
+1103	handan	daily	判断	はんだん	phán đoán	どっちがいいか、判断つかないよ。	Không phán đoán được cái nào tốt hơn.
+1104	handan	business	判断	はんだん	phán đoán	最終的な判断は上長にお任せいたします。	Chúng tôi sẽ để cấp trên đưa ra phán đoán cuối cùng.
+1105	hannin	exam	犯人	はんにん	tội phạm, thủ phạm	警察は犯人を捜している。	Cảnh sát đang truy tìm thủ phạm.
+1106	hannin	daily	犯人	はんにん	tội phạm, thủ phạm	犯人、もう捕まったの?	Thủ phạm bị bắt chưa?
+1107	hannin	business	犯人	はんにん	tội phạm, thủ phạm	犯人特定のため防犯カメラを確認しております。	Chúng tôi đang kiểm tra camera an ninh để xác định thủ phạm.
+1108	hiatari	exam	日当たり	ひあたり	ánh nắng	この部屋は日当たりがいい。	Căn phòng này ánh nắng tốt.
+1109	hiatari	daily	日当たり	ひあたり	ánh nắng	このベランダ、日当たり悪くない?	Ban công này ánh nắng không tệ à?
+1110	hiatari	business	日当たり	ひあたり	ánh nắng	日当たりの良い立地を条件に物件を探しております。	Chúng tôi đang tìm bất động sản với điều kiện vị trí nhiều ánh nắng.
+1111	higaeri	exam	日帰り	ひがえり	đi về trong ngày	日帰りで温泉旅行に行った。	Tôi đã đi du lịch suối nước nóng trong ngày.
+1112	higaeri	daily	日帰り	ひがえり	đi về trong ngày	日帰りで行ける?	Đi về trong ngày được không?
+1113	higaeri	business	日帰り	ひがえり	đi về trong ngày	日帰り出張のスケジュールを組みました。	Tôi đã lên lịch cho chuyến công tác trong ngày.
+1114	hikaku	exam	比較	ひかく	so sánh	二つの商品を比較して選んだ。	Tôi đã so sánh hai sản phẩm rồi chọn.
+1115	hikaku	daily	比較	ひかく	so sánh	値段、比較してみようよ。	Thử so sánh giá xem sao.
+1116	hikaku	business	比較	ひかく	so sánh	競合他社との比較資料を作成しました。	Tôi đã tạo tài liệu so sánh với các đối thủ cạnh tranh.
+1117	hisashiburi	exam	久しぶり	ひさしぶり	lâu rồi (không gặp/làm)	久しぶりに故郷に帰った。	Tôi đã về quê sau một thời gian dài.
+1118	hisashiburi	daily	久しぶり	ひさしぶり	lâu rồi (không gặp/làm)	久しぶり!元気だった?	Lâu rồi không gặp! Khỏe không?
+1119	hisashiburi	business	久しぶり	ひさしぶり	lâu rồi (không gặp/làm)	久しぶりにお目にかかれて光栄です。	Thật vinh dự được gặp lại quý vị sau một thời gian dài.
+1120	hikkoshi	exam	引っ越し	ひっこし	chuyển nhà	来月、引っ越しをする予定だ。	Tháng sau tôi dự định chuyển nhà.
+1121	hikkoshi	daily	引っ越し	ひっこし	chuyển nhà	引っ越し、手伝おうか?	Tớ giúp chuyển nhà nhé?
+1122	hikkoshi	business	引っ越し	ひっこし	chuyển nhà	事務所の引っ越しにつきましてご案内いたします。	Xin thông báo về việc chuyển văn phòng.
+1123	hitorihitori	exam	一人一人	ひとりひとり	từng người	一人一人に名前を呼ばれた。	Từng người một đã được gọi tên.
+1124	hitorihitori	daily	一人一人	ひとりひとり	từng người	一人一人、感想聞かせてよ。	Từng người nói cảm nghĩ cho tớ nghe đi.
+1125	hitorihitori	business	一人一人	ひとりひとり	từng người	社員一人一人の意見を尊重いたします。	Chúng tôi tôn trọng ý kiến của từng nhân viên.
+1126	vinyl	exam	ビニール	ビニール	ni lông (nhựa)	ビニール袋に入れて持ち帰った。	Tôi đã cho vào túi ni lông rồi mang về.
+1127	vinyl	daily	ビニール	ビニール	ni lông (nhựa)	ビニール傘、また忘れちゃった。	Lại quên cây dù ni lông rồi.
+1128	vinyl	business	ビニール	ビニール	ni lông (nhựa)	レジ袋はビニール製から紙製へ変更いたします。	Chúng tôi sẽ thay túi mua hàng từ nhựa ni lông sang giấy.
+1129	himitsu	exam	秘密	ひみつ	bí mật	これは二人だけの秘密だ。	Đây là bí mật chỉ hai người biết.
+1130	himitsu	daily	秘密	ひみつ	bí mật	秘密にしといてね。	Giữ bí mật giúp tớ nhé.
+1131	himitsu	business	秘密	ひみつ	bí mật	お客様の情報は秘密として厳重に管理いたします。	Thông tin khách hàng sẽ được quản lý nghiêm ngặt như bí mật.
+1132	hyoushi	exam	表紙	ひょうし	bìa (sách)	この本の表紙が気に入った。	Tôi thích bìa cuốn sách này.
+1133	hyoushi	daily	表紙	ひょうし	bìa (sách)	表紙、破れちゃった。	Bìa sách bị rách rồi.
+1134	hyoushi	business	表紙	ひょうし	bìa (sách)	新しいカタログの表紙デザインを検討中です。	Chúng tôi đang xem xét thiết kế bìa cho catalogue mới.
+1135	hyoujun	exam	標準	ひょうじゅん	tiêu chuẩn	これが標準的なサイズです。	Đây là kích thước tiêu chuẩn.
+1136	hyoujun	daily	標準	ひょうじゅん	tiêu chuẩn	これ、標準装備なの?	Cái này là trang bị tiêu chuẩn à?
+1137	hyoujun	business	標準	ひょうじゅん	tiêu chuẩn	業界標準に準拠した仕様となっております。	Đây là thông số kỹ thuật tuân theo tiêu chuẩn ngành.
+1138	hyouban	exam	評判	ひょうばん	danh tiếng	このレストランは評判がいい。	Nhà hàng này có danh tiếng tốt.
+1139	hyouban	daily	評判	ひょうばん	danh tiếng	そのカフェ、評判いいらしいよ。	Nghe nói quán cà phê đó danh tiếng tốt đấy.
+1140	hyouban	business	評判	ひょうばん	danh tiếng	新サービスは顧客から高い評判を得ています。	Dịch vụ mới nhận được đánh giá cao từ khách hàng.
+1141	hyoumen	exam	表面	ひょうめん	bề mặt	水の表面に葉が浮いている。	Chiếc lá đang nổi trên bề mặt nước.
+1142	hyoumen	daily	表面	ひょうめん	bề mặt	表面、ちょっとザラザラしてる。	Bề mặt hơi sần sùi chút.
+1143	hyoumen	business	表面	ひょうめん	bề mặt	製品表面に傷がないかご確認ください。	Xin vui lòng kiểm tra bề mặt sản phẩm có bị trầy xước không.
+1144	hirune	exam	昼寝	ひるね	ngủ trưa	昼食後、少し昼寝をした。	Sau bữa trưa tôi đã ngủ trưa một chút.
+1145	hirune	daily	昼寝	ひるね	ngủ trưa	眠いから昼寝しようかな。	Buồn ngủ quá, ngủ trưa chút nhỉ.
+1146	hirune	business	昼寝	ひるね	ngủ trưa	休憩時間の昼寝制度を導入しました。	Chúng tôi đã triển khai chế độ ngủ trưa trong giờ nghỉ.
+1147	hint	exam	ヒント	ヒント	gợi ý	先生からヒントをもらった。	Tôi đã nhận được gợi ý từ thầy giáo.
+1148	hint	daily	ヒント	ヒント	gợi ý	もうちょっとヒントちょうだいよ。	Cho tớ thêm gợi ý chút nữa đi.
+1149	hint	business	ヒント	ヒント	gợi ý	改善のヒントになれば幸いです。	Rất mong đây sẽ là gợi ý hữu ích cho việc cải thiện.
+1150	fusoku	exam	不足	ふそく	thiếu	睡眠不足で頭が痛い。	Vì thiếu ngủ nên tôi bị đau đầu.
+1151	fusoku	daily	不足	ふそく	thiếu	説明不足だったね、ごめん。	Giải thích chưa đủ thì phải, xin lỗi nhé.
+1152	fusoku	business	不足	ふそく	thiếu	人手不足のため採用を強化しております。	Vì thiếu nhân lực nên chúng tôi đang tăng cường tuyển dụng.
+1153	bubun	exam	部分	ぶぶん	phần	この部分がよく分からない。	Tôi không hiểu rõ phần này.
+1154	bubun	daily	部分	ぶぶん	phần	どの部分が難しかった?	Phần nào khó vậy?
+1155	bubun	business	部分	ぶぶん	phần	報告書のこの部分を修正いたしました。	Tôi đã chỉnh sửa phần này trong báo cáo.
+1156	plastic	exam	プラスチック	プラスチック	nhựa	このコップはプラスチックでできている。	Chiếc cốc này được làm bằng nhựa.
+1157	plastic	daily	プラスチック	プラスチック	nhựa	プラスチックのゴミ、分別してね。	Nhớ phân loại rác nhựa nhé.
+1158	plastic	business	プラスチック	プラスチック	nhựa	環境配慮のためプラスチック製品の使用を削減しております。	Chúng tôi đang giảm sử dụng sản phẩm nhựa vì môi trường.
+1159	print	exam	プリント	プリント	in, bản in	先生がプリントを配った。	Thầy giáo đã phát tài liệu photo.
+1160	print	daily	プリント	プリント	in, bản in	このプリント、なくしちゃった。	Tớ làm mất tờ giấy này rồi.
+1161	print	business	プリント	プリント	in, bản in	会議資料はプリントして配布いたします。	Chúng tôi sẽ in và phát tài liệu cuộc họp.
+1162	furusato	exam	ふるさと	ふるさと	quê hương	ふるさとの祭りが恋しい。	Tôi nhớ lễ hội ở quê hương.
+1163	furusato	daily	ふるさと	ふるさと	quê hương	ふるさとに帰りたいな。	Muốn về quê hương quá.
+1164	furusato	business	ふるさと	ふるさと	quê hương	ふるさと納税制度についてご説明いたします。	Tôi xin giải thích về chế độ đóng thuế quê hương (furusato nozei).
+1165	blog	exam	ブログ	ブログ	blog	毎日ブログを更新している。	Tôi cập nhật blog mỗi ngày.
+1166	blog	daily	ブログ	ブログ	blog	ブログ、読んだよ。面白かった!	Tớ đọc blog của cậu rồi. Thú vị lắm!
+1167	blog	business	ブログ	ブログ	blog	会社の公式ブログで最新情報を発信しております。	Chúng tôi đăng thông tin mới nhất trên blog chính thức của công ty.
+1168	program	exam	プログラム	プログラム	chương trình	今日のプログラムを確認した。	Tôi đã kiểm tra chương trình hôm nay.
+1169	program	daily	プログラム	プログラム	chương trình	そのプログラム、面白そうだね。	Chương trình đó có vẻ thú vị nhỉ.
+1170	program	business	プログラム	プログラム	chương trình	研修プログラムの内容を見直しております。	Chúng tôi đang xem xét lại nội dung chương trình đào tạo.
+1171	propose	exam	プロポーズ	プロポーズ	cầu hôn	彼は彼女にプロポーズした。	Anh ấy đã cầu hôn cô ấy.
+1172	propose	daily	プロポーズ	プロポーズ	cầu hôn	彼、まだプロポーズしてないの?	Anh ấy vẫn chưa cầu hôn à?
+1173	propose	business	プロポーズ	プロポーズ	cầu hôn	結婚式場では、プロポーズの演出についての相談も受け付けています。	Tại địa điểm tổ chức cưới, chúng tôi cũng tiếp nhận tư vấn về cách dàn dựng màn cầu hôn.
+1174	funiki	exam	雰囲気	ふんいき	bầu không khí	このカフェは雰囲気がいい。	Quán cà phê này có bầu không khí tốt.
+1175	funiki	daily	雰囲気	ふんいき	bầu không khí	なんか雰囲気変じゃない?	Bầu không khí có gì đó lạ nhỉ?
+1176	funiki	business	雰囲気	ふんいき	bầu không khí	チーム全体の雰囲気を良くする取り組みを進めています。	Chúng tôi đang thúc đẩy các sáng kiến để cải thiện bầu không khí toàn đội.
+1177	heikin	exam	平均	へいきん	trung bình	クラスの平均点は80点だった。	Điểm trung bình của lớp là 80 điểm.
+1178	heikin	daily	平均	へいきん	trung bình	平均して1日3杯コーヒー飲むよ。	Tính trung bình mỗi ngày tớ uống 3 ly cà phê đấy.
+1179	heikin	business	平均	へいきん	trung bình	今月の平均売上を算出いたしました。	Tôi đã tính doanh thu trung bình của tháng này.
+1180	betsubetsu	exam	別々	べつべつ	riêng	二人は別々の道を選んだ。	Hai người đã chọn con đường riêng.
+1181	betsubetsu	daily	別々	べつべつ	riêng	会計、別々にしよう。	Tính tiền riêng nhé.
+1182	betsubetsu	business	別々	べつべつ	riêng	請求書は別々に発行いたします。	Chúng tôi sẽ phát hành hóa đơn riêng biệt.
+1183	henka	exam	変化	へんか	thay đổi	気候の変化が激しい。	Sự thay đổi khí hậu rất mạnh mẽ.
+1184	henka	daily	変化	へんか	thay đổi	最近、体調に変化ある?	Dạo này tình trạng sức khỏe cậu có thay đổi gì không?
+1185	henka	business	変化	へんか	thay đổi	市場の変化に迅速に対応してまいります。	Chúng tôi sẽ nhanh chóng ứng phó với những thay đổi của thị trường.
+1186	henkou	exam	変更	へんこう	thay đổi	予定を変更した。	Tôi đã thay đổi kế hoạch.
+1187	henkou	daily	変更	へんこう	thay đổi	場所、変更してもいい?	Đổi địa điểm được không?
+1188	henkou	business	変更	へんこう	thay đổi	契約内容の変更につきましてご連絡いたします。	Tôi xin liên hệ về việc thay đổi nội dung hợp đồng.
+1189	henshin	exam	返信	へんしん	trả lời (thư)	メールに返信した。	Tôi đã trả lời email.
+1190	henshin	daily	返信	へんしん	trả lời (thư)	まだ返信してないの?	Cậu vẫn chưa trả lời à?
+1191	henshin	business	返信	へんしん	trả lời (thư)	ご連絡いただきありがとうございます。早速返信いたします。	Cảm ơn đã liên hệ. Tôi xin trả lời ngay.
+1192	pointer	exam	ポインター	ポインター	con trỏ	発表でポインターを使った。	Tôi đã dùng con trỏ khi thuyết trình.
+1193	pointer	daily	ポインター	ポインター	con trỏ	そのポインター、貸して。	Cho tớ mượn cây con trỏ đó.
+1194	pointer	business	ポインター	ポインター	con trỏ	レーザーポインターをご用意しております。	Chúng tôi có chuẩn bị bút laser trỏ.
+1195	boueki	exam	貿易	ぼうえき	thương mại	日本は貿易で発展してきた。	Nhật Bản đã phát triển nhờ thương mại.
+1196	boueki	daily	貿易	ぼうえき	thương mại	貿易の仕事に興味があるんだ。	Tớ quan tâm đến công việc thương mại đấy.
+1197	boueki	business	貿易	ぼうえき	thương mại	弊社は東南アジアとの貿易を拡大しております。	Công ty chúng tôi đang mở rộng thương mại với Đông Nam Á.
+1198	hougen	exam	方言	ほうげん	phương ngữ	彼は関西の方言で話す。	Anh ấy nói bằng phương ngữ Kansai.
+1199	hougen	daily	方言	ほうげん	phương ngữ	その方言、聞いているとなんだか親しみを感じる。	Nghe phương ngữ đó tự nhiên tôi thấy có cảm giác thân thuộc.
+1200	hougen	business	方言	ほうげん	phương ngữ	地方支店では方言が飛び交うこともあります。	Ở chi nhánh địa phương đôi khi cũng nghe thấy phương ngữ.
+1201	houkoku	exam	報告	ほうこく	báo cáo	結果を先生に報告した。	Tôi đã báo cáo kết quả cho thầy giáo.
+1202	houkoku	daily	報告	ほうこく	báo cáo	報告、聞いた?	Nghe báo cáo chưa?
+1203	houkoku	business	報告	ほうこく	báo cáo	進捗状況を毎週ご報告いたします。	Chúng tôi sẽ báo cáo tình hình tiến độ hàng tuần.
+1204	boushi2	exam	防止	ぼうし	phòng chống	事故防止のために注意する。	Chú ý để phòng chống tai nạn.
+1205	boushi2	daily	防止	ぼうし	phòng chống	風邪防止に手洗いしようね。	Rửa tay để phòng cảm cúm nhé.
+1206	boushi2	business	防止	ぼうし	phòng chống	情報漏洩防止のため対策を強化いたしました。	Chúng tôi đã tăng cường biện pháp để phòng chống rò rỉ thông tin.
+1207	bounenkai	exam	忘年会	ぼうねんかい	tiệc cuối năm	会社の忘年会に参加した。	Tôi đã tham gia tiệc cuối năm của công ty.
+1208	bounenkai	daily	忘年会	ぼうねんかい	tiệc cuối năm	忘年会、いつやる?	Tiệc cuối năm khi nào tổ chức vậy?
+1209	bounenkai	business	忘年会	ぼうねんかい	tiệc cuối năm	忘年会の日程についてご案内いたします。	Xin thông báo về lịch trình tiệc cuối năm.
+1210	houhou	exam	方法	ほうほう	phương pháp	新しい方法を試してみた。	Tôi đã thử phương pháp mới.
+1211	houhou	daily	方法	ほうほう	phương pháp	もっといい方法ないかな。	Không biết có cách nào tốt hơn không nhỉ.
+1212	houhou	business	方法	ほうほう	phương pháp	効率的な作業方法をご提案いたします。	Chúng tôi xin đề xuất phương pháp làm việc hiệu quả.
+1213	houmon	exam	訪問	ほうもん	thăm	来週、取引先を訪問する。	Tuần sau tôi sẽ đến thăm đối tác.
+1214	houmon	daily	訪問	ほうもん	thăm	明日、おばあちゃん訪問するよ。	Mai tớ sẽ đi thăm bà đấy.
+1215	houmon	business	訪問	ほうもん	thăm	来月、貴社を訪問させていただきたく存じます。	Tháng sau tôi mong muốn được đến thăm quý công ty.
+1216	houritsu	exam	法律	ほうりつ	pháp luật	この法律は今年改正された。	Luật này đã được sửa đổi trong năm nay.
+1217	houritsu	daily	法律	ほうりつ	pháp luật	それ、法律違反じゃない?	Cái đó không vi phạm pháp luật chứ?
+1218	houritsu	business	法律	ほうりつ	pháp luật	本件は関連法律に基づいて対応いたします。	Chúng tôi sẽ xử lý việc này dựa trên các quy định pháp luật liên quan.
+1219	homesick	exam	ホームシック	ホームシック	nhớ nhà	留学中、ホームシックになった。	Trong thời gian du học, tôi đã bị nhớ nhà.
+1220	homesick	daily	ホームシック	ホームシック	nhớ nhà	最近ちょっとホームシックかも。	Dạo này có lẽ tớ hơi nhớ nhà.
+1221	homesick	business	ホームシック	ホームシック	nhớ nhà	海外赴任中の社員がホームシックになることもあります。	Nhân viên đi công tác nước ngoài cũng có lúc bị nhớ nhà.
+1222	homestay	exam	ホームステイ	ホームステイ	homestay	アメリカでホームステイを経験した。	Tôi đã trải nghiệm homestay ở Mỹ.
+1223	homestay	daily	ホームステイ	ホームステイ	homestay	来月、ホームステイするんだ。	Tháng sau tớ sẽ đi homestay đó.
+1224	homestay	business	ホームステイ	ホームステイ	homestay	研修生にはホームステイ先を手配いたします。	Chúng tôi sẽ sắp xếp nơi homestay cho thực tập sinh.
+1225	homepage	exam	ホームページ	ホームページ	trang web	会社のホームページを見た。	Tôi đã xem trang web của công ty.
+1226	homepage	daily	ホームページ	ホームページ	trang web	ホームページ、まだ更新されてないよ。	Trang web vẫn chưa được cập nhật đấy.
+1227	homepage	business	ホームページ	ホームページ	trang web	詳細は当社ホームページをご覧ください。	Xin vui lòng xem chi tiết trên trang web của công ty chúng tôi.
+1228	boshuu	exam	募集	ぼしゅう	tuyển	アルバイトを募集している。	Đang tuyển nhân viên làm thêm.
+1229	boshuu	daily	募集	ぼしゅう	tuyển	そのイベント、まだ募集してるの?	Sự kiện đó vẫn còn tuyển à?
+1230	boshuu	business	募集	ぼしゅう	tuyển	新卒採用を来週より募集開始いたします。	Chúng tôi sẽ bắt đầu tuyển dụng sinh viên mới ra trường từ tuần sau.
+1231	poster	exam	ポスター	ポスター	áp phích	壁にポスターを貼った。	Tôi đã dán áp phích lên tường.
+1232	poster	daily	ポスター	ポスター	áp phích	このポスター、かっこいいね。	Áp phích này ngầu ghê.
+1233	poster	business	ポスター	ポスター	áp phích	イベント告知用のポスターを作成しました。	Chúng tôi đã tạo áp phích để thông báo sự kiện.
+1234	hozon	exam	保存	ほぞん	bảo quản, lưu	写真をパソコンに保存した。	Tôi đã lưu ảnh vào máy tính.
+1235	hozon	daily	保存	ほぞん	bảo quản, lưu	このファイル、保存した?	Tệp này lưu chưa?
+1236	hozon	business	保存	ほぞん	bảo quản, lưu	データは定期的にバックアップとして保存しております。	Chúng tôi lưu dữ liệu định kỳ như bản sao lưu.
+1237	volunteer	exam	ボランティア	ボランティア	tình nguyện	週末はボランティアをしている。	Cuối tuần tôi làm tình nguyện.
+1238	volunteer	daily	ボランティア	ボランティア	tình nguyện	一緒にボランティア行かない?	Cùng đi tình nguyện không?
+1239	volunteer	business	ボランティア	ボランティア	tình nguyện	社員によるボランティア活動を推進しております。	Chúng tôi đang thúc đẩy hoạt động tình nguyện của nhân viên.
+1240	honsha	exam	本社	ほんしゃ	trụ sở chính	本社は東京にある。	Trụ sở chính ở Tokyo.
+1241	honsha	daily	本社	ほんしゃ	trụ sở chính	来月、本社に異動するんだ。	Tháng sau tớ sẽ chuyển đến trụ sở chính đó.
+1242	honsha	business	本社	ほんしゃ	trụ sở chính	本社にて説明会を開催いたします。	Chúng tôi sẽ tổ chức buổi giải thích tại trụ sở chính.
+1243	honmono	exam	本物	ほんもの	hàng thật	これは本物のダイヤモンドだ。	Đây là kim cương thật.
+1244	honmono	daily	本物	ほんもの	hàng thật	これ、本物?すごいね。	Cái này thật à? Ghê thật.
+1245	honmono	business	本物	ほんもの	hàng thật	本物の品質をお届けすることをお約束いたします。	Chúng tôi cam kết mang đến chất lượng đích thực.
+1246	honyaku	exam	翻訳	ほんやく	dịch	この本は日本語に翻訳された。	Cuốn sách này đã được dịch sang tiếng Nhật.
+1247	honyaku	daily	翻訳	ほんやく	dịch	この文章、翻訳してくれる?	Dịch giúp tớ đoạn văn này được không?
+1248	honyaku	business	翻訳	ほんやく	dịch	契約書の翻訳を専門業者に依頼いたしました。	Chúng tôi đã nhờ đơn vị chuyên nghiệp dịch hợp đồng.
+1249	mark	exam	マーク	マーク	đánh dấu, biểu tượng	重要な箇所にマークをつけた。	Tôi đã đánh dấu vào chỗ quan trọng.
+1250	mark	daily	マーク	マーク	đánh dấu, biểu tượng	このマーク、何の意味だろう。	Biểu tượng này có nghĩa là gì nhỉ.
+1251	mark	business	マーク	マーク	đánh dấu, biểu tượng	対象商品には専用マークが付いています。	Sản phẩm đối tượng có gắn biểu tượng riêng.
+1252	machiawase	exam	待ち合わせ	まちあわせ	hẹn gặp	駅前で待ち合わせをした。	Tôi đã hẹn gặp trước ga.
+1253	machiawase	daily	待ち合わせ	まちあわせ	hẹn gặp	待ち合わせ、何時にする?	Hẹn gặp lúc mấy giờ vậy?
+1254	machiawase	business	待ち合わせ	まちあわせ	hẹn gặp	お客様との待ち合わせ場所を変更いたします。	Chúng tôi sẽ thay đổi địa điểm hẹn gặp với khách hàng.
+1255	mannermode	exam	マナーモード	マナーモード	chế độ im lặng	映画館ではマナーモードにする。	Ở rạp phim thì chuyển sang chế độ im lặng.
+1256	mannermode	daily	マナーモード	マナーモード	chế độ im lặng	携帯、マナーモードにしといて。	Để điện thoại chế độ im lặng giúp tớ nhé.
+1257	mannermode	business	マナーモード	マナーモード	chế độ im lặng	会議中は携帯をマナーモードに設定してください。	Trong lúc họp, xin vui lòng để điện thoại ở chế độ im lặng.
+1258	manual	exam	マニュアル	マニュアル	hướng dẫn sử dụng	マニュアルを読んでから操作した。	Tôi đã đọc sách hướng dẫn trước khi vận hành.
+1259	manual	daily	マニュアル	マニュアル	hướng dẫn sử dụng	マニュアル通りにやったのに動かない。	Đã làm đúng theo hướng dẫn mà vẫn không chạy.
+1260	manual	business	マニュアル	マニュアル	hướng dẫn sử dụng	新入社員用のマニュアルを作成いたしました。	Chúng tôi đã tạo sổ tay hướng dẫn cho nhân viên mới.

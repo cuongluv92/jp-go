@@ -1,0 +1,181 @@
+row	vocabId	type	word	reading	meaningVi	exampleJp	exampleVi
+4681	mezasu	exam	目指す	めざす	nhắm đến, hướng tới	医者を目指している。	Đang hướng đến trở thành bác sĩ.
+4682	mezasu	daily	目指す	めざす	nhắm đến, hướng tới	頂上を目指した。	Đã nhắm đến đỉnh núi.
+4683	mezasu	business	目指す	めざす	nhắm đến, hướng tới	業界トップを目指す方針だ。	Đây là phương châm nhắm đến vị trí hàng đầu ngành.
+4684	medatsu	exam	目立つ	めだつ	nổi bật	彼の服装は目立った。	Trang phục của anh ấy rất nổi bật.
+4685	medatsu	daily	目立つ	めだつ	nổi bật	最近ミスが目立ってきた。	Gần đây lỗi sai xuất hiện nổi bật hơn.
+4686	medatsu	business	目立つ	めだつ	nổi bật	このデザインは目立つ色を使っている。	Thiết kế này sử dụng màu sắc nổi bật.
+4687	moushikomu	exam	申し込む	もうしこむ	đăng ký, xin đăng ký	講座に申し込んだ。	Đã đăng ký khóa học.
+4688	moushikomu	daily	申し込む	もうしこむ	đăng ký, xin đăng ký	セミナーに申し込んでおいた。	Đã đăng ký hội thảo trước rồi.
+4689	moushikomu	business	申し込む	もうしこむ	đăng ký, xin đăng ký	来週までに参加を申し込む必要がある。	Cần đăng ký tham gia trước tuần sau.
+4690	modosu2	exam	戻す	もどす	trả lại, đưa về (vị trí cũ)	本を棚に戻した。	Đã trả sách về giá.
+4691	modosu2	daily	戻す	もどす	trả lại, đưa về (vị trí cũ)	椅子を元の位置に戻しておいた。	Đã đặt ghế về vị trí cũ trước.
+4692	modosu2	business	戻す	もどす	trả lại, đưa về (vị trí cũ)	設定を初期値に戻す必要がある。	Cần đưa cài đặt về giá trị mặc định.
+4693	moyasu	exam	燃やす	もやす	đốt	落ち葉を燃やした。	Đã đốt lá rụng.
+4694	moyasu	daily	燃やす	もやす	đốt	ゴミを燃やしてはいけない。	Không được đốt rác.
+4695	moyasu	business	燃やす	もやす	đốt	情熱を燃やす人を応援する。	Cổ vũ những người đang cháy hết mình vì đam mê.
+4696	yakusu	exam	訳す	やくす	dịch (ngôn ngữ)	英語を日本語に訳した。	Đã dịch tiếng Anh sang tiếng Nhật.
+4697	yakusu	daily	訳す	やくす	dịch (ngôn ngữ)	この文章を訳してもらえますか。	Bạn có thể dịch giúp đoạn văn này không?
+4698	yakusu	business	訳す	やくす	dịch (ngôn ngữ)	契約書を正確に訳す必要がある。	Cần dịch hợp đồng một cách chính xác.
+4699	yakunitatsu	exam	役に立つ	やくにたつ	có ích, hữu ích	この本はとても役に立った。	Cuốn sách này rất hữu ích.
+4700	yakunitatsu	daily	役に立つ	やくにたつ	có ích, hữu ích	その情報が役に立っている。	Thông tin đó đang có ích.
+4701	yakunitatsu	business	役に立つ	やくにたつ	có ích, hữu ích	この資料は新人教育の役に立つはずです。	Tài liệu này hẳn sẽ hữu ích cho việc đào tạo nhân viên mới.
+4702	yasumeru	exam	休める	やすめる	cho nghỉ ngơi	少し体を休めた。	Đã cho cơ thể nghỉ ngơi một chút.
+4703	yasumeru	daily	休める	やすめる	cho nghỉ ngơi	目を休めてから作業を続けた。	Cho mắt nghỉ ngơi rồi tiếp tục làm việc.
+4704	yasumeru	business	休める	やすめる	cho nghỉ ngơi	週末はゆっくり心身を休める予定だ。	Cuối tuần dự định để tâm hồn và cơ thể nghỉ ngơi thoải mái.
+4705	yatou	exam	雇う	やとう	thuê, tuyển dụng	新しい社員を雇った。	Đã tuyển nhân viên mới.
+4706	yatou	daily	雇う	やとう	thuê, tuyển dụng	アルバイトを雇っている。	Đang thuê nhân viên làm thêm.
+4707	yatou	business	雇う	やとう	thuê, tuyển dụng	来月から人を雇う予定だ。	Dự định thuê người từ tháng sau.
+4708	yabureru	exam	破れる	やぶれる	rách, bị xé	ズボンが破れてしまった。	Quần bị rách mất rồi.
+4709	yabureru	daily	破れる	やぶれる	rách, bị xé	紙が破れた。	Giấy đã bị rách.
+4710	yabureru	business	破れる	やぶれる	rách, bị xé	商品の包装が破れております。	Bao bì sản phẩm đang bị rách.
+4711	yuzuru	exam	譲る	ゆずる	nhường, chuyển giao	席をお年寄りに譲った。	Đã nhường ghế cho người già.
+4712	yuzuru	daily	譲る	ゆずる	nhường, chuyển giao	自分の意見を譲らなかった。	Đã không nhượng bộ ý kiến của mình.
+4713	yuzuru	business	譲る	ゆずる	nhường, chuyển giao	事業を息子に譲る計画だ。	Đây là kế hoạch chuyển giao công việc kinh doanh cho con trai.
+4714	yuderu	exam	ゆでる	ゆでる	luộc	卵をゆでた。	Đã luộc trứng.
+4715	yuderu	daily	ゆでる	ゆでる	luộc	パスタをゆでて食べる。	Luộc mì Ý rồi ăn.
+4716	yuderu	business	ゆでる	ゆでる	luộc	野菜をさっとゆでる調理法だ。	Đây là cách nấu luộc sơ rau củ.
+4717	yurusu	exam	許す	ゆるす	tha thứ, cho phép	彼を許した。	Đã tha thứ cho anh ấy.
+4718	yurusu	daily	許す	ゆるす	tha thứ, cho phép	時間が許せば行きたい。	Nếu thời gian cho phép thì tôi muốn đi.
+4719	yurusu	business	許す	ゆるす	tha thứ, cho phép	この行為は決して許すべきではない。	Hành vi này tuyệt đối không nên tha thứ.
+4720	yureru	exam	揺れる	ゆれる	rung, lắc, lay động	電車が大きく揺れた。	Tàu điện đã rung lắc mạnh.
+4721	yureru	daily	揺れる	ゆれる	rung, lắc, lay động	木の枝が風で揺れている。	Cành cây đang lay động vì gió.
+4722	yureru	business	揺れる	ゆれる	rung, lắc, lay động	地震で建物が揺れる恐れがある。	Có nguy cơ tòa nhà rung lắc do động đất.
+4723	you2	exam	酔う	よう	say (rượu, xe)	お酒に酔ってしまった。	Đã say rượu mất rồi.
+4724	you2	daily	酔う	よう	say (rượu, xe)	車に酔った。	Đã bị say xe.
+4725	you2	business	酔う	よう	say (rượu, xe)	彼はすぐに酔う体質だ。	Anh ấy có thể trạng dễ say.
+4726	yogosu	exam	汚す	よごす	làm bẩn, làm ô nhiễm	服を泥で汚してしまった。	Đã làm bẩn quần áo bằng bùn mất rồi.
+4727	yogosu	daily	汚す	よごす	làm bẩn, làm ô nhiễm	壁を汚した。	Đã làm bẩn tường.
+4728	yogosu	business	汚す	よごす	làm bẩn, làm ô nhiễm	環境を汚す行為をやめるべきだ。	Nên dừng hành vi gây ô nhiễm môi trường.
+4729	yowamaru	exam	弱まる	よわまる	yếu đi, suy yếu	台風の勢いが弱まった。	Sức mạnh của cơn bão đã yếu đi.
+4730	yowamaru	daily	弱まる	よわまる	yếu đi, suy yếu	痛みが少し弱まってきた。	Cơn đau đã bắt đầu dịu bớt.
+4731	yowamaru	business	弱まる	よわまる	yếu đi, suy yếu	今後、風は弱まる見込みです。	Dự kiến gió sẽ yếu đi trong thời gian tới.
+4732	wakeru	exam	分ける	わける	chia, phân chia	ケーキを三つに分けた。	Đã chia bánh làm ba phần.
+4733	wakeru	daily	分ける	わける	chia, phân chia	グループを二つに分けて作業した。	Chia nhóm làm hai rồi làm việc.
+4734	wakeru	business	分ける	わける	chia, phân chia	利益を公平に分ける必要がある。	Cần chia lợi nhuận một cách công bằng.
+4735	waru	exam	割る	わる	làm vỡ, chia (toán)	コップを割ってしまった。	Đã làm vỡ cốc mất rồi.
+4736	waru	daily	割る	わる	làm vỡ, chia (toán)	卵を割ってボウルに入れた。	Đập trứng rồi cho vào tô.
+4737	waru	business	割る	わる	làm vỡ, chia (toán)	十を二で割ると五になる。	10 chia cho 2 thì bằng 5.
+4738	asai	exam	浅い	あさい	nông, cạn	このプールは浅い。	Hồ bơi này nông.
+4739	asai	daily	浅い	あさい	nông, cạn	川が浅くて渡れた。	Vì sông nông nên đã lội qua được.
+4740	asai	business	浅い	あさい	nông, cạn	経験が浅いため慎重に対応する。	Vì kinh nghiệm còn non nên xử lý thận trọng.
+4741	erai	exam	偉い	えらい	giỏi, vĩ đại, đáng khen	彼は本当に偉い人だ。	Anh ấy thực sự là người vĩ đại.
+4742	erai	daily	偉い	えらい	giỏi, vĩ đại, đáng khen	一人で全部やるなんて偉いね。	Tự làm hết một mình, giỏi thật đấy.
+4743	erai	business	偉い	えらい	giỏi, vĩ đại, đáng khen	役職が上がって偉くなっても、部下の意見を聞く姿勢が大切です。	Dù lên chức và có địa vị cao hơn, việc lắng nghe ý kiến cấp dưới vẫn rất quan trọng.
+4744	okashii1	exam	おかしい①	おかしい	buồn cười, hài hước	その話はとてもおかしかった。	Câu chuyện đó rất buồn cười.
+4745	okashii1	daily	おかしい①	おかしい	buồn cười, hài hước	彼の顔がおかしくて笑った。	Mặt anh ấy buồn cười nên tôi đã cười.
+4746	okashii1	business	おかしい①	おかしい	buồn cười, hài hước	懇親会で部長がおかしい話をして、みんなを笑わせました。	Trong buổi giao lưu, trưởng phòng kể một câu chuyện hài hước khiến mọi người bật cười.
+4747	okashii2	exam	おかしい②	おかしい	kỳ lạ, bất thường	機械の音がおかしい。	Tiếng máy nghe có vẻ lạ.
+4748	okashii2	daily	おかしい②	おかしい	kỳ lạ, bất thường	最近彼の様子がおかしかった。	Gần đây dáng vẻ anh ấy có vẻ khác lạ.
+4749	okashii2	business	おかしい②	おかしい	kỳ lạ, bất thường	この数値はおかしくないか確認してください。	Vui lòng kiểm tra xem con số này có bất thường không.
+4750	osoroshii	exam	恐ろしい	おそろしい	đáng sợ	恐ろしい事故が起きた。	Đã xảy ra vụ tai nạn đáng sợ.
+4751	osoroshii	daily	恐ろしい	おそろしい	đáng sợ	あの映画は本当に恐ろしかった。	Bộ phim đó thực sự đáng sợ.
+4752	osoroshii	business	恐ろしい	おそろしい	đáng sợ	工場で恐ろしい事故を起こさないよう、安全確認を徹底しています。	Chúng tôi kiểm tra an toàn nghiêm ngặt để không xảy ra tai nạn đáng sợ trong nhà máy.
+4753	otonashii	exam	おとなしい	おとなしい	ngoan, hiền lành	彼女はとてもおとなしい性格だ。	Cô ấy có tính cách rất hiền lành.
+4754	otonashii	daily	おとなしい	おとなしい	ngoan, hiền lành	子供の頃はおとなしかった。	Hồi nhỏ tôi rất ngoan.
+4755	otonashii	business	おとなしい	おとなしい	ngoan, hiền lành	この犬はおとなしいので、診察しやすいです。	Con chó này hiền nên khá dễ khám.
+4756	kayui	exam	かゆい	かゆい	ngứa	背中がかゆい。	Lưng bị ngứa.
+4757	kayui	daily	かゆい	かゆい	ngứa	蚊に刺されてかゆかった。	Bị muỗi đốt nên ngứa.
+4758	kayui	business	かゆい	かゆい	ngứa	作業中に手がかゆくなったので、保護手袋を交換しました。	Trong lúc làm việc tay tôi bị ngứa nên đã thay găng bảo hộ.
+4759	kitsui	exam	きつい	きつい	chật, khắt khe, mệt	この靴はきつい。	Đôi giày này chật.
+4760	kitsui	daily	きつい	きつい	chật, khắt khe, mệt	スケジュールがきつかった。	Lịch trình đã khá gấp gáp.
+4761	kitsui	business	きつい	きつい	chật, khắt khe, mệt	今月は納期がきついので、作業の優先順位を見直します。	Tháng này thời hạn khá gấp nên chúng tôi sẽ xem lại thứ tự ưu tiên công việc.
+4762	kibishii	exam	厳しい	きびしい	nghiêm khắc	先生は厳しい人だ。	Giáo viên là người nghiêm khắc.
+4763	kibishii	daily	厳しい	きびしい	nghiêm khắc	昔は規則が厳しかった。	Ngày xưa quy tắc rất nghiêm ngặt.
+4764	kibishii	business	厳しい	きびしい	nghiêm khắc	状況は厳しくなる一方だ。	Tình hình chỉ có ngày càng khó khăn hơn.
+4765	kusai	exam	臭い	くさい	hôi	このゴミは臭い。	Đống rác này hôi.
+4766	kusai	daily	臭い	くさい	hôi	靴下が臭かった。	Đôi tất đã bị hôi.
+4767	kusai	business	臭い	くさい	hôi	倉庫が臭かったので、換気設備を点検しました。	Vì kho có mùi hôi nên chúng tôi đã kiểm tra hệ thống thông gió.
+4768	kuyashii	exam	悔しい	くやしい	tiếc, cay cú	試合に負けて悔しい。	Thua trận đấu nên rất tiếc.
+4769	kuyashii	daily	悔しい	くやしい	tiếc, cay cú	あの時は本当に悔しかった。	Lúc đó thực sự rất cay cú.
+4770	kuyashii	business	悔しい	くやしい	tiếc, cay cú	受注を逃して悔しいですが、原因を分析して次に生かします。	Tôi rất tiếc vì để tuột đơn hàng, nhưng sẽ phân tích nguyên nhân để rút kinh nghiệm cho lần sau.
+4771	kurushii	exam	苦しい	くるしい	khó thở, khổ sở	息が苦しい。	Thở khó khăn.
+4772	kurushii	daily	苦しい	くるしい	khó thở, khổ sở	生活が苦しかった時期がある。	Có một thời kỳ cuộc sống khó khăn.
+4773	kurushii	business	苦しい	くるしい	khó thở, khổ sở	経営が苦しくて資金を借りた。	Kinh doanh khó khăn nên đã vay vốn.
+4774	kuwashii	exam	詳しい	くわしい	chi tiết, rành, am hiểu	彼は歴史に詳しい。	Anh ấy rành về lịch sử.
+4775	kuwashii	daily	詳しい	くわしい	chi tiết, rành, am hiểu	もっと詳しかったら教えてほしい。	Nếu biết chi tiết hơn thì hãy chỉ cho tôi.
+4776	kuwashii	business	詳しい	くわしい	chi tiết, rành, am hiểu	詳しくご説明いたします。	Tôi xin giải thích chi tiết.
+4777	koi	exam	濃い	こい	đậm	このコーヒーは濃い。	Ly cà phê này đậm.
+4778	koi	daily	濃い	こい	đậm	昔より色が濃かった。	Màu đậm hơn trước.
+4779	koi	business	濃い	こい	đậm	試作品は味が濃いため、配合を調整します。	Vì mẫu thử có vị quá đậm nên chúng tôi sẽ điều chỉnh tỷ lệ pha trộn.
+4780	komakai	exam	細かい	こまかい	nhỏ, chi tiết, tỉ mỉ	字が細かい。	Chữ nhỏ.
+4781	komakai	daily	細かい	こまかい	nhỏ, chi tiết, tỉ mỉ	説明が細かかった。	Phần giải thích đã rất chi tiết.
+4782	komakai	business	細かい	こまかい	nhỏ, chi tiết, tỉ mỉ	細かい点まで確認してから資料を提出してください。	Hãy kiểm tra cả những chi tiết nhỏ rồi mới nộp tài liệu.
+4783	shiokarai	exam	塩辛い	しおからい	mặn	このスープは塩辛い。	Món súp này mặn.
+4784	shiokarai	daily	塩辛い	しおからい	mặn	昨日の料理は塩辛かった。	Món ăn hôm qua đã mặn.
+4785	shiokarai	business	塩辛い	しおからい	mặn	試作品が塩辛かったので、味付けを調整しました。	Vì mẫu thử bị mặn nên chúng tôi đã điều chỉnh gia vị.
+4786	shikakui	exam	四角い	しかくい	vuông	この箱は四角い。	Cái hộp này vuông.
+4787	shikakui	daily	四角い	しかくい	vuông	昔は四角かった時計だ。	Đây là chiếc đồng hồ ngày xưa có hình vuông.
+4788	shikakui	business	四角い	しかくい	vuông	この部品は四角いので、向きを確認して取り付けてください。	Bộ phận này có dạng vuông, hãy kiểm tra hướng rồi lắp vào.
+4789	shikataganai	exam	しかた（が）ない	しかたがない	không còn cách nào khác	遅れたのはしかたがない。	Bị trễ thì cũng không còn cách nào khác.
+4790	shikataganai	daily	しかた（が）ない	しかたがない	không còn cách nào khác	忙しくてしかたがなかった。	Bận rộn đến mức không thể làm gì khác.
+4791	shikataganai	business	しかた（が）ない	しかたがない	không còn cách nào khác	今回はしかたがないと判断した。	Lần này đã phán đoán rằng không còn cách nào khác.
+4792	suppai	exam	酸っぱい	すっぱい	chua	このレモンは酸っぱい。	Quả chanh này chua.
+4793	suppai	daily	酸っぱい	すっぱい	chua	昨日の梅干しは酸っぱかった。	Quả mơ muối hôm qua đã chua.
+4794	suppai	business	酸っぱい	すっぱい	chua	この試作品は少し酸っぱいので、配合を見直します。	Mẫu thử này hơi chua nên chúng tôi sẽ xem lại tỷ lệ pha trộn.
+4795	tsurai	exam	つらい	つらい	khó khăn, đau khổ	別れはつらい。	Chia ly thật đau khổ.
+4796	tsurai	daily	つらい	つらい	khó khăn, đau khổ	あの時期は本当につらかった。	Thời kỳ đó thực sự rất khó khăn.
+4797	tsurai	business	つらい	つらい	khó khăn, đau khổ	繁忙期はつらいですが、交代で休憩を取っています。	Mùa cao điểm khá vất vả, nhưng chúng tôi thay phiên nhau nghỉ giải lao.
+4798	natsukashii	exam	懐かしい	なつかしい	nhớ, hoài niệm	この写真を見ると懐かしい。	Nhìn tấm ảnh này thấy nhớ nhung.
+4799	natsukashii	daily	懐かしい	なつかしい	nhớ, hoài niệm	昔の歌を聞いて懐かしかった。	Nghe bài hát ngày xưa thấy hoài niệm.
+4800	natsukashii	business	懐かしい	なつかしい	nhớ, hoài niệm	昔の製品カタログを見ると、懐かしい気持ちになります。	Nhìn catalog sản phẩm cũ khiến tôi có cảm giác hoài niệm.
+4801	nurui	exam	ぬるい	ぬるい	ấm, hơi nguội	お茶がぬるい。	Trà bị nguội.
+4802	nurui	daily	ぬるい	ぬるい	ấm, hơi nguội	お風呂がぬるかった。	Nước tắm đã hơi nguội.
+4803	nurui	business	ぬるい	ぬるい	ấm, hơi nguội	お客様からスープがぬるいと指摘があり、作り直しました。	Khách phản ánh súp bị nguội nên chúng tôi đã làm lại.
+4804	hidoi	exam	ひどい	ひどい	tệ, tồi tệ	今日の天気はひどい。	Thời tiết hôm nay rất tệ.
+4805	hidoi	daily	ひどい	ひどい	tệ, tồi tệ	昨日の事故はひどかった。	Vụ tai nạn hôm qua thật khủng khiếp.
+4806	hidoi	business	ひどい	ひどい	tệ, tồi tệ	対応がひどくてクレームになった。	Cách xử lý tệ nên đã dẫn đến khiếu nại.
+4807	hosonagai	exam	細長い	ほそながい	thon dài	この箱は細長い。	Cái hộp này thon dài.
+4808	hosonagai	daily	細長い	ほそながい	thon dài	昔の建物は細長かった。	Tòa nhà ngày xưa đã thon dài.
+4809	hosonagai	business	細長い	ほそながい	thon dài	細長くて運びにくい形だ。	Đây là hình dạng thon dài nên khó mang vác.
+4810	mazushii	exam	貧しい	まずしい	nghèo	昔は貧しい生活だった。	Ngày xưa cuộc sống nghèo khó.
+4811	mazushii	daily	貧しい	まずしい	nghèo	あの国は貧しかった。	Đất nước đó đã từng nghèo.
+4812	mazushii	business	貧しい	まずしい	nghèo	経済的に貧しい地域への支援を続けています。	Chúng tôi tiếp tục hỗ trợ những khu vực khó khăn về kinh tế.
+4813	mushiatsui	exam	蒸し暑い	むしあつい	oi bức	今日は蒸し暑い。	Hôm nay oi bức.
+4814	mushiatsui	daily	蒸し暑い	むしあつい	oi bức	昨日はとても蒸し暑かった。	Hôm qua rất oi bức.
+4815	mushiatsui	business	蒸し暑い	むしあつい	oi bức	倉庫内が蒸し暑いので、換気を強めました。	Trong kho oi bức nên chúng tôi đã tăng thông gió.
+4816	mezurashii	exam	珍しい	めずらしい	hiếm	これは珍しい花だ。	Đây là loài hoa hiếm.
+4817	mezurashii	daily	珍しい	めずらしい	hiếm	こんなに雪が降るのは珍しかった。	Tuyết rơi nhiều như thế này quả là hiếm.
+4818	mezurashii	business	珍しい	めずらしい	hiếm	珍しく部長が朝礼に遅れました。	Hiếm khi thấy trưởng phòng đến muộn buổi họp đầu giờ như hôm nay.
+4819	moushiwakenai	exam	申し訳ない	もうしわけない	xin lỗi, thật có lỗi	ご迷惑をおかけして申し訳ない。	Xin lỗi vì đã gây phiền phức.
+4820	moushiwakenai	daily	申し訳ない	もうしわけない	xin lỗi, thật có lỗi	遅れて本当に申し訳なかった。	Thực sự xin lỗi vì đã đến trễ.
+4821	moushiwakenai	business	申し訳ない	もうしわけない	xin lỗi, thật có lỗi	対応が遅れたことを申し訳なく思っております。	Chúng tôi cảm thấy rất áy náy vì việc phản hồi chậm trễ.
+4822	mottainai	exam	もったいない	もったいない	lãng phí, phí phạm	食べ物を捨てるのはもったいない。	Vứt bỏ đồ ăn thì thật lãng phí.
+4823	mottainai	daily	もったいない	もったいない	lãng phí, phí phạm	使わないのはもったいなかった。	Không dùng thì thật là phí.
+4824	mottainai	business	もったいない	もったいない	lãng phí, phí phạm	まだ使える部品を捨てるのはもったいないです。	Vứt những linh kiện vẫn còn dùng được thì thật lãng phí.
+4825	monosugoi	exam	ものすごい	ものすごい	khủng khiếp, ghê gớm	ものすごい人だかりだった。	Đám đông thật khủng khiếp.
+4826	monosugoi	daily	ものすごい	ものすごい	khủng khiếp, ghê gớm	昨日はものすごく暑かった。	Hôm qua nóng kinh khủng.
+4827	monosugoi	business	ものすごい	ものすごい	khủng khiếp, ghê gớm	注文数がものすごい勢いで増えています。	Số đơn hàng đang tăng với tốc độ khủng khiếp.
+4828	igai	exam	意外	いがい	bất ngờ	結果は意外だった。	Kết quả thật bất ngờ.
+4829	igai	daily	意外	いがい	bất ngờ	意外な人が来た。	Một người bất ngờ đã đến.
+4830	igai	business	意外	いがい	bất ngờ	この提案は意外に好評だった。	Đề xuất này bất ngờ được đánh giá cao.
+4831	ijou	exam	異常	いじょう	bất thường	体温が異常だ。	Thân nhiệt bất thường.
+4832	ijou	daily	異常	いじょう	bất thường	異常な暑さが続いている。	Cái nóng bất thường vẫn tiếp diễn.
+4833	ijou	business	異常	いじょう	bất thường	システムに異常が発生しました。	Đã xảy ra sự cố bất thường trong hệ thống.
+4834	ippanteki	exam	一般的	いっぱんてき	thông thường, phổ biến	これは一般的な考え方だ。	Đây là cách nghĩ thông thường.
+4835	ippanteki	daily	一般的	いっぱんてき	thông thường, phổ biến	その方法は一般的だ。	Phương pháp đó khá phổ biến.
+4836	ippanteki	business	一般的	いっぱんてき	thông thường, phổ biến	一般的に、この時期は忙しい。	Nhìn chung, thời điểm này khá bận rộn.
+4837	odayaka	exam	穏やか	おだやか	êm đềm, ôn hòa	今日は海が穏やかだ。	Hôm nay biển êm đềm.
+4838	odayaka	daily	穏やか	おだやか	êm đềm, ôn hòa	彼は穏やかな性格だ。	Anh ấy có tính cách ôn hòa.
+4839	odayaka	business	穏やか	おだやか	êm đềm, ôn hòa	会議は穏やかに進んだ。	Cuộc họp diễn ra êm đềm.
+4840	kakujitsu	exam	確実	かくじつ	chắc chắn	成功は確実だ。	Thành công là chắc chắn.
+4841	kakujitsu	daily	確実	かくじつ	chắc chắn	確実な情報を集めた。	Đã thu thập thông tin chắc chắn.
+4842	kakujitsu	business	確実	かくじつ	chắc chắn	契約を確実に履行してください。	Vui lòng thực hiện hợp đồng một cách chắc chắn.
+4843	katte	exam	勝手	かって	tùy tiện, ích kỷ	それは勝手な行動だ。	Đó là hành động tùy tiện.
+4844	katte	daily	勝手	かって	tùy tiện, ích kỷ	彼は勝手だと言われた。	Anh ấy bị nói là ích kỷ.
+4845	katte	business	勝手	かって	tùy tiện, ích kỷ	勝手に変更しないでください。	Xin đừng tự ý thay đổi.
+4846	kanou	exam	可能	かのう	có thể	それは可能だ。	Điều đó là có thể.
+4847	kanou	daily	可能	かのう	có thể	可能な限り協力する。	Sẽ hợp tác trong khả năng có thể.
+4848	kanou	business	可能	かのう	có thể	納期を短縮することは可能ですか。	Có thể rút ngắn thời hạn giao hàng không?
+4849	kawaisou	exam	かわいそう	かわいそう	đáng thương	あの子はかわいそうだ。	Đứa trẻ đó thật đáng thương.
+4850	kawaisou	daily	かわいそう	かわいそう	đáng thương	かわいそうな犬を保護した。	Đã cứu giúp chú chó đáng thương.
+4851	kawaisou	business	かわいそう	かわいそう	đáng thương	困っている新人をかわいそうに思うだけでなく、業務を手伝いました。	Tôi không chỉ thấy thương nhân viên mới đang gặp khó mà còn giúp họ làm việc.
+4852	ganko	exam	頑固	がんこ	cứng đầu, ngoan cố	祖父は頑固だ。	Ông tôi rất cứng đầu.
+4853	ganko	daily	頑固	がんこ	cứng đầu, ngoan cố	頑固な性格を直したい。	Muốn sửa tính cứng đầu của mình.
+4854	ganko	business	頑固	がんこ	cứng đầu, ngoan cố	彼は頑固に意見を変えなかった。	Anh ấy ngoan cố không chịu thay đổi ý kiến.
+4855	kanzen	exam	完全	かんぜん	hoàn toàn	この修理は完全だ。	Việc sửa chữa này hoàn hảo.
+4856	kanzen	daily	完全	かんぜん	hoàn toàn	完全な失敗だった。	Đó là một thất bại hoàn toàn.
+4857	kanzen	business	完全	かんぜん	hoàn toàn	問題を完全に解決した。	Đã giải quyết hoàn toàn vấn đề.
+4858	kyakkanteki	exam	客観的	きゃっかんてき	khách quan	その意見は客観的だ。	Ý kiến đó khách quan.
+4859	kyakkanteki	daily	客観的	きゃっかんてき	khách quan	客観的なデータが必要だ。	Cần có dữ liệu khách quan.
+4860	kyakkanteki	business	客観的	きゃっかんてき	khách quan	状況を客観的に分析する。	Phân tích tình hình một cách khách quan.

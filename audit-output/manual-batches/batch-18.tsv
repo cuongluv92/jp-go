@@ -1,0 +1,181 @@
+row	vocabId	type	word	reading	meaningVi	exampleJp	exampleVi
+3061	taiyou	exam	太陽	たいよう	mặt trời	太陽が眩しい。	Mặt trời chói mắt.
+3062	taiyou	daily	太陽	たいよう	mặt trời	今日、太陽出てないね。	Hôm nay không thấy mặt trời nhỉ.
+3063	taiyou	business	太陽	たいよう	mặt trời	太陽光発電システムを導入いたしました。	Chúng tôi đã triển khai hệ thống điện mặt trời.
+3064	tairiku	exam	大陸	たいりく	châu lục	アフリカ大陸を旅した。	Tôi đã du lịch qua châu lục Châu Phi.
+3065	tairiku	daily	大陸	たいりく	châu lục	どの大陸に行ってみたい?	Cậu muốn đi châu lục nào?
+3066	tairiku	business	大陸	たいりく	châu lục	南米大陸への事業展開を検討しております。	Chúng tôi đang xem xét mở rộng kinh doanh sang châu lục Nam Mỹ.
+3067	tane	exam	種	たね	hạt giống	花の種をまいた。	Tôi đã gieo hạt giống hoa.
+3068	tane	daily	種	たね	hạt giống	この種、何の花になるの?	Hạt giống này sẽ nở thành hoa gì vậy?
+3069	tane	business	種	たね	hạt giống	新品種の種を試験栽培しております。	Chúng tôi đang trồng thử nghiệm hạt giống giống mới.
+3070	dansui	exam	断水	だんすい	mất nước	工事のため断水になった。	Vì thi công nên bị mất nước.
+3071	dansui	daily	断水	だんすい	mất nước	今日、断水するらしいよ。	Nghe nói hôm nay bị mất nước đấy.
+3072	dansui	business	断水	だんすい	mất nước	断水のお知らせを掲示板に貼りました。	Chúng tôi đã dán thông báo mất nước lên bảng thông báo.
+3073	tanbo	exam	田んぼ	たんぼ	ruộng lúa	田んぼで米を作っている。	Tôi trồng lúa ở ruộng lúa.
+3074	tanbo	daily	田んぼ	たんぼ	ruộng lúa	田んぼに水が入ると、景色がきれいだね。	Khi ruộng lúa có nước, phong cảnh đẹp nhỉ.
+3075	tanbo	business	田んぼ	たんぼ	ruộng lúa	田んぼを活用した観光事業を計画しております。	Chúng tôi đang lên kế hoạch kinh doanh du lịch tận dụng ruộng lúa.
+3076	chikyuu	exam	地球	ちきゅう	trái đất	地球は丸い。	Trái đất tròn.
+3077	chikyuu	daily	地球	ちきゅう	trái đất	地球にやさしい生活しようよ。	Sống thân thiện với trái đất đi.
+3078	chikyuu	business	地球	ちきゅう	trái đất	地球環境に配慮した経営を目指しております。	Chúng tôi hướng đến kinh doanh quan tâm đến môi trường trái đất.
+3079	chuuihou	exam	注意報	ちゅういほう	cảnh báo	大雪注意報が発表された。	Cảnh báo tuyết lớn đã được công bố.
+3080	chuuihou	daily	注意報	ちゅういほう	cảnh báo	注意報、出てるね。気をつけて。	Có cảnh báo rồi đấy. Cẩn thận nhé.
+3081	chuuihou	business	注意報	ちゅういほう	cảnh báo	注意報発令時の対応手順を確認しております。	Chúng tôi đang kiểm tra quy trình ứng phó khi có cảnh báo.
+3082	tsuchi	exam	土	つち	đất	土を耕して野菜を植えた。	Tôi đã cày đất rồi trồng rau.
+3083	tsuchi	daily	土	つち	đất	靴に土がついてるよ。	Đất dính vào giày cậu kìa.
+3084	tsuchi	business	土	つち	đất	土壌の状態を分析し栽培計画を立てております。	Chúng tôi đang phân tích tình trạng đất để lập kế hoạch canh tác.
+3085	tsunami	exam	津波	つなみ	sóng thần	地震の後、津波が来た。	Sau động đất, sóng thần đã ập đến.
+3086	tsunami	daily	津波	つなみ	sóng thần	津波警報、出てるよ。	Có cảnh báo sóng thần rồi đấy.
+3087	tsunami	business	津波	つなみ	sóng thần	津波避難訓練を定期的に実施しております。	Chúng tôi tổ chức diễn tập sơ tán sóng thần định kỳ.
+3088	tsuyu	exam	梅雨	つゆ	mùa mưa	梅雨は雨が多い。	Mùa mưa có nhiều mưa.
+3089	tsuyu	daily	梅雨	つゆ	mùa mưa	そろそろ梅雨だね。	Sắp đến mùa mưa rồi nhỉ.
+3090	tsuyu	business	梅雨	つゆ	mùa mưa	梅雨時期の湿気対策商品を発売いたします。	Chúng tôi sẽ bán sản phẩm chống ẩm cho mùa mưa.
+3091	teiden	exam	停電	ていでん	mất điện	台風で停電した。	Vì bão nên bị mất điện.
+3092	teiden	daily	停電	ていでん	mất điện	停電、いつ直るの?	Khi nào thì có điện lại vậy?
+3093	teiden	business	停電	ていでん	mất điện	停電時の対応マニュアルを整備しております。	Chúng tôi đang hoàn thiện sổ tay ứng phó khi mất điện.
+3094	densen	exam	電線	でんせん	dây điện	電線に鳥がとまっている。	Có con chim đậu trên dây điện.
+3095	densen	daily	電線	でんせん	dây điện	電線、切れかけてるよ。	Dây điện sắp đứt rồi kìa.
+3096	densen	business	電線	でんせん	dây điện	電線の点検作業を実施いたします。	Chúng tôi sẽ thực hiện công việc kiểm tra dây điện.
+3097	doro	exam	泥	どろ	bùn	雨で靴が泥だらけになった。	Giày bị dính đầy bùn vì mưa.
+3098	doro	daily	泥	どろ	bùn	泥、ついちゃったよ。	Bị dính bùn rồi đấy.
+3099	doro	business	泥	どろ	bùn	作業員の靴には泥が付着しておりました。	Giày của công nhân đã dính bùn.
+3100	nami	exam	波	なみ	sóng	海の波が高い。	Sóng biển cao.
+3101	nami	daily	波	なみ	sóng	波、大きいね。	Sóng lớn thật nhỉ.
+3102	nami	business	波	なみ	sóng	波の高さに関する注意報が出ております。	Đã có cảnh báo liên quan đến độ cao sóng.
+3103	nisankatanso	exam	二酸化炭素	にさんかたんそ	khí CO2	二酸化炭素の排出を減らす。	Giảm lượng khí thải CO2.
+3104	nisankatanso	daily	二酸化炭素	にさんかたんそ	khí CO2	二酸化炭素って地球温暖化の原因なんだって。	Nghe nói CO2 là nguyên nhân gây nóng lên toàn cầu đấy.
+3105	nisankatanso	business	二酸化炭素	にさんかたんそ	khí CO2	二酸化炭素排出量の削減目標を設定いたしました。	Chúng tôi đã đặt mục tiêu giảm lượng khí thải CO2.
+3106	ne	exam	根	ね	rễ	木の根が深く張っている。	Rễ cây ăn sâu vào lòng đất.
+3107	ne	daily	根	ね	rễ	この植物、根が出てきたよ。	Loài thực vật này đã mọc rễ rồi.
+3108	ne	business	根	ね	rễ	根本的な原因を分析しております。	Chúng tôi đang phân tích nguyên nhân gốc rễ.
+3109	hatake	exam	畑	はたけ	cánh đồng	畑で野菜を育てている。	Tôi đang trồng rau ở cánh đồng.
+3110	hatake	daily	畑	はたけ	cánh đồng	この畑、広いね。	Cánh đồng này rộng nhỉ.
+3111	hatake	business	畑	はたけ	cánh đồng	自社畑で栽培した野菜を使用しております。	Chúng tôi sử dụng rau trồng tại cánh đồng của công ty.
+3112	hantou	exam	半島	はんとう	bán đảo	伊豆半島を旅行した。	Tôi đã du lịch bán đảo Izu.
+3113	hantou	daily	半島	はんとう	bán đảo	あの半島、景色きれいだよ。	Cảnh quan bán đảo đó đẹp lắm.
+3114	hantou	business	半島	はんとう	bán đảo	半島地域での事業拡大を計画しております。	Chúng tôi đang lên kế hoạch mở rộng kinh doanh ở khu vực bán đảo.
+3115	hinan	exam	避難	ひなん	lánh nạn	地震で避難した。	Chúng tôi đã đi lánh nạn vì động đất.
+3116	hinan	daily	避難	ひなん	lánh nạn	避難、大丈夫だった?	Lánh nạn có ổn không?
+3117	hinan	business	避難	ひなん	lánh nạn	避難経路を全員で確認しましょう。	Hãy cùng nhau kiểm tra lối thoát hiểm.
+3118	fuusoku	exam	風速	ふうそく	tốc độ gió	今日の風速は強い。	Tốc độ gió hôm nay mạnh.
+3119	fuusoku	daily	風速	ふうそく	tốc độ gió	風速、どれくらいだった?	Tốc độ gió khoảng bao nhiêu vậy?
+3120	fuusoku	business	風速	ふうそく	tốc độ gió	風速25メートルの強風に警戒が必要です。	Cần cảnh giác với gió mạnh tốc độ 25 mét/giây.
+3121	bousai	exam	防災	ぼうさい	phòng chống thiên tai	学校で防災訓練があった。	Ở trường có diễn tập phòng chống thiên tai.
+3122	bousai	daily	防災	ぼうさい	phòng chống thiên tai	防災グッズ、揃えた?	Đồ dùng phòng chống thiên tai cậu chuẩn bị đủ chưa?
+3123	bousai	business	防災	ぼうさい	phòng chống thiên tai	防災対策の一環として備蓄品を見直しております。	Chúng tôi đang xem xét lại vật tư dự trữ như một phần của biện pháp phòng chống thiên tai.
+3124	hokori	exam	ほこり	ほこり	bụi	棚にほこりがたまっている。	Bụi đã tích tụ trên kệ.
+3125	hokori	daily	ほこり	ほこり	bụi	ほこり、すごいね。掃除しなきゃ。	Nhiều bụi ghê. Phải dọn dẹp thôi.
+3126	hokori	business	ほこり	ほこり	bụi	定期清掃にてほこりの除去を実施しております。	Chúng tôi thực hiện loại bỏ bụi trong đợt dọn dẹp định kỳ.
+3127	mushi	exam	虫	むし	côn trùng	庭に虫がいる。	Có côn trùng trong vườn.
+3128	mushi	daily	虫	むし	côn trùng	虫、苦手なんだよね。	Tớ sợ côn trùng lắm.
+3129	mushi	business	虫	むし	côn trùng	製品への虫の混入を防止する対策を講じております。	Chúng tôi đang thực hiện biện pháp phòng ngừa côn trùng lẫn vào sản phẩm.
+3130	rousoku	exam	ろうそく	ろうそく	nến	誕生日にろうそくを立てた。	Tôi đã cắm nến vào ngày sinh nhật.
+3131	rousoku	daily	ろうそく	ろうそく	nến	停電の時、ろうそく使った。	Lúc mất điện tớ đã dùng nến.
+3132	rousoku	business	ろうそく	ろうそく	nến	非常用にろうそくを備蓄しております。	Chúng tôi tích trữ nến cho trường hợp khẩn cấp.
+3133	wan	exam	湾	わん	vịnh	東京湾を船で回った。	Tôi đã đi thuyền vòng quanh vịnh Tokyo.
+3134	wan	daily	湾	わん	vịnh	あの湾、きれいだね。	Vịnh đó đẹp thật nhỉ.
+3135	wan	business	湾	わん	vịnh	湾岸エリアに新拠点を設立いたしました。	Chúng tôi đã thành lập cơ sở mới ở khu vực ven vịnh.
+3136	usagi	exam	うさぎ	うさぎ	con thỏ	うさぎを飼っている。	Tôi đang nuôi thỏ.
+3137	usagi	daily	うさぎ	うさぎ	con thỏ	うさぎが耳をぴくぴく動かしている。	Con thỏ đang cử động đôi tai liên tục.
+3138	usagi	business	うさぎ	うさぎ	con thỏ	うさぎをモチーフにしたグッズを販売いたします。	Chúng tôi sẽ bán các sản phẩm lấy hình tượng con thỏ làm chủ đề.
+3139	ushi	exam	牛	うし	con bò	牧場で牛を見た。	Tôi đã thấy bò ở nông trại.
+3140	ushi	daily	牛	うし	con bò	この肉、牛?豚?	Thịt này bò hay lợn vậy?
+3141	ushi	business	牛	うし	con bò	国産牛を使用したメニューをご提供しております。	Chúng tôi cung cấp thực đơn sử dụng thịt bò nội địa.
+3142	uma	exam	馬	うま	con ngựa	馬に乗ったことがある。	Tôi từng cưỡi ngựa.
+3143	uma	daily	馬	うま	con ngựa	あの馬、かっこいいね。	Con ngựa đó ngầu thật nhỉ.
+3144	uma	business	馬	うま	con ngựa	競馬場では馬のレースが行われます。	Ở trường đua ngựa có tổ chức các cuộc đua ngựa.
+3145	ka	exam	蚊	か	con muỗi	蚊に刺された。	Tôi bị muỗi đốt.
+3146	ka	daily	蚊	か	con muỗi	蚊、多くない?	Muỗi nhiều quá không?
+3147	ka	business	蚊	か	con muỗi	蚊対策として虫よけを配布しております。	Chúng tôi phát thuốc chống côn trùng để phòng chống muỗi.
+3148	kai	exam	貝	かい	con sò	海岸で貝を拾った。	Tôi đã nhặt vỏ sò trên bờ biển.
+3149	kai	daily	貝	かい	con sò	この貝、食べられるの?	Con sò này ăn được không?
+3150	kai	business	貝	かい	con sò	貝類を使った新メニューを開発いたしました。	Chúng tôi đã phát triển thực đơn mới sử dụng các loại sò.
+3151	karasu	exam	からす	からす	con quạ	からすが鳴いている。	Con quạ đang kêu.
+3152	karasu	daily	からす	からす	con quạ	からす、ゴミ荒らしてるよ。	Quạ đang bới rác kìa.
+3153	karasu	business	からす	からす	con quạ	からすによるゴミ被害の対策を検討しております。	Chúng tôi đang xem xét biện pháp đối phó với thiệt hại rác do quạ gây ra.
+3154	saru	exam	猿	さる	con khỉ	山で猿を見た。	Tôi đã thấy khỉ trên núi.
+3155	saru	daily	猿	さる	con khỉ	猿、こっち見てるよ。	Con khỉ đang nhìn về hướng này kìa.
+3156	saru	business	猿	さる	con khỉ	観光地では猿にご注意ください。	Xin lưu ý khỉ ở khu du lịch.
+3157	zou	exam	象	ぞう	con voi	動物園で象を見た。	Tôi đã thấy voi ở sở thú.
+3158	zou	daily	象	ぞう	con voi	象、大きいね。	Voi to thật nhỉ.
+3159	zou	business	象	ぞう	con voi	象は非常に知能が高い動物です。	Voi là loài động vật có trí thông minh rất cao.
+3160	tora	exam	虎	とら	con hổ	動物園で虎を見た。	Tôi đã thấy hổ ở sở thú.
+3161	tora	daily	虎	とら	con hổ	虎、迫力あるね。	Hổ đầy uy lực thật nhỉ.
+3162	tora	business	虎	とら	con hổ	虎は絶滅危惧種に指定されています。	Hổ được xếp vào loài có nguy cơ tuyệt chủng.
+3163	niwatori	exam	鶏	にわとり	con gà	農家で鶏を飼っている。	Nông dân đang nuôi gà.
+3164	niwatori	daily	鶏	にわとり	con gà	鶏、朝から鳴いてるね。	Gà gáy từ sáng nhỉ.
+3165	niwatori	business	鶏	にわとり	con gà	地鶏を使用した商品を販売しております。	Chúng tôi bán sản phẩm sử dụng thịt gà địa phương.
+3166	nezumi	exam	ねずみ	ねずみ	con chuột	家にねずみが出た。	Có chuột xuất hiện trong nhà.
+3167	nezumi	daily	ねずみ	ねずみ	con chuột	ねずみ、怖いよね。	Chuột đáng sợ thật nhỉ.
+3168	nezumi	business	ねずみ	ねずみ	con chuột	倉庫のねずみ対策を実施しております。	Chúng tôi đang thực hiện biện pháp phòng chống chuột ở kho.
+3169	hitsuji	exam	羊	ひつじ	con cừu	牧場で羊を見た。	Tôi đã thấy cừu ở nông trại.
+3170	hitsuji	daily	羊	ひつじ	con cừu	羊、もこもこで可愛いね。	Cừu lông xù trông dễ thương ghê.
+3171	hitsuji	business	羊	ひつじ	con cừu	羊毛を使用した製品を開発しております。	Chúng tôi đang phát triển sản phẩm sử dụng lông cừu.
+3172	buta	exam	豚	ぶた	con lợn	農場で豚を育てている。	Nông trại đang nuôi lợn.
+3173	buta	daily	豚	ぶた	con lợn	この肉、豚肉だよ。	Miếng thịt này là thịt lợn đấy.
+3174	buta	business	豚	ぶた	con lợn	国産豚を使用したメニューをご用意しております。	Chúng tôi có chuẩn bị thực đơn sử dụng thịt lợn nội địa.
+3175	hebi	exam	蛇	へび	con rắn	草むらで蛇を見た。	Tôi đã thấy con rắn trong bụi cỏ.
+3176	hebi	daily	蛇	へび	con rắn	蛇、怖いから近づかないで。	Rắn đáng sợ nên đừng lại gần.
+3177	hebi	business	蛇	へび	con rắn	工事現場の周辺で蛇が見つかったため、安全確認を行いました。	Vì phát hiện rắn quanh công trường nên chúng tôi đã tiến hành kiểm tra an toàn.
+3178	sakura	exam	桜	さくら	hoa anh đào	春に桜が咲く。	Vào mùa xuân hoa anh đào nở.
+3179	sakura	daily	桜	さくら	hoa anh đào	桜、見に行こうよ。	Đi ngắm hoa anh đào đi.
+3180	sakura	business	桜	さくら	hoa anh đào	桜の名所を紹介するパンフレットを作成いたしました。	Chúng tôi đã tạo tờ rơi giới thiệu địa điểm ngắm hoa anh đào nổi tiếng.
+3181	igo	exam	以後	いご	sau đó, từ nay về sau	以後、気をつけます。	Từ nay về sau tôi sẽ chú ý.
+3182	igo	daily	以後	いご	sau đó, từ nay về sau	以後、気をつけてね。	Từ nay chú ý nhé.
+3183	igo	business	以後	いご	sau đó, từ nay về sau	以後、同様の事案が発生しないよう努めます。	Chúng tôi sẽ nỗ lực để không xảy ra sự việc tương tự từ nay về sau.
+3184	izen	exam	以前	いぜん	trước đây	以前、ここに来たことがある。	Trước đây tôi từng đến đây.
+3185	izen	daily	以前	いぜん	trước đây	以前と変わったね。	Thay đổi so với trước rồi nhỉ.
+3186	izen	business	以前	いぜん	trước đây	以前ご案内した内容から変更がございます。	Có thay đổi so với nội dung đã thông báo trước đây.
+3187	enki	exam	延期	えんき	hoãn	雨でイベントが延期になった。	Sự kiện đã bị hoãn vì mưa.
+3188	enki	daily	延期	えんき	hoãn	延期になったんだって。	Nghe nói bị hoãn rồi đấy.
+3189	enki	business	延期	えんき	hoãn	誠に恐縮ですが会議を延期させていただきます。	Chúng tôi thành thật xin lỗi vì phải hoãn cuộc họp.
+3190	enchou	exam	延長	えんちょう	kéo dài	会議の時間を延長した。	Tôi đã kéo dài thời gian cuộc họp.
+3191	enchou	daily	延長	えんちょう	kéo dài	延長してもいい?	Kéo dài thêm được không?
+3192	enchou	business	延長	えんちょう	kéo dài	キャンペーン期間を延長いたします。	Chúng tôi sẽ kéo dài thời gian chương trình khuyến mãi.
+3193	kaishi	exam	開始	かいし	bắt đầu	会議が開始した。	Cuộc họp đã bắt đầu.
+3194	kaishi	daily	開始	かいし	bắt đầu	もう開始してる?	Đã bắt đầu chưa?
+3195	kaishi	business	開始	かいし	bắt đầu	本日9時より受付を開始いたします。	Chúng tôi sẽ bắt đầu tiếp nhận từ 9 giờ hôm nay.
+3196	kako	exam	過去	かこ	quá khứ	過去のことは忘れよう。	Hãy quên đi những chuyện đã qua.
+3197	kako	daily	過去	かこ	quá khứ	過去にこんなことあったよね。	Trước đây từng có chuyện thế này nhỉ.
+3198	kako	business	過去	かこ	quá khứ	過去のデータを参考に分析いたしました。	Chúng tôi đã phân tích dựa trên dữ liệu trong quá khứ.
+3199	kikan	exam	期間	きかん	khoảng thời gian	キャンペーン期間は今月末までだ。	Thời gian chương trình khuyến mãi kéo dài đến cuối tháng này.
+3200	kikan	daily	期間	きかん	khoảng thời gian	期間、短くない?	Thời gian không ngắn quá à?
+3201	kikan	business	期間	きかん	khoảng thời gian	保証期間内であれば無償修理いたします。	Nếu còn trong thời gian bảo hành, chúng tôi sẽ sửa chữa miễn phí.
+3202	kigen	exam	期限	きげん	thời hạn	提出期限は明日だ。	Hạn nộp là ngày mai.
+3203	kigen	daily	期限	きげん	thời hạn	期限、過ぎてない?	Quá hạn chưa vậy?
+3204	kigen	business	期限	きげん	thời hạn	お支払い期限を過ぎますとサービスが停止されます。	Nếu quá hạn thanh toán, dịch vụ sẽ bị tạm dừng.
+3205	kyuujitsu	exam	休日	きゅうじつ	ngày nghỉ	休日は家でゆっくりする。	Ngày nghỉ tôi thư giãn ở nhà.
+3206	kyuujitsu	daily	休日	きゅうじつ	ngày nghỉ	休日、何する?	Ngày nghỉ cậu làm gì?
+3207	kyuujitsu	business	休日	きゅうじつ	ngày nghỉ	休日出勤には代休を付与いたします。	Chúng tôi sẽ cấp ngày nghỉ bù cho việc đi làm ngày nghỉ.
+3208	gejun	exam	下旬	げじゅん	hạ tuần (cuối tháng)	来月下旬に旅行に行く。	Cuối tháng sau tôi sẽ đi du lịch.
+3209	gejun	daily	下旬	げじゅん	hạ tuần (cuối tháng)	今月下旬、忙しいんだよね。	Cuối tháng này tớ bận lắm.
+3210	gejun	business	下旬	げじゅん	hạ tuần (cuối tháng)	納品は今月下旬を予定しております。	Dự kiến giao hàng vào cuối tháng này.
+3211	getsumatsu	exam	月末	げつまつ	cuối tháng	月末に給料が入る。	Cuối tháng lương sẽ vào tài khoản.
+3212	getsumatsu	daily	月末	げつまつ	cuối tháng	月末、忙しくなるよ。	Cuối tháng sẽ bận rộn đấy.
+3213	getsumatsu	business	月末	げつまつ	cuối tháng	月末までにご入金をお願いいたします。	Xin vui lòng thanh toán trước cuối tháng.
+3214	genzai	exam	現在	げんざい	hiện tại	現在、東京に住んでいる。	Hiện tại tôi đang sống ở Tokyo.
+3215	genzai	daily	現在	げんざい	hiện tại	現在の状況、教えて。	Cho tớ biết tình hình hiện tại đi.
+3216	genzai	business	現在	げんざい	hiện tại	現在の進捗状況をご報告いたします。	Tôi xin báo cáo tình hình tiến độ hiện tại.
+3217	gendai	exam	現代	げんだい	hiện đại	現代社会は変化が激しい。	Xã hội hiện đại thay đổi mạnh mẽ.
+3218	gendai	daily	現代	げんだい	hiện đại	現代っぽいデザインだね。	Thiết kế mang phong cách hiện đại nhỉ.
+3219	gendai	business	現代	げんだい	hiện đại	現代のニーズに合わせた商品を開発しております。	Chúng tôi đang phát triển sản phẩm phù hợp với nhu cầu hiện đại.
+3220	kouhan	exam	後半	こうはん	nửa sau	試合の後半で逆転した。	Chúng tôi đã lội ngược dòng ở nửa sau trận đấu.
+3221	kouhan	daily	後半	こうはん	nửa sau	後半、頑張ろう!	Nửa sau cố lên nào!
+3222	kouhan	business	後半	こうはん	nửa sau	今年度後半の業績を分析いたしました。	Chúng tôi đã phân tích kết quả kinh doanh nửa sau năm nay.
+3223	goldenweek	exam	ゴールデンウィーク	ゴールデンウィーク	tuần lễ vàng	ゴールデンウィークに旅行する。	Tôi sẽ đi du lịch vào tuần lễ vàng.
+3224	goldenweek	daily	ゴールデンウィーク	ゴールデンウィーク	tuần lễ vàng	ゴールデンウィーク、どこ行くの?	Tuần lễ vàng cậu đi đâu vậy?
+3225	goldenweek	business	ゴールデンウィーク	ゴールデンウィーク	tuần lễ vàng	ゴールデンウィーク期間中の営業時間をご案内いたします。	Chúng tôi xin thông báo giờ hoạt động trong thời gian tuần lễ vàng.
+3226	koro	exam	頃	ころ	khoảng (thời gian)	子供の頃、よく遊んだ。	Hồi bé tôi hay chơi.
+3227	koro	daily	頃	ころ	khoảng (thời gian)	そろそろ帰る頃かな。	Chắc sắp đến lúc về rồi nhỉ.
+3228	koro	business	頃	ころ	khoảng (thời gian)	来月の頃には完成する見込みです。	Dự kiến sẽ hoàn thành vào khoảng tháng sau.
+3229	konkai	exam	今回	こんかい	lần này	今回のテストは難しかった。	Bài kiểm tra lần này khó.
+3230	konkai	daily	今回	こんかい	lần này	今回はどうだった?	Lần này thế nào?
+3231	konkai	business	今回	こんかい	lần này	今回のプロジェクトについてご説明いたします。	Tôi xin giải thích về dự án lần này.
+3232	season	exam	シーズン	シーズン	mùa	今はイチゴのシーズンだ。	Bây giờ đang là mùa dâu tây.
+3233	season	daily	シーズン	シーズン	mùa	もうそんなシーズンなんだね。	Đã đến mùa đó rồi nhỉ.
+3234	season	business	シーズン	シーズン	mùa	繁忙シーズンに向けて人員を増強いたします。	Chúng tôi sẽ tăng cường nhân sự hướng tới mùa cao điểm.
+3235	jiki	exam	時期	じき	thời điểm	引っ越しの時期を決めた。	Tôi đã quyết định thời điểm chuyển nhà.
+3236	jiki	daily	時期	じき	thời điểm	今の時期、寒いよね。	Thời điểm này lạnh thật nhỉ.
+3237	jiki	business	時期	じき	thời điểm	導入時期については追ってご連絡いたします。	Chúng tôi sẽ liên hệ sau về thời điểm triển khai.
+3238	jikoku	exam	時刻	じこく	thời khắc	出発時刻を確認した。	Tôi đã kiểm tra thời khắc khởi hành.
+3239	jikoku	daily	時刻	じこく	thời khắc	時刻、間違えないでね。	Đừng nhầm giờ giấc nhé.
+3240	jikoku	business	時刻	じこく	thời khắc	到着時刻は変更となる場合がございます。	Thời khắc đến nơi có thể sẽ thay đổi.
