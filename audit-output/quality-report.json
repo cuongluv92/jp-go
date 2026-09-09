@@ -1,0 +1,3906 @@
+{
+  "counts": {
+    "words": 1798,
+    "examples": 5394,
+    "verbs": 268
+  },
+  "posSchemaIssueCount": 261,
+  "verbMissingTransitivityCount": 0,
+  "multiSenseWordCount": 0,
+  "businessNoWorkplaceCueCount": 1253,
+  "businessCasualWithoutInternalCueCount": 1,
+  "exactTemplateGroupCount": 28,
+  "viDuplicateGroupCount": 0,
+  "answerSurfaceSuspectCount": 0,
+  "overrideLayerKeyCounts": [
+    {
+      "path": "lib/data/tango-n3-example-overrides.ts",
+      "count": 42
+    },
+    {
+      "path": "lib/data/tango-n3-example-overrides-context.ts",
+      "count": 53
+    },
+    {
+      "path": "lib/data/tango-n3-example-overrides-final.ts",
+      "count": 21
+    },
+    {
+      "path": "lib/data/tango-n3-example-overrides-final2.ts",
+      "count": 42
+    }
+  ],
+  "overrideCollisionCount": 1,
+  "samples": {
+    "posSchemaIssues": [
+      {
+        "id": "aisuru",
+        "word": "愛する",
+        "partOfSpeech": "verb",
+        "verbClass": "suru",
+        "transitivity": "transitive"
+      },
+      {
+        "id": "akirameru",
+        "word": "諦める",
+        "partOfSpeech": "verb",
+        "verbClass": "ichidan",
+        "transitivity": "transitive"
+      },
+      {
+        "id": "akiru",
+        "word": "飽きる",
+        "partOfSpeech": "verb",
+        "verbClass": "ichidan",
+        "transitivity": "intransitive"
+      },
+      {
+        "id": "azukaru",
+        "word": "預かる",
+        "partOfSpeech": "verb",
+        "verbClass": "godan",
+        "transitivity": "transitive"
+      },
+      {
+        "id": "azukeru",
+        "word": "預ける",
+        "partOfSpeech": "verb",
+        "verbClass": "ichidan",
+        "transitivity": "transitive"
+      },
+      {
+        "id": "atatameru1",
+        "word": "暖める",
+        "partOfSpeech": "verb",
+        "verbClass": "ichidan",
+        "transitivity": "transitive"
+      },
+      {
+        "id": "atatameru2",
+        "word": "温める",
+        "partOfSpeech": "verb",
+        "verbClass": "ichidan",
+        "transitivity": "transitive"
+      },
+      {
+        "id": "ataru",
+        "word": "当たる",
+        "partOfSpeech": "verb",
+        "verbClass": "godan",
+        "transitivity": "intransitive"
+      },
+      {
+        "id": "amaru",
+        "word": "余る",
+        "partOfSpeech": "verb",
+        "verbClass": "godan",
+        "transitivity": "intransitive"
+      },
+      {
+        "id": "amu",
+        "word": "編む",
+        "partOfSpeech": "verb",
+        "verbClass": "godan",
+        "transitivity": "transitive"
+      },
+      {
+        "id": "arawareru",
+        "word": "現れる",
+        "partOfSpeech": "verb",
+        "verbClass": "ichidan",
+        "transitivity": "intransitive"
+      },
+      {
+        "id": "awaseru",
+        "word": "合わせる",
+        "partOfSpeech": "verb",
+        "verbClass": "ichidan",
+        "transitivity": "transitive"
+      },
+      {
+        "id": "awateru",
+        "word": "慌てる",
+        "partOfSpeech": "verb",
+        "verbClass": "ichidan",
+        "transitivity": "intransitive"
+      },
+      {
+        "id": "ikasu",
+        "word": "生かす",
+        "partOfSpeech": "verb",
+        "verbClass": "godan",
+        "transitivity": "transitive"
+      },
+      {
+        "id": "ijimeru",
+        "word": "いじめる",
+        "partOfSpeech": "verb",
+        "verbClass": "ichidan",
+        "transitivity": "transitive"
+      },
+      {
+        "id": "itameru",
+        "word": "炒める",
+        "partOfSpeech": "verb",
+        "verbClass": "ichidan",
+        "transitivity": "transitive"
+      },
+      {
+        "id": "inoru",
+        "word": "祈る",
+        "partOfSpeech": "verb",
+        "verbClass": "godan",
+        "transitivity": "transitive"
+      },
+      {
+        "id": "iyagaru",
+        "word": "嫌がる",
+        "partOfSpeech": "verb",
+        "verbClass": "godan",
+        "transitivity": "transitive"
+      },
+      {
+        "id": "iraira",
+        "word": "いらいらする",
+        "partOfSpeech": "verb",
+        "verbClass": "suru",
+        "transitivity": "intransitive"
+      },
+      {
+        "id": "iwau",
+        "word": "祝う",
+        "partOfSpeech": "verb",
+        "verbClass": "godan",
+        "transitivity": "transitive"
+      },
+      {
+        "id": "ueru",
+        "word": "植える",
+        "partOfSpeech": "verb",
+        "verbClass": "ichidan",
+        "transitivity": "transitive"
+      },
+      {
+        "id": "ukaru",
+        "word": "受かる",
+        "partOfSpeech": "verb",
+        "verbClass": "godan",
+        "transitivity": "intransitive"
+      },
+      {
+        "id": "uku",
+        "word": "浮く",
+        "partOfSpeech": "verb",
+        "verbClass": "godan",
+        "transitivity": "intransitive"
+      },
+      {
+        "id": "uketsukeru",
+        "word": "受け付ける",
+        "partOfSpeech": "verb",
+        "verbClass": "ichidan",
+        "transitivity": "transitive"
+      },
+      {
+        "id": "uketoru",
+        "word": "受け取る",
+        "partOfSpeech": "verb",
+        "verbClass": "godan",
+        "transitivity": "transitive"
+      },
+      {
+        "id": "ugokasu",
+        "word": "動かす",
+        "partOfSpeech": "verb",
+        "verbClass": "godan",
+        "transitivity": "transitive"
+      },
+      {
+        "id": "utsusu",
+        "word": "移す",
+        "partOfSpeech": "verb",
+        "verbClass": "godan",
+        "transitivity": "transitive"
+      },
+      {
+        "id": "utsuru",
+        "word": "写る",
+        "partOfSpeech": "verb",
+        "verbClass": "godan",
+        "transitivity": "intransitive"
+      },
+      {
+        "id": "uragaesu",
+        "word": "裏返す",
+        "partOfSpeech": "verb",
+        "verbClass": "godan",
+        "transitivity": "transitive"
+      },
+      {
+        "id": "urikireru",
+        "word": "売り切れる",
+        "partOfSpeech": "verb",
+        "verbClass": "ichidan",
+        "transitivity": "intransitive"
+      },
+      {
+        "id": "ureru",
+        "word": "売れる",
+        "partOfSpeech": "verb",
+        "verbClass": "ichidan",
+        "transitivity": "intransitive"
+      },
+      {
+        "id": "erabu",
+        "word": "選ぶ",
+        "partOfSpeech": "verb",
+        "verbClass": "godan",
+        "transitivity": "transitive"
+      },
+      {
+        "id": "oikakeru",
+        "word": "追いかける",
+        "partOfSpeech": "verb",
+        "verbClass": "ichidan",
+        "transitivity": "transitive"
+      },
+      {
+        "id": "oikosu",
+        "word": "追い越す",
+        "partOfSpeech": "verb",
+        "verbClass": "godan",
+        "transitivity": "transitive"
+      },
+      {
+        "id": "oitsuku",
+        "word": "追いつく",
+        "partOfSpeech": "verb",
+        "verbClass": "godan",
+        "transitivity": "intransitive"
+      },
+      {
+        "id": "ou2",
+        "word": "追う",
+        "partOfSpeech": "verb",
+        "verbClass": "godan",
+        "transitivity": "transitive"
+      },
+      {
+        "id": "okuru2",
+        "word": "贈る",
+        "partOfSpeech": "verb",
+        "verbClass": "godan",
+        "transitivity": "transitive"
+      },
+      {
+        "id": "okonau",
+        "word": "行う",
+        "partOfSpeech": "verb",
+        "verbClass": "godan",
+        "transitivity": "transitive"
+      },
+      {
+        "id": "osaeru",
+        "word": "押さえる",
+        "partOfSpeech": "verb",
+        "verbClass": "ichidan",
+        "transitivity": "transitive"
+      },
+      {
+        "id": "ochitsuku",
+        "word": "落ち着く",
+        "partOfSpeech": "verb",
+        "verbClass": "godan",
+        "transitivity": "intransitive"
+      },
+      {
+        "id": "oboreru",
+        "word": "溺れる",
+        "partOfSpeech": "verb",
+        "verbClass": "ichidan",
+        "transitivity": "intransitive"
+      },
+      {
+        "id": "omoitsuku",
+        "word": "思いつく",
+        "partOfSpeech": "verb",
+        "verbClass": "godan",
+        "transitivity": "transitive"
+      },
+      {
+        "id": "oreru",
+        "word": "折れる",
+        "partOfSpeech": "verb",
+        "verbClass": "ichidan",
+        "transitivity": "intransitive"
+      },
+      {
+        "id": "orosu",
+        "word": "下ろす",
+        "partOfSpeech": "verb",
+        "verbClass": "godan",
+        "transitivity": "transitive"
+      },
+      {
+        "id": "kau2",
+        "word": "飼う",
+        "partOfSpeech": "verb",
+        "verbClass": "godan",
+        "transitivity": "transitive"
+      },
+      {
+        "id": "kaeru2",
+        "word": "返る",
+        "partOfSpeech": "verb",
+        "verbClass": "godan",
+        "transitivity": "intransitive"
+      },
+      {
+        "id": "kagayaku",
+        "word": "輝く",
+        "partOfSpeech": "verb",
+        "verbClass": "godan",
+        "transitivity": "intransitive"
+      },
+      {
+        "id": "kakaru2",
+        "word": "かかる",
+        "partOfSpeech": "verb",
+        "verbClass": "godan",
+        "transitivity": "intransitive"
+      },
+      {
+        "id": "kagu2",
+        "word": "かぐ",
+        "partOfSpeech": "verb",
+        "verbClass": "godan",
+        "transitivity": "transitive"
+      },
+      {
+        "id": "kakusu",
+        "word": "隠す",
+        "partOfSpeech": "verb",
+        "verbClass": "godan",
+        "transitivity": "transitive"
+      },
+      {
+        "id": "kakomu",
+        "word": "囲む",
+        "partOfSpeech": "verb",
+        "verbClass": "godan",
+        "transitivity": "transitive"
+      },
+      {
+        "id": "kasaneru",
+        "word": "重ねる",
+        "partOfSpeech": "verb",
+        "verbClass": "ichidan",
+        "transitivity": "transitive"
+      },
+      {
+        "id": "kazoeru",
+        "word": "数える",
+        "partOfSpeech": "verb",
+        "verbClass": "ichidan",
+        "transitivity": "transitive"
+      },
+      {
+        "id": "katamaru",
+        "word": "固まる",
+        "partOfSpeech": "verb",
+        "verbClass": "godan",
+        "transitivity": "intransitive"
+      },
+      {
+        "id": "katamuku",
+        "word": "傾く",
+        "partOfSpeech": "verb",
+        "verbClass": "godan",
+        "transitivity": "intransitive"
+      },
+      {
+        "id": "gakkari",
+        "word": "がっかりする",
+        "partOfSpeech": "verb",
+        "verbClass": "suru",
+        "transitivity": "intransitive"
+      },
+      {
+        "id": "kamu",
+        "word": "かむ",
+        "partOfSpeech": "verb",
+        "verbClass": "godan",
+        "transitivity": "transitive"
+      },
+      {
+        "id": "kayou",
+        "word": "通う",
+        "partOfSpeech": "verb",
+        "verbClass": "godan",
+        "transitivity": "intransitive"
+      },
+      {
+        "id": "kareru",
+        "word": "枯れる",
+        "partOfSpeech": "verb",
+        "verbClass": "ichidan",
+        "transitivity": "intransitive"
+      },
+      {
+        "id": "kawaigaru",
+        "word": "かわいがる",
+        "partOfSpeech": "verb",
+        "verbClass": "godan",
+        "transitivity": "transitive"
+      },
+      {
+        "id": "kawakasu",
+        "word": "乾かす",
+        "partOfSpeech": "verb",
+        "verbClass": "godan",
+        "transitivity": "transitive"
+      },
+      {
+        "id": "kawaru",
+        "word": "代わる",
+        "partOfSpeech": "verb",
+        "verbClass": "godan",
+        "transitivity": "intransitive"
+      },
+      {
+        "id": "kanjiru",
+        "word": "感じる",
+        "partOfSpeech": "verb",
+        "verbClass": "ichidan",
+        "transitivity": "transitive"
+      },
+      {
+        "id": "kiku2",
+        "word": "効く",
+        "partOfSpeech": "verb",
+        "verbClass": "godan",
+        "transitivity": "intransitive"
+      },
+      {
+        "id": "kiseru",
+        "word": "着せる",
+        "partOfSpeech": "verb",
+        "verbClass": "ichidan",
+        "transitivity": "transitive"
+      },
+      {
+        "id": "kizuku",
+        "word": "気づく",
+        "partOfSpeech": "verb",
+        "verbClass": "godan",
+        "transitivity": "intransitive"
+      },
+      {
+        "id": "kiniiru",
+        "word": "気に入る",
+        "partOfSpeech": "verb",
+        "verbClass": "godan",
+        "transitivity": "intransitive"
+      },
+      {
+        "id": "kireru",
+        "word": "切れる",
+        "partOfSpeech": "verb",
+        "verbClass": "ichidan",
+        "transitivity": "intransitive"
+      },
+      {
+        "id": "kiwotsukeru",
+        "word": "気をつける",
+        "partOfSpeech": "verb",
+        "verbClass": "ichidan",
+        "transitivity": "intransitive"
+      },
+      {
+        "id": "kusaru",
+        "word": "腐る",
+        "partOfSpeech": "verb",
+        "verbClass": "godan",
+        "transitivity": "intransitive"
+      },
+      {
+        "id": "kuzureru",
+        "word": "崩れる",
+        "partOfSpeech": "verb",
+        "verbClass": "ichidan",
+        "transitivity": "intransitive"
+      },
+      {
+        "id": "kubaru",
+        "word": "配る",
+        "partOfSpeech": "verb",
+        "verbClass": "godan",
+        "transitivity": "transitive"
+      },
+      {
+        "id": "kurasu",
+        "word": "暮らす",
+        "partOfSpeech": "verb",
+        "verbClass": "godan",
+        "transitivity": "intransitive"
+      },
+      {
+        "id": "kuraberu",
+        "word": "比べる",
+        "partOfSpeech": "verb",
+        "verbClass": "ichidan",
+        "transitivity": "transitive"
+      },
+      {
+        "id": "kurikaesu",
+        "word": "繰り返す",
+        "partOfSpeech": "verb",
+        "verbClass": "godan",
+        "transitivity": "transitive"
+      },
+      {
+        "id": "kurushimu",
+        "word": "苦しむ",
+        "partOfSpeech": "verb",
+        "verbClass": "godan",
+        "transitivity": "intransitive"
+      },
+      {
+        "id": "kureru2",
+        "word": "暮れる",
+        "partOfSpeech": "verb",
+        "verbClass": "ichidan",
+        "transitivity": "intransitive"
+      },
+      {
+        "id": "kuwaeru",
+        "word": "加える",
+        "partOfSpeech": "verb",
+        "verbClass": "ichidan",
+        "transitivity": "transitive"
+      },
+      {
+        "id": "kezuru",
+        "word": "削る",
+        "partOfSpeech": "verb",
+        "verbClass": "godan",
+        "transitivity": "transitive"
+      },
+      {
+        "id": "keru",
+        "word": "蹴る",
+        "partOfSpeech": "verb",
+        "verbClass": "godan",
+        "transitivity": "transitive"
+      },
+      {
+        "id": "koeru",
+        "word": "越える",
+        "partOfSpeech": "verb",
+        "verbClass": "ichidan",
+        "transitivity": "intransitive"
+      },
+      {
+        "id": "kooru",
+        "word": "凍る",
+        "partOfSpeech": "verb",
+        "verbClass": "godan",
+        "transitivity": "intransitive"
+      },
+      {
+        "id": "kogu",
+        "word": "こぐ",
+        "partOfSpeech": "verb",
+        "verbClass": "godan",
+        "transitivity": "transitive"
+      },
+      {
+        "id": "kogeru",
+        "word": "焦げる",
+        "partOfSpeech": "verb",
+        "verbClass": "ichidan",
+        "transitivity": "intransitive"
+      },
+      {
+        "id": "koshikakeru",
+        "word": "腰掛ける",
+        "partOfSpeech": "verb",
+        "verbClass": "ichidan",
+        "transitivity": "intransitive"
+      },
+      {
+        "id": "kosu",
+        "word": "越す",
+        "partOfSpeech": "verb",
+        "verbClass": "godan",
+        "transitivity": "transitive"
+      },
+      {
+        "id": "kotowaru",
+        "word": "断る",
+        "partOfSpeech": "verb",
+        "verbClass": "godan",
+        "transitivity": "transitive"
+      },
+      {
+        "id": "koboreru",
+        "word": "こぼれる",
+        "partOfSpeech": "verb",
+        "verbClass": "ichidan",
+        "transitivity": "intransitive"
+      },
+      {
+        "id": "komu2",
+        "word": "混む",
+        "partOfSpeech": "verb",
+        "verbClass": "godan",
+        "transitivity": "intransitive"
+      },
+      {
+        "id": "korogaru",
+        "word": "転がる",
+        "partOfSpeech": "verb",
+        "verbClass": "godan",
+        "transitivity": "intransitive"
+      },
+      {
+        "id": "korosu",
+        "word": "殺す",
+        "partOfSpeech": "verb",
+        "verbClass": "godan",
+        "transitivity": "transitive"
+      },
+      {
+        "id": "korobu",
+        "word": "転ぶ",
+        "partOfSpeech": "verb",
+        "verbClass": "godan",
+        "transitivity": "intransitive"
+      },
+      {
+        "id": "sagasu",
+        "word": "探す",
+        "partOfSpeech": "verb",
+        "verbClass": "godan",
+        "transitivity": "transitive"
+      },
+      {
+        "id": "sakebu",
+        "word": "叫ぶ",
+        "partOfSpeech": "verb",
+        "verbClass": "godan",
+        "transitivity": "intransitive"
+      },
+      {
+        "id": "sasu1",
+        "word": "刺す",
+        "partOfSpeech": "verb",
+        "verbClass": "godan",
+        "transitivity": "transitive"
+      },
+      {
+        "id": "sasu2",
+        "word": "指す",
+        "partOfSpeech": "verb",
+        "verbClass": "godan",
+        "transitivity": "transitive"
+      },
+      {
+        "id": "sasu3",
+        "word": "差す",
+        "partOfSpeech": "verb",
+        "verbClass": "godan",
+        "transitivity": "transitive"
+      },
+      {
+        "id": "sasou",
+        "word": "誘う",
+        "partOfSpeech": "verb",
+        "verbClass": "godan",
+        "transitivity": "transitive"
+      },
+      {
+        "id": "sappari",
+        "word": "さっぱりする",
+        "partOfSpeech": "verb",
+        "verbClass": "suru",
+        "transitivity": "intransitive"
+      },
+      {
+        "id": "sameru1",
+        "word": "覚める",
+        "partOfSpeech": "verb",
+        "verbClass": "ichidan",
+        "transitivity": "intransitive"
+      },
+      {
+        "id": "sameru2",
+        "word": "冷める",
+        "partOfSpeech": "verb",
+        "verbClass": "ichidan",
+        "transitivity": "intransitive"
+      },
+      {
+        "id": "shiku",
+        "word": "敷く",
+        "partOfSpeech": "verb",
+        "verbClass": "godan",
+        "transitivity": "transitive"
+      },
+      {
+        "id": "shizumu",
+        "word": "沈む",
+        "partOfSpeech": "verb",
+        "verbClass": "godan",
+        "transitivity": "intransitive"
+      },
+      {
+        "id": "shiharau",
+        "word": "支払う",
+        "partOfSpeech": "verb",
+        "verbClass": "godan",
+        "transitivity": "transitive"
+      },
+      {
+        "id": "shibaru",
+        "word": "縛る",
+        "partOfSpeech": "verb",
+        "verbClass": "godan",
+        "transitivity": "transitive"
+      },
+      {
+        "id": "shimau",
+        "word": "しまう",
+        "partOfSpeech": "verb",
+        "verbClass": "godan",
+        "transitivity": "transitive"
+      },
+      {
+        "id": "shaberu",
+        "word": "しゃべる",
+        "partOfSpeech": "verb",
+        "verbClass": "godan",
+        "transitivity": "transitive"
+      },
+      {
+        "id": "shinjiru",
+        "word": "信じる",
+        "partOfSpeech": "verb",
+        "verbClass": "ichidan",
+        "transitivity": "transitive"
+      },
+      {
+        "id": "sugiru",
+        "word": "過ぎる",
+        "partOfSpeech": "verb",
+        "verbClass": "ichidan",
+        "transitivity": "intransitive"
+      },
+      {
+        "id": "sugosu",
+        "word": "過ごす",
+        "partOfSpeech": "verb",
+        "verbClass": "godan",
+        "transitivity": "transitive"
+      },
+      {
+        "id": "susumu",
+        "word": "進む",
+        "partOfSpeech": "verb",
+        "verbClass": "godan",
+        "transitivity": "intransitive"
+      },
+      {
+        "id": "susumeru",
+        "word": "勧める",
+        "partOfSpeech": "verb",
+        "verbClass": "ichidan",
+        "transitivity": "transitive"
+      },
+      {
+        "id": "suberu",
+        "word": "滑る",
+        "partOfSpeech": "verb",
+        "verbClass": "godan",
+        "transitivity": "intransitive"
+      },
+      {
+        "id": "sumu2",
+        "word": "済む",
+        "partOfSpeech": "verb",
+        "verbClass": "godan",
+        "transitivity": "intransitive"
+      },
+      {
+        "id": "sodateru",
+        "word": "育てる",
+        "partOfSpeech": "verb",
+        "verbClass": "ichidan",
+        "transitivity": "transitive"
+      },
+      {
+        "id": "sonaeru",
+        "word": "備える",
+        "partOfSpeech": "verb",
+        "verbClass": "ichidan",
+        "transitivity": "transitive"
+      },
+      {
+        "id": "someru",
+        "word": "染める",
+        "partOfSpeech": "verb",
+        "verbClass": "ichidan",
+        "transitivity": "transitive"
+      },
+      {
+        "id": "soru",
+        "word": "そる",
+        "partOfSpeech": "verb",
+        "verbClass": "godan",
+        "transitivity": "transitive"
+      },
+      {
+        "id": "soroeru",
+        "word": "そろえる",
+        "partOfSpeech": "verb",
+        "verbClass": "ichidan",
+        "transitivity": "transitive"
+      },
+      {
+        "id": "taosu",
+        "word": "倒す",
+        "partOfSpeech": "verb",
+        "verbClass": "godan",
+        "transitivity": "transitive"
+      },
+      {
+        "id": "taku",
+        "word": "炊く",
+        "partOfSpeech": "verb",
+        "verbClass": "godan",
+        "transitivity": "transitive"
+      },
+      {
+        "id": "daku",
+        "word": "抱く",
+        "partOfSpeech": "verb",
+        "verbClass": "godan",
+        "transitivity": "transitive"
+      },
+      {
+        "id": "tashikameru",
+        "word": "確かめる",
+        "partOfSpeech": "verb",
+        "verbClass": "ichidan",
+        "transitivity": "transitive"
+      },
+      {
+        "id": "tasu",
+        "word": "足す",
+        "partOfSpeech": "verb",
+        "verbClass": "godan",
+        "transitivity": "transitive"
+      },
+      {
+        "id": "tasukeru",
+        "word": "助ける",
+        "partOfSpeech": "verb",
+        "verbClass": "ichidan",
+        "transitivity": "transitive"
+      },
+      {
+        "id": "tazuneru1",
+        "word": "訪ねる",
+        "partOfSpeech": "verb",
+        "verbClass": "ichidan",
+        "transitivity": "transitive"
+      },
+      {
+        "id": "tazuneru2",
+        "word": "尋ねる",
+        "partOfSpeech": "verb",
+        "verbClass": "ichidan",
+        "transitivity": "transitive"
+      },
+      {
+        "id": "tatakau",
+        "word": "戦う",
+        "partOfSpeech": "verb",
+        "verbClass": "godan",
+        "transitivity": "intransitive"
+      },
+      {
+        "id": "tataku",
+        "word": "たたく",
+        "partOfSpeech": "verb",
+        "verbClass": "godan",
+        "transitivity": "transitive"
+      },
+      {
+        "id": "tatamu",
+        "word": "畳む",
+        "partOfSpeech": "verb",
+        "verbClass": "godan",
+        "transitivity": "transitive"
+      },
+      {
+        "id": "tachiagaru",
+        "word": "立ち上がる",
+        "partOfSpeech": "verb",
+        "verbClass": "godan",
+        "transitivity": "intransitive"
+      },
+      {
+        "id": "tachidomaru",
+        "word": "立ち止まる",
+        "partOfSpeech": "verb",
+        "verbClass": "godan",
+        "transitivity": "intransitive"
+      },
+      {
+        "id": "tanoshimu",
+        "word": "楽しむ",
+        "partOfSpeech": "verb",
+        "verbClass": "godan",
+        "transitivity": "transitive"
+      },
+      {
+        "id": "damaru",
+        "word": "黙る",
+        "partOfSpeech": "verb",
+        "verbClass": "godan",
+        "transitivity": "intransitive"
+      },
+      {
+        "id": "tameru",
+        "word": "ためる",
+        "partOfSpeech": "verb",
+        "verbClass": "ichidan",
+        "transitivity": "transitive"
+      },
+      {
+        "id": "tariru",
+        "word": "足りる",
+        "partOfSpeech": "verb",
+        "verbClass": "ichidan",
+        "transitivity": "intransitive"
+      },
+      {
+        "id": "chikazuku",
+        "word": "近づく",
+        "partOfSpeech": "verb",
+        "verbClass": "godan",
+        "transitivity": "intransitive"
+      },
+      {
+        "id": "chikayoru",
+        "word": "近寄る",
+        "partOfSpeech": "verb",
+        "verbClass": "godan",
+        "transitivity": "intransitive"
+      },
+      {
+        "id": "chirakaru",
+        "word": "散らかる",
+        "partOfSpeech": "verb",
+        "verbClass": "godan",
+        "transitivity": "intransitive"
+      },
+      {
+        "id": "chiru",
+        "word": "散る",
+        "partOfSpeech": "verb",
+        "verbClass": "godan",
+        "transitivity": "intransitive"
+      },
+      {
+        "id": "tsuujiru",
+        "word": "通じる",
+        "partOfSpeech": "verb",
+        "verbClass": "ichidan",
+        "transitivity": "intransitive"
+      },
+      {
+        "id": "tsukamaru",
+        "word": "捕まる",
+        "partOfSpeech": "verb",
+        "verbClass": "godan",
+        "transitivity": "intransitive"
+      },
+      {
+        "id": "tsukamu",
+        "word": "つかむ",
+        "partOfSpeech": "verb",
+        "verbClass": "godan",
+        "transitivity": "transitive"
+      },
+      {
+        "id": "tsukiau",
+        "word": "付き合う",
+        "partOfSpeech": "verb",
+        "verbClass": "godan",
+        "transitivity": "intransitive"
+      },
+      {
+        "id": "tsuku2",
+        "word": "付く",
+        "partOfSpeech": "verb",
+        "verbClass": "godan",
+        "transitivity": "intransitive"
+      },
+      {
+        "id": "tsukeru2",
+        "word": "着ける",
+        "partOfSpeech": "verb",
+        "verbClass": "ichidan",
+        "transitivity": "transitive"
+      },
+      {
+        "id": "tsutawaru",
+        "word": "伝わる",
+        "partOfSpeech": "verb",
+        "verbClass": "godan",
+        "transitivity": "intransitive"
+      },
+      {
+        "id": "tsubureru",
+        "word": "潰れる",
+        "partOfSpeech": "verb",
+        "verbClass": "ichidan",
+        "transitivity": "intransitive"
+      },
+      {
+        "id": "tsumu2",
+        "word": "積む",
+        "partOfSpeech": "verb",
+        "verbClass": "godan",
+        "transitivity": "transitive"
+      },
+      {
+        "id": "tsumeru",
+        "word": "詰める",
+        "partOfSpeech": "verb",
+        "verbClass": "ichidan",
+        "transitivity": "transitive"
+      },
+      {
+        "id": "tsumoru",
+        "word": "積もる",
+        "partOfSpeech": "verb",
+        "verbClass": "godan",
+        "transitivity": "intransitive"
+      },
+      {
+        "id": "deau",
+        "word": "出会う",
+        "partOfSpeech": "verb",
+        "verbClass": "godan",
+        "transitivity": "intransitive"
+      },
+      {
+        "id": "dekiagaru",
+        "word": "できあがる",
+        "partOfSpeech": "verb",
+        "verbClass": "godan",
+        "transitivity": "intransitive"
+      },
+      {
+        "id": "teru2",
+        "word": "照る",
+        "partOfSpeech": "verb",
+        "verbClass": "godan",
+        "transitivity": "intransitive"
+      },
+      {
+        "id": "toku2",
+        "word": "溶く",
+        "partOfSpeech": "verb",
+        "verbClass": "godan",
+        "transitivity": "transitive"
+      },
+      {
+        "id": "doku",
+        "word": "どく",
+        "partOfSpeech": "verb",
+        "verbClass": "godan",
+        "transitivity": "intransitive"
+      },
+      {
+        "id": "tokeru2",
+        "word": "溶ける",
+        "partOfSpeech": "verb",
+        "verbClass": "ichidan",
+        "transitivity": "intransitive"
+      },
+      {
+        "id": "dokeru",
+        "word": "どける",
+        "partOfSpeech": "verb",
+        "verbClass": "ichidan",
+        "transitivity": "transitive"
+      },
+      {
+        "id": "tojiru",
+        "word": "閉じる",
+        "partOfSpeech": "verb",
+        "verbClass": "ichidan",
+        "transitivity": "transitive"
+      },
+      {
+        "id": "tobikomu",
+        "word": "飛び込む",
+        "partOfSpeech": "verb",
+        "verbClass": "godan",
+        "transitivity": "intransitive"
+      },
+      {
+        "id": "tobidasu",
+        "word": "飛び出す",
+        "partOfSpeech": "verb",
+        "verbClass": "godan",
+        "transitivity": "intransitive"
+      },
+      {
+        "id": "toriageru",
+        "word": "取り上げる",
+        "partOfSpeech": "verb",
+        "verbClass": "ichidan",
+        "transitivity": "transitive"
+      },
+      {
+        "id": "torikesu",
+        "word": "取り消す",
+        "partOfSpeech": "verb",
+        "verbClass": "godan",
+        "transitivity": "transitive"
+      },
+      {
+        "id": "toridasu",
+        "word": "取り出す",
+        "partOfSpeech": "verb",
+        "verbClass": "godan",
+        "transitivity": "transitive"
+      },
+      {
+        "id": "toru_catch",
+        "word": "捕る",
+        "partOfSpeech": "verb",
+        "verbClass": "godan",
+        "transitivity": "transitive"
+      },
+      {
+        "id": "toreru",
+        "word": "取れる",
+        "partOfSpeech": "verb",
+        "verbClass": "ichidan",
+        "transitivity": "intransitive"
+      },
+      {
+        "id": "nagareru",
+        "word": "流れる",
+        "partOfSpeech": "verb",
+        "verbClass": "ichidan",
+        "transitivity": "intransitive"
+      },
+      {
+        "id": "naguru",
+        "word": "殴る",
+        "partOfSpeech": "verb",
+        "verbClass": "godan",
+        "transitivity": "transitive"
+      },
+      {
+        "id": "nayamu",
+        "word": "悩む",
+        "partOfSpeech": "verb",
+        "verbClass": "godan",
+        "transitivity": "intransitive"
+      },
+      {
+        "id": "naru_fruit",
+        "word": "生る",
+        "partOfSpeech": "verb",
+        "verbClass": "godan",
+        "transitivity": "intransitive"
+      },
+      {
+        "id": "niau",
+        "word": "似合う",
+        "partOfSpeech": "verb",
+        "verbClass": "godan",
+        "transitivity": "intransitive"
+      },
+      {
+        "id": "nigiru",
+        "word": "握る",
+        "partOfSpeech": "verb",
+        "verbClass": "godan",
+        "transitivity": "transitive"
+      },
+      {
+        "id": "niru_boil",
+        "word": "煮る",
+        "partOfSpeech": "verb",
+        "verbClass": "ichidan",
+        "transitivity": "transitive"
+      },
+      {
+        "id": "nuu",
+        "word": "縫う",
+        "partOfSpeech": "verb",
+        "verbClass": "godan",
+        "transitivity": "transitive"
+      },
+      {
+        "id": "nuku",
+        "word": "抜く",
+        "partOfSpeech": "verb",
+        "verbClass": "godan",
+        "transitivity": "transitive"
+      },
+      {
+        "id": "nureru",
+        "word": "ぬれる",
+        "partOfSpeech": "verb",
+        "verbClass": "ichidan",
+        "transitivity": "intransitive"
+      },
+      {
+        "id": "negau",
+        "word": "願う",
+        "partOfSpeech": "verb",
+        "verbClass": "godan",
+        "transitivity": "transitive"
+      },
+      {
+        "id": "nokosu",
+        "word": "残す",
+        "partOfSpeech": "verb",
+        "verbClass": "godan",
+        "transitivity": "transitive"
+      },
+      {
+        "id": "noseru",
+        "word": "載せる",
+        "partOfSpeech": "verb",
+        "verbClass": "ichidan",
+        "transitivity": "transitive"
+      },
+      {
+        "id": "nobiru_grow",
+        "word": "伸びる",
+        "partOfSpeech": "verb",
+        "verbClass": "ichidan",
+        "transitivity": "intransitive"
+      },
+      {
+        "id": "nobiru_postpone",
+        "word": "延びる",
+        "partOfSpeech": "verb",
+        "verbClass": "ichidan",
+        "transitivity": "intransitive"
+      },
+      {
+        "id": "noboru_rise",
+        "word": "昇る",
+        "partOfSpeech": "verb",
+        "verbClass": "godan",
+        "transitivity": "intransitive"
+      },
+      {
+        "id": "norikosu",
+        "word": "乗り越す",
+        "partOfSpeech": "verb",
+        "verbClass": "godan",
+        "transitivity": "intransitive"
+      },
+      {
+        "id": "haeru",
+        "word": "生える",
+        "partOfSpeech": "verb",
+        "verbClass": "ichidan",
+        "transitivity": "intransitive"
+      },
+      {
+        "id": "hakaru",
+        "word": "測る",
+        "partOfSpeech": "verb",
+        "verbClass": "godan",
+        "transitivity": "transitive"
+      },
+      {
+        "id": "haku_sweep",
+        "word": "掃く",
+        "partOfSpeech": "verb",
+        "verbClass": "godan",
+        "transitivity": "transitive"
+      },
+      {
+        "id": "haku_vomit",
+        "word": "吐く",
+        "partOfSpeech": "verb",
+        "verbClass": "godan",
+        "transitivity": "transitive"
+      },
+      {
+        "id": "hasamu",
+        "word": "挟む",
+        "partOfSpeech": "verb",
+        "verbClass": "godan",
+        "transitivity": "transitive"
+      },
+      {
+        "id": "hazusu",
+        "word": "外す",
+        "partOfSpeech": "verb",
+        "verbClass": "godan",
+        "transitivity": "transitive"
+      },
+      {
+        "id": "hazureru",
+        "word": "外れる",
+        "partOfSpeech": "verb",
+        "verbClass": "ichidan",
+        "transitivity": "intransitive"
+      },
+      {
+        "id": "hanashiau",
+        "word": "話し合う",
+        "partOfSpeech": "verb",
+        "verbClass": "godan",
+        "transitivity": "intransitive"
+      },
+      {
+        "id": "hanashikakeru",
+        "word": "話しかける",
+        "partOfSpeech": "verb",
+        "verbClass": "ichidan",
+        "transitivity": "transitive"
+      },
+      {
+        "id": "hanareru",
+        "word": "離れる",
+        "partOfSpeech": "verb",
+        "verbClass": "ichidan",
+        "transitivity": "intransitive"
+      },
+      {
+        "id": "hameru",
+        "word": "はめる",
+        "partOfSpeech": "verb",
+        "verbClass": "ichidan",
+        "transitivity": "transitive"
+      },
+      {
+        "id": "hayaru",
+        "word": "流行る",
+        "partOfSpeech": "verb",
+        "verbClass": "godan",
+        "transitivity": "intransitive"
+      },
+      {
+        "id": "haraimodosu",
+        "word": "払い戻す",
+        "partOfSpeech": "verb",
+        "verbClass": "godan",
+        "transitivity": "transitive"
+      },
+      {
+        "id": "hareru_swell",
+        "word": "腫れる",
+        "partOfSpeech": "verb",
+        "verbClass": "ichidan",
+        "transitivity": "intransitive"
+      },
+      {
+        "id": "hikiukeru",
+        "word": "引き受ける",
+        "partOfSpeech": "verb",
+        "verbClass": "ichidan",
+        "transitivity": "transitive"
+      },
+      {
+        "id": "hikidasu",
+        "word": "引き出す",
+        "partOfSpeech": "verb",
+        "verbClass": "godan",
+        "transitivity": "transitive"
+      },
+      {
+        "id": "hiku2",
+        "word": "引く",
+        "partOfSpeech": "verb",
+        "verbClass": "godan",
+        "transitivity": "transitive"
+      }
+    ],
+    "verbMissingTransitivity": [],
+    "multiSenseWords": [],
+    "businessNoWorkplaceCue": [
+      {
+        "vocabId": "achirakochira",
+        "word": "あちらこちら",
+        "jp": "会場のあちらこちらに案内板を設置しました。",
+        "vi": "Chúng tôi đã đặt bảng hướng dẫn ở nhiều chỗ trong hội trường."
+      },
+      {
+        "vocabId": "atsumari",
+        "word": "集まり",
+        "jp": "部署の集まりで今後の方針について話し合った。",
+        "vi": "Tại buổi họp mặt của phòng ban, mọi người đã bàn về phương hướng sắp tới."
+      },
+      {
+        "vocabId": "atena",
+        "word": "宛名",
+        "jp": "案内状の宛名は役職名まで正確に記載してください。",
+        "vi": "Vui lòng ghi chính xác cả chức danh trong tên người nhận của thư mời."
+      },
+      {
+        "vocabId": "atokatazuke",
+        "word": "後片付け",
+        "jp": "イベント終了後の後片付けは業者に依頼した。",
+        "vi": "Việc dọn dẹp sau khi sự kiện kết thúc đã được thuê đơn vị ngoài xử lý."
+      },
+      {
+        "vocabId": "ana",
+        "word": "穴",
+        "jp": "このスケジュールには穴があるので見直しましょう。",
+        "vi": "Lịch trình này có lỗ hổng nên hãy xem lại."
+      },
+      {
+        "vocabId": "amari",
+        "word": "余り",
+        "jp": "予算の余りは来期に繰り越します。",
+        "vi": "Phần ngân sách còn dư sẽ được chuyển sang kỳ sau."
+      },
+      {
+        "vocabId": "isshun",
+        "word": "一瞬",
+        "jp": "一瞬の判断ミスが大きな損失につながった。",
+        "vi": "Một sai lầm trong khoảnh khắc đã dẫn đến tổn thất lớn."
+      },
+      {
+        "vocabId": "event",
+        "word": "イベント",
+        "jp": "新商品発表のイベントを来週開催します。",
+        "vi": "Chúng tôi sẽ tổ chức sự kiện ra mắt sản phẩm mới vào tuần sau."
+      },
+      {
+        "vocabId": "insatsu",
+        "word": "印刷",
+        "jp": "パンフレットの印刷を業者に発注しました。",
+        "vi": "Tôi đã đặt in tờ rơi từ nhà cung cấp."
+      },
+      {
+        "vocabId": "inshou",
+        "word": "印象",
+        "jp": "面接では第一印象がとても重要です。",
+        "vi": "Trong phỏng vấn, ấn tượng đầu tiên rất quan trọng."
+      },
+      {
+        "vocabId": "intabyuu",
+        "word": "インタビュー",
+        "jp": "新製品についてメディアからインタビューを受けました。",
+        "vi": "Chúng tôi đã được truyền thông phỏng vấn về sản phẩm mới."
+      },
+      {
+        "vocabId": "uso",
+        "word": "うそ",
+        "jp": "経歴にうそがあったことが発覚し、大問題になった。",
+        "vi": "Việc phát hiện có sự gian dối trong lý lịch đã trở thành vấn đề lớn."
+      },
+      {
+        "vocabId": "eikyou",
+        "word": "影響",
+        "jp": "為替の変動が売り上げに影響を与えている。",
+        "vi": "Biến động tỷ giá đang ảnh hưởng đến doanh số."
+      },
+      {
+        "vocabId": "eco",
+        "word": "エコ",
+        "jp": "弊社は梱包資材をエコ素材に切り替えました。",
+        "vi": "Công ty chúng tôi đã chuyển sang dùng vật liệu đóng gói thân thiện môi trường."
+      },
+      {
+        "vocabId": "oil",
+        "word": "オイル",
+        "jp": "定期的にオイルの状態を点検しています。",
+        "vi": "Chúng tôi kiểm tra tình trạng dầu định kỳ."
+      },
+      {
+        "vocabId": "oiwai",
+        "word": "お祝い",
+        "jp": "創業のお祝いとして記念品をお渡ししております。",
+        "vi": "Chúng tôi tặng quà lưu niệm để chúc mừng dịp thành lập công ty."
+      },
+      {
+        "vocabId": "ojigi",
+        "word": "おじぎ",
+        "jp": "名刺交換の際は丁寧におじぎをしてください。",
+        "vi": "Khi trao đổi danh thiếp, vui lòng cúi chào lịch sự."
+      },
+      {
+        "vocabId": "oshaberi",
+        "word": "おしゃべり",
+        "jp": "休憩中のおしゃべりも大事なコミュニケーションです。",
+        "vi": "Việc trò chuyện trong giờ nghỉ cũng là giao tiếp quan trọng."
+      },
+      {
+        "vocabId": "olympic",
+        "word": "オリンピック",
+        "jp": "弊社はオリンピックの公式スポンサーです。",
+        "vi": "Công ty chúng tôi là nhà tài trợ chính thức của Thế vận hội."
+      },
+      {
+        "vocabId": "kaikai",
+        "word": "開会",
+        "jp": "定刻通りに開会いたします。",
+        "vi": "Chúng tôi sẽ khai mạc đúng giờ đã định."
+      },
+      {
+        "vocabId": "kakudai",
+        "word": "拡大",
+        "jp": "来期は海外市場への事業拡大を計画しています。",
+        "vi": "Kỳ tới chúng tôi dự định mở rộng kinh doanh sang thị trường nước ngoài."
+      },
+      {
+        "vocabId": "kaji",
+        "word": "家事",
+        "jp": "育児と家事の両立支援制度を導入しました。",
+        "vi": "Chúng tôi đã áp dụng chế độ hỗ trợ cân bằng giữa nuôi con và việc nhà."
+      },
+      {
+        "vocabId": "kata",
+        "word": "型",
+        "jp": "新型のプリンターを導入しました。",
+        "vi": "Chúng tôi đã đưa vào sử dụng máy in kiểu mới."
+      },
+      {
+        "vocabId": "kachi",
+        "word": "価値",
+        "jp": "当社のブランド価値を高める施策を検討しています。",
+        "vi": "Chúng tôi đang xem xét biện pháp nâng cao giá trị thương hiệu của công ty."
+      },
+      {
+        "vocabId": "cut",
+        "word": "カット",
+        "jp": "コスト削減のため、不要な工程をカットしました。",
+        "vi": "Để cắt giảm chi phí, chúng tôi đã loại bỏ những công đoạn không cần thiết."
+      },
+      {
+        "vocabId": "katsudou",
+        "word": "活動",
+        "jp": "地域貢献活動の一環としてボランティアを募集しています。",
+        "vi": "Chúng tôi đang tuyển tình nguyện viên như một phần của hoạt động đóng góp cho cộng đồng."
+      },
+      {
+        "vocabId": "gaman",
+        "word": "我慢",
+        "jp": "繁忙期はしばらく我慢が必要です。",
+        "vi": "Trong mùa cao điểm cần phải chịu đựng một thời gian."
+      },
+      {
+        "vocabId": "kami",
+        "word": "神",
+        "jp": "各国の神話には神々についての物語がある。",
+        "vi": "Trong thần thoại của các nước đều có những câu chuyện về các vị thần."
+      },
+      {
+        "vocabId": "kara",
+        "word": "空",
+        "jp": "空の容器はこちらに回収してください。",
+        "vi": "Vui lòng để các vỏ hộp rỗng vào đây để thu gom."
+      },
+      {
+        "vocabId": "kawa",
+        "word": "革",
+        "jp": "新商品には高級な革素材を使用しています。",
+        "vi": "Sản phẩm mới sử dụng chất liệu da cao cấp."
+      },
+      {
+        "vocabId": "kangei",
+        "word": "歓迎",
+        "jp": "新規のお取引を歓迎いたします。",
+        "vi": "Chúng tôi hoan nghênh giao dịch mới."
+      },
+      {
+        "vocabId": "kankou",
+        "word": "観光",
+        "jp": "インバウンド観光客向けの案内板を設置しました。",
+        "vi": "Chúng tôi đã lắp đặt bảng chỉ dẫn dành cho khách du lịch nước ngoài."
+      },
+      {
+        "vocabId": "kansatsu",
+        "word": "観察",
+        "jp": "市場動向を継続的に観察する必要があります。",
+        "vi": "Cần phải quan sát liên tục xu hướng thị trường."
+      },
+      {
+        "vocabId": "kanji2",
+        "word": "感じ",
+        "jp": "新しいオフィスはとても開放的な感じです。",
+        "vi": "Văn phòng mới có cảm giác rất thoáng đãng."
+      },
+      {
+        "vocabId": "kansha",
+        "word": "感謝",
+        "jp": "日頃のご愛顧に感謝申し上げます。",
+        "vi": "Chúng tôi xin bày tỏ lòng biết ơn đến sự ủng hộ thường ngày của quý khách."
+      },
+      {
+        "vocabId": "kanjou",
+        "word": "感情",
+        "jp": "交渉の場では感情的にならないよう注意しましょう。",
+        "vi": "Trong các cuộc đàm phán, hãy chú ý đừng để cảm xúc chi phối."
+      },
+      {
+        "vocabId": "kanshin2",
+        "word": "関心",
+        "jp": "消費者の関心が高い分野に投資しています。",
+        "vi": "Chúng tôi đang đầu tư vào lĩnh vực mà người tiêu dùng quan tâm nhiều."
+      },
+      {
+        "vocabId": "kansei",
+        "word": "完成",
+        "jp": "新製品は来月末に完成する予定です。",
+        "vi": "Sản phẩm mới dự kiến sẽ hoàn thành vào cuối tháng sau."
+      },
+      {
+        "vocabId": "kanren",
+        "word": "関連",
+        "jp": "関連部署に情報を共有してください。",
+        "vi": "Vui lòng chia sẻ thông tin cho các bộ phận liên quan."
+      },
+      {
+        "vocabId": "kikime",
+        "word": "効き目",
+        "jp": "この広告施策の効き目を検証する必要があります。",
+        "vi": "Cần phải kiểm chứng hiệu quả của chiến dịch quảng cáo này."
+      },
+      {
+        "vocabId": "kikoku",
+        "word": "帰国",
+        "jp": "海外赴任者の帰国手続きについてご案内します。",
+        "vi": "Chúng tôi xin hướng dẫn về thủ tục hồi hương cho nhân viên công tác nước ngoài."
+      },
+      {
+        "vocabId": "kiji",
+        "word": "記事",
+        "jp": "新製品に関する記事がニュースサイトに掲載されました。",
+        "vi": "Bài viết về sản phẩm mới đã được đăng trên trang tin tức."
+      },
+      {
+        "vocabId": "gijutsu",
+        "word": "技術",
+        "jp": "弊社は独自の技術で業界をリードしています。",
+        "vi": "Công ty chúng tôi dẫn đầu ngành bằng công nghệ độc quyền."
+      },
+      {
+        "vocabId": "kitaku",
+        "word": "帰宅",
+        "jp": "台風接近のため、本日は早めに帰宅してください。",
+        "vi": "Do bão đang tới gần, hôm nay xin hãy về nhà sớm hơn."
+      },
+      {
+        "vocabId": "kichouhin",
+        "word": "貴重品",
+        "jp": "セキュリティのため、貴重品は金庫に入れてください。",
+        "vi": "Vì lý do an ninh, xin hãy để đồ có giá trị vào két sắt."
+      },
+      {
+        "vocabId": "kinyuu",
+        "word": "記入",
+        "jp": "申込書の必要事項をご記入ください。",
+        "vi": "Vui lòng điền các mục cần thiết vào đơn đăng ký."
+      },
+      {
+        "vocabId": "kinen",
+        "word": "記念",
+        "jp": "創立10周年を記念してイベントを開催します。",
+        "vi": "Chúng tôi sẽ tổ chức sự kiện để kỷ niệm 10 năm thành lập."
+      },
+      {
+        "vocabId": "kibou",
+        "word": "希望",
+        "jp": "ご希望の日時をお知らせください。",
+        "vi": "Xin vui lòng cho biết ngày giờ mong muốn."
+      },
+      {
+        "vocabId": "kihon",
+        "word": "基本",
+        "jp": "基本料金に加えて、オプション料金がかかります。",
+        "vi": "Ngoài phí cơ bản, còn phát sinh phí tùy chọn."
+      },
+      {
+        "vocabId": "gimon",
+        "word": "疑問",
+        "jp": "ご不明な点やご疑問があればお問い合わせください。",
+        "vi": "Nếu có điểm chưa rõ hoặc thắc mắc, xin vui lòng liên hệ."
+      },
+      {
+        "vocabId": "kyuukei",
+        "word": "休憩",
+        "jp": "午後3時に15分間の休憩を挟みます。",
+        "vi": "Chúng ta sẽ có 15 phút nghỉ giải lao vào lúc 3 giờ chiều."
+      },
+      {
+        "vocabId": "kyuuyou",
+        "word": "急用",
+        "jp": "急用のため、本日は早退させていただきます。",
+        "vi": "Vì có việc gấp nên hôm nay tôi xin phép về sớm."
+      },
+      {
+        "vocabId": "gyouji",
+        "word": "行事",
+        "jp": "年間行事のスケジュールを社内に共有しました。",
+        "vi": "Chúng tôi đã chia sẻ lịch các sự kiện trong năm cho nội bộ công ty."
+      },
+      {
+        "vocabId": "kyousou",
+        "word": "競争",
+        "jp": "価格競争が激化し、利益率が下がっています。",
+        "vi": "Cạnh tranh giá cả ngày càng gay gắt, tỷ suất lợi nhuận đang giảm."
+      },
+      {
+        "vocabId": "kyoutsuu",
+        "word": "共通",
+        "jp": "両社の共通目標を明確にしましょう。",
+        "vi": "Hãy làm rõ mục tiêu chung của hai công ty."
+      },
+      {
+        "vocabId": "kyouryoku",
+        "word": "協力",
+        "jp": "関係部署のご協力をお願いいたします。",
+        "vi": "Kính mong sự hợp tác của các bộ phận liên quan."
+      },
+      {
+        "vocabId": "gyouretsu",
+        "word": "行列",
+        "jp": "開店前から長い行列ができていました。",
+        "vi": "Trước khi mở cửa đã có hàng dài người xếp hàng."
+      },
+      {
+        "vocabId": "kyoka",
+        "word": "許可",
+        "jp": "上長の許可を得てから提出してください。",
+        "vi": "Vui lòng nộp sau khi đã được cấp trên cho phép."
+      },
+      {
+        "vocabId": "gyogyou",
+        "word": "漁業",
+        "jp": "漁業関連企業への投資を検討しています。",
+        "vi": "Chúng tôi đang xem xét đầu tư vào các doanh nghiệp liên quan đến ngư nghiệp."
+      },
+      {
+        "vocabId": "kin",
+        "word": "金",
+        "jp": "金の含有量を証明書に明記しています。",
+        "vi": "Hàm lượng vàng được ghi rõ trong giấy chứng nhận."
+      },
+      {
+        "vocabId": "gin",
+        "word": "銀",
+        "jp": "銀メダルを獲得した選手にインタビューしました。",
+        "vi": "Chúng tôi đã phỏng vấn vận động viên giành huy chương bạc."
+      },
+      {
+        "vocabId": "kinko",
+        "word": "金庫",
+        "jp": "現金は必ず金庫で保管してください。",
+        "vi": "Tiền mặt phải luôn được bảo quản trong két sắt."
+      },
+      {
+        "vocabId": "kinchou",
+        "word": "緊張",
+        "jp": "プレゼン前は誰でも緊張するものです。",
+        "vi": "Trước khi thuyết trình, ai cũng sẽ căng thẳng thôi."
+      },
+      {
+        "vocabId": "kufuu",
+        "word": "工夫",
+        "jp": "コスト削減のため、様々な工夫を行っています。",
+        "vi": "Chúng tôi đang thực hiện nhiều sáng kiến để cắt giảm chi phí."
+      },
+      {
+        "vocabId": "kubetsu",
+        "word": "区別",
+        "jp": "公私の区別をしっかりつけましょう。",
+        "vi": "Hãy phân biệt rõ ràng chuyện công việc và cá nhân."
+      },
+      {
+        "vocabId": "click",
+        "word": "クリック",
+        "jp": "リンクをクリックすると詳細ページに移動します。",
+        "vi": "Khi nhấp vào liên kết, bạn sẽ được chuyển đến trang chi tiết."
+      },
+      {
+        "vocabId": "kurou",
+        "word": "苦労",
+        "jp": "新規事業の立ち上げには大変苦労しました。",
+        "vi": "Việc khởi động dự án kinh doanh mới rất vất vả."
+      },
+      {
+        "vocabId": "keiji",
+        "word": "掲示",
+        "jp": "変更事項は社内掲示板に掲示いたします。",
+        "vi": "Nội dung thay đổi sẽ được thông báo trên bảng tin nội bộ."
+      },
+      {
+        "vocabId": "kesshin",
+        "word": "決心",
+        "jp": "事業を拡大する決心を固めました。",
+        "vi": "Chúng tôi đã củng cố quyết tâm mở rộng kinh doanh."
+      },
+      {
+        "vocabId": "kettei",
+        "word": "決定",
+        "jp": "来期の予算が正式に決定しました。",
+        "vi": "Ngân sách kỳ tới đã được quyết định chính thức."
+      },
+      {
+        "vocabId": "ketsuron",
+        "word": "結論",
+        "jp": "長時間の議論の末、ようやく結論に達しました。",
+        "vi": "Sau thời gian dài thảo luận, cuối cùng chúng tôi cũng đạt được kết luận."
+      },
+      {
+        "vocabId": "ken1",
+        "word": "券",
+        "jp": "商品券を進呈いたします。",
+        "vi": "Chúng tôi xin tặng phiếu mua hàng."
+      },
+      {
+        "vocabId": "kenchiku",
+        "word": "建築",
+        "jp": "有名な建築家に新社屋の設計を依頼しました。",
+        "vi": "Chúng tôi đã nhờ một kiến trúc sư nổi tiếng thiết kế trụ sở mới."
+      },
+      {
+        "vocabId": "kenpou",
+        "word": "憲法",
+        "jp": "憲法に定められた権利について解説します。",
+        "vi": "Chúng tôi sẽ giải thích về các quyền được quy định trong Hiến pháp."
+      },
+      {
+        "vocabId": "kenri",
+        "word": "権利",
+        "jp": "従業員の権利を守るための規定を整備しました。",
+        "vi": "Chúng tôi đã hoàn thiện quy định để bảo vệ quyền lợi nhân viên."
+      },
+      {
+        "vocabId": "kouen1",
+        "word": "講演",
+        "jp": "来月、業界専門家による講演会を開催します。",
+        "vi": "Tháng sau chúng tôi sẽ tổ chức buổi diễn thuyết bởi chuyên gia trong ngành."
+      },
+      {
+        "vocabId": "kouka",
+        "word": "効果",
+        "jp": "広告の効果を数値で検証しています。",
+        "vi": "Chúng tôi đang kiểm chứng hiệu quả quảng cáo bằng số liệu."
+      },
+      {
+        "vocabId": "kougyou",
+        "word": "工業",
+        "jp": "工業製品の輸出が好調に推移しています。",
+        "vi": "Xuất khẩu sản phẩm công nghiệp đang diễn biến thuận lợi."
+      },
+      {
+        "vocabId": "koukuubin",
+        "word": "航空便",
+        "jp": "至急の書類は航空便で発送してください。",
+        "vi": "Tài liệu gấp xin gửi bằng đường hàng không."
+      },
+      {
+        "vocabId": "koukoku",
+        "word": "広告",
+        "jp": "SNSで新商品の広告を出す予定です。",
+        "vi": "Chúng tôi dự định đăng quảng cáo sản phẩm mới trên mạng xã hội."
+      },
+      {
+        "vocabId": "kousai",
+        "word": "交際",
+        "jp": "交際費の精算は月末までにお願いします。",
+        "vi": "Việc thanh toán chi phí giao tế xin thực hiện trước cuối tháng."
+      },
+      {
+        "vocabId": "kouji",
+        "word": "工事",
+        "jp": "工事期間中はご不便をおかけいたします。",
+        "vi": "Trong thời gian thi công, chúng tôi xin lỗi vì sự bất tiện này。"
+      },
+      {
+        "vocabId": "koudou",
+        "word": "行動",
+        "jp": "迅速な行動が求められる状況です。",
+        "vi": "Đây là tình huống đòi hỏi hành động nhanh chóng."
+      },
+      {
+        "vocabId": "kouryuu",
+        "word": "交流",
+        "jp": "異文化交流を目的としたイベントを企画しています。",
+        "vi": "Chúng tôi đang lên kế hoạch sự kiện nhằm mục đích giao lưu văn hóa."
+      },
+      {
+        "vocabId": "gokai",
+        "word": "誤解",
+        "jp": "説明不足が誤解を招く結果となりました。",
+        "vi": "Việc giải thích thiếu sót đã dẫn đến hiểu lầm."
+      },
+      {
+        "vocabId": "kogata",
+        "word": "小型",
+        "jp": "小型家電の需要が増加しています。",
+        "vi": "Nhu cầu về đồ điện gia dụng cỡ nhỏ đang tăng."
+      },
+      {
+        "vocabId": "kokusan",
+        "word": "国産",
+        "jp": "国産材料のみを使用した商品を開発しました。",
+        "vi": "Chúng tôi đã phát triển sản phẩm chỉ sử dụng nguyên liệu trong nước."
+      },
+      {
+        "vocabId": "kokkai",
+        "word": "国会",
+        "jp": "国会で可決された法律の施行日が発表されました。",
+        "vi": "Ngày thi hành luật được Quốc hội thông qua đã được công bố."
+      },
+      {
+        "vocabId": "kona",
+        "word": "粉",
+        "jp": "原料の粉を均一に混ぜる工程が重要です。",
+        "vi": "Công đoạn trộn đều bột nguyên liệu rất quan trọng."
+      },
+      {
+        "vocabId": "gobusata",
+        "word": "ご無沙汰",
+        "jp": "長らくご無沙汰しており、申し訳ございません。",
+        "vi": "Tôi thành thật xin lỗi vì đã lâu không liên lạc với quý vị."
+      },
+      {
+        "vocabId": "gum",
+        "word": "ゴム",
+        "jp": "ゴム製品の耐久性を試験しています。",
+        "vi": "Chúng tôi đang thử nghiệm độ bền của sản phẩm cao su."
+      },
+      {
+        "vocabId": "komugi",
+        "word": "小麦",
+        "jp": "小麦価格の変動が原材料費に直結しています。",
+        "vi": "Biến động giá lúa mì ảnh hưởng trực tiếp đến chi phí nguyên liệu."
+      },
+      {
+        "vocabId": "concours",
+        "word": "コンクール",
+        "jp": "社内アイデアコンクールを毎年開催しています。",
+        "vi": "Chúng tôi tổ chức cuộc thi ý tưởng nội bộ hàng năm."
+      },
+      {
+        "vocabId": "saikou",
+        "word": "最高",
+        "jp": "今期は最高益を更新する見込みです。",
+        "vi": "Kỳ này dự kiến sẽ đạt lợi nhuận cao kỷ lục."
+      },
+      {
+        "vocabId": "saidai",
+        "word": "最大",
+        "jp": "最大限の努力をしてまいります。",
+        "vi": "Chúng tôi sẽ nỗ lực hết mức có thể."
+      },
+      {
+        "vocabId": "saitei",
+        "word": "最低",
+        "jp": "最低限の情報だけ共有してください。",
+        "vi": "Vui lòng chỉ chia sẻ những thông tin tối thiểu cần thiết."
+      },
+      {
+        "vocabId": "zairyou",
+        "word": "材料",
+        "jp": "高品質な材料のみを厳選して使用しています。",
+        "vi": "Chúng tôi chỉ tuyển chọn sử dụng nguyên liệu chất lượng cao."
+      },
+      {
+        "vocabId": "siren",
+        "word": "サイレン",
+        "jp": "避難訓練の際はサイレンが鳴ります。",
+        "vi": "Trong lúc diễn tập sơ tán sẽ có còi báo động vang lên."
+      },
+      {
+        "vocabId": "sakuhin",
+        "word": "作品",
+        "jp": "コンテストに応募する作品を選定しています。",
+        "vi": "Chúng tôi đang chọn lựa tác phẩm để dự thi."
+      },
+      {
+        "vocabId": "satsuei",
+        "word": "撮影",
+        "jp": "新商品の撮影を来週実施する予定です。",
+        "vi": "Chúng tôi dự định thực hiện chụp ảnh sản phẩm mới vào tuần sau."
+      },
+      {
+        "vocabId": "sawagi",
+        "word": "騒ぎ",
+        "jp": "誤報が社内で大きな騒ぎとなりました。",
+        "vi": "Tin đồn sai sự thật đã gây ra sự xáo trộn lớn trong công ty."
+      },
+      {
+        "vocabId": "sanka",
+        "word": "参加",
+        "jp": "セミナーへの参加を希望する方はお申し込みください。",
+        "vi": "Những ai mong muốn tham gia hội thảo xin vui lòng đăng ký."
+      },
+      {
+        "vocabId": "sangyou",
+        "word": "産業",
+        "jp": "観光産業の活性化に向けた施策を検討しています。",
+        "vi": "Chúng tôi đang xem xét biện pháp thúc đẩy ngành du lịch."
+      },
+      {
+        "vocabId": "zangyou",
+        "word": "残業",
+        "jp": "残業時間の削減に向けて取り組んでいます。",
+        "vi": "Chúng tôi đang nỗ lực để giảm thời gian làm thêm giờ."
+      },
+      {
+        "vocabId": "sankou",
+        "word": "参考",
+        "jp": "他社事例を参考に新しい制度を検討しています。",
+        "vi": "Chúng tôi đang xem xét chế độ mới dựa trên tham khảo các trường hợp của công ty khác."
+      },
+      {
+        "vocabId": "sansei",
+        "word": "賛成",
+        "jp": "提案に賛成する方は挙手をお願いします。",
+        "vi": "Những ai tán thành đề xuất xin vui lòng giơ tay."
+      },
+      {
+        "vocabId": "sanchi",
+        "word": "産地",
+        "jp": "全商品に産地情報を表示するよう義務付けられています。",
+        "vi": "Quy định bắt buộc phải ghi rõ thông tin nơi sản xuất trên tất cả sản phẩm."
+      },
+      {
+        "vocabId": "shigen",
+        "word": "資源",
+        "jp": "限られた資源を有効に活用する必要があります。",
+        "vi": "Cần phải sử dụng hiệu quả nguồn tài nguyên có hạn."
+      },
+      {
+        "vocabId": "jiken",
+        "word": "事件",
+        "jp": "情報漏洩事件を受けてセキュリティを強化しました。",
+        "vi": "Sau sự cố rò rỉ thông tin, chúng tôi đã tăng cường bảo mật."
+      },
+      {
+        "vocabId": "jijitsu",
+        "word": "事実",
+        "jp": "調査の結果、事実関係が明らかになりました。",
+        "vi": "Qua kết quả điều tra, các tình tiết sự việc đã được làm rõ."
+      },
+      {
+        "vocabId": "jijou",
+        "word": "事情",
+        "jp": "事情を説明の上、ご理解いただけますと幸いです。",
+        "vi": "Sau khi giải thích hoàn cảnh, mong quý vị thông cảm."
+      },
+      {
+        "vocabId": "jishin1",
+        "word": "自信",
+        "jp": "この製品の品質には自信を持っております。",
+        "vi": "Chúng tôi tự tin vào chất lượng của sản phẩm này."
+      },
+      {
+        "vocabId": "jisoku",
+        "word": "時速",
+        "jp": "時速80キロを超える走行は禁止されています。",
+        "vi": "Việc lái xe vượt quá vận tốc 80km/h bị cấm."
+      },
+      {
+        "vocabId": "shitsugyou",
+        "word": "失業",
+        "jp": "景気の悪化により失業率が上昇しています。",
+        "vi": "Do kinh tế suy thoái, tỷ lệ thất nghiệp đang tăng lên."
+      },
+      {
+        "vocabId": "jitsuryoku",
+        "word": "実力",
+        "jp": "実力主義の評価制度を導入しました。",
+        "vi": "Chúng tôi đã áp dụng chế độ đánh giá theo chủ nghĩa thực lực."
+      },
+      {
+        "vocabId": "shiten",
+        "word": "支店",
+        "jp": "大阪支店との連携を強化する必要があります。",
+        "vi": "Cần phải tăng cường phối hợp với chi nhánh Osaka."
+      },
+      {
+        "vocabId": "jimu",
+        "word": "事務",
+        "jp": "事務手続きはオンラインでも可能です。",
+        "vi": "Thủ tục hành chính cũng có thể thực hiện trực tuyến."
+      },
+      {
+        "vocabId": "jama",
+        "word": "邪魔",
+        "jp": "通路の邪魔にならないよう荷物を整理してください。",
+        "vi": "Vui lòng sắp xếp hành lý để không cản trở lối đi."
+      },
+      {
+        "vocabId": "janken",
+        "word": "じゃんけん",
+        "jp": "順番はじゃんけんで公平に決めましょう。",
+        "vi": "Hãy quyết định thứ tự công bằng bằng oẳn tù tì."
+      },
+      {
+        "vocabId": "shuukai",
+        "word": "集会",
+        "jp": "緊急集会を招集し、対応方針を協議しました。",
+        "vi": "Chúng tôi đã triệu tập cuộc họp khẩn cấp để bàn phương hướng xử lý."
+      },
+      {
+        "vocabId": "shuugou",
+        "word": "集合",
+        "jp": "出発前に駐車場に集合をお願いします。",
+        "vi": "Xin vui lòng tập trung tại bãi đỗ xe trước khi khởi hành."
+      },
+      {
+        "vocabId": "shuushoku",
+        "word": "就職",
+        "jp": "新卒者の就職支援プログラムを実施しています。",
+        "vi": "Chúng tôi đang thực hiện chương trình hỗ trợ việc làm cho sinh viên mới tốt nghiệp."
+      },
+      {
+        "vocabId": "shugi",
+        "word": "主義",
+        "jp": "弊社は成果主義を採用しています。",
+        "vi": "Công ty chúng tôi áp dụng chủ nghĩa thành quả."
+      },
+      {
+        "vocabId": "shukushou",
+        "word": "縮小",
+        "jp": "不採算事業の縮小を検討しています。",
+        "vi": "Chúng tôi đang xem xét thu hẹp mảng kinh doanh không có lãi."
+      },
+      {
+        "vocabId": "shukkin",
+        "word": "出勤",
+        "jp": "台風のため、出勤時間を変更いたします。",
+        "vi": "Do bão nên chúng tôi sẽ thay đổi giờ đi làm."
+      },
+      {
+        "vocabId": "shutsujou",
+        "word": "出場",
+        "jp": "全国大会への出場を目指して練習しています。",
+        "vi": "Chúng tôi đang luyện tập nhắm đến việc tham gia giải toàn quốc."
+      },
+      {
+        "vocabId": "junjo",
+        "word": "順序",
+        "jp": "手続きは正しい順序で進めてください。",
+        "vi": "Vui lòng tiến hành thủ tục theo đúng trình tự."
+      },
+      {
+        "vocabId": "shiyou1",
+        "word": "使用",
+        "jp": "社用車の使用は事前に申請してください。",
+        "vi": "Vui lòng đăng ký trước khi sử dụng xe công ty."
+      },
+      {
+        "vocabId": "shougyou",
+        "word": "商業",
+        "jp": "新しい商業施設の開発計画が発表されました。",
+        "vi": "Kế hoạch phát triển khu thương mại mới đã được công bố."
+      },
+      {
+        "vocabId": "joushiki",
+        "word": "常識",
+        "jp": "ビジネスマナーは社会人としての常識です。",
+        "vi": "Phép tắc kinh doanh là kiến thức cơ bản của người đi làm."
+      },
+      {
+        "vocabId": "joutai",
+        "word": "状態",
+        "jp": "機器の状態を定期的に点検しています。",
+        "vi": "Chúng tôi kiểm tra tình trạng thiết bị định kỳ."
+      },
+      {
+        "vocabId": "shouchi",
+        "word": "承知",
+        "jp": "ご依頼の件、承知いたしました。",
+        "vi": "Về việc quý vị yêu cầu, tôi đã rõ ạ."
+      },
+      {
+        "vocabId": "shouhin",
+        "word": "商品",
+        "jp": "新商品の発売日が正式に決定しました。",
+        "vi": "Ngày ra mắt sản phẩm mới đã được quyết định chính thức."
+      },
+      {
+        "vocabId": "jouhou",
+        "word": "情報",
+        "jp": "個人情報の取り扱いには十分ご注意ください。",
+        "vi": "Xin hãy cẩn thận trong việc xử lý thông tin cá nhân."
+      },
+      {
+        "vocabId": "shoumeisho",
+        "word": "証明書",
+        "jp": "在職証明書の発行を人事部に依頼してください。",
+        "vi": "Vui lòng yêu cầu phòng nhân sự cấp giấy xác nhận đang làm việc."
+      },
+      {
+        "vocabId": "shoumen",
+        "word": "正面",
+        "jp": "正面玄関からお入りください。",
+        "vi": "Xin vui lòng vào từ cổng chính phía trước."
+      },
+      {
+        "vocabId": "shock",
+        "word": "ショック",
+        "jp": "予想外の結果に社内は大きなショックを受けました。",
+        "vi": "Cả công ty đã rất sốc trước kết quả ngoài dự kiến."
+      },
+      {
+        "vocabId": "shirushi",
+        "word": "印",
+        "jp": "承認済みの書類には印を付けてください。",
+        "vi": "Vui lòng đánh dấu vào các tài liệu đã được phê duyệt."
+      },
+      {
+        "vocabId": "shinri",
+        "word": "心理",
+        "jp": "消費者心理を分析してマーケティング戦略を立てます。",
+        "vi": "Chúng tôi sẽ phân tích tâm lý người tiêu dùng để lập chiến lược marketing."
+      },
+      {
+        "vocabId": "style",
+        "word": "スタイル",
+        "jp": "新しい働き方のスタイルを導入しました。",
+        "vi": "Chúng tôi đã áp dụng phong cách làm việc mới."
+      },
+      {
+        "vocabId": "speech",
+        "word": "スピーチ",
+        "jp": "社長が新年のスピーチを行いました。",
+        "vi": "Giám đốc đã có bài phát biểu đầu năm."
+      },
+      {
+        "vocabId": "suri",
+        "word": "すり",
+        "jp": "混雑時はすり被害にご注意ください。",
+        "vi": "Trong lúc đông đúc xin chú ý đề phòng móc túi."
+      },
+      {
+        "vocabId": "seigen",
+        "word": "制限",
+        "jp": "アクセス制限を一部解除いたしました。",
+        "vi": "Chúng tôi đã gỡ bỏ một phần giới hạn truy cập."
+      },
+      {
+        "vocabId": "seikou",
+        "word": "成功",
+        "jp": "新製品の開発が成功し、来月発売されます。",
+        "vi": "Việc phát triển sản phẩm mới đã thành công và sẽ ra mắt vào tháng sau."
+      },
+      {
+        "vocabId": "seisan1",
+        "word": "生産",
+        "jp": "生産ラインの効率を向上させる施策を実施します。",
+        "vi": "Chúng tôi sẽ thực hiện biện pháp nâng cao hiệu quả dây chuyền sản xuất."
+      },
+      {
+        "vocabId": "seiji",
+        "word": "政治",
+        "jp": "政治情勢が経済に与える影響を分析しています。",
+        "vi": "Chúng tôi đang phân tích ảnh hưởng của tình hình chính trị đến kinh tế."
+      },
+      {
+        "vocabId": "seishitsu",
+        "word": "性質",
+        "jp": "素材の性質を考慮して設計してください。",
+        "vi": "Vui lòng thiết kế có xem xét đến tính chất của vật liệu."
+      },
+      {
+        "vocabId": "seichou",
+        "word": "成長",
+        "jp": "企業の成長戦略について議論しました。",
+        "vi": "Chúng tôi đã thảo luận về chiến lược tăng trưởng của doanh nghiệp."
+      },
+      {
+        "vocabId": "seido",
+        "word": "制度",
+        "jp": "新しい人事制度を来月から導入します。",
+        "vi": "Chúng tôi sẽ áp dụng chế độ nhân sự mới từ tháng sau."
+      },
+      {
+        "vocabId": "seihin",
+        "word": "製品",
+        "jp": "製品の品質管理を徹底しています。",
+        "vi": "Chúng tôi thực hiện triệt để việc quản lý chất lượng sản phẩm."
+      },
+      {
+        "vocabId": "seifu",
+        "word": "政府",
+        "jp": "政府の規制強化に対応する必要があります。",
+        "vi": "Cần phải ứng phó với việc tăng cường quy định của chính phủ."
+      },
+      {
+        "vocabId": "seiyou",
+        "word": "西洋",
+        "jp": "西洋と東洋の商習慣の違いを研究しています。",
+        "vi": "Chúng tôi đang nghiên cứu sự khác biệt trong tập quán kinh doanh giữa phương Tây và phương Đông."
+      },
+      {
+        "vocabId": "seiri",
+        "word": "整理",
+        "jp": "データの整理を進めております。",
+        "vi": "Chúng tôi đang tiến hành sắp xếp dữ liệu."
+      },
+      {
+        "vocabId": "safe",
+        "word": "セーフ",
+        "jp": "判定はセーフでした。",
+        "vi": "Phán quyết là an toàn (safe)."
+      },
+      {
+        "vocabId": "sale",
+        "word": "セール",
+        "jp": "夏のセールを来週から開始いたします。",
+        "vi": "Chúng tôi sẽ bắt đầu đợt giảm giá mùa hè từ tuần sau."
+      },
+      {
+        "vocabId": "sekitan",
+        "word": "石炭",
+        "jp": "石炭の輸入価格が上昇しています。",
+        "vi": "Giá nhập khẩu than đá đang tăng."
+      },
+      {
+        "vocabId": "sekinin",
+        "word": "責任",
+        "jp": "品質管理の責任者を新たに任命しました。",
+        "vi": "Chúng tôi đã bổ nhiệm mới người phụ trách quản lý chất lượng."
+      },
+      {
+        "vocabId": "sekiyu",
+        "word": "石油",
+        "jp": "石油価格の高騰が輸送コストに影響しています。",
+        "vi": "Giá dầu tăng cao đang ảnh hưởng đến chi phí vận chuyển."
+      },
+      {
+        "vocabId": "senkyo",
+        "word": "選挙",
+        "jp": "選挙結果を受けて新体制が発表されました。",
+        "vi": "Sau kết quả bầu cử, thể chế mới đã được công bố."
+      },
+      {
+        "vocabId": "zenshin",
+        "word": "前進",
+        "jp": "交渉は前進していると評価されています。",
+        "vi": "Cuộc đàm phán được đánh giá là đang có tiến triển."
+      },
+      {
+        "vocabId": "zentai",
+        "word": "全体",
+        "jp": "全体の予算を見直す必要があります。",
+        "vi": "Cần phải xem lại toàn bộ ngân sách."
+      },
+      {
+        "vocabId": "senden",
+        "word": "宣伝",
+        "jp": "SNSを活用した宣伝活動を強化します。",
+        "vi": "Chúng tôi sẽ tăng cường hoạt động quảng bá sử dụng mạng xã hội."
+      },
+      {
+        "vocabId": "zenryoku",
+        "word": "全力",
+        "jp": "目標達成に向けて全力を尽くしてまいります。",
+        "vi": "Chúng tôi sẽ dốc hết toàn lực để đạt được mục tiêu."
+      },
+      {
+        "vocabId": "souzou",
+        "word": "想像",
+        "jp": "将来の需要を想像しながら計画を立てています。",
+        "vi": "Chúng tôi đang lập kế hoạch trong khi hình dung nhu cầu tương lai."
+      },
+      {
+        "vocabId": "soubetsukai",
+        "word": "送別会",
+        "jp": "退職者のための送別会を来週末に開催します。",
+        "vi": "Chúng tôi sẽ tổ chức tiệc chia tay cho người nghỉ việc vào cuối tuần sau."
+      },
+      {
+        "vocabId": "sokutatsu",
+        "word": "速達",
+        "jp": "重要書類は速達で発送してください。",
+        "vi": "Tài liệu quan trọng xin gửi bằng chuyển phát nhanh."
+      },
+      {
+        "vocabId": "sotogawa",
+        "word": "外側",
+        "jp": "建物の外側の塗装工事を行います。",
+        "vi": "Chúng tôi sẽ tiến hành thi công sơn bên ngoài tòa nhà."
+      },
+      {
+        "vocabId": "sonota",
+        "word": "その他",
+        "jp": "その他の詳細については別紙をご覧ください。",
+        "vi": "Về các chi tiết khác, xin vui lòng xem tài liệu đính kèm."
+      },
+      {
+        "vocabId": "tai1",
+        "word": "対",
+        "jp": "賛成対反対の割合を集計しました。",
+        "vi": "Chúng tôi đã tổng hợp tỷ lệ tán thành đối phản đối."
+      },
+      {
+        "vocabId": "dai1",
+        "word": "台",
+        "jp": "社用車を新たに2台導入いたしました。",
+        "vi": "Chúng tôi đã đưa vào sử dụng mới thêm 2 chiếc xe công ty."
+      },
+      {
+        "vocabId": "dai2",
+        "word": "題",
+        "jp": "レポートの題を「市場動向分析」としました。",
+        "vi": "Chúng tôi đã đặt tiêu đề báo cáo là \"Phân tích xu hướng thị trường\"."
+      },
+      {
+        "vocabId": "taikai",
+        "word": "大会",
+        "jp": "全国大会の開催に向けて準備を進めています。",
+        "vi": "Chúng tôi đang chuẩn bị cho việc tổ chức đại hội toàn quốc."
+      },
+      {
+        "vocabId": "taisou",
+        "word": "体操",
+        "jp": "始業前に軽い体操を実施しています。",
+        "vi": "Chúng tôi thực hiện bài thể dục nhẹ trước giờ làm việc."
+      },
+      {
+        "vocabId": "daibubun",
+        "word": "大部分",
+        "jp": "予算の大部分は人件費に充てられています。",
+        "vi": "Phần lớn ngân sách được dùng cho chi phí nhân sự."
+      },
+      {
+        "vocabId": "tanomi",
+        "word": "頼み",
+        "jp": "一つ頼みがあるのですが、お時間よろしいですか。",
+        "vi": "Tôi có một việc muốn nhờ, anh/chị có thời gian không ạ?"
+      },
+      {
+        "vocabId": "double",
+        "word": "ダブル",
+        "jp": "ダブルルームを2部屋ご用意いたしました。",
+        "vi": "Chúng tôi đã chuẩn bị 2 phòng đôi."
+      },
+      {
+        "vocabId": "tama",
+        "word": "玉",
+        "jp": "製品には小さな玉状の部品が使われています。",
+        "vi": "Sản phẩm sử dụng các linh kiện dạng viên nhỏ."
+      },
+      {
+        "vocabId": "check",
+        "word": "チェック",
+        "jp": "提出前に必ず内容をチェックしてください。",
+        "vi": "Vui lòng kiểm tra nội dung trước khi nộp."
+      },
+      {
+        "vocabId": "checkout",
+        "word": "チェックアウト",
+        "jp": "チェックアウトの際はフロントにお立ち寄りください。",
+        "vi": "Khi trả phòng, xin vui lòng ghé qua quầy lễ tân."
+      },
+      {
+        "vocabId": "checkin",
+        "word": "チェックイン",
+        "jp": "オンラインチェックインをご利用いただけます。",
+        "vi": "Quý khách có thể sử dụng dịch vụ làm thủ tục trực tuyến."
+      },
+      {
+        "vocabId": "chigai",
+        "word": "違い",
+        "jp": "両プランの違いを表にまとめました。",
+        "vi": "Tôi đã tổng hợp sự khác nhau giữa hai gói thành bảng."
+      },
+      {
+        "vocabId": "chance",
+        "word": "チャンス",
+        "jp": "海外進出の大きなチャンスだと考えています。",
+        "vi": "Chúng tôi cho rằng đây là cơ hội lớn để mở rộng ra nước ngoài."
+      },
+      {
+        "vocabId": "chuumoku",
+        "word": "注目",
+        "jp": "新製品は業界内で大きな注目を集めています。",
+        "vi": "Sản phẩm mới đang thu hút sự chú ý lớn trong ngành."
+      },
+      {
+        "vocabId": "choukan",
+        "word": "朝刊",
+        "jp": "本件は本日の朝刊にも掲載される予定です。",
+        "vi": "Việc này dự kiến cũng sẽ được đăng trên báo sáng hôm nay."
+      },
+      {
+        "vocabId": "tour",
+        "word": "ツアー",
+        "jp": "団体様向けの特別ツアーをご用意しております。",
+        "vi": "Chúng tôi có chuẩn bị tour đặc biệt dành cho đoàn khách."
+      },
+      {
+        "vocabId": "twin",
+        "word": "ツイン",
+        "jp": "ツインルームを3室ご手配可能です。",
+        "vi": "Chúng tôi có thể sắp xếp 3 phòng twin."
+      },
+      {
+        "vocabId": "tsuuwa",
+        "word": "通話",
+        "jp": "通話内容は品質向上のため録音される場合がございます。",
+        "vi": "Nội dung cuộc gọi có thể được ghi âm để nâng cao chất lượng."
+      },
+      {
+        "vocabId": "tsugou",
+        "word": "都合",
+        "jp": "ご都合のよろしい日時をお知らせください。",
+        "vi": "Xin cho biết ngày giờ tiện lợi của quý khách."
+      },
+      {
+        "vocabId": "tsutome",
+        "word": "勤め",
+        "jp": "長年の勤めを終え、来月退職いたします。",
+        "vi": "Sau nhiều năm làm việc, tôi sẽ nghỉ hưu vào tháng sau."
+      },
+      {
+        "vocabId": "teiin",
+        "word": "定員",
+        "jp": "会場の定員を超えないようご注意ください。",
+        "vi": "Xin lưu ý không vượt quá sức chứa của hội trường."
+      },
+      {
+        "vocabId": "teishutsu",
+        "word": "提出",
+        "jp": "必要書類は本日中にご提出ください。",
+        "vi": "Xin vui lòng nộp các giấy tờ cần thiết trong hôm nay."
+      },
+      {
+        "vocabId": "teido",
+        "word": "程度",
+        "jp": "被害の程度を現在調査しております。",
+        "vi": "Chúng tôi hiện đang điều tra mức độ thiệt hại."
+      },
+      {
+        "vocabId": "theme",
+        "word": "テーマ",
+        "jp": "今回の企画のテーマは「持続可能性」です。",
+        "vi": "Chủ đề của dự án lần này là 'tính bền vững'."
+      },
+      {
+        "vocabId": "dekigoto",
+        "word": "出来事",
+        "jp": "今回の出来事について経緯をご説明いたします。",
+        "vi": "Tôi xin giải thích diễn biến sự việc lần này."
+      },
+      {
+        "vocabId": "design",
+        "word": "デザイン",
+        "jp": "新製品のデザインを来週提案いたします。",
+        "vi": "Tôi sẽ đề xuất thiết kế sản phẩm mới vào tuần sau."
+      },
+      {
+        "vocabId": "tezukuri",
+        "word": "手作り",
+        "jp": "当店は全て手作りにこだわっております。",
+        "vi": "Cửa hàng chúng tôi luôn chú trọng làm hoàn toàn thủ công."
+      },
+      {
+        "vocabId": "tetsudai",
+        "word": "手伝い",
+        "jp": "急な依頼で恐縮ですが、お手伝いいただけますか。",
+        "vi": "Xin lỗi vì yêu cầu gấp, anh/chị có thể giúp đỡ được không ạ?"
+      },
+      {
+        "vocabId": "ten",
+        "word": "点",
+        "jp": "その点については後ほどご説明いたします。",
+        "vi": "Về điểm đó, chúng tôi sẽ giải thích sau."
+      },
+      {
+        "vocabId": "dengon",
+        "word": "伝言",
+        "jp": "ご不在でしたので、伝言をお願いいたしました。",
+        "vi": "Vì quý khách vắng mặt nên tôi đã nhờ để lại lời nhắn."
+      },
+      {
+        "vocabId": "dentou",
+        "word": "伝統",
+        "jp": "伝統と革新を両立させた製品を目指します。",
+        "vi": "Chúng tôi hướng đến sản phẩm dung hòa cả truyền thống và đổi mới."
+      },
+      {
+        "vocabId": "denpa",
+        "word": "電波",
+        "jp": "電波状況により通信が不安定になる場合がございます。",
+        "vi": "Tùy tình trạng sóng mà kết nối có thể không ổn định."
+      },
+      {
+        "vocabId": "dou",
+        "word": "銅",
+        "jp": "当社は銅を使った工芸品を扱っております。",
+        "vi": "Công ty chúng tôi kinh doanh các sản phẩm thủ công làm từ đồng."
+      },
+      {
+        "vocabId": "touzen",
+        "word": "当然",
+        "jp": "品質管理は当然の責務と考えております。",
+        "vi": "Chúng tôi coi quản lý chất lượng là trách nhiệm đương nhiên."
+      },
+      {
+        "vocabId": "touhyou",
+        "word": "投票",
+        "jp": "本議案について投票をお願いいたします。",
+        "vi": "Xin mời bỏ phiếu về đề án này."
+      },
+      {
+        "vocabId": "tokushoku",
+        "word": "特色",
+        "jp": "弊社製品の特色を改めてご紹介いたします。",
+        "vi": "Tôi xin giới thiệu lại nét đặc sắc của sản phẩm công ty chúng tôi."
+      },
+      {
+        "vocabId": "top",
+        "word": "トップ",
+        "jp": "当社は業界トップのシェアを誇ります。",
+        "vi": "Công ty chúng tôi tự hào có thị phần đứng đầu ngành."
+      },
+      {
+        "vocabId": "todoke",
+        "word": "届け",
+        "jp": "休職届けを人事部に提出してください。",
+        "vi": "Vui lòng nộp đơn xin nghỉ việc tạm thời cho phòng nhân sự."
+      },
+      {
+        "vocabId": "nylon",
+        "word": "ナイロン",
+        "jp": "当社はナイロン素材の製品も取り扱っております。",
+        "vi": "Công ty chúng tôi cũng kinh doanh các sản phẩm chất liệu nylon."
+      },
+      {
+        "vocabId": "nanani",
+        "word": "何々",
+        "jp": "申請には何々の書類が必要かご案内します。",
+        "vi": "Chúng tôi sẽ hướng dẫn cần những giấy tờ gì cho việc đăng ký."
+      },
+      {
+        "vocabId": "nama",
+        "word": "生",
+        "jp": "本イベントは生放送でお届けします。",
+        "vi": "Sự kiện này sẽ được phát sóng trực tiếp."
+      },
+      {
+        "vocabId": "nisemono",
+        "word": "偽物",
+        "jp": "市場には偽物が出回っておりますのでご注意ください。",
+        "vi": "Xin lưu ý vì hàng giả đang lưu hành trên thị trường."
+      },
+      {
+        "vocabId": "nyuujou",
+        "word": "入場",
+        "jp": "入場の際はチケットをご提示ください。",
+        "vi": "Khi vào cửa, xin vui lòng xuất trình vé."
+      },
+      {
+        "vocabId": "ninki",
+        "word": "人気",
+        "jp": "新商品は発売直後から人気を集めています。",
+        "vi": "Sản phẩm mới thu hút sự chú ý ngay sau khi ra mắt."
+      },
+      {
+        "vocabId": "nebou",
+        "word": "寝坊",
+        "jp": "寝坊による遅刻は評価に影響いたします。",
+        "vi": "Đi trễ do ngủ quên sẽ ảnh hưởng đến đánh giá."
+      },
+      {
+        "vocabId": "nengajou",
+        "word": "年賀状",
+        "jp": "日頃の感謝を込めて年賀状をお送りいたします。",
+        "vi": "Chúng tôi gửi thiệp năm mới để bày tỏ lòng biết ơn thường ngày."
+      },
+      {
+        "vocabId": "nougyou",
+        "word": "農業",
+        "jp": "弊社は農業分野への投資を拡大しております。",
+        "vi": "Công ty chúng tôi đang mở rộng đầu tư vào lĩnh vực nông nghiệp."
+      },
+      {
+        "vocabId": "knock",
+        "word": "ノック",
+        "jp": "入室の際は必ずノックをお願いいたします。",
+        "vi": "Khi vào phòng, xin vui lòng gõ cửa trước."
+      },
+      {
+        "vocabId": "hakushu",
+        "word": "拍手",
+        "jp": "発表の後、会場から大きな拍手が送られました。",
+        "vi": "Sau bài phát biểu, hội trường đã dành tràng vỗ tay lớn."
+      },
+      {
+        "vocabId": "password",
+        "word": "パスワード",
+        "jp": "初回ログイン後はパスワードを変更してください。",
+        "vi": "Sau lần đăng nhập đầu tiên, xin vui lòng đổi mật khẩu."
+      },
+      {
+        "vocabId": "hata",
+        "word": "旗",
+        "jp": "会場入口に社旗を掲揚いたします。",
+        "vi": "Chúng tôi sẽ treo cờ công ty ở lối vào hội trường."
+      },
+      {
+        "vocabId": "hakken",
+        "word": "発見",
+        "jp": "調査の結果、新たな課題を発見いたしました。",
+        "vi": "Qua kết quả điều tra, chúng tôi đã phát hiện ra vấn đề mới."
+      },
+      {
+        "vocabId": "hatsubai",
+        "word": "発売",
+        "jp": "新商品を来週より発売いたします。",
+        "vi": "Chúng tôi sẽ bán ra sản phẩm mới từ tuần sau."
+      },
+      {
+        "vocabId": "happyou",
+        "word": "発表",
+        "jp": "新製品を来月正式に発表いたします。",
+        "vi": "Chúng tôi sẽ chính thức công bố sản phẩm mới vào tháng sau."
+      },
+      {
+        "vocabId": "hatsumei",
+        "word": "発明",
+        "jp": "新技術の発明により特許を取得しました。",
+        "vi": "Nhờ phát minh công nghệ mới, chúng tôi đã lấy được bằng sáng chế."
+      },
+      {
+        "vocabId": "haba",
+        "word": "幅",
+        "jp": "製品の幅を5センチ縮小いたしました。",
+        "vi": "Chúng tôi đã thu nhỏ chiều rộng sản phẩm 5cm."
+      },
+      {
+        "vocabId": "bamen",
+        "word": "場面",
+        "jp": "状況に応じて場面ごとに対応いたします。",
+        "vi": "Chúng tôi sẽ ứng phó theo từng tình huống cụ thể."
+      },
+      {
+        "vocabId": "hanzai",
+        "word": "犯罪",
+        "jp": "社内の犯罪防止対策を強化しております。",
+        "vi": "Chúng tôi đang tăng cường biện pháp phòng chống tội phạm trong công ty."
+      },
+      {
+        "vocabId": "hansei",
+        "word": "反省",
+        "jp": "今回のミスについて深く反省しております。",
+        "vi": "Chúng tôi thành thật kiểm điểm sâu sắc về sai sót lần này."
+      },
+      {
+        "vocabId": "handan",
+        "word": "判断",
+        "jp": "最終的な判断は上長にお任せいたします。",
+        "vi": "Chúng tôi sẽ để cấp trên đưa ra phán đoán cuối cùng."
+      },
+      {
+        "vocabId": "hiatari",
+        "word": "日当たり",
+        "jp": "日当たりの良い立地を条件に物件を探しております。",
+        "vi": "Chúng tôi đang tìm bất động sản với điều kiện vị trí nhiều ánh nắng."
+      },
+      {
+        "vocabId": "hisashiburi",
+        "word": "久しぶり",
+        "jp": "久しぶりにお目にかかれて光栄です。",
+        "vi": "Thật vinh dự được gặp lại quý vị sau một thời gian dài."
+      },
+      {
+        "vocabId": "hikkoshi",
+        "word": "引っ越し",
+        "jp": "事務所の引っ越しにつきましてご案内いたします。",
+        "vi": "Xin thông báo về việc chuyển văn phòng."
+      },
+      {
+        "vocabId": "vinyl",
+        "word": "ビニール",
+        "jp": "レジ袋はビニール製から紙製へ変更いたします。",
+        "vi": "Chúng tôi sẽ thay túi mua hàng từ nhựa ni lông sang giấy."
+      },
+      {
+        "vocabId": "hyoushi",
+        "word": "表紙",
+        "jp": "新しいカタログの表紙デザインを検討中です。",
+        "vi": "Chúng tôi đang xem xét thiết kế bìa cho catalogue mới."
+      },
+      {
+        "vocabId": "hyoujun",
+        "word": "標準",
+        "jp": "業界標準に準拠した仕様となっております。",
+        "vi": "Đây là thông số kỹ thuật tuân theo tiêu chuẩn ngành."
+      },
+      {
+        "vocabId": "hirune",
+        "word": "昼寝",
+        "jp": "休憩時間の昼寝制度を導入しました。",
+        "vi": "Chúng tôi đã triển khai chế độ ngủ trưa trong giờ nghỉ."
+      },
+      {
+        "vocabId": "hint",
+        "word": "ヒント",
+        "jp": "改善のヒントになれば幸いです。",
+        "vi": "Rất mong đây sẽ là gợi ý hữu ích cho việc cải thiện."
+      },
+      {
+        "vocabId": "fusoku",
+        "word": "不足",
+        "jp": "人手不足のため採用を強化しております。",
+        "vi": "Vì thiếu nhân lực nên chúng tôi đang tăng cường tuyển dụng."
+      },
+      {
+        "vocabId": "plastic",
+        "word": "プラスチック",
+        "jp": "環境配慮のためプラスチック製品の使用を削減しております。",
+        "vi": "Chúng tôi đang giảm sử dụng sản phẩm nhựa vì môi trường."
+      },
+      {
+        "vocabId": "furusato",
+        "word": "ふるさと",
+        "jp": "ふるさと納税制度についてご説明いたします。",
+        "vi": "Tôi xin giải thích về chế độ đóng thuế quê hương (furusato nozei)."
+      },
+      {
+        "vocabId": "propose",
+        "word": "プロポーズ",
+        "jp": "結婚式場では、プロポーズの演出についての相談も受け付けています。",
+        "vi": "Tại địa điểm tổ chức cưới, chúng tôi cũng tiếp nhận tư vấn về cách dàn dựng màn cầu hôn."
+      },
+      {
+        "vocabId": "betsubetsu",
+        "word": "別々",
+        "jp": "請求書は別々に発行いたします。",
+        "vi": "Chúng tôi sẽ phát hành hóa đơn riêng biệt."
+      },
+      {
+        "vocabId": "henka",
+        "word": "変化",
+        "jp": "市場の変化に迅速に対応してまいります。",
+        "vi": "Chúng tôi sẽ ứng phó nhanh chóng với sự thay đổi của thị trường。"
+      },
+      {
+        "vocabId": "pointer",
+        "word": "ポインター",
+        "jp": "レーザーポインターをご用意しております。",
+        "vi": "Chúng tôi có chuẩn bị bút laser trỏ."
+      },
+      {
+        "vocabId": "boueki",
+        "word": "貿易",
+        "jp": "弊社は東南アジアとの貿易を拡大しております。",
+        "vi": "Công ty chúng tôi đang mở rộng thương mại với Đông Nam Á."
+      },
+      {
+        "vocabId": "hougen",
+        "word": "方言",
+        "jp": "地方支店では方言が飛び交うこともあります。",
+        "vi": "Ở chi nhánh địa phương đôi khi cũng nghe thấy phương ngữ."
+      },
+      {
+        "vocabId": "boushi2",
+        "word": "防止",
+        "jp": "情報漏洩防止のため対策を強化いたしました。",
+        "vi": "Chúng tôi đã tăng cường biện pháp để phòng chống rò rỉ thông tin."
+      },
+      {
+        "vocabId": "bounenkai",
+        "word": "忘年会",
+        "jp": "忘年会の日程についてご案内いたします。",
+        "vi": "Xin thông báo về lịch trình tiệc cuối năm."
+      },
+      {
+        "vocabId": "houmon",
+        "word": "訪問",
+        "jp": "来月、貴社を訪問させていただきたく存じます。",
+        "vi": "Tháng sau tôi mong muốn được đến thăm quý công ty."
+      },
+      {
+        "vocabId": "houritsu",
+        "word": "法律",
+        "jp": "本件は関連法律に基づいて対応いたします。",
+        "vi": "Chúng tôi sẽ xử lý việc này dựa trên các quy định pháp luật liên quan."
+      },
+      {
+        "vocabId": "homepage",
+        "word": "ホームページ",
+        "jp": "詳細は当社ホームページをご覧ください。",
+        "vi": "Xin vui lòng xem chi tiết trên trang web của công ty chúng tôi."
+      },
+      {
+        "vocabId": "boshuu",
+        "word": "募集",
+        "jp": "新卒採用を来週より募集開始いたします。",
+        "vi": "Chúng tôi sẽ bắt đầu tuyển dụng sinh viên mới ra trường từ tuần sau."
+      },
+      {
+        "vocabId": "poster",
+        "word": "ポスター",
+        "jp": "イベント告知用のポスターを作成しました。",
+        "vi": "Chúng tôi đã tạo áp phích để thông báo sự kiện."
+      },
+      {
+        "vocabId": "hozon",
+        "word": "保存",
+        "jp": "データは定期的にバックアップとして保存しております。",
+        "vi": "Chúng tôi lưu dữ liệu định kỳ như bản sao lưu."
+      },
+      {
+        "vocabId": "honsha",
+        "word": "本社",
+        "jp": "本社にて説明会を開催いたします。",
+        "vi": "Chúng tôi sẽ tổ chức buổi giải thích tại trụ sở chính."
+      },
+      {
+        "vocabId": "honmono",
+        "word": "本物",
+        "jp": "本物の品質をお届けすることをお約束いたします。",
+        "vi": "Chúng tôi cam kết mang đến chất lượng đích thực."
+      },
+      {
+        "vocabId": "mark",
+        "word": "マーク",
+        "jp": "対象商品には専用マークが付いています。",
+        "vi": "Sản phẩm đối tượng có gắn biểu tượng riêng."
+      },
+      {
+        "vocabId": "mane",
+        "word": "まね",
+        "jp": "他社のまねではなく独自の技術を追求します。",
+        "vi": "Chúng tôi theo đuổi công nghệ riêng chứ không bắt chước công ty khác."
+      },
+      {
+        "vocabId": "miss",
+        "word": "ミス",
+        "jp": "入力ミスがございましたので訂正いたします。",
+        "vi": "Vì có sai sót nhập liệu nên chúng tôi xin đính chính."
+      },
+      {
+        "vocabId": "minshushugi",
+        "word": "民主主義",
+        "jp": "本講演では民主主義の発展について解説いたします。",
+        "vi": "Bài giảng này sẽ giải thích về sự phát triển của nền dân chủ."
+      },
+      {
+        "vocabId": "muchuu",
+        "word": "夢中",
+        "jp": "新製品の開発に夢中で取り組んでいます。",
+        "vi": "Chúng tôi đang say mê phát triển sản phẩm mới."
+      },
+      {
+        "vocabId": "meisho",
+        "word": "名所",
+        "jp": "地域の観光名所を紹介するパンフレットを作成しました。",
+        "vi": "Chúng tôi đã tạo tờ rơi giới thiệu các danh lam du lịch của khu vực."
+      },
+      {
+        "vocabId": "meibutsu",
+        "word": "名物",
+        "jp": "地元の名物商品を全国に販売しております。",
+        "vi": "Chúng tôi đang bán sản phẩm đặc sản địa phương ra toàn quốc."
+      },
+      {
+        "vocabId": "medal",
+        "word": "メダル",
+        "jp": "本大会の優勝者にはメダルを授与いたします。",
+        "vi": "Chúng tôi sẽ trao huy chương cho người chiến thắng đại hội này."
+      },
+      {
+        "vocabId": "mensetsu",
+        "word": "面接",
+        "jp": "来週火曜日に面接をお願いできますでしょうか。",
+        "vi": "Tôi có thể xin phỏng vấn vào thứ Ba tuần sau được không ạ?"
+      },
+      {
+        "vocabId": "moushikomi",
+        "word": "申し込み",
+        "jp": "お申し込みは本日中にお願いいたします。",
+        "vi": "Xin vui lòng đăng ký trong hôm nay."
+      },
+      {
+        "vocabId": "mochimono",
+        "word": "持ち物",
+        "jp": "当日の持ち物リストをお送りいたします。",
+        "vi": "Chúng tôi sẽ gửi danh sách đồ cần mang theo cho ngày hôm đó."
+      },
+      {
+        "vocabId": "moyou",
+        "word": "模様",
+        "jp": "製品の模様デザインを刷新いたしました。",
+        "vi": "Chúng tôi đã đổi mới thiết kế hoa văn sản phẩm."
+      },
+      {
+        "vocabId": "yaku",
+        "word": "約",
+        "jp": "本製品は約2週間でお届けいたします。",
+        "vi": "Sản phẩm này sẽ được giao trong khoảng 2 tuần."
+      },
+      {
+        "vocabId": "yuuki",
+        "word": "勇気",
+        "jp": "新しい挑戦には勇気が必要です。",
+        "vi": "Thử thách mới cần có dũng khí."
+      },
+      {
+        "vocabId": "yuushou",
+        "word": "優勝",
+        "jp": "弊社製品がコンテストで優勝いたしました。",
+        "vi": "Sản phẩm của công ty chúng tôi đã giành chiến thắng trong cuộc thi."
+      },
+      {
+        "vocabId": "yuujou",
+        "word": "友情",
+        "jp": "長年の友情に感謝いたします。",
+        "vi": "Tôi xin cảm ơn tình bạn nhiều năm qua."
+      },
+      {
+        "vocabId": "yuubin",
+        "word": "郵便",
+        "jp": "書類は郵便にて送付いたします。",
+        "vi": "Tài liệu sẽ được gửi qua đường bưu điện."
+      },
+      {
+        "vocabId": "youshi",
+        "word": "用紙",
+        "jp": "申請用紙は下記からダウンロードできます。",
+        "vi": "Mẫu đơn đăng ký có thể tải xuống từ bên dưới."
+      },
+      {
+        "vocabId": "yousu",
+        "word": "様子",
+        "jp": "現場の様子を写真で共有いたします。",
+        "vi": "Tôi sẽ chia sẻ tình hình hiện trường bằng hình ảnh."
+      },
+      {
+        "vocabId": "yohou",
+        "word": "予報",
+        "jp": "天気予報を踏まえてイベントの実施を判断いたします。",
+        "vi": "Chúng tôi sẽ quyết định tổ chức sự kiện dựa trên dự báo thời tiết."
+      },
+      {
+        "vocabId": "rikai",
+        "word": "理解",
+        "jp": "ご理解いただきありがとうございます。",
+        "vi": "Xin cảm ơn quý khách đã thấu hiểu."
+      },
+      {
+        "vocabId": "risou",
+        "word": "理想",
+        "jp": "理想的な人材像を明確にいたしました。",
+        "vi": "Chúng tôi đã làm rõ hình mẫu nhân tài lý tưởng."
+      },
+      {
+        "vocabId": "ryuukou",
+        "word": "流行",
+        "jp": "流行の変化に合わせて商品ラインを見直します。",
+        "vi": "Chúng tôi sẽ xem xét lại dòng sản phẩm theo sự thay đổi của xu hướng."
+      },
+      {
+        "vocabId": "ryou",
+        "word": "量",
+        "jp": "生産量を来月から増やす予定です。",
+        "vi": "Chúng tôi dự định tăng sản lượng từ tháng sau."
+      },
+      {
+        "vocabId": "ryougawa",
+        "word": "両側",
+        "jp": "会場の両側に案内板を設置いたします。",
+        "vi": "Chúng tôi sẽ đặt bảng chỉ dẫn ở hai bên hội trường."
+      },
+      {
+        "vocabId": "ryoken",
+        "word": "旅券",
+        "jp": "渡航には有効な旅券が必要です。",
+        "vi": "Đi nước ngoài cần có hộ chiếu còn hiệu lực."
+      },
+      {
+        "vocabId": "rule",
+        "word": "ルール",
+        "jp": "社内ルールを改めて周知いたします。",
+        "vi": "Chúng tôi sẽ thông báo lại về các quy định nội bộ công ty."
+      },
+      {
+        "vocabId": "rei",
+        "word": "例",
+        "jp": "過去の成功例を参考にいたします。",
+        "vi": "Chúng tôi sẽ tham khảo các ví dụ thành công trước đây."
+      },
+      {
+        "vocabId": "reigai",
+        "word": "例外",
+        "jp": "本ケースは例外として処理いたします。",
+        "vi": "Trường hợp này chúng tôi sẽ xử lý như một ngoại lệ."
+      },
+      {
+        "vocabId": "roudou",
+        "word": "労働",
+        "jp": "労働環境の改善に取り組んでおります。",
+        "vi": "Chúng tôi đang nỗ lực cải thiện môi trường lao động."
+      },
+      {
+        "vocabId": "rokuon",
+        "word": "録音",
+        "jp": "通話内容は録音させていただいております。",
+        "vi": "Nội dung cuộc gọi sẽ được chúng tôi ghi âm lại."
+      },
+      {
+        "vocabId": "rokuga",
+        "word": "録画",
+        "jp": "本セミナーは録画にて後日配信いたします。",
+        "vi": "Buổi hội thảo này sẽ được ghi hình và phát lại sau."
+      },
+      {
+        "vocabId": "locker",
+        "word": "ロッカー",
+        "jp": "貴重品はロッカーにて保管をお願いいたします。",
+        "vi": "Xin vui lòng cất giữ đồ có giá trị trong tủ đồ."
+      },
+      {
+        "vocabId": "wadai",
+        "word": "話題",
+        "jp": "新製品が業界内で話題を呼んでいます。",
+        "vi": "Sản phẩm mới đang gây chú ý trong ngành."
+      },
+      {
+        "vocabId": "wariai",
+        "word": "割合",
+        "jp": "不良品の割合を1%以下に抑えております。",
+        "vi": "Chúng tôi giữ tỷ lệ hàng lỗi dưới 1%."
+      },
+      {
+        "vocabId": "atari",
+        "word": "辺り",
+        "jp": "このあたりの土地の相場について調査いたしました。",
+        "vi": "Chúng tôi đã điều tra về giá đất ở khu vực này."
+      },
+      {
+        "vocabId": "ichi",
+        "word": "位置",
+        "jp": "当社は駅前の好立地に位置しております。",
+        "vi": "Công ty chúng tôi nằm ở vị trí thuận lợi trước ga."
+      },
+      {
+        "vocabId": "ichiba",
+        "word": "市場",
+        "jp": "地元市場との連携を強化しております。",
+        "vi": "Chúng tôi đang tăng cường liên kết với chợ địa phương."
+      },
+      {
+        "vocabId": "office",
+        "word": "オフィス",
+        "jp": "来月、オフィスを移転いたします。",
+        "vi": "Chúng tôi sẽ chuyển văn phòng vào tháng sau."
+      },
+      {
+        "vocabId": "kaigai",
+        "word": "海外",
+        "jp": "海外事業の拡大を計画しております。",
+        "vi": "Chúng tôi đang lên kế hoạch mở rộng kinh doanh ở nước ngoài."
+      },
+      {
+        "vocabId": "counter",
+        "word": "カウンター",
+        "jp": "お問い合わせはカウンターまでお越しください。",
+        "vi": "Xin vui lòng đến quầy để được hỗ trợ thắc mắc."
+      },
+      {
+        "vocabId": "gasstand",
+        "word": "ガソリンスタンド",
+        "jp": "配送車は近くのガソリンスタンドで給油いたします。",
+        "vi": "Xe giao hàng sẽ đổ xăng tại cây xăng gần đó."
+      },
+      {
+        "vocabId": "kitsuenjo",
+        "word": "喫煙所",
+        "jp": "館内の喫煙所は3階に設置しております。",
+        "vi": "Nơi hút thuốc trong tòa nhà được bố trí ở tầng 3."
+      },
+      {
+        "vocabId": "kissaten",
+        "word": "喫茶店",
+        "jp": "打ち合わせは近くの喫茶店で行いましょう。",
+        "vi": "Chúng ta hãy gặp mặt ở quán cà phê gần đó nhé."
+      }
+    ],
+    "businessCasualWithoutInternalCue": [
+      {
+        "vocabId": "janken",
+        "word": "じゃんけん",
+        "jp": "順番はじゃんけんで公平に決めましょう。",
+        "vi": "Hãy quyết định thứ tự công bằng bằng oẳn tù tì."
+      }
+    ],
+    "exactTemplateGroups": [
+      {
+        "key": "daily\tその_____、素敵だね。",
+        "count": 5,
+        "rows": [
+          {
+            "vocabId": "dress",
+            "jp": "そのドレス、素敵だね。",
+            "vi": "Chiếc váy đó đẹp thật nhỉ."
+          },
+          {
+            "vocabId": "onepiece",
+            "jp": "そのワンピース、素敵だね。",
+            "vi": "Chiếc váy liền đó đẹp thật nhỉ."
+          },
+          {
+            "vocabId": "scarf",
+            "jp": "そのスカーフ、素敵だね。",
+            "vi": "Chiếc khăn đó đẹp thật nhỉ."
+          },
+          {
+            "vocabId": "brooch",
+            "jp": "そのブローチ、素敵だね。",
+            "vi": "Cái ghim cài đó đẹp thật nhỉ."
+          },
+          {
+            "vocabId": "sensu",
+            "jp": "その扇子、素敵だね。",
+            "vi": "Quạt giấy đó đẹp thật nhỉ."
+          }
+        ]
+      },
+      {
+        "key": "daily\tこの_____、柔らかいね。",
+        "count": 5,
+        "rows": [
+          {
+            "vocabId": "keito",
+            "jp": "この毛糸、柔らかいね。",
+            "vi": "Sợi len này mềm thật nhỉ."
+          },
+          {
+            "vocabId": "toriniku",
+            "jp": "このとり肉、柔らかいね。",
+            "vi": "Thịt gà này mềm thật nhỉ."
+          },
+          {
+            "vocabId": "pork",
+            "jp": "このポーク、柔らかいね。",
+            "vi": "Thịt heo này mềm thật nhỉ."
+          },
+          {
+            "vocabId": "nuno",
+            "jp": "この布、柔らかいね。",
+            "vi": "Vải này mềm thật nhỉ."
+          },
+          {
+            "vocabId": "makura",
+            "jp": "この枕、柔らかいね。",
+            "vi": "Cái gối này mềm thật nhỉ."
+          }
+        ]
+      },
+      {
+        "key": "daily\tその_____、かっこいいね。",
+        "count": 4,
+        "rows": [
+          {
+            "vocabId": "medal",
+            "jp": "そのメダル、かっこいいね。",
+            "vi": "Huy chương đó ngầu ghê."
+          },
+          {
+            "vocabId": "jacket",
+            "jp": "そのジャケット、かっこいいね。",
+            "vi": "Áo jacket đó ngầu ghê."
+          },
+          {
+            "vocabId": "sunglasses",
+            "jp": "そのサングラス、かっこいいね。",
+            "vi": "Kính râm đó ngầu ghê."
+          },
+          {
+            "vocabId": "belt",
+            "jp": "そのベルト、かっこいいね。",
+            "vi": "Thắt lưng đó ngầu ghê."
+          }
+        ]
+      },
+      {
+        "key": "business\t_____の点検を定期的に実施しております。",
+        "count": 4,
+        "rows": [
+          {
+            "vocabId": "engine",
+            "jp": "エンジンの点検を定期的に実施しております。",
+            "vi": "Chúng tôi kiểm tra động cơ định kỳ."
+          },
+          {
+            "vocabId": "brake",
+            "jp": "ブレーキの点検を定期的に実施しております。",
+            "vi": "Chúng tôi kiểm tra phanh định kỳ."
+          },
+          {
+            "vocabId": "yane",
+            "jp": "屋根の点検を定期的に実施しております。",
+            "vi": "Chúng tôi kiểm tra mái nhà định kỳ."
+          },
+          {
+            "vocabId": "chain",
+            "jp": "チェーンの点検を定期的に実施しております。",
+            "vi": "Chúng tôi kiểm tra dây xích định kỳ."
+          }
+        ]
+      },
+      {
+        "key": "daily\t_____、好きなんだ。",
+        "count": 4,
+        "rows": [
+          {
+            "vocabId": "tetsudou",
+            "jp": "鉄道、好きなんだ。",
+            "vi": "Tớ thích đường sắt lắm."
+          },
+          {
+            "vocabId": "dokusho",
+            "jp": "読書、好きなんだ。",
+            "vi": "Tớ thích đọc sách lắm."
+          },
+          {
+            "vocabId": "sumou",
+            "jp": "相撲、好きなんだ。",
+            "vi": "Tớ thích sumo lắm."
+          },
+          {
+            "vocabId": "tsuri",
+            "jp": "釣り、好きなんだ。",
+            "vi": "Tớ thích câu cá lắm."
+          }
+        ]
+      },
+      {
+        "key": "exam\t彼は_____だ。",
+        "count": 4,
+        "rows": [
+          {
+            "vocabId": "shougakusei",
+            "jp": "彼は小学生だ。",
+            "vi": "Cậu ấy là học sinh tiểu học."
+          },
+          {
+            "vocabId": "sekkyokuteki",
+            "jp": "彼は積極的だ。",
+            "vi": "Anh ấy rất tích cực."
+          },
+          {
+            "vocabId": "yuushuu",
+            "jp": "彼は優秀だ。",
+            "vi": "Anh ấy xuất sắc."
+          },
+          {
+            "vocabId": "wagamama",
+            "jp": "彼はわがままだ。",
+            "vi": "Anh ấy ích kỷ."
+          }
+        ]
+      },
+      {
+        "key": "daily\t_____、持ってきた?",
+        "count": 4,
+        "rows": [
+          {
+            "vocabId": "kigae",
+            "jp": "着替え、持ってきた?",
+            "vi": "Cậu mang theo đồ để thay chưa?"
+          },
+          {
+            "vocabId": "raincoat",
+            "jp": "レインコート、持ってきた?",
+            "vi": "Cậu mang áo mưa chưa?"
+          },
+          {
+            "vocabId": "hanko",
+            "jp": "判こ、持ってきた?",
+            "vi": "Cậu mang theo con dấu chưa?"
+          },
+          {
+            "vocabId": "digicame",
+            "jp": "デジカメ、持ってきた?",
+            "vi": "Cậu mang máy ảnh chưa?"
+          }
+        ]
+      },
+      {
+        "key": "exam\t新しい_____を買った。",
+        "count": 4,
+        "rows": [
+          {
+            "vocabId": "socks",
+            "jp": "新しいソックスを買った。",
+            "vi": "Tôi đã mua tất mới."
+          },
+          {
+            "vocabId": "shitagi",
+            "jp": "新しい下着を買った。",
+            "vi": "Tôi đã mua đồ lót mới."
+          },
+          {
+            "vocabId": "bag",
+            "jp": "新しいバッグを買った。",
+            "vi": "Tôi đã mua túi mới."
+          },
+          {
+            "vocabId": "kagu",
+            "jp": "新しい家具を買った。",
+            "vi": "Tôi đã mua đồ nội thất mới."
+          }
+        ]
+      },
+      {
+        "key": "daily\t大変_____。",
+        "count": 4,
+        "rows": [
+          {
+            "vocabId": "osewaninarimashita",
+            "jp": "大変お世話になりました。",
+            "vi": "Tôi thực sự đã được giúp đỡ rất nhiều."
+          },
+          {
+            "vocabId": "omataseshimashita",
+            "jp": "大変お待たせしました。",
+            "vi": "Thành thật xin lỗi vì đã để quý vị chờ lâu."
+          },
+          {
+            "vocabId": "gomeiwakuookakeshimashita",
+            "jp": "大変ご迷惑をおかけしました。",
+            "vi": "Thành thật xin lỗi vì đã gây phiền phức rất nhiều."
+          },
+          {
+            "vocabId": "moushiwakearimasen",
+            "jp": "大変申し訳ありません。",
+            "vi": "Thành thật xin lỗi."
+          }
+        ]
+      },
+      {
+        "key": "daily\t_____、どうだった?",
+        "count": 3,
+        "rows": [
+          {
+            "vocabId": "kekka",
+            "jp": "結果、どうだった?",
+            "vi": "Kết quả thế nào rồi?"
+          },
+          {
+            "vocabId": "seiseki",
+            "jp": "成績、どうだった?",
+            "vi": "Thành tích thế nào rồi?"
+          },
+          {
+            "vocabId": "semi",
+            "jp": "ゼミ、どうだった?",
+            "vi": "Buổi hội thảo thế nào?"
+          }
+        ]
+      },
+      {
+        "key": "exam\tそれは_____です。",
+        "count": 3,
+        "rows": [
+          {
+            "vocabId": "gokai",
+            "jp": "それは誤解です。",
+            "vi": "Đó là hiểu lầm thôi."
+          },
+          {
+            "vocabId": "jijitsu",
+            "jp": "それは事実です。",
+            "vi": "Đó là sự thật."
+          },
+          {
+            "vocabId": "joushiki",
+            "jp": "それは常識です。",
+            "vi": "Đó là kiến thức thông thường."
+          }
+        ]
+      },
+      {
+        "key": "daily\t何か_____ある?",
+        "count": 3,
+        "rows": [
+          {
+            "vocabId": "wadai",
+            "jp": "何か話題ある?",
+            "vi": "Có chủ đề gì hay ho không?"
+          },
+          {
+            "vocabId": "allergy",
+            "jp": "何かアレルギーある?",
+            "vi": "Cậu có dị ứng gì không?"
+          },
+          {
+            "vocabId": "tokugi",
+            "jp": "何か特技ある?",
+            "vi": "Cậu có kỹ năng đặc biệt gì không?"
+          }
+        ]
+      },
+      {
+        "key": "daily\t_____、大丈夫?痛くない?",
+        "count": 3,
+        "rows": [
+          {
+            "vocabId": "kizu",
+            "jp": "傷、大丈夫?痛くない?",
+            "vi": "Vết thương ổn không? Có đau không?"
+          },
+          {
+            "vocabId": "yakedo",
+            "jp": "やけど、大丈夫?痛くない?",
+            "vi": "Vết bỏng ổn không? Có đau không?"
+          },
+          {
+            "vocabId": "koshi",
+            "jp": "腰、大丈夫?痛くない?",
+            "vi": "Lưng ổn không? Có đau không?"
+          }
+        ]
+      },
+      {
+        "key": "exam\t彼女は_____として働いている。",
+        "count": 3,
+        "rows": [
+          {
+            "vocabId": "ishi",
+            "jp": "彼女は医師として働いている。",
+            "vi": "Cô ấy làm việc với vai trò bác sĩ."
+          },
+          {
+            "vocabId": "kangoshi",
+            "jp": "彼女は看護師として働いている。",
+            "vi": "Cô ấy làm việc với vai trò y tá."
+          },
+          {
+            "vocabId": "koumuin",
+            "jp": "彼女は公務員として働いている。",
+            "vi": "Cô ấy làm việc với vai trò công chức."
+          }
+        ]
+      },
+      {
+        "key": "daily\t_____のニュース、見た?",
+        "count": 3,
+        "rows": [
+          {
+            "vocabId": "kokuou",
+            "jp": "国王のニュース、見た?",
+            "vi": "Cậu xem tin tức về quốc vương chưa?"
+          },
+          {
+            "vocabId": "shushou",
+            "jp": "首相のニュース、見た?",
+            "vi": "Cậu xem tin tức về thủ tướng chưa?"
+          },
+          {
+            "vocabId": "tennou",
+            "jp": "天皇のニュース、見た?",
+            "vi": "Cậu xem tin tức về thiên hoàng chưa?"
+          }
+        ]
+      },
+      {
+        "key": "exam\t彼女は有名な_____だ。",
+        "count": 3,
+        "rows": [
+          {
+            "vocabId": "sakka",
+            "jp": "彼女は有名な作家だ。",
+            "vi": "Cô ấy là nhà văn nổi tiếng."
+          },
+          {
+            "vocabId": "gaka",
+            "jp": "彼女は有名な画家だ。",
+            "vi": "Cô ấy là họa sĩ nổi tiếng."
+          },
+          {
+            "vocabId": "joyuu",
+            "jp": "彼女は有名な女優だ。",
+            "vi": "Cô ấy là nữ diễn viên nổi tiếng."
+          }
+        ]
+      },
+      {
+        "key": "exam\t週末に_____に行った。",
+        "count": 3,
+        "rows": [
+          {
+            "vocabId": "tozan",
+            "jp": "週末に登山に行った。",
+            "vi": "Cuối tuần tôi đã đi leo núi."
+          },
+          {
+            "vocabId": "tsuri",
+            "jp": "週末に釣りに行った。",
+            "vi": "Cuối tuần tôi đã đi câu cá."
+          },
+          {
+            "vocabId": "onsen",
+            "jp": "週末に温泉に行った。",
+            "vi": "Cuối tuần tôi đã đi tắm suối nước nóng."
+          }
+        ]
+      },
+      {
+        "key": "business\t国産_____を使用したメニューをご提供しております。",
+        "count": 3,
+        "rows": [
+          {
+            "vocabId": "ushi",
+            "jp": "国産牛を使用したメニューをご提供しております。",
+            "vi": "Chúng tôi cung cấp thực đơn sử dụng thịt bò nội địa."
+          },
+          {
+            "vocabId": "toriniku",
+            "jp": "国産とり肉を使用したメニューをご提供しております。",
+            "vi": "Chúng tôi cung cấp thực đơn sử dụng thịt gà nội địa."
+          },
+          {
+            "vocabId": "pork",
+            "jp": "国産ポークを使用したメニューをご提供しております。",
+            "vi": "Chúng tôi cung cấp thực đơn sử dụng thịt heo nội địa."
+          }
+        ]
+      },
+      {
+        "key": "business\t夏季限定の_____を販売いたします。",
+        "count": 3,
+        "rows": [
+          {
+            "vocabId": "sandal",
+            "jp": "夏季限定のサンダルを販売いたします。",
+            "vi": "Chúng tôi sẽ bán dép chỉ có trong mùa hè."
+          },
+          {
+            "vocabId": "mizugi",
+            "jp": "夏季限定の水着を販売いたします。",
+            "vi": "Chúng tôi sẽ bán đồ bơi chỉ có trong mùa hè."
+          },
+          {
+            "vocabId": "sunglasses",
+            "jp": "夏季限定のサングラスを販売いたします。",
+            "vi": "Chúng tôi sẽ bán kính râm chỉ có trong mùa hè."
+          }
+        ]
+      },
+      {
+        "key": "business\t新作_____のラインナップを拡充いたしました。",
+        "count": 3,
+        "rows": [
+          {
+            "vocabId": "jeans",
+            "jp": "新作ジーンズのラインナップを拡充いたしました。",
+            "vi": "Chúng tôi đã mở rộng dòng sản phẩm quần bò mới."
+          },
+          {
+            "vocabId": "scarf",
+            "jp": "新作スカーフのラインナップを拡充いたしました。",
+            "vi": "Chúng tôi đã mở rộng dòng khăn quàng mới."
+          },
+          {
+            "vocabId": "backpack",
+            "jp": "新作リュックのラインナップを拡充いたしました。",
+            "vi": "Chúng tôi đã mở rộng dòng sản phẩm ba lô mới."
+          }
+        ]
+      },
+      {
+        "key": "daily\tその_____、暖かそう。",
+        "count": 3,
+        "rows": [
+          {
+            "vocabId": "jumper",
+            "jp": "そのジャンパー、暖かそう。",
+            "vi": "Cái áo gió đó trông ấm ghê."
+          },
+          {
+            "vocabId": "boots",
+            "jp": "そのブーツ、暖かそう。",
+            "vi": "Đôi bốt đó trông ấm ghê."
+          },
+          {
+            "vocabId": "muffler",
+            "jp": "そのマフラー、暖かそう。",
+            "vi": "Cái khăn đó trông ấm ghê."
+          }
+        ]
+      },
+      {
+        "key": "daily\t_____、片付けなきゃ。",
+        "count": 3,
+        "rows": [
+          {
+            "vocabId": "garage",
+            "jp": "ガレージ、片付けなきゃ。",
+            "vi": "Phải dọn dẹp gara thôi."
+          },
+          {
+            "vocabId": "shinshitsu",
+            "jp": "寝室、片付けなきゃ。",
+            "vi": "Phải dọn dẹp phòng ngủ thôi."
+          },
+          {
+            "vocabId": "monooki",
+            "jp": "物置、片付けなきゃ。",
+            "vi": "Phải dọn kho chứa thôi."
+          }
+        ]
+      },
+      {
+        "key": "business\t新フレーバーの_____を発売いたします。",
+        "count": 3,
+        "rows": [
+          {
+            "vocabId": "icecream",
+            "jp": "新フレーバーのアイスクリームを発売いたします。",
+            "vi": "Chúng tôi sẽ ra mắt kem hương vị mới."
+          },
+          {
+            "vocabId": "gum_b26",
+            "jp": "新フレーバーのガムを発売いたします。",
+            "vi": "Chúng tôi sẽ ra mắt kẹo cao su hương vị mới."
+          },
+          {
+            "vocabId": "jelly",
+            "jp": "新フレーバーのゼリーを発売いたします。",
+            "vi": "Chúng tôi sẽ ra mắt thạch hương vị mới."
+          }
+        ]
+      },
+      {
+        "key": "business\t高級_____の取り扱いを開始いたしました。",
+        "count": 3,
+        "rows": [
+          {
+            "vocabId": "whiskey",
+            "jp": "高級ウイスキーの取り扱いを開始いたしました。",
+            "vi": "Chúng tôi đã bắt đầu kinh doanh rượu whisky cao cấp."
+          },
+          {
+            "vocabId": "wine",
+            "jp": "高級ワインの取り扱いを開始いたしました。",
+            "vi": "Chúng tôi đã bắt đầu kinh doanh rượu vang cao cấp."
+          },
+          {
+            "vocabId": "glass",
+            "jp": "高級グラスの取り扱いを開始いたしました。",
+            "vi": "Chúng tôi đã bắt đầu kinh doanh ly cao cấp."
+          }
+        ]
+      },
+      {
+        "key": "exam\t昼食に_____を食べた。",
+        "count": 3,
+        "rows": [
+          {
+            "vocabId": "udon",
+            "jp": "昼食にうどんを食べた。",
+            "vi": "Tôi đã ăn mì udon vào bữa trưa."
+          },
+          {
+            "vocabId": "soba",
+            "jp": "昼食にそばを食べた。",
+            "vi": "Tôi đã ăn mì soba vào bữa trưa."
+          },
+          {
+            "vocabId": "pasta",
+            "jp": "昼食にパスタを食べた。",
+            "vi": "Tôi đã ăn mì Ý vào bữa trưa."
+          }
+        ]
+      },
+      {
+        "key": "daily\tこの_____、可愛いね。",
+        "count": 3,
+        "rows": [
+          {
+            "vocabId": "shokki",
+            "jp": "この食器、可愛いね。",
+            "vi": "Bộ bát đĩa này dễ thương ghê."
+          },
+          {
+            "vocabId": "cover",
+            "jp": "このカバー、可愛いね。",
+            "vi": "Cái vỏ bọc này dễ thương ghê."
+          },
+          {
+            "vocabId": "binsen",
+            "jp": "この便せん、可愛いね。",
+            "vi": "Giấy viết thư này dễ thương ghê."
+          }
+        ]
+      },
+      {
+        "key": "daily\t_____、もらえる?",
+        "count": 3,
+        "rows": [
+          {
+            "vocabId": "straw",
+            "jp": "ストロー、もらえる?",
+            "vi": "Cho tớ xin cái ống hút được không?"
+          },
+          {
+            "vocabId": "napkin",
+            "jp": "ナプキン、もらえる?",
+            "vi": "Cho tớ xin khăn ăn được không?"
+          },
+          {
+            "vocabId": "dannboru",
+            "jp": "段ボール、もらえる?",
+            "vi": "Cho tớ xin thùng carton được không?"
+          }
+        ]
+      },
+      {
+        "key": "exam\t_____。",
+        "count": 3,
+        "rows": [
+          {
+            "vocabId": "ojamashimasu",
+            "jp": "おじゃまします。",
+            "vi": "Xin phép làm phiền ạ."
+          },
+          {
+            "vocabId": "omataseshimashita",
+            "jp": "お待たせしました。",
+            "vi": "Xin lỗi đã để quý vị chờ lâu."
+          },
+          {
+            "vocabId": "gomeiwakuookakeshimashita",
+            "jp": "ご迷惑をおかけしました。",
+            "vi": "Xin lỗi vì đã gây phiền phức cho quý vị."
+          }
+        ]
+      }
+    ],
+    "viDuplicateGroups": [],
+    "answerSurfaceSuspects": [],
+    "overrideCollisions": [
+      {
+        "key": "heiwa#3",
+        "paths": [
+          "lib/data/tango-n3-example-overrides-context.ts",
+          "lib/data/tango-n3-example-overrides-final.ts"
+        ]
+      }
+    ]
+  }
+}
