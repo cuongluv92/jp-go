@@ -3,10 +3,12 @@ import { describe, expect, it } from "vitest";
 import { sampleExamples } from "./sample-examples";
 import { sampleWords } from "./sample-words";
 
+type ExampleKey = `${string}#${1 | 2 | 3}`;
+
 const examplesByKey = new Map(sampleExamples.map((e) => [`${e.vocabId}#${e.exampleNo}`, e] as const));
 const wordsById = new Map(sampleWords.map((w) => [w.id, w] as const));
 
-function example(key: string) {
+function example(key: ExampleKey) {
   const value = examplesByKey.get(key);
   expect(value, `missing runtime example ${key}`).toBeDefined();
   return value!;
