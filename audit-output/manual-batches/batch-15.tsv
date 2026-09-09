@@ -16,7 +16,7 @@ row	vocabId	type	word	reading	meaningVi	exampleJp	exampleVi
 2535	circle	business	サークル	サークル	câu lạc bộ (đại học)	学生時代のサークル仲間と今も交流があります。	Tôi vẫn còn giao lưu với bạn bè câu lạc bộ thời sinh viên.
 2536	sankaku	exam	三角	さんかく	tam giác	三角の図形を描いた。	Tôi đã vẽ hình tam giác.
 2537	sankaku	daily	三角	さんかく	tam giác	これ、三角に切って。	Cắt cái này thành hình tam giác nhé.
-2538	sankaku	business	三角	さんかく	tam giác	三角形の面積を計算いたしました。	Chúng tôi đã tính diện tích hình tam giác.
+2538	sankaku	business	三角	さんかく	tam giác	材料を三角に切る工程を追加しました。	Chúng tôi đã thêm công đoạn cắt vật liệu thành hình tam giác.
 2539	jikanwari	exam	時間割	じかんわり	thời khóa biểu	新しい時間割をもらった。	Tôi đã nhận được thời khóa biểu mới.
 2540	jikanwari	daily	時間割	じかんわり	thời khóa biểu	時間割、見せて。	Cho tớ xem thời khóa biểu.
 2541	jikanwari	business	時間割	じかんわり	thời khóa biểu	来学期の時間割を作成しております。	Chúng tôi đang lập thời khóa biểu cho học kỳ tới.
@@ -175,7 +175,7 @@ row	vocabId	type	word	reading	meaningVi	exampleJp	exampleVi
 2694	kokugo	business	国語	こくご	môn tiếng Nhật, quốc văn Nhật	国語力向上のための教材を開発しております。	Chúng tôi đang phát triển tài liệu để nâng cao năng lực quốc ngữ.
 2695	taiiku	exam	体育	たいいく	thể dục	体育の授業でサッカーをした。	Tôi đã chơi bóng đá trong giờ thể dục.
 2696	taiiku	daily	体育	たいいく	thể dục	体育、今日あったっけ?	Hôm nay có tiết thể dục không nhỉ?
-2697	taiiku	business	体育	たいいく	thể dục	社員向け体育館を新たに設置いたしました。	Chúng tôi đã lắp đặt mới nhà thi đấu thể dục dành cho nhân viên.
+2697	taiiku	business	体育	たいいく	thể dục	学校では体育の授業で使う器具を新しく購入しました。	Nhà trường đã mua mới dụng cụ dùng trong giờ thể dục.
 2698	butsuri	exam	物理	ぶつり	vật lý	物理の公式を覚えた。	Tôi đã học thuộc công thức vật lý.
 2699	butsuri	daily	物理	ぶつり	vật lý	物理、難しいよね。	Môn vật lý khó thật nhỉ.
 2700	butsuri	business	物理	ぶつり	vật lý	物理学の専門家に監修を依頼いたしました。	Chúng tôi đã nhờ chuyên gia vật lý học giám sát.

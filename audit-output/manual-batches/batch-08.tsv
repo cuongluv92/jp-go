@@ -16,13 +16,13 @@ row	vocabId	type	word	reading	meaningVi	exampleJp	exampleVi
 1275	muchuu	business	夢中	むちゅう	say mê	新製品の開発に夢中で取り組んでいます。	Chúng tôi đang say mê phát triển sản phẩm mới.
 1276	meisho	exam	名所	めいしょ	danh lam	京都には名所がたくさんある。	Kyoto có rất nhiều danh lam thắng cảnh.
 1277	meisho	daily	名所	めいしょ	danh lam	近くの名所、行ってみない?	Đi thử danh lam gần đây không?
-1278	meisho	business	名所	めいしょ	danh lam	地域の観光名所を紹介するパンフレットを作成しました。	Chúng tôi đã tạo tờ rơi giới thiệu các danh lam du lịch của khu vực.
+1278	meisho	business	名所	めいしょ	danh lam	地域の観光名所を紹介するパンフレットを作成しました。	Chúng tôi đã làm brochure giới thiệu các điểm tham quan nổi tiếng trong khu vực.
 1279	meibutsu	exam	名物	めいぶつ	đặc sản	この地方の名物は温泉まんじゅうだ。	Đặc sản của vùng này là bánh bao suối nước nóng.
 1280	meibutsu	daily	名物	めいぶつ	đặc sản	ここの名物、何?	Đặc sản ở đây là gì vậy?
 1281	meibutsu	business	名物	めいぶつ	đặc sản	地元の名物商品を全国に販売しております。	Chúng tôi đang bán sản phẩm đặc sản địa phương ra toàn quốc.
 1282	meirei	exam	命令	めいれい	mệnh lệnh	上官の命令に従った。	Tôi đã tuân theo mệnh lệnh của cấp trên.
 1283	meirei	daily	命令	めいれい	mệnh lệnh	そんな命令、聞きたくないよ。	Tớ không muốn nghe cái mệnh lệnh đó đâu.
-1284	meirei	business	命令	めいれい	mệnh lệnh	業務命令として本件を対応いたします。	Chúng tôi sẽ xử lý việc này như một mệnh lệnh công việc.
+1284	meirei	business	命令	めいれい	mệnh lệnh	本件については、業務命令に従って対応いたします。	Về việc này, chúng tôi sẽ xử lý theo chỉ thị công việc.
 1285	mailaddress	exam	メールアドレス	メールアドレス	địa chỉ email	メールアドレスを教えてください。	Xin cho tôi biết địa chỉ email của bạn.
 1286	mailaddress	daily	メールアドレス	メールアドレス	địa chỉ email	メールアドレス、変わったの?	Địa chỉ email của cậu đổi rồi à?
 1287	mailaddress	business	メールアドレス	メールアドレス	địa chỉ email	登録メールアドレスの変更方法をご案内いたします。	Chúng tôi xin hướng dẫn cách thay đổi địa chỉ email đã đăng ký.
@@ -64,10 +64,10 @@ row	vocabId	type	word	reading	meaningVi	exampleJp	exampleVi
 1323	yuuki	business	勇気	ゆうき	dũng khí	新しい挑戦には勇気が必要です。	Thử thách mới cần có dũng khí.
 1324	yuushou	exam	優勝	ゆうしょう	vô địch	チームは大会で優勝した。	Đội đã vô địch giải đấu.
 1325	yuushou	daily	優勝	ゆうしょう	vô địch	優勝したの、すごいね!	Vô địch rồi à, ghê thật đấy!
-1326	yuushou	business	優勝	ゆうしょう	vô địch	弊社製品がコンテストで優勝いたしました。	Sản phẩm của công ty chúng tôi đã giành chiến thắng trong cuộc thi.
+1326	yuushou	business	優勝	ゆうしょう	vô địch	弊社の開発チームが社内コンテストで優勝しました。	Đội phát triển của công ty chúng tôi đã giành giải nhất trong cuộc thi nội bộ.
 1327	yuujou	exam	友情	ゆうじょう	tình bạn	二人の友情は変わらない。	Tình bạn của hai người không thay đổi.
 1328	yuujou	daily	友情	ゆうじょう	tình bạn	友情って大事だよね。	Tình bạn quan trọng thật nhỉ.
-1329	yuujou	business	友情	ゆうじょう	tình bạn	長年の友情に感謝いたします。	Tôi xin cảm ơn tình bạn nhiều năm qua.
+1329	yuujou	business	友情	ゆうじょう	tình bạn	長年一緒に働いた同僚との友情は、退職後も続いています。	Tình bạn với người đồng nghiệp đã làm việc cùng nhiều năm vẫn tiếp tục ngay cả sau khi nghỉ việc.
 1330	yuubin	exam	郵便	ゆうびん	bưu điện	郵便で荷物を送った。	Tôi đã gửi đồ qua bưu điện.
 1331	yuubin	daily	郵便	ゆうびん	bưu điện	郵便、まだ届いてないよ。	Bưu phẩm vẫn chưa đến đâu.
 1332	yuubin	business	郵便	ゆうびん	bưu điện	書類は郵便にて送付いたします。	Tài liệu sẽ được gửi qua đường bưu điện.
@@ -135,7 +135,7 @@ row	vocabId	type	word	reading	meaningVi	exampleJp	exampleVi
 1394	renzoku	daily	連続	れんぞく	liên tiếp	このドラマ、連続で見ちゃった。	Bộ phim này tớ xem liền tù tì luôn.
 1395	renzoku	business	連続	れんぞく	liên tiếp	3か月連続で売上が増加しております。	Doanh thu đã tăng liên tiếp trong 3 tháng.
 1396	roudou	exam	労働	ろうどう	lao động	この国は労働時間が長い。	Nước này có thời gian lao động dài.
-1397	roudou	daily	労働	ろうどう	lao động	今日も労働、疲れたなあ。	Hôm nay cũng làm việc, mệt ghê.
+1397	roudou	daily	労働	ろうどう	lao động	今日は肉体労働だったから、さすがに疲れた。	Hôm nay làm lao động chân tay nên đúng là mệt thật.
 1398	roudou	business	労働	ろうどう	lao động	労働環境の改善に取り組んでおります。	Chúng tôi đang nỗ lực cải thiện môi trường lao động.
 1399	rokuon	exam	録音	ろくおん	ghi âm	会議の内容を録音した。	Tôi đã ghi âm lại nội dung cuộc họp.
 1400	rokuon	daily	録音	ろくおん	ghi âm	この曲、録音しておいた?	Bài hát này ghi âm lại chưa?

@@ -56,7 +56,7 @@ row	vocabId	type	word	reading	meaningVi	exampleJp	exampleVi
 3115	hinan	exam	避難	ひなん	lánh nạn	地震で避難した。	Chúng tôi đã đi lánh nạn vì động đất.
 3116	hinan	daily	避難	ひなん	lánh nạn	避難、大丈夫だった?	Lánh nạn có ổn không?
 3117	hinan	business	避難	ひなん	lánh nạn	避難経路を全員で確認しましょう。	Hãy cùng nhau kiểm tra lối thoát hiểm.
-3118	fuusoku	exam	風速	ふうそく	tốc độ gió	今日の風速は強い。	Tốc độ gió hôm nay mạnh.
+3118	fuusoku	exam	風速	ふうそく	tốc độ gió	今日の風速はかなり高い。	Tốc độ gió hôm nay khá cao.
 3119	fuusoku	daily	風速	ふうそく	tốc độ gió	風速、どれくらいだった?	Tốc độ gió khoảng bao nhiêu vậy?
 3120	fuusoku	business	風速	ふうそく	tốc độ gió	風速25メートルの強風に警戒が必要です。	Cần cảnh giác với gió mạnh tốc độ 25 mét/giây.
 3121	bousai	exam	防災	ぼうさい	phòng chống thiên tai	学校で防災訓練があった。	Ở trường có diễn tập phòng chống thiên tai.
@@ -97,10 +97,10 @@ row	vocabId	type	word	reading	meaningVi	exampleJp	exampleVi
 3156	saru	business	猿	さる	con khỉ	観光地では猿にご注意ください。	Xin lưu ý khỉ ở khu du lịch.
 3157	zou	exam	象	ぞう	con voi	動物園で象を見た。	Tôi đã thấy voi ở sở thú.
 3158	zou	daily	象	ぞう	con voi	象、大きいね。	Voi to thật nhỉ.
-3159	zou	business	象	ぞう	con voi	象は非常に知能が高い動物です。	Voi là loài động vật có trí thông minh rất cao.
+3159	zou	business	象	ぞう	con voi	動物園では象の健康状態を毎朝確認しています。	Tại sở thú, nhân viên kiểm tra tình trạng sức khỏe của voi mỗi sáng.
 3160	tora	exam	虎	とら	con hổ	動物園で虎を見た。	Tôi đã thấy hổ ở sở thú.
 3161	tora	daily	虎	とら	con hổ	虎、迫力あるね。	Hổ đầy uy lực thật nhỉ.
-3162	tora	business	虎	とら	con hổ	虎は絶滅危惧種に指定されています。	Hổ được xếp vào loài có nguy cơ tuyệt chủng.
+3162	tora	business	虎	とら	con hổ	動物園では虎の飼育エリアを毎日点検しています。	Tại sở thú, khu nuôi hổ được kiểm tra hằng ngày.
 3163	niwatori	exam	鶏	にわとり	con gà	農家で鶏を飼っている。	Nông dân đang nuôi gà.
 3164	niwatori	daily	鶏	にわとり	con gà	鶏、朝から鳴いてるね。	Gà gáy từ sáng nhỉ.
 3165	niwatori	business	鶏	にわとり	con gà	地鶏を使用した商品を販売しております。	Chúng tôi bán sản phẩm sử dụng thịt gà địa phương.
@@ -166,7 +166,7 @@ row	vocabId	type	word	reading	meaningVi	exampleJp	exampleVi
 3225	goldenweek	business	ゴールデンウィーク	ゴールデンウィーク	tuần lễ vàng	ゴールデンウィーク期間中の営業時間をご案内いたします。	Chúng tôi xin thông báo giờ hoạt động trong thời gian tuần lễ vàng.
 3226	koro	exam	頃	ころ	khoảng (thời gian)	子供の頃、よく遊んだ。	Hồi bé tôi hay chơi.
 3227	koro	daily	頃	ころ	khoảng (thời gian)	そろそろ帰る頃かな。	Chắc sắp đến lúc về rồi nhỉ.
-3228	koro	business	頃	ころ	khoảng (thời gian)	来月の頃には完成する見込みです。	Dự kiến sẽ hoàn thành vào khoảng tháng sau.
+3228	koro	business	頃	ころ	khoảng (thời gian)	来月頃には完成する見込みです。	Dự kiến sẽ hoàn thành vào khoảng tháng sau.
 3229	konkai	exam	今回	こんかい	lần này	今回のテストは難しかった。	Bài kiểm tra lần này khó.
 3230	konkai	daily	今回	こんかい	lần này	今回はどうだった?	Lần này thế nào?
 3231	konkai	business	今回	こんかい	lần này	今回のプロジェクトについてご説明いたします。	Tôi xin giải thích về dự án lần này.
@@ -176,6 +176,6 @@ row	vocabId	type	word	reading	meaningVi	exampleJp	exampleVi
 3235	jiki	exam	時期	じき	thời điểm	引っ越しの時期を決めた。	Tôi đã quyết định thời điểm chuyển nhà.
 3236	jiki	daily	時期	じき	thời điểm	今の時期、寒いよね。	Thời điểm này lạnh thật nhỉ.
 3237	jiki	business	時期	じき	thời điểm	導入時期については追ってご連絡いたします。	Chúng tôi sẽ liên hệ sau về thời điểm triển khai.
-3238	jikoku	exam	時刻	じこく	giờ, thời điểm	出発時刻を確認した。	Tôi đã kiểm tra thời khắc khởi hành.
-3239	jikoku	daily	時刻	じこく	giờ, thời điểm	時刻、間違えないでね。	Đừng nhầm giờ giấc nhé.
-3240	jikoku	business	時刻	じこく	giờ, thời điểm	到着時刻は変更となる場合がございます。	Thời khắc đến nơi có thể sẽ thay đổi.
+3238	jikoku	exam	時刻	じこく	giờ, thời điểm	出発時刻を確認した。	Tôi đã kiểm tra giờ khởi hành.
+3239	jikoku	daily	時刻	じこく	giờ, thời điểm	時刻、間違えないでね。	Đừng nhầm giờ nhé.
+3240	jikoku	business	時刻	じこく	giờ, thời điểm	到着時刻は変更となる場合がございます。	Giờ đến nơi có thể thay đổi.

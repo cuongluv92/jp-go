@@ -7,7 +7,7 @@
   "posSchemaIssueCount": 0,
   "verbMissingTransitivityCount": 0,
   "multiSenseWordCount": 0,
-  "businessNoWorkplaceCueCount": 1250,
+  "businessNoWorkplaceCueCount": 1239,
   "businessCasualWithoutInternalCueCount": 1,
   "exactTemplateGroupCount": 0,
   "viDuplicateGroupCount": 0,
@@ -23,14 +23,14 @@
     },
     {
       "path": "lib/data/tango-n3-example-overrides-final.ts",
-      "count": 21
+      "count": 20
     },
     {
       "path": "lib/data/tango-n3-example-overrides-final2.ts",
       "count": 42
     }
   ],
-  "overrideCollisionCount": 1,
+  "overrideCollisionCount": 0,
   "samples": {
     "posSchemaIssues": [],
     "verbMissingTransitivity": [],
@@ -1269,8 +1269,8 @@
       {
         "vocabId": "todoke",
         "word": "届け",
-        "jp": "休職届けを人事部に提出してください。",
-        "vi": "Vui lòng nộp đơn xin nghỉ việc tạm thời cho phòng nhân sự."
+        "jp": "休職に必要な届けを人事部に提出してください。",
+        "vi": "Vui lòng nộp giấy khai báo cần thiết cho việc tạm nghỉ việc cho phòng nhân sự."
       },
       {
         "vocabId": "nylon",
@@ -1287,8 +1287,8 @@
       {
         "vocabId": "nama",
         "word": "生",
-        "jp": "本イベントは生放送でお届けします。",
-        "vi": "Sự kiện này sẽ được phát sóng trực tiếp."
+        "jp": "当店では生の魚を扱うため、温度管理を徹底しています。",
+        "vi": "Cửa hàng chúng tôi quản lý nhiệt độ nghiêm ngặt vì có xử lý cá tươi sống."
       },
       {
         "vocabId": "nisemono",
@@ -1306,7 +1306,7 @@
         "vocabId": "ninki",
         "word": "人気",
         "jp": "新商品は発売直後から人気を集めています。",
-        "vi": "Sản phẩm mới thu hút sự chú ý ngay sau khi ra mắt."
+        "vi": "Sản phẩm mới đã được ưa chuộng ngay từ sau khi ra mắt."
       },
       {
         "vocabId": "nebou",
@@ -1570,7 +1570,7 @@
         "vocabId": "mark",
         "word": "マーク",
         "jp": "対象商品には専用マークが付いています。",
-        "vi": "Sản phẩm đối tượng có gắn biểu tượng riêng."
+        "vi": "Sản phẩm thuộc diện áp dụng có gắn biểu tượng riêng."
       },
       {
         "vocabId": "mane",
@@ -1600,7 +1600,7 @@
         "vocabId": "meisho",
         "word": "名所",
         "jp": "地域の観光名所を紹介するパンフレットを作成しました。",
-        "vi": "Chúng tôi đã tạo tờ rơi giới thiệu các danh lam du lịch của khu vực."
+        "vi": "Chúng tôi đã làm brochure giới thiệu các điểm tham quan nổi tiếng trong khu vực."
       },
       {
         "vocabId": "meibutsu",
@@ -1649,18 +1649,6 @@
         "word": "勇気",
         "jp": "新しい挑戦には勇気が必要です。",
         "vi": "Thử thách mới cần có dũng khí."
-      },
-      {
-        "vocabId": "yuushou",
-        "word": "優勝",
-        "jp": "弊社製品がコンテストで優勝いたしました。",
-        "vi": "Sản phẩm của công ty chúng tôi đã giành chiến thắng trong cuộc thi."
-      },
-      {
-        "vocabId": "yuujou",
-        "word": "友情",
-        "jp": "長年の友情に感謝いたします。",
-        "vi": "Tôi xin cảm ơn tình bạn nhiều năm qua."
       },
       {
         "vocabId": "yuubin",
@@ -1835,6 +1823,18 @@
         "word": "グラウンド",
         "jp": "イベントは市営グラウンドにて開催いたします。",
         "vi": "Sự kiện sẽ được tổ chức tại sân vận động thành phố."
+      },
+      {
+        "vocabId": "keisatsusho",
+        "word": "警察署",
+        "jp": "不審者情報を警察署に通報いたしました。",
+        "vi": "Chúng tôi đã báo cáo thông tin người khả nghi cho đồn cảnh sát."
+      },
+      {
+        "vocabId": "gekijou",
+        "word": "劇場",
+        "jp": "本公演は国立劇場にて上演いたします。",
+        "vi": "Buổi biểu diễn này sẽ được trình diễn tại nhà hát quốc gia."
       }
     ],
     "businessCasualWithoutInternalCue": [
@@ -1848,14 +1848,6 @@
     "exactTemplateGroups": [],
     "viDuplicateGroups": [],
     "answerSurfaceSuspects": [],
-    "overrideCollisions": [
-      {
-        "key": "heiwa#3",
-        "paths": [
-          "lib/data/tango-n3-example-overrides-context.ts",
-          "lib/data/tango-n3-example-overrides-final.ts"
-        ]
-      }
-    ]
+    "overrideCollisions": []
   }
 }

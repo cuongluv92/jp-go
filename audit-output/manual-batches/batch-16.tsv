@@ -64,7 +64,7 @@ row	vocabId	type	word	reading	meaningVi	exampleJp	exampleVi
 2763	leisure	business	レジャー	レジャー	giải trí	レジャー業界向けのサービスを展開しております。	Chúng tôi đang triển khai dịch vụ dành cho ngành giải trí.
 2764	sumou	exam	相撲	すもう	sumo	相撲を見に行った。	Tôi đã đi xem sumo.
 2765	sumou	daily	相撲	すもう	sumo	相撲、子どものころからよく見てる。	Mình xem sumo thường xuyên từ hồi còn nhỏ.
-2766	sumou	business	相撲	すもう	sumo	相撲観戦は日本文化を知るいい機会です。	Xem sumo là cơ hội tốt để hiểu văn hóa Nhật Bản.
+2766	sumou	business	相撲	すもう	sumo	旅行会社では、外国人向けの相撲観戦ツアーを販売しています。	Công ty du lịch đang bán tour xem sumo dành cho khách nước ngoài.
 2767	takkyuu	exam	卓球	たっきゅう	bóng bàn	卓球の試合に出た。	Tôi đã tham gia trận đấu bóng bàn.
 2768	takkyuu	daily	卓球	たっきゅう	bóng bàn	卓球、やらない?	Chơi bóng bàn không?
 2769	takkyuu	business	卓球	たっきゅう	bóng bàn	社内に卓球台を設置いたしました。	Chúng tôi đã lắp đặt bàn bóng bàn trong công ty.
@@ -142,7 +142,7 @@ row	vocabId	type	word	reading	meaningVi	exampleJp	exampleVi
 2841	osatsu	business	お札	おさつ	tiền giấy	新デザインのお札が発行されました。	Tiền giấy với thiết kế mới đã được phát hành.
 2842	shishutsu	exam	支出	ししゅつ	chi tiêu	毎月の支出を記録している。	Tôi ghi chép chi tiêu hàng tháng.
 2843	shishutsu	daily	支出	ししゅつ	chi tiêu	今月、支出が多いな。	Tháng này chi tiêu nhiều thật.
-2844	shishutsu	business	支出	ししゅつ	chi tiêu	経費支出の削減に取り組んでおります。	Chúng tôi đang nỗ lực cắt giảm chi tiêu chi phí.
+2844	shishutsu	business	支出	ししゅつ	chi tiêu	会社の支出を削減する取り組みを進めています。	Chúng tôi đang triển khai các biện pháp cắt giảm chi tiêu của công ty.
 2845	shiharai	exam	支払い	しはらい	thanh toán	家賃の支払いを済ませた。	Tôi đã hoàn tất thanh toán tiền thuê nhà.
 2846	shiharai	daily	支払い	しはらい	thanh toán	支払い、どうする?現金?	Thanh toán thế nào? Tiền mặt à?
 2847	shiharai	business	支払い	しはらい	thanh toán	お支払いはクレジットカードでも可能です。	Có thể thanh toán bằng thẻ tín dụng.
@@ -178,4 +178,4 @@ row	vocabId	type	word	reading	meaningVi	exampleJp	exampleVi
 2877	takarakuji	business	宝くじ	たからくじ	xổ số	年末は宝くじ売り場に長い行列ができます。	Cuối năm quầy vé số thường có hàng dài người xếp hàng.
 2878	tada	exam	ただ	ただ	miễn phí	このイベントはただで参加できる。	Sự kiện này có thể tham gia miễn phí.
 2879	tada	daily	ただ	ただ	miễn phí	これ、ただでもらったんだ。	Cái này tớ được cho không đấy.
-2880	tada	business	ただ	ただ	miễn phí	初回相談はただでご利用いただけます。	Lần tư vấn đầu tiên có thể sử dụng miễn phí.
+2880	tada	business	ただ	ただ	miễn phí	同僚に「この社内セミナー、ただで参加できるよ」と教えました。	Tôi nói với đồng nghiệp: “Hội thảo nội bộ này tham gia miễn phí đấy.”

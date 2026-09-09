@@ -47,9 +47,9 @@ row	vocabId	type	word	reading	meaningVi	exampleJp	exampleVi
 2026	shounika	exam	小児科	しょうにか	nhi khoa	子供を小児科に連れて行った。	Tôi đã đưa con đến khoa nhi.
 2027	shounika	daily	小児科	しょうにか	nhi khoa	小児科、予約制なんだって。	Nghe nói khoa nhi phải đặt hẹn trước.
 2028	shounika	business	小児科	しょうにか	nhi khoa	小児科医の増員を検討しております。	Chúng tôi đang xem xét tăng số lượng bác sĩ nhi khoa.
-2029	seikeigeka	exam	整形外科	せいけいげか	khoa chấn thương chỉnh hình, ngoại chỉnh hình	整形外科でリハビリを受けている。	Tôi đang phục hồi chức năng ở khoa chỉnh hình.
-2030	seikeigeka	daily	整形外科	せいけいげか	khoa chấn thương chỉnh hình, ngoại chỉnh hình	整形外科、紹介してもらえる?	Cậu giới thiệu giúp khoa chỉnh hình được không?
-2031	seikeigeka	business	整形外科	せいけいげか	khoa chấn thương chỉnh hình, ngoại chỉnh hình	整形外科分野での症例数が増加しております。	Số ca bệnh trong lĩnh vực chỉnh hình đang tăng lên.
+2029	seikeigeka	exam	整形外科	せいけいげか	khoa chấn thương chỉnh hình, ngoại chỉnh hình	整形外科でリハビリを受けている。	Tôi đang phục hồi chức năng ở khoa chấn thương chỉnh hình.
+2030	seikeigeka	daily	整形外科	せいけいげか	khoa chấn thương chỉnh hình, ngoại chỉnh hình	整形外科、紹介してもらえる?	Cậu giới thiệu giúp khoa chấn thương chỉnh hình nào tốt được không?
+2031	seikeigeka	business	整形外科	せいけいげか	khoa chấn thương chỉnh hình, ngoại chỉnh hình	整形外科分野での症例数が増加しております。	Số ca bệnh trong lĩnh vực chấn thương chỉnh hình đang tăng lên.
 2032	naika	exam	内科	ないか	nội khoa	風邪で内科に行った。	Vì cảm cúm nên tôi đã đi khoa nội.
 2033	naika	daily	内科	ないか	nội khoa	内科、混んでるかな。	Không biết khoa nội có đông không.
 2034	naika	business	内科	ないか	nội khoa	内科的な検査を追加で実施いたします。	Chúng tôi sẽ thực hiện thêm kiểm tra nội khoa.
@@ -142,13 +142,13 @@ row	vocabId	type	word	reading	meaningVi	exampleJp	exampleVi
 2121	ousama	business	王様	おうさま	nhà vua	このホテルは王様気分を味わえます。	Khách sạn này mang lại cảm giác như được làm vua.
 2122	ojisan	exam	おじさん	おじさん	chú, bác	隣のおじさんに挨拶した。	Tôi đã chào chú hàng xóm.
 2123	ojisan	daily	おじさん	おじさん	chú, bác	あのおじさん、優しいよね。	Chú kia hiền thật nhỉ.
-2124	ojisan	business	おじさん	おじさん	chú, bác	近所のおじさんによく野菜をもらいます。	Tôi thường được chú hàng xóm cho rau.
+2124	ojisan	business	おじさん	おじさん	chú, bác	同僚が「うちのおじさん、この会社の元社員なんだ」と話していました。	Một đồng nghiệp nói: “Chú của tôi từng là nhân viên công ty này.”
 2125	ojousan	exam	お嬢さん	おじょうさん	cô gái, tiểu thư	隣のお嬢さんは大学生だ。	Cô con gái nhà hàng xóm là sinh viên đại học.
 2126	ojousan	daily	お嬢さん	おじょうさん	cô gái, tiểu thư	あのお嬢さん、可愛いね。	Cô bé kia dễ thương nhỉ.
 2127	ojousan	business	お嬢さん	おじょうさん	cô gái, tiểu thư	社長のお嬢さんが来社されました。	Con gái của giám đốc đã đến công ty.
 2128	obasan	exam	おばさん	おばさん	cô, bác (gái)	近所のおばさんに野菜をもらった。	Tôi đã nhận rau từ cô hàng xóm.
 2129	obasan	daily	おばさん	おばさん	cô, bác (gái)	あのおばさん、いつも元気だね。	Cô kia lúc nào cũng khỏe mạnh nhỉ.
-2130	obasan	business	おばさん	おばさん	cô, bác (gái)	取引先のおばさんによく声をかけられます。	Tôi thường được người phụ nữ lớn tuổi bên đối tác bắt chuyện.
+2130	obasan	business	おばさん	おばさん	cô, bác (gái)	同僚が「うちのおばさん、取引先で働いてるんだ」と話していました。	Một đồng nghiệp nói: “Cô của tôi đang làm việc ở công ty đối tác.”
 2131	oyako	exam	親子	おやこ	cha mẹ và con	公園で親子が遊んでいる。	Cha mẹ và con đang chơi ở công viên.
 2132	oyako	daily	親子	おやこ	cha mẹ và con	あの親子、仲良さそうだね。	Cha mẹ con nhà kia có vẻ hòa thuận nhỉ.
 2133	oyako	business	親子	おやこ	cha mẹ và con	親子向けのイベントを企画しております。	Chúng tôi đang lên kế hoạch tổ chức sự kiện dành cho gia đình.
@@ -175,7 +175,7 @@ row	vocabId	type	word	reading	meaningVi	exampleJp	exampleVi
 2154	kyouju	business	教授	きょうじゅ	giáo sư	本研究は大学教授の監修のもと実施いたしました。	Nghiên cứu này được thực hiện dưới sự giám sát của giáo sư đại học.
 2155	classmate	exam	クラスメート	クラスメート	bạn cùng lớp	クラスメートと一緒に勉強した。	Tôi đã học cùng bạn cùng lớp.
 2156	classmate	daily	クラスメート	クラスメート	bạn cùng lớp	昔のクラスメートに会ったよ。	Tớ đã gặp bạn cùng lớp cũ đấy.
-2157	classmate	business	クラスメート	クラスメート	bạn cùng lớp	大学のクラスメートと今も交流があります。	Tôi vẫn còn giao lưu với bạn cùng lớp đại học cho đến bây giờ.
+2157	classmate	business	クラスメート	クラスメート	bạn cùng lớp	大学時代のクラスメートが、今回の取引先の担当者でした。	Bạn cùng lớp thời đại học của tôi chính là người phụ trách phía đối tác lần này.
 2158	group	exam	グループ	グループ	nhóm	3人でグループを作った。	Ba người đã lập thành một nhóm.
 2159	group	daily	グループ	グループ	nhóm	どのグループに入るの?	Cậu sẽ vào nhóm nào?
 2160	group	business	グループ	グループ	nhóm	プロジェクトごとにグループを編成いたします。	Chúng tôi sẽ thành lập nhóm theo từng dự án.

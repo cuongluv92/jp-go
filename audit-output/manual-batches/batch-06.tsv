@@ -98,9 +98,9 @@ row	vocabId	type	word	reading	meaningVi	exampleJp	exampleVi
 0997	top	exam	トップ	トップ	cao nhất, đứng đầu	彼はクラスでトップの成績だ。	Anh ấy có thành tích đứng đầu lớp.
 0998	top	daily	トップ	トップ	cao nhất, đứng đầu	このランキング、トップになったよ!	Bảng xếp hạng này lên top rồi đó!
 0999	top	business	トップ	トップ	cao nhất, đứng đầu	当社は業界トップのシェアを誇ります。	Công ty chúng tôi tự hào có thị phần đứng đầu ngành.
-1000	todoke	exam	届け	とどけ	đơn (khai báo)	市役所に転居届けを出した。	Tôi đã nộp đơn khai chuyển nhà ở tòa thị chính.
-1001	todoke	daily	届け	とどけ	đơn (khai báo)	結婚届け、もう出した?	Đơn đăng ký kết hôn nộp chưa?
-1002	todoke	business	届け	とどけ	đơn (khai báo)	休職届けを人事部に提出してください。	Vui lòng nộp đơn xin nghỉ việc tạm thời cho phòng nhân sự.
+1000	todoke	exam	届け	とどけ	đơn (khai báo)	住所を変えたので、市役所に届けを出した。	Vì đổi địa chỉ nên tôi đã nộp giấy khai báo tại tòa thị chính.
+1001	todoke	daily	届け	とどけ	đơn (khai báo)	その届け、もう役所に出した？	Giấy khai báo đó cậu đã nộp cho cơ quan hành chính chưa?
+1002	todoke	business	届け	とどけ	đơn (khai báo)	休職に必要な届けを人事部に提出してください。	Vui lòng nộp giấy khai báo cần thiết cho việc tạm nghỉ việc cho phòng nhân sự.
 1003	doryoku	exam	努力	どりょく	nỗ lực	合格するには努力が必要だ。	Để đỗ cần phải nỗ lực.
 1004	doryoku	daily	努力	どりょく	nỗ lực	もっと努力しなきゃな。	Phải nỗ lực nhiều hơn nữa thôi.
 1005	doryoku	business	努力	どりょく	nỗ lực	チーム一丸となって努力してまいります。	Chúng tôi sẽ cùng nhau nỗ lực với tư cách là một đội.
@@ -118,7 +118,7 @@ row	vocabId	type	word	reading	meaningVi	exampleJp	exampleVi
 1017	nanani	business	何々	なになに	v.v., cái này cái kia	申請には何々の書類が必要かご案内します。	Chúng tôi sẽ hướng dẫn cần những giấy tờ gì cho việc đăng ký.
 1018	nama	exam	生	なま	tươi sống	生野菜は体にいい。	Rau sống tốt cho sức khỏe.
 1019	nama	daily	生	なま	tươi sống	今夜は生ビールで乾杯しよう。	Tối nay cụng ly với bia tươi nhé.
-1020	nama	business	生	なま	tươi sống	本イベントは生放送でお届けします。	Sự kiện này sẽ được phát sóng trực tiếp.
+1020	nama	business	生	なま	tươi sống	当店では生の魚を扱うため、温度管理を徹底しています。	Cửa hàng chúng tôi quản lý nhiệt độ nghiêm ngặt vì có xử lý cá tươi sống.
 1021	nisemono	exam	偽物	にせもの	hàng giả	これは偽物のブランド品だ。	Đây là hàng hiệu giả.
 1022	nisemono	daily	偽物	にせもの	hàng giả	このバッグ、偽物じゃない?	Cái túi này không phải hàng giả chứ?
 1023	nisemono	business	偽物	にせもの	hàng giả	市場には偽物が出回っておりますのでご注意ください。	Xin lưu ý vì hàng giả đang lưu hành trên thị trường.
@@ -127,7 +127,7 @@ row	vocabId	type	word	reading	meaningVi	exampleJp	exampleVi
 1026	nyuujou	business	入場	にゅうじょう	vào (khu vực)	入場の際はチケットをご提示ください。	Khi vào cửa, xin vui lòng xuất trình vé.
 1027	ninki	exam	人気	にんき	nổi tiếng, được yêu thích	この歌手は若者に人気がある。	Ca sĩ này được giới trẻ yêu thích.
 1028	ninki	daily	人気	にんき	nổi tiếng, được yêu thích	このお店、最近人気だよね。	Quán này dạo này nổi tiếng nhỉ.
-1029	ninki	business	人気	にんき	nổi tiếng, được yêu thích	新商品は発売直後から人気を集めています。	Sản phẩm mới thu hút sự chú ý ngay sau khi ra mắt.
+1029	ninki	business	人気	にんき	nổi tiếng, được yêu thích	新商品は発売直後から人気を集めています。	Sản phẩm mới đã được ưa chuộng ngay từ sau khi ra mắt.
 1030	net	exam	ネット	ネット	mạng	ネットで情報を調べた。	Tôi đã tra thông tin trên mạng.
 1031	net	daily	ネット	ネット	mạng	それ、ネットで買ったの?	Cái đó cậu mua trên mạng à?
 1032	net	business	ネット	ネット	mạng	ネット通販の売上が伸びています。	Doanh thu bán hàng trực tuyến đang tăng.
@@ -141,7 +141,7 @@ row	vocabId	type	word	reading	meaningVi	exampleJp	exampleVi
 1040	nougyou	daily	農業	のうぎょう	nông nghiệp	将来、農業やりたいんだよね。	Sau này tớ muốn làm nông nghiệp đó.
 1041	nougyou	business	農業	のうぎょう	nông nghiệp	弊社は農業分野への投資を拡大しております。	Công ty chúng tôi đang mở rộng đầu tư vào lĩnh vực nông nghiệp.
 1042	nouritsu	exam	能率	のうりつ	hiệu suất	作業の能率を上げたい。	Tôi muốn nâng cao hiệu suất công việc.
-1043	nouritsu	daily	能率	のうりつ	hiệu suất	このやり方、能率悪くない?	Cách làm này hiệu suất không tệ à?
+1043	nouritsu	daily	能率	のうりつ	hiệu suất	このやり方、能率悪くない?	Cách làm này hơi kém hiệu quả, phải không?
 1044	nouritsu	business	能率	のうりつ	hiệu suất	新システム導入により能率が大幅に向上しました。	Nhờ triển khai hệ thống mới, hiệu suất đã cải thiện đáng kể.
 1045	knock	exam	ノック	ノック	gõ cửa	入る前にドアをノックした。	Tôi đã gõ cửa trước khi vào.
 1046	knock	daily	ノック	ノック	gõ cửa	ノックしてから入ってね。	Gõ cửa rồi mới vào nhé.

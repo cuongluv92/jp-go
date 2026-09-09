@@ -13,13 +13,13 @@ row	vocabId	type	word	reading	meaningVi	exampleJp	exampleVi
 3792	nuno	business	布	ぬの	vải	高品質な布を使用した製品です。	Đây là sản phẩm sử dụng vải chất lượng cao.
 3793	hamigaki	exam	歯磨き	はみがき	đánh răng	寝る前に歯磨きをした。	Trước khi ngủ tôi đã đánh răng.
 3794	hamigaki	daily	歯磨き	はみがき	đánh răng	歯磨き、忘れないでね。	Đừng quên đánh răng nhé.
-3795	hamigaki	business	歯磨き	はみがき	đánh răng	歯磨き粉の新商品を発売いたします。	Chúng tôi sẽ ra mắt sản phẩm kem đánh răng mới.
+3795	hamigaki	business	歯磨き	はみがき	đánh răng	介護施設では、利用者の歯磨きをスタッフが見守っています。	Tại cơ sở chăm sóc, nhân viên giám sát việc đánh răng của người sử dụng dịch vụ.
 3796	hari	exam	針	はり	kim	針で穴を開けた。	Tôi đã đục lỗ bằng kim.
 3797	hari	daily	針	はり	kim	針、なくさないでね。	Đừng làm mất kim nhé.
 3798	hari	business	針	はり	kim	製造には専用の針を使用しております。	Chúng tôi sử dụng kim chuyên dụng trong sản xuất.
 3799	hanko	exam	判こ	はんこ	con dấu	書類に判こを押した。	Tôi đã đóng dấu vào tài liệu.
 3800	hanko	daily	判こ	はんこ	con dấu	判こ、玄関の引き出しに入れておいたよ。	Con dấu mình để sẵn trong ngăn kéo ở cửa ra vào rồi đấy.
-3801	hanko	business	判こ	はんこ	con dấu	契約書には判この押印が必要です。	Hợp đồng cần đóng dấu con dấu.
+3801	hanko	business	判こ	はんこ	con dấu	契約書の所定欄に判こを押してください。	Vui lòng đóng dấu vào ô quy định trên hợp đồng.
 3802	bin2	exam	瓶	びん	chai	瓶にジャムを入れた。	Tôi đã cho mứt vào chai.
 3803	bin2	daily	瓶	びん	chai	この瓶、開かないよ。	Cái chai này không mở được.
 3804	bin2	business	瓶	びん	chai	リサイクル可能な瓶を使用しております。	Chúng tôi sử dụng chai có thể tái chế.
@@ -44,9 +44,9 @@ row	vocabId	type	word	reading	meaningVi	exampleJp	exampleVi
 3823	switch	exam	スイッチ	スイッチ	công tắc	スイッチを入れた。	Tôi đã bật công tắc.
 3824	switch	daily	スイッチ	スイッチ	công tắc	スイッチ、どこ?	Công tắc ở đâu vậy?
 3825	switch	business	スイッチ	スイッチ	công tắc	電源スイッチの位置を分かりやすく表示いたしました。	Chúng tôi đã hiển thị vị trí công tắc nguồn dễ nhìn hơn.
-3826	stand	exam	スタンド	スタンド	đèn bàn; giá, chân đỡ	机にスタンドを置いた。	Tôi đã đặt đèn bàn trên bàn học.
-3827	stand	daily	スタンド	スタンド	đèn bàn; giá, chân đỡ	このスタンド、明るいね。	Cái đèn bàn này sáng thật nhỉ.
-3828	stand	business	スタンド	スタンド	đèn bàn; giá, chân đỡ	省エネスタンドを社内に導入いたしました。	Chúng tôi đã đưa vào sử dụng đèn bàn tiết kiệm điện trong công ty.
+3826	stand	exam	スタンド	スタンド	đèn bàn; giá, chân đỡ	机にスタンドを置いた。	Tôi đã đặt đèn bàn lên bàn.
+3827	stand	daily	スタンド	スタンド	đèn bàn; giá, chân đỡ	このスタンド、明るいね。	Đèn bàn này sáng thật nhỉ.
+3828	stand	business	スタンド	スタンド	đèn bàn; giá, chân đỡ	省エネスタンドを社内に導入いたしました。	Chúng tôi đã trang bị đèn bàn tiết kiệm điện trong công ty.
 3829	speaker	exam	スピーカー	スピーカー	loa	スピーカーで音楽を流した。	Tôi đã phát nhạc qua loa.
 3830	speaker	daily	スピーカー	スピーカー	loa	このスピーカー、音いいね。	Loa này âm thanh hay ghê.
 3831	speaker	business	スピーカー	スピーカー	loa	会議室にスピーカーを設置いたしました。	Chúng tôi đã lắp đặt loa trong phòng họp.

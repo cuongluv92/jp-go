@@ -33,8 +33,8 @@ row	vocabId	type	word	reading	meaningVi	exampleJp	exampleVi
 4532	haeru	daily	生える	はえる	mọc (tóc, cỏ, răng)	赤ちゃんに歯が生えてきた。	Em bé đã mọc răng.
 4533	haeru	business	生える	はえる	mọc (tóc, cỏ, răng)	この土地にはキノコがよく生える。	Nấm thường mọc nhiều ở khu đất này.
 4534	hakaru	exam	測る	はかる	đo, đo lường	体温を測った。	Đã đo thân nhiệt.
-4535	hakaru	daily	測る	はかる	đo, đo lường	体重を量って記録した。	Cân trọng lượng rồi ghi lại.
-4536	hakaru	business	測る	はかる	đo, đo lường	作業時間を計って報告する。	Đo thời gian làm việc rồi báo cáo.
+4535	hakaru	daily	測る	はかる	đo, đo lường	部屋の広さを測って、家具のサイズを決めた。	Tôi đo kích thước căn phòng rồi quyết định kích cỡ đồ nội thất.
+4536	hakaru	business	測る	はかる	đo, đo lường	製品の寸法を測って検査記録に残します。	Chúng tôi đo kích thước sản phẩm và ghi vào biên bản kiểm tra.
 4537	haku_sweep	exam	掃く	はく	quét (nhà, sân)	部屋を掃いて掃除した。	Quét phòng để dọn dẹp.
 4538	haku_sweep	daily	掃く	はく	quét (nhà, sân)	庭を掃いた。	Đã quét sân.
 4539	haku_sweep	business	掃く	はく	quét (nhà, sân)	店の前を毎朝掃く。	Mỗi sáng quét trước cửa hàng.

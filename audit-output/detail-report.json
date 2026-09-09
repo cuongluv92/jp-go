@@ -1,34 +1,6 @@
 {
-  "collisionCount": 1,
-  "collisions": [
-    {
-      "key": "heiwa#3",
-      "paths": [
-        "lib/data/tango-n3-example-overrides-context.ts",
-        "lib/data/tango-n3-example-overrides-final.ts"
-      ],
-      "blocks": [
-        {
-          "path": "lib/data/tango-n3-example-overrides-context.ts",
-          "block": "  \"heiwa#3\": {\n    exampleJp: \"職場の雰囲気は平和で、相談もしやすいです。\",\n    exampleVi: \"Bầu không khí nơi làm việc yên bình nên cũng dễ trao đổi, xin ý kiến.\",\n    clozeJp: \"職場の雰囲気は_____で、相談もしやすいです。\",\n    answer: \"平和\",\n  }"
-        },
-        {
-          "path": "lib/data/tango-n3-example-overrides-final.ts",
-          "block": "  \"heiwa#3\": {\n    exampleJp: \"今日はトラブルもなく、職場は平和です。\",\n    exampleVi: \"Hôm nay không có sự cố gì, chỗ làm khá yên ổn.\",\n    clozeJp: \"今日はトラブルもなく、職場は_____です。\",\n    answer: \"平和\",\n    focusNote: \"職場は平和だ — cách nói hội thoại về một ngày làm việc yên ổn, không phải thuật ngữ trang trọng.\",\n  }"
-        }
-      ],
-      "runtime": {
-        "vocabId": "heiwa",
-        "exampleNo": 3,
-        "exampleType": "business",
-        "exampleJp": "今日はトラブルもなく、職場は平和です。",
-        "exampleVi": "Hôm nay không có sự cố gì, chỗ làm khá yên ổn.",
-        "clozeJp": "今日はトラブルもなく、職場は_____です。",
-        "answer": "平和",
-        "focusNote": "職場は平和だ — cách nói hội thoại về một ngày làm việc yên ổn, không phải thuật ngữ trang trọng."
-      }
-    }
-  ],
+  "collisionCount": 0,
+  "collisions": [],
   "casualBusinessCount": 0,
   "casualBusiness": [],
   "missingDictionaryFormCount": 0,

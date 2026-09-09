@@ -134,7 +134,7 @@ row	vocabId	type	word	reading	meaningVi	exampleJp	exampleVi
 4453	dokeru	exam	どける	どける	dời đi, tránh ra	荷物をどけてください。	Vui lòng dời hành lý ra.
 4454	dokeru	daily	どける	どける	dời đi, tránh ra	椅子をどけて掃除した。	Dời ghế ra rồi dọn dẹp.
 4455	dokeru	business	どける	どける	dời đi, tránh ra	通路の荷物をどけておいてください。	Vui lòng dời hành lý ở lối đi ra trước.
-4456	tojiru	exam	閉じる	とじる	đóng, khép lại	本を閉じてください。	Vui lòng gấp sách lại.
+4456	tojiru	exam	閉じる	とじる	đóng, khép lại	本を閉じてください。	Vui lòng đóng sách lại.
 4457	tojiru	daily	閉じる	とじる	đóng, khép lại	目を閉じて考えた。	Nhắm mắt lại suy nghĩ.
 4458	tojiru	business	閉じる	とじる	đóng, khép lại	会議の最後に議長がファイルを閉じた。	Cuối cuộc họp chủ tọa đã đóng tệp lại.
 4459	tobikomu	exam	飛び込む	とびこむ	nhảy vào, lao vào	彼はプールに飛び込んだ。	Anh ấy nhảy xuống hồ bơi.
@@ -154,13 +154,13 @@ row	vocabId	type	word	reading	meaningVi	exampleJp	exampleVi
 4473	toridasu	business	取り出す	とりだす	lấy ra	書類をファイルから取り出してください。	Vui lòng lấy tài liệu ra khỏi tệp.
 4474	toru_catch	exam	捕る	とる	bắt (chim, cá, thú)	漁師が魚を捕った。	Ngư dân bắt được cá.
 4475	toru_catch	daily	捕る	とる	bắt (chim, cá, thú)	猫がネズミを捕って持ってきた。	Con mèo bắt chuột rồi mang về.
-4476	toru_catch	business	捕る	とる	bắt (chim, cá, thú)	その地域では違法に鳥を捕ることが問題になっている。	Việc bắt chim trái phép ở khu vực đó đang là vấn đề.
+4476	toru_catch	business	捕る	とる	bắt (chim, cá, thú)	漁業会社では、決められた区域で魚を捕っています。	Công ty đánh bắt thủy sản bắt cá trong khu vực được quy định.
 4477	toreru	exam	取れる	とれる	tuột ra, rơi ra; đạt được	ボタンが取れてしまった。	Nút áo bị rơi mất.
 4478	toreru	daily	取れる	とれる	tuột ra, rơi ra; đạt được	汚れがきれいに取れた。	Vết bẩn đã sạch hẳn.
 4479	toreru	business	取れる	とれる	tuột ra, rơi ra; đạt được	今月は予算が取れなかった。	Tháng này không xin được ngân sách.
 4480	nagareru	exam	流れる	ながれる	chảy, trôi, lan truyền	川が海に流れている。	Sông chảy ra biển.
 4481	nagareru	daily	流れる	ながれる	chảy, trôi, lan truyền	涙が頬を流れた。	Nước mắt chảy trên má.
-4482	nagareru	business	流れる	ながれる	chảy, trôi, lan truyền	そのニュースは世界中に流れた。	Tin tức đó đã lan truyền khắp thế giới.
+4482	nagareru	business	流れる	ながれる	chảy, trôi, lan truyền	店内に音楽が流れる時間帯を設定しています。	Chúng tôi thiết lập khung giờ phát nhạc trong cửa hàng.
 4483	naguru	exam	殴る	なぐる	đánh, đấm	彼は相手を殴ってしまった。	Anh ấy đã đấm đối phương.
 4484	naguru	daily	殴る	なぐる	đánh, đấm	弟を殴るのはよくない。	Đánh em trai là không tốt.
 4485	naguru	business	殴る	なぐる	đánh, đấm	従業員を殴った上司が処分された。	Cấp trên đánh nhân viên đã bị xử lý kỷ luật.
@@ -169,7 +169,7 @@ row	vocabId	type	word	reading	meaningVi	exampleJp	exampleVi
 4488	nayamu	business	悩む	なやむ	lo lắng, phiền muộn	経営方針について長く悩んだ末に決断した。	Sau khi trăn trở lâu về phương châm kinh doanh, đã đưa ra quyết định.
 4489	naru_fruit	exam	生る	なる	ra quả, kết trái	庭の木にたくさん実が生った。	Cây trong vườn ra rất nhiều quả.
 4490	naru_fruit	daily	生る	なる	ra quả, kết trái	柿が赤く生っている。	Quả hồng chín đỏ trên cây.
-4491	naru_fruit	business	生る	なる	ra quả, kết trái	今年はりんごがよく生った。	Năm nay táo ra quả nhiều.
+4491	naru_fruit	business	生る	なる	ra quả, kết trái	農園では、りんごがよく生るように剪定を行っています。	Tại nông trại, chúng tôi tỉa cành để cây táo sai quả.
 4492	niau	exam	似合う	にあう	hợp, xứng	その服はあなたに似合っている。	Bộ đồ đó hợp với bạn.
 4493	niau	daily	似合う	にあう	hợp, xứng	髪型が似合ってるね。	Kiểu tóc hợp đấy.
 4494	niau	business	似合う	にあう	hợp, xứng	新しいロゴは会社のイメージに似合う。	Logo mới hợp với hình ảnh công ty.
