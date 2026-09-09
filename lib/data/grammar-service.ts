@@ -145,13 +145,25 @@ export async function getGrammarDetail(supabase: SupabaseClient, grammarId: stri
   if (grammarError) throw grammarError;
   if (!grammar) return null;
 
-  const [{ data: usages }, { data: examples }, { data: questions }, { data: relations1 }, { data: relations2 }] = await Promise.all([
+  const [usagesResult, examplesResult, questionsResult, relations1Result, relations2Result] = await Promise.all([
     supabase.from("jp_grammar_usages").select("*").eq("grammar_id", grammarId).order("usage_no", { ascending: true }),
     supabase.from("jp_grammar_examples").select("*").eq("grammar_id", grammarId).order("example_no", { ascending: true }),
-    supabase.from("jp_grammar_questions").select("*").eq("grammar_id", grammarId),
+    supabase.from("jp_grammar_questions").select("*").eq("grammar_id", grammarId).order("created_at", { ascending: true }),
     supabase.from("jp_grammar_relations").select("*").eq("grammar_id_1", grammarId),
     supabase.from("jp_grammar_relations").select("*").eq("grammar_id_2", grammarId),
   ]);
+
+  if (usagesResult.error) throw usagesResult.error;
+  if (examplesResult.error) throw examplesResult.error;
+  if (questionsResult.error) throw questionsResult.error;
+  if (relations1Result.error) throw relations1Result.error;
+  if (relations2Result.error) throw relations2Result.error;
+
+  const usages = usagesResult.data;
+  const examples = examplesResult.data;
+  const questions = questionsResult.data;
+  const relations1 = relations1Result.data;
+  const relations2 = relations2Result.data;
 
   const relationRows = [...(relations1 ?? []), ...(relations2 ?? [])] as GrammarRelationRow[];
   const otherIds = relationRows.map((r) => (r.grammar_id_1 === grammarId ? r.grammar_id_2 : r.grammar_id_1));
@@ -334,7 +346,11 @@ export async function listWrongGrammarForUser(supabase: SupabaseClient, userId: 
 /** Lấy toàn bộ câu hỏi (jp_grammar_questions) cho nhiều mẫu cùng lúc — dùng cho phiên ôn tập gộp nhiều mẫu. */
 export async function getQuestionsForGrammarIds(supabase: SupabaseClient, grammarIds: string[]): Promise<GrammarQuestionRow[]> {
   if (grammarIds.length === 0) return [];
-  const { data, error } = await supabase.from("jp_grammar_questions").select("*").in("grammar_id", grammarIds);
+  const { data, error } = await supabase
+    .from("jp_grammar_questions")
+    .select("*")
+    .in("grammar_id", grammarIds)
+    .order("created_at", { ascending: true });
   if (error) throw error;
   return (data ?? []) as GrammarQuestionRow[];
 }
@@ -357,7 +373,8 @@ export async function listReviewedGrammarQuestionsByLevel(
     .from("jp_grammar_questions")
     .select("*")
     .in("grammar_id", ids)
-    .eq("review_status", "ok");
+    .eq("review_status", "ok")
+    .order("created_at", { ascending: true });
   if (error) throw error;
   const grammarById = new Map(grammars.map((grammar) => [grammar.id, grammar]));
   return ((data ?? []) as GrammarQuestionRow[]).map((question) => {
