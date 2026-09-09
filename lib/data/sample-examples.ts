@@ -8,6 +8,7 @@ import { applyTangoN3Final2Override } from "./tango-n3-example-overrides-final2"
 import { applyTangoN3Final3Override } from "./tango-n3-example-overrides-final3";
 import { applyTangoN3Final4Override } from "./tango-n3-example-overrides-final4";
 import { applyTangoN3Final5Override } from "./tango-n3-example-overrides-final5";
+import { applyTangoN3Final6Override } from "./tango-n3-example-overrides-final6";
 
 /**
  * Đúng 3 ví dụ / từ (1 = exam, 2 = daily, 3 = business), khớp `vocabId` với
@@ -23,4 +24,5 @@ export const sampleExamples: VocabExample[] = rawSampleExamples
   .map(applyTangoN3Final2Override)
   .map(applyTangoN3Final3Override)
   .map(applyTangoN3Final4Override)
-  .map(applyTangoN3Final5Override);
+  .map(applyTangoN3Final5Override)
+  .map(applyTangoN3Final6Override);
