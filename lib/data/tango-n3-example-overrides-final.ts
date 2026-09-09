@@ -37,13 +37,6 @@ const FINAL_CONTEXT_OVERRIDES: Record<string, ExampleOverride> = {
     answer: "満足",
     focusNote: "Nに満足する — hài lòng với N. Daily không cần thêm よ・ね nếu chỉ đang nói trạng thái của mình.",
   },
-  "heiwa#3": {
-    exampleJp: "今日はトラブルもなく、職場は平和です。",
-    exampleVi: "Hôm nay không có sự cố gì, chỗ làm khá yên ổn.",
-    clozeJp: "今日はトラブルもなく、職場は_____です。",
-    answer: "平和",
-    focusNote: "職場は平和だ — cách nói hội thoại về một ngày làm việc yên ổn, không phải thuật ngữ trang trọng.",
-  },
   "makka#3": {
     exampleJp: "課長はミスの報告を聞いて、顔を真っ赤にして怒りました。",
     exampleVi: "Trưởng bộ phận nghe báo cáo sai sót thì đỏ bừng mặt vì giận.",
