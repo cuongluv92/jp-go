@@ -1,7 +1,7 @@
 row	vocabId	type	word	reading	meaningVi	exampleJp	exampleVi
 0181	kami	exam	神	かみ	thần	神に願いをかけた。	Tôi đã cầu nguyện với thần linh.
 0182	kami	daily	神	かみ	thần	これはもう神対応だね!	Đây đúng là cách xử lý thần thánh luôn!
-0183	kami	business	神	かみ	thần	各国の神話には神々についての物語がある。	Trong thần thoại của các nước đều có những câu chuyện về các vị thần.
+0183	kami	business	神	かみ	thần	展示会では各国の神を題材にした作品を紹介します。	Tại triển lãm, chúng tôi giới thiệu các tác phẩm lấy các vị thần của nhiều nước làm đề tài.
 0184	kara	exam	空	から	trống, rỗng	このペットボトルは空です。	Chai nhựa này rỗng.
 0185	kara	daily	空	から	trống, rỗng	財布の中が空になっちゃった。	Trong ví đã trống rỗng mất rồi.
 0186	kara	business	空	から	trống, rỗng	空の容器はこちらに回収してください。	Vui lòng để các vỏ hộp rỗng vào đây để thu gom.
@@ -10,19 +10,19 @@ row	vocabId	type	word	reading	meaningVi	exampleJp	exampleVi
 0189	kawa	business	革	かわ	da	新商品には高級な革素材を使用しています。	Sản phẩm mới sử dụng chất liệu da cao cấp.
 0190	kangei	exam	歓迎	かんげい	hoan nghênh	新入生を心から歓迎します。	Chúng tôi hoan nghênh sinh viên mới từ tận đáy lòng.
 0191	kangei	daily	歓迎	かんげい	hoan nghênh	今度、新人の歓迎会あるらしいよ。	Nghe nói sắp có tiệc chào mừng nhân viên mới đó.
-0192	kangei	business	歓迎	かんげい	hoan nghênh	新規のお取引を歓迎いたします。	Chúng tôi hoan nghênh giao dịch mới.
+0192	kangei	business	歓迎	かんげい	hoan nghênh	新規のお取引のご相談も歓迎しております。	Chúng tôi luôn hoan nghênh các đề nghị hợp tác mới.
 0193	kankou	exam	観光	かんこう	tham quan	京都を観光するならどこがいいですか。	Nếu tham quan Kyoto thì nên đi đâu?
 0194	kankou	daily	観光	かんこう	tham quan	週末、ちょっと観光しようよ。	Cuối tuần đi tham quan chút đi.
 0195	kankou	business	観光	かんこう	tham quan	インバウンド観光客向けの案内板を設置しました。	Chúng tôi đã lắp đặt bảng chỉ dẫn dành cho khách du lịch nước ngoài.
 0196	kansatsu	exam	観察	かんさつ	quan sát	植物の成長を観察しています。	Tôi đang quan sát sự phát triển của cây.
 0197	kansatsu	daily	観察	かんさつ	quan sát	子供の様子、よく観察してるね。	Bạn quan sát trẻ con kỹ ghê.
-0198	kansatsu	business	観察	かんさつ	quan sát	市場動向を継続的に観察する必要があります。	Cần phải quan sát liên tục xu hướng thị trường.
+0198	kansatsu	business	観察	かんさつ	quan sát	製造ラインで作業の流れを観察し、改善点を探しています。	Chúng tôi quan sát quy trình làm việc trên dây chuyền sản xuất để tìm điểm cần cải thiện.
 0199	kanji2	exam	感じ	かんじ	cảm giác	何か変な感じがする。	Có cảm giác gì đó lạ lạ.
-0200	kanji2	daily	感じ	かんじ	cảm giác	この店、いい感じじゃん。	Quán này cảm giác được đó.
+0200	kanji2	daily	感じ	かんじ	cảm giác	この店、いい感じじゃん。	Quán này trông khá ổn nhỉ.
 0201	kanji2	business	感じ	かんじ	cảm giác	新しいオフィスはとても開放的な感じです。	Văn phòng mới có cảm giác rất thoáng đãng.
 0202	kansha	exam	感謝	かんしゃ	biết ơn	いつも感謝しています。	Tôi luôn biết ơn.
 0203	kansha	daily	感謝	かんしゃ	biết ơn	本当に感謝してるよ、ありがとう。	Thật sự biết ơn cậu lắm, cảm ơn nhé.
-0204	kansha	business	感謝	かんしゃ	biết ơn	日頃のご愛顧に感謝申し上げます。	Chúng tôi xin bày tỏ lòng biết ơn đến sự ủng hộ thường ngày của quý khách.
+0204	kansha	business	感謝	かんしゃ	biết ơn	日頃のご愛顧に感謝申し上げます。	Chúng tôi xin chân thành cảm ơn quý khách đã luôn ủng hộ.
 0205	kanjou	exam	感情	かんじょう	cảm xúc	感情を顔に出さないようにした。	Tôi đã cố không để lộ cảm xúc ra mặt.
 0206	kanjou	daily	感情	かんじょう	cảm xúc	そんなに感情的にならないでよ。	Đừng có xúc động thái quá vậy chứ.
 0207	kanjou	business	感情	かんじょう	cảm xúc	交渉の場では感情的にならないよう注意しましょう。	Trong các cuộc đàm phán, hãy chú ý đừng để cảm xúc chi phối.
@@ -55,10 +55,10 @@ row	vocabId	type	word	reading	meaningVi	exampleJp	exampleVi
 0234	kikai1	business	機会	きかい	cơ hội	この機会にぜひ弊社の新サービスをご検討ください。	Nhân dịp này, kính mong quý khách cân nhắc dịch vụ mới của công ty chúng tôi.
 0235	kikime	exam	効き目	ききめ	tác dụng	この薬は効き目が早い。	Loại thuốc này có tác dụng nhanh.
 0236	kikime	daily	効き目	ききめ	tác dụng	全然効き目ないんだけど。	Chẳng có tác dụng gì cả.
-0237	kikime	business	効き目	ききめ	tác dụng	この広告施策の効き目を検証する必要があります。	Cần phải kiểm chứng hiệu quả của chiến dịch quảng cáo này.
+0237	kikime	business	効き目	ききめ	tác dụng	この洗浄剤の効き目を現場で確認しています。	Chúng tôi đang kiểm tra tác dụng của chất tẩy rửa này tại hiện trường.
 0238	kikoku	exam	帰国	きこく	về nước	来月、日本に帰国します。	Tháng sau tôi sẽ về nước Nhật.
 0239	kikoku	daily	帰国	きこく	về nước	いつ帰国するの?	Khi nào bạn về nước?
-0240	kikoku	business	帰国	きこく	về nước	海外赴任者の帰国手続きについてご案内します。	Chúng tôi xin hướng dẫn về thủ tục hồi hương cho nhân viên công tác nước ngoài.
+0240	kikoku	business	帰国	きこく	về nước	海外赴任者の帰国手続きについてご案内します。	Chúng tôi xin hướng dẫn thủ tục về nước dành cho nhân viên được cử đi làm việc ở nước ngoài.
 0241	kiji	exam	記事	きじ	bài báo	この記事を読んでみてください。	Hãy đọc thử bài báo này.
 0242	kiji	daily	記事	きじ	bài báo	あの記事、めっちゃバズってたね。	Bài báo đó viral dữ ghê nhỉ.
 0243	kiji	business	記事	きじ	bài báo	新製品に関する記事がニュースサイトに掲載されました。	Bài viết về sản phẩm mới đã được đăng trên trang tin tức.
@@ -108,7 +108,7 @@ row	vocabId	type	word	reading	meaningVi	exampleJp	exampleVi
 0287	kyoutsuu	daily	共通	きょうつう	chung	それ、みんなの共通の悩みだよね。	Đó là nỗi lo chung của mọi người mà.
 0288	kyoutsuu	business	共通	きょうつう	chung	両社の共通目標を明確にしましょう。	Hãy làm rõ mục tiêu chung của hai công ty.
 0289	kyouryoku	exam	協力	きょうりょく	hợp tác	みんなで協力しましょう。	Hãy cùng nhau hợp tác nào.
-0290	kyouryoku	daily	協力	きょうりょく	hợp tác	手伝ってくれて、協力感謝だよ。	Cảm ơn đã giúp đỡ, cảm ơn sự hợp tác nhé.
+0290	kyouryoku	daily	協力	きょうりょく	hợp tác	協力してくれてありがとう。本当に助かったよ。	Cảm ơn cậu đã hợp tác nhé. Thật sự giúp mình rất nhiều.
 0291	kyouryoku	business	協力	きょうりょく	hợp tác	関係部署のご協力をお願いいたします。	Kính mong sự hợp tác của các bộ phận liên quan.
 0292	gyouretsu	exam	行列	ぎょうれつ	hàng người	あの店の前に行列ができている。	Trước cửa hàng đó đang có một hàng dài người xếp hàng.
 0293	gyouretsu	daily	行列	ぎょうれつ	hàng người	すごい行列だね、並ぶ?	Xếp hàng dài dữ ghê, có xếp không?
@@ -148,7 +148,7 @@ row	vocabId	type	word	reading	meaningVi	exampleJp	exampleVi
 0327	guai	business	具合	ぐあい	tình trạng	機械の具合が悪いので点検を依頼しました。	Vì máy móc gặp trục trặc nên chúng tôi đã yêu cầu kiểm tra.
 0328	kufuu	exam	工夫	くふう	sáng tạo	もう少し工夫が必要ですね。	Cần thêm chút sáng tạo nữa nhỉ.
 0329	kufuu	daily	工夫	くふう	sáng tạo	この収納、工夫してるね!	Cách sắp xếp đồ này sáng tạo ghê!
-0330	kufuu	business	工夫	くふう	sáng tạo	コスト削減のため、様々な工夫を行っています。	Chúng tôi đang thực hiện nhiều sáng kiến để cắt giảm chi phí.
+0330	kufuu	business	工夫	くふう	sáng tạo	コスト削減のため、様々な工夫を重ねています。	Chúng tôi đang liên tục tìm nhiều cách cải tiến để cắt giảm chi phí.
 0331	kubetsu	exam	区別	くべつ	phân biệt	この二つは区別がつきにくい。	Hai cái này khó phân biệt.
 0332	kubetsu	daily	区別	くべつ	phân biệt	双子だから区別つかないよね。	Vì là sinh đôi nên không phân biệt được nhỉ.
 0333	kubetsu	business	区別	くべつ	phân biệt	公私の区別をしっかりつけましょう。	Hãy phân biệt rõ ràng chuyện công việc và cá nhân.

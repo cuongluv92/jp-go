@@ -4,7 +4,7 @@ row	vocabId	type	word	reading	meaningVi	exampleJp	exampleVi
 0003	ai	business	愛	あい	tình yêu	私たちは、お客様への愛を込めてサービスを提供しています。	Chúng tôi cung cấp dịch vụ với tất cả tình yêu dành cho khách hàng.
 0004	aijou	exam	愛情	あいじょう	tình yêu thương, tình cảm	親は子供に深い愛情を持っている。	Cha mẹ có tình yêu thương sâu sắc dành cho con cái.
 0005	aijou	daily	愛情	あいじょう	tình yêu thương, tình cảm	このぬいぐるみ、愛情込めて作ったんだ。	Con thú nhồi bông này mình làm với cả tình yêu thương đó.
-0006	aijou	business	愛情	あいじょう	tình yêu thương, tình cảm	弊社は一つ一つの商品に愛情を持って製造しています。	Công ty chúng tôi sản xuất từng sản phẩm với tất cả sự tâm huyết.
+0006	aijou	business	愛情	あいじょう	tình yêu thương, tình cảm	弊社は一つ一つの商品に愛情を込めて製造しています。	Công ty chúng tôi sản xuất từng sản phẩm với tất cả tâm huyết.
 0007	aidea	exam	アイデア	アイデア	ý tưởng	何かいいアイデアがあったら教えてください。	Nếu có ý tưởng hay nào thì hãy cho tôi biết.
 0008	aidea	daily	アイデア	アイデア	ý tưởng	このアイデア、めっちゃいいじゃん!	Ý tưởng này hay quá đi mất!
 0009	aidea	business	アイデア	アイデア	ý tưởng	会議で新商品のアイデアをいくつか出しました。	Trong cuộc họp, tôi đã đưa ra vài ý tưởng cho sản phẩm mới.
@@ -53,7 +53,7 @@ row	vocabId	type	word	reading	meaningVi	exampleJp	exampleVi
 0052	ihan	exam	違反	いはん	vi phạm	スピード違反で捕まった。	Tôi đã bị bắt vì vi phạm tốc độ.
 0053	ihan	daily	違反	いはん	vi phạm	それ、校則違反じゃない?	Cái đó không phải vi phạm nội quy trường à?
 0054	ihan	business	違反	いはん	vi phạm	契約違反があった場合、直ちにご連絡ください。	Nếu có vi phạm hợp đồng, vui lòng liên hệ ngay lập tức.
-0055	event	exam	イベント	イベント	sự kiện	来月、大きいイベントがある。	Tháng sau có một sự kiện lớn.
+0055	event	exam	イベント	イベント	sự kiện	来月、大きなイベントがあります。	Tháng sau có một sự kiện lớn.
 0056	event	daily	イベント	イベント	sự kiện	このイベント、めっちゃ楽しみ!	Sự kiện này, tớ mong chờ lắm luôn!
 0057	event	business	イベント	イベント	sự kiện	新商品発表のイベントを来週開催します。	Chúng tôi sẽ tổ chức sự kiện ra mắt sản phẩm mới vào tuần sau.
 0058	image	exam	イメージ	イメージ	hình ảnh, ấn tượng	この会社のイメージはどうですか。	Ấn tượng của bạn về công ty này thế nào?
@@ -61,7 +61,7 @@ row	vocabId	type	word	reading	meaningVi	exampleJp	exampleVi
 0060	image	business	イメージ	イメージ	hình ảnh, ấn tượng	新しいロゴで会社のイメージを一新したい。	Chúng tôi muốn làm mới hình ảnh công ty bằng logo mới.
 0061	insatsu	exam	印刷	いんさつ	in ấn	この資料を10部印刷してください。	Hãy in tài liệu này thành 10 bản.
 0062	insatsu	daily	印刷	いんさつ	in ấn	プリンターの調子が悪くて印刷できない。	Máy in bị trục trặc nên không in được.
-0063	insatsu	business	印刷	いんさつ	in ấn	パンフレットの印刷を業者に発注しました。	Tôi đã đặt in tờ rơi từ nhà cung cấp.
+0063	insatsu	business	印刷	いんさつ	in ấn	パンフレットの印刷を業者に発注しました。	Chúng tôi đã đặt in tập giới thiệu tại một đơn vị chuyên môn.
 0064	inshou	exam	印象	いんしょう	ấn tượng	彼の第一印象はとても良かった。	Ấn tượng đầu tiên về anh ấy rất tốt.
 0065	inshou	daily	印象	いんしょう	ấn tượng	あの映画、印象に残るシーンが多かった。	Bộ phim đó có nhiều cảnh gây ấn tượng ghê.
 0066	inshou	business	印象	いんしょう	ấn tượng	面接では第一印象がとても重要です。	Trong phỏng vấn, ấn tượng đầu tiên rất quan trọng.
@@ -86,7 +86,7 @@ row	vocabId	type	word	reading	meaningVi	exampleJp	exampleVi
 0085	eco	exam	エコ	エコ	sinh thái	最近はエコな商品が増えている。	Gần đây các sản phẩm thân thiện môi trường ngày càng nhiều.
 0086	eco	daily	エコ	エコ	sinh thái	エコバッグ持ってきた?	Mang túi eco theo chưa?
 0087	eco	business	エコ	エコ	sinh thái	弊社は梱包資材をエコ素材に切り替えました。	Công ty chúng tôi đã chuyển sang dùng vật liệu đóng gói thân thiện môi trường.
-0088	energy	exam	エネルギー	エネルギー	năng lượng	太陽光は再生可能エネルギーの一つです。	Ánh sáng mặt trời là một trong những năng lượng tái tạo.
+0088	energy	exam	エネルギー	エネルギー	năng lượng	太陽光は再生可能エネルギーの一つです。	Năng lượng mặt trời là một dạng năng lượng tái tạo.
 0089	energy	daily	エネルギー	エネルギー	năng lượng	最近、エネルギー切れって感じ…。	Dạo này thấy như hết năng lượng vậy đó.
 0090	energy	business	エネルギー	エネルギー	năng lượng	工場の消費エネルギーを削減する計画です。	Đây là kế hoạch giảm năng lượng tiêu thụ của nhà máy.
 0091	oil	exam	オイル	オイル	dầu, dầu mỏ	エンジンオイルを交換してもらった。	Tôi đã nhờ thay dầu động cơ.
@@ -100,12 +100,12 @@ row	vocabId	type	word	reading	meaningVi	exampleJp	exampleVi
 0099	ouen	business	応援	おうえん	cổ vũ	新入社員の挑戦をチーム一丸となって応援します。	Cả đội sẽ đồng lòng cổ vũ cho thử thách của nhân viên mới.
 0100	ogata	exam	大型	おおがた	cỡ lớn	大型の台風が接近しています。	Một cơn bão lớn đang tới gần.
 0101	ogata	daily	大型	おおがた	cỡ lớn	このスーパー、大型店だから何でもあるよ。	Siêu thị này là cửa hàng lớn nên có đủ thứ luôn đó.
-0102	ogata	business	大型	おおがた	cỡ lớn	大型連休中の営業時間を変更いたします。	Chúng tôi sẽ thay đổi giờ mở cửa trong kỳ nghỉ dài.
+0102	ogata	business	大型	おおがた	cỡ lớn	大型設備の搬入は来週を予定しています。	Việc đưa thiết bị cỡ lớn vào dự kiến được thực hiện vào tuần sau.
 0103	okay	exam	オーケー	オーケー	đồng ý	これでオーケーですか。	Như vậy có được không?
 0104	okay	daily	オーケー	オーケー	đồng ý	オーケー、了解!	Ok, hiểu rồi!
 0105	okay	business	オーケー	オーケー	đồng ý	部長からオーケーが出ました。	Trưởng phòng đã đồng ý rồi.
 0106	ojigi	exam	おじぎ	おじぎ	cúi chào	先生に会ったらおじぎをしましょう。	Khi gặp thầy cô thì hãy cúi chào nhé.
-0107	ojigi	daily	おじぎ	おじぎ	cúi chào	深々とおじぎされて、ちょっと恐縮した。	Bị cúi chào rất sâu nên tôi hơi ngại.
+0107	ojigi	daily	おじぎ	おじぎ	cúi chào	深々とおじぎされて、ちょっと恐縮した。	Người ta cúi chào mình rất sâu nên tôi hơi ngượng.
 0108	ojigi	business	おじぎ	おじぎ	cúi chào	名刺交換の際は丁寧におじぎをしてください。	Khi trao đổi danh thiếp, vui lòng cúi chào lịch sự.
 0109	oshaberi	exam	おしゃべり	おしゃべり	tán gẫu	授業中のおしゃべりは禁止です。	Cấm nói chuyện riêng trong giờ học.
 0110	oshaberi	daily	おしゃべり	おしゃべり	tán gẫu	久しぶりに友達とおしゃべりして楽しかった。	Lâu rồi mới tán gẫu với bạn, vui ghê.
@@ -156,14 +156,14 @@ row	vocabId	type	word	reading	meaningVi	exampleJp	exampleVi
 0155	kashidashi	daily	貸し出し	かしだし	cho mượn	傘の貸し出し、やってるんだって。	Nghe nói có dịch vụ cho mượn ô đó.
 0156	kashidashi	business	貸し出し	かしだし	cho mượn	会議室のプロジェクター貸し出しは総務部までご連絡ください。	Việc mượn máy chiếu phòng họp, vui lòng liên hệ phòng tổng vụ.
 0157	kazu	exam	数	かず	số lượng	参加者の数を数えてください。	Hãy đếm số lượng người tham gia.
-0158	kazu	daily	数	かず	số lượng	意外と数少ないんだね。	Ít hơn tôi tưởng nhỉ.
+0158	kazu	daily	数	かず	số lượng	意外と数が少ないんだね。	Số lượng ít hơn mình tưởng nhỉ.
 0159	kazu	business	数	かず	số lượng	在庫の数を毎週確認しています。	Chúng tôi kiểm tra số lượng tồn kho mỗi tuần.
 0160	kata	exam	型	かた	kiểu, loại	この機械は古い型です。	Cái máy này là kiểu cũ.
 0161	kata	daily	型	かた	kiểu, loại	血液型を調べたことある?	Bạn đã từng kiểm tra nhóm máu chưa?
 0162	kata	business	型	かた	kiểu, loại	新型のプリンターを導入しました。	Chúng tôi đã đưa vào sử dụng máy in kiểu mới.
 0163	katahou	exam	片方	かたほう	một bên	靴下の片方がない!	Mất một chiếc tất rồi!
 0164	katahou	daily	片方	かたほう	một bên	イヤホンの片方、聞こえないんだけど。	Một bên tai nghe không nghe được nè.
-0165	katahou	business	片方	かたほう	một bên	資料は片方の面のみ印刷してください。	Vui lòng chỉ in một mặt của tài liệu.
+0165	katahou	business	片方	かたほう	một bên	左右のスピーカーの片方から音が出ていません。	Một bên trong cặp loa trái phải không phát ra âm thanh.
 0166	catalog	exam	カタログ	カタログ	catalogue	商品のカタログを見せてください。	Cho tôi xem catalogue sản phẩm với.
 0167	catalog	daily	カタログ	カタログ	catalogue	このカタログ、写真がきれいだね。	Cái catalogue này ảnh đẹp ghê.
 0168	catalog	business	カタログ	カタログ	catalogue	最新のカタログを取引先に送付しました。	Chúng tôi đã gửi catalogue mới nhất cho đối tác.
@@ -178,4 +178,4 @@ row	vocabId	type	word	reading	meaningVi	exampleJp	exampleVi
 0177	katsudou	business	活動	かつどう	hoạt động	地域貢献活動の一環としてボランティアを募集しています。	Chúng tôi đang tuyển tình nguyện viên như một phần của hoạt động đóng góp cho cộng đồng.
 0178	gaman	exam	我慢	がまん	chịu đựng	痛くてもう我慢できない。	Đau quá không chịu đựng nổi nữa rồi.
 0179	gaman	daily	我慢	がまん	chịu đựng	ちょっとだけ我慢してね。	Cố chịu một chút thôi nhé.
-0180	gaman	business	我慢	がまん	chịu đựng	繁忙期はしばらく我慢が必要です。	Trong mùa cao điểm cần phải chịu đựng một thời gian.
+0180	gaman	business	我慢	がまん	chịu đựng	工事の騒音は一時的ですので、もう少し我慢していただけますか。	Tiếng ồn do thi công chỉ là tạm thời, mong quý khách chịu khó thêm một chút.

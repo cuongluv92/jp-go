@@ -7,7 +7,7 @@
   "posSchemaIssueCount": 0,
   "verbMissingTransitivityCount": 0,
   "multiSenseWordCount": 0,
-  "businessNoWorkplaceCueCount": 1251,
+  "businessNoWorkplaceCueCount": 1250,
   "businessCasualWithoutInternalCueCount": 1,
   "exactTemplateGroupCount": 0,
   "viDuplicateGroupCount": 0,
@@ -88,7 +88,7 @@
         "vocabId": "insatsu",
         "word": "印刷",
         "jp": "パンフレットの印刷を業者に発注しました。",
-        "vi": "Tôi đã đặt in tờ rơi từ nhà cung cấp."
+        "vi": "Chúng tôi đã đặt in tập giới thiệu tại một đơn vị chuyên môn."
       },
       {
         "vocabId": "inshou",
@@ -175,6 +175,12 @@
         "vi": "Chúng tôi đã đưa vào sử dụng máy in kiểu mới."
       },
       {
+        "vocabId": "katahou",
+        "word": "片方",
+        "jp": "左右のスピーカーの片方から音が出ていません。",
+        "vi": "Một bên trong cặp loa trái phải không phát ra âm thanh."
+      },
+      {
         "vocabId": "kachi",
         "word": "価値",
         "jp": "当社のブランド価値を高める施策を検討しています。",
@@ -195,14 +201,14 @@
       {
         "vocabId": "gaman",
         "word": "我慢",
-        "jp": "繁忙期はしばらく我慢が必要です。",
-        "vi": "Trong mùa cao điểm cần phải chịu đựng một thời gian."
+        "jp": "工事の騒音は一時的ですので、もう少し我慢していただけますか。",
+        "vi": "Tiếng ồn do thi công chỉ là tạm thời, mong quý khách chịu khó thêm một chút."
       },
       {
         "vocabId": "kami",
         "word": "神",
-        "jp": "各国の神話には神々についての物語がある。",
-        "vi": "Trong thần thoại của các nước đều có những câu chuyện về các vị thần."
+        "jp": "展示会では各国の神を題材にした作品を紹介します。",
+        "vi": "Tại triển lãm, chúng tôi giới thiệu các tác phẩm lấy các vị thần của nhiều nước làm đề tài."
       },
       {
         "vocabId": "kara",
@@ -219,20 +225,14 @@
       {
         "vocabId": "kangei",
         "word": "歓迎",
-        "jp": "新規のお取引を歓迎いたします。",
-        "vi": "Chúng tôi hoan nghênh giao dịch mới."
+        "jp": "新規のお取引のご相談も歓迎しております。",
+        "vi": "Chúng tôi luôn hoan nghênh các đề nghị hợp tác mới."
       },
       {
         "vocabId": "kankou",
         "word": "観光",
         "jp": "インバウンド観光客向けの案内板を設置しました。",
         "vi": "Chúng tôi đã lắp đặt bảng chỉ dẫn dành cho khách du lịch nước ngoài."
-      },
-      {
-        "vocabId": "kansatsu",
-        "word": "観察",
-        "jp": "市場動向を継続的に観察する必要があります。",
-        "vi": "Cần phải quan sát liên tục xu hướng thị trường."
       },
       {
         "vocabId": "kanji2",
@@ -244,7 +244,7 @@
         "vocabId": "kansha",
         "word": "感謝",
         "jp": "日頃のご愛顧に感謝申し上げます。",
-        "vi": "Chúng tôi xin bày tỏ lòng biết ơn đến sự ủng hộ thường ngày của quý khách."
+        "vi": "Chúng tôi xin chân thành cảm ơn quý khách đã luôn ủng hộ."
       },
       {
         "vocabId": "kanjou",
@@ -271,16 +271,10 @@
         "vi": "Vui lòng chia sẻ thông tin cho các bộ phận liên quan."
       },
       {
-        "vocabId": "kikime",
-        "word": "効き目",
-        "jp": "この広告施策の効き目を検証する必要があります。",
-        "vi": "Cần phải kiểm chứng hiệu quả của chiến dịch quảng cáo này."
-      },
-      {
         "vocabId": "kikoku",
         "word": "帰国",
         "jp": "海外赴任者の帰国手続きについてご案内します。",
-        "vi": "Chúng tôi xin hướng dẫn về thủ tục hồi hương cho nhân viên công tác nước ngoài."
+        "vi": "Chúng tôi xin hướng dẫn thủ tục về nước dành cho nhân viên được cử đi làm việc ở nước ngoài."
       },
       {
         "vocabId": "kiji",
@@ -417,8 +411,8 @@
       {
         "vocabId": "kufuu",
         "word": "工夫",
-        "jp": "コスト削減のため、様々な工夫を行っています。",
-        "vi": "Chúng tôi đang thực hiện nhiều sáng kiến để cắt giảm chi phí."
+        "jp": "コスト削減のため、様々な工夫を重ねています。",
+        "vi": "Chúng tôi đang liên tục tìm nhiều cách cải tiến để cắt giảm chi phí."
       },
       {
         "vocabId": "kubetsu",
@@ -1835,6 +1829,12 @@
         "word": "喫茶店",
         "jp": "打ち合わせは近くの喫茶店で行いましょう。",
         "vi": "Chúng ta hãy gặp mặt ở quán cà phê gần đó nhé."
+      },
+      {
+        "vocabId": "ground",
+        "word": "グラウンド",
+        "jp": "イベントは市営グラウンドにて開催いたします。",
+        "vi": "Sự kiện sẽ được tổ chức tại sân vận động thành phố."
       }
     ],
     "businessCasualWithoutInternalCue": [
