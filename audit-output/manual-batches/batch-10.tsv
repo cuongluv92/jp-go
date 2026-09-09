@@ -59,9 +59,9 @@ row	vocabId	type	word	reading	meaningVi	exampleJp	exampleVi
 1678	kyuukyuusha	exam	救急車	きゅうきゅうしゃ	xe cấp cứu	救急車を呼んだ。	Tôi đã gọi xe cấp cứu.
 1679	kyuukyuusha	daily	救急車	きゅうきゅうしゃ	xe cấp cứu	救急車のサイレン、聞こえる?	Nghe thấy còi xe cấp cứu không?
 1680	kyuukyuusha	business	救急車	きゅうきゅうしゃ	xe cấp cứu	緊急時は速やかに救急車を手配いたします。	Trong trường hợp khẩn cấp, chúng tôi sẽ nhanh chóng gọi xe cấp cứu.
-1681	kudari	exam	下り	くだり	xuống, chuyến về ngoại thành	下りの電車に乗った。	Tôi đã lên chuyến tàu đi xuống.
-1682	kudari	daily	下り	くだり	xuống, chuyến về ngoại thành	下りだから空いてるよ。	Vì là chuyến xuống nên vắng đấy.
-1683	kudari	business	下り	くだり	xuống, chuyến về ngoại thành	下り線の運行状況をご確認ください。	Xin vui lòng kiểm tra tình trạng vận hành của tuyến đi xuống.
+1681	kudari	exam	下り	くだり	tuyến/chuyến đi xuống, rời trung tâm	下りの電車に乗った。	Tôi đã lên chuyến tàu đi xuống.
+1682	kudari	daily	下り	くだり	tuyến/chuyến đi xuống, rời trung tâm	下りだから空いてるよ。	Vì là chuyến xuống nên vắng đấy.
+1683	kudari	business	下り	くだり	tuyến/chuyến đi xuống, rời trung tâm	下り線の運行状況をご確認ください。	Xin vui lòng kiểm tra tình trạng vận hành của tuyến đi xuống.
 1684	keiyu	exam	経由	けいゆ	quá cảnh, qua	大阪経由で東京に行った。	Tôi đã đi Tokyo qua ngả Osaka.
 1685	keiyu	daily	経由	けいゆ	quá cảnh, qua	どこ経由で行くの?	Đi qua ngả nào vậy?
 1686	keiyu	business	経由	けいゆ	quá cảnh, qua	メール経由でご連絡いたします。	Chúng tôi sẽ liên hệ qua email.

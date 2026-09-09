@@ -95,9 +95,9 @@ row	vocabId	type	word	reading	meaningVi	exampleJp	exampleVi
 1894	kyuubyou	exam	急病	きゅうびょう	bệnh đột ngột	急病で会議を欠席した。	Tôi đã vắng mặt cuộc họp vì bệnh đột ngột.
 1895	kyuubyou	daily	急病	きゅうびょう	bệnh đột ngột	急病人が出たみたいだよ。	Hình như có người bị bệnh đột ngột đấy.
 1896	kyuubyou	business	急病	きゅうびょう	bệnh đột ngột	急病のため本日の出勤を見合わせます。	Vì bệnh đột ngột nên tôi xin phép nghỉ làm hôm nay.
-1897	kin_en	exam	禁煙	きんえん	cấm hút thuốc	この店内は禁煙です。	Bên trong cửa hàng này cấm hút thuốc.
-1898	kin_en	daily	禁煙	きんえん	cấm hút thuốc	禁煙、決めたの?	Cậu quyết định bỏ thuốc rồi à?
-1899	kin_en	business	禁煙	きんえん	cấm hút thuốc	館内は全面禁煙とさせていただいております。	Bên trong tòa nhà được quy định cấm hút thuốc hoàn toàn.
+1897	kin_en	exam	禁煙	きんえん	cấm hút thuốc; bỏ/kiêng hút thuốc	この店内は禁煙です。	Bên trong cửa hàng này cấm hút thuốc.
+1898	kin_en	daily	禁煙	きんえん	cấm hút thuốc; bỏ/kiêng hút thuốc	禁煙、決めたの?	Cậu quyết định bỏ thuốc rồi à?
+1899	kin_en	business	禁煙	きんえん	cấm hút thuốc; bỏ/kiêng hút thuốc	館内は全面禁煙とさせていただいております。	Bên trong tòa nhà được quy định cấm hút thuốc hoàn toàn.
 1900	kinshi_b15	exam	禁止	きんし	cấm	ここは駐車禁止です。	Nơi đây cấm đỗ xe.
 1901	kinshi_b15	daily	禁止	きんし	cấm	それ、禁止されてるよ。	Cái đó bị cấm rồi đó.
 1902	kinshi_b15	business	禁止	きんし	cấm	社内での私用スマホの使用を禁止しております。	Chúng tôi cấm sử dụng điện thoại cá nhân trong công ty.

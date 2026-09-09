@@ -47,9 +47,9 @@ row	vocabId	type	word	reading	meaningVi	exampleJp	exampleVi
 2026	shounika	exam	小児科	しょうにか	nhi khoa	子供を小児科に連れて行った。	Tôi đã đưa con đến khoa nhi.
 2027	shounika	daily	小児科	しょうにか	nhi khoa	小児科、予約制なんだって。	Nghe nói khoa nhi phải đặt hẹn trước.
 2028	shounika	business	小児科	しょうにか	nhi khoa	小児科医の増員を検討しております。	Chúng tôi đang xem xét tăng số lượng bác sĩ nhi khoa.
-2029	seikeigeka	exam	整形外科	せいけいげか	chỉnh hình	整形外科でリハビリを受けている。	Tôi đang phục hồi chức năng ở khoa chỉnh hình.
-2030	seikeigeka	daily	整形外科	せいけいげか	chỉnh hình	整形外科、紹介してもらえる?	Cậu giới thiệu giúp khoa chỉnh hình được không?
-2031	seikeigeka	business	整形外科	せいけいげか	chỉnh hình	整形外科分野での症例数が増加しております。	Số ca bệnh trong lĩnh vực chỉnh hình đang tăng lên.
+2029	seikeigeka	exam	整形外科	せいけいげか	khoa chấn thương chỉnh hình, ngoại chỉnh hình	整形外科でリハビリを受けている。	Tôi đang phục hồi chức năng ở khoa chỉnh hình.
+2030	seikeigeka	daily	整形外科	せいけいげか	khoa chấn thương chỉnh hình, ngoại chỉnh hình	整形外科、紹介してもらえる?	Cậu giới thiệu giúp khoa chỉnh hình được không?
+2031	seikeigeka	business	整形外科	せいけいげか	khoa chấn thương chỉnh hình, ngoại chỉnh hình	整形外科分野での症例数が増加しております。	Số ca bệnh trong lĩnh vực chỉnh hình đang tăng lên.
 2032	naika	exam	内科	ないか	nội khoa	風邪で内科に行った。	Vì cảm cúm nên tôi đã đi khoa nội.
 2033	naika	daily	内科	ないか	nội khoa	内科、混んでるかな。	Không biết khoa nội có đông không.
 2034	naika	business	内科	ないか	nội khoa	内科的な検査を追加で実施いたします。	Chúng tôi sẽ thực hiện thêm kiểm tra nội khoa.

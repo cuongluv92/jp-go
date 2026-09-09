@@ -146,9 +146,9 @@ row	vocabId	type	word	reading	meaningVi	exampleJp	exampleVi
 2665	ryuugaku	exam	留学	りゅうがく	du học	来年、アメリカに留学する。	Sang năm tôi sẽ du học Mỹ.
 2666	ryuugaku	daily	留学	りゅうがく	du học	留学、楽しかった?	Du học có vui không?
 2667	ryuugaku	business	留学	りゅうがく	du học	留学経験者を積極的に採用しております。	Chúng tôi tích cực tuyển dụng người có kinh nghiệm du học.
-2668	lesson	exam	レッスン	レッスン	bài học	ピアノのレッスンを受けている。	Tôi đang học đàn piano.
-2669	lesson	daily	レッスン	レッスン	bài học	今日、レッスンあるの?	Hôm nay có bài học không?
-2670	lesson	business	レッスン	レッスン	bài học	無料体験レッスンをご用意しております。	Chúng tôi có chuẩn bị bài học trải nghiệm miễn phí.
+2668	lesson	exam	レッスン	レッスン	buổi học, buổi hướng dẫn	ピアノのレッスンを受けている。	Tôi đang học đàn piano.
+2669	lesson	daily	レッスン	レッスン	buổi học, buổi hướng dẫn	今日、レッスンあるの?	Hôm nay có bài học không?
+2670	lesson	business	レッスン	レッスン	buổi học, buổi hướng dẫn	無料体験レッスンをご用意しております。	Chúng tôi có chuẩn bị bài học trải nghiệm miễn phí.
 2671	report	exam	レポート	レポート	báo cáo	レポートを書き終えた。	Tôi đã viết xong báo cáo.
 2672	report	daily	レポート	レポート	báo cáo	レポート、まだ終わってないの?	Báo cáo vẫn chưa xong à?
 2673	report	business	レポート	レポート	báo cáo	月次レポートを本日中に提出いたします。	Chúng tôi sẽ nộp báo cáo hàng tháng trong hôm nay.
@@ -158,9 +158,9 @@ row	vocabId	type	word	reading	meaningVi	exampleJp	exampleVi
 2677	senmongakkou	exam	専門学校	せんもんがっこう	trường chuyên môn	専門学校で美容を学んでいる。	Tôi đang học ngành làm đẹp ở trường chuyên môn.
 2678	senmongakkou	daily	専門学校	せんもんがっこう	trường chuyên môn	専門学校、どこに通ってるの?	Cậu học trường chuyên môn nào vậy?
 2679	senmongakkou	business	専門学校	せんもんがっこう	trường chuyên môn	専門学校卒業生の採用を強化しております。	Chúng tôi đang tăng cường tuyển dụng sinh viên tốt nghiệp trường chuyên môn.
-2680	daigakuin	exam	大学院	だいがくいん	cao học	彼は大学院で経済学を研究している。	Anh ấy đang nghiên cứu kinh tế học ở bậc cao học.
-2681	daigakuin	daily	大学院	だいがくいん	cao học	大学院、大変そうだね。	Cao học có vẻ vất vả nhỉ.
-2682	daigakuin	business	大学院	だいがくいん	cao học	大学院卒の人材を積極的に採用しております。	Chúng tôi tích cực tuyển dụng nhân tài tốt nghiệp cao học.
+2680	daigakuin	exam	大学院	だいがくいん	trường/bậc cao học, sau đại học	彼は大学院で経済学を研究している。	Anh ấy đang nghiên cứu kinh tế học ở bậc cao học.
+2681	daigakuin	daily	大学院	だいがくいん	trường/bậc cao học, sau đại học	大学院、大変そうだね。	Cao học có vẻ vất vả nhỉ.
+2682	daigakuin	business	大学院	だいがくいん	trường/bậc cao học, sau đại học	大学院卒の人材を積極的に採用しております。	Chúng tôi tích cực tuyển dụng nhân tài tốt nghiệp cao học.
 2683	tandai	exam	短大	たんだい	cao đẳng	短大で栄養学を学んだ。	Tôi đã học dinh dưỡng học ở trường cao đẳng.
 2684	tandai	daily	短大	たんだい	cao đẳng	短大出身なんだ。	Tớ tốt nghiệp cao đẳng đấy.
 2685	tandai	business	短大	たんだい	cao đẳng	短大卒以上を応募条件としております。	Điều kiện ứng tuyển là tốt nghiệp cao đẳng trở lên.
@@ -170,9 +170,9 @@ row	vocabId	type	word	reading	meaningVi	exampleJp	exampleVi
 2689	kagaku	exam	化学	かがく	hóa học	化学の実験をした。	Tôi đã làm thí nghiệm hóa học.
 2690	kagaku	daily	化学	かがく	hóa học	化学、苦手なんだよね。	Tớ sợ môn hóa học lắm.
 2691	kagaku	business	化学	かがく	hóa học	化学分野での研究を進めております。	Chúng tôi đang tiến hành nghiên cứu trong lĩnh vực hóa học.
-2692	kokugo	exam	国語	こくご	quốc ngữ (môn tiếng Nhật)	国語のテストがある。	Có bài kiểm tra môn quốc ngữ.
-2693	kokugo	daily	国語	こくご	quốc ngữ (môn tiếng Nhật)	国語、得意なんだ。	Tớ giỏi môn quốc ngữ đấy.
-2694	kokugo	business	国語	こくご	quốc ngữ (môn tiếng Nhật)	国語力向上のための教材を開発しております。	Chúng tôi đang phát triển tài liệu để nâng cao năng lực quốc ngữ.
+2692	kokugo	exam	国語	こくご	môn tiếng Nhật, quốc văn Nhật	国語のテストがある。	Có bài kiểm tra môn quốc ngữ.
+2693	kokugo	daily	国語	こくご	môn tiếng Nhật, quốc văn Nhật	国語、得意なんだ。	Tớ giỏi môn quốc ngữ đấy.
+2694	kokugo	business	国語	こくご	môn tiếng Nhật, quốc văn Nhật	国語力向上のための教材を開発しております。	Chúng tôi đang phát triển tài liệu để nâng cao năng lực quốc ngữ.
 2695	taiiku	exam	体育	たいいく	thể dục	体育の授業でサッカーをした。	Tôi đã chơi bóng đá trong giờ thể dục.
 2696	taiiku	daily	体育	たいいく	thể dục	体育、今日あったっけ?	Hôm nay có tiết thể dục không nhỉ?
 2697	taiiku	business	体育	たいいく	thể dục	社員向け体育館を新たに設置いたしました。	Chúng tôi đã lắp đặt mới nhà thi đấu thể dục dành cho nhân viên.

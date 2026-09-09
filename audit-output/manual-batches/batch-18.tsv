@@ -176,6 +176,6 @@ row	vocabId	type	word	reading	meaningVi	exampleJp	exampleVi
 3235	jiki	exam	時期	じき	thời điểm	引っ越しの時期を決めた。	Tôi đã quyết định thời điểm chuyển nhà.
 3236	jiki	daily	時期	じき	thời điểm	今の時期、寒いよね。	Thời điểm này lạnh thật nhỉ.
 3237	jiki	business	時期	じき	thời điểm	導入時期については追ってご連絡いたします。	Chúng tôi sẽ liên hệ sau về thời điểm triển khai.
-3238	jikoku	exam	時刻	じこく	thời khắc	出発時刻を確認した。	Tôi đã kiểm tra thời khắc khởi hành.
-3239	jikoku	daily	時刻	じこく	thời khắc	時刻、間違えないでね。	Đừng nhầm giờ giấc nhé.
-3240	jikoku	business	時刻	じこく	thời khắc	到着時刻は変更となる場合がございます。	Thời khắc đến nơi có thể sẽ thay đổi.
+3238	jikoku	exam	時刻	じこく	giờ, thời điểm	出発時刻を確認した。	Tôi đã kiểm tra thời khắc khởi hành.
+3239	jikoku	daily	時刻	じこく	giờ, thời điểm	時刻、間違えないでね。	Đừng nhầm giờ giấc nhé.
+3240	jikoku	business	時刻	じこく	giờ, thời điểm	到着時刻は変更となる場合がございます。	Thời khắc đến nơi có thể sẽ thay đổi.

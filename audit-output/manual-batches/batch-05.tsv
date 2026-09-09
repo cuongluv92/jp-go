@@ -14,9 +14,9 @@ row	vocabId	type	word	reading	meaningVi	exampleJp	exampleVi
 0733	seiji	exam	政治	せいじ	chính trị	彼は政治に興味があります。	Anh ấy quan tâm đến chính trị.
 0734	seiji	daily	政治	せいじ	chính trị	政治の話は苦手なんだ。	Tôi không giỏi nói chuyện chính trị đâu.
 0735	seiji	business	政治	せいじ	chính trị	政治情勢が経済に与える影響を分析しています。	Chúng tôi đang phân tích ảnh hưởng của tình hình chính trị đến kinh tế.
-0736	seishitsu	exam	性質	せいしつ	tính chất	この物質は特殊な性質を持っている。	Chất này có tính chất đặc biệt.
-0737	seishitsu	daily	性質	せいしつ	tính chất	彼、そういう性質だから仕方ないよ。	Anh ấy tính cách vậy nên đành chịu thôi.
-0738	seishitsu	business	性質	せいしつ	tính chất	素材の性質を考慮して設計してください。	Vui lòng thiết kế có xem xét đến tính chất của vật liệu.
+0736	seishitsu	exam	性質	せいしつ	tính chất, bản tính	この物質は特殊な性質を持っている。	Chất này có tính chất đặc biệt.
+0737	seishitsu	daily	性質	せいしつ	tính chất, bản tính	彼、そういう性質だから仕方ないよ。	Anh ấy tính cách vậy nên đành chịu thôi.
+0738	seishitsu	business	性質	せいしつ	tính chất, bản tính	素材の性質を考慮して設計してください。	Vui lòng thiết kế có xem xét đến tính chất của vật liệu.
 0739	seizou	exam	製造	せいぞう	chế tạo	この製品は日本で製造されています。	Sản phẩm này được sản xuất tại Nhật Bản.
 0740	seizou	daily	製造	せいぞう	chế tạo	製造過程、見てみたいな。	Mình muốn xem thử quá trình sản xuất ghê.
 0741	seizou	business	製造	せいぞう	chế tạo	製造コストの削減に取り組んでいます。	Chúng tôi đang nỗ lực cắt giảm chi phí sản xuất.
@@ -41,9 +41,9 @@ row	vocabId	type	word	reading	meaningVi	exampleJp	exampleVi
 0760	seiri	exam	整理	せいり	sắp xếp	部屋を整理しました。	Tôi đã dọn dẹp sắp xếp phòng.
 0761	seiri	daily	整理	せいり	sắp xếp	机の上、整理したほうがいいよ。	Nên sắp xếp lại trên bàn đi đó.
 0762	seiri	business	整理	せいり	sắp xếp	データの整理を進めております。	Chúng tôi đang tiến hành sắp xếp dữ liệu.
-0763	safe	exam	セーフ	セーフ	an toàn	ぎりぎりセーフだった。	Suýt nữa thì không kịp, may mà an toàn.
-0764	safe	daily	セーフ	セーフ	an toàn	今のセーフ?アウト?	Vừa rồi safe hay out vậy?
-0765	safe	business	セーフ	セーフ	an toàn	判定はセーフでした。	Phán quyết là an toàn (safe).
+0763	safe	exam	セーフ	セーフ	an toàn; hợp lệ; kịp/thoát	ぎりぎりセーフだった。	Suýt nữa thì không kịp, may mà an toàn.
+0764	safe	daily	セーフ	セーフ	an toàn; hợp lệ; kịp/thoát	今のセーフ?アウト?	Vừa rồi safe hay out vậy?
+0765	safe	business	セーフ	セーフ	an toàn; hợp lệ; kịp/thoát	判定はセーフでした。	Phán quyết là an toàn (safe).
 0766	sale	exam	セール	セール	giảm giá	今、セール中です。	Hiện đang giảm giá.
 0767	sale	daily	セール	セール	giảm giá	このセール、いつまで?	Đợt giảm giá này đến khi nào vậy?
 0768	sale	business	セール	セール	giảm giá	夏のセールを来週から開始いたします。	Chúng tôi sẽ bắt đầu đợt giảm giá mùa hè từ tuần sau.
@@ -107,9 +107,9 @@ row	vocabId	type	word	reading	meaningVi	exampleJp	exampleVi
 0826	dai2	exam	題	だい	đề tài	この作文の題は何にしますか。	Đề tài bài văn này bạn định đặt là gì?
 0827	dai2	daily	題	だい	đề tài	いい題、思いついた!	Tôi đã nghĩ ra đề tài hay rồi!
 0828	dai2	business	題	だい	đề tài	レポートの題を「市場動向分析」としました。	Chúng tôi đã đặt tiêu đề báo cáo là "Phân tích xu hướng thị trường".
-0829	taikai	exam	大会	たいかい	đại hội	来月、スポーツ大会があります。	Tháng sau có đại hội thể thao.
-0830	taikai	daily	大会	たいかい	đại hội	大会、優勝できるといいね。	Mong là mình có thể vô địch giải đấu này.
-0831	taikai	business	大会	たいかい	đại hội	全国大会の開催に向けて準備を進めています。	Chúng tôi đang chuẩn bị cho việc tổ chức đại hội toàn quốc.
+0829	taikai	exam	大会	たいかい	giải đấu, đại hội	来月、スポーツ大会があります。	Tháng sau có đại hội thể thao.
+0830	taikai	daily	大会	たいかい	giải đấu, đại hội	大会、優勝できるといいね。	Mong là mình có thể vô địch giải đấu này.
+0831	taikai	business	大会	たいかい	giải đấu, đại hội	全国大会の開催に向けて準備を進めています。	Chúng tôi đang chuẩn bị cho việc tổ chức đại hội toàn quốc.
 0832	taisou	exam	体操	たいそう	thể dục	毎朝、ラジオ体操をしています。	Mỗi sáng tôi đều tập thể dục theo radio.
 0833	taisou	daily	体操	たいそう	thể dục	体操、久しぶりにやったら疲れた。	Lâu rồi mới tập thể dục nên thấy mệt.
 0834	taisou	business	体操	たいそう	thể dục	始業前に軽い体操を実施しています。	Chúng tôi thực hiện bài thể dục nhẹ trước giờ làm việc.

@@ -56,9 +56,9 @@ row	vocabId	type	word	reading	meaningVi	exampleJp	exampleVi
 0415	koukoku	exam	広告	こうこく	quảng cáo	テレビでこの商品の広告を見た。	Tôi đã xem quảng cáo sản phẩm này trên TV.
 0416	koukoku	daily	広告	こうこく	quảng cáo	この広告、めっちゃ印象に残るね。	Quảng cáo này ấn tượng ghê nhỉ.
 0417	koukoku	business	広告	こうこく	quảng cáo	SNSで新商品の広告を出す予定です。	Chúng tôi dự định đăng quảng cáo sản phẩm mới trên mạng xã hội.
-0418	kousai	exam	交際	こうさい	giao tiếp, quan hệ	二人は3年前から交際しています。	Hai người đã hẹn hò từ 3 năm trước.
-0419	kousai	daily	交際	こうさい	giao tiếp, quan hệ	え、二人って交際してるの?	Ơ, hai người đó đang hẹn hò à?
-0420	kousai	business	交際	こうさい	giao tiếp, quan hệ	交際費の精算は月末までにお願いします。	Việc thanh toán chi phí giao tế xin thực hiện trước cuối tháng.
+0418	kousai	exam	交際	こうさい	quan hệ, giao du; hẹn hò	二人は3年前から交際しています。	Hai người đã hẹn hò từ 3 năm trước.
+0419	kousai	daily	交際	こうさい	quan hệ, giao du; hẹn hò	え、二人って交際してるの?	Ơ, hai người đó đang hẹn hò à?
+0420	kousai	business	交際	こうさい	quan hệ, giao du; hẹn hò	交際費の精算は月末までにお願いします。	Việc thanh toán chi phí giao tế xin thực hiện trước cuối tháng.
 0421	kouji	exam	工事	こうじ	thi công	この道路は工事中です。	Con đường này đang thi công.
 0422	kouji	daily	工事	こうじ	thi công	隣のビル、また工事始まったね。	Tòa nhà bên cạnh lại bắt đầu thi công rồi nhỉ.
 0423	kouji	business	工事	こうじ	thi công	工事期間中はご不便をおかけいたします。	Trong thời gian thi công, chúng tôi thành thật xin lỗi vì đã gây bất tiện.
@@ -164,9 +164,9 @@ row	vocabId	type	word	reading	meaningVi	exampleJp	exampleVi
 0523	sanka	exam	参加	さんか	tham gia	イベントに参加します。	Tôi sẽ tham gia sự kiện.
 0524	sanka	daily	参加	さんか	tham gia	今度の飲み会、参加する?	Buổi nhậu lần này, có tham gia không?
 0525	sanka	business	参加	さんか	tham gia	セミナーへの参加を希望する方はお申し込みください。	Những ai mong muốn tham gia hội thảo xin vui lòng đăng ký.
-0526	sangyou	exam	産業	さんぎょう	ngành nghề	この国の主要産業は農業です。	Ngành công nghiệp chính của nước này là nông nghiệp.
-0527	sangyou	daily	産業	さんぎょう	ngành nghề	IT産業、これからも伸びそうだね。	Ngành công nghiệp IT có vẻ sẽ còn phát triển nữa nhỉ.
-0528	sangyou	business	産業	さんぎょう	ngành nghề	観光産業の活性化に向けた施策を検討しています。	Chúng tôi đang xem xét biện pháp thúc đẩy ngành du lịch.
+0526	sangyou	exam	産業	さんぎょう	ngành công nghiệp, ngành kinh tế	この国の主要産業は農業です。	Ngành công nghiệp chính của nước này là nông nghiệp.
+0527	sangyou	daily	産業	さんぎょう	ngành công nghiệp, ngành kinh tế	IT産業、これからも伸びそうだね。	Ngành công nghiệp IT có vẻ sẽ còn phát triển nữa nhỉ.
+0528	sangyou	business	産業	さんぎょう	ngành công nghiệp, ngành kinh tế	観光産業の活性化に向けた施策を検討しています。	Chúng tôi đang xem xét biện pháp thúc đẩy ngành du lịch.
 0529	zangyou	exam	残業	ざんぎょう	làm thêm giờ	今日は残業しなければなりません。	Hôm nay tôi phải làm thêm giờ.
 0530	zangyou	daily	残業	ざんぎょう	làm thêm giờ	また残業?大変だね。	Lại làm thêm giờ à? Vất vả nhỉ.
 0531	zangyou	business	残業	ざんぎょう	làm thêm giờ	残業時間の削減に向けて取り組んでいます。	Chúng tôi đang nỗ lực để giảm thời gian làm thêm giờ.

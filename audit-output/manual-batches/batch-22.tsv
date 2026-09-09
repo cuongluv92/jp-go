@@ -44,9 +44,9 @@ row	vocabId	type	word	reading	meaningVi	exampleJp	exampleVi
 3823	switch	exam	スイッチ	スイッチ	công tắc	スイッチを入れた。	Tôi đã bật công tắc.
 3824	switch	daily	スイッチ	スイッチ	công tắc	スイッチ、どこ?	Công tắc ở đâu vậy?
 3825	switch	business	スイッチ	スイッチ	công tắc	電源スイッチの位置を分かりやすく表示いたしました。	Chúng tôi đã hiển thị vị trí công tắc nguồn dễ nhìn hơn.
-3826	stand	exam	スタンド	スタンド	chân đèn (đèn bàn)	机にスタンドを置いた。	Tôi đã đặt đèn bàn trên bàn học.
-3827	stand	daily	スタンド	スタンド	chân đèn (đèn bàn)	このスタンド、明るいね。	Cái đèn bàn này sáng thật nhỉ.
-3828	stand	business	スタンド	スタンド	chân đèn (đèn bàn)	省エネスタンドを社内に導入いたしました。	Chúng tôi đã đưa vào sử dụng đèn bàn tiết kiệm điện trong công ty.
+3826	stand	exam	スタンド	スタンド	đèn bàn; giá, chân đỡ	机にスタンドを置いた。	Tôi đã đặt đèn bàn trên bàn học.
+3827	stand	daily	スタンド	スタンド	đèn bàn; giá, chân đỡ	このスタンド、明るいね。	Cái đèn bàn này sáng thật nhỉ.
+3828	stand	business	スタンド	スタンド	đèn bàn; giá, chân đỡ	省エネスタンドを社内に導入いたしました。	Chúng tôi đã đưa vào sử dụng đèn bàn tiết kiệm điện trong công ty.
 3829	speaker	exam	スピーカー	スピーカー	loa	スピーカーで音楽を流した。	Tôi đã phát nhạc qua loa.
 3830	speaker	daily	スピーカー	スピーカー	loa	このスピーカー、音いいね。	Loa này âm thanh hay ghê.
 3831	speaker	business	スピーカー	スピーカー	loa	会議室にスピーカーを設置いたしました。	Chúng tôi đã lắp đặt loa trong phòng họp.

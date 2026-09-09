@@ -47,9 +47,9 @@ row	vocabId	type	word	reading	meaningVi	exampleJp	exampleVi
 0946	tetsu	exam	鉄	てつ	sắt	このドアは鉄でできている。	Cánh cửa này được làm bằng sắt.
 0947	tetsu	daily	鉄	てつ	sắt	このフライパン、鉄製で重いね。	Cái chảo này bằng sắt nên nặng ghê.
 0948	tetsu	business	鉄	てつ	sắt	当社は鉄を主原料とした製品を製造しています。	Công ty chúng tôi sản xuất các sản phẩm lấy sắt làm nguyên liệu chính.
-0949	tezukuri	exam	手作り	てづくり	làm tay	母の手作りの料理が好きだ。	Tôi thích món ăn mẹ làm tay.
-0950	tezukuri	daily	手作り	てづくり	làm tay	これ、手作りのケーキだよ。	Đây là bánh mình làm bằng tay đó.
-0951	tezukuri	business	手作り	てづくり	làm tay	当店は全て手作りにこだわっております。	Cửa hàng chúng tôi luôn chú trọng làm hoàn toàn thủ công.
+0949	tezukuri	exam	手作り	てづくり	làm thủ công, handmade	母の手作りの料理が好きだ。	Tôi thích món ăn mẹ làm tay.
+0950	tezukuri	daily	手作り	てづくり	làm thủ công, handmade	これ、手作りのケーキだよ。	Đây là bánh mình làm bằng tay đó.
+0951	tezukuri	business	手作り	てづくり	làm thủ công, handmade	当店は全て手作りにこだわっております。	Cửa hàng chúng tôi luôn chú trọng làm hoàn toàn thủ công.
 0952	tetsudai	exam	手伝い	てつだい	giúp đỡ	母に食事の手伝いを頼まれた。	Tôi được mẹ nhờ giúp việc bếp núc.
 0953	tetsudai	daily	手伝い	てつだい	giúp đỡ	手伝い、してほしいことある?	Có việc gì cần giúp không?
 0954	tetsudai	business	手伝い	てつだい	giúp đỡ	急な依頼で恐縮ですが、お手伝いいただけますか。	Xin lỗi vì yêu cầu gấp, anh/chị có thể giúp đỡ được không ạ?

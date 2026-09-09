@@ -38,9 +38,9 @@ row	vocabId	type	word	reading	meaningVi	exampleJp	exampleVi
 0577	shidou	exam	指導	しどう	hướng dẫn	先生から指導を受けています。	Tôi đang được thầy hướng dẫn.
 0578	shidou	daily	指導	しどう	hướng dẫn	監督の指導、厳しいんだって。	Nghe nói sự chỉ dạy của huấn luyện viên nghiêm khắc lắm.
 0579	shidou	business	指導	しどう	hướng dẫn	新入社員に丁寧な指導を行っています。	Chúng tôi đang hướng dẫn tận tình cho nhân viên mới.
-0580	jimu	exam	事務	じむ	văn phòng	彼女は事務の仕事をしています。	Cô ấy làm công việc văn phòng.
-0581	jimu	daily	事務	じむ	văn phòng	事務作業、意外と多いね。	Công việc giấy tờ nhiều hơn tôi tưởng nhỉ.
-0582	jimu	business	事務	じむ	văn phòng	事務手続きはオンラインでも可能です。	Thủ tục hành chính cũng có thể thực hiện trực tuyến.
+0580	jimu	exam	事務	じむ	công việc hành chính, văn phòng	彼女は事務の仕事をしています。	Cô ấy làm công việc văn phòng.
+0581	jimu	daily	事務	じむ	công việc hành chính, văn phòng	事務作業、意外と多いね。	Công việc giấy tờ nhiều hơn tôi tưởng nhỉ.
+0582	jimu	business	事務	じむ	công việc hành chính, văn phòng	事務手続きはオンラインでも可能です。	Thủ tục hành chính cũng có thể thực hiện trực tuyến.
 0583	shimekiri	exam	締め切り	しめきり	hạn chót	レポートの締め切りは金曜日です。	Hạn nộp báo cáo là thứ Sáu.
 0584	shimekiri	daily	締め切り	しめきり	hạn chót	締め切りに間に合わなかった。	Tôi đã không kịp hạn chót.
 0585	shimekiri	business	締め切り	しめきり	hạn chót	締め切りを過ぎた場合はご連絡ください。	Nếu quá hạn nộp, vui lòng liên hệ với chúng tôi.
