@@ -29,53 +29,8 @@
       }
     }
   ],
-  "casualBusinessCount": 1,
-  "casualBusiness": [
-    {
-      "word": {
-        "id": "janken",
-        "word": "じゃんけん",
-        "kanji": "",
-        "reading": "じゃんけん",
-        "meaningVi": "oẳn tù tì",
-        "partOfSpeech": "noun",
-        "verbClass": null,
-        "transitivity": null,
-        "particlePatterns": [
-          "じゃんけんする"
-        ],
-        "usagePatterns": [],
-        "collocations": [],
-        "register": null,
-        "usageNote": "",
-        "commonMistake": "",
-        "similarWords": "",
-        "naturalnessNote": "",
-        "jlpt": "N3",
-        "needsReview": false,
-        "progress": {
-          "status": "chua_hoc",
-          "isFavorite": false,
-          "timesCorrect": 0,
-          "timesWrong": 0,
-          "lastReviewedAt": null,
-          "nextReviewAt": null,
-          "intervalDays": 1,
-          "easeFactor": 2.5,
-          "repetitions": 0
-        }
-      },
-      "example": {
-        "vocabId": "janken",
-        "exampleNo": 3,
-        "exampleType": "business",
-        "exampleJp": "順番はじゃんけんで公平に決めましょう。",
-        "exampleVi": "Hãy quyết định thứ tự công bằng bằng oẳn tù tì.",
-        "clozeJp": "順番は_____で公平に決めましょう。",
-        "answer": "じゃんけん"
-      }
-    }
-  ],
+  "casualBusinessCount": 0,
+  "casualBusiness": [],
   "missingDictionaryFormCount": 0,
   "dictionaryClassShapeBadCount": 0,
   "dictionaryClassShapeBad": [],

@@ -1,0 +1,56 @@
+1. [5] daily	その_____、素敵だね。
+   dress:ドレス | onepiece:ワンピース | scarf:スカーフ | brooch:ブローチ | sensu:扇子
+2. [5] daily	この_____、柔らかいね。
+   keito:毛糸 | toriniku:とり肉 | pork:ポーク | nuno:布 | makura:枕
+3. [4] daily	その_____、かっこいいね。
+   medal:メダル | jacket:ジャケット | sunglasses:サングラス | belt:ベルト
+4. [4] business	_____の点検を定期的に実施しております。
+   engine:エンジン | brake:ブレーキ | yane:屋根 | chain:チェーン
+5. [4] daily	_____、好きなんだ。
+   tetsudou:鉄道 | dokusho:読書 | sumou:相撲 | tsuri:釣り
+6. [4] exam	彼は_____だ。
+   shougakusei:小学生 | sekkyokuteki:積極的 | yuushuu:優秀 | wagamama:わがまま
+7. [4] daily	_____、持ってきた?
+   kigae:着替え | raincoat:レインコート | hanko:判こ | digicame:デジカメ
+8. [4] exam	新しい_____を買った。
+   socks:ソックス | shitagi:下着 | bag:バッグ | kagu:家具
+9. [4] daily	大変_____。
+   osewaninarimashita:お世話になりました | omataseshimashita:お待たせしました | gomeiwakuookakeshimashita:ご迷惑をおかけしました | moushiwakearimasen:申し訳ありません
+10. [3] daily	_____、どうだった?
+   kekka:結果 | seiseki:成績 | semi:ゼミ
+11. [3] exam	それは_____です。
+   gokai:誤解 | jijitsu:事実 | joushiki:常識
+12. [3] daily	何か_____ある?
+   wadai:話題 | allergy:アレルギー | tokugi:特技
+13. [3] daily	_____、大丈夫?痛くない?
+   kizu:傷 | yakedo:やけど | koshi:腰
+14. [3] exam	彼女は_____として働いている。
+   ishi:医師 | kangoshi:看護師 | koumuin:公務員
+15. [3] daily	_____のニュース、見た?
+   kokuou:国王 | shushou:首相 | tennou:天皇
+16. [3] exam	彼女は有名な_____だ。
+   sakka:作家 | gaka:画家 | joyuu:女優
+17. [3] exam	週末に_____に行った。
+   tozan:登山 | tsuri:釣り | onsen:温泉
+18. [3] business	国産_____を使用したメニューをご提供しております。
+   ushi:牛 | toriniku:とり肉 | pork:ポーク
+19. [3] business	夏季限定の_____を販売いたします。
+   sandal:サンダル | mizugi:水着 | sunglasses:サングラス
+20. [3] business	新作_____のラインナップを拡充いたしました。
+   jeans:ジーンズ | scarf:スカーフ | backpack:リュック
+21. [3] daily	その_____、暖かそう。
+   jumper:ジャンパー | boots:ブーツ | muffler:マフラー
+22. [3] daily	_____、片付けなきゃ。
+   garage:ガレージ | shinshitsu:寝室 | monooki:物置
+23. [3] business	新フレーバーの_____を発売いたします。
+   icecream:アイスクリーム | gum_b26:ガム | jelly:ゼリー
+24. [3] business	高級_____の取り扱いを開始いたしました。
+   whiskey:ウイスキー | wine:ワイン | glass:グラス
+25. [3] exam	昼食に_____を食べた。
+   udon:うどん | soba:そば | pasta:パスタ
+26. [3] daily	この_____、可愛いね。
+   shokki:食器 | cover:カバー | binsen:便せん
+27. [3] daily	_____、もらえる?
+   straw:ストロー | napkin:ナプキン | dannboru:段ボール
+28. [3] exam	_____。
+   ojamashimasu:おじゃまします | omataseshimashita:お待たせしました | gomeiwakuookakeshimashita:ご迷惑をおかけしました
