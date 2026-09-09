@@ -39,27 +39,37 @@ function GrammarListContent() {
   const [grammarList, setGrammarList] = useState<GrammarRow[]>(initialCached?.grammarList ?? []);
   const [countsByLevel, setCountsByLevel] = useState<Record<JlptLevel, number> | null>(initialCached?.countsByLevel ?? null);
   const [loading, setLoading] = useState(!initialCached);
+  const [loadError, setLoadError] = useState<string | null>(null);
+  const [reloadKey, setReloadKey] = useState(0);
   const [exporting, setExporting] = useState(false);
 
   useEffect(() => {
     let cancelled = false;
     async function load() {
       const supabase = createClient();
-      const [list, counts] = await Promise.all([listGrammarByLevel(supabase, level), getGrammarLevelCounts(supabase)]);
-      if (cancelled) return;
-      setGrammarList(list);
-      setCountsByLevel(counts);
-      setLoading(false);
-      setCached<GrammarListCachedData>(grammarListCacheKey(level), { grammarList: list, countsByLevel: counts });
+      try {
+        const [list, counts] = await Promise.all([listGrammarByLevel(supabase, level), getGrammarLevelCounts(supabase)]);
+        if (cancelled) return;
+        setGrammarList(list);
+        setCountsByLevel(counts);
+        setLoadError(null);
+        setCached<GrammarListCachedData>(grammarListCacheKey(level), { grammarList: list, countsByLevel: counts });
+      } catch {
+        if (cancelled) return;
+        setLoadError("Không tải được dữ liệu Ngữ pháp. Vui lòng thử lại.");
+      } finally {
+        if (!cancelled) setLoading(false);
+      }
     }
     void load();
     return () => {
       cancelled = true;
     };
-  }, [level]);
+  }, [level, reloadKey]);
 
   function selectLevel(newLevel: JlptLevel) {
     const cached = getCached<GrammarListCachedData>(grammarListCacheKey(newLevel));
+    setLoadError(null);
     if (cached) {
       setGrammarList(cached.grammarList);
       setCountsByLevel(cached.countsByLevel);
@@ -69,6 +79,12 @@ function GrammarListContent() {
       setLoading(true);
     }
     setLevel(newLevel);
+  }
+
+  function retryLoad() {
+    setLoadError(null);
+    setLoading(grammarList.length === 0);
+    setReloadKey((value) => value + 1);
   }
 
   async function handleExport() {
@@ -123,8 +139,24 @@ function GrammarListContent() {
         })}
       </div>
 
+      {loadError && grammarList.length > 0 && (
+        <div className="flex items-center justify-between gap-3 rounded-xl border border-amber-200 bg-amber-50 p-3 text-xs text-amber-900">
+          <span>{loadError} Đang hiển thị dữ liệu đã lưu tạm.</span>
+          <button type="button" onClick={retryLoad} className="shrink-0 font-semibold text-accent">
+            Thử lại
+          </button>
+        </div>
+      )}
+
       {loading ? (
         <p className="rounded-2xl border border-dashed border-border p-4 text-sm text-muted">Đang tải...</p>
+      ) : loadError && grammarList.length === 0 ? (
+        <div className="rounded-2xl border border-amber-200 bg-amber-50 p-4 text-sm text-amber-900">
+          <p>{loadError}</p>
+          <button type="button" onClick={retryLoad} className="mt-2 font-semibold text-accent">
+            Thử lại
+          </button>
+        </div>
       ) : grammarList.length === 0 ? (
         <p className="rounded-2xl border border-dashed border-border p-4 text-sm text-muted">
           Chưa có nội dung Ngữ pháp cho cấp {level}.
