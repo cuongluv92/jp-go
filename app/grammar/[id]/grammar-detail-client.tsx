@@ -22,6 +22,10 @@ interface GrammarDetailCachedData {
   userId: string | null;
 }
 
+type GrammarExampleWithFurigana = GrammarExampleRow & {
+  furigana_tokens?: Array<{ surface: string; reading: string }>;
+};
+
 function grammarDetailCacheKey(id: string): string {
   return `grammar-detail-${id}`;
 }
@@ -39,19 +43,22 @@ function ExampleList({ examples }: { examples: GrammarExampleRow[] }) {
         </p>
       )}
       <ul className="flex flex-col gap-2">
-        {examples.map((ex, i) => (
-          <li key={ex.id} className="rounded-lg border border-border bg-surface px-3 py-2">
-            <div className="flex flex-wrap items-center gap-1.5 text-[10px] font-semibold">
-              <span className="text-muted">Ví dụ {i + 1}</span>
-              <span className="rounded-full bg-accent-soft px-2 py-0.5 text-accent">
-                {ex.example_type === "standard" ? "Chuẩn mẫu" : ex.example_type === "business" ? "Công việc" : "Đời thường"}
-              </span>
-              {ex.review_status === "needs_review" && <span className="rounded-full bg-amber-100 px-2 py-0.5 text-amber-800">Cần kiểm tra</span>}
-            </div>
-            <JapaneseSentence text={ex.example_jp} className="mt-0.5 text-sm text-foreground" />
-            <p className="text-xs text-muted">{ex.example_vi}</p>
-          </li>
-        ))}
+        {examples.map((ex, i) => {
+          const furiganaTokens = (ex as GrammarExampleWithFurigana).furigana_tokens ?? [];
+          return (
+            <li key={ex.id} className="rounded-lg border border-border bg-surface px-3 py-2">
+              <div className="flex flex-wrap items-center gap-1.5 text-[10px] font-semibold">
+                <span className="text-muted">Ví dụ {i + 1}</span>
+                <span className="rounded-full bg-accent-soft px-2 py-0.5 text-accent">
+                  {ex.example_type === "standard" ? "Chuẩn mẫu" : ex.example_type === "business" ? "Công việc" : "Đời thường"}
+                </span>
+                {ex.review_status === "needs_review" && <span className="rounded-full bg-amber-100 px-2 py-0.5 text-amber-800">Cần kiểm tra</span>}
+              </div>
+              <JapaneseSentence text={ex.example_jp} furiganaTokens={furiganaTokens} className="mt-0.5 text-sm text-foreground" />
+              <p className="text-xs text-muted">{ex.example_vi}</p>
+            </li>
+          );
+        })}
       </ul>
     </div>
   );
