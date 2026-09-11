@@ -4,10 +4,12 @@ import Link from "next/link";
 import { useSearchParams } from "next/navigation";
 import { Suspense, useEffect, useMemo, useState } from "react";
 
+import { LessonNavigator } from "@/components/lesson-navigator";
 import { getCached, setCached } from "@/lib/data/client-cache";
 import { downloadBlob } from "@/lib/data/excel-export";
 import { buildKanjiWorkbook, fetchAllKanjiData } from "@/lib/data/kanji-excel-export";
 import { getKanjiLevelCounts, listKanjiByLevel, type KanjiRow } from "@/lib/data/kanji-service";
+import { getLessonCount, LESSON_SIZES, sliceLesson } from "@/lib/data/lesson-structure";
 import { createClient } from "@/lib/supabase/client";
 import { JLPT_LEVELS, type JlptLevel } from "@/lib/types";
 import { JLPT_TONES } from "@/lib/ui/jlpt-styles";
@@ -42,6 +44,7 @@ function KanjiListContent() {
   const [loading, setLoading] = useState(!initialCached);
   const [exporting, setExporting] = useState(false);
   const [query, setQuery] = useState("");
+  const [selectedLesson, setSelectedLesson] = useState(1);
 
   const filteredKanji = useMemo(() => {
     const normalized = query.trim().toLocaleLowerCase("vi");
@@ -52,6 +55,13 @@ function KanjiListContent() {
       ),
     );
   }, [kanjiList, query]);
+
+  const lessonKanji = useMemo(
+    () => sliceLesson(kanjiList, selectedLesson, LESSON_SIZES.kanji),
+    [kanjiList, selectedLesson],
+  );
+  const displayedKanji = query.trim() ? filteredKanji : lessonKanji;
+  const lessonCount = getLessonCount(kanjiList.length, LESSON_SIZES.kanji);
 
   useEffect(() => {
     let cancelled = false;
@@ -72,6 +82,8 @@ function KanjiListContent() {
 
   function selectLevel(newLevel: JlptLevel) {
     const cached = getCached<KanjiListCachedData>(kanjiListCacheKey(newLevel));
+    setSelectedLesson(1);
+    setQuery("");
     if (cached) {
       setKanjiList(cached.kanjiList);
       setCountsByLevel(cached.countsByLevel);
@@ -105,7 +117,9 @@ function KanjiListContent() {
             <h1 className="text-xl font-bold">Kanji</h1>
             <span className={`inline-flex rounded-full border px-2.5 py-1 text-[11px] font-bold ${tone.badge}`}>{level}</span>
           </div>
-          <p className="mt-1 text-sm text-muted">{kanjiList.length} kanji ở cấp {level}</p>
+          <p className="mt-1 text-sm text-muted">
+            {kanjiList.length} kanji · {lessonCount} bài · khoảng {LESSON_SIZES.kanji} chữ/bài
+          </p>
         </div>
         <button
           type="button"
@@ -159,19 +173,36 @@ function KanjiListContent() {
         />
       </label>
 
+      {!query.trim() && kanjiList.length > 0 && !loading && (
+        <LessonNavigator
+          totalItems={kanjiList.length}
+          lessonSize={LESSON_SIZES.kanji}
+          selectedLesson={selectedLesson}
+          onChange={setSelectedLesson}
+          unitLabel="kanji"
+          title="Bài Kanji"
+        />
+      )}
+
+      {query.trim() && (
+        <p className="rounded-xl border border-border bg-slate-50 px-3 py-2 text-xs text-muted">
+          Đang tìm trong toàn bộ {level}; xoá từ khoá để quay lại Bài {selectedLesson}.
+        </p>
+      )}
+
       {loading ? (
         <p className="rounded-2xl border border-dashed border-border p-4 text-sm text-muted">Đang tải...</p>
       ) : kanjiList.length === 0 ? (
         <p className="rounded-2xl border border-dashed border-border p-4 text-sm text-muted">
           Chưa có nội dung Kanji cho cấp {level}.
         </p>
-      ) : filteredKanji.length === 0 ? (
+      ) : query.trim() && filteredKanji.length === 0 ? (
         <p className="rounded-2xl border border-dashed border-border p-4 text-sm text-muted">
           Không tìm thấy Kanji phù hợp.
         </p>
       ) : (
         <ul className="grid grid-cols-3 gap-2 sm:grid-cols-4">
-          {filteredKanji.map((k) => (
+          {displayedKanji.map((k) => (
             <li key={k.id}>
               <Link
                 href={`/kanji/${k.id}`}

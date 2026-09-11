@@ -4,7 +4,9 @@ import Link from "next/link";
 import { useSearchParams } from "next/navigation";
 import { Suspense, useMemo, useState } from "react";
 
+import { LessonNavigator } from "@/components/lesson-navigator";
 import { StatusBadge } from "@/components/status-badge";
+import { LESSON_SIZES, getLessonCount, sliceLesson } from "@/lib/data/lesson-structure";
 import { filterWords, type VocabularyFilter } from "@/lib/data/selectors";
 import { useVocabulary } from "@/lib/data/vocabulary-context";
 import { getVocabularyCollection, VOCABULARY_COLLECTIONS } from "@/lib/data/vocabulary-collections";
@@ -15,8 +17,41 @@ import {
   type JlptLevel,
   type LearningStatus,
   type PartOfSpeech,
+  type VocabWord,
 } from "@/lib/types";
 import { JLPT_TONES } from "@/lib/ui/jlpt-styles";
+
+type VocabularyViewMode = "lesson" | "partOfSpeech";
+type PartOfSpeechSelection = PartOfSpeech | "all";
+
+const LEARNER_PART_OF_SPEECH_LABELS: Record<PartOfSpeech, string> = {
+  noun: "Danh từ（名詞）",
+  verb: "Động từ（動詞）",
+  i_adjective: "Tính từ い（い形容詞）",
+  na_adjective: "Tính từ な（な形容詞）",
+  adverb: "Trạng từ（副詞）",
+  conjunction: "Liên từ（接続詞）",
+  particle: "Trợ từ（助詞）",
+  expression: "Biểu hiện / cụm từ（表現）",
+  unclassified: "Chưa phân loại",
+};
+
+function sortWordsForLessons(words: VocabWord[]): VocabWord[] {
+  return words
+    .map((word, index) => ({ word, index }))
+    .sort((a, b) => {
+      const lessonA = a.word.lessonNo ?? Number.MAX_SAFE_INTEGER;
+      const lessonB = b.word.lessonNo ?? Number.MAX_SAFE_INTEGER;
+      if (lessonA !== lessonB) return lessonA - lessonB;
+
+      const pageA = a.word.sourcePage ?? Number.MAX_SAFE_INTEGER;
+      const pageB = b.word.sourcePage ?? Number.MAX_SAFE_INTEGER;
+      if (pageA !== pageB) return pageA - pageB;
+
+      return a.index - b.index;
+    })
+    .map(({ word }) => word);
+}
 
 export default function VocabularyPage() {
   return (
@@ -44,23 +79,85 @@ function VocabularyPageContent() {
   }, [words, archivedWords, collection]);
   const initialQuery = searchParams.get("query")?.trim() || undefined;
   const isJlptLevel = (v: string | null): v is JlptLevel => !!v && (JLPT_LEVELS as readonly string[]).includes(v);
+  const defaultLevel = isJlptLevel(initialLevel) ? initialLevel : collection === "current" && !initialQuery ? "N5" : undefined;
 
-  const [filter, setFilter] = useState<VocabularyFilter>(
-    { ...(isJlptLevel(initialLevel) ? { level: initialLevel } : {}), ...(initialQuery ? { query: initialQuery } : {}) },
+  const [filter, setFilter] = useState<VocabularyFilter>({
+    ...(defaultLevel ? { level: defaultLevel } : {}),
+    ...(initialQuery ? { query: initialQuery } : {}),
+  });
+  const [viewMode, setViewMode] = useState<VocabularyViewMode>("lesson");
+  const [selectedLesson, setSelectedLesson] = useState(1);
+  const [selectedPartOfSpeech, setSelectedPartOfSpeech] = useState<PartOfSpeechSelection>("all");
+
+  const collectionFixedLevel = useMemo(() => {
+    const levels = Array.from(new Set(visibleWords.map((word) => word.jlpt)));
+    return levels.length === 1 ? levels[0] : undefined;
+  }, [visibleWords]);
+  const effectiveLevel = filter.level ?? collectionFixedLevel;
+
+  const levelWords = useMemo(() => {
+    if (!effectiveLevel) return visibleWords;
+    return visibleWords.filter((word) => word.jlpt === effectiveLevel);
+  }, [visibleWords, effectiveLevel]);
+  const lessonOrderedWords = useMemo(() => sortWordsForLessons(levelWords), [levelWords]);
+  const lessonWords = useMemo(
+    () => sliceLesson(lessonOrderedWords, selectedLesson, LESSON_SIZES.vocabulary),
+    [lessonOrderedWords, selectedLesson],
   );
 
-  const filtered = useMemo(() => filterWords(visibleWords, filter), [visibleWords, filter]);
+  const categoryCounts = useMemo(() => {
+    const counts = new Map<PartOfSpeech, number>();
+    for (const word of levelWords) counts.set(word.partOfSpeech, (counts.get(word.partOfSpeech) ?? 0) + 1);
+    return counts;
+  }, [levelWords]);
+  const availableCategories = (Object.keys(PART_OF_SPEECH_LABELS) as PartOfSpeech[]).filter(
+    (partOfSpeech) => (categoryCounts.get(partOfSpeech) ?? 0) > 0,
+  );
+
+  const queryActive = Boolean(filter.query?.trim());
+  const viewScopedWords = useMemo(() => {
+    if (viewMode === "lesson") {
+      if (queryActive) return lessonOrderedWords;
+      if (!effectiveLevel) return [];
+      return lessonWords;
+    }
+    if (selectedPartOfSpeech === "all") return levelWords;
+    return levelWords.filter((word) => word.partOfSpeech === selectedPartOfSpeech);
+  }, [viewMode, queryActive, lessonOrderedWords, effectiveLevel, lessonWords, selectedPartOfSpeech, levelWords]);
+
+  const filtered = useMemo(
+    () => filterWords(viewScopedWords, { query: filter.query, status: filter.status }),
+    [viewScopedWords, filter.query, filter.status],
+  );
+  const lessonCount = getLessonCount(lessonOrderedWords.length, LESSON_SIZES.vocabulary);
+
+  function changeLevel(value: string) {
+    setFilter((current) => ({ ...current, level: (value as JlptLevel) || undefined }));
+    setSelectedLesson(1);
+    setSelectedPartOfSpeech("all");
+  }
+
+  function changeViewMode(mode: VocabularyViewMode) {
+    setViewMode(mode);
+    setSelectedLesson(1);
+    setSelectedPartOfSpeech("all");
+  }
+
+  const headerScope = effectiveLevel ? `${effectiveLevel} · ${levelWords.length} từ` : `${visibleWords.length} từ`;
 
   return (
     <div className="flex flex-col gap-4">
       <div>
         <div className="flex items-center gap-2.5">
           <h1 className="text-xl font-bold">{collection === "current" ? "Kho từ vựng" : currentCollection.label}</h1>
-          {filter.level && collection === "current" && (
-            <span className={`inline-flex rounded-full border px-2.5 py-1 text-[11px] font-bold ${JLPT_TONES[filter.level].badge}`}>{filter.level}</span>
+          {effectiveLevel && (
+            <span className={`inline-flex rounded-full border px-2.5 py-1 text-[11px] font-bold ${JLPT_TONES[effectiveLevel].badge}`}>{effectiveLevel}</span>
           )}
         </div>
-        <p className="mt-1 text-sm text-muted">{visibleWords.length} từ · đang hiển thị {filtered.length}</p>
+        <p className="mt-1 text-sm text-muted">
+          {headerScope}
+          {viewMode === "lesson" && effectiveLevel ? ` · ${lessonCount} bài · ${LESSON_SIZES.vocabulary} từ/bài` : ""}
+        </p>
       </div>
 
       <nav aria-label="Bộ từ vựng" className="flex gap-2 overflow-x-auto pb-1">
@@ -94,10 +191,27 @@ function VocabularyPageContent() {
         <input
           type="search"
           value={filter.query ?? ""}
-          onChange={(e) => setFilter((f) => ({ ...f, query: e.target.value }))}
+          onChange={(event) => setFilter((current) => ({ ...current, query: event.target.value }))}
           placeholder="Tìm theo từ, cách đọc hoặc nghĩa..."
           className="w-full rounded-xl border border-border bg-surface py-2.5 pl-9 pr-3 text-sm shadow-sm outline-none transition focus:border-accent"
         />
+      </div>
+
+      <div className="grid grid-cols-2 gap-1 rounded-2xl bg-slate-100 p-1">
+        <button
+          type="button"
+          onClick={() => changeViewMode("lesson")}
+          className={`rounded-xl px-3 py-2.5 text-sm font-semibold transition ${viewMode === "lesson" ? "bg-white text-foreground shadow-sm" : "text-muted hover:text-foreground"}`}
+        >
+          Theo bài
+        </button>
+        <button
+          type="button"
+          onClick={() => changeViewMode("partOfSpeech")}
+          className={`rounded-xl px-3 py-2.5 text-sm font-semibold transition ${viewMode === "partOfSpeech" ? "bg-white text-foreground shadow-sm" : "text-muted hover:text-foreground"}`}
+        >
+          Theo từ loại
+        </button>
       </div>
 
       <div className="-mx-4 flex gap-2 overflow-x-auto px-4 pb-1">
@@ -106,21 +220,71 @@ function VocabularyPageContent() {
             label="Cấp độ"
             value={filter.level}
             options={JLPT_LEVELS.map((level) => ({ value: level, label: level }))}
-            onChange={(v) => setFilter((f) => ({ ...f, level: (v as JlptLevel) || undefined }))}
+            onChange={changeLevel}
           />
         )}
-        <SelectChip
-          label="Loại từ"
-          value={filter.partOfSpeech}
-          options={Object.entries(PART_OF_SPEECH_LABELS).map(([value, label]) => ({ value, label }))}
-          onChange={(v) => setFilter((f) => ({ ...f, partOfSpeech: (v as PartOfSpeech) || undefined }))}
-        />
         <SelectChip
           label="Trạng thái"
           value={filter.status}
           options={Object.entries(LEARNING_STATUS_LABELS).map(([value, label]) => ({ value, label }))}
-          onChange={(v) => setFilter((f) => ({ ...f, status: (v as LearningStatus) || undefined }))}
+          onChange={(value) => setFilter((current) => ({ ...current, status: (value as LearningStatus) || undefined }))}
         />
+      </div>
+
+      {viewMode === "lesson" && !queryActive && effectiveLevel && (
+        <LessonNavigator
+          totalItems={lessonOrderedWords.length}
+          lessonSize={LESSON_SIZES.vocabulary}
+          selectedLesson={selectedLesson}
+          onChange={setSelectedLesson}
+          unitLabel="từ"
+          title="Bài từ vựng"
+        />
+      )}
+
+      {viewMode === "lesson" && !queryActive && !effectiveLevel && (
+        <p className="rounded-xl border border-dashed border-border bg-slate-50 p-4 text-sm text-muted">
+          Chọn một cấp độ N5–N1 để học theo bài. Mỗi bài có khoảng {LESSON_SIZES.vocabulary} từ.
+        </p>
+      )}
+
+      {viewMode === "lesson" && queryActive && (
+        <p className="rounded-xl border border-border bg-slate-50 px-3 py-2 text-xs text-muted">
+          Đang tìm trong toàn bộ {effectiveLevel ?? "kho từ"}; xoá từ khoá để quay lại Bài {selectedLesson}.
+        </p>
+      )}
+
+      {viewMode === "partOfSpeech" && (
+        <div className="-mx-4 flex gap-2 overflow-x-auto px-4 pb-1">
+          <button
+            type="button"
+            onClick={() => setSelectedPartOfSpeech("all")}
+            className={`shrink-0 rounded-full border px-3 py-1.5 text-xs font-semibold transition ${selectedPartOfSpeech === "all" ? "border-accent bg-accent text-accent-foreground" : "border-border bg-surface text-muted hover:border-slate-300 hover:text-foreground"}`}
+          >
+            Tất cả ({levelWords.length})
+          </button>
+          {availableCategories.map((partOfSpeech) => (
+            <button
+              key={partOfSpeech}
+              type="button"
+              onClick={() => setSelectedPartOfSpeech(partOfSpeech)}
+              className={`shrink-0 rounded-full border px-3 py-1.5 text-xs font-semibold transition ${selectedPartOfSpeech === partOfSpeech ? "border-accent bg-accent text-accent-foreground" : "border-border bg-surface text-muted hover:border-slate-300 hover:text-foreground"}`}
+            >
+              {LEARNER_PART_OF_SPEECH_LABELS[partOfSpeech]} ({categoryCounts.get(partOfSpeech) ?? 0})
+            </button>
+          ))}
+        </div>
+      )}
+
+      <div className="flex items-center justify-between gap-3 text-xs text-muted">
+        <span>
+          {viewMode === "lesson" && !queryActive && effectiveLevel
+            ? `Bài ${selectedLesson}/${lessonCount}`
+            : viewMode === "partOfSpeech" && selectedPartOfSpeech !== "all"
+              ? LEARNER_PART_OF_SPEECH_LABELS[selectedPartOfSpeech]
+              : "Danh sách"}
+        </span>
+        <span>{filtered.length} từ đang hiển thị</span>
       </div>
 
       <ul className="flex flex-col gap-2">
@@ -157,11 +321,11 @@ function SelectChip({ label, value, options, onChange }: { label: string; value?
     <label className="relative shrink-0">
       <select
         value={value ?? ""}
-        onChange={(e) => onChange(e.target.value)}
+        onChange={(event) => onChange(event.target.value)}
         className={`appearance-none rounded-full border px-3 py-1.5 pr-7 text-xs font-semibold shadow-sm outline-none transition ${levelTone ? levelTone.idle : value ? "border-accent bg-accent/10 text-accent" : "border-border bg-surface text-muted hover:border-slate-300"}`}
       >
         <option value="">{label}</option>
-        {options.map((opt) => <option key={opt.value} value={opt.value}>{opt.label}</option>)}
+        {options.map((option) => <option key={option.value} value={option.value}>{option.label}</option>)}
       </select>
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="pointer-events-none absolute right-2 top-1/2 h-3 w-3 -translate-y-1/2">
         <path strokeLinecap="round" strokeLinejoin="round" d="M6 9l6 6 6-6" />
