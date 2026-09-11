@@ -86,4 +86,40 @@ describe("segmentJapaneseText", () => {
     expect(linked[0]).toMatchObject({ text: "書きます", reading: "かきます" });
     expect(result[0]).toMatchObject({ text: "報告書を", word: null });
   });
+
+  it("không lấy reading của dạng đang hiển thị để gắn sai sang dạng từ điển", () => {
+    const base = readableWord("base", "歩く", "あるく", "verb", "godan");
+    const inflected = {
+      ...word("inflected", "歩いて"),
+      dictionaryForm: "歩く",
+      reading: "あるいて",
+      partOfSpeech: "verb" as const,
+      verbClass: "godan" as const,
+    } as VocabWord;
+    const result = segmentJapaneseText("歩く。歩いて帰ります。", [inflected, base]);
+    expect(result.find((part) => part.text === "歩く")).toMatchObject({ reading: "あるく", word: { id: "base" } });
+    expect(result.find((part) => part.text === "歩いて")).toMatchObject({ reading: "あるいて" });
+  });
+
+  it("không hiển thị chuỗi nhiều cách đọc như một furigana duy nhất", () => {
+    const ambiguous = readableWord("1", "何", "なに／なん", "noun");
+    const automatic = segmentJapaneseText("何ですか。", [ambiguous]);
+    expect(automatic.find((part) => part.text === "何")?.reading).toBeUndefined();
+    const reviewed = segmentJapaneseText("何ですか。", [ambiguous], [{ surface: "何", reading: "なん" }]);
+    expect(reviewed.find((part) => part.text === "何")).toMatchObject({ reading: "なん" });
+  });
+
+  it("không gắn 一日=ついたち vào tiền tố của 一日中", () => {
+    const date = readableWord("1", "一日", "ついたち", "noun");
+    const automatic = segmentJapaneseText("一日中勉強しました。", [date]);
+    expect(automatic.some((part) => part.text === "一日" && part.reading === "ついたち")).toBe(false);
+    const reviewed = segmentJapaneseText("一日中勉強しました。", [date], [{ surface: "一日中", reading: "いちにちじゅう" }]);
+    expect(reviewed.find((part) => part.text === "一日中")).toMatchObject({ reading: "いちにちじゅう" });
+  });
+
+  it("coi 々 là phần của cụm Kanji khi kiểm ranh giới", () => {
+    const person = readableWord("1", "人", "ひと", "noun");
+    const result = segmentJapaneseText("人々が集まりました。", [person]);
+    expect(result.some((part) => part.word?.id === "1")).toBe(false);
+  });
 });
