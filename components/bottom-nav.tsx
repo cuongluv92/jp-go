@@ -10,6 +10,10 @@ interface NavItem {
   icon: ReactNode;
 }
 
+interface BottomNavProps {
+  desktopMode: boolean;
+}
+
 function HomeIcon() {
   return (
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" className="h-5 w-5">
@@ -70,12 +74,15 @@ const NAV_ITEMS: NavItem[] = [
   { href: "/progress", label: "Tiến độ", icon: <ChartIcon /> },
 ];
 
-export function BottomNav() {
+export function BottomNav({ desktopMode }: BottomNavProps) {
   const pathname = usePathname();
+  const listClassName = desktopMode
+    ? "mx-auto grid w-full max-w-7xl grid-cols-5 px-4 sm:px-6 lg:px-8"
+    : "mx-auto grid w-full max-w-md grid-cols-5 sm:max-w-lg";
 
   return (
     <nav className="safe-bottom fixed inset-x-0 bottom-0 z-20 border-t border-border bg-surface/90 shadow-[0_-4px_16px_-8px_rgba(15,23,42,0.12)] backdrop-blur-lg">
-      <ul className="mx-auto grid w-full max-w-md grid-cols-5 sm:max-w-lg">
+      <ul className={listClassName}>
         {NAV_ITEMS.map((item) => {
           const isActive = item.href === "/" ? pathname === "/" : pathname.startsWith(item.href);
           return (
