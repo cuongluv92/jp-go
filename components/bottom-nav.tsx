@@ -13,6 +13,8 @@ interface NavItem {
 
 interface BottomNavProps {
   desktopMode: boolean;
+  sidebarCollapsed?: boolean;
+  onToggleSidebar?: () => void;
 }
 
 function HomeIcon() {
@@ -76,6 +78,14 @@ function GrammarIcon() {
   return <span className="font-jp text-base font-bold leading-none">文</span>;
 }
 
+function CollapseIcon({ collapsed }: { collapsed: boolean }) {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" className="h-4 w-4">
+      <path strokeLinecap="round" strokeLinejoin="round" d={collapsed ? "M9 6l6 6-6 6" : "M15 6l-6 6 6 6"} />
+    </svg>
+  );
+}
+
 const NAV_ITEMS: NavItem[] = [
   { href: "/", label: "Trang chủ", description: "Tổng quan học tập", icon: <HomeIcon /> },
   { href: "/plan", label: "Lộ trình", description: "Kế hoạch theo ngày", icon: <PlanIcon /> },
@@ -94,7 +104,7 @@ function isItemActive(pathname: string, href: string): boolean {
   return href === "/" ? pathname === "/" : pathname.startsWith(href);
 }
 
-function DesktopNavGroup({ items, pathname }: { items: NavItem[]; pathname: string }) {
+function DesktopNavGroup({ items, pathname, collapsed }: { items: NavItem[]; pathname: string; collapsed: boolean }) {
   return (
     <ul className="flex flex-col gap-1">
       {items.map((item) => {
@@ -104,17 +114,20 @@ function DesktopNavGroup({ items, pathname }: { items: NavItem[]; pathname: stri
             <Link
               href={item.href}
               aria-current={isActive ? "page" : undefined}
-              className={`group flex items-center gap-3 rounded-2xl px-3 py-2.5 transition ${
-                isActive ? "bg-accent text-accent-foreground shadow-sm shadow-accent/20" : "text-foreground hover:bg-slate-50"
-              }`}
+              title={collapsed ? item.label : undefined}
+              className={`group flex items-center rounded-2xl transition ${
+                collapsed ? "justify-center px-2 py-2.5" : "gap-3 px-3 py-2.5"
+              } ${isActive ? "bg-accent text-accent-foreground shadow-sm shadow-accent/20" : "text-foreground hover:bg-slate-50"}`}
             >
               <span className={`flex h-9 w-9 shrink-0 items-center justify-center rounded-xl ${isActive ? "bg-white/15" : "bg-slate-100 text-muted group-hover:text-foreground"}`}>
                 {item.icon}
               </span>
-              <span className="min-w-0">
-                <span className="block text-sm font-semibold">{item.label}</span>
-                <span className={`mt-0.5 block truncate text-[11px] ${isActive ? "text-white/75" : "text-muted"}`}>{item.description}</span>
-              </span>
+              {!collapsed && (
+                <span className="min-w-0">
+                  <span className="block text-sm font-semibold">{item.label}</span>
+                  <span className={`mt-0.5 block truncate text-[11px] ${isActive ? "text-white/75" : "text-muted"}`}>{item.description}</span>
+                </span>
+              )}
             </Link>
           </li>
         );
@@ -123,28 +136,59 @@ function DesktopNavGroup({ items, pathname }: { items: NavItem[]; pathname: stri
   );
 }
 
-export function BottomNav({ desktopMode }: BottomNavProps) {
+export function BottomNav({ desktopMode, sidebarCollapsed = false, onToggleSidebar }: BottomNavProps) {
   const pathname = usePathname();
 
   if (desktopMode) {
     return (
       <aside className="sticky top-[88px] self-start">
-        <nav aria-label="Điều hướng chính" className="rounded-3xl border border-border/90 bg-surface/95 p-3 shadow-sm backdrop-blur">
-          <div className="mb-2 px-3 pb-2 pt-1">
-            <p className="text-[11px] font-semibold uppercase tracking-[0.16em] text-muted">Workspace</p>
-            <p className="mt-1 text-sm font-semibold text-foreground">Học tiếng Nhật</p>
-          </div>
+        <nav
+          aria-label="Điều hướng chính"
+          className={`rounded-3xl border border-border/90 bg-surface/95 shadow-sm backdrop-blur transition-all ${sidebarCollapsed ? "p-2" : "p-3"}`}
+        >
+          {sidebarCollapsed ? (
+            <div className="mb-2 flex justify-center py-1">
+              <span className="font-jp flex h-9 w-9 items-center justify-center rounded-xl bg-gradient-accent text-sm font-bold text-white shadow-sm">日</span>
+            </div>
+          ) : (
+            <div className="mb-2 px-3 pb-2 pt-1">
+              <p className="text-[11px] font-semibold uppercase tracking-[0.16em] text-muted">Workspace</p>
+              <p className="mt-1 text-sm font-semibold text-foreground">Học tiếng Nhật</p>
+            </div>
+          )}
 
-          <DesktopNavGroup items={NAV_ITEMS} pathname={pathname} />
+          <DesktopNavGroup items={NAV_ITEMS} pathname={pathname} collapsed={sidebarCollapsed} />
 
           <div className="my-3 h-px bg-border" />
-          <p className="mb-1.5 px-3 text-[10px] font-semibold uppercase tracking-[0.16em] text-muted">Nội dung</p>
-          <DesktopNavGroup items={CONTENT_ITEMS} pathname={pathname} />
+          {!sidebarCollapsed && <p className="mb-1.5 px-3 text-[10px] font-semibold uppercase tracking-[0.16em] text-muted">Nội dung</p>}
+          <DesktopNavGroup items={CONTENT_ITEMS} pathname={pathname} collapsed={sidebarCollapsed} />
 
-          <div className="mt-3 rounded-2xl bg-slate-50 px-3 py-3">
-            <p className="text-xs font-semibold text-foreground">Chế độ Desktop</p>
-            <p className="mt-1 text-[11px] leading-5 text-muted">Không gian rộng hơn để tra cứu, học và làm bài tập thoải mái.</p>
-          </div>
+          {!sidebarCollapsed && (
+            <div className="mt-3 rounded-2xl bg-slate-50 px-3 py-3">
+              <p className="text-xs font-semibold text-foreground">Phím tắt nhanh</p>
+              <div className="mt-2 flex items-center justify-between text-[10px] text-muted">
+                <span>Tìm mọi thứ</span>
+                <kbd className="rounded-md border border-border bg-white px-1.5 py-0.5 font-semibold">Ctrl K</kbd>
+              </div>
+              <div className="mt-1.5 flex items-center justify-between text-[10px] text-muted">
+                <span>Tìm nhanh</span>
+                <kbd className="rounded-md border border-border bg-white px-1.5 py-0.5 font-semibold">/</kbd>
+              </div>
+            </div>
+          )}
+
+          {onToggleSidebar && (
+            <button
+              type="button"
+              onClick={onToggleSidebar}
+              title={sidebarCollapsed ? "Mở rộng sidebar" : "Thu gọn sidebar"}
+              aria-label={sidebarCollapsed ? "Mở rộng sidebar" : "Thu gọn sidebar"}
+              className={`mt-3 flex w-full items-center rounded-xl border border-border text-xs font-semibold text-muted transition hover:border-accent/30 hover:bg-accent-soft hover:text-accent ${sidebarCollapsed ? "justify-center px-2 py-2.5" : "justify-between px-3 py-2"}`}
+            >
+              {!sidebarCollapsed && <span>Thu gọn</span>}
+              <CollapseIcon collapsed={sidebarCollapsed} />
+            </button>
+          )}
         </nav>
       </aside>
     );
