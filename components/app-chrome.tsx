@@ -4,6 +4,7 @@ import { usePathname } from "next/navigation";
 import { useEffect, useState, type ReactNode } from "react";
 
 import { BottomNav } from "@/components/bottom-nav";
+import { DetailQuickNavigator } from "@/components/detail-quick-navigator";
 import { GlobalCommandPalette } from "@/components/global-command-palette";
 import { TopHeader } from "@/components/top-header";
 import styles from "@/components/app-chrome-polish.module.css";
@@ -121,7 +122,11 @@ export function AppChrome({ children }: { children: ReactNode }) {
         <TopHeader desktopMode onToggleDesktop={toggleLayoutMode} onOpenSearch={() => setCommandOpen(true)} />
         <div className={desktopGridClass}>
           <BottomNav desktopMode sidebarCollapsed={sidebarCollapsed} onToggleSidebar={toggleSidebar} />
-          <main className={`${styles.desktopMain} min-w-0 pb-10`}>{children}</main>
+          <main className={`${styles.desktopMain} min-w-0 pb-10`}>
+            <DetailQuickNavigator variant="top" />
+            {children}
+            <DetailQuickNavigator variant="bottom" />
+          </main>
         </div>
         <GlobalCommandPalette open={commandOpen} onClose={() => setCommandOpen(false)} />
       </>
@@ -131,7 +136,10 @@ export function AppChrome({ children }: { children: ReactNode }) {
   return (
     <>
       <TopHeader desktopMode={false} onToggleDesktop={toggleLayoutMode} />
-      <main className={`${styles.mobileMain} mx-auto w-full max-w-md flex-1 px-4 pb-24 pt-4 sm:max-w-lg`}>{children}</main>
+      <main className={`${styles.mobileMain} mx-auto w-full max-w-md flex-1 px-4 pb-24 pt-4 sm:max-w-lg`}>
+        {children}
+        <DetailQuickNavigator variant="bottom" />
+      </main>
       <BottomNav desktopMode={false} />
     </>
   );
