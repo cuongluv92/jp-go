@@ -8,6 +8,7 @@ import { createClient } from "@/lib/supabase/client";
 
 type DetailKind = "vocabulary" | "grammar" | "kanji";
 type Variant = "top" | "bottom";
+type DynamicRow = Record<string, string | null>;
 
 interface SectionLink { id: string; label: string }
 interface NeighborLink { href: string; label: string }
@@ -29,20 +30,30 @@ function visibleHeading(element: Element): element is HTMLElement {
 
 async function loadDbNeighbors(kind: "grammar" | "kanji", id: string): Promise<NeighborState> {
   const supabase = createClient();
+  const db = supabase as unknown as {
+    from: (table: string) => {
+      select: (columns: string) => any;
+    };
+  };
   const config = kind === "grammar"
     ? { table: "jp_grammar", label: "grammar_pattern", href: "/grammar" }
     : { table: "jp_kanji", label: "kanji_character", href: "/kanji" };
-  const { data: current, error: currentError } = await supabase.from(config.table).select(`id, level, ${config.label}`).eq("id", id).maybeSingle();
-  if (currentError || !current) return { previous: null, next: null };
-  const { data: rows, error: listError } = await supabase.from(config.table).select(`id, ${config.label}, created_at`).eq("level", current.level).order("created_at", { ascending: true }).limit(1000);
-  if (listError || !rows) return { previous: null, next: null };
+
+  const { data: currentRaw, error: currentError } = await db.from(config.table).select(`id, level, ${config.label}`).eq("id", id).maybeSingle();
+  const current = currentRaw as DynamicRow | null;
+  if (currentError || !current?.level) return { previous: null, next: null };
+
+  const { data: rowsRaw, error: listError } = await db.from(config.table).select(`id, ${config.label}, created_at`).eq("level", current.level).order("created_at", { ascending: true }).limit(1000);
+  const rows = (rowsRaw ?? []) as DynamicRow[];
+  if (listError) return { previous: null, next: null };
+
   const index = rows.findIndex((row) => row.id === id);
   if (index < 0) return { previous: null, next: null };
   const previous = rows[index - 1];
   const next = rows[index + 1];
   return {
-    previous: previous ? { href: `${config.href}/${previous.id}`, label: String(previous[config.label] ?? "Bài trước") } : null,
-    next: next ? { href: `${config.href}/${next.id}`, label: String(next[config.label] ?? "Bài tiếp") } : null,
+    previous: previous?.id ? { href: `${config.href}/${previous.id}`, label: String(previous[config.label] ?? "Bài trước") } : null,
+    next: next?.id ? { href: `${config.href}/${next.id}`, label: String(next[config.label] ?? "Bài tiếp") } : null,
   };
 }
 
@@ -63,6 +74,7 @@ async function loadVocabularyNeighbors(id: string): Promise<NeighborState> {
       }
     }
   }
+
   const [{ sampleWords }, { getVocabularyCollection }] = await Promise.all([
     import("@/lib/data/sample-words"),
     import("@/lib/data/vocabulary-collections"),
@@ -88,8 +100,10 @@ export function DetailQuickNavigator({ variant }: { variant: Variant }) {
 
   useEffect(() => {
     if (variant !== "top" || !route) { setSections([]); return; }
+    const activeRoute = route;
     const main = document.querySelector("main");
     if (!main) return;
+
     function collectSections() {
       const seen = new Set<string>();
       const nextSections: SectionLink[] = [];
@@ -98,11 +112,12 @@ export function DetailQuickNavigator({ variant }: { variant: Variant }) {
         const label = heading.textContent?.replace(/\s+/g, " ").trim();
         if (!label || seen.has(label) || nextSections.length >= 6) return;
         seen.add(label);
-        if (!heading.id) heading.id = `detail-section-${route.kind}-${index}`;
+        if (!heading.id) heading.id = `detail-section-${activeRoute.kind}-${index}`;
         nextSections.push({ id: heading.id, label: compactLabel(label) });
       });
       setSections(nextSections);
     }
+
     collectSections();
     const observer = new MutationObserver(collectSections);
     observer.observe(main, { childList: true, subtree: true });
@@ -111,20 +126,26 @@ export function DetailQuickNavigator({ variant }: { variant: Variant }) {
 
   useEffect(() => {
     if (variant !== "bottom" || !route) { setNeighbors({ previous: null, next: null }); return; }
+    const activeRoute = route;
     let cancelled = false;
+
     async function load() {
       try {
-        const value = route.kind === "vocabulary" ? await loadVocabularyNeighbors(route.id) : await loadDbNeighbors(route.kind, route.id);
+        const value = activeRoute.kind === "vocabulary"
+          ? await loadVocabularyNeighbors(activeRoute.id)
+          : await loadDbNeighbors(activeRoute.kind, activeRoute.id);
         if (!cancelled) setNeighbors(value);
       } catch {
         if (!cancelled) setNeighbors({ previous: null, next: null });
       }
     }
+
     void load();
     return () => { cancelled = true; };
   }, [route, variant]);
 
   if (!route) return null;
+
   if (variant === "top") {
     if (sections.length < 2) return null;
     return (
