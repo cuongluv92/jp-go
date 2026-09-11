@@ -10,8 +10,8 @@ interface TopHeaderProps {
   onToggleDesktop: () => void;
 }
 
-function DesktopIcon({ active }: { active: boolean }) {
-  if (active) {
+function LayoutIcon({ desktopMode }: { desktopMode: boolean }) {
+  if (desktopMode) {
     return (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" className="h-5 w-5">
         <rect x="7" y="3" width="10" height="18" rx="2" strokeLinecap="round" strokeLinejoin="round" />
@@ -39,22 +39,32 @@ export function TopHeader({ desktopMode, onToggleDesktop }: TopHeaderProps) {
   }
 
   const innerClassName = desktopMode
-    ? "mx-auto flex w-full max-w-7xl items-center justify-between px-4 py-3 sm:px-6 lg:px-8"
+    ? "mx-auto flex w-full max-w-7xl items-center justify-between px-5 py-3.5 lg:px-8"
     : "mx-auto flex w-full max-w-md items-center justify-between px-4 py-3 sm:max-w-lg";
 
   return (
-    <header className="safe-top sticky top-0 z-20 border-b border-border bg-surface/85 backdrop-blur-lg">
+    <header className="safe-top sticky top-0 z-30 border-b border-border/90 bg-surface/90 backdrop-blur-xl">
       <div className={innerClassName}>
-        <Link href="/" className="flex items-center gap-2">
-          <span className="flex h-8 w-8 items-center justify-center rounded-xl bg-gradient-accent text-sm font-bold text-accent-foreground shadow-sm shadow-accent/30">
+        <Link href="/" className="flex items-center gap-3">
+          <span className={`flex items-center justify-center bg-gradient-accent font-bold text-accent-foreground shadow-sm shadow-accent/30 ${desktopMode ? "h-10 w-10 rounded-2xl text-base" : "h-8 w-8 rounded-xl text-sm"}`}>
             日
           </span>
-          <span className="text-lg font-semibold tracking-tight">jp-go</span>
+          <span>
+            <span className={`${desktopMode ? "text-xl" : "text-lg"} block font-semibold tracking-tight`}>jp-go</span>
+            {desktopMode && <span className="block text-[11px] font-medium tracking-wide text-muted">Japanese Learning Workspace</span>}
+          </span>
         </Link>
-        <div className="flex items-center gap-1">
+
+        <div className="flex items-center gap-1.5">
+          {desktopMode && (
+            <span className="mr-2 hidden rounded-full border border-border bg-slate-50 px-3 py-1 text-[11px] font-semibold text-muted lg:inline-flex">
+              Desktop
+            </span>
+          )}
           <Link
             href="/admin"
             aria-label="Quản lý dữ liệu"
+            title="Cài đặt / quản lý dữ liệu"
             className="flex h-9 w-9 items-center justify-center rounded-full text-muted transition hover:bg-slate-100 hover:text-foreground"
           >
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" className="h-5 w-5">
@@ -71,25 +81,22 @@ export function TopHeader({ desktopMode, onToggleDesktop }: TopHeaderProps) {
             onClick={onToggleDesktop}
             aria-label={desktopMode ? "Chuyển về giao diện điện thoại" : "Chuyển sang giao diện desktop"}
             aria-pressed={desktopMode}
-            title={desktopMode ? "Giao diện điện thoại" : "Giao diện desktop"}
+            title={desktopMode ? "Về giao diện điện thoại" : "Mở giao diện desktop"}
             className={`hidden h-9 w-9 items-center justify-center rounded-full transition md:flex ${
               desktopMode ? "bg-accent-soft text-accent" : "text-muted hover:bg-slate-100 hover:text-foreground"
             }`}
           >
-            <DesktopIcon active={desktopMode} />
+            <LayoutIcon desktopMode={desktopMode} />
           </button>
           <button
             type="button"
             onClick={handleLogout}
             aria-label="Đăng xuất"
+            title="Đăng xuất"
             className="flex h-9 w-9 items-center justify-center rounded-full text-muted transition hover:bg-slate-100 hover:text-foreground"
           >
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" className="h-5 w-5">
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M9 21H5a2 2 0 01-2-2V5a2 2 0 012-2h4M16 17l5-5-5-5M21 12H9"
-              />
+              <path strokeLinecap="round" strokeLinejoin="round" d="M9 21H5a2 2 0 01-2-2V5a2 2 0 012-2h4M16 17l5-5-5-5M21 12H9" />
             </svg>
           </button>
         </div>
