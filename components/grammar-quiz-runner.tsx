@@ -10,6 +10,15 @@ export interface GrammarQuizResult {
   correct: boolean;
 }
 
+function QuizExplanation({ text }: { text?: string | null }) {
+  if (!text) return null;
+  return (
+    <div className="rounded-xl border border-border bg-surface p-3 text-sm text-foreground">
+      <span className="font-semibold">Giải thích:</span> {text}
+    </div>
+  );
+}
+
 /**
  * Trình chạy bài tập Ngữ pháp — hỗ trợ trắc nghiệm 4 lựa chọn (choose_pattern/
  * choose_connection/choose_meaning) và gõ đáp án (fill_blank/reorder_sentence,
@@ -104,6 +113,7 @@ export function GrammarQuizRunner({
                 : `Chưa đúng — đáp án: ${question.correct_answer}`}
             </p>
           )}
+          {checked && <QuizExplanation text={question.explanation_vi} />}
           <button
             type="submit"
             className="rounded-xl bg-accent px-4 py-3 text-sm font-semibold text-accent-foreground transition active:scale-[0.98]"
@@ -132,6 +142,7 @@ export function GrammarQuizRunner({
               </button>
             );
           })}
+          {checked && <QuizExplanation text={question.explanation_vi} />}
           {checked && (
             <button
               type="button"
