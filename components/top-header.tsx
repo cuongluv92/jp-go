@@ -1,13 +1,14 @@
 "use client";
 
 import Link from "next/link";
-import { useRouter } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 
 import { createClient } from "@/lib/supabase/client";
 
 interface TopHeaderProps {
   desktopMode: boolean;
   onToggleDesktop: () => void;
+  onOpenSearch?: () => void;
 }
 
 function LayoutIcon({ desktopMode }: { desktopMode: boolean }) {
@@ -28,8 +29,27 @@ function LayoutIcon({ desktopMode }: { desktopMode: boolean }) {
   );
 }
 
-export function TopHeader({ desktopMode, onToggleDesktop }: TopHeaderProps) {
+function getBreadcrumbs(pathname: string): string[] {
+  if (pathname === "/") return ["Trang chủ"];
+  if (pathname.startsWith("/vocabulary/")) return ["Từ vựng", "Chi tiết"];
+  if (pathname === "/vocabulary") return ["Từ vựng"];
+  if (pathname.startsWith("/kanji/")) return ["Kanji", "Chi tiết"];
+  if (pathname === "/kanji") return ["Kanji"];
+  if (pathname.startsWith("/grammar/")) return ["Ngữ pháp", "Chi tiết"];
+  if (pathname === "/grammar") return ["Ngữ pháp"];
+  if (pathname.startsWith("/plan")) return ["Lộ trình"];
+  if (pathname.startsWith("/practice")) return ["Luyện tập"];
+  if (pathname.startsWith("/review")) return ["Ôn tập"];
+  if (pathname.startsWith("/progress")) return ["Tiến độ"];
+  if (pathname.startsWith("/flashcards")) return ["Flashcard"];
+  if (pathname.startsWith("/admin")) return ["Quản lý dữ liệu"];
+  return ["jp-go"];
+}
+
+export function TopHeader({ desktopMode, onToggleDesktop, onOpenSearch }: TopHeaderProps) {
   const router = useRouter();
+  const pathname = usePathname();
+  const breadcrumbs = getBreadcrumbs(pathname);
 
   async function handleLogout() {
     const supabase = createClient();
@@ -39,13 +59,13 @@ export function TopHeader({ desktopMode, onToggleDesktop }: TopHeaderProps) {
   }
 
   const innerClassName = desktopMode
-    ? "mx-auto flex w-full max-w-7xl items-center justify-between px-5 py-3.5 lg:px-8"
+    ? "mx-auto flex w-full max-w-7xl items-center px-5 py-3.5 lg:px-8"
     : "mx-auto flex w-full max-w-md items-center justify-between px-4 py-3 sm:max-w-lg";
 
   return (
     <header className="safe-top sticky top-0 z-30 border-b border-border/90 bg-surface/90 backdrop-blur-xl">
       <div className={innerClassName}>
-        <Link href="/" className="flex items-center gap-3">
+        <Link href="/" className="flex shrink-0 items-center gap-3">
           <span className={`flex items-center justify-center bg-gradient-accent font-bold text-accent-foreground shadow-sm shadow-accent/30 ${desktopMode ? "h-10 w-10 rounded-2xl text-base" : "h-8 w-8 rounded-xl text-sm"}`}>
             日
           </span>
@@ -55,9 +75,38 @@ export function TopHeader({ desktopMode, onToggleDesktop }: TopHeaderProps) {
           </span>
         </Link>
 
-        <div className="flex items-center gap-1.5">
+        {desktopMode && (
+          <div className="mx-5 hidden min-w-0 flex-1 items-center gap-5 md:flex lg:mx-8">
+            <div className="min-w-0 flex-1">
+              <div className="flex min-w-0 items-center gap-1.5 text-xs font-medium text-muted">
+                {breadcrumbs.map((item, index) => (
+                  <span key={`${item}-${index}`} className="flex min-w-0 items-center gap-1.5">
+                    {index > 0 && <span className="text-slate-300">/</span>}
+                    <span className={index === breadcrumbs.length - 1 ? "truncate font-semibold text-foreground" : "truncate"}>{item}</span>
+                  </span>
+                ))}
+              </div>
+            </div>
+
+            <button
+              type="button"
+              onClick={onOpenSearch}
+              className="group flex w-full max-w-[330px] items-center gap-2.5 rounded-2xl border border-border bg-slate-50/85 px-3.5 py-2.5 text-left shadow-sm transition hover:border-accent/30 hover:bg-white hover:shadow-md"
+              aria-label="Tìm kiếm toàn app"
+            >
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" className="h-4 w-4 shrink-0 text-muted group-hover:text-accent">
+                <circle cx="11" cy="11" r="7" />
+                <path strokeLinecap="round" d="M21 21l-3.5-3.5" />
+              </svg>
+              <span className="min-w-0 flex-1 truncate text-xs font-medium text-muted">Tìm từ, Kanji, ngữ pháp...</span>
+              <kbd className="shrink-0 rounded-lg border border-border bg-white px-1.5 py-0.5 text-[9px] font-semibold text-muted">Ctrl K</kbd>
+            </button>
+          </div>
+        )}
+
+        <div className={`${desktopMode ? "ml-auto" : ""} flex shrink-0 items-center gap-1.5`}>
           {desktopMode && (
-            <span className="mr-2 hidden rounded-full border border-border bg-slate-50 px-3 py-1 text-[11px] font-semibold text-muted lg:inline-flex">
+            <span className="mr-1 hidden rounded-full border border-border bg-slate-50 px-3 py-1 text-[11px] font-semibold text-muted xl:inline-flex">
               Desktop
             </span>
           )}
