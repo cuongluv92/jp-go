@@ -2,12 +2,14 @@
 
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
-import { Suspense, useEffect, useState } from "react";
+import { Suspense, useEffect, useMemo, useState } from "react";
 
+import { LessonNavigator } from "@/components/lesson-navigator";
 import { getCached, setCached } from "@/lib/data/client-cache";
 import { downloadBlob } from "@/lib/data/excel-export";
 import { buildGrammarWorkbook, fetchAllGrammarData } from "@/lib/data/grammar-excel-export";
 import { getGrammarLevelCounts, listGrammarByLevel, type GrammarRow } from "@/lib/data/grammar-service";
+import { getLessonCount, LESSON_SIZES, sliceLesson } from "@/lib/data/lesson-structure";
 import { createClient } from "@/lib/supabase/client";
 import { JLPT_LEVELS, type JlptLevel } from "@/lib/types";
 import { JLPT_TONES } from "@/lib/ui/jlpt-styles";
@@ -43,6 +45,7 @@ function GrammarListContent() {
   const [loadError, setLoadError] = useState<string | null>(null);
   const [reloadKey, setReloadKey] = useState(0);
   const [exporting, setExporting] = useState(false);
+  const [selectedLesson, setSelectedLesson] = useState(1);
 
   useEffect(() => {
     let cancelled = false;
@@ -71,6 +74,7 @@ function GrammarListContent() {
   function selectLevel(newLevel: JlptLevel) {
     const cached = getCached<GrammarListCachedData>(grammarListCacheKey(newLevel));
     setLoadError(null);
+    setSelectedLesson(1);
     if (cached) {
       setGrammarList(cached.grammarList);
       setCountsByLevel(cached.countsByLevel);
@@ -101,6 +105,11 @@ function GrammarListContent() {
   }
 
   const tone = JLPT_TONES[level];
+  const lessonCount = getLessonCount(grammarList.length, LESSON_SIZES.grammar);
+  const displayedGrammar = useMemo(
+    () => sliceLesson(grammarList, selectedLesson, LESSON_SIZES.grammar),
+    [grammarList, selectedLesson],
+  );
 
   return (
     <div className="flex flex-col gap-4">
@@ -110,7 +119,9 @@ function GrammarListContent() {
             <h1 className="text-xl font-bold">Ngữ pháp</h1>
             <span className={`inline-flex rounded-full border px-2.5 py-1 text-[11px] font-bold ${tone.badge}`}>{level}</span>
           </div>
-          <p className="mt-1 text-sm text-muted">{grammarList.length} mẫu ở cấp {level}</p>
+          <p className="mt-1 text-sm text-muted">
+            {grammarList.length} mẫu · {lessonCount} bài · khoảng {LESSON_SIZES.grammar} mẫu/bài
+          </p>
         </div>
         <button
           type="button"
@@ -158,6 +169,17 @@ function GrammarListContent() {
         </div>
       )}
 
+      {grammarList.length > 0 && !loading && (
+        <LessonNavigator
+          totalItems={grammarList.length}
+          lessonSize={LESSON_SIZES.grammar}
+          selectedLesson={selectedLesson}
+          onChange={setSelectedLesson}
+          unitLabel="mẫu"
+          title="Bài ngữ pháp"
+        />
+      )}
+
       {loading ? (
         <p className="rounded-2xl border border-dashed border-border p-4 text-sm text-muted">Đang tải...</p>
       ) : loadError && grammarList.length === 0 ? (
@@ -173,18 +195,24 @@ function GrammarListContent() {
         </p>
       ) : (
         <ul className="flex flex-col gap-2">
-          {grammarList.map((g) => (
-            <li key={g.id}>
-              <Link
-                href={`/grammar/${g.id}`}
-                className="group relative flex flex-col gap-0.5 overflow-hidden rounded-xl border border-border bg-surface py-3 pl-5 pr-4 shadow-sm transition hover:border-slate-300 hover:shadow-md active:scale-[0.98]"
-              >
-                <span className={`absolute inset-y-0 left-0 w-1 ${tone.dot}`} aria-hidden />
-                <span className="font-jp text-base font-semibold transition group-hover:text-accent">{g.grammar_pattern}</span>
-                <span className="text-xs leading-5 text-muted">{g.meaning_vi}</span>
-              </Link>
-            </li>
-          ))}
+          {displayedGrammar.map((g, index) => {
+            const absoluteIndex = (selectedLesson - 1) * LESSON_SIZES.grammar + index + 1;
+            return (
+              <li key={g.id}>
+                <Link
+                  href={`/grammar/${g.id}`}
+                  className="group relative flex flex-col gap-0.5 overflow-hidden rounded-xl border border-border bg-surface py-3 pl-5 pr-4 shadow-sm transition hover:border-slate-300 hover:shadow-md active:scale-[0.98]"
+                >
+                  <span className={`absolute inset-y-0 left-0 w-1 ${tone.dot}`} aria-hidden />
+                  <div className="flex items-center justify-between gap-3">
+                    <span className="font-jp min-w-0 text-base font-semibold transition group-hover:text-accent">{g.grammar_pattern}</span>
+                    <span className="shrink-0 text-[10px] font-bold text-muted">#{absoluteIndex}</span>
+                  </div>
+                  <span className="text-xs leading-5 text-muted">{g.meaning_vi}</span>
+                </Link>
+              </li>
+            );
+          })}
         </ul>
       )}
     </div>
