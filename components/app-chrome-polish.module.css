@@ -1,0 +1,146 @@
+.desktopMain,
+.mobileMain {
+  min-width: 0;
+}
+
+/* Desktop detail workspace ------------------------------------------------ */
+:global(html[data-jp-page$="-detail"]) .desktopMain > div {
+  display: grid;
+  width: 100%;
+  max-width: 1180px;
+  grid-template-columns: minmax(260px, 310px) minmax(0, 1fr);
+  align-items: start;
+  gap: 18px 24px;
+}
+
+:global(html[data-jp-page$="-detail"]) .desktopMain > div > * {
+  min-width: 0;
+  grid-column: 2;
+}
+
+:global(html[data-jp-page$="-detail"]) .desktopMain > div > a:first-child {
+  grid-column: 1 / -1;
+}
+
+:global(html[data-jp-page="vocabulary-detail"]) .desktopMain > div > section:first-of-type,
+:global(html[data-jp-page="grammar-detail"]) .desktopMain > div > [class~="text-center"][class~="shadow-sm"],
+:global(html[data-jp-page="kanji-detail"]) .desktopMain > div > [class~="text-center"][class~="shadow-sm"] {
+  grid-column: 1;
+  position: sticky;
+  top: 104px;
+  z-index: 2;
+  border-radius: 24px;
+  padding: 22px;
+  box-shadow: 0 20px 42px -32px rgba(15, 23, 42, 0.52);
+}
+
+:global(html[data-jp-page="vocabulary-detail"]) .desktopMain > div > section:first-of-type [class~="text-3xl"] {
+  font-size: 1.75rem;
+  line-height: 2.15rem;
+}
+
+:global(html[data-jp-page="kanji-detail"]) .desktopMain > div > [class~="text-center"][class~="shadow-sm"] [class~="text-6xl"] {
+  font-size: 4.6rem;
+  line-height: 1;
+}
+
+:global(html[data-jp-page="grammar-detail"]) .desktopMain > div > [class~="text-center"][class~="shadow-sm"] [class~="text-2xl"] {
+  font-size: 1.6rem;
+  line-height: 2.1rem;
+}
+
+:global(html[data-jp-page$="-detail"]) .desktopMain > div > :not(a) {
+  scroll-margin-top: 104px;
+}
+
+:global(html[data-jp-page="kanji-detail"]) .desktopMain > div > p,
+:global(html[data-jp-page="grammar-detail"]) .desktopMain > div > p {
+  max-width: none;
+}
+
+:global(html[data-jp-page="vocabulary-detail"]) .desktopMain > div > section:not(:first-of-type),
+:global(html[data-jp-page="grammar-detail"]) .desktopMain > div > div:not([class~="text-center"]),
+:global(html[data-jp-page="kanji-detail"]) .desktopMain > div > div:not([class~="text-center"]) {
+  min-width: 0;
+}
+
+/* Mobile polish ----------------------------------------------------------- */
+.mobileMain {
+  padding-bottom: calc(6.75rem + env(safe-area-inset-bottom, 0px));
+}
+
+:global(html[data-jp-page$="-detail"]) .mobileMain > div {
+  gap: 16px;
+}
+
+:global(html[data-jp-page="vocabulary-detail"]) .mobileMain > div > section:first-of-type,
+:global(html[data-jp-page="grammar-detail"]) .mobileMain > div > [class~="text-center"][class~="shadow-sm"],
+:global(html[data-jp-page="kanji-detail"]) .mobileMain > div > [class~="text-center"][class~="shadow-sm"] {
+  border-radius: 20px;
+  padding: 16px;
+  box-shadow: 0 14px 30px -26px rgba(15, 23, 42, 0.5);
+}
+
+:global(html[data-jp-page="kanji-detail"]) .mobileMain > div > [class~="text-center"][class~="shadow-sm"] [class~="text-6xl"] {
+  font-size: 3.25rem;
+  line-height: 1;
+}
+
+:global(html[data-jp-page="vocabulary-detail"]) .mobileMain > div > section:first-of-type [class~="text-3xl"] {
+  font-size: 1.65rem;
+  line-height: 2rem;
+}
+
+:global(html[data-jp-page="vocabulary-detail"]) .mobileMain > div > section:not(:first-of-type),
+:global(html[data-jp-page="grammar-detail"]) .mobileMain > div > div,
+:global(html[data-jp-page="kanji-detail"]) .mobileMain > div > div {
+  border-radius: 16px;
+}
+
+:global(html[data-jp-page="vocabulary"]) .mobileMain > div > ul > li > a,
+:global(html[data-jp-page="grammar"]) .mobileMain > div > ul > li > a,
+:global(html[data-jp-page="kanji"]) .mobileMain > div > ul > li > a {
+  border-radius: 16px;
+  border-color: rgba(203, 213, 225, 0.9);
+  box-shadow: 0 8px 22px -20px rgba(15, 23, 42, 0.55);
+}
+
+.mobileMain ~ :global(nav.safe-bottom) {
+  border-top-color: rgba(203, 213, 225, 0.88);
+  background: rgba(255, 255, 255, 0.94);
+  box-shadow: 0 -12px 30px -24px rgba(15, 23, 42, 0.55);
+  backdrop-filter: blur(18px);
+}
+
+.mobileMain ~ :global(nav.safe-bottom) > ul {
+  gap: 2px;
+  padding: 5px 6px 6px;
+}
+
+.mobileMain ~ :global(nav.safe-bottom) a {
+  min-height: 50px;
+  justify-content: center;
+  border-radius: 16px;
+  transition: background-color 150ms ease, color 150ms ease, transform 150ms ease, box-shadow 150ms ease;
+}
+
+.mobileMain ~ :global(nav.safe-bottom) a[aria-current="page"] {
+  box-shadow: inset 0 0 0 1px rgba(67, 56, 202, 0.08), 0 8px 18px -16px rgba(67, 56, 202, 0.7);
+}
+
+.mobileMain ~ :global(nav.safe-bottom) a:active {
+  transform: scale(0.97);
+}
+
+@media (max-width: 1060px) {
+  :global(html[data-jp-page$="-detail"]) .desktopMain > div {
+    grid-template-columns: minmax(230px, 270px) minmax(0, 1fr);
+    gap: 16px 20px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .mobileMain ~ :global(nav.safe-bottom) a {
+    transition: none;
+  }
+}

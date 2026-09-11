@@ -6,6 +6,7 @@ import { useEffect, useState, type ReactNode } from "react";
 import { BottomNav } from "@/components/bottom-nav";
 import { GlobalCommandPalette } from "@/components/global-command-palette";
 import { TopHeader } from "@/components/top-header";
+import styles from "@/components/app-chrome-polish.module.css";
 
 const LAYOUT_STORAGE_KEY = "jp-go-layout-mode";
 const SIDEBAR_STORAGE_KEY = "jp-go-desktop-sidebar-collapsed";
@@ -120,7 +121,7 @@ export function AppChrome({ children }: { children: ReactNode }) {
         <TopHeader desktopMode onToggleDesktop={toggleLayoutMode} onOpenSearch={() => setCommandOpen(true)} />
         <div className={desktopGridClass}>
           <BottomNav desktopMode sidebarCollapsed={sidebarCollapsed} onToggleSidebar={toggleSidebar} />
-          <main className="min-w-0 pb-10">{children}</main>
+          <main className={`${styles.desktopMain} min-w-0 pb-10`}>{children}</main>
         </div>
         <GlobalCommandPalette open={commandOpen} onClose={() => setCommandOpen(false)} />
       </>
@@ -130,7 +131,7 @@ export function AppChrome({ children }: { children: ReactNode }) {
   return (
     <>
       <TopHeader desktopMode={false} onToggleDesktop={toggleLayoutMode} />
-      <main className="mx-auto w-full max-w-md flex-1 px-4 pb-24 pt-4 sm:max-w-lg">{children}</main>
+      <main className={`${styles.mobileMain} mx-auto w-full max-w-md flex-1 px-4 pb-24 pt-4 sm:max-w-lg`}>{children}</main>
       <BottomNav desktopMode={false} />
     </>
   );
