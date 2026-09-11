@@ -1,20 +1,22 @@
 import type { Metadata, Viewport } from "next";
-import { Noto_Sans_JP, Noto_Sans } from "next/font/google";
+import { Inter, Noto_Sans_JP } from "next/font/google";
 
 import { AppChrome } from "@/components/app-chrome";
 import { VocabularyProvider } from "@/lib/data/vocabulary-context";
 
 import "./globals.css";
 
-const notoSans = Noto_Sans({
+const inter = Inter({
   variable: "--font-sans",
-  subsets: ["latin"],
+  subsets: ["latin", "vietnamese"],
+  display: "swap",
 });
 
 const notoSansJp = Noto_Sans_JP({
   variable: "--font-jp",
   subsets: ["latin"],
-  weight: ["400", "500", "700"],
+  weight: ["400", "500", "600", "700"],
+  display: "swap",
 });
 
 export const metadata: Metadata = {
@@ -40,12 +42,12 @@ export const viewport: Viewport = {
   initialScale: 1,
   maximumScale: 1,
   viewportFit: "cover",
-  themeColor: "#4f46e5",
+  themeColor: "#4338ca",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="vi" className={`${notoSans.variable} ${notoSansJp.variable} h-full`}>
+    <html lang="vi" className={`${inter.variable} ${notoSansJp.variable} h-full`}>
       <body className="flex h-full min-h-dvh flex-col bg-background font-sans text-foreground antialiased">
         <VocabularyProvider>
           <AppChrome>{children}</AppChrome>
