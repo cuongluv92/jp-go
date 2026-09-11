@@ -9,14 +9,27 @@ import { TopHeader } from "@/components/top-header";
 const LAYOUT_STORAGE_KEY = "jp-go-layout-mode";
 type LayoutMode = "mobile" | "desktop";
 
+function getPageKind(pathname: string): string {
+  if (pathname === "/") return "home";
+  if (pathname === "/vocabulary") return "vocabulary";
+  if (pathname.startsWith("/vocabulary/")) return "vocabulary-detail";
+  if (pathname === "/grammar") return "grammar";
+  if (pathname.startsWith("/grammar/")) return "grammar-detail";
+  if (pathname === "/kanji") return "kanji";
+  if (pathname.startsWith("/kanji/")) return "kanji-detail";
+  if (pathname === "/plan") return "plan";
+  if (pathname === "/practice") return "practice";
+  if (pathname === "/review") return "review";
+  if (pathname === "/progress") return "progress";
+  if (pathname === "/flashcards") return "flashcards";
+  return "generic";
+}
+
 /**
- * Bọc phần khung app (header + bottom nav) và chỉ hiện khi đã ở trong app
- * thật sự — ẩn hoàn toàn ở /login vì lúc đó chưa có phiên đăng nhập nên
- * các nút Quản lý dữ liệu/Đăng xuất (TopHeader) và các tab (BottomNav) đều
- * chưa có ý nghĩa, hiện ra chỉ gây rối mắt cho màn hình đăng nhập.
- *
- * Mặc định giữ khung hẹp như giao diện điện thoại. Trên máy tính người dùng
- * có thể bật chế độ desktop từ TopHeader; lựa chọn được lưu trên trình duyệt.
+ * Khung chung của app.
+ * - Mobile mode giữ nguyên giao diện hẹp + bottom navigation.
+ * - Desktop mode chuyển thành workspace: sidebar trái + nội dung chính rộng.
+ * Lựa chọn được lưu riêng trên trình duyệt của người dùng.
  */
 export function AppChrome({ children }: { children: ReactNode }) {
   const pathname = usePathname();
@@ -34,6 +47,15 @@ export function AppChrome({ children }: { children: ReactNode }) {
     }
   }, []);
 
+  useEffect(() => {
+    document.documentElement.dataset.jpLayout = layoutMode;
+    document.documentElement.dataset.jpPage = getPageKind(pathname);
+
+    return () => {
+      delete document.documentElement.dataset.jpPage;
+    };
+  }, [layoutMode, pathname]);
+
   const isDesktopMode = layoutMode === "desktop";
 
   function toggleLayoutMode() {
@@ -50,15 +72,23 @@ export function AppChrome({ children }: { children: ReactNode }) {
     return <main className="mx-auto w-full max-w-md flex-1 px-4 py-4 sm:max-w-lg">{children}</main>;
   }
 
-  const mainClassName = isDesktopMode
-    ? "mx-auto w-full max-w-7xl flex-1 px-4 pb-24 pt-4 sm:px-6 lg:px-8"
-    : "mx-auto w-full max-w-md flex-1 px-4 pb-24 pt-4 sm:max-w-lg";
+  if (isDesktopMode) {
+    return (
+      <>
+        <TopHeader desktopMode onToggleDesktop={toggleLayoutMode} />
+        <div className="mx-auto grid w-full max-w-7xl flex-1 grid-cols-[220px_minmax(0,1fr)] items-start gap-7 px-5 py-6 lg:grid-cols-[232px_minmax(0,1fr)] lg:gap-8 lg:px-8">
+          <BottomNav desktopMode />
+          <main className="min-w-0 pb-10">{children}</main>
+        </div>
+      </>
+    );
+  }
 
   return (
     <>
-      <TopHeader desktopMode={isDesktopMode} onToggleDesktop={toggleLayoutMode} />
-      <main className={mainClassName}>{children}</main>
-      <BottomNav desktopMode={isDesktopMode} />
+      <TopHeader desktopMode={false} onToggleDesktop={toggleLayoutMode} />
+      <main className="mx-auto w-full max-w-md flex-1 px-4 pb-24 pt-4 sm:max-w-lg">{children}</main>
+      <BottomNav desktopMode={false} />
     </>
   );
 }
