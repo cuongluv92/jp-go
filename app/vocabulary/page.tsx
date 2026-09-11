@@ -16,6 +16,7 @@ import {
   type LearningStatus,
   type PartOfSpeech,
 } from "@/lib/types";
+import { JLPT_TONES } from "@/lib/ui/jlpt-styles";
 
 export default function VocabularyPage() {
   return (
@@ -53,7 +54,12 @@ function VocabularyPageContent() {
   return (
     <div className="flex flex-col gap-4">
       <div>
-        <h1 className="text-xl font-bold">{collection === "current" ? "Kho từ vựng" : currentCollection.label}</h1>
+        <div className="flex items-center gap-2.5">
+          <h1 className="text-xl font-bold">{collection === "current" ? "Kho từ vựng" : currentCollection.label}</h1>
+          {filter.level && collection === "current" && (
+            <span className={`inline-flex rounded-full border px-2.5 py-1 text-[11px] font-bold ${JLPT_TONES[filter.level].badge}`}>{filter.level}</span>
+          )}
+        </div>
         <p className="mt-1 text-sm text-muted">{visibleWords.length} từ · đang hiển thị {filtered.length}</p>
       </div>
 
@@ -63,7 +69,7 @@ function VocabularyPageContent() {
             key={item.id}
             href={item.href}
             aria-current={collection === item.id ? "page" : undefined}
-            className={`shrink-0 rounded-xl border px-3 py-2 text-sm font-semibold ${collection === item.id ? "border-accent bg-accent text-accent-foreground" : "border-border bg-surface text-muted"}`}
+            className={`shrink-0 rounded-xl border px-3 py-2 text-sm font-semibold transition ${collection === item.id ? "border-accent bg-accent text-accent-foreground shadow-sm shadow-accent/20" : "border-border bg-surface text-muted hover:border-slate-300 hover:bg-slate-50 hover:text-foreground"}`}
           >
             {item.label}
           </Link>
@@ -90,7 +96,7 @@ function VocabularyPageContent() {
           value={filter.query ?? ""}
           onChange={(e) => setFilter((f) => ({ ...f, query: e.target.value }))}
           placeholder="Tìm theo từ, cách đọc hoặc nghĩa..."
-          className="w-full rounded-xl border border-border bg-surface py-2.5 pl-9 pr-3 text-sm shadow-sm outline-none focus:border-accent"
+          className="w-full rounded-xl border border-border bg-surface py-2.5 pl-9 pr-3 text-sm shadow-sm outline-none transition focus:border-accent"
         />
       </div>
 
@@ -118,20 +124,25 @@ function VocabularyPageContent() {
       </div>
 
       <ul className="flex flex-col gap-2">
-        {filtered.map((word) => (
-          <li key={word.id}>
-            <Link href={`/vocabulary/${word.id}`} className="flex items-center justify-between gap-3 rounded-xl border border-border bg-surface px-4 py-3 shadow-sm transition active:scale-[0.99]">
-              <div className="min-w-0">
-                <div className="flex items-center gap-2">
-                  <p className="font-jp truncate text-base font-semibold">{word.word}</p>
-                  {word.progress.isFavorite && <span aria-hidden>⭐</span>}
+        {filtered.map((word) => {
+          const tone = JLPT_TONES[word.jlpt];
+          return (
+            <li key={word.id}>
+              <Link href={`/vocabulary/${word.id}`} className="group relative flex items-center justify-between gap-3 overflow-hidden rounded-xl border border-border bg-surface py-3 pl-5 pr-4 shadow-sm transition hover:-translate-y-0.5 hover:border-slate-300 hover:shadow-md active:scale-[0.99]">
+                <span className={`absolute inset-y-0 left-0 w-1 ${tone.dot}`} aria-hidden />
+                <div className="min-w-0">
+                  <div className="flex items-center gap-2">
+                    <p className="font-jp truncate text-base font-semibold transition group-hover:text-accent">{word.word}</p>
+                    <span className={`hidden rounded-full border px-2 py-0.5 text-[10px] font-bold sm:inline-flex ${tone.badge}`}>{word.jlpt}</span>
+                    {word.progress.isFavorite && <span aria-hidden>⭐</span>}
+                  </div>
+                  <p className="truncate text-xs leading-5 text-muted">{word.reading} · {word.meaningVi}</p>
                 </div>
-                <p className="truncate text-xs text-muted">{word.reading} · {word.meaningVi}</p>
-              </div>
-              <StatusBadge status={word.progress.status} />
-            </Link>
-          </li>
-        ))}
+                <StatusBadge status={word.progress.status} />
+              </Link>
+            </li>
+          );
+        })}
         {filtered.length === 0 && (
           <li className="rounded-xl border border-dashed border-border p-6 text-center text-sm text-muted">Chưa có dữ liệu ở mục này.</li>
         )}
@@ -141,12 +152,13 @@ function VocabularyPageContent() {
 }
 
 function SelectChip({ label, value, options, onChange }: { label: string; value?: string; options: { value: string; label: string }[]; onChange: (value: string) => void }) {
+  const levelTone = value && (JLPT_LEVELS as readonly string[]).includes(value) ? JLPT_TONES[value as JlptLevel] : null;
   return (
     <label className="relative shrink-0">
       <select
         value={value ?? ""}
         onChange={(e) => onChange(e.target.value)}
-        className={`appearance-none rounded-full border px-3 py-1.5 pr-7 text-xs font-medium shadow-sm outline-none ${value ? "border-accent bg-accent/10 text-accent" : "border-border bg-surface text-muted"}`}
+        className={`appearance-none rounded-full border px-3 py-1.5 pr-7 text-xs font-semibold shadow-sm outline-none transition ${levelTone ? levelTone.idle : value ? "border-accent bg-accent/10 text-accent" : "border-border bg-surface text-muted hover:border-slate-300"}`}
       >
         <option value="">{label}</option>
         {options.map((opt) => <option key={opt.value} value={opt.value}>{opt.label}</option>)}
