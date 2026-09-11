@@ -13,7 +13,7 @@ type SegmentCandidate = {
   surface: string;
   word: VocabWord | null;
   reading?: string;
-  /** 3 = token nội dung kiểm tra tay, 2 = suy ra an toàn từ reading_furigana, 1 = chỉ khớp mặt chữ. */
+  /** 3 = token nội dung kiểm tra tay, 2 = reading khớp trực tiếp, 1 = fallback yếu/không reading. */
   readingPriority: 1 | 2 | 3;
 };
 
@@ -35,17 +35,52 @@ const KURU_SUFFIX_READINGS: Record<string, string> = {
   "来れば": "くれば",
 };
 
+const KANJI_LIKE_RE = /[一-鿿々〆ヵヶ]/u;
+
 function hasKanji(value: string): boolean {
-  return /[一-鿿]/u.test(value);
+  return KANJI_LIKE_RE.test(value);
+}
+
+/** Ruby chỉ được nhận đúng một cách đọc cụ thể. Dữ liệu kiểu なに／なん
+ * là ghi chú nhiều cách đọc, không được đưa nguyên chuỗi đó lên furigana. */
+function singleStoredReading(value: string | undefined): string | undefined {
+  const reading = normalizeDictionaryForm(value || "").trim();
+  if (!reading || /[／/・,，;]/u.test(reading)) return undefined;
+  return reading;
+}
+
+/**
+ * reading_furigana mô tả word.word đang hiển thị, không phải lúc nào cũng là
+ * dictionary_form. Ví dụ 歩いて=あるいて nhưng dictionary_form=歩く.
+ * Chỉ dùng reading đó để suy dạng chia khi có căn cứ nó thực sự là reading
+ * của dictionary_form. Entry có nhãn ngữ cảnh như [雨が～]降る vẫn dùng được,
+ * nhưng cho priority thấp hơn entry gốc 降る nếu cả hai cùng tồn tại.
+ */
+function trustedDictionaryReading(
+  word: VocabWord,
+  dictionaryForm: string,
+): { reading: string; priority: 1 | 2 } | null {
+  const reading = singleStoredReading(word.reading);
+  if (!reading) return null;
+
+  const rawWord = (word.word || "").trim();
+  const normalizedWord = normalizeDictionaryForm(rawWord);
+  if (normalizedWord === dictionaryForm) return { reading, priority: 2 };
+  if (rawWord.endsWith(dictionaryForm)) return { reading, priority: 1 };
+  return null;
 }
 
 /**
  * Tạo reading cho đúng bề mặt chia từ mà không đoán phát âm mới:
- * giữ nguyên phần reading của gốc đã có trong jp_vocab rồi nối hậu tố kana
+ * giữ nguyên phần reading của dạng từ điển đã xác nhận rồi nối hậu tố kana
  * xuất hiện trực tiếp trên bề mặt. 来る là ngoại lệ duy nhất cần bảng riêng.
  */
-function deriveVerifiedReading(word: VocabWord, dictionaryForm: string, surface: string): string | undefined {
-  const dictionaryReading = normalizeDictionaryForm(word.reading || "").trim();
+function deriveVerifiedReading(
+  word: VocabWord,
+  dictionaryForm: string,
+  dictionaryReading: string,
+  surface: string,
+): string | undefined {
   if (!dictionaryReading || !hasKanji(surface)) return undefined;
 
   if (surface === dictionaryForm) return dictionaryReading;
@@ -95,8 +130,11 @@ function deriveVerifiedReading(word: VocabWord, dictionaryForm: string, surface:
   return undefined;
 }
 
-function safeStemCandidate(word: VocabWord, dictionaryForm: string): { surface: string; reading: string } | null {
-  const dictionaryReading = normalizeDictionaryForm(word.reading || "").trim();
+function safeStemCandidate(
+  word: VocabWord,
+  dictionaryForm: string,
+  dictionaryReading: string,
+): { surface: string; reading: string } | null {
   if (!dictionaryReading) return null;
 
   // 来る phải dùng bảng bất quy tắc ở trên, nếu lấy 来→く sẽ sai ở 来ます/来ない.
@@ -135,24 +173,30 @@ function addCandidate(byFirst: Map<string, SegmentCandidate[]>, candidate: Segme
 }
 
 /**
- * Kanji đơn như stem 書[か] chỉ là fallback khi chưa xác định được đầy đủ dạng
- * chia. Không được nhận nó bên trong từ ghép như 報告書/図書館, nếu không UI
- * sẽ gắn furigana và liên kết từ sai vị trí trước khi tới động từ thật.
+ * Không được nhận một từ ngắn nằm bên trong từ ghép Kanji dài hơn. Ví dụ
+ * 一日[ついたち] không được ăn mất tiền tố của 一日中[いちにちじゅう].
+ * Với Kanji đơn, kiểm cả hai phía như trước; với từ nhiều ký tự, chặn khi
+ * ngay sau nó vẫn là Kanji/々 để ưu tiên token/từ ghép đầy đủ nếu có.
  */
 function candidateMatchesAt(text: string, index: number, candidate: SegmentCandidate): boolean {
   if (!text.startsWith(candidate.surface, index)) return false;
-  if (candidate.surface.length !== 1 || !hasKanji(candidate.surface)) return true;
 
   const previous = index > 0 ? text[index - 1] : "";
   const next = text[index + candidate.surface.length] ?? "";
-  return !hasKanji(previous) && !hasKanji(next);
+  if (candidate.surface.length === 1 && hasKanji(candidate.surface)) {
+    return !hasKanji(previous) && !hasKanji(next);
+  }
+  const last = candidate.surface.slice(-1);
+  if (hasKanji(last) && hasKanji(next)) return false;
+  return true;
 }
 
 /**
  * Tách câu theo từ vựng đã có trong jp-go bằng cách ưu tiên từ dài nhất.
  * Furigana chỉ được hiển thị khi reading xuất phát từ reading_furigana đã lưu
- * hoặc token đã kiểm tra tay. Không dùng bộ phân tích hình thái/dịch tự động
- * để đoán phần không chắc chắn; đoạn không khớp luôn được giữ nguyên.
+ * đúng cho bề mặt/dạng từ điển, hoặc token đã kiểm tra tay. Không dùng bộ phân
+ * tích hình thái/dịch tự động để đoán phần không chắc chắn; đoạn không khớp
+ * luôn được giữ nguyên.
  */
 export function segmentJapaneseText(
   text: string,
@@ -162,28 +206,51 @@ export function segmentJapaneseText(
   const byFirst = new Map<string, SegmentCandidate[]>();
 
   for (const word of words) {
+    const rawWord = (word.word || "").trim();
     const dictionaryForm = normalizeDictionaryForm(word.dictionaryForm || word.word);
+    const dictionary = trustedDictionaryReading(word, dictionaryForm);
     const conjugation = getConjugation(word);
     const conjugationForms = conjugation ? Object.values(conjugation).filter((value): value is string => typeof value === "string") : [];
-    const surfaces = new Set([word.word.trim(), dictionaryForm, ...conjugationForms]);
+    const surfaces = new Set([rawWord, dictionaryForm, ...conjugationForms]);
 
     // N5 cũ còn nhiều động từ chưa có verb_class. Riêng 来る vẫn thêm được
-    // toàn bộ dạng bất quy tắc vì đây là bảng xác định, không phải suy đoán nhóm.
-    if (dictionaryForm.endsWith("来る") && normalizeDictionaryForm(word.reading || "").endsWith("くる")) {
+    // toàn bộ dạng bất quy tắc khi reading của dictionary_form đã đáng tin.
+    if (dictionary && dictionaryForm.endsWith("来る") && dictionary.reading.endsWith("くる")) {
       const prefix = dictionaryForm.slice(0, -2);
       Object.keys(KURU_SUFFIX_READINGS).forEach((suffix) => surfaces.add(`${prefix}${suffix}`));
     }
 
     for (const surface of surfaces) {
-      const reading = deriveVerifiedReading(word, dictionaryForm, surface);
-      addCandidate(byFirst, { surface, word, reading, readingPriority: reading ? 2 : 1 });
+      // reading_furigana luôn mô tả word.word đang hiển thị, vì vậy exact
+      // surface được phép dùng trực tiếp kể cả khi entry là 歩いて/知っている.
+      if (surface === rawWord) {
+        const exactReading = singleStoredReading(word.reading);
+        addCandidate(byFirst, {
+          surface,
+          word,
+          reading: exactReading && hasKanji(surface) ? exactReading : undefined,
+          readingPriority: exactReading && hasKanji(surface) ? 2 : 1,
+        });
+        continue;
+      }
+
+      const reading = dictionary
+        ? deriveVerifiedReading(word, dictionaryForm, dictionary.reading, surface)
+        : undefined;
+      addCandidate(byFirst, {
+        surface,
+        word,
+        reading,
+        readingPriority: reading ? dictionary?.priority ?? 1 : 1,
+      });
     }
 
-    // Khi verb_class chưa có, vẫn có thể gắn furigana cho phần gốc có kanji:
-    // 書いて→書[か] + いて, 食べます→食べ[たべ] + ます,
-    // 確認しました→確認[かくにん] + しました.
-    const stem = safeStemCandidate(word, dictionaryForm);
-    if (stem) addCandidate(byFirst, { ...stem, word, readingPriority: 2 });
+    // Khi verb_class chưa có, vẫn có thể gắn furigana cho phần gốc có kanji,
+    // nhưng chỉ khi reading của dictionary_form đã được xác nhận.
+    if (dictionary) {
+      const stem = safeStemCandidate(word, dictionaryForm, dictionary.reading);
+      if (stem) addCandidate(byFirst, { ...stem, word, readingPriority: dictionary.priority });
+    }
   }
 
   // Token kiểm tra tay luôn thắng reading suy ra nếu cùng một bề mặt.
