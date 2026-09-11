@@ -1,15 +1,15 @@
 @import "tailwindcss";
 
 :root {
-  --background: #f4f5fb;
-  --foreground: #0f172a;
-  --accent: #4f46e5;
+  --background: #f6f7fb;
+  --foreground: #111827;
+  --accent: #4338ca;
   --accent-foreground: #ffffff;
   --accent-soft: #eef2ff;
   --surface: #ffffff;
-  --border: #e5e7f0;
-  --muted: #64748b;
-  --gradient-accent: linear-gradient(135deg, #6366f1 0%, #4f46e5 55%, #4338ca 100%);
+  --border: #d9deea;
+  --muted: #526075;
+  --gradient-accent: linear-gradient(135deg, #6366f1 0%, #4f46e5 52%, #3730a3 100%);
 }
 
 @theme inline {
@@ -27,16 +27,55 @@
 
 html {
   overscroll-behavior-y: none;
+  text-rendering: optimizeLegibility;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
+  line-height: 1.55;
   -webkit-tap-highlight-color: transparent;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::selection {
+  background: #c7d2fe;
+  color: #1e1b4b;
+}
+
+::placeholder {
+  color: #7b8798;
+  opacity: 1;
+}
+
+h1,
+h2,
+h3 {
+  color: #0b1220;
+  letter-spacing: -0.022em;
+}
+
+button,
+a,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid rgba(67, 56, 202, 0.45);
+  outline-offset: 2px;
 }
 
 .font-jp {
   font-family: var(--font-jp), var(--font-sans), sans-serif;
+  font-kerning: normal;
 }
 
 .safe-bottom {
@@ -54,13 +93,27 @@ body {
 /* Desktop workspace ------------------------------------------------------- */
 html[data-jp-layout="desktop"] body {
   background:
-    radial-gradient(circle at 12% -4%, rgba(99, 102, 241, 0.10), transparent 27rem),
-    radial-gradient(circle at 92% 8%, rgba(129, 140, 248, 0.08), transparent 24rem),
+    radial-gradient(circle at 12% -4%, rgba(99, 102, 241, 0.11), transparent 27rem),
+    radial-gradient(circle at 92% 8%, rgba(129, 140, 248, 0.09), transparent 24rem),
     var(--background);
 }
 
 html[data-jp-layout="desktop"] main {
   animation: desktop-content-in 180ms ease-out;
+}
+
+html[data-jp-layout="desktop"] main h1 {
+  font-weight: 750;
+  letter-spacing: -0.035em;
+}
+
+html[data-jp-layout="desktop"] main h2,
+html[data-jp-layout="desktop"] main h3 {
+  font-weight: 700;
+}
+
+html[data-jp-layout="desktop"] main .font-jp {
+  letter-spacing: 0.005em;
 }
 
 html[data-jp-layout="desktop"] main a,
@@ -106,7 +159,7 @@ html[data-jp-layout="desktop"][data-jp-page="home"] main > div > section:nth-of-
 
 html[data-jp-layout="desktop"][data-jp-page="home"] main > div > section:nth-of-type(2) > a:hover {
   transform: translateY(-2px);
-  border-color: rgba(79, 70, 229, 0.28);
+  border-color: rgba(67, 56, 202, 0.3);
   box-shadow: 0 10px 24px -16px rgba(15, 23, 42, 0.35);
 }
 
@@ -116,7 +169,7 @@ html[data-jp-layout="desktop"][data-jp-page="home"] main > div > section:nth-of-
   align-self: stretch;
   border: 1px solid var(--border);
   border-radius: 24px;
-  background: rgba(255, 255, 255, 0.92);
+  background: rgba(255, 255, 255, 0.95);
   padding: 24px;
   box-shadow: 0 16px 38px -30px rgba(15, 23, 42, 0.35);
 }
@@ -160,7 +213,7 @@ html[data-jp-layout="desktop"][data-jp-page="grammar"] main > div > ul > li > a 
 html[data-jp-layout="desktop"][data-jp-page="vocabulary"] main > div > ul > li > a:hover,
 html[data-jp-layout="desktop"][data-jp-page="grammar"] main > div > ul > li > a:hover {
   transform: translateY(-2px);
-  border-color: rgba(79, 70, 229, 0.26);
+  border-color: rgba(67, 56, 202, 0.28);
   box-shadow: 0 14px 30px -22px rgba(15, 23, 42, 0.42);
 }
 
@@ -183,7 +236,7 @@ html[data-jp-layout="desktop"][data-jp-page="kanji"] main > div > ul > li > a {
 
 html[data-jp-layout="desktop"][data-jp-page="kanji"] main > div > ul > li > a:hover {
   transform: translateY(-3px);
-  border-color: rgba(79, 70, 229, 0.3);
+  border-color: rgba(67, 56, 202, 0.32);
   box-shadow: 0 14px 30px -22px rgba(15, 23, 42, 0.42);
 }
 
