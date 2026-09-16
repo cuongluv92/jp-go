@@ -145,6 +145,20 @@ export default function HomePage() {
         />
       </section>
 
+      <section className="flex flex-col gap-3">
+        <h2 className="text-sm font-semibold text-foreground">Ôn thi chứng chỉ</h2>
+        <Link
+          href="/exam"
+          className="flex items-center justify-between gap-3 rounded-2xl border border-border bg-surface px-4 py-4 shadow-sm transition active:scale-[0.98]"
+        >
+          <div className="min-w-0">
+            <p className="font-jp truncate text-base font-bold">2級電気工事施工管理</p>
+            <p className="mt-0.5 text-xs text-muted">Sách + đề thi ôn chứng chỉ quản lý thi công điện</p>
+          </div>
+          <span className="shrink-0 text-accent">→</span>
+        </Link>
+      </section>
+
       <section className="grid grid-cols-2 gap-3">
         <StatCard label="Tiến độ lộ trình" value={`${planProgressPercent}%`} hint={plan ? `${completedDays.length}/${days.length} ngày` : undefined} />
         <StatCard label="Chuỗi ngày học" value={`🔥 ${streak}`} hint="ngày liên tục" />
