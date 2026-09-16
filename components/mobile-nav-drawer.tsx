@@ -23,15 +23,15 @@ function MobileNavGroup({ items, pathname, onNavigate }: { items: NavItem[]; pat
               onClick={onNavigate}
               aria-current={isActive ? "page" : undefined}
               className={`flex items-center gap-3 rounded-2xl px-3 py-2.5 transition ${
-                isActive ? "bg-accent text-accent-foreground shadow-sm shadow-accent/20" : "text-foreground active:bg-slate-100"
+                isActive ? "bg-accent-soft text-accent" : "text-foreground active:bg-slate-100"
               }`}
             >
-              <span className={`flex h-9 w-9 shrink-0 items-center justify-center rounded-xl ${isActive ? "bg-white/15" : "bg-slate-100 text-muted"}`}>
+              <span className={`flex h-9 w-9 shrink-0 items-center justify-center rounded-xl ${isActive ? "bg-white text-accent shadow-sm" : "bg-slate-100 text-muted"}`}>
                 {item.icon}
               </span>
               <span className="min-w-0">
                 <span className="block text-sm font-semibold">{item.label}</span>
-                <span className={`mt-0.5 block truncate text-[11px] ${isActive ? "text-white/75" : "text-muted"}`}>{item.description}</span>
+                <span className={`mt-0.5 block truncate text-[11px] ${isActive ? "text-accent/75" : "text-muted"}`}>{item.description}</span>
               </span>
             </Link>
           </li>

@@ -382,7 +382,7 @@ export function StudyPlanPanel() {
         </div>
       )}
 
-      <div className="bg-gradient-accent rounded-2xl px-4 py-4 text-accent-foreground shadow-lg shadow-accent/20">
+      <div className="bg-gradient-accent rounded-2xl px-4 py-4 text-accent-foreground">
         <div className="flex items-start justify-between gap-2">
           <div className="min-w-0 flex-1">
             {renaming ? (

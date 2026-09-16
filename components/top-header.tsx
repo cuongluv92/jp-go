@@ -113,7 +113,7 @@ export function TopHeader({ desktopMode, onToggleDesktop, onOpenSearch, sidebarC
           </button>
         )}
         <Link href="/" className="flex shrink-0 items-center gap-3">
-          <span className={`flex items-center justify-center bg-gradient-accent font-bold text-accent-foreground shadow-sm shadow-accent/30 ${desktopMode ? "h-10 w-10 rounded-2xl text-base" : "h-8 w-8 rounded-xl text-sm"}`}>
+          <span className={`flex items-center justify-center bg-gradient-accent font-bold text-accent-foreground ${desktopMode ? "h-10 w-10 rounded-2xl text-base" : "h-8 w-8 rounded-xl text-sm"}`}>
             日
           </span>
           <span>

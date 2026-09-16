@@ -1,14 +1,17 @@
 @import "tailwindcss";
 
 :root {
-  --background: #f6f7fb;
-  --foreground: #111827;
+  /* Nền trung tính (bớt ám xanh so với trước) - phong cách SaaS tối giản
+     kiểu Linear/Notion: 1 màu accent duy nhất nổi bật trên nền xám trung
+     tính thay vì nhiều tông màu bão hoà cùng lúc. */
+  --background: #f7f7f8;
+  --foreground: #18181b;
   --accent: #4338ca;
   --accent-foreground: #ffffff;
   --accent-soft: #eef2ff;
   --surface: #ffffff;
-  --border: #d9deea;
-  --muted: #526075;
+  --border: #e4e4e7;
+  --muted: #6b6b74;
   --gradient-accent: linear-gradient(135deg, #6366f1 0%, #4f46e5 52%, #3730a3 100%);
   /* Chiều cao header desktop - nguồn duy nhất, dùng cho cả TopHeader lẫn mọi
      phần tử cần offset theo header (tránh mỗi nơi đoán 1 con số px khác nhau). */
@@ -55,7 +58,7 @@ body {
 h1,
 h2,
 h3 {
-  color: #0b1220;
+  color: var(--foreground);
   letter-spacing: -0.022em;
 }
 
@@ -111,9 +114,11 @@ html[data-jp-layout="mobile"] .detail-quick-nav-top {
 
 /* Desktop workspace ------------------------------------------------------- */
 html[data-jp-layout="desktop"] body {
+  /* Nhạt hơn hẳn bản cũ (0.11/0.09 -> 0.05/0.04) - chỉ còn là gợi ý màu rất
+     nhẹ ở góc màn hình thay vì phủ tím lên phần lớn viewport. */
   background:
-    radial-gradient(circle at 12% -4%, rgba(99, 102, 241, 0.11), transparent 27rem),
-    radial-gradient(circle at 92% 8%, rgba(129, 140, 248, 0.09), transparent 24rem),
+    radial-gradient(circle at 12% -4%, rgba(99, 102, 241, 0.05), transparent 27rem),
+    radial-gradient(circle at 92% 8%, rgba(129, 140, 248, 0.04), transparent 24rem),
     var(--background);
 }
 

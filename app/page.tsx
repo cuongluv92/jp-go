@@ -101,11 +101,11 @@ export default function HomePage() {
 
   return (
     <div className="flex flex-col gap-6">
-      <section className="bg-gradient-accent -mx-4 rounded-b-3xl px-4 pb-6 pt-2 text-accent-foreground shadow-lg shadow-accent/20 sm:mx-0 sm:rounded-3xl sm:px-6 sm:pt-6">
-        <h1 className="text-xl font-bold">Xin chào 👋</h1>
-        <p className="mt-1 text-sm text-white/80">Hôm nay bạn đã sẵn sàng học tiếng Nhật chưa?</p>
+      <section className="-mx-4 rounded-b-3xl border-b border-border bg-surface px-4 pb-6 pt-2 sm:mx-0 sm:rounded-3xl sm:border sm:px-6 sm:pt-6">
+        <h1 className="text-xl font-bold text-foreground">Xin chào 👋</h1>
+        <p className="mt-1 text-sm text-muted">Hôm nay bạn đã sẵn sàng học tiếng Nhật chưa?</p>
         {dueCount > 0 && (
-          <Link href="/review" className="mt-3 flex items-center justify-between gap-2 rounded-xl bg-white/15 px-3.5 py-2.5 text-sm font-semibold transition active:scale-[0.98]">
+          <Link href="/review" className="mt-3 flex items-center justify-between gap-2 rounded-xl bg-accent-soft px-3.5 py-2.5 text-sm font-semibold text-accent transition active:scale-[0.98]">
             <span>🔔 {dueCount} mục đang đến hạn ôn tập</span>
             <span className="text-xs">Ôn ngay →</span>
           </Link>
@@ -113,7 +113,7 @@ export default function HomePage() {
       </section>
 
       <section className="grid grid-cols-4 gap-2">
-        <Link href="/vocabulary?collection=tango-n3" className="rounded-xl border border-border bg-surface px-2 py-2 text-center shadow-sm">
+        <Link href="/vocabulary?collection=tango-n3" className="rounded-xl border border-border bg-surface px-2 py-2 text-center">
           <span className="font-jp block text-xs font-bold">単語 N3</span>
           <span className="mt-0.5 block text-[10px] text-muted">{tangoN3Count}</span>
         </Link>
@@ -125,9 +125,9 @@ export default function HomePage() {
           <span className="font-jp block text-xs font-bold">単語 N1</span>
           <span className="mt-0.5 block text-[10px] text-muted">sắp có</span>
         </div>
-        <Link href="/n2-legacy" className="rounded-xl border border-amber-200 bg-amber-50 px-2 py-2 text-center shadow-sm">
-          <span className="block text-xs font-bold text-amber-800">N2 cũ</span>
-          <span className="mt-0.5 block text-[10px] text-amber-700">{oldN2VocabCount} từ</span>
+        <Link href="/n2-legacy" className="rounded-xl border border-border bg-surface px-2 py-2 text-center">
+          <span className="block text-xs font-bold text-foreground">N2 cũ</span>
+          <span className="mt-0.5 block text-[10px] text-muted">{oldN2VocabCount} từ</span>
         </Link>
       </section>
 

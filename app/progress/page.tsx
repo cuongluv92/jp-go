@@ -145,11 +145,11 @@ export default function ProgressPage() {
       {totalDueCount > 0 && (
         <Link
           href="/review"
-          className="flex items-center justify-between gap-3 rounded-2xl bg-gradient-accent px-4 py-3.5 text-accent-foreground shadow-lg shadow-accent/20 transition active:scale-[0.99]"
+          className="flex items-center justify-between gap-3 rounded-2xl bg-accent-soft px-4 py-3.5 text-accent transition active:scale-[0.99]"
         >
           <div>
             <p className="text-sm font-bold">🔔 {totalDueCount} mục đang đến hạn ôn tập</p>
-            <p className="mt-0.5 text-xs text-white/80">
+            <p className="mt-0.5 text-xs text-accent/75">
               {dueVocabCount > 0 && `${dueVocabCount} lịch từ vựng`}
               {dueVocabCount > 0 && dueKanjiCount > 0 && " · "}
               {dueKanjiCount > 0 && `${dueKanjiCount} kanji`}
@@ -157,7 +157,7 @@ export default function ProgressPage() {
               {dueGrammarCount > 0 && `${dueGrammarCount} ngữ pháp`}
             </p>
           </div>
-          <span className="shrink-0 rounded-lg bg-white/15 px-3 py-1.5 text-xs font-semibold">Ôn ngay →</span>
+          <span className="shrink-0 rounded-lg bg-white px-3 py-1.5 text-xs font-semibold shadow-sm">Ôn ngay →</span>
         </Link>
       )}
 

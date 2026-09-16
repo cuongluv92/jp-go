@@ -32,15 +32,15 @@ function DesktopNavGroup({
               aria-current={isActive ? "page" : undefined}
               data-active={isActive ? "true" : undefined}
               className={`group flex items-center gap-3 rounded-2xl px-3 py-2.5 transition ${
-                isActive ? "bg-accent text-accent-foreground shadow-sm shadow-accent/20" : "text-foreground hover:bg-slate-50"
+                isActive ? "bg-accent-soft text-accent" : "text-foreground hover:bg-slate-50"
               }`}
             >
-              <span className={`flex h-9 w-9 shrink-0 items-center justify-center rounded-xl ${isActive ? "bg-white/15" : "bg-slate-100 text-muted group-hover:text-foreground"}`}>
+              <span className={`flex h-9 w-9 shrink-0 items-center justify-center rounded-xl ${isActive ? "bg-white text-accent shadow-sm" : "bg-slate-100 text-muted group-hover:text-foreground"}`}>
                 {item.icon}
               </span>
               <span className="min-w-0">
                 <span className="block text-sm font-semibold">{item.label}</span>
-                <span className={`mt-0.5 block truncate text-[11px] ${isActive ? "text-white/75" : "text-muted"}`}>{item.description}</span>
+                <span className={`mt-0.5 block truncate text-[11px] ${isActive ? "text-accent/75" : "text-muted"}`}>{item.description}</span>
               </span>
             </Link>
           </li>
