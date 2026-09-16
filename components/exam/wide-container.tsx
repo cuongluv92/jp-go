@@ -9,8 +9,8 @@ import type { ReactNode } from "react";
  */
 export function WideContainer({ children }: { children: ReactNode }) {
   return (
-    <div className="relative left-1/2 w-screen max-w-none -translate-x-1/2 px-4 sm:px-6 lg:px-10">
-      <div className="mx-auto w-full max-w-6xl">{children}</div>
+    <div className="relative left-1/2 w-screen max-w-none -translate-x-1/2 px-4 sm:px-6 md:static md:left-auto md:w-full md:translate-x-0 md:px-0 lg:px-0">
+      {children}
     </div>
   );
 }

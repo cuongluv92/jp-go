@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 
-import { ThreeColumnPage } from "@/components/exam/three-column-page";
+import { ColumnWorkspace } from "@/components/exam/column-workspace";
 import { WideContainer } from "@/components/exam/wide-container";
 import {
   getExamBookBySlug,
@@ -79,7 +79,7 @@ export default async function ExamPageReader({
         </div>
 
         {page.content_blocks.length > 0 ? (
-          <ThreeColumnPage blocks={page.content_blocks} />
+          <ColumnWorkspace blocks={page.content_blocks} />
         ) : (
           <p className="rounded-xl border border-dashed border-border p-6 text-center text-sm text-muted">
             Trang này chưa có nội dung.

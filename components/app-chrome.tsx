@@ -98,14 +98,17 @@ export function AppChrome({ children }: { children: ReactNode }) {
     }
   }
 
-  function toggleSidebar() {
-    const nextValue = !sidebarCollapsed;
+  function setSidebarState(nextValue: boolean) {
     setSidebarCollapsed(nextValue);
     try {
       window.localStorage.setItem(SIDEBAR_STORAGE_KEY, nextValue ? "1" : "0");
     } catch {
-      // Không ảnh hưởng việc thu gọn sidebar trong phiên hiện tại.
+      // Không ảnh hưởng việc đóng/mở sidebar trong phiên hiện tại.
     }
+  }
+
+  function toggleSidebar() {
+    setSidebarState(!sidebarCollapsed);
   }
 
   if (isLoginPage) {
@@ -113,15 +116,24 @@ export function AppChrome({ children }: { children: ReactNode }) {
   }
 
   if (isDesktopMode) {
+    // Sidebar nhị phân: mở (220px + nội dung) hoặc đóng hẳn (không giữ
+    // khoảng trắng, nội dung giãn full width). Không còn chế độ "thu gọn
+    // icon-rail" trung gian.
     const desktopGridClass = sidebarCollapsed
-      ? "mx-auto grid w-full max-w-7xl flex-1 grid-cols-[76px_minmax(0,1fr)] items-start gap-5 px-5 py-6 lg:grid-cols-[80px_minmax(0,1fr)] lg:gap-6 lg:px-8"
-      : "mx-auto grid w-full max-w-7xl flex-1 grid-cols-[220px_minmax(0,1fr)] items-start gap-7 px-5 py-6 lg:grid-cols-[232px_minmax(0,1fr)] lg:gap-8 lg:px-8";
+      ? "grid w-full flex-1 grid-cols-1 gap-0 px-5 py-6 transition-[grid-template-columns,gap] duration-200 lg:px-8"
+      : "grid w-full flex-1 grid-cols-[220px_minmax(0,1fr)] items-start gap-7 px-5 py-6 transition-[grid-template-columns,gap] duration-200 lg:grid-cols-[232px_minmax(0,1fr)] lg:gap-8 lg:px-8";
 
     return (
       <>
-        <TopHeader desktopMode onToggleDesktop={toggleLayoutMode} onOpenSearch={() => setCommandOpen(true)} />
+        <TopHeader
+          desktopMode
+          onToggleDesktop={toggleLayoutMode}
+          onOpenSearch={() => setCommandOpen(true)}
+          sidebarCollapsed={sidebarCollapsed}
+          onToggleSidebar={toggleSidebar}
+        />
         <div className={desktopGridClass}>
-          <BottomNav desktopMode sidebarCollapsed={sidebarCollapsed} onToggleSidebar={toggleSidebar} />
+          {!sidebarCollapsed && <BottomNav desktopMode onNavigate={() => setSidebarState(true)} />}
           <main className={`${styles.desktopMain} min-w-0 pb-10`}>
             <DetailQuickNavigator variant="top" />
             {children}

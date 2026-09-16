@@ -9,6 +9,17 @@ interface TopHeaderProps {
   desktopMode: boolean;
   onToggleDesktop: () => void;
   onOpenSearch?: () => void;
+  sidebarCollapsed?: boolean;
+  onToggleSidebar?: () => void;
+}
+
+function SidebarToggleIcon() {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" className="h-5 w-5">
+      <rect x="3.5" y="4.5" width="17" height="15" rx="2.5" strokeLinecap="round" strokeLinejoin="round" />
+      <path d="M9.5 4.5v15" strokeLinecap="round" />
+    </svg>
+  );
 }
 
 function LayoutIcon({ desktopMode }: { desktopMode: boolean }) {
@@ -46,7 +57,7 @@ function getBreadcrumbs(pathname: string): string[] {
   return ["jp-go"];
 }
 
-export function TopHeader({ desktopMode, onToggleDesktop, onOpenSearch }: TopHeaderProps) {
+export function TopHeader({ desktopMode, onToggleDesktop, onOpenSearch, sidebarCollapsed, onToggleSidebar }: TopHeaderProps) {
   const router = useRouter();
   const pathname = usePathname();
   const breadcrumbs = getBreadcrumbs(pathname);
@@ -58,13 +69,26 @@ export function TopHeader({ desktopMode, onToggleDesktop, onOpenSearch }: TopHea
     router.refresh();
   }
 
+  // Full-width: không còn max-w-7xl - toolbar dùng hết chiều rộng viewport.
   const innerClassName = desktopMode
-    ? "mx-auto flex w-full max-w-7xl items-center px-5 py-3.5 lg:px-8"
+    ? "flex w-full items-center px-5 py-3.5 lg:px-8"
     : "mx-auto flex w-full max-w-md items-center justify-between px-4 py-3 sm:max-w-lg";
 
   return (
     <header className="safe-top sticky top-0 z-30 border-b border-border/90 bg-surface/90 backdrop-blur-xl">
       <div className={innerClassName}>
+        {desktopMode && onToggleSidebar && (
+          <button
+            type="button"
+            onClick={onToggleSidebar}
+            aria-label={sidebarCollapsed ? "Mở sidebar" : "Đóng sidebar"}
+            aria-pressed={!sidebarCollapsed}
+            title={sidebarCollapsed ? "Mở sidebar" : "Đóng sidebar"}
+            className="mr-3 flex h-9 w-9 shrink-0 items-center justify-center rounded-full text-muted transition hover:bg-slate-100 hover:text-foreground"
+          >
+            <SidebarToggleIcon />
+          </button>
+        )}
         <Link href="/" className="flex shrink-0 items-center gap-3">
           <span className={`flex items-center justify-center bg-gradient-accent font-bold text-accent-foreground shadow-sm shadow-accent/30 ${desktopMode ? "h-10 w-10 rounded-2xl text-base" : "h-8 w-8 rounded-xl text-sm"}`}>
             日
