@@ -20,7 +20,8 @@ export const furiganaTokenSchema = z.object({
   reading: z.string().min(1),
 });
 
-const furiganaTokens = z.array(furiganaTokenSchema).default([]);
+// Furigana là metadata bổ sung: nội dung/import cũ không bắt buộc phải có.
+const furiganaTokens = z.array(furiganaTokenSchema).optional();
 
 export const headingBlockSchema = z.object({
   type: z.literal("heading"),
