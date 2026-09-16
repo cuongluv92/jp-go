@@ -6,6 +6,7 @@ import { useEffect, useState, type ReactNode } from "react";
 import { BottomNav } from "@/components/bottom-nav";
 import { DetailQuickNavigator } from "@/components/detail-quick-navigator";
 import { GlobalCommandPalette } from "@/components/global-command-palette";
+import { MobileNavDrawer } from "@/components/mobile-nav-drawer";
 import { TopHeader } from "@/components/top-header";
 import styles from "@/components/app-chrome-polish.module.css";
 
@@ -41,6 +42,11 @@ export function AppChrome({ children }: { children: ReactNode }) {
   const [layoutMode, setLayoutMode] = useState<LayoutMode>("mobile");
   const [sidebarCollapsed, setSidebarCollapsed] = useState(false);
   const [commandOpen, setCommandOpen] = useState(false);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
+  useEffect(() => {
+    setMobileMenuOpen(false);
+  }, [pathname]);
 
   useEffect(() => {
     try {
@@ -116,15 +122,15 @@ export function AppChrome({ children }: { children: ReactNode }) {
   }
 
   if (isDesktopMode) {
-    // Sidebar nhị phân: mở (220px + nội dung) hoặc đóng hẳn (không giữ
-    // khoảng trắng, nội dung giãn full width). Không còn chế độ "thu gọn
-    // icon-rail" trung gian.
-    const desktopGridClass = sidebarCollapsed
-      ? "grid w-full flex-1 grid-cols-1 gap-0 px-5 py-6 transition-[grid-template-columns,gap] duration-200 lg:px-8"
-      : "grid w-full flex-1 grid-cols-[220px_minmax(0,1fr)] items-start gap-7 px-5 py-6 transition-[grid-template-columns,gap] duration-200 lg:grid-cols-[232px_minmax(0,1fr)] lg:gap-8 lg:px-8";
-
+    // App shell full-height cố định (header + hàng dưới cao đúng phần còn
+    // lại của viewport). Sidebar và main mỗi bên tự overflow-y-auto riêng -
+    // đây là nguyên nhân gốc của bug "sidebar bị cắt, không scroll được":
+    // bản cũ dùng `position: sticky` không giới hạn chiều cao, dựa vào
+    // scroll của CẢ TRANG nên khi trang ngắn hơn danh sách menu, phần menu
+    // dưới không có cách nào cuộn tới. Nhị phân mở/đóng giữ nguyên - đóng là
+    // không render sidebar (không giữ khoảng trắng), main giãn full width.
     return (
-      <>
+      <div className="flex h-dvh flex-col">
         <TopHeader
           desktopMode
           onToggleDesktop={toggleLayoutMode}
@@ -132,27 +138,28 @@ export function AppChrome({ children }: { children: ReactNode }) {
           sidebarCollapsed={sidebarCollapsed}
           onToggleSidebar={toggleSidebar}
         />
-        <div className={desktopGridClass}>
+        <div className="flex min-h-0 flex-1">
           {!sidebarCollapsed && <BottomNav desktopMode onNavigate={() => setSidebarState(true)} />}
-          <main className={`${styles.desktopMain} min-w-0 pb-10`}>
+          <main className={`${styles.desktopMain} min-w-0 flex-1 overflow-y-auto overflow-x-hidden px-5 py-6 lg:px-8`}>
             <DetailQuickNavigator variant="top" />
             {children}
             <DetailQuickNavigator variant="bottom" />
           </main>
         </div>
         <GlobalCommandPalette open={commandOpen} onClose={() => setCommandOpen(false)} />
-      </>
+      </div>
     );
   }
 
   return (
     <>
-      <TopHeader desktopMode={false} onToggleDesktop={toggleLayoutMode} />
+      <TopHeader desktopMode={false} onToggleDesktop={toggleLayoutMode} onOpenMenu={() => setMobileMenuOpen(true)} />
       <main className={`${styles.mobileMain} mx-auto w-full max-w-md flex-1 px-4 pb-24 pt-4 sm:max-w-lg`}>
         {children}
         <DetailQuickNavigator variant="bottom" />
       </main>
       <BottomNav desktopMode={false} />
+      <MobileNavDrawer open={mobileMenuOpen} onClose={() => setMobileMenuOpen(false)} />
     </>
   );
 }

@@ -148,8 +148,13 @@ export function DetailQuickNavigator({ variant }: { variant: Variant }) {
 
   if (variant === "top") {
     if (sections.length < 2) return null;
+    // Offset theo layout mode qua CSS (globals.css .detail-quick-nav-top):
+    // desktop mode có main tự scroll riêng (không có header bên trong) nên
+    // top:0 là đủ; mobile mode (kể cả xem trên màn rộng) vẫn scroll chung
+    // trang với header sticky top-0 nên cần chừa đúng --app-header-h để
+    // không đè lên header.
     return (
-      <nav aria-label="Mục lục bài học" className="sticky top-[76px] z-20 mb-4 hidden items-center gap-1.5 overflow-x-auto rounded-2xl border border-border/90 bg-white/95 p-2 shadow-sm backdrop-blur-xl md:flex">
+      <nav aria-label="Mục lục bài học" className="detail-quick-nav-top z-20 mb-4 hidden items-center gap-1.5 overflow-x-auto rounded-2xl border border-border/90 bg-white/95 p-2 shadow-sm backdrop-blur-xl md:flex">
         <span className="shrink-0 px-2 text-[10px] font-bold uppercase tracking-[0.16em] text-muted">Trong bài</span>
         {sections.map((section) => (
           <button key={section.id} type="button" onClick={() => document.getElementById(section.id)?.scrollIntoView({ behavior: "smooth", block: "start" })} className="shrink-0 rounded-xl px-2.5 py-1.5 text-xs font-semibold text-foreground/75 transition hover:bg-accent-soft hover:text-accent">

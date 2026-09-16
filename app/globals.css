@@ -10,6 +10,9 @@
   --border: #d9deea;
   --muted: #526075;
   --gradient-accent: linear-gradient(135deg, #6366f1 0%, #4f46e5 52%, #3730a3 100%);
+  /* Chiều cao header desktop - nguồn duy nhất, dùng cho cả TopHeader lẫn mọi
+     phần tử cần offset theo header (tránh mỗi nơi đoán 1 con số px khác nhau). */
+  --app-header-h: 4.5rem;
 }
 
 @theme inline {
@@ -88,6 +91,22 @@ textarea:focus-visible {
 
 .bg-gradient-accent {
   background: var(--gradient-accent);
+}
+
+/* Xem components/detail-quick-navigator.tsx: offset sticky phụ thuộc layout
+   mode vì desktop mode có main tự scroll riêng (không có header bên trong),
+   còn mobile mode (kể cả xem trên màn rộng) vẫn scroll chung trang với
+   header sticky - cần trừ đúng --app-header-h để khỏi bị đè. */
+.detail-quick-nav-top {
+  position: sticky;
+}
+
+html[data-jp-layout="desktop"] .detail-quick-nav-top {
+  top: 0;
+}
+
+html[data-jp-layout="mobile"] .detail-quick-nav-top {
+  top: var(--app-header-h);
 }
 
 /* Desktop workspace ------------------------------------------------------- */
@@ -186,6 +205,14 @@ html[data-jp-layout="desktop"][data-jp-page="home"] main > div > section:nth-of-
 
 html[data-jp-layout="desktop"][data-jp-page="home"] main > div > section:nth-of-type(5) {
   grid-row: 4;
+}
+
+/* Dashboard: full width but capped so stat cards don't stretch absurdly
+   wide on ultra-wide monitors - the grid columns below do the real work of
+   using the extra space. */
+html[data-jp-layout="desktop"][data-jp-page="progress"] main > div {
+  width: 100%;
+  max-width: 1400px;
 }
 
 /* List pages: use the extra horizontal space instead of stretching one row. */
@@ -287,11 +314,12 @@ html[data-jp-layout="desktop"][data-jp-page="kanji-detail"] main > div > div {
   border-radius: 18px;
 }
 
-/* Other desktop screens should not become an unreadably wide text column. */
+/* Other desktop screens should not become an unreadably wide text column.
+   "progress" is deliberately excluded: it's a stat-card dashboard, not
+   prose, so it should use the full main width like Kanji's grid does. */
 html[data-jp-layout="desktop"][data-jp-page="plan"] main > div,
 html[data-jp-layout="desktop"][data-jp-page="practice"] main > div,
 html[data-jp-layout="desktop"][data-jp-page="review"] main > div,
-html[data-jp-layout="desktop"][data-jp-page="progress"] main > div,
 html[data-jp-layout="desktop"][data-jp-page="flashcards"] main > div,
 html[data-jp-layout="desktop"][data-jp-page="generic"] main > div {
   width: 100%;

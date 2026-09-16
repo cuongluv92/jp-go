@@ -242,7 +242,7 @@ export default function ProgressPage() {
 
       <section>
         <h2 className="mb-2 text-sm font-semibold text-foreground">Từ vựng (Flashcard)</h2>
-        <div className="grid grid-cols-2 gap-3">
+        <div className="grid grid-cols-2 gap-3 lg:grid-cols-4">
           <StatCard label="Từ đã học" value={stats.learned + stats.learning} hint={`/${stats.total} từ`} />
           <StatCard label="Từ đã nhớ" value={stats.learned} />
           <StatCard label="Chưa bắt đầu" value={stats.notStarted} />

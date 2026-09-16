@@ -29,7 +29,7 @@ export default function PlanPage() {
   return (
     <div className="flex flex-col gap-4">
       <div>
-        <h1 className="text-xl font-bold">Lộ trình</h1>
+        <h1 className="text-xl font-bold">Đang học</h1>
         <p className="mt-1 text-sm text-muted">Theo dõi lộ trình đang học, hoặc chọn một lộ trình mới bất cứ lúc nào.</p>
       </div>
 

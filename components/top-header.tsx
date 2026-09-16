@@ -11,6 +11,8 @@ interface TopHeaderProps {
   onOpenSearch?: () => void;
   sidebarCollapsed?: boolean;
   onToggleSidebar?: () => void;
+  /** Mobile only: mở drawer menu (nhóm "Nội dung" không có chỗ trong bottom tab bar). */
+  onOpenMenu?: () => void;
 }
 
 function SidebarToggleIcon() {
@@ -18,6 +20,14 @@ function SidebarToggleIcon() {
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" className="h-5 w-5">
       <rect x="3.5" y="4.5" width="17" height="15" rx="2.5" strokeLinecap="round" strokeLinejoin="round" />
       <path d="M9.5 4.5v15" strokeLinecap="round" />
+    </svg>
+  );
+}
+
+function HamburgerIcon() {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" className="h-5 w-5">
+      <path strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 12h16M4 18h16" />
     </svg>
   );
 }
@@ -48,7 +58,7 @@ function getBreadcrumbs(pathname: string): string[] {
   if (pathname === "/kanji") return ["Kanji"];
   if (pathname.startsWith("/grammar/")) return ["Ngữ pháp", "Chi tiết"];
   if (pathname === "/grammar") return ["Ngữ pháp"];
-  if (pathname.startsWith("/plan")) return ["Lộ trình"];
+  if (pathname.startsWith("/plan")) return ["Đang học"];
   if (pathname.startsWith("/practice")) return ["Luyện tập"];
   if (pathname.startsWith("/review")) return ["Ôn tập"];
   if (pathname.startsWith("/progress")) return ["Tiến độ"];
@@ -57,7 +67,7 @@ function getBreadcrumbs(pathname: string): string[] {
   return ["jp-go"];
 }
 
-export function TopHeader({ desktopMode, onToggleDesktop, onOpenSearch, sidebarCollapsed, onToggleSidebar }: TopHeaderProps) {
+export function TopHeader({ desktopMode, onToggleDesktop, onOpenSearch, sidebarCollapsed, onToggleSidebar, onOpenMenu }: TopHeaderProps) {
   const router = useRouter();
   const pathname = usePathname();
   const breadcrumbs = getBreadcrumbs(pathname);
@@ -70,12 +80,14 @@ export function TopHeader({ desktopMode, onToggleDesktop, onOpenSearch, sidebarC
   }
 
   // Full-width: không còn max-w-7xl - toolbar dùng hết chiều rộng viewport.
+  // Chiều cao cố định qua --app-header-h để sidebar/nội dung tính offset
+  // chính xác thay vì mỗi nơi tự đoán 1 số px (nguyên nhân lệch sticky cũ).
   const innerClassName = desktopMode
-    ? "flex w-full items-center px-5 py-3.5 lg:px-8"
-    : "mx-auto flex w-full max-w-md items-center justify-between px-4 py-3 sm:max-w-lg";
+    ? "flex h-[var(--app-header-h)] w-full items-center px-5 lg:px-8"
+    : "mx-auto flex h-[var(--app-header-h)] w-full max-w-md items-center justify-between px-4 sm:max-w-lg";
 
   return (
-    <header className="safe-top sticky top-0 z-30 border-b border-border/90 bg-surface/90 backdrop-blur-xl">
+    <header className="safe-top sticky top-0 z-30 shrink-0 border-b border-border/90 bg-surface/90 backdrop-blur-xl">
       <div className={innerClassName}>
         {desktopMode && onToggleSidebar && (
           <button
@@ -87,6 +99,17 @@ export function TopHeader({ desktopMode, onToggleDesktop, onOpenSearch, sidebarC
             className="mr-3 flex h-9 w-9 shrink-0 items-center justify-center rounded-full text-muted transition hover:bg-slate-100 hover:text-foreground"
           >
             <SidebarToggleIcon />
+          </button>
+        )}
+        {!desktopMode && onOpenMenu && (
+          <button
+            type="button"
+            onClick={onOpenMenu}
+            aria-label="Mở menu"
+            title="Mở menu"
+            className="mr-2 flex h-9 w-9 shrink-0 items-center justify-center rounded-full text-muted transition hover:bg-slate-100 hover:text-foreground"
+          >
+            <HamburgerIcon />
           </button>
         )}
         <Link href="/" className="flex shrink-0 items-center gap-3">

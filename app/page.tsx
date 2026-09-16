@@ -165,7 +165,7 @@ export default function HomePage() {
       </section>
 
       <section className="grid grid-cols-2 gap-3">
-        <Link href="/plan" className="flex items-center justify-center rounded-2xl border border-accent px-4 py-3 text-center text-sm font-semibold text-accent transition active:scale-[0.98]">Lộ trình học</Link>
+        <Link href="/plan" className="flex items-center justify-center rounded-2xl border border-accent px-4 py-3 text-center text-sm font-semibold text-accent transition active:scale-[0.98]">Đang học</Link>
         <Link href="/practice" className="flex items-center justify-center rounded-2xl border border-accent px-4 py-3 text-center text-sm font-semibold text-accent transition active:scale-[0.98]">Luyện tập</Link>
         <Link href="/flashcards" className="flex items-center justify-center rounded-2xl border border-accent px-4 py-3 text-center text-sm font-semibold text-accent transition active:scale-[0.98]">Học bằng Flashcard</Link>
         <Link href="/review" className="relative flex items-center justify-center rounded-2xl border border-accent px-4 py-3 text-center text-sm font-semibold text-accent transition active:scale-[0.98]">
