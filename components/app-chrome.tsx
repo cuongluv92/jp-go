@@ -139,7 +139,9 @@ export function AppChrome({ children }: { children: ReactNode }) {
           onToggleSidebar={toggleSidebar}
         />
         <div className="flex min-h-0 flex-1">
-          {!sidebarCollapsed && <BottomNav desktopMode onNavigate={() => setSidebarState(true)} />}
+          {/* Sidebar chỉ đóng/mở qua nút gạt ☰ ở TopHeader (toggleSidebar) -
+              không tự đóng khi bấm 1 mục điều hướng, theo yêu cầu người dùng. */}
+          {!sidebarCollapsed && <BottomNav desktopMode />}
           <main className={`${styles.desktopMain} min-w-0 flex-1 overflow-y-auto overflow-x-hidden px-5 py-6 lg:px-8`}>
             <DetailQuickNavigator variant="top" />
             {children}
