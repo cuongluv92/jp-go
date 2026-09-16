@@ -74,6 +74,14 @@ function KanjiIcon() {
   return <span className="font-jp text-base font-bold leading-none">漢</span>;
 }
 
+function BoltIcon() {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" className="h-5 w-5">
+      <path strokeLinecap="round" strokeLinejoin="round" d="M13 2 4 14h6l-1 8 9-12h-6l1-8z" />
+    </svg>
+  );
+}
+
 function GrammarIcon() {
   return <span className="font-jp text-base font-bold leading-none">文</span>;
 }
@@ -98,6 +106,7 @@ const CONTENT_ITEMS: NavItem[] = [
   { href: "/vocabulary", label: "Từ vựng", description: "Tra cứu & học từ", icon: <BookIcon /> },
   { href: "/kanji", label: "Kanji", description: "Âm đọc & từ ghép", icon: <KanjiIcon /> },
   { href: "/grammar", label: "Ngữ pháp", description: "Mẫu câu & bài tập", icon: <GrammarIcon /> },
+  { href: "/exam", label: "Ôn thi 2級電気工事", description: "Sách + đề thi施工管理", icon: <BoltIcon /> },
 ];
 
 function isItemActive(pathname: string, href: string): boolean {

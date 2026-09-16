@@ -1,0 +1,19 @@
+{
+  "book_slug": "sekou-gijutsu",
+  "section_path": [
+    { "code": "1", "title_jp": "第1編 電気工学", "title_vi": "Tập 1 - Kỹ thuật điện" }
+  ],
+  "page_number": 1,
+  "page_label": "p.1",
+  "notes_vi": "[SAMPLE - dữ liệu minh hoạ để test import cho sách thứ 2, KHÔNG phải nội dung thật của sách.]",
+  "review_status": "draft",
+  "blocks": [
+    {
+      "type": "heading",
+      "level": 1,
+      "jp": "第1編 電気工学",
+      "vi": "Tập 1 - Kỹ thuật điện",
+      "explanation_vi": null
+    }
+  ]
+}

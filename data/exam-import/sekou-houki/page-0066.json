@@ -1,0 +1,25 @@
+{
+  "book_slug": "sekou-houki",
+  "section_path": [
+    { "code": "施工管理", "title_jp": "施工管理", "title_vi": "Quản lý thi công" },
+    { "code": "2", "title_jp": "2. 工程管理", "title_vi": "Quản lý tiến độ" }
+  ],
+  "page_number": 66,
+  "page_label": "p.66",
+  "notes_vi": "[SAMPLE - dữ liệu minh hoạ để test import/UI (trang kế tiếp trong cùng 1 mục), KHÔNG phải nội dung thật của sách.]",
+  "review_status": "draft",
+  "blocks": [
+    {
+      "type": "definition",
+      "jp": "（サンプル定義）",
+      "vi": null,
+      "explanation_vi": "Đây là block loại definition dùng để test giao diện - chưa phải nội dung thật."
+    },
+    {
+      "type": "warning",
+      "jp": "（サンプル注意）",
+      "vi": null,
+      "explanation_vi": "Đây là block loại warning dùng để test giao diện - chưa phải nội dung thật."
+    }
+  ]
+}

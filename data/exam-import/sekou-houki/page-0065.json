@@ -1,0 +1,58 @@
+{
+  "book_slug": "sekou-houki",
+  "section_path": [
+    { "code": "施工管理", "title_jp": "施工管理", "title_vi": "Quản lý thi công" },
+    { "code": "2", "title_jp": "2. 工程管理", "title_vi": "Quản lý tiến độ" }
+  ],
+  "page_number": 65,
+  "page_label": "p.65",
+  "notes_vi": "[SAMPLE - dữ liệu minh hoạ để test import/UI theo docs/EXAM_CONTENT_IMPORT.md, KHÔNG phải nội dung thật của sách. Sẽ được ChatGPT ghi đè bằng nội dung thật khi người dùng chụp trang 65 gửi lên.]",
+  "review_status": "draft",
+  "blocks": [
+    {
+      "type": "heading",
+      "level": 2,
+      "jp": "2. 工程管理",
+      "vi": "2. Quản lý tiến độ",
+      "explanation_vi": null
+    },
+    {
+      "type": "paragraph",
+      "jp": "工程管理",
+      "vi": "Quản lý tiến độ",
+      "explanation_vi": "Quản lý thời gian và trình tự các công việc để công trình hoàn thành theo kế hoạch."
+    },
+    {
+      "type": "bullet_list",
+      "items_jp": ["工程表の作成", "進捗の確認", "遅延対策"],
+      "items_vi": ["Lập bảng tiến độ", "Kiểm tra tiến độ thực tế", "Biện pháp xử lý khi chậm tiến độ"],
+      "explanation_vi": null
+    },
+    {
+      "type": "formula",
+      "content": "P = VIcosφ",
+      "vi": null,
+      "explanation_vi": "P là công suất tác dụng..."
+    },
+    {
+      "type": "table",
+      "headers_jp": ["工程表の種類", "特徴"],
+      "rows_jp": [
+        ["ガントチャート", "横棒で作業期間を表す"],
+        ["ネットワーク工程表", "作業の順序関係を矢線で表す"]
+      ],
+      "headers_vi": ["Loại bảng tiến độ", "Đặc điểm"],
+      "rows_vi": [
+        ["Biểu đồ Gantt", "Thể hiện thời gian công việc bằng thanh ngang"],
+        ["Sơ đồ mạng lưới", "Thể hiện quan hệ trình tự công việc bằng mũi tên"]
+      ],
+      "explanation_vi": null
+    },
+    {
+      "type": "note",
+      "jp": "（サンプル注記）",
+      "vi": null,
+      "explanation_vi": "Đây là block loại note dùng để test giao diện - chưa phải nội dung thật."
+    }
+  ]
+}

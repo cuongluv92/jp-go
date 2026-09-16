@@ -27,6 +27,14 @@ const QUICK_LINKS: CommandResult[] = [
   { id: "page-grammar", kind: "page", badge: "文", primary: "Ngữ pháp", secondary: "Mẫu câu, cách dùng và bài tập", href: "/grammar" },
   { id: "page-practice", kind: "page", badge: "練", primary: "Luyện tập", secondary: "Bài tập tổng hợp theo cấp độ", href: "/practice" },
   { id: "page-review", kind: "page", badge: "復", primary: "Ôn tập", secondary: "Nội dung đến hạn ôn", href: "/review" },
+  {
+    id: "page-exam",
+    kind: "page",
+    badge: "電",
+    primary: "Ôn thi 2級電気工事施工管理",
+    secondary: "Sách + đề thi ôn chứng chỉ",
+    href: "/exam",
+  },
 ];
 
 function resultScore(result: CommandResult, query: string): number {
