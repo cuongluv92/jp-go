@@ -4,7 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect } from "react";
 
-import { CONTENT_ITEMS, isNavItemActive, NAV_ITEMS, type NavItem } from "@/components/nav-items";
+import { CONTENT_ITEMS, isNavItemActive, PRIMARY_SIDEBAR_ITEMS, type NavItem } from "@/components/nav-items";
 
 interface MobileNavDrawerProps {
   open: boolean;
@@ -94,7 +94,7 @@ export function MobileNavDrawer({ open, onClose }: MobileNavDrawerProps) {
         </div>
 
         <nav aria-label="Menu điều hướng" className="min-h-0 flex-1 overflow-y-auto overflow-x-hidden px-3 py-4">
-          <MobileNavGroup items={NAV_ITEMS} pathname={pathname} onNavigate={onClose} />
+          <MobileNavGroup items={PRIMARY_SIDEBAR_ITEMS} pathname={pathname} onNavigate={onClose} />
           <div className="my-3 h-px bg-border" />
           <p className="mb-1.5 px-3 text-[10px] font-semibold uppercase tracking-[0.16em] text-muted">Nội dung</p>
           <MobileNavGroup items={CONTENT_ITEMS} pathname={pathname} onNavigate={onClose} />

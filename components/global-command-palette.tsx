@@ -31,8 +31,8 @@ const QUICK_LINKS: CommandResult[] = [
     id: "page-exam",
     kind: "page",
     badge: "電",
-    primary: "Ôn thi 2級電気工事施工管理",
-    secondary: "Sách + đề thi ôn chứng chỉ",
+    primary: "2級電気工事施工管理",
+    secondary: "Sách + đề thi chứng chỉ",
     href: "/exam",
   },
 ];

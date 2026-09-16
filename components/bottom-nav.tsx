@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
-import { CONTENT_ITEMS, isNavItemActive, NAV_ITEMS, type NavItem } from "@/components/nav-items";
+import { CONTENT_ITEMS, isNavItemActive, NAV_ITEMS, PRIMARY_SIDEBAR_ITEMS, type NavItem } from "@/components/nav-items";
 
 interface BottomNavProps {
   desktopMode: boolean;
@@ -68,7 +68,7 @@ export function BottomNav({ desktopMode, onNavigate }: BottomNavProps) {
           <p className="mt-1 text-sm font-semibold text-foreground">Học tiếng Nhật</p>
         </div>
 
-        <DesktopNavGroup items={NAV_ITEMS} pathname={pathname} onNavigate={onNavigate} />
+        <DesktopNavGroup items={PRIMARY_SIDEBAR_ITEMS} pathname={pathname} onNavigate={onNavigate} />
 
         <div className="my-3 h-px shrink-0 bg-border" />
         <p className="mb-1.5 px-3 text-[10px] font-semibold uppercase tracking-[0.16em] text-muted">Nội dung</p>

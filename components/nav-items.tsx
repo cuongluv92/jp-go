@@ -77,9 +77,9 @@ function BoltIcon() {
 }
 
 /**
- * Nhóm điều hướng chính - hiện ở cả sidebar desktop, bottom-nav mobile và
- * mobile drawer. "Đang học" (route /plan, giữ nguyên logic trang Lộ trình cũ)
- * cố tình đặt NGAY SAU "Tiến độ" theo yêu cầu sắp xếp lại menu.
+ * Nhóm điều hướng chính - dùng cho bottom tab bar mobile (giữ đúng 5 mục cố
+ * định, không đổi). "Đang học" (route /plan, giữ nguyên logic trang Lộ
+ * trình cũ) cố tình đặt NGAY SAU "Tiến độ" theo yêu cầu sắp xếp lại menu.
  */
 export const NAV_ITEMS: NavItem[] = [
   { href: "/", label: "Trang chủ", description: "Tổng quan học tập", icon: <HomeIcon /> },
@@ -89,12 +89,25 @@ export const NAV_ITEMS: NavItem[] = [
   { href: "/plan", label: "Đang học", description: "Kế hoạch theo ngày", icon: <PlanIcon /> },
 ];
 
+const EXAM_NAV_ITEM: NavItem = {
+  href: "/exam",
+  label: "2級電気工事施工管理",
+  description: "Sách + đề thi chứng chỉ",
+  icon: <BoltIcon />,
+};
+
+/**
+ * Nhóm điều hướng chính cho sidebar desktop + mobile drawer (không bị giới
+ * hạn 5 mục như bottom tab bar) - "2級電気工事施工管理" nằm ngay sau
+ * "Đang học", cùng nhóm chính, không còn ở nhóm "Nội dung" phía dưới.
+ */
+export const PRIMARY_SIDEBAR_ITEMS: NavItem[] = [...NAV_ITEMS, EXAM_NAV_ITEM];
+
 /** Nhóm nội dung tra cứu - hiện ở sidebar desktop (nhóm "Nội dung") và mobile drawer. */
 export const CONTENT_ITEMS: NavItem[] = [
   { href: "/vocabulary", label: "Từ vựng", description: "Tra cứu & học từ", icon: <BookIcon /> },
   { href: "/kanji", label: "Kanji", description: "Âm đọc & từ ghép", icon: <KanjiIcon /> },
   { href: "/grammar", label: "Ngữ pháp", description: "Mẫu câu & bài tập", icon: <GrammarIcon /> },
-  { href: "/exam", label: "Ôn thi 2級電気工事", description: "Sách + đề thi施工管理", icon: <BoltIcon /> },
 ];
 
 export function isNavItemActive(pathname: string, href: string): boolean {
