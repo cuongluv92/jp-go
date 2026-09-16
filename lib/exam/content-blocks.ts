@@ -6,6 +6,7 @@
  * - `vi` / `*_vi`  = CHỈ bản dịch sát nghĩa của `jp`. Có thể null nếu chưa dịch.
  * - `explanation_vi` = CHỈ giải thích thêm, tách biệt khỏi bản dịch. Luôn được phép null.
  * - `furigana_tokens` = CHỈ cách đọc đã được kiểm tra cho đúng bề mặt Kanji trong `jp`.
+ * - `bold_jp` = các cụm chữ được IN ĐẬM ngay trong nội dung sách; không dùng để tự nhấn mạnh thêm.
  *
  * Dùng chung một bộ schema Zod cho cả import (validate JSON từ ChatGPT) lẫn
  * UI render (3 cột), để không bao giờ lệch giữa hai phía.
@@ -20,8 +21,9 @@ export const furiganaTokenSchema = z.object({
   reading: z.string().min(1),
 });
 
-// Furigana là metadata bổ sung: nội dung/import cũ không bắt buộc phải có.
+// Furigana / typography là metadata bổ sung: nội dung/import cũ không bắt buộc phải có.
 const furiganaTokens = z.array(furiganaTokenSchema).optional();
+const boldJapanesePhrases = z.array(z.string().min(1)).optional();
 
 export const headingBlockSchema = z.object({
   type: z.literal("heading"),
@@ -30,6 +32,7 @@ export const headingBlockSchema = z.object({
   vi: nullableString.default(null),
   explanation_vi: nullableString.default(null),
   furigana_tokens: furiganaTokens,
+  bold_jp: boldJapanesePhrases,
 });
 
 export const paragraphBlockSchema = z.object({
@@ -38,6 +41,7 @@ export const paragraphBlockSchema = z.object({
   vi: nullableString.default(null),
   explanation_vi: nullableString.default(null),
   furigana_tokens: furiganaTokens,
+  bold_jp: boldJapanesePhrases,
 });
 
 export const bulletListBlockSchema = z.object({
@@ -84,6 +88,7 @@ export const noteBlockSchema = z.object({
   vi: nullableString.default(null),
   explanation_vi: nullableString.default(null),
   furigana_tokens: furiganaTokens,
+  bold_jp: boldJapanesePhrases,
 });
 
 export const warningBlockSchema = z.object({
@@ -92,6 +97,7 @@ export const warningBlockSchema = z.object({
   vi: nullableString.default(null),
   explanation_vi: nullableString.default(null),
   furigana_tokens: furiganaTokens,
+  bold_jp: boldJapanesePhrases,
 });
 
 export const definitionBlockSchema = z.object({
@@ -100,6 +106,7 @@ export const definitionBlockSchema = z.object({
   vi: nullableString.default(null),
   explanation_vi: nullableString.default(null),
   furigana_tokens: furiganaTokens,
+  bold_jp: boldJapanesePhrases,
 });
 
 export const contentBlockSchema = z.discriminatedUnion("type", [
