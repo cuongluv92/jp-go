@@ -2,8 +2,6 @@
 
 import { createContext, useCallback, useContext, useEffect, useMemo, useRef, useState, type ReactNode } from "react";
 
-import { sampleExamples } from "@/lib/data/sample-examples";
-import { sampleWords } from "@/lib/data/sample-words";
 import { getVocabularyCollection } from "@/lib/data/vocabulary-collections";
 import { fetchAllRows } from "@/lib/data/supabase-pagination";
 import { listAllDbVocab } from "@/lib/data/vocab-content-service";
@@ -14,7 +12,12 @@ import type { FlashcardGrade, LearningProgress, LearningStatus, VocabExample, Vo
 /**
  * Nguồn dữ liệu từ vựng cho toàn bộ UI — GỘP 2 nguồn:
  *   1. N3 (1798 từ, biên soạn đợt đầu) vẫn đóng gói dạng JSON tĩnh trong app
- *      (`sample-words.json`/`sample-examples.json`) như trước, KHÔNG đổi.
+ *      (`sample-words.json`/`sample-examples.json`, ~3MB gộp lại) như trước,
+ *      KHÔNG đổi nội dung — chỉ đổi CÁCH nạp: `import()` động bên trong
+ *      effect thay vì `import` tĩnh ở đầu file, để 2 file JSON này tách
+ *      thành chunk riêng, không còn bị mọi route (kể cả /exam, /admin...
+ *      vốn không liên quan) buộc phải tải qua `VocabularyProvider` ở layout
+ *      gốc. Xem effect `loadStaticN3` bên dưới.
  *   2. N5 trở đi (từ PDF nguồn, xem `vocab-content-service.ts`) nạp trực
  *      tiếp từ Supabase (`jp_vocab`/`jp_vocab_examples`), gộp thêm vào cùng
  *      danh sách `words`/`examples` ngay sau khi tải xong.
@@ -99,35 +102,48 @@ function progressToRow(userId: string, wordId: string, progress: LearningProgres
 }
 
 export function VocabularyProvider({ children }: { children: ReactNode }) {
-  const [words, setWords] = useState<VocabWord[]>(sampleWords);
-  const [examples, setExamples] = useState<VocabExample[]>(sampleExamples);
+  const [words, setWords] = useState<VocabWord[]>([]);
+  const [examples, setExamples] = useState<VocabExample[]>([]);
   const userIdRef = useRef<string | null>(null);
 
+  // Nạp N3 tĩnh (JSON ~3MB) bằng import() động, tách khỏi bundle chính —
+  // tự fetch/gộp tiến độ cho đúng các từ N3 vừa nạp (giống loadDbVocab bên
+  // dưới) vì 2 effect chạy song song, không đảm bảo thứ tự.
   useEffect(() => {
     let cancelled = false;
     const supabase = createClient();
 
-    async function loadProgress() {
+    async function loadStaticN3() {
+      const [{ sampleWords }, { sampleExamples }] = await Promise.all([
+        import("@/lib/data/sample-words"),
+        import("@/lib/data/sample-examples"),
+      ]);
+      if (cancelled) return;
+
+      let mergedWords = sampleWords;
       const {
         data: { user },
       } = await supabase.auth.getUser();
-      if (!user || cancelled) return;
-      userIdRef.current = user.id;
-
-      const rows = await listAllWordProgress(supabase, user.id);
+      if (user && !cancelled) {
+        userIdRef.current = user.id;
+        const rows = await listAllWordProgress(supabase, user.id);
+        if (rows.length > 0) {
+          const byWordId = new Map<string, WordProgressRow>(rows.map((r: WordProgressRow) => [r.word_id, r]));
+          mergedWords = sampleWords.map((w) => {
+            const row = byWordId.get(w.id);
+            if (!row) return w;
+            return { ...w, progress: rowToProgress(row), isHidden: row.is_hidden };
+          });
+        }
+      }
       if (cancelled) return;
-
-      const byWordId = new Map<string, WordProgressRow>(rows.map((r: WordProgressRow) => [r.word_id, r]));
-      setWords((prev) =>
-        prev.map((w) => {
-          const row = byWordId.get(w.id);
-          if (!row) return w;
-          return { ...w, progress: rowToProgress(row), isHidden: row.is_hidden };
-        }),
-      );
+      setWords((prev) => [...new Map([...prev, ...mergedWords].map((word) => [word.id, word])).values()]);
+      setExamples((prev) => [
+        ...new Map([...prev, ...sampleExamples].map((example) => [`${example.vocabId}:${example.exampleNo}`, example])).values(),
+      ]);
     }
 
-    void loadProgress();
+    void loadStaticN3();
     return () => {
       cancelled = true;
     };
@@ -136,10 +152,11 @@ export function VocabularyProvider({ children }: { children: ReactNode }) {
   // Nạp từ vựng nội dung DB (N5 trở đi, xem vocab-content-service.ts) và gộp
   // vào cùng danh sách với N3 JSON tĩnh, để mọi UI/luyện tập/ôn tập hiện có
   // hoạt động chung trên 1 danh sách duy nhất. Tự fetch tiến độ riêng cho
-  // đúng các từ vừa nạp (thay vì dựa vào effect loadProgress phía trên) vì
+  // đúng các từ vừa nạp (thay vì dựa vào effect loadStaticN3 phía trên) vì
   // 2 effect chạy song song, không đảm bảo thứ tự — nếu chỉ dựa effect kia,
   // tiến độ của từ N5 có thể bị bỏ sót khi effect kia chạy xong trước lúc
-  // các từ N5 được thêm vào state.
+  // các từ N5 được thêm vào state. Dùng chung pattern merge-bằng-Map nên
+  // dù effect nào chạy xong trước, kết quả gộp cuối cùng vẫn giống nhau.
   useEffect(() => {
     let cancelled = false;
     const supabase = createClient();

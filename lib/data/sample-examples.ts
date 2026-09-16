@@ -14,15 +14,25 @@ import { applyTangoN3Final6Override } from "./tango-n3-example-overrides-final6"
  * Đúng 3 ví dụ / từ (1 = exam, 2 = daily, 3 = business), khớp `vocabId` với
  * `sample-words.ts`. JSON gốc được sinh tự động; sửa hậu kiểm được áp qua
  * các lớp override để giữ lịch sử và tránh chỉnh tay file lớn.
+ *
+ * Mỗi override là hàm thuần (input: VocabExample) => VocabExample, độc lập
+ * theo từng phần tử — gộp thành 1 lượt duyệt mảng duy nhất (thay vì 8 lượt
+ * `.map()` nối tiếp) để giảm số lần cấp phát mảng trung gian khi module này
+ * được nạp, thứ tự áp dụng override giữ nguyên như cũ.
  */
 const rawSampleExamples = examplesData as unknown as VocabExample[];
 
-export const sampleExamples: VocabExample[] = rawSampleExamples
-  .map(applyTangoN3ExampleOverride)
-  .map(applyTangoN3ContextExampleOverride)
-  .map(applyTangoN3FinalContextOverride)
-  .map(applyTangoN3Final2Override)
-  .map(applyTangoN3Final3Override)
-  .map(applyTangoN3Final4Override)
-  .map(applyTangoN3Final5Override)
-  .map(applyTangoN3Final6Override);
+const OVERRIDES = [
+  applyTangoN3ExampleOverride,
+  applyTangoN3ContextExampleOverride,
+  applyTangoN3FinalContextOverride,
+  applyTangoN3Final2Override,
+  applyTangoN3Final3Override,
+  applyTangoN3Final4Override,
+  applyTangoN3Final5Override,
+  applyTangoN3Final6Override,
+] as const;
+
+export const sampleExamples: VocabExample[] = rawSampleExamples.map((example) =>
+  OVERRIDES.reduce((current, override) => override(current), example),
+);

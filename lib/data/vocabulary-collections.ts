@@ -1,13 +1,19 @@
-import { sampleWords } from "./sample-words";
 import type { VocabWord } from "../types";
 
 export type VocabularyCollection = "current" | "tango-n3" | "n2-chua-dat";
 
-const tangoN3Ids = new Set(sampleWords.filter((word) => word.jlpt === "N3").map((word) => word.id));
-
-export function getVocabularyCollection(word: Pick<VocabWord, "id" | "jlpt">): VocabularyCollection {
+/**
+ * Phân biệt "tango-n3" (bộ N3 JSON tĩnh, ~1798 từ) với các từ N3 khác (nạp
+ * từ Supabase, xem vocab-content-service.ts) bằng `contentSourceType`: chỉ
+ * từ nạp từ DB mới có field này (luôn set, xem dbVocabRowToWord); từ JSON
+ * tĩnh không bao giờ set. Cố tình KHÔNG import `sample-words.ts` ở đây để
+ * dựng Set id (như trước) — file đó nặng ~1.36MB, import tĩnh sẽ kéo theo
+ * mọi nơi gọi `getVocabularyCollection`, kể cả từ những route không liên
+ * quan gì tới N3.
+ */
+export function getVocabularyCollection(word: Pick<VocabWord, "jlpt" | "contentSourceType">): VocabularyCollection {
   if (word.jlpt === "N2") return "n2-chua-dat";
-  if (tangoN3Ids.has(word.id)) return "tango-n3";
+  if (word.jlpt === "N3" && !word.contentSourceType) return "tango-n3";
   return "current";
 }
 

@@ -6,8 +6,6 @@ import { Suspense, useEffect, useMemo, useState } from "react";
 
 import { LessonNavigator } from "@/components/lesson-navigator";
 import { getCached, setCached } from "@/lib/data/client-cache";
-import { downloadBlob } from "@/lib/data/excel-export";
-import { buildKanjiWorkbook, fetchAllKanjiData } from "@/lib/data/kanji-excel-export";
 import { getKanjiLevelCounts, listKanjiByLevel, type KanjiRow } from "@/lib/data/kanji-service";
 import { getLessonCount, LESSON_SIZES, sliceLesson } from "@/lib/data/lesson-structure";
 import { createClient } from "@/lib/supabase/client";
@@ -98,6 +96,13 @@ function KanjiListContent() {
   async function handleExport() {
     setExporting(true);
     try {
+      // exceljs (~900KB) chỉ cần khi thật sự bấm xuất — nạp động ở đây thay
+      // vì import tĩnh ở đầu file để không bắt mọi lượt xem trang /kanji
+      // phải tải kèm thư viện này.
+      const [{ downloadBlob }, { buildKanjiWorkbook, fetchAllKanjiData }] = await Promise.all([
+        import("@/lib/data/excel-export"),
+        import("@/lib/data/kanji-excel-export"),
+      ]);
       const supabase = createClient();
       const data = await fetchAllKanjiData(supabase);
       const blob = await buildKanjiWorkbook(data);

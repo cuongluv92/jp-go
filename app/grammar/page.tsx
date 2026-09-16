@@ -6,8 +6,6 @@ import { Suspense, useEffect, useMemo, useState } from "react";
 
 import { LessonNavigator } from "@/components/lesson-navigator";
 import { getCached, setCached } from "@/lib/data/client-cache";
-import { downloadBlob } from "@/lib/data/excel-export";
-import { buildGrammarWorkbook, fetchAllGrammarData } from "@/lib/data/grammar-excel-export";
 import { getGrammarLevelCounts, listGrammarByLevel, type GrammarRow } from "@/lib/data/grammar-service";
 import { getLessonCount, LESSON_SIZES, sliceLesson } from "@/lib/data/lesson-structure";
 import { createClient } from "@/lib/supabase/client";
@@ -95,6 +93,13 @@ function GrammarListContent() {
   async function handleExport() {
     setExporting(true);
     try {
+      // exceljs (~900KB) chỉ cần khi thật sự bấm xuất — nạp động ở đây thay
+      // vì import tĩnh ở đầu file để không bắt mọi lượt xem trang /grammar
+      // phải tải kèm thư viện này.
+      const [{ downloadBlob }, { buildGrammarWorkbook, fetchAllGrammarData }] = await Promise.all([
+        import("@/lib/data/excel-export"),
+        import("@/lib/data/grammar-excel-export"),
+      ]);
       const supabase = createClient();
       const data = await fetchAllGrammarData(supabase);
       const blob = await buildGrammarWorkbook(data);
