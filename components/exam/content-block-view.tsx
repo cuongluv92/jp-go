@@ -14,20 +14,89 @@ const HEADING_TAGS = ["h1", "h2", "h3", "h4", "h5", "h6"] as const;
 
 const EmptyVi = () => <p className="text-sm italic text-muted">(chưa dịch)</p>;
 
-function renderJapaneseText(text: string, tokens: FuriganaToken[] = [], showFurigana = false): ReactNode {
-  if (!showFurigana || tokens.length === 0) return text;
+type TextRange = { start: number; end: number };
 
-  const segments = segmentJapaneseText(text, [], tokens);
-  return segments.map((segment, index) =>
-    segment.reading ? (
-      <ruby key={`${segment.start}-${index}`}>
-        {segment.text}
-        <rt className="text-[0.58em] font-normal leading-none text-muted">{segment.reading}</rt>
-      </ruby>
+function collectBoldRanges(text: string, phrases: string[] = []): TextRange[] {
+  const ranges: TextRange[] = [];
+  for (const phrase of phrases) {
+    if (!phrase) continue;
+    let from = 0;
+    while (from < text.length) {
+      const start = text.indexOf(phrase, from);
+      if (start === -1) break;
+      ranges.push({ start, end: start + phrase.length });
+      from = start + Math.max(phrase.length, 1);
+    }
+  }
+  return ranges.sort((a, b) => a.start - b.start || a.end - b.end);
+}
+
+function overlapsBold(start: number, end: number, ranges: TextRange[]): boolean {
+  return ranges.some((range) => range.start < end && range.end > start);
+}
+
+function renderPlainSegmentWithBold(
+  text: string,
+  absoluteStart: number,
+  ranges: TextRange[],
+  keyPrefix: string,
+): ReactNode[] {
+  if (!text) return [];
+  const absoluteEnd = absoluteStart + text.length;
+  const cuts = new Set<number>([absoluteStart, absoluteEnd]);
+  for (const range of ranges) {
+    if (range.start > absoluteStart && range.start < absoluteEnd) cuts.add(range.start);
+    if (range.end > absoluteStart && range.end < absoluteEnd) cuts.add(range.end);
+  }
+  const points = [...cuts].sort((a, b) => a - b);
+  return points.slice(0, -1).map((start, index) => {
+    const end = points[index + 1];
+    const piece = text.slice(start - absoluteStart, end - absoluteStart);
+    return overlapsBold(start, end, ranges) ? (
+      <strong key={`${keyPrefix}-${start}`} className="font-bold">
+        {piece}
+      </strong>
     ) : (
-      <Fragment key={`${segment.start}-${index}`}>{segment.text}</Fragment>
-    ),
-  );
+      <Fragment key={`${keyPrefix}-${start}`}>{piece}</Fragment>
+    );
+  });
+}
+
+function renderJapaneseText(
+  text: string,
+  tokens: FuriganaToken[] = [],
+  showFurigana = false,
+  boldPhrases: string[] = [],
+): ReactNode {
+  const boldRanges = collectBoldRanges(text, boldPhrases);
+  const segments = showFurigana && tokens.length > 0
+    ? segmentJapaneseText(text, [], tokens)
+    : [{ text, start: 0, word: null, reading: undefined }];
+
+  return segments.map((segment, index) => {
+    const segmentEnd = segment.start + segment.text.length;
+    if (segment.reading) {
+      const ruby = (
+        <ruby>
+          {segment.text}
+          <rt className="text-[0.58em] font-normal leading-none text-muted">{segment.reading}</rt>
+        </ruby>
+      );
+      return overlapsBold(segment.start, segmentEnd, boldRanges) ? (
+        <strong key={`${segment.start}-${index}`} className="font-bold">
+          {ruby}
+        </strong>
+      ) : (
+        <Fragment key={`${segment.start}-${index}`}>{ruby}</Fragment>
+      );
+    }
+
+    return (
+      <Fragment key={`${segment.start}-${index}`}>
+        {renderPlainSegmentWithBold(segment.text, segment.start, boldRanges, `${segment.start}-${index}`)}
+      </Fragment>
+    );
+  });
 }
 
 /**
@@ -40,7 +109,11 @@ export function renderBlockColumns(block: ContentBlock, showFurigana = false): B
     case "heading": {
       const Tag = HEADING_TAGS[Math.min(Math.max(block.level - 1, 0), 5)];
       return {
-        jp: <Tag className="font-jp text-lg font-bold">{renderJapaneseText(block.jp, block.furigana_tokens, showFurigana)}</Tag>,
+        jp: (
+          <Tag className="font-jp text-lg font-bold">
+            {renderJapaneseText(block.jp, block.furigana_tokens, showFurigana, block.bold_jp)}
+          </Tag>
+        ),
         vi: block.vi ? <Tag className="text-lg font-bold">{block.vi}</Tag> : <EmptyVi />,
         explanation: block.explanation_vi ? <p className="text-sm text-muted">{block.explanation_vi}</p> : null,
       };
@@ -60,7 +133,7 @@ export function renderBlockColumns(block: ContentBlock, showFurigana = false): B
       return {
         jp: (
           <p className={`font-jp whitespace-pre-line leading-relaxed ${cls}`}>
-            {renderJapaneseText(block.jp, block.furigana_tokens, showFurigana)}
+            {renderJapaneseText(block.jp, block.furigana_tokens, showFurigana, block.bold_jp)}
           </p>
         ),
         vi: block.vi ? (
