@@ -187,7 +187,13 @@ function candidateMatchesAt(text: string, index: number, candidate: SegmentCandi
     return !hasKanji(previous) && !hasKanji(next);
   }
   const last = candidate.surface.slice(-1);
-  if (hasKanji(last) && hasKanji(next)) return false;
+  // Token đã kiểm tra tay (readingPriority 3) là cả cụm đã được xác nhận
+  // trọn vẹn - không áp dụng chặn "Kanji tiếp theo" vì 2 cụm Kanji độc lập
+  // đứng liền nhau là chuyện bình thường trong câu tiếng Nhật (vd 一日中
+  // đứng ngay trước 勉強), không có nghĩa cụm đầu bị cắt hụt. Với candidate
+  // suy luận tự động (priority 1/2) vẫn giữ nguyên chặn để tránh đoán nhầm
+  // vào một từ ghép dài hơn mà ta không biết.
+  if (candidate.readingPriority !== 3 && hasKanji(last) && hasKanji(next)) return false;
   return true;
 }
 
@@ -233,6 +239,14 @@ export function segmentJapaneseText(
         });
         continue;
       }
+
+      // Bề mặt suy ra (dictionaryForm/dạng chia) khác với rawWord chỉ có giá
+      // trị khi còn Kanji để gắn furigana. Không có Kanji (vd dictionary_form
+      // bị nhập nhầm thành cách đọc thuần kana như "まし" thay vì "增し") thì
+      // bỏ qua hẳn - nếu vẫn thêm, chuỗi kana ngắn đó có thể vô tình khớp
+      // giữa 1 từ chia dạng khác hoàn toàn không liên quan (vd "出しました"
+      // bị cắt nhầm thành "出"+"し"+"まし"+"た" vì "まし" trùng khớp).
+      if (!hasKanji(surface)) continue;
 
       const reading = dictionary
         ? deriveVerifiedReading(word, dictionaryForm, dictionary.reading, surface)

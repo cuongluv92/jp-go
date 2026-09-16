@@ -117,6 +117,21 @@ describe("segmentJapaneseText", () => {
     expect(reviewed.find((part) => part.text === "一日中")).toMatchObject({ reading: "いちにちじゅう" });
   });
 
+  it("không để dictionary_form thuần kana của từ khác chiếm nhầm 1 phần của từ chia dạng không liên quan", () => {
+    // Lỗi thật gặp trong DB: な形容詞 "ましな" có dictionary_form bị nhập
+    // nhầm thành "まし" (thuần kana, không có Kanji). Chuỗi "まし" đó không
+    // được phép khớp bừa vào giữa "出しました" (biến của "出す") của 1 từ
+    // hoàn toàn khác.
+    const mashi = { ...word("mashi", "ましな"), dictionaryForm: "まし", reading: "ましな", partOfSpeech: "na_adjective" as const } as VocabWord;
+    const dasu = readableWord("dasu", "出す", "だす", "verb", "godan");
+    const result = segmentJapaneseText("財布から千円を出しました。", [mashi, dasu]);
+    expect(result.some((part) => part.word?.id === "mashi")).toBe(false);
+    // ました (quá khứ lịch sự) chưa nằm trong bảng chia động từ nên chỉ khớp
+    // được phần gốc "出"=đ - đây là giới hạn về độ đầy đủ đã biết, không phải
+    // lỗi sai (đọc "だ" cho "出" vẫn đúng), khác với lỗi "まし" bị khớp bừa.
+    expect(result.find((part) => part.word?.id === "dasu")).toMatchObject({ text: "出", reading: "だ" });
+  });
+
   it("coi 々 là phần của cụm Kanji khi kiểm ranh giới", () => {
     const person = readableWord("1", "人", "ひと", "noun");
     const result = segmentJapaneseText("人々が集まりました。", [person]);
