@@ -1,6 +1,7 @@
-import type { ReactNode } from "react";
+import { Fragment, type ReactNode } from "react";
 
-import type { ContentBlock } from "@/lib/exam/content-blocks";
+import type { ContentBlock, FuriganaToken } from "@/lib/exam/content-blocks";
+import { segmentJapaneseText } from "@/lib/japanese-text";
 import { getExamSourceImageUrl } from "@/lib/exam/storage";
 
 export interface BlockColumns {
@@ -13,17 +14,33 @@ const HEADING_TAGS = ["h1", "h2", "h3", "h4", "h5", "h6"] as const;
 
 const EmptyVi = () => <p className="text-sm italic text-muted">(chưa dịch)</p>;
 
+function renderJapaneseText(text: string, tokens: FuriganaToken[] = [], showFurigana = false): ReactNode {
+  if (!showFurigana || tokens.length === 0) return text;
+
+  const segments = segmentJapaneseText(text, [], tokens);
+  return segments.map((segment, index) =>
+    segment.reading ? (
+      <ruby key={`${segment.start}-${index}`}>
+        {segment.text}
+        <rt className="text-[0.58em] font-normal leading-none text-muted">{segment.reading}</rt>
+      </ruby>
+    ) : (
+      <Fragment key={`${segment.start}-${index}`}>{segment.text}</Fragment>
+    ),
+  );
+}
+
 /**
  * Chuyển 1 content block thành 3 mảnh render riêng biệt cho 3 cột. KHÔNG bao
  * giờ trộn jp/vi/explanation_vi vào cùng một node - đúng rule bắt buộc của
  * module (xem docs/EXAM_CONTENT_IMPORT.md).
  */
-export function renderBlockColumns(block: ContentBlock): BlockColumns {
+export function renderBlockColumns(block: ContentBlock, showFurigana = false): BlockColumns {
   switch (block.type) {
     case "heading": {
       const Tag = HEADING_TAGS[Math.min(Math.max(block.level - 1, 0), 5)];
       return {
-        jp: <Tag className="font-jp text-lg font-bold">{block.jp}</Tag>,
+        jp: <Tag className="font-jp text-lg font-bold">{renderJapaneseText(block.jp, block.furigana_tokens, showFurigana)}</Tag>,
         vi: block.vi ? <Tag className="text-lg font-bold">{block.vi}</Tag> : <EmptyVi />,
         explanation: block.explanation_vi ? <p className="text-sm text-muted">{block.explanation_vi}</p> : null,
       };
@@ -41,7 +58,11 @@ export function renderBlockColumns(block: ContentBlock): BlockColumns {
       };
       const cls = calloutClass[block.type];
       return {
-        jp: <p className={`font-jp whitespace-pre-line leading-relaxed ${cls}`}>{block.jp}</p>,
+        jp: (
+          <p className={`font-jp whitespace-pre-line leading-relaxed ${cls}`}>
+            {renderJapaneseText(block.jp, block.furigana_tokens, showFurigana)}
+          </p>
+        ),
         vi: block.vi ? (
           <p className={`whitespace-pre-line leading-relaxed ${cls}`}>{block.vi}</p>
         ) : (
