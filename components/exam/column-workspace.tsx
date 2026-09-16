@@ -21,6 +21,7 @@ const STORAGE_KEYS: Record<ColumnKey, string> = {
   vi: "jpgo-exam-show-translation",
   explanation: "jpgo-exam-show-explanation",
 };
+const FURIGANA_STORAGE_KEY = "jpgo-exam-show-furigana";
 
 type Visibility = Record<ColumnKey, boolean>;
 
@@ -37,6 +38,16 @@ function readStoredVisibility(): Visibility {
     }
   };
   return { jp: read(STORAGE_KEYS.jp), vi: read(STORAGE_KEYS.vi), explanation: read(STORAGE_KEYS.explanation) };
+}
+
+function readStoredFurigana(): boolean {
+  if (typeof window === "undefined") return true;
+  try {
+    const raw = window.localStorage.getItem(FURIGANA_STORAGE_KEY);
+    return raw === null ? true : raw === "1";
+  } catch {
+    return true;
+  }
 }
 
 function EyeIcon() {
@@ -77,18 +88,23 @@ function desktopGridColsClass(count: number): string {
  *   hợp cột muốn xem, luôn giữ ít nhất 1 cột.
  * - FOCUS: `focus` (không persist qua refresh) - tạm thời chỉ phóng to 1 cột,
  *   không đụng tới `visible` nên thoát Focus luôn khôi phục đúng tổ hợp trước đó.
+ * - FURIGANA: chỉ render các token cách đọc đã được kiểm tra trong dữ liệu;
+ *   bật/tắt độc lập và ghi nhớ bằng localStorage.
  * Desktop: CSS grid song song. Mobile: tab, không ép nằm ngang.
  */
 export function ColumnWorkspace({ blocks }: { blocks: ContentBlock[] }) {
   const [visible, setVisible] = useState<Visibility>(ALL_VISIBLE);
   const [focus, setFocus] = useState<ColumnKey | null>(null);
   const [mobileTab, setMobileTab] = useState<ColumnKey>("jp");
+  const [showFurigana, setShowFurigana] = useState(true);
 
   useEffect(() => {
     // Đọc localStorage sau khi hydrate xong (SSR không có window) - cùng
     // pattern với AppChrome cho sidebar, tránh lệch HTML server/client.
     // eslint-disable-next-line react-hooks/set-state-in-effect
     setVisible(readStoredVisibility());
+    // eslint-disable-next-line react-hooks/set-state-in-effect
+    setShowFurigana(readStoredFurigana());
   }, []);
 
   const visibleCount = COLUMN_ORDER.filter((key) => visible[key]).length;
@@ -119,8 +135,23 @@ export function ColumnWorkspace({ blocks }: { blocks: ContentBlock[] }) {
     persistVisibility({ jp: cols.includes("jp"), vi: cols.includes("vi"), explanation: cols.includes("explanation") });
   }
 
+  function toggleFurigana() {
+    setShowFurigana((current) => {
+      const next = !current;
+      try {
+        window.localStorage.setItem(FURIGANA_STORAGE_KEY, next ? "1" : "0");
+      } catch {
+        // Preference vẫn hoạt động trong phiên hiện tại nếu localStorage bị chặn.
+      }
+      return next;
+    });
+  }
+
   const renderedColumns = focus ? [focus] : COLUMN_ORDER.filter((key) => visible[key]);
-  const rows = useMemo(() => blocks.map((block, index) => ({ key: index, ...renderBlockColumns(block) })), [blocks]);
+  const rows = useMemo(
+    () => blocks.map((block, index) => ({ key: index, ...renderBlockColumns(block, showFurigana) })),
+    [blocks, showFurigana],
+  );
   const mobileActiveTab = renderedColumns.includes(mobileTab) ? mobileTab : renderedColumns[0];
 
   return (
@@ -139,6 +170,17 @@ export function ColumnWorkspace({ blocks }: { blocks: ContentBlock[] }) {
           className="rounded-lg border border-border px-2.5 py-1 text-xs font-medium text-foreground transition hover:border-accent hover:text-accent"
         >
           <span className="font-jp">すべて表示</span>
+        </button>
+        <button
+          type="button"
+          onClick={toggleFurigana}
+          aria-pressed={showFurigana}
+          title={showFurigana ? "Ẩn hiragana trên Kanji" : "Hiện hiragana trên Kanji"}
+          className={`rounded-lg border px-2.5 py-1 text-xs font-semibold transition ${
+            showFurigana ? "border-accent/40 bg-accent-soft text-accent" : "border-border text-muted hover:border-accent/60"
+          }`}
+        >
+          <span className="font-jp">ふりがな</span> {showFurigana ? "ON" : "OFF"}
         </button>
 
         <div className="ml-auto flex flex-wrap items-center gap-1.5">
