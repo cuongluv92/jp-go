@@ -103,7 +103,6 @@ export function ColumnWorkspace({ blocks }: { blocks: ContentBlock[] }) {
     // pattern với AppChrome cho sidebar, tránh lệch HTML server/client.
     // eslint-disable-next-line react-hooks/set-state-in-effect
     setVisible(readStoredVisibility());
-    // eslint-disable-next-line react-hooks/set-state-in-effect
     setShowFurigana(readStoredFurigana());
   }, []);
 
