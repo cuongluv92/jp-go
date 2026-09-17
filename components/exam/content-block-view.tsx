@@ -124,9 +124,9 @@ export function renderBlockColumns(block: ContentBlock, showFurigana = false): B
     case "warning":
     case "definition": {
       const calloutClass: Record<string, string> = {
-        note: "rounded-xl bg-sky-50 p-3 text-sky-900",
-        warning: "rounded-xl bg-amber-50 p-3 text-amber-900",
-        definition: "rounded-xl bg-violet-50 p-3 text-violet-900",
+        note: "rounded-xl bg-sky-50 dark:bg-sky-500/10 p-3 text-sky-900 dark:text-sky-200",
+        warning: "rounded-xl bg-amber-50 dark:bg-amber-500/10 p-3 text-amber-900 dark:text-amber-200",
+        definition: "rounded-xl bg-violet-50 dark:bg-violet-500/10 p-3 text-violet-900 dark:text-violet-200",
         paragraph: "",
       };
       const cls = calloutClass[block.type];
@@ -177,7 +177,7 @@ export function renderBlockColumns(block: ContentBlock, showFurigana = false): B
         <div className="overflow-x-auto rounded-lg border border-border">
           <table className={`w-full text-left text-sm ${jpStyle ? "font-jp" : ""}`}>
             {headers.length > 0 && (
-              <thead className="bg-slate-50">
+              <thead className="bg-slate-50 dark:bg-surface-muted">
                 <tr>
                   {headers.map((h, i) => (
                     <th key={i} className="border-b border-border px-2 py-1.5 font-semibold">
@@ -189,7 +189,7 @@ export function renderBlockColumns(block: ContentBlock, showFurigana = false): B
             )}
             <tbody>
               {rows.map((row, ri) => (
-                <tr key={ri} className="odd:bg-white even:bg-slate-50/50">
+                <tr key={ri} className="odd:bg-white dark:odd:bg-surface even:bg-slate-50/50 dark:even:bg-white/5">
                   {row.map((cell, ci) => (
                     <td key={ci} className="border-b border-border px-2 py-1.5 align-top">
                       {cell}
@@ -214,7 +214,7 @@ export function renderBlockColumns(block: ContentBlock, showFurigana = false): B
     case "formula": {
       return {
         jp: (
-          <pre className="overflow-x-auto rounded-lg bg-slate-900 px-3 py-2 font-mono text-sm text-slate-50">
+          <pre className="overflow-x-auto rounded-lg bg-slate-900 px-3 py-2 font-mono text-sm text-slate-50 dark:text-foreground">
             {block.content}
           </pre>
         ),

@@ -4,6 +4,7 @@ import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 
 import { createClient } from "@/lib/supabase/client";
+import { useTheme } from "@/lib/theme-context";
 
 interface TopHeaderProps {
   desktopMode: boolean;
@@ -36,6 +37,23 @@ function BackIcon() {
   return (
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="h-5 w-5">
       <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
+    </svg>
+  );
+}
+
+function SunIcon() {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" className="h-5 w-5">
+      <circle cx="12" cy="12" r="4.2" strokeLinecap="round" strokeLinejoin="round" />
+      <path strokeLinecap="round" d="M12 3v2M12 19v2M4.2 4.2l1.4 1.4M18.4 18.4l1.4 1.4M3 12h2M19 12h2M4.2 19.8l1.4-1.4M18.4 5.6l1.4-1.4" />
+    </svg>
+  );
+}
+
+function MoonIcon() {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" className="h-5 w-5">
+      <path strokeLinecap="round" strokeLinejoin="round" d="M20 14.5A8.5 8.5 0 019.5 4a8.5 8.5 0 1010.5 10.5z" />
     </svg>
   );
 }
@@ -90,6 +108,7 @@ function getBreadcrumbs(pathname: string): string[] {
 export function TopHeader({ desktopMode, onToggleDesktop, onOpenSearch, sidebarCollapsed, onToggleSidebar, onOpenMenu }: TopHeaderProps) {
   const router = useRouter();
   const pathname = usePathname();
+  const { theme, toggleTheme } = useTheme();
   const breadcrumbs = getBreadcrumbs(pathname);
   const showBack = shouldShowBack(pathname);
 
@@ -128,7 +147,7 @@ export function TopHeader({ desktopMode, onToggleDesktop, onOpenSearch, sidebarC
             aria-label={sidebarCollapsed ? "Mở sidebar" : "Đóng sidebar"}
             aria-pressed={!sidebarCollapsed}
             title={sidebarCollapsed ? "Mở sidebar" : "Đóng sidebar"}
-            className="mr-3 flex h-9 w-9 shrink-0 items-center justify-center rounded-full text-muted transition hover:bg-slate-100 hover:text-foreground"
+            className="mr-3 flex h-9 w-9 shrink-0 items-center justify-center rounded-full text-muted transition hover:bg-slate-100 dark:hover:bg-white/10 hover:text-foreground"
           >
             <SidebarToggleIcon />
           </button>
@@ -139,7 +158,7 @@ export function TopHeader({ desktopMode, onToggleDesktop, onOpenSearch, sidebarC
             onClick={goBack}
             aria-label="Quay lại"
             title="Quay lại"
-            className="mr-3 flex h-9 w-9 shrink-0 items-center justify-center rounded-full text-muted transition hover:bg-slate-100 hover:text-foreground"
+            className="mr-3 flex h-9 w-9 shrink-0 items-center justify-center rounded-full text-muted transition hover:bg-slate-100 dark:hover:bg-white/10 hover:text-foreground"
           >
             <BackIcon />
           </button>
@@ -150,7 +169,7 @@ export function TopHeader({ desktopMode, onToggleDesktop, onOpenSearch, sidebarC
             onClick={goBack}
             aria-label="Quay lại"
             title="Quay lại"
-            className="mr-2 flex h-9 w-9 shrink-0 items-center justify-center rounded-full text-muted transition hover:bg-slate-100 hover:text-foreground"
+            className="mr-2 flex h-9 w-9 shrink-0 items-center justify-center rounded-full text-muted transition hover:bg-slate-100 dark:hover:bg-white/10 hover:text-foreground"
           >
             <BackIcon />
           </button>
@@ -161,7 +180,7 @@ export function TopHeader({ desktopMode, onToggleDesktop, onOpenSearch, sidebarC
             onClick={onOpenMenu}
             aria-label="Mở menu"
             title="Mở menu"
-            className="mr-2 flex h-9 w-9 shrink-0 items-center justify-center rounded-full text-muted transition hover:bg-slate-100 hover:text-foreground"
+            className="mr-2 flex h-9 w-9 shrink-0 items-center justify-center rounded-full text-muted transition hover:bg-slate-100 dark:hover:bg-white/10 hover:text-foreground"
           >
             <HamburgerIcon />
           </button>
@@ -182,7 +201,7 @@ export function TopHeader({ desktopMode, onToggleDesktop, onOpenSearch, sidebarC
               <div className="flex min-w-0 items-center gap-1.5 text-xs font-medium text-muted">
                 {breadcrumbs.map((item, index) => (
                   <span key={`${item}-${index}`} className="flex min-w-0 items-center gap-1.5">
-                    {index > 0 && <span className="text-slate-300">/</span>}
+                    {index > 0 && <span className="text-slate-300 dark:text-white/25">/</span>}
                     <span className={index === breadcrumbs.length - 1 ? "truncate font-semibold text-foreground" : "truncate"}>{item}</span>
                   </span>
                 ))}
@@ -192,7 +211,7 @@ export function TopHeader({ desktopMode, onToggleDesktop, onOpenSearch, sidebarC
             <button
               type="button"
               onClick={onOpenSearch}
-              className="group flex w-full max-w-[330px] items-center gap-2.5 rounded-2xl border border-border bg-slate-50/85 px-3.5 py-2.5 text-left shadow-sm transition hover:border-accent/30 hover:bg-white hover:shadow-md"
+              className="group flex w-full max-w-[330px] items-center gap-2.5 rounded-2xl border border-border bg-slate-50/85 px-3.5 py-2.5 text-left shadow-sm transition hover:border-accent/30 hover:bg-white dark:hover:bg-surface hover:shadow-md"
               aria-label="Tìm kiếm toàn app"
             >
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" className="h-4 w-4 shrink-0 text-muted group-hover:text-accent">
@@ -200,22 +219,31 @@ export function TopHeader({ desktopMode, onToggleDesktop, onOpenSearch, sidebarC
                 <path strokeLinecap="round" d="M21 21l-3.5-3.5" />
               </svg>
               <span className="min-w-0 flex-1 truncate text-xs font-medium text-muted">Tìm từ, Kanji, ngữ pháp...</span>
-              <kbd className="shrink-0 rounded-lg border border-border bg-white px-1.5 py-0.5 text-[9px] font-semibold text-muted">Ctrl K</kbd>
+              <kbd className="shrink-0 rounded-lg border border-border bg-white dark:bg-surface px-1.5 py-0.5 text-[9px] font-semibold text-muted">Ctrl K</kbd>
             </button>
           </div>
         )}
 
         <div className={`${desktopMode ? "ml-auto" : ""} flex shrink-0 items-center gap-1.5`}>
           {desktopMode && (
-            <span className="mr-1 hidden rounded-full border border-border bg-slate-50 px-3 py-1 text-[11px] font-semibold text-muted xl:inline-flex">
+            <span className="mr-1 hidden rounded-full border border-border bg-slate-50 dark:bg-surface-muted px-3 py-1 text-[11px] font-semibold text-muted xl:inline-flex">
               Desktop
             </span>
           )}
+          <button
+            type="button"
+            onClick={toggleTheme}
+            aria-label={theme === "dark" ? "Chuyển sang giao diện sáng" : "Chuyển sang giao diện tối"}
+            title={theme === "dark" ? "Giao diện sáng" : "Giao diện tối"}
+            className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full text-muted transition hover:bg-slate-100 dark:hover:bg-white/10 hover:text-foreground"
+          >
+            {theme === "dark" ? <SunIcon /> : <MoonIcon />}
+          </button>
           <Link
             href="/admin"
             aria-label="Quản lý dữ liệu"
             title="Cài đặt / quản lý dữ liệu"
-            className="flex h-9 w-9 items-center justify-center rounded-full text-muted transition hover:bg-slate-100 hover:text-foreground"
+            className="flex h-9 w-9 items-center justify-center rounded-full text-muted transition hover:bg-slate-100 dark:hover:bg-white/10 hover:text-foreground"
           >
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" className="h-5 w-5">
               <path
@@ -233,7 +261,7 @@ export function TopHeader({ desktopMode, onToggleDesktop, onOpenSearch, sidebarC
             aria-pressed={desktopMode}
             title={desktopMode ? "Về giao diện điện thoại" : "Mở giao diện desktop"}
             className={`hidden h-9 w-9 items-center justify-center rounded-full transition md:flex ${
-              desktopMode ? "bg-accent-soft text-accent" : "text-muted hover:bg-slate-100 hover:text-foreground"
+              desktopMode ? "bg-accent-soft text-accent" : "text-muted hover:bg-slate-100 dark:hover:bg-white/10 hover:text-foreground"
             }`}
           >
             <LayoutIcon desktopMode={desktopMode} />
@@ -243,7 +271,7 @@ export function TopHeader({ desktopMode, onToggleDesktop, onOpenSearch, sidebarC
             onClick={handleLogout}
             aria-label="Đăng xuất"
             title="Đăng xuất"
-            className="flex h-9 w-9 items-center justify-center rounded-full text-muted transition hover:bg-slate-100 hover:text-foreground"
+            className="flex h-9 w-9 items-center justify-center rounded-full text-muted transition hover:bg-slate-100 dark:hover:bg-white/10 hover:text-foreground"
           >
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" className="h-5 w-5">
               <path strokeLinecap="round" strokeLinejoin="round" d="M9 21H5a2 2 0 01-2-2V5a2 2 0 012-2h4M16 17l5-5-5-5M21 12H9" />

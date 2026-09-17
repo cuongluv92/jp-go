@@ -191,7 +191,7 @@ export function GlobalCommandPalette({ open, onClose }: GlobalCommandPaletteProp
         role="dialog"
         aria-modal="true"
         aria-label="Tìm kiếm toàn app"
-        className="w-full max-w-2xl overflow-hidden rounded-3xl border border-white/70 bg-surface shadow-[0_28px_80px_-24px_rgba(15,23,42,0.55)]"
+        className="w-full max-w-2xl overflow-hidden rounded-3xl border border-white/70 bg-surface shadow-[0_28px_80px_-24px_rgba(15,23,42,0.55)] dark:border-white/10"
         onMouseDown={(event) => event.stopPropagation()}
       >
         <div className="flex items-center gap-3 border-b border-border px-5 py-4">
@@ -210,7 +210,7 @@ export function GlobalCommandPalette({ open, onClose }: GlobalCommandPaletteProp
           {loading ? (
             <span className="text-xs font-medium text-muted">Đang tìm...</span>
           ) : (
-            <kbd className="rounded-lg border border-border bg-slate-50 px-2 py-1 text-[10px] font-semibold text-muted">ESC</kbd>
+            <kbd className="rounded-lg border border-border bg-slate-50 dark:bg-surface-muted px-2 py-1 text-[10px] font-semibold text-muted">ESC</kbd>
           )}
         </div>
 
@@ -234,16 +234,16 @@ export function GlobalCommandPalette({ open, onClose }: GlobalCommandPaletteProp
                     type="button"
                     onMouseMove={() => setSelectedIndex(index)}
                     onClick={() => openResult(result)}
-                    className={`flex w-full items-center gap-3 rounded-2xl px-3 py-3 text-left transition ${active ? "bg-accent-soft" : "hover:bg-slate-50"}`}
+                    className={`flex w-full items-center gap-3 rounded-2xl px-3 py-3 text-left transition ${active ? "bg-accent-soft" : "hover:bg-slate-50 dark:hover:bg-surface-muted"}`}
                   >
-                    <span className={`font-jp flex h-10 w-10 shrink-0 items-center justify-center rounded-xl text-lg font-bold ${active ? "bg-accent text-accent-foreground" : "bg-slate-100 text-foreground"}`}>
+                    <span className={`font-jp flex h-10 w-10 shrink-0 items-center justify-center rounded-xl text-lg font-bold ${active ? "bg-accent text-accent-foreground" : "bg-slate-100 dark:bg-white/10 text-foreground"}`}>
                       {result.badge}
                     </span>
                     <span className="min-w-0 flex-1">
                       <span className="font-jp block truncate text-sm font-semibold text-foreground">{result.primary}</span>
                       <span className="mt-0.5 block truncate text-xs text-muted">{result.secondary}</span>
                     </span>
-                    <span className="shrink-0 rounded-full border border-border bg-white px-2 py-1 text-[10px] font-semibold text-muted">{kindLabel(result.kind)}</span>
+                    <span className="shrink-0 rounded-full border border-border bg-white dark:bg-surface px-2 py-1 text-[10px] font-semibold text-muted">{kindLabel(result.kind)}</span>
                   </button>
                 </li>
               );
@@ -251,7 +251,7 @@ export function GlobalCommandPalette({ open, onClose }: GlobalCommandPaletteProp
           </ul>
         </div>
 
-        <div className="flex flex-wrap items-center justify-between gap-2 border-t border-border bg-slate-50/80 px-5 py-2.5 text-[10px] font-medium text-muted">
+        <div className="flex flex-wrap items-center justify-between gap-2 border-t border-border bg-slate-50/80 px-5 py-2.5 text-[10px] font-medium text-muted dark:bg-white/5">
           <span>↑↓ chọn · Enter mở · Esc đóng</span>
           <span>Tìm xuyên Từ vựng · Kanji · Ngữ pháp</span>
         </div>

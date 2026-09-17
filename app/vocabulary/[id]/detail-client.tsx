@@ -63,7 +63,7 @@ export function VocabularyDetailClient({ id }: { id: string }) {
         ← {collection.label}
       </Link>
       {collection.id === "n2-chua-dat" && (
-        <p className="rounded-xl border border-amber-200 bg-amber-50 p-3 text-sm text-amber-800">
+        <p className="rounded-xl border border-amber-200 dark:border-amber-500/25 bg-amber-50 dark:bg-amber-500/10 p-3 text-sm text-amber-800 dark:text-amber-300">
           N2 chưa đạt · Bản lưu để tra lại, đang chờ bộ N2 thay thế.
         </p>
       )}
@@ -80,11 +80,11 @@ export function VocabularyDetailClient({ id }: { id: string }) {
         <p className="mt-3 text-lg">{word.meaningVi}</p>
 
         <div className="mt-3 flex flex-wrap items-center gap-2">
-          <span className="rounded-full bg-slate-100 px-3 py-1 text-xs font-semibold text-slate-700">
+          <span className="rounded-full bg-slate-100 dark:bg-white/10 px-3 py-1 text-xs font-semibold text-slate-700 dark:text-zinc-200">
             {topBadge}
           </span>
           {word.needsReview && (
-            <span className="rounded-full bg-amber-100 px-2.5 py-0.5 text-xs font-medium text-amber-700">
+            <span className="rounded-full bg-amber-100 dark:bg-amber-500/15 px-2.5 py-0.5 text-xs font-medium text-amber-700 dark:text-amber-400">
               ⚠ Cần kiểm tra lại
             </span>
           )}
@@ -96,7 +96,7 @@ export function VocabularyDetailClient({ id }: { id: string }) {
             onClick={() => toggleFavorite(word.id)}
             className={`flex flex-1 items-center justify-center gap-1.5 rounded-xl border px-3 py-2 text-sm font-medium transition ${
               word.progress.isFavorite
-                ? "border-amber-300 bg-amber-50 text-amber-600"
+                ? "border-amber-300 dark:border-amber-500/30 bg-amber-50 dark:bg-amber-500/10 text-amber-600 dark:text-amber-400"
                 : "border-border text-muted"
             }`}
           >
@@ -141,7 +141,7 @@ export function VocabularyDetailClient({ id }: { id: string }) {
           {notes.length > 0 && (
             <div>
               <dt className="text-xs font-medium text-muted">Lưu ý / từ dễ nhầm</dt>
-              <dd className="mt-1 flex flex-col gap-1 rounded-lg bg-amber-50 p-2 text-amber-800">
+              <dd className="mt-1 flex flex-col gap-1 rounded-lg bg-amber-50 dark:bg-amber-500/10 p-2 text-amber-800 dark:text-amber-300">
                 {notes.map((note, i) => (
                   <p key={i}>{note}</p>
                 ))}
@@ -154,7 +154,7 @@ export function VocabularyDetailClient({ id }: { id: string }) {
       <section className="flex flex-col gap-3">
         <h2 className="text-sm font-semibold">Ví dụ</h2>
         {examples.length < 3 && (
-          <p className="rounded-xl border border-amber-200 bg-amber-50 p-3 text-xs leading-relaxed text-amber-900">
+          <p className="rounded-xl border border-amber-200 dark:border-amber-500/25 bg-amber-50 dark:bg-amber-500/10 p-3 text-xs leading-relaxed text-amber-900 dark:text-amber-200">
             Hiện có {examples.length}/3 ngữ cảnh. Phần còn thiếu chưa được tự điền để tránh đưa câu chưa kiểm chứng vào bài học.
           </p>
         )}
@@ -166,10 +166,10 @@ export function VocabularyDetailClient({ id }: { id: string }) {
             <div className="mb-2 flex flex-wrap items-center gap-1.5 pl-7 text-[10px] font-semibold">
               <span className="rounded-full bg-accent-soft px-2 py-0.5 text-accent">{EXAMPLE_TYPE_LABELS[example.exampleType]}</span>
               {example.difficulty && (
-                <span className="rounded-full bg-slate-100 px-2 py-0.5 text-muted">Mức {example.difficulty}/3</span>
+                <span className="rounded-full bg-slate-100 dark:bg-white/10 px-2 py-0.5 text-muted">Mức {example.difficulty}/3</span>
               )}
               {example.focusNote && (
-                <span className="rounded-full bg-amber-50 px-2 py-0.5 text-amber-800">{example.focusNote}</span>
+                <span className="rounded-full bg-amber-50 dark:bg-amber-500/10 px-2 py-0.5 text-amber-800 dark:text-amber-300">{example.focusNote}</span>
               )}
             </div>
             <div className="flex items-start gap-2">
@@ -212,7 +212,7 @@ function UsageListRow({ label, items }: { label: string; items: string[] }) {
       <dt className="text-xs font-medium text-muted">{label}</dt>
       <dd className="font-jp mt-1 flex flex-wrap gap-1.5">
         {items.map((item) => (
-          <span key={item} className="rounded-lg bg-slate-100 px-2 py-1 text-sm">
+          <span key={item} className="rounded-lg bg-slate-100 dark:bg-white/10 px-2 py-1 text-sm">
             {item}
           </span>
         ))}
@@ -389,11 +389,11 @@ function ConjugationTable({
   return (
     <div>
       <dt className="text-xs font-medium text-muted">Các thể（各活用形）</dt>
-      <dd className="mt-1 grid grid-cols-1 gap-2 rounded-lg bg-slate-50 p-3 text-sm">
+      <dd className="mt-1 grid grid-cols-1 gap-2 rounded-lg bg-slate-50 dark:bg-surface-muted p-3 text-sm">
         {rows.map((row) => (
           <div
             key={row.label}
-            className="grid grid-cols-[minmax(0,1fr)_minmax(0,1fr)] items-start gap-3 border-b border-slate-100 pb-2 last:border-b-0 last:pb-0"
+            className="grid grid-cols-[minmax(0,1fr)_minmax(0,1fr)] items-start gap-3 border-b border-slate-100 dark:border-white/10 pb-2 last:border-b-0 last:pb-0"
           >
             <span className="text-xs leading-relaxed text-muted">{row.label}</span>
             <span className="min-w-0 text-right">

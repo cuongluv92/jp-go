@@ -8,9 +8,9 @@ import { useVocabulary } from "@/lib/data/vocabulary-context";
 import type { FlashcardGrade, VocabWord } from "@/lib/types";
 
 const TONE_STYLES = {
-  rose: "border-rose-300 bg-rose-50 text-rose-600",
-  amber: "border-amber-300 bg-amber-50 text-amber-700",
-  emerald: "border-emerald-300 bg-emerald-50 text-emerald-700",
+  rose: "border-rose-300 bg-rose-50 dark:bg-rose-500/10 text-rose-600",
+  amber: "border-amber-300 dark:border-amber-500/30 bg-amber-50 dark:bg-amber-500/10 text-amber-700 dark:text-amber-400",
+  emerald: "border-emerald-300 dark:border-emerald-500/30 bg-emerald-50 dark:bg-emerald-500/10 text-emerald-700 dark:text-emerald-400",
 };
 
 function GradeButton({ label, tone, onClick }: { label: string; tone: keyof typeof TONE_STYLES; onClick: () => void }) {
@@ -71,7 +71,7 @@ export function ReviewFlashcardExercise({ words, onComplete }: { words: VocabWor
             {getExamplesForWord(examples, current.id)
               .slice(0, 1)
               .map((example) => (
-                <div key={example.exampleNo} className="mt-2 w-full rounded-xl bg-slate-50 p-3 text-left text-sm">
+                <div key={example.exampleNo} className="mt-2 w-full rounded-xl bg-slate-50 dark:bg-surface-muted p-3 text-left text-sm">
                   <p className="font-jp">{example.exampleJp}</p>
                   <p className="mt-0.5 text-xs text-muted">{example.exampleVi}</p>
                 </div>

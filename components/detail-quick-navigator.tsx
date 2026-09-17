@@ -154,7 +154,7 @@ export function DetailQuickNavigator({ variant }: { variant: Variant }) {
     // trang với header sticky top-0 nên cần chừa đúng --app-header-h để
     // không đè lên header.
     return (
-      <nav aria-label="Mục lục bài học" className="detail-quick-nav-top z-20 mb-4 hidden items-center gap-1.5 overflow-x-auto rounded-2xl border border-border/90 bg-white/95 p-2 shadow-sm backdrop-blur-xl md:flex">
+      <nav aria-label="Mục lục bài học" className="detail-quick-nav-top z-20 mb-4 hidden items-center gap-1.5 overflow-x-auto rounded-2xl border border-border/90 bg-white/95 p-2 shadow-sm backdrop-blur-xl dark:bg-surface/95 md:flex">
         <span className="shrink-0 px-2 text-[10px] font-bold uppercase tracking-[0.16em] text-muted">Trong bài</span>
         {sections.map((section) => (
           <button key={section.id} type="button" onClick={() => document.getElementById(section.id)?.scrollIntoView({ behavior: "smooth", block: "start" })} className="shrink-0 rounded-xl px-2.5 py-1.5 text-xs font-semibold text-foreground/75 transition hover:bg-accent-soft hover:text-accent">
@@ -169,13 +169,13 @@ export function DetailQuickNavigator({ variant }: { variant: Variant }) {
   return (
     <nav aria-label="Chuyển bài" className="mt-7 grid grid-cols-2 gap-3 border-t border-border/80 pt-5">
       {neighbors.previous ? (
-        <Link href={neighbors.previous.href} className="group min-w-0 rounded-2xl border border-border bg-surface p-3.5 shadow-sm transition hover:-translate-y-0.5 hover:border-slate-300 hover:shadow-md">
+        <Link href={neighbors.previous.href} className="group min-w-0 rounded-2xl border border-border bg-surface p-3.5 shadow-sm transition hover:-translate-y-0.5 hover:border-slate-300 dark:hover:border-white/15 hover:shadow-md">
           <span className="block text-[10px] font-bold uppercase tracking-[0.14em] text-muted">← Bài trước</span>
           <span className="mt-1 block truncate font-jp text-sm font-semibold group-hover:text-accent">{neighbors.previous.label}</span>
         </Link>
       ) : <div />}
       {neighbors.next ? (
-        <Link href={neighbors.next.href} className="group min-w-0 rounded-2xl border border-border bg-surface p-3.5 text-right shadow-sm transition hover:-translate-y-0.5 hover:border-slate-300 hover:shadow-md">
+        <Link href={neighbors.next.href} className="group min-w-0 rounded-2xl border border-border bg-surface p-3.5 text-right shadow-sm transition hover:-translate-y-0.5 hover:border-slate-300 dark:hover:border-white/15 hover:shadow-md">
           <span className="block text-[10px] font-bold uppercase tracking-[0.14em] text-muted">Bài tiếp →</span>
           <span className="mt-1 block truncate font-jp text-sm font-semibold group-hover:text-accent">{neighbors.next.label}</span>
         </Link>

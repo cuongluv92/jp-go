@@ -93,7 +93,7 @@ export function KanjiQuizRunner({
           {checked && (
             <p
               className={`text-center text-sm font-medium ${
-                normalizeJapaneseAnswer(typedInput) === normalizeJapaneseAnswer(question.correct_answer) ? "text-emerald-700" : "text-rose-600"
+                normalizeJapaneseAnswer(typedInput) === normalizeJapaneseAnswer(question.correct_answer) ? "text-emerald-700 dark:text-emerald-400" : "text-rose-600"
               }`}
             >
               {normalizeJapaneseAnswer(typedInput) === normalizeJapaneseAnswer(question.correct_answer)
@@ -115,8 +115,8 @@ export function KanjiQuizRunner({
             const isSelected = choice === selected;
             let style = "border-border bg-surface";
             if (checked) {
-              if (isCorrect) style = "border-emerald-400 bg-emerald-50 text-emerald-700";
-              else if (isSelected) style = "border-rose-400 bg-rose-50 text-rose-700";
+              if (isCorrect) style = "border-emerald-400 dark:border-emerald-500/40 bg-emerald-50 dark:bg-emerald-500/10 text-emerald-700 dark:text-emerald-400";
+              else if (isSelected) style = "border-rose-400 bg-rose-50 dark:bg-rose-500/10 text-rose-700 dark:text-rose-400";
             }
             return (
               <button

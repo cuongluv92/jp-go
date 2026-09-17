@@ -117,11 +117,11 @@ export default function HomePage() {
           <span className="font-jp block text-xs font-bold">単語 N3</span>
           <span className="mt-0.5 block text-[10px] text-muted">{tangoN3Count}</span>
         </Link>
-        <div className="rounded-xl border border-border bg-slate-50 px-2 py-2 text-center opacity-60">
+        <div className="rounded-xl border border-border bg-slate-50 dark:bg-surface-muted px-2 py-2 text-center opacity-60">
           <span className="font-jp block text-xs font-bold">単語 N2</span>
           <span className="mt-0.5 block text-[10px] text-muted">sắp có</span>
         </div>
-        <div className="rounded-xl border border-border bg-slate-50 px-2 py-2 text-center opacity-60">
+        <div className="rounded-xl border border-border bg-slate-50 dark:bg-surface-muted px-2 py-2 text-center opacity-60">
           <span className="font-jp block text-xs font-bold">単語 N1</span>
           <span className="mt-0.5 block text-[10px] text-muted">sắp có</span>
         </div>

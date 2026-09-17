@@ -113,8 +113,8 @@ export function TestRunner({ test, questions }: { test: ExamTest; questions: Exa
                     isCurrent
                       ? "bg-accent text-accent-foreground"
                       : isAnswered
-                        ? "bg-emerald-100 text-emerald-700"
-                        : "bg-slate-100 text-muted"
+                        ? "bg-emerald-100 dark:bg-emerald-500/15 text-emerald-700 dark:text-emerald-400"
+                        : "bg-slate-100 dark:bg-white/10 text-muted"
                   }`}
                 >
                   {q.question_number}
@@ -149,7 +149,7 @@ export function TestRunner({ test, questions }: { test: ExamTest; questions: Exa
               aria-pressed={state.flagged[current.id]}
               className={`shrink-0 rounded-lg border px-2.5 py-1 text-xs font-medium ${
                 state.flagged[current.id]
-                  ? "border-amber-400 bg-amber-50 text-amber-700"
+                  ? "border-amber-400 dark:border-amber-500/40 bg-amber-50 dark:bg-amber-500/10 text-amber-700 dark:text-amber-400"
                   : "border-border text-muted"
               }`}
             >
@@ -179,9 +179,9 @@ export function TestRunner({ test, questions }: { test: ExamTest; questions: Exa
                   disabled={submitted}
                   className={`flex items-start gap-3 rounded-xl border px-3 py-2.5 text-left text-sm transition ${
                     showCorrectness && isCorrectChoice
-                      ? "border-emerald-400 bg-emerald-50"
+                      ? "border-emerald-400 dark:border-emerald-500/40 bg-emerald-50 dark:bg-emerald-500/10"
                       : showCorrectness && isSelected && !isCorrectChoice
-                        ? "border-red-300 bg-red-50"
+                        ? "border-red-300 bg-red-50 dark:bg-red-500/10"
                         : isSelected
                           ? "border-accent bg-accent/5"
                           : "border-border hover:border-accent/50"
@@ -195,7 +195,7 @@ export function TestRunner({ test, questions }: { test: ExamTest; questions: Exa
           </div>
 
           {submitted && current.explanation_vi && (
-            <p className="mt-4 rounded-xl bg-slate-50 p-3 text-sm text-muted">{current.explanation_vi}</p>
+            <p className="mt-4 rounded-xl bg-slate-50 dark:bg-surface-muted p-3 text-sm text-muted">{current.explanation_vi}</p>
           )}
 
           {current.references.length > 0 && (

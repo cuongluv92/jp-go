@@ -166,7 +166,7 @@ function VocabularyPageContent() {
             key={item.id}
             href={item.href}
             aria-current={collection === item.id ? "page" : undefined}
-            className={`shrink-0 rounded-xl border px-3 py-2 text-sm font-semibold transition ${collection === item.id ? "border-accent bg-accent text-accent-foreground shadow-sm shadow-accent/20" : "border-border bg-surface text-muted hover:border-slate-300 hover:bg-slate-50 hover:text-foreground"}`}
+            className={`shrink-0 rounded-xl border px-3 py-2 text-sm font-semibold transition ${collection === item.id ? "border-accent bg-accent text-accent-foreground shadow-sm shadow-accent/20" : "border-border bg-surface text-muted hover:border-slate-300 dark:hover:border-white/15 hover:bg-slate-50 dark:hover:bg-surface-muted hover:text-foreground"}`}
           >
             {item.label}
           </Link>
@@ -178,7 +178,7 @@ function VocabularyPageContent() {
         </p>
       )}
       {collection === "n2-chua-dat" && (
-        <p className="rounded-xl border border-amber-200 bg-amber-50 p-3 text-sm text-amber-800">
+        <p className="rounded-xl border border-amber-200 dark:border-amber-500/25 bg-amber-50 dark:bg-amber-500/10 p-3 text-sm text-amber-800 dark:text-amber-300">
           N2 dữ liệu cũ · Được giữ riêng để tra lại, không tính vào bộ N2 mới.
         </p>
       )}
@@ -197,18 +197,18 @@ function VocabularyPageContent() {
         />
       </div>
 
-      <div className="grid grid-cols-2 gap-1 rounded-2xl bg-slate-100 p-1">
+      <div className="grid grid-cols-2 gap-1 rounded-2xl bg-slate-100 dark:bg-white/10 p-1">
         <button
           type="button"
           onClick={() => changeViewMode("lesson")}
-          className={`rounded-xl px-3 py-2.5 text-sm font-semibold transition ${viewMode === "lesson" ? "bg-white text-foreground shadow-sm" : "text-muted hover:text-foreground"}`}
+          className={`rounded-xl px-3 py-2.5 text-sm font-semibold transition ${viewMode === "lesson" ? "bg-white dark:bg-surface text-foreground shadow-sm" : "text-muted hover:text-foreground"}`}
         >
           Theo bài
         </button>
         <button
           type="button"
           onClick={() => changeViewMode("partOfSpeech")}
-          className={`rounded-xl px-3 py-2.5 text-sm font-semibold transition ${viewMode === "partOfSpeech" ? "bg-white text-foreground shadow-sm" : "text-muted hover:text-foreground"}`}
+          className={`rounded-xl px-3 py-2.5 text-sm font-semibold transition ${viewMode === "partOfSpeech" ? "bg-white dark:bg-surface text-foreground shadow-sm" : "text-muted hover:text-foreground"}`}
         >
           Theo từ loại
         </button>
@@ -243,13 +243,13 @@ function VocabularyPageContent() {
       )}
 
       {viewMode === "lesson" && !queryActive && !effectiveLevel && (
-        <p className="rounded-xl border border-dashed border-border bg-slate-50 p-4 text-sm text-muted">
+        <p className="rounded-xl border border-dashed border-border bg-slate-50 dark:bg-surface-muted p-4 text-sm text-muted">
           Chọn một cấp độ N5–N1 để học theo bài. Mỗi bài có khoảng {LESSON_SIZES.vocabulary} từ.
         </p>
       )}
 
       {viewMode === "lesson" && queryActive && (
-        <p className="rounded-xl border border-border bg-slate-50 px-3 py-2 text-xs text-muted">
+        <p className="rounded-xl border border-border bg-slate-50 dark:bg-surface-muted px-3 py-2 text-xs text-muted">
           Đang tìm trong toàn bộ {effectiveLevel ?? "kho từ"}; xoá từ khoá để quay lại Bài {selectedLesson}.
         </p>
       )}
@@ -259,7 +259,7 @@ function VocabularyPageContent() {
           <button
             type="button"
             onClick={() => setSelectedPartOfSpeech("all")}
-            className={`shrink-0 rounded-full border px-3 py-1.5 text-xs font-semibold transition ${selectedPartOfSpeech === "all" ? "border-accent bg-accent text-accent-foreground" : "border-border bg-surface text-muted hover:border-slate-300 hover:text-foreground"}`}
+            className={`shrink-0 rounded-full border px-3 py-1.5 text-xs font-semibold transition ${selectedPartOfSpeech === "all" ? "border-accent bg-accent text-accent-foreground" : "border-border bg-surface text-muted hover:border-slate-300 dark:hover:border-white/15 hover:text-foreground"}`}
           >
             Tất cả ({levelWords.length})
           </button>
@@ -268,7 +268,7 @@ function VocabularyPageContent() {
               key={partOfSpeech}
               type="button"
               onClick={() => setSelectedPartOfSpeech(partOfSpeech)}
-              className={`shrink-0 rounded-full border px-3 py-1.5 text-xs font-semibold transition ${selectedPartOfSpeech === partOfSpeech ? "border-accent bg-accent text-accent-foreground" : "border-border bg-surface text-muted hover:border-slate-300 hover:text-foreground"}`}
+              className={`shrink-0 rounded-full border px-3 py-1.5 text-xs font-semibold transition ${selectedPartOfSpeech === partOfSpeech ? "border-accent bg-accent text-accent-foreground" : "border-border bg-surface text-muted hover:border-slate-300 dark:hover:border-white/15 hover:text-foreground"}`}
             >
               {LEARNER_PART_OF_SPEECH_LABELS[partOfSpeech]} ({categoryCounts.get(partOfSpeech) ?? 0})
             </button>
@@ -292,7 +292,7 @@ function VocabularyPageContent() {
           const tone = JLPT_TONES[word.jlpt];
           return (
             <li key={word.id}>
-              <Link href={`/vocabulary/${word.id}`} className="group relative flex items-center justify-between gap-3 overflow-hidden rounded-xl border border-border bg-surface py-3 pl-5 pr-4 shadow-sm transition hover:-translate-y-0.5 hover:border-slate-300 hover:shadow-md active:scale-[0.99]">
+              <Link href={`/vocabulary/${word.id}`} className="group relative flex items-center justify-between gap-3 overflow-hidden rounded-xl border border-border bg-surface py-3 pl-5 pr-4 shadow-sm transition hover:-translate-y-0.5 hover:border-slate-300 dark:hover:border-white/15 hover:shadow-md active:scale-[0.99]">
                 <span className={`absolute inset-y-0 left-0 w-1 ${tone.dot}`} aria-hidden />
                 <div className="min-w-0">
                   <div className="flex items-center gap-2">
@@ -322,7 +322,7 @@ function SelectChip({ label, value, options, onChange }: { label: string; value?
       <select
         value={value ?? ""}
         onChange={(event) => onChange(event.target.value)}
-        className={`appearance-none rounded-full border px-3 py-1.5 pr-7 text-xs font-semibold shadow-sm outline-none transition ${levelTone ? levelTone.idle : value ? "border-accent bg-accent/10 text-accent" : "border-border bg-surface text-muted hover:border-slate-300"}`}
+        className={`appearance-none rounded-full border px-3 py-1.5 pr-7 text-xs font-semibold shadow-sm outline-none transition ${levelTone ? levelTone.idle : value ? "border-accent bg-accent/10 text-accent" : "border-border bg-surface text-muted hover:border-slate-300 dark:hover:border-white/15"}`}
       >
         <option value="">{label}</option>
         {options.map((option) => <option key={option.value} value={option.value}>{option.label}</option>)}

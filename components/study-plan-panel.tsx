@@ -74,7 +74,7 @@ function ContentProgressCard({ label, learned, total }: { label: string; learned
           {learned}/{total} · {percent}%
         </p>
       </div>
-      <div className="mt-2.5 h-2 w-full overflow-hidden rounded-full bg-slate-100">
+      <div className="mt-2.5 h-2 w-full overflow-hidden rounded-full bg-slate-100 dark:bg-white/10">
         <div className="h-full rounded-full bg-gradient-accent transition-all" style={{ width: `${percent}%` }} />
       </div>
     </div>
@@ -102,7 +102,7 @@ function PlanSwitcherChip({
       }`}
     >
       <div className="flex items-center gap-1.5">
-        <span className={`rounded-md px-1.5 py-0.5 text-[10px] font-bold ${active ? "bg-accent text-accent-foreground" : "bg-slate-100 text-muted"}`}>
+        <span className={`rounded-md px-1.5 py-0.5 text-[10px] font-bold ${active ? "bg-accent text-accent-foreground" : "bg-slate-100 dark:bg-white/10 text-muted"}`}>
           {plan.jlpt_level}
         </span>
         <span className={`max-w-[9rem] truncate text-xs font-semibold ${active ? "text-accent" : "text-foreground"}`}>
@@ -528,7 +528,7 @@ export function StudyPlanPanel() {
                           </p>
                         </div>
                         {isDone ? (
-                          <span className="shrink-0 rounded-lg bg-emerald-50 px-2.5 py-1.5 text-xs font-semibold text-emerald-700">
+                          <span className="shrink-0 rounded-lg bg-emerald-50 dark:bg-emerald-500/10 px-2.5 py-1.5 text-xs font-semibold text-emerald-700 dark:text-emerald-400">
                             ✓ Đã xong
                           </span>
                         ) : (

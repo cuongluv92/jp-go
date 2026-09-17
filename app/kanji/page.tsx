@@ -151,11 +151,11 @@ function KanjiListContent() {
                   ? levelTone.active
                   : count > 0
                     ? levelTone.idle
-                    : "border-border bg-slate-50 text-muted opacity-60"
+                    : "border-border bg-slate-50 dark:bg-surface-muted text-muted opacity-60"
               }`}
             >
               <span className="inline-flex items-center gap-1.5">
-                <span className={`h-1.5 w-1.5 rounded-full ${level === lv ? "bg-white" : levelTone.dot}`} aria-hidden />
+                <span className={`h-1.5 w-1.5 rounded-full ${level === lv ? "bg-white dark:bg-surface" : levelTone.dot}`} aria-hidden />
                 {lv} {count > 0 ? `(${count})` : "· sắp có"}
               </span>
             </button>
@@ -190,7 +190,7 @@ function KanjiListContent() {
       )}
 
       {query.trim() && (
-        <p className="rounded-xl border border-border bg-slate-50 px-3 py-2 text-xs text-muted">
+        <p className="rounded-xl border border-border bg-slate-50 dark:bg-surface-muted px-3 py-2 text-xs text-muted">
           Đang tìm trong toàn bộ {level}; xoá từ khoá để quay lại Bài {selectedLesson}.
         </p>
       )}
@@ -211,7 +211,7 @@ function KanjiListContent() {
             <li key={k.id}>
               <Link
                 href={`/kanji/${k.id}`}
-                className="group relative flex flex-col items-center gap-1 overflow-hidden rounded-xl border border-border bg-surface px-2 py-3 text-center shadow-sm transition hover:-translate-y-0.5 hover:border-slate-300 hover:shadow-md active:scale-[0.97]"
+                className="group relative flex flex-col items-center gap-1 overflow-hidden rounded-xl border border-border bg-surface px-2 py-3 text-center shadow-sm transition hover:-translate-y-0.5 hover:border-slate-300 dark:hover:border-white/15 hover:shadow-md active:scale-[0.97]"
               >
                 <span className={`absolute inset-x-0 top-0 h-1 ${tone.dot}`} aria-hidden />
                 <span className="font-jp mt-1 text-2xl font-semibold transition group-hover:text-accent">{k.kanji_character}</span>

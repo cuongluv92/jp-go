@@ -34,7 +34,7 @@ export function ReferenceModal({
             type="button"
             onClick={onClose}
             aria-label="Đóng"
-            className="flex h-8 w-8 items-center justify-center rounded-full text-muted hover:bg-slate-100 hover:text-foreground"
+            className="flex h-8 w-8 items-center justify-center rounded-full text-muted hover:bg-slate-100 dark:hover:bg-white/10 hover:text-foreground"
           >
             ×
           </button>

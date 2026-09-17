@@ -94,7 +94,7 @@ export function QuizRunner({
             className="rounded-xl border border-border bg-surface px-3 py-3 text-center font-jp text-lg outline-none focus:border-accent disabled:opacity-70"
           />
           {typedChecked && (
-            <div className={`rounded-xl border p-3 text-sm ${normalizeJapaneseAnswer(typedInput) === normalizeJapaneseAnswer(item.answer!) ? "border-emerald-300 bg-emerald-50 text-emerald-800" : "border-rose-300 bg-rose-50 text-rose-800"}`}>
+            <div className={`rounded-xl border p-3 text-sm ${normalizeJapaneseAnswer(typedInput) === normalizeJapaneseAnswer(item.answer!) ? "border-emerald-300 dark:border-emerald-500/30 bg-emerald-50 dark:bg-emerald-500/10 text-emerald-800 dark:text-emerald-300" : "border-rose-300 bg-rose-50 dark:bg-rose-500/10 text-rose-800 dark:text-rose-300"}`}>
               <p className="font-semibold">
                 {normalizeJapaneseAnswer(typedInput) === normalizeJapaneseAnswer(item.answer!) ? "Đúng" : `Chưa đúng · Đáp án: ${item.answer}`}
               </p>
@@ -112,8 +112,8 @@ export function QuizRunner({
           const isSelected = i === selected;
           let style = "border-border bg-surface";
           if (selected !== null) {
-            if (isCorrect) style = "border-emerald-400 bg-emerald-50 text-emerald-700";
-            else if (isSelected) style = "border-rose-400 bg-rose-50 text-rose-700";
+            if (isCorrect) style = "border-emerald-400 dark:border-emerald-500/40 bg-emerald-50 dark:bg-emerald-500/10 text-emerald-700 dark:text-emerald-400";
+            else if (isSelected) style = "border-rose-400 bg-rose-50 dark:bg-rose-500/10 text-rose-700 dark:text-rose-400";
           }
           return (
             <button
@@ -131,7 +131,7 @@ export function QuizRunner({
 
       {!isTyped && selected !== null && (
         <div
-          className={`rounded-xl border p-3 text-sm ${selected === item.correctIndex ? "border-emerald-300 bg-emerald-50 text-emerald-800" : "border-rose-300 bg-rose-50 text-rose-800"}`}
+          className={`rounded-xl border p-3 text-sm ${selected === item.correctIndex ? "border-emerald-300 dark:border-emerald-500/30 bg-emerald-50 dark:bg-emerald-500/10 text-emerald-800 dark:text-emerald-300" : "border-rose-300 bg-rose-50 dark:bg-rose-500/10 text-rose-800 dark:text-rose-300"}`}
         >
           <p className="font-semibold">{selected === item.correctIndex ? "Đúng" : `Chưa đúng · Đáp án: ${options[item.correctIndex!]}`}</p>
           {item.explanation && <p className="mt-1 whitespace-pre-line text-xs leading-relaxed">{item.explanation}</p>}

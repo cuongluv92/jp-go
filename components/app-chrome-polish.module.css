@@ -96,11 +96,22 @@
   box-shadow: 0 8px 22px -20px rgba(15, 23, 42, 0.55);
 }
 
+:global(html[data-theme="dark"][data-jp-page="vocabulary"]) .mobileMain > div > ul > li > a,
+:global(html[data-theme="dark"][data-jp-page="grammar"]) .mobileMain > div > ul > li > a,
+:global(html[data-theme="dark"][data-jp-page="kanji"]) .mobileMain > div > ul > li > a {
+  border-color: var(--border);
+}
+
 .mobileMain ~ :global(nav.safe-bottom) {
   border-top-color: rgba(203, 213, 225, 0.88);
   background: rgba(255, 255, 255, 0.94);
   box-shadow: 0 -12px 30px -24px rgba(15, 23, 42, 0.55);
   backdrop-filter: blur(18px);
+}
+
+:global(html[data-theme="dark"]) .mobileMain ~ :global(nav.safe-bottom) {
+  border-top-color: var(--border);
+  background: color-mix(in srgb, var(--surface) 94%, transparent);
 }
 
 .mobileMain ~ :global(nav.safe-bottom) > ul {

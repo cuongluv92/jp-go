@@ -153,11 +153,11 @@ function GrammarListContent() {
                   ? levelTone.active
                   : count > 0
                     ? levelTone.idle
-                    : "border-border bg-slate-50 text-muted opacity-60"
+                    : "border-border bg-slate-50 dark:bg-surface-muted text-muted opacity-60"
               }`}
             >
               <span className="inline-flex items-center gap-1.5">
-                <span className={`h-1.5 w-1.5 rounded-full ${level === lv ? "bg-white" : levelTone.dot}`} aria-hidden />
+                <span className={`h-1.5 w-1.5 rounded-full ${level === lv ? "bg-white dark:bg-surface" : levelTone.dot}`} aria-hidden />
                 {lv} {count > 0 ? `(${count})` : "· sắp có"}
               </span>
             </button>
@@ -166,7 +166,7 @@ function GrammarListContent() {
       </div>
 
       {loadError && grammarList.length > 0 && (
-        <div className="flex items-center justify-between gap-3 rounded-xl border border-amber-200 bg-amber-50 p-3 text-xs text-amber-900">
+        <div className="flex items-center justify-between gap-3 rounded-xl border border-amber-200 dark:border-amber-500/25 bg-amber-50 dark:bg-amber-500/10 p-3 text-xs text-amber-900 dark:text-amber-200">
           <span>{loadError} Đang hiển thị dữ liệu đã lưu tạm.</span>
           <button type="button" onClick={retryLoad} className="shrink-0 font-semibold text-accent">
             Thử lại
@@ -188,7 +188,7 @@ function GrammarListContent() {
       {loading ? (
         <p className="rounded-2xl border border-dashed border-border p-4 text-sm text-muted">Đang tải...</p>
       ) : loadError && grammarList.length === 0 ? (
-        <div className="rounded-2xl border border-amber-200 bg-amber-50 p-4 text-sm text-amber-900">
+        <div className="rounded-2xl border border-amber-200 dark:border-amber-500/25 bg-amber-50 dark:bg-amber-500/10 p-4 text-sm text-amber-900 dark:text-amber-200">
           <p>{loadError}</p>
           <button type="button" onClick={retryLoad} className="mt-2 font-semibold text-accent">
             Thử lại
@@ -206,7 +206,7 @@ function GrammarListContent() {
               <li key={g.id}>
                 <Link
                   href={`/grammar/${g.id}`}
-                  className="group relative flex flex-col gap-0.5 overflow-hidden rounded-xl border border-border bg-surface py-3 pl-5 pr-4 shadow-sm transition hover:border-slate-300 hover:shadow-md active:scale-[0.98]"
+                  className="group relative flex flex-col gap-0.5 overflow-hidden rounded-xl border border-border bg-surface py-3 pl-5 pr-4 shadow-sm transition hover:border-slate-300 dark:hover:border-white/15 hover:shadow-md active:scale-[0.98]"
                 >
                   <span className={`absolute inset-y-0 left-0 w-1 ${tone.dot}`} aria-hidden />
                   <div className="flex items-center justify-between gap-3">

@@ -194,7 +194,7 @@ export function StudyPlanWizard({ onCreated }: { onCreated: () => void }) {
                     ? "bg-accent text-accent-foreground shadow-sm shadow-accent/30"
                     : s < step
                       ? "bg-accent/15 text-accent"
-                      : "bg-slate-100 text-muted"
+                      : "bg-slate-100 dark:bg-white/10 text-muted"
                 }`}
               >
                 {s < step ? "✓" : s}
@@ -204,7 +204,7 @@ export function StudyPlanWizard({ onCreated }: { onCreated: () => void }) {
               </span>
             </div>
             {i < 3 && (
-              <div className={`mx-1 h-0.5 flex-1 rounded-full transition ${s < step ? "bg-accent/40" : "bg-slate-100"}`} />
+              <div className={`mx-1 h-0.5 flex-1 rounded-full transition ${s < step ? "bg-accent/40" : "bg-slate-100 dark:bg-white/10"}`} />
             )}
           </div>
         ))}
@@ -227,7 +227,7 @@ export function StudyPlanWizard({ onCreated }: { onCreated: () => void }) {
                       ? "border-accent bg-accent text-accent-foreground"
                       : available
                         ? "border-border bg-surface text-foreground"
-                        : "border-border bg-slate-50 text-muted opacity-60"
+                        : "border-border bg-slate-50 dark:bg-surface-muted text-muted opacity-60"
                   }`}
                 >
                   {lv}
@@ -256,7 +256,7 @@ export function StudyPlanWizard({ onCreated }: { onCreated: () => void }) {
                 <label
                   key={s}
                   className={`flex items-center gap-2 rounded-xl border border-border px-3 py-2 text-sm ${
-                    available ? "bg-surface" : "bg-slate-50 text-muted opacity-60"
+                    available ? "bg-surface" : "bg-slate-50 dark:bg-surface-muted text-muted opacity-60"
                   }`}
                 >
                   <input

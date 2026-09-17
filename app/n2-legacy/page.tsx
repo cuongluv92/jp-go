@@ -52,15 +52,15 @@ export default function N2LegacyPage() {
       </div>
 
       <div className="grid grid-cols-3 gap-2">
-        <Link href="/vocabulary?collection=n2-chua-dat" className="rounded-xl border border-amber-200 bg-amber-50 px-2 py-3 text-center">
+        <Link href="/vocabulary?collection=n2-chua-dat" className="rounded-xl border border-amber-200 dark:border-amber-500/25 bg-amber-50 dark:bg-amber-500/10 px-2 py-3 text-center">
           <span className="block text-sm font-semibold">Từ vựng</span>
           <span className="mt-1 block text-xs text-muted">{archivedWords.length} mục</span>
         </Link>
-        <a href="#legacy-kanji" className="rounded-xl border border-amber-200 bg-amber-50 px-2 py-3 text-center">
+        <a href="#legacy-kanji" className="rounded-xl border border-amber-200 dark:border-amber-500/25 bg-amber-50 dark:bg-amber-500/10 px-2 py-3 text-center">
           <span className="block text-sm font-semibold">Kanji</span>
           <span className="mt-1 block text-xs text-muted">{loading ? "..." : `${kanji.length} mục`}</span>
         </a>
-        <a href="#legacy-grammar" className="rounded-xl border border-amber-200 bg-amber-50 px-2 py-3 text-center">
+        <a href="#legacy-grammar" className="rounded-xl border border-amber-200 dark:border-amber-500/25 bg-amber-50 dark:bg-amber-500/10 px-2 py-3 text-center">
           <span className="block text-sm font-semibold">Ngữ pháp</span>
           <span className="mt-1 block text-xs text-muted">{loading ? "..." : `${grammar.length} mục`}</span>
         </a>

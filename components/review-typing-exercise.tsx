@@ -66,7 +66,7 @@ export function ReviewTypingExercise({ words, onComplete }: { words: VocabWord[]
         className="rounded-xl border border-border bg-surface px-3 py-2.5 text-center font-jp text-lg outline-none focus:border-accent disabled:opacity-70"
       />
 
-      {result === "correct" && <p className="text-center text-sm font-medium text-emerald-700">Chính xác! 🎉</p>}
+      {result === "correct" && <p className="text-center text-sm font-medium text-emerald-700 dark:text-emerald-400">Chính xác! 🎉</p>}
       {result === "incorrect" && <p className="text-center text-sm font-medium text-rose-600">Chưa đúng — đáp án: {answer}</p>}
 
       <button type="submit" className="rounded-xl bg-accent px-4 py-3 text-sm font-semibold text-accent-foreground transition active:scale-[0.98]">

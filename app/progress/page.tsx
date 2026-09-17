@@ -157,7 +157,7 @@ export default function ProgressPage() {
               {dueGrammarCount > 0 && `${dueGrammarCount} ngữ pháp`}
             </p>
           </div>
-          <span className="shrink-0 rounded-lg bg-white px-3 py-1.5 text-xs font-semibold shadow-sm">Ôn ngay →</span>
+          <span className="shrink-0 rounded-lg bg-white dark:bg-surface px-3 py-1.5 text-xs font-semibold shadow-sm">Ôn ngay →</span>
         </Link>
       )}
 
@@ -202,12 +202,12 @@ export default function ProgressPage() {
                         </div>
                         <span className="shrink-0 text-xs font-semibold text-muted">{percent}%</span>
                       </div>
-                      <div className="mt-2 h-1.5 w-full overflow-hidden rounded-full bg-slate-100">
+                      <div className="mt-2 h-1.5 w-full overflow-hidden rounded-full bg-slate-100 dark:bg-white/10">
                         <div className="h-full rounded-full bg-gradient-accent" style={{ width: `${percent}%` }} />
                       </div>
                       <p
                         className={`mt-1.5 text-[11px] font-medium ${
-                          paceDiff < 0 ? "text-amber-700" : paceDiff > 0 ? "text-emerald-700" : "text-muted"
+                          paceDiff < 0 ? "text-amber-700 dark:text-amber-400" : paceDiff > 0 ? "text-emerald-700 dark:text-emerald-400" : "text-muted"
                         }`}
                       >
                         {completed}/{plan.total_days} ngày ·{" "}
@@ -311,7 +311,7 @@ function BarRow({ label, count, max }: { label: string; count: number; max: numb
         <span className="text-muted">{label}</span>
         <span className="font-medium">{count}</span>
       </div>
-      <div className="h-2 w-full overflow-hidden rounded-full bg-slate-100">
+      <div className="h-2 w-full overflow-hidden rounded-full bg-slate-100 dark:bg-white/10">
         <div className="h-full rounded-full bg-accent" style={{ width: `${pct}%` }} />
       </div>
     </div>

@@ -45,7 +45,7 @@ export function LessonNavigator({
             type="button"
             onClick={() => onChange(range.lesson - 1)}
             disabled={range.lesson <= 1}
-            className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl border border-border bg-white text-sm font-bold text-foreground transition hover:border-slate-300 hover:bg-slate-50 disabled:cursor-not-allowed disabled:opacity-35"
+            className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl border border-border bg-white dark:bg-surface text-sm font-bold text-foreground transition hover:border-slate-300 dark:hover:border-white/15 hover:bg-slate-50 dark:hover:bg-surface-muted disabled:cursor-not-allowed disabled:opacity-35"
             aria-label="Bài trước"
           >
             ←
@@ -56,7 +56,7 @@ export function LessonNavigator({
             <select
               value={range.lesson}
               onChange={(event) => onChange(Number(event.target.value))}
-              className="h-9 w-full min-w-[138px] appearance-none rounded-xl border border-border bg-white px-3 pr-8 text-xs font-semibold text-foreground outline-none transition focus:border-accent sm:w-auto"
+              className="h-9 w-full min-w-[138px] appearance-none rounded-xl border border-border bg-white dark:bg-surface px-3 pr-8 text-xs font-semibold text-foreground outline-none transition focus:border-accent sm:w-auto"
             >
               {Array.from({ length: totalLessons }, (_, index) => {
                 const lesson = index + 1;
@@ -83,7 +83,7 @@ export function LessonNavigator({
             type="button"
             onClick={() => onChange(range.lesson + 1)}
             disabled={range.lesson >= totalLessons}
-            className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl border border-border bg-white text-sm font-bold text-foreground transition hover:border-slate-300 hover:bg-slate-50 disabled:cursor-not-allowed disabled:opacity-35"
+            className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl border border-border bg-white dark:bg-surface text-sm font-bold text-foreground transition hover:border-slate-300 dark:hover:border-white/15 hover:bg-slate-50 dark:hover:bg-surface-muted disabled:cursor-not-allowed disabled:opacity-35"
             aria-label="Bài tiếp"
           >
             →
@@ -91,7 +91,7 @@ export function LessonNavigator({
         </div>
       </div>
 
-      <div className="mt-3 h-1.5 overflow-hidden rounded-full bg-slate-100" aria-hidden>
+      <div className="mt-3 h-1.5 overflow-hidden rounded-full bg-slate-100 dark:bg-white/10" aria-hidden>
         <div className="h-full rounded-full bg-accent transition-[width] duration-200" style={{ width: progress }} />
       </div>
     </section>

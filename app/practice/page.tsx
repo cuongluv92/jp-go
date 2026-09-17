@@ -248,7 +248,7 @@ function AutoPracticeTab({ userId }: { userId: string | null }) {
         {generating ? "Đang ghép đề..." : "Tạo đề luyện tập"}
       </button>
 
-      {generateError && <p className="rounded-xl border border-rose-200 bg-rose-50 p-3 text-sm text-rose-700">{generateError}</p>}
+      {generateError && <p className="rounded-xl border border-rose-200 dark:border-rose-500/25 bg-rose-50 dark:bg-rose-500/10 p-3 text-sm text-rose-700 dark:text-rose-400">{generateError}</p>}
 
       {test && availableSections.length === 0 && (
         <p className="rounded-xl border border-dashed border-border p-4 text-sm text-muted">
@@ -305,7 +305,7 @@ function SkillPracticeTab({ userId }: { userId: string | null }) {
       <div className="flex flex-col gap-3">
         <div className="flex flex-wrap gap-1.5 text-[11px] text-muted">
           {Object.entries(practice.countsByKind).map(([kind, count]) => (
-            <span key={kind} className="rounded-full bg-slate-100 px-2 py-1">
+            <span key={kind} className="rounded-full bg-slate-100 dark:bg-white/10 px-2 py-1">
               {SKILL_KIND_LABELS[kind as keyof typeof SKILL_KIND_LABELS]} · {count}
             </span>
           ))}

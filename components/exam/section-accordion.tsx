@@ -42,7 +42,7 @@ function SectionNode({
 
   return (
     <li>
-      <div className="flex items-center gap-2 rounded-lg px-2 py-2 hover:bg-slate-50">
+      <div className="flex items-center gap-2 rounded-lg px-2 py-2 hover:bg-slate-50 dark:hover:bg-surface-muted">
         {hasChildren ? (
           <button
             type="button"

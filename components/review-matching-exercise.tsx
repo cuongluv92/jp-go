@@ -101,9 +101,9 @@ export function ReviewMatchingExercise({ words, onComplete }: { words: VocabWord
                 onClick={() => handlePick("left", id)}
                 className={`rounded-xl border px-3 py-3 text-left font-jp text-base font-semibold transition ${
                   isMatched
-                    ? "border-emerald-300 bg-emerald-50 text-emerald-700 opacity-60"
+                    ? "border-emerald-300 dark:border-emerald-500/30 bg-emerald-50 dark:bg-emerald-500/10 text-emerald-700 dark:text-emerald-400 opacity-60"
                     : isWrong
-                      ? "border-rose-300 bg-rose-50"
+                      ? "border-rose-300 bg-rose-50 dark:bg-rose-500/10"
                       : isSelected
                         ? "border-accent bg-accent/10"
                         : "border-border bg-surface"
@@ -128,9 +128,9 @@ export function ReviewMatchingExercise({ words, onComplete }: { words: VocabWord
                 onClick={() => handlePick("right", id)}
                 className={`rounded-xl border px-3 py-3 text-left text-sm transition ${
                   isMatched
-                    ? "border-emerald-300 bg-emerald-50 text-emerald-700 opacity-60"
+                    ? "border-emerald-300 dark:border-emerald-500/30 bg-emerald-50 dark:bg-emerald-500/10 text-emerald-700 dark:text-emerald-400 opacity-60"
                     : isWrong
-                      ? "border-rose-300 bg-rose-50"
+                      ? "border-rose-300 bg-rose-50 dark:bg-rose-500/10"
                       : isSelected
                         ? "border-accent bg-accent/10"
                         : "border-border bg-surface"

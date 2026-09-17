@@ -23,10 +23,10 @@ function MobileNavGroup({ items, pathname, onNavigate }: { items: NavItem[]; pat
               onClick={onNavigate}
               aria-current={isActive ? "page" : undefined}
               className={`flex items-center gap-3 rounded-2xl px-3 py-2.5 transition ${
-                isActive ? "bg-accent-soft text-accent" : "text-foreground active:bg-slate-100"
+                isActive ? "bg-accent-soft text-accent" : "text-foreground active:bg-slate-100 dark:active:bg-white/10"
               }`}
             >
-              <span className={`flex h-9 w-9 shrink-0 items-center justify-center rounded-xl ${isActive ? "bg-white text-accent shadow-sm" : "bg-slate-100 text-muted"}`}>
+              <span className={`flex h-9 w-9 shrink-0 items-center justify-center rounded-xl ${isActive ? "bg-white dark:bg-surface text-accent shadow-sm" : "bg-slate-100 dark:bg-white/10 text-muted"}`}>
                 {item.icon}
               </span>
               <span className="min-w-0">
@@ -85,7 +85,7 @@ export function MobileNavDrawer({ open, onClose }: MobileNavDrawerProps) {
             onClick={onClose}
             aria-label="Đóng menu"
             title="Đóng menu"
-            className="flex h-9 w-9 items-center justify-center rounded-full text-muted transition hover:bg-slate-100 hover:text-foreground"
+            className="flex h-9 w-9 items-center justify-center rounded-full text-muted transition hover:bg-slate-100 dark:hover:bg-white/10 hover:text-foreground"
           >
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" className="h-5 w-5">
               <path strokeLinecap="round" strokeLinejoin="round" d="M6 6l12 12M18 6L6 18" />

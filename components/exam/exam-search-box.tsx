@@ -73,7 +73,7 @@ export function ExamSearchBox({ bookSlug }: { bookSlug?: string }) {
                 <Link
                   key={section.id}
                   href={`/exam/${book.slug}`}
-                  className="block rounded-lg px-2 py-1.5 hover:bg-slate-50"
+                  className="block rounded-lg px-2 py-1.5 hover:bg-slate-50 dark:hover:bg-surface-muted"
                 >
                   <p className="font-jp text-sm font-medium">{section.title_jp}</p>
                   <p className="text-xs text-muted">
@@ -92,7 +92,7 @@ export function ExamSearchBox({ bookSlug }: { bookSlug?: string }) {
                 <Link
                   key={page.id}
                   href={`/exam/${book.slug}/page/${page.page_number}`}
-                  className="block rounded-lg px-2 py-1.5 hover:bg-slate-50"
+                  className="block rounded-lg px-2 py-1.5 hover:bg-slate-50 dark:hover:bg-surface-muted"
                 >
                   <p className="text-sm font-medium">
                     {book.short_title} · trang {page.page_number}

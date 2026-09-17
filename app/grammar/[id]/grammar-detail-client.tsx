@@ -38,7 +38,7 @@ function ExampleList({ examples }: { examples: GrammarExampleRow[] }) {
   return (
     <div className="mt-2">
       {examples.length < 3 && (
-        <p className="mb-2 rounded-lg border border-amber-200 bg-amber-50 p-2 text-[11px] text-amber-900">
+        <p className="mb-2 rounded-lg border border-amber-200 dark:border-amber-500/25 bg-amber-50 dark:bg-amber-500/10 p-2 text-[11px] text-amber-900 dark:text-amber-200">
           Mới có {examples.length}/3 ngữ cảnh đã kiểm tra; chưa tự điền câu còn thiếu.
         </p>
       )}
@@ -52,7 +52,7 @@ function ExampleList({ examples }: { examples: GrammarExampleRow[] }) {
                 <span className="rounded-full bg-accent-soft px-2 py-0.5 text-accent">
                   {ex.example_type === "standard" ? "Chuẩn mẫu" : ex.example_type === "business" ? "Công việc" : "Đời thường"}
                 </span>
-                {ex.review_status === "needs_review" && <span className="rounded-full bg-amber-100 px-2 py-0.5 text-amber-800">Cần kiểm tra</span>}
+                {ex.review_status === "needs_review" && <span className="rounded-full bg-amber-100 dark:bg-amber-500/15 px-2 py-0.5 text-amber-800 dark:text-amber-300">Cần kiểm tra</span>}
               </div>
               <JapaneseSentence
                 text={ex.example_jp}
@@ -143,7 +143,7 @@ export function GrammarDetailClient({ id }: { id: string }) {
   if (loading) return <p className="rounded-2xl border border-dashed border-border p-4 text-sm text-muted">Đang tải...</p>;
   if (loadError && !detail) {
     return (
-      <div className="rounded-2xl border border-amber-200 bg-amber-50 p-4 text-sm text-amber-900">
+      <div className="rounded-2xl border border-amber-200 dark:border-amber-500/25 bg-amber-50 dark:bg-amber-500/10 p-4 text-sm text-amber-900 dark:text-amber-200">
         <p>{loadError}</p>
         <button type="button" onClick={retryLoad} className="mt-2 font-semibold text-accent">
           Thử lại
@@ -164,7 +164,7 @@ export function GrammarDetailClient({ id }: { id: string }) {
       </Link>
 
       {loadError && (
-        <div className="flex items-center justify-between gap-3 rounded-xl border border-amber-200 bg-amber-50 p-3 text-xs text-amber-900">
+        <div className="flex items-center justify-between gap-3 rounded-xl border border-amber-200 dark:border-amber-500/25 bg-amber-50 dark:bg-amber-500/10 p-3 text-xs text-amber-900 dark:text-amber-200">
           <span>{loadError} Đang hiển thị dữ liệu đã lưu tạm.</span>
           <button type="button" onClick={retryLoad} className="shrink-0 font-semibold text-accent">
             Thử lại
@@ -210,7 +210,7 @@ export function GrammarDetailClient({ id }: { id: string }) {
       )}
 
       {hasNotesBlock && (
-        <div className="rounded-xl border border-amber-200 bg-amber-50 p-3 text-xs text-amber-900">
+        <div className="rounded-xl border border-amber-200 dark:border-amber-500/25 bg-amber-50 dark:bg-amber-500/10 p-3 text-xs text-amber-900 dark:text-amber-200">
           {detail.notes && !hasMultipleUsages && <p className="whitespace-pre-line">{detail.notes}</p>}
           {detail.common_mistake && <p className={detail.notes && !hasMultipleUsages ? "mt-1" : ""}>⚠️ {detail.common_mistake}</p>}
           {detail.difference_note && (

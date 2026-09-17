@@ -152,7 +152,7 @@ export function PersonalExamples({
       </div>
 
       {formOpen && (
-        <form onSubmit={handleSubmit} className="mt-4 flex flex-col gap-3 rounded-xl bg-slate-50 p-3">
+        <form onSubmit={handleSubmit} className="mt-4 flex flex-col gap-3 rounded-xl bg-slate-50 dark:bg-surface-muted p-3">
           <label className="flex flex-col gap-1 text-xs font-medium">
             Loại ví dụ
             <select
@@ -237,7 +237,7 @@ export function PersonalExamples({
               </div>
               {example.sentence_vi && <p className="mt-1 text-xs text-muted">{example.sentence_vi}</p>}
               {example.highlight_text && (
-                <p className="font-jp mt-2 rounded-lg bg-indigo-50 px-2 py-1 text-xs text-indigo-700">Chú ý: {example.highlight_text}</p>
+                <p className="font-jp mt-2 rounded-lg bg-indigo-50 dark:bg-indigo-500/10 px-2 py-1 text-xs text-indigo-700 dark:text-indigo-400">Chú ý: {example.highlight_text}</p>
               )}
               {example.note && <p className="mt-1 text-xs text-muted">📝 {example.note}</p>}
               <div className="mt-2 flex items-center justify-between gap-2">

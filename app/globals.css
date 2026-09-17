@@ -1,5 +1,11 @@
 @import "tailwindcss";
 
+/* Dark mode chọn thủ công qua thuộc tính data-theme trên <html> (xem
+   lib/theme-context.tsx) thay vì theo prefers-color-scheme của hệ điều hành -
+   mặc định LUÔN là sáng (nền trắng hiện tại) bất kể máy người dùng đặt dark
+   mode gì, người dùng tự bật tối qua nút chuyển ở header. */
+@custom-variant dark (&:where([data-theme="dark"], [data-theme="dark"] *));
+
 :root {
   /* Nền trung tính (bớt ám xanh so với trước) - phong cách SaaS tối giản
      kiểu Linear/Notion: 1 màu accent duy nhất nổi bật trên nền xám trung
@@ -10,6 +16,7 @@
   --accent-foreground: #ffffff;
   --accent-soft: #eef2ff;
   --surface: #ffffff;
+  --surface-muted: #f4f4f5;
   --border: #e4e4e7;
   /* #6b6b74 (bản "tinh gọn" trước) chỉ đạt ~5.3:1 trên nền trắng - đủ chuẩn
      AA nhưng bị chê "chữ không rõ" vì --muted không chỉ dùng cho nhãn phụ mà
@@ -18,9 +25,28 @@
      hơn để dễ đọc hơn hẳn, không quay lại màu ám xanh của bản cũ hơn nữa. */
   --muted: #52525b;
   --gradient-accent: linear-gradient(135deg, #6366f1 0%, #4f46e5 52%, #3730a3 100%);
+  --focus-ring: rgba(67, 56, 202, 0.45);
   /* Chiều cao header desktop - nguồn duy nhất, dùng cho cả TopHeader lẫn mọi
      phần tử cần offset theo header (tránh mỗi nơi đoán 1 con số px khác nhau). */
   --app-header-h: 4.5rem;
+}
+
+/* Bảng màu tối - cùng gam accent indigo với bản sáng (giữ nhận diện thương
+   hiệu), chỉ đảo nền/chữ + nâng độ sáng accent vì indigo-700 gốc quá tối để
+   làm CHỮ/icon nổi trên nền gần đen (đo tương phản: accent sáng #818cf8 trên
+   nền #0c0c10 đạt ~6.5:1, --muted đạt ~7.8:1 - cùng chuẩn AA như bản sáng). */
+:root[data-theme="dark"] {
+  --background: #0c0c10;
+  --foreground: #eeeef1;
+  --accent: #818cf8;
+  --accent-foreground: #1e1b4b;
+  --accent-soft: rgba(129, 140, 248, 0.16);
+  --surface: #17171c;
+  --surface-muted: #1e1e25;
+  --border: #2a2a33;
+  --muted: #a3a3ad;
+  --gradient-accent: linear-gradient(135deg, #818cf8 0%, #6366f1 52%, #4338ca 100%);
+  --focus-ring: rgba(129, 140, 248, 0.55);
 }
 
 @theme inline {
@@ -30,6 +56,7 @@
   --color-accent-foreground: var(--accent-foreground);
   --color-accent-soft: var(--accent-soft);
   --color-surface: var(--surface);
+  --color-surface-muted: var(--surface-muted);
   --color-border: var(--border);
   --color-muted: var(--muted);
   --font-sans: var(--font-sans);
@@ -55,9 +82,18 @@ body {
   color: #1e1b4b;
 }
 
+:root[data-theme="dark"] ::selection {
+  background: #3730a3;
+  color: #eeeef1;
+}
+
 ::placeholder {
   color: #7b8798;
   opacity: 1;
+}
+
+:root[data-theme="dark"] ::placeholder {
+  color: #6b7280;
 }
 
 h1,
@@ -80,7 +116,7 @@ a:focus-visible,
 input:focus-visible,
 select:focus-visible,
 textarea:focus-visible {
-  outline: 2px solid rgba(67, 56, 202, 0.45);
+  outline: 2px solid var(--focus-ring);
   outline-offset: 2px;
 }
 
@@ -198,7 +234,7 @@ html[data-jp-layout="desktop"][data-jp-page="home"] main > div > section:nth-of-
   align-self: stretch;
   border: 1px solid var(--border);
   border-radius: 24px;
-  background: rgba(255, 255, 255, 0.95);
+  background: color-mix(in srgb, var(--surface) 95%, transparent);
   padding: 24px;
   box-shadow: 0 16px 38px -30px rgba(15, 23, 42, 0.35);
 }

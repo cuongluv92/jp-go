@@ -95,11 +95,11 @@ function RelatedWordRow({
           </Link>
           {word.word_furigana && <span className="font-jp text-[11px] text-foreground/70">（{word.word_furigana}）</span>}
           {word.meaning_vi && <span>— {word.meaning_vi}</span>}
-          {sourceLevel && <span className="rounded-full bg-slate-100 px-1.5 py-0.5 text-[10px] font-medium">từ {sourceLevel}</span>}
-          {word.is_irregular && <span className="text-[10px] font-semibold text-amber-700">※đọc đặc biệt</span>}
+          {sourceLevel && <span className="rounded-full bg-slate-100 dark:bg-white/10 px-1.5 py-0.5 text-[10px] font-medium">từ {sourceLevel}</span>}
+          {word.is_irregular && <span className="text-[10px] font-semibold text-amber-700 dark:text-amber-400">※đọc đặc biệt</span>}
         </div>
         {example && (
-          <div className="mt-1 rounded-lg bg-slate-50 px-2.5 py-1.5">
+          <div className="mt-1 rounded-lg bg-slate-50 dark:bg-surface-muted px-2.5 py-1.5">
             <JapaneseSentence
               text={example.example_jp}
               className="text-[13px] leading-6 text-foreground"
@@ -124,12 +124,12 @@ function RelatedWordRow({
         </Link>
         {word.word_furigana && <span className="font-jp text-xs font-medium text-foreground/70">{word.word_furigana}</span>}
         {word.meaning_vi && <span className="text-xs text-foreground/75">— {word.meaning_vi}</span>}
-        {sourceLevel && <span className="rounded-full bg-slate-100 px-1.5 py-0.5 text-[10px] font-medium text-muted">từ {sourceLevel}</span>}
-        {word.is_irregular && <span className="text-[10px] font-semibold text-amber-700">※đọc đặc biệt</span>}
+        {sourceLevel && <span className="rounded-full bg-slate-100 dark:bg-white/10 px-1.5 py-0.5 text-[10px] font-medium text-muted">từ {sourceLevel}</span>}
+        {word.is_irregular && <span className="text-[10px] font-semibold text-amber-700 dark:text-amber-400">※đọc đặc biệt</span>}
       </div>
 
       {example && (
-        <details className="mt-1.5 rounded-lg bg-slate-50 px-2.5 py-1.5">
+        <details className="mt-1.5 rounded-lg bg-slate-50 dark:bg-surface-muted px-2.5 py-1.5">
           <summary className="cursor-pointer text-[11px] font-semibold text-accent">
             Ví dụ {exampleTypeLabel(example.example_type)}
           </summary>
@@ -192,10 +192,10 @@ function ReadingBlock({
                   {reading.is_main ? (
                     <span className="ml-2 align-middle font-sans text-[10px] font-semibold text-accent">ưu tiên {level}</span>
                   ) : totalRelatedWords > 0 ? (
-                    <span className="ml-2 align-middle font-sans text-[10px] font-medium text-blue-700">âm bổ trợ</span>
+                    <span className="ml-2 align-middle font-sans text-[10px] font-medium text-blue-700 dark:text-blue-400">âm bổ trợ</span>
                   ) : null}
                   {reading.review_status === "needs_review" && (
-                    <span className="ml-2 align-middle font-sans text-[10px] font-normal text-amber-600">cần kiểm tra lại</span>
+                    <span className="ml-2 align-middle font-sans text-[10px] font-normal text-amber-600 dark:text-amber-400">cần kiểm tra lại</span>
                   )}
                 </p>
                 {totalRelatedWords > 0 && <span className="shrink-0 text-[10px] font-medium text-muted">{totalRelatedWords} từ</span>}
@@ -335,8 +335,8 @@ export function KanjiDetailClient({ id }: { id: string }) {
         {detail.meaning_vi_summary && <span className="text-sm text-muted">{detail.meaning_vi_summary}</span>}
         {(detail.stroke_count || detail.radical) && (
           <div className="mt-1 flex flex-wrap justify-center gap-2 text-xs text-muted">
-            {detail.stroke_count && <span className="rounded-full bg-slate-100 px-2.5 py-1">{detail.stroke_count} nét</span>}
-            {detail.radical && <span className="rounded-full bg-slate-100 px-2.5 py-1">Bộ {detail.radical}</span>}
+            {detail.stroke_count && <span className="rounded-full bg-slate-100 dark:bg-white/10 px-2.5 py-1">{detail.stroke_count} nét</span>}
+            {detail.radical && <span className="rounded-full bg-slate-100 dark:bg-white/10 px-2.5 py-1">Bộ {detail.radical}</span>}
           </div>
         )}
         <MaziiLink kind="kanji" query={detail.kanji_character} className="mt-2 rounded-lg border border-border px-3 py-1.5 text-xs font-semibold text-accent" />
@@ -430,7 +430,7 @@ export function KanjiDetailClient({ id }: { id: string }) {
       )}
 
       {(detail.similar_kanji.length > 0 || detail.common_mistake) && (
-        <div className="rounded-xl border border-amber-200 bg-amber-50 p-3 text-xs text-amber-900">
+        <div className="rounded-xl border border-amber-200 dark:border-amber-500/25 bg-amber-50 dark:bg-amber-500/10 p-3 text-xs text-amber-900 dark:text-amber-200">
           {detail.similar_kanji.length > 0 && (
             <p>
               <span className="font-semibold">Kanji dễ nhầm:</span>{" "}

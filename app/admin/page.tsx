@@ -147,7 +147,7 @@ function ImportSection() {
           <code>VOCAB_COLUMNS</code>). Cột danh sách (particle_patterns, usage_patterns, collocations) nối bằng{" "}
           <code>|</code>.
         </p>
-        <label className="mt-3 flex cursor-pointer items-center justify-center rounded-xl border border-border bg-slate-50 px-4 py-3 text-xs font-medium text-foreground hover:bg-slate-100">
+        <label className="mt-3 flex cursor-pointer items-center justify-center rounded-xl border border-border bg-slate-50 dark:bg-surface-muted px-4 py-3 text-xs font-medium text-foreground hover:bg-slate-100 dark:hover:bg-white/10">
           <input type="file" accept=".xlsx" onChange={handleFileChange} className="hidden" />
           📄 Chọn file Excel (.xlsx)
         </label>
@@ -215,7 +215,7 @@ function ImportSection() {
             Nhập {importableCount} dòng vào kho từ vựng
           </button>
           {importedCount !== null && (
-            <p className="text-center text-xs text-emerald-700">Đã nhập/cập nhật {importedCount} từ.</p>
+            <p className="text-center text-xs text-emerald-700 dark:text-emerald-400">Đã nhập/cập nhật {importedCount} từ.</p>
           )}
         </div>
       )}
@@ -226,28 +226,28 @@ function ImportSection() {
 function RowStatus({ item }: { item: AnalyzedRow }) {
   if (item.errors.length > 0) {
     return (
-      <span className="rounded-full bg-rose-100 px-2 py-0.5 text-xs text-rose-700" title={item.errors.join("; ")}>
+      <span className="rounded-full bg-rose-100 dark:bg-rose-500/15 px-2 py-0.5 text-xs text-rose-700 dark:text-rose-400" title={item.errors.join("; ")}>
         Lỗi ({item.errors.length})
       </span>
     );
   }
   if (item.isDuplicateInFile) {
-    return <span className="rounded-full bg-amber-100 px-2 py-0.5 text-xs text-amber-700">Trùng trong file</span>;
+    return <span className="rounded-full bg-amber-100 dark:bg-amber-500/15 px-2 py-0.5 text-xs text-amber-700 dark:text-amber-400">Trùng trong file</span>;
   }
   if (item.isDuplicateInStore) {
-    return <span className="rounded-full bg-amber-100 px-2 py-0.5 text-xs text-amber-700">Trùng ID đã có</span>;
+    return <span className="rounded-full bg-amber-100 dark:bg-amber-500/15 px-2 py-0.5 text-xs text-amber-700 dark:text-amber-400">Trùng ID đã có</span>;
   }
   if (item.warnings.length > 0) {
     return (
       <span
-        className="rounded-full bg-slate-100 px-2 py-0.5 text-xs text-slate-600"
+        className="rounded-full bg-slate-100 dark:bg-white/10 px-2 py-0.5 text-xs text-slate-600 dark:text-muted"
         title={item.warnings.join("; ")}
       >
         Sẵn sàng (thiếu {item.warnings.length} cột phụ)
       </span>
     );
   }
-  return <span className="rounded-full bg-emerald-100 px-2 py-0.5 text-xs text-emerald-700">Sẵn sàng</span>;
+  return <span className="rounded-full bg-emerald-100 dark:bg-emerald-500/15 px-2 py-0.5 text-xs text-emerald-700 dark:text-emerald-400">Sẵn sàng</span>;
 }
 
 function ExportSection() {

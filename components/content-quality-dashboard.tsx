@@ -10,7 +10,7 @@ import { createClient } from "@/lib/supabase/client";
 
 function Ratio({ value, total }: { value: number; total: number }) {
   const good = total > 0 && value === total;
-  return <span className={good ? "font-semibold text-emerald-700" : total === 0 ? "text-muted" : "font-semibold text-amber-700"}>{value}/{total}</span>;
+  return <span className={good ? "font-semibold text-emerald-700 dark:text-emerald-400" : total === 0 ? "text-muted" : "font-semibold text-amber-700 dark:text-amber-400"}>{value}/{total}</span>;
 }
 
 export function ContentQualityDashboard() {
@@ -51,7 +51,7 @@ export function ContentQualityDashboard() {
 
       <div className="overflow-x-auto rounded-xl border border-border bg-surface">
         <table className="w-full min-w-[520px] text-xs">
-          <thead className="bg-slate-50 text-left text-muted">
+          <thead className="bg-slate-50 dark:bg-surface-muted text-left text-muted">
             <tr>
               <th className="px-3 py-2">Cấp</th>
               <th className="px-3 py-2">Từ</th>
@@ -77,7 +77,7 @@ export function ContentQualityDashboard() {
       {catalog ? (
         <div className="overflow-x-auto rounded-xl border border-border bg-surface">
           <table className="w-full min-w-[620px] text-xs">
-            <thead className="bg-slate-50 text-left text-muted">
+            <thead className="bg-slate-50 dark:bg-surface-muted text-left text-muted">
               <tr>
                 <th className="px-3 py-2">Cấp</th>
                 <th className="px-3 py-2">Ngữ pháp</th>
@@ -107,7 +107,7 @@ export function ContentQualityDashboard() {
         <p className="rounded-xl border border-dashed border-border p-3 text-xs text-muted">{error ? "Không tải được thống kê Kanji/Ngữ pháp." : "Đang phân tích Kanji và Ngữ pháp..."}</p>
       )}
 
-      <div className="rounded-xl border border-amber-200 bg-amber-50 p-3 text-xs leading-relaxed text-amber-900">
+      <div className="rounded-xl border border-amber-200 dark:border-amber-500/25 bg-amber-50 dark:bg-amber-500/10 p-3 text-xs leading-relaxed text-amber-900 dark:text-amber-200">
         <p className="font-semibold">Những nhóm cần xử lý tiếp bằng nguồn chuẩn</p>
         <p className="mt-1">{report.incompleteExampleWordIds.length} từ chưa đủ bộ ví dụ đề thi/đời thường/công việc; {report.duplicateEntries.length} nhóm mục từ trùng; {report.repeatedExamples.length} câu ví dụ lặp giữa nhiều từ.</p>
         {catalog && <p>{catalog.grammarNeedsReview} mẫu ngữ pháp và {catalog.kanjiNeedsReview} Kanji đang có nội dung gắn cờ cần duyệt; {catalog.repeatedGrammarExamples} câu ngữ pháp lặp giữa nhiều mẫu.</p>}
@@ -131,7 +131,7 @@ export function ContentQualityDashboard() {
 }
 
 function Metric({ label, value, tone }: { label: string; value: number; tone: "neutral" | "good" | "warn" }) {
-  const style = tone === "good" ? "border-emerald-200 bg-emerald-50 text-emerald-800" : tone === "warn" ? "border-amber-200 bg-amber-50 text-amber-900" : "border-border bg-surface";
+  const style = tone === "good" ? "border-emerald-200 dark:border-emerald-500/25 bg-emerald-50 dark:bg-emerald-500/10 text-emerald-800 dark:text-emerald-300" : tone === "warn" ? "border-amber-200 dark:border-amber-500/25 bg-amber-50 dark:bg-amber-500/10 text-amber-900 dark:text-amber-200" : "border-border bg-surface";
   return (
     <div className={`rounded-xl border p-3 ${style}`}>
       <p className="text-xl font-bold">{value.toLocaleString("vi-VN")}</p>

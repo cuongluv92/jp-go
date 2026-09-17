@@ -50,7 +50,7 @@ function parseKanjiVg(svgText: string): StrokeData {
 
 function PracticeGrid() {
   return (
-    <g aria-hidden="true" className="stroke-slate-200" strokeWidth="0.65" strokeDasharray="3 3">
+    <g aria-hidden="true" className="stroke-slate-200 dark:stroke-white/10" strokeWidth="0.65" strokeDasharray="3 3">
       <path d="M54.5 4V105M4 54.5H105M18.8 18.8L90.2 90.2M90.2 18.8L18.8 90.2" />
       <rect x="4" y="4" width="101" height="101" rx="3" fill="none" strokeDasharray="none" />
     </g>
@@ -240,7 +240,7 @@ export function KanjiStrokePractice({ character, userId }: { character: string; 
         </div>
       </div>
 
-      <div className="mx-auto mt-4 max-w-[19rem] overflow-hidden rounded-2xl bg-slate-50">
+      <div className="mx-auto mt-4 max-w-[19rem] overflow-hidden rounded-2xl bg-slate-50 dark:bg-surface-muted">
         <svg
           ref={boardRef}
           viewBox="0 0 109 109"
@@ -388,15 +388,15 @@ export function KanjiStrokePractice({ character, userId }: { character: string; 
             <p
               className={`rounded-lg p-2 text-xs ${
                 feedback.startsWith("✓") || feedback.startsWith("Hoàn")
-                  ? "bg-emerald-50 text-emerald-700"
-                  : "bg-amber-50 text-amber-700"
+                  ? "bg-emerald-50 dark:bg-emerald-500/10 text-emerald-700 dark:text-emerald-400"
+                  : "bg-amber-50 dark:bg-amber-500/10 text-amber-700 dark:text-amber-400"
               }`}
             >
               {feedback}
             </p>
           )}
           {savedResult && (
-            <p className="rounded-lg bg-indigo-50 p-2 text-xs text-indigo-700">
+            <p className="rounded-lg bg-indigo-50 dark:bg-indigo-500/10 p-2 text-xs text-indigo-700 dark:text-indigo-400">
               Lần này {savedResult.score}/100 · Cao nhất {savedResult.best}/100 · Đã luyện {savedResult.count} lần
             </p>
           )}

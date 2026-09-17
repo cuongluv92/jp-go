@@ -199,7 +199,7 @@ export function ColumnWorkspace({ blocks }: { blocks: ContentBlock[] }) {
                   isOn ? "border-accent/40 bg-accent-soft text-accent" : "border-border text-muted"
                 } ${disableOff ? "cursor-not-allowed opacity-60" : "hover:border-accent/60"}`}
               >
-                <span className={`h-1.5 w-1.5 rounded-full ${isOn ? "bg-accent" : "bg-slate-300"}`} />
+                <span className={`h-1.5 w-1.5 rounded-full ${isOn ? "bg-accent" : "bg-slate-300 dark:bg-white/20"}`} />
                 <span className="font-jp">{COLUMN_LABELS[col].title}</span>
               </button>
             );
@@ -302,7 +302,7 @@ function ColumnHeader({
           disabled={disableHide}
           aria-label={visible ? `Ẩn ${label.title}` : `Hiện ${label.title}`}
           title={visible ? `Ẩn ${label.title}` : `Hiện ${label.title}`}
-          className={`flex h-7 w-7 items-center justify-center rounded-lg text-muted transition hover:bg-slate-100 hover:text-foreground ${
+          className={`flex h-7 w-7 items-center justify-center rounded-lg text-muted transition hover:bg-slate-100 dark:hover:bg-white/10 hover:text-foreground ${
             disableHide ? "cursor-not-allowed opacity-40" : ""
           }`}
         >
@@ -313,7 +313,7 @@ function ColumnHeader({
           onClick={onToggleFocus}
           aria-label={focused ? `Thoát chế độ tập trung ${label.title}` : `Phóng to ${label.title}`}
           title={focused ? "Thoát chế độ tập trung" : `Phóng to ${label.title}`}
-          className={`flex h-7 w-7 items-center justify-center rounded-lg transition hover:bg-slate-100 ${
+          className={`flex h-7 w-7 items-center justify-center rounded-lg transition hover:bg-slate-100 dark:hover:bg-white/10 ${
             focused ? "text-accent" : "text-muted hover:text-foreground"
           }`}
         >

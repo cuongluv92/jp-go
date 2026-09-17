@@ -42,7 +42,7 @@ function ReadingBlock({ label, readings, words }: { label: string; readings: Kan
               <p className="font-jp text-lg font-semibold">
                 {r.reading_kana}
                 {r.review_status === "needs_review" && (
-                  <span className="ml-2 align-middle text-[10px] font-normal text-amber-600">cần kiểm tra lại</span>
+                  <span className="ml-2 align-middle text-[10px] font-normal text-amber-600 dark:text-amber-400">cần kiểm tra lại</span>
                 )}
               </p>
               {relatedWords.map((w) => (
@@ -51,7 +51,7 @@ function ReadingBlock({ label, readings, words }: { label: string; readings: Kan
                     {w.word_jp}
                   </Link>
                   {w.word_furigana && ` (${w.word_furigana})`} — {w.meaning_vi}
-                  {w.is_irregular && <span className="ml-1 text-amber-600">※bất quy tắc</span>}
+                  {w.is_irregular && <span className="ml-1 text-amber-600 dark:text-amber-400">※bất quy tắc</span>}
                 </p>
               ))}
             </div>
@@ -121,8 +121,8 @@ export function LegacyKanjiDetailClient({ id }: { id: string }) {
         {detail.meaning_vi_summary && <span className="text-sm text-muted">{detail.meaning_vi_summary}</span>}
         {(detail.stroke_count || detail.radical) && (
           <div className="mt-1 flex flex-wrap justify-center gap-2 text-xs text-muted">
-            {detail.stroke_count && <span className="rounded-full bg-slate-100 px-2.5 py-1">{detail.stroke_count} nét</span>}
-            {detail.radical && <span className="rounded-full bg-slate-100 px-2.5 py-1">Bộ {detail.radical}</span>}
+            {detail.stroke_count && <span className="rounded-full bg-slate-100 dark:bg-white/10 px-2.5 py-1">{detail.stroke_count} nét</span>}
+            {detail.radical && <span className="rounded-full bg-slate-100 dark:bg-white/10 px-2.5 py-1">Bộ {detail.radical}</span>}
           </div>
         )}
         <MaziiLink kind="kanji" query={detail.kanji_character} className="mt-2 rounded-lg border border-border px-3 py-1.5 text-xs font-semibold text-accent" />
@@ -146,7 +146,7 @@ export function LegacyKanjiDetailClient({ id }: { id: string }) {
                     {w.word_jp}
                   </Link>
                   {w.word_furigana && ` (${w.word_furigana})`} — <span className="text-muted">{w.meaning_vi}</span>
-                  {w.is_irregular && <span className="ml-1 text-amber-600">※bất quy tắc</span>}
+                  {w.is_irregular && <span className="ml-1 text-amber-600 dark:text-amber-400">※bất quy tắc</span>}
                 </li>
               ))}
             </ul>
@@ -155,7 +155,7 @@ export function LegacyKanjiDetailClient({ id }: { id: string }) {
       )}
 
       {(detail.similar_kanji.length > 0 || detail.common_mistake) && (
-        <div className="rounded-xl border border-amber-200 bg-amber-50 p-3 text-xs text-amber-900">
+        <div className="rounded-xl border border-amber-200 dark:border-amber-500/25 bg-amber-50 dark:bg-amber-500/10 p-3 text-xs text-amber-900 dark:text-amber-200">
           {detail.similar_kanji.length > 0 && (
             <p>
               <span className="font-semibold">Kanji dễ nhầm:</span>{" "}

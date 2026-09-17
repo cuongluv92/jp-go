@@ -198,7 +198,7 @@ export function CustomReviewPicker({
                     ? "border-accent bg-accent text-accent-foreground"
                     : available
                       ? "border-border bg-surface text-foreground"
-                      : "border-border bg-slate-50 text-muted opacity-60"
+                      : "border-border bg-slate-50 dark:bg-surface-muted text-muted opacity-60"
                 }`}
               >
                 {lv}

@@ -64,7 +64,7 @@ export function PersonalExampleExercise({
   }
 
   return (
-    <div className="mt-3 rounded-xl bg-slate-50 p-3">
+    <div className="mt-3 rounded-xl bg-slate-50 dark:bg-surface-muted p-3">
       <div className="flex flex-wrap gap-1.5">
         {modes.map((item) => (
           <button
@@ -122,7 +122,7 @@ export function PersonalExampleExercise({
       )}
 
       {result !== null && (
-        <div className={`mt-2 rounded-lg p-2 text-xs ${result ? "bg-emerald-50 text-emerald-700" : "bg-red-50 text-red-700"}`}>
+        <div className={`mt-2 rounded-lg p-2 text-xs ${result ? "bg-emerald-50 dark:bg-emerald-500/10 text-emerald-700 dark:text-emerald-400" : "bg-red-50 dark:bg-red-500/10 text-red-700 dark:text-red-400"}`}>
           {result ? "✓ Chính xác" : `✗ Đáp án: ${exercise.answer}`}
           {!result && <span className="ml-1">· Đã đưa vào lịch ôn ngày mai.</span>}
           <button type="button" disabled={saving} onClick={() => changeMode(mode)} className="ml-2 font-semibold underline">Làm lại</button>

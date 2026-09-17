@@ -92,12 +92,12 @@ export function JapaneseSentence({
                 key={`${segment.start}-${segment.text}`}
                 type="button"
                 onClick={() => setSelectedId(segment.word!.id)}
-                className={`rounded px-0.5 underline decoration-dotted underline-offset-4 ${active ? "bg-amber-200" : "hover:bg-accent-soft"}`}
+                className={`rounded px-0.5 underline decoration-dotted underline-offset-4 ${active ? "bg-amber-200 dark:bg-amber-500/20" : "hover:bg-accent-soft"}`}
               >
                 {renderSegmentText(segment.text, segment.word, segment.reading)}
               </button>
             ) : (
-              <span key={`${segment.start}-${index}`} className={active ? "rounded bg-amber-200" : ""}>
+              <span key={`${segment.start}-${index}`} className={active ? "rounded bg-amber-200 dark:bg-amber-500/20" : ""}>
                 {renderSegmentText(segment.text, null, segment.reading)}
               </span>
             );

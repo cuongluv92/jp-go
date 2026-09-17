@@ -81,7 +81,7 @@ export default function LoginPage() {
         </label>
 
         {error && <p className="text-sm text-red-600">{error}</p>}
-        {info && <p className="text-sm text-emerald-700">{info}</p>}
+        {info && <p className="text-sm text-emerald-700 dark:text-emerald-400">{info}</p>}
 
         <button
           type="submit"
