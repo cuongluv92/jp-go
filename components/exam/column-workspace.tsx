@@ -76,7 +76,10 @@ function CompressIcon() {
 }
 
 function desktopGridColsClass(count: number): string {
-  if (count >= 3) return "md:grid-cols-[1.3fr_1fr_1fr]";
+  // Giải thích thường ngắn hơn hẳn nguyên văn/bản dịch (nhiều chỗ chỉ 1-2 câu
+  // hoặc bỏ trống) nên chia 5:5:3 thay vì gần bằng nhau như trước, đỡ phí
+  // khoảng trắng ở cột giải thích và có thêm chỗ cho 2 cột còn lại.
+  if (count >= 3) return "md:grid-cols-[5fr_5fr_3fr]";
   if (count === 2) return "md:grid-cols-2";
   return "md:grid-cols-1";
 }

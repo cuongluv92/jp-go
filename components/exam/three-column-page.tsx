@@ -25,14 +25,17 @@ export function ThreeColumnPage({ blocks }: { blocks: ContentBlock[] }) {
 
   return (
     <div>
-      {/* Desktop: 3 cột song song */}
+      {/* Desktop: 3 cột song song. Giải thích thường ngắn hơn hẳn 2 cột kia
+          (nguyên văn/bản dịch luôn có nội dung, giải thích nhiều chỗ chỉ 1-2
+          câu hoặc bỏ trống) nên chia tỉ lệ 5:5:3 thay vì đều nhau, đỡ phí
+          khoảng trắng ở cột giải thích và có thêm chỗ cho 2 cột còn lại. */}
       <div className="hidden md:block">
-        <div className="grid grid-cols-3 gap-x-6 border-b border-border pb-2 text-sm font-semibold text-muted">
+        <div className="grid grid-cols-[5fr_5fr_3fr] gap-x-6 border-b border-border pb-2 text-sm font-semibold text-muted">
           <span>① 日本語・原文</span>
           <span>② Bản dịch tiếng Việt</span>
           <span>③ Giải thích</span>
         </div>
-        <div className="grid grid-cols-3 gap-x-6">
+        <div className="grid grid-cols-[5fr_5fr_3fr] gap-x-6">
           {rows.map((row) => (
             <Fragment key={row.key}>
               <div className="border-b border-border py-4">{row.jp}</div>
