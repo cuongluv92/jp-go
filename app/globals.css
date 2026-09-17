@@ -11,7 +11,12 @@
   --accent-soft: #eef2ff;
   --surface: #ffffff;
   --border: #e4e4e7;
-  --muted: #6b6b74;
+  /* #6b6b74 (bản "tinh gọn" trước) chỉ đạt ~5.3:1 trên nền trắng - đủ chuẩn
+     AA nhưng bị chê "chữ không rõ" vì --muted không chỉ dùng cho nhãn phụ mà
+     còn cho cả nghĩa tiếng Việt/câu dịch (nội dung chính học viên đọc liên
+     tục). Đổi sang zinc-600 (~7.7:1) - vẫn là tông xám trung tính, chỉ đậm
+     hơn để dễ đọc hơn hẳn, không quay lại màu ám xanh của bản cũ hơn nữa. */
+  --muted: #52525b;
   --gradient-accent: linear-gradient(135deg, #6366f1 0%, #4f46e5 52%, #3730a3 100%);
   /* Chiều cao header desktop - nguồn duy nhất, dùng cho cả TopHeader lẫn mọi
      phần tử cần offset theo header (tránh mỗi nơi đoán 1 con số px khác nhau). */

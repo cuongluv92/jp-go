@@ -32,6 +32,26 @@ function HamburgerIcon() {
   );
 }
 
+function BackIcon() {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="h-5 w-5">
+      <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
+    </svg>
+  );
+}
+
+/**
+ * 5 tab chính (bottom tab bar mobile / đầu sidebar desktop) không có "trang
+ * trước" hợp lý trong luồng điều hướng của app - mọi trang KHÁC (từ vựng,
+ * Kanji, ngữ pháp, ôn thi, flashcard, quản lý dữ liệu...) đều được mở ra từ
+ * một trang khác nên luôn có "quay lại" hợp lý.
+ */
+const PRIMARY_TAB_ROOTS = new Set(["/", "/practice", "/review", "/progress", "/plan"]);
+
+function shouldShowBack(pathname: string): boolean {
+  return !PRIMARY_TAB_ROOTS.has(pathname);
+}
+
 function LayoutIcon({ desktopMode }: { desktopMode: boolean }) {
   if (desktopMode) {
     return (
@@ -71,6 +91,15 @@ export function TopHeader({ desktopMode, onToggleDesktop, onOpenSearch, sidebarC
   const router = useRouter();
   const pathname = usePathname();
   const breadcrumbs = getBreadcrumbs(pathname);
+  const showBack = shouldShowBack(pathname);
+
+  function goBack() {
+    // router.back() phụ thuộc lịch sử trình duyệt - nếu người dùng vào thẳng
+    // trang này (mở link, F5...) thì không có lịch sử để quay lại, khi đó về
+    // thẳng trang chủ thay vì kẹt lại đúng trang hiện tại.
+    if (window.history.length > 1) router.back();
+    else router.push("/");
+  }
 
   async function handleLogout() {
     const supabase = createClient();
@@ -87,7 +116,10 @@ export function TopHeader({ desktopMode, onToggleDesktop, onOpenSearch, sidebarC
     : "mx-auto flex h-[var(--app-header-h)] w-full max-w-md items-center justify-between px-4 sm:max-w-lg";
 
   return (
-    <header className="safe-top sticky top-0 z-30 shrink-0 border-b border-border/90 bg-surface/90 backdrop-blur-xl">
+    // backdrop-blur chỉ bật ở desktop (GPU khoẻ hơn hẳn điện thoại) - header
+    // này sticky, repaint mỗi lần cuộn trang, blur liên tục là gánh nặng
+    // GPU rõ rệt trên di động cấu hình thấp. Mobile dùng nền gần như đặc.
+    <header className={`safe-top sticky top-0 z-30 shrink-0 border-b border-border/90 ${desktopMode ? "bg-surface/90 backdrop-blur-xl" : "bg-surface/98"}`}>
       <div className={innerClassName}>
         {desktopMode && onToggleSidebar && (
           <button
@@ -101,7 +133,29 @@ export function TopHeader({ desktopMode, onToggleDesktop, onOpenSearch, sidebarC
             <SidebarToggleIcon />
           </button>
         )}
-        {!desktopMode && onOpenMenu && (
+        {desktopMode && showBack && (
+          <button
+            type="button"
+            onClick={goBack}
+            aria-label="Quay lại"
+            title="Quay lại"
+            className="mr-3 flex h-9 w-9 shrink-0 items-center justify-center rounded-full text-muted transition hover:bg-slate-100 hover:text-foreground"
+          >
+            <BackIcon />
+          </button>
+        )}
+        {!desktopMode && showBack && (
+          <button
+            type="button"
+            onClick={goBack}
+            aria-label="Quay lại"
+            title="Quay lại"
+            className="mr-2 flex h-9 w-9 shrink-0 items-center justify-center rounded-full text-muted transition hover:bg-slate-100 hover:text-foreground"
+          >
+            <BackIcon />
+          </button>
+        )}
+        {!desktopMode && !showBack && onOpenMenu && (
           <button
             type="button"
             onClick={onOpenMenu}

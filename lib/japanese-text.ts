@@ -165,11 +165,108 @@ function safeStemCandidate(
   return null;
 }
 
-function addCandidate(byFirst: Map<string, SegmentCandidate[]>, candidate: SegmentCandidate) {
+function normalizeCandidateSurface(candidate: SegmentCandidate): SegmentCandidate | null {
   const surface = candidate.surface.trim();
-  if (!surface || (surface.length === 1 && !hasKanji(surface))) return;
-  const first = Array.from(surface)[0];
-  byFirst.set(first, [...(byFirst.get(first) ?? []), { ...candidate, surface }]);
+  if (!surface || (surface.length === 1 && !hasKanji(surface))) return null;
+  return { ...candidate, surface };
+}
+
+function insertCandidate(byFirst: Map<string, SegmentCandidate[]>, candidate: SegmentCandidate) {
+  const first = Array.from(candidate.surface)[0];
+  byFirst.set(first, [...(byFirst.get(first) ?? []), candidate]);
+}
+
+function addCandidate(byFirst: Map<string, SegmentCandidate[]>, candidate: SegmentCandidate) {
+  const normalized = normalizeCandidateSurface(candidate);
+  if (normalized) insertCandidate(byFirst, normalized);
+}
+
+/**
+ * Suy candidate của 1 từ (dictionaryForm/dạng chia/reading đã xác minh) chỉ
+ * phụ thuộc chính bản thân từ đó, không phụ thuộc câu ví dụ, priorityWordId
+ * hay furiganaTokens của lần gọi. Mỗi trang có thể hiện nhiều câu ví dụ,
+ * gọi segmentJapaneseText nhiều lần với CÙNG danh sách words (đến hàng nghìn
+ * từ) — nếu suy lại từ đầu mỗi lần thì cùng 1 từ bị lặp lại phép tính hàng
+ * chục lần chỉ trong 1 lượt xem trang. Cache theo tham chiếu VocabWord (an
+ * toàn: object cũ được thay bằng object mới khi cập nhật tiến độ, WeakMap tự
+ * dọn phần không còn ai tham chiếu) để chỉ tính đúng 1 lần cho mỗi từ.
+ */
+const wordCandidateCache = new WeakMap<VocabWord, SegmentCandidate[]>();
+
+function computeWordCandidates(word: VocabWord): SegmentCandidate[] {
+  const cached = wordCandidateCache.get(word);
+  if (cached) return cached;
+
+  const candidates: SegmentCandidate[] = [];
+  const push = (candidate: SegmentCandidate) => {
+    const normalized = normalizeCandidateSurface(candidate);
+    if (normalized) candidates.push(normalized);
+  };
+
+  const rawWord = (word.word || "").trim();
+  const dictionaryForm = normalizeDictionaryForm(word.dictionaryForm || word.word);
+  const dictionary = trustedDictionaryReading(word, dictionaryForm);
+  const conjugation = getConjugation(word);
+  // Object.values(conjugation) cũng chứa "kind" ("verb"/"i_adjective"/…) và
+  // dictionaryForm - loại 2 khoá này ra để không biến literal "kind" thành
+  // 1 bề mặt có thể khớp (vô hại trong câu tiếng Nhật thật, nhưng vẫn là dữ
+  // liệu sai nếu lọt vào tập bề mặt).
+  const conjugationForms = conjugation
+    ? Object.entries(conjugation)
+        .filter(([key, value]) => key !== "kind" && key !== "dictionaryForm" && typeof value === "string")
+        .map(([, value]) => value as string)
+    : [];
+  const surfaces = new Set([rawWord, dictionaryForm, ...conjugationForms]);
+
+  // N5 cũ còn nhiều động từ chưa có verb_class. Riêng 来る vẫn thêm được
+  // toàn bộ dạng bất quy tắc khi reading của dictionary_form đã đáng tin.
+  if (dictionary && dictionaryForm.endsWith("来る") && dictionary.reading.endsWith("くる")) {
+    const prefix = dictionaryForm.slice(0, -2);
+    Object.keys(KURU_SUFFIX_READINGS).forEach((suffix) => surfaces.add(`${prefix}${suffix}`));
+  }
+
+  for (const surface of surfaces) {
+    // reading_furigana luôn mô tả word.word đang hiển thị, vì vậy exact
+    // surface được phép dùng trực tiếp kể cả khi entry là 歩いて/知っている.
+    if (surface === rawWord) {
+      const exactReading = singleStoredReading(word.reading);
+      push({
+        surface,
+        word,
+        reading: exactReading && hasKanji(surface) ? exactReading : undefined,
+        readingPriority: exactReading && hasKanji(surface) ? 2 : 1,
+      });
+      continue;
+    }
+
+    // Bề mặt suy ra (dictionaryForm/dạng chia) khác với rawWord chỉ có giá
+    // trị khi còn Kanji để gắn furigana. Không có Kanji (vd dictionary_form
+    // bị nhập nhầm thành cách đọc thuần kana như "まし" thay vì "增し") thì
+    // bỏ qua hẳn - nếu vẫn thêm, chuỗi kana ngắn đó có thể vô tình khớp
+    // giữa 1 từ chia dạng khác hoàn toàn không liên quan (vd "出しました"
+    // bị cắt nhầm thành "出"+"し"+"まし"+"た" vì "まし" trùng khớp).
+    if (!hasKanji(surface)) continue;
+
+    const reading = dictionary
+      ? deriveVerifiedReading(word, dictionaryForm, dictionary.reading, surface)
+      : undefined;
+    push({
+      surface,
+      word,
+      reading,
+      readingPriority: reading ? dictionary?.priority ?? 1 : 1,
+    });
+  }
+
+  // Khi verb_class chưa có, vẫn có thể gắn furigana cho phần gốc có kanji,
+  // nhưng chỉ khi reading của dictionary_form đã được xác nhận.
+  if (dictionary) {
+    const stem = safeStemCandidate(word, dictionaryForm, dictionary.reading);
+    if (stem) push({ ...stem, word, readingPriority: dictionary.priority });
+  }
+
+  wordCandidateCache.set(word, candidates);
+  return candidates;
 }
 
 /**
@@ -212,66 +309,8 @@ export function segmentJapaneseText(
   const byFirst = new Map<string, SegmentCandidate[]>();
 
   for (const word of words) {
-    const rawWord = (word.word || "").trim();
-    const dictionaryForm = normalizeDictionaryForm(word.dictionaryForm || word.word);
-    const dictionary = trustedDictionaryReading(word, dictionaryForm);
-    const conjugation = getConjugation(word);
-    // Object.values(conjugation) cũng chứa "kind" ("verb"/"i_adjective"/…) và
-    // dictionaryForm - loại 2 khoá này ra để không biến literal "kind" thành
-    // 1 bề mặt có thể khớp (vô hại trong câu tiếng Nhật thật, nhưng vẫn là dữ
-    // liệu sai nếu lọt vào tập bề mặt).
-    const conjugationForms = conjugation
-      ? Object.entries(conjugation)
-          .filter(([key, value]) => key !== "kind" && key !== "dictionaryForm" && typeof value === "string")
-          .map(([, value]) => value as string)
-      : [];
-    const surfaces = new Set([rawWord, dictionaryForm, ...conjugationForms]);
-
-    // N5 cũ còn nhiều động từ chưa có verb_class. Riêng 来る vẫn thêm được
-    // toàn bộ dạng bất quy tắc khi reading của dictionary_form đã đáng tin.
-    if (dictionary && dictionaryForm.endsWith("来る") && dictionary.reading.endsWith("くる")) {
-      const prefix = dictionaryForm.slice(0, -2);
-      Object.keys(KURU_SUFFIX_READINGS).forEach((suffix) => surfaces.add(`${prefix}${suffix}`));
-    }
-
-    for (const surface of surfaces) {
-      // reading_furigana luôn mô tả word.word đang hiển thị, vì vậy exact
-      // surface được phép dùng trực tiếp kể cả khi entry là 歩いて/知っている.
-      if (surface === rawWord) {
-        const exactReading = singleStoredReading(word.reading);
-        addCandidate(byFirst, {
-          surface,
-          word,
-          reading: exactReading && hasKanji(surface) ? exactReading : undefined,
-          readingPriority: exactReading && hasKanji(surface) ? 2 : 1,
-        });
-        continue;
-      }
-
-      // Bề mặt suy ra (dictionaryForm/dạng chia) khác với rawWord chỉ có giá
-      // trị khi còn Kanji để gắn furigana. Không có Kanji (vd dictionary_form
-      // bị nhập nhầm thành cách đọc thuần kana như "まし" thay vì "增し") thì
-      // bỏ qua hẳn - nếu vẫn thêm, chuỗi kana ngắn đó có thể vô tình khớp
-      // giữa 1 từ chia dạng khác hoàn toàn không liên quan (vd "出しました"
-      // bị cắt nhầm thành "出"+"し"+"まし"+"た" vì "まし" trùng khớp).
-      if (!hasKanji(surface)) continue;
-
-      const reading = dictionary
-        ? deriveVerifiedReading(word, dictionaryForm, dictionary.reading, surface)
-        : undefined;
-      addCandidate(byFirst, {
-        surface,
-        word,
-        reading,
-        readingPriority: reading ? dictionary?.priority ?? 1 : 1,
-      });
-    }
-
-    // Khi verb_class chưa có, vẫn có thể gắn furigana cho phần gốc có kanji,
-    // nhưng chỉ khi reading của dictionary_form đã được xác nhận.
-    if (dictionary) {
-      const stem = safeStemCandidate(word, dictionaryForm, dictionary.reading);
-      if (stem) addCandidate(byFirst, { ...stem, word, readingPriority: dictionary.priority });
+    for (const candidate of computeWordCandidates(word)) {
+      insertCandidate(byFirst, candidate);
     }
   }
 

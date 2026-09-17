@@ -63,7 +63,7 @@ export function JapaneseSentence({
       return (
         <ruby>
           {segmentText}
-          <rt className="text-[0.58em] font-normal text-muted">{verifiedReading}</rt>
+          <rt className="text-[0.65em] font-medium text-muted">{verifiedReading}</rt>
         </ruby>
       );
     }
@@ -74,7 +74,7 @@ export function JapaneseSentence({
     return canShowReading ? (
       <ruby>
         {segmentText}
-        <rt className="text-[0.58em] font-normal text-muted">{reading}</rt>
+        <rt className="text-[0.65em] font-medium text-muted">{reading}</rt>
       </ruby>
     ) : (
       segmentText

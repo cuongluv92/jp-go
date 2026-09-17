@@ -90,7 +90,12 @@ export function BottomNav({ desktopMode, onNavigate }: BottomNavProps) {
   }
 
   return (
-    <nav className="safe-bottom fixed inset-x-0 bottom-0 z-20 border-t border-border bg-surface/90 shadow-[0_-4px_16px_-8px_rgba(15,23,42,0.12)] backdrop-blur-lg">
+    // Không dùng backdrop-blur ở đây: thanh này fixed + repaint mỗi frame
+    // cuộn trang, backdrop-blur ép trình duyệt phải composite lại lớp mờ đó
+    // liên tục - tốn GPU rõ rệt trên điện thoại cấu hình thấp (đúng kiểu
+    // "giật, đơ" khi cuộn/chuyển tab). Nền gần như đặc (98%) đã đủ tách lớp
+    // với nội dung phía sau mà không cần hiệu ứng mờ.
+    <nav className="safe-bottom fixed inset-x-0 bottom-0 z-20 border-t border-border bg-surface/98 shadow-[0_-4px_16px_-8px_rgba(15,23,42,0.12)]">
       <ul className="mx-auto grid w-full max-w-md grid-cols-5 sm:max-w-lg">
         {NAV_ITEMS.map((item) => {
           const isActive = isNavItemActive(pathname, item.href);

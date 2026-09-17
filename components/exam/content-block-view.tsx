@@ -79,7 +79,7 @@ function renderJapaneseText(
       const ruby = (
         <ruby>
           {segment.text}
-          <rt className="text-[0.58em] font-normal leading-none text-muted">{segment.reading}</rt>
+          <rt className="text-[0.65em] font-medium leading-none text-muted">{segment.reading}</rt>
         </ruby>
       );
       return overlapsBold(segment.start, segmentEnd, boldRanges) ? (

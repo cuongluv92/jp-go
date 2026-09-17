@@ -47,7 +47,9 @@ export function ThreeColumnPage({ blocks }: { blocks: ContentBlock[] }) {
 
       {/* Mobile: tab 原文 | Dịch | Giải thích */}
       <div className="md:hidden">
-        <div className="sticky top-14 z-10 -mx-4 flex border-b border-border bg-surface/95 px-4 backdrop-blur">
+        {/* Không backdrop-blur: tab này sticky, repaint mỗi frame cuộn trên
+            mobile - bỏ blur để tránh gánh nặng GPU trên máy cấu hình thấp. */}
+        <div className="sticky top-14 z-10 -mx-4 flex border-b border-border bg-surface/98 px-4">
           {TABS.map((tab) => (
             <button
               key={tab.key}
