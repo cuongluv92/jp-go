@@ -7,6 +7,7 @@ import { GrammarQuizRunner } from "@/components/grammar-quiz-runner";
 import { JapaneseSentence } from "@/components/japanese-sentence";
 import { MaziiLink } from "@/components/mazii-link";
 import { PersonalExamples } from "@/components/personal-examples";
+import { SkeletonDetailCard } from "@/components/skeleton";
 import { getCached, setCached } from "@/lib/data/client-cache";
 import {
   gradeGrammarReview,
@@ -140,7 +141,7 @@ export function GrammarDetailClient({ id }: { id: string }) {
     }
   }
 
-  if (loading) return <p className="rounded-2xl border border-dashed border-border p-4 text-sm text-muted">Đang tải...</p>;
+  if (loading) return <SkeletonDetailCard />;
   if (loadError && !detail) {
     return (
       <div className="rounded-2xl border border-amber-200 dark:border-amber-500/25 bg-amber-50 dark:bg-amber-500/10 p-4 text-sm text-amber-900 dark:text-amber-200">

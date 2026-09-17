@@ -5,6 +5,7 @@ import { useSearchParams } from "next/navigation";
 import { Suspense, useEffect, useMemo, useState } from "react";
 
 import { LessonNavigator } from "@/components/lesson-navigator";
+import { SkeletonGrid } from "@/components/skeleton";
 import { getCached, setCached } from "@/lib/data/client-cache";
 import { getKanjiLevelCounts, listKanjiByLevel, type KanjiRow } from "@/lib/data/kanji-service";
 import { getLessonCount, LESSON_SIZES, sliceLesson } from "@/lib/data/lesson-structure";
@@ -196,7 +197,7 @@ function KanjiListContent() {
       )}
 
       {loading ? (
-        <p className="rounded-2xl border border-dashed border-border p-4 text-sm text-muted">Đang tải...</p>
+        <SkeletonGrid count={20} />
       ) : kanjiList.length === 0 ? (
         <p className="rounded-2xl border border-dashed border-border p-4 text-sm text-muted">
           Chưa có nội dung Kanji cho cấp {level}.

@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 
 import { createClient } from "@/lib/supabase/client";
+import { SkeletonGrid, SkeletonRows } from "@/components/skeleton";
 import { useVocabulary } from "@/lib/data/vocabulary-context";
 
 interface LegacyKanji {
@@ -68,7 +69,7 @@ export default function N2LegacyPage() {
 
       <section id="legacy-kanji" className="flex flex-col gap-3 scroll-mt-4">
         <h2 className="text-base font-semibold">Kanji N2 cũ · {kanji.length}</h2>
-        {loading ? <p className="text-sm text-muted">Đang tải...</p> : (
+        {loading ? <SkeletonGrid count={12} /> : (
           <div className="grid grid-cols-3 gap-2 sm:grid-cols-4">
             {kanji.map((item) => (
               <Link key={item.id} href={`/kanji/${item.id}`} className="rounded-xl border border-border bg-surface px-2 py-3 text-center shadow-sm">
@@ -82,7 +83,7 @@ export default function N2LegacyPage() {
 
       <section id="legacy-grammar" className="flex flex-col gap-3 scroll-mt-4">
         <h2 className="text-base font-semibold">Ngữ pháp N2 cũ · {grammar.length}</h2>
-        {loading ? <p className="text-sm text-muted">Đang tải...</p> : (
+        {loading ? <SkeletonRows count={5} rowClassName="h-14" /> : (
           <div className="flex flex-col gap-2">
             {grammar.map((item) => (
               <Link key={item.id} href={`/grammar/${item.id}`} className="rounded-xl border border-border bg-surface px-3 py-3 shadow-sm">

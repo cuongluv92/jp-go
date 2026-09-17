@@ -2,6 +2,7 @@
 
 import { useEffect, useMemo, useState } from "react";
 
+import { Skeleton } from "@/components/skeleton";
 import { getGrammarLevelCounts, listGrammarByLevel, listWrongGrammarForUser } from "@/lib/data/grammar-service";
 import { getKanjiLevelCounts, listKanjiByLevel, listWrongKanjiForUser } from "@/lib/data/kanji-service";
 import { useVocabulary } from "@/lib/data/vocabulary-context";
@@ -229,7 +230,7 @@ export function CustomReviewPicker({
 
       <section className="rounded-xl border border-dashed border-border p-3 text-xs text-muted">
         {(contentType === "kanji" && kanjiLoading) || (contentType === "grammar" && grammarLoading) ? (
-          <p>Đang tải...</p>
+          <Skeleton className="h-4 w-32" />
         ) : itemCount === 0 ? (
           <p>Không có mục nào phù hợp lựa chọn hiện tại.</p>
         ) : (

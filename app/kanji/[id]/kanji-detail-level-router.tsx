@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 
+import { SkeletonDetailCard } from "@/components/skeleton";
 import { createClient } from "@/lib/supabase/client";
 
 import { KanjiDetailClient } from "./kanji-detail-client";
@@ -31,7 +32,7 @@ export function KanjiDetailLevelRouter({ id }: { id: string }) {
   }, [id]);
 
   if (mode === null) {
-    return <p className="rounded-2xl border border-dashed border-border p-4 text-sm text-muted">Đang tải...</p>;
+    return <SkeletonDetailCard />;
   }
   if (mode === "missing") {
     return <p className="rounded-2xl border border-dashed border-border p-4 text-sm text-muted">Không tìm thấy kanji.</p>;

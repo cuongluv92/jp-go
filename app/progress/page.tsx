@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useEffect, useState } from "react";
 
+import { SkeletonRows } from "@/components/skeleton";
 import { StatCard } from "@/components/stat-card";
 import { getCached, setCached } from "@/lib/data/client-cache";
 import { getDueGrammarForReview, getGrammarProgressStats, type GrammarProgressStats } from "@/lib/data/grammar-service";
@@ -164,7 +165,7 @@ export default function ProgressPage() {
       <section>
         <h2 className="mb-2 text-sm font-semibold text-foreground">Lộ trình đang học</h2>
         {loading ? (
-          <p className="rounded-2xl border border-dashed border-border p-4 text-sm text-muted">Đang tải...</p>
+          <SkeletonRows count={2} rowClassName="h-20" />
         ) : plans.length === 0 ? (
           <Link
             href="/plan"

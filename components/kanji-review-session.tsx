@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 
 import { KanjiQuizRunner, type KanjiQuizResult } from "@/components/kanji-quiz-runner";
+import { SkeletonDetailCard } from "@/components/skeleton";
 import { gradeKanjiReview, getQuestionsForKanjiIds, type KanjiQuestionRow } from "@/lib/data/kanji-service";
 import { createClient } from "@/lib/supabase/client";
 
@@ -73,7 +74,7 @@ export function KanjiReviewSession({
   }
 
   if (!questions) {
-    return <p className="rounded-2xl border border-dashed border-border p-4 text-sm text-muted">Đang tải...</p>;
+    return <SkeletonDetailCard />;
   }
 
   if (questions.length === 0) {

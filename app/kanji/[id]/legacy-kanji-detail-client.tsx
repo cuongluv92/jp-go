@@ -6,6 +6,7 @@ import { useEffect, useState } from "react";
 import { KanjiQuizRunner } from "@/components/kanji-quiz-runner";
 import { KanjiStrokePractice } from "@/components/kanji-stroke-practice";
 import { MaziiLink } from "@/components/mazii-link";
+import { SkeletonDetailCard } from "@/components/skeleton";
 import { getCached, setCached } from "@/lib/data/client-cache";
 import {
   gradeKanjiReview,
@@ -99,7 +100,7 @@ export function LegacyKanjiDetailClient({ id }: { id: string }) {
     }
   }
 
-  if (loading) return <p className="rounded-2xl border border-dashed border-border p-4 text-sm text-muted">Đang tải...</p>;
+  if (loading) return <SkeletonDetailCard />;
   if (!detail) return <p className="rounded-2xl border border-dashed border-border p-4 text-sm text-muted">Không tìm thấy kanji.</p>;
 
   const kunReadings = detail.readings.filter((r) => r.reading_type === "kun");

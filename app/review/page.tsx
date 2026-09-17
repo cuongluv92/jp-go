@@ -10,6 +10,7 @@ import { ReviewFlashcardExercise } from "@/components/review-flashcard-exercise"
 import { ReviewMatchingExercise } from "@/components/review-matching-exercise";
 import { ReviewTypingExercise } from "@/components/review-typing-exercise";
 import { SegmentedTabs } from "@/components/segmented-tabs";
+import { SkeletonRows } from "@/components/skeleton";
 import { getCached, setCached } from "@/lib/data/client-cache";
 import { getDueWords } from "@/lib/data/selectors";
 import { getDueGrammarForReview, type DueGrammarRow } from "@/lib/data/grammar-service";
@@ -261,7 +262,7 @@ export default function ReviewPage() {
 
       {tab === "due" ? (
         loading ? (
-          <p className="rounded-2xl border border-dashed border-border p-4 text-sm text-muted">Đang tải...</p>
+          <SkeletonRows count={5} />
         ) : sessionWords.length === 0 && dueKanji.length === 0 && dueGrammar.length === 0 && duePersonal.length === 0 ? (
           <p className="rounded-2xl border border-dashed border-border p-4 text-sm text-muted">
             Không có lịch ôn nào đến hạn. Tiếp tục học để tạo lịch ôn mới, hoặc sang tab &quot;Tự chọn ôn tập&quot; để ôn bất cứ lúc nào.

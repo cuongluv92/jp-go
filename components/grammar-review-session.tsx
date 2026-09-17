@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 
 import { GrammarQuizRunner, type GrammarQuizResult } from "@/components/grammar-quiz-runner";
+import { SkeletonDetailCard } from "@/components/skeleton";
 import { gradeGrammarReview, getQuestionsForGrammarIds, type GrammarQuestionRow } from "@/lib/data/grammar-service";
 import { createClient } from "@/lib/supabase/client";
 
@@ -72,7 +73,7 @@ export function GrammarReviewSession({
   }
 
   if (!questions) {
-    return <p className="rounded-2xl border border-dashed border-border p-4 text-sm text-muted">Đang tải...</p>;
+    return <SkeletonDetailCard />;
   }
 
   if (questions.length === 0) {

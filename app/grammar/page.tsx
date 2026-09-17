@@ -5,6 +5,7 @@ import { useSearchParams } from "next/navigation";
 import { Suspense, useEffect, useMemo, useState } from "react";
 
 import { LessonNavigator } from "@/components/lesson-navigator";
+import { SkeletonRows } from "@/components/skeleton";
 import { getCached, setCached } from "@/lib/data/client-cache";
 import { getGrammarLevelCounts, listGrammarByLevel, type GrammarRow } from "@/lib/data/grammar-service";
 import { getLessonCount, LESSON_SIZES, sliceLesson } from "@/lib/data/lesson-structure";
@@ -186,7 +187,7 @@ function GrammarListContent() {
       )}
 
       {loading ? (
-        <p className="rounded-2xl border border-dashed border-border p-4 text-sm text-muted">Đang tải...</p>
+        <SkeletonRows count={8} />
       ) : loadError && grammarList.length === 0 ? (
         <div className="rounded-2xl border border-amber-200 dark:border-amber-500/25 bg-amber-50 dark:bg-amber-500/10 p-4 text-sm text-amber-900 dark:text-amber-200">
           <p>{loadError}</p>
