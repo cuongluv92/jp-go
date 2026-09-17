@@ -11,6 +11,11 @@ export interface BlockColumns {
 }
 
 const HEADING_TAGS = ["h1", "h2", "h3", "h4", "h5", "h6"] as const;
+// Trước đây mọi cấp heading (điều/chương/mục/tiểu mục...) đều dùng chung
+// text-lg, khiến cả "電気工学" (cấp 1) lẫn "a. 電荷" (cấp 4) to bằng nhau và
+// nặng nề so với nội dung xung quanh - giảm dần theo cấp cho đúng phân cấp
+// thị giác, cấp càng sâu càng nhỏ.
+const HEADING_SIZE_CLASSES = ["text-lg", "text-base", "text-[15px]", "text-sm", "text-sm", "text-sm"] as const;
 
 const EmptyVi = () => <p className="text-sm italic text-muted">(chưa dịch)</p>;
 
@@ -107,14 +112,16 @@ function renderJapaneseText(
 export function renderBlockColumns(block: ContentBlock, showFurigana = false): BlockColumns {
   switch (block.type) {
     case "heading": {
-      const Tag = HEADING_TAGS[Math.min(Math.max(block.level - 1, 0), 5)];
+      const levelIndex = Math.min(Math.max(block.level - 1, 0), 5);
+      const Tag = HEADING_TAGS[levelIndex];
+      const sizeClass = HEADING_SIZE_CLASSES[levelIndex];
       return {
         jp: (
-          <Tag className="font-jp text-lg font-bold">
+          <Tag className={`font-jp ${sizeClass} font-bold`}>
             {renderJapaneseText(block.jp, block.furigana_tokens, showFurigana, block.bold_jp)}
           </Tag>
         ),
-        vi: block.vi ? <Tag className="text-lg font-bold">{block.vi}</Tag> : <EmptyVi />,
+        vi: block.vi ? <Tag className={`${sizeClass} font-bold`}>{block.vi}</Tag> : <EmptyVi />,
         explanation: block.explanation_vi ? <p className="text-sm text-muted">{block.explanation_vi}</p> : null,
       };
     }

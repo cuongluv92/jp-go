@@ -38,9 +38,9 @@ export function ThreeColumnPage({ blocks }: { blocks: ContentBlock[] }) {
         <div className="grid grid-cols-[5fr_5fr_3fr] gap-x-6">
           {rows.map((row) => (
             <Fragment key={row.key}>
-              <div className="border-b border-border py-4">{row.jp}</div>
-              <div className="border-b border-border py-4">{row.vi}</div>
-              <div className="border-b border-border py-4">
+              <div className="border-b border-border py-2.5">{row.jp}</div>
+              <div className="border-b border-border py-2.5">{row.vi}</div>
+              <div className="border-b border-border py-2.5">
                 {row.explanation ?? <span className="text-sm text-muted/60">—</span>}
               </div>
             </Fragment>

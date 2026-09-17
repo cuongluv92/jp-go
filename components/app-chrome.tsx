@@ -27,6 +27,7 @@ function getPageKind(pathname: string): string {
   if (pathname === "/review") return "review";
   if (pathname === "/progress") return "progress";
   if (pathname === "/flashcards") return "flashcards";
+  if (pathname.startsWith("/exam")) return "exam";
   return "generic";
 }
 

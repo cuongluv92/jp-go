@@ -261,6 +261,16 @@ html[data-jp-layout="desktop"][data-jp-page="progress"] main > div {
   max-width: 1400px;
 }
 
+/* Trang đọc sách ôn thi 2級電気工事施工管理 (WideContainer thoát khỏi khung
+   max-w-md mặc định của layout mobile) - 3 cột song song cần rộng hơn hẳn 1
+   trang đọc thường (trước bị lọt vào "generic" nên bị chụp max-width 1040px,
+   khiến WideContainer coi như vô tác dụng trên desktop). Vẫn giới hạn 1600px
+   để dòng chữ không dài quá mức trên màn hình siêu rộng. */
+html[data-jp-layout="desktop"][data-jp-page="exam"] main > div {
+  width: 100%;
+  max-width: 1600px;
+}
+
 /* List pages: use the extra horizontal space instead of stretching one row. */
 html[data-jp-layout="desktop"][data-jp-page="vocabulary"] main > div > ul,
 html[data-jp-layout="desktop"][data-jp-page="grammar"] main > div > ul {
