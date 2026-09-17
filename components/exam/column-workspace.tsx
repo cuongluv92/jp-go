@@ -225,7 +225,7 @@ export function ColumnWorkspace({ blocks }: { blocks: ContentBlock[] }) {
         ))}
         {rows.map((row) =>
           renderedColumns.map((col) => (
-            <div key={`${row.key}-${col}`} className="border-b border-border py-2.5">
+            <div key={`${row.key}-${col}`} className="border-b border-border py-1.5">
               {row[col] ?? <span className="text-sm text-muted/60">—</span>}
             </div>
           )),

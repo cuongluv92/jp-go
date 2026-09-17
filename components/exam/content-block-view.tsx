@@ -40,6 +40,11 @@ function overlapsBold(start: number, end: number, ranges: TextRange[]): boolean 
   return ranges.some((range) => range.start < end && range.end > start);
 }
 
+// Trước dùng <strong> (in đậm thuần) - đổi sang tô vàng nhạt kiểu bút nhớ,
+// KHÔNG in đậm nữa (đậm + tô màu cùng lúc bị rối mắt, chỉ tô nền là đủ nổi
+// bật, giống cách gạch bút dạ thật trên giấy).
+const HIGHLIGHT_CLASS = "rounded-[3px] bg-amber-200/70 px-0.5 text-inherit dark:bg-amber-300/25";
+
 function renderPlainSegmentWithBold(
   text: string,
   absoluteStart: number,
@@ -58,9 +63,9 @@ function renderPlainSegmentWithBold(
     const end = points[index + 1];
     const piece = text.slice(start - absoluteStart, end - absoluteStart);
     return overlapsBold(start, end, ranges) ? (
-      <strong key={`${keyPrefix}-${start}`} className="font-bold">
+      <mark key={`${keyPrefix}-${start}`} className={HIGHLIGHT_CLASS}>
         {piece}
-      </strong>
+      </mark>
     ) : (
       <Fragment key={`${keyPrefix}-${start}`}>{piece}</Fragment>
     );
@@ -88,9 +93,9 @@ function renderJapaneseText(
         </ruby>
       );
       return overlapsBold(segment.start, segmentEnd, boldRanges) ? (
-        <strong key={`${segment.start}-${index}`} className="font-bold">
+        <mark key={`${segment.start}-${index}`} className={HIGHLIGHT_CLASS}>
           {ruby}
-        </strong>
+        </mark>
       ) : (
         <Fragment key={`${segment.start}-${index}`}>{ruby}</Fragment>
       );
