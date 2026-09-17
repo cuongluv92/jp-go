@@ -73,10 +73,18 @@ function conjugateGodan(dictionaryForm: string): VerbConjugation {
   const { te, ta } = usesIkuTeTaException(dictionaryForm) ? { te: "って", ta: "った" } : godanTeTaSuffix(last);
   const honorific = HONORIFIC_RU_SPECIALS[dictionaryForm];
   const isAru = dictionaryForm === "ある";
+  // Thể lịch sự (ます/ました/ません/ませんでした) đều chia đều từ cùng 1 gốc -
+  // kể cả 下さる/くださる... (honorific đặc biệt, gốc いい thay vì gốc thường)
+  // và ある (ありません/ありました vẫn chia đều dù thể thường phủ định "ない"
+  // là bất quy tắc riêng, không dùng chung gốc này).
+  const politeStem = honorific ? honorific.masuForm.slice(0, -2) : `${stem}${masuStem}`;
   return {
     kind: "verb",
     dictionaryForm,
-    masuForm: honorific?.masuForm ?? `${stem}${masuStem}ます`,
+    masuForm: `${politeStem}ます`,
+    masuTaForm: `${politeStem}ました`,
+    masuNaiForm: `${politeStem}ません`,
+    masuNaiTaForm: `${politeStem}ませんでした`,
     teForm: `${stem}${te}`,
     naiForm: isAru ? "ない" : `${stem}${aStem}ない`,
     naiTaForm: isAru ? "なかった" : `${stem}${aStem}なかった`,
@@ -95,7 +103,8 @@ function conjugateIchidan(dictionaryForm: string): VerbConjugation {
   const stem = dictionaryForm.slice(0, -1);
   return {
     kind: "verb", dictionaryForm,
-    masuForm: `${stem}ます`, teForm: `${stem}て`, naiForm: `${stem}ない`, naiTaForm: `${stem}なかった`, taForm: `${stem}た`,
+    masuForm: `${stem}ます`, masuTaForm: `${stem}ました`, masuNaiForm: `${stem}ません`, masuNaiTaForm: `${stem}ませんでした`,
+    teForm: `${stem}て`, naiForm: `${stem}ない`, naiTaForm: `${stem}なかった`, taForm: `${stem}た`,
     potentialForm: `${stem}られる`, volitionalForm: `${stem}よう`, passiveForm: `${stem}られる`, causativeForm: `${stem}させる`,
     causativePassiveForm: `${stem}させられる`, imperativeForm: `${stem}ろ`, conditionalForm: `${stem}れば`,
   };
@@ -106,7 +115,8 @@ function conjugateSuru(dictionaryForm: string): VerbConjugation {
   const potentialStem = stem.endsWith("を") ? `${stem.slice(0, -1)}が` : stem;
   return {
     kind: "verb", dictionaryForm,
-    masuForm: `${stem}します`, teForm: `${stem}して`, naiForm: `${stem}しない`, naiTaForm: `${stem}しなかった`, taForm: `${stem}した`,
+    masuForm: `${stem}します`, masuTaForm: `${stem}しました`, masuNaiForm: `${stem}しません`, masuNaiTaForm: `${stem}しませんでした`,
+    teForm: `${stem}して`, naiForm: `${stem}しない`, naiTaForm: `${stem}しなかった`, taForm: `${stem}した`,
     potentialForm: `${potentialStem}できる`, volitionalForm: `${stem}しよう`, passiveForm: `${stem}される`, causativeForm: `${stem}させる`,
     causativePassiveForm: `${stem}させられる`, imperativeForm: `${stem}しろ`, conditionalForm: `${stem}すれば`,
   };
@@ -116,7 +126,8 @@ function conjugateKuru(dictionaryForm: string): VerbConjugation {
   const stem = dictionaryForm.endsWith("来る") ? dictionaryForm.slice(0, -2) : "";
   return {
     kind: "verb", dictionaryForm,
-    masuForm: `${stem}来ます`, teForm: `${stem}来て`, naiForm: `${stem}来ない`, naiTaForm: `${stem}来なかった`, taForm: `${stem}来た`,
+    masuForm: `${stem}来ます`, masuTaForm: `${stem}来ました`, masuNaiForm: `${stem}来ません`, masuNaiTaForm: `${stem}来ませんでした`,
+    teForm: `${stem}来て`, naiForm: `${stem}来ない`, naiTaForm: `${stem}来なかった`, taForm: `${stem}来た`,
     potentialForm: `${stem}来られる`, volitionalForm: `${stem}来よう`, passiveForm: `${stem}来られる`, causativeForm: `${stem}来させる`,
     causativePassiveForm: `${stem}来させられる`, imperativeForm: `${stem}来い`, conditionalForm: `${stem}来れば`,
   };
@@ -136,7 +147,9 @@ function joinVerbVariants(forms: VerbConjugation[]): VerbConjugation {
   const join = (key: keyof VerbConjugation) => forms.map((form) => String(form[key])).join("／");
   return {
     kind: "verb",
-    dictionaryForm: join("dictionaryForm"), masuForm: join("masuForm"), teForm: join("teForm"), naiForm: join("naiForm"),
+    dictionaryForm: join("dictionaryForm"), masuForm: join("masuForm"),
+    masuTaForm: join("masuTaForm"), masuNaiForm: join("masuNaiForm"), masuNaiTaForm: join("masuNaiTaForm"),
+    teForm: join("teForm"), naiForm: join("naiForm"),
     naiTaForm: join("naiTaForm"), taForm: join("taForm"), potentialForm: join("potentialForm"), volitionalForm: join("volitionalForm"),
     passiveForm: join("passiveForm"), causativeForm: join("causativeForm"), causativePassiveForm: join("causativePassiveForm"),
     imperativeForm: join("imperativeForm"), conditionalForm: join("conditionalForm"),

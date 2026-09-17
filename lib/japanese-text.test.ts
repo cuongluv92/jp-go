@@ -126,10 +126,15 @@ describe("segmentJapaneseText", () => {
     const dasu = readableWord("dasu", "出す", "だす", "verb", "godan");
     const result = segmentJapaneseText("財布から千円を出しました。", [mashi, dasu]);
     expect(result.some((part) => part.word?.id === "mashi")).toBe(false);
-    // ました (quá khứ lịch sự) chưa nằm trong bảng chia động từ nên chỉ khớp
-    // được phần gốc "出"=đ - đây là giới hạn về độ đầy đủ đã biết, không phải
-    // lỗi sai (đọc "だ" cho "出" vẫn đúng), khác với lỗi "まし" bị khớp bừa.
-    expect(result.find((part) => part.word?.id === "dasu")).toMatchObject({ text: "出", reading: "だ" });
+    expect(result.find((part) => part.word?.id === "dasu")).toMatchObject({ text: "出しました", reading: "だしました" });
+  });
+
+  it("gắn furigana đầy đủ cho dạng lịch sự quá khứ (ました) thay vì chỉ 1 chữ gốc", () => {
+    const target = readableWord("1", "書く", "かく", "verb", "godan");
+    const result = segmentJapaneseText("報告書を書きました。", [target]);
+    const linked = result.filter((part) => part.word?.id === "1");
+    expect(linked).toHaveLength(1);
+    expect(linked[0]).toMatchObject({ text: "書きました", reading: "かきました" });
   });
 
   it("coi 々 là phần của cụm Kanji khi kiểm ranh giới", () => {

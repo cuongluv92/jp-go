@@ -175,6 +175,12 @@ export interface VerbConjugation {
   kind: "verb";
   dictionaryForm: string;
   masuForm: string;
+  /** ました形 — lịch sự quá khứ. */
+  masuTaForm: string;
+  /** ません形 — lịch sự phủ định. */
+  masuNaiForm: string;
+  /** ませんでした形 — lịch sự phủ định quá khứ. */
+  masuNaiTaForm: string;
   teForm: string;
   naiForm: string;
   /** なかった形 — quá khứ phủ định thể thường. */

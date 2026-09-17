@@ -216,7 +216,15 @@ export function segmentJapaneseText(
     const dictionaryForm = normalizeDictionaryForm(word.dictionaryForm || word.word);
     const dictionary = trustedDictionaryReading(word, dictionaryForm);
     const conjugation = getConjugation(word);
-    const conjugationForms = conjugation ? Object.values(conjugation).filter((value): value is string => typeof value === "string") : [];
+    // Object.values(conjugation) cũng chứa "kind" ("verb"/"i_adjective"/…) và
+    // dictionaryForm - loại 2 khoá này ra để không biến literal "kind" thành
+    // 1 bề mặt có thể khớp (vô hại trong câu tiếng Nhật thật, nhưng vẫn là dữ
+    // liệu sai nếu lọt vào tập bề mặt).
+    const conjugationForms = conjugation
+      ? Object.entries(conjugation)
+          .filter(([key, value]) => key !== "kind" && key !== "dictionaryForm" && typeof value === "string")
+          .map(([, value]) => value as string)
+      : [];
     const surfaces = new Set([rawWord, dictionaryForm, ...conjugationForms]);
 
     // N5 cũ còn nhiều động từ chưa có verb_class. Riêng 来る vẫn thêm được

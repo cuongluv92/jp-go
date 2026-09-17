@@ -202,6 +202,9 @@ function buildComprehensionPool(
 
 const VERB_FORM_LABELS = [
   ["masuForm", "ます形"],
+  ["masuTaForm", "ました形"],
+  ["masuNaiForm", "ません形"],
+  ["masuNaiTaForm", "ませんでした形"],
   ["teForm", "て形"],
   ["naiForm", "ない形"],
   ["taForm", "た形"],

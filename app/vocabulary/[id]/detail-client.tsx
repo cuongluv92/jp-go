@@ -251,6 +251,9 @@ function getVerbGroupDisplay(verbClass: VerbClass): string {
 const VERB_ROWS: { key: keyof Extract<Conjugation, { kind: "verb" }>; label: string }[] = [
   { key: "dictionaryForm", label: "Dạng từ điển（辞書形）" },
   { key: "masuForm", label: "Dạng lịch sự（ます形）" },
+  { key: "masuTaForm", label: "Lịch sự quá khứ（ました形）" },
+  { key: "masuNaiForm", label: "Lịch sự phủ định（ません形）" },
+  { key: "masuNaiTaForm", label: "Lịch sự phủ định quá khứ（ませんでした形）" },
   { key: "teForm", label: "Thể て（て形）" },
   { key: "naiForm", label: "Phủ định hiện tại（現在否定形／ない形）" },
   { key: "naiTaForm", label: "Phủ định quá khứ（過去否定形／なかった形）" },
@@ -308,6 +311,12 @@ function getConjugationGloss(
         return base;
       case "masuForm":
         return `${base} — lịch sự`;
+      case "masuTaForm":
+        return `đã ${base} — lịch sự`;
+      case "masuNaiForm":
+        return `${negateMeaning(base)} — lịch sự`;
+      case "masuNaiTaForm":
+        return `đã ${negateMeaning(base)} — lịch sự`;
       case "teForm":
         return `${base}; dạng nối`;
       case "naiForm":

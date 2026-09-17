@@ -8,6 +8,9 @@ describe("conjugateVerb — godan", () => {
       kind: "verb",
       dictionaryForm: "書く",
       masuForm: "書きます",
+      masuTaForm: "書きました",
+      masuNaiForm: "書きません",
+      masuNaiTaForm: "書きませんでした",
       teForm: "書いて",
       naiForm: "書かない",
       naiTaForm: "書かなかった",
@@ -51,10 +54,22 @@ describe("conjugateVerb — godan", () => {
     expect(conjugateVerb("おっしゃる", "godan").imperativeForm).toBe("おっしゃい");
   });
 
-  it("ある dùng phủ định bất quy tắc ない/なかった", () => {
+  it("ある dùng phủ định bất quy tắc ない/なかった, nhưng thể lịch sự vẫn chia đều", () => {
     const result = conjugateVerb("ある", "godan");
     expect(result.naiForm).toBe("ない");
     expect(result.naiTaForm).toBe("なかった");
+    expect(result.masuForm).toBe("あります");
+    expect(result.masuTaForm).toBe("ありました");
+    expect(result.masuNaiForm).toBe("ありません");
+    expect(result.masuNaiTaForm).toBe("ありませんでした");
+  });
+
+  it("kính ngữ godan đặc biệt: ました/ません/ませんでした chia từ gốc kính ngữ", () => {
+    const result = conjugateVerb("くださる", "godan");
+    expect(result.masuForm).toBe("くださいます");
+    expect(result.masuTaForm).toBe("くださいました");
+    expect(result.masuNaiForm).toBe("くださいません");
+    expect(result.masuNaiTaForm).toBe("くださいませんでした");
   });
 
   it("bỏ nhãn phân biệt nghĩa ①/② trước khi chia", () => {
@@ -96,6 +111,9 @@ describe("conjugateVerb — ichidan", () => {
       kind: "verb",
       dictionaryForm: "食べる",
       masuForm: "食べます",
+      masuTaForm: "食べました",
+      masuNaiForm: "食べません",
+      masuNaiTaForm: "食べませんでした",
       teForm: "食べて",
       naiForm: "食べない",
       naiTaForm: "食べなかった",
@@ -117,6 +135,9 @@ describe("conjugateVerb — suru", () => {
       kind: "verb",
       dictionaryForm: "する",
       masuForm: "します",
+      masuTaForm: "しました",
+      masuNaiForm: "しません",
+      masuNaiTaForm: "しませんでした",
       teForm: "して",
       naiForm: "しない",
       naiTaForm: "しなかった",
@@ -148,6 +169,9 @@ describe("conjugateVerb — kuru", () => {
       kind: "verb",
       dictionaryForm: "来る",
       masuForm: "来ます",
+      masuTaForm: "来ました",
+      masuNaiForm: "来ません",
+      masuNaiTaForm: "来ませんでした",
       teForm: "来て",
       naiForm: "来ない",
       naiTaForm: "来なかった",
