@@ -7,6 +7,10 @@
  * - `explanation_vi` = CHỈ giải thích thêm, tách biệt khỏi bản dịch. Luôn được phép null.
  * - `furigana_tokens` = CHỈ cách đọc đã được kiểm tra cho đúng bề mặt Kanji trong `jp`.
  * - `bold_jp` = các cụm chữ được IN ĐẬM ngay trong nội dung sách; không dùng để tự nhấn mạnh thêm.
+ * - `bold_vi` = cụm trong BẢN DỊCH tương ứng nghĩa với từng phần tử của `bold_jp` (không bắt buộc
+ *   1-1 theo thứ tự/số lượng - vd 2 cụm tiếng Nhật cùng nghĩa "nối tiếp" chỉ cần 1 cụm bold_vi vì
+ *   UI tự tô mọi chỗ khớp). Phải là NGUYÊN VĂN xuất hiện trong `vi` (so khớp chuỗi con), không phải
+ *   diễn giải lại - nếu không chắc cụm nào tương ứng thì để trống, đừng đoán.
  *
  * Dùng chung một bộ schema Zod cho cả import (validate JSON từ ChatGPT) lẫn
  * UI render (3 cột), để không bao giờ lệch giữa hai phía.
@@ -23,7 +27,7 @@ export const furiganaTokenSchema = z.object({
 
 // Furigana / typography là metadata bổ sung: nội dung/import cũ không bắt buộc phải có.
 const furiganaTokens = z.array(furiganaTokenSchema).optional();
-const boldJapanesePhrases = z.array(z.string().min(1)).optional();
+const boldPhrases = z.array(z.string().min(1)).optional();
 
 export const headingBlockSchema = z.object({
   type: z.literal("heading"),
@@ -32,7 +36,8 @@ export const headingBlockSchema = z.object({
   vi: nullableString.default(null),
   explanation_vi: nullableString.default(null),
   furigana_tokens: furiganaTokens,
-  bold_jp: boldJapanesePhrases,
+  bold_jp: boldPhrases,
+  bold_vi: boldPhrases,
 });
 
 export const paragraphBlockSchema = z.object({
@@ -41,7 +46,8 @@ export const paragraphBlockSchema = z.object({
   vi: nullableString.default(null),
   explanation_vi: nullableString.default(null),
   furigana_tokens: furiganaTokens,
-  bold_jp: boldJapanesePhrases,
+  bold_jp: boldPhrases,
+  bold_vi: boldPhrases,
 });
 
 export const bulletListBlockSchema = z.object({
@@ -88,7 +94,8 @@ export const noteBlockSchema = z.object({
   vi: nullableString.default(null),
   explanation_vi: nullableString.default(null),
   furigana_tokens: furiganaTokens,
-  bold_jp: boldJapanesePhrases,
+  bold_jp: boldPhrases,
+  bold_vi: boldPhrases,
 });
 
 export const warningBlockSchema = z.object({
@@ -97,7 +104,8 @@ export const warningBlockSchema = z.object({
   vi: nullableString.default(null),
   explanation_vi: nullableString.default(null),
   furigana_tokens: furiganaTokens,
-  bold_jp: boldJapanesePhrases,
+  bold_jp: boldPhrases,
+  bold_vi: boldPhrases,
 });
 
 export const definitionBlockSchema = z.object({
@@ -106,7 +114,8 @@ export const definitionBlockSchema = z.object({
   vi: nullableString.default(null),
   explanation_vi: nullableString.default(null),
   furigana_tokens: furiganaTokens,
-  bold_jp: boldJapanesePhrases,
+  bold_jp: boldPhrases,
+  bold_vi: boldPhrases,
 });
 
 export const contentBlockSchema = z.discriminatedUnion("type", [

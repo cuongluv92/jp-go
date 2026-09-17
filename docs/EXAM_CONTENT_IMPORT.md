@@ -43,6 +43,26 @@ Sai:
 là câu trả lời cho "người học cần biết thêm gì để hiểu/nhớ". Không viết kiến
 thức mới vào `vi`, không rút gọn ý của `jp` khi dịch.
 
+### 1.1. `bold_jp` / `bold_vi` (chữ in đậm trong sách)
+
+Áp dụng cho `heading`/`paragraph`/`note`/`warning`/`definition`. Cả hai đều
+**optional** — bỏ qua nếu không có gì in đậm trong sách.
+
+| Trường | Ý nghĩa | Bắt buộc? |
+| --- | --- | --- |
+| `bold_jp` | Các cụm chữ được **in đậm ngay trong sách** (nguyên văn, không tự nhấn mạnh thêm) | Không |
+| `bold_vi` | Cụm trong `vi` **tương ứng nghĩa** với từng phần tử `bold_jp`, để UI tô cùng màu ở cả 2 cột | Không |
+
+`bold_vi` phải là **nguyên văn chuỗi con xuất hiện trong `vi`** (UI so khớp
+bằng string match, không phải AI đoán vị trí) — copy đúng cụm chữ, không diễn
+giải lại. Không bắt buộc 1-1 theo số lượng/thứ tự với `bold_jp`: ví dụ tiếng
+Nhật có 2 cụm cùng nghĩa "直列"/"直列接続" (đều dịch ra "nối tiếp") thì chỉ cần
+1 phần tử `bold_vi: ["nối tiếp"]` — UI tự tô mọi chỗ khớp trong câu dịch.
+
+**Nếu không chắc cụm nào trong `vi` tương ứng với `bold_jp`, để `bold_vi`
+trống (`null`/bỏ qua) — đừng đoán bừa**, vì tô sai cụm còn gây hiểu lầm hơn
+là không tô.
+
 ## 2. book_slug (3 cuốn sách cố định)
 
 | book_slug | Tên hiển thị ngắn (UI) | Tên đầy đủ |

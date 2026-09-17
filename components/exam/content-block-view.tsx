@@ -55,6 +55,7 @@ function renderPlainSegmentWithBold(
   absoluteStart: number,
   ranges: TextRange[],
   keyPrefix: string,
+  highlightClass: string = HIGHLIGHT_CLASS,
 ): ReactNode[] {
   if (!text) return [];
   const absoluteEnd = absoluteStart + text.length;
@@ -68,13 +69,25 @@ function renderPlainSegmentWithBold(
     const end = points[index + 1];
     const piece = text.slice(start - absoluteStart, end - absoluteStart);
     return overlapsBold(start, end, ranges) ? (
-      <mark key={`${keyPrefix}-${start}`} className={HIGHLIGHT_CLASS}>
+      <mark key={`${keyPrefix}-${start}`} className={highlightClass}>
         {piece}
       </mark>
     ) : (
       <Fragment key={`${keyPrefix}-${start}`}>{piece}</Fragment>
     );
   });
+}
+
+/**
+ * Tô đúng (các) cụm trong bold_vi xuất hiện trong text - dùng cho bản dịch,
+ * KHÔNG tô cả câu như trước. Không có bold_vi (dữ liệu cũ/chưa đối chiếu)
+ * thì trả về text nguyên vẹn, không tự đoán tô đâu.
+ */
+function renderViTextWithHighlight(text: string, boldVi: string[] = []): ReactNode {
+  if (boldVi.length === 0) return text;
+  const ranges = collectBoldRanges(text, boldVi);
+  if (ranges.length === 0) return text;
+  return renderPlainSegmentWithBold(text, 0, ranges, "vi", HIGHLIGHT_CLASS_PLAIN);
 }
 
 function renderJapaneseText(
@@ -131,7 +144,11 @@ export function renderBlockColumns(block: ContentBlock, showFurigana = false): B
             {renderJapaneseText(block.jp, block.furigana_tokens, showFurigana, block.bold_jp)}
           </Tag>
         ),
-        vi: block.vi ? <Tag className={`${sizeClass} font-bold`}>{block.vi}</Tag> : <EmptyVi />,
+        vi: block.vi ? (
+          <Tag className={`${sizeClass} font-bold`}>{renderViTextWithHighlight(block.vi, block.bold_vi)}</Tag>
+        ) : (
+          <EmptyVi />
+        ),
         explanation: block.explanation_vi ? <p className="text-sm text-muted">{block.explanation_vi}</p> : null,
       };
     }
@@ -147,7 +164,6 @@ export function renderBlockColumns(block: ContentBlock, showFurigana = false): B
         paragraph: "",
       };
       const cls = calloutClass[block.type];
-      const hasBold = (block.bold_jp?.length ?? 0) > 0;
       return {
         jp: (
           <p className={`font-jp whitespace-pre-line leading-relaxed ${cls}`}>
@@ -156,7 +172,7 @@ export function renderBlockColumns(block: ContentBlock, showFurigana = false): B
         ),
         vi: block.vi ? (
           <p className={`whitespace-pre-line leading-relaxed ${cls}`}>
-            {hasBold ? <mark className={HIGHLIGHT_CLASS_PLAIN}>{block.vi}</mark> : block.vi}
+            {renderViTextWithHighlight(block.vi, block.bold_vi)}
           </p>
         ) : (
           <EmptyVi />
