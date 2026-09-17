@@ -24,7 +24,11 @@ export function PersonalExampleReviewSection({
       <div className="flex flex-col gap-2">
         {examples.map((example) => (
           <article key={example.id} className="rounded-xl border border-border bg-surface p-3 shadow-sm">
-            <JapaneseSentence text={example.sentence_jp} className="text-sm" />
+            <JapaneseSentence
+              text={example.sentence_jp}
+              className="text-sm"
+              priorityWordId={example.target_type === "vocab" ? example.target_id : undefined}
+            />
             {example.sentence_vi && <p className="mt-1 text-xs text-muted">{example.sentence_vi}</p>}
             <div className="mt-2 flex items-center justify-between gap-2 text-xs">
               <Link href={`/${example.target_type === "vocab" ? "vocabulary" : "grammar"}/${example.target_id}`} className="text-muted">

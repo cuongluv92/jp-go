@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useMemo, useState } from "react";
 
+import { JapaneseSentence } from "@/components/japanese-sentence";
 import { PronounceButton } from "@/components/pronounce-button";
 import { getExamplesForWord } from "@/lib/data/selectors";
 import { useVocabulary } from "@/lib/data/vocabulary-context";
@@ -51,10 +52,21 @@ export default function FlashcardsPage() {
         <span>Đã học trong phiên: {sessionCount}</span>
       </div>
 
-      <button
-        type="button"
+      {/* div (không phải button) vì mặt sau chứa nút bấm thật (phát âm, chọn
+          từ trong câu ví dụ, bật/tắt furigana) - HTML không cho phép
+          <button> lồng <button>, nên phải tự thêm role/tabIndex/onKeyDown
+          để vẫn bấm được bằng bàn phím như button thật. */}
+      <div
+        role="button"
+        tabIndex={0}
         onClick={() => setFlipped((f) => !f)}
-        className="flex min-h-[22rem] flex-col items-center justify-center gap-4 rounded-3xl border border-border bg-surface p-6 text-center shadow-sm active:scale-[0.99]"
+        onKeyDown={(e) => {
+          if (e.key === "Enter" || e.key === " ") {
+            e.preventDefault();
+            setFlipped((f) => !f);
+          }
+        }}
+        className="flex min-h-[22rem] cursor-pointer flex-col items-center justify-center gap-4 rounded-3xl border border-border bg-surface p-6 text-center shadow-sm active:scale-[0.99]"
       >
         {!flipped ? (
           <>
@@ -69,8 +81,13 @@ export default function FlashcardsPage() {
             {getExamplesForWord(examples, current.id)
               .slice(0, 1)
               .map((example) => (
-                <div key={example.exampleNo} className="mt-2 w-full rounded-xl bg-slate-50 p-3 text-left text-sm">
-                  <p className="font-jp">{example.exampleJp}</p>
+                <div key={example.exampleNo} className="mt-2 w-full rounded-xl bg-slate-50 p-3 text-left text-sm" onClick={(e) => e.stopPropagation()}>
+                  <JapaneseSentence
+                    text={example.exampleJp}
+                    furiganaTokens={example.furiganaTokens}
+                    priorityWordId={current.id}
+                    className="font-jp"
+                  />
                   <p className="mt-0.5 text-xs text-muted">{example.exampleVi}</p>
                 </div>
               ))}
@@ -79,7 +96,7 @@ export default function FlashcardsPage() {
             </div>
           </div>
         )}
-      </button>
+      </div>
 
       {flipped ? (
         <div className="grid grid-cols-3 gap-2">

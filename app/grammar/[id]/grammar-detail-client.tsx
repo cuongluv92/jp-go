@@ -54,7 +54,12 @@ function ExampleList({ examples }: { examples: GrammarExampleRow[] }) {
                 </span>
                 {ex.review_status === "needs_review" && <span className="rounded-full bg-amber-100 px-2 py-0.5 text-amber-800">Cần kiểm tra</span>}
               </div>
-              <JapaneseSentence text={ex.example_jp} furiganaTokens={furiganaTokens} className="mt-0.5 text-sm text-foreground" />
+              <JapaneseSentence
+                text={ex.example_jp}
+                furiganaTokens={furiganaTokens}
+                priorityWordId={ex.linked_vocab_id ?? undefined}
+                className="mt-0.5 text-sm text-foreground"
+              />
               <p className="text-xs text-muted">{ex.example_vi}</p>
             </li>
           );

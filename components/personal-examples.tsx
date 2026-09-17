@@ -229,7 +229,11 @@ export function PersonalExamples({
                 </div>
               </div>
               <div className="mt-2">
-                <JapaneseSentence text={example.sentence_jp} className="text-sm" />
+                <JapaneseSentence
+                  text={example.sentence_jp}
+                  className="text-sm"
+                  priorityWordId={targetType === "vocab" ? targetId : undefined}
+                />
               </div>
               {example.sentence_vi && <p className="mt-1 text-xs text-muted">{example.sentence_vi}</p>}
               {example.highlight_text && (
