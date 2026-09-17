@@ -43,7 +43,12 @@ function overlapsBold(start: number, end: number, ranges: TextRange[]): boolean 
 // Trước dùng <strong> (in đậm thuần) - đổi sang tô vàng nhạt kiểu bút nhớ,
 // KHÔNG in đậm nữa (đậm + tô màu cùng lúc bị rối mắt, chỉ tô nền là đủ nổi
 // bật, giống cách gạch bút dạ thật trên giấy).
-const HIGHLIGHT_CLASS = "rounded-[3px] bg-amber-200/70 px-0.5 text-inherit dark:bg-amber-300/25";
+const HIGHLIGHT_CLASS = "rounded-[3px] bg-amber-200/70 px-0.5 font-semibold text-inherit dark:bg-amber-300/25";
+// Bản dịch không có dữ liệu "cụm nào tương ứng với chỗ in đậm tiếng Nhật"
+// (chỉ có bold_jp, không có bold_vi) - nên khi dòng đó có in đậm bên 原文,
+// tô vàng luôn CẢ câu dịch tương ứng thay vì đoán 1 cụm nhỏ trong đó. Không
+// in đậm bên này theo đúng yêu cầu, chỉ tô màu.
+const HIGHLIGHT_CLASS_PLAIN = "rounded-[3px] bg-amber-200/70 px-0.5 text-inherit dark:bg-amber-300/25";
 
 function renderPlainSegmentWithBold(
   text: string,
@@ -142,6 +147,7 @@ export function renderBlockColumns(block: ContentBlock, showFurigana = false): B
         paragraph: "",
       };
       const cls = calloutClass[block.type];
+      const hasBold = (block.bold_jp?.length ?? 0) > 0;
       return {
         jp: (
           <p className={`font-jp whitespace-pre-line leading-relaxed ${cls}`}>
@@ -149,7 +155,9 @@ export function renderBlockColumns(block: ContentBlock, showFurigana = false): B
           </p>
         ),
         vi: block.vi ? (
-          <p className={`whitespace-pre-line leading-relaxed ${cls}`}>{block.vi}</p>
+          <p className={`whitespace-pre-line leading-relaxed ${cls}`}>
+            {hasBold ? <mark className={HIGHLIGHT_CLASS_PLAIN}>{block.vi}</mark> : block.vi}
+          </p>
         ) : (
           <EmptyVi />
         ),
