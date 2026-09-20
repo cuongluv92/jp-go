@@ -28,6 +28,10 @@ export const furiganaTokenSchema = z.object({
 // Furigana / typography là metadata bổ sung: nội dung/import cũ không bắt buộc phải có.
 const furiganaTokens = z.array(furiganaTokenSchema).optional();
 const boldPhrases = z.array(z.string().min(1)).optional();
+const inlineImageFields = {
+  image_path: z.string().min(1).optional(),
+  image_width: z.number().int().positive().max(600).optional(),
+};
 
 export const headingBlockSchema = z.object({
   type: z.literal("heading"),
@@ -48,6 +52,7 @@ export const paragraphBlockSchema = z.object({
   furigana_tokens: furiganaTokens,
   bold_jp: boldPhrases,
   bold_vi: boldPhrases,
+  ...inlineImageFields,
 });
 
 export const bulletListBlockSchema = z.object({
@@ -71,6 +76,7 @@ export const tableBlockSchema = z.object({
   headers_vi: z.array(z.string()).nullable().default(null),
   rows_vi: z.array(z.array(z.string())).nullable().default(null),
   explanation_vi: nullableString.default(null),
+  ...inlineImageFields,
 });
 
 export const formulaBlockSchema = z.object({
@@ -78,6 +84,7 @@ export const formulaBlockSchema = z.object({
   content: z.string().min(1),
   vi: nullableString.default(null),
   explanation_vi: nullableString.default(null),
+  ...inlineImageFields,
 });
 
 export const imageBlockSchema = z.object({
