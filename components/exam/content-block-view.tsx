@@ -250,7 +250,7 @@ export function renderBlockColumns(block: ContentBlock, showFurigana = false): B
     case "formula": {
       return {
         jp: (
-          <pre className="overflow-x-auto rounded-lg bg-slate-900 px-3 py-2 font-mono text-sm text-slate-50 dark:text-foreground">
+          <pre className="font-mono-jp overflow-x-auto rounded-xl bg-slate-900 px-4 py-3 text-[15px] leading-[2] tracking-normal text-slate-50 dark:text-foreground">
             {block.content}
           </pre>
         ),

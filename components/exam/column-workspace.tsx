@@ -75,6 +75,23 @@ function CompressIcon() {
   );
 }
 
+function SingleColumnIcon() {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" className="h-3.5 w-3.5">
+      <rect x="4" y="5" width="16" height="14" rx="1.5" />
+    </svg>
+  );
+}
+
+function AllColumnsIcon() {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" className="h-3.5 w-3.5">
+      <rect x="4" y="5" width="16" height="14" rx="1.5" />
+      <path strokeLinecap="round" d="M9.5 5v14M14.5 5v14" />
+    </svg>
+  );
+}
+
 function desktopGridColsClass(count: number): string {
   // Giải thích thường ngắn hơn hẳn nguyên văn/bản dịch (nhiều chỗ chỉ 1-2 câu
   // hoặc bỏ trống) nên chia 5:5:3 thay vì gần bằng nhau như trước, đỡ phí
@@ -149,6 +166,8 @@ export function ColumnWorkspace({ blocks }: { blocks: ContentBlock[] }) {
     });
   }
 
+  const isJpOnly = visible.jp && !visible.vi && !visible.explanation;
+  const isAllVisible = visible.jp && visible.vi && visible.explanation;
   const renderedColumns = focus ? [focus] : COLUMN_ORDER.filter((key) => visible[key]);
   const rows = useMemo(
     () => blocks.map((block, index) => ({ key: index, ...renderBlockColumns(block, showFurigana) })),
@@ -158,30 +177,44 @@ export function ColumnWorkspace({ blocks }: { blocks: ContentBlock[] }) {
 
   return (
     <div className="flex flex-col gap-3">
-      <div className="flex flex-wrap items-center gap-2 rounded-xl border border-border bg-surface px-3 py-2">
-        <button
-          type="button"
-          onClick={() => showOnly(["jp"])}
-          className="rounded-lg border border-border px-2.5 py-1 text-xs font-medium text-foreground transition hover:border-accent hover:text-accent"
-        >
-          <span className="font-jp">日本語のみ</span>
-        </button>
-        <button
-          type="button"
-          onClick={() => showOnly(["jp", "vi", "explanation"])}
-          className="rounded-lg border border-border px-2.5 py-1 text-xs font-medium text-foreground transition hover:border-accent hover:text-accent"
-        >
-          <span className="font-jp">すべて表示</span>
-        </button>
+      <div className="flex flex-wrap items-center gap-3 rounded-xl border border-border bg-surface px-3 py-2">
+        <div className="flex items-center gap-1.5">
+          <button
+            type="button"
+            onClick={() => showOnly(["jp"])}
+            aria-pressed={isJpOnly}
+            className={`flex items-center gap-1.5 rounded-lg border px-2.5 py-1 text-xs font-medium transition ${
+              isJpOnly ? "border-accent/40 bg-accent-soft text-accent" : "border-border text-muted hover:border-accent/60 hover:text-foreground"
+            }`}
+          >
+            <SingleColumnIcon />
+            <span className="font-jp">日本語のみ</span>
+          </button>
+          <button
+            type="button"
+            onClick={() => showOnly(["jp", "vi", "explanation"])}
+            aria-pressed={isAllVisible}
+            className={`flex items-center gap-1.5 rounded-lg border px-2.5 py-1 text-xs font-medium transition ${
+              isAllVisible ? "border-accent/40 bg-accent-soft text-accent" : "border-border text-muted hover:border-accent/60 hover:text-foreground"
+            }`}
+          >
+            <AllColumnsIcon />
+            <span className="font-jp">すべて表示</span>
+          </button>
+        </div>
+
+        <div className="h-5 w-px shrink-0 bg-border" aria-hidden />
+
         <button
           type="button"
           onClick={toggleFurigana}
           aria-pressed={showFurigana}
           title={showFurigana ? "Ẩn hiragana trên Kanji" : "Hiện hiragana trên Kanji"}
-          className={`rounded-lg border px-2.5 py-1 text-xs font-semibold transition ${
-            showFurigana ? "border-accent/40 bg-accent-soft text-accent" : "border-border text-muted hover:border-accent/60"
+          className={`flex items-center gap-1.5 rounded-lg border px-2.5 py-1 text-xs font-semibold transition ${
+            showFurigana ? "border-accent/40 bg-accent-soft text-accent" : "border-border text-muted hover:border-accent/60 hover:text-foreground"
           }`}
         >
+          <span className={`h-1.5 w-1.5 rounded-full ${showFurigana ? "bg-accent" : "bg-slate-300 dark:bg-white/20"}`} />
           <span className="font-jp">ふりがな</span> {showFurigana ? "ON" : "OFF"}
         </button>
 

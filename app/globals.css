@@ -125,6 +125,16 @@ textarea:focus-visible {
   font-kerning: normal;
 }
 
+/* Công thức trong sách ôn thi canh cột bằng dấu cách thuần (kiểu ASCII-art:
+   "Q" / "───" / "t") - font-mono mặc định của Tailwind chỉ có ký tự Latin,
+   chữ Nhật/full-width bên trong (１クーロン, ［A］...) rơi về font hệ thống
+   khác bề rộng, làm lệch hẳn phân số so với gạch ngang. Các font monospace
+   có gốc Nhật (MS Gothic, Osaka-Mono...) luôn giữ đúng full-width = 2x
+   half-width nên vẫn canh đúng khi trộn cả hai. */
+.font-mono-jp {
+  font-family: "Osaka-Mono", "MS Gothic", "BIZ UDGothic", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+}
+
 .safe-bottom {
   padding-bottom: env(safe-area-inset-bottom, 0px);
 }

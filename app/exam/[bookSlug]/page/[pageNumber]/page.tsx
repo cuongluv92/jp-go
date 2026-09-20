@@ -2,13 +2,16 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 
 import { ColumnWorkspace } from "@/components/exam/column-workspace";
+import { PageJumpSelect } from "@/components/exam/page-jump-select";
 import { WideContainer } from "@/components/exam/wide-container";
 import {
   getExamBookBySlug,
   getExamPage,
   getExamSectionAncestors,
-  listExamPageNumbers,
+  getExamSectionTree,
+  listExamPagesMeta,
 } from "@/lib/exam/queries";
+import { buildAggregatedFirstPageIndex, buildSectionPageIndex, flattenSectionTree } from "@/lib/exam/section-tree";
 
 export const dynamic = "force-dynamic";
 
@@ -27,20 +30,34 @@ export default async function ExamPageReader({
   const page = await getExamPage(book.id, pageNum);
   if (!page) notFound();
 
-  const [ancestors, pageNumbers] = await Promise.all([
+  const [ancestors, tree, pagesMeta] = await Promise.all([
     page.section_id ? getExamSectionAncestors(page.section_id) : Promise.resolve([]),
-    listExamPageNumbers(book.id),
+    getExamSectionTree(book.id),
+    listExamPagesMeta(book.id),
   ]);
 
-  const idx = pageNumbers.indexOf(pageNum);
-  const prevPage = idx > 0 ? pageNumbers[idx - 1] : null;
-  const nextPage = idx >= 0 && idx < pageNumbers.length - 1 ? pageNumbers[idx + 1] : null;
+  // Trang chỉ gắn section_id vào mục lá - mục cha (第1編...) không có trang
+  // trực tiếp nên cần index gộp đệ quy mới bấm được ở MỌI cấp breadcrumb,
+  // không chỉ sách/mục lá như trước.
+  const directPageIndex = buildSectionPageIndex(pagesMeta);
+  const aggregatedFirstPage = buildAggregatedFirstPageIndex(tree, directPageIndex);
+  const sectionsById = new Map(flattenSectionTree(tree).map((section) => [section.id, section]));
+
+  const sortedPages = [...pagesMeta].sort((a, b) => a.page_number - b.page_number);
+  const idx = sortedPages.findIndex((p) => p.page_number === pageNum);
+  const prevPage = idx > 0 ? sortedPages[idx - 1].page_number : null;
+  const nextPage = idx >= 0 && idx < sortedPages.length - 1 ? sortedPages[idx + 1].page_number : null;
+
+  const pageOptions = sortedPages.map((p) => {
+    const title = p.section_id ? sectionsById.get(p.section_id)?.title_jp : null;
+    return { pageNumber: p.page_number, label: title ? `Trang ${p.page_number} — ${title}` : `Trang ${p.page_number}` };
+  });
 
   return (
     <WideContainer>
       <div className="flex flex-col gap-4 py-4">
         <div className="flex flex-wrap items-center justify-between gap-2">
-          <p className="text-sm text-muted">
+          <p className="min-w-0 flex-1 text-sm text-muted">
             <Link href="/exam" className="hover:text-accent">
               2級電気工事施工管理
             </Link>{" "}
@@ -48,9 +65,22 @@ export default async function ExamPageReader({
             <Link href={`/exam/${book.slug}`} className="hover:text-accent">
               {book.short_title}
             </Link>
-            {ancestors.map((section) => (
-              <span key={section.id}> / {section.title_jp}</span>
-            ))}
+            {ancestors.map((section) => {
+              const firstPage = aggregatedFirstPage.get(section.id);
+              return (
+                <span key={section.id}>
+                  {" "}
+                  /{" "}
+                  {firstPage != null ? (
+                    <Link href={`/exam/${book.slug}/page/${firstPage}`} className="hover:text-accent">
+                      {section.title_jp}
+                    </Link>
+                  ) : (
+                    section.title_jp
+                  )}
+                </span>
+              );
+            })}
           </p>
 
           <div className="flex items-center gap-2">
@@ -64,7 +94,7 @@ export default async function ExamPageReader({
             ) : (
               <span className="rounded-lg border border-border px-3 py-1.5 text-sm text-muted/50">← Trang trước</span>
             )}
-            <span className="text-sm font-medium">Trang {page.page_number}</span>
+            <PageJumpSelect bookSlug={book.slug} options={pageOptions} currentPage={page.page_number} />
             {nextPage != null ? (
               <Link
                 href={`/exam/${book.slug}/page/${nextPage}`}

@@ -69,6 +69,33 @@ export function buildSectionPageIndex(
   return index;
 }
 
+/**
+ * Trang chỉ gắn section_id vào mục lá (xem buildSectionPageIndex) - mục cha
+ * (第1編, 施工管理技術...) không có trang nào gắn trực tiếp nên không có trong
+ * index đó. Hàm này duyệt cây để mỗi mục cha cũng biết "trang đầu tiên của
+ * bất kỳ mục con nào bên dưới nó", dùng để breadcrumb bấm được ở mọi cấp
+ * chứ không chỉ cấp sách/mục lá.
+ */
+export function buildAggregatedFirstPageIndex(
+  tree: ExamSectionNode[],
+  directIndex: Map<string, SectionPageStat>,
+): Map<string, number> {
+  const result = new Map<string, number>();
+
+  function visit(node: ExamSectionNode): number | null {
+    let min = directIndex.get(node.id)?.firstPageNumber ?? null;
+    for (const child of node.children) {
+      const childMin = visit(child);
+      if (childMin != null && (min == null || childMin < min)) min = childMin;
+    }
+    if (min != null) result.set(node.id, min);
+    return min;
+  }
+
+  for (const root of tree) visit(root);
+  return result;
+}
+
 export function flattenSectionTree(tree: ExamSectionNode[]): ExamSection[] {
   const out: ExamSection[] = [];
   const visit = (nodes: ExamSectionNode[]) => {
