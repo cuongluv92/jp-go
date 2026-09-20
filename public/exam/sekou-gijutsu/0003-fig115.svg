@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 760" role="img" aria-labelledby="t d">
+  <title id="t">図1.1.5 並列回路とその等価回路</title>
+  <desc id="d">3Ωの抵抗3個を並列接続した回路と、その合成抵抗1Ωの等価回路</desc>
+  <rect width="1200" height="760" fill="white"/>
+  <g stroke="#111" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <!-- parallel circuit -->
+    <circle cx="90" cy="315" r="8"/><circle cx="520" cy="315" r="8"/>
+    <path d="M98 315 H135 M475 315 H512"/>
+    <path d="M90 323 V570 H520 V323"/>
+    <path d="M285 570 H325 M343 570 H520"/><path d="M325 540 V600 M343 552 V588"/>
+    <path d="M135 245 V430 M475 245 V430"/>
+    <path d="M135 245 H215 M295 245 H475"/>
+    <path d="M135 335 H215 M295 335 H475"/>
+    <path d="M135 425 H215 M295 425 H475"/>
+    <rect x="215" y="220" width="80" height="50"/><rect x="215" y="310" width="80" height="50"/><rect x="215" y="400" width="80" height="50"/>
+    <path d="M100 275 H150"/><path d="M136 265 L150 275 L136 285"/>
+    <path d="M155 205 H205"/><path d="M191 195 L205 205 L191 215"/>
+    <path d="M155 295 H205"/><path d="M191 285 L205 295 L191 305"/>
+    <path d="M155 385 H205"/><path d="M191 375 L205 385 L191 395"/>
+    <path d="M90 500 H520"/><path d="M107 490 L90 500 L107 510 M503 490 L520 500 L503 510"/>
+    <!-- transform arrow -->
+    <path d="M560 405 H650 V367 L715 425 L650 483 V445 H560 Z" stroke-width="5"/>
+    <!-- equivalent circuit -->
+    <circle cx="780" cy="315" r="8"/><circle cx="1115" cy="315" r="8"/>
+    <path d="M788 315 H880 M980 315 H1107"/><rect x="880" y="290" width="100" height="50"/>
+    <path d="M780 323 V570 H1115 V323"/>
+    <path d="M920 570 H952 M970 570 H1115"/><path d="M952 540 V600 M970 552 V588"/>
+    <path d="M800 270 H855"/><path d="M841 260 L855 270 L841 280"/>
+    <path d="M780 500 H1115"/><path d="M797 490 L780 500 L797 510 M1098 490 L1115 500 L1098 510"/>
+    <rect x="615" y="120" width="155" height="52" rx="8"/><path d="M770 146 H805"/>
+  </g>
+  <g fill="#111" font-family="Noto Sans JP, Yu Gothic, sans-serif">
+    <text x="58" y="325" font-size="34">A</text><text x="532" y="325" font-size="34">B</text>
+    <text x="112" y="268" font-size="34" font-style="italic">I</text>
+    <text x="165" y="194" font-size="27">I₁</text><text x="165" y="284" font-size="27">I₂</text><text x="165" y="374" font-size="27">I₃</text>
+    <text x="232" y="210" font-size="26">R₁</text><text x="232" y="300" font-size="26">R₂</text><text x="232" y="390" font-size="26">R₃</text>
+    <text x="315" y="255" font-size="27">3 Ω</text><text x="315" y="345" font-size="27">3 Ω</text><text x="315" y="435" font-size="27">3 Ω</text>
+    <text x="290" y="493" font-size="30">V</text>
+    <text x="210" y="635" font-size="32">(a) 並列回路</text>
+    <text x="750" y="325" font-size="34">A</text><text x="1128" y="325" font-size="34">B</text>
+    <text x="810" y="263" font-size="34" font-style="italic">I</text><text x="920" y="278" font-size="30">R</text>
+    <text x="938" y="493" font-size="30">V</text>
+    <text x="900" y="635" font-size="32">(b) 等価回路</text>
+    <text x="175" y="72" font-size="28">参考）抵抗が2つの場合　R = (R₁ × R₂) / (R₁ + R₂)</text>
+    <text x="640" y="156" font-size="28" font-weight="700">合成抵抗</text>
+    <text x="805" y="155" font-size="31">1/R = 1/3 + 1/3 + 1/3 = 3/3 [1/Ω]</text>
+    <text x="825" y="205" font-size="31">R = 3/3 = 1 [Ω]</text>
+    <text x="350" y="720" font-size="38" font-weight="700">図1.1.5　並列回路とその等価回路</text>
+  </g>
+</svg>
