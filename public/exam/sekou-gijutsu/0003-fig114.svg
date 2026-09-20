@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 660" role="img" aria-labelledby="t d">
+  <title id="t">図1.1.4 直列回路とその等価回路</title>
+  <desc id="d">3Ωの抵抗3個を直列接続した回路と、その合成抵抗9Ωの等価回路</desc>
+  <rect width="1200" height="660" fill="white"/>
+  <g stroke="#111" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <!-- series circuit -->
+    <circle cx="85" cy="250" r="8"/><circle cx="520" cy="250" r="8"/>
+    <path d="M93 250 H145 M225 250 H270 M350 250 H395 M475 250 H512"/>
+    <rect x="145" y="225" width="80" height="50"/><rect x="270" y="225" width="80" height="50"/><rect x="395" y="225" width="80" height="50"/>
+    <path d="M85 258 V470 H520 V258"/>
+    <path d="M285 470 H325 M343 470 H520"/>
+    <path d="M325 440 V500 M343 452 V488"/>
+    <path d="M100 205 H150"/><path d="M136 195 L150 205 L136 215"/>
+    <path d="M85 330 H225"/><path d="M102 320 L85 330 L102 340 M208 320 L225 330 L208 340"/>
+    <path d="M225 330 H350"/><path d="M242 320 L225 330 L242 340 M333 320 L350 330 L333 340"/>
+    <path d="M350 330 H520"/><path d="M367 320 L350 330 L367 340 M503 320 L520 330 L503 340"/>
+    <path d="M85 395 H520"/><path d="M102 385 L85 395 L102 405 M503 385 L520 395 L503 405"/>
+    <!-- transform arrow -->
+    <path d="M560 330 H650 V292 L715 350 L650 408 V370 H560 Z" stroke-width="5"/>
+    <!-- equivalent circuit -->
+    <circle cx="780" cy="250" r="8"/><circle cx="1115" cy="250" r="8"/>
+    <path d="M788 250 H880 M980 250 H1107"/>
+    <rect x="880" y="225" width="100" height="50"/>
+    <path d="M780 258 V470 H1115 V258"/>
+    <path d="M920 470 H952 M970 470 H1115"/>
+    <path d="M952 440 V500 M970 452 V488"/>
+    <path d="M800 205 H855"/><path d="M841 195 L855 205 L841 215"/>
+    <path d="M780 395 H1115"/><path d="M797 385 L780 395 L797 405 M1098 385 L1115 395 L1098 405"/>
+    <rect x="790" y="75" width="155" height="52" rx="8"/>
+    <path d="M945 101 H980"/>
+  </g>
+  <g fill="#111" font-family="Noto Sans JP, Yu Gothic, sans-serif">
+    <text x="55" y="260" font-size="34">A</text><text x="532" y="260" font-size="34">B</text>
+    <text x="112" y="198" font-size="34" font-style="italic">I</text>
+    <text x="163" y="214" font-size="28">3 Ω</text><text x="288" y="214" font-size="28">3 Ω</text><text x="413" y="214" font-size="28">3 Ω</text>
+    <text x="164" y="305" font-size="28">R₁</text><text x="289" y="305" font-size="28">R₂</text><text x="414" y="305" font-size="28">R₃</text>
+    <text x="132" y="362" font-size="27">V₁</text><text x="275" y="362" font-size="27">V₂</text><text x="425" y="362" font-size="27">V₃</text>
+    <text x="290" y="388" font-size="30">V</text>
+    <text x="210" y="535" font-size="32">(a) 直列回路</text>
+    <text x="750" y="260" font-size="34">A</text><text x="1128" y="260" font-size="34">B</text>
+    <text x="810" y="198" font-size="34" font-style="italic">I</text>
+    <text x="912" y="214" font-size="30">R₀</text>
+    <text x="938" y="388" font-size="30">V</text>
+    <text x="900" y="535" font-size="32">(b) 等価回路</text>
+    <text x="815" y="111" font-size="28" font-weight="700">合成抵抗</text>
+    <text x="990" y="113" font-size="34">R₀ = 3 + 3 + 3 = 9 [Ω]</text>
+    <text x="350" y="620" font-size="38" font-weight="700">図1.1.4　直列回路とその等価回路</text>
+  </g>
+</svg>
