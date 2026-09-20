@@ -6,6 +6,7 @@ import { getSupabaseClient } from "./supabase-client";
  * Đổi ảnh sau này chỉ cần thay file trong Storage, không đổi page id.
  */
 export function getExamSourceImageUrl(path: string): string {
+  if (path.startsWith("/")) return path;
   const supabase = getSupabaseClient();
   return supabase.storage.from("exam-sources").getPublicUrl(path).data.publicUrl;
 }
