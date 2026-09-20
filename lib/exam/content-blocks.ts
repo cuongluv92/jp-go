@@ -28,6 +28,10 @@ export const furiganaTokenSchema = z.object({
 // Furigana / typography là metadata bổ sung: nội dung/import cũ không bắt buộc phải có.
 const furiganaTokens = z.array(furiganaTokenSchema).optional();
 const boldPhrases = z.array(z.string().min(1)).optional();
+const inlineImageFields = {
+  image_path: z.string().min(1).optional(),
+  image_width: z.number().int().positive().max(600).optional(),
+};
 
 export const headingBlockSchema = z.object({
   type: z.literal("heading"),
@@ -48,6 +52,7 @@ export const paragraphBlockSchema = z.object({
   furigana_tokens: furiganaTokens,
   bold_jp: boldPhrases,
   bold_vi: boldPhrases,
+  ...inlineImageFields,
 });
 
 export const bulletListBlockSchema = z.object({
@@ -71,6 +76,7 @@ export const tableBlockSchema = z.object({
   headers_vi: z.array(z.string()).nullable().default(null),
   rows_vi: z.array(z.array(z.string())).nullable().default(null),
   explanation_vi: nullableString.default(null),
+  ...inlineImageFields,
 });
 
 export const formulaBlockSchema = z.object({
@@ -78,6 +84,7 @@ export const formulaBlockSchema = z.object({
   content: z.string().min(1),
   vi: nullableString.default(null),
   explanation_vi: nullableString.default(null),
+  ...inlineImageFields,
 });
 
 export const imageBlockSchema = z.object({
@@ -118,6 +125,34 @@ export const definitionBlockSchema = z.object({
   bold_vi: boldPhrases,
 });
 
+export const contentLeafBlockSchema = z.discriminatedUnion("type", [
+  headingBlockSchema,
+  paragraphBlockSchema,
+  bulletListBlockSchema,
+  numberedListBlockSchema,
+  tableBlockSchema,
+  formulaBlockSchema,
+  imageBlockSchema,
+  noteBlockSchema,
+  warningBlockSchema,
+  definitionBlockSchema,
+]);
+
+/**
+ * Một cụm nội dung trong sách có hình đặt bên phải toàn bộ cụm
+ * (ví dụ tiêu đề + đoạn giải thích + công thức + chú giải).
+ * Dùng block này để giữ đúng bố cục sách, thay vì gắn ảnh vào một dòng lẻ.
+ */
+export const sectionGroupBlockSchema = z.object({
+  type: z.literal("section_group"),
+  blocks: z.array(contentLeafBlockSchema).min(1),
+  image_path: z.string().min(1),
+  image_width: z.number().int().positive().max(600).optional(),
+  caption_jp: nullableString.default(null),
+  caption_vi: nullableString.default(null),
+  explanation_vi: nullableString.default(null),
+});
+
 export const contentBlockSchema = z.discriminatedUnion("type", [
   headingBlockSchema,
   paragraphBlockSchema,
@@ -129,6 +164,7 @@ export const contentBlockSchema = z.discriminatedUnion("type", [
   noteBlockSchema,
   warningBlockSchema,
   definitionBlockSchema,
+  sectionGroupBlockSchema,
 ]);
 
 export type FuriganaToken = z.infer<typeof furiganaTokenSchema>;
@@ -142,6 +178,7 @@ export type ImageBlock = z.infer<typeof imageBlockSchema>;
 export type NoteBlock = z.infer<typeof noteBlockSchema>;
 export type WarningBlock = z.infer<typeof warningBlockSchema>;
 export type DefinitionBlock = z.infer<typeof definitionBlockSchema>;
+export type SectionGroupBlock = z.infer<typeof sectionGroupBlockSchema>;
 export type ContentBlock = z.infer<typeof contentBlockSchema>;
 export type ContentBlockType = ContentBlock["type"];
 
@@ -156,4 +193,5 @@ export const CONTENT_BLOCK_TYPES: ContentBlockType[] = [
   "note",
   "warning",
   "definition",
+  "section_group",
 ];

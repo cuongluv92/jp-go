@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="135" height="135" viewBox="0 0 900 900" role="img" aria-label="図1.1.2">
+<rect width="900" height="900" fill="white"/>
+<g fill="none" stroke="black" stroke-width="10" stroke-linejoin="round">
+<path d="M450 110 L160 650 H740 Z"/>
+<path d="M300 390 H600"/>
+<path d="M450 390 V650"/>
+</g>
+<g font-family="serif" font-style="italic" fill="black" text-anchor="middle">
+<text x="450" y="330" font-size="130">V</text>
+<text x="350" y="570" font-size="125">I</text>
+<text x="550" y="570" font-size="125">R</text>
+</g>
+<text x="450" y="790" text-anchor="middle" font-family="sans-serif" font-size="68" fill="black">図1.1.2</text>
+</svg>

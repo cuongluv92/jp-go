@@ -127,6 +127,21 @@ function renderJapaneseText(
   });
 }
 
+function renderInlineBookImage(path?: string, width = 160): ReactNode {
+  if (!path) return null;
+  return (
+    // Ảnh minh hoạ nhỏ trong sách có thể nằm bên phải đoạn/công thức tương ứng.
+    // Chỉ block nào có image_path mới dùng kiểu này; các trang cũ không đổi bố cục.
+    // eslint-disable-next-line @next/next/no-img-element
+    <img
+      src={getExamSourceImageUrl(path)}
+      alt="Hình minh hoạ"
+      className="h-auto shrink-0 object-contain"
+      style={{ width: `${width}px`, maxWidth: "42%" }}
+    />
+  );
+}
+
 /**
  * Chuyển 1 content block thành 3 mảnh render riêng biệt cho 3 cột. KHÔNG bao
  * giờ trộn jp/vi/explanation_vi vào cùng một node - đúng rule bắt buộc của
@@ -153,7 +168,32 @@ export function renderBlockColumns(block: ContentBlock, showFurigana = false): B
       };
     }
 
-    case "paragraph":
+    case "paragraph": {
+      const text = (
+        <p className="font-jp whitespace-pre-line leading-relaxed">
+          {renderJapaneseText(block.jp, block.furigana_tokens, showFurigana, block.bold_jp)}
+        </p>
+      );
+      return {
+        jp: block.image_path ? (
+          <div className="flex items-start justify-between gap-3">
+            <div className="min-w-0 flex-1">{text}</div>
+            {renderInlineBookImage(block.image_path, block.image_width)}
+          </div>
+        ) : text,
+        vi: block.vi ? (
+          <p className="whitespace-pre-line leading-relaxed">
+            {renderViTextWithHighlight(block.vi, block.bold_vi)}
+          </p>
+        ) : (
+          <EmptyVi />
+        ),
+        explanation: block.explanation_vi ? (
+          <p className="whitespace-pre-line text-sm text-muted">{block.explanation_vi}</p>
+        ) : null,
+      };
+    }
+
     case "note":
     case "warning":
     case "definition": {
@@ -161,7 +201,6 @@ export function renderBlockColumns(block: ContentBlock, showFurigana = false): B
         note: "rounded-xl bg-sky-50 dark:bg-sky-500/10 p-3 text-sky-900 dark:text-sky-200",
         warning: "rounded-xl bg-amber-50 dark:bg-amber-500/10 p-3 text-amber-900 dark:text-amber-200",
         definition: "rounded-xl bg-violet-50 dark:bg-violet-500/10 p-3 text-violet-900 dark:text-violet-200",
-        paragraph: "",
       };
       const cls = calloutClass[block.type];
       return {
@@ -238,7 +277,12 @@ export function renderBlockColumns(block: ContentBlock, showFurigana = false): B
         </div>
       );
       return {
-        jp: renderTable(block.headers_jp, block.rows_jp, true),
+        jp: block.image_path ? (
+          <div className="flex items-start justify-between gap-3">
+            <div className="min-w-0 flex-1">{renderTable(block.headers_jp, block.rows_jp, true)}</div>
+            {renderInlineBookImage(block.image_path, block.image_width)}
+          </div>
+        ) : renderTable(block.headers_jp, block.rows_jp, true),
         vi:
           block.rows_vi && block.rows_vi.length > 0
             ? renderTable(block.headers_vi ?? [], block.rows_vi, false)
@@ -248,14 +292,60 @@ export function renderBlockColumns(block: ContentBlock, showFurigana = false): B
     }
 
     case "formula": {
+      const formulaPre = (
+        <pre className="font-mono-jp min-w-0 flex-1 overflow-x-auto rounded-xl bg-slate-900 px-4 py-3 text-[15px] leading-[2] tracking-normal text-slate-50 dark:text-foreground">
+          {block.content}
+        </pre>
+      );
       return {
-        jp: (
-          <pre className="font-mono-jp overflow-x-auto rounded-xl bg-slate-900 px-4 py-3 text-[15px] leading-[2] tracking-normal text-slate-50 dark:text-foreground">
-            {block.content}
-          </pre>
+        jp: block.image_path ? (
+          <div className="flex items-start justify-between gap-3">
+            {formulaPre}
+            {renderInlineBookImage(block.image_path, block.image_width)}
+          </div>
+        ) : (
+          formulaPre
         ),
         vi: block.vi ? <p className="text-sm leading-relaxed">{block.vi}</p> : null,
         explanation: block.explanation_vi ? <p className="text-sm text-muted">{block.explanation_vi}</p> : null,
+      };
+    }
+
+    case "section_group": {
+      const childRows = block.blocks.map((child) => renderBlockColumns(child, showFurigana));
+      const jpChildren = childRows.map((row, index) => (
+        <div key={index}>{row.jp}</div>
+      ));
+      const viChildren = childRows.map((row, index) => (
+        <div key={index}>{row.vi}</div>
+      ));
+      const explanationChildren = childRows
+        .map((row, index) => (row.explanation ? <div key={index}>{row.explanation}</div> : null))
+        .filter(Boolean);
+
+      return {
+        jp: (
+          <div className="flex items-start justify-between gap-4">
+            <div className="min-w-0 flex-1 space-y-2">{jpChildren}</div>
+            <figure
+              className="shrink-0 space-y-1"
+              style={{ width: `${block.image_width ?? 180}px`, maxWidth: "42%" }}
+            >
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src={getExamSourceImageUrl(block.image_path)}
+                alt={block.caption_jp ?? "Hình minh hoạ"}
+                className="h-auto w-full object-contain"
+              />
+              {block.caption_jp && (
+                <figcaption className="font-jp text-center text-[11px] text-muted">{block.caption_jp}</figcaption>
+              )}
+            </figure>
+          </div>
+        ),
+        vi: <div className="space-y-2">{viChildren}</div>,
+        explanation:
+          explanationChildren.length > 0 ? <div className="space-y-2">{explanationChildren}</div> : null,
       };
     }
 
