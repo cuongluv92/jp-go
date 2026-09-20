@@ -322,26 +322,46 @@ export function renderBlockColumns(block: ContentBlock, showFurigana = false): B
         .map((row, index) => (row.explanation ? <div key={index}>{row.explanation}</div> : null))
         .filter(Boolean);
 
-      return {
-        jp: (
+      const figure = (
+        <figure
+          className="shrink-0 space-y-1"
+          style={{ width: `${block.image_width ?? 180}px`, maxWidth: "46%" }}
+        >
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src={getExamSourceImageUrl(block.image_path)}
+            alt={block.caption_jp ?? "Hình minh hoạ"}
+            className="h-auto w-full object-contain"
+          />
+          {block.caption_jp && (
+            <figcaption className="font-jp text-center text-[11px] text-muted">{block.caption_jp}</figcaption>
+          )}
+        </figure>
+      );
+
+      const topCount =
+        block.image_layout === "top_then_side"
+          ? Math.min(Math.max(block.top_block_count ?? 0, 0), jpChildren.length)
+          : 0;
+
+      const jp =
+        block.image_layout === "top_then_side" ? (
+          <div className="space-y-2">
+            {topCount > 0 && <div className="space-y-2">{jpChildren.slice(0, topCount)}</div>}
+            <div className="flex items-start justify-between gap-5">
+              <div className="min-w-0 flex-1 space-y-2">{jpChildren.slice(topCount)}</div>
+              {figure}
+            </div>
+          </div>
+        ) : (
           <div className="flex items-start justify-between gap-4">
             <div className="min-w-0 flex-1 space-y-2">{jpChildren}</div>
-            <figure
-              className="shrink-0 space-y-1"
-              style={{ width: `${block.image_width ?? 180}px`, maxWidth: "42%" }}
-            >
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
-                src={getExamSourceImageUrl(block.image_path)}
-                alt={block.caption_jp ?? "Hình minh hoạ"}
-                className="h-auto w-full object-contain"
-              />
-              {block.caption_jp && (
-                <figcaption className="font-jp text-center text-[11px] text-muted">{block.caption_jp}</figcaption>
-              )}
-            </figure>
+            {figure}
           </div>
-        ),
+        );
+
+      return {
+        jp,
         vi: <div className="space-y-2">{viChildren}</div>,
         explanation:
           explanationChildren.length > 0 ? <div className="space-y-2">{explanationChildren}</div> : null,
