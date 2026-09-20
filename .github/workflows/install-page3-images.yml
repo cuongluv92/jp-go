@@ -1,0 +1,34 @@
+name: Install approved page 3 images
+
+on:
+  push:
+    paths:
+      - ".tmp/page3-images/READY"
+
+permissions:
+  contents: write
+
+jobs:
+  install:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build approved image files
+        shell: bash
+        run: |
+          set -euo pipefail
+          test -f .tmp/page3-images/READY || exit 0
+          mkdir -p public/exam/sekou-gijutsu
+          cat .tmp/page3-images/a.part* | base64 -d > public/exam/sekou-gijutsu/0003-fig114.webp
+          cat .tmp/page3-images/b.part* | base64 -d > public/exam/sekou-gijutsu/0003-fig115.webp
+          rm -rf .tmp/page3-images
+      - name: Commit approved images
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git diff --cached --quiet && exit 0
+          git commit -m "content: install approved page 3 images"
+          git push
