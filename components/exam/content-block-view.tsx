@@ -310,6 +310,44 @@ export function renderBlockColumns(block: ContentBlock, showFurigana = false): B
       };
     }
 
+    case "section_group": {
+      const childRows = block.blocks.map((child) => renderBlockColumns(child, showFurigana));
+      const jpChildren = childRows.map((row, index) => (
+        <div key={index}>{row.jp}</div>
+      ));
+      const viChildren = childRows.map((row, index) => (
+        <div key={index}>{row.vi}</div>
+      ));
+      const explanationChildren = childRows
+        .map((row, index) => (row.explanation ? <div key={index}>{row.explanation}</div> : null))
+        .filter(Boolean);
+
+      return {
+        jp: (
+          <div className="flex items-start justify-between gap-4">
+            <div className="min-w-0 flex-1 space-y-2">{jpChildren}</div>
+            <figure
+              className="shrink-0 space-y-1"
+              style={{ width: `${block.image_width ?? 180}px`, maxWidth: "42%" }}
+            >
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src={getExamSourceImageUrl(block.image_path)}
+                alt={block.caption_jp ?? "Hình minh hoạ"}
+                className="h-auto w-full object-contain"
+              />
+              {block.caption_jp && (
+                <figcaption className="font-jp text-center text-[11px] text-muted">{block.caption_jp}</figcaption>
+              )}
+            </figure>
+          </div>
+        ),
+        vi: <div className="space-y-2">{viChildren}</div>,
+        explanation:
+          explanationChildren.length > 0 ? <div className="space-y-2">{explanationChildren}</div> : null,
+      };
+    }
+
     case "image": {
       const src = getExamSourceImageUrl(block.image_path);
       return {
