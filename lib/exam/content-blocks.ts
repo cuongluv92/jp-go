@@ -148,6 +148,10 @@ export const sectionGroupBlockSchema = z.object({
   blocks: z.array(contentLeafBlockSchema).min(1),
   image_path: z.string().min(1),
   image_width: z.number().int().positive().max(600).optional(),
+  // "side": toàn bộ cụm chữ ở trái, hình ở phải.
+  // "top_then_side": một số block đầu chạy full width; phần còn lại ở trái và hình ở phải.
+  image_layout: z.enum(["side", "top_then_side"]).optional(),
+  top_block_count: z.number().int().min(0).optional(),
   caption_jp: nullableString.default(null),
   caption_vi: nullableString.default(null),
   explanation_vi: nullableString.default(null),
