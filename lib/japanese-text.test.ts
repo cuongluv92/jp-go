@@ -142,4 +142,31 @@ describe("segmentJapaneseText", () => {
     const result = segmentJapaneseText("人々が集まりました。", [person]);
     expect(result.some((part) => part.word?.id === "1")).toBe(false);
   });
+
+  it("khóa furigana theo đúng occurrence bằng start", () => {
+    const sentence = "一日はついたちです。一日休みます。";
+    const first = sentence.indexOf("一日");
+    const second = sentence.lastIndexOf("一日");
+    const result = segmentJapaneseText(sentence, [], [
+      { surface: "一日", reading: "ついたち", start: first },
+      { surface: "一日", reading: "いちにち", start: second },
+    ]);
+    const readings = result.filter((part) => part.text === "一日").map((part) => part.reading);
+    expect(readings).toEqual(["ついたち", "いちにち"]);
+  });
+
+  it("bỏ token có start không khớp bề mặt thay vì gắn nhầm", () => {
+    const sentence = "大人数で作業します。";
+    const result = segmentJapaneseText(sentence, [], [{ surface: "大人", reading: "おとな", start: 1 }]);
+    expect(result.some((part) => part.text === "大人" && part.reading === "おとな")).toBe(false);
+  });
+
+  it("không để token vị trí của 一時 trượt sang occurrence khác", () => {
+    const sentence = "一時間だけ一時停止します。";
+    const pauseStart = sentence.indexOf("一時停止");
+    const result = segmentJapaneseText(sentence, [], [{ surface: "一時", reading: "いちじ", start: pauseStart }]);
+    const linked = result.filter((part) => part.text === "一時" && part.reading === "いちじ");
+    expect(linked).toHaveLength(1);
+    expect(linked[0]?.start).toBe(pauseStart);
+  });
 });
