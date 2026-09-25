@@ -4,6 +4,7 @@ import { TANGO_N3_USAGE_NOTES_3 } from "./tango-n3-usage-notes-3";
 import { TANGO_N3_USAGE_NOTES_4 } from "./tango-n3-usage-notes-4";
 import { TANGO_N3_USAGE_NOTES_5 } from "./tango-n3-usage-notes-5";
 import { TANGO_N3_USAGE_NOTES_6 } from "./tango-n3-usage-notes-6";
+import { TANGO_N3_USAGE_NOTES_7 } from "./tango-n3-usage-notes-7";
 
 /**
  * Gộp các đợt bổ sung usageNote/commonMistake/similarWords/naturalnessNote
@@ -21,4 +22,5 @@ export const TANGO_N3_USAGE_NOTES: Record<
   ...TANGO_N3_USAGE_NOTES_4,
   ...TANGO_N3_USAGE_NOTES_5,
   ...TANGO_N3_USAGE_NOTES_6,
+  ...TANGO_N3_USAGE_NOTES_7,
 };
