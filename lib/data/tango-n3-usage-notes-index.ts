@@ -1,6 +1,7 @@
 import { TANGO_N3_USAGE_NOTES_1 } from "./tango-n3-usage-notes-1";
 import { TANGO_N3_USAGE_NOTES_2 } from "./tango-n3-usage-notes-2";
 import { TANGO_N3_USAGE_NOTES_3 } from "./tango-n3-usage-notes-3";
+import { TANGO_N3_USAGE_NOTES_4 } from "./tango-n3-usage-notes-4";
 
 /**
  * Gộp các đợt bổ sung usageNote/commonMistake/similarWords/naturalnessNote
@@ -15,4 +16,5 @@ export const TANGO_N3_USAGE_NOTES: Record<
   ...TANGO_N3_USAGE_NOTES_1,
   ...TANGO_N3_USAGE_NOTES_2,
   ...TANGO_N3_USAGE_NOTES_3,
+  ...TANGO_N3_USAGE_NOTES_4,
 };
