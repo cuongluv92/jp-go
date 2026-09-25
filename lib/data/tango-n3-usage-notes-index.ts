@@ -1,0 +1,14 @@
+import { TANGO_N3_USAGE_NOTES_1 } from "./tango-n3-usage-notes-1";
+
+/**
+ * Gộp các đợt bổ sung usageNote/commonMistake/similarWords/naturalnessNote
+ * cho Tango N3 (mỗi đợt ~150 từ, xem tango-n3-usage-notes-N.ts). Tách theo
+ * đợt để dễ review từng lần thay vì 1 file khổng lồ; file này chỉ gộp lại
+ * theo id để tango-n3-word-overrides.ts dùng chung 1 lượt merge.
+ */
+export const TANGO_N3_USAGE_NOTES: Record<
+  string,
+  { usageNote?: string; commonMistake?: string; similarWords?: string; naturalnessNote?: string }
+> = {
+  ...TANGO_N3_USAGE_NOTES_1,
+};

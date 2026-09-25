@@ -1,5 +1,6 @@
 import type { VocabWord } from "@/lib/types";
 
+import { TANGO_N3_USAGE_NOTES } from "./tango-n3-usage-notes-index";
 import { TANGO_N3_VERB_COLLOCATIONS } from "./tango-n3-verb-collocations";
 import { TANGO_N3_VERB_COLLOCATIONS_2 } from "./tango-n3-verb-collocations-2";
 import { TANGO_N3_VERB_COLLOCATIONS_3 } from "./tango-n3-verb-collocations-3";
@@ -131,6 +132,7 @@ export const TANGO_N3_WORD_OVERRIDES: Record<string, Partial<VocabWord>> = {
 
 export function applyTangoN3WordOverride(input: VocabWord): VocabWord {
   const override = TANGO_N3_WORD_OVERRIDES[input.id] ?? {};
+  const usageNotes = TANGO_N3_USAGE_NOTES[input.id];
   const cleanWord = input.word.replace(SENSE_MARKERS, "");
   const sourceReading = input.reading.trim().replace(SENSE_MARKERS, "");
   const safeKanaReading = !sourceReading && PURE_KANA.test(cleanWord) ? cleanWord : sourceReading;
@@ -141,6 +143,7 @@ export function applyTangoN3WordOverride(input: VocabWord): VocabWord {
     ...input,
     reading: safeKanaReading,
     dictionaryForm: safeDictionaryForm,
+    ...usageNotes,
     ...override,
     collocations: reviewedCollocations,
   };
