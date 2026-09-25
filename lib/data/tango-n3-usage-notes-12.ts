@@ -1,0 +1,68 @@
+/**
+ * Đợt 12/12 (đợt cuối) bổ sung usageNote cho Tango N3 (xem tango-n3-usage-notes-1.ts về quy ước).
+ * Chủ đề: liên từ (接続詞) còn lại và các mẫu câu giao tiếp cố định (あいさつ・表現).
+ */
+export const TANGO_N3_USAGE_NOTES_12: Record<
+  string,
+  { usageNote?: string; commonMistake?: string; similarWords?: string; naturalnessNote?: string }
+> = {
+  souieba: { usageNote: "そういえば、明日は休みだ (nói mới nhớ, mai được nghỉ) — dùng khi chợt nhớ ra điều liên quan đến chủ đề đang nói." },
+  sokode: { usageNote: "雨が降った。そこで、傘を買った (trời mưa, do đó tôi đã mua ô) — nêu hành động được thực hiện để ứng phó với tình huống vừa nói." },
+  sonoue: { usageNote: "安いし、そのうえおいしい (rẻ, hơn nữa còn ngon) — bổ sung thêm một ưu/nhược điểm nữa cùng chiều." },
+  sonotame: { usageNote: "台風が来た。そのため、電車が止まった (bão đến. Vì vậy tàu điện đã dừng) — nêu kết quả do nguyên nhân vừa nói, trang trọng hơn だから." },
+  sorede: { usageNote: "それで、どうなったの？ (rồi sau đó thế nào?) — cũng dùng để hỏi tiếp diễn biến câu chuyện." },
+  soretomo: { usageNote: "コーヒーにしますか、それとも紅茶にしますか (bạn dùng cà phê hay là trà?) — nối hai lựa chọn thay thế nhau." },
+  sorenara: { usageNote: "疲れた？それなら、休もう (mệt à? Vậy thì nghỉ đi) — đưa ra đề xuất dựa trên điều vừa nghe." },
+  soreni: { usageNote: "安いし、それに近い (rẻ, hơn nữa lại gần) — gần nghĩa với そのうえ, bổ sung thêm lý do/ưu điểm." },
+  daga: { usageNote: "だが、彼は諦めなかった (nhưng anh ấy đã không từ bỏ) — cách nói trang trọng, mang tính văn viết hơn でも." },
+  tsumari: { usageNote: "つまり、彼は間違っていた (tức là anh ta đã sai) — dùng để tóm tắt/diễn giải lại ý vừa nói." },
+  desukara: { usageNote: "雨です。ですから、傘を持って行きます (trời mưa. Vì thế tôi sẽ mang ô) — cách nói lịch sự của だから." },
+  tokoroga: { usageNote: "計画は完璧だった。ところが、失敗した (kế hoạch hoàn hảo. Tuy nhiên lại thất bại) — diễn tả kết quả bất ngờ, trái với mong đợi." },
+  tokorode: { usageNote: "ところで、明日の予定は？ (à mà, kế hoạch ngày mai thế nào?) — dùng để chuyển sang chủ đề mới trong hội thoại." },
+  nazenara: { usageNote: "彼を信じる。なぜなら、嘘をついたことがないからだ (tôi tin anh ấy, bởi vì anh ấy chưa từng nói dối) — nêu lý do, thường đi kèm ~からだ ở cuối câu." },
+  mataha: { usageNote: "電話またはメールで連絡してください (xin liên lạc bằng điện thoại hoặc email) — trang trọng hơn それとも/か, hay dùng trong văn bản." },
+  degozaimasu: { usageNote: "こちらが資料でございます (đây là tài liệu ạ) — dạng lịch sự khiêm nhường nhất của です, dùng trong tiếp khách, dịch vụ." },
+  oidekudasai: { usageNote: "こちらへおいでください (xin mời đến đây) — cách nói kính ngữ lịch sự của 来てください/行ってください." },
+  okamainaku: { usageNote: "どうぞお構いなく (xin đừng bận tâm) — đáp lại khi ai đó định tiếp đón/lo lắng cho mình quá mức cần thiết." },
+  ogenkide: { usageNote: "それでは、お元気で (vậy thì, giữ gìn sức khỏe nhé) — lời chào tạm biệt khi lâu ngày mới gặp lại." },
+  osakini: { usageNote: "お先に失礼します (xin phép về/làm trước) — nói khi rời khỏi nơi làm việc trước người khác." },
+  ojamashimasu: { usageNote: "おじゃまします (xin phép làm phiền/vào nhà) — nói khi bước vào nhà người khác." },
+  osewaninarimashita: { usageNote: "いろいろお世話になりました (đã được giúp đỡ nhiều, cảm ơn) — lời cảm ơn trang trọng khi kết thúc một mối quan hệ hợp tác/hỗ trợ." },
+  otsukaresamadeshita: { usageNote: "お疲れ様でした (cảm ơn vì đã vất vả) — nói sau khi hoàn thành công việc, chào đồng nghiệp lúc tan làm." },
+  omataseshimashita: { usageNote: "お待たせしました (xin lỗi đã để quý khách chờ) — nói khi đến muộn hoặc phục vụ xong sau khi khách chờ." },
+  omachidoosama: {
+    usageNote: "お待ちどおさま (xin lỗi đã để chờ lâu) — thường dùng khi phục vụ đồ ăn/thức uống, thân mật hơn お待たせしました.",
+    similarWords: "お待たせしました: trang trọng hơn, dùng được trong nhiều ngữ cảnh công việc.",
+  },
+  omedetougozaimasu: { usageNote: "誕生日おめでとうございます (chúc mừng sinh nhật) — lời chúc mừng trang trọng." },
+  kamaimasen: { usageNote: "私はかまいません (tôi không sao cả) — cách nói lịch sự của 大丈夫です khi đồng ý/không phản đối." },
+  goenryonaku: { usageNote: "ご遠慮なくどうぞ (xin cứ tự nhiên) — mời ai đó đừng ngại ngùng, cứ thoải mái." },
+  gomeiwakuookakeshimashita: { usageNote: "ご迷惑をおかけしました (xin lỗi vì đã làm phiền quý vị) — lời xin lỗi trang trọng khi gây rắc rối cho người khác." },
+  gomen: {
+    usageNote: "ごめん、遅れた (xin lỗi, tôi đến muộn) — cách xin lỗi thân mật, dùng với bạn bè/người thân.",
+    similarWords: "申し訳ありません: cách xin lỗi trang trọng, dùng nơi công việc/với người trên.",
+  },
+  sumanai: { usageNote: "すまない、頼む (xin lỗi nhé, nhờ cậu) — cách xin lỗi thân mật, thường nam giới dùng." },
+  sorewaikemasenne: { usageNote: "それはいけませんね (như vậy không được rồi) — bày tỏ sự thông cảm/lo lắng khi nghe chuyện không hay." },
+  matane: { usageNote: "またね (hẹn gặp lại nhé) — lời chào tạm biệt thân mật, dùng với bạn bè." },
+  moushiwakearimasen: {
+    usageNote: "遅れて申し訳ありません (xin lỗi vì đã đến muộn) — cách xin lỗi trang trọng nhất trong các từ xin lỗi.",
+    similarWords: "すみません: xin lỗi thông dụng hằng ngày; ごめん: thân mật — 申し訳ありません trang trọng nhất trong ba từ.",
+  },
+  youkoso: { usageNote: "日本へようこそ (chào mừng đến Nhật Bản) — lời chào mừng khi có khách đến." },
+  yokuirasshaimashita: { usageNote: "よくいらっしゃいました (cảm ơn quý vị đã đến) — lời chào trang trọng khi tiếp đón khách." },
+  are: { usageNote: "あれ、財布がない (ơ, không thấy ví đâu) — thán từ biểu lộ sự ngạc nhiên, bất ngờ nhận ra điều gì đó." },
+  eeto: { usageNote: "ええと、そうですね… (ừm, để xem nào...) — dùng khi đang suy nghĩ, chưa trả lời ngay được." },
+  banzai: { usageNote: "万歳！(muôn năm!) — hô vang khi ăn mừng, chiến thắng, thường kèm động tác giơ hai tay lên cao." },
+  kin_en: { usageNote: "禁煙する/禁煙席 (bỏ hút thuốc / khu vực cấm hút thuốc) — vừa chỉ hành động cai thuốc, vừa chỉ biển báo cấm hút thuốc." },
+  seikeigeka: { usageNote: "整形外科に通う (đi khám ở khoa chấn thương chỉnh hình) — khoa chuyên xương khớp, khác 形成外科 (phẫu thuật thẩm mỹ)." },
+  lesson: { usageNote: "ピアノのレッスンを受ける (học một buổi piano) — buổi học kỹ năng (nhạc, thể thao...), khác 授業 (tiết học ở trường)." },
+  daigakuin: { usageNote: "大学院に進学する (học lên cao học) — bậc học sau đại học, gồm 修士課程・博士課程." },
+  kokugo: {
+    usageNote: "国語のテスト (bài kiểm tra môn Quốc văn) — môn tiếng Nhật dạy cho người Nhật ở trường, khác 日本語 (tiếng Nhật dạy cho người nước ngoài).",
+    similarWords: "日本語（にほんご）: tiếng Nhật nói chung/dạy cho người nước ngoài, khác với 国語 là tên môn học trong trường Nhật.",
+  },
+  concert: { usageNote: "コンサートに行く (đi xem buổi hòa nhạc) — buổi biểu diễn âm nhạc." },
+  ticket: { usageNote: "チケットを予約する (đặt vé) — từ mượn thông dụng của 切符/券." },
+  hanabi: { usageNote: "花火を見る/花火大会 (xem pháo hoa / lễ hội pháo hoa) — hoạt động mùa hè phổ biến ở Nhật." },
+};
