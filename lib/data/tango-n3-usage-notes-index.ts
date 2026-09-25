@@ -1,4 +1,5 @@
 import { TANGO_N3_USAGE_NOTES_1 } from "./tango-n3-usage-notes-1";
+import { TANGO_N3_USAGE_NOTES_2 } from "./tango-n3-usage-notes-2";
 
 /**
  * Gộp các đợt bổ sung usageNote/commonMistake/similarWords/naturalnessNote
@@ -11,4 +12,5 @@ export const TANGO_N3_USAGE_NOTES: Record<
   { usageNote?: string; commonMistake?: string; similarWords?: string; naturalnessNote?: string }
 > = {
   ...TANGO_N3_USAGE_NOTES_1,
+  ...TANGO_N3_USAGE_NOTES_2,
 };
