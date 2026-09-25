@@ -1,6 +1,7 @@
 import type { VocabExample } from "@/lib/types";
 
 import examplesData from "./sample-examples.json";
+import { TANGO_N3_EXAMPLE_ADDITIONS } from "./tango-n3-example-additions";
 import { applyTangoN3ExampleOverride } from "./tango-n3-example-overrides";
 import { applyTangoN3ContextExampleOverride } from "./tango-n3-example-overrides-context";
 import { applyTangoN3FinalContextOverride } from "./tango-n3-example-overrides-final";
@@ -33,6 +34,7 @@ const OVERRIDES = [
   applyTangoN3Final6Override,
 ] as const;
 
-export const sampleExamples: VocabExample[] = rawSampleExamples.map((example) =>
-  OVERRIDES.reduce((current, override) => override(current), example),
-);
+export const sampleExamples: VocabExample[] = [
+  ...rawSampleExamples.map((example) => OVERRIDES.reduce((current, override) => override(current), example)),
+  ...TANGO_N3_EXAMPLE_ADDITIONS,
+];
