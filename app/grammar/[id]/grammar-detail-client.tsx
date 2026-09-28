@@ -23,10 +23,6 @@ interface GrammarDetailCachedData {
   userId: string | null;
 }
 
-type GrammarExampleWithFurigana = GrammarExampleRow & {
-  furigana_tokens?: Array<{ surface: string; reading: string }>;
-};
-
 function grammarDetailCacheKey(id: string): string {
   return `grammar-detail-${id}`;
 }
@@ -45,7 +41,7 @@ function ExampleList({ examples }: { examples: GrammarExampleRow[] }) {
       )}
       <ul className="flex flex-col gap-2">
         {examples.map((ex, i) => {
-          const furiganaTokens = (ex as GrammarExampleWithFurigana).furigana_tokens ?? [];
+          const furiganaTokens = ex.furigana_tokens ?? [];
           return (
             <li key={ex.id} className="rounded-lg border border-border bg-surface px-3 py-2">
               <div className="flex flex-wrap items-center gap-1.5 text-[10px] font-semibold">
