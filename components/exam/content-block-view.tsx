@@ -369,6 +369,19 @@ export function renderBlockColumns(block: ContentBlock, showFurigana = false): B
       };
     }
 
+    case "image_placeholder": {
+      return {
+        jp: (
+          <figure className="space-y-2 rounded-lg border border-dashed border-border bg-slate-50/60 p-5 text-center dark:bg-white/5">
+            <div className="text-sm font-medium text-muted">Ảnh minh họa sẽ bổ sung</div>
+            {block.caption_jp && <figcaption className="font-jp text-xs text-muted">{block.caption_jp}</figcaption>}
+          </figure>
+        ),
+        vi: block.caption_vi ? <p className="text-sm text-muted">{block.caption_vi}</p> : null,
+        explanation: block.explanation_vi ? <p className="text-sm text-muted">{block.explanation_vi}</p> : null,
+      };
+    }
+
     case "image": {
       const src = getExamSourceImageUrl(block.image_path);
       return {
