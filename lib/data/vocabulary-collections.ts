@@ -10,9 +10,16 @@ export type VocabularyCollection = "current" | "tango-n3" | "n2-chua-dat";
  * dựng Set id (như trước) — file đó nặng ~1.36MB, import tĩnh sẽ kéo theo
  * mọi nơi gọi `getVocabularyCollection`, kể cả từ những route không liên
  * quan gì tới N3.
+ *
+ * Với N2, bộ legacy trong Supabase được giữ nguyên để tra lại và có
+ * `lesson_no = NULL`; bộ N2 v2 đã kiểm định luôn có `lesson_no >= 1`.
+ * Dùng chính metadata bài học này để hai bộ cùng tồn tại mà không phải đổi
+ * level giả hoặc phụ thuộc vào id.
  */
-export function getVocabularyCollection(word: Pick<VocabWord, "jlpt" | "contentSourceType">): VocabularyCollection {
-  if (word.jlpt === "N2") return "n2-chua-dat";
+export function getVocabularyCollection(
+  word: Pick<VocabWord, "jlpt" | "contentSourceType" | "lessonNo">,
+): VocabularyCollection {
+  if (word.jlpt === "N2" && word.lessonNo === undefined) return "n2-chua-dat";
   if (word.jlpt === "N3" && !word.contentSourceType) return "tango-n3";
   return "current";
 }
