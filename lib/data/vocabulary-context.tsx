@@ -31,7 +31,6 @@ import type { FlashcardGrade, LearningProgress, LearningStatus, VocabExample, Vo
  */
 interface VocabularyContextValue {
   words: VocabWord[];
-  /** Compatibility-only; production legacy N2 data has been removed. */
   archivedWords: VocabWord[];
   examples: VocabExample[];
   getWordById: (id: string) => VocabWord | undefined;
