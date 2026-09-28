@@ -320,10 +320,28 @@ export function segmentJapaneseText(
 ): JapaneseTextSegment[] {
   const byFirst = new Map<string, SegmentCandidate[]>();
 
-  for (const word of words) {
-    for (const candidate of computeWordCandidates(word)) {
-      insertCandidate(byFirst, candidate);
-    }
+  const automaticCandidates = words.flatMap((word) => computeWordCandidates(word));
+  const readingsBySurface = new Map<string, Set<string>>();
+  for (const candidate of automaticCandidates) {
+    if (!candidate.reading || candidate.readingPriority === 3) continue;
+    const readings = readingsBySurface.get(candidate.surface) ?? new Set<string>();
+    readings.add(candidate.reading);
+    readingsBySurface.set(candidate.surface, readings);
+  }
+  const ambiguousSurfaces = new Set(
+    [...readingsBySurface.entries()].filter(([, readings]) => readings.size > 1).map(([surface]) => surface),
+  );
+
+  for (const candidate of automaticCandidates) {
+    // Nếu cùng một bề mặt trong kho từ có nhiều reading khác nhau, không tự
+    // chọn theo thứ tự mảng. Vẫn giữ liên kết từ để tra nghĩa, nhưng chỉ hiện
+    // furigana khi nội dung cung cấp token đã xác nhận đúng ngữ cảnh.
+    insertCandidate(
+      byFirst,
+      ambiguousSurfaces.has(candidate.surface)
+        ? { ...candidate, reading: undefined, readingPriority: 1 }
+        : candidate,
+    );
   }
 
   // Token kiểm tra tay luôn thắng reading suy ra nếu cùng một bề mặt.
