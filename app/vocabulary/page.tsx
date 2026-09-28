@@ -67,16 +67,16 @@ function VocabularyPageRoute() {
 }
 
 function VocabularyPageContent() {
-  const { words, archivedWords } = useVocabulary();
+  const { words } = useVocabulary();
   const searchParams = useSearchParams();
   const initialLevel = searchParams.get("level");
   const requestedCollection = searchParams.get("collection");
-  const collection = requestedCollection === "tango-n3" || requestedCollection === "n2-chua-dat" ? requestedCollection : "current";
+  const collection = requestedCollection === "tango-n3" ? "tango-n3" : "current";
   const currentCollection = VOCABULARY_COLLECTIONS.find((item) => item.id === collection)!;
-  const visibleWords = useMemo(() => {
-    const source = collection === "n2-chua-dat" ? archivedWords : words;
-    return source.filter((word) => !word.isHidden && getVocabularyCollection(word) === collection);
-  }, [words, archivedWords, collection]);
+  const visibleWords = useMemo(
+    () => words.filter((word) => !word.isHidden && getVocabularyCollection(word) === collection),
+    [words, collection],
+  );
   const initialQuery = searchParams.get("query")?.trim() || undefined;
   const isJlptLevel = (v: string | null): v is JlptLevel => !!v && (JLPT_LEVELS as readonly string[]).includes(v);
   const defaultLevel = isJlptLevel(initialLevel) ? initialLevel : collection === "current" && !initialQuery ? "N5" : undefined;
@@ -175,11 +175,6 @@ function VocabularyPageContent() {
       {collection === "tango-n3" && (
         <p className="rounded-xl border border-border bg-surface p-3 text-sm text-muted">
           Bộ 単語 N3 hiện tại được giữ riêng, không tính vào kho N3 mới.
-        </p>
-      )}
-      {collection === "n2-chua-dat" && (
-        <p className="rounded-xl border border-amber-200 dark:border-amber-500/25 bg-amber-50 dark:bg-amber-500/10 p-3 text-sm text-amber-800 dark:text-amber-300">
-          N2 dữ liệu cũ · Được giữ riêng để tra lại, không tính vào bộ N2 mới.
         </p>
       )}
 
