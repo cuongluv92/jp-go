@@ -169,4 +169,18 @@ describe("segmentJapaneseText", () => {
     expect(linked).toHaveLength(1);
     expect(linked[0]?.start).toBe(pauseStart);
   });
+  it("không tự chọn reading khi cùng surface có nhiều cách đọc trong kho từ", () => {
+    const date = readableWord("date", "一日", "ついたち", "noun");
+    const duration = readableWord("duration", "一日", "いちにち", "noun");
+    const automatic = segmentJapaneseText("一日休みます。", [date, duration]);
+    expect(automatic.find((part) => part.text === "一日")?.reading).toBeUndefined();
+
+    const reviewed = segmentJapaneseText(
+      "一日休みます。",
+      [date, duration],
+      [{ surface: "一日", reading: "いちにち", start: 0 }],
+    );
+    expect(reviewed.find((part) => part.text === "一日")).toMatchObject({ reading: "いちにち", start: 0 });
+  });
+
 });
