@@ -11,8 +11,10 @@ export type VocabularyCollection = "current" | "tango-n3" | "n2-chua-dat";
  * mọi nơi gọi `getVocabularyCollection`, kể cả từ những route không liên
  * quan gì tới N3.
  *
- * Với N2, nhánh legacy được giữ ở mức tương thích code; dữ liệu production
- * legacy đã bị xóa. Bộ N2 hoàn chỉnh có `lesson_no >= 1`.
+ * Với N2, bộ legacy trong Supabase được giữ nguyên để tra lại và có
+ * `lesson_no = NULL`; bộ N2 v2 đã kiểm định luôn có `lesson_no >= 1`.
+ * Dùng chính metadata bài học này để hai bộ cùng tồn tại mà không phải đổi
+ * level giả hoặc phụ thuộc vào id.
  */
 export function getVocabularyCollection(
   word: Pick<VocabWord, "jlpt" | "contentSourceType" | "lessonNo">,
@@ -25,4 +27,5 @@ export function getVocabularyCollection(
 export const VOCABULARY_COLLECTIONS = [
   { id: "current", label: "Từ vựng", href: "/vocabulary" },
   { id: "tango-n3", label: "単語 N3", href: "/vocabulary?collection=tango-n3" },
+  { id: "n2-chua-dat", label: "N2 dữ liệu cũ", href: "/vocabulary?collection=n2-chua-dat" },
 ] as const;
