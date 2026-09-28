@@ -1,15 +1,16 @@
 import type { VocabWord } from "../types";
 
-export type VocabularyCollection = "current" | "tango-n3";
+export type VocabularyCollection = "current" | "tango-n3" | "n2-chua-dat";
 
 /**
  * Phân biệt "tango-n3" (bộ N3 JSON tĩnh) với các từ nạp từ Supabase bằng
- * `contentSourceType`: chỉ từ DB mới có field này. N2 hoàn chỉnh hiện là
- * bộ production duy nhất và thuộc collection "current".
+ * `contentSourceType`. Giữ literal "n2-chua-dat" chỉ để tương thích với
+ * consumer cũ; production hiện không còn bản ghi N2 legacy nào.
  */
 export function getVocabularyCollection(
-  word: Pick<VocabWord, "jlpt" | "contentSourceType">,
+  word: Pick<VocabWord, "jlpt" | "contentSourceType" | "lessonNo">,
 ): VocabularyCollection {
+  if (word.jlpt === "N2" && word.lessonNo === undefined) return "n2-chua-dat";
   if (word.jlpt === "N3" && !word.contentSourceType) return "tango-n3";
   return "current";
 }
