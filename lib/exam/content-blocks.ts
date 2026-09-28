@@ -95,6 +95,13 @@ export const imageBlockSchema = z.object({
   explanation_vi: nullableString.default(null),
 });
 
+export const imagePlaceholderBlockSchema = z.object({
+  type: z.literal("image_placeholder"),
+  caption_jp: nullableString.default(null),
+  caption_vi: nullableString.default(null),
+  explanation_vi: nullableString.default(null),
+});
+
 export const noteBlockSchema = z.object({
   type: z.literal("note"),
   jp: z.string().min(1),
@@ -133,6 +140,7 @@ export const contentLeafBlockSchema = z.discriminatedUnion("type", [
   tableBlockSchema,
   formulaBlockSchema,
   imageBlockSchema,
+  imagePlaceholderBlockSchema,
   noteBlockSchema,
   warningBlockSchema,
   definitionBlockSchema,
@@ -165,6 +173,7 @@ export const contentBlockSchema = z.discriminatedUnion("type", [
   tableBlockSchema,
   formulaBlockSchema,
   imageBlockSchema,
+  imagePlaceholderBlockSchema,
   noteBlockSchema,
   warningBlockSchema,
   definitionBlockSchema,
@@ -179,6 +188,7 @@ export type NumberedListBlock = z.infer<typeof numberedListBlockSchema>;
 export type TableBlock = z.infer<typeof tableBlockSchema>;
 export type FormulaBlock = z.infer<typeof formulaBlockSchema>;
 export type ImageBlock = z.infer<typeof imageBlockSchema>;
+export type ImagePlaceholderBlock = z.infer<typeof imagePlaceholderBlockSchema>;
 export type NoteBlock = z.infer<typeof noteBlockSchema>;
 export type WarningBlock = z.infer<typeof warningBlockSchema>;
 export type DefinitionBlock = z.infer<typeof definitionBlockSchema>;
@@ -194,6 +204,7 @@ export const CONTENT_BLOCK_TYPES: ContentBlockType[] = [
   "table",
   "formula",
   "image",
+  "image_placeholder",
   "note",
   "warning",
   "definition",
