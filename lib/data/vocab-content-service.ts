@@ -162,13 +162,14 @@ export function vocabExampleRowToExample(row: VocabExampleRow, exampleNo: Exampl
   const resolvedDifficulty = row.difficulty === 1 || row.difficulty === 2 || row.difficulty === 3 ? row.difficulty : undefined;
   const furiganaTokens = Array.isArray(row.furigana_tokens)
     ? row.furigana_tokens.filter(
-        (token): token is { surface: string; reading: string } =>
+        (token): token is { surface: string; reading: string; start?: number } =>
           typeof token === "object" &&
           token !== null &&
           "surface" in token &&
           "reading" in token &&
           typeof token.surface === "string" &&
-          typeof token.reading === "string",
+          typeof token.reading === "string" &&
+          (!("start" in token) || token.start === undefined || (typeof token.start === "number" && Number.isInteger(token.start) && token.start >= 0)),
       )
     : undefined;
   return {
