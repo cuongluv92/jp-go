@@ -164,7 +164,7 @@ export interface VocabExample {
   /** Trọng tâm cần học trong câu: trợ từ, sắc thái, collocation... */
   focusNote?: string;
   /** Token phiên âm đã kiểm tra; để trống thì UI chỉ hiện furigana cho từ đã nhận diện chắc chắn. */
-  furiganaTokens?: Array<{ surface: string; reading: string }>;
+  furiganaTokens?: Array<{ surface: string; reading: string; start?: number }>;
 }
 
 // ---------------------------------------------------------------------------
