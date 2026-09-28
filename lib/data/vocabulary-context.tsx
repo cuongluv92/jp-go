@@ -2,6 +2,7 @@
 
 import { createContext, useCallback, useContext, useEffect, useMemo, useRef, useState, type ReactNode } from "react";
 
+import { getVocabularyCollection } from "@/lib/data/vocabulary-collections";
 import { fetchAllRows } from "@/lib/data/supabase-pagination";
 import { listAllDbVocab } from "@/lib/data/vocab-content-service";
 import { applyFlashcardGrade } from "@/lib/srs";
@@ -295,7 +296,7 @@ export function VocabularyProvider({ children }: { children: ReactNode }) {
       setHidden,
       upsertExamples,
     }),
-    [words, examples, getWordById, toggleFavorite, setStatus, gradeFlashcard, addWord, updateWord, setHidden, upsertExamples],
+    [activeWords, archivedWords, examples, getWordById, toggleFavorite, setStatus, gradeFlashcard, addWord, updateWord, setHidden, upsertExamples],
   );
 
   return <VocabularyContext.Provider value={value}>{children}</VocabularyContext.Provider>;
