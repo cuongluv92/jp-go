@@ -161,7 +161,7 @@ function VocabularyPageContent() {
       </div>
 
       <nav aria-label="Bộ từ vựng" className="flex gap-2 overflow-x-auto pb-1">
-        {VOCABULARY_COLLECTIONS.map((item) => (
+        {VOCABULARY_COLLECTIONS.filter((item) => item.id !== "n2-chua-dat").map((item) => (
           <Link
             key={item.id}
             href={item.href}
