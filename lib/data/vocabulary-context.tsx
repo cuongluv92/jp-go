@@ -31,6 +31,8 @@ import type { FlashcardGrade, LearningProgress, LearningStatus, VocabExample, Vo
  */
 interface VocabularyContextValue {
   words: VocabWord[];
+  /** Compatibility-only; production legacy N2 data has been removed. */
+  archivedWords: VocabWord[];
   examples: VocabExample[];
   getWordById: (id: string) => VocabWord | undefined;
   toggleFavorite: (id: string) => void;
@@ -282,10 +284,13 @@ export function VocabularyProvider({ children }: { children: ReactNode }) {
   }, []);
 
   const getWordById = useCallback((id: string) => words.find((w) => w.id === id), [words]);
+  const activeWords = useMemo(() => words.filter((word) => getVocabularyCollection(word) !== "n2-chua-dat"), [words]);
+  const archivedWords = useMemo(() => words.filter((word) => getVocabularyCollection(word) === "n2-chua-dat"), [words]);
 
   const value = useMemo(
     () => ({
-      words,
+      words: activeWords,
+      archivedWords,
       examples,
       getWordById,
       toggleFavorite,
