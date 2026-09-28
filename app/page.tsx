@@ -29,7 +29,7 @@ interface HomeCachedData {
 }
 
 export default function HomePage() {
-  const { words, archivedWords } = useVocabulary();
+  const { words } = useVocabulary();
   const cached = getCached<HomeCachedData>(HOME_CACHE_KEY);
   const [plan, setPlan] = useState<StudyPlanRow | null>(cached?.plan ?? null);
   const [days, setDays] = useState<StudyDayRow[]>(cached?.days ?? []);
@@ -98,7 +98,6 @@ export default function HomePage() {
   const n2VocabCount = words.filter(
     (w) => w.jlpt === "N2" && !w.isHidden && getVocabularyCollection(w) === "current",
   ).length;
-  const oldN2VocabCount = archivedWords.filter((w) => !w.isHidden).length;
   const kanjiCountForLevel = kanjiCounts?.[selectedLevel] ?? 0;
   const grammarCountForLevel = grammarCounts?.[selectedLevel] ?? 0;
 
@@ -115,7 +114,7 @@ export default function HomePage() {
         )}
       </section>
 
-      <section className="grid grid-cols-4 gap-2">
+      <section className="grid grid-cols-3 gap-2">
         <Link href="/vocabulary?collection=tango-n3" className="rounded-xl border border-border bg-surface px-2 py-2 text-center">
           <span className="font-jp block text-xs font-bold">単語 N3</span>
           <span className="mt-0.5 block text-[10px] text-muted">{tangoN3Count}</span>
@@ -128,10 +127,6 @@ export default function HomePage() {
           <span className="font-jp block text-xs font-bold">単語 N1</span>
           <span className="mt-0.5 block text-[10px] text-muted">sắp có</span>
         </div>
-        <Link href="/n2-legacy" className="rounded-xl border border-border bg-surface px-2 py-2 text-center">
-          <span className="block text-xs font-bold text-foreground">N2 cũ</span>
-          <span className="mt-0.5 block text-[10px] text-muted">{oldN2VocabCount} từ</span>
-        </Link>
       </section>
 
       <section className="flex flex-col gap-3">
