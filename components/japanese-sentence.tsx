@@ -5,10 +5,10 @@ import { useEffect, useMemo, useRef, useState } from "react";
 
 import { getConjugation, normalizeDictionaryForm } from "@/lib/conjugation";
 import { useVocabulary } from "@/lib/data/vocabulary-context";
-import { segmentJapaneseText } from "@/lib/japanese-text";
+import { segmentJapaneseText, type FuriganaToken } from "@/lib/japanese-text";
 import { speakJapanese, type JapaneseSpeechRate } from "@/lib/speech";
 
-const EMPTY_FURIGANA_TOKENS: Array<{ surface: string; reading: string }> = [];
+const EMPTY_FURIGANA_TOKENS: FuriganaToken[] = [];
 
 export function JapaneseSentence({
   text,
@@ -19,7 +19,7 @@ export function JapaneseSentence({
   text: string;
   className?: string;
   priorityWordId?: string;
-  furiganaTokens?: Array<{ surface: string; reading: string }>;
+  furiganaTokens?: FuriganaToken[];
 }) {
   const { words, toggleFavorite } = useVocabulary();
   const [selectedId, setSelectedId] = useState<string | null>(null);

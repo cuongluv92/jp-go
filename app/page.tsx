@@ -95,6 +95,9 @@ export default function HomePage() {
     (w) => w.jlpt === selectedLevel && !w.isHidden && getVocabularyCollection(w) === "current",
   ).length;
   const tangoN3Count = words.filter((w) => !w.isHidden && getVocabularyCollection(w) === "tango-n3").length;
+  const n2VocabCount = words.filter(
+    (w) => w.jlpt === "N2" && !w.isHidden && getVocabularyCollection(w) === "current",
+  ).length;
   const oldN2VocabCount = archivedWords.filter((w) => !w.isHidden).length;
   const kanjiCountForLevel = kanjiCounts?.[selectedLevel] ?? 0;
   const grammarCountForLevel = grammarCounts?.[selectedLevel] ?? 0;
@@ -117,10 +120,10 @@ export default function HomePage() {
           <span className="font-jp block text-xs font-bold">単語 N3</span>
           <span className="mt-0.5 block text-[10px] text-muted">{tangoN3Count}</span>
         </Link>
-        <div className="rounded-xl border border-border bg-slate-50 dark:bg-surface-muted px-2 py-2 text-center opacity-60">
+        <Link href="/vocabulary?level=N2" className="rounded-xl border border-border bg-surface px-2 py-2 text-center">
           <span className="font-jp block text-xs font-bold">単語 N2</span>
-          <span className="mt-0.5 block text-[10px] text-muted">sắp có</span>
-        </div>
+          <span className="mt-0.5 block text-[10px] text-muted">{n2VocabCount}</span>
+        </Link>
         <div className="rounded-xl border border-border bg-slate-50 dark:bg-surface-muted px-2 py-2 text-center opacity-60">
           <span className="font-jp block text-xs font-bold">単語 N1</span>
           <span className="mt-0.5 block text-[10px] text-muted">sắp có</span>

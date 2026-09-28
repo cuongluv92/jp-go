@@ -57,6 +57,7 @@ export interface GrammarExampleRow {
   linked_vocab_id: string | null;
   source_type: GrammarSourceType;
   review_status: GrammarReviewStatus;
+  furigana_tokens?: Array<{ surface: string; reading: string; start?: number }>;
   created_at: string;
 }
 

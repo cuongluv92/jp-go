@@ -9,10 +9,21 @@ export interface JapaneseTextSegment {
   reading?: string;
 }
 
+export interface FuriganaToken {
+  surface: string;
+  reading: string;
+  /**
+   * Vị trí 0-based trong chính câu đang hiển thị. Khi có start, token chỉ được
+   * phép khớp đúng occurrence này; dùng cho các từ đa âm/đồng hình như 一日・何.
+   */
+  start?: number;
+}
+
 type SegmentCandidate = {
   surface: string;
   word: VocabWord | null;
   reading?: string;
+  exactStart?: number;
   /** 3 = token nội dung kiểm tra tay, 2 = reading khớp trực tiếp, 1 = fallback yếu/không reading. */
   readingPriority: 1 | 2 | 3;
 };
@@ -276,6 +287,7 @@ function computeWordCandidates(word: VocabWord): SegmentCandidate[] {
  * ngay sau nó vẫn là Kanji/々 để ưu tiên token/từ ghép đầy đủ nếu có.
  */
 function candidateMatchesAt(text: string, index: number, candidate: SegmentCandidate): boolean {
+  if (candidate.exactStart !== undefined && candidate.exactStart !== index) return false;
   if (!text.startsWith(candidate.surface, index)) return false;
 
   const previous = index > 0 ? text[index - 1] : "";
@@ -304,14 +316,32 @@ function candidateMatchesAt(text: string, index: number, candidate: SegmentCandi
 export function segmentJapaneseText(
   text: string,
   words: VocabWord[],
-  furiganaTokens: Array<{ surface: string; reading: string }> = [],
+  furiganaTokens: FuriganaToken[] = [],
 ): JapaneseTextSegment[] {
   const byFirst = new Map<string, SegmentCandidate[]>();
 
-  for (const word of words) {
-    for (const candidate of computeWordCandidates(word)) {
-      insertCandidate(byFirst, candidate);
-    }
+  const automaticCandidates = words.flatMap((word) => computeWordCandidates(word));
+  const readingsBySurface = new Map<string, Set<string>>();
+  for (const candidate of automaticCandidates) {
+    if (!candidate.reading || candidate.readingPriority === 3) continue;
+    const readings = readingsBySurface.get(candidate.surface) ?? new Set<string>();
+    readings.add(candidate.reading);
+    readingsBySurface.set(candidate.surface, readings);
+  }
+  const ambiguousSurfaces = new Set(
+    [...readingsBySurface.entries()].filter(([, readings]) => readings.size > 1).map(([surface]) => surface),
+  );
+
+  for (const candidate of automaticCandidates) {
+    // Nếu cùng một bề mặt trong kho từ có nhiều reading khác nhau, không tự
+    // chọn theo thứ tự mảng. Vẫn giữ liên kết từ để tra nghĩa, nhưng chỉ hiện
+    // furigana khi nội dung cung cấp token đã xác nhận đúng ngữ cảnh.
+    insertCandidate(
+      byFirst,
+      ambiguousSurfaces.has(candidate.surface)
+        ? { ...candidate, reading: undefined, readingPriority: 1 }
+        : candidate,
+    );
   }
 
   // Token kiểm tra tay luôn thắng reading suy ra nếu cùng một bề mặt.
@@ -319,8 +349,17 @@ export function segmentJapaneseText(
     const surface = token.surface.trim();
     const reading = token.reading.trim();
     if (!surface || !reading || !hasKanji(surface)) continue;
+
+    let exactStart: number | undefined;
+    if (token.start !== undefined) {
+      if (!Number.isInteger(token.start) || token.start < 0 || text.slice(token.start, token.start + surface.length) !== surface) {
+        continue;
+      }
+      exactStart = token.start;
+    }
+
     const matchingWord = words.find((word) => normalizeDictionaryForm(word.dictionaryForm || word.word) === surface) ?? null;
-    addCandidate(byFirst, { surface, word: matchingWord, reading, readingPriority: 3 });
+    addCandidate(byFirst, { surface, word: matchingWord, reading, exactStart, readingPriority: 3 });
   }
 
   for (const candidates of byFirst.values()) {
