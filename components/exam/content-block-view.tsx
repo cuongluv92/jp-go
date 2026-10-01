@@ -230,7 +230,7 @@ export function renderBlockColumns(block: ContentBlock, showFurigana = false): B
         jp: (
           <ListTag className={`font-jp ${listClass} space-y-1 pl-5`}>
             {block.items_jp.map((item, i) => (
-              <li key={i}>{item}</li>
+              <li key={i}>{renderJapaneseText(item, block.items_furigana_tokens?.[i] ?? [], showFurigana)}</li>
             ))}
           </ListTag>
         ),
@@ -248,7 +248,13 @@ export function renderBlockColumns(block: ContentBlock, showFurigana = false): B
     }
 
     case "table": {
-      const renderTable = (headers: string[], rows: string[][], jpStyle: boolean) => (
+      const renderTable = (
+        headers: string[],
+        rows: string[][],
+        jpStyle: boolean,
+        headerTokens: FuriganaToken[][] = [],
+        rowTokens: FuriganaToken[][][] = [],
+      ) => (
         <div className="overflow-x-auto rounded-lg border border-border">
           <table className={`w-full text-left text-sm ${jpStyle ? "font-jp" : ""}`}>
             {headers.length > 0 && (
@@ -256,7 +262,7 @@ export function renderBlockColumns(block: ContentBlock, showFurigana = false): B
                 <tr>
                   {headers.map((h, i) => (
                     <th key={i} className="border-b border-border px-2 py-1.5 font-semibold">
-                      {h}
+                      {jpStyle ? renderJapaneseText(h, headerTokens[i] ?? [], showFurigana) : h}
                     </th>
                   ))}
                 </tr>
@@ -267,7 +273,7 @@ export function renderBlockColumns(block: ContentBlock, showFurigana = false): B
                 <tr key={ri} className="odd:bg-white dark:odd:bg-surface even:bg-slate-50/50 dark:even:bg-white/5">
                   {row.map((cell, ci) => (
                     <td key={ci} className="border-b border-border px-2 py-1.5 align-top">
-                      {cell}
+                      {jpStyle ? renderJapaneseText(cell, rowTokens[ri]?.[ci] ?? [], showFurigana) : cell}
                     </td>
                   ))}
                 </tr>
@@ -279,10 +285,24 @@ export function renderBlockColumns(block: ContentBlock, showFurigana = false): B
       return {
         jp: block.image_path ? (
           <div className="flex items-start justify-between gap-3">
-            <div className="min-w-0 flex-1">{renderTable(block.headers_jp, block.rows_jp, true)}</div>
+            <div className="min-w-0 flex-1">
+              {renderTable(
+                block.headers_jp,
+                block.rows_jp,
+                true,
+                block.headers_furigana_tokens,
+                block.rows_furigana_tokens,
+              )}
+            </div>
             {renderInlineBookImage(block.image_path, block.image_width)}
           </div>
-        ) : renderTable(block.headers_jp, block.rows_jp, true),
+        ) : renderTable(
+          block.headers_jp,
+          block.rows_jp,
+          true,
+          block.headers_furigana_tokens,
+          block.rows_furigana_tokens,
+        ),
         vi:
           block.rows_vi && block.rows_vi.length > 0
             ? renderTable(block.headers_vi ?? [], block.rows_vi, false)

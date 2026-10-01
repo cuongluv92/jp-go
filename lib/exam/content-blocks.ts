@@ -27,6 +27,10 @@ export const furiganaTokenSchema = z.object({
 
 // Furigana / typography là metadata bổ sung: nội dung/import cũ không bắt buộc phải có.
 const furiganaTokens = z.array(furiganaTokenSchema).optional();
+// Danh sách/bảng cần token riêng cho từng item/cell để nút ふりがな hoạt động
+// mà không phải đoán cách đọc ở phía client.
+const furiganaTokenGroups = z.array(z.array(furiganaTokenSchema)).optional();
+const furiganaTokenGrid = z.array(z.array(z.array(furiganaTokenSchema))).optional();
 const boldPhrases = z.array(z.string().min(1)).optional();
 const inlineImageFields = {
   image_path: z.string().min(1).optional(),
@@ -59,6 +63,7 @@ export const bulletListBlockSchema = z.object({
   type: z.literal("bullet_list"),
   items_jp: z.array(z.string().min(1)).min(1),
   items_vi: nullableStringArray.default(null),
+  items_furigana_tokens: furiganaTokenGroups,
   explanation_vi: nullableString.default(null),
 });
 
@@ -66,6 +71,7 @@ export const numberedListBlockSchema = z.object({
   type: z.literal("numbered_list"),
   items_jp: z.array(z.string().min(1)).min(1),
   items_vi: nullableStringArray.default(null),
+  items_furigana_tokens: furiganaTokenGroups,
   explanation_vi: nullableString.default(null),
 });
 
@@ -75,6 +81,8 @@ export const tableBlockSchema = z.object({
   rows_jp: z.array(z.array(z.string())).min(1),
   headers_vi: z.array(z.string()).nullable().default(null),
   rows_vi: z.array(z.array(z.string())).nullable().default(null),
+  headers_furigana_tokens: furiganaTokenGroups,
+  rows_furigana_tokens: furiganaTokenGrid,
   explanation_vi: nullableString.default(null),
   ...inlineImageFields,
 });
