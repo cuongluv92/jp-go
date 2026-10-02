@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 360">
+<style>text{font-family:serif;font-size:20px;fill:#111}.a{stroke:#111;stroke-width:2;fill:none}</style>
+<line class="a" x1="70" y1="180" x2="450" y2="180"/><line class="a" x1="240" y1="310" x2="240" y2="45"/>
+<text x="455" y="190">H [A/m]</text><text x="225" y="35">B [T]</text><text x="247" y="200">0</text>
+<path class="a" d="M115 285 C165 275 175 220 195 160 C210 105 230 75 300 65 C265 85 260 120 260 180 C260 240 255 285 205 315 C225 275 225 225 225 180 C225 130 225 90 300 65"/>
+<path class="a" d="M120 285 C180 285 205 260 235 225 C270 185 300 145 325 95 C345 65 385 65 405 75 C375 95 365 125 350 180 C335 235 315 275 265 295 C210 315 160 305 120 285"/>
+<text x="295" y="55">ア</text><text x="405" y="95">イ</text>
+</svg>
