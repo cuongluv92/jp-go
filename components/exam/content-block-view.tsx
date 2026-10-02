@@ -248,20 +248,47 @@ export function renderBlockColumns(block: ContentBlock, showFurigana = false): B
     }
 
     case "table": {
+      const getColumnWidths = (headers: string[], rows: string[][]): string[] => {
+        const columnCount = Math.max(headers.length, ...rows.map((row) => row.length), 1);
+        const weights = Array.from({ length: columnCount }, (_, columnIndex) => {
+          const values = [headers[columnIndex] ?? "", ...rows.map((row) => row[columnIndex] ?? "")];
+          const longest = Math.max(
+            4,
+            ...values.map((value) => Math.min(Array.from(value).length, 64)),
+          );
+          // Căn theo độ dài nội dung nhưng nén chênh lệch để cột ngắn không bị bóp quá hẹp.
+          return 4 + Math.sqrt(longest);
+        });
+        const total = weights.reduce((sum, weight) => sum + weight, 0);
+        return weights.map((weight) => `${((weight / total) * 100).toFixed(2)}%`);
+      };
+
       const renderTable = (
         headers: string[],
         rows: string[][],
         jpStyle: boolean,
         headerTokens: FuriganaToken[][] = [],
         rowTokens: FuriganaToken[][][] = [],
-      ) => (
-        <div className="overflow-x-auto rounded-lg border border-border">
-          <table className={`w-full text-left text-sm ${jpStyle ? "font-jp" : ""}`}>
+      ) => {
+        const columnWidths = getColumnWidths(headers, rows);
+        const minWidth = columnWidths.length >= 5 ? `${columnWidths.length * 128}px` : undefined;
+
+        return (
+          <div className="overflow-x-auto rounded-lg border border-border">
+            <table
+              className={`w-full table-fixed text-left text-sm ${jpStyle ? "font-jp" : ""}`}
+              style={{ minWidth }}
+            >
+              <colgroup>
+                {columnWidths.map((width, index) => (
+                  <col key={index} style={{ width }} />
+                ))}
+              </colgroup>
             {headers.length > 0 && (
               <thead className="bg-slate-50 dark:bg-surface-muted">
                 <tr>
                   {headers.map((h, i) => (
-                    <th key={i} className="border-b border-border px-2 py-1.5 font-semibold">
+                    <th key={i} className="break-words whitespace-normal border-b border-border px-2 py-1.5 font-semibold align-top">
                       {jpStyle ? renderJapaneseText(h, headerTokens[i] ?? [], showFurigana) : h}
                     </th>
                   ))}
@@ -272,16 +299,17 @@ export function renderBlockColumns(block: ContentBlock, showFurigana = false): B
               {rows.map((row, ri) => (
                 <tr key={ri} className="odd:bg-white dark:odd:bg-surface even:bg-slate-50/50 dark:even:bg-white/5">
                   {row.map((cell, ci) => (
-                    <td key={ci} className="border-b border-border px-2 py-1.5 align-top">
+                    <td key={ci} className="break-words whitespace-normal border-b border-border px-2 py-1.5 align-top">
                       {jpStyle ? renderJapaneseText(cell, rowTokens[ri]?.[ci] ?? [], showFurigana) : cell}
                     </td>
                   ))}
                 </tr>
               ))}
             </tbody>
-          </table>
-        </div>
-      );
+            </table>
+          </div>
+        );
+      };
       return {
         jp: block.image_path ? (
           <div className="flex items-start justify-between gap-3">
