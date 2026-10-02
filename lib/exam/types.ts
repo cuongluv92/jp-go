@@ -83,6 +83,7 @@ export interface ExamQuestionChoice {
   question_id: string;
   choice_label: string;
   choice_jp: string;
+  choice_vi: string | null;
   is_correct: boolean;
   sort_order: number;
 }
