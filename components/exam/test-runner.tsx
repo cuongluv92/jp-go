@@ -217,6 +217,17 @@ export function TestRunner({ test, questions }: { test: ExamTest; questions: Exa
           ) : (
             <p className="text-sm italic text-muted">(chưa dịch)</p>
           )}
+
+          {current.choices.length > 0 && (
+            <div className="mt-4 flex flex-col gap-2">
+              {current.choices.map((choice) => (
+                <div key={choice.id} className="flex items-start gap-3 rounded-xl border border-border px-3 py-2.5 text-sm">
+                  <span className="font-semibold">{choice.choice_label}</span>
+                  <span>{choice.choice_vi ?? "(chưa dịch lựa chọn)"}</span>
+                </div>
+              ))}
+            </div>
+          )}
         </section>
 
         <section className="min-w-0 rounded-2xl border border-border bg-surface p-4">
