@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 560">
+<style>text{font-family:sans-serif;font-size:14px;fill:#111}.g{stroke:#777;stroke-width:1}.p{stroke:#111;stroke-width:3;fill:none}.d{stroke:#111;stroke-width:2;fill:none;stroke-dasharray:7 5}</style>
+<rect x="70" y="40" width="860" height="450" fill="white" stroke="#111" stroke-width="2"/>
+<text x="300" y="25" font-size="20">○○ビル新築電気設備工事工程表</text>
+<line class="g" x1="130" y1="40" x2="130" y2="490"/><line class="g" x1="187" y1="40" x2="187" y2="490"/><line class="g" x1="244" y1="40" x2="244" y2="490"/><line class="g" x1="301" y1="40" x2="301" y2="490"/><line class="g" x1="358" y1="40" x2="358" y2="490"/><line class="g" x1="415" y1="40" x2="415" y2="490"/><line class="g" x1="472" y1="40" x2="472" y2="490"/><line class="g" x1="529" y1="40" x2="529" y2="490"/><line class="g" x1="586" y1="40" x2="586" y2="490"/><line class="g" x1="643" y1="40" x2="643" y2="490"/><line class="g" x1="700" y1="40" x2="700" y2="490"/><line class="g" x1="757" y1="40" x2="757" y2="490"/><line class="g" x1="814" y1="40" x2="814" y2="490"/><line class="g" x1="871" y1="40" x2="871" y2="490"/>
+<line class="g" x1="70" y1="95" x2="930" y2="95"/><line class="g" x1="70" y1="144" x2="930" y2="144"/><line class="g" x1="70" y1="193" x2="930" y2="193"/><line class="g" x1="70" y1="242" x2="930" y2="242"/><line class="g" x1="70" y1="291" x2="930" y2="291"/><line class="g" x1="70" y1="340" x2="930" y2="340"/><line class="g" x1="70" y1="389" x2="930" y2="389"/><line class="g" x1="70" y1="438" x2="930" y2="438"/><line class="g" x1="70" y1="487" x2="930" y2="487"/>
+<text x="85" y="125">RF</text><text x="85" y="174">5F</text><text x="85" y="223">4F</text><text x="85" y="272">3F</text><text x="85" y="321">2F</text><text x="85" y="370">1F</text><text x="82" y="419">B1F</text>
+<text x="145" y="82">12月</text><text x="205" y="82">1月</text><text x="262" y="82">2月</text><text x="319" y="82">3月</text><text x="376" y="82">4月</text><text x="433" y="82">5月</text><text x="490" y="82">6月</text><text x="547" y="82">7月</text><text x="604" y="82">8月</text><text x="661" y="82">9月</text><text x="718" y="82">10月</text><text x="775" y="82">11月</text><text x="832" y="82">12月</text>
+<polyline class="p" points="190,430 250,410 310,365 370,315 430,265 490,215 550,165 610,115"/>
+<polyline class="p" points="480,430 540,380 600,330 660,280 720,230 780,180 840,130"/>
+<polyline class="p" points="570,430 630,380 690,330 750,280 810,230"/>
+<polyline class="d" points="200,440 310,440 370,390 490,390 550,340 670,340 730,290 850,290"/>
+<polyline class="d" points="430,125 550,125 610,145 730,145 790,170 850,170 880,360 850,410"/>
+<text x="180" y="465">準備・接地極埋設</text><text x="430" y="455">天井内配管・通線</text><text x="650" y="455">幹線・動力通線</text><text x="835" y="400">竣工</text>
+</svg>
