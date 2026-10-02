@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 430">
+<style>text{font-family:serif;font-size:22px;fill:#111} .w{stroke:#111;stroke-width:2;fill:none}</style>
+<g class="w">
+<line x1="90" y1="70" x2="630" y2="70"/><line x1="90" y1="210" x2="630" y2="210"/><line x1="90" y1="350" x2="630" y2="350"/>
+<line x1="90" y1="70" x2="90" y2="350"/><line x1="630" y1="70" x2="630" y2="350"/>
+<rect x="220" y="52" width="80" height="36"/><rect x="220" y="192" width="80" height="36"/><rect x="220" y="332" width="80" height="36"/>
+<path d="M300 70 h32 q12 0 16 -14 q8 28 16 0 q8 28 16 0 q8 28 16 0 h36"/>
+<path d="M300 210 h32 q12 0 16 -14 q8 28 16 0 q8 28 16 0 q8 28 16 0 h36"/>
+<path d="M300 350 h32 q12 0 16 -14 q8 28 16 0 q8 28 16 0 q8 28 16 0 h36"/>
+<rect x="630" y="50" width="70" height="320"/>
+</g>
+<text x="245" y="45">R</text><text x="355" y="45">X</text><text x="475" y="45">I →</text>
+<text x="245" y="185">R</text><text x="355" y="185">X</text><text x="475" y="185">I →</text>
+<text x="245" y="325">R</text><text x="355" y="325">X</text><text x="475" y="325">I →</text>
+<text x="35" y="110">Vs</text><text x="35" y="250">Vs</text><text x="35" y="390">Vs</text>
+<text x="585" y="110">Vr</text><text x="585" y="250">Vr</text><text x="585" y="390">Vr</text>
+<text x="668" y="115" writing-mode="tb">三相平衡負荷</text>
+</svg>
