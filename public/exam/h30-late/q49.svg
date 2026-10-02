@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 620 430">
+<style>text{font-family:sans-serif;font-size:17px;fill:#111}.a{stroke:#111;stroke-width:2;fill:none}.b{fill:#eee;stroke:#111}</style>
+<line class="a" x1="70" y1="40" x2="70" y2="350"/><line class="a" x1="70" y1="350" x2="560" y2="350"/>
+<rect class="b" x="90" y="170" width="55" height="180"/><rect class="b" x="155" y="245" width="55" height="105"/><rect class="b" x="220" y="300" width="55" height="50"/><rect class="b" x="285" y="325" width="55" height="25"/><rect class="b" x="350" y="335" width="55" height="15"/><rect class="b" x="415" y="340" width="55" height="10"/><rect class="b" x="480" y="330" width="55" height="20"/>
+<polyline class="a" points="70,350 117,170 182,105 247,75 312,62 377,52 442,45 507,40"/>
+<circle cx="117" cy="170" r="4"/><circle cx="182" cy="105" r="4"/><circle cx="247" cy="75" r="4"/><circle cx="312" cy="62" r="4"/><circle cx="377" cy="52" r="4"/><circle cx="442" cy="45" r="4"/><circle cx="507" cy="40" r="4"/>
+<text x="22" y="55">50</text><text x="20" y="180">25</text><text x="25" y="350">0</text>
+<text x="545" y="45">100%</text><text x="548" y="190">50%</text><text x="557" y="350">0</text>
+<text x="83" y="385">寸法不良</text><text x="155" y="405">部品不良</text><text x="230" y="385">穴位置違い</text><text x="307" y="405">組立不良</text><text x="390" y="385">加工忘れ</text><text x="470" y="405">その他</text>
+</svg>
