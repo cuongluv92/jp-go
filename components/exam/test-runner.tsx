@@ -4,12 +4,27 @@ import Link from "next/link";
 import { useEffect, useMemo, useState } from "react";
 
 import { getExamSourceImageUrl } from "@/lib/exam/storage";
+import { segmentJapaneseText, type FuriganaToken } from "@/lib/japanese-text";
 import type { ExamQuestion, ExamTest } from "@/lib/exam/types";
 
 interface TestState {
   currentIndex: number;
   answers: Record<string, string>;
   flagged: Record<string, boolean>;
+}
+
+function renderExamJapanese(text: string, tokens: FuriganaToken[] = [], showFurigana = false) {
+  if (!showFurigana || tokens.length === 0) return text;
+  return segmentJapaneseText(text, [], tokens).map((segment, index) =>
+    segment.reading ? (
+      <ruby key={`${segment.start}-${index}`}>
+        {segment.text}
+        <rt className="text-[0.65em] font-medium leading-none text-muted">{segment.reading}</rt>
+      </ruby>
+    ) : (
+      <span key={`${segment.start}-${index}`}>{segment.text}</span>
+    ),
+  );
 }
 
 function loadState(testId: string, questions: ExamQuestion[]): TestState {
@@ -72,6 +87,7 @@ function ReferencePages({ question }: { question: ExamQuestion }) {
 export function TestRunner({ test, questions }: { test: ExamTest; questions: ExamQuestion[] }) {
   const [state, setState] = useState<TestState>(() => loadState(test.id, questions));
   const [submitted, setSubmitted] = useState(false);
+  const [showFurigana, setShowFurigana] = useState(false);
 
   useEffect(() => {
     try {
@@ -125,6 +141,17 @@ export function TestRunner({ test, questions }: { test: ExamTest; questions: Exa
           </p>
           <h1 className="font-jp text-base font-bold sm:text-lg">{test.title}</h1>
         </div>
+        <div className="flex items-center gap-2">
+          <button
+            type="button"
+            onClick={() => setShowFurigana((value) => !value)}
+            aria-pressed={showFurigana}
+            className={`rounded-lg border px-2.5 py-1 text-xs font-medium ${
+              showFurigana ? "border-accent bg-accent/5 text-accent" : "border-border text-muted"
+            }`}
+          >
+            ふりがな {showFurigana ? "ON" : "OFF"}
+          </button>
         <button
           type="button"
           onClick={toggleFlag}
@@ -137,6 +164,7 @@ export function TestRunner({ test, questions }: { test: ExamTest; questions: Exa
         >
           {state.flagged[current.id] ? "Đã đánh dấu" : "Đánh dấu"}
         </button>
+        </div>
       </div>
 
       <div className="rounded-2xl border border-border bg-surface p-3">
@@ -170,7 +198,7 @@ export function TestRunner({ test, questions }: { test: ExamTest; questions: Exa
         <section className="min-w-0 rounded-2xl border border-border bg-surface p-4">
           <p className="mb-3 text-xs font-semibold uppercase tracking-wide text-muted">原文</p>
           <p className="font-jp whitespace-pre-line text-sm leading-relaxed sm:text-base">
-            問{current.question_number}. {current.question_jp}
+            問{current.question_number}. {renderExamJapanese(current.question_jp, current.question_furigana_tokens, showFurigana)}
           </p>
 
           {current.question_image_path && (
@@ -204,7 +232,7 @@ export function TestRunner({ test, questions }: { test: ExamTest; questions: Exa
                     }`}
                   >
                     <span className="font-jp font-semibold">{choice.choice_label}</span>
-                    <span className="font-jp">{choice.choice_jp}</span>
+                    <span className="font-jp">{renderExamJapanese(choice.choice_jp, choice.choice_furigana_tokens, showFurigana)}</span>
                   </button>
                 );
               })}
