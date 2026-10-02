@@ -49,6 +49,8 @@ function ReferencePages({ question }: { question: ExamQuestion }) {
             <Link
               key={ref.id}
               href={`/exam/${ref.book.slug}/page/${ref.page.page_number}`}
+              target="_blank"
+              rel="noopener noreferrer"
               className="rounded-lg border border-accent/40 bg-accent/5 px-2.5 py-1 text-xs font-medium text-accent hover:bg-accent/10"
             >
               {ref.book.short_title} · p.{ref.page.page_number}
