@@ -1,5 +1,6 @@
 import { buildSectionTree } from "./section-tree";
 import { getSupabaseClient } from "./supabase-client";
+import { STATIC_SOUGOU_PAGES } from "./sougou-static-pages";
 import type {
   ExamBook,
   ExamPage,
@@ -83,6 +84,55 @@ export async function getExamSectionAncestors(sectionId: string): Promise<ExamSe
   return chain;
 }
 
+
+async function getSougouStaticContext(bookId: string): Promise<{
+  sectionIdByCode: Map<string, string>;
+} | null> {
+  const supabase = getSupabaseClient();
+  const { data, error } = await supabase
+    .from("jp_exam_books")
+    .select("slug")
+    .eq("id", bookId)
+    .maybeSingle();
+
+  if (error) throw error;
+  if (!data || data.slug !== "sougou-mondai") return null;
+
+  const sections = await listExamSections(bookId);
+  return {
+    sectionIdByCode: new Map(
+      sections
+        .filter((section) => section.code)
+        .map((section) => [section.code as string, section.id]),
+    ),
+  };
+}
+
+function buildStaticSougouPage(
+  bookId: string,
+  pageNumber: number,
+  sectionIdByCode: Map<string, string>,
+): ExamPage | null {
+  const seed = STATIC_SOUGOU_PAGES[pageNumber];
+  if (!seed) return null;
+  const sectionId = sectionIdByCode.get(seed.sectionCode) ?? null;
+
+  return {
+    id: `static-sougou-${pageNumber}`,
+    book_id: bookId,
+    section_id: sectionId,
+    page_number: pageNumber,
+    page_label: `p.${pageNumber}`,
+    source_image_path: null,
+    content_blocks: seed.content_blocks,
+    notes_vi: seed.notes_vi ?? "Nội dung được nhập từ bản sách người dùng cung cấp.",
+    review_status: "reviewed",
+    sort_order: pageNumber,
+    created_at: "",
+    updated_at: "",
+  };
+}
+
 export async function getExamPage(bookId: string, pageNumber: number): Promise<ExamPage | null> {
   const supabase = getSupabaseClient();
   const { data, error } = await supabase
@@ -93,7 +143,11 @@ export async function getExamPage(bookId: string, pageNumber: number): Promise<E
     .maybeSingle();
 
   if (error) throw error;
-  return (data as ExamPage | null) ?? null;
+  if (data) return data as ExamPage;
+
+  const staticContext = await getSougouStaticContext(bookId);
+  if (!staticContext) return null;
+  return buildStaticSougouPage(bookId, pageNumber, staticContext.sectionIdByCode);
 }
 
 export async function listExamPagesForSection(sectionId: string): Promise<ExamPage[]> {
@@ -119,19 +173,28 @@ export async function listExamPagesMeta(
     .order("page_number", { ascending: true });
 
   if (error) throw error;
-  return data as { id: string; section_id: string | null; page_number: number }[];
+
+  const rows = [...(data as { id: string; section_id: string | null; page_number: number }[])];
+  const staticContext = await getSougouStaticContext(bookId);
+  if (!staticContext) return rows;
+
+  const existing = new Set(rows.map((row) => row.page_number));
+  for (const pageNumber of Object.keys(STATIC_SOUGOU_PAGES).map(Number)) {
+    if (existing.has(pageNumber)) continue;
+    const seed = STATIC_SOUGOU_PAGES[pageNumber];
+    rows.push({
+      id: `static-sougou-${pageNumber}`,
+      section_id: staticContext.sectionIdByCode.get(seed.sectionCode) ?? null,
+      page_number: pageNumber,
+    });
+  }
+
+  return rows.sort((a, b) => a.page_number - b.page_number);
 }
 
 export async function listExamPageNumbers(bookId: string): Promise<number[]> {
-  const supabase = getSupabaseClient();
-  const { data, error } = await supabase
-    .from("jp_exam_pages")
-    .select("page_number")
-    .eq("book_id", bookId)
-    .order("page_number", { ascending: true });
-
-  if (error) throw error;
-  return (data as { page_number: number }[]).map((row) => row.page_number);
+  const pages = await listExamPagesMeta(bookId);
+  return pages.map((row) => row.page_number);
 }
 
 export interface ExamSearchResult {

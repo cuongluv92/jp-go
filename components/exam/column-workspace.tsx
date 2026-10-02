@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { Fragment, useEffect, useMemo, useState } from "react";
 
 import { renderBlockColumns } from "./content-block-view";
@@ -114,6 +115,38 @@ const EXERCISE_COLUMN_LABELS: Record<ExerciseColumnKey, { title: string; subtitl
   solutionVi: { title: "Dịch 解説", subtitle: "Dịch lời giải + giải thích" },
 };
 
+
+function renderExerciseReference(reference: string) {
+  let currentBook: "sekou-gijutsu" | "sekou-houki" | null = null;
+  const parts = reference.split(/(電気テキスト|施工マニュアル|p\.\s*\d+)/g).filter(Boolean);
+
+  return parts.map((part, index) => {
+    if (part === "電気テキスト") {
+      currentBook = "sekou-gijutsu";
+      return <Fragment key={index}>{part}</Fragment>;
+    }
+    if (part === "施工マニュアル") {
+      currentBook = "sekou-houki";
+      return <Fragment key={index}>{part}</Fragment>;
+    }
+    const pageMatch = part.match(/^p\.\s*(\d+)$/);
+    if (pageMatch && currentBook) {
+      return (
+        <Link
+          key={index}
+          href={`/exam/${currentBook}/page/${pageMatch[1]}`}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="font-semibold text-accent underline underline-offset-2 hover:opacity-80"
+        >
+          {part}
+        </Link>
+      );
+    }
+    return <Fragment key={index}>{part}</Fragment>;
+  });
+}
+
 function renderExerciseJapanese(text: string, tokens: FuriganaToken[] = [], showFurigana = false) {
   const segments =
     showFurigana && tokens.length > 0
@@ -167,11 +200,14 @@ function ExerciseWorkspace({ blocks }: { blocks: ExerciseBlock[] }) {
             </div>
           )}
           {block.choices_jp.length > 0 && (
-            <ol className="space-y-1 pl-5 font-jp text-sm">
+            <div className="space-y-1.5 font-jp text-sm">
               {block.choices_jp.map((choice, index) => (
-                <li key={index}>{renderExerciseJapanese(choice, block.choices_furigana_tokens?.[index] ?? [], showFurigana)}</li>
+                <div key={index} className="flex items-start gap-2">
+                  <span className="w-5 shrink-0 font-bold text-accent">{index + 1}.</span>
+                  <span className="min-w-0">{renderExerciseJapanese(choice, block.choices_furigana_tokens?.[index] ?? [], showFurigana)}</span>
+                </div>
               ))}
-            </ol>
+            </div>
           )}
         </div>
       );
@@ -187,9 +223,14 @@ function ExerciseWorkspace({ blocks }: { blocks: ExerciseBlock[] }) {
             <p className="text-sm italic text-muted">(chưa dịch)</p>
           )}
           {block.choices_vi && block.choices_vi.length > 0 && (
-            <ol className="space-y-1 pl-5 text-sm">
-              {block.choices_vi.map((choice, index) => <li key={index}>{choice}</li>)}
-            </ol>
+            <div className="space-y-1.5 text-sm">
+              {block.choices_vi.map((choice, index) => (
+                <div key={index} className="flex items-start gap-2">
+                  <span className="w-5 shrink-0 font-bold text-accent">{index + 1}.</span>
+                  <span className="min-w-0">{choice}</span>
+                </div>
+              ))}
+            </div>
           )}
         </div>
       );
@@ -198,9 +239,12 @@ function ExerciseWorkspace({ blocks }: { blocks: ExerciseBlock[] }) {
     if (column === "solutionJp") {
       return (
         <div className="space-y-3">
-          <p className="font-jp text-xs font-bold text-accent">
-            【解説 No.{block.number}】{block.reference_jp ? ` ${block.reference_jp}` : ""}
-          </p>
+          <div className="font-jp text-xs font-bold text-accent">
+            <span>【解説 No.{block.number}】</span>
+            {block.reference_jp && (
+              <span className="ml-1">{renderExerciseReference(block.reference_jp)}</span>
+            )}
+          </div>
           <p className="font-jp whitespace-pre-line leading-relaxed">
             {renderExerciseJapanese(block.solution_jp, block.solution_furigana_tokens, showFurigana)}
           </p>

@@ -9,7 +9,7 @@ import {
   getExamSectionTree,
   listExamPagesMeta,
 } from "@/lib/exam/queries";
-import { buildSectionPageIndex } from "@/lib/exam/section-tree";
+import { buildAggregatedFirstPageIndex, buildSectionPageIndex } from "@/lib/exam/section-tree";
 
 export const dynamic = "force-dynamic";
 
@@ -19,8 +19,20 @@ export default async function ExamBookPage({ params }: { params: Promise<{ bookS
   if (!book) notFound();
 
   const [tree, pagesMeta] = await Promise.all([getExamSectionTree(book.id), listExamPagesMeta(book.id)]);
-  const pageIndexMap = buildSectionPageIndex(pagesMeta);
-  const pageIndex = Object.fromEntries(pageIndexMap);
+  const directPageIndex = buildSectionPageIndex(pagesMeta);
+  const aggregatedFirstPage = buildAggregatedFirstPageIndex(tree, directPageIndex);
+  const aggregatedPageIndex = new Map(directPageIndex);
+
+  function countPagesInNode(node: (typeof tree)[number]): number {
+    let total = directPageIndex.get(node.id)?.count ?? 0;
+    for (const child of node.children) total += countPagesInNode(child);
+    const firstPageNumber = aggregatedFirstPage.get(node.id);
+    if (firstPageNumber != null) aggregatedPageIndex.set(node.id, { count: total, firstPageNumber });
+    return total;
+  }
+  for (const root of tree) countPagesInNode(root);
+
+  const pageIndex = Object.fromEntries(aggregatedPageIndex);
 
   return (
     <WideContainer>
