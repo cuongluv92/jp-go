@@ -140,6 +140,28 @@ export const definitionBlockSchema = z.object({
   bold_vi: boldPhrases,
 });
 
+
+/**
+ * Block riêng cho 総合問題: 4 cột 問題 / Dịch問題 / 解説 / Dịch解説.
+ * Lời giải Nhật được giữ tách biệt hoàn toàn với bản dịch/giải thích Việt.
+ */
+export const exerciseBlockSchema = z.object({
+  type: z.literal("exercise"),
+  number: z.number().int().positive(),
+  question_jp: z.string().min(1),
+  question_vi: nullableString.default(null),
+  question_furigana_tokens: furiganaTokens,
+  choices_jp: z.array(z.string().min(1)).default([]),
+  choices_vi: nullableStringArray.default(null),
+  choices_furigana_tokens: furiganaTokenGroups,
+  figure_placeholder_jp: nullableString.default(null),
+  solution_jp: z.string().min(1),
+  solution_vi: nullableString.default(null),
+  solution_furigana_tokens: furiganaTokens,
+  reference_jp: nullableString.default(null),
+  explanation_vi: nullableString.default(null),
+});
+
 export const contentLeafBlockSchema = z.discriminatedUnion("type", [
   headingBlockSchema,
   paragraphBlockSchema,
@@ -185,6 +207,7 @@ export const contentBlockSchema = z.discriminatedUnion("type", [
   noteBlockSchema,
   warningBlockSchema,
   definitionBlockSchema,
+  exerciseBlockSchema,
   sectionGroupBlockSchema,
 ]);
 
@@ -200,6 +223,7 @@ export type ImagePlaceholderBlock = z.infer<typeof imagePlaceholderBlockSchema>;
 export type NoteBlock = z.infer<typeof noteBlockSchema>;
 export type WarningBlock = z.infer<typeof warningBlockSchema>;
 export type DefinitionBlock = z.infer<typeof definitionBlockSchema>;
+export type ExerciseBlock = z.infer<typeof exerciseBlockSchema>;
 export type SectionGroupBlock = z.infer<typeof sectionGroupBlockSchema>;
 export type ContentBlock = z.infer<typeof contentBlockSchema>;
 export type ContentBlockType = ContentBlock["type"];
@@ -216,5 +240,6 @@ export const CONTENT_BLOCK_TYPES: ContentBlockType[] = [
   "note",
   "warning",
   "definition",
+  "exercise",
   "section_group",
 ];

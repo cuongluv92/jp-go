@@ -1,9 +1,10 @@
 "use client";
 
-import { useEffect, useMemo, useState } from "react";
+import { Fragment, useEffect, useMemo, useState } from "react";
 
 import { renderBlockColumns } from "./content-block-view";
-import type { ContentBlock } from "@/lib/exam/content-blocks";
+import type { ContentBlock, ExerciseBlock, FuriganaToken } from "@/lib/exam/content-blocks";
+import { segmentJapaneseText } from "@/lib/japanese-text";
 
 type ColumnKey = "jp" | "vi" | "explanation";
 
@@ -101,6 +102,205 @@ function desktopGridColsClass(count: number): string {
   return "md:grid-cols-1";
 }
 
+
+type ExerciseColumnKey = "questionJp" | "questionVi" | "solutionJp" | "solutionVi";
+
+const EXERCISE_COLUMN_ORDER: ExerciseColumnKey[] = ["questionJp", "questionVi", "solutionJp", "solutionVi"];
+
+const EXERCISE_COLUMN_LABELS: Record<ExerciseColumnKey, { title: string; subtitle: string }> = {
+  questionJp: { title: "問題", subtitle: "Câu hỏi" },
+  questionVi: { title: "Dịch 問題", subtitle: "Dịch câu hỏi" },
+  solutionJp: { title: "解説", subtitle: "Lời giải Nhật" },
+  solutionVi: { title: "Dịch 解説", subtitle: "Dịch lời giải + giải thích" },
+};
+
+function renderExerciseJapanese(text: string, tokens: FuriganaToken[] = [], showFurigana = false) {
+  const segments =
+    showFurigana && tokens.length > 0
+      ? segmentJapaneseText(text, [], tokens)
+      : [{ text, start: 0, word: null, reading: undefined }];
+
+  return segments.map((segment, index) =>
+    segment.reading ? (
+      <ruby key={`${segment.start}-${index}`}>
+        {segment.text}
+        <rt className="text-[0.65em] font-medium leading-none text-muted">{segment.reading}</rt>
+      </ruby>
+    ) : (
+      <Fragment key={`${segment.start}-${index}`}>{segment.text}</Fragment>
+    ),
+  );
+}
+
+function ExerciseWorkspace({ blocks }: { blocks: ExerciseBlock[] }) {
+  const [mobileTab, setMobileTab] = useState<ExerciseColumnKey>("questionJp");
+  const [showFurigana, setShowFurigana] = useState(true);
+
+  useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect
+    setShowFurigana(readStoredFurigana());
+  }, []);
+
+  function toggleFurigana() {
+    setShowFurigana((current) => {
+      const next = !current;
+      try {
+        window.localStorage.setItem(FURIGANA_STORAGE_KEY, next ? "1" : "0");
+      } catch {
+        // Không chặn việc học nếu localStorage bị vô hiệu hóa.
+      }
+      return next;
+    });
+  }
+
+  function renderExerciseCell(block: ExerciseBlock, column: ExerciseColumnKey) {
+    if (column === "questionJp") {
+      return (
+        <div className="space-y-3">
+          <p className="font-jp text-xs font-bold text-accent">【問題 No.{block.number}】</p>
+          <p className="font-jp whitespace-pre-line leading-relaxed">
+            {renderExerciseJapanese(block.question_jp, block.question_furigana_tokens, showFurigana)}
+          </p>
+          {block.figure_placeholder_jp && (
+            <div className="rounded-lg border border-dashed border-border bg-slate-50/60 p-3 font-jp text-xs text-muted dark:bg-white/5">
+              【図】{block.figure_placeholder_jp}
+            </div>
+          )}
+          {block.choices_jp.length > 0 && (
+            <ol className="space-y-1 pl-5 font-jp text-sm">
+              {block.choices_jp.map((choice, index) => (
+                <li key={index}>{renderExerciseJapanese(choice, block.choices_furigana_tokens?.[index] ?? [], showFurigana)}</li>
+              ))}
+            </ol>
+          )}
+        </div>
+      );
+    }
+
+    if (column === "questionVi") {
+      return (
+        <div className="space-y-3">
+          <p className="text-xs font-bold text-accent">Câu {block.number}</p>
+          {block.question_vi ? (
+            <p className="whitespace-pre-line leading-relaxed">{block.question_vi}</p>
+          ) : (
+            <p className="text-sm italic text-muted">(chưa dịch)</p>
+          )}
+          {block.choices_vi && block.choices_vi.length > 0 && (
+            <ol className="space-y-1 pl-5 text-sm">
+              {block.choices_vi.map((choice, index) => <li key={index}>{choice}</li>)}
+            </ol>
+          )}
+        </div>
+      );
+    }
+
+    if (column === "solutionJp") {
+      return (
+        <div className="space-y-3">
+          <p className="font-jp text-xs font-bold text-accent">
+            【解説 No.{block.number}】{block.reference_jp ? ` ${block.reference_jp}` : ""}
+          </p>
+          <p className="font-jp whitespace-pre-line leading-relaxed">
+            {renderExerciseJapanese(block.solution_jp, block.solution_furigana_tokens, showFurigana)}
+          </p>
+        </div>
+      );
+    }
+
+    return (
+      <div className="space-y-3">
+        {block.solution_vi ? (
+          <p className="whitespace-pre-line leading-relaxed">{block.solution_vi}</p>
+        ) : (
+          <p className="text-sm italic text-muted">(chưa dịch)</p>
+        )}
+        {block.explanation_vi && (
+          <div className="rounded-lg bg-sky-50 p-3 text-sm leading-relaxed text-sky-950 dark:bg-sky-500/10 dark:text-sky-100">
+            <p className="mb-1 font-semibold">Giải thích thêm</p>
+            <p className="whitespace-pre-line">{block.explanation_vi}</p>
+          </div>
+        )}
+      </div>
+    );
+  }
+
+  return (
+    <div className="flex flex-col gap-3">
+      <div className="flex items-center gap-3 rounded-xl border border-border bg-surface px-3 py-2">
+        <p className="text-xs text-muted">総合問題 · 4 cột</p>
+        <button
+          type="button"
+          onClick={toggleFurigana}
+          aria-pressed={showFurigana}
+          className={`ml-auto flex items-center gap-1.5 rounded-lg border px-2.5 py-1 text-xs font-semibold transition ${
+            showFurigana
+              ? "border-accent/40 bg-accent-soft text-accent"
+              : "border-border text-muted hover:border-accent/60 hover:text-foreground"
+          }`}
+        >
+          <span className={`h-1.5 w-1.5 rounded-full ${showFurigana ? "bg-accent" : "bg-slate-300 dark:bg-white/20"}`} />
+          <span className="font-jp">ふりがな</span> {showFurigana ? "ON" : "OFF"}
+        </button>
+      </div>
+
+      <div className="hidden gap-x-4 lg:grid lg:grid-cols-4">
+        {EXERCISE_COLUMN_ORDER.map((column) => (
+          <div key={column} className="border-b-2 border-border pb-2">
+            <p className="font-jp text-sm font-bold">{EXERCISE_COLUMN_LABELS[column].title}</p>
+            <p className="text-[11px] text-muted">{EXERCISE_COLUMN_LABELS[column].subtitle}</p>
+          </div>
+        ))}
+        {blocks.map((block) => (
+          <Fragment key={block.number}>
+            {EXERCISE_COLUMN_ORDER.map((column) => (
+              <div key={column} className="min-w-0 border-b border-border py-4">
+                {renderExerciseCell(block, column)}
+              </div>
+            ))}
+          </Fragment>
+        ))}
+      </div>
+
+      <div className="lg:hidden">
+        <div className="grid grid-cols-2 border-b border-border sm:grid-cols-4">
+          {EXERCISE_COLUMN_ORDER.map((column) => (
+            <button
+              key={column}
+              type="button"
+              onClick={() => setMobileTab(column)}
+              className={`border-b-2 px-2 py-2 text-xs font-medium transition ${
+                mobileTab === column ? "border-accent text-accent" : "border-transparent text-muted"
+              }`}
+            >
+              <span className="font-jp">{EXERCISE_COLUMN_LABELS[column].title}</span>
+            </button>
+          ))}
+        </div>
+        <div className="divide-y divide-border">
+          {blocks.map((block) => (
+            <div key={block.number} className="py-4">
+              {renderExerciseCell(block, mobileTab)}
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+}
+
+/**
+ * Tự chuyển sang workspace 4 cột khi trang gồm các block 総合問題.
+ * Các sách lý thuyết cũ vẫn dùng workspace 3 cột, không bị thay đổi.
+ */
+export function ColumnWorkspace({ blocks }: { blocks: ContentBlock[] }) {
+  const exerciseBlocks = blocks.filter((block): block is ExerciseBlock => block.type === "exercise");
+  if (exerciseBlocks.length > 0 && exerciseBlocks.length === blocks.length) {
+    return <ExerciseWorkspace blocks={exerciseBlocks} />;
+  }
+  return <StandardColumnWorkspace blocks={blocks} />;
+}
+
 /**
  * Workspace 3 cột (原文 / Dịch / Giải thích) cho trang đọc 2級電気工事施工管理.
  *
@@ -112,7 +312,7 @@ function desktopGridColsClass(count: number): string {
  *   bật/tắt độc lập và ghi nhớ bằng localStorage.
  * Desktop: CSS grid song song. Mobile: tab, không ép nằm ngang.
  */
-export function ColumnWorkspace({ blocks }: { blocks: ContentBlock[] }) {
+function StandardColumnWorkspace({ blocks }: { blocks: ContentBlock[] }) {
   const [visible, setVisible] = useState<Visibility>(ALL_VISIBLE);
   const [focus, setFocus] = useState<ColumnKey | null>(null);
   const [mobileTab, setMobileTab] = useState<ColumnKey>("jp");
