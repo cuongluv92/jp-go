@@ -2,7 +2,7 @@
  * Kiểu dữ liệu khớp 1-1 với các bảng jp_exam_* (xem
  * supabase/migrations/20260916120000_jp_exam_2kyu_denki_schema.sql).
  */
-import type { ContentBlock } from "./content-blocks";
+import type { ContentBlock, FuriganaToken } from "./content-blocks";
 
 export type ExamBookStatus = "active" | "draft" | "archived";
 
@@ -84,6 +84,7 @@ export interface ExamQuestionChoice {
   choice_label: string;
   choice_jp: string;
   choice_vi: string | null;
+  choice_furigana_tokens: FuriganaToken[];
   is_correct: boolean;
   sort_order: number;
 }
@@ -108,6 +109,7 @@ export interface ExamQuestion {
   question_number: number;
   question_jp: string;
   question_vi: string | null;
+  question_furigana_tokens: FuriganaToken[];
   question_image_path: string | null;
   explanation_vi: string | null;
   is_flagged_default: boolean;
