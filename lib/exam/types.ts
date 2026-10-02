@@ -60,6 +60,7 @@ export interface ExamPage {
 }
 
 export type ExamTestType = "kakomon" | "mock" | "practice";
+export type ExamStage = "1ji" | "2ji";
 export type ExamTestStatus = "draft" | "published" | "archived";
 
 export interface ExamTest {
@@ -67,6 +68,7 @@ export interface ExamTest {
   slug: string;
   title: string;
   test_year: string | null;
+  exam_stage: ExamStage | null;
   test_type: ExamTestType;
   question_count: number | null;
   duration_minutes: number | null;
@@ -104,6 +106,7 @@ export interface ExamQuestion {
   test_id: string;
   question_number: number;
   question_jp: string;
+  question_vi: string | null;
   question_image_path: string | null;
   explanation_vi: string | null;
   is_flagged_default: boolean;

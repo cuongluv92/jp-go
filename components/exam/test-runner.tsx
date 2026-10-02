@@ -1,8 +1,8 @@
 "use client";
 
+import Link from "next/link";
 import { useEffect, useMemo, useState } from "react";
 
-import { ReferenceModal } from "./reference-modal";
 import { getExamSourceImageUrl } from "@/lib/exam/storage";
 import type { ExamQuestion, ExamTest } from "@/lib/exam/types";
 
@@ -21,58 +21,79 @@ function loadState(testId: string, questions: ExamQuestion[]): TestState {
       const raw = window.sessionStorage.getItem(`jp-go-exam-test-${testId}`);
       if (raw) return { currentIndex: 0, answers: {}, flagged, ...JSON.parse(raw) };
     } catch {
-      // sessionStorage có thể bị chặn (chế độ ẩn danh) - bỏ qua, dùng state mặc định.
+      // sessionStorage có thể bị chặn - dùng state mặc định.
     }
   }
   return { currentIndex: 0, answers: {}, flagged };
 }
 
-function formatSeconds(totalSeconds: number): string {
-  const m = Math.floor(totalSeconds / 60)
-    .toString()
-    .padStart(2, "0");
-  const s = (totalSeconds % 60).toString().padStart(2, "0");
-  return `${m}:${s}`;
+function ReferencePages({ question }: { question: ExamQuestion }) {
+  if (question.references.length === 0) return null;
+
+  return (
+    <div className="mt-4 border-t border-border pt-3">
+      <p className="mb-2 text-xs font-semibold uppercase tracking-wide text-muted">
+        Lý thuyết liên quan
+      </p>
+      <div className="flex flex-wrap gap-2">
+        {question.references.map((ref) => {
+          if (!ref.book || !ref.page) {
+            return ref.note ? (
+              <span key={ref.id} className="rounded-lg bg-slate-100 px-2.5 py-1 text-xs text-muted dark:bg-white/10">
+                {ref.note}
+              </span>
+            ) : null;
+          }
+
+          return (
+            <Link
+              key={ref.id}
+              href={`/exam/${ref.book.slug}/page/${ref.page.page_number}`}
+              className="rounded-lg border border-accent/40 bg-accent/5 px-2.5 py-1 text-xs font-medium text-accent hover:bg-accent/10"
+            >
+              {ref.book.short_title} · p.{ref.page.page_number}
+              {ref.note ? ` · ${ref.note}` : ""}
+            </Link>
+          );
+        })}
+      </div>
+    </div>
+  );
 }
 
 /**
- * Quản lý toàn bộ state của một lần làm đề: câu hiện tại, đáp án đã chọn,
- * câu đánh dấu, timer. Mở/đóng modal 参考資料 KHÔNG được reset gì trong số
- * này - modal chỉ là overlay điều khiển bằng 1 state cờ riêng
- * (`referenceQuestionId`), không unmount phần còn lại của component.
+ * Giao diện dùng chung cho đề thật/luyện:
+ * - 3 cột cố định theo module sách: 原文 / Dịch Việt / Đáp án・Giải thích.
+ * - Nếu đề chưa có đáp án, cột 3 vẫn hiện giải thích học tập + trang lý thuyết.
+ * - Chỉ bật chấm điểm khi câu thực sự có choices/đáp án.
  */
 export function TestRunner({ test, questions }: { test: ExamTest; questions: ExamQuestion[] }) {
   const [state, setState] = useState<TestState>(() => loadState(test.id, questions));
-  const [referenceQuestionId, setReferenceQuestionId] = useState<string | null>(null);
   const [submitted, setSubmitted] = useState(false);
-  const [elapsedSeconds, setElapsedSeconds] = useState(0);
-
-  useEffect(() => {
-    const interval = setInterval(() => setElapsedSeconds((s) => s + 1), 1000);
-    return () => clearInterval(interval);
-  }, []);
 
   useEffect(() => {
     try {
       window.sessionStorage.setItem(`jp-go-exam-test-${test.id}`, JSON.stringify(state));
     } catch {
-      // Bỏ qua nếu sessionStorage không dùng được - không ảnh hưởng việc làm bài.
+      // Không ảnh hưởng việc đọc/làm đề.
     }
   }, [state, test.id]);
 
   const current = questions[state.currentIndex];
-  const answeredCount = Object.keys(state.answers).length;
+  const hasAnyChoices = useMemo(() => questions.some((q) => q.choices.length > 0), [questions]);
 
   const score = useMemo(() => {
-    if (!submitted) return null;
+    if (!submitted || !hasAnyChoices) return null;
     let correct = 0;
+    let gradable = 0;
     for (const q of questions) {
-      const chosen = state.answers[q.id];
       const correctChoice = q.choices.find((c) => c.is_correct);
-      if (chosen && correctChoice && chosen === correctChoice.id) correct += 1;
+      if (!correctChoice) continue;
+      gradable += 1;
+      if (state.answers[q.id] === correctChoice.id) correct += 1;
     }
-    return { correct, total: questions.length };
-  }, [submitted, questions, state.answers]);
+    return { correct, total: gradable };
+  }, [submitted, hasAnyChoices, questions, state.answers]);
 
   if (!current) {
     return <p className="p-6 text-sm text-muted">Đề thi này chưa có câu hỏi.</p>;
@@ -92,159 +113,157 @@ export function TestRunner({ test, questions }: { test: ExamTest; questions: Exa
     setState((s) => ({ ...s, currentIndex: index }));
   };
 
-  const referenceQuestion = referenceQuestionId ? questions.find((q) => q.id === referenceQuestionId) : null;
-
   return (
-    <div className="flex flex-col gap-4 py-4 lg:flex-row lg:items-start lg:gap-6">
-      <aside className="order-2 lg:order-1 lg:w-56 lg:shrink-0">
-        <div className="rounded-2xl border border-border bg-surface p-3">
-          <p className="mb-2 text-xs font-semibold uppercase text-muted">Danh sách câu hỏi</p>
-          <div className="grid grid-cols-8 gap-1.5 lg:grid-cols-5">
-            {questions.map((q, i) => {
-              const isAnswered = Boolean(state.answers[q.id]);
-              const isFlagged = state.flagged[q.id];
-              const isCurrent = i === state.currentIndex;
-              return (
-                <button
-                  key={q.id}
-                  type="button"
-                  onClick={() => goTo(i)}
-                  className={`relative flex h-8 w-8 items-center justify-center rounded-lg text-xs font-medium transition ${
-                    isCurrent
-                      ? "bg-accent text-accent-foreground"
-                      : isAnswered
-                        ? "bg-emerald-100 dark:bg-emerald-500/15 text-emerald-700 dark:text-emerald-400"
-                        : "bg-slate-100 dark:bg-white/10 text-muted"
-                  }`}
-                >
-                  {q.question_number}
-                  {isFlagged && <span className="absolute -right-1 -top-1 h-2 w-2 rounded-full bg-amber-500" />}
-                </button>
-              );
-            })}
-          </div>
+    <div className="flex flex-col gap-4 py-4">
+      <div className="flex flex-wrap items-center justify-between gap-3 rounded-2xl border border-border bg-surface px-4 py-3">
+        <div>
+          <p className="text-xs text-muted">
+            {test.test_year ?? ""}
+            {test.exam_stage ? ` · ${test.exam_stage === "1ji" ? "1次" : "2次"}` : ""}
+          </p>
+          <h1 className="font-jp text-base font-bold sm:text-lg">{test.title}</h1>
         </div>
-      </aside>
+        <button
+          type="button"
+          onClick={toggleFlag}
+          aria-pressed={state.flagged[current.id]}
+          className={`rounded-lg border px-2.5 py-1 text-xs font-medium ${
+            state.flagged[current.id]
+              ? "border-amber-400 bg-amber-50 text-amber-700 dark:border-amber-500/40 dark:bg-amber-500/10 dark:text-amber-400"
+              : "border-border text-muted"
+          }`}
+        >
+          {state.flagged[current.id] ? "Đã đánh dấu" : "Đánh dấu"}
+        </button>
+      </div>
 
-      <div className="order-1 flex-1 lg:order-2">
-        <div className="flex items-center justify-between rounded-2xl border border-border bg-surface px-4 py-2.5">
-          <span className="text-sm font-semibold">{test.title}</span>
-          <span className="text-sm tabular-nums text-muted">⏱ {formatSeconds(elapsedSeconds)}</span>
-        </div>
-
-        {submitted && score && (
-          <div className="mt-4 rounded-2xl border border-accent bg-accent/5 p-4 text-sm font-medium text-accent">
-            Kết quả: {score.correct}/{score.total} câu đúng
-          </div>
-        )}
-
-        <div className="mt-4 rounded-2xl border border-border bg-surface p-4 sm:p-5">
-          <div className="flex items-start justify-between gap-3">
-            <p className="font-jp whitespace-pre-line text-base font-medium leading-relaxed">
-              問{current.question_number}. {current.question_jp}
-            </p>
+      <div className="rounded-2xl border border-border bg-surface p-3">
+        <p className="mb-2 text-xs font-semibold uppercase text-muted">Danh sách câu hỏi</p>
+        <div className="flex flex-wrap gap-1.5">
+          {questions.map((q, i) => (
             <button
+              key={q.id}
               type="button"
-              onClick={toggleFlag}
-              aria-pressed={state.flagged[current.id]}
-              className={`shrink-0 rounded-lg border px-2.5 py-1 text-xs font-medium ${
-                state.flagged[current.id]
-                  ? "border-amber-400 dark:border-amber-500/40 bg-amber-50 dark:bg-amber-500/10 text-amber-700 dark:text-amber-400"
-                  : "border-border text-muted"
+              onClick={() => goTo(i)}
+              className={`relative flex h-8 min-w-8 items-center justify-center rounded-lg px-2 text-xs font-medium transition ${
+                i === state.currentIndex
+                  ? "bg-accent text-accent-foreground"
+                  : "bg-slate-100 text-muted dark:bg-white/10"
               }`}
             >
-              {state.flagged[current.id] ? "Đã đánh dấu" : "Đánh dấu"}
+              {q.question_number}
+              {state.flagged[q.id] && <span className="absolute -right-1 -top-1 h-2 w-2 rounded-full bg-amber-500" />}
             </button>
-          </div>
+          ))}
+        </div>
+      </div>
+
+      {submitted && score && (
+        <div className="rounded-2xl border border-accent bg-accent/5 p-4 text-sm font-medium text-accent">
+          Kết quả: {score.correct}/{score.total} câu đúng
+        </div>
+      )}
+
+      <div className="grid gap-3 lg:grid-cols-3">
+        <section className="min-w-0 rounded-2xl border border-border bg-surface p-4">
+          <p className="mb-3 text-xs font-semibold uppercase tracking-wide text-muted">原文</p>
+          <p className="font-jp whitespace-pre-line text-sm leading-relaxed sm:text-base">
+            問{current.question_number}. {current.question_jp}
+          </p>
 
           {current.question_image_path && (
             // eslint-disable-next-line @next/next/no-img-element
             <img
               src={getExamSourceImageUrl(current.question_image_path)}
               alt={`Hình câu ${current.question_number}`}
-              className="mt-3 rounded-lg border border-border"
+              className="mt-4 h-auto max-w-full rounded-lg border border-border"
             />
           )}
 
-          <div className="mt-4 flex flex-col gap-2">
-            {current.choices.map((choice) => {
-              const isSelected = state.answers[current.id] === choice.id;
-              const showCorrectness = submitted;
-              const isCorrectChoice = choice.is_correct;
-              return (
-                <button
-                  key={choice.id}
-                  type="button"
-                  onClick={() => selectChoice(choice.id)}
-                  disabled={submitted}
-                  className={`flex items-start gap-3 rounded-xl border px-3 py-2.5 text-left text-sm transition ${
-                    showCorrectness && isCorrectChoice
-                      ? "border-emerald-400 dark:border-emerald-500/40 bg-emerald-50 dark:bg-emerald-500/10"
-                      : showCorrectness && isSelected && !isCorrectChoice
-                        ? "border-red-300 bg-red-50 dark:bg-red-500/10"
-                        : isSelected
-                          ? "border-accent bg-accent/5"
-                          : "border-border hover:border-accent/50"
-                  }`}
-                >
-                  <span className="font-jp font-semibold">{choice.choice_label}</span>
-                  <span className="font-jp">{choice.choice_jp}</span>
-                </button>
-              );
-            })}
-          </div>
-
-          {submitted && current.explanation_vi && (
-            <p className="mt-4 rounded-xl bg-slate-50 dark:bg-surface-muted p-3 text-sm text-muted">{current.explanation_vi}</p>
+          {current.choices.length > 0 && (
+            <div className="mt-4 flex flex-col gap-2">
+              {current.choices.map((choice) => {
+                const isSelected = state.answers[current.id] === choice.id;
+                const showCorrectness = submitted;
+                return (
+                  <button
+                    key={choice.id}
+                    type="button"
+                    onClick={() => selectChoice(choice.id)}
+                    disabled={submitted}
+                    className={`flex items-start gap-3 rounded-xl border px-3 py-2.5 text-left text-sm transition ${
+                      showCorrectness && choice.is_correct
+                        ? "border-emerald-400 bg-emerald-50 dark:border-emerald-500/40 dark:bg-emerald-500/10"
+                        : showCorrectness && isSelected && !choice.is_correct
+                          ? "border-red-300 bg-red-50 dark:bg-red-500/10"
+                          : isSelected
+                            ? "border-accent bg-accent/5"
+                            : "border-border hover:border-accent/50"
+                    }`}
+                  >
+                    <span className="font-jp font-semibold">{choice.choice_label}</span>
+                    <span className="font-jp">{choice.choice_jp}</span>
+                  </button>
+                );
+              })}
+            </div>
           )}
+        </section>
 
-          {current.references.length > 0 && (
-            <button
-              type="button"
-              onClick={() => setReferenceQuestionId(current.id)}
-              className="mt-4 rounded-lg border border-accent px-3 py-1.5 text-sm font-medium text-accent"
-            >
-              参考資料を見る
-            </button>
-          )}
-        </div>
-
-        <div className="mt-4 flex items-center justify-between gap-2">
-          <button
-            type="button"
-            onClick={() => goTo(state.currentIndex - 1)}
-            disabled={state.currentIndex === 0}
-            className="rounded-lg border border-border px-4 py-2 text-sm disabled:opacity-40"
-          >
-            ← Câu trước
-          </button>
-          <span className="text-xs text-muted">
-            Đã làm {answeredCount}/{questions.length} câu
-          </span>
-          {state.currentIndex === questions.length - 1 ? (
-            <button
-              type="button"
-              onClick={() => setSubmitted(true)}
-              disabled={submitted}
-              className="rounded-lg bg-accent px-4 py-2 text-sm font-semibold text-accent-foreground disabled:opacity-40"
-            >
-              Nộp bài
-            </button>
+        <section className="min-w-0 rounded-2xl border border-border bg-surface p-4">
+          <p className="mb-3 text-xs font-semibold uppercase tracking-wide text-muted">Dịch Việt</p>
+          {current.question_vi ? (
+            <p className="whitespace-pre-line text-sm leading-relaxed sm:text-base">{current.question_vi}</p>
           ) : (
-            <button
-              type="button"
-              onClick={() => goTo(state.currentIndex + 1)}
-              className="rounded-lg border border-border px-4 py-2 text-sm"
-            >
-              Câu sau →
-            </button>
+            <p className="text-sm italic text-muted">(chưa dịch)</p>
           )}
-        </div>
+        </section>
+
+        <section className="min-w-0 rounded-2xl border border-border bg-surface p-4">
+          <p className="mb-3 text-xs font-semibold uppercase tracking-wide text-muted">Đáp án・Giải thích</p>
+          {current.explanation_vi ? (
+            <p className="whitespace-pre-line text-sm leading-relaxed">{current.explanation_vi}</p>
+          ) : (
+            <p className="text-sm italic text-muted">
+              Chưa có file đáp án. Phần này hiện chỉ dùng để ghi giải thích học tập và trang lý thuyết liên quan.
+            </p>
+          )}
+          <ReferencePages question={current} />
+        </section>
       </div>
 
-      {referenceQuestion && (
-        <ReferenceModal references={referenceQuestion.references} onClose={() => setReferenceQuestionId(null)} />
-      )}
+      <div className="flex items-center justify-between gap-2">
+        <button
+          type="button"
+          onClick={() => goTo(state.currentIndex - 1)}
+          disabled={state.currentIndex === 0}
+          className="rounded-lg border border-border px-4 py-2 text-sm disabled:opacity-40"
+        >
+          ← Câu trước
+        </button>
+        <span className="text-xs text-muted">
+          Câu {state.currentIndex + 1}/{questions.length}
+        </span>
+        {hasAnyChoices && state.currentIndex === questions.length - 1 ? (
+          <button
+            type="button"
+            onClick={() => setSubmitted(true)}
+            disabled={submitted}
+            className="rounded-lg bg-accent px-4 py-2 text-sm font-semibold text-accent-foreground disabled:opacity-40"
+          >
+            Nộp bài
+          </button>
+        ) : (
+          <button
+            type="button"
+            onClick={() => goTo(state.currentIndex + 1)}
+            disabled={state.currentIndex === questions.length - 1}
+            className="rounded-lg border border-border px-4 py-2 text-sm disabled:opacity-40"
+          >
+            Câu sau →
+          </button>
+        )}
+      </div>
     </div>
   );
 }
