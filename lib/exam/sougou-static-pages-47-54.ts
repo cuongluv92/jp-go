@@ -167,7 +167,7 @@ export const STATIC_SOUGOU_PAGES_47_54: Record<number, StaticSougouPageSeed> = {
       question_jp:"火力発電に用いられるタービン発電機に関する記述として、最も不適当なものはどれか。",
       question_vi:"Trong các phát biểu về máy phát tua-bin dùng trong nhà máy nhiệt điện, phát biểu nào không phù hợp nhất?",
       choices_jp:["水車発電機に比べて、回転速度が速い。","大容量機では、水素冷却方式が採用される。","回転子は、突極形が採用される。","軸形式は、横軸形が採用される。"],
-      choices_vi:["Tốc độ quay cao hơn máy phát thủy điện.","Máy công suất lớn có thể dùng làm mát bằng hydro.","Rôto dùng kiểu cực lồi.","Kiểu trục thường là trục ngang."],
+      choices_vi:["Tốc độ quay cao hơn máy phát thủy điện.","Máy công suất lớn có thể dùng làm mát bằng khí hiđrô.","Rôto dùng kiểu cực lồi.","Kiểu trục thường là trục ngang."],
       figure_placeholder_jp:null,
       solution_jp:"3. 蒸気タービン発電機は高速回転をするため、回転子は非突極回転界磁形（円筒回転界磁形）である。\n【正解】3",
       solution_vi:"Máy phát tua-bin hơi quay rất nhanh, nên rôto cần chịu lực ly tâm lớn và thường dùng dạng trụ nhẵn, không dùng cực lồi. Vì vậy phương án 3 là sai.\n【Đáp án】3",

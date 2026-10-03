@@ -181,7 +181,7 @@ export const STATIC_SOUGOU_PAGES_55_62: Record<number, StaticSougouPageSeed> = {
       question_jp:"屋内に施設する電動機の過負荷保護を目的に設置する保護装置として、不適当なものはどれか。\nただし、0.2kW以下のものを除く。",
       question_vi:"Thiết bị nào không phù hợp để bảo vệ quá tải cho động cơ lắp trong nhà? Không xét động cơ công suất 0,2 kW trở xuống.",
       choices_jp:["電磁開閉器（電磁接触器とサーマルリレーを組合せたもの）","電動機用ヒューズ（タイムラグヒューズ）","電動機保護用配線用遮断器","不足電圧継電器"],
-      choices_vi:["Khởi động từ điện từ gồm contactor và rơ-le nhiệt.","Cầu chì động cơ loại time-lag.","MCCB/CB chuyên bảo vệ động cơ.","Rơ-le thấp áp."],
+      choices_vi:["Khởi động từ điện từ gồm bộ tiếp xúc điện từ và rơ-le nhiệt.","Cầu chì động cơ loại tác động chậm.","MCCB/CB chuyên bảo vệ động cơ.","Rơ-le thấp áp."],
       figure_placeholder_jp:null,
       solution_jp:"4. 不足電圧継電器は、電圧が低下した時の機械の保護に用いるものであり、電動機の過負荷保護ではない。\n【正解】4",
       solution_vi:"Rơ-le thấp áp tác động khi điện áp nguồn giảm để bảo vệ thiết bị khỏi tình trạng điện áp thấp. Nó không phải phần tử dùng để phát hiện và bảo vệ quá tải của động cơ.\n【Đáp án】4",

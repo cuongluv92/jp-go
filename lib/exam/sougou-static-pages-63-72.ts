@@ -56,7 +56,7 @@ export const STATIC_SOUGOU_PAGES_63_72: Record<number, StaticSougouPageSeed> = {
       question_jp:"高圧受電設備に使用する機器に関する記述として、最も不適当なものはどれか。",
       question_vi:"Trong các phát biểu về thiết bị dùng trong hệ thống nhận điện cao áp, phát biểu nào không phù hợp nhất?",
       choices_jp:["限流ヒューズ付高圧交流負荷開閉器は、高圧限流ヒューズと組み合わせて、電路の短絡電流を遮断する機能を有する。","断路器は、高圧遮断器の電源側に設置し、負荷電流が流れている電路を開閉する機能を有する。","高圧交流電磁接触器は、負荷電流の多頻度の開閉をする機能を有する。","避雷器は、雷および開閉サージによる異常電圧による電流を大地へ分流する機能を有する。"],
-      choices_vi:["LBS cao áp kèm cầu chì hạn dòng có thể kết hợp với cầu chì hạn dòng để cắt dòng ngắn mạch.","Dao cách ly đặt phía nguồn của máy cắt cao áp và có chức năng đóng cắt mạch đang mang dòng tải.","Contactor điện từ cao áp có chức năng đóng cắt dòng tải với tần suất cao.","Chống sét van có chức năng dẫn dòng do quá điện áp sét hoặc xung quá áp do đóng cắt xuống đất."],
+      choices_vi:["LBS cao áp kèm cầu chì hạn dòng có thể kết hợp với cầu chì hạn dòng để cắt dòng ngắn mạch.","Dao cách ly đặt phía nguồn của máy cắt cao áp và có chức năng đóng cắt mạch đang mang dòng tải.","Khởi động từ điện từ cao áp có chức năng đóng cắt dòng tải với tần suất cao.","Chống sét van có chức năng dẫn dòng do quá điện áp sét hoặc xung quá áp do đóng cắt xuống đất."],
       figure_placeholder_jp:null,
       solution_jp:"2. 断路器は、電路の保守点検の際などに、充電された電路を開閉分離するために用いる機器で、負荷電流の開閉を目的としないものである。負荷電流の開閉は高圧負荷開閉器で行う。\n【正解】2",
       solution_vi:"Dao cách ly (断路器) chủ yếu dùng để cách ly mạch phục vụ bảo trì/kiểm tra, không dùng để đóng cắt dòng tải. Việc đóng cắt dòng tải do thiết bị đóng cắt tải cao áp đảm nhiệm.\n【Đáp án】2",

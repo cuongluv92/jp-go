@@ -33,7 +33,7 @@ export const STATIC_SOUGOU_PAGES_37_46: Record<number, StaticSougouPageSeed> = {
       choices_vi:["Điện trở của chất cách điện không đổi theo nhiệt độ.","Điện trở của chất cách điện tăng khi nhiệt độ tăng.","Điện trở của kim loại giảm khi nhiệt độ tăng.","Điện trở của kim loại tăng khi nhiệt độ tăng."],
       figure_placeholder_jp:null,
       solution_jp:"4. 一般に、金属導体の電気抵抗は温度が高くなるに従って増加し、炭素、半導体、絶縁体の電気抵抗は温度が上がるに従って減少する。\n【正解】4",
-      solution_vi:"Với kim loại, khi nhiệt độ tăng thì dao động mạng tinh thể tăng, cản trở chuyển động electron nhiều hơn nên điện trở tăng. Ngược lại, nhiều vật liệu như chất bán dẫn/chất cách điện có xu hướng điện trở giảm khi nhiệt độ tăng.\n【Đáp án】4",
+      solution_vi:"Với kim loại, khi nhiệt độ tăng thì dao động mạng tinh thể tăng, cản trở chuyển động của điện tử nhiều hơn nên điện trở tăng. Ngược lại, nhiều vật liệu như chất bán dẫn/chất cách điện có xu hướng điện trở giảm khi nhiệt độ tăng.\n【Đáp án】4",
       reference_jp:"電気テキスト p.2",explanation_vi:"Mẹo nhớ cho bài thi: 金属 = hệ số nhiệt điện trở dương → nóng lên thì R tăng."
     }),
     ex({type:"exercise",number:40,question_jp:"図のような金属導体Bの抵抗値は、金属導体Aの抵抗値の何倍になるか。\nただし、金属導体の材質及び温度条件は同一とする。",question_vi:"Điện trở của dây dẫn kim loại B gấp bao nhiêu lần dây dẫn A, khi vật liệu và nhiệt độ như nhau?",
