@@ -58,7 +58,7 @@ export const STATIC_SOUGOU_PAGES_47_54: Record<number, StaticSougouPageSeed> = {
       solution_jp:"4. LEDランプは、周囲温度の変化に対して、その光束はほとんど影響を受けない。蛍光ランプは、LEDランプに比べて光束の低下が大きい。\n【正解】4",
       solution_vi:"LED nhìn chung ít bị suy giảm quang thông do biến đổi nhiệt độ môi trường hơn đèn huỳnh quang. Vì vậy phát biểu nói LED giảm quang thông nhiều hơn đèn huỳnh quang là ngược lại.\n【Đáp án】4",
       reference_jp:"電気テキスト p.34（参考）",
-      explanation_vi:"Câu này hỏi so sánh tương đối giữa LED và đèn huỳnh quang. Đừng nhầm với việc LED vẫn cần tản nhiệt tại chip."
+      explanation_vi:"Câu này hỏi so sánh tương đối giữa LED và đèn huỳnh quang. Đừng nhầm với việc LED vẫn cần tản nhiệt tại phần tử bán dẫn."
     })
   ]},
 
@@ -86,7 +86,7 @@ export const STATIC_SOUGOU_PAGES_47_54: Record<number, StaticSougouPageSeed> = {
       solution_jp:"4. 避雷器は、雷や回路の開閉などに起因する過電圧の波高値が一定の値を超えた場合、放電することによって過電圧を制限して電気施設の絶縁を保護し、かつ、続流を短時間のうちに遮断して系統の正常な状態を乱すことなく現状に復帰する機能を持つ装置であり、保護継電システムの構成機器ではない。\n【正解】4",
       solution_vi:"Một hệ thống bảo vệ rơ-le cần phần tử đo lường để lấy tín hiệu, rơ-le để phán đoán và máy cắt để cắt sự cố. Chống sét van có nhiệm vụ hạn chế quá điện áp và bảo vệ cách điện, nhưng không phải phần tử cấu thành chuỗi bảo vệ rơ-le.\n【Đáp án】4",
       reference_jp:"電気テキスト p.38",
-      explanation_vi:"Nhìn theo chuỗi hoạt động: CT/VT → relay → breaker. Arrester hoạt động trực tiếp với quá điện áp, không nằm trong chuỗi này."
+      explanation_vi:"Nhìn theo chuỗi hoạt động: CT/VT → rơle → máy cắt. Chống sét van hoạt động trực tiếp với quá điện áp, không nằm trong chuỗi này."
     }),
     ex({type:"exercise",number:58,
       question_jp:"配電系統に生じる電力損失の軽減対策として、最も不適当なものはどれか。",
@@ -142,10 +142,10 @@ export const STATIC_SOUGOU_PAGES_47_54: Record<number, StaticSougouPageSeed> = {
       question_jp:"火力発電所の燃焼ガスによる大気汚染を軽減するために用いられる装置として、最も不適当なものはどれか。",
       question_vi:"Thiết bị nào không phù hợp nhất khi nói đến thiết bị dùng để giảm ô nhiễm không khí do khí cháy tại nhà máy nhiệt điện?",
       choices_jp:["脱硫装置","脱硝装置","節炭器","電気集じん器"],
-      choices_vi:["Thiết bị khử lưu huỳnh.","Thiết bị khử NOx.","Bộ hâm nước cấp/economizer.","Lọc bụi tĩnh điện."],
+      choices_vi:["Thiết bị khử lưu huỳnh.","Thiết bị khử NOx.","Bộ hâm nước cấp.","Lọc bụi tĩnh điện."],
       figure_placeholder_jp:null,
       solution_jp:"3. 節炭器は、ボイラの燃焼ガスの熱を回収してボイラ給水を予熱し、ボイラ効率を高める装置である。燃焼ガスによる大気汚染の軽減には直接関係しない。\n【正解】3",
-      solution_vi:"Economizer tận dụng nhiệt còn lại của khí thải để gia nhiệt nước cấp, nhằm nâng hiệu suất nồi hơi. Nó không phải thiết bị xử lý chất ô nhiễm. Khử SOx, khử NOx và lọc bụi tĩnh điện mới trực tiếp giảm ô nhiễm khí thải.\n【Đáp án】3",
+      solution_vi:"Bộ hâm nước cấp tận dụng nhiệt còn lại của khí thải để gia nhiệt nước cấp, nhằm nâng hiệu suất nồi hơi. Nó không phải thiết bị xử lý chất ô nhiễm. Khử SOx, khử NOx và lọc bụi tĩnh điện mới trực tiếp giảm ô nhiễm khí thải.\n【Đáp án】3",
       reference_jp:"電気テキスト p.48",
       explanation_vi:"Câu này phân biệt thiết bị nâng hiệu suất nhiệt với thiết bị xử lý môi trường."
     })
@@ -156,12 +156,12 @@ export const STATIC_SOUGOU_PAGES_47_54: Record<number, StaticSougouPageSeed> = {
       question_jp:"図に示す汽力発電の熱サイクルのうち、機器イ、ロの名称の組合せとして、適当なものはどれか。",
       question_vi:"Trong chu trình nhiệt của phát điện hơi nước ở hình, tổ hợp tên thiết bị イ và ロ nào đúng?",
       choices_jp:["イ：節炭器　ロ：復水器","イ：節炭器　ロ：気化器","イ：過熱器　ロ：復水器","イ：過熱器　ロ：気化器"],
-      choices_vi:["イ: Economizer / ロ: Bình ngưng.","イ: Economizer / ロ: Thiết bị hóa hơi.","イ: Bộ quá nhiệt / ロ: Bình ngưng.","イ: Bộ quá nhiệt / ロ: Thiết bị hóa hơi."],
+      choices_vi:["イ: Bộ hâm nước cấp / ロ: Bình ngưng.","イ: Bộ hâm nước cấp / ロ: Thiết bị hóa hơi.","イ: Bộ quá nhiệt / ロ: Bình ngưng.","イ: Bộ quá nhiệt / ロ: Thiết bị hóa hơi."],
       figure_placeholder_jp:"汽力発電の熱サイクル図。ボイラ上部のイ、蒸気タービン下流の熱交換器ロ、給水ポンプを示す。原本図を後で挿入。",
       solution_jp:"給水ポンプからボイラに送り込まれた水（給水）は、飽和蒸気となり過熱器に送られ、さらに過熱されて蒸気タービンに送られる。ここでは熱エネルギーが機械的エネルギーに変換され、蒸気タービンが回転する。蒸気タービンから排出した蒸気（排気）は復水器に入り、冷却されてもとの水（復水）に戻る。この変化を熱サイクル（heat cycle）ランキンサイクルという。\n【正解】3",
       solution_vi:"Sau khi nước cấp vào nồi hơi tạo thành hơi bão hòa, hơi được đưa qua bộ quá nhiệt để nâng nhiệt độ rồi vào tua-bin. Hơi thoát khỏi tua-bin đi vào bình ngưng, được làm lạnh và trở lại thành nước. Vì vậy イ là 過熱器 và ロ là 復水器.\n【Đáp án】3",
       reference_jp:"電気テキスト p.46",
-      explanation_vi:"Theo thứ tự chu trình Rankine: bơm cấp nước → nồi hơi/boiler → quá nhiệt → tua-bin → bình ngưng → bơm."
+      explanation_vi:"Theo thứ tự chu trình Rankine: bơm cấp nước → lò hơi → quá nhiệt → tua-bin → bình ngưng → bơm."
     }),
     ex({type:"exercise",number:64,
       question_jp:"火力発電に用いられるタービン発電機に関する記述として、最も不適当なものはどれか。",
@@ -172,7 +172,7 @@ export const STATIC_SOUGOU_PAGES_47_54: Record<number, StaticSougouPageSeed> = {
       solution_jp:"3. 蒸気タービン発電機は高速回転をするため、回転子は非突極回転界磁形（円筒回転界磁形）である。\n【正解】3",
       solution_vi:"Máy phát tua-bin hơi quay rất nhanh, nên rôto cần chịu lực ly tâm lớn và thường dùng dạng trụ nhẵn, không dùng cực lồi. Vì vậy phương án 3 là sai.\n【Đáp án】3",
       reference_jp:"電気テキスト p.26",
-      explanation_vi:"Đây là cặp ngược với câu 61: steam turbine → tốc độ cao → rôto hình trụ; hydro turbine → tốc độ thấp → rôto cực lồi."
+      explanation_vi:"Đây là cặp ngược với câu 61: tua-bin hơi → tốc độ cao → rôto hình trụ; tua-bin nước → tốc độ thấp → rôto cực lồi."
     })
   ]},
 
@@ -181,10 +181,10 @@ export const STATIC_SOUGOU_PAGES_47_54: Record<number, StaticSougouPageSeed> = {
       question_jp:"送電線路の線路定数に関する次の記述のうち、［　］に当てはまる語句として、適当なものはどれか。\n「送電線路は、抵抗、インダクタンス、［　］、漏れコンダクタンスの4つの定数をもつ連続した電気回路とすることができる。」",
       question_vi:"Trong mô tả về các hằng số đường dây truyền tải, đại lượng nào điền đúng vào chỗ trống? Đường dây có thể được xem là mạch phân bố gồm bốn hằng số: điện trở, điện cảm, ..., và điện dẫn rò.",
       choices_jp:["アドミタンス","インピーダンス","静電容量","漏れ電流"],
-      choices_vi:["Admittance.","Trở kháng.","Điện dung.","Dòng rò."],
+      choices_vi:["Dẫn nạp.","Trở kháng.","Điện dung.","Dòng rò."],
       figure_placeholder_jp:null,
       solution_jp:"3. 送電線路は、抵抗R、インダクタンスL、静電容量Cおよび漏れコンダクタンスgの4つの定数をもった電気回路とみなされ、電線の種類・太さおよびその配置によって定まるもので、電圧・電流または力率などには影響されないのが原則である。\n【正解】3",
-      solution_vi:"Bốn hằng số cơ bản của đường dây là R, L, C và điện dẫn rò g. Vì vậy đại lượng còn thiếu là điện dung 静電容量. Các đại lượng như impedance hay admittance là đại lượng tổng hợp từ các hằng số này.\n【Đáp án】3",
+      solution_vi:"Bốn hằng số cơ bản của đường dây là R, L, C và điện dẫn rò g. Vì vậy đại lượng còn thiếu là điện dung 静電容量. Các đại lượng như tổng trở hay dẫn nạp là đại lượng tổng hợp từ các hằng số này.\n【Đáp án】3",
       reference_jp:"電気テキスト p.57",
       explanation_vi:"Nhớ bộ RL-C-g: điện trở R, điện cảm L, điện dung C, điện dẫn rò g."
     }),

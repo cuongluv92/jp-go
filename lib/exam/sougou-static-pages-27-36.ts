@@ -138,10 +138,10 @@ export const STATIC_SOUGOU_PAGES_27_36: Record<number, StaticSougouPageSeed> = {
     }),
     ex({type:"exercise",number:31,question_jp:"事業者が、遅滞なく、報告書を所轄労働基準監督署長に提出しなければならない場合として、「労働安全衛生法」上、定められていないものはどれか。",question_vi:"Theo Luật An toàn và vệ sinh lao động, trường hợp nào không thuộc nhóm phải lập tức nộp báo cáo cho cơ quan thanh tra lao động?",
       choices_jp:["事業場で火災又は爆発の事故が発生したとき","ゴンドラのワイヤロープの切断の事故が発生したとき","つり上げ荷重が5tの移動式クレーンの倒壊の事故が発生したとき","休業の日数が4日に満たない労働災害が発生したとき"],
-      choices_vi:["Xảy ra cháy hoặc nổ tại cơ sở.","Đứt cáp thép của gondola.","Cần cẩu di động tải nâng 5 t bị đổ.","Tai nạn lao động khiến nghỉ việc dưới 4 ngày."],
+      choices_vi:["Xảy ra cháy hoặc nổ tại cơ sở.","Đứt cáp thép của sàn thao tác treo.","Cần cẩu di động tải nâng 5 t bị đổ.","Tai nạn lao động khiến nghỉ việc dưới 4 ngày."],
       figure_placeholder_jp:null,
       solution_jp:"4. 労働安全衛生規則第96条第1項に定める事故は遅滞なく報告する必要がある。一方、休業の日数が4日に満たない労働災害は、一定期間ごとにまとめて報告する扱いであり、遅滞なく提出する対象ではない。\n【正解】4",
-      solution_vi:"Các sự cố nghiêm trọng như cháy nổ, đứt cáp gondola hay đổ cần cẩu thuộc nhóm phải báo cáo không chậm trễ. Tai nạn làm nghỉ việc dưới 4 ngày được tổng hợp báo cáo định kỳ, không thuộc nhóm phải nộp ngay.\n【Đáp án】4",
+      solution_vi:"Các sự cố nghiêm trọng như cháy nổ, đứt cáp sàn thao tác treo hay đổ cần cẩu thuộc nhóm phải báo cáo không chậm trễ. Tai nạn làm nghỉ việc dưới 4 ngày được tổng hợp báo cáo định kỳ, không thuộc nhóm phải nộp ngay.\n【Đáp án】4",
       reference_jp:null,explanation_vi:"Câu bẫy nằm ở từ '遅滞なく'. Không phải mọi tai nạn lao động đều có cùng thời hạn báo cáo."
     })
   ]},

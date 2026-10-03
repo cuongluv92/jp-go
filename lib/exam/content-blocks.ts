@@ -23,6 +23,9 @@ const nullableStringArray = z.array(z.string()).nullable();
 export const furiganaTokenSchema = z.object({
   surface: z.string().min(1),
   reading: z.string().min(1),
+  // Vị trí 0-based trong đúng chuỗi đang hiển thị. Có start thì cùng một
+  // chữ/từ xuất hiện nhiều lần vẫn nhận đúng cách đọc theo ngữ cảnh.
+  start: z.number().int().min(0).optional(),
 });
 
 // Furigana / typography là metadata bổ sung: nội dung/import cũ không bắt buộc phải có.

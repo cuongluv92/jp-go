@@ -20,10 +20,10 @@ export const STATIC_SOUGOU_PAGES_37_46: Record<number, StaticSougouPageSeed> = {
   ]},
   38:{sectionCode:"ch2-2",content_blocks:[
     ex({type:"exercise",number:38,question_jp:"分別解体等及び再資源化等を促進するため、特定建設資材として、「建設工事に係る資材の再資源化等に関する法律」上、定められていないものはどれか。",question_vi:"Theo Luật Tái chế vật liệu xây dựng, loại nào không thuộc 特定建設資材?",
-      choices_jp:["電線","アスファルト・コンクリート","木材","コンクリート"],choices_vi:["Dây điện.","Bê tông nhựa asphalt.","Gỗ.","Bê tông."],
+      choices_jp:["電線","アスファルト・コンクリート","木材","コンクリート"],choices_vi:["Dây điện.","Bê tông nhựa nhựa đường.","Gỗ.","Bê tông."],
       figure_placeholder_jp:null,
       solution_jp:"1. 特定建設資材とは、コンクリート、コンクリート及び鉄から成る建設資材、木材、アスファルト・コンクリートである。電線は含まれない。\n【正解】1",
-      solution_vi:"Nhóm 特定建設資材 gồm bê tông, vật liệu xây dựng gồm bê tông và sắt, gỗ và bê tông nhựa asphalt. Dây điện không nằm trong danh mục này.\n【Đáp án】1",
+      solution_vi:"Nhóm 特定建設資材 gồm bê tông, vật liệu xây dựng gồm bê tông và sắt, gỗ và bê tông nhựa nhựa đường. Dây điện không nằm trong danh mục này.\n【Đáp án】1",
       reference_jp:"施工マニュアル p.304",explanation_vi:"Cần học đúng danh mục 4 nhóm. Điện線 tuy là vật liệu công trình nhưng không phải 特定建設資材 theo luật này."
     })
   ]},
@@ -85,7 +85,7 @@ export const STATIC_SOUGOU_PAGES_37_46: Record<number, StaticSougouPageSeed> = {
       figure_placeholder_jp:"コンデンサCのみの交流回路と位相波形1～4。原本図を後で挿入。",
       solution_jp:"1. は抵抗だけの回路で同相である。\n2. はコイル（インダクタンス）だけの回路で遅相である。\n3. は設問の図の通りコンデンサ（静電容量）だけの回路で進相である。\n4. は電圧と電流が逆相の図である。\n【正解】3",
       solution_vi:"Mạch thuần R: v và i cùng pha. Mạch thuần L: dòng trễ pha so với điện áp. Mạch thuần C: dòng sớm pha hơn điện áp 90°. Vì hình 3 thể hiện i sớm v nên đúng.\n【Đáp án】3",
-      reference_jp:"電気テキスト p.16, 18",explanation_vi:"Câu nhớ nhanh: C → current leads; L → current lags. Với tụ, i sớm v một góc π/2."
+      reference_jp:"電気テキスト p.16, 18",explanation_vi:"Câu nhớ nhanh: C → dòng điện sớm pha; L → dòng điện trễ pha. Với tụ, i sớm v một góc π/2."
     })
   ]},
   44:{sectionCode:"ch2-3",content_blocks:[
@@ -105,12 +105,12 @@ export const STATIC_SOUGOU_PAGES_37_46: Record<number, StaticSougouPageSeed> = {
       solution_vi:"Cần mở rộng thang 10 V lên 100 V, tức hệ số 10. Tổng điện trở cần tăng lên 10 lần điện trở trong: R_tổng = 10×10 kΩ = 100 kΩ. Trừ điện trở trong 10 kΩ, điện trở nối tiếp cần thêm là 90 kΩ.\n【Đáp án】3",
       reference_jp:"電気テキスト p.23",explanation_vi:"Vôn kế mở rộng thang bằng điện trở nối tiếp. Công thức nhanh: R_m = (n−1)R_v, với n = V_mới/V_cũ = 10."
     }),
-    ex({type:"exercise",number:48,question_jp:"図に示す、最大目盛10mA、内部抵抗9Ωの電流計を使用し、最大電流0.1Aまで測定するための分流器R_sの抵抗値［Ω］として、正しいものはどれか。",question_vi:"Ampe kế toàn thang 10 mA, điện trở trong 9 Ω. Muốn đo đến 0,1 A thì điện trở shunt R_s bằng bao nhiêu?",
+    ex({type:"exercise",number:48,question_jp:"図に示す、最大目盛10mA、内部抵抗9Ωの電流計を使用し、最大電流0.1Aまで測定するための分流器R_sの抵抗値［Ω］として、正しいものはどれか。",question_vi:"Ampe kế toàn thang 10 mA, điện trở trong 9 Ω. Muốn đo đến 0,1 A thì điện trở phân dòng R_s bằng bao nhiêu?",
       choices_jp:["0.9Ω","1Ω","81Ω","90Ω"],choices_vi:["0,9 Ω","1 Ω","81 Ω","90 Ω"],
       figure_placeholder_jp:"電流計と分流器R_sの並列回路。原本図を後で挿入。",
       solution_jp:"最大0.1Aでは、計器に0.01A、分流器に0.09Aが流れる。電流比 I_a:I_s=0.01:0.09=1:9。並列なので電圧は等しく、抵抗比は電流比の逆となる。R_a:R_s=9:1。R_a=9Ωより R_s=1Ω。\n【正解】2",
-      solution_vi:"Ở dòng tổng 0,1 A, ampe kế chỉ được nhận 0,01 A nên shunt phải mang 0,09 A. Hai nhánh song song có cùng điện áp, vì vậy điện trở tỉ lệ nghịch dòng: 9 Ω : R_s = 0,09 : 0,01 = 9 : 1. Suy ra R_s = 1 Ω.\n【Đáp án】2",
-      reference_jp:"電気テキスト p.23",explanation_vi:"Ampe kế mở rộng thang bằng shunt song song, ngược với vôn kế dùng điện trở nối tiếp."
+      solution_vi:"Ở dòng tổng 0,1 A, ampe kế chỉ được nhận 0,01 A nên nhánh phân dòng phải mang 0,09 A. Hai nhánh song song có cùng điện áp, vì vậy điện trở tỉ lệ nghịch dòng: 9 Ω : R_s = 0,09 : 0,01 = 9 : 1. Suy ra R_s = 1 Ω.\n【Đáp án】2",
+      reference_jp:"電気テキスト p.23",explanation_vi:"Ampe kế mở rộng thang bằng điện trở phân dòng mắc song song, ngược với vôn kế dùng điện trở nối tiếp."
     })
   ]},
   46:{sectionCode:"ch2-4",content_blocks:[
@@ -121,13 +121,13 @@ export const STATIC_SOUGOU_PAGES_37_46: Record<number, StaticSougouPageSeed> = {
       solution_vi:"Tụ bù cung cấp công suất phản kháng tại chỗ, nhờ đó giảm dòng phản kháng, giảm tổn thất và sụt áp, đồng thời bù dòng trễ của tải cảm. Tần số hệ thống chủ yếu phụ thuộc tốc độ máy phát và cân bằng công suất, không do tụ bù này điều khiển.\n【Đáp án】3",
       reference_jp:"電気テキスト p.53, 125",explanation_vi:"Nhớ: tụ bù xử lý vấn đề cosφ/無効電力; điều khiển tần số là nhiệm vụ của điều tốc và hệ thống điều khiển tần số."
     }),
-    ex({type:"exercise",number:50,question_jp:"変電所に用いる分路リアクトルに関する次の記述のうち、［ア］［イ］に当てはまる語句の組合せとして、適当なものはどれか。\n「分路リアクトルは、深夜などの軽負荷時に誘導性の負荷が少なくなったとき、長距離送電線やケーブル系統などの［ア］電流による、受電端の電圧［イ］を抑制するために用いる。」",question_vi:"Trong mô tả về shunt reactor dùng ở trạm biến áp, tổ hợp nào đúng cho [ア] và [イ]?",
+    ex({type:"exercise",number:50,question_jp:"変電所に用いる分路リアクトルに関する次の記述のうち、［ア］［イ］に当てはまる語句の組合せとして、適当なものはどれか。\n「分路リアクトルは、深夜などの軽負荷時に誘導性の負荷が少なくなったとき、長距離送電線やケーブル系統などの［ア］電流による、受電端の電圧［イ］を抑制するために用いる。」",question_vi:"Trong mô tả về cuộn kháng bù ngang dùng ở trạm biến áp, tổ hợp nào đúng cho [ア] và [イ]?",
       choices_jp:["ア：進相　イ：上昇","ア：進相　イ：低下","ア：遅相　イ：上昇","ア：遅相　イ：低下"],
       choices_vi:["[ア] Dòng sớm pha / [イ] Điện áp tăng.","[ア] Dòng sớm pha / [イ] Điện áp giảm.","[ア] Dòng trễ pha / [イ] Điện áp tăng.","[ア] Dòng trễ pha / [イ] Điện áp giảm."],
       figure_placeholder_jp:null,
       solution_jp:"1. ア：進相　イ：上昇\n【正解】1",
-      solution_vi:"Khi tải nhẹ, điện dung của đường dây dài/cáp tạo dòng điện sớm pha và có thể làm điện áp phía nhận tăng lên (hiệu ứng Ferranti). Shunt reactor hấp thụ công suất phản kháng dung kháng để hạn chế hiện tượng tăng áp đó.\n【Đáp án】1",
-      reference_jp:"電気テキスト p.53",explanation_vi:"Vì vậy cặp đúng là 進相 + 上昇. Có thể nhớ: shunt reactor dùng để 'ăn bớt' phản kháng dung khi tải nhẹ."
+      solution_vi:"Khi tải nhẹ, điện dung của đường dây dài/cáp tạo dòng điện sớm pha và có thể làm điện áp phía nhận tăng lên (hiệu ứng Ferranti). Cuộn kháng bù ngang hấp thụ công suất phản kháng dung kháng để hạn chế hiện tượng tăng áp đó.\n【Đáp án】1",
+      reference_jp:"電気テキスト p.53",explanation_vi:"Vì vậy cặp đúng là 進相 + 上昇. Có thể nhớ: cuộn kháng bù ngang dùng để 'ăn bớt' phản kháng dung khi tải nhẹ."
     })
   ]}
 };

@@ -42,12 +42,12 @@ export const STATIC_SOUGOU_PAGES_55_62: Record<number, StaticSougouPageSeed> = {
       question_jp:"架空送電線路に関する次の記述に該当する機材の名称として、最も適当なものはどれか。\n「電線の周りに数本巻き付けて、電線が風の流れと定常的な共振状態になることを防止し、電線特有の風音の発生を抑制する。」",
       question_vi:"Thiết bị nào phù hợp nhất với mô tả: quấn vài thanh quanh dây dẫn để ngăn dây rơi vào trạng thái cộng hưởng ổn định với luồng gió và hạn chế tiếng gió đặc trưng của dây?",
       choices_jp:["スパイラルロッド","アーマロッド","スペーサ","ダンパ"],
-      choices_vi:["Spiral rod.","Armor rod.","Spacer.","Damper."],
+      choices_vi:["Thanh xoắn chống rung.","Thanh giáp bảo vệ.","Thanh định khoảng.","Bộ giảm chấn."],
       figure_placeholder_jp:null,
       solution_jp:"2. アーマロッドは、懸垂クランプ部における電線の振動疲労による素線切れ防止対策および事故電流による溶断防止策として、電線と同じ材質の金属を電線に巻き付けて補強するものである。一般にあらかじめ電線に沿うように整形されたプレホームドアーマロッドが使用されている。\n3. スペーサは、多導体の電線相互間の間隔を保持するもので、強風による電線相互の接近、接触や、事故時の短絡電流による電磁吸引力による電線損傷を防止することを目的としている。\n4. ダンパは、微風振動による電線の疲労、破損などを防止する目的で電線の振動エネルギーを吸収させるものとして電線に取り付けられる。種類としては、電線把持部近くの振幅が最大となる箇所に取付ける重錘式ダンパと、電線把持部近くの電線に添わせる添線式ダンパがある。\n【正解】1",
-      solution_vi:"Mô tả này là スパイラルロッド: quấn dạng xoắn quanh dây để làm thay đổi đặc tính khí động, tránh cộng hưởng ổn định với gió và giảm tiếng ồn do gió. Armor rod chủ yếu gia cường vùng kẹp; spacer giữ khoảng cách dây bó; damper hấp thụ năng lượng rung.\n【Đáp án】1",
+      solution_vi:"Mô tả này là スパイラルロッド: quấn dạng xoắn quanh dây để làm thay đổi đặc tính khí động, tránh cộng hưởng ổn định với gió và giảm tiếng ồn do gió. Thanh giáp bảo vệ chủ yếu gia cường vùng kẹp; thanh định khoảng giữ khoảng cách dây bó; bộ giảm chấn hấp thụ năng lượng rung.\n【Đáp án】1",
       reference_jp:"電気テキスト p.61",
-      explanation_vi:"Cùng liên quan rung nhưng chức năng khác nhau: spiral rod thay đổi hiện tượng khí động; damper hấp thụ năng lượng; armor rod gia cường; spacer giữ khoảng cách."
+      explanation_vi:"Cùng liên quan rung nhưng chức năng khác nhau: thanh xoắn chống rung làm thay đổi đặc tính khí động; bộ giảm chấn hấp thụ năng lượng; thanh giáp bảo vệ gia cường; thanh định khoảng giữ khoảng cách."
     })
   ]},
 
@@ -56,23 +56,23 @@ export const STATIC_SOUGOU_PAGES_55_62: Record<number, StaticSougouPageSeed> = {
       question_jp:"架空送電線における電線振動対策に関する次の文章中、［イ］［ロ］に当てはまる語句の組合せとして、適当なものはどれか。\n「電線振動対策には、電線支持点のクランプ付近で電線を補強する［イ］や、振動エネルギーを吸収する［ロ］などがある。」",
       question_vi:"Trong biện pháp chống rung dây dẫn trên đường dây truyền tải trên không, tổ hợp nào đúng cho [イ] thiết bị gia cường dây gần kẹp đỡ và [ロ] thiết bị hấp thụ năng lượng rung?",
       choices_jp:["イ：アーマロッド　ロ：ダンパ","イ：アーマロッド　ロ：スペーサ","イ：アークホーン　ロ：ダンパ","イ：アークホーン　ロ：スペーサ"],
-      choices_vi:["[イ] Armor rod / [ロ] Damper.","[イ] Armor rod / [ロ] Spacer.","[イ] Arc horn / [ロ] Damper.","[イ] Arc horn / [ロ] Spacer."],
+      choices_vi:["[イ] Thanh giáp bảo vệ / [ロ] Bộ giảm chấn.","[イ] Thanh giáp bảo vệ / [ロ] Thanh định khoảng.","[イ] Sừng phóng điện / [ロ] Bộ giảm chấn.","[イ] Sừng phóng điện / [ロ] Thanh định khoảng."],
       figure_placeholder_jp:null,
       solution_jp:"電線振動による断線を防ぐ方法としては、クランプ近くの電線を補強するアーマロッド、適当な制動力をつけて振動を防止するダンパなどがある。\n【正解】1",
-      solution_vi:"Armor rod được quấn quanh dây tại vùng gần kẹp để gia cường và giảm hư hỏng do rung. Damper tạo lực cản và hấp thụ năng lượng rung. Vì vậy cặp đúng là アーマロッド + ダンパ.\n【Đáp án】1",
+      solution_vi:"Thanh giáp bảo vệ được quấn quanh dây tại vùng gần kẹp để gia cường và giảm hư hỏng do rung. Bộ giảm chấn tạo lực cản và hấp thụ năng lượng rung. Vì vậy cặp đúng là アーマロッド + ダンパ.\n【Đáp án】1",
       reference_jp:"電気テキスト p.61",
-      explanation_vi:"Arc horn là thiết bị liên quan bảo vệ hồ quang/sét; spacer dùng cho dây bó. Hai thiết bị đó không phù hợp với hai chức năng được mô tả."
+      explanation_vi:"Sừng phóng điện là thiết bị liên quan bảo vệ hồ quang/sét; thanh định khoảng dùng cho dây bó. Hai thiết bị đó không phù hợp với hai chức năng được mô tả."
     }),
     ex({type:"exercise",number:72,
       question_jp:"架空送電線路に取り付けるダンパの目的として、適当なものはどれか。",
-      question_vi:"Mục đích đúng của damper lắp trên đường dây truyền tải trên không là gì?",
+      question_vi:"Mục đích đúng của bộ giảm chấn lắp trên đường dây truyền tải trên không là gì?",
       choices_jp:["電線に着雪しにくくする。","雷によるフラッシオーバを防止する。","風による電線の振動疲労を防止する。","風による電線の騒音発生を防止する。"],
       choices_vi:["Làm dây khó bám tuyết.","Ngăn flashover do sét.","Ngăn mỏi rung của dây do gió.","Ngăn tiếng ồn của dây do gió."],
       figure_placeholder_jp:null,
       solution_jp:"3. 微風振動により起因する電線の疲労、損傷などを防止するためダンパが取り付けられる。重錘式ダンパ（トーショナルダンパなど）と添線式ダンパ（ベートダンパなど）がある。\n【正解】3",
-      solution_vi:"Damper được lắp để hấp thụ rung do gió nhẹ kéo dài, tránh mỏi và hư hỏng dây dẫn. Đây là chức năng chống rung cơ học, không phải chống sét, chống tuyết hay chủ yếu giảm tiếng ồn.\n【Đáp án】3",
+      solution_vi:"Bộ giảm chấn được lắp để hấp thụ rung do gió nhẹ kéo dài, tránh mỏi và hư hỏng dây dẫn. Đây là chức năng chống rung cơ học, không phải chống sét, chống tuyết hay chủ yếu giảm tiếng ồn.\n【Đáp án】3",
       reference_jp:"電気テキスト p.61",
-      explanation_vi:"Từ khóa của damper trong đề là 微風振動 và 疲労・損傷."
+      explanation_vi:"Từ khóa của bộ giảm chấn trong đề là 微風振動 và 疲労・損傷."
     })
   ]},
 
@@ -81,7 +81,7 @@ export const STATIC_SOUGOU_PAGES_55_62: Record<number, StaticSougouPageSeed> = {
       question_jp:"塩害地域における架空送電線路の塩害対策に関する記述として、不適当なものはどれか。",
       question_vi:"Trong các biện pháp chống tác hại của muối cho đường dây truyền tải trên không ở vùng nhiễm mặn, phát biểu nào không phù hợp?",
       choices_jp:["懸垂がいしの個数を増加する。","長幹がいしやスモッグがいしを採用する。","がいしをV吊りにする。","シリコンコンパウンドをがいしに塗布する。"],
-      choices_vi:["Tăng số lượng cách điện treo.","Dùng cách điện long-rod hoặc cách điện chống sương muối/smog.","Treo cách điện theo dạng chữ V.","Phủ hợp chất silicone lên cách điện."],
+      choices_vi:["Tăng số lượng cách điện treo.","Dùng sứ thanh dài hoặc sứ chống ô nhiễm muối/khói.","Treo cách điện theo dạng chữ V.","Phủ hợp chất silicone lên cách điện."],
       figure_placeholder_jp:null,
       solution_jp:"3. がいしのV吊りは、架空送電の懸垂鉄塔で用いられる方法で、懸垂個所でのがいしの横揺れを防ぎ、線下幅を節約し用地費の軽減を図る効果がある。塩害対策とは直接関係はない。\n【正解】3",
       solution_vi:"Treo chuỗi cách điện hình V chủ yếu hạn chế lắc ngang của chuỗi cách điện và giúp thu hẹp hành lang tuyến, không phải biện pháp trực tiếp chống nhiễm muối. Các biện pháp còn lại đều tăng khả năng chống bẩn/ẩm/muối của cách điện.\n【Đáp án】3",
@@ -136,7 +136,7 @@ export const STATIC_SOUGOU_PAGES_55_62: Record<number, StaticSougouPageSeed> = {
       solution_jp:"1. ACBとは、気中遮断器（air circuit-breaker）のことであり、電路の開閉が大気中で行われるもので、周波数50Hzまたは60Hzの交流低圧および直流の電路に使用される。\n2. GCBとは、ガス遮断器（gas circuit-breaker）のことであり、SF₆ガスをアークに吹き付けて消弧するものである。\n3. OCBとは、油遮断器（oil circuit-breaker）のことであり、電路の開閉が油中で行われるもの。\n設問の記述は、4.のVCB（真空遮断器：vacuum circuit-breaker）である。\n【正解】4",
       solution_vi:"VCB dập hồ quang trong môi trường chân không. ACB dùng không khí, GCB dùng khí SF₆, OCB dùng dầu. Vì vậy mô tả của đề là VCB.\n【Đáp án】4",
       reference_jp:"電気テキスト p.29, p.126",
-      explanation_vi:"Nhớ theo chữ cái đầu: A = Air, G = Gas, O = Oil, V = Vacuum."
+      explanation_vi:"Nhớ theo chữ cái đầu: A = không khí, G = khí, O = dầu, V = chân không."
     }),
     ex({type:"exercise",number:78,
       question_jp:"架空配電線路の保護に用いられる機器または装置として、不適当なものはどれか。",
@@ -147,7 +147,7 @@ export const STATIC_SOUGOU_PAGES_55_62: Record<number, StaticSougouPageSeed> = {
       solution_jp:"4. こう長が長く電圧降下が大きい配電線において、変電所の電圧調整だけでは需要家の電圧を許容電圧範囲内に保持することが困難なため、線路用電圧調整器（ステップ式自動電圧調整器）が使用され、変電所出口から末端に至る配電線路途中に施設される。したがって、自動電圧調整器は、各事故に対する保護機器ではない。\n【正解】4",
       solution_vi:"Bộ điều chỉnh điện áp tự động được lắp trên tuyến để bù sụt áp và giữ điện áp khách hàng trong phạm vi cho phép. Nó là thiết bị điều chỉnh điện áp, không phải thiết bị bảo vệ sự cố.\n【Đáp án】4",
       reference_jp:"電気テキスト p.38",
-      explanation_vi:"Các thiết bị bảo vệ phản ứng với bất thường/sự cố; AVR/step voltage regulator chỉ duy trì mức điện áp."
+      explanation_vi:"Các thiết bị bảo vệ phản ứng với bất thường/sự cố; AVR/bộ điều chỉnh điện áp theo nấc chỉ duy trì mức điện áp."
     })
   ]},
 

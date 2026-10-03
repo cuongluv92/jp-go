@@ -17,12 +17,12 @@ export const STATIC_SOUGOU_PAGES_63_72: Record<number, StaticSougouPageSeed> = {
       question_jp:"屋内の低圧配線方法と造営材に取り付ける場合の支持点間の距離の組合せとして、「内線規程」上、最も不適当なものはどれか。",
       question_vi:"Theo Nội quy dây dẫn trong nhà (内線規程), tổ hợp nào giữa phương pháp đi dây hạ áp trong nhà và khoảng cách giữa các điểm đỡ khi gắn lên kết cấu là không phù hợp nhất?",
       choices_jp:["合成樹脂管（PF管）―1m以下","金属管―2m以下","金属ダクト―3m以下","ライティングダクト―3m以下"],
-      choices_vi:["Ống nhựa tổng hợp (PF) — không quá 1 m.","Ống kim loại — không quá 2 m.","Máng kim loại — không quá 3 m.","Lighting duct — không quá 3 m."],
+      choices_vi:["Ống nhựa tổng hợp (PF) — không quá 1 m.","Ống kim loại — không quá 2 m.","Máng kim loại — không quá 3 m.","Máng cấp điện cho đèn — không quá 3 m."],
       figure_placeholder_jp:null,
       solution_jp:"4. 内線規程3150-4（ライティングダクトの施設方法）に「ライティングダクトを造営材に取り付ける場合は、次により堅固に取り付けること」「支持点の距離は2m以下とすること」と規定されている。\n【正解】4",
-      solution_vi:"Lighting duct khi gắn vào kết cấu phải được cố định chắc chắn và khoảng cách giữa các điểm đỡ không được vượt quá 2 m. Vì vậy ghi 3 m là sai.\n【Đáp án】4",
+      solution_vi:"Máng cấp điện cho đèn khi gắn vào kết cấu phải được cố định chắc chắn và khoảng cách giữa các điểm đỡ không được vượt quá 2 m. Vì vậy ghi 3 m là sai.\n【Đáp án】4",
       reference_jp:"電気テキスト p.111",
-      explanation_vi:"Điểm bẫy là lighting duct: giới hạn hỗ trợ là 2 m, không phải 3 m."
+      explanation_vi:"Điểm bẫy là máng cấp điện cho đèn: giới hạn hỗ trợ là 2 m, không phải 3 m."
     })
   ]},
 
@@ -56,7 +56,7 @@ export const STATIC_SOUGOU_PAGES_63_72: Record<number, StaticSougouPageSeed> = {
       question_jp:"高圧受電設備に使用する機器に関する記述として、最も不適当なものはどれか。",
       question_vi:"Trong các phát biểu về thiết bị dùng trong hệ thống nhận điện cao áp, phát biểu nào không phù hợp nhất?",
       choices_jp:["限流ヒューズ付高圧交流負荷開閉器は、高圧限流ヒューズと組み合わせて、電路の短絡電流を遮断する機能を有する。","断路器は、高圧遮断器の電源側に設置し、負荷電流が流れている電路を開閉する機能を有する。","高圧交流電磁接触器は、負荷電流の多頻度の開閉をする機能を有する。","避雷器は、雷および開閉サージによる異常電圧による電流を大地へ分流する機能を有する。"],
-      choices_vi:["LBS cao áp kèm cầu chì hạn dòng có thể kết hợp với cầu chì hạn dòng để cắt dòng ngắn mạch.","Dao cách ly đặt phía nguồn của máy cắt cao áp và có chức năng đóng cắt mạch đang mang dòng tải.","Contactor điện từ cao áp có chức năng đóng cắt dòng tải với tần suất cao.","Chống sét van có chức năng dẫn dòng do quá điện áp sét hoặc surge đóng cắt xuống đất."],
+      choices_vi:["LBS cao áp kèm cầu chì hạn dòng có thể kết hợp với cầu chì hạn dòng để cắt dòng ngắn mạch.","Dao cách ly đặt phía nguồn của máy cắt cao áp và có chức năng đóng cắt mạch đang mang dòng tải.","Contactor điện từ cao áp có chức năng đóng cắt dòng tải với tần suất cao.","Chống sét van có chức năng dẫn dòng do quá điện áp sét hoặc xung quá áp do đóng cắt xuống đất."],
       figure_placeholder_jp:null,
       solution_jp:"2. 断路器は、電路の保守点検の際などに、充電された電路を開閉分離するために用いる機器で、負荷電流の開閉を目的としないものである。負荷電流の開閉は高圧負荷開閉器で行う。\n【正解】2",
       solution_vi:"Dao cách ly (断路器) chủ yếu dùng để cách ly mạch phục vụ bảo trì/kiểm tra, không dùng để đóng cắt dòng tải. Việc đóng cắt dòng tải do thiết bị đóng cắt tải cao áp đảm nhiệm.\n【Đáp án】2",
@@ -72,7 +72,7 @@ export const STATIC_SOUGOU_PAGES_63_72: Record<number, StaticSougouPageSeed> = {
       solution_jp:"1. JIS C 4604において、Cは「リアクトルなしコンデンサ用」である。\n【正解】1",
       solution_vi:"Theo JIS C 4604, ký hiệu C là loại dùng cho tụ điện không có cuộn kháng. Vì vậy mô tả “tụ điện có cuộn kháng” là sai.\n【Đáp án】1",
       reference_jp:"電気テキスト p.127",
-      explanation_vi:"Nhớ ba ký hiệu thường gặp: G = general, M = motor, T = transformer; C là capacitor loại không kèm reactor."
+      explanation_vi:"Nhớ ba ký hiệu thường gặp: G = dùng chung, M = động cơ, T = máy biến áp; C là tụ điện loại không kèm cuộn kháng."
     })
   ]},
 
@@ -168,25 +168,25 @@ export const STATIC_SOUGOU_PAGES_63_72: Record<number, StaticSougouPageSeed> = {
   70: { sectionCode:"ch2-6", content_blocks:[
     ex({type:"exercise",number:95,
       question_jp:"電車線路のちょう架方式におけるコンパウンドカテナリ式の図として、適当なものはどれか。",
-      question_vi:"Trong các hình về phương thức treo dây tiếp xúc đường sắt điện, hình nào là hệ compound catenary?",
+      question_vi:"Trong các hình về phương thức treo dây tiếp xúc đường sắt điện, hình nào là hệ dây treo phức hợp?",
       choices_jp:["図1","図2","図3","図4"],
       choices_vi:["Hình 1","Hình 2","Hình 3","Hình 4"],
       figure_placeholder_jp:"図1〜4：電車線路のちょう架方式。図1はちょう架線・補助ちょう架線・ハンガ・ドロッパ・トロリ線を示す。原本図を後で挿入。",
       solution_jp:"2. ツインシンプル式と呼ばれるもので、既設電化区間（シンプル式）の架高を変更しないで高速度・集電性能を上げることができる方式。架高の小さいトンネル区間にも使われる。\n3. シンプル式と呼ばれるもので、カテナリちょう架式の基本的、代表的なものである。集電容量は中程度で、速度も最高100km/h程度の中速用で、広く採用されている。\n4. ダブルメッセンジャ式と呼ばれるもので、2本のちょう架線で1本のトロリ線をV字形に吊す方式。橋りょうなどの、長径間用の耐風構造の方式。\n【正解】1",
-      solution_vi:"Hệ compound catenary có dây treo chính, dây treo phụ và dây trolley; hình 1 thể hiện đúng cấu trúc đó. Hình 2 là twin simple, hình 3 là simple và hình 4 là double messenger.\n【Đáp án】1",
+      solution_vi:"Hệ dây treo phức hợp có dây treo chính, dây treo phụ và dây tiếp xúc; hình 1 thể hiện đúng cấu trúc đó. Hình 2 là hệ dây treo đơn kép, hình 3 là hệ dây treo đơn và hình 4 là hệ hai dây treo chính.\n【Đáp án】1",
       reference_jp:"電気テキスト p.77",
-      explanation_vi:"Nhận dạng compound catenary bằng tầng dây treo phụ nằm giữa messenger và trolley."
+      explanation_vi:"Nhận dạng dây treo phức hợp bằng tầng dây treo phụ nằm giữa dây treo chính và dây tiếp xúc."
     }),
     ex({type:"exercise",number:96,
       question_jp:"図に示す電車線路のシンプル架線において、機材イ、ロの名称の組合せとして、適当なものはどれか。",
       question_vi:"Trong hệ treo đơn giản của dây tiếp xúc đường sắt điện như hình, tổ hợp tên của bộ phận イ và ロ nào đúng?",
       choices_jp:["イ：ちょう架線　ロ：ハンガ","イ：ちょう架線　ロ：ドロッパ","イ：補助ちょう架線　ロ：ハンガ","イ：補助ちょう架線　ロ：ドロッパ"],
-      choices_vi:["イ: dây treo / ロ: hanger.","イ: dây treo / ロ: dropper.","イ: dây treo phụ / ロ: hanger.","イ: dây treo phụ / ロ: dropper."],
+      choices_vi:["イ: dây treo chính / ロ: dây treo đứng.","イ: dây treo chính / ロ: dây thả.","イ: dây treo phụ / ロ: dây treo đứng.","イ: dây treo phụ / ロ: dây thả."],
       figure_placeholder_jp:"図：シンプル架線。上部のちょう架線、下部のトロリ線、両者をつなぐハンガを示す。原本図を後で挿入。",
       solution_jp:"1. ちょう架線とは、架空電車線において、ハンガを介してトロリ線を、吊り上げるために電車線の最上部に架設される電線である。ハンガとは、トロリ線をちょう架線または補助ちょう架線に吊り上げるための金具である。\n【正解】1",
-      solution_vi:"イ là ちょう架線 (dây treo chính) ở phía trên; ロ là ハンガ nối dây treo với trolley wire.\n【Đáp án】1",
+      solution_vi:"イ là ちょう架線 (dây treo chính) ở phía trên; ロ là ハンガ nối dây treo chính với dây tiếp xúc.\n【Đáp án】1",
       reference_jp:"電気テキスト p.77, p.80",
-      explanation_vi:"Trong hệ simple catenary không có dây treo phụ; trolley được treo trực tiếp từ messenger bằng hanger."
+      explanation_vi:"Trong hệ dây treo đơn không có dây treo phụ; dây tiếp xúc được treo trực tiếp từ dây treo chính bằng dây treo đứng."
     })
   ]},
 
@@ -195,12 +195,12 @@ export const STATIC_SOUGOU_PAGES_63_72: Record<number, StaticSougouPageSeed> = {
       question_jp:"電車線において、速度100km/h以上の運転区間に用いられるちょう架方式として、不適当なものはどれか。",
       question_vi:"Trong dây tiếp xúc đường sắt điện, phương thức treo nào không phù hợp cho đoạn khai thác ở tốc độ từ 100 km/h trở lên?",
       choices_jp:["ヘビーシンプルカテナリ式","コンパウンドカテナリ式","ツインシンプルカテナリ式","直接ちょう架式"],
-      choices_vi:["Heavy simple catenary.","Compound catenary.","Twin simple catenary.","Treo trực tiếp."],
+      choices_vi:["Hệ dây treo đơn tăng cường.","Hệ dây treo phức hợp.","Hệ dây treo đơn kép.","Treo trực tiếp."],
       figure_placeholder_jp:null,
       solution_jp:"4. 直接ちょう架式は、ちょう架線を設けず、支持点で直接トロリ線を吊り上げる形式のものでトロリ線の弛みと高低変化が大きいことから、路面電車など比較的低速での運転のときに採用される。\n【正解】4",
-      solution_vi:"Treo trực tiếp không có messenger; trolley wire võng và thay đổi cao độ lớn nên chủ yếu dùng cho phương tiện tốc độ thấp như xe điện mặt đất. Vì vậy không phù hợp với đoạn từ 100 km/h trở lên.\n【Đáp án】4",
+      solution_vi:"Treo trực tiếp không có dây treo chính; dây tiếp xúc võng và thay đổi cao độ lớn nên chủ yếu dùng cho phương tiện tốc độ thấp như xe điện mặt đất. Vì vậy không phù hợp với đoạn từ 100 km/h trở lên.\n【Đáp án】4",
       reference_jp:"電気テキスト p.77",
-      explanation_vi:"Tốc độ cao cần hệ catenary có đặc tính thu dòng ổn định hơn; direct suspension không đáp ứng tốt."
+      explanation_vi:"Tốc độ cao cần hệ dây treo có đặc tính thu dòng ổn định hơn; phương thức treo trực tiếp không đáp ứng tốt."
     }),
     ex({type:"exercise",number:98,
       question_jp:"図に示すトンネル内の照明方式のうちプロビーム照明方式として、適当なものはどれか。",

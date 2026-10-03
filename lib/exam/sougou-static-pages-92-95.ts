@@ -28,6 +28,9 @@ export const STATIC_SOUGOU_PAGES_92_95: Record<number, StaticSougouPageSeed> = {
       ["オ","① thiếu ôxy　② hỏa hoạn　③ tai nạn lao động　④ điện giật"],
       ["カ","① cơ sở kinh doanh　② công trình điện　③ hiện trường　④ khu vực làm việc"]
     ],explanation_vi:null},
+  ]},
+
+  93: { sectionCode:"ch3-5-2", content_blocks:[
     {type:"heading",level:3,jp:"【解説】施工マニュアル　ア・イ p.222／ウ・エ p.209",vi:"【Đáp án và giải thích】",explanation_vi:null},
     {type:"table",headers_jp:["空欄","正解"],headers_vi:["Chỗ trống","Đáp án"],rows_jp:[
       ["ア","④ 技能講習を修了した者"],
@@ -73,6 +76,9 @@ export const STATIC_SOUGOU_PAGES_92_95: Record<number, StaticSougouPageSeed> = {
       ["オ","① cá nhân　② công cộng　③ kinh doanh　④ tự dùng"],
       ["カ","① nhỏ/nhẹ, không đáng kể　② quan trọng　③ an toàn　④ nguy hiểm"]
     ],explanation_vi:null},
+  ]},
+
+  95: { sectionCode:"ch3-5-3", content_blocks:[
     {type:"heading",level:3,jp:"【解説】電気テキスト　ア・イ p.197／ウ・エ・オ・カ p.193",vi:"【Đáp án và giải thích】",explanation_vi:null},
     {type:"table",headers_jp:["空欄","正解"],headers_vi:["Chỗ trống","Đáp án"],rows_jp:[
       ["ア","④ 5年以内"],

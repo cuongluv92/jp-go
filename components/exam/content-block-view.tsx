@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { Fragment, type ReactNode } from "react";
 
 import type { ContentBlock, FuriganaToken } from "@/lib/exam/content-blocks";
@@ -50,12 +51,72 @@ const HIGHLIGHT_CLASS = "rounded-[3px] bg-amber-200/70 px-0.5 font-semibold text
 // in đậm bên này theo đúng yêu cầu, chỉ tô màu.
 const HIGHLIGHT_CLASS_PLAIN = "rounded-[3px] bg-amber-200/70 px-0.5 text-inherit dark:bg-amber-300/25";
 
+function referenceBookSlug(source: string, absoluteIndex: number): "sekou-gijutsu" | "sekou-houki" | null {
+  const lineStart = source.lastIndexOf("\n", Math.max(0, absoluteIndex - 1)) + 1;
+  const before = source.slice(lineStart, absoluteIndex);
+  const electric = before.lastIndexOf("電気テキスト");
+  const manual = before.lastIndexOf("施工マニュアル");
+  if (electric < 0 && manual < 0) return null;
+  return electric > manual ? "sekou-gijutsu" : "sekou-houki";
+}
+
+function renderReferenceLinks(
+  text: string,
+  absoluteStart: number,
+  source: string,
+  keyPrefix: string,
+): ReactNode[] {
+  const nodes: ReactNode[] = [];
+  const pattern = /p\.\s*(\d+)/g;
+  let cursor = 0;
+  let match: RegExpExecArray | null;
+
+  while ((match = pattern.exec(text)) !== null) {
+    if (match.index > cursor) {
+      nodes.push(
+        <Fragment key={`${keyPrefix}-plain-${absoluteStart + cursor}`}>
+          {text.slice(cursor, match.index)}
+        </Fragment>,
+      );
+    }
+    const absoluteIndex = absoluteStart + match.index;
+    const bookSlug = referenceBookSlug(source, absoluteIndex);
+    if (bookSlug) {
+      nodes.push(
+        <Link
+          key={`${keyPrefix}-ref-${absoluteIndex}`}
+          href={`/exam/${bookSlug}/page/${match[1]}`}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="font-semibold text-accent underline underline-offset-2 hover:opacity-80"
+        >
+          {match[0]}
+        </Link>,
+      );
+    } else {
+      nodes.push(<Fragment key={`${keyPrefix}-raw-${absoluteIndex}`}>{match[0]}</Fragment>);
+    }
+    cursor = match.index + match[0].length;
+  }
+  if (cursor < text.length) {
+    nodes.push(
+      <Fragment key={`${keyPrefix}-tail-${absoluteStart + cursor}`}>
+        {text.slice(cursor)}
+      </Fragment>,
+    );
+  }
+  return nodes.length > 0
+    ? nodes
+    : [<Fragment key={`${keyPrefix}-plain-${absoluteStart}`}>{text}</Fragment>];
+}
+
 function renderPlainSegmentWithBold(
   text: string,
   absoluteStart: number,
   ranges: TextRange[],
   keyPrefix: string,
   highlightClass: string = HIGHLIGHT_CLASS,
+  referenceSource?: string,
 ): ReactNode[] {
   if (!text) return [];
   const absoluteEnd = absoluteStart + text.length;
@@ -68,12 +129,15 @@ function renderPlainSegmentWithBold(
   return points.slice(0, -1).map((start, index) => {
     const end = points[index + 1];
     const piece = text.slice(start - absoluteStart, end - absoluteStart);
+    const content = referenceSource
+      ? renderReferenceLinks(piece, start, referenceSource, `${keyPrefix}-${start}`)
+      : piece;
     return overlapsBold(start, end, ranges) ? (
       <mark key={`${keyPrefix}-${start}`} className={highlightClass}>
-        {piece}
+        {content}
       </mark>
     ) : (
-      <Fragment key={`${keyPrefix}-${start}`}>{piece}</Fragment>
+      <Fragment key={`${keyPrefix}-${start}`}>{content}</Fragment>
     );
   });
 }
@@ -121,7 +185,7 @@ function renderJapaneseText(
 
     return (
       <Fragment key={`${segment.start}-${index}`}>
-        {renderPlainSegmentWithBold(segment.text, segment.start, boldRanges, `${segment.start}-${index}`)}
+        {renderPlainSegmentWithBold(segment.text, segment.start, boldRanges, `${segment.start}-${index}`, HIGHLIGHT_CLASS, text)}
       </Fragment>
     );
   });
