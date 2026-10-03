@@ -57,7 +57,7 @@ export const STATIC_SOUGOU_PAGES_82_90: Record<number, StaticSougouPageSeed> = {
     {type:"paragraph",jp:"3. 三相誘導電動機の始動方式（電気テキスト p.136, 137）\n① かご形誘導電動機は始動電流対策として行うスターデルタ始動法と、始動電流の対策を行わない直入始動法がある。\n② 全電圧じか入れ始動法は電動機の巻線に全電圧を最初から印加して始動し、5.5kW未満の電動機で一般に使用されている。",vi:"3. Phương pháp khởi động động cơ cảm ứng ba pha\n① Với động cơ rôto lồng sóc có phương pháp sao–tam giác để giảm dòng khởi động và phương pháp khởi động trực tiếp không giảm dòng khởi động.\n② Khởi động trực tiếp toàn điện áp cấp ngay toàn bộ điện áp vào cuộn dây từ lúc bắt đầu; thường dùng cho động cơ dưới 5,5 kW.",explanation_vi:"Điểm cần nhớ là mục đích của star–delta là giảm dòng khởi động; direct-on-line đơn giản nhưng dòng khởi động lớn hơn."}
   ]},
 
-  90: { sectionCode:"ch3-5", content_blocks:[
+  90: { sectionCode:"ch3-5-1", content_blocks:[
     {type:"heading",level:2,jp:"5. 法規　5-1 建設業法",vi:"5. Pháp quy – 5-1 Luật Xây dựng",explanation_vi:"Điền đúng thuật ngữ được quy định trong luật."},
     {type:"paragraph",jp:"【問題】建設業者等の責務に関する次の記述の［　］に当てはまる語句として、「建設業法」上、定められている語句を記入しなさい。",vi:"【Câu hỏi】Hãy điền các thuật ngữ được Luật Xây dựng quy định vào các chỗ trống trong những câu sau về trách nhiệm của doanh nghiệp xây dựng.",explanation_vi:"Nguồn câu hỏi: R3・R4・R5."},
     {type:"paragraph",jp:"「建設業者は、建設工事の担い手の［ア］及び確保その他の［イ］技術の確保に努めなければならない。」",vi:"“Doanh nghiệp xây dựng phải nỗ lực [ア] và bảo đảm nguồn nhân lực đảm nhiệm công trình xây dựng, đồng thời bảo đảm kỹ thuật [イ] và các nội dung liên quan.”",explanation_vi:"Đáp án đúng phải tạo thành cụm pháp lý tự nhiên: 担い手の育成及び確保・施工技術の確保。"},
