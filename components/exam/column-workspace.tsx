@@ -165,7 +165,132 @@ function renderExerciseJapanese(text: string, tokens: FuriganaToken[] = [], show
   );
 }
 
-function ExerciseWorkspace({ blocks }: { blocks: ExerciseBlock[] }) {
+
+function IntroBlocksCard({
+  blocks,
+  showFurigana,
+  compact = false,
+}: {
+  blocks: ContentBlock[];
+  showFurigana: boolean;
+  compact?: boolean;
+}) {
+  const rows = blocks.map((block, index) => ({
+    key: index,
+    block,
+    columns: renderBlockColumns(block, showFurigana),
+  }));
+
+  return (
+    <div
+      className={`mx-auto w-full rounded-2xl border border-border bg-surface ${
+        compact ? "p-4" : "max-w-5xl p-5 sm:p-7"
+      }`}
+    >
+      <div className="space-y-5">
+        {rows.map(({ key, block, columns }, index) => {
+          if (block.type === "heading") {
+            return (
+              <div
+                key={key}
+                className={`space-y-1 text-center ${index > 0 ? "border-t border-border pt-5" : ""}`}
+              >
+                <div className="font-jp">{columns.jp}</div>
+                {columns.vi && <div className="text-muted">{columns.vi}</div>}
+                {columns.explanation && (
+                  <div className="mx-auto max-w-3xl pt-1 text-sm text-muted">{columns.explanation}</div>
+                )}
+              </div>
+            );
+          }
+
+          return (
+            <div
+              key={key}
+              className={`grid gap-4 border-t border-border pt-4 md:grid-cols-2 ${
+                columns.explanation ? "md:[&>*:last-child]:col-span-2" : ""
+              }`}
+            >
+              <div className="min-w-0">{columns.jp}</div>
+              <div className="min-w-0">{columns.vi}</div>
+              {columns.explanation && (
+                <div className="rounded-xl bg-slate-50 p-3 text-sm text-muted dark:bg-white/5">
+                  {columns.explanation}
+                </div>
+              )}
+            </div>
+          );
+        })}
+      </div>
+    </div>
+  );
+}
+
+function isIntroLikePage(blocks: ContentBlock[]): boolean {
+  if (blocks.length === 0 || blocks.length > 7) return false;
+  if (!blocks.some((block) => block.type === "heading" && block.level <= 2)) return false;
+
+  return blocks.every((block) =>
+    block.type === "heading" ||
+    block.type === "paragraph" ||
+    block.type === "note" ||
+    block.type === "warning" ||
+    block.type === "definition" ||
+    block.type === "bullet_list" ||
+    block.type === "numbered_list"
+  );
+}
+
+function IntroPageWorkspace({ blocks }: { blocks: ContentBlock[] }) {
+  const [showFurigana, setShowFurigana] = useState(true);
+
+  useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect
+    setShowFurigana(readStoredFurigana());
+  }, []);
+
+  function toggleFurigana() {
+    setShowFurigana((current) => {
+      const next = !current;
+      try {
+        window.localStorage.setItem(FURIGANA_STORAGE_KEY, next ? "1" : "0");
+      } catch {
+        // Không chặn hiển thị nếu localStorage bị vô hiệu hóa.
+      }
+      return next;
+    });
+  }
+
+  return (
+    <div className="flex flex-col gap-3">
+      <div className="mx-auto flex w-full max-w-5xl items-center gap-3 rounded-xl border border-border bg-surface px-3 py-2">
+        <p className="text-xs text-muted">Trang tiêu đề / hướng dẫn</p>
+        <button
+          type="button"
+          onClick={toggleFurigana}
+          aria-pressed={showFurigana}
+          className={`ml-auto flex items-center gap-1.5 rounded-lg border px-2.5 py-1 text-xs font-semibold transition ${
+            showFurigana
+              ? "border-accent/40 bg-accent-soft text-accent"
+              : "border-border text-muted hover:border-accent/60 hover:text-foreground"
+          }`}
+        >
+          <span className={`h-1.5 w-1.5 rounded-full ${showFurigana ? "bg-accent" : "bg-slate-300 dark:bg-white/20"}`} />
+          <span className="font-jp">ふりがな</span> {showFurigana ? "ON" : "OFF"}
+        </button>
+      </div>
+      <IntroBlocksCard blocks={blocks} showFurigana={showFurigana} />
+    </div>
+  );
+}
+
+function ExerciseWorkspace({
+  blocks,
+  leadBlocks = [],
+}: {
+  blocks: ExerciseBlock[];
+  leadBlocks?: ContentBlock[];
+}) {
   const [mobileTab, setMobileTab] = useState<ExerciseColumnKey>("questionJp");
   const [showFurigana, setShowFurigana] = useState(true);
 
@@ -288,6 +413,10 @@ function ExerciseWorkspace({ blocks }: { blocks: ExerciseBlock[] }) {
         </button>
       </div>
 
+      {leadBlocks.length > 0 && (
+        <IntroBlocksCard blocks={leadBlocks} showFurigana={showFurigana} compact />
+      )}
+
       <div className="hidden gap-x-4 lg:grid lg:grid-cols-4">
         {EXERCISE_COLUMN_ORDER.map((column) => (
           <div key={column} className="border-b-2 border-border pb-2">
@@ -334,13 +463,18 @@ function ExerciseWorkspace({ blocks }: { blocks: ExerciseBlock[] }) {
 }
 
 /**
- * Tự chuyển sang workspace 4 cột khi trang gồm các block 総合問題.
- * Các sách lý thuyết cũ vẫn dùng workspace 3 cột, không bị thay đổi.
+ * 総合問題 luôn dùng 4 cột. Nếu cùng trang còn có tiêu đề/hướng dẫn thì phần
+ * đó nằm trên một thẻ mở đầu toàn chiều ngang. Trang thuần tiêu đề/hướng dẫn
+ * cũng có bố cục riêng, không bị ép vào 3 cột như trang học lý thuyết.
  */
 export function ColumnWorkspace({ blocks }: { blocks: ContentBlock[] }) {
   const exerciseBlocks = blocks.filter((block): block is ExerciseBlock => block.type === "exercise");
-  if (exerciseBlocks.length > 0 && exerciseBlocks.length === blocks.length) {
-    return <ExerciseWorkspace blocks={exerciseBlocks} />;
+  if (exerciseBlocks.length > 0) {
+    const leadBlocks = blocks.filter((block) => block.type !== "exercise");
+    return <ExerciseWorkspace blocks={exerciseBlocks} leadBlocks={leadBlocks} />;
+  }
+  if (isIntroLikePage(blocks)) {
+    return <IntroPageWorkspace blocks={blocks} />;
   }
   return <StandardColumnWorkspace blocks={blocks} />;
 }

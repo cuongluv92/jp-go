@@ -80,8 +80,8 @@ function ReferencePages({ question }: { question: ExamQuestion }) {
 
 /**
  * Giao diện dùng chung cho đề thật/luyện:
- * - 3 cột cố định theo module sách: 原文 / Dịch Việt / Đáp án・Giải thích.
- * - Nếu đề chưa có đáp án, cột 3 vẫn hiện giải thích học tập + trang lý thuyết.
+ * - 4 cột giống 総合問題: 問題 / Dịch 問題 / 解答 / Giải thích.
+ * - 解答 chỉ dùng đáp án Nhật đã có trong dữ liệu, không tự suy đoán.
  * - Chỉ bật chấm điểm khi câu thực sự có choices/đáp án.
  */
 export function TestRunner({ test, questions }: { test: ExamTest; questions: ExamQuestion[] }) {
@@ -99,6 +99,7 @@ export function TestRunner({ test, questions }: { test: ExamTest; questions: Exa
 
   const current = questions[state.currentIndex];
   const hasAnyChoices = useMemo(() => questions.some((q) => q.choices.length > 0), [questions]);
+  const correctChoice = current?.choices.find((choice) => choice.is_correct) ?? null;
 
   const score = useMemo(() => {
     if (!submitted || !hasAnyChoices) return null;
@@ -194,9 +195,9 @@ export function TestRunner({ test, questions }: { test: ExamTest; questions: Exa
         </div>
       )}
 
-      <div className="grid gap-3 lg:grid-cols-3">
+      <div className="grid gap-3 md:grid-cols-2 xl:grid-cols-4">
         <section className="min-w-0 rounded-2xl border border-border bg-surface p-4">
-          <p className="mb-3 text-xs font-semibold uppercase tracking-wide text-muted">原文</p>
+          <p className="mb-3 text-xs font-semibold uppercase tracking-wide text-muted">問題</p>
           <p className="font-jp whitespace-pre-line text-sm leading-relaxed sm:text-base">
             問{current.question_number}. {renderExamJapanese(current.question_jp, current.question_furigana_tokens, showFurigana)}
           </p>
@@ -241,7 +242,7 @@ export function TestRunner({ test, questions }: { test: ExamTest; questions: Exa
         </section>
 
         <section className="min-w-0 rounded-2xl border border-border bg-surface p-4">
-          <p className="mb-3 text-xs font-semibold uppercase tracking-wide text-muted">Dịch Việt</p>
+          <p className="mb-3 text-xs font-semibold uppercase tracking-wide text-muted">Dịch 問題</p>
           {current.question_vi ? (
             <p className="whitespace-pre-line text-sm leading-relaxed sm:text-base">{current.question_vi}</p>
           ) : (
@@ -261,13 +262,27 @@ export function TestRunner({ test, questions }: { test: ExamTest; questions: Exa
         </section>
 
         <section className="min-w-0 rounded-2xl border border-border bg-surface p-4">
-          <p className="mb-3 text-xs font-semibold uppercase tracking-wide text-muted">Đáp án・Giải thích</p>
+          <p className="mb-3 text-xs font-semibold uppercase tracking-wide text-muted">解答</p>
+          {correctChoice ? (
+            <div className="space-y-3">
+              <p className="font-jp text-sm font-bold text-accent">【正解】{correctChoice.choice_label}</p>
+              <p className="font-jp whitespace-pre-line text-sm leading-relaxed sm:text-base">
+                {renderExamJapanese(correctChoice.choice_jp, correctChoice.choice_furigana_tokens, showFurigana)}
+              </p>
+            </div>
+          ) : (
+            <p className="text-sm italic text-muted">
+              Câu này chưa có đáp án tiếng Nhật được nhập trong dữ liệu.
+            </p>
+          )}
+        </section>
+
+        <section className="min-w-0 rounded-2xl border border-border bg-surface p-4">
+          <p className="mb-3 text-xs font-semibold uppercase tracking-wide text-muted">Giải thích</p>
           {current.explanation_vi ? (
             <p className="whitespace-pre-line text-sm leading-relaxed">{current.explanation_vi}</p>
           ) : (
-            <p className="text-sm italic text-muted">
-              Chưa có file đáp án. Phần này hiện chỉ dùng để ghi giải thích học tập và trang lý thuyết liên quan.
-            </p>
+            <p className="text-sm italic text-muted">Chưa có phần giải thích cho câu này.</p>
           )}
           <ReferencePages question={current} />
         </section>
