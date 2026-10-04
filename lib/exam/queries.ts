@@ -1,5 +1,6 @@
 import { buildSectionTree } from "./section-tree";
 import { getSupabaseClient } from "./supabase-client";
+import { enrichExamTextWithFurigana } from "./server-furigana";
 import { STATIC_SOUGOU_PAGES } from "./sougou-static-pages";
 import type {
   ExamBook,
@@ -371,9 +372,28 @@ export async function listExamQuestionsForTest(testId: string): Promise<ExamQues
     references: ExamQuestionReference[];
   };
 
-  return (data as Row[]).map((row) => ({
-    ...row,
-    choices: [...row.choices].sort((a, b) => a.sort_order - b.sort_order),
-    references: [...row.references].sort((a, b) => a.sort_order - b.sort_order),
-  }));
+  const rows = data as Row[];
+
+  return Promise.all(
+    rows.map(async (row) => {
+      const choices = [...row.choices].sort((a, b) => a.sort_order - b.sort_order);
+      return {
+        ...row,
+        question_furigana_tokens: await enrichExamTextWithFurigana(
+          row.question_jp,
+          row.question_furigana_tokens,
+        ),
+        choices: await Promise.all(
+          choices.map(async (choice) => ({
+            ...choice,
+            choice_furigana_tokens: await enrichExamTextWithFurigana(
+              choice.choice_jp,
+              choice.choice_furigana_tokens,
+            ),
+          })),
+        ),
+        references: [...row.references].sort((a, b) => a.sort_order - b.sort_order),
+      };
+    }),
+  );
 }

@@ -150,6 +150,13 @@ async function enrichBlock(block: ContentBlock): Promise<ContentBlock> {
   }
 }
 
+export async function enrichExamTextWithFurigana(
+  text: string,
+  existing?: FuriganaToken[],
+): Promise<FuriganaToken[]> {
+  return withTokens(text, existing);
+}
+
 export async function enrichExamBlocksWithFurigana(blocks: ContentBlock[]): Promise<ContentBlock[]> {
   return Promise.all(blocks.map((block) => enrichBlock(block)));
 }
