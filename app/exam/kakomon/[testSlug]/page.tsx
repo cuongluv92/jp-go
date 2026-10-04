@@ -12,13 +12,17 @@ export default async function ExamTestPage({ params }: { params: Promise<{ testS
   if (!test) notFound();
 
   const questions = await listExamQuestionsForTest(test.id);
-  const showR1FirstStageGuide =
+  const showLegacyFirstStageGuide =
     test.exam_stage === "1ji" &&
-    (test.slug === "r1-2denki-1ji-early" || test.slug === "r1-2denki-1ji-late");
+    (
+      test.slug === "r1-2denki-1ji-early" ||
+      test.slug === "r1-2denki-1ji-late" ||
+      test.slug === "r2-2denki-1ji-late"
+    );
 
   return (
     <WideContainer>
-      {showR1FirstStageGuide && (
+      {showLegacyFirstStageGuide && (
         <section className="mb-4 rounded-2xl border border-border bg-surface p-4 sm:p-5">
           <div className="flex flex-wrap items-baseline gap-x-3 gap-y-1">
             <h2 className="font-jp text-base font-bold">注意事項・解答数</h2>
