@@ -2,6 +2,7 @@
 
 import { useEffect, useMemo, useState } from "react";
 
+import { AnswerFeedbackModal } from "./answer-feedback-modal";
 import { ReferenceModal } from "./reference-modal";
 import { getExamSourceImageUrl } from "@/lib/exam/storage";
 import type { ExamQuestion, ExamTest } from "@/lib/exam/types";
@@ -10,6 +11,14 @@ interface TestState {
   currentIndex: number;
   answers: Record<string, string>;
   flagged: Record<string, boolean>;
+  // true nếu câu đó đã từng bị chọn sai ít nhất 1 lần trước khi chọn đúng -
+  // dùng để tính điểm "đúng ngay lần đầu" dù chế độ làm lại cho phép thử lại.
+  mistakes: Record<string, boolean>;
+}
+
+interface AnswerFeedback {
+  choiceLabel: string;
+  correct: boolean;
 }
 
 function loadState(testId: string, questions: ExamQuestion[]): TestState {
@@ -19,12 +28,12 @@ function loadState(testId: string, questions: ExamQuestion[]): TestState {
   if (typeof window !== "undefined") {
     try {
       const raw = window.sessionStorage.getItem(`jp-go-exam-test-${testId}`);
-      if (raw) return { currentIndex: 0, answers: {}, flagged, ...JSON.parse(raw) };
+      if (raw) return { currentIndex: 0, answers: {}, flagged, mistakes: {}, ...JSON.parse(raw) };
     } catch {
       // sessionStorage có thể bị chặn (chế độ ẩn danh) - bỏ qua, dùng state mặc định.
     }
   }
-  return { currentIndex: 0, answers: {}, flagged };
+  return { currentIndex: 0, answers: {}, flagged, mistakes: {} };
 }
 
 function formatSeconds(totalSeconds: number): string {
@@ -46,6 +55,7 @@ export function TestRunner({ test, questions }: { test: ExamTest; questions: Exa
   const [referenceQuestionId, setReferenceQuestionId] = useState<string | null>(null);
   const [submitted, setSubmitted] = useState(false);
   const [elapsedSeconds, setElapsedSeconds] = useState(0);
+  const [feedback, setFeedback] = useState<AnswerFeedback | null>(null);
 
   useEffect(() => {
     const interval = setInterval(() => setElapsedSeconds((s) => s + 1), 1000);
@@ -66,21 +76,50 @@ export function TestRunner({ test, questions }: { test: ExamTest; questions: Exa
   const score = useMemo(() => {
     if (!submitted) return null;
     let correct = 0;
+    let firstTry = 0;
     for (const q of questions) {
       const chosen = state.answers[q.id];
       const correctChoice = q.choices.find((c) => c.is_correct);
-      if (chosen && correctChoice && chosen === correctChoice.id) correct += 1;
+      if (chosen && correctChoice && chosen === correctChoice.id) {
+        correct += 1;
+        if (!state.mistakes[q.id]) firstTry += 1;
+      }
     }
-    return { correct, total: questions.length };
-  }, [submitted, questions, state.answers]);
+    return { correct, firstTry, total: questions.length };
+  }, [submitted, questions, state.answers, state.mistakes]);
 
   if (!current) {
     return <p className="p-6 text-sm text-muted">Đề thi này chưa có câu hỏi.</p>;
   }
 
+  // Đã chọn đúng rồi thì "khoá" câu đó lại, không bật lại modal nếu bấm nữa.
+  const isCurrentLocked = Boolean(state.answers[current.id]);
+
   const selectChoice = (choiceId: string) => {
-    if (submitted) return;
-    setState((s) => ({ ...s, answers: { ...s.answers, [current.id]: choiceId } }));
+    if (submitted || feedback || isCurrentLocked) return;
+    const choice = current.choices.find((c) => c.id === choiceId);
+    if (!choice) return;
+    if (choice.is_correct) {
+      setState((s) => ({ ...s, answers: { ...s.answers, [current.id]: choiceId } }));
+    } else {
+      setState((s) => ({ ...s, mistakes: { ...s.mistakes, [current.id]: true } }));
+    }
+    setFeedback({ choiceLabel: choice.choice_label, correct: choice.is_correct });
+  };
+
+  const isLastQuestion = state.currentIndex === questions.length - 1;
+
+  const closeFeedbackAndAdvance = () => {
+    setFeedback(null);
+    if (isLastQuestion) {
+      setSubmitted(true);
+    } else {
+      goTo(state.currentIndex + 1);
+    }
+  };
+
+  const closeFeedbackAndRetry = () => {
+    setFeedback(null);
   };
 
   const toggleFlag = () => {
@@ -134,7 +173,7 @@ export function TestRunner({ test, questions }: { test: ExamTest; questions: Exa
 
         {submitted && score && (
           <div className="mt-4 rounded-2xl border border-accent bg-accent/5 p-4 text-sm font-medium text-accent">
-            Kết quả: {score.correct}/{score.total} câu đúng
+            Kết quả: {score.correct}/{score.total} câu đúng · {score.firstTry} câu đúng ngay lần đầu
           </div>
         )}
 
@@ -176,14 +215,14 @@ export function TestRunner({ test, questions }: { test: ExamTest; questions: Exa
                   key={choice.id}
                   type="button"
                   onClick={() => selectChoice(choice.id)}
-                  disabled={submitted}
+                  disabled={submitted || isCurrentLocked || Boolean(feedback)}
                   className={`flex items-start gap-3 rounded-xl border px-3 py-2.5 text-left text-sm transition ${
                     showCorrectness && isCorrectChoice
                       ? "border-emerald-400 dark:border-emerald-500/40 bg-emerald-50 dark:bg-emerald-500/10"
                       : showCorrectness && isSelected && !isCorrectChoice
                         ? "border-red-300 bg-red-50 dark:bg-red-500/10"
                         : isSelected
-                          ? "border-accent bg-accent/5"
+                          ? "border-emerald-400 dark:border-emerald-500/40 bg-emerald-50 dark:bg-emerald-500/10"
                           : "border-border hover:border-accent/50"
                   }`}
                 >
@@ -244,6 +283,17 @@ export function TestRunner({ test, questions }: { test: ExamTest; questions: Exa
 
       {referenceQuestion && (
         <ReferenceModal references={referenceQuestion.references} onClose={() => setReferenceQuestionId(null)} />
+      )}
+
+      {feedback && (
+        <AnswerFeedbackModal
+          correct={feedback.correct}
+          choiceLabel={feedback.choiceLabel}
+          explanation={current.explanation_vi}
+          isLastQuestion={isLastQuestion}
+          onRetry={closeFeedbackAndRetry}
+          onNext={closeFeedbackAndAdvance}
+        />
       )}
     </div>
   );
