@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useEffect, useMemo, useState } from "react";
 
+import { AnswerFeedbackModal } from "./answer-feedback-modal";
 import { getExamSourceImageUrl } from "@/lib/exam/storage";
 import { segmentJapaneseText, type FuriganaToken } from "@/lib/japanese-text";
 import type { ExamQuestion, ExamTest } from "@/lib/exam/types";
@@ -11,6 +12,14 @@ interface TestState {
   currentIndex: number;
   answers: Record<string, string>;
   flagged: Record<string, boolean>;
+  // true nếu câu đó đã từng bị chọn sai ít nhất 1 lần trước khi chọn đúng -
+  // dùng để tính điểm "đúng ngay lần đầu" dù chế độ làm bài cho phép thử lại.
+  mistakes: Record<string, boolean>;
+}
+
+interface AnswerFeedback {
+  choiceLabel: string;
+  correct: boolean;
 }
 
 function renderExamJapanese(text: string, tokens: FuriganaToken[] = [], showFurigana = false) {
@@ -34,12 +43,12 @@ function loadState(testId: string, questions: ExamQuestion[]): TestState {
   if (typeof window !== "undefined") {
     try {
       const raw = window.sessionStorage.getItem(`jp-go-exam-test-${testId}`);
-      if (raw) return { currentIndex: 0, answers: {}, flagged, ...JSON.parse(raw) };
+      if (raw) return { currentIndex: 0, answers: {}, flagged, mistakes: {}, ...JSON.parse(raw) };
     } catch {
       // sessionStorage có thể bị chặn - dùng state mặc định.
     }
   }
-  return { currentIndex: 0, answers: {}, flagged };
+  return { currentIndex: 0, answers: {}, flagged, mistakes: {} };
 }
 
 function ReferencePages({ question }: { question: ExamQuestion }) {
@@ -80,7 +89,10 @@ function ReferencePages({ question }: { question: ExamQuestion }) {
 
 /**
  * Giao diện dùng chung cho đề thật/luyện:
- * - 4 cột giống 総合問題: 問題 / Dịch 問題 / 解答 / Giải thích.
+ * - Mặc định (chế độ tham khảo): 4 cột giống 総合問題: 問題 / Dịch 問題 / 解答 / Giải thích,
+ *   đáp án + giải thích luôn hiện sẵn - dùng để đọc/ôn lại.
+ * - "Chế độ làm bài": ẩn 解答/Giải thích, bấm 1 đáp án hiện popup nổi báo đúng/sai ngay -
+ *   sai thì bấm làm lại (không đổi câu), đúng thì tự qua câu tiếp theo.
  * - 解答 chỉ dùng đáp án Nhật đã có trong dữ liệu, không tự suy đoán.
  * - Chỉ bật chấm điểm khi câu thực sự có choices/đáp án.
  */
@@ -88,6 +100,8 @@ export function TestRunner({ test, questions }: { test: ExamTest; questions: Exa
   const [state, setState] = useState<TestState>(() => loadState(test.id, questions));
   const [submitted, setSubmitted] = useState(false);
   const [showFurigana, setShowFurigana] = useState(false);
+  const [quizMode, setQuizMode] = useState(false);
+  const [feedback, setFeedback] = useState<AnswerFeedback | null>(null);
 
   useEffect(() => {
     try {
@@ -105,22 +119,56 @@ export function TestRunner({ test, questions }: { test: ExamTest; questions: Exa
     if (!submitted || !hasAnyChoices) return null;
     let correct = 0;
     let gradable = 0;
+    let firstTry = 0;
     for (const q of questions) {
-      const correctChoice = q.choices.find((c) => c.is_correct);
-      if (!correctChoice) continue;
+      const correctChoiceForQuestion = q.choices.find((c) => c.is_correct);
+      if (!correctChoiceForQuestion) continue;
       gradable += 1;
-      if (state.answers[q.id] === correctChoice.id) correct += 1;
+      if (state.answers[q.id] === correctChoiceForQuestion.id) {
+        correct += 1;
+        if (!state.mistakes[q.id]) firstTry += 1;
+      }
     }
-    return { correct, total: gradable };
-  }, [submitted, hasAnyChoices, questions, state.answers]);
+    return { correct, firstTry, total: gradable };
+  }, [submitted, hasAnyChoices, questions, state.answers, state.mistakes]);
 
   if (!current) {
     return <p className="p-6 text-sm text-muted">Đề thi này chưa có câu hỏi.</p>;
   }
 
+  // Trong chế độ làm bài, chọn đúng rồi thì "khoá" câu đó lại, không bật lại modal nếu bấm nữa.
+  const isCurrentLocked = quizMode && Boolean(state.answers[current.id]);
+  const isLastQuestion = state.currentIndex === questions.length - 1;
+  const showReferenceColumns = !quizMode || submitted;
+
   const selectChoice = (choiceId: string) => {
     if (submitted) return;
-    setState((s) => ({ ...s, answers: { ...s.answers, [current.id]: choiceId } }));
+    if (!quizMode) {
+      setState((s) => ({ ...s, answers: { ...s.answers, [current.id]: choiceId } }));
+      return;
+    }
+    if (feedback || isCurrentLocked) return;
+    const choice = current.choices.find((c) => c.id === choiceId);
+    if (!choice) return;
+    if (choice.is_correct) {
+      setState((s) => ({ ...s, answers: { ...s.answers, [current.id]: choiceId } }));
+    } else {
+      setState((s) => ({ ...s, mistakes: { ...s.mistakes, [current.id]: true } }));
+    }
+    setFeedback({ choiceLabel: choice.choice_label, correct: choice.is_correct });
+  };
+
+  const closeFeedbackAndAdvance = () => {
+    setFeedback(null);
+    if (isLastQuestion) {
+      setSubmitted(true);
+    } else {
+      goTo(state.currentIndex + 1);
+    }
+  };
+
+  const closeFeedbackAndRetry = () => {
+    setFeedback(null);
   };
 
   const toggleFlag = () => {
@@ -143,6 +191,19 @@ export function TestRunner({ test, questions }: { test: ExamTest; questions: Exa
           <h1 className="font-jp text-base font-bold sm:text-lg">{test.title}</h1>
         </div>
         <div className="flex items-center gap-2">
+          {hasAnyChoices && (
+            <button
+              type="button"
+              onClick={() => setQuizMode((value) => !value)}
+              disabled={submitted}
+              aria-pressed={quizMode}
+              className={`rounded-lg border px-2.5 py-1 text-xs font-medium disabled:opacity-40 ${
+                quizMode ? "border-accent bg-accent/5 text-accent" : "border-border text-muted"
+              }`}
+            >
+              Chế độ làm bài {quizMode ? "ON" : "OFF"}
+            </button>
+          )}
           <button
             type="button"
             onClick={() => setShowFurigana((value) => !value)}
@@ -179,7 +240,9 @@ export function TestRunner({ test, questions }: { test: ExamTest; questions: Exa
               className={`relative flex h-8 min-w-8 items-center justify-center rounded-lg px-2 text-xs font-medium transition ${
                 i === state.currentIndex
                   ? "bg-accent text-accent-foreground"
-                  : "bg-slate-100 text-muted dark:bg-white/10"
+                  : quizMode && state.answers[q.id]
+                    ? "bg-emerald-100 text-emerald-700 dark:bg-emerald-500/15 dark:text-emerald-400"
+                    : "bg-slate-100 text-muted dark:bg-white/10"
               }`}
             >
               {q.question_number}
@@ -191,11 +254,11 @@ export function TestRunner({ test, questions }: { test: ExamTest; questions: Exa
 
       {submitted && score && (
         <div className="rounded-2xl border border-accent bg-accent/5 p-4 text-sm font-medium text-accent">
-          Kết quả: {score.correct}/{score.total} câu đúng
+          Kết quả: {score.correct}/{score.total} câu đúng · {score.firstTry} câu đúng ngay lần đầu
         </div>
       )}
 
-      <div className="grid gap-3 md:grid-cols-2 xl:grid-cols-4">
+      <div className={`grid gap-3 md:grid-cols-2 ${showReferenceColumns ? "xl:grid-cols-4" : ""}`}>
         <section className="min-w-0 rounded-2xl border border-border bg-surface p-4">
           <p className="mb-3 text-xs font-semibold uppercase tracking-wide text-muted">問題</p>
           <p className="font-jp whitespace-pre-line text-sm leading-relaxed sm:text-base">
@@ -216,21 +279,25 @@ export function TestRunner({ test, questions }: { test: ExamTest; questions: Exa
               {current.choices.map((choice) => {
                 const isSelected = state.answers[current.id] === choice.id;
                 const showCorrectness = submitted;
+                let style: string;
+                if (showCorrectness && choice.is_correct) {
+                  style = "border-emerald-400 bg-emerald-50 dark:border-emerald-500/40 dark:bg-emerald-500/10";
+                } else if (showCorrectness && isSelected && !choice.is_correct) {
+                  style = "border-red-300 bg-red-50 dark:bg-red-500/10";
+                } else if (isSelected) {
+                  style = quizMode
+                    ? "border-emerald-400 bg-emerald-50 dark:border-emerald-500/40 dark:bg-emerald-500/10"
+                    : "border-accent bg-accent/5";
+                } else {
+                  style = "border-border hover:border-accent/50";
+                }
                 return (
                   <button
                     key={choice.id}
                     type="button"
                     onClick={() => selectChoice(choice.id)}
-                    disabled={submitted}
-                    className={`flex items-start gap-3 rounded-xl border px-3 py-2.5 text-left text-sm transition ${
-                      showCorrectness && choice.is_correct
-                        ? "border-emerald-400 bg-emerald-50 dark:border-emerald-500/40 dark:bg-emerald-500/10"
-                        : showCorrectness && isSelected && !choice.is_correct
-                          ? "border-red-300 bg-red-50 dark:bg-red-500/10"
-                          : isSelected
-                            ? "border-accent bg-accent/5"
-                            : "border-border hover:border-accent/50"
-                    }`}
+                    disabled={submitted || isCurrentLocked || Boolean(feedback)}
+                    className={`flex items-start gap-3 rounded-xl border px-3 py-2.5 text-left text-sm transition ${style}`}
                   >
                     <span className="font-jp font-semibold">{choice.choice_label}</span>
                     <span className="font-jp">{renderExamJapanese(choice.choice_jp, choice.choice_furigana_tokens, showFurigana)}</span>
@@ -261,31 +328,35 @@ export function TestRunner({ test, questions }: { test: ExamTest; questions: Exa
           )}
         </section>
 
-        <section className="min-w-0 rounded-2xl border border-border bg-surface p-4">
-          <p className="mb-3 text-xs font-semibold uppercase tracking-wide text-muted">解答</p>
-          {correctChoice ? (
-            <div className="space-y-3">
-              <p className="font-jp text-sm font-bold text-accent">【正解】{correctChoice.choice_label}</p>
-              <p className="font-jp whitespace-pre-line text-sm leading-relaxed sm:text-base">
-                {renderExamJapanese(correctChoice.choice_jp, correctChoice.choice_furigana_tokens, showFurigana)}
-              </p>
-            </div>
-          ) : (
-            <p className="text-sm italic text-muted">
-              Câu này chưa có đáp án tiếng Nhật được nhập trong dữ liệu.
-            </p>
-          )}
-        </section>
+        {showReferenceColumns && (
+          <>
+            <section className="min-w-0 rounded-2xl border border-border bg-surface p-4">
+              <p className="mb-3 text-xs font-semibold uppercase tracking-wide text-muted">解答</p>
+              {correctChoice ? (
+                <div className="space-y-3">
+                  <p className="font-jp text-sm font-bold text-accent">【正解】{correctChoice.choice_label}</p>
+                  <p className="font-jp whitespace-pre-line text-sm leading-relaxed sm:text-base">
+                    {renderExamJapanese(correctChoice.choice_jp, correctChoice.choice_furigana_tokens, showFurigana)}
+                  </p>
+                </div>
+              ) : (
+                <p className="text-sm italic text-muted">
+                  Câu này chưa có đáp án tiếng Nhật được nhập trong dữ liệu.
+                </p>
+              )}
+            </section>
 
-        <section className="min-w-0 rounded-2xl border border-border bg-surface p-4">
-          <p className="mb-3 text-xs font-semibold uppercase tracking-wide text-muted">Giải thích</p>
-          {current.explanation_vi ? (
-            <p className="whitespace-pre-line text-sm leading-relaxed">{current.explanation_vi}</p>
-          ) : (
-            <p className="text-sm italic text-muted">Chưa có phần giải thích cho câu này.</p>
-          )}
-          <ReferencePages question={current} />
-        </section>
+            <section className="min-w-0 rounded-2xl border border-border bg-surface p-4">
+              <p className="mb-3 text-xs font-semibold uppercase tracking-wide text-muted">Giải thích</p>
+              {current.explanation_vi ? (
+                <p className="whitespace-pre-line text-sm leading-relaxed">{current.explanation_vi}</p>
+              ) : (
+                <p className="text-sm italic text-muted">Chưa có phần giải thích cho câu này.</p>
+              )}
+              <ReferencePages question={current} />
+            </section>
+          </>
+        )}
       </div>
 
       <div className="flex items-center justify-between gap-2">
@@ -320,6 +391,17 @@ export function TestRunner({ test, questions }: { test: ExamTest; questions: Exa
           </button>
         )}
       </div>
+
+      {feedback && (
+        <AnswerFeedbackModal
+          correct={feedback.correct}
+          choiceLabel={feedback.choiceLabel}
+          explanation={current.explanation_vi}
+          isLastQuestion={isLastQuestion}
+          onRetry={closeFeedbackAndRetry}
+          onNext={closeFeedbackAndAdvance}
+        />
+      )}
     </div>
   );
 }
