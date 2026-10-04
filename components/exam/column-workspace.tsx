@@ -204,6 +204,20 @@ function IntroBlocksCard({
             );
           }
 
+          if (block.type === "table" || block.type === "image" || block.type === "image_placeholder") {
+            return (
+              <div key={key} className="border-t border-border pt-4">
+                <div className="min-w-0">{columns.jp}</div>
+                {columns.vi && <div className="mt-4 min-w-0">{columns.vi}</div>}
+                {columns.explanation && (
+                  <div className="mt-3 rounded-xl bg-slate-50 p-3 text-sm text-muted dark:bg-white/5">
+                    {columns.explanation}
+                  </div>
+                )}
+              </div>
+            );
+          }
+
           return (
             <div
               key={key}
@@ -237,7 +251,10 @@ function isIntroLikePage(blocks: ContentBlock[]): boolean {
     block.type === "warning" ||
     block.type === "definition" ||
     block.type === "bullet_list" ||
-    block.type === "numbered_list"
+    block.type === "numbered_list" ||
+    block.type === "table" ||
+    block.type === "image_placeholder" ||
+    block.type === "image"
   );
 }
 
