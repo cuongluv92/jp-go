@@ -25,7 +25,9 @@ export default async function ExamTestPage({ params }: { params: Promise<{ testS
       test.slug === "r3-2denki-1ji-early" ||
       test.slug === "r3-2denki-1ji-late" ||
       test.slug === "r4-2denki-1ji-early" ||
-      test.slug === "r4-2denki-1ji-late"
+      test.slug === "r4-2denki-1ji-late" ||
+      test.slug === "r5-2denki-1ji-early" ||
+      test.slug === "r5-2denki-1ji-late"
     );
 
   return (
