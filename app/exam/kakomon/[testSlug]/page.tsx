@@ -2,7 +2,7 @@ import { notFound } from "next/navigation";
 
 import { TestRunner } from "@/components/exam/test-runner";
 import { WideContainer } from "@/components/exam/wide-container";
-import { getExamTestBySlug, listExamQuestionsForTest } from "@/lib/exam/queries";
+import { getExamTestBySlug, listExamQuestionsForTestRaw } from "@/lib/exam/queries";
 
 export const dynamic = "force-dynamic";
 
@@ -11,7 +11,7 @@ export default async function ExamTestPage({ params }: { params: Promise<{ testS
   const test = await getExamTestBySlug(testSlug);
   if (!test) notFound();
 
-  const questions = await listExamQuestionsForTest(test.id);
+  const questions = await listExamQuestionsForTestRaw(test.id);
   const showLegacyFirstStageGuide =
     test.exam_stage === "1ji" &&
     (

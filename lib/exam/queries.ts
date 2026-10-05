@@ -348,7 +348,13 @@ export async function getExamTestBySlug(slug: string): Promise<ExamTest | null> 
   return (data as ExamTest | null) ?? null;
 }
 
-export async function listExamQuestionsForTest(testId: string): Promise<ExamQuestion[]> {
+/**
+ * Lấy câu hỏi + đáp án CHƯA sinh furigana - dùng cho lần render trang đầu
+ * tiên để không phải chờ kuromoji dựng dictionary (xem server-furigana.ts).
+ * Trang hiện ra ngay với chữ thường, furigana (nếu có) tới sau qua API
+ * /api/exam/furigana/test gọi listExamQuestionsForTest (bản có enrich) ở dưới.
+ */
+export async function listExamQuestionsForTestRaw(testId: string): Promise<ExamQuestion[]> {
   const supabase = getSupabaseClient();
   const { data, error } = await supabase
     .from("jp_exam_questions")
@@ -374,26 +380,32 @@ export async function listExamQuestionsForTest(testId: string): Promise<ExamQues
 
   const rows = data as Row[];
 
+  return rows.map((row) => ({
+    ...row,
+    choices: [...row.choices].sort((a, b) => a.sort_order - b.sort_order),
+    references: [...row.references].sort((a, b) => a.sort_order - b.sort_order),
+  }));
+}
+
+export async function listExamQuestionsForTest(testId: string): Promise<ExamQuestion[]> {
+  const rows = await listExamQuestionsForTestRaw(testId);
+
   return Promise.all(
-    rows.map(async (row) => {
-      const choices = [...row.choices].sort((a, b) => a.sort_order - b.sort_order);
-      return {
-        ...row,
-        question_furigana_tokens: await enrichExamTextWithFurigana(
-          row.question_jp,
-          row.question_furigana_tokens,
-        ),
-        choices: await Promise.all(
-          choices.map(async (choice) => ({
-            ...choice,
-            choice_furigana_tokens: await enrichExamTextWithFurigana(
-              choice.choice_jp,
-              choice.choice_furigana_tokens,
-            ),
-          })),
-        ),
-        references: [...row.references].sort((a, b) => a.sort_order - b.sort_order),
-      };
-    }),
+    rows.map(async (row) => ({
+      ...row,
+      question_furigana_tokens: await enrichExamTextWithFurigana(
+        row.question_jp,
+        row.question_furigana_tokens,
+      ),
+      choices: await Promise.all(
+        row.choices.map(async (choice) => ({
+          ...choice,
+          choice_furigana_tokens: await enrichExamTextWithFurigana(
+            choice.choice_jp,
+            choice.choice_furigana_tokens,
+          ),
+        })),
+      ),
+    })),
   );
 }

@@ -484,7 +484,32 @@ function ExerciseWorkspace({
  * đó nằm trên một thẻ mở đầu toàn chiều ngang. Trang thuần tiêu đề/hướng dẫn
  * cũng có bố cục riêng, không bị ép vào 3 cột như trang học lý thuyết.
  */
-export function ColumnWorkspace({ blocks }: { blocks: ContentBlock[] }) {
+export function ColumnWorkspace({
+  blocks: initialBlocks,
+  bookSlug,
+  pageNumber,
+}: {
+  blocks: ContentBlock[];
+  bookSlug: string;
+  pageNumber: number;
+}) {
+  // Render ngay với block gốc (chưa có furigana) để không chặn trang chờ
+  // kuromoji dựng dictionary - furigana (nếu có) tới sau qua API và chỉ thay
+  // phần furigana_tokens, không đổi cấu trúc block nên không giật layout.
+  const [blocks, setBlocks] = useState(initialBlocks);
+  useEffect(() => {
+    let cancelled = false;
+    fetch(`/api/exam/furigana/page?bookSlug=${encodeURIComponent(bookSlug)}&pageNumber=${pageNumber}`)
+      .then((res) => (res.ok ? res.json() : null))
+      .then((data: { blocks?: ContentBlock[] } | null) => {
+        if (!cancelled && data?.blocks) setBlocks(data.blocks);
+      })
+      .catch(() => {});
+    return () => {
+      cancelled = true;
+    };
+  }, [bookSlug, pageNumber]);
+
   const exerciseBlocks = blocks.filter((block): block is ExerciseBlock => block.type === "exercise");
   if (exerciseBlocks.length > 0) {
     const leadBlocks = blocks.filter((block) => block.type !== "exercise");

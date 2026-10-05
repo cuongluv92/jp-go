@@ -96,8 +96,26 @@ function ReferencePages({ question }: { question: ExamQuestion }) {
  * - 解答 chỉ dùng đáp án Nhật đã có trong dữ liệu, không tự suy đoán.
  * - Chỉ bật chấm điểm khi câu thực sự có choices/đáp án.
  */
-export function TestRunner({ test, questions }: { test: ExamTest; questions: ExamQuestion[] }) {
-  const [state, setState] = useState<TestState>(() => loadState(test.id, questions));
+export function TestRunner({ test, questions: initialQuestions }: { test: ExamTest; questions: ExamQuestion[] }) {
+  // Render ngay với dữ liệu gốc (chưa có furigana) để không phải chờ kuromoji
+  // dựng dictionary - furigana (nếu có) tới sau qua API, state ở đây chỉ đổi
+  // phần furigana_tokens, không đổi id/thứ tự câu nên không ảnh hưởng gì tới
+  // index/answers đang có.
+  const [questions, setQuestions] = useState(initialQuestions);
+  useEffect(() => {
+    let cancelled = false;
+    fetch(`/api/exam/furigana/test?slug=${encodeURIComponent(test.slug)}`)
+      .then((res) => (res.ok ? res.json() : null))
+      .then((data: { questions?: ExamQuestion[] } | null) => {
+        if (!cancelled && data?.questions) setQuestions(data.questions);
+      })
+      .catch(() => {});
+    return () => {
+      cancelled = true;
+    };
+  }, [test.slug]);
+
+  const [state, setState] = useState<TestState>(() => loadState(test.id, initialQuestions));
   const [submitted, setSubmitted] = useState(false);
   const [showFurigana, setShowFurigana] = useState(false);
   // Mặc định bật "chế độ làm bài" (ẩn đáp án, hiện bảng đúng/sai khi bấm chọn) -

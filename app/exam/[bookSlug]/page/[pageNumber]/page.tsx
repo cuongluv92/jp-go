@@ -12,7 +12,6 @@ import {
   listExamPagesMeta,
 } from "@/lib/exam/queries";
 import { buildAggregatedFirstPageIndex, buildSectionPageIndex, flattenSectionTree } from "@/lib/exam/section-tree";
-import { enrichExamBlocksWithFurigana } from "@/lib/exam/server-furigana";
 
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
@@ -54,8 +53,6 @@ export default async function ExamPageReader({
     const title = p.section_id ? sectionsById.get(p.section_id)?.title_jp : null;
     return { pageNumber: p.page_number, label: title ? `Trang ${p.page_number} — ${title}` : `Trang ${p.page_number}` };
   });
-
-  const renderedBlocks = await enrichExamBlocksWithFurigana(page.content_blocks);
 
   return (
     <WideContainer>
@@ -113,7 +110,7 @@ export default async function ExamPageReader({
         </div>
 
         {page.content_blocks.length > 0 ? (
-          <ColumnWorkspace blocks={renderedBlocks} />
+          <ColumnWorkspace blocks={page.content_blocks} bookSlug={book.slug} pageNumber={page.page_number} />
         ) : (
           <p className="rounded-xl border border-dashed border-border p-6 text-center text-sm text-muted">
             Trang này chưa có nội dung.
