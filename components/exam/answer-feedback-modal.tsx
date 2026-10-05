@@ -24,13 +24,13 @@ export function AnswerFeedbackModal({
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 p-4">
       <div className="w-full max-w-sm rounded-2xl bg-surface p-5 text-center shadow-xl">
         <div
-          className={`mx-auto mb-3 flex h-14 w-14 items-center justify-center rounded-full text-2xl font-semibold ${
+          className={`mx-auto mb-3 flex h-16 w-16 items-center justify-center rounded-full border-[3px] text-3xl font-bold ${
             correct
-              ? "bg-emerald-100 text-emerald-600 dark:bg-emerald-500/15 dark:text-emerald-400"
-              : "bg-red-100 text-red-600 dark:bg-red-500/15 dark:text-red-400"
+              ? "border-emerald-500 text-emerald-600 dark:border-emerald-400 dark:text-emerald-400"
+              : "border-red-500 text-red-600 dark:border-red-400 dark:text-red-400"
           }`}
         >
-          {correct ? "✓" : "✕"}
+          {correct ? "○" : "✕"}
         </div>
         <p
           className={`text-lg font-semibold ${
