@@ -16,9 +16,31 @@ type KuromojiTokenizer = {
 };
 
 const KANJI_RE = /[一-鿿々〆ヵヶ]/u;
+// Dựng dictionary kuromoji từ đĩa mất ~2s ở lần đầu mỗi instance serverless -
+// không được để request nào phải chờ quá lâu chỉ vì furigana (chỉ là phần hỗ
+// trợ đọc, không phải nội dung chính). Quá thời gian này thì trả về rỗng cho
+// lượt render đó, tokenizer vẫn tiếp tục dựng ở background và cache lại cho
+// lần sau (instance đã "warm").
+const TOKENIZE_TIMEOUT_MS = 1500;
 const tokenCache = new Map<string, Promise<FuriganaToken[]>>();
 let tokenizerPromise: Promise<KuromojiTokenizer> | null = null;
 let tokenizerUnavailable = false;
+
+function raceWithTimeout<T>(promise: Promise<T>, ms: number, fallback: T): Promise<T> {
+  return new Promise((resolve) => {
+    const timer = setTimeout(() => resolve(fallback), ms);
+    promise.then(
+      (value) => {
+        clearTimeout(timer);
+        resolve(value);
+      },
+      () => {
+        clearTimeout(timer);
+        resolve(fallback);
+      },
+    );
+  });
+}
 
 function katakanaToHiragana(value: string): string {
   return value.replace(/[ァ-ヶ]/g, (char) =>
@@ -46,10 +68,16 @@ function getTokenizer(): Promise<KuromojiTokenizer> {
   return tokenizerPromise;
 }
 
+// Bắt đầu dựng dictionary ngay khi module này được import (lúc instance
+// serverless cold-start), chạy song song với việc query Supabase... thay vì
+// chỉ bắt đầu khi code chạy tới dòng cần furigana (tức là sau khi đã có kết
+// quả Supabase) - giúp tận dụng thời gian chờ sẵn có, không cộng dồn thêm.
+void getTokenizer().catch(() => {});
+
 async function generatedTokens(text: string): Promise<FuriganaToken[]> {
   if (!text || !KANJI_RE.test(text)) return [];
   const cached = tokenCache.get(text);
-  if (cached) return cached;
+  if (cached) return raceWithTimeout(cached, TOKENIZE_TIMEOUT_MS, []);
 
   const pending = (async () => {
     try {
@@ -87,7 +115,10 @@ async function generatedTokens(text: string): Promise<FuriganaToken[]> {
   })();
 
   tokenCache.set(text, pending);
-  return pending;
+  // `pending` tiếp tục chạy nền và được cache lại dù lượt này có bị timeout
+  // hay không - lần gọi sau (hoặc re-render) cho cùng text sẽ có token thật
+  // ngay khi tokenizer đã dựng xong, không phải tính lại.
+  return raceWithTimeout(pending, TOKENIZE_TIMEOUT_MS, []);
 }
 
 async function withTokens(text: string, existing?: FuriganaToken[]): Promise<FuriganaToken[]> {
