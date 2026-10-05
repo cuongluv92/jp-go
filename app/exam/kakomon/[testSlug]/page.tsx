@@ -29,6 +29,12 @@ export default async function ExamTestPage({ params }: { params: Promise<{ testS
       test.slug === "r5-2denki-1ji-early" ||
       test.slug === "r5-2denki-1ji-late"
     );
+  const showR6FirstStageGuide =
+    test.exam_stage === "1ji" &&
+    (
+      test.slug === "r6-2denki-1ji-early" ||
+      test.slug === "r6-2denki-1ji-late"
+    );
 
   return (
     <WideContainer>
@@ -73,6 +79,29 @@ export default async function ExamTestPage({ params }: { params: Promise<{ testS
           </div>
           <p className="mt-3 text-xs text-muted">
             No.39–42 là các câu hỏi năng lực ứng dụng về 施工管理法. Đây là quy tắc chọn câu của đề gốc; trên app vẫn có thể mở từng câu để ôn tập.
+          </p>
+        </section>
+      )}
+      {showR6FirstStageGuide && (
+        <section className="mb-4 rounded-2xl border border-border bg-surface p-4 sm:p-5">
+          <div className="flex flex-wrap items-baseline gap-x-3 gap-y-1">
+            <h2 className="font-jp text-base font-bold">注意事項・解答数</h2>
+            <p className="text-sm font-semibold">Hướng dẫn làm đề R6</p>
+          </div>
+          <p className="mt-2 text-sm text-muted">
+            Thời gian: 150 phút. Đề có 62 câu, làm 40 câu, mỗi câu 1 điểm (40 điểm).
+          </p>
+          <div className="mt-3 grid gap-2 text-sm sm:grid-cols-2 lg:grid-cols-3">
+            <p><span className="font-jp font-semibold">No.1–4</span>: làm đủ 4 câu</p>
+            <p><span className="font-jp font-semibold">No.5–10</span>: chọn 4/6 câu</p>
+            <p><span className="font-jp font-semibold">No.11–29</span>: chọn 10/19 câu</p>
+            <p><span className="font-jp font-semibold">No.30–35</span>: chọn 3/6 câu</p>
+            <p><span className="font-jp font-semibold">No.36–40</span>: làm đủ 5 câu</p>
+            <p><span className="font-jp font-semibold">No.41–50</span>: chọn 6/10 câu</p>
+            <p><span className="font-jp font-semibold">No.51–62</span>: chọn 8/12 câu</p>
+          </div>
+          <p className="mt-3 text-xs text-muted">
+            No.37–40 là câu hỏi năng lực của 施工管理法. Đây là quy tắc chọn câu của đề gốc; trên app vẫn có thể mở từng câu để ôn tập.
           </p>
         </section>
       )}
