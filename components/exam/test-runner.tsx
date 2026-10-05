@@ -100,7 +100,10 @@ export function TestRunner({ test, questions }: { test: ExamTest; questions: Exa
   const [state, setState] = useState<TestState>(() => loadState(test.id, questions));
   const [submitted, setSubmitted] = useState(false);
   const [showFurigana, setShowFurigana] = useState(false);
-  const [quizMode, setQuizMode] = useState(false);
+  // Mặc định bật "chế độ làm bài" (ẩn đáp án, hiện bảng đúng/sai khi bấm chọn) -
+  // đây là cách dùng chính khi làm đề; tắt đi mới chuyển qua xem tham khảo
+  // (đáp án + giải thích hiện sẵn ngay cả khi chưa nộp bài).
+  const [quizMode, setQuizMode] = useState(() => questions.some((q) => q.choices.length > 0));
   const [feedback, setFeedback] = useState<AnswerFeedback | null>(null);
 
   useEffect(() => {
