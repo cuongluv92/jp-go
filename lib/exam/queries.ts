@@ -1,6 +1,5 @@
 import { buildSectionTree } from "./section-tree";
 import { getSupabaseClient } from "./supabase-client";
-import { enrichExamTextWithFurigana } from "./server-furigana";
 import { STATIC_SOUGOU_PAGES } from "./sougou-static-pages";
 import type {
   ExamBook,
@@ -387,7 +386,15 @@ export async function listExamQuestionsForTestRaw(testId: string): Promise<ExamQ
   }));
 }
 
+/**
+ * Chỉ route /api/exam/furigana/test gọi hàm này. Import "./server-furigana"
+ * (và qua đó, package "kuromoji") kiểu dynamic ngay trong hàm - không import
+ * tĩnh ở đầu file - để các trang khác chỉ dùng listExamQuestionsForTestRaw
+ * (hoặc các hàm query khác trong file này) không bao giờ phải nạp kuromoji
+ * vào bộ nhớ, dù cùng import từ "./queries".
+ */
 export async function listExamQuestionsForTest(testId: string): Promise<ExamQuestion[]> {
+  const { enrichExamTextWithFurigana } = await import("./server-furigana");
   const rows = await listExamQuestionsForTestRaw(testId);
 
   return Promise.all(

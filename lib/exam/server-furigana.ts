@@ -68,12 +68,6 @@ function getTokenizer(): Promise<KuromojiTokenizer> {
   return tokenizerPromise;
 }
 
-// Bắt đầu dựng dictionary ngay khi module này được import (lúc instance
-// serverless cold-start), chạy song song với việc query Supabase... thay vì
-// chỉ bắt đầu khi code chạy tới dòng cần furigana (tức là sau khi đã có kết
-// quả Supabase) - giúp tận dụng thời gian chờ sẵn có, không cộng dồn thêm.
-void getTokenizer().catch(() => {});
-
 async function generatedTokens(text: string): Promise<FuriganaToken[]> {
   if (!text || !KANJI_RE.test(text)) return [];
   const cached = tokenCache.get(text);
