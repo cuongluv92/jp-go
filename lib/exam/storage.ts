@@ -1,12 +1,12 @@
 import { getSupabaseClient } from "./supabase-client";
 
 /**
- * Ảnh nguồn KHÔNG lưu base64 trong DB - chỉ lưu path trong Supabase Storage,
- * bucket "exam-sources" (xem docs/EXAM_CONTENT_IMPORT.md mục ảnh nguồn).
- * Đổi ảnh sau này chỉ cần thay file trong Storage, không đổi page id.
+ * Ảnh nguồn chủ yếu lưu dưới dạng path trong Supabase Storage (bucket "exam-sources")
+ * hoặc public path của app. Với một số đề PDF đã nhập, cho phép data URL để giữ nguyên
+ * sơ đồ/hình gốc mà không cần tạo thêm file Storage.
  */
 export function getExamSourceImageUrl(path: string): string {
-  if (path.startsWith("/")) return path;
+  if (path.startsWith("/") || path.startsWith("data:")) return path;
   const supabase = getSupabaseClient();
   return supabase.storage.from("exam-sources").getPublicUrl(path).data.publicUrl;
 }
