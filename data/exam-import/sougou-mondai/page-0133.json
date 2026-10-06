@@ -1,0 +1,21 @@
+{
+  "book_slug": "sougou-mondai",
+  "section_path": [
+    { "code": "doc2", "title_jp": "資料No.2 第二次検定用教材", "title_vi": "Cuốn 2 - Tài liệu ôn thi lần 2" },
+    { "code": "doc2-5", "title_jp": "5. 電気用語", "title_vi": "5. Thuật ngữ điện" }
+  ],
+  "page_number": 133,
+  "page_label": "p.33",
+  "source_image_path": null,
+  "notes_vi": "[資料No.2 2級電気工事施工管理技術研修 第二次検定用教材（2026年度用）. Trang tiêu đề mở đầu chương mới '5. 電気用語', chỉ có 1 dòng tiêu đề. Phần chữ mờ nhìn xuyên qua (bảng 【問題No.1】【問題No.2】và hướng dẫn cách viết) là nội dung mặt sau tờ giấy (trang 34) bị bóng qua, không phải nội dung thật của trang 33.]",
+  "review_status": "draft",
+  "blocks": [
+    {
+      "type": "heading",
+      "level": 1,
+      "jp": "5．電気用語",
+      "vi": "5. Thuật ngữ điện",
+      "explanation_vi": null
+    }
+  ]
+}

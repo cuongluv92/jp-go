@@ -2,145 +2,85 @@
   "book_slug": "sougou-mondai",
   "section_path": [
     { "code": "doc2", "title_jp": "資料No.2 第二次検定用教材", "title_vi": "Cuốn 2 - Tài liệu ôn thi lần 2" },
-    { "code": "doc2-exp", "title_jp": "2. 施工経験記述", "title_vi": "2. Mô tả kinh nghiệm thi công" },
-    { "code": "doc2-exp-1", "title_jp": "【1】工程管理", "title_vi": "[1] Quản lý tiến độ" }
+    { "code": "doc2-4", "title_jp": "4. 計算問題", "title_vi": "4. Bài toán tính toán" }
   ],
   "page_number": 130,
-  "page_label": "Luyện thi R6",
+  "page_label": "p.30",
   "source_image_path": null,
-  "notes_vi": "Nội dung KHÔNG phải trích từ sách gốc - đây là bộ đáp án luyện viết tay do Claude soạn riêng theo yêu cầu của người dùng, dựa trên đúng đề thi thật R6 問題1 (工程管理, 問A+問B) ở trang 6-8, nhưng viết ngắn gọn hơn bản mẫu trong sách khoảng 20-30% để vừa sức luyện viết tay trong phòng thi. Theo đúng khung: 現場状況→問題・理由→留意事項→対策・実施.",
+  "notes_vi": "[資料No.2 2級電気工事施工管理技術研修 第二次検定用教材（2026年度用）. Ảnh gốc có lời giải viết tay bằng mực đỏ của người chụp (không phải nội dung in sẵn của sách) nên KHÔNG chép vào đây - chỉ chép phần chữ in (đề bài, 4 lựa chọn, và bảng đáp án đúng ở cuối trang). Sơ đồ mạch điện là hình vẽ nên chỉ mô tả bằng lời, không chép lại dạng hình.]",
   "review_status": "draft",
   "blocks": [
     {
       "type": "heading",
       "level": 2,
-      "jp": "R6 問題1（工程管理）解答例 - 練習用・短縮版",
-      "vi": "R6 Câu 1 (Quản lý tiến độ) - Bài giải luyện tập (bản rút gọn)",
-      "explanation_vi": null
-    },
-    {
-      "type": "note",
-      "jp": "本解答例は教材の模範解答とは別に、実際の試験で手書きできる分量に短縮して作成したものです。",
-      "vi": "Bài giải này được soạn riêng (không trích từ sách), rút ngắn vừa đủ để có thể viết tay thực tế trong phòng thi.",
+      "jp": "【問題 No.3】次の問いに答えなさい。",
+      "vi": "[Câu hỏi số 3] Hãy trả lời các câu hỏi sau.",
       "explanation_vi": null
     },
     {
       "type": "heading",
       "level": 3,
-      "jp": "問Ａ　屋外の作業のある電気工事",
-      "vi": "Đề A: Công trình điện có hạng mục làm việc ngoài trời",
-      "explanation_vi": null
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "jp": "留意すべき事項と理由①",
-      "vi": "Sự việc cần lưu ý và lý do ①",
+      "jp": "3-1",
+      "vi": "3-1",
       "explanation_vi": null
     },
     {
       "type": "paragraph",
-      "jp": "工場敷地内の屋外における高圧ケーブル新設工事（延長300m、掘削・布設・埋戻し）を9月に実施した。台風シーズンと重なり、降雨による掘削工程の中断が工期全体に影響するおそれがあったため、天候に左右されない工程確保に留意した。",
-      "vi": "Tôi đã thực hiện công trình lắp đặt mới cáp cao áp ngoài trời trong khuôn viên nhà máy (dài 300m, gồm đào đất, lắp đặt, lấp lại) vào tháng 9. Do trùng mùa bão, việc đào đất bị gián đoạn vì mưa có thể ảnh hưởng đến toàn bộ tiến độ công trình, nên tôi đã lưu ý đến việc đảm bảo tiến độ không phụ thuộc vào thời tiết.",
-      "explanation_vi": "Chuỗi logic: hiện trường cụ thể (cáp cao áp ngoài trời, tháng 9) → vấn đề/lý do (mùa bão, mưa gián đoạn đào đất, ảnh hưởng toàn bộ tiến độ) → sự việc lưu ý (đảm bảo tiến độ không phụ thuộc thời tiết)."
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "jp": "対策又は処置①",
-      "vi": "Biện pháp hoặc cách xử lý ①",
+      "jp": "図に示すRLC直列回路に交流電圧を加えたとき、XLの両端の電圧VL〔V〕として、最も適当なものはどれか。",
+      "vi": "Khi đặt điện áp xoay chiều vào mạch nối tiếp RLC như hình vẽ, giá trị điện áp VL [V] ở hai đầu XL nào dưới đây là phù hợp nhất?",
       "explanation_vi": null
     },
     {
-      "type": "paragraph",
-      "jp": "気象情報を基に作業工程表に予備日を3日間確保するとともに、降雨が予想される前日までに掘削・残土処理を前倒しで完了させるよう職長に指示した。毎日の作業終了時に進捗を写真と工程表で確認した。",
-      "vi": "Dựa trên thông tin thời tiết, tôi đã bố trí 3 ngày dự phòng trong bảng tiến độ, đồng thời chỉ thị tổ trưởng hoàn thành trước công việc đào đất và xử lý đất thải trước ngày dự báo có mưa. Vào cuối mỗi ngày làm việc, tôi xác nhận tiến độ bằng ảnh chụp và bảng tiến độ.",
-      "explanation_vi": "Đối sách cụ thể: dự phòng 3 ngày + đẩy sớm lịch đào đất trước ngày mưa (ai làm: chỉ thị tổ trưởng) → thực hiện/xác nhận: kiểm tra tiến độ hàng ngày bằng ảnh và bảng tiến độ."
+      "type": "image_placeholder",
+      "caption_jp": "RLC直列回路（VLを求める回路図）",
+      "caption_vi": "Mạch nối tiếp RLC (sơ đồ tìm điện áp VL)",
+      "explanation_vi": "Nguồn xoay chiều E=100V nối với mạch nối tiếp gồm điện trở R=8Ω, cuộn cảm XL=9Ω và tụ điện Xc=3Ω."
     },
     {
-      "type": "heading",
-      "level": 4,
-      "jp": "留意すべき事項と理由②",
-      "vi": "Sự việc cần lưu ý và lý do ②",
+      "type": "bullet_list",
+      "items_jp": ["① 30V", "② 45V", "③ 60V", "④ 90V"],
+      "items_vi": ["① 30V", "② 45V", "③ 60V", "④ 90V"],
       "explanation_vi": null
-    },
-    {
-      "type": "paragraph",
-      "jp": "同工事では、場内の資材搬入経路を他業者の重機作業と共用していたため、搬入車両の待機による作業員の手待ち時間増加で工程が遅延するおそれがあった。そのため、関連業者との搬入時間調整に留意した。",
-      "vi": "Trong cùng công trình này, do tuyến đường vận chuyển vật tư trong công trường dùng chung với khu vực làm việc của máy móc hạng nặng của nhà thầu khác, nên xe vận chuyển phải chờ đợi khiến công nhân mất thời gian chờ, có thể làm chậm tiến độ. Vì vậy, tôi đã lưu ý đến việc điều phối thời gian vận chuyển với nhà thầu liên quan.",
-      "explanation_vi": "Chuỗi logic: hiện trường cụ thể (đường vận chuyển dùng chung với nhà thầu khác) → vấn đề/lý do (xe chờ, công nhân mất thời gian chờ, chậm tiến độ) → sự việc lưu ý (điều phối thời gian vận chuyển)."
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "jp": "対策又は処置②",
-      "vi": "Biện pháp hoặc cách xử lý ②",
-      "explanation_vi": null
-    },
-    {
-      "type": "paragraph",
-      "jp": "元請と協議し、搬入時間帯を工種ごとに30分単位で割り振った搬入計画表を作成した。毎朝のミーティングで当日の搬入順を全業者に周知し、進捗を職長に確認させた。",
-      "vi": "Tôi đã trao đổi với nhà thầu chính và lập bảng kế hoạch vận chuyển, phân chia khung giờ vận chuyển theo từng loại công việc theo đơn vị 30 phút. Trong buổi họp mỗi sáng, tôi thông báo thứ tự vận chuyển trong ngày cho tất cả các nhà thầu và cho tổ trưởng xác nhận tiến độ.",
-      "explanation_vi": "Đối sách cụ thể: lập bảng phân chia khung giờ vận chuyển (ai làm: trao đổi với nhà thầu chính) → thực hiện/xác nhận: họp sáng thông báo thứ tự, tổ trưởng xác nhận tiến độ."
     },
     {
       "type": "heading",
       "level": 3,
-      "jp": "問Ｂ　土曜日、日曜日及び祝祭日のみ施工が可能な電気工事",
-      "vi": "Đề B: Công trình điện chỉ có thể thi công vào thứ Bảy, Chủ nhật và ngày lễ",
+      "jp": "3-2",
+      "vi": "3-2",
+      "explanation_vi": null
+    },
+    {
+      "type": "paragraph",
+      "jp": "図に示す配電線路において、C点の線間電圧〔V〕として、最も適当なものはどれか。\nただし、電線1線あたりの抵抗は、A-B間で0.2Ω、B-C間で0.1Ω、負荷は抵抗負荷とし、線路リアクタンスは無視する。",
+      "vi": "Trong đường dây phân phối điện như hình vẽ, giá trị điện áp dây tại điểm C [V] nào dưới đây là phù hợp nhất?\nTuy nhiên, điện trở mỗi dây dẫn là 0,2Ω giữa A-B, 0,1Ω giữa B-C, tải là tải điện trở, và bỏ qua điện kháng đường dây.",
+      "explanation_vi": null
+    },
+    {
+      "type": "image_placeholder",
+      "caption_jp": "配電線路（C点の線間電圧を求める回路図）",
+      "caption_vi": "Đường dây phân phối điện (sơ đồ tìm điện áp dây tại điểm C)",
+      "explanation_vi": "Nguồn 1 pha 2 dây (1φ2W) 210V tại điểm A, qua đoạn A-B (0.2Ω) tới điểm B có tải 10A, qua đoạn B-C (0.1Ω) tới điểm C có tải 10A."
+    },
+    {
+      "type": "bullet_list",
+      "items_jp": ["① 198V", "② 200V", "③ 204V", "④ 205V"],
+      "items_vi": ["① 198V", "② 200V", "③ 204V", "④ 205V"],
       "explanation_vi": null
     },
     {
       "type": "heading",
       "level": 4,
-      "jp": "留意すべき事項と理由①",
-      "vi": "Sự việc cần lưu ý và lý do ①",
+      "jp": "【解説 No.3】　電気テキスト　3-1 p.17〜19　3-2 p.2〜3",
+      "vi": "[Giải đáp số 3] - Giáo trình điện 3-1 tr.17~19, 3-2 tr.2~3",
       "explanation_vi": null
     },
     {
-      "type": "paragraph",
-      "jp": "商業施設の電気設備改修工事において、営業への影響を避けるため土曜・日曜・祝日のみの施工に限定されていた。限られた稼働日数で計画工程を達成できないおそれがあったため、稼働日ごとの作業量配分に留意した。",
-      "vi": "Trong công trình cải tạo thiết bị điện của trung tâm thương mại, để tránh ảnh hưởng đến việc kinh doanh, thi công chỉ được giới hạn vào thứ Bảy, Chủ nhật và ngày lễ. Vì có nguy cơ không đạt được tiến độ kế hoạch với số ngày thi công hạn chế, tôi đã lưu ý đến việc phân bổ khối lượng công việc cho từng ngày thi công.",
-      "explanation_vi": "Chuỗi logic: hiện trường cụ thể (chỉ thi công T7/CN/lễ do tránh ảnh hưởng kinh doanh) → vấn đề/lý do (số ngày hạn chế, khó đạt tiến độ) → sự việc lưu ý (phân bổ khối lượng theo từng ngày)."
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "jp": "対策又は処置①",
-      "vi": "Biện pháp hoặc cách xử lý ①",
+      "type": "table",
+      "headers_jp": ["問", "Đáp án đúng", "Giá trị"],
+      "rows_jp": [["3-1", "④", "90V"], ["3-2", "②", "200V"]],
+      "headers_vi": ["Câu", "Đáp án đúng", "Giá trị"],
+      "rows_vi": [["3-1", "④", "90V"], ["3-2", "②", "200V"]],
       "explanation_vi": null
-    },
-    {
-      "type": "paragraph",
-      "jp": "作業を日ごとに完結できる単位（フロア・系統ごと）に分割した詳細工程表を作成し、職長と事前に作業手順を確認した。各稼働日の終業時に進捗を記録し、翌稼働日の計画と照合した。",
-      "vi": "Tôi đã lập bảng tiến độ chi tiết, chia công việc thành các đơn vị có thể hoàn thành trong từng ngày (theo tầng, theo hệ thống), và xác nhận trước trình tự làm việc với tổ trưởng. Vào cuối mỗi ngày thi công, tôi ghi lại tiến độ và đối chiếu với kế hoạch của ngày thi công tiếp theo.",
-      "explanation_vi": "Đối sách cụ thể: chia nhỏ công việc theo đơn vị hoàn thành trong ngày (ai làm: xác nhận trước với tổ trưởng) → thực hiện/xác nhận: ghi tiến độ cuối ngày, đối chiếu kế hoạch ngày sau."
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "jp": "留意すべき事項と理由②",
-      "vi": "Sự việc cần lưu ý và lý do ②",
-      "explanation_vi": null
-    },
-    {
-      "type": "paragraph",
-      "jp": "当該工事は土曜・日曜・祝日のみの稼働であったため、必要な資材・機材を稼働日前に現場へ搬入しておく必要があった。搬入漏れがあると次の稼働日まで数日空いてしまい、作業ができず工程が大幅に遅れるおそれがあったため、事前の資材・人員手配に留意した。",
-      "vi": "Vì công trình này chỉ thi công vào thứ Bảy, Chủ nhật và ngày lễ, nên cần vận chuyển vật tư, thiết bị cần thiết vào công trường trước ngày thi công. Nếu thiếu sót trong khâu vận chuyển, sẽ phải chờ nhiều ngày đến lần thi công tiếp theo mới có thể làm việc, khiến tiến độ bị chậm trễ đáng kể, nên tôi đã lưu ý đến việc chuẩn bị vật tư và nhân lực trước.",
-      "explanation_vi": "Chuỗi logic: hiện trường cụ thể (chỉ thi công T7/CN/lễ) → vấn đề/lý do (thiếu sót vận chuyển → phải chờ nhiều ngày đến lần thi công sau → chậm tiến độ lớn) → sự việc lưu ý (chuẩn bị vật tư/nhân lực trước)."
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "jp": "対策又は処置②",
-      "vi": "Biện pháp hoặc cách xử lý ②",
-      "explanation_vi": null
-    },
-    {
-      "type": "paragraph",
-      "jp": "稼働日前日までに必要資材のチェックリストを作成し、職長と倉庫担当者で二重確認した。人員についても事前に出勤可否を確認し、不足時は代替要員を手配した。",
-      "vi": "Tôi đã lập danh sách kiểm tra vật tư cần thiết trước ngày thi công, và cho tổ trưởng cùng người phụ trách kho kiểm tra chéo hai lần. Về nhân lực, tôi cũng xác nhận trước khả năng đi làm, và bố trí người thay thế khi thiếu.",
-      "explanation_vi": "Đối sách cụ thể: lập checklist vật tư (ai làm: tổ trưởng + thủ kho kiểm tra chéo) → thực hiện/xác nhận: xác nhận nhân lực trước, bố trí thay thế khi thiếu."
     }
   ]
 }

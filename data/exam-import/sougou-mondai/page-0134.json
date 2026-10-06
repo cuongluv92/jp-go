@@ -1,0 +1,53 @@
+{
+  "book_slug": "sougou-mondai",
+  "section_path": [
+    { "code": "doc2", "title_jp": "資料No.2 第二次検定用教材", "title_vi": "Cuốn 2 - Tài liệu ôn thi lần 2" },
+    { "code": "doc2-5", "title_jp": "5. 電気用語", "title_vi": "5. Thuật ngữ điện" }
+  ],
+  "page_number": 134,
+  "page_label": "p.34",
+  "source_image_path": null,
+  "notes_vi": "[資料No.2 2級電気工事施工管理技術研修 第二次検定用教材（2026年度用）. Hướng dẫn cách làm bài phần 電気用語 (thuật ngữ điện), kèm ví dụ mẫu 風力発電.]",
+  "review_status": "draft",
+  "blocks": [
+    {
+      "type": "heading",
+      "level": 2,
+      "jp": "電気用語の記述の方法について",
+      "vi": "Về cách mô tả phần thuật ngữ điện",
+      "explanation_vi": null
+    },
+    {
+      "type": "paragraph",
+      "jp": "技術的な内容について記述すると設問にあるが、この場合の技術的内容とは施工管理技術を指すことに注意する。\n従って、施工管理者として工事を実施するときに必要な事項を中心に記述すると良い。具体的には、機器等であれば、どの設備（用途）にどのような目的で使用されるか、どのような原理で作動するか、また、どのような特徴や種類があるか、選定や施工についてはどのような留意点があるか等、また、現象については、どの設備で発生するか、何が原因か、対策をどのようにとるかを記述すると良い。\n各用語について2項目、各2行程度で記述することになっているため、記述スペースを有効に利用し記述不足にならないよう注意し準備をすることが必要である。\n毎年9用語出題され、その中から3用語を選択し解答する形式になっている。",
+      "vi": "Đề bài ghi là \"mô tả nội dung kỹ thuật\", nhưng cần lưu ý rằng nội dung kỹ thuật ở đây chỉ kỹ thuật quản lý thi công.\nVì vậy, nên mô tả tập trung vào những nội dung cần thiết đối với người quản lý thi công khi thực hiện công trình. Cụ thể, nếu là thiết bị, nên mô tả nó được dùng ở thiết bị (công dụng) nào với mục đích gì, hoạt động theo nguyên lý nào, có đặc điểm/chủng loại gì, khi lựa chọn hoặc thi công cần lưu ý điểm gì v.v.; còn nếu là hiện tượng, nên mô tả nó phát sinh ở thiết bị nào, nguyên nhân là gì, và biện pháp xử lý như thế nào.\nMỗi thuật ngữ cần mô tả 2 nội dung, mỗi nội dung khoảng 2 dòng, nên cần tận dụng hiệu quả không gian viết, chuẩn bị kỹ để tránh viết thiếu.\nMỗi năm ra đề 9 thuật ngữ, thí sinh chọn 3 trong số đó để trả lời.",
+      "explanation_vi": null
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "jp": "記述の手順要領",
+      "vi": "Hướng dẫn trình tự mô tả",
+      "explanation_vi": null
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "jp": "◎ 風力発電",
+      "vi": "◎ Phát điện bằng sức gió",
+      "explanation_vi": null
+    },
+    {
+      "type": "paragraph",
+      "jp": "（目的）自然エネルギーの活用を目的とした発電設備で、風力を各種の風車により回転エネルギーに変換し発電機により電気エネルギーに変換する発電設備である。",
+      "vi": "(Mục đích) Là thiết bị phát điện nhằm mục đích tận dụng năng lượng tự nhiên, chuyển đổi sức gió thành động năng quay thông qua các loại tua-bin gió, sau đó chuyển đổi thành điện năng nhờ máy phát điện.",
+      "explanation_vi": null
+    },
+    {
+      "type": "paragraph",
+      "jp": "（特徴）風力発電は地球温暖化の原因となるCO2の発生もなく、有害物質を排出しないクリーンなエネルギー資源であるが、発電量は風速に左右されるため不規則で間欠的である。",
+      "vi": "(Đặc điểm) Phát điện bằng sức gió là nguồn năng lượng sạch, không phát sinh CO2 (nguyên nhân gây nóng lên toàn cầu), không thải ra chất độc hại, nhưng sản lượng điện phụ thuộc vào tốc độ gió nên không ổn định và gián đoạn.",
+      "explanation_vi": "Đây là ví dụ mẫu minh họa cách trình bày 2 nội dung (mục đích + đặc điểm) cho 1 thuật ngữ, theo đúng khung hướng dẫn ở trên."
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "book_slug": "sougou-mondai",
+  "section_path": [
+    { "code": "doc2", "title_jp": "資料No.2 第二次検定用教材", "title_vi": "Cuốn 2 - Tài liệu ôn thi lần 2" },
+    { "code": "doc2-4", "title_jp": "4. 計算問題", "title_vi": "4. Bài toán tính toán" }
+  ],
+  "page_number": 132,
+  "page_label": "p.32",
+  "source_image_path": null,
+  "notes_vi": "[資料No.2 2級電気工事施工管理技術研修 第二次検定用教材（2026年度用）. Trang này chỉ có tiêu đề 【MEMO】và các dòng kẻ trống để tự ghi chú, không có nội dung in sẵn khác. Chữ mờ nhìn xuyên qua là nội dung mặt sau (trang 31), không phải nội dung trang này.]",
+  "review_status": "draft",
+  "blocks": [
+    {
+      "type": "heading",
+      "level": 3,
+      "jp": "【MEMO】",
+      "vi": "[Ghi chú]",
+      "explanation_vi": null
+    }
+  ]
+}
