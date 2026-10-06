@@ -1,0 +1,81 @@
+{
+  "book_slug": "sougou-mondai",
+  "section_path": [
+    { "code": "doc2", "title_jp": "資料No.2 第二次検定用教材", "title_vi": "Cuốn 2 - Tài liệu ôn thi lần 2" },
+    { "code": "doc2-exp", "title_jp": "2. 施工経験記述", "title_vi": "2. Mô tả kinh nghiệm thi công" },
+    { "code": "doc2-exp-1", "title_jp": "【1】工程管理", "title_vi": "[1] Quản lý tiến độ" }
+  ],
+  "page_number": 107,
+  "page_label": "p.7",
+  "source_image_path": null,
+  "notes_vi": "[資料No.2 2級電気工事施工管理技術研修 第二次検定用教材（2026年度用）. Bài giải mẫu cho đề R6 問A (p.6) - công trình có hạng mục làm việc ngoài trời.]",
+  "review_status": "draft",
+  "blocks": [
+    {
+      "type": "heading",
+      "level": 2,
+      "jp": "R6解答例",
+      "vi": "Bài giải mẫu năm Reiwa 6",
+      "explanation_vi": null
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "jp": "◎屋外の作業のある電気工事の例",
+      "vi": "Ví dụ: công trình thi công điện có hạng mục làm việc ngoài trời",
+      "explanation_vi": null
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "jp": "留意すべき事項と理由①",
+      "vi": "Sự việc cần lưu ý và lý do ①",
+      "explanation_vi": null
+    },
+    {
+      "type": "paragraph",
+      "jp": "❶工場新築工事において、構内道路沿いに設置する15か所のマンホールに敷設する6.6kV高圧ケーブル約450mの地中埋設工事（掘削、配管、埋戻し）を7月に行った。❷工事期間中は梅雨明け直後で、気象予報では降雨確率が50％以上の日が複数日あったため、❸作業効率向上の作業方法に留意した。",
+      "vi": "❶Trong công trình xây mới nhà máy, đã thực hiện công trình chôn ngầm (đào, lắp ống, lấp lại) khoảng 450m cáp cao áp 6,6kV dẫn tới 15 hố ga đặt dọc đường nội bộ, vào tháng 7. ❷Thời gian thi công là ngay sau khi hết mùa mưa, dự báo thời tiết cho thấy nhiều ngày có xác suất mưa trên 50%, nên ❸đã lưu ý đến phương pháp làm việc nhằm nâng cao hiệu suất thi công.",
+      "explanation_vi": null
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "jp": "対策又は処置①",
+      "vi": "Biện pháp hoặc cách xử lý ①",
+      "explanation_vi": null
+    },
+    {
+      "type": "paragraph",
+      "jp": "❹職長と作業工程を見直し、工程表に予備日を5日間設定するとともに1日当たりのケーブル保護管敷設延長をマンホール1区間30mから2区間60mへ増加させた。❺1日2区間の施工に対応させるため配管作業中は2区間目の掘削を行わせて機械の稼働率を上げさせた。進捗管理はマンホール番号で班長に報告させた。",
+      "vi": "❹Đã cùng tổ trưởng xem xét lại tiến độ thi công, thiết lập 5 ngày dự phòng trong bảng tiến độ, đồng thời tăng chiều dài lắp ống bảo vệ cáp mỗi ngày từ 1 đoạn (giữa 1 cặp hố ga, 30m) lên 2 đoạn (60m). ❺Để đáp ứng thi công 2 đoạn/ngày, trong lúc lắp ống đã cho đào luôn đoạn thứ 2 để tăng hiệu suất sử dụng máy móc. Việc quản lý tiến độ được tổ trưởng báo cáo theo số hiệu hố ga.",
+      "explanation_vi": null
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "jp": "留意すべき事項と理由②",
+      "vi": "Sự việc cần lưu ý và lý do ②",
+      "explanation_vi": null
+    },
+    {
+      "type": "paragraph",
+      "jp": "❶工場構内道路に設置されたLED照明器具20基の更新工事において、照明柱は構内主要道路沿いに設置されており、高所作業車を移動して器具取付及び結線作業を行うが、通行車両の運行に合わせ作業場所を移動するため❸作業能率低下に伴う作業遅延防止方法に留意した。",
+      "vi": "❶Trong công trình thay mới 20 bộ đèn chiếu sáng LED lắp đặt trên đường nội bộ nhà máy, các cột đèn được đặt dọc theo đường chính nội bộ; công việc lắp đặt thiết bị và đấu nối phải di chuyển xe nâng, và phải di chuyển vị trí làm việc theo lưu lượng xe cộ qua lại, nên ❸đã lưu ý đến biện pháp phòng ngừa chậm tiến độ do giảm hiệu suất làm việc.",
+      "explanation_vi": null
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "jp": "対策又は処置②",
+      "vi": "Biện pháp hoặc cách xử lý ②",
+      "explanation_vi": null
+    },
+    {
+      "type": "paragraph",
+      "jp": "❹施設管理者と調整し、車両通行の少ない時間帯に照明柱を10基ずつ連続施工する作業を2日間で計画し、照明器具や結線材料を施工エリアごとに事前配置した。❺また取付班と点灯確認班の2班編成とし、進捗管理は1か所20分で実施した。その結果、1日10基の施工目標を達成し、工完出来た。",
+      "vi": "❹Đã phối hợp với người quản lý cơ sở, lên kế hoạch thi công liên tục 10 cột đèn vào khung giờ ít xe qua lại, chia thành 2 ngày, và bố trí trước thiết bị chiếu sáng cùng vật tư đấu nối theo từng khu vực thi công. ❺Ngoài ra, chia thành 2 tổ: tổ lắp đặt và tổ kiểm tra bật đèn, việc quản lý tiến độ thực hiện 20 phút/vị trí. Kết quả đạt mục tiêu thi công 10 bộ/ngày và hoàn thành công trình.",
+      "explanation_vi": null
+    }
+  ]
+}

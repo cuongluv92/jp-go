@@ -1,0 +1,81 @@
+{
+  "book_slug": "sougou-mondai",
+  "section_path": [
+    { "code": "doc2", "title_jp": "資料No.2 第二次検定用教材", "title_vi": "Cuốn 2 - Tài liệu ôn thi lần 2" },
+    { "code": "doc2-exp", "title_jp": "2. 施工経験記述", "title_vi": "2. Mô tả kinh nghiệm thi công" },
+    { "code": "doc2-exp-2", "title_jp": "【2】安全管理", "title_vi": "[2] Quản lý an toàn" }
+  ],
+  "page_number": 110,
+  "page_label": "p.10",
+  "source_image_path": null,
+  "notes_vi": "[資料No.2 2級電気工事施工管理技術研修 第二次検定用教材（2026年度用）. Ảnh chỉ thấy rõ bài giải 問A; phần 問B (hiện mờ ở mép phải ảnh, có thể ở trang 11) chưa đọc được, sẽ bổ sung khi có ảnh rõ hơn.]",
+  "review_status": "draft",
+  "blocks": [
+    {
+      "type": "heading",
+      "level": 2,
+      "jp": "R7解答例",
+      "vi": "Bài giải mẫu năm Reiwa 7",
+      "explanation_vi": null
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "jp": "問Ａ　施設等が運用中の電気工事",
+      "vi": "Đề A: Công trình điện tại cơ sở đang vận hành",
+      "explanation_vi": null
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "jp": "留意した事項と理由①",
+      "vi": "Sự việc đã lưu ý và lý do ①",
+      "explanation_vi": null
+    },
+    {
+      "type": "paragraph",
+      "jp": "❶病院の電気設備改修工事において、増設MRI用分岐幹線を接続する工事の際に、❷ほかの医療機器への電源供給を維持しつつ、作業を行うよう指示があったため活線近接作業による、❸接触防止手法に留意する必要があった。",
+      "vi": "❶Trong công trình cải tạo thiết bị điện của bệnh viện, khi thi công đấu nối đường dây nhánh cho máy MRI lắp thêm, ❷đã được chỉ thị phải vừa duy trì cấp điện cho các thiết bị y tế khác vừa thi công, nên do phải làm việc gần đường dây đang mang điện, ❸cần lưu ý đến biện pháp phòng tránh tiếp xúc.",
+      "explanation_vi": null
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "jp": "対策又は処置①",
+      "vi": "Biện pháp hoặc cách xử lý ①",
+      "explanation_vi": null
+    },
+    {
+      "type": "paragraph",
+      "jp": "❹作業責任者との検討の結果、通常よりも広い充電部から50cm以内に接近可能性のある作業の際には、必ず絶縁防護具を取り付けるよう決めた。❺作業開始前には必ず、作業責任者が検電器で確認した上で作業を開始する手順を確立し、感電事故を防いだ。",
+      "vi": "❹Qua thảo luận với người phụ trách thi công, đã quyết định: với các công việc có khả năng đến gần trong phạm vi 50cm tính từ phần mang điện rộng hơn bình thường, bắt buộc phải lắp dụng cụ bảo hộ cách điện. ❺Trước khi bắt đầu làm việc, đã thiết lập quy trình bắt buộc người phụ trách thi công phải dùng bút thử điện kiểm tra trước rồi mới bắt đầu, nhờ đó phòng tránh được tai nạn điện giật.",
+      "explanation_vi": null
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "jp": "留意した事項と理由②",
+      "vi": "Sự việc đã lưu ý và lý do ②",
+      "explanation_vi": null
+    },
+    {
+      "type": "paragraph",
+      "jp": "❶10F建てのホテル改修工事の照明取替工事が営業時間内での、フロアごとの改修工事になった。❷作業に必要な資材の搬入が、他作業の搬入と重なり、客用EVを使用しなければならないことになり、❸搬入時のお客様との接触などの防止に留意した。",
+      "vi": "❶Công trình thay thế đèn chiếu sáng trong dự án cải tạo khách sạn 10 tầng trở thành công trình cải tạo theo từng tầng, thực hiện trong giờ khách sạn vẫn hoạt động. ❷Việc vận chuyển vật tư cần thiết cho công việc trùng với việc vận chuyển của công việc khác, nên phải dùng thang máy dành cho khách, do đó ❸đã lưu ý phòng tránh va chạm/tiếp xúc với khách trong lúc vận chuyển.",
+      "explanation_vi": null
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "jp": "対策又は処置②",
+      "vi": "Biện pháp hoặc cách xử lý ②",
+      "explanation_vi": null
+    },
+    {
+      "type": "paragraph",
+      "jp": "❹ホテル責任者と打ち合わせを行い、搬入時間をお客様の比較的少ない12:00〜13:00とし、動線確保のため、カラーコーン、コーンバーを設置するように決めた。❺当日、作業責任者に動線の広さの確認を指示し、思っていたよりもお客様の人数が多かった誘導員を配備し、事故を防ぐことができた。",
+      "vi": "❹Đã họp bàn với người phụ trách khách sạn, chọn khung giờ vận chuyển là 12:00~13:00 (lúc ít khách hơn), và quyết định đặt cọc tiêu/thanh chắn để đảm bảo lối đi lại. ❺Vào ngày thi công, đã chỉ thị người phụ trách thi công kiểm tra lại độ rộng lối đi; vì số lượng khách nhiều hơn dự tính nên đã bố trí thêm người hướng dẫn, nhờ đó phòng tránh được tai nạn.",
+      "explanation_vi": null
+    }
+  ]
+}

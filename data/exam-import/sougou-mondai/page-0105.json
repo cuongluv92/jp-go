@@ -1,0 +1,59 @@
+{
+  "book_slug": "sougou-mondai",
+  "section_path": [
+    { "code": "doc2", "title_jp": "資料No.2 第二次検定用教材", "title_vi": "Cuốn 2 - Tài liệu ôn thi lần 2" },
+    { "code": "doc2-exp", "title_jp": "2. 施工経験記述", "title_vi": "2. Mô tả kinh nghiệm thi công" }
+  ],
+  "page_number": 105,
+  "page_label": "p.5",
+  "source_image_path": null,
+  "notes_vi": "[資料No.2 2級電気工事施工管理技術研修 第二次検定用教材（2026年度用）. Sơ đồ 【施工管理の手順】này trước đó bị cắt mép ảnh ở p.4, giờ đã có ảnh rõ nên bổ sung đầy đủ.]",
+  "review_status": "draft",
+  "blocks": [
+    {
+      "type": "heading",
+      "level": 3,
+      "jp": "【施工管理の手順】",
+      "vi": "[Trình tự nghiệp vụ quản lý thi công]",
+      "explanation_vi": null
+    },
+    {
+      "type": "paragraph",
+      "jp": "施工管理者の経験記述は、下記の施工管理業務の手順を十分に理解することが重要である。",
+      "vi": "Đối với phần mô tả kinh nghiệm của người quản lý thi công, điều quan trọng là phải hiểu rõ trình tự nghiệp vụ quản lý thi công dưới đây.",
+      "explanation_vi": null
+    },
+    {
+      "type": "table",
+      "headers_jp": ["手順", "具体的な経験記述"],
+      "rows_jp": [
+        ["❶ 現場状況等", "問題の起きる現場状況を具体的に"],
+        ["❷ 予測した問題", "予測した問題とその理由を具体的に"],
+        [
+          "❸ 特に留意した事項",
+          "予測した問題を解決するために特に取り組んだ管理する項目を具体的に\n管理上の留意事項は必ず1つ\n留意事項は工事の目的や目標ではない"
+        ],
+        ["❹ 対策の決定", "色々検討して決定した対策を2つ具体的に"],
+        [
+          "❺ 対策・処置",
+          "決定した対策を計画どおり実施するために、どのように現場状況に合った適切な指揮・指導等をしたか、また、どのようにチェックしたかを具体的に。"
+        ]
+      ],
+      "headers_vi": ["Bước", "Mô tả kinh nghiệm cụ thể"],
+      "rows_vi": [
+        ["❶ Tình hình hiện trường...", "Mô tả cụ thể tình hình hiện trường nơi có thể phát sinh vấn đề"],
+        ["❷ Vấn đề đã dự đoán", "Mô tả cụ thể vấn đề đã dự đoán và lý do của nó"],
+        [
+          "❸ Sự việc đặc biệt lưu ý",
+          "Mô tả cụ thể hạng mục quản lý đã đặc biệt chú trọng để giải quyết vấn đề đã dự đoán\nSự việc cần lưu ý về quản lý chỉ được nêu đúng 1 điều\nSự việc cần lưu ý không phải là mục đích hay mục tiêu công trình"
+        ],
+        ["❹ Quyết định biện pháp", "Mô tả cụ thể 2 biện pháp đã xem xét nhiều mặt rồi quyết định"],
+        [
+          "❺ Biện pháp - xử lý",
+          "Mô tả cụ thể đã chỉ huy/hướng dẫn phù hợp với tình hình hiện trường như thế nào để thực hiện đúng biện pháp đã quyết định theo kế hoạch, và đã kiểm tra như thế nào."
+        ]
+      ],
+      "explanation_vi": "Đây chính là sơ đồ nhắc tới ở trang trước (p.4) - trong sách gốc có 2 ngoặc bên trái: bước ❶~❹ thuộc nhóm '計画' (Lập kế hoạch), bước ❺ thuộc nhóm '実施' (Thực hiện)."
+    }
+  ]
+}

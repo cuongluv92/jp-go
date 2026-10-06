@@ -1,0 +1,60 @@
+{
+  "book_slug": "sougou-mondai",
+  "section_path": [
+    { "code": "doc2", "title_jp": "資料No.2 第二次検定用教材", "title_vi": "Cuốn 2 - Tài liệu ôn thi lần 2" },
+    { "code": "doc2-exp", "title_jp": "2. 施工経験記述", "title_vi": "2. Mô tả kinh nghiệm thi công" },
+    { "code": "doc2-exp-1", "title_jp": "【1】工程管理", "title_vi": "[1] Quản lý tiến độ" }
+  ],
+  "page_number": 106,
+  "page_label": "p.6",
+  "source_image_path": null,
+  "notes_vi": "[資料No.2 2級電気工事施工管理技術研修 第二次検定用教材（2026年度用）. Lề trang có 1 dòng chữ viết tay tiếng Việt của người chụp (ghi chú cá nhân, không phải nội dung sách gốc) nên không chép vào đây.]",
+  "review_status": "draft",
+  "blocks": [
+    {
+      "type": "heading",
+      "level": 2,
+      "jp": "【1】工程管理",
+      "vi": "[1] Quản lý tiến độ",
+      "explanation_vi": "Chủ đề này đã từng ra đề các năm: R6, R4, R2, H30."
+    },
+    {
+      "type": "note",
+      "jp": "1-2　上記の電気工事の現場において、工程管理上あなたが特に留意した事項とその理由を2つあげ、あなたがとった対策又は処置を留意した項目ごとに具体的に記述しなさい。",
+      "vi": "1-2. Tại công trường thi công điện nêu trên, hãy nêu 2 sự việc bạn đặc biệt lưu ý về mặt quản lý tiến độ và lý do, đồng thời mô tả cụ thể biện pháp hoặc cách xử lý bạn đã thực hiện theo từng sự việc đã lưu ý.",
+      "explanation_vi": "(R4) - đây là đề thật của năm Reiwa 4."
+    },
+    {
+      "type": "note",
+      "jp": "【問題１】　次の問Ａ又は問Ｂのどちらかを選択して答えなさい。\nただし、解答は電気工事に附帯する工事を主体に記述しないこと。",
+      "vi": "【Câu 1】 Chọn một trong hai câu hỏi A hoặc B dưới đây để trả lời.\nTuy nhiên, không được mô tả chủ yếu về công trình phụ trợ đi kèm công trình điện.",
+      "explanation_vi": null
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "jp": "（問Ａ）",
+      "vi": "(Đề A)",
+      "explanation_vi": null
+    },
+    {
+      "type": "paragraph",
+      "jp": "あなたの電気工事の経験を踏まえ、屋外の作業のある電気工事において、工程管理上、あなたが留意すべき事項とその理由を2つあげなさい。\nその上で、留意すべき事項ごとに、あなたがとるべき対策又は処置を具体的に記述しなさい。\nただし、対策又は処置の内容は重複しないこと。",
+      "vi": "Dựa trên kinh nghiệm thi công điện của bạn, trong công trình thi công điện có hạng mục làm việc ngoài trời, hãy nêu 2 sự việc bạn cần lưu ý về mặt quản lý tiến độ và lý do của chúng.\nSau đó, hãy mô tả cụ thể theo từng sự việc cần lưu ý về biện pháp hoặc cách xử lý bạn cần thực hiện.\nLưu ý: nội dung biện pháp hoặc cách xử lý không được trùng nhau.",
+      "explanation_vi": null
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "jp": "（問Ｂ）",
+      "vi": "(Đề B)",
+      "explanation_vi": null
+    },
+    {
+      "type": "paragraph",
+      "jp": "あなたの電気工事の経験を踏まえ、土曜日、日曜日及び祝祭日のみ施工が可能な電気工事において、工程管理上、あなたが留意すべき事項と理由を2つあげなさい。\nその上で、留意すべき事項ごとに、あなたがとるべき対策又は処置を具体的に記述しなさい。\nただし、対策又は処置の内容は重複しないこと。",
+      "vi": "Dựa trên kinh nghiệm thi công điện của bạn, trong công trình thi công điện chỉ có thể thi công vào thứ Bảy, Chủ nhật và ngày lễ, hãy nêu 2 sự việc bạn cần lưu ý về mặt quản lý tiến độ và lý do.\nSau đó, hãy mô tả cụ thể theo từng sự việc cần lưu ý về biện pháp hoặc cách xử lý bạn cần thực hiện.\nLưu ý: nội dung biện pháp hoặc cách xử lý không được trùng nhau.",
+      "explanation_vi": "(R6) - đây chính là đề thật của năm Reiwa 6, có bài giải mẫu ở trang sau."
+    }
+  ]
+}
