@@ -15,7 +15,12 @@
       "level": 4,
       "jp": "14．電動機の過負荷保護（R1）　電気テキスト p.139",
       "vi": "14. Bảo vệ quá tải động cơ điện (R1) - Giáo trình điện tr.139",
-      "explanation_vi": null
+      "explanation_vi": null,
+      "furigana_tokens": [
+        { "surface": "電動機", "reading": "でんどうき" },
+        { "surface": "過負荷保護", "reading": "かふかほご" },
+        { "surface": "電気", "reading": "でんき" }
+      ]
     },
     {
       "type": "bullet_list",
@@ -27,6 +32,28 @@
         "① Khi giá trị công suất đặt lên động cơ vượt quá tải định mức sẽ gây quá tải (overload), nên mục đích là phòng tránh quá nhiệt.",
         "② Cần lưu ý giá trị dòng điện cho phép; có phương pháp dùng rơ-le quá dòng để phát hiện dòng quá tải chạy qua khi xảy ra sự cố quá tải, từ đó cho máy cắt tác động."
       ],
+      "items_furigana_tokens": [
+        [
+          { "surface": "電動機", "reading": "でんどうき" },
+          { "surface": "電力数値", "reading": "でんりょくすうち" },
+          { "surface": "定格負荷以上", "reading": "ていかくふかいじょう" },
+          { "surface": "過熱防止", "reading": "かねつぼうし" },
+          { "surface": "目的", "reading": "もくてき" }
+        ],
+        [
+          { "surface": "許容電流値", "reading": "きょようでんりゅうち" },
+          { "surface": "注意", "reading": "ちゅうい" },
+          { "surface": "必要", "reading": "ひつよう" },
+          { "surface": "過負荷事故時", "reading": "かふかじこじ" },
+          { "surface": "流", "reading": "なが" },
+          { "surface": "過電流", "reading": "かでんりゅう" },
+          { "surface": "検出", "reading": "けんしゅつ" },
+          { "surface": "過電流継電器", "reading": "かでんりゅうけいでんき" },
+          { "surface": "遮断器", "reading": "しゃだんき" },
+          { "surface": "動作", "reading": "どうさ" },
+          { "surface": "方法", "reading": "ほうほう" }
+        ]
+      ],
       "explanation_vi": null
     },
     {
@@ -34,7 +61,11 @@
       "level": 4,
       "jp": "15．変流器（CT）（R1）　電気テキスト p.121",
       "vi": "15. Biến dòng điện - CT (R1) - Giáo trình điện tr.121",
-      "explanation_vi": null
+      "explanation_vi": null,
+      "furigana_tokens": [
+        { "surface": "変流器", "reading": "へんりゅうき" },
+        { "surface": "電気", "reading": "でんき" }
+      ]
     },
     {
       "type": "bullet_list",
@@ -46,6 +77,22 @@
         "① Để đo dòng điện lớn bằng dòng điện nhỏ, biến đổi thành dòng điện nhỏ.",
         "② Biến dòng điện được chia thành 2 loại lớn: biến dòng dùng cho đồng hồ đo và biến dòng dùng cho rơ-le bảo vệ - đây là điểm cần lưu ý khi lựa chọn."
       ],
+      "items_furigana_tokens": [
+        [
+          { "surface": "大電流", "reading": "だいでんりゅう" },
+          { "surface": "小電流", "reading": "しょうでんりゅう" },
+          { "surface": "測定", "reading": "そくてい" },
+          { "surface": "変成", "reading": "へんせい" }
+        ],
+        [
+          { "surface": "変流器", "reading": "へんりゅうき" },
+          { "surface": "計器用変流器", "reading": "けいきようへんりゅうき" },
+          { "surface": "保護継電器用変流器", "reading": "ほごけいでんきようへんりゅうき" },
+          { "surface": "大別", "reading": "だいべつ" },
+          { "surface": "選定上", "reading": "せんていじょう" },
+          { "surface": "留意点", "reading": "りゅういてん" }
+        ]
+      ],
       "explanation_vi": null
     },
     {
@@ -53,7 +100,11 @@
       "level": 4,
       "jp": "16．接地抵抗試験（R5）　電気テキスト p.102",
       "vi": "16. Thử nghiệm điện trở tiếp địa (R5) - Giáo trình điện tr.102",
-      "explanation_vi": null
+      "explanation_vi": null,
+      "furigana_tokens": [
+        { "surface": "接地抵抗試験", "reading": "せっちていこうしけん" },
+        { "surface": "電気", "reading": "でんき" }
+      ]
     },
     {
       "type": "bullet_list",
@@ -65,6 +116,25 @@
         "① Là thử nghiệm được thực hiện để phòng tránh điện giật từ thiết bị, vật cách điện, nhằm xác nhận điện trở đạt từ giá trị quy định trở xuống.",
         "② Giá trị điện trở tiếp địa được quy định: loại A, loại C phải từ 10Ω trở xuống; loại D phải từ 100Ω trở xuống."
       ],
+      "items_furigana_tokens": [
+        [
+          { "surface": "機器", "reading": "きき" },
+          { "surface": "絶縁物", "reading": "ぜつえんぶつ" },
+          { "surface": "感電", "reading": "かんでん" },
+          { "surface": "防止", "reading": "ぼうし" },
+          { "surface": "行", "reading": "おこな" },
+          { "surface": "所定", "reading": "しょてい" },
+          { "surface": "抵抗値以下", "reading": "ていこうちいか" },
+          { "surface": "確認", "reading": "かくにん" },
+          { "surface": "試験", "reading": "しけん" }
+        ],
+        [
+          { "surface": "接地抵抗値", "reading": "せっちていこうち" },
+          { "surface": "種", "reading": "しゅ" },
+          { "surface": "以下", "reading": "いか" },
+          { "surface": "規定", "reading": "きてい" }
+        ]
+      ],
       "explanation_vi": null
     },
     {
@@ -72,7 +142,10 @@
       "level": 4,
       "jp": "17．2Eリレー（R7）　電気テキスト p.139",
       "vi": "17. Rơ-le 2E (R7) - Giáo trình điện tr.139",
-      "explanation_vi": null
+      "explanation_vi": null,
+      "furigana_tokens": [
+        { "surface": "電気", "reading": "でんき" }
+      ]
     },
     {
       "type": "bullet_list",
@@ -84,6 +157,39 @@
         "① Rơ-le 2E là một loại rơ-le chủ yếu dùng để bảo vệ động cơ điện và thiết bị điện, phát hiện quá tải hoặc mất pha, gửi tín hiệu sự cố đến công-tắc-tơ điện từ v.v. để ngắt mạch chính.",
         "② Nguyên nhân chính gây quá tải hoặc mất pha là đứt dây do tiếp điểm của máy cắt hoặc công-tắc-tơ điện từ bị hỏng/suy giảm chất lượng, đứt dây do cáp bị lão hóa, hoặc rung động do hoạt động của động cơ v.v."
       ],
+      "items_furigana_tokens": [
+        [
+          { "surface": "主に", "reading": "おもに" },
+          { "surface": "電動機", "reading": "でんどうき" },
+          { "surface": "電気機器", "reading": "でんききき" },
+          { "surface": "保護", "reading": "ほご" },
+          { "surface": "使用", "reading": "しよう" },
+          { "surface": "一種", "reading": "いっしゅ" },
+          { "surface": "過負荷", "reading": "かふか" },
+          { "surface": "欠相", "reading": "けっそう" },
+          { "surface": "検出", "reading": "けんしゅつ" },
+          { "surface": "電磁接触器等", "reading": "でんじせっしょくきとう" },
+          { "surface": "事故信号", "reading": "じこしんごう" },
+          { "surface": "送り", "reading": "おくり" },
+          { "surface": "主回路", "reading": "しゅかいろ" },
+          { "surface": "開放", "reading": "かいほう" }
+        ],
+        [
+          { "surface": "過負荷", "reading": "かふか" },
+          { "surface": "欠相", "reading": "けっそう" },
+          { "surface": "発生", "reading": "はっせい" },
+          { "surface": "主な", "reading": "おもな" },
+          { "surface": "原因", "reading": "げんいん" },
+          { "surface": "配線用遮断器", "reading": "はいせんようしゃだんき" },
+          { "surface": "電磁接触器", "reading": "でんじせっしょくき" },
+          { "surface": "接点不良", "reading": "せってんふりょう" },
+          { "surface": "劣化", "reading": "れっか" },
+          { "surface": "断線", "reading": "だんせん" },
+          { "surface": "電動機等", "reading": "でんどうきとう" },
+          { "surface": "作動", "reading": "さどう" },
+          { "surface": "振動等", "reading": "しんどうとう" }
+        ]
+      ],
       "explanation_vi": null
     },
     {
@@ -91,7 +197,10 @@
       "level": 2,
       "jp": "【通信設備】",
       "vi": "[Thiết bị thông tin liên lạc]",
-      "explanation_vi": null
+      "explanation_vi": null,
+      "furigana_tokens": [
+        { "surface": "通信設備", "reading": "つうしんせつび" }
+      ]
     },
     {
       "type": "numbered_list",
@@ -105,6 +214,15 @@
         "Cáp UTP (R1, 4)",
         "Cáp đồng trục tần số cao (R6)"
       ],
+      "items_furigana_tokens": [
+        [
+          { "surface": "光", "reading": "ひかり" }
+        ],
+        [],
+        [
+          { "surface": "高周波同軸", "reading": "こうしゅうはどうじく" }
+        ]
+      ],
       "explanation_vi": "Số trong ngoặc là các năm (Reiwa) từng ra đề về thuật ngữ đó."
     },
     {
@@ -112,7 +230,11 @@
       "level": 4,
       "jp": "◎1．光ファイバケーブル（R2, 5）　電気テキスト p.155",
       "vi": "◎1. Cáp quang (R2, 5) - Giáo trình điện tr.155",
-      "explanation_vi": null
+      "explanation_vi": null,
+      "furigana_tokens": [
+        { "surface": "光", "reading": "ひかり" },
+        { "surface": "電気", "reading": "でんき" }
+      ]
     },
     {
       "type": "bullet_list",
@@ -123,6 +245,36 @@
       "items_vi": [
         "① Nếu cùng dung lượng truyền dẫn thì cáp này mảnh hơn so với các loại cáp khác, nhẹ và có tính mềm dẻo tốt. Ngoài ra còn có các loại như đa mode (multi-mode), đơn mode (single-mode) v.v.",
         "② Là cáp thông tin liên lạc chuyển đổi tín hiệu điện đã số hóa thành tín hiệu quang để truyền dẫn, có các ưu điểm như tổn hao thấp, băng thông rộng, không cảm ứng, không nhiễu xuyên âm v.v."
+      ],
+      "items_furigana_tokens": [
+        [
+          { "surface": "同", "reading": "おな" },
+          { "surface": "伝送量", "reading": "でんそうりょう" },
+          { "surface": "他", "reading": "ほか" },
+          { "surface": "比較", "reading": "ひかく" },
+          { "surface": "細", "reading": "ほそ" },
+          { "surface": "済", "reading": "す" },
+          { "surface": "軽量", "reading": "けいりょう" },
+          { "surface": "上", "reading": "うえ" },
+          { "surface": "可とう性", "reading": "かとうせい" },
+          { "surface": "優", "reading": "すぐ" },
+          { "surface": "形等", "reading": "がたとう" },
+          { "surface": "形", "reading": "がた" },
+          { "surface": "種類", "reading": "しゅるい" }
+        ],
+        [
+          { "surface": "化", "reading": "か" },
+          { "surface": "電気信号", "reading": "でんきしんごう" },
+          { "surface": "光信号", "reading": "こうしんごう" },
+          { "surface": "変", "reading": "か" },
+          { "surface": "伝送", "reading": "でんそう" },
+          { "surface": "通信用", "reading": "つうしんよう" },
+          { "surface": "低損失", "reading": "ていそんしつ" },
+          { "surface": "広帯域性", "reading": "こうたいいきせい" },
+          { "surface": "無誘導", "reading": "むゆうどう" },
+          { "surface": "無漏話等", "reading": "むろうわとう" },
+          { "surface": "利点", "reading": "りてん" }
+        ]
       ],
       "explanation_vi": null
     }

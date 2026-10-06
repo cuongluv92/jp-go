@@ -24,6 +24,13 @@
         "区分",
         "内容（解答欄）"
       ],
+      "headers_furigana_tokens": [
+        [{ "surface": "区分", "reading": "くぶん" }],
+        [
+          { "surface": "内容", "reading": "ないよう" },
+          { "surface": "解答欄", "reading": "かいとうらん" }
+        ]
+      ],
       "rows_jp": [
         [
           "(2) 留意すべき事項と理由",
@@ -32,6 +39,24 @@
         [
           "(2) 対策又は処置",
           "（記述欄）"
+        ]
+      ],
+      "rows_furigana_tokens": [
+        [
+          [
+            { "surface": "留意", "reading": "りゅうい" },
+            { "surface": "事項", "reading": "じこう" },
+            { "surface": "理由", "reading": "りゆう" }
+          ],
+          [{ "surface": "記述欄", "reading": "きじゅつらん" }]
+        ],
+        [
+          [
+            { "surface": "対策", "reading": "たいさく" },
+            { "surface": "又", "reading": "また" },
+            { "surface": "処置", "reading": "しょち" }
+          ],
+          [{ "surface": "記述欄", "reading": "きじゅつらん" }]
         ]
       ],
       "headers_vi": [
@@ -53,6 +78,12 @@
     {
       "type": "note",
       "jp": "※実際の解答用紙とは、記入できるスペースなどが異なります。",
+      "furigana_tokens": [
+        { "surface": "実際", "reading": "じっさい" },
+        { "surface": "解答用紙", "reading": "かいとうようし" },
+        { "surface": "記入", "reading": "きにゅう" },
+        { "surface": "異", "reading": "こと" }
+      ],
       "vi": "※Phiếu trả lời thực tế có khoảng trống để viết khác với mẫu minh họa này.",
       "explanation_vi": null
     },
@@ -60,6 +91,10 @@
       "type": "heading",
       "level": 2,
       "jp": "2-2. 出題傾向",
+      "furigana_tokens": [
+        { "surface": "出題", "reading": "しゅつだい" },
+        { "surface": "傾向", "reading": "けいこう" }
+      ],
       "vi": "2-2. Xu hướng ra đề",
       "explanation_vi": null
     },
@@ -77,6 +112,19 @@
         "R5",
         "R6",
         "R7"
+      ],
+      "headers_furigana_tokens": [
+        [{ "surface": "出題", "reading": "しゅつだい" }],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        []
       ],
       "rows_jp": [
         [
@@ -104,6 +152,16 @@
           "○",
           "",
           "○"
+        ]
+      ],
+      "rows_furigana_tokens": [
+        [
+          [{ "surface": "工程管理", "reading": "こうていかんり" }],
+          [], [], [], [], [], [], [], [], [], []
+        ],
+        [
+          [{ "surface": "安全管理", "reading": "あんぜんかんり" }],
+          [], [], [], [], [], [], [], [], [], []
         ]
       ],
       "headers_vi": [

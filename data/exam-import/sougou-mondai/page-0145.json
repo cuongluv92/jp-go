@@ -15,7 +15,10 @@
       "level": 1,
       "jp": "6．法規",
       "vi": "6. Pháp quy",
-      "explanation_vi": null
+      "explanation_vi": null,
+      "furigana_tokens": [
+        { "surface": "法規", "reading": "ほうき" }
+      ]
     }
   ]
 }

@@ -15,6 +15,12 @@
       "type": "heading",
       "level": 2,
       "jp": "2-4．経験記述の評価基準とチェック",
+      "furigana_tokens": [
+        { "surface": "経験", "reading": "けいけん" },
+        { "surface": "記述", "reading": "きじゅつ" },
+        { "surface": "評価", "reading": "ひょうか" },
+        { "surface": "基準", "reading": "きじゅん" }
+      ],
       "vi": "2-4. Tiêu chuẩn đánh giá và việc kiểm tra bài mô tả kinh nghiệm",
       "explanation_vi": null
     },
@@ -22,6 +28,13 @@
       "type": "heading",
       "level": 3,
       "jp": "(1) 施工管理の理論の展開記述のチェック",
+      "furigana_tokens": [
+        { "surface": "施工", "reading": "しこう" },
+        { "surface": "管理", "reading": "かんり" },
+        { "surface": "理論", "reading": "りろん" },
+        { "surface": "展開", "reading": "てんかい" },
+        { "surface": "記述", "reading": "きじゅつ" }
+      ],
       "vi": "(1) Kiểm tra phần triển khai lý luận quản lý thi công",
       "explanation_vi": null
     },
@@ -31,6 +44,34 @@
         "施工管理の手法が手順よく展開されているか。",
         "施工管理業務の展開記述が施工法や作業中心になっていないか。",
         "管理手法・手順のどこが問われているか設問を理解して、解答できているか。"
+      ],
+      "items_furigana_tokens": [
+        [
+          { "surface": "施工", "reading": "しこう" },
+          { "surface": "管理", "reading": "かんり" },
+          { "surface": "手法", "reading": "しゅほう" },
+          { "surface": "手順", "reading": "てじゅん" },
+          { "surface": "展開", "reading": "てんかい" }
+        ],
+        [
+          { "surface": "施工", "reading": "しこう" },
+          { "surface": "管理", "reading": "かんり" },
+          { "surface": "業務", "reading": "ぎょうむ" },
+          { "surface": "展開", "reading": "てんかい" },
+          { "surface": "記述", "reading": "きじゅつ" },
+          { "surface": "施工法", "reading": "しこうほう" },
+          { "surface": "作業", "reading": "さぎょう" },
+          { "surface": "中心", "reading": "ちゅうしん" }
+        ],
+        [
+          { "surface": "管理", "reading": "かんり" },
+          { "surface": "手法", "reading": "しゅほう" },
+          { "surface": "手順", "reading": "てじゅん" },
+          { "surface": "問", "reading": "と" },
+          { "surface": "設問", "reading": "せつもん" },
+          { "surface": "理解", "reading": "りかい" },
+          { "surface": "解答", "reading": "かいとう" }
+        ]
       ],
       "items_vi": [
         "Phương pháp quản lý thi công có được triển khai theo đúng trình tự hay không.",
@@ -45,6 +86,25 @@
         "イ) 技術的課題と目的（又は目標）を混同した記述になっていないか。",
         "ロ) 検討項目と決定した対策の内容が混同していないか。"
       ],
+      "items_furigana_tokens": [
+        [
+          { "surface": "技術的", "reading": "ぎじゅつてき" },
+          { "surface": "課題", "reading": "かだい" },
+          { "surface": "目的", "reading": "もくてき" },
+          { "surface": "又", "reading": "また" },
+          { "surface": "目標", "reading": "もくひょう" },
+          { "surface": "混同", "reading": "こんどう" },
+          { "surface": "記述", "reading": "きじゅつ" }
+        ],
+        [
+          { "surface": "検討", "reading": "けんとう" },
+          { "surface": "項目", "reading": "こうもく" },
+          { "surface": "決定", "reading": "けってい" },
+          { "surface": "対策", "reading": "たいさく" },
+          { "surface": "内容", "reading": "ないよう" },
+          { "surface": "混同", "reading": "こんどう" }
+        ]
+      ],
       "items_vi": [
         "イ) Có bị nhầm lẫn giữa vấn đề kỹ thuật với mục đích (hoặc mục tiêu) trong bài mô tả hay không.",
         "ロ) Có bị nhầm lẫn giữa hạng mục đã xem xét với nội dung biện pháp đã quyết định hay không."
@@ -55,6 +115,10 @@
       "type": "heading",
       "level": 3,
       "jp": "(2) 内容の一貫性のチェック",
+      "furigana_tokens": [
+        { "surface": "内容", "reading": "ないよう" },
+        { "surface": "一貫性", "reading": "いっかんせい" }
+      ],
       "vi": "(2) Kiểm tra tính nhất quán của nội dung",
       "explanation_vi": null
     },
@@ -64,6 +128,41 @@
         "イ) 施工管理業務の内容が与えられた条件と一貫して記述しているかどうか。",
         "ロ) 取り組んだ課題→検討内容→対応処置の管理活動の手法・手順が一貫したものでなければならない。",
         "ハ) 元請・下請の立場の違いによる管理内容に一貫性があること。"
+      ],
+      "items_furigana_tokens": [
+        [
+          { "surface": "施工", "reading": "しこう" },
+          { "surface": "管理", "reading": "かんり" },
+          { "surface": "業務", "reading": "ぎょうむ" },
+          { "surface": "内容", "reading": "ないよう" },
+          { "surface": "与", "reading": "あた" },
+          { "surface": "条件", "reading": "じょうけん" },
+          { "surface": "一貫", "reading": "いっかん" },
+          { "surface": "記述", "reading": "きじゅつ" }
+        ],
+        [
+          { "surface": "取", "reading": "と" },
+          { "surface": "組", "reading": "く" },
+          { "surface": "課題", "reading": "かだい" },
+          { "surface": "検討", "reading": "けんとう" },
+          { "surface": "内容", "reading": "ないよう" },
+          { "surface": "対応", "reading": "たいおう" },
+          { "surface": "処置", "reading": "しょち" },
+          { "surface": "管理", "reading": "かんり" },
+          { "surface": "活動", "reading": "かつどう" },
+          { "surface": "手法", "reading": "しゅほう" },
+          { "surface": "手順", "reading": "てじゅん" },
+          { "surface": "一貫", "reading": "いっかん" }
+        ],
+        [
+          { "surface": "元請", "reading": "もとうけ" },
+          { "surface": "下請", "reading": "したうけ" },
+          { "surface": "立場", "reading": "たちば" },
+          { "surface": "違", "reading": "ちが" },
+          { "surface": "管理", "reading": "かんり" },
+          { "surface": "内容", "reading": "ないよう" },
+          { "surface": "一貫性", "reading": "いっかんせい" }
+        ]
       ],
       "items_vi": [
         "イ) Nội dung nghiệp vụ quản lý thi công có được mô tả nhất quán với điều kiện đã cho hay không.",

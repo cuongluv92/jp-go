@@ -15,53 +15,143 @@
       "level": 2,
       "jp": "【問題 No.2】「建設業法」、「労働安全衛生法」又は「電気工事士法」に定められている法文において、下線部の語句のうち誤っている語句の番号をそれぞれ1つあげ、それに対する正しい語句を答えなさい。",
       "vi": "[Câu hỏi số 2] Trong các điều luật được quy định tại \"Luật Xây dựng\", \"Luật An toàn và Vệ sinh Lao động\" hoặc \"Luật Thợ điện\", hãy nêu ra 1 số thứ tự của từ gạch chân bị sai trong mỗi câu, và trả lời từ đúng tương ứng.",
-      "explanation_vi": "(R2)"
+      "explanation_vi": "(R2)",
+      "furigana_tokens": [
+        { "surface": "問題", "reading": "もんだい" },
+        { "surface": "建設業法", "reading": "けんせつぎょうほう" },
+        { "surface": "労働安全衛生法", "reading": "ろうどうあんぜんえいせいほう" },
+        { "surface": "又", "reading": "また" },
+        { "surface": "電気工事士法", "reading": "でんきこうじしほう" },
+        { "surface": "定", "reading": "さだ" },
+        { "surface": "法文", "reading": "ほうぶん" },
+        { "surface": "下線部", "reading": "かせんぶ" },
+        { "surface": "語句", "reading": "ごく" },
+        { "surface": "誤", "reading": "あやま" },
+        { "surface": "番号", "reading": "ばんごう" },
+        { "surface": "対", "reading": "たい" },
+        { "surface": "正", "reading": "ただ" },
+        { "surface": "答", "reading": "こた" }
+      ]
     },
     {
       "type": "heading",
       "level": 3,
       "jp": "2-1 「建設業法」",
       "vi": "2-1 \"Luật Xây dựng\"",
-      "explanation_vi": null
+      "explanation_vi": null,
+      "furigana_tokens": [
+        { "surface": "建設業法", "reading": "けんせつぎょうほう" }
+      ]
     },
     {
       "type": "paragraph",
       "jp": "元請負人は、その請け負った建設工事を施工するために必要な工程①の細目、作業②方法その他元請負人において定めるべき事項を定めようとするときは、あらかじめ、設計者③の意見を聞かなければならない。",
       "vi": "Khi nhà thầu chính có ý định quy định các hạng mục chi tiết về tiến độ①, phương pháp thi công② và các vấn đề khác mà nhà thầu chính cần quy định để thi công công trình xây dựng mà mình đã nhận thầu, thì trước đó phải lắng nghe ý kiến của người thiết kế③.",
-      "explanation_vi": null
+      "explanation_vi": null,
+      "furigana_tokens": [
+        { "surface": "元請負人", "reading": "もとうけおいにん" },
+        { "surface": "請け負った", "reading": "うけおった" },
+        { "surface": "建設工事", "reading": "けんせつこうじ" },
+        { "surface": "施工", "reading": "せこう" },
+        { "surface": "必要", "reading": "ひつよう" },
+        { "surface": "工程", "reading": "こうてい" },
+        { "surface": "細目", "reading": "さいもく" },
+        { "surface": "作業", "reading": "さぎょう" },
+        { "surface": "方法", "reading": "ほうほう" },
+        { "surface": "他", "reading": "ほか" },
+        { "surface": "定", "reading": "さだ" },
+        { "surface": "事項", "reading": "じこう" },
+        { "surface": "設計者", "reading": "せっけいしゃ" },
+        { "surface": "意見", "reading": "いけん" },
+        { "surface": "聞", "reading": "き" }
+      ]
     },
     {
       "type": "heading",
       "level": 3,
       "jp": "2-2 「労働安全衛生法」",
       "vi": "2-2 \"Luật An toàn và Vệ sinh Lao động\"",
-      "explanation_vi": null
+      "explanation_vi": null,
+      "furigana_tokens": [
+        { "surface": "労働安全衛生法", "reading": "ろうどうあんぜんえいせいほう" }
+      ]
     },
     {
       "type": "paragraph",
       "jp": "事業者は、単にこの法律で定める公衆①災害の防止のための最低基準②を守るだけでなく、快適な職場環境の実現と労働条件の改善を通じて職場における労働者の安全と健康③を確保するようにしなければならない。また、事業者は、国が実施する公衆①災害の防止に関する施策に協力するようにしなければならない。",
       "vi": "Người sử dụng lao động không chỉ đơn thuần phải tuân thủ tiêu chuẩn tối thiểu② nhằm phòng ngừa tai nạn công cộng① mà luật này quy định, mà còn phải đảm bảo an toàn và sức khỏe③ của người lao động tại nơi làm việc thông qua việc hiện thực hóa môi trường làm việc thoải mái và cải thiện điều kiện lao động. Ngoài ra, người sử dụng lao động phải hợp tác với các biện pháp phòng ngừa tai nạn công cộng① mà Nhà nước thực hiện.",
-      "explanation_vi": null
+      "explanation_vi": null,
+      "furigana_tokens": [
+        { "surface": "事業者", "reading": "じぎょうしゃ" },
+        { "surface": "単", "reading": "たん" },
+        { "surface": "法律", "reading": "ほうりつ" },
+        { "surface": "定", "reading": "さだ" },
+        { "surface": "公衆", "reading": "こうしゅう" },
+        { "surface": "災害", "reading": "さいがい" },
+        { "surface": "防止", "reading": "ぼうし" },
+        { "surface": "最低基準", "reading": "さいていきじゅん" },
+        { "surface": "守", "reading": "まも" },
+        { "surface": "快適", "reading": "かいてき" },
+        { "surface": "職場環境", "reading": "しょくばかんきょう" },
+        { "surface": "実現", "reading": "じつげん" },
+        { "surface": "労働条件", "reading": "ろうどうじょうけん" },
+        { "surface": "改善", "reading": "かいぜん" },
+        { "surface": "通", "reading": "つう" },
+        { "surface": "職場", "reading": "しょくば" },
+        { "surface": "労働者", "reading": "ろうどうしゃ" },
+        { "surface": "安全", "reading": "あんぜん" },
+        { "surface": "健康", "reading": "けんこう" },
+        { "surface": "確保", "reading": "かくほ" },
+        { "surface": "国", "reading": "くに" },
+        { "surface": "実施", "reading": "じっし" },
+        { "surface": "関", "reading": "かん" },
+        { "surface": "施策", "reading": "しさく" },
+        { "surface": "協力", "reading": "きょうりょく" }
+      ]
     },
     {
       "type": "heading",
       "level": 3,
       "jp": "2-3 「電気工事士法」",
       "vi": "2-3 \"Luật Thợ điện\"",
-      "explanation_vi": null
+      "explanation_vi": null,
+      "furigana_tokens": [
+        { "surface": "電気工事士法", "reading": "でんきこうじしほう" }
+      ]
     },
     {
       "type": "paragraph",
       "jp": "この法律において「電気工事」とは、一般用①電気工作物等又は事業用②電気工作物を設置し、又は変更する工事をいう。ただし、政令で定める軽微③な工事を除く。",
       "vi": "Trong luật này, \"công trình điện\" là công trình lắp đặt hoặc thay đổi thiết bị điện dùng chung① hoặc thiết bị điện kinh doanh②. Tuy nhiên, không bao gồm công trình nhỏ③ theo quy định của nghị định.",
-      "explanation_vi": null
+      "explanation_vi": null,
+      "furigana_tokens": [
+        { "surface": "法律", "reading": "ほうりつ" },
+        { "surface": "電気工事", "reading": "でんきこうじ" },
+        { "surface": "一般用", "reading": "いっぱんよう" },
+        { "surface": "電気工作物等", "reading": "でんきこうさくぶつとう" },
+        { "surface": "又", "reading": "また" },
+        { "surface": "事業用", "reading": "じぎょうよう" },
+        { "surface": "電気工作物", "reading": "でんきこうさくぶつ" },
+        { "surface": "設置", "reading": "せっち" },
+        { "surface": "変更", "reading": "へんこう" },
+        { "surface": "工事", "reading": "こうじ" },
+        { "surface": "政令", "reading": "せいれい" },
+        { "surface": "定", "reading": "さだ" },
+        { "surface": "軽微", "reading": "けいび" },
+        { "surface": "除", "reading": "のぞ" }
+      ]
     },
     {
       "type": "heading",
       "level": 4,
       "jp": "【解説 No.2】　施工マニュアル　1-p.173　2-p.209　電気テキスト　3-p.193",
       "vi": "[Giải đáp số 2] - Sổ tay thi công 1-tr.173, 2-tr.209; Giáo trình điện 3-tr.193",
-      "explanation_vi": null
+      "explanation_vi": null,
+      "furigana_tokens": [
+        { "surface": "解説", "reading": "かいせつ" },
+        { "surface": "施工", "reading": "せこう" },
+        { "surface": "電気", "reading": "でんき" }
+      ]
     },
     {
       "type": "table",
@@ -69,6 +159,16 @@
       "rows_jp": [["2-1", "③", "下請負人"], ["2-2", "①", "労働"], ["2-3", "②", "自家用"]],
       "headers_vi": ["Câu", "Số sai", "Từ đúng"],
       "rows_vi": [["2-1", "③", "nhà thầu phụ (下請負人)"], ["2-2", "①", "lao động (労働)"], ["2-3", "②", "tự dùng riêng (自家用)"]],
+      "headers_furigana_tokens": [
+        [{ "surface": "問", "reading": "もん" }],
+        [{ "surface": "誤っている番号", "reading": "あやまっているばんごう" }],
+        [{ "surface": "正しい語句", "reading": "ただしいごく" }]
+      ],
+      "rows_furigana_tokens": [
+        [[], [], [{ "surface": "下請負人", "reading": "したうけおいにん" }]],
+        [[], [], [{ "surface": "労働", "reading": "ろうどう" }]],
+        [[], [], [{ "surface": "自家用", "reading": "じかよう" }]]
+      ],
       "explanation_vi": null
     }
   ]

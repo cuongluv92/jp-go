@@ -15,31 +15,83 @@
       "level": 2,
       "jp": "【問題 No.4】「建設業法」、「労働安全衛生法」又は「電気工事士法」に関する次の問に答えなさい。",
       "vi": "[Câu hỏi số 4] Hãy trả lời các câu hỏi sau liên quan đến \"Luật Xây dựng\", \"Luật An toàn và Vệ sinh Lao động\" hoặc \"Luật Thợ điện\".",
-      "explanation_vi": "(R4)"
+      "explanation_vi": "(R4)",
+      "furigana_tokens": [
+        { "surface": "問題", "reading": "もんだい" },
+        { "surface": "建設業法", "reading": "けんせつぎょうほう" },
+        { "surface": "労働安全衛生法", "reading": "ろうどうあんぜんえいせいほう" },
+        { "surface": "又", "reading": "また" },
+        { "surface": "電気工事士法", "reading": "でんきこうじしほう" },
+        { "surface": "関", "reading": "かん" },
+        { "surface": "次", "reading": "つぎ" },
+        { "surface": "問", "reading": "もん" },
+        { "surface": "答", "reading": "こた" }
+      ]
     },
     {
       "type": "heading",
       "level": 3,
       "jp": "4-1 建設工事に従事する者に関する次の記述の［　］に当てはまる語句として、「建設業法」上、定められているものはそれぞれどれか。",
       "vi": "4-1 Từ nào dưới đây phù hợp với chỗ trống ［　］ trong đoạn mô tả sau về người tham gia công trình xây dựng, theo quy định của \"Luật Xây dựng\"?",
-      "explanation_vi": null
+      "explanation_vi": null,
+      "furigana_tokens": [
+        { "surface": "建設工事", "reading": "けんせつこうじ" },
+        { "surface": "従事", "reading": "じゅうじ" },
+        { "surface": "者", "reading": "もの" },
+        { "surface": "関", "reading": "かん" },
+        { "surface": "次", "reading": "つぎ" },
+        { "surface": "記述", "reading": "きじゅつ" },
+        { "surface": "当", "reading": "あ" },
+        { "surface": "語句", "reading": "ごく" },
+        { "surface": "建設業法", "reading": "けんせつぎょうほう" },
+        { "surface": "上", "reading": "じょう" },
+        { "surface": "定", "reading": "さだ" }
+      ]
     },
     {
       "type": "paragraph",
       "jp": "「建設工事に従事する者は、建設工事を適正に実施するために必要な［ア］又は技能の［イ］に努めなければならない。」",
       "vi": "\"Người tham gia công trình xây dựng phải nỗ lực ［イ］ ［ア］ hoặc kỹ năng cần thiết để thực hiện công trình xây dựng một cách đúng đắn.\"",
-      "explanation_vi": null
+      "explanation_vi": null,
+      "furigana_tokens": [
+        { "surface": "建設工事", "reading": "けんせつこうじ" },
+        { "surface": "従事", "reading": "じゅうじ" },
+        { "surface": "者", "reading": "もの" },
+        { "surface": "適正", "reading": "てきせい" },
+        { "surface": "実施", "reading": "じっし" },
+        { "surface": "必要", "reading": "ひつよう" },
+        { "surface": "又", "reading": "また" },
+        { "surface": "技能", "reading": "ぎのう" },
+        { "surface": "努", "reading": "つと" }
+      ]
     },
     {
       "type": "bullet_list",
       "items_jp": ["ア　①知識及び経験　②知識及び技術　③技術及び経験　④技術及び実績"],
       "items_vi": ["ア　① kiến thức và kinh nghiệm　② kiến thức và kỹ thuật　③ kỹ thuật và kinh nghiệm　④ kỹ thuật và thành tích"],
+      "items_furigana_tokens": [
+        [
+          { "surface": "知識", "reading": "ちしき" },
+          { "surface": "及", "reading": "およ" },
+          { "surface": "経験", "reading": "けいけん" },
+          { "surface": "技術", "reading": "ぎじゅつ" },
+          { "surface": "実績", "reading": "じっせき" }
+        ]
+      ],
       "explanation_vi": null
     },
     {
       "type": "bullet_list",
       "items_jp": ["イ　①習得　②進歩　③向上　④継承"],
       "items_vi": ["イ　① lĩnh hội　② tiến bộ　③ nâng cao　④ kế thừa"],
+      "items_furigana_tokens": [
+        [
+          { "surface": "習得", "reading": "しゅうとく" },
+          { "surface": "進歩", "reading": "しんぽ" },
+          { "surface": "向上", "reading": "こうじょう" },
+          { "surface": "継承", "reading": "けいしょう" }
+        ]
+      ],
       "explanation_vi": null
     },
     {
@@ -47,24 +99,74 @@
       "level": 3,
       "jp": "4-2 事業者等の責務に関する次の記述の［　］に当てはまる語句として、「労働安全衛生法」上、定められているものはそれぞれどれか。",
       "vi": "4-2 Từ nào dưới đây phù hợp với chỗ trống ［　］ trong đoạn mô tả sau về trách nhiệm của người sử dụng lao động, theo quy định của \"Luật An toàn và Vệ sinh Lao động\"?",
-      "explanation_vi": null
+      "explanation_vi": null,
+      "furigana_tokens": [
+        { "surface": "事業者等", "reading": "じぎょうしゃとう" },
+        { "surface": "責務", "reading": "せきむ" },
+        { "surface": "関", "reading": "かん" },
+        { "surface": "次", "reading": "つぎ" },
+        { "surface": "記述", "reading": "きじゅつ" },
+        { "surface": "当", "reading": "あ" },
+        { "surface": "語句", "reading": "ごく" },
+        { "surface": "労働安全衛生法", "reading": "ろうどうあんぜんえいせいほう" },
+        { "surface": "上", "reading": "じょう" },
+        { "surface": "定", "reading": "さだ" }
+      ]
     },
     {
       "type": "paragraph",
       "jp": "「事業者は、単にこの法律で定める労働災害防止のための［ア］を守るだけでなく、快適な職場環境の実現と労働条件の改善を通じて職場における労働者の［イ］を確保するようにしなければならない。」",
       "vi": "\"Người sử dụng lao động không chỉ đơn thuần phải tuân thủ ［ア］ nhằm phòng ngừa tai nạn lao động mà luật này quy định, mà còn phải đảm bảo ［イ］ của người lao động tại nơi làm việc thông qua việc hiện thực hóa môi trường làm việc thoải mái và cải thiện điều kiện lao động.\"",
-      "explanation_vi": null
+      "explanation_vi": null,
+      "furigana_tokens": [
+        { "surface": "事業者", "reading": "じぎょうしゃ" },
+        { "surface": "単", "reading": "たん" },
+        { "surface": "法律", "reading": "ほうりつ" },
+        { "surface": "定", "reading": "さだ" },
+        { "surface": "労働災害防止", "reading": "ろうどうさいがいぼうし" },
+        { "surface": "守", "reading": "まも" },
+        { "surface": "快適", "reading": "かいてき" },
+        { "surface": "職場環境", "reading": "しょくばかんきょう" },
+        { "surface": "実現", "reading": "じつげん" },
+        { "surface": "労働条件", "reading": "ろうどうじょうけん" },
+        { "surface": "改善", "reading": "かいぜん" },
+        { "surface": "通", "reading": "つう" },
+        { "surface": "職場", "reading": "しょくば" },
+        { "surface": "労働者", "reading": "ろうどうしゃ" },
+        { "surface": "確保", "reading": "かくほ" }
+      ]
     },
     {
       "type": "bullet_list",
       "items_jp": ["ア　①作業環境　②技術的事項　③最低基準　④勧告及び規則"],
       "items_vi": ["ア　① môi trường làm việc　② vấn đề kỹ thuật　③ tiêu chuẩn tối thiểu　④ khuyến cáo và quy tắc"],
+      "items_furigana_tokens": [
+        [
+          { "surface": "作業環境", "reading": "さぎょうかんきょう" },
+          { "surface": "技術的事項", "reading": "ぎじゅつてきじこう" },
+          { "surface": "最低基準", "reading": "さいていきじゅん" },
+          { "surface": "勧告", "reading": "かんこく" },
+          { "surface": "及", "reading": "およ" },
+          { "surface": "規則", "reading": "きそく" }
+        ]
+      ],
       "explanation_vi": null
     },
     {
       "type": "bullet_list",
       "items_jp": ["イ　①安全と健康　②健康の保持　③労働災害の防止　④安全又は衛生"],
       "items_vi": ["イ　① an toàn và sức khỏe　② duy trì sức khỏe　③ phòng ngừa tai nạn lao động　④ an toàn hoặc vệ sinh"],
+      "items_furigana_tokens": [
+        [
+          { "surface": "安全", "reading": "あんぜん" },
+          { "surface": "健康", "reading": "けんこう" },
+          { "surface": "保持", "reading": "ほじ" },
+          { "surface": "労働災害", "reading": "ろうどうさいがい" },
+          { "surface": "防止", "reading": "ぼうし" },
+          { "surface": "又", "reading": "また" },
+          { "surface": "衛生", "reading": "えいせい" }
+        ]
+      ],
       "explanation_vi": null
     },
     {
@@ -72,24 +174,66 @@
       "level": 3,
       "jp": "4-3 電気工事士に関する次の記述の［　］に当てはまる語句として、「電気工事士法」上、定められているものはそれぞれどれか。",
       "vi": "4-3 Từ nào dưới đây phù hợp với chỗ trống ［　］ trong đoạn mô tả sau về thợ điện, theo quy định của \"Luật Thợ điện\"?",
-      "explanation_vi": null
+      "explanation_vi": null,
+      "furigana_tokens": [
+        { "surface": "電気工事士", "reading": "でんきこうじし" },
+        { "surface": "関", "reading": "かん" },
+        { "surface": "次", "reading": "つぎ" },
+        { "surface": "記述", "reading": "きじゅつ" },
+        { "surface": "当", "reading": "あ" },
+        { "surface": "語句", "reading": "ごく" },
+        { "surface": "電気工事士法", "reading": "でんきこうじしほう" },
+        { "surface": "上", "reading": "じょう" },
+        { "surface": "定", "reading": "さだ" }
+      ]
     },
     {
       "type": "paragraph",
       "jp": "「この法律は、電気工事の［ア］の資格及び義務を定め、もつて電気工事の欠陥による［イ］の防止に寄与することを目的とする。」",
       "vi": "\"Luật này nhằm mục đích quy định tư cách và nghĩa vụ của ［ア］ trong công trình điện, qua đó góp phần phòng ngừa ［イ］ do khuyết tật của công trình điện gây ra.\"",
-      "explanation_vi": null
+      "explanation_vi": null,
+      "furigana_tokens": [
+        { "surface": "法律", "reading": "ほうりつ" },
+        { "surface": "電気工事", "reading": "でんきこうじ" },
+        { "surface": "資格", "reading": "しかく" },
+        { "surface": "及", "reading": "およ" },
+        { "surface": "義務", "reading": "ぎむ" },
+        { "surface": "定", "reading": "さだ" },
+        { "surface": "欠陥", "reading": "けっかん" },
+        { "surface": "防止", "reading": "ぼうし" },
+        { "surface": "寄与", "reading": "きよ" },
+        { "surface": "目的", "reading": "もくてき" }
+      ]
     },
     {
       "type": "bullet_list",
       "items_jp": ["ア　①作業に従事する者　②作業の管理をする者　③現場に従事する者　④現場の管理をする者"],
       "items_vi": ["ア　① người tham gia thực hiện công việc　② người quản lý công việc　③ người tham gia hiện trường　④ người quản lý hiện trường"],
+      "items_furigana_tokens": [
+        [
+          { "surface": "作業", "reading": "さぎょう" },
+          { "surface": "従事", "reading": "じゅうじ" },
+          { "surface": "者", "reading": "もの" },
+          { "surface": "管理", "reading": "かんり" },
+          { "surface": "現場", "reading": "げんば" }
+        ]
+      ],
       "explanation_vi": null
     },
     {
       "type": "bullet_list",
       "items_jp": ["イ　①施工不良　②災害の発生　③感電事故　④安全性の低下"],
       "items_vi": ["イ　① thi công kém chất lượng　② xảy ra tai nạn　③ sự cố điện giật　④ suy giảm tính an toàn"],
+      "items_furigana_tokens": [
+        [
+          { "surface": "施工不良", "reading": "せこうふりょう" },
+          { "surface": "災害", "reading": "さいがい" },
+          { "surface": "発生", "reading": "はっせい" },
+          { "surface": "感電事故", "reading": "かんでんじこ" },
+          { "surface": "安全性", "reading": "あんぜんせい" },
+          { "surface": "低下", "reading": "ていか" }
+        ]
+      ],
       "explanation_vi": null
     },
     {
@@ -97,7 +241,12 @@
       "level": 4,
       "jp": "【解説 No.4】　施工マニュアル　1-p.177　2-p.209　電気テキスト　3-p.193",
       "vi": "[Giải đáp số 4] - Sổ tay thi công 1-tr.177, 2-tr.209; Giáo trình điện 3-tr.193",
-      "explanation_vi": null
+      "explanation_vi": null,
+      "furigana_tokens": [
+        { "surface": "解説", "reading": "かいせつ" },
+        { "surface": "施工", "reading": "せこう" },
+        { "surface": "電気", "reading": "でんき" }
+      ]
     },
     {
       "type": "table",
@@ -118,6 +267,33 @@
         ["4-2 イ", "①", "an toàn và sức khỏe"],
         ["4-3 ア", "①", "người tham gia thực hiện công việc"],
         ["4-3 イ", "②", "xảy ra tai nạn"]
+      ],
+      "headers_furigana_tokens": [
+        [{ "surface": "問", "reading": "もん" }],
+        [{ "surface": "正解", "reading": "せいかい" }],
+        [{ "surface": "語句", "reading": "ごく" }]
+      ],
+      "rows_furigana_tokens": [
+        [[], [], [
+          { "surface": "知識", "reading": "ちしき" },
+          { "surface": "及", "reading": "およ" },
+          { "surface": "技術", "reading": "ぎじゅつ" }
+        ]],
+        [[], [], [{ "surface": "向上", "reading": "こうじょう" }]],
+        [[], [], [{ "surface": "最低基準", "reading": "さいていきじゅん" }]],
+        [[], [], [
+          { "surface": "安全", "reading": "あんぜん" },
+          { "surface": "健康", "reading": "けんこう" }
+        ]],
+        [[], [], [
+          { "surface": "作業", "reading": "さぎょう" },
+          { "surface": "従事", "reading": "じゅうじ" },
+          { "surface": "者", "reading": "もの" }
+        ]],
+        [[], [], [
+          { "surface": "災害", "reading": "さいがい" },
+          { "surface": "発生", "reading": "はっせい" }
+        ]]
       ],
       "explanation_vi": null
     }

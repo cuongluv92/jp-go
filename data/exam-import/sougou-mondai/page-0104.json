@@ -22,12 +22,28 @@
       "type": "heading",
       "level": 2,
       "jp": "2-3. 求められている施工経験記述",
+      "furigana_tokens": [
+        { "surface": "求", "reading": "もと" },
+        { "surface": "施工", "reading": "しこう" },
+        { "surface": "経験", "reading": "けいけん" },
+        { "surface": "記述", "reading": "きじゅつ" }
+      ],
       "vi": "2-3. Mô tả kinh nghiệm thi công được yêu cầu",
       "explanation_vi": null
     },
     {
       "type": "paragraph",
       "jp": "求められている施工経験記述は、作業主体の施工経験ではなく、管理業務主体の施工経験である。",
+      "furigana_tokens": [
+        { "surface": "求", "reading": "もと" },
+        { "surface": "施工", "reading": "しこう" },
+        { "surface": "経験", "reading": "けいけん" },
+        { "surface": "記述", "reading": "きじゅつ" },
+        { "surface": "作業", "reading": "さぎょう" },
+        { "surface": "主体", "reading": "しゅたい" },
+        { "surface": "管理", "reading": "かんり" },
+        { "surface": "業務", "reading": "ぎょうむ" }
+      ],
       "vi": "Mô tả kinh nghiệm thi công được yêu cầu ở đây không phải là kinh nghiệm thi công với tư cách người trực tiếp thao tác, mà là kinh nghiệm thi công với tư cách người quản lý.",
       "explanation_vi": null
     },
@@ -35,12 +51,47 @@
       "type": "heading",
       "level": 3,
       "jp": "【通常の管理業務】",
+      "furigana_tokens": [
+        { "surface": "通常", "reading": "つうじょう" },
+        { "surface": "管理", "reading": "かんり" },
+        { "surface": "業務", "reading": "ぎょうむ" }
+      ],
       "vi": "[Công tác quản lý thông thường]",
       "explanation_vi": null
     },
     {
       "type": "paragraph",
       "jp": "管理業務とは、請け負った工事を工期内に適切に完成して引き渡すために、\n①現場を確認し、それに適した施工計画を立て、\n②その計画で予測して決定した対策を現場で適切に対応させ施工し、\n③その結果を振り返り、\n④次の仕事に活かす\nという一連の管理活動のことである。",
+      "furigana_tokens": [
+        { "surface": "管理", "reading": "かんり" },
+        { "surface": "業務", "reading": "ぎょうむ" },
+        { "surface": "請", "reading": "う" },
+        { "surface": "負", "reading": "お" },
+        { "surface": "工事", "reading": "こうじ" },
+        { "surface": "工期内", "reading": "こうきない" },
+        { "surface": "適切", "reading": "てきせつ" },
+        { "surface": "完成", "reading": "かんせい" },
+        { "surface": "引", "reading": "ひ" },
+        { "surface": "渡", "reading": "わた" },
+        { "surface": "現場", "reading": "げんば" },
+        { "surface": "確認", "reading": "かくにん" },
+        { "surface": "適", "reading": "てき" },
+        { "surface": "計画", "reading": "けいかく" },
+        { "surface": "立", "reading": "た" },
+        { "surface": "予測", "reading": "よそく" },
+        { "surface": "決定", "reading": "けってい" },
+        { "surface": "対策", "reading": "たいさく" },
+        { "surface": "対応", "reading": "たいおう" },
+        { "surface": "施工", "reading": "しこう" },
+        { "surface": "結果", "reading": "けっか" },
+        { "surface": "振", "reading": "ふ" },
+        { "surface": "返", "reading": "かえ" },
+        { "surface": "次", "reading": "つぎ" },
+        { "surface": "仕事", "reading": "しごと" },
+        { "surface": "活", "reading": "い" },
+        { "surface": "一連", "reading": "いちれん" },
+        { "surface": "活動", "reading": "かつどう" }
+      ],
       "vi": "Công tác quản lý là chuỗi hoạt động quản lý nhằm hoàn thành và bàn giao công trình nhận thầu đúng thời hạn một cách phù hợp, gồm:\n① Kiểm tra hiện trường và lập kế hoạch thi công phù hợp,\n② Dự đoán và quyết định biện pháp theo kế hoạch đó, triển khai thi công phù hợp tại hiện trường,\n③ Nhìn lại kết quả,\n④ Vận dụng cho công việc tiếp theo.",
       "explanation_vi": null
     },
@@ -48,12 +99,34 @@
       "type": "heading",
       "level": 3,
       "jp": "【特に留意した管理業務】",
+      "furigana_tokens": [
+        { "surface": "特", "reading": "とく" },
+        { "surface": "留意", "reading": "りゅうい" },
+        { "surface": "管理", "reading": "かんり" },
+        { "surface": "業務", "reading": "ぎょうむ" }
+      ],
       "vi": "[Công tác quản lý cần đặc biệt lưu ý]",
       "explanation_vi": null
     },
     {
       "type": "paragraph",
       "jp": "しかし、試験で求められている管理業務は、通常の管理業務ではなく、\n問題の発生する恐れのある工事に気が付いて、それをどのように適切に対処したかを記述することである。",
+      "furigana_tokens": [
+        { "surface": "試験", "reading": "しけん" },
+        { "surface": "求", "reading": "もと" },
+        { "surface": "管理", "reading": "かんり" },
+        { "surface": "業務", "reading": "ぎょうむ" },
+        { "surface": "通常", "reading": "つうじょう" },
+        { "surface": "問題", "reading": "もんだい" },
+        { "surface": "発生", "reading": "はっせい" },
+        { "surface": "恐", "reading": "おそ" },
+        { "surface": "工事", "reading": "こうじ" },
+        { "surface": "気", "reading": "き" },
+        { "surface": "付", "reading": "づ" },
+        { "surface": "適切", "reading": "てきせつ" },
+        { "surface": "対処", "reading": "たいしょ" },
+        { "surface": "記述", "reading": "きじゅつ" }
+      ],
       "vi": "Tuy nhiên, công tác quản lý được yêu cầu trong bài thi không phải là công tác quản lý thông thường, mà là mô tả việc bạn đã nhận ra công trình có nguy cơ phát sinh vấn đề và đã xử lý phù hợp như thế nào.",
       "explanation_vi": null
     },
@@ -65,6 +138,73 @@
         "発生する問題を防止するために施工管理上の手法・手順のどこの何に特に留意して取り組むか、留意事項を決めなければならない。",
         "問題を解決するために色々検討した手法など項目ごとに防止する対策を決めなければならない。",
         "決定した対策を計画に反映させて実施するために、現場で下請業者や労働者に対応させる指揮・指導を執り、その後チェックもする。"
+      ],
+      "items_furigana_tokens": [
+        [
+          { "surface": "現場", "reading": "げんば" },
+          { "surface": "状況", "reading": "じょうきょう" },
+          { "surface": "調査", "reading": "ちょうさ" },
+          { "surface": "確認", "reading": "かくにん" },
+          { "surface": "問題", "reading": "もんだい" },
+          { "surface": "起", "reading": "お" },
+          { "surface": "事", "reading": "こと" },
+          { "surface": "気", "reading": "き" },
+          { "surface": "付", "reading": "づ" }
+        ],
+        [
+          { "surface": "発生", "reading": "はっせい" },
+          { "surface": "問題", "reading": "もんだい" },
+          { "surface": "明確", "reading": "めいかく" },
+          { "surface": "予測", "reading": "よそく" },
+          { "surface": "理由", "reading": "りゆう" },
+          { "surface": "根拠", "reading": "こんきょ" },
+          { "surface": "等", "reading": "とう" },
+          { "surface": "捉", "reading": "とら" }
+        ],
+        [
+          { "surface": "発生", "reading": "はっせい" },
+          { "surface": "問題", "reading": "もんだい" },
+          { "surface": "防止", "reading": "ぼうし" },
+          { "surface": "施工", "reading": "しこう" },
+          { "surface": "管理", "reading": "かんり" },
+          { "surface": "上", "reading": "じょう" },
+          { "surface": "手法", "reading": "しゅほう" },
+          { "surface": "手順", "reading": "てじゅん" },
+          { "surface": "何", "reading": "なに" },
+          { "surface": "特", "reading": "とく" },
+          { "surface": "留意", "reading": "りゅうい" },
+          { "surface": "取", "reading": "と" },
+          { "surface": "組", "reading": "く" },
+          { "surface": "事項", "reading": "じこう" },
+          { "surface": "決", "reading": "き" }
+        ],
+        [
+          { "surface": "問題", "reading": "もんだい" },
+          { "surface": "解決", "reading": "かいけつ" },
+          { "surface": "色々", "reading": "いろいろ" },
+          { "surface": "検討", "reading": "けんとう" },
+          { "surface": "手法", "reading": "しゅほう" },
+          { "surface": "項目", "reading": "こうもく" },
+          { "surface": "防止", "reading": "ぼうし" },
+          { "surface": "対策", "reading": "たいさく" },
+          { "surface": "決", "reading": "き" }
+        ],
+        [
+          { "surface": "決定", "reading": "けってい" },
+          { "surface": "対策", "reading": "たいさく" },
+          { "surface": "計画", "reading": "けいかく" },
+          { "surface": "反映", "reading": "はんえい" },
+          { "surface": "実施", "reading": "じっし" },
+          { "surface": "現場", "reading": "げんば" },
+          { "surface": "下請", "reading": "したうけ" },
+          { "surface": "業者", "reading": "ぎょうしゃ" },
+          { "surface": "労働者", "reading": "ろうどうしゃ" },
+          { "surface": "対応", "reading": "たいおう" },
+          { "surface": "指揮", "reading": "しき" },
+          { "surface": "指導", "reading": "しどう" },
+          { "surface": "執", "reading": "と" },
+          { "surface": "後", "reading": "ご" }
+        ]
       ],
       "items_vi": [
         "Phải nhận ra dấu hiệu có thể phát sinh vấn đề thông qua việc khảo sát, xác nhận tình hình hiện trường.",
@@ -78,6 +218,31 @@
     {
       "type": "note",
       "jp": "※現場では工事の対処は十分に出来ているものの、❶〜❺の手法・手順の展開が無意識や感性で実施されている事が多い。そのため、施工経験を振り返って記述する事が出来ない。\nしかし、管理手法・手順に沿って振り返って整理すると施工経験記述は必ず書けるようになります。",
+      "furigana_tokens": [
+        { "surface": "現場", "reading": "げんば" },
+        { "surface": "工事", "reading": "こうじ" },
+        { "surface": "対処", "reading": "たいしょ" },
+        { "surface": "十分", "reading": "じゅうぶん" },
+        { "surface": "出来", "reading": "でき" },
+        { "surface": "手法", "reading": "しゅほう" },
+        { "surface": "手順", "reading": "てじゅん" },
+        { "surface": "展開", "reading": "てんかい" },
+        { "surface": "無意識", "reading": "むいしき" },
+        { "surface": "感性", "reading": "かんせい" },
+        { "surface": "実施", "reading": "じっし" },
+        { "surface": "事", "reading": "こと" },
+        { "surface": "多", "reading": "おお" },
+        { "surface": "施工", "reading": "しこう" },
+        { "surface": "経験", "reading": "けいけん" },
+        { "surface": "振", "reading": "ふ" },
+        { "surface": "返", "reading": "かえ" },
+        { "surface": "記述", "reading": "きじゅつ" },
+        { "surface": "管理", "reading": "かんり" },
+        { "surface": "沿", "reading": "そ" },
+        { "surface": "整理", "reading": "せいり" },
+        { "surface": "必", "reading": "かなら" },
+        { "surface": "書", "reading": "か" }
+      ],
       "vi": "※Tại hiện trường, dù việc xử lý công trình đã được thực hiện đầy đủ, nhưng phần lớn các bước ❶〜❺ lại được thực hiện một cách vô thức hoặc theo cảm tính. Vì vậy nhiều người không thể mô tả lại được kinh nghiệm thi công của mình.\nTuy nhiên, nếu nhìn lại và sắp xếp theo đúng phương pháp/trình tự quản lý, chắc chắn bạn sẽ viết được phần mô tả kinh nghiệm thi công.",
       "explanation_vi": null
     }
