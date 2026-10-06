@@ -1,0 +1,131 @@
+{
+  "book_slug": "sougou-mondai",
+  "section_path": [
+    { "code": "doc2", "title_jp": "資料No.2 第二次検定用教材", "title_vi": "Cuốn 2 - Tài liệu ôn thi lần 2" },
+    { "code": "doc2-6", "title_jp": "6. 法規", "title_vi": "6. Pháp quy" }
+  ],
+  "page_number": 151,
+  "page_label": "p.51",
+  "source_image_path": null,
+  "notes_vi": "[資料No.2 2級電気工事施工管理技術研修 第二次検定用教材（2026年度用）. 【問題No.6】và 【解説No.6】- đề R6, cùng dạng điền từ vào chỗ trống ［ア］［イ］như trang 50. Câu 6-1 (主任技術者及び監理技術者の職務) được chép đối chiếu với nguyên văn Điều 26-4 Luật Xây dựng Nhật Bản để đảm bảo đúng ngữ pháp câu gốc.]",
+  "review_status": "draft",
+  "blocks": [
+    {
+      "type": "heading",
+      "level": 2,
+      "jp": "【問題 No.6】「建設業法」、「労働安全衛生法」又は「電気工事士法」に関する次の問に答えなさい。",
+      "vi": "[Câu hỏi số 6] Hãy trả lời các câu hỏi sau liên quan đến \"Luật Xây dựng\", \"Luật An toàn và Vệ sinh Lao động\" hoặc \"Luật Thợ điện\".",
+      "explanation_vi": null
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "jp": "6-1 建設工事の主任技術者及び監理技術者の職務に関する次の記述の［　］に当てはまる語句として、「建設業法」上、定められているものはそれぞれどれか。",
+      "vi": "6-1 Từ nào dưới đây phù hợp với chỗ trống ［　］ trong đoạn mô tả sau về nhiệm vụ của chủ nhiệm kỹ thuật và kỹ sư giám lý công trình xây dựng, theo quy định của \"Luật Xây dựng\"?",
+      "explanation_vi": null
+    },
+    {
+      "type": "paragraph",
+      "jp": "「主任技術者及び監理技術者は、工事現場における建設工事を適正に実施するため、当該建設工事の施工計画の作成、工程管理、品質管理その他の技術上の管理及び当該建設工事の［ア］に従事する者の技術上の［イ］の職務を誠実に行わなければならない。」",
+      "vi": "\"Để thực hiện đúng đắn công trình xây dựng tại hiện trường thi công, chủ nhiệm kỹ thuật và kỹ sư giám lý phải thực hiện trung thực các nhiệm vụ quản lý về mặt kỹ thuật như lập kế hoạch thi công, quản lý tiến độ, quản lý chất lượng của công trình xây dựng đó, cũng như nhiệm vụ ［イ］ về mặt kỹ thuật đối với người tham gia ［ア］ công trình xây dựng đó.\"",
+      "explanation_vi": "Câu gốc tương ứng Điều 26-4 Luật Xây dựng Nhật Bản (quy định về職務của主任技術者/監理技術者)."
+    },
+    {
+      "type": "bullet_list",
+      "items_jp": ["ア　①計画　②見積　③設計　④施工"],
+      "items_vi": ["ア　① kế hoạch　② báo giá　③ thiết kế　④ thi công"],
+      "explanation_vi": null
+    },
+    {
+      "type": "bullet_list",
+      "items_jp": ["イ　①指導監督　②現場教育　③工事管理　④現場確認"],
+      "items_vi": ["イ　① chỉ đạo giám sát　② đào tạo tại hiện trường　③ quản lý công trình　④ xác nhận hiện trường"],
+      "explanation_vi": null
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "jp": "6-2 労働災害の防止に関する次の記述の［　］に当てはまる語句として、「労働安全衛生法」上、定められているものはそれぞれどれか。",
+      "vi": "6-2 Từ nào dưới đây phù hợp với chỗ trống ［　］ trong đoạn mô tả sau về phòng ngừa tai nạn lao động, theo quy định của \"Luật An toàn và Vệ sinh Lao động\"?",
+      "explanation_vi": null
+    },
+    {
+      "type": "paragraph",
+      "jp": "「労働者は、労働災害を防止するために必要な事項を守るほか、［ア］その他の関係者が実施する労働災害の防止に関する措置に［イ］するよう努めなければならない。」",
+      "vi": "\"Ngoài việc tuân thủ các nội dung cần thiết để phòng ngừa tai nạn lao động, người lao động phải nỗ lực ［イ］ với các biện pháp phòng ngừa tai nạn lao động do ［ア］ và các bên liên quan khác thực hiện.\"",
+      "explanation_vi": null
+    },
+    {
+      "type": "bullet_list",
+      "items_jp": ["ア　①元請　②下請　③事業者　④注文者"],
+      "items_vi": ["ア　① nhà thầu chính　② nhà thầu phụ　③ người sử dụng lao động　④ bên đặt hàng"],
+      "explanation_vi": null
+    },
+    {
+      "type": "bullet_list",
+      "items_jp": ["イ　①協力　②理解　③対応　④適合"],
+      "items_vi": ["イ　① hợp tác　② hiểu rõ　③ ứng phó　④ phù hợp"],
+      "explanation_vi": null
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "jp": "6-3 電気工事士に関する次の記述の［　］に当てはまる語句として、「電気工事士法」上、定められているものはそれぞれどれか。",
+      "vi": "6-3 Từ nào dưới đây phù hợp với chỗ trống ［　］ trong đoạn mô tả sau về thợ điện, theo quy định của \"Luật Thợ điện\"?",
+      "explanation_vi": null
+    },
+    {
+      "type": "paragraph",
+      "jp": "「第一種電気工事士は、経済産業省令で定めるやむを得ない事由がある場合を除き、第一種電気工事士免状の交付を受けた日から［ア］に、経済産業省令で定めるところにより、経済産業大臣の指定する者が行う［イ］電気工作物の保安に関する講習を受けなければならない。当該講習を受けた日以降についても同様とする。」",
+      "vi": "\"Thợ điện hạng 1, trừ trường hợp có lý do bất khả kháng theo quy định của Bộ lệnh Kinh tế - Công nghiệp, trong vòng ［ア］ kể từ ngày được cấp Chứng chỉ thợ điện hạng 1, phải tham gia khóa đào tạo về bảo trì thiết bị điện ［イ］ do người được Bộ trưởng Bộ Kinh tế - Công nghiệp chỉ định tổ chức, theo quy định của Bộ lệnh Kinh tế - Công nghiệp. Sau ngày tham gia khóa đào tạo đó cũng áp dụng tương tự.\"",
+      "explanation_vi": null
+    },
+    {
+      "type": "bullet_list",
+      "items_jp": ["ア　①2年以内　②3年以内　③4年以内　④5年以内"],
+      "items_vi": ["ア　① trong vòng 2 năm　② trong vòng 3 năm　③ trong vòng 4 năm　④ trong vòng 5 năm"],
+      "explanation_vi": null
+    },
+    {
+      "type": "bullet_list",
+      "items_jp": ["イ　①一般用　②自家用　③事業用　④特殊"],
+      "items_vi": ["イ　① dùng chung　② tự dùng riêng　③ kinh doanh　④ đặc biệt"],
+      "explanation_vi": null
+    },
+    {
+      "type": "paragraph",
+      "jp": "(R6)",
+      "vi": "(R6)",
+      "explanation_vi": null
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "jp": "【解説 No.6】　施工マニュアル　1-p.178　2-p.209　電気テキスト　3-p.197",
+      "vi": "[Giải đáp số 6] - Sổ tay thi công 1-tr.178, 2-tr.209; Giáo trình điện 3-tr.197",
+      "explanation_vi": null
+    },
+    {
+      "type": "table",
+      "headers_jp": ["問", "正解", "語句"],
+      "rows_jp": [
+        ["6-1 ア", "④", "施工"],
+        ["6-1 イ", "①", "指導監督"],
+        ["6-2 ア", "③", "事業者"],
+        ["6-2 イ", "①", "協力"],
+        ["6-3 ア", "④", "5年以内"],
+        ["6-3 イ", "②", "自家用"]
+      ],
+      "headers_vi": ["Câu", "Đáp án đúng", "Từ"],
+      "rows_vi": [
+        ["6-1 ア", "④", "thi công"],
+        ["6-1 イ", "①", "chỉ đạo giám sát"],
+        ["6-2 ア", "③", "người sử dụng lao động"],
+        ["6-2 イ", "①", "hợp tác"],
+        ["6-3 ア", "④", "trong vòng 5 năm"],
+        ["6-3 イ", "②", "tự dùng riêng"]
+      ],
+      "explanation_vi": null
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "book_slug": "sougou-mondai",
+  "section_path": [
+    { "code": "doc2", "title_jp": "資料No.2 第二次検定用教材", "title_vi": "Cuốn 2 - Tài liệu ôn thi lần 2" },
+    { "code": "doc2-7", "title_jp": "7. 令和7年度問題実例", "title_vi": "7. Ví dụ đề thi thực tế năm Reiwa 7" }
+  ],
+  "page_number": 153,
+  "page_label": "p.53",
+  "source_image_path": null,
+  "notes_vi": "[資料No.2 2級電気工事施工管理技術研修 第二次検定用教材（2026年度用）. Trang tiêu đề mở đầu chương mới '7. 令和7年度問題実例', bên dưới có khung mẫu trống (語句:/理由①:/理由②: với các dòng kẻ trống) để người học tự điền khi luyện tập - KHÔNG có nội dung in sẵn nào khác nên không chép giả định vào đây. Phần chữ mờ bóng qua phía trên (nội dung dạng 【問題No.2】của trang 54) là nội dung in ở MẶT SAU tờ giấy, không phải nội dung thật của trang 53.]",
+  "review_status": "draft",
+  "blocks": [
+    {
+      "type": "heading",
+      "level": 1,
+      "jp": "7．令和7年度問題実例",
+      "vi": "7. Ví dụ đề thi thực tế năm Reiwa 7",
+      "explanation_vi": null
+    },
+    {
+      "type": "note",
+      "jp": "語句：\n理由①：\n理由②：",
+      "vi": "Từ ngữ:\nLý do ①:\nLý do ②:",
+      "explanation_vi": "Đây là khung mẫu trống (có các dòng kẻ để viết tay) dùng cho người học tự điền khi luyện tập, không phải nội dung đã in sẵn - không tự ý điền giả định vào các dòng này."
+    }
+  ]
+}
