@@ -1,0 +1,77 @@
+{
+  "book_slug": "sougou-mondai",
+  "section_path": [
+    { "code": "doc2", "title_jp": "資料No.2 第二次検定用教材", "title_vi": "Cuốn 2 - Tài liệu ôn thi lần 2" },
+    { "code": "doc2-exp", "title_jp": "2. 施工経験記述", "title_vi": "2. Mô tả kinh nghiệm thi công" },
+    { "code": "doc2-exp-4", "title_jp": "2-4. 経験記述の評価基準とチェック", "title_vi": "2-4. Tiêu chuẩn đánh giá và kiểm tra bài mô tả kinh nghiệm" }
+  ],
+  "page_number": 113,
+  "page_label": "p.13",
+  "source_image_path": null,
+  "notes_vi": "[資料No.2 2級電気工事施工管理技術研修 第二次検定用教材（2026年度用）. Tiếp theo trang 12.]",
+  "review_status": "draft",
+  "blocks": [
+    {
+      "type": "heading",
+      "level": 3,
+      "jp": "(3) 内容の具体性のチェック",
+      "vi": "(3) Kiểm tra tính cụ thể của nội dung",
+      "explanation_vi": null
+    },
+    {
+      "type": "bullet_list",
+      "items_jp": [
+        "イ) 記述する「留意する事項」は1つに絞られているか。",
+        "ロ) 箇条書きで記述されているか。",
+        "ハ) 予測した問題、留意する事項（管理項目）、検討項目に理由等をつけて内容を明確にしているか。",
+        "ニ) 上記の問題点、留意する事項（管理項目）、検討項目などを管理の対象として、統括的にまとめて明確にし、かつ具体的に記述できているか。",
+        "ホ) 問題の起こす固有の現場状況、固有の施工内容を具体的に記述する。",
+        "ヘ) 必要に応じて5M（担当者名、材料名、施工名、機械・器具名など）を具体的に記述しているか。",
+        "ト) 現場で誰と何を打合せ、誰に何を指示し、どのように確認するのか具体的に記述しているか。",
+        "チ) 実際に経験した出来事や内容を具体的に記述して、経験した内容が誰にでも理解できるようにする。"
+      ],
+      "items_vi": [
+        "イ) \"Sự việc cần lưu ý\" được mô tả có thu hẹp lại đúng 1 điều hay không.",
+        "ロ) Có được trình bày theo dạng liệt kê (gạch đầu dòng) hay không.",
+        "ハ) Vấn đề đã dự đoán, sự việc cần lưu ý (hạng mục quản lý), hạng mục đã xem xét có được làm rõ nội dung bằng cách gắn kèm lý do v.v. hay không.",
+        "ニ) Các vấn đề, sự việc cần lưu ý (hạng mục quản lý), hạng mục đã xem xét nêu trên có được tổng hợp lại một cách bao quát làm đối tượng quản lý, đồng thời mô tả rõ ràng, cụ thể hay không.",
+        "ホ) Mô tả cụ thể tình hình hiện trường đặc thù, nội dung thi công đặc thù - nơi phát sinh vấn đề.",
+        "ヘ) Có mô tả cụ thể 5M (tên người phụ trách, tên vật liệu, tên công việc thi công, tên máy móc/dụng cụ v.v.) khi cần thiết hay không.",
+        "ト) Có mô tả cụ thể đã trao đổi với ai về việc gì tại hiện trường, đã chỉ thị ai về việc gì, và xác nhận bằng cách nào hay không.",
+        "チ) Mô tả cụ thể sự việc/nội dung đã thực sự trải qua, để bất kỳ ai cũng có thể hiểu được nội dung kinh nghiệm đã trải qua."
+      ],
+      "explanation_vi": null
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "jp": "(4) 簡潔・丁寧に記述すること",
+      "vi": "(4) Mô tả ngắn gọn, cẩn thận",
+      "explanation_vi": null
+    },
+    {
+      "type": "numbered_list",
+      "items_jp": [
+        "パソコン入力したときでも必ず手書きにし、記述スペースに収まるか確認すること。",
+        "なぐり書きせず、ハッキリと濃く、字の大きさや高さをそろえるなど他人が読める文字で記述されているかどうか。",
+        "文章を適度に区切り、段落で改行したり、適切な字の大きさなど読みやすく配慮しているかどうか。",
+        "記述例の丸写しは不合格になります。",
+        "記述が終わったら、誤字、脱字がないか読み返すようにしてください。また、おかしな箇所があったら、消しゴムでよく消してから訂正してください。"
+      ],
+      "items_vi": [
+        "Kể cả khi nhập trên máy tính, luôn phải viết tay và kiểm tra xem có vừa trong khoảng không gian mô tả hay không.",
+        "Không viết nguệch ngoạc, chữ phải rõ ràng và đậm, cỡ chữ và độ cao đồng đều v.v. - tức viết bằng chữ người khác có thể đọc được hay không.",
+        "Có ngắt câu vừa phải, xuống dòng theo đoạn, cỡ chữ phù hợp v.v. để dễ đọc hay không.",
+        "Chép y nguyên bài mẫu sẽ bị đánh trượt.",
+        "Sau khi viết xong, hãy đọc lại để kiểm tra có sai chính tả, thiếu chữ hay không. Ngoài ra nếu có chỗ nào không ổn, hãy tẩy sạch bằng tẩy rồi sửa lại."
+      ],
+      "explanation_vi": null
+    },
+    {
+      "type": "paragraph",
+      "jp": "以上のチェックポイントは、経験記述を準備したのちに必ず自身で確認すること。",
+      "vi": "Các điểm kiểm tra trên đây, sau khi chuẩn bị xong bài mô tả kinh nghiệm, nhất định phải tự mình xác nhận lại.",
+      "explanation_vi": null
+    }
+  ]
+}

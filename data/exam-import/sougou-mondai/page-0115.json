@@ -1,0 +1,21 @@
+{
+  "book_slug": "sougou-mondai",
+  "section_path": [
+    { "code": "doc2", "title_jp": "資料No.2 第二次検定用教材", "title_vi": "Cuốn 2 - Tài liệu ôn thi lần 2" },
+    { "code": "doc2-3", "title_jp": "3. 施工管理法", "title_vi": "3. Phương pháp quản lý thi công" }
+  ],
+  "page_number": 115,
+  "page_label": "p.15",
+  "source_image_path": null,
+  "notes_vi": "[資料No.2 2級電気工事施工管理技術研修 第二次検定用教材（2026年度用）. Trang này là trang tiêu đề mở đầu chương mới '3. 施工管理法', chỉ có 1 dòng tiêu đề. Phần chữ mờ nhìn xuyên qua (bảng câu hỏi về 安全管理 như 危険予知活動(KYK)、安全施工サイクル、新規入場者教育... và sơ đồ 1-14 安全管理) là nội dung in ở MẶT SAU tờ giấy bị bóng qua, không phải nội dung thật của trang 15 nên không chép vào đây - sẽ chép khi có ảnh rõ của trang tiếp theo.]",
+  "review_status": "draft",
+  "blocks": [
+    {
+      "type": "heading",
+      "level": 1,
+      "jp": "3．施工管理法",
+      "vi": "3. Phương pháp quản lý thi công",
+      "explanation_vi": null
+    }
+  ]
+}

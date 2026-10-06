@@ -1,0 +1,70 @@
+{
+  "book_slug": "sougou-mondai",
+  "section_path": [
+    { "code": "doc2", "title_jp": "資料No.2 第二次検定用教材", "title_vi": "Cuốn 2 - Tài liệu ôn thi lần 2" },
+    { "code": "doc2-exp", "title_jp": "2. 施工経験記述", "title_vi": "2. Mô tả kinh nghiệm thi công" },
+    { "code": "doc2-exp-4", "title_jp": "2-4. 経験記述の評価基準とチェック", "title_vi": "2-4. Tiêu chuẩn đánh giá và kiểm tra bài mô tả kinh nghiệm" }
+  ],
+  "page_number": 114,
+  "page_label": "p.14",
+  "source_image_path": null,
+  "notes_vi": "[資料No.2 2級電気工事施工管理技術研修 第二次検定用教材（2026年度用）. Tiếp theo trang 12-13. Trong sách gốc, các cụm được ghi chú là phần '留意事項' (sự việc cần lưu ý) được gạch chân; ở đây giữ nguyên toàn bộ câu, không tách riêng phần gạch chân.]",
+  "review_status": "draft",
+  "blocks": [
+    {
+      "type": "heading",
+      "level": 2,
+      "jp": "留意事項と理由の例",
+      "vi": "Ví dụ về sự việc cần lưu ý và lý do",
+      "explanation_vi": null
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "jp": "① 安全管理（＿部分が留意事項）",
+      "vi": "① Quản lý an toàn (phần gạch chân là sự việc cần lưu ý)",
+      "explanation_vi": null
+    },
+    {
+      "type": "bullet_list",
+      "items_jp": [
+        "イ. 高所作業（柱上、ケーブルラック上、屋上、足場上等）時の作業員の墜落災害防止",
+        "ロ. 暗所作業（マンホール、地下ピット等）時の作業員の墜落災害防止",
+        "ハ. 上下作業時の飛来落下事故防止",
+        "ニ. クレーン作業時の飛来落下事故防止",
+        "ホ. 狭所、暗所での活線近接作業時の作業員の感電事故防止"
+      ],
+      "items_vi": [
+        "イ. Phòng tránh tai nạn rơi ngã cho công nhân khi làm việc trên cao (trên cột, trên giá đỡ cáp, trên mái, trên giàn giáo v.v.)",
+        "ロ. Phòng tránh tai nạn rơi ngã cho công nhân khi làm việc ở nơi tối (hố ga, hầm kỹ thuật ngầm v.v.)",
+        "ハ. Phòng tránh sự cố vật rơi/bay khi làm việc trên-dưới cùng lúc",
+        "ニ. Phòng tránh sự cố vật rơi/bay khi làm việc với cần cẩu",
+        "ホ. Phòng tránh tai nạn điện giật cho công nhân khi làm việc gần đường dây mang điện ở nơi hẹp, nơi tối"
+      ],
+      "explanation_vi": null
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "jp": "② 工程管理（＿部分が留意事項）",
+      "vi": "② Quản lý tiến độ (phần gạch chân là sự việc cần lưu ý)",
+      "explanation_vi": null
+    },
+    {
+      "type": "bullet_list",
+      "items_jp": [
+        "イ. 狭所作業（マンホール、地下ピット等）時の作業能率低下防止",
+        "ロ. 競合作業（夜間作業）時の作業能率低下防止",
+        "ハ. 先行作業の遅れによる後続作業の日程短縮",
+        "ニ. 追加工事、変更工事の発生による○○作業の促進調整"
+      ],
+      "items_vi": [
+        "イ. Phòng tránh giảm hiệu suất làm việc khi làm việc ở nơi hẹp (hố ga, hầm kỹ thuật ngầm v.v.)",
+        "ロ. Phòng tránh giảm hiệu suất làm việc khi có công việc cạnh tranh (làm việc ban đêm)",
+        "ハ. Rút ngắn lịch trình công việc kế tiếp do công việc trước bị chậm trễ",
+        "ニ. Điều chỉnh thúc đẩy công việc ○○ do phát sinh công trình bổ sung, công trình thay đổi"
+      ],
+      "explanation_vi": null
+    }
+  ]
+}

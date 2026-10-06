@@ -1,0 +1,76 @@
+{
+  "book_slug": "sougou-mondai",
+  "section_path": [
+    { "code": "doc2", "title_jp": "資料No.2 第二次検定用教材", "title_vi": "Cuốn 2 - Tài liệu ôn thi lần 2" },
+    { "code": "doc2-exp", "title_jp": "2. 施工経験記述", "title_vi": "2. Mô tả kinh nghiệm thi công" },
+    { "code": "doc2-exp-4", "title_jp": "2-4. 経験記述の評価基準とチェック", "title_vi": "2-4. Tiêu chuẩn đánh giá và kiểm tra bài mô tả kinh nghiệm" }
+  ],
+  "page_number": 112,
+  "page_label": "p.12",
+  "source_image_path": null,
+  "notes_vi": "[資料No.2 2級電気工事施工管理技術研修 第二次検定用教材（2026年度用）. Mục này là hướng dẫn/checklist chung áp dụng cho cả phần 工程管理 và 安全管理, không gắn riêng với mục nào nên tách thành mục con riêng 2-4.]",
+  "review_status": "draft",
+  "blocks": [
+    {
+      "type": "heading",
+      "level": 2,
+      "jp": "2-4．経験記述の評価基準とチェック",
+      "vi": "2-4. Tiêu chuẩn đánh giá và việc kiểm tra bài mô tả kinh nghiệm",
+      "explanation_vi": null
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "jp": "(1) 施工管理の理論の展開記述のチェック",
+      "vi": "(1) Kiểm tra phần triển khai lý luận quản lý thi công",
+      "explanation_vi": null
+    },
+    {
+      "type": "numbered_list",
+      "items_jp": [
+        "施工管理の手法が手順よく展開されているか。",
+        "施工管理業務の展開記述が施工法や作業中心になっていないか。",
+        "管理手法・手順のどこが問われているか設問を理解して、解答できているか。"
+      ],
+      "items_vi": [
+        "Phương pháp quản lý thi công có được triển khai theo đúng trình tự hay không.",
+        "Phần mô tả triển khai nghiệp vụ quản lý thi công có đang lấy phương pháp thi công hay thao tác làm trọng tâm hay không.",
+        "Có hiểu rõ câu hỏi đang hỏi về điểm nào trong phương pháp/trình tự quản lý rồi trả lời đúng trọng tâm hay không."
+      ],
+      "explanation_vi": null
+    },
+    {
+      "type": "bullet_list",
+      "items_jp": [
+        "イ) 技術的課題と目的（又は目標）を混同した記述になっていないか。",
+        "ロ) 検討項目と決定した対策の内容が混同していないか。"
+      ],
+      "items_vi": [
+        "イ) Có bị nhầm lẫn giữa vấn đề kỹ thuật với mục đích (hoặc mục tiêu) trong bài mô tả hay không.",
+        "ロ) Có bị nhầm lẫn giữa hạng mục đã xem xét với nội dung biện pháp đã quyết định hay không."
+      ],
+      "explanation_vi": "2 ý イ/ロ này là chi tiết của mục ③ ở trên."
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "jp": "(2) 内容の一貫性のチェック",
+      "vi": "(2) Kiểm tra tính nhất quán của nội dung",
+      "explanation_vi": null
+    },
+    {
+      "type": "bullet_list",
+      "items_jp": [
+        "イ) 施工管理業務の内容が与えられた条件と一貫して記述しているかどうか。",
+        "ロ) 取り組んだ課題→検討内容→対応処置の管理活動の手法・手順が一貫したものでなければならない。",
+        "ハ) 元請・下請の立場の違いによる管理内容に一貫性があること。"
+      ],
+      "items_vi": [
+        "イ) Nội dung nghiệp vụ quản lý thi công có được mô tả nhất quán với điều kiện đã cho hay không.",
+        "ロ) Trình tự phương pháp/thủ tục của hoạt động quản lý theo luồng: vấn đề đã xử lý → nội dung đã xem xét → biện pháp đối ứng, phải nhất quán với nhau.",
+        "ハ) Nội dung quản lý phải nhất quán cho dù có sự khác biệt về vị trí (nhà thầu chính hay nhà thầu phụ)."
+      ],
+      "explanation_vi": null
+    }
+  ]
+}
