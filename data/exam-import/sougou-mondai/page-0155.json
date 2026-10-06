@@ -15,14 +15,36 @@
       "level": 2,
       "jp": "【問題 No.2】次の問に答えなさい。",
       "vi": "[Câu hỏi số 2] Hãy trả lời câu hỏi sau.",
-      "explanation_vi": null
+      "explanation_vi": null,
+      "furigana_tokens": [
+        { "surface": "問題", "reading": "もんだい" },
+        { "surface": "次", "reading": "つぎ" },
+        { "surface": "問", "reading": "とい" },
+        { "surface": "答", "reading": "こた" }
+      ]
     },
     {
       "type": "heading",
       "level": 3,
       "jp": "2-1　電気工事に関する次の語句の中から2つ選び、番号と語句を記入のうえ、施工管理上留意すべき内容について、それぞれ2つ具体的に記述しなさい。",
       "vi": "2-1 Hãy chọn 2 trong số các từ ngữ liên quan đến công trình điện dưới đây, điền số thứ tự và từ ngữ, rồi nêu cụ thể 2 nội dung cần lưu ý về mặt quản lý thi công cho mỗi từ.",
-      "explanation_vi": null
+      "explanation_vi": null,
+      "furigana_tokens": [
+        { "surface": "電気工事", "reading": "でんきこうじ" },
+        { "surface": "関", "reading": "かん" },
+        { "surface": "次", "reading": "つぎ" },
+        { "surface": "語句", "reading": "ごく" },
+        { "surface": "中", "reading": "なか" },
+        { "surface": "選", "reading": "えら" },
+        { "surface": "番号", "reading": "ばんごう" },
+        { "surface": "記入", "reading": "きにゅう" },
+        { "surface": "施工管理", "reading": "せこうかんり" },
+        { "surface": "上", "reading": "じょう" },
+        { "surface": "留意", "reading": "りゅうい" },
+        { "surface": "内容", "reading": "ないよう" },
+        { "surface": "具体的", "reading": "ぐたいてき" },
+        { "surface": "記述", "reading": "きじゅつ" }
+      ]
     },
     {
       "type": "numbered_list",
@@ -42,13 +64,48 @@
         "Thử nghiệm mạch nhánh hạ áp",
         "Lắp đặt tủ điện phân phối"
       ],
+      "items_furigana_tokens": [
+        [
+          { "surface": "機器", "reading": "きき" },
+          { "surface": "搬入", "reading": "はんにゅう" }
+        ],
+        [
+          { "surface": "電線", "reading": "でんせん" },
+          { "surface": "相互", "reading": "そうご" },
+          { "surface": "接続", "reading": "せつぞく" }
+        ],
+        [
+          { "surface": "低圧", "reading": "ていあつ" },
+          { "surface": "敷設", "reading": "ふせつ" }
+        ],
+        [
+          { "surface": "資材", "reading": "しざい" },
+          { "surface": "受入", "reading": "うけいれ" },
+          { "surface": "検査", "reading": "けんさ" }
+        ],
+        [
+          { "surface": "低圧", "reading": "ていあつ" },
+          { "surface": "分岐回路", "reading": "ぶんきかいろ" },
+          { "surface": "試験", "reading": "しけん" }
+        ],
+        [
+          { "surface": "分電盤", "reading": "ぶんでんばん" },
+          { "surface": "取付", "reading": "とりつけ" }
+        ]
+      ],
       "explanation_vi": null
     },
     {
       "type": "note",
       "jp": "＜解答欄＞\n番号：　語句：\n内容①：\n内容②：\n\n番号：　語句：\n内容①：\n内容②：",
       "vi": "<Khung trả lời>\nSố thứ tự:　Từ ngữ:\nNội dung①:\nNội dung②:\n\nSố thứ tự:　Từ ngữ:\nNội dung①:\nNội dung②:",
-      "explanation_vi": "Đây là khung trả lời trống (có các dòng kẻ để viết tay) dùng cho người học tự điền khi luyện tập, không phải nội dung đã in sẵn - đáp án tham khảo nằm ở 【解説No.2】trang sau."
+      "explanation_vi": "Đây là khung trả lời trống (có các dòng kẻ để viết tay) dùng cho người học tự điền khi luyện tập, không phải nội dung đã in sẵn - đáp án tham khảo nằm ở 【解説No.2】trang sau.",
+      "furigana_tokens": [
+        { "surface": "解答欄", "reading": "かいとうらん" },
+        { "surface": "番号", "reading": "ばんごう" },
+        { "surface": "語句", "reading": "ごく" },
+        { "surface": "内容", "reading": "ないよう" }
+      ]
     }
   ]
 }

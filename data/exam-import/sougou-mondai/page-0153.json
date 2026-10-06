@@ -15,13 +15,23 @@
       "level": 1,
       "jp": "7．令和7年度問題実例",
       "vi": "7. Ví dụ đề thi thực tế năm Reiwa 7",
-      "explanation_vi": null
+      "explanation_vi": null,
+      "furigana_tokens": [
+        { "surface": "令和", "reading": "れいわ" },
+        { "surface": "年度", "reading": "ねんど" },
+        { "surface": "問題", "reading": "もんだい" },
+        { "surface": "実例", "reading": "じつれい" }
+      ]
     },
     {
       "type": "note",
       "jp": "語句：\n理由①：\n理由②：",
       "vi": "Từ ngữ:\nLý do ①:\nLý do ②:",
-      "explanation_vi": "Đây là khung mẫu trống (có các dòng kẻ để viết tay) dùng cho người học tự điền khi luyện tập, không phải nội dung đã in sẵn - không tự ý điền giả định vào các dòng này."
+      "explanation_vi": "Đây là khung mẫu trống (có các dòng kẻ để viết tay) dùng cho người học tự điền khi luyện tập, không phải nội dung đã in sẵn - không tự ý điền giả định vào các dòng này.",
+      "furigana_tokens": [
+        { "surface": "語句", "reading": "ごく" },
+        { "surface": "理由", "reading": "りゆう" }
+      ]
     }
   ]
 }

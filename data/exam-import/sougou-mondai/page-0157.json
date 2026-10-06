@@ -15,14 +15,20 @@
       "level": 2,
       "jp": "【解説 No.2】",
       "vi": "[Giải đáp số 2]",
-      "explanation_vi": null
+      "explanation_vi": null,
+      "furigana_tokens": [
+        { "surface": "解説", "reading": "かいせつ" }
+      ]
     },
     {
       "type": "heading",
       "level": 4,
       "jp": "2-1　電気テキスト　5-p.98",
       "vi": "2-1 - Giáo trình điện 5-tr.98",
-      "explanation_vi": null
+      "explanation_vi": null,
+      "furigana_tokens": [
+        { "surface": "電気", "reading": "でんき" }
+      ]
     },
     {
       "type": "table",
@@ -34,6 +40,176 @@
         ["4. 資材の受入検査", "①仕様書で指定されている材料の場合、設計図書に定める品質及び性能を有する材料かどうか確認する。\n②納品書の内容と搬入された材料の仕様の相違や数量の不足がないか確認する。"],
         ["5. 低圧分岐回路の試験", "①漏電がないことを確認するために、分電盤の分岐回路の絶縁を確認するには、絶縁抵抗計で測定する。\n②三相の内二相の電線を入れ替えると三相モータが逆回転するので、低圧三相動力回路の相順を検相器によって確認する。"],
         ["6. 分電盤の取付け", "①外壁、建物へ取り付ける場合は、水が盤に侵入しないように盤隙間にコーキング処理を施す。\n②盤取付けには、分電盤が十分に固定できるように、事前に壁厚と取付け物厚を十分考慮する。"]
+      ],
+      "headers_furigana_tokens": [
+        [{ "surface": "語句", "reading": "ごく" }],
+        [{ "surface": "内容", "reading": "ないよう" }]
+      ],
+      "rows_furigana_tokens": [
+        [
+          [
+            { "surface": "機器", "reading": "きき" },
+            { "surface": "搬入", "reading": "はんにゅう" }
+          ],
+          [
+            { "surface": "各種", "reading": "かくしゅ" },
+            { "surface": "機器", "reading": "きき" },
+            { "surface": "誤", "reading": "ご" },
+            { "surface": "搬入", "reading": "はんにゅう" },
+            { "surface": "漏", "reading": "もれ" },
+            { "surface": "無", "reading": "な" },
+            { "surface": "資材", "reading": "しざい" },
+            { "surface": "表", "reading": "ひょう" },
+            { "surface": "等", "reading": "とう" },
+            { "surface": "使用", "reading": "しよう" },
+            { "surface": "現場", "reading": "げんば" },
+            { "surface": "時", "reading": "じ" },
+            { "surface": "周囲", "reading": "しゅうい" },
+            { "surface": "接触", "reading": "せっしょく" },
+            { "surface": "防止", "reading": "ぼうし" },
+            { "surface": "口", "reading": "ぐち" },
+            { "surface": "位置", "reading": "いち" },
+            { "surface": "大", "reading": "おお" },
+            { "surface": "確認", "reading": "かくにん" }
+          ]
+        ],
+        [
+          [
+            { "surface": "電線", "reading": "でんせん" },
+            { "surface": "相互", "reading": "そうご" },
+            { "surface": "接続", "reading": "せつぞく" }
+          ],
+          [
+            { "surface": "接続", "reading": "せつぞく" },
+            { "surface": "確実", "reading": "かくじつ" },
+            { "surface": "行", "reading": "おこな" },
+            { "surface": "圧着", "reading": "あっちゃく" },
+            { "surface": "電線", "reading": "でんせん" },
+            { "surface": "端子", "reading": "たんし" },
+            { "surface": "等", "reading": "とう" },
+            { "surface": "適合", "reading": "てきごう" },
+            { "surface": "材", "reading": "ざい" },
+            { "surface": "用", "reading": "もち" },
+            { "surface": "点検", "reading": "てんけん" },
+            { "surface": "不十分", "reading": "ふじゅうぶん" },
+            { "surface": "金属", "reading": "きんぞく" },
+            { "surface": "管", "reading": "かん" },
+            { "surface": "硬質", "reading": "こうしつ" },
+            { "surface": "製", "reading": "せい" },
+            { "surface": "可", "reading": "か" },
+            { "surface": "内部", "reading": "ないぶ" }
+          ]
+        ],
+        [
+          [
+            { "surface": "低圧", "reading": "ていあつ" },
+            { "surface": "敷設", "reading": "ふせつ" }
+          ],
+          [
+            { "surface": "弱電流", "reading": "じゃくでんりゅう" },
+            { "surface": "電線", "reading": "でんせん" },
+            { "surface": "水管", "reading": "すいかん" },
+            { "surface": "管", "reading": "かん" },
+            { "surface": "漏電", "reading": "ろうでん" },
+            { "surface": "防", "reading": "ふせ" },
+            { "surface": "接近", "reading": "せっきん" },
+            { "surface": "交差", "reading": "こうさ" },
+            { "surface": "場合", "reading": "ばあい" },
+            { "surface": "接触", "reading": "せっしょく" },
+            { "surface": "支持", "reading": "しじ" },
+            { "surface": "接続", "reading": "せつぞく" },
+            { "surface": "部", "reading": "ぶ" },
+            { "surface": "不要", "reading": "ふよう" },
+            { "surface": "張力", "reading": "ちょうりょく" },
+            { "surface": "加", "reading": "くわ" },
+            { "surface": "付近", "reading": "ふきん" }
+          ]
+        ],
+        [
+          [
+            { "surface": "資材", "reading": "しざい" },
+            { "surface": "受入", "reading": "うけいれ" },
+            { "surface": "検査", "reading": "けんさ" }
+          ],
+          [
+            { "surface": "仕様", "reading": "しよう" },
+            { "surface": "書", "reading": "しょ" },
+            { "surface": "指定", "reading": "してい" },
+            { "surface": "材料", "reading": "ざいりょう" },
+            { "surface": "場合", "reading": "ばあい" },
+            { "surface": "設計", "reading": "せっけい" },
+            { "surface": "図書", "reading": "としょ" },
+            { "surface": "定", "reading": "さだ" },
+            { "surface": "品質", "reading": "ひんしつ" },
+            { "surface": "及", "reading": "および" },
+            { "surface": "性能", "reading": "せいのう" },
+            { "surface": "有", "reading": "あ" },
+            { "surface": "確認", "reading": "かくにん" },
+            { "surface": "納品", "reading": "のうひん" },
+            { "surface": "内容", "reading": "ないよう" },
+            { "surface": "搬入", "reading": "はんにゅう" },
+            { "surface": "相違", "reading": "そうい" },
+            { "surface": "数量", "reading": "すうりょう" },
+            { "surface": "不足", "reading": "ふそく" }
+          ]
+        ],
+        [
+          [
+            { "surface": "低圧", "reading": "ていあつ" },
+            { "surface": "分岐回路", "reading": "ぶんきかいろ" },
+            { "surface": "試験", "reading": "しけん" }
+          ],
+          [
+            { "surface": "漏電", "reading": "ろうでん" },
+            { "surface": "確認", "reading": "かくにん" },
+            { "surface": "分電盤", "reading": "ぶんでんばん" },
+            { "surface": "分岐回路", "reading": "ぶんきかいろ" },
+            { "surface": "絶縁", "reading": "ぜつえん" },
+            { "surface": "抵抗", "reading": "ていこう" },
+            { "surface": "計", "reading": "けい" },
+            { "surface": "測定", "reading": "そくてい" },
+            { "surface": "三相", "reading": "さんそう" },
+            { "surface": "内", "reading": "うち" },
+            { "surface": "二相", "reading": "にそう" },
+            { "surface": "電線", "reading": "でんせん" },
+            { "surface": "入", "reading": "い" },
+            { "surface": "替", "reading": "かえ" },
+            { "surface": "逆回転", "reading": "ぎゃくかいてん" },
+            { "surface": "低圧", "reading": "ていあつ" },
+            { "surface": "動力", "reading": "どうりょく" },
+            { "surface": "回路", "reading": "かいろ" },
+            { "surface": "相順", "reading": "そうじゅん" },
+            { "surface": "検相器", "reading": "けんそうき" }
+          ]
+        ],
+        [
+          [
+            { "surface": "分電盤", "reading": "ぶんでんばん" },
+            { "surface": "取付", "reading": "とりつけ" }
+          ],
+          [
+            { "surface": "外壁", "reading": "がいへき" },
+            { "surface": "建物", "reading": "たてもの" },
+            { "surface": "取", "reading": "と" },
+            { "surface": "付", "reading": "つ" },
+            { "surface": "場合", "reading": "ばあい" },
+            { "surface": "水", "reading": "みず" },
+            { "surface": "盤", "reading": "ばん" },
+            { "surface": "侵入", "reading": "しんにゅう" },
+            { "surface": "隙間", "reading": "すきま" },
+            { "surface": "処理", "reading": "しょり" },
+            { "surface": "施", "reading": "ほどこ" },
+            { "surface": "取付", "reading": "とりつけ" },
+            { "surface": "分電盤", "reading": "ぶんでんばん" },
+            { "surface": "十分", "reading": "じゅうぶん" },
+            { "surface": "固定", "reading": "こてい" },
+            { "surface": "事前", "reading": "じぜん" },
+            { "surface": "壁", "reading": "かべ" },
+            { "surface": "厚", "reading": "あつ" },
+            { "surface": "物", "reading": "もの" },
+            { "surface": "考慮", "reading": "こうりょ" }
+          ]
+        ]
       ],
       "headers_vi": ["Từ ngữ", "Nội dung"],
       "rows_vi": [
@@ -51,7 +227,10 @@
       "level": 4,
       "jp": "2-2　電気テキスト　p.120, 121",
       "vi": "2-2 - Giáo trình điện tr.120, 121",
-      "explanation_vi": null
+      "explanation_vi": null,
+      "furigana_tokens": [
+        { "surface": "電気", "reading": "でんき" }
+      ]
     },
     {
       "type": "bullet_list",
@@ -62,6 +241,34 @@
       "items_vi": [
         "(1) Tên gọi: Cầu dao phụ tải xoay chiều cao áp có kèm cầu chì công suất\n　　Tên viết tắt: PF付LBS",
         "(2) Chức năng: Là thiết bị đóng điện, cắt điện cho mạch điện ở trạng thái bình thường; khi ngắn mạch, quá tải thì dùng cầu chì để ngắt nhanh."
+      ],
+      "items_furigana_tokens": [
+        [
+          { "surface": "名称", "reading": "めいしょう" },
+          { "surface": "電力", "reading": "でんりょく" },
+          { "surface": "付", "reading": "つき" },
+          { "surface": "高圧", "reading": "こうあつ" },
+          { "surface": "交流", "reading": "こうりゅう" },
+          { "surface": "負荷", "reading": "ふか" },
+          { "surface": "開閉器", "reading": "かいへいき" },
+          { "surface": "略称", "reading": "りゃくしょう" }
+        ],
+        [
+          { "surface": "機能", "reading": "きのう" },
+          { "surface": "電路", "reading": "でんろ" },
+          { "surface": "通常", "reading": "つうじょう" },
+          { "surface": "状態", "reading": "じょうたい" },
+          { "surface": "通電", "reading": "つうでん" },
+          { "surface": "遮断", "reading": "しゃだん" },
+          { "surface": "装置", "reading": "そうち" },
+          { "surface": "短絡", "reading": "たんらく" },
+          { "surface": "過", "reading": "か" },
+          { "surface": "負荷", "reading": "ふか" },
+          { "surface": "時", "reading": "じ" },
+          { "surface": "高速", "reading": "こうそく" },
+          { "surface": "断", "reading": "だん" },
+          { "surface": "行", "reading": "おこな" }
+        ]
       ],
       "explanation_vi": null
     }

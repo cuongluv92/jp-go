@@ -15,13 +15,40 @@
       "level": 3,
       "jp": "2-2　一般送配電事業者から供給を受ける、図に示す高圧受電設備の単線結線図について、次の問に答えなさい。",
       "vi": "2-2 Về sơ đồ đấu nối một sợi của thiết bị nhận điện cao áp như hình vẽ, nhận điện từ công ty truyền tải - phân phối điện phổ thông, hãy trả lời các câu hỏi sau.",
-      "explanation_vi": null
+      "explanation_vi": null,
+      "furigana_tokens": [
+        { "surface": "一般", "reading": "いっぱん" },
+        { "surface": "送配電", "reading": "そうはいでん" },
+        { "surface": "事業者", "reading": "じぎょうしゃ" },
+        { "surface": "供給", "reading": "きょうきゅう" },
+        { "surface": "受", "reading": "う" },
+        { "surface": "図", "reading": "ず" },
+        { "surface": "示", "reading": "しめ" },
+        { "surface": "高圧", "reading": "こうあつ" },
+        { "surface": "受電", "reading": "じゅでん" },
+        { "surface": "設備", "reading": "せつび" },
+        { "surface": "単線", "reading": "たんせん" },
+        { "surface": "結線", "reading": "けっせん" },
+        { "surface": "次", "reading": "つぎ" },
+        { "surface": "問", "reading": "とい" },
+        { "surface": "答", "reading": "こた" }
+      ]
     },
     {
       "type": "paragraph",
       "jp": "(1) アに示す機器の名称又は略称を記入しなさい。\n(2) アに示す機器の機能を記述しなさい。",
       "vi": "(1) Hãy ghi tên gọi hoặc tên viết tắt của thiết bị được chỉ ra tại ア.\n(2) Hãy mô tả chức năng của thiết bị được chỉ ra tại ア.",
-      "explanation_vi": null
+      "explanation_vi": null,
+      "furigana_tokens": [
+        { "surface": "示", "reading": "しめ" },
+        { "surface": "機器", "reading": "きき" },
+        { "surface": "名称", "reading": "めいしょう" },
+        { "surface": "又", "reading": "また" },
+        { "surface": "略称", "reading": "りゃくしょう" },
+        { "surface": "記入", "reading": "きにゅう" },
+        { "surface": "機能", "reading": "きのう" },
+        { "surface": "記述", "reading": "きじゅつ" }
+      ]
     },
     {
       "type": "image_placeholder",
@@ -33,7 +60,10 @@
       "type": "note",
       "jp": "＜解答欄＞\n(1)\n(2)",
       "vi": "<Khung trả lời>\n(1)\n(2)",
-      "explanation_vi": "Khung trả lời trống trong sách, không có nội dung in sẵn. Đáp án tham khảo nằm ở 【解説No.2】trang 57: (1) Tên gọi: 電力ヒューズ付高圧交流負荷開閉器 (cầu dao phụ tải xoay chiều cao áp có kèm cầu chì công suất), tên viết tắt: PF付LBS; (2) Chức năng: là thiết bị đóng/cắt điện cho mạch ở trạng thái bình thường, khi ngắn mạch hoặc quá tải thì dùng cầu chì để ngắt nhanh."
+      "explanation_vi": "Khung trả lời trống trong sách, không có nội dung in sẵn. Đáp án tham khảo nằm ở 【解説No.2】trang 57: (1) Tên gọi: 電力ヒューズ付高圧交流負荷開閉器 (cầu dao phụ tải xoay chiều cao áp có kèm cầu chì công suất), tên viết tắt: PF付LBS; (2) Chức năng: là thiết bị đóng/cắt điện cho mạch ở trạng thái bình thường, khi ngắn mạch hoặc quá tải thì dùng cầu chì để ngắt nhanh.",
+      "furigana_tokens": [
+        { "surface": "解答欄", "reading": "かいとうらん" }
+      ]
     }
   ]
 }

@@ -14,14 +14,22 @@
       "type": "note",
       "jp": "＜解答欄＞\n5-1　ア①②③④　イ①②③④\n5-2　ア①②③④　イ①②③④\n5-3　ア①②③④　イ①②③④",
       "vi": "<Khung trả lời>\n5-1　ア①②③④　イ①②③④\n5-2　ア①②③④　イ①②③④\n5-3　ア①②③④　イ①②③④",
-      "explanation_vi": "Khung trả lời trống trong sách (chỉ in sẵn các số thứ tự để khoanh tròn), không có nội dung đáp án nào được điền sẵn."
+      "explanation_vi": "Khung trả lời trống trong sách (chỉ in sẵn các số thứ tự để khoanh tròn), không có nội dung đáp án nào được điền sẵn.",
+      "furigana_tokens": [
+        { "surface": "解答欄", "reading": "かいとうらん" }
+      ]
     },
     {
       "type": "heading",
       "level": 4,
       "jp": "【解説 No.5】　施工マニュアル　1-p.　2-p.　電気テキスト　3-p.196",
       "vi": "[Giải đáp số 5] - Sổ tay thi công 1-tr. (để trống trong sách gốc), 2-tr. (để trống trong sách gốc); Giáo trình điện 3-tr.196",
-      "explanation_vi": "Số trang tham khảo của 施工マニュアル bị để trống ngay trong bản in gốc của sách (có thể là lỗi in ấn), đã chép đúng nguyên trạng không tự ý điền số."
+      "explanation_vi": "Số trang tham khảo của 施工マニュアル bị để trống ngay trong bản in gốc của sách (có thể là lỗi in ấn), đã chép đúng nguyên trạng không tự ý điền số.",
+      "furigana_tokens": [
+        { "surface": "解説", "reading": "かいせつ" },
+        { "surface": "施工", "reading": "せこう" },
+        { "surface": "電気", "reading": "でんき" }
+      ]
     },
     {
       "type": "table",
@@ -33,6 +41,19 @@
         ["5-2 イ", "②", "安全と健康"],
         ["5-3 ア", "③", "工事"],
         ["5-3 イ", "①", "実務の経験"]
+      ],
+      "headers_furigana_tokens": [
+        [{ "surface": "問", "reading": "もん" }],
+        [{ "surface": "正解", "reading": "せいかい" }],
+        [{ "surface": "語句", "reading": "ごく" }]
+      ],
+      "rows_furigana_tokens": [
+        [[], [], [{ "surface": "育成", "reading": "いくせい" }]],
+        [[], [], [{ "surface": "技術", "reading": "ぎじゅつ" }]],
+        [[], [], [{ "surface": "最低", "reading": "さいてい" }, { "surface": "基準", "reading": "きじゅん" }]],
+        [[], [], [{ "surface": "安全", "reading": "あんぜん" }, { "surface": "健康", "reading": "けんこう" }]],
+        [[], [], [{ "surface": "工事", "reading": "こうじ" }]],
+        [[], [], [{ "surface": "実務", "reading": "じつむ" }, { "surface": "経験", "reading": "けいけん" }]]
       ],
       "headers_vi": ["Câu", "Đáp án đúng", "Từ"],
       "rows_vi": [

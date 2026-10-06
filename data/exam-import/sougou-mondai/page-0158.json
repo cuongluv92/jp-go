@@ -15,13 +15,46 @@
       "level": 2,
       "jp": "【問題 No.3】電気工事に関する次の用語の中から3つ選び、番号と用語を記入のうえ、技術的な内容について、それぞれ2つ具体的に記述しなさい。",
       "vi": "[Câu hỏi số 3] Hãy chọn 3 trong số các thuật ngữ liên quan đến công trình điện dưới đây, điền số thứ tự và thuật ngữ, rồi nêu cụ thể 2 nội dung kỹ thuật cho mỗi thuật ngữ.",
-      "explanation_vi": null
+      "explanation_vi": null,
+      "furigana_tokens": [
+        { "surface": "問題", "reading": "もんだい" },
+        { "surface": "電気工事", "reading": "でんきこうじ" },
+        { "surface": "関", "reading": "かん" },
+        { "surface": "次", "reading": "つぎ" },
+        { "surface": "用語", "reading": "ようご" },
+        { "surface": "中", "reading": "なか" },
+        { "surface": "選", "reading": "えら" },
+        { "surface": "番号", "reading": "ばんごう" },
+        { "surface": "記入", "reading": "きにゅう" },
+        { "surface": "技術的", "reading": "ぎじゅつてき" },
+        { "surface": "内容", "reading": "ないよう" },
+        { "surface": "具体的", "reading": "ぐたいてき" },
+        { "surface": "記述", "reading": "きじゅつ" }
+      ]
     },
     {
       "type": "note",
       "jp": "ただし、技術的な内容とは、施工上の留意点、選定上の留意点、動作原理、発生原理、定義、目的、用途、方式、方法、特徴、対策などをいう。",
       "vi": "Trong đó, \"nội dung kỹ thuật\" được hiểu là điểm cần lưu ý khi thi công, điểm cần lưu ý khi lựa chọn, nguyên lý hoạt động, nguyên lý phát sinh, định nghĩa, mục đích, công dụng, phương thức, phương pháp, đặc điểm, đối sách v.v.",
-      "explanation_vi": null
+      "explanation_vi": null,
+      "furigana_tokens": [
+        { "surface": "技術的", "reading": "ぎじゅつてき" },
+        { "surface": "内容", "reading": "ないよう" },
+        { "surface": "施工", "reading": "せこう" },
+        { "surface": "上", "reading": "じょう" },
+        { "surface": "留意点", "reading": "りゅういてん" },
+        { "surface": "選定", "reading": "せんてい" },
+        { "surface": "動作", "reading": "どうさ" },
+        { "surface": "原理", "reading": "げんり" },
+        { "surface": "発生", "reading": "はっせい" },
+        { "surface": "定義", "reading": "ていぎ" },
+        { "surface": "目的", "reading": "もくてき" },
+        { "surface": "用途", "reading": "ようと" },
+        { "surface": "方式", "reading": "ほうしき" },
+        { "surface": "方法", "reading": "ほうほう" },
+        { "surface": "特徴", "reading": "とくちょう" },
+        { "surface": "対策", "reading": "たいさく" }
+      ]
     },
     {
       "type": "numbered_list",
@@ -47,13 +80,67 @@
         "Công trình tiếp địa loại A",
         "Dòng điện cho phép của dây dẫn"
       ],
+      "items_furigana_tokens": [
+        [
+          { "surface": "太陽光", "reading": "たいようこう" },
+          { "surface": "発電", "reading": "はつでん" }
+        ],
+        [
+          { "surface": "単相", "reading": "たんそう" },
+          { "surface": "変圧器", "reading": "へんあつき" },
+          { "surface": "結線", "reading": "けっせん" }
+        ],
+        [],
+        [
+          { "surface": "屋内", "reading": "おくない" },
+          { "surface": "配線", "reading": "はいせん" },
+          { "surface": "用", "reading": "よう" },
+          { "surface": "差込", "reading": "さしこみ" },
+          { "surface": "形", "reading": "がた" },
+          { "surface": "電線", "reading": "でんせん" }
+        ],
+        [
+          { "surface": "定温", "reading": "ていおん" },
+          { "surface": "式", "reading": "しき" },
+          { "surface": "型", "reading": "がた" },
+          { "surface": "感知", "reading": "かんち" },
+          { "surface": "器", "reading": "き" }
+        ],
+        [
+          { "surface": "電車", "reading": "でんしゃ" },
+          { "surface": "線路", "reading": "せんろ" },
+          { "surface": "帰線", "reading": "きせん" }
+        ],
+        [
+          { "surface": "式", "reading": "しき" },
+          { "surface": "車両", "reading": "しゃりょう" },
+          { "surface": "感知", "reading": "かんち" },
+          { "surface": "器", "reading": "き" }
+        ],
+        [
+          { "surface": "種", "reading": "しゅ" },
+          { "surface": "接地", "reading": "せっち" },
+          { "surface": "工事", "reading": "こうじ" }
+        ],
+        [
+          { "surface": "電線", "reading": "でんせん" },
+          { "surface": "許容", "reading": "きょよう" },
+          { "surface": "電流", "reading": "でんりゅう" }
+        ]
+      ],
       "explanation_vi": null
     },
     {
       "type": "note",
       "jp": "＜解答欄＞\n番号：　用語：\n内容①：\n内容②：\n\n番号：　用語：\n内容①：\n内容②：\n\n番号：　用語：\n内容①：\n内容②：",
       "vi": "<Khung trả lời>\nSố thứ tự:　Thuật ngữ:\nNội dung①:\nNội dung②:\n\nSố thứ tự:　Thuật ngữ:\nNội dung①:\nNội dung②:\n\nSố thứ tự:　Thuật ngữ:\nNội dung①:\nNội dung②:",
-      "explanation_vi": "Đây là khung trả lời trống (3 khung, có các dòng kẻ để viết tay) dùng cho người học tự điền khi luyện tập, không phải nội dung đã in sẵn."
+      "explanation_vi": "Đây là khung trả lời trống (3 khung, có các dòng kẻ để viết tay) dùng cho người học tự điền khi luyện tập, không phải nội dung đã in sẵn.",
+      "furigana_tokens": [
+        { "surface": "解答欄", "reading": "かいとうらん" },
+        { "surface": "番号", "reading": "ばんごう" },
+        { "surface": "用語", "reading": "ようご" },
+        { "surface": "内容", "reading": "ないよう" }
+      ]
     }
   ]
 }

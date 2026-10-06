@@ -15,14 +15,31 @@
       "level": 2,
       "jp": "【問題 No.4】次の問いに答えなさい。",
       "vi": "[Câu hỏi số 4] Hãy trả lời các câu hỏi sau.",
-      "explanation_vi": null
+      "explanation_vi": null,
+      "furigana_tokens": [
+        { "surface": "問題", "reading": "もんだい" },
+        { "surface": "次", "reading": "つぎ" },
+        { "surface": "問", "reading": "とい" },
+        { "surface": "答", "reading": "こた" }
+      ]
     },
     {
       "type": "heading",
       "level": 3,
       "jp": "4-1　図に示すブリッジ回路において、スイッチSを投入すると、検流計Gの値が0Aとなった。未知抵抗Rxの値〔Ω〕として、正しいものはどれか。",
       "vi": "4-1 Trong mạch cầu như hình vẽ, khi đóng công tắc S thì giá trị của điện kế G trở thành 0A. Giá trị điện trở chưa biết Rx [Ω] nào dưới đây là đúng?",
-      "explanation_vi": null
+      "explanation_vi": null,
+      "furigana_tokens": [
+        { "surface": "図", "reading": "ず" },
+        { "surface": "示", "reading": "しめ" },
+        { "surface": "回路", "reading": "かいろ" },
+        { "surface": "投入", "reading": "とうにゅう" },
+        { "surface": "検流計", "reading": "けんりゅうけい" },
+        { "surface": "未知", "reading": "みち" },
+        { "surface": "抵抗", "reading": "ていこう" },
+        { "surface": "値", "reading": "あたい" },
+        { "surface": "正", "reading": "ただ" }
+      ]
     },
     {
       "type": "image_placeholder",
@@ -41,13 +58,30 @@
       "level": 3,
       "jp": "4-2　出力285kWで運転している変圧器があり、そのときの負荷損は5kW、無負荷損は10kWであった。このときの変圧器の効率〔%〕として、正しいものはどれか。",
       "vi": "4-2 Có một máy biến áp đang vận hành với công suất đầu ra 285kW, khi đó tổn thất tải là 5kW, tổn thất không tải là 10kW. Hiệu suất của máy biến áp [%] khi đó nào dưới đây là đúng?",
-      "explanation_vi": null
+      "explanation_vi": null,
+      "furigana_tokens": [
+        { "surface": "出力", "reading": "しゅつりょく" },
+        { "surface": "運転", "reading": "うんてん" },
+        { "surface": "変圧器", "reading": "へんあつき" },
+        { "surface": "負荷", "reading": "ふか" },
+        { "surface": "損", "reading": "そん" },
+        { "surface": "無", "reading": "む" },
+        { "surface": "効率", "reading": "こうりつ" },
+        { "surface": "正", "reading": "ただ" }
+      ]
     },
     {
       "type": "note",
       "jp": "ただし、負荷損、無負荷損以外の損失はないものとする。",
       "vi": "Trong đó, giả định không có tổn thất nào khác ngoài tổn thất tải và tổn thất không tải.",
-      "explanation_vi": null
+      "explanation_vi": null,
+      "furigana_tokens": [
+        { "surface": "負荷", "reading": "ふか" },
+        { "surface": "損", "reading": "そん" },
+        { "surface": "無", "reading": "む" },
+        { "surface": "以外", "reading": "いがい" },
+        { "surface": "損失", "reading": "そんしつ" }
+      ]
     },
     {
       "type": "bullet_list",
@@ -59,19 +93,34 @@
       "type": "note",
       "jp": "＜解答欄＞\n4-1　①②③④\n4-2　①②③④",
       "vi": "<Khung trả lời>\n4-1　①②③④\n4-2　①②③④",
-      "explanation_vi": "Khung trả lời trống trong sách (chỉ in sẵn 4 số thứ tự để khoanh tròn), không có nội dung đáp án nào được điền sẵn."
+      "explanation_vi": "Khung trả lời trống trong sách (chỉ in sẵn 4 số thứ tự để khoanh tròn), không có nội dung đáp án nào được điền sẵn.",
+      "furigana_tokens": [
+        { "surface": "解答欄", "reading": "かいとうらん" }
+      ]
     },
     {
       "type": "heading",
       "level": 4,
       "jp": "【解説 No.4】　電気テキスト　2-p.28",
       "vi": "[Giải đáp số 4] - Giáo trình điện 2-tr.28",
-      "explanation_vi": null
+      "explanation_vi": null,
+      "furigana_tokens": [
+        { "surface": "解説", "reading": "かいせつ" },
+        { "surface": "電気", "reading": "でんき" }
+      ]
     },
     {
       "type": "table",
       "headers_jp": ["問", "正しいもの"],
       "rows_jp": [["4-1", "① (150Ω)"], ["4-2", "③ (95%)"]],
+      "headers_furigana_tokens": [
+        [{ "surface": "問", "reading": "もん" }],
+        [{ "surface": "正", "reading": "ただ" }]
+      ],
+      "rows_furigana_tokens": [
+        [[], []],
+        [[], []]
+      ],
       "headers_vi": ["Câu", "Đáp án đúng"],
       "rows_vi": [["4-1", "① (150Ω)"], ["4-2", "③ (95%)"]],
       "explanation_vi": null
