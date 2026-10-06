@@ -16,27 +16,59 @@
       "level": 2,
       "jp": "3-1-1．安全管理",
       "vi": "3-1-1. Quản lý an toàn",
-      "explanation_vi": null
+      "explanation_vi": null,
+      "furigana_tokens": [
+        { "surface": "安全管理", "reading": "あんぜんかんり" }
+      ]
     },
     {
       "type": "heading",
       "level": 3,
       "jp": "安全管理の記述の方法について",
       "vi": "Về cách mô tả phần quản lý an toàn",
-      "explanation_vi": null
+      "explanation_vi": null,
+      "furigana_tokens": [
+        { "surface": "安全管理", "reading": "あんぜんかんり" },
+        { "surface": "記述", "reading": "きじゅつ" },
+        { "surface": "方法", "reading": "ほうほう" }
+      ]
     },
     {
       "type": "paragraph",
       "jp": "過去に、労働災害を防止するための対策を記述する問題が出題されている。\n安全管理の記述方法も、管理業務である「問題点を予測し対策を講ずる」展開である。\nしたがって、労働災害を防止するための対策は、下記の施工管理業務の一部を記述すると良い。",
       "vi": "Trước đây, đã từng ra đề yêu cầu mô tả biện pháp phòng ngừa tai nạn lao động.\nCách mô tả phần quản lý an toàn cũng tương tự nghiệp vụ quản lý: triển khai theo hướng \"dự đoán vấn đề rồi đưa ra biện pháp\".\nVì vậy, nên mô tả biện pháp phòng ngừa tai nạn lao động như một phần trong nghiệp vụ quản lý thi công dưới đây.",
-      "explanation_vi": null
+      "explanation_vi": null,
+      "furigana_tokens": [
+        { "surface": "過去", "reading": "かこ" },
+        { "surface": "労働災害", "reading": "ろうどうさいがい" },
+        { "surface": "防止", "reading": "ぼうし" },
+        { "surface": "対策", "reading": "たいさく" },
+        { "surface": "記述", "reading": "きじゅつ" },
+        { "surface": "問題", "reading": "もんだい" },
+        { "surface": "出題", "reading": "しゅつだい" },
+        { "surface": "安全管理", "reading": "あんぜんかんり" },
+        { "surface": "記述方法", "reading": "きじゅつほうほう" },
+        { "surface": "管理業務", "reading": "かんりぎょうむ" },
+        { "surface": "問題点", "reading": "もんだいてん" },
+        { "surface": "予測", "reading": "よそく" },
+        { "surface": "講", "reading": "こう" },
+        { "surface": "展開", "reading": "てんかい" },
+        { "surface": "下記", "reading": "かき" },
+        { "surface": "施工管理業務", "reading": "せこうかんりぎょうむ" },
+        { "surface": "一部", "reading": "いちぶ" },
+        { "surface": "良", "reading": "よ" }
+      ]
     },
     {
       "type": "heading",
       "level": 3,
       "jp": "施工管理の手順",
       "vi": "Trình tự nghiệp vụ quản lý thi công",
-      "explanation_vi": null
+      "explanation_vi": null,
+      "furigana_tokens": [
+        { "surface": "施工管理", "reading": "せこうかんり" },
+        { "surface": "手順", "reading": "てじゅん" }
+      ]
     },
     {
       "type": "table",
@@ -56,7 +88,97 @@
         ["❹ Quyết định biện pháp", "Xem xét kỹ sự việc đặc biệt cần lưu ý để phòng ngừa vấn đề phát sinh, từ đó quyết định biện pháp phòng ngừa vấn đề đó."],
         ["❺ Thực hiện biện pháp", "Mô tả cụ thể đã chỉ đạo/chỉ huy như thế nào để thực hiện được biện pháp đã quyết định."]
       ],
-      "explanation_vi": "Giống khung sơ đồ 5 bước đã gặp ở p.5 (chương 2: 施工経験記述), nay áp dụng lại cho chương 3. Trong sách gốc có 2 ngoặc bên trái: bước ❶~❹ thuộc nhóm '計画' (Lập kế hoạch), bước ❺ thuộc nhóm '実施' (Thực hiện)."
+      "explanation_vi": "Giống khung sơ đồ 5 bước đã gặp ở p.5 (chương 2: 施工経験記述), nay áp dụng lại cho chương 3. Trong sách gốc có 2 ngoặc bên trái: bước ❶~❹ thuộc nhóm '計画' (Lập kế hoạch), bước ❺ thuộc nhóm '実施' (Thực hiện).",
+      "headers_furigana_tokens": [
+        [
+          { "surface": "手順", "reading": "てじゅん" },
+          { "surface": "理論", "reading": "りろん" }
+        ],
+        [
+          { "surface": "応用能力", "reading": "おうようのうりょく" },
+          { "surface": "表現", "reading": "ひょうげん" }
+        ]
+      ],
+      "rows_furigana_tokens": [
+        [
+          [ { "surface": "現場状況等", "reading": "げんばじょうきょうとう" } ],
+          [
+            { "surface": "発生", "reading": "はっせい" },
+            { "surface": "現場状況", "reading": "げんばじょうきょう" },
+            { "surface": "過去", "reading": "かこ" },
+            { "surface": "工事経験", "reading": "こうじけいけん" },
+            { "surface": "具体的", "reading": "ぐたいてき" },
+            { "surface": "記述", "reading": "きじゅつ" }
+          ]
+        ],
+        [
+          [
+            { "surface": "予測", "reading": "よそく" },
+            { "surface": "問題", "reading": "もんだい" }
+          ],
+          [
+            { "surface": "予測", "reading": "よそく" },
+            { "surface": "問題", "reading": "もんだい" },
+            { "surface": "具体的", "reading": "ぐたいてき" },
+            { "surface": "記述", "reading": "きじゅつ" },
+            { "surface": "理由", "reading": "りゆう" },
+            { "surface": "明確", "reading": "めいかく" }
+          ]
+        ],
+        [
+          [
+            { "surface": "特", "reading": "とく" },
+            { "surface": "留意", "reading": "りゅうい" },
+            { "surface": "事項", "reading": "じこう" }
+          ],
+          [
+            { "surface": "留意", "reading": "りゅうい" },
+            { "surface": "事項", "reading": "じこう" },
+            { "surface": "適切", "reading": "てきせつ" },
+            { "surface": "手法", "reading": "しゅほう" },
+            { "surface": "手順", "reading": "てじゅん" },
+            { "surface": "絞", "reading": "しぼ" },
+            { "surface": "明確", "reading": "めいかく" },
+            { "surface": "記述", "reading": "きじゅつ" },
+            { "surface": "重点管理項目", "reading": "じゅうてんかんりこうもく" },
+            { "surface": "工事", "reading": "こうじ" },
+            { "surface": "目的", "reading": "もくてき" },
+            { "surface": "目標", "reading": "もくひょう" }
+          ]
+        ],
+        [
+          [
+            { "surface": "対策", "reading": "たいさく" },
+            { "surface": "決定", "reading": "けってい" }
+          ],
+          [
+            { "surface": "問題", "reading": "もんだい" },
+            { "surface": "発生", "reading": "はっせい" },
+            { "surface": "防止", "reading": "ぼうし" },
+            { "surface": "特", "reading": "とく" },
+            { "surface": "留意", "reading": "りゅうい" },
+            { "surface": "事項", "reading": "じこう" },
+            { "surface": "十分", "reading": "じゅうぶん" },
+            { "surface": "検討", "reading": "けんとう" },
+            { "surface": "対策", "reading": "たいさく" },
+            { "surface": "決定", "reading": "けってい" }
+          ]
+        ],
+        [
+          [
+            { "surface": "対策", "reading": "たいさく" },
+            { "surface": "実施", "reading": "じっし" }
+          ],
+          [
+            { "surface": "対策", "reading": "たいさく" },
+            { "surface": "実現", "reading": "じつげん" },
+            { "surface": "指導", "reading": "しどう" },
+            { "surface": "指揮", "reading": "しき" },
+            { "surface": "具体的", "reading": "ぐたいてき" },
+            { "surface": "記述", "reading": "きじゅつ" }
+          ]
+        ]
+      ]
     }
   ]
 }

@@ -16,7 +16,10 @@
       "level": 2,
       "jp": "【品質管理】",
       "vi": "[Quản lý chất lượng]",
-      "explanation_vi": null
+      "explanation_vi": null,
+      "furigana_tokens": [
+        { "surface": "品質管理", "reading": "ひんしつかんり" }
+      ]
     },
     {
       "type": "numbered_list",
@@ -44,14 +47,61 @@
         "Thi công giá đỡ cáp (cable rack) (R5)",
         "Xử lý chống thấm nước tại cửa dẫn vào (R5)"
       ],
-      "explanation_vi": "Số trong ngoặc là các năm (Reiwa) từng ra đề về thuật ngữ đó. Lưu ý: mục 3 ở đây sách gốc ghi '低圧分岐回線の試験' (kanji 線), còn ở trang 21 (đề luyện tập) lại ghi '低圧分岐回路の試験' (kanji 路) - đã chép đúng theo từng chỗ xuất hiện trong ảnh gốc, có thể là điểm chưa thống nhất của sách."
+      "explanation_vi": "Số trong ngoặc là các năm (Reiwa) từng ra đề về thuật ngữ đó. Lưu ý: mục 3 ở đây sách gốc ghi '低圧分岐回線の試験' (kanji 線), còn ở trang 21 (đề luyện tập) lại ghi '低圧分岐回路の試験' (kanji 路) - đã chép đúng theo từng chỗ xuất hiện trong ảnh gốc, có thể là điểm chưa thống nhất của sách.",
+      "items_furigana_tokens": [
+        [
+          { "surface": "材料", "reading": "ざいりょう" },
+          { "surface": "資材", "reading": "しざい" },
+          { "surface": "受入検査", "reading": "うけいれけんさ" }
+        ],
+        [
+          { "surface": "工具", "reading": "こうぐ" },
+          { "surface": "取扱い", "reading": "とりあつかい" }
+        ],
+        [
+          { "surface": "低圧分岐回線", "reading": "ていあつぶんきかいせん" },
+          { "surface": "試験", "reading": "しけん" }
+        ],
+        [
+          { "surface": "電線相互", "reading": "でんせんそうご" },
+          { "surface": "接続", "reading": "せつぞく" }
+        ],
+        [
+          { "surface": "低圧", "reading": "ていあつ" },
+          { "surface": "敷設", "reading": "ふせつ" }
+        ],
+        [
+          { "surface": "電動機", "reading": "でんどうき" },
+          { "surface": "配管配線", "reading": "はいかんはいせん" }
+        ],
+        [
+          { "surface": "分電盤", "reading": "ぶんでんばん" },
+          { "surface": "取付け", "reading": "とりつけ" }
+        ],
+        [
+          { "surface": "機器搬入", "reading": "ききはんにゅう" }
+        ],
+        [
+          { "surface": "施工", "reading": "せこう" }
+        ],
+        [
+          { "surface": "引込口", "reading": "ひきこみぐち" },
+          { "surface": "防水処理", "reading": "ぼうすいしょり" }
+        ]
+      ]
     },
     {
       "type": "heading",
       "level": 4,
       "jp": "1．材料（資材）の受入検査（R3, 7）　施工マニュアル p.61",
       "vi": "1. Kiểm tra nhận vật liệu (vật tư) (R3, 7) - Sổ tay thi công tr.61",
-      "explanation_vi": null
+      "explanation_vi": null,
+      "furigana_tokens": [
+        { "surface": "材料", "reading": "ざいりょう" },
+        { "surface": "資材", "reading": "しざい" },
+        { "surface": "受入検査", "reading": "うけいれけんさ" },
+        { "surface": "施工", "reading": "せこう" }
+      ]
     },
     {
       "type": "bullet_list",
@@ -63,14 +113,44 @@
         "① Đối với vật liệu được chỉ định trong bản quy cách, xác nhận xem đó có phải là vật liệu có chất lượng và tính năng theo quy định trong hồ sơ thiết kế hay không.",
         "② Xác nhận xem nội dung phiếu giao hàng có khác với quy cách vật liệu đã vận chuyển vào, hoặc có thiếu số lượng hay không."
       ],
-      "explanation_vi": null
+      "explanation_vi": null,
+      "items_furigana_tokens": [
+        [
+          { "surface": "仕様書", "reading": "しようしょ" },
+          { "surface": "指定", "reading": "してい" },
+          { "surface": "材料", "reading": "ざいりょう" },
+          { "surface": "場合", "reading": "ばあい" },
+          { "surface": "設計図書", "reading": "せっけいとしょ" },
+          { "surface": "定める", "reading": "さだめる" },
+          { "surface": "品質", "reading": "ひんしつ" },
+          { "surface": "及", "reading": "および" },
+          { "surface": "性能", "reading": "せいのう" },
+          { "surface": "有する", "reading": "ゆうする" },
+          { "surface": "確認", "reading": "かくにん" }
+        ],
+        [
+          { "surface": "納品書", "reading": "のうひんしょ" },
+          { "surface": "内容", "reading": "ないよう" },
+          { "surface": "搬入", "reading": "はんにゅう" },
+          { "surface": "材料", "reading": "ざいりょう" },
+          { "surface": "仕様", "reading": "しよう" },
+          { "surface": "相違", "reading": "そうい" },
+          { "surface": "数量", "reading": "すうりょう" },
+          { "surface": "不足", "reading": "ぶそく" },
+          { "surface": "確認", "reading": "かくにん" }
+        ]
+      ]
     },
     {
       "type": "heading",
       "level": 4,
       "jp": "◎2．工具の取扱い（R5）",
       "vi": "◎2. Sử dụng/quản lý dụng cụ (R5)",
-      "explanation_vi": null
+      "explanation_vi": null,
+      "furigana_tokens": [
+        { "surface": "工具", "reading": "こうぐ" },
+        { "surface": "取扱い", "reading": "とりあつかい" }
+      ]
     },
     {
       "type": "bullet_list",
@@ -82,14 +162,47 @@
         "① Sắp xếp dụng cụ theo từng loại và cất vào hộp nhựa v.v. để có thể lấy ra nhanh chóng dụng cụ phù hợp với công việc thi công.",
         "② Các dụng cụ điện cầm tay mang mới vào hiện trường có thể bị hỏng hóc hoặc hư hại trong quá trình vận chuyển, nên khi mang vào phải kiểm tra tại hiện trường, và đính kèm giấy chứng nhận đã tiếp nhận khai báo máy móc mang vào cho những dụng cụ đạt yêu cầu."
       ],
-      "explanation_vi": null
+      "explanation_vi": null,
+      "items_furigana_tokens": [
+        [
+          { "surface": "施工", "reading": "せこう" },
+          { "surface": "適した", "reading": "てきした" },
+          { "surface": "工具", "reading": "こうぐ" },
+          { "surface": "迅速", "reading": "じんそく" },
+          { "surface": "取り出せる", "reading": "とりだせる" },
+          { "surface": "種類", "reading": "しゅるい" },
+          { "surface": "整理", "reading": "せいり" },
+          { "surface": "収納", "reading": "しゅうのう" }
+        ],
+        [
+          { "surface": "現場", "reading": "げんば" },
+          { "surface": "新たに", "reading": "あらたに" },
+          { "surface": "持ち込む", "reading": "もちこむ" },
+          { "surface": "電動工具類", "reading": "でんどうこうぐるい" },
+          { "surface": "運搬中", "reading": "うんぱんちゅう" },
+          { "surface": "故障", "reading": "こしょう" },
+          { "surface": "損傷", "reading": "そんしょう" },
+          { "surface": "場合", "reading": "ばあい" },
+          { "surface": "持込み時現場", "reading": "もちこみじげんば" },
+          { "surface": "検査", "reading": "けんさ" },
+          { "surface": "合格", "reading": "ごうかく" },
+          { "surface": "持込機械届受理証", "reading": "もちこみきかいとどけじゅりしょう" },
+          { "surface": "添付", "reading": "てんぷ" }
+        ]
+      ]
     },
     {
       "type": "heading",
       "level": 4,
       "jp": "3．低圧分岐回線の試験（R3, 7）　電気テキスト p.98, 140（参考）",
       "vi": "3. Thử nghiệm mạch nhánh hạ áp (R3, 7) - Giáo trình điện tr.98, 140 (tham khảo)",
-      "explanation_vi": null
+      "explanation_vi": null,
+      "furigana_tokens": [
+        { "surface": "低圧分岐回線", "reading": "ていあつぶんきかいせん" },
+        { "surface": "試験", "reading": "しけん" },
+        { "surface": "電気", "reading": "でんき" },
+        { "surface": "参考", "reading": "さんこう" }
+      ]
     },
     {
       "type": "bullet_list",
@@ -101,14 +214,41 @@
         "① Để xác nhận không có rò điện, khi kiểm tra cách điện của mạch nhánh trong tủ điện phân phối, đo bằng đồng hồ đo điện trở cách điện.",
         "② Nếu đổi chỗ 2 trong 3 dây pha thì động cơ 3 pha sẽ quay ngược chiều, nên phải xác nhận thứ tự pha của mạch động lực 3 pha hạ áp bằng máy kiểm tra thứ tự pha."
       ],
-      "explanation_vi": null
+      "explanation_vi": null,
+      "items_furigana_tokens": [
+        [
+          { "surface": "漏電", "reading": "ろうでん" },
+          { "surface": "確認", "reading": "かくにん" },
+          { "surface": "分電盤", "reading": "ぶんでんばん" },
+          { "surface": "分岐回路", "reading": "ぶんきかいろ" },
+          { "surface": "絶縁", "reading": "ぜつえん" },
+          { "surface": "絶縁抵抗計", "reading": "ぜつえんていこうけい" },
+          { "surface": "測定", "reading": "そくてい" }
+        ],
+        [
+          { "surface": "三相", "reading": "さんそう" },
+          { "surface": "内", "reading": "うち" },
+          { "surface": "二相", "reading": "にそう" },
+          { "surface": "電線", "reading": "でんせん" },
+          { "surface": "入れ替える", "reading": "いれかえる" },
+          { "surface": "逆回転", "reading": "ぎゃくかいてん" },
+          { "surface": "低圧三相動力回路", "reading": "ていあつさんそうどうりょくかいろ" },
+          { "surface": "相順", "reading": "そうじゅん" },
+          { "surface": "検相器", "reading": "けんそうき" },
+          { "surface": "確認", "reading": "かくにん" }
+        ]
+      ]
     },
     {
       "type": "heading",
       "level": 4,
       "jp": "4．電線相互の接続（R7）",
       "vi": "4. Đấu nối dây dẫn với nhau (R7)",
-      "explanation_vi": null
+      "explanation_vi": null,
+      "furigana_tokens": [
+        { "surface": "電線相互", "reading": "でんせんそうご" },
+        { "surface": "接続", "reading": "せつぞく" }
+      ]
     },
     {
       "type": "bullet_list",
@@ -120,14 +260,46 @@
         "① Sử dụng vật liệu đấu nối phù hợp với dây dẫn như ống ép, đầu nối dây, cốt ép đầu dây v.v. để việc đấu nối được chắc chắn.",
         "② Không được đấu nối bên trong ống kim loại, ống PF, ống CD, ống nhựa cứng, ống luồn dây kim loại dạng mềm, vì việc đấu nối và kiểm tra sẽ không đầy đủ."
       ],
-      "explanation_vi": null
+      "explanation_vi": null,
+      "items_furigana_tokens": [
+        [
+          { "surface": "接続", "reading": "せつぞく" },
+          { "surface": "確実", "reading": "かくじつ" },
+          { "surface": "行われる", "reading": "おこなわれる" },
+          { "surface": "圧着", "reading": "あっちゃく" },
+          { "surface": "電線", "reading": "でんせん" },
+          { "surface": "圧着端子等", "reading": "あっちゃくたんしとう" },
+          { "surface": "適合", "reading": "てきごう" },
+          { "surface": "接続材", "reading": "せつぞくざい" },
+          { "surface": "用いる", "reading": "もちいる" }
+        ],
+        [
+          { "surface": "電線", "reading": "でんせん" },
+          { "surface": "接続", "reading": "せつぞく" },
+          { "surface": "点検", "reading": "てんけん" },
+          { "surface": "不十分", "reading": "ふじゅうぶん" },
+          { "surface": "金属管", "reading": "きんぞくかん" },
+          { "surface": "PF管", "reading": "ぴーえふかん" },
+          { "surface": "CD管", "reading": "しーでぃーかん" },
+          { "surface": "硬質", "reading": "こうしつ" },
+          { "surface": "管", "reading": "かん" },
+          { "surface": "金属製可とう電線管", "reading": "きんぞくせいかとうでんせんかん" },
+          { "surface": "内部", "reading": "ないぶ" }
+        ]
+      ]
     },
     {
       "type": "heading",
       "level": 4,
       "jp": "5．低圧ケーブルの敷設（R3, 7）　電気テキスト p.115（参考）",
       "vi": "5. Lắp đặt cáp hạ áp (R3, 7) - Giáo trình điện tr.115 (tham khảo)",
-      "explanation_vi": null
+      "explanation_vi": null,
+      "furigana_tokens": [
+        { "surface": "低圧", "reading": "ていあつ" },
+        { "surface": "敷設", "reading": "ふせつ" },
+        { "surface": "電気", "reading": "でんき" },
+        { "surface": "参考", "reading": "さんこう" }
+      ]
     },
     {
       "type": "bullet_list",
@@ -139,7 +311,29 @@
         "① Để phòng ngừa rò điện với dây điện yếu, ống nước, ống ga, khi đi gần hoặc giao cắt với các đường ống này, phải cố định sao cho không tiếp xúc với chúng.",
         "② Cố định gần hộp nối để tránh gây lực căng không cần thiết lên điểm đấu nối dây dẫn."
       ],
-      "explanation_vi": null
+      "explanation_vi": null,
+      "items_furigana_tokens": [
+        [
+          { "surface": "弱電流電線", "reading": "じゃくでんりゅうでんせん" },
+          { "surface": "水管", "reading": "すいかん" },
+          { "surface": "ガス管", "reading": "がすかん" },
+          { "surface": "漏電", "reading": "ろうでん" },
+          { "surface": "防", "reading": "ふせ" },
+          { "surface": "接近", "reading": "せっきん" },
+          { "surface": "交", "reading": "こう" },
+          { "surface": "場合", "reading": "ばあい" },
+          { "surface": "接触", "reading": "せっしょく" },
+          { "surface": "支持", "reading": "しじ" }
+        ],
+        [
+          { "surface": "電線接続部", "reading": "でんせんせつぞくぶ" },
+          { "surface": "不要", "reading": "ふよう" },
+          { "surface": "張力", "reading": "ちょうりょく" },
+          { "surface": "加えない", "reading": "くわえない" },
+          { "surface": "付近", "reading": "ふきん" },
+          { "surface": "支持", "reading": "しじ" }
+        ]
+      ]
     }
   ]
 }

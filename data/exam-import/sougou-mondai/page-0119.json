@@ -16,7 +16,13 @@
       "level": 4,
       "jp": "6．高所作業車での作業における危険防止対策（R2）　施工マニュアル p.245〜247",
       "vi": "6. Biện pháp phòng ngừa nguy hiểm khi làm việc bằng xe làm việc trên cao (R2) - Sổ tay thi công tr.245~247",
-      "explanation_vi": null
+      "explanation_vi": null,
+      "furigana_tokens": [
+        { "surface": "高所作業車", "reading": "こうしょさぎょうしゃ" },
+        { "surface": "作業", "reading": "さぎょう" },
+        { "surface": "危険防止対策", "reading": "きけんぼうしたいさく" },
+        { "surface": "施工", "reading": "せこう" }
+      ]
     },
     {
       "type": "bullet_list",
@@ -28,14 +34,40 @@
         "① Để phòng ngừa tai nạn do bảo dưỡng không đầy đủ, nhất định phải kiểm tra khởi động trước khi bắt đầu làm việc.",
         "② Để phòng ngừa tai nạn do máy bị lật đổ, đặt máy ở nơi bằng phẳng và mở chân chống (outrigger) ra tối đa."
       ],
-      "explanation_vi": null
+      "explanation_vi": null,
+      "items_furigana_tokens": [
+        [
+          { "surface": "整備不良", "reading": "せいびふりょう" },
+          { "surface": "災害", "reading": "さいがい" },
+          { "surface": "防", "reading": "ふせ" },
+          { "surface": "始動点検", "reading": "しどうてんけん" },
+          { "surface": "作業開始前", "reading": "さぎょうかいしまえ" },
+          { "surface": "必ず", "reading": "かならず" },
+          { "surface": "行う", "reading": "おこなう" }
+        ],
+        [
+          { "surface": "機械", "reading": "きかい" },
+          { "surface": "転倒", "reading": "てんとう" },
+          { "surface": "災害", "reading": "さいがい" },
+          { "surface": "防", "reading": "ふせ" },
+          { "surface": "水平場所", "reading": "すいへいばしょ" },
+          { "surface": "設置", "reading": "せっち" },
+          { "surface": "最大限", "reading": "さいだいげん" },
+          { "surface": "張り出す", "reading": "はりだす" }
+        ]
+      ]
     },
     {
       "type": "heading",
       "level": 4,
       "jp": "◎7．墜落災害の防止対策（R4, 6）　施工マニュアル p.259〜261",
       "vi": "◎7. Biện pháp phòng ngừa tai nạn rơi ngã (R4, 6) - Sổ tay thi công tr.259~261",
-      "explanation_vi": "Trong bảng tổng hợp ở trang 18, mục này còn ghi thêm năm H30 (墜落災害の防止対策（H30, R4, 6）) nhưng ở phần giải nghĩa chi tiết này sách gốc chỉ ghi (R4, 6) - đã chép đúng theo từng chỗ trong ảnh gốc."
+      "explanation_vi": "Trong bảng tổng hợp ở trang 18, mục này còn ghi thêm năm H30 (墜落災害の防止対策（H30, R4, 6）) nhưng ở phần giải nghĩa chi tiết này sách gốc chỉ ghi (R4, 6) - đã chép đúng theo từng chỗ trong ảnh gốc.",
+      "furigana_tokens": [
+        { "surface": "墜落災害", "reading": "ついらくさいがい" },
+        { "surface": "防止対策", "reading": "ぼうしたいさく" },
+        { "surface": "施工", "reading": "せこう" }
+      ]
     },
     {
       "type": "bullet_list",
@@ -47,14 +79,52 @@
         "① Tại nơi có độ cao từ 2m trở lên (trừ mép sàn thao tác, lỗ mở v.v.), phải lắp đặt sàn thao tác bằng cách dựng giàn giáo v.v.",
         "② Tại mép sàn thao tác có độ cao từ 2m trở lên, lỗ mở v.v. có nguy cơ gây nguy hiểm rơi ngã cho người lao động, phải lắp đặt rào chắn, tay vịn, nắp che v.v."
       ],
-      "explanation_vi": null
+      "explanation_vi": null,
+      "items_furigana_tokens": [
+        [
+          { "surface": "高さ", "reading": "たかさ" },
+          { "surface": "以上", "reading": "いじょう" },
+          { "surface": "場所", "reading": "ばしょ" },
+          { "surface": "作業床", "reading": "さぎょうしょう" },
+          { "surface": "端", "reading": "たん" },
+          { "surface": "開口部等", "reading": "かいこうぶとう" },
+          { "surface": "除く", "reading": "のぞく" },
+          { "surface": "足場", "reading": "あしば" },
+          { "surface": "組み立てる", "reading": "くみたてる" },
+          { "surface": "等", "reading": "とう" },
+          { "surface": "方法", "reading": "ほうほう" },
+          { "surface": "設ける", "reading": "もうける" }
+        ],
+        [
+          { "surface": "高さ", "reading": "たかさ" },
+          { "surface": "以上", "reading": "いじょう" },
+          { "surface": "作業床", "reading": "さぎょうしょう" },
+          { "surface": "端", "reading": "たん" },
+          { "surface": "開口部等", "reading": "かいこうぶとう" },
+          { "surface": "墜落", "reading": "ついらく" },
+          { "surface": "労働者", "reading": "ろうどうしゃ" },
+          { "surface": "危険", "reading": "きけん" },
+          { "surface": "及ぼす", "reading": "および" },
+          { "surface": "個所", "reading": "こしょ" },
+          { "surface": "囲い", "reading": "かこい" },
+          { "surface": "手すり", "reading": "てすり" },
+          { "surface": "覆い", "reading": "おおい" },
+          { "surface": "等", "reading": "とう" },
+          { "surface": "設ける", "reading": "もうける" }
+        ]
+      ]
     },
     {
       "type": "heading",
       "level": 4,
       "jp": "8．飛来落下災害の防止対策（R4）　施工マニュアル p.262",
       "vi": "8. Biện pháp phòng ngừa tai nạn vật bay/rơi (R4) - Sổ tay thi công tr.262",
-      "explanation_vi": null
+      "explanation_vi": null,
+      "furigana_tokens": [
+        { "surface": "飛来落下災害", "reading": "ひらいらっかさいがい" },
+        { "surface": "防止対策", "reading": "ぼうしたいさく" },
+        { "surface": "施工", "reading": "せこう" }
+      ]
     },
     {
       "type": "bullet_list",
@@ -66,14 +136,47 @@
         "① Để phòng ngừa tai nạn do dụng cụ, công cụ của công việc thực hiện ở phía trên bị rơi xuống, lập kế hoạch thi công và kế hoạch bố trí máy móc thiết bị sao cho tránh làm việc đồng thời trên-dưới.",
         "② Khi bất khả kháng phải thực hiện công việc thả/ném vật xuống, phải lắp đặt thiết bị chuyên dụng như máng thả (shoot) v.v."
       ],
-      "explanation_vi": null
+      "explanation_vi": null,
+      "items_furigana_tokens": [
+        [
+          { "surface": "上方", "reading": "じょうほう" },
+          { "surface": "行われる", "reading": "おこなわれる" },
+          { "surface": "作業", "reading": "さぎょう" },
+          { "surface": "器具", "reading": "きぐ" },
+          { "surface": "工具", "reading": "こうぐ" },
+          { "surface": "落下", "reading": "らっか" },
+          { "surface": "災害", "reading": "さいがい" },
+          { "surface": "防", "reading": "ふせ" },
+          { "surface": "上下作業", "reading": "じょうかさぎょう" },
+          { "surface": "避けて", "reading": "さけて" },
+          { "surface": "施工計画", "reading": "せこうけいかく" },
+          { "surface": "機械設備", "reading": "きかいせつび" },
+          { "surface": "配置計画", "reading": "はいちけいかく" },
+          { "surface": "作成", "reading": "さくせい" }
+        ],
+        [
+          { "surface": "得ず", "reading": "えず" },
+          { "surface": "投下作業", "reading": "とうかさぎょう" },
+          { "surface": "行う", "reading": "おこなう" },
+          { "surface": "投下", "reading": "とうか" },
+          { "surface": "等", "reading": "とう" },
+          { "surface": "専用設備", "reading": "せんようせつび" },
+          { "surface": "設ける", "reading": "もうける" }
+        ]
+      ]
     },
     {
       "type": "heading",
       "level": 4,
       "jp": "◎9．感電災害の防止対策（R2, 4, 6）　施工マニュアル p.151〜152, 228（特別教育）",
       "vi": "◎9. Biện pháp phòng ngừa tai nạn điện giật (R2, 4, 6) - Sổ tay thi công tr.151~152, 228 (giáo dục đặc biệt)",
-      "explanation_vi": null
+      "explanation_vi": null,
+      "furigana_tokens": [
+        { "surface": "感電災害", "reading": "かんでんさいがい" },
+        { "surface": "防止対策", "reading": "ぼうしたいさく" },
+        { "surface": "施工", "reading": "せこう" },
+        { "surface": "特別教育", "reading": "とくべつきょういく" }
+      ]
     },
     {
       "type": "bullet_list",
@@ -85,14 +188,43 @@
         "① Để phòng ngừa tai nạn điện giật do tiếp xúc với đường dây đang mang điện, lắp đặt dụng cụ bảo hộ cách điện trên đường dây.",
         "② Với các dụng cụ có vỏ ngoài bằng kim loại và điện áp sử dụng trên 60V, để phòng ngừa tai nạn điện giật do rò điện, lắp đặt cầu dao chống rò (ELCB) tại nguồn điện của dụng cụ."
       ],
-      "explanation_vi": null
+      "explanation_vi": null,
+      "items_furigana_tokens": [
+        [
+          { "surface": "充電電路", "reading": "じゅうでんでんろ" },
+          { "surface": "接触", "reading": "せっしょく" },
+          { "surface": "感電災害", "reading": "かんでんさいがい" },
+          { "surface": "防", "reading": "ふせ" },
+          { "surface": "電路", "reading": "でんろ" },
+          { "surface": "絶縁用防護具", "reading": "ぜつえんようぼうごぐ" },
+          { "surface": "装置", "reading": "そうち" }
+        ],
+        [
+          { "surface": "金属製外箱", "reading": "きんぞくせいがいばこ" },
+          { "surface": "有する", "reading": "ゆうする" },
+          { "surface": "使用電圧", "reading": "しようでんあつ" },
+          { "surface": "超える", "reading": "こえる" },
+          { "surface": "器具", "reading": "きぐ" },
+          { "surface": "漏電", "reading": "ろうでん" },
+          { "surface": "感電災害", "reading": "かんでんさいがい" },
+          { "surface": "防", "reading": "ふせ" },
+          { "surface": "電源", "reading": "でんげん" },
+          { "surface": "漏電遮断器", "reading": "ろうでんしゃだんき" },
+          { "surface": "設置", "reading": "せっち" }
+        ]
+      ]
     },
     {
       "type": "heading",
       "level": 4,
       "jp": "10．酸素欠乏危険場所での危険防止対策（R2）　施工マニュアル p.226, 228, 285〜287",
       "vi": "10. Biện pháp phòng ngừa nguy hiểm tại nơi có nguy cơ thiếu oxy (R2) - Sổ tay thi công tr.226, 228, 285~287",
-      "explanation_vi": null
+      "explanation_vi": null,
+      "furigana_tokens": [
+        { "surface": "酸素欠乏危険場所", "reading": "さんそけつぼうきけんばしょ" },
+        { "surface": "危険防止対策", "reading": "きけんぼうしたいさく" },
+        { "surface": "施工", "reading": "せこう" }
+      ]
     },
     {
       "type": "bullet_list",
@@ -104,7 +236,23 @@
         "① Trước khi bắt đầu công việc, yêu cầu người phụ trách công việc nguy hiểm về oxy đo nồng độ oxy.",
         "② Thực hiện giáo dục đặc biệt về công việc có nguy cơ thiếu oxy cho người lao động."
       ],
-      "explanation_vi": null
+      "explanation_vi": null,
+      "items_furigana_tokens": [
+        [
+          { "surface": "作業", "reading": "さぎょう" },
+          { "surface": "開始", "reading": "かいし" },
+          { "surface": "前", "reading": "まえ" },
+          { "surface": "酸素危険作業主任者", "reading": "さんそきけんさぎょうしゅにんしゃ" },
+          { "surface": "酸素濃度", "reading": "さんそのうど" },
+          { "surface": "測定", "reading": "そくてい" }
+        ],
+        [
+          { "surface": "労働者", "reading": "ろうどうしゃ" },
+          { "surface": "酸素欠乏危険作業", "reading": "さんそけつぼうきけんさぎょう" },
+          { "surface": "特別教育", "reading": "とくべつきょういく" },
+          { "surface": "行う", "reading": "おこなう" }
+        ]
+      ]
     }
   ]
 }

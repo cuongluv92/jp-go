@@ -16,14 +16,24 @@
       "level": 2,
       "jp": "留意事項と理由の例",
       "vi": "Ví dụ về sự việc cần lưu ý và lý do",
-      "explanation_vi": null
+      "explanation_vi": null,
+      "furigana_tokens": [
+        { "surface": "留意事項", "reading": "りゅういじこう" },
+        { "surface": "理由", "reading": "りゆう" },
+        { "surface": "例", "reading": "れい" }
+      ]
     },
     {
       "type": "heading",
       "level": 3,
       "jp": "① 安全管理（＿部分が留意事項）",
       "vi": "① Quản lý an toàn (phần gạch chân là sự việc cần lưu ý)",
-      "explanation_vi": null
+      "explanation_vi": null,
+      "furigana_tokens": [
+        { "surface": "安全管理", "reading": "あんぜんかんり" },
+        { "surface": "部分", "reading": "ぶぶん" },
+        { "surface": "留意事項", "reading": "りゅういじこう" }
+      ]
     },
     {
       "type": "bullet_list",
@@ -41,14 +51,54 @@
         "ニ. Phòng tránh sự cố vật rơi/bay khi làm việc với cần cẩu",
         "ホ. Phòng tránh tai nạn điện giật cho công nhân khi làm việc gần đường dây mang điện ở nơi hẹp, nơi tối"
       ],
-      "explanation_vi": null
+      "explanation_vi": null,
+      "items_furigana_tokens": [
+        [
+          { "surface": "高所作業", "reading": "こうしょさぎょう" },
+          { "surface": "柱上", "reading": "ちゅうじょう" },
+          { "surface": "屋上", "reading": "おくじょう" },
+          { "surface": "足場上", "reading": "あしばじょう" },
+          { "surface": "等", "reading": "とう" },
+          { "surface": "時", "reading": "じ" },
+          { "surface": "作業員", "reading": "さぎょういん" },
+          { "surface": "墜落災害防止", "reading": "ついらくさいがいぼうし" }
+        ],
+        [
+          { "surface": "暗所作業", "reading": "あんしょさぎょう" },
+          { "surface": "地下ピット", "reading": "ちかぴっと" },
+          { "surface": "等", "reading": "とう" },
+          { "surface": "時", "reading": "じ" },
+          { "surface": "作業員", "reading": "さぎょういん" },
+          { "surface": "墜落災害防止", "reading": "ついらくさいがいぼうし" }
+        ],
+        [
+          { "surface": "上下作業時", "reading": "じょうかさぎょうじ" },
+          { "surface": "飛来落下事故防止", "reading": "ひらいらっかじこぼうし" }
+        ],
+        [
+          { "surface": "クレーン作業時", "reading": "くれーんさぎょうじ" },
+          { "surface": "飛来落下事故防止", "reading": "ひらいらっかじこぼうし" }
+        ],
+        [
+          { "surface": "狭所", "reading": "きょうしょ" },
+          { "surface": "暗所", "reading": "あんしょ" },
+          { "surface": "活線近接作業時", "reading": "かっせんきんせつさぎょうじ" },
+          { "surface": "作業員", "reading": "さぎょういん" },
+          { "surface": "感電事故防止", "reading": "かんでんじこぼうし" }
+        ]
+      ]
     },
     {
       "type": "heading",
       "level": 3,
       "jp": "② 工程管理（＿部分が留意事項）",
       "vi": "② Quản lý tiến độ (phần gạch chân là sự việc cần lưu ý)",
-      "explanation_vi": null
+      "explanation_vi": null,
+      "furigana_tokens": [
+        { "surface": "工程管理", "reading": "こうていかんり" },
+        { "surface": "部分", "reading": "ぶぶん" },
+        { "surface": "留意事項", "reading": "りゅういじこう" }
+      ]
     },
     {
       "type": "bullet_list",
@@ -64,7 +114,35 @@
         "ハ. Rút ngắn lịch trình công việc kế tiếp do công việc trước bị chậm trễ",
         "ニ. Điều chỉnh thúc đẩy công việc ○○ do phát sinh công trình bổ sung, công trình thay đổi"
       ],
-      "explanation_vi": null
+      "explanation_vi": null,
+      "items_furigana_tokens": [
+        [
+          { "surface": "狭所作業", "reading": "きょうしょさぎょう" },
+          { "surface": "地下ピット", "reading": "ちかぴっと" },
+          { "surface": "等", "reading": "とう" },
+          { "surface": "時", "reading": "じ" },
+          { "surface": "作業能率低下防止", "reading": "さぎょうのうりつていかぼうし" }
+        ],
+        [
+          { "surface": "競合作業", "reading": "きょうごうさぎょう" },
+          { "surface": "夜間作業", "reading": "やかんさぎょう" },
+          { "surface": "時", "reading": "じ" },
+          { "surface": "作業能率低下防止", "reading": "さぎょうのうりつていかぼうし" }
+        ],
+        [
+          { "surface": "先行作業", "reading": "せんこうさぎょう" },
+          { "surface": "遅れ", "reading": "おくれ" },
+          { "surface": "後続作業", "reading": "こうぞくさぎょう" },
+          { "surface": "日程短縮", "reading": "にっていたんしゅく" }
+        ],
+        [
+          { "surface": "追加工事", "reading": "ついかこうじ" },
+          { "surface": "変更工事", "reading": "へんこうこうじ" },
+          { "surface": "発生", "reading": "はっせい" },
+          { "surface": "作業", "reading": "さぎょう" },
+          { "surface": "促進調整", "reading": "そくしんちょうせい" }
+        ]
+      ]
     }
   ]
 }

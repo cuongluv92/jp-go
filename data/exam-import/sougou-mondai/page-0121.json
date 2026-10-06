@@ -16,13 +16,31 @@
       "level": 3,
       "jp": "【問題 No.1】",
       "vi": "[Câu hỏi số 1]",
-      "explanation_vi": "(R3)"
+      "explanation_vi": "(R3)",
+      "furigana_tokens": [
+        { "surface": "問題", "reading": "もんだい" }
+      ]
     },
     {
       "type": "note",
       "jp": "電気工事に関する次の語句の中から2つを選び、番号と語句を記入のうえ、施工管理上留意すべき内容を、それぞれについて2つ具体的に記述しなさい。",
       "vi": "Hãy chọn 2 trong số các thuật ngữ liên quan đến công trình điện dưới đây, ghi rõ số thứ tự và thuật ngữ, sau đó mô tả cụ thể 2 nội dung cần lưu ý về mặt quản lý thi công cho mỗi thuật ngữ.",
-      "explanation_vi": null
+      "explanation_vi": null,
+      "furigana_tokens": [
+        { "surface": "電気工事", "reading": "でんきこうじ" },
+        { "surface": "関", "reading": "かん" },
+        { "surface": "次", "reading": "つぎ" },
+        { "surface": "語句", "reading": "ごく" },
+        { "surface": "中", "reading": "なか" },
+        { "surface": "選び", "reading": "えらび" },
+        { "surface": "番号", "reading": "ばんごう" },
+        { "surface": "記入", "reading": "きにゅう" },
+        { "surface": "施工管理上", "reading": "せこうかんりじょう" },
+        { "surface": "留意", "reading": "りゅうい" },
+        { "surface": "内容", "reading": "ないよう" },
+        { "surface": "具体的", "reading": "ぐたいてき" },
+        { "surface": "記述", "reading": "きじゅつ" }
+      ]
     },
     {
       "type": "bullet_list",
@@ -42,20 +60,64 @@
         "5. Kiểm tra nhận vật tư",
         "6. Thử nghiệm mạch nhánh hạ áp"
       ],
-      "explanation_vi": null
+      "explanation_vi": null,
+      "items_furigana_tokens": [
+        [
+          { "surface": "機器", "reading": "きき" },
+          { "surface": "搬入", "reading": "はんにゅう" }
+        ],
+        [
+          { "surface": "分電盤", "reading": "ぶんでんばん" },
+          { "surface": "取付け", "reading": "とりつけ" }
+        ],
+        [
+          { "surface": "低圧", "reading": "ていあつ" },
+          { "surface": "敷設", "reading": "ふせつ" }
+        ],
+        [
+          { "surface": "電動機", "reading": "でんどうき" },
+          { "surface": "配管配線", "reading": "はいかんはいせん" }
+        ],
+        [
+          { "surface": "資材", "reading": "しざい" },
+          { "surface": "受入検査", "reading": "うけいれけんさ" }
+        ],
+        [
+          { "surface": "低圧分岐回路", "reading": "ていあつぶんきかいろ" },
+          { "surface": "試験", "reading": "しけん" }
+        ]
+      ]
     },
     {
       "type": "heading",
       "level": 3,
       "jp": "【問題 No.2】",
       "vi": "[Câu hỏi số 2]",
-      "explanation_vi": "(R5)"
+      "explanation_vi": "(R5)",
+      "furigana_tokens": [
+        { "surface": "問題", "reading": "もんだい" }
+      ]
     },
     {
       "type": "note",
       "jp": "電気工事に関する次の語句の中から2つを選び、番号と語句を記入のうえ、施工管理上留意すべき内容を、それぞれについて2つ具体的に記述しなさい。",
       "vi": "Hãy chọn 2 trong số các thuật ngữ liên quan đến công trình điện dưới đây, ghi rõ số thứ tự và thuật ngữ, sau đó mô tả cụ thể 2 nội dung cần lưu ý về mặt quản lý thi công cho mỗi thuật ngữ.",
-      "explanation_vi": null
+      "explanation_vi": null,
+      "furigana_tokens": [
+        { "surface": "電気工事", "reading": "でんきこうじ" },
+        { "surface": "関", "reading": "かん" },
+        { "surface": "次", "reading": "つぎ" },
+        { "surface": "語句", "reading": "ごく" },
+        { "surface": "中", "reading": "なか" },
+        { "surface": "選び", "reading": "えらび" },
+        { "surface": "番号", "reading": "ばんごう" },
+        { "surface": "記入", "reading": "きにゅう" },
+        { "surface": "施工管理上", "reading": "せこうかんりじょう" },
+        { "surface": "留意", "reading": "りゅうい" },
+        { "surface": "内容", "reading": "ないよう" },
+        { "surface": "具体的", "reading": "ぐたいてき" },
+        { "surface": "記述", "reading": "きじゅつ" }
+      ]
     },
     {
       "type": "bullet_list",
@@ -75,20 +137,63 @@
         "5. Lắp đặt ống/dây dẫn đến động cơ điện",
         "6. Xử lý chống thấm nước tại cửa dẫn vào"
       ],
-      "explanation_vi": null
+      "explanation_vi": null,
+      "items_furigana_tokens": [
+        [
+          { "surface": "工具", "reading": "こうぐ" },
+          { "surface": "取扱い", "reading": "とりあつかい" }
+        ],
+        [
+          { "surface": "機器", "reading": "きき" },
+          { "surface": "搬入", "reading": "はんにゅう" }
+        ],
+        [
+          { "surface": "分電盤", "reading": "ぶんでんばん" },
+          { "surface": "取付け", "reading": "とりつけ" }
+        ],
+        [
+          { "surface": "施工", "reading": "せこう" }
+        ],
+        [
+          { "surface": "電動機", "reading": "でんどうき" },
+          { "surface": "配管配線", "reading": "はいかんはいせん" }
+        ],
+        [
+          { "surface": "引込口", "reading": "ひきこみぐち" },
+          { "surface": "防水処理", "reading": "ぼうすいしょり" }
+        ]
+      ]
     },
     {
       "type": "heading",
       "level": 3,
       "jp": "【問題 No.3】",
       "vi": "[Câu hỏi số 3]",
-      "explanation_vi": "(R7)"
+      "explanation_vi": "(R7)",
+      "furigana_tokens": [
+        { "surface": "問題", "reading": "もんだい" }
+      ]
     },
     {
       "type": "note",
       "jp": "電気工事に関する次の語句の中から2つを選び、番号と語句を記入のうえ、施工管理上留意すべき内容について、それぞれ2つ具体的に記述しなさい。",
       "vi": "Hãy chọn 2 trong số các thuật ngữ liên quan đến công trình điện dưới đây, ghi rõ số thứ tự và thuật ngữ, sau đó mô tả cụ thể 2 nội dung cần lưu ý về mặt quản lý thi công cho mỗi thuật ngữ.",
-      "explanation_vi": null
+      "explanation_vi": null,
+      "furigana_tokens": [
+        { "surface": "電気工事", "reading": "でんきこうじ" },
+        { "surface": "関", "reading": "かん" },
+        { "surface": "次", "reading": "つぎ" },
+        { "surface": "語句", "reading": "ごく" },
+        { "surface": "中", "reading": "なか" },
+        { "surface": "選び", "reading": "えらび" },
+        { "surface": "番号", "reading": "ばんごう" },
+        { "surface": "記入", "reading": "きにゅう" },
+        { "surface": "施工管理上", "reading": "せこうかんりじょう" },
+        { "surface": "留意", "reading": "りゅうい" },
+        { "surface": "内容", "reading": "ないよう" },
+        { "surface": "具体的", "reading": "ぐたいてき" },
+        { "surface": "記述", "reading": "きじゅつ" }
+      ]
     },
     {
       "type": "bullet_list",
@@ -108,7 +213,33 @@
         "5. Thử nghiệm mạch nhánh hạ áp",
         "6. Lắp đặt tủ điện phân phối"
       ],
-      "explanation_vi": null
+      "explanation_vi": null,
+      "items_furigana_tokens": [
+        [
+          { "surface": "機器", "reading": "きき" },
+          { "surface": "搬入", "reading": "はんにゅう" }
+        ],
+        [
+          { "surface": "電線相互", "reading": "でんせんそうご" },
+          { "surface": "接続", "reading": "せつぞく" }
+        ],
+        [
+          { "surface": "低圧", "reading": "ていあつ" },
+          { "surface": "敷設", "reading": "ふせつ" }
+        ],
+        [
+          { "surface": "資材", "reading": "しざい" },
+          { "surface": "受入検査", "reading": "うけいれけんさ" }
+        ],
+        [
+          { "surface": "低圧分岐回路", "reading": "ていあつぶんきかいろ" },
+          { "surface": "試験", "reading": "しけん" }
+        ],
+        [
+          { "surface": "分電盤", "reading": "ぶんでんばん" },
+          { "surface": "取付け", "reading": "とりつけ" }
+        ]
+      ]
     }
   ]
 }

@@ -16,13 +16,29 @@
       "level": 3,
       "jp": "【問題 No.1】",
       "vi": "[Câu hỏi số 1]",
-      "explanation_vi": "(R2)"
+      "explanation_vi": "(R2)",
+      "furigana_tokens": [
+        { "surface": "問題", "reading": "もんだい" }
+      ]
     },
     {
       "type": "note",
       "jp": "安全管理に関する次の語句の中から2つを選び、番号と語句を記入のうえ、それぞれの内容について2つ具体的に記述しなさい。",
       "vi": "Hãy chọn 2 trong số các thuật ngữ liên quan đến quản lý an toàn dưới đây, ghi rõ số thứ tự và thuật ngữ, sau đó mô tả cụ thể 2 nội dung cho mỗi thuật ngữ.",
-      "explanation_vi": null
+      "explanation_vi": null,
+      "furigana_tokens": [
+        { "surface": "安全管理", "reading": "あんぜんかんり" },
+        { "surface": "関", "reading": "かん" },
+        { "surface": "次", "reading": "つぎ" },
+        { "surface": "語句", "reading": "ごく" },
+        { "surface": "中", "reading": "なか" },
+        { "surface": "選び", "reading": "えらび" },
+        { "surface": "番号", "reading": "ばんごう" },
+        { "surface": "記入", "reading": "きにゅう" },
+        { "surface": "内容", "reading": "ないよう" },
+        { "surface": "具体的", "reading": "ぐたいてき" },
+        { "surface": "記述", "reading": "きじゅつ" }
+      ]
     },
     {
       "type": "bullet_list",
@@ -42,20 +58,53 @@
         "5. Biện pháp phòng ngừa nguy hiểm khi dùng xe làm việc trên cao",
         "6. Biện pháp phòng ngừa tai nạn điện giật"
       ],
-      "explanation_vi": null
+      "explanation_vi": null,
+      "items_furigana_tokens": [
+        [ { "surface": "危険予知活動", "reading": "きけんよちかつどう" } ],
+        [ { "surface": "安全施工", "reading": "あんぜんせこう" } ],
+        [ { "surface": "新規入場者教育", "reading": "しんきにゅうじょうしゃきょういく" } ],
+        [
+          { "surface": "酸素欠乏危険場所", "reading": "さんそけつぼうきけんばしょ" },
+          { "surface": "危険防止対策", "reading": "きけんぼうしたいさく" }
+        ],
+        [
+          { "surface": "高所作業車", "reading": "こうしょさぎょうしゃ" },
+          { "surface": "危険防止対策", "reading": "きけんぼうしたいさく" }
+        ],
+        [
+          { "surface": "感電災害", "reading": "かんでんさいがい" },
+          { "surface": "防止対策", "reading": "ぼうしたいさく" }
+        ]
+      ]
     },
     {
       "type": "heading",
       "level": 3,
       "jp": "【問題 No.2】",
       "vi": "[Câu hỏi số 2]",
-      "explanation_vi": "(R4)"
+      "explanation_vi": "(R4)",
+      "furigana_tokens": [
+        { "surface": "問題", "reading": "もんだい" }
+      ]
     },
     {
       "type": "note",
       "jp": "安全管理に関する次の語句の中から2つを選び、番号と語句を記入のうえ、それぞれの内容について2つ具体的に記述しなさい。",
       "vi": "Hãy chọn 2 trong số các thuật ngữ liên quan đến quản lý an toàn dưới đây, ghi rõ số thứ tự và thuật ngữ, sau đó mô tả cụ thể 2 nội dung cho mỗi thuật ngữ.",
-      "explanation_vi": null
+      "explanation_vi": null,
+      "furigana_tokens": [
+        { "surface": "安全管理", "reading": "あんぜんかんり" },
+        { "surface": "関", "reading": "かん" },
+        { "surface": "次", "reading": "つぎ" },
+        { "surface": "語句", "reading": "ごく" },
+        { "surface": "中", "reading": "なか" },
+        { "surface": "選び", "reading": "えらび" },
+        { "surface": "番号", "reading": "ばんごう" },
+        { "surface": "記入", "reading": "きにゅう" },
+        { "surface": "内容", "reading": "ないよう" },
+        { "surface": "具体的", "reading": "ぐたいてき" },
+        { "surface": "記述", "reading": "きじゅつ" }
+      ]
     },
     {
       "type": "bullet_list",
@@ -75,20 +124,53 @@
         "5. Biện pháp phòng ngừa tai nạn điện giật",
         "6. Giáo dục người mới vào công trường"
       ],
-      "explanation_vi": null
+      "explanation_vi": null,
+      "items_furigana_tokens": [
+        [ { "surface": "安全", "reading": "あんぜん" } ],
+        [],
+        [
+          { "surface": "飛来落下災害", "reading": "ひらいらっかさいがい" },
+          { "surface": "防止対策", "reading": "ぼうしたいさく" }
+        ],
+        [
+          { "surface": "墜落災害", "reading": "ついらくさいがい" },
+          { "surface": "防止対策", "reading": "ぼうしたいさく" }
+        ],
+        [
+          { "surface": "感電災害", "reading": "かんでんさいがい" },
+          { "surface": "防止対策", "reading": "ぼうしたいさく" }
+        ],
+        [ { "surface": "新規入場者教育", "reading": "しんきにゅうじょうしゃきょういく" } ]
+      ]
     },
     {
       "type": "heading",
       "level": 3,
       "jp": "【問題 No.3】",
       "vi": "[Câu hỏi số 3]",
-      "explanation_vi": "(R6)"
+      "explanation_vi": "(R6)",
+      "furigana_tokens": [
+        { "surface": "問題", "reading": "もんだい" }
+      ]
     },
     {
       "type": "note",
       "jp": "安全管理に関する次の語句の中から2つを選び、番号と語句を記入のうえ、それぞれの内容について2つ具体的に記述しなさい。",
       "vi": "Hãy chọn 2 trong số các thuật ngữ liên quan đến quản lý an toàn dưới đây, ghi rõ số thứ tự và thuật ngữ, sau đó mô tả cụ thể 2 nội dung cho mỗi thuật ngữ.",
-      "explanation_vi": null
+      "explanation_vi": null,
+      "furigana_tokens": [
+        { "surface": "安全管理", "reading": "あんぜんかんり" },
+        { "surface": "関", "reading": "かん" },
+        { "surface": "次", "reading": "つぎ" },
+        { "surface": "語句", "reading": "ごく" },
+        { "surface": "中", "reading": "なか" },
+        { "surface": "選び", "reading": "えらび" },
+        { "surface": "番号", "reading": "ばんごう" },
+        { "surface": "記入", "reading": "きにゅう" },
+        { "surface": "内容", "reading": "ないよう" },
+        { "surface": "具体的", "reading": "ぐたいてき" },
+        { "surface": "記述", "reading": "きじゅつ" }
+      ]
     },
     {
       "type": "bullet_list",
@@ -108,7 +190,21 @@
         "5. Biện pháp phòng ngừa tai nạn rơi ngã",
         "6. Giáo dục người mới vào công trường"
       ],
-      "explanation_vi": null
+      "explanation_vi": null,
+      "items_furigana_tokens": [
+        [ { "surface": "危険予知活動", "reading": "きけんよちかつどう" } ],
+        [ { "surface": "安全施工", "reading": "あんぜんせこう" } ],
+        [
+          { "surface": "感電災害", "reading": "かんでんさいがい" },
+          { "surface": "防止対策", "reading": "ぼうしたいさく" }
+        ],
+        [ { "surface": "安全", "reading": "あんぜん" } ],
+        [
+          { "surface": "墜落災害", "reading": "ついらくさいがい" },
+          { "surface": "防止対策", "reading": "ぼうしたいさく" }
+        ],
+        [ { "surface": "新規入場者教育", "reading": "しんきにゅうじょうしゃきょういく" } ]
+      ]
     }
   ]
 }

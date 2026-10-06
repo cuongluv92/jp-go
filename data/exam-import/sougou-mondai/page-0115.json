@@ -15,7 +15,10 @@
       "level": 1,
       "jp": "3．施工管理法",
       "vi": "3. Phương pháp quản lý thi công",
-      "explanation_vi": null
+      "explanation_vi": null,
+      "furigana_tokens": [
+        { "surface": "施工管理法", "reading": "せこうかんりほう" }
+      ]
     }
   ]
 }

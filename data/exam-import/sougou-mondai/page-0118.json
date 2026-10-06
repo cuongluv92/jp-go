@@ -16,7 +16,10 @@
       "level": 2,
       "jp": "【安全管理】",
       "vi": "[Quản lý an toàn]",
-      "explanation_vi": null
+      "explanation_vi": null,
+      "furigana_tokens": [
+        { "surface": "安全管理", "reading": "あんぜんかんり" }
+      ]
     },
     {
       "type": "numbered_list",
@@ -44,14 +47,45 @@
         "Biện pháp phòng ngừa tai nạn điện giật (R2, 4)",
         "Biện pháp phòng ngừa nguy hiểm tại nơi có nguy cơ thiếu oxy (R2)"
       ],
-      "explanation_vi": "Số trong ngoặc là các năm (Reiwa/Heisei) từng ra đề về thuật ngữ đó."
+      "explanation_vi": "Số trong ngoặc là các năm (Reiwa/Heisei) từng ra đề về thuật ngữ đó.",
+      "items_furigana_tokens": [
+        [],
+        [ { "surface": "危険予知活動", "reading": "きけんよちかつどう" } ],
+        [ { "surface": "安全", "reading": "あんぜん" } ],
+        [ { "surface": "新規入場者教育", "reading": "しんきにゅうじょうしゃきょういく" } ],
+        [ { "surface": "安全施工", "reading": "あんぜんせこう" } ],
+        [
+          { "surface": "高所作業車", "reading": "こうしょさぎょうしゃ" },
+          { "surface": "作業", "reading": "さぎょう" },
+          { "surface": "危険防止対策", "reading": "きけんぼうしたいさく" }
+        ],
+        [
+          { "surface": "墜落災害", "reading": "ついらくさいがい" },
+          { "surface": "防止対策", "reading": "ぼうしたいさく" }
+        ],
+        [
+          { "surface": "飛来落下災害", "reading": "ひらいらっかさいがい" },
+          { "surface": "防止対策", "reading": "ぼうしたいさく" }
+        ],
+        [
+          { "surface": "感電災害", "reading": "かんでんさいがい" },
+          { "surface": "防止対策", "reading": "ぼうしたいさく" }
+        ],
+        [
+          { "surface": "酸素欠乏危険場所", "reading": "さんそけつぼうきけんばしょ" },
+          { "surface": "危険防止対策", "reading": "きけんぼうしたいさく" }
+        ]
+      ]
     },
     {
       "type": "heading",
       "level": 4,
       "jp": "1．TBM（ツールボックスミーティング）（R4）　施工マニュアル p.145",
       "vi": "1. TBM (Họp hộp dụng cụ) (R4) - Sổ tay thi công tr.145",
-      "explanation_vi": null
+      "explanation_vi": null,
+      "furigana_tokens": [
+        { "surface": "施工", "reading": "せこう" }
+      ]
     },
     {
       "type": "bullet_list",
@@ -63,14 +97,46 @@
         "① Đây là hoạt động được thực hiện với mục đích nắm rõ nội dung công việc và nguy cơ tai nạn, trong đó các đồng nghiệp tập trung bên cạnh hộp dụng cụ (tool box) trong khoảng thời gian ngắn trước khi bắt đầu công việc để cùng trao đổi về công việc an toàn.",
         "② Chủ đề trao đổi trong buổi họp là cách tiến hành công việc trong ngày hôm đó và mối liên hệ với an toàn lao động v.v."
       ],
-      "explanation_vi": null
+      "explanation_vi": null,
+      "items_furigana_tokens": [
+        [
+          { "surface": "作業内容", "reading": "さぎょうないよう" },
+          { "surface": "災害", "reading": "さいがい" },
+          { "surface": "危険", "reading": "きけん" },
+          { "surface": "知", "reading": "し" },
+          { "surface": "目的", "reading": "もくてき" },
+          { "surface": "行", "reading": "おこな" },
+          { "surface": "作業開始", "reading": "さぎょうかいし" },
+          { "surface": "短", "reading": "みじか" },
+          { "surface": "時間", "reading": "じかん" },
+          { "surface": "使", "reading": "つか" },
+          { "surface": "道具箱", "reading": "どうぐばこ" },
+          { "surface": "集", "reading": "あつ" },
+          { "surface": "仕事仲間", "reading": "しごとなかま" },
+          { "surface": "安全作業", "reading": "あんぜんさぎょう" },
+          { "surface": "話し合い", "reading": "はなしあい" }
+        ],
+        [
+          { "surface": "話題", "reading": "わだい" },
+          { "surface": "日", "reading": "ひ" },
+          { "surface": "作業内容", "reading": "さぎょうないよう" },
+          { "surface": "進め方", "reading": "すすめかた" },
+          { "surface": "安全", "reading": "あんぜん" },
+          { "surface": "関係等", "reading": "かんけいとう" },
+          { "surface": "話し合う", "reading": "はなしあう" }
+        ]
+      ]
     },
     {
       "type": "heading",
       "level": 4,
       "jp": "◎2．KYK（危険予知活動）（R2, 6）　施工マニュアル p.146",
       "vi": "◎2. KYK (Hoạt động dự đoán nguy hiểm) (R2, 6) - Sổ tay thi công tr.146",
-      "explanation_vi": null
+      "explanation_vi": null,
+      "furigana_tokens": [
+        { "surface": "危険予知活動", "reading": "きけんよちかつどう" },
+        { "surface": "施工", "reading": "せこう" }
+      ]
     },
     {
       "type": "bullet_list",
@@ -82,14 +148,43 @@
         "① Hoạt động nhằm nắm rõ các nguyên nhân nguy hiểm tiềm ẩn trong nơi làm việc hoặc công việc, để phòng ngừa tai nạn xảy ra trước khi nó xảy ra.",
         "② Hoạt động theo nhóm nhỏ, vừa thực hiện thao tác thực tế vừa trao đổi để hiểu rõ các hạng mục trọng điểm cần thực hiện về an toàn."
       ],
-      "explanation_vi": null
+      "explanation_vi": null,
+      "items_furigana_tokens": [
+        [
+          { "surface": "災害", "reading": "さいがい" },
+          { "surface": "発生", "reading": "はっせい" },
+          { "surface": "未然", "reading": "みぜん" },
+          { "surface": "防", "reading": "ふせ" },
+          { "surface": "職場", "reading": "しょくば" },
+          { "surface": "作業", "reading": "さぎょう" },
+          { "surface": "中", "reading": "なか" },
+          { "surface": "危険原因", "reading": "きけんげんいん" },
+          { "surface": "知", "reading": "し" },
+          { "surface": "活動", "reading": "かつどう" }
+        ],
+        [
+          { "surface": "実際", "reading": "じっさい" },
+          { "surface": "作業", "reading": "さぎょう" },
+          { "surface": "小集団", "reading": "しょうしゅうだん" },
+          { "surface": "話し合い", "reading": "はなしあい" },
+          { "surface": "安全重点実施項目", "reading": "あんぜんじゅうてんじっしこうもく" },
+          { "surface": "理解", "reading": "りかい" },
+          { "surface": "活動", "reading": "かつどう" }
+        ]
+      ]
     },
     {
       "type": "heading",
       "level": 4,
       "jp": "◎3．安全パトロール（R4, 6）　施工マニュアル p.144（参考）p.212, 221（巡視）",
       "vi": "◎3. Tuần tra an toàn (R4, 6) - Sổ tay thi công tr.144 (tham khảo), tr.212, 221 (tuần tra)",
-      "explanation_vi": null
+      "explanation_vi": null,
+      "furigana_tokens": [
+        { "surface": "安全", "reading": "あんぜん" },
+        { "surface": "施工", "reading": "せこう" },
+        { "surface": "参考", "reading": "さんこう" },
+        { "surface": "巡視", "reading": "じゅんし" }
+      ]
     },
     {
       "type": "bullet_list",
@@ -101,14 +196,41 @@
         "① Là việc phát hiện, chỉ ra các điều kiện vật chất nguy hiểm của công trình, thiết bị, máy móc hoặc phương pháp/hành vi làm việc nguy hiểm trên toàn bộ cơ sở hay từng khu vực làm việc, rồi sửa chữa khắc phục chúng.",
         "② Là việc tuần tra nơi làm việc nhằm đạt được mục tiêu an toàn."
       ],
-      "explanation_vi": null
+      "explanation_vi": null,
+      "items_furigana_tokens": [
+        [
+          { "surface": "事業所", "reading": "じぎょうしょ" },
+          { "surface": "全域", "reading": "ぜんいき" },
+          { "surface": "単位作業場", "reading": "たんいさぎょうじょう" },
+          { "surface": "危険", "reading": "きけん" },
+          { "surface": "施設", "reading": "しせつ" },
+          { "surface": "設備", "reading": "せつび" },
+          { "surface": "機械", "reading": "きかい" },
+          { "surface": "物的条件", "reading": "ぶってきじょうけん" },
+          { "surface": "作業方法", "reading": "さぎょうほうほう" },
+          { "surface": "作業行動", "reading": "さぎょうこうどう" },
+          { "surface": "摘出", "reading": "てきしゅつ" },
+          { "surface": "指摘", "reading": "してき" },
+          { "surface": "是正", "reading": "ぜせい" }
+        ],
+        [
+          { "surface": "安全", "reading": "あんぜん" },
+          { "surface": "達成", "reading": "たっせい" },
+          { "surface": "職場", "reading": "しょくば" },
+          { "surface": "巡視", "reading": "じゅんし" }
+        ]
+      ]
     },
     {
       "type": "heading",
       "level": 4,
       "jp": "◎4．新規入場者教育（R2, 4, 6）　施工マニュアル p.227",
       "vi": "◎4. Giáo dục người mới vào công trường (R2, 4, 6) - Sổ tay thi công tr.227",
-      "explanation_vi": null
+      "explanation_vi": null,
+      "furigana_tokens": [
+        { "surface": "新規入場者教育", "reading": "しんきにゅうじょうしゃきょういく" },
+        { "surface": "施工", "reading": "せこう" }
+      ]
     },
     {
       "type": "bullet_list",
@@ -120,14 +242,46 @@
         "① Là việc giáo dục về an toàn hoặc vệ sinh liên quan đến công việc mà người lao động sẽ đảm nhận, do người sử dụng lao động thực hiện khi tuyển dụng, nhằm phòng ngừa tai nạn phát sinh do thiếu kiến thức về công việc.",
         "② Giáo dục về trình tự làm việc, các biện pháp sơ cứu khẩn cấp khi xảy ra sự cố v.v."
       ],
-      "explanation_vi": null
+      "explanation_vi": null,
+      "items_furigana_tokens": [
+        [
+          { "surface": "作業", "reading": "さぎょう" },
+          { "surface": "知識不足", "reading": "ちしきぶそく" },
+          { "surface": "発生", "reading": "はっせい" },
+          { "surface": "災害", "reading": "さいがい" },
+          { "surface": "防", "reading": "ふせ" },
+          { "surface": "労働者", "reading": "ろうどうしゃ" },
+          { "surface": "雇い入れた", "reading": "やといれた" },
+          { "surface": "時", "reading": "とき" },
+          { "surface": "事業者", "reading": "じぎょうしゃ" },
+          { "surface": "行", "reading": "おこな" },
+          { "surface": "従事", "reading": "じゅうじ" },
+          { "surface": "業務", "reading": "ぎょうむ" },
+          { "surface": "関", "reading": "かん" },
+          { "surface": "安全", "reading": "あんぜん" },
+          { "surface": "衛生", "reading": "えいせい" },
+          { "surface": "教育", "reading": "きょういく" }
+        ],
+        [
+          { "surface": "作業手順", "reading": "さぎょうてじゅん" },
+          { "surface": "事故時", "reading": "じこじ" },
+          { "surface": "応急措置", "reading": "おうきゅうそち" },
+          { "surface": "関", "reading": "かん" },
+          { "surface": "事項等", "reading": "じこうとう" },
+          { "surface": "教育", "reading": "きょういく" }
+        ]
+      ]
     },
     {
       "type": "heading",
       "level": 4,
       "jp": "5．安全施工サイクル（R2, 6）　施工マニュアル p.144, 145",
       "vi": "5. Chu trình thi công an toàn (R2, 6) - Sổ tay thi công tr.144, 145",
-      "explanation_vi": null
+      "explanation_vi": null,
+      "furigana_tokens": [
+        { "surface": "安全施工", "reading": "あんぜんせこう" },
+        { "surface": "施工", "reading": "せこう" }
+      ]
     },
     {
       "type": "bullet_list",
@@ -139,7 +293,30 @@
         "① Thực hiện theo chu kỳ hàng ngày, hàng tuần, hàng tháng các việc như xác nhận kế hoạch trước khi làm việc, họp bàn về an toàn, kiểm tra máy móc hạng nặng v.v.",
         "② Điều quan trọng là phải lặp lại thường xuyên các hoạt động như chào buổi sáng an toàn, họp an toàn (bao gồm cả KYK), kiểm tra an toàn v.v."
       ],
-      "explanation_vi": null
+      "explanation_vi": null,
+      "items_furigana_tokens": [
+        [
+          { "surface": "作業前", "reading": "さぎょうまえ" },
+          { "surface": "計画確認", "reading": "けいかくかくにん" },
+          { "surface": "安全", "reading": "あんぜん" },
+          { "surface": "打合せ", "reading": "うちあわせ" },
+          { "surface": "重機", "reading": "じゅうき" },
+          { "surface": "点検", "reading": "てんけん" },
+          { "surface": "毎作業日", "reading": "まいさぎょうび" },
+          { "surface": "毎週", "reading": "まいしゅう" },
+          { "surface": "毎月", "reading": "まいつき" },
+          { "surface": "実施", "reading": "じっし" }
+        ],
+        [
+          { "surface": "安全朝礼", "reading": "あんぜんちょうれい" },
+          { "surface": "安全", "reading": "あんぜん" },
+          { "surface": "含む", "reading": "ふくむ" },
+          { "surface": "安全点検等", "reading": "あんぜんてんけんとう" },
+          { "surface": "くり返し", "reading": "くりかえし" },
+          { "surface": "行", "reading": "おこな" },
+          { "surface": "重要", "reading": "じゅうよう" }
+        ]
+      ]
     }
   ]
 }
