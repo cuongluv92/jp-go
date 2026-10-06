@@ -1,0 +1,96 @@
+{
+  "book_slug": "sougou-mondai",
+  "section_path": [
+    { "code": "doc2", "title_jp": "資料No.2 第二次検定用教材", "title_vi": "Cuốn 2 - Tài liệu ôn thi lần 2" },
+    { "code": "doc2-7", "title_jp": "7. 令和7年度問題実例", "title_vi": "7. Ví dụ đề thi thực tế năm Reiwa 7" }
+  ],
+  "page_number": 161,
+  "page_label": "p.61",
+  "source_image_path": null,
+  "notes_vi": "[資料No.2 2級電気工事施工管理技術研修 第二次検定用教材（2026年度用）. 【問題No.5】- câu 5-1 đến 5-3, dạng điền từ vào chỗ trống ［ア］［イ］trong văn bản luật, mỗi chỗ trống có 4 lựa chọn ①②③④. Khung 解答欄 và 【解説No.5】nằm ở trang 62.]",
+  "review_status": "draft",
+  "blocks": [
+    {
+      "type": "heading",
+      "level": 2,
+      "jp": "【問題 No.5】「建設業法」、「労働安全衛生法」又は「電気工事士法」に関する次の問に答えなさい。",
+      "vi": "[Câu hỏi số 5] Hãy trả lời các câu hỏi sau liên quan đến \"Luật Xây dựng\", \"Luật An toàn và Vệ sinh Lao động\" hoặc \"Luật Thợ điện\".",
+      "explanation_vi": null
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "jp": "5-1　建設工事の施工技術の確保に関する次の記述の［　］に当てはまる語句として、「建設業法」上、定められているものはそれぞれどれか。",
+      "vi": "5-1 Từ nào dưới đây phù hợp với chỗ trống ［　］ trong đoạn mô tả sau về việc đảm bảo kỹ thuật thi công công trình xây dựng, theo quy định của \"Luật Xây dựng\"?",
+      "explanation_vi": null
+    },
+    {
+      "type": "paragraph",
+      "jp": "「建設業者は、建設工事の担い手の［ア］及び確保その他の施工技術の確保に努めなければならない。\n（第2項　中略）\n第3項　建設工事に従事する者は、建設工事を適正に実施するために必要な知識及び［イ］又は技能の向上に努めなければならない。」",
+      "vi": "\"Nhà thầu xây dựng phải nỗ lực ［ア］ và đảm bảo người đảm nhận công trình xây dựng, cũng như đảm bảo kỹ thuật thi công khác.\n(Khoản 2 - lược bỏ)\nKhoản 3: Người tham gia công trình xây dựng phải nỗ lực nâng cao kiến thức và ［イ］ hoặc kỹ năng cần thiết để thực hiện công trình xây dựng một cách đúng đắn.\"",
+      "explanation_vi": null
+    },
+    {
+      "type": "bullet_list",
+      "items_jp": ["ア　①教育　②養成　③育成　④訓練"],
+      "items_vi": ["ア　① giáo dục/đào tạo　② bồi dưỡng　③ đào tạo/nuôi dưỡng　④ huấn luyện"],
+      "explanation_vi": null
+    },
+    {
+      "type": "bullet_list",
+      "items_jp": ["イ　①技術　②資格　③技量　④監理"],
+      "items_vi": ["イ　① kỹ thuật　② tư cách/chứng chỉ　③ tay nghề　④ giám lý"],
+      "explanation_vi": null
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "jp": "5-2　事業者等の責務に関する次の記述の［　］に当てはまる語句として、「労働安全衛生法」上、定められているものはそれぞれどれか。",
+      "vi": "5-2 Từ nào dưới đây phù hợp với chỗ trống ［　］ trong đoạn mô tả sau về trách nhiệm của người sử dụng lao động, theo quy định của \"Luật An toàn và Vệ sinh Lao động\"?",
+      "explanation_vi": null
+    },
+    {
+      "type": "paragraph",
+      "jp": "「事業者は、単にこの法律で定める労働災害の防止のための［ア］を守るだけでなく、快適な職場環境の実現と労働条件の改善を通じて職場における労働者の［イ］を確保するようにしなければならない。」",
+      "vi": "\"Người sử dụng lao động không chỉ đơn thuần phải tuân thủ ［ア］ nhằm phòng ngừa tai nạn lao động mà luật này quy định, mà còn phải đảm bảo ［イ］ của người lao động tại nơi làm việc thông qua việc hiện thực hóa môi trường làm việc thoải mái và cải thiện điều kiện lao động.\"",
+      "explanation_vi": null
+    },
+    {
+      "type": "bullet_list",
+      "items_jp": ["ア　①勧告　②作業環境　③省令　④最低基準"],
+      "items_vi": ["ア　① khuyến cáo　② môi trường làm việc　③ pháp lệnh của bộ　④ tiêu chuẩn tối thiểu"],
+      "explanation_vi": null
+    },
+    {
+      "type": "bullet_list",
+      "items_jp": ["イ　①安全又は衛生　②安全と健康　③健康の増進　④作業する環境"],
+      "items_vi": ["イ　① an toàn hoặc vệ sinh　② an toàn và sức khỏe　③ tăng cường sức khỏe　④ môi trường làm việc"],
+      "explanation_vi": null
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "jp": "5-3　電気工事士免状に関する次の記述の［　］に当てはまる語句として、「電気工事士法」上、定められているものはそれぞれどれか。",
+      "vi": "5-3 Từ nào dưới đây phù hợp với chỗ trống ［　］ trong đoạn mô tả sau về chứng chỉ thợ điện, theo quy định của \"Luật Thợ điện\"?",
+      "explanation_vi": null
+    },
+    {
+      "type": "paragraph",
+      "jp": "「第一種電気工事士免状は、次の各号の一に該当する者でなければ、その交付を受けることができない。\n第一号　第一種電気工事士試験に合格し、かつ、経済産業省令で定める電気に関する［ア］に関し経済産業省令で定める［イ］を有する者」\n（第二号　省略）",
+      "vi": "\"Chứng chỉ thợ điện hạng 1 chỉ được cấp cho người thuộc một trong các khoản sau đây.\nKhoản 1: Người đã đỗ kỳ thi thợ điện hạng 1, và có ［イ］ theo quy định của Bộ lệnh Kinh tế - Công nghiệp liên quan đến ［ア］ về điện do Bộ lệnh Kinh tế - Công nghiệp quy định\n(Khoản 2 - lược bỏ)\"",
+      "explanation_vi": null
+    },
+    {
+      "type": "bullet_list",
+      "items_jp": ["ア　①技術　②知識　③工事　④作業"],
+      "items_vi": ["ア　① kỹ thuật　② kiến thức　③ công trình　④ công việc"],
+      "explanation_vi": null
+    },
+    {
+      "type": "bullet_list",
+      "items_jp": ["イ　①実務の経験　②工事の経歴　③施工の技術　④作業の実績"],
+      "items_vi": ["イ　① kinh nghiệm thực tế　② lý lịch công trình　③ kỹ thuật thi công　④ thành tích công việc"],
+      "explanation_vi": null
+    }
+  ]
+}

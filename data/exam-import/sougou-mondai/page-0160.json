@@ -1,0 +1,80 @@
+{
+  "book_slug": "sougou-mondai",
+  "section_path": [
+    { "code": "doc2", "title_jp": "資料No.2 第二次検定用教材", "title_vi": "Cuốn 2 - Tài liệu ôn thi lần 2" },
+    { "code": "doc2-7", "title_jp": "7. 令和7年度問題実例", "title_vi": "7. Ví dụ đề thi thực tế năm Reiwa 7" }
+  ],
+  "page_number": 160,
+  "page_label": "p.60",
+  "source_image_path": null,
+  "notes_vi": "[資料No.2 2級電気工事施工管理技術研修 第二次検定用教材（2026年度用）. 【問題No.4】- bài toán tính toán 4-1 (mạch cầu Wheatstone tìm Rx) và 4-2 (hiệu suất máy biến áp), kèm 【解説No.4】đáp án. Ảnh gốc có lời giải viết tay bằng mực đỏ của người chụp cho câu 4-1 (công thức Rx×R2=R1×R3, Rx×200=100×300, Rx=150) - đây KHÔNG phải nội dung in sẵn của sách nên không chép vào đây, chỉ mô tả sơ đồ mạch bằng lời.]",
+  "review_status": "draft",
+  "blocks": [
+    {
+      "type": "heading",
+      "level": 2,
+      "jp": "【問題 No.4】次の問いに答えなさい。",
+      "vi": "[Câu hỏi số 4] Hãy trả lời các câu hỏi sau.",
+      "explanation_vi": null
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "jp": "4-1　図に示すブリッジ回路において、スイッチSを投入すると、検流計Gの値が0Aとなった。未知抵抗Rxの値〔Ω〕として、正しいものはどれか。",
+      "vi": "4-1 Trong mạch cầu như hình vẽ, khi đóng công tắc S thì giá trị của điện kế G trở thành 0A. Giá trị điện trở chưa biết Rx [Ω] nào dưới đây là đúng?",
+      "explanation_vi": null
+    },
+    {
+      "type": "image_placeholder",
+      "caption_jp": "ブリッジ回路（未知抵抗Rxを求める回路図）",
+      "caption_vi": "Mạch cầu Wheatstone (sơ đồ tìm điện trở chưa biết Rx)",
+      "explanation_vi": "Sơ đồ hình thoi: đỉnh trên nối xuống 2 nhánh - nhánh phải trên là điện trở chưa biết Rx (未知抵抗Rx), nhánh trái trên là R1=100Ω; đỉnh dưới nối lên 2 nhánh - nhánh trái dưới là R2=200Ω, nhánh phải dưới là R3=300Ω; ở giữa hình thoi (nối 2 đỉnh trái-phải) có điện kế G và công tắc S nối tiếp; nguồn điện E nối ở đáy mạch cấp điện cho toàn mạch cầu."
+    },
+    {
+      "type": "bullet_list",
+      "items_jp": ["① 150Ω", "② 200Ω", "③ 400Ω", "④ 600Ω"],
+      "items_vi": ["① 150Ω", "② 200Ω", "③ 400Ω", "④ 600Ω"],
+      "explanation_vi": null
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "jp": "4-2　出力285kWで運転している変圧器があり、そのときの負荷損は5kW、無負荷損は10kWであった。このときの変圧器の効率〔%〕として、正しいものはどれか。",
+      "vi": "4-2 Có một máy biến áp đang vận hành với công suất đầu ra 285kW, khi đó tổn thất tải là 5kW, tổn thất không tải là 10kW. Hiệu suất của máy biến áp [%] khi đó nào dưới đây là đúng?",
+      "explanation_vi": null
+    },
+    {
+      "type": "note",
+      "jp": "ただし、負荷損、無負荷損以外の損失はないものとする。",
+      "vi": "Trong đó, giả định không có tổn thất nào khác ngoài tổn thất tải và tổn thất không tải.",
+      "explanation_vi": null
+    },
+    {
+      "type": "bullet_list",
+      "items_jp": ["① 85%", "② 90%", "③ 95%", "④ 98%"],
+      "items_vi": ["① 85%", "② 90%", "③ 95%", "④ 98%"],
+      "explanation_vi": null
+    },
+    {
+      "type": "note",
+      "jp": "＜解答欄＞\n4-1　①②③④\n4-2　①②③④",
+      "vi": "<Khung trả lời>\n4-1　①②③④\n4-2　①②③④",
+      "explanation_vi": "Khung trả lời trống trong sách (chỉ in sẵn 4 số thứ tự để khoanh tròn), không có nội dung đáp án nào được điền sẵn."
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "jp": "【解説 No.4】　電気テキスト　2-p.28",
+      "vi": "[Giải đáp số 4] - Giáo trình điện 2-tr.28",
+      "explanation_vi": null
+    },
+    {
+      "type": "table",
+      "headers_jp": ["問", "正しいもの"],
+      "rows_jp": [["4-1", "① (150Ω)"], ["4-2", "③ (95%)"]],
+      "headers_vi": ["Câu", "Đáp án đúng"],
+      "rows_vi": [["4-1", "① (150Ω)"], ["4-2", "③ (95%)"]],
+      "explanation_vi": null
+    }
+  ]
+}

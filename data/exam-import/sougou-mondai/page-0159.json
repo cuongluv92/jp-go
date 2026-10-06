@@ -1,0 +1,49 @@
+{
+  "book_slug": "sougou-mondai",
+  "section_path": [
+    { "code": "doc2", "title_jp": "資料No.2 第二次検定用教材", "title_vi": "Cuốn 2 - Tài liệu ôn thi lần 2" },
+    { "code": "doc2-7", "title_jp": "7. 令和7年度問題実例", "title_vi": "7. Ví dụ đề thi thực tế năm Reiwa 7" }
+  ],
+  "page_number": 159,
+  "page_label": "p.59",
+  "source_image_path": null,
+  "notes_vi": "[資料No.2 2級電気工事施工管理技術研修 第二次検定用教材（2026年度用）. 【解説No.3】- đáp án mẫu cho câu hỏi 問題No.3 (trang 58), đầy đủ 9 thuật ngữ, mỗi thuật ngữ 2 nội dung kỹ thuật. Sách ghi rõ đây chỉ là ví dụ tham khảo. Mục 5 (定温式スポット型感知器), dòng về vị trí lắp đặt cảm biến - chữ in hơi nhỏ, đối chiếu với nội dung cùng quy định đã chép rõ ràng hơn ở trang 144 (0.3m以内 - trong phạm vi 0.3m) để đảm bảo nhất quán, vì về mặt kỹ thuật '0.3m以内' mới hợp lý (đầu cảm biến không được treo thấp quá so với mặt trần).]",
+  "review_status": "draft",
+  "blocks": [
+    {
+      "type": "heading",
+      "level": 4,
+      "jp": "【解説 No.3】　電気テキスト　1-p.49　2-p.122　3-p.140　5-p.150, 151　6-p.100　7-p.98",
+      "vi": "[Giải đáp số 3] - Giáo trình điện 1-tr.49, 2-tr.122, 3-tr.140, 5-tr.150,151, 6-tr.100, 7-tr.98",
+      "explanation_vi": null
+    },
+    {
+      "type": "table",
+      "headers_jp": ["用語", "技術的な内容"],
+      "rows_jp": [
+        ["1. 太陽光発電システム", "①太陽の光エネルギーを半導体素子の光電効果を利用して電気エネルギーに変換する太陽電池を利用したシステムをいう。\n②システムの構成は太陽電池モジュールと交直変換装置、系統連系保護装置等で構成されている。"],
+        ["2. 単相変圧器のV結線", "①単相変圧器3台を用いる△-△結線のうち1台を取り外したもので、△の一辺が無くなってV形になった結線である。\n②△-△結線の変圧器が故障したときの応急処置や、将来の負荷増加予定の△-△結線を、コスト抑制を目的としてV結線にしている。"],
+        ["3. 2Eリレー", "①2Eリレーは、主に電動機や電気機器の保護に使用されるリレーの一種で、過負荷や欠相を検出し、電磁接触器等に事故信号を送り、主回路を開放する。\n②過負荷や欠相が発生する主な原因は配線用遮断器や電磁接触器の接点不良・劣化による断線やケーブルの劣化による断線、電動機等の作動による振動等がある。"],
+        ["4. 屋内配線用差込形電線コネクタ", "①この電線コネクタは、電線の延長や分岐を目的として電線相互の接続を行う結束端子である。\n②ケーブルからIV線を取出しコネクタの穴に差し込むだけなので、施工時間の短縮や省力化を図ることができる。"],
+        ["5. 定温式スポット型感知器", "①自動火災報知設備等に用いられる火災の発生を自動的に感知し、受信器に信号を送る装置である。感知器の下端は、取付面の下方0.3m以内とする。\n②発生する熱により火災を感知する感知器の一種であり、感知条件としては局所の温度が一定以上になると作動する。"],
+        ["6. 電車線路の帰線", "①電気鉄道のき電回路の帰線のことであり、電気車に供給された運転用電力を、変電所に戻すために帰線電流の回路となる帰線レールを含む部分の総称である。\n②一般に帰線は、列車走行用のレールを電気的にボンドで接続して使用する帰線レール方式が使用されており、一般的な架空単線方式ではレールを帰線として使用している。"],
+        ["7. ループコイル式車両感知器", "①ループコイルにより車両の存在又は通過を感知するものであり、検出精度は超音波式より優れている。\n②ループコイルに高周波電流を流し、車体が通行することによってループコイルのインダクタンスの変化を感知し、車体を検出する。"],
+        ["8. A種接地工事", "①接地工事は、機器等を大地と電気的に接続することにより、異常電圧発生時の感電を防止し、機器等の絶縁強度を軽減するものである。\n②A種接地工事は、高圧用又は特別高圧用機器の鉄台等に施設され、高電圧の侵入の恐れがあり、かつ、危険度の大きい場合に施設される。"],
+        ["9. 電線の許容電流", "①電線に電流を通じると抵抗により発熱し、絶縁体が熱劣化し、線の諸性能が低下する。その限度となる温度を最高許容温度といい、その電流を許容電流という。\n②許容電流の値は、周囲温度、電線・絶縁物・外被の材質、構造、配線方法等によって異なる。"]
+      ],
+      "headers_vi": ["Thuật ngữ", "Nội dung kỹ thuật"],
+      "rows_vi": [
+        ["1. Hệ thống phát điện năng lượng mặt trời", "① Là hệ thống sử dụng pin mặt trời, chuyển đổi năng lượng ánh sáng mặt trời thành năng lượng điện bằng cách tận dụng hiệu ứng quang điện của linh kiện bán dẫn.\n② Hệ thống được cấu thành từ module pin mặt trời, thiết bị chuyển đổi xoay chiều-một chiều, thiết bị bảo vệ liên kết hệ thống v.v."],
+        ["2. Đấu nối chữ V máy biến áp 1 pha", "① Là kiểu đấu nối có được bằng cách tháo bỏ 1 trong 3 máy biến áp 1 pha của đấu nối tam giác (Δ-Δ), khiến 1 cạnh của tam giác mất đi, trở thành hình chữ V.\n② Dùng đấu nối chữ V như biện pháp xử lý khẩn cấp khi máy biến áp đấu Δ-Δ bị sự cố, hoặc với mục đích tiết kiệm chi phí khi dự kiến tăng tải trong tương lai cho đấu nối Δ-Δ."],
+        ["3. Rơ-le 2E", "① Rơ-le 2E là một loại rơ-le chủ yếu dùng để bảo vệ động cơ điện và thiết bị điện, phát hiện quá tải hoặc mất pha, gửi tín hiệu sự cố đến công-tắc-tơ điện từ v.v. để ngắt mạch chính.\n② Nguyên nhân chính gây quá tải hoặc mất pha là đứt dây do tiếp điểm của máy cắt hoặc công-tắc-tơ điện từ bị hỏng/suy giảm chất lượng, đứt dây do cáp bị lão hóa, hoặc rung động do hoạt động của động cơ v.v."],
+        ["4. Đầu nối dạng cắm dùng cho dây dẫn trong nhà", "① Đầu nối dây điện này là đầu cực dùng để đấu nối các dây điện với nhau, nhằm mục đích nối dài hoặc rẽ nhánh dây điện.\n② Chỉ cần lấy dây IV ra từ cáp rồi cắm vào lỗ của đầu nối, nên có thể rút ngắn thời gian thi công và tiết kiệm công sức."],
+        ["5. Đầu báo nhiệt loại điểm cố định", "① Là thiết bị dùng trong hệ thống báo cháy tự động v.v., tự động phát hiện khi có hỏa hoạn xảy ra và gửi tín hiệu đến bộ thu nhận. Đầu dưới của đầu báo phải nằm trong phạm vi 0,3m phía dưới mặt lắp đặt.\n② Là một loại đầu báo phát hiện hỏa hoạn nhờ nhiệt phát sinh; điều kiện phát hiện là khi nhiệt độ tại chỗ vượt quá một mức cố định thì đầu báo tác động."],
+        ["6. Dây hồi lưu của tuyến đường dây điện xe lửa", "① Là dây hồi lưu của mạch cấp điện đường sắt điện, tên gọi chung cho phần bao gồm đường ray hồi lưu đóng vai trò mạch dòng điện hồi lưu, để đưa điện năng vận hành đã cấp cho tàu điện trở về trạm biến điện.\n② Nhìn chung, dây hồi lưu sử dụng phương thức đường ray hồi lưu, đấu nối điện bằng khớp nối (bond) với đường ray chạy tàu; ở phương thức đường dây trên không đơn tuyến phổ biến, đường ray được dùng làm dây hồi lưu."],
+        ["7. Cảm biến xe dạng cuộn dây vòng", "① Là thiết bị phát hiện sự tồn tại hoặc đi qua của xe cộ nhờ cuộn dây vòng (loop coil), có độ chính xác phát hiện tốt hơn loại siêu âm.\n② Cho dòng điện tần số cao chạy qua cuộn dây vòng, khi xe đi qua sẽ làm thay đổi độ tự cảm của cuộn dây, nhờ đó phát hiện được xe."],
+        ["8. Công trình tiếp địa loại A", "① Công trình tiếp địa là việc đấu nối thiết bị v.v. về mặt điện với đất, nhằm phòng tránh điện giật khi xảy ra điện áp bất thường, đồng thời giảm bớt yêu cầu về độ bền cách điện của thiết bị.\n② Công trình tiếp địa loại A được thi công tại bệ sắt v.v. của thiết bị dùng cho cao áp hoặc siêu cao áp, áp dụng khi có nguy cơ điện áp cao xâm nhập và mức độ nguy hiểm lớn."],
+        ["9. Dòng điện cho phép của dây dẫn", "① Khi cho dòng điện chạy qua dây dẫn, do điện trở sẽ phát nhiệt, làm vật liệu cách điện bị lão hóa do nhiệt, khiến các tính năng của dây suy giảm. Nhiệt độ giới hạn đó gọi là nhiệt độ cho phép tối đa, và dòng điện tương ứng gọi là dòng điện cho phép.\n② Giá trị dòng điện cho phép khác nhau tùy theo nhiệt độ môi trường xung quanh, vật liệu và cấu tạo của dây dẫn, lớp cách điện, lớp vỏ bọc, phương pháp lắp đặt dây dẫn v.v."]
+      ],
+      "explanation_vi": "※ Chọn 3 trong số 1〜9 ở trên để viết là đủ. (Nội dung trên chỉ là ví dụ tham khảo - nếu nội dung đúng thì viết gì cũng được.)"
+    }
+  ]
+}
