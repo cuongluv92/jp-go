@@ -1,0 +1,145 @@
+{
+  "book_slug": "sougou-mondai",
+  "section_path": [
+    { "code": "doc2", "title_jp": "資料No.2 第二次検定用教材", "title_vi": "Cuốn 2 - Tài liệu ôn thi lần 2" },
+    { "code": "doc2-3", "title_jp": "3. 施工管理法", "title_vi": "3. Phương pháp quản lý thi công" },
+    { "code": "doc2-3-1", "title_jp": "3-1-1. 安全管理", "title_vi": "3-1-1. Quản lý an toàn" }
+  ],
+  "page_number": 118,
+  "page_label": "p.18",
+  "source_image_path": null,
+  "notes_vi": "[資料No.2 2級電気工事施工管理技術研修 第二次検定用教材（2026年度用）. Bảng tổng hợp 10 thuật ngữ quản lý an toàn hay ra đề + giải nghĩa chi tiết 5 thuật ngữ đầu (phần còn lại ở trang 19). Dấu ◎ trong sách gốc đánh dấu các thuật ngữ quan trọng/hay gặp - đã giữ nguyên.]",
+  "review_status": "draft",
+  "blocks": [
+    {
+      "type": "heading",
+      "level": 2,
+      "jp": "【安全管理】",
+      "vi": "[Quản lý an toàn]",
+      "explanation_vi": null
+    },
+    {
+      "type": "numbered_list",
+      "items_jp": [
+        "TBM（ツールボックスミーティング）（R4）",
+        "KYK（危険予知活動）（R2, 6）",
+        "安全パトロール（R4, 6）",
+        "新規入場者教育（R2, 4, 6）",
+        "安全施工サイクル（R2, 6）",
+        "高所作業車での作業における危険防止対策（R2）",
+        "墜落災害の防止対策（H30, R4, 6）",
+        "飛来落下災害の防止対策（R4）",
+        "感電災害の防止対策（R2, 4）",
+        "酸素欠乏危険場所での危険防止対策（R2）"
+      ],
+      "items_vi": [
+        "TBM (Họp hộp dụng cụ) (R4)",
+        "KYK (Hoạt động dự đoán nguy hiểm) (R2, 6)",
+        "Tuần tra an toàn (R4, 6)",
+        "Giáo dục người mới vào công trường (R2, 4, 6)",
+        "Chu trình thi công an toàn (R2, 6)",
+        "Biện pháp phòng ngừa nguy hiểm khi dùng xe làm việc trên cao (R2)",
+        "Biện pháp phòng ngừa tai nạn rơi ngã (H30, R4, 6)",
+        "Biện pháp phòng ngừa tai nạn vật bay/rơi (R4)",
+        "Biện pháp phòng ngừa tai nạn điện giật (R2, 4)",
+        "Biện pháp phòng ngừa nguy hiểm tại nơi có nguy cơ thiếu oxy (R2)"
+      ],
+      "explanation_vi": "Số trong ngoặc là các năm (Reiwa/Heisei) từng ra đề về thuật ngữ đó."
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "jp": "1．TBM（ツールボックスミーティング）（R4）　施工マニュアル p.145",
+      "vi": "1. TBM (Họp hộp dụng cụ) (R4) - Sổ tay thi công tr.145",
+      "explanation_vi": null
+    },
+    {
+      "type": "bullet_list",
+      "items_jp": [
+        "①作業内容と災害の危険を知る目的で行われるもので、作業開始の短い時間を使って道具箱（ツール・ボックス）のそばに集まった仕事仲間が安全作業について話し合いを行うこと。",
+        "②ミーティングの話題として、その日の作業内容の進め方と安全の関係等について話し合う。"
+      ],
+      "items_vi": [
+        "① Đây là hoạt động được thực hiện với mục đích nắm rõ nội dung công việc và nguy cơ tai nạn, trong đó các đồng nghiệp tập trung bên cạnh hộp dụng cụ (tool box) trong khoảng thời gian ngắn trước khi bắt đầu công việc để cùng trao đổi về công việc an toàn.",
+        "② Chủ đề trao đổi trong buổi họp là cách tiến hành công việc trong ngày hôm đó và mối liên hệ với an toàn lao động v.v."
+      ],
+      "explanation_vi": null
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "jp": "◎2．KYK（危険予知活動）（R2, 6）　施工マニュアル p.146",
+      "vi": "◎2. KYK (Hoạt động dự đoán nguy hiểm) (R2, 6) - Sổ tay thi công tr.146",
+      "explanation_vi": null
+    },
+    {
+      "type": "bullet_list",
+      "items_jp": [
+        "①災害の発生を未然に防ぐため、職場や作業の中にひそむ危険原因を知る活動。",
+        "②実際に作業してみせたりしながら、小集団で話し合い安全重点実施項目を理解する活動。"
+      ],
+      "items_vi": [
+        "① Hoạt động nhằm nắm rõ các nguyên nhân nguy hiểm tiềm ẩn trong nơi làm việc hoặc công việc, để phòng ngừa tai nạn xảy ra trước khi nó xảy ra.",
+        "② Hoạt động theo nhóm nhỏ, vừa thực hiện thao tác thực tế vừa trao đổi để hiểu rõ các hạng mục trọng điểm cần thực hiện về an toàn."
+      ],
+      "explanation_vi": null
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "jp": "◎3．安全パトロール（R4, 6）　施工マニュアル p.144（参考）p.212, 221（巡視）",
+      "vi": "◎3. Tuần tra an toàn (R4, 6) - Sổ tay thi công tr.144 (tham khảo), tr.212, 221 (tuần tra)",
+      "explanation_vi": null
+    },
+    {
+      "type": "bullet_list",
+      "items_jp": [
+        "①事業所の全域あるいは単位作業場ごとに、危険な施設、設備、機械の物的条件または危険な作業方法、作業行動などを摘出、指摘し、これを是正すること。",
+        "②安全を達成しようとする職場の巡視のことをいう。"
+      ],
+      "items_vi": [
+        "① Là việc phát hiện, chỉ ra các điều kiện vật chất nguy hiểm của công trình, thiết bị, máy móc hoặc phương pháp/hành vi làm việc nguy hiểm trên toàn bộ cơ sở hay từng khu vực làm việc, rồi sửa chữa khắc phục chúng.",
+        "② Là việc tuần tra nơi làm việc nhằm đạt được mục tiêu an toàn."
+      ],
+      "explanation_vi": null
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "jp": "◎4．新規入場者教育（R2, 4, 6）　施工マニュアル p.227",
+      "vi": "◎4. Giáo dục người mới vào công trường (R2, 4, 6) - Sổ tay thi công tr.227",
+      "explanation_vi": null
+    },
+    {
+      "type": "bullet_list",
+      "items_jp": [
+        "①作業の知識不足によって発生する災害を防ぐため、労働者を雇い入れた時に、事業者が行うその従事する業務に関する安全または衛生のための教育。",
+        "②作業手順、事故時における応急措置に関する事項等について教育する。"
+      ],
+      "items_vi": [
+        "① Là việc giáo dục về an toàn hoặc vệ sinh liên quan đến công việc mà người lao động sẽ đảm nhận, do người sử dụng lao động thực hiện khi tuyển dụng, nhằm phòng ngừa tai nạn phát sinh do thiếu kiến thức về công việc.",
+        "② Giáo dục về trình tự làm việc, các biện pháp sơ cứu khẩn cấp khi xảy ra sự cố v.v."
+      ],
+      "explanation_vi": null
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "jp": "5．安全施工サイクル（R2, 6）　施工マニュアル p.144, 145",
+      "vi": "5. Chu trình thi công an toàn (R2, 6) - Sổ tay thi công tr.144, 145",
+      "explanation_vi": null
+    },
+    {
+      "type": "bullet_list",
+      "items_jp": [
+        "①作業前の計画確認や安全の打合せ、重機の点検などを毎作業日、毎週、毎月とサイクルで実施する。",
+        "②安全朝礼、安全ミーティング（K.Y.Kを含む）、安全点検等くり返し行うことが重要である。"
+      ],
+      "items_vi": [
+        "① Thực hiện theo chu kỳ hàng ngày, hàng tuần, hàng tháng các việc như xác nhận kế hoạch trước khi làm việc, họp bàn về an toàn, kiểm tra máy móc hạng nặng v.v.",
+        "② Điều quan trọng là phải lặp lại thường xuyên các hoạt động như chào buổi sáng an toàn, họp an toàn (bao gồm cả KYK), kiểm tra an toàn v.v."
+      ],
+      "explanation_vi": null
+    }
+  ]
+}

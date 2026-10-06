@@ -1,0 +1,114 @@
+{
+  "book_slug": "sougou-mondai",
+  "section_path": [
+    { "code": "doc2", "title_jp": "資料No.2 第二次検定用教材", "title_vi": "Cuốn 2 - Tài liệu ôn thi lần 2" },
+    { "code": "doc2-3", "title_jp": "3. 施工管理法", "title_vi": "3. Phương pháp quản lý thi công" },
+    { "code": "doc2-3-1", "title_jp": "3-1-1. 安全管理", "title_vi": "3-1-1. Quản lý an toàn" }
+  ],
+  "page_number": 117,
+  "page_label": "p.17",
+  "source_image_path": null,
+  "notes_vi": "[資料No.2 2級電気工事施工管理技術研修 第二次検定用教材（2026年度用）. 3 đề luyện tập (R2, R4, R6) về thuật ngữ quản lý an toàn. Đề No.1 trong ảnh gốc có kèm khung trả lời trống (解答欄: 番号/語句/内容①/内容②) để người học tự điền tay, không chép khung trống đó vào đây vì không phải nội dung cố định. Mép trái trang có vài chữ bị mờ bóng từ mặt sau không đọc rõ, không phải nội dung trang này nên bỏ qua.]",
+  "review_status": "draft",
+  "blocks": [
+    {
+      "type": "heading",
+      "level": 3,
+      "jp": "【問題 No.1】",
+      "vi": "[Câu hỏi số 1]",
+      "explanation_vi": "(R2)"
+    },
+    {
+      "type": "note",
+      "jp": "安全管理に関する次の語句の中から2つを選び、番号と語句を記入のうえ、それぞれの内容について2つ具体的に記述しなさい。",
+      "vi": "Hãy chọn 2 trong số các thuật ngữ liên quan đến quản lý an toàn dưới đây, ghi rõ số thứ tự và thuật ngữ, sau đó mô tả cụ thể 2 nội dung cho mỗi thuật ngữ.",
+      "explanation_vi": null
+    },
+    {
+      "type": "bullet_list",
+      "items_jp": [
+        "1. 危険予知活動（KYK）",
+        "2. 安全施工サイクル",
+        "3. 新規入場者教育",
+        "4. 酸素欠乏危険場所での危険防止対策",
+        "5. 高所作業車での危険防止対策",
+        "6. 感電災害の防止対策"
+      ],
+      "items_vi": [
+        "1. Hoạt động dự đoán nguy hiểm (KYK)",
+        "2. Chu trình thi công an toàn",
+        "3. Giáo dục người mới vào công trường",
+        "4. Biện pháp phòng ngừa nguy hiểm tại nơi có nguy cơ thiếu oxy",
+        "5. Biện pháp phòng ngừa nguy hiểm khi dùng xe làm việc trên cao",
+        "6. Biện pháp phòng ngừa tai nạn điện giật"
+      ],
+      "explanation_vi": null
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "jp": "【問題 No.2】",
+      "vi": "[Câu hỏi số 2]",
+      "explanation_vi": "(R4)"
+    },
+    {
+      "type": "note",
+      "jp": "安全管理に関する次の語句の中から2つを選び、番号と語句を記入のうえ、それぞれの内容について2つ具体的に記述しなさい。",
+      "vi": "Hãy chọn 2 trong số các thuật ngữ liên quan đến quản lý an toàn dưới đây, ghi rõ số thứ tự và thuật ngữ, sau đó mô tả cụ thể 2 nội dung cho mỗi thuật ngữ.",
+      "explanation_vi": null
+    },
+    {
+      "type": "bullet_list",
+      "items_jp": [
+        "1. 安全パトロール",
+        "2. ツールボックスミーティング（TBM）",
+        "3. 飛来落下災害の防止対策",
+        "4. 墜落災害の防止対策",
+        "5. 感電災害の防止対策",
+        "6. 新規入場者教育"
+      ],
+      "items_vi": [
+        "1. Tuần tra an toàn",
+        "2. Họp hộp dụng cụ (TBM)",
+        "3. Biện pháp phòng ngừa tai nạn vật bay/rơi",
+        "4. Biện pháp phòng ngừa tai nạn rơi ngã",
+        "5. Biện pháp phòng ngừa tai nạn điện giật",
+        "6. Giáo dục người mới vào công trường"
+      ],
+      "explanation_vi": null
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "jp": "【問題 No.3】",
+      "vi": "[Câu hỏi số 3]",
+      "explanation_vi": "(R6)"
+    },
+    {
+      "type": "note",
+      "jp": "安全管理に関する次の語句の中から2つを選び、番号と語句を記入のうえ、それぞれの内容について2つ具体的に記述しなさい。",
+      "vi": "Hãy chọn 2 trong số các thuật ngữ liên quan đến quản lý an toàn dưới đây, ghi rõ số thứ tự và thuật ngữ, sau đó mô tả cụ thể 2 nội dung cho mỗi thuật ngữ.",
+      "explanation_vi": null
+    },
+    {
+      "type": "bullet_list",
+      "items_jp": [
+        "1. 危険予知活動（KYK）",
+        "2. 安全施工サイクル",
+        "3. 感電災害の防止対策",
+        "4. 安全パトロール",
+        "5. 墜落災害の防止対策",
+        "6. 新規入場者教育"
+      ],
+      "items_vi": [
+        "1. Hoạt động dự đoán nguy hiểm (KYK)",
+        "2. Chu trình thi công an toàn",
+        "3. Biện pháp phòng ngừa tai nạn điện giật",
+        "4. Tuần tra an toàn",
+        "5. Biện pháp phòng ngừa tai nạn rơi ngã",
+        "6. Giáo dục người mới vào công trường"
+      ],
+      "explanation_vi": null
+    }
+  ]
+}

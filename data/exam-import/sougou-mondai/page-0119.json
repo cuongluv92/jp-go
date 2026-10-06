@@ -1,0 +1,110 @@
+{
+  "book_slug": "sougou-mondai",
+  "section_path": [
+    { "code": "doc2", "title_jp": "資料No.2 第二次検定用教材", "title_vi": "Cuốn 2 - Tài liệu ôn thi lần 2" },
+    { "code": "doc2-3", "title_jp": "3. 施工管理法", "title_vi": "3. Phương pháp quản lý thi công" },
+    { "code": "doc2-3-1", "title_jp": "3-1-1. 安全管理", "title_vi": "3-1-1. Quản lý an toàn" }
+  ],
+  "page_number": 119,
+  "page_label": "p.19",
+  "source_image_path": null,
+  "notes_vi": "[資料No.2 2級電気工事施工管理技術研修 第二次検定用教材（2026年度用）. Tiếp theo trang 18 (giải nghĩa thuật ngữ 6-10). Có vài chữ mờ bóng từ mặt sau tờ giấy ở góc trang, không phải nội dung trang này nên bỏ qua.]",
+  "review_status": "draft",
+  "blocks": [
+    {
+      "type": "heading",
+      "level": 4,
+      "jp": "6．高所作業車での作業における危険防止対策（R2）　施工マニュアル p.245〜247",
+      "vi": "6. Biện pháp phòng ngừa nguy hiểm khi làm việc bằng xe làm việc trên cao (R2) - Sổ tay thi công tr.245~247",
+      "explanation_vi": null
+    },
+    {
+      "type": "bullet_list",
+      "items_jp": [
+        "①整備不良による災害を防ぐため、始動点検を作業開始前に必ず行う。",
+        "②機械の転倒による災害を防ぐため、水平場所に設置し、アウトリガーは最大限に張り出す。"
+      ],
+      "items_vi": [
+        "① Để phòng ngừa tai nạn do bảo dưỡng không đầy đủ, nhất định phải kiểm tra khởi động trước khi bắt đầu làm việc.",
+        "② Để phòng ngừa tai nạn do máy bị lật đổ, đặt máy ở nơi bằng phẳng và mở chân chống (outrigger) ra tối đa."
+      ],
+      "explanation_vi": null
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "jp": "◎7．墜落災害の防止対策（R4, 6）　施工マニュアル p.259〜261",
+      "vi": "◎7. Biện pháp phòng ngừa tai nạn rơi ngã (R4, 6) - Sổ tay thi công tr.259~261",
+      "explanation_vi": "Trong bảng tổng hợp ở trang 18, mục này còn ghi thêm năm H30 (墜落災害の防止対策（H30, R4, 6）) nhưng ở phần giải nghĩa chi tiết này sách gốc chỉ ghi (R4, 6) - đã chép đúng theo từng chỗ trong ảnh gốc."
+    },
+    {
+      "type": "bullet_list",
+      "items_jp": [
+        "①高さ2m以上の場所（作業床の端、開口部等を除く）では、足場を組み立てる等の方法により、作業床を設ける。",
+        "②高さが2m以上の作業床の端、開口部等で墜落により労働者に危険を及ぼすおそれのある個所には、囲い、手すり、覆い等を設ける。"
+      ],
+      "items_vi": [
+        "① Tại nơi có độ cao từ 2m trở lên (trừ mép sàn thao tác, lỗ mở v.v.), phải lắp đặt sàn thao tác bằng cách dựng giàn giáo v.v.",
+        "② Tại mép sàn thao tác có độ cao từ 2m trở lên, lỗ mở v.v. có nguy cơ gây nguy hiểm rơi ngã cho người lao động, phải lắp đặt rào chắn, tay vịn, nắp che v.v."
+      ],
+      "explanation_vi": null
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "jp": "8．飛来落下災害の防止対策（R4）　施工マニュアル p.262",
+      "vi": "8. Biện pháp phòng ngừa tai nạn vật bay/rơi (R4) - Sổ tay thi công tr.262",
+      "explanation_vi": null
+    },
+    {
+      "type": "bullet_list",
+      "items_jp": [
+        "①上方で行われる作業の器具や工具の落下による災害を防ぐため、上下作業を避けて施工計画や機械設備の配置計画を作成する。",
+        "②やむを得ず投下作業を行うときは、投下シュート等の専用設備を設ける。"
+      ],
+      "items_vi": [
+        "① Để phòng ngừa tai nạn do dụng cụ, công cụ của công việc thực hiện ở phía trên bị rơi xuống, lập kế hoạch thi công và kế hoạch bố trí máy móc thiết bị sao cho tránh làm việc đồng thời trên-dưới.",
+        "② Khi bất khả kháng phải thực hiện công việc thả/ném vật xuống, phải lắp đặt thiết bị chuyên dụng như máng thả (shoot) v.v."
+      ],
+      "explanation_vi": null
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "jp": "◎9．感電災害の防止対策（R2, 4, 6）　施工マニュアル p.151〜152, 228（特別教育）",
+      "vi": "◎9. Biện pháp phòng ngừa tai nạn điện giật (R2, 4, 6) - Sổ tay thi công tr.151~152, 228 (giáo dục đặc biệt)",
+      "explanation_vi": null
+    },
+    {
+      "type": "bullet_list",
+      "items_jp": [
+        "①充電電路に接触することによる感電災害を防ぐため、電路に絶縁用防護具を装置する。",
+        "②金属製外箱を有する使用電圧が60Vを超える器具では、漏電による感電災害を防ぐため、器具の電源に漏電遮断器を設置する。"
+      ],
+      "items_vi": [
+        "① Để phòng ngừa tai nạn điện giật do tiếp xúc với đường dây đang mang điện, lắp đặt dụng cụ bảo hộ cách điện trên đường dây.",
+        "② Với các dụng cụ có vỏ ngoài bằng kim loại và điện áp sử dụng trên 60V, để phòng ngừa tai nạn điện giật do rò điện, lắp đặt cầu dao chống rò (ELCB) tại nguồn điện của dụng cụ."
+      ],
+      "explanation_vi": null
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "jp": "10．酸素欠乏危険場所での危険防止対策（R2）　施工マニュアル p.226, 228, 285〜287",
+      "vi": "10. Biện pháp phòng ngừa nguy hiểm tại nơi có nguy cơ thiếu oxy (R2) - Sổ tay thi công tr.226, 228, 285~287",
+      "explanation_vi": null
+    },
+    {
+      "type": "bullet_list",
+      "items_jp": [
+        "①作業を開始する前に、酸素危険作業主任者に酸素濃度を測定させる。",
+        "②労働者に酸素欠乏危険作業の特別教育を行う。"
+      ],
+      "items_vi": [
+        "① Trước khi bắt đầu công việc, yêu cầu người phụ trách công việc nguy hiểm về oxy đo nồng độ oxy.",
+        "② Thực hiện giáo dục đặc biệt về công việc có nguy cơ thiếu oxy cho người lao động."
+      ],
+      "explanation_vi": null
+    }
+  ]
+}
