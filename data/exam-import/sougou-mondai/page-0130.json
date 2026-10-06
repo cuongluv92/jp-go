@@ -53,8 +53,8 @@
     },
     {
       "type": "paragraph",
-      "jp": "気象情報を基に作業工程表に予備日を3日間確保するとともに、降雨が予想される前日までに掘削・残土処理を前倒しで完了させるよう職長に指示した。作業終了時には進捗を写真と工程表で日次確認した。",
-      "vi": "Dựa trên thông tin thời tiết, tôi đã bố trí 3 ngày dự phòng trong bảng tiến độ, đồng thời chỉ thị tổ trưởng hoàn thành trước công việc đào đất và xử lý đất thải trước ngày dự báo có mưa. Vào cuối mỗi ngày làm việc, tôi xác nhận tiến độ hàng ngày bằng ảnh chụp và bảng tiến độ.",
+      "jp": "気象情報を基に作業工程表に予備日を3日間確保するとともに、降雨が予想される前日までに掘削・残土処理を前倒しで完了させるよう職長に指示した。毎日の作業終了時に進捗を写真と工程表で確認した。",
+      "vi": "Dựa trên thông tin thời tiết, tôi đã bố trí 3 ngày dự phòng trong bảng tiến độ, đồng thời chỉ thị tổ trưởng hoàn thành trước công việc đào đất và xử lý đất thải trước ngày dự báo có mưa. Vào cuối mỗi ngày làm việc, tôi xác nhận tiến độ bằng ảnh chụp và bảng tiến độ.",
       "explanation_vi": "Đối sách cụ thể: dự phòng 3 ngày + đẩy sớm lịch đào đất trước ngày mưa (ai làm: chỉ thị tổ trưởng) → thực hiện/xác nhận: kiểm tra tiến độ hàng ngày bằng ảnh và bảng tiến độ."
     },
     {
@@ -125,9 +125,9 @@
     },
     {
       "type": "paragraph",
-      "jp": "当該工事は休止中の既存設備を活用するため、稼働日前に資材・機材を全て現場へ搬入しておく必要があった。搬入漏れがあると次回稼働日まで作業ができず工程が大幅に遅れるおそれがあったため、事前の資材・人員手配に留意した。",
-      "vi": "Vì công trình này tận dụng thiết bị hiện có đang tạm ngừng hoạt động, nên cần vận chuyển toàn bộ vật tư, thiết bị vào công trường trước ngày thi công. Nếu thiếu sót trong khâu vận chuyển, sẽ không thể làm việc cho đến ngày thi công tiếp theo, khiến tiến độ bị chậm trễ đáng kể, nên tôi đã lưu ý đến việc chuẩn bị vật tư và nhân lực trước.",
-      "explanation_vi": "Chuỗi logic: hiện trường cụ thể (tận dụng thiết bị tạm ngừng, cần mang vật tư trước) → vấn đề/lý do (thiếu sót → không làm được đến ngày sau, chậm tiến độ lớn) → sự việc lưu ý (chuẩn bị vật tư/nhân lực trước)."
+      "jp": "当該工事は土曜・日曜・祝日のみの稼働であったため、必要な資材・機材を稼働日前に現場へ搬入しておく必要があった。搬入漏れがあると次の稼働日まで数日空いてしまい、作業ができず工程が大幅に遅れるおそれがあったため、事前の資材・人員手配に留意した。",
+      "vi": "Vì công trình này chỉ thi công vào thứ Bảy, Chủ nhật và ngày lễ, nên cần vận chuyển vật tư, thiết bị cần thiết vào công trường trước ngày thi công. Nếu thiếu sót trong khâu vận chuyển, sẽ phải chờ nhiều ngày đến lần thi công tiếp theo mới có thể làm việc, khiến tiến độ bị chậm trễ đáng kể, nên tôi đã lưu ý đến việc chuẩn bị vật tư và nhân lực trước.",
+      "explanation_vi": "Chuỗi logic: hiện trường cụ thể (chỉ thi công T7/CN/lễ) → vấn đề/lý do (thiếu sót vận chuyển → phải chờ nhiều ngày đến lần thi công sau → chậm tiến độ lớn) → sự việc lưu ý (chuẩn bị vật tư/nhân lực trước)."
     },
     {
       "type": "heading",
