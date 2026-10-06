@@ -1,0 +1,113 @@
+{
+  "book_slug": "sougou-mondai",
+  "section_path": [
+    { "code": "doc2", "title_jp": "資料No.2 第二次検定用教材", "title_vi": "Cuốn 2 - Tài liệu ôn thi lần 2" },
+    { "code": "doc2-5", "title_jp": "5. 電気用語", "title_vi": "5. Thuật ngữ điện" }
+  ],
+  "page_number": 139,
+  "page_label": "p.39",
+  "source_image_path": null,
+  "notes_vi": "[資料No.2 2級電気工事施工管理技術研修 第二次検定用教材（2026年度用）. Nhóm giải nghĩa thuật ngữ 【電気鉄道】(đường sắt điện khí hóa). Dấu ◎ đánh dấu thuật ngữ quan trọng/hay gặp. Góc dưới phải trang có chữ mờ bóng từ mặt sau tờ giấy (trang 40), không phải nội dung trang này nên không chép vào.]",
+  "review_status": "draft",
+  "blocks": [
+    {
+      "type": "heading",
+      "level": 2,
+      "jp": "【電気鉄道】",
+      "vi": "[Đường sắt điện khí hóa]",
+      "explanation_vi": null
+    },
+    {
+      "type": "numbered_list",
+      "items_jp": [
+        "電気鉄道のき電方式（R3）",
+        "電気鉄道の帰線（R1, 4, 7）",
+        "自動列車制御装置（ATC）（R5）",
+        "自動列車停止装置（ATS）（R2, 6）"
+      ],
+      "items_vi": [
+        "Phương thức cấp điện đường sắt điện khí hóa (R3)",
+        "Đường dây hồi lưu đường sắt điện khí hóa (R1, 4, 7)",
+        "Thiết bị điều khiển tàu tự động (ATC) (R5)",
+        "Thiết bị dừng tàu tự động (ATS) (R2, 6)"
+      ],
+      "explanation_vi": "Số trong ngoặc là các năm (Reiwa) từng ra đề về thuật ngữ đó."
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "jp": "1．電気鉄道のき電方式（R3）　電気テキスト p.72〜74",
+      "vi": "1. Phương thức cấp điện đường sắt điện khí hóa (R3) - Giáo trình điện tr.72~74",
+      "explanation_vi": null
+    },
+    {
+      "type": "bullet_list",
+      "items_jp": [
+        "①き電方式とは、電車線に電力を供給する設備をいい、電力系統の構成としては鉄道専用送電線、変圧器、電車線路等が必要となる。",
+        "②普通鉄道の標準電圧は直流1,500V、750V等を、単相交流では20,000Vを採用し、新幹線鉄道の標準電圧は単相交流25,000Vを採用している。"
+      ],
+      "items_vi": [
+        "① Phương thức cấp điện là thiết bị cung cấp điện năng cho đường dây tàu điện; về cấu trúc hệ thống điện, cần có đường dây truyền tải chuyên dụng cho đường sắt, máy biến áp, đường dây tàu điện v.v.",
+        "② Điện áp tiêu chuẩn của đường sắt thông thường dùng DC 1.500V, 750V v.v., còn với xoay chiều 1 pha thì dùng 20.000V; đường sắt Shinkansen dùng điện áp tiêu chuẩn xoay chiều 1 pha 25.000V."
+      ],
+      "explanation_vi": null
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "jp": "2．電気鉄道の帰線（R1, 4, 7）　電気テキスト p.74（参考）",
+      "vi": "2. Đường dây hồi lưu đường sắt điện khí hóa (R1, 4, 7) - Giáo trình điện tr.74 (tham khảo)",
+      "explanation_vi": null
+    },
+    {
+      "type": "bullet_list",
+      "items_jp": [
+        "①電気鉄道のき電回路の帰線のことであり、電気車に供給された運転用電力を、変電所に戻すために帰線電流の回路となる帰線レールを含む部分の総称である。",
+        "②一般に帰線は、列車走行用のレールを電気的にボンドで接続して使用する帰線レール方式が使用されており、一般的な架空単線方式ではレールを帰線として使用している。"
+      ],
+      "items_vi": [
+        "① Là đường dây hồi lưu của mạch cấp điện đường sắt điện khí hóa; là tên gọi chung cho phần bao gồm ray hồi lưu, tạo thành mạch dòng điện hồi lưu để đưa điện năng vận hành đã cấp cho toa tàu trở về trạm biến điện.",
+        "② Thông thường, đường hồi lưu sử dụng phương thức ray hồi lưu, nối điện ray chạy tàu bằng dây bond (bonding) để sử dụng; với phương thức đường dây trên không đơn tuyến thông thường, ray được dùng làm đường hồi lưu."
+      ],
+      "explanation_vi": null
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "jp": "◎3．自動列車制御装置（ATC）（R5）　電気テキスト p.86",
+      "vi": "◎3. Thiết bị điều khiển tàu tự động (ATC) (R5) - Giáo trình điện tr.86",
+      "explanation_vi": null
+    },
+    {
+      "type": "bullet_list",
+      "items_jp": [
+        "①自動列車制御装置（ATC）は、速度制御区間において列車速度が制限速度以上になると、自動的にブレーキをかけて減速させ、列車の速度を制御する装置である。",
+        "②この装置を採用すれば、運転手が信号現示を誤認したときでも安全な運転が行われ保安度が向上する。このため、新幹線、地下鉄および一部の在来線において採用されている。"
+      ],
+      "items_vi": [
+        "① Thiết bị điều khiển tàu tự động (ATC) là thiết bị điều khiển tốc độ tàu: trong đoạn kiểm soát tốc độ, khi tốc độ tàu vượt quá tốc độ giới hạn thì tự động phanh để giảm tốc.",
+        "② Nếu áp dụng thiết bị này, kể cả khi người lái tàu nhận định sai tín hiệu, tàu vẫn vận hành an toàn, nâng cao mức độ bảo đảm an toàn. Vì vậy, thiết bị này được áp dụng cho Shinkansen, tàu điện ngầm và một phần các tuyến đường sắt thông thường."
+      ],
+      "explanation_vi": null
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "jp": "4．自動列車停止装置（ATS）（R2, 6）　電気テキスト p.86",
+      "vi": "4. Thiết bị dừng tàu tự động (ATS) (R2, 6) - Giáo trình điện tr.86",
+      "explanation_vi": null
+    },
+    {
+      "type": "bullet_list",
+      "items_jp": [
+        "①列車が停止信号に接近し、ブレーキ操作が行われないときに、自動的に列車を信号機の外側に停止させる。",
+        "②一定の速度を超える速度で列車が走行しているとき、自動的に列車を停止させる。"
+      ],
+      "items_vi": [
+        "① Khi tàu đến gần tín hiệu dừng mà không thực hiện thao tác phanh, tự động dừng tàu ở phía ngoài tín hiệu đó.",
+        "② Khi tàu đang chạy với tốc độ vượt quá tốc độ quy định, tự động dừng tàu lại."
+      ],
+      "explanation_vi": null
+    }
+  ]
+}

@@ -1,0 +1,92 @@
+{
+  "book_slug": "sougou-mondai",
+  "section_path": [
+    { "code": "doc2", "title_jp": "資料No.2 第二次検定用教材", "title_vi": "Cuốn 2 - Tài liệu ôn thi lần 2" },
+    { "code": "doc2-5", "title_jp": "5. 電気用語", "title_vi": "5. Thuật ngữ điện" }
+  ],
+  "page_number": 135,
+  "page_label": "p.35",
+  "source_image_path": null,
+  "notes_vi": "[資料No.2 2級電気工事施工管理技術研修 第二次検定用教材（2026年度用）. 2 đề luyện tập (R1, R2) chọn 3 trong 9 thuật ngữ. Đề No.1 trong ảnh gốc có kèm khung trả lời trống (解答欄: 番号/用語/内容①/内容②) để tự điền tay, không chép khung trống vào đây.]",
+  "review_status": "draft",
+  "blocks": [
+    {
+      "type": "heading",
+      "level": 3,
+      "jp": "【問題 No.1】",
+      "vi": "[Câu hỏi số 1]",
+      "explanation_vi": "(R1)"
+    },
+    {
+      "type": "note",
+      "jp": "電気工事に関する次の用語の中から3つを選び、番号と用語を記入のうえ、技術的な内容を、それぞれについて2つ具体的に記述しなさい。\nただし、技術的な内容とは、施工上の留意点、選定上の留意点、定義、動作原理、発生原理、目的、用途、方式、方法、特徴、対策などをいう。",
+      "vi": "Hãy chọn 3 trong số các thuật ngữ liên quan đến công trình điện dưới đây, ghi rõ số thứ tự và thuật ngữ, sau đó mô tả cụ thể 2 nội dung kỹ thuật cho mỗi thuật ngữ.\nTuy nhiên, \"nội dung kỹ thuật\" ở đây nghĩa là điểm cần lưu ý khi thi công, điểm cần lưu ý khi lựa chọn, định nghĩa, nguyên lý hoạt động, nguyên lý phát sinh, mục đích, công dụng, phương thức, phương pháp, đặc điểm, biện pháp xử lý v.v.",
+      "explanation_vi": null
+    },
+    {
+      "type": "numbered_list",
+      "items_jp": [
+        "変流器（CT）",
+        "うず電流",
+        "力率改善",
+        "架空地線",
+        "電車線路の帰線",
+        "道路の照明方式（トンネル照明を除く）",
+        "変圧器の並行運転",
+        "電動機の過負荷保護",
+        "UTPケーブル"
+      ],
+      "items_vi": [
+        "Biến dòng điện (CT)",
+        "Dòng điện xoáy (dòng Foucault)",
+        "Cải thiện hệ số công suất",
+        "Dây chống sét trên không",
+        "Đường dây hồi lưu của tuyến đường tàu điện",
+        "Phương thức chiếu sáng đường bộ (trừ chiếu sáng hầm)",
+        "Vận hành song song máy biến áp",
+        "Bảo vệ quá tải động cơ điện",
+        "Cáp UTP"
+      ],
+      "explanation_vi": null
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "jp": "【問題 No.2】",
+      "vi": "[Câu hỏi số 2]",
+      "explanation_vi": "(R2)"
+    },
+    {
+      "type": "note",
+      "jp": "電気工事に関する次の用語の中から3つを選び、番号と用語を記入のうえ、技術的な内容を、それぞれについて2つ具体的に記述しなさい。\nただし、技術的な内容とは、施工上の留意点、選定上の留意点、定義、動作原理、発生原理、目的、用途、方式、方法、特徴、対策などをいう。",
+      "vi": "Hãy chọn 3 trong số các thuật ngữ liên quan đến công trình điện dưới đây, ghi rõ số thứ tự và thuật ngữ, sau đó mô tả cụ thể 2 nội dung kỹ thuật cho mỗi thuật ngữ.\nTuy nhiên, \"nội dung kỹ thuật\" ở đây nghĩa là điểm cần lưu ý khi thi công, điểm cần lưu ý khi lựa chọn, định nghĩa, nguyên lý hoạt động, nguyên lý phát sinh, mục đích, công dụng, phương thức, phương pháp, đặc điểm, biện pháp xử lý v.v.",
+      "explanation_vi": null
+    },
+    {
+      "type": "numbered_list",
+      "items_jp": [
+        "太陽光発電システム",
+        "架空送配電線路の塩害対策",
+        "三相誘導電動機の始動法",
+        "スコット結線変圧器",
+        "光ファイバケーブル",
+        "自動列車停止装置（ATS）",
+        "ループコイル式車両感知器",
+        "絶縁抵抗試験",
+        "D種接地工事"
+      ],
+      "items_vi": [
+        "Hệ thống phát điện năng lượng mặt trời",
+        "Biện pháp chống nhiễm mặn cho đường dây truyền tải/phân phối trên không",
+        "Phương pháp khởi động động cơ cảm ứng 3 pha",
+        "Máy biến áp đấu nối Scott",
+        "Cáp quang",
+        "Thiết bị dừng tàu tự động (ATS)",
+        "Cảm biến xe dạng cuộn dây vòng (loop coil)",
+        "Thử nghiệm điện trở cách điện",
+        "Công trình tiếp địa loại D"
+      ],
+      "explanation_vi": null
+    }
+  ]
+}
