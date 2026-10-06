@@ -1,0 +1,113 @@
+{
+  "book_slug": "sougou-mondai",
+  "section_path": [
+    { "code": "doc2", "title_jp": "資料No.2 第二次検定用教材", "title_vi": "Cuốn 2 - Tài liệu ôn thi lần 2" },
+    { "code": "doc2-5", "title_jp": "5. 電気用語", "title_vi": "5. Thuật ngữ điện" }
+  ],
+  "page_number": 138,
+  "page_label": "p.38",
+  "source_image_path": null,
+  "notes_vi": "[資料No.2 2級電気工事施工管理技術研修 第二次検定用教材（2026年度用）. Nhóm giải nghĩa thuật ngữ 【送配電設備】(thiết bị truyền tải - phân phối điện). Dấu ◎ đánh dấu thuật ngữ quan trọng/hay gặp.]",
+  "review_status": "draft",
+  "blocks": [
+    {
+      "type": "heading",
+      "level": 2,
+      "jp": "【送配電設備】",
+      "vi": "[Thiết bị truyền tải - phân phối điện]",
+      "explanation_vi": null
+    },
+    {
+      "type": "numbered_list",
+      "items_jp": [
+        "架空地線（R1, 4）",
+        "架空送電線のたるみ（R3, 6）",
+        "架空送配電線路の塩害対策（R2, 5）",
+        "電線の許容電流（R3, 5, 7）"
+      ],
+      "items_vi": [
+        "Dây chống sét trên không (R1, 4)",
+        "Độ võng dây dẫn trên không (R3, 6)",
+        "Biện pháp chống nhiễm mặn cho đường dây truyền tải/phân phối trên không (R2, 5)",
+        "Dòng điện cho phép của dây dẫn (R3, 5, 7)"
+      ],
+      "explanation_vi": "Số trong ngoặc là các năm (Reiwa) từng ra đề về thuật ngữ đó."
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "jp": "◎1．架空地線（R1, 4）　電気テキスト p.63",
+      "vi": "◎1. Dây chống sét trên không (R1, 4) - Giáo trình điện tr.63",
+      "explanation_vi": null
+    },
+    {
+      "type": "bullet_list",
+      "items_jp": [
+        "①送電線上方に張った接地線であり、鉄塔を介して接地させ、送電線への落雷を防止する電線。",
+        "②直撃雷に対する遮へい角が小さいほど遮へい効果が高くなる。"
+      ],
+      "items_vi": [
+        "① Là dây tiếp địa căng ở phía trên đường dây truyền tải, được tiếp đất qua tháp sắt, dùng để phòng tránh sét đánh trực tiếp vào đường dây truyền tải.",
+        "② Góc che chắn đối với sét đánh trực tiếp càng nhỏ thì hiệu quả che chắn càng cao."
+      ],
+      "explanation_vi": null
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "jp": "2．架空送電線のたるみ（R3, 6）　電気テキスト p.64",
+      "vi": "2. Độ võng dây dẫn trên không (R3, 6) - Giáo trình điện tr.64",
+      "explanation_vi": null
+    },
+    {
+      "type": "bullet_list",
+      "items_jp": [
+        "①送配電設備に用いられる用語で弛度として表し、気温の低下を原因とする電線の収縮によって架空電線が断線を起こす恐れがあるので、これを防止するために必要である。",
+        "②たるみは電線の重量に比例し、電線の水平張力に反比例する事から弛度が小さいと電線の張力が大きくなり、大きいと電線の振れが大きくなり、線間接触、樹木、他の工作物への接触原因となる。"
+      ],
+      "items_vi": [
+        "① Là thuật ngữ dùng trong thiết bị truyền tải/phân phối điện, biểu thị bằng độ chùng dây; cần thiết để phòng tránh nguy cơ đứt dây trên không do dây dẫn co lại vì nhiệt độ giảm.",
+        "② Độ chùng tỉ lệ thuận với trọng lượng dây dẫn, tỉ lệ nghịch với lực căng ngang của dây dẫn; nếu độ chùng nhỏ thì lực căng dây lớn, nếu độ chùng lớn thì dây rung lắc nhiều, trở thành nguyên nhân tiếp xúc giữa các dây, với cây cối, với công trình khác."
+      ],
+      "explanation_vi": null
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "jp": "◎3．架空送配電線路の塩害対策（R2, 5）　電気テキスト p.62, 65",
+      "vi": "◎3. Biện pháp chống nhiễm mặn cho đường dây truyền tải/phân phối trên không (R2, 5) - Giáo trình điện tr.62, 65",
+      "explanation_vi": null
+    },
+    {
+      "type": "bullet_list",
+      "items_jp": [
+        "①耐塩性の強いスモッグがいし、あるいは雨による洗い流し効果のよい長幹がいしを使用する。",
+        "②がいしの連結個数を増やしたり、がいしにシリコンを塗る。"
+      ],
+      "items_vi": [
+        "① Sử dụng sứ cách điện chịu mặn tốt (smog insulator), hoặc sứ cách điện dạng thân dài có hiệu quả rửa trôi tốt nhờ nước mưa.",
+        "② Tăng số lượng sứ cách điện nối tiếp, hoặc bôi silicon lên sứ cách điện."
+      ],
+      "explanation_vi": null
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "jp": "◎4．電線の許容電流（R3, 5, 7）　電気テキスト p.97",
+      "vi": "◎4. Dòng điện cho phép của dây dẫn (R3, 5, 7) - Giáo trình điện tr.97",
+      "explanation_vi": null
+    },
+    {
+      "type": "bullet_list",
+      "items_jp": [
+        "①電線に電流を通じると抵抗により発熱し、絶縁体が熱劣化し、電線の諸性能が低下する。その限度となる温度を最高許容温度といい、その電流を許容電流という。",
+        "②許容電流の値は、周囲温度、電線・絶縁物・外被の材質、構造、配線方法等によって異なる。"
+      ],
+      "items_vi": [
+        "① Khi cho dòng điện chạy qua dây dẫn, do điện trở mà sinh nhiệt, làm vật liệu cách điện bị lão hóa nhiệt, khiến các tính năng của dây dẫn suy giảm. Nhiệt độ giới hạn đó gọi là nhiệt độ cho phép tối đa, và dòng điện tương ứng gọi là dòng điện cho phép.",
+        "② Giá trị dòng điện cho phép khác nhau tùy theo nhiệt độ môi trường xung quanh, chất liệu dây dẫn/vật cách điện/vỏ bọc, cấu tạo, phương pháp đi dây v.v."
+      ],
+      "explanation_vi": null
+    }
+  ]
+}

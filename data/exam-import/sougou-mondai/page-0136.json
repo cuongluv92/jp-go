@@ -1,0 +1,131 @@
+{
+  "book_slug": "sougou-mondai",
+  "section_path": [
+    { "code": "doc2", "title_jp": "資料No.2 第二次検定用教材", "title_vi": "Cuốn 2 - Tài liệu ôn thi lần 2" },
+    { "code": "doc2-5", "title_jp": "5. 電気用語", "title_vi": "5. Thuật ngữ điện" }
+  ],
+  "page_number": 136,
+  "page_label": "p.36",
+  "source_image_path": null,
+  "notes_vi": "[資料No.2 2級電気工事施工管理技術研修 第二次検定用教材（2026年度用）. 3 đề luyện tập (R3, R4, R5) chọn 3 trong 9 thuật ngữ.]",
+  "review_status": "draft",
+  "blocks": [
+    {
+      "type": "heading",
+      "level": 3,
+      "jp": "【問題 No.3】",
+      "vi": "[Câu hỏi số 3]",
+      "explanation_vi": "(R3)"
+    },
+    {
+      "type": "note",
+      "jp": "電気工事に関する次の用語の中から3つを選び、番号と用語を記入のうえ、技術的な内容を、それぞれについて2つ具体的に記述しなさい。\nただし、技術的な内容とは、施工上の留意点、選定上の留意点、定義、動作原理、発生原理、目的、用途、方式、方法、特徴、対策などをいう。",
+      "vi": "Hãy chọn 3 trong số các thuật ngữ liên quan đến công trình điện dưới đây, ghi rõ số thứ tự và thuật ngữ, sau đó mô tả cụ thể 2 nội dung kỹ thuật cho mỗi thuật ngữ.",
+      "explanation_vi": null
+    },
+    {
+      "type": "numbered_list",
+      "items_jp": [
+        "風力発電",
+        "架空送電線のたるみ",
+        "スターデルタ始動",
+        "VVFケーブルの差込形のコネクタ",
+        "定温式スポット型感知器",
+        "電気鉄道のき電方式",
+        "超音波式車両感知器",
+        "電線の許容電流",
+        "A種接地工事"
+      ],
+      "items_vi": [
+        "Phát điện bằng sức gió",
+        "Độ võng dây dẫn trên không",
+        "Khởi động sao-tam giác (Star-Delta)",
+        "Đầu nối dạng cắm của cáp VVF",
+        "Cảm biến nhiệt độ cố định dạng điểm",
+        "Phương thức cấp điện đường sắt điện khí hóa",
+        "Cảm biến xe dạng siêu âm",
+        "Dòng điện cho phép của dây dẫn",
+        "Công trình tiếp địa loại A"
+      ],
+      "explanation_vi": null
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "jp": "【問題 No.4】",
+      "vi": "[Câu hỏi số 4]",
+      "explanation_vi": "(R4)"
+    },
+    {
+      "type": "note",
+      "jp": "電気工事に関する次の用語の中から3つを選び、番号と用語を記入のうえ、技術的な内容を、それぞれについて2つ具体的に記述しなさい。\nただし、技術的な内容とは、施工上の留意点、選定上の留意点、定義、動作原理、発生原理、目的、用途、方式、方法、特徴、対策などをいう。",
+      "vi": "Hãy chọn 3 trong số các thuật ngữ liên quan đến công trình điện dưới đây, ghi rõ số thứ tự và thuật ngữ, sau đó mô tả cụ thể 2 nội dung kỹ thuật cho mỗi thuật ngữ.",
+      "explanation_vi": null
+    },
+    {
+      "type": "numbered_list",
+      "items_jp": [
+        "揚水式発電",
+        "架空地線",
+        "力率改善",
+        "漏電遮断器",
+        "UTPケーブル",
+        "電車線路の帰線",
+        "ループコイル式車両感知器",
+        "波付硬質合成樹脂管（FEP）",
+        "絶縁抵抗試験"
+      ],
+      "items_vi": [
+        "Phát điện kiểu bơm tích năng (thủy điện tích năng)",
+        "Dây chống sét trên không",
+        "Cải thiện hệ số công suất",
+        "Cầu dao chống rò điện (ELCB)",
+        "Cáp UTP",
+        "Đường dây hồi lưu của tuyến đường tàu điện",
+        "Cảm biến xe dạng cuộn dây vòng",
+        "Ống nhựa tổng hợp cứng dạng gợn sóng (FEP)",
+        "Thử nghiệm điện trở cách điện"
+      ],
+      "explanation_vi": "Mục 6 trong ảnh gốc đọc hơi khó (nét in mờ), nhưng theo đúng thuật ngữ chuẩn và khớp với mục 5 của 問題No.1 nên chép là '電車線路の帰線'."
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "jp": "【問題 No.5】",
+      "vi": "[Câu hỏi số 5]",
+      "explanation_vi": "(R5)"
+    },
+    {
+      "type": "note",
+      "jp": "電気工事に関する次の用語の中から3つを選び、番号と用語を記入のうえ、技術的な内容を、それぞれについて2つ具体的に記述しなさい。\nただし、技術的な内容とは、施工上の留意点、選定上の留意点、定義、動作原理、発生原理、目的、用途、方式、方法、特徴、対策などをいう。",
+      "vi": "Hãy chọn 3 trong số các thuật ngữ liên quan đến công trình điện dưới đây, ghi rõ số thứ tự và thuật ngữ, sau đó mô tả cụ thể 2 nội dung kỹ thuật cho mỗi thuật ngữ.",
+      "explanation_vi": null
+    },
+    {
+      "type": "numbered_list",
+      "items_jp": [
+        "風力発電",
+        "架空送配電線路の耐塩対策",
+        "三相誘導電動機の始動方式",
+        "屋内配線用差込形電線コネクタ",
+        "光ファイバケーブル",
+        "自動列車制御装置（ATC）",
+        "道路の照明方式（トンネル照明を除く）",
+        "接地抵抗試験",
+        "電線の許容電流"
+      ],
+      "items_vi": [
+        "Phát điện bằng sức gió",
+        "Biện pháp chống nhiễm mặn cho đường dây truyền tải/phân phối trên không",
+        "Phương thức khởi động động cơ cảm ứng 3 pha",
+        "Đầu nối dây dạng cắm dùng cho dây dẫn trong nhà",
+        "Cáp quang",
+        "Thiết bị điều khiển tàu tự động (ATC)",
+        "Phương thức chiếu sáng đường bộ (trừ chiếu sáng hầm)",
+        "Thử nghiệm điện trở tiếp địa",
+        "Dòng điện cho phép của dây dẫn"
+      ],
+      "explanation_vi": null
+    }
+  ]
+}

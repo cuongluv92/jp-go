@@ -1,0 +1,131 @@
+{
+  "book_slug": "sougou-mondai",
+  "section_path": [
+    { "code": "doc2", "title_jp": "資料No.2 第二次検定用教材", "title_vi": "Cuốn 2 - Tài liệu ôn thi lần 2" },
+    { "code": "doc2-5", "title_jp": "5. 電気用語", "title_vi": "5. Thuật ngữ điện" }
+  ],
+  "page_number": 137,
+  "page_label": "p.37",
+  "source_image_path": null,
+  "notes_vi": "[資料No.2 2級電気工事施工管理技術研修 第二次検定用教材（2026年度用）. Đề luyện tập No.6 (R6) + bắt đầu phần giải nghĩa thuật ngữ theo nhóm 【発変電設備】(thiết bị phát điện - biến điện). Dấu ◎ đánh dấu thuật ngữ quan trọng/hay gặp.]",
+  "review_status": "draft",
+  "blocks": [
+    {
+      "type": "heading",
+      "level": 3,
+      "jp": "【問題 No.6】",
+      "vi": "[Câu hỏi số 6]",
+      "explanation_vi": "(R6)"
+    },
+    {
+      "type": "note",
+      "jp": "電気工事に関する次の用語の中から3つを選び、番号と用語を記入のうえ、技術的な内容を、それぞれについて2つ具体的に記述しなさい。\nただし、技術的な内容とは、施工上の留意点、選定上の留意点、定義、目的、用途、方式、方法、特徴、選定上の留意点、動作原理、発生原理、対策などをいう。",
+      "vi": "Hãy chọn 3 trong số các thuật ngữ liên quan đến công trình điện dưới đây, ghi rõ số thứ tự và thuật ngữ, sau đó mô tả cụ thể 2 nội dung kỹ thuật cho mỗi thuật ngữ.",
+      "explanation_vi": null
+    },
+    {
+      "type": "numbered_list",
+      "items_jp": [
+        "揚水式発電",
+        "架空送電線のたるみ",
+        "力率改善",
+        "漏電遮断器",
+        "高周波同軸ケーブル",
+        "自動列車停止装置（ATS）",
+        "超音波式車両感知器",
+        "絶縁抵抗試験",
+        "波付硬質合成樹脂管（FEP）の施工"
+      ],
+      "items_vi": [
+        "Phát điện kiểu bơm tích năng",
+        "Độ võng dây dẫn trên không",
+        "Cải thiện hệ số công suất",
+        "Cầu dao chống rò điện",
+        "Cáp đồng trục tần số cao",
+        "Thiết bị dừng tàu tự động",
+        "Cảm biến xe dạng siêu âm",
+        "Thử nghiệm điện trở cách điện",
+        "Thi công ống nhựa tổng hợp cứng dạng gợn sóng (FEP)"
+      ],
+      "explanation_vi": null
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "jp": "【発変電設備】",
+      "vi": "[Thiết bị phát điện - biến điện]",
+      "explanation_vi": null
+    },
+    {
+      "type": "numbered_list",
+      "items_jp": [
+        "揚水式発電（R4, 6）",
+        "太陽光発電システム（R2, 7）",
+        "風力発電（R3, 5）"
+      ],
+      "items_vi": [
+        "Phát điện kiểu bơm tích năng (R4, 6)",
+        "Hệ thống phát điện năng lượng mặt trời (R2, 7)",
+        "Phát điện bằng sức gió (R3, 5)"
+      ],
+      "explanation_vi": "Số trong ngoặc là các năm (Reiwa) từng ra đề về thuật ngữ đó."
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "jp": "1．揚水式発電（R4, 6）　電気テキスト p.43",
+      "vi": "1. Phát điện kiểu bơm tích năng (R4, 6) - Giáo trình điện tr.43",
+      "explanation_vi": null
+    },
+    {
+      "type": "bullet_list",
+      "items_jp": [
+        "①発電所の上部および下部に貯水池を設け、深夜等の軽負荷時の余剰電力を利用して発電機水車をポンプとして揚水を行い、ピーク負荷時にこの水を利用して発電する。",
+        "②揚水発電では発電機と電動機の2通りに使用する同期発電電動機が用いられ、発電電動機の性能および構造は発電機とほぼ同じである。"
+      ],
+      "items_vi": [
+        "① Đặt hồ chứa nước ở phía trên và phía dưới nhà máy điện, tận dụng điện năng dư thừa vào thời điểm tải thấp như ban đêm để bơm nước lên bằng cách dùng máy phát-tuabin nước làm bơm, rồi dùng nước đó để phát điện vào thời điểm tải đỉnh.",
+        "② Trong phát điện tích năng bằng bơm, sử dụng loại máy phát-động cơ đồng bộ dùng được cho cả 2 mục đích là máy phát điện và động cơ điện; tính năng và cấu tạo của máy này gần giống với máy phát điện."
+      ],
+      "explanation_vi": null
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "jp": "2．太陽光発電システム（R2, 7）　電気テキスト p.49",
+      "vi": "2. Hệ thống phát điện năng lượng mặt trời (R2, 7) - Giáo trình điện tr.49",
+      "explanation_vi": null
+    },
+    {
+      "type": "bullet_list",
+      "items_jp": [
+        "①太陽の光エネルギーを半導体素子の光電効果を利用して電気エネルギーに変換する太陽電池を利用したシステムをいう。",
+        "②システムの構成は太陽電池モジュールと交直変換装置、系統連系保護装置等で構成されている。"
+      ],
+      "items_vi": [
+        "① Là hệ thống sử dụng pin mặt trời, chuyển đổi năng lượng ánh sáng mặt trời thành điện năng nhờ hiệu ứng quang điện của linh kiện bán dẫn.",
+        "② Cấu trúc hệ thống gồm module pin mặt trời, thiết bị chuyển đổi xoay chiều-một chiều, thiết bị bảo vệ liên kết lưới điện v.v."
+      ],
+      "explanation_vi": null
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "jp": "◎3．風力発電（R3, 5）　電気テキスト p.50",
+      "vi": "◎3. Phát điện bằng sức gió (R3, 5) - Giáo trình điện tr.50",
+      "explanation_vi": null
+    },
+    {
+      "type": "bullet_list",
+      "items_jp": [
+        "①自然エネルギーの活用を目的とした発電設備で、風力を各種の風車により回転エネルギーに変換し発電機により電気エネルギーに変換する発電設備である。",
+        "②風力発電は地球温暖化の原因となるCO2の発生もなく、有害物質を排出しないクリーンなエネルギー資源であるが、発電量は風速に左右されるため不規則で間欠的である。"
+      ],
+      "items_vi": [
+        "① Là thiết bị phát điện nhằm mục đích tận dụng năng lượng tự nhiên, chuyển đổi sức gió thành động năng quay thông qua các loại tua-bin gió, sau đó chuyển đổi thành điện năng nhờ máy phát điện.",
+        "② Phát điện bằng sức gió là nguồn năng lượng sạch, không phát sinh CO2 (nguyên nhân gây nóng lên toàn cầu), không thải ra chất độc hại, nhưng sản lượng điện phụ thuộc vào tốc độ gió nên không ổn định và gián đoạn."
+      ],
+      "explanation_vi": "Nội dung này trùng với ví dụ mẫu '風力発電' đã nêu ở trang 34 (phần hướng dẫn cách viết) - sách gốc lặp lại y hệt, là nội dung chính thức của mục giải nghĩa này."
+    }
+  ]
+}
