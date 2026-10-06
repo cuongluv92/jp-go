@@ -1,0 +1,79 @@
+{
+  "book_slug": "sougou-mondai",
+  "section_path": [
+    { "code": "1ji", "title_jp": "1次検定", "title_vi": "Kỳ thi lần 1" },
+    { "code": "1ji-book-01", "title_jp": "資料No.1 総合問題集", "title_vi": "Cuốn 1 - Tổng hợp bài tập" },
+    { "code": "ch3", "title_jp": "第3章 第二次検定基本問題", "title_vi": "Chương 3 - Bài cơ bản cho kỳ thi lần 2" },
+    { "code": "ch3-exp", "title_jp": "2. 施工経験記述", "title_vi": "2. Mô tả kinh nghiệm thi công" }
+  ],
+  "page_number": 104,
+  "page_label": "資料No.2 p.4",
+  "source_image_path": null,
+  "notes_vi": "[資料No.2 2級電気工事施工管理技術研修 第二次検定用教材（2026年度用）. Trang này còn 1 sơ đồ 【施工管理の手順】 bị cắt ở mép ảnh (chỉ thấy nhãn ①〜④, không đọc được nội dung đầy đủ) - sơ đồ này minh họa lại đúng 5 bước ❶〜❺ đã có trong đoạn văn bên dưới nên chưa cần tách riêng; nếu có ảnh rõ hơn sẽ bổ sung. Còn thiếu các trang tiếp theo của tài liệu (問題2〜5...).]",
+  "review_status": "draft",
+  "blocks": [
+    {
+      "type": "heading",
+      "level": 2,
+      "jp": "2-3. 求められている施工経験記述",
+      "vi": "2-3. Mô tả kinh nghiệm thi công được yêu cầu",
+      "explanation_vi": null
+    },
+    {
+      "type": "paragraph",
+      "jp": "求められている施工経験記述は、作業主体の施工経験ではなく、管理業務主体の施工経験である。",
+      "vi": "Mô tả kinh nghiệm thi công được yêu cầu ở đây không phải là kinh nghiệm thi công với tư cách người trực tiếp thao tác, mà là kinh nghiệm thi công với tư cách người quản lý.",
+      "explanation_vi": null
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "jp": "【通常の管理業務】",
+      "vi": "[Công tác quản lý thông thường]",
+      "explanation_vi": null
+    },
+    {
+      "type": "paragraph",
+      "jp": "管理業務とは、請け負った工事を工期内に適切に完成して引き渡すために、\n①現場を確認し、それに適した施工計画を立て、\n②その計画で予測して決定した対策を現場で適切に対応させ施工し、\n③その結果を振り返り、\n④次の仕事に活かす\nという一連の管理活動のことである。",
+      "vi": "Công tác quản lý là chuỗi hoạt động quản lý nhằm hoàn thành và bàn giao công trình nhận thầu đúng thời hạn một cách phù hợp, gồm:\n① Kiểm tra hiện trường và lập kế hoạch thi công phù hợp,\n② Dự đoán và quyết định biện pháp theo kế hoạch đó, triển khai thi công phù hợp tại hiện trường,\n③ Nhìn lại kết quả,\n④ Vận dụng cho công việc tiếp theo.",
+      "explanation_vi": null
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "jp": "【特に留意した管理業務】",
+      "vi": "[Công tác quản lý cần đặc biệt lưu ý]",
+      "explanation_vi": null
+    },
+    {
+      "type": "paragraph",
+      "jp": "しかし、試験で求められている管理業務は、通常の管理業務ではなく、\n問題の発生する恐れのある工事に気が付いて、それをどのように適切に対処したかを記述することである。",
+      "vi": "Tuy nhiên, công tác quản lý được yêu cầu trong bài thi không phải là công tác quản lý thông thường, mà là mô tả việc bạn đã nhận ra công trình có nguy cơ phát sinh vấn đề và đã xử lý phù hợp như thế nào.",
+      "explanation_vi": null
+    },
+    {
+      "type": "numbered_list",
+      "items_jp": [
+        "現場状況の調査・確認などで問題が起きそうな事に気が付かなければならない。",
+        "発生する問題を明確に予測し、その理由・根拠等を捉えなければならない。",
+        "発生する問題を防止するために施工管理上の手法・手順のどこの何に特に留意して取り組むか、留意事項を決めなければならない。",
+        "問題を解決するために色々検討した手法など項目ごとに防止する対策を決めなければならない。",
+        "決定した対策を計画に反映させて実施するために、現場で下請業者や労働者に対応させる指揮・指導を執り、その後チェックもする。"
+      ],
+      "items_vi": [
+        "Phải nhận ra dấu hiệu có thể phát sinh vấn đề thông qua việc khảo sát, xác nhận tình hình hiện trường.",
+        "Phải dự đoán rõ ràng vấn đề sẽ phát sinh, nắm bắt lý do/căn cứ của nó.",
+        "Để phòng ngừa vấn đề phát sinh, phải quyết định sự việc cần đặc biệt lưu ý trong phương pháp/trình tự quản lý thi công.",
+        "Phải quyết định biện pháp phòng ngừa theo từng hạng mục, dựa trên các phương pháp đã xem xét để giải quyết vấn đề.",
+        "Để phản ánh biện pháp đã quyết định vào kế hoạch và triển khai thực hiện, phải chỉ huy/hướng dẫn nhà thầu phụ và người lao động tại hiện trường, sau đó kiểm tra lại."
+      ],
+      "explanation_vi": "5 bước ❶〜❺ này tương ứng với sơ đồ 【施工管理の手順】(quy trình quản lý thi công) ở bên cạnh trong sách gốc."
+    },
+    {
+      "type": "note",
+      "jp": "※現場では工事の対処は十分に出来ているものの、❶〜❺の手法・手順の展開が無意識や感性で実施されている事が多い。そのため、施工経験を振り返って記述する事が出来ない。\nしかし、管理手法・手順に沿って振り返って整理すると施工経験記述は必ず書けるようになります。",
+      "vi": "※Tại hiện trường, dù việc xử lý công trình đã được thực hiện đầy đủ, nhưng phần lớn các bước ❶〜❺ lại được thực hiện một cách vô thức hoặc theo cảm tính. Vì vậy nhiều người không thể mô tả lại được kinh nghiệm thi công của mình.\nTuy nhiên, nếu nhìn lại và sắp xếp theo đúng phương pháp/trình tự quản lý, chắc chắn bạn sẽ viết được phần mô tả kinh nghiệm thi công.",
+      "explanation_vi": null
+    }
+  ]
+}

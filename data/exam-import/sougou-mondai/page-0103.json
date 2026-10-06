@@ -1,0 +1,57 @@
+{
+  "book_slug": "sougou-mondai",
+  "section_path": [
+    { "code": "1ji", "title_jp": "1次検定", "title_vi": "Kỳ thi lần 1" },
+    { "code": "1ji-book-01", "title_jp": "資料No.1 総合問題集", "title_vi": "Cuốn 1 - Tổng hợp bài tập" },
+    { "code": "ch3", "title_jp": "第3章 第二次検定基本問題", "title_vi": "Chương 3 - Bài cơ bản cho kỳ thi lần 2" },
+    { "code": "ch3-exp", "title_jp": "2. 施工経験記述", "title_vi": "2. Mô tả kinh nghiệm thi công" }
+  ],
+  "page_number": 103,
+  "page_label": "資料No.2 p.3",
+  "source_image_path": null,
+  "notes_vi": "[資料No.2 2級電気工事施工管理技術研修 第二次検定用教材（2026年度用）. Còn thiếu trang sau, sẽ bổ sung.]",
+  "review_status": "draft",
+  "blocks": [
+    {
+      "type": "table",
+      "headers_jp": ["区分", "内容（解答欄）"],
+      "rows_jp": [
+        ["(2) 留意すべき事項と理由", "（記述欄）"],
+        ["(2) 対策又は処置", "（記述欄）"]
+      ],
+      "headers_vi": ["Mục", "Nội dung (khung trả lời)"],
+      "rows_vi": [
+        ["(2) Sự việc cần lưu ý và lý do", "(Khung để viết câu trả lời)"],
+        ["(2) Biện pháp hoặc cách xử lý", "(Khung để viết câu trả lời)"]
+      ],
+      "explanation_vi": "Tiếp theo mục (1) của mẫu phiếu trả lời ở trang trước."
+    },
+    {
+      "type": "note",
+      "jp": "※実際の解答用紙とは、記入できるスペースなどが異なります。",
+      "vi": "※Phiếu trả lời thực tế có khoảng trống để viết khác với mẫu minh họa này.",
+      "explanation_vi": null
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "jp": "2-2. 出題傾向",
+      "vi": "2-2. Xu hướng ra đề",
+      "explanation_vi": null
+    },
+    {
+      "type": "table",
+      "headers_jp": ["出題テーマ", "H28", "H29", "H30", "R1", "R2", "R3", "R4", "R5", "R6", "R7"],
+      "rows_jp": [
+        ["工程管理", "○", "", "○", "", "○", "", "○", "", "○", ""],
+        ["安全管理", "", "○", "", "○", "", "○", "", "○", "", "○"]
+      ],
+      "headers_vi": ["Chủ đề ra đề", "H28", "H29", "H30", "R1", "R2", "R3", "R4", "R5", "R6", "R7"],
+      "rows_vi": [
+        ["Quản lý tiến độ", "○", "", "○", "", "○", "", "○", "", "○", ""],
+        ["Quản lý an toàn", "", "○", "", "○", "", "○", "", "○", "", "○"]
+      ],
+      "explanation_vi": "○ đánh dấu năm đề thi ra chủ đề đó cho Câu 1 (経験記述). Hai chủ đề \"quản lý tiến độ\" và \"quản lý an toàn\" gần như luân phiên nhau qua từng năm."
+    }
+  ]
+}

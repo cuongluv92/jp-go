@@ -352,7 +352,7 @@ export function renderBlockColumns(block: ContentBlock, showFurigana = false): B
               <thead className="bg-slate-50 dark:bg-surface-muted">
                 <tr>
                   {headers.map((h, i) => (
-                    <th key={i} className="break-words whitespace-normal border-b border-border px-2 py-1.5 font-semibold align-top">
+                    <th key={i} className="break-words whitespace-pre-line border-b border-border px-2 py-1.5 font-semibold align-top">
                       {jpStyle ? renderJapaneseText(h, headerTokens[i] ?? [], showFurigana) : h}
                     </th>
                   ))}
@@ -363,7 +363,7 @@ export function renderBlockColumns(block: ContentBlock, showFurigana = false): B
               {rows.map((row, ri) => (
                 <tr key={ri} className="odd:bg-white dark:odd:bg-surface even:bg-slate-50/50 dark:even:bg-white/5">
                   {row.map((cell, ci) => (
-                    <td key={ci} className="break-words whitespace-normal border-b border-border px-2 py-1.5 align-top">
+                    <td key={ci} className="break-words whitespace-pre-line border-b border-border px-2 py-1.5 align-top">
                       {jpStyle ? renderJapaneseText(cell, rowTokens[ri]?.[ci] ?? [], showFurigana) : cell}
                     </td>
                   ))}
