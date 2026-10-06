@@ -1,0 +1,74 @@
+{
+  "book_slug": "sougou-mondai",
+  "section_path": [
+    { "code": "doc2", "title_jp": "資料No.2 第二次検定用教材", "title_vi": "Cuốn 2 - Tài liệu ôn thi lần 2" },
+    { "code": "doc2-exp", "title_jp": "2. 施工経験記述", "title_vi": "2. Mô tả kinh nghiệm thi công" },
+    { "code": "doc2-exp-1", "title_jp": "【1】工程管理", "title_vi": "[1] Quản lý tiến độ" }
+  ],
+  "page_number": 108,
+  "page_label": "p.8",
+  "source_image_path": null,
+  "notes_vi": "[資料No.2 2級電気工事施工管理技術研修 第二次検定用教材（2026年度用）. Đây là phần tiếp theo của bài giải R6解答例 (問Ｂ - công trình chỉ thi công được thứ 7/CN/lễ), nối tiếp sau trang 7 (問Ａ). Lưu ý: phần 'Sự việc cần lưu ý và lý do' ①và②trong ảnh gốc có nội dung gần như giống hệt nhau, chỉ phần 'Biện pháp hoặc cách xử lý' là khác nhau - đã chép đúng theo ảnh gốc. Mép phải trang có chữ mờ bóng in qua từ mặt sau tờ giấy, không phải nội dung trang này nên không chép vào.]",
+  "review_status": "draft",
+  "blocks": [
+    {
+      "type": "heading",
+      "level": 3,
+      "jp": "◎土曜日、日曜日及び祝祭日のみ施工が可能な電気工事の例",
+      "vi": "Ví dụ: công trình thi công điện chỉ có thể thi công vào thứ Bảy, Chủ nhật và ngày lễ",
+      "explanation_vi": null
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "jp": "留意すべき事項と理由①",
+      "vi": "Sự việc cần lưu ý và lý do ①",
+      "explanation_vi": null
+    },
+    {
+      "type": "paragraph",
+      "jp": "❶8F建ての事務所ビル改修工事の一環として、祝祭日に床のモール配線をOAフロア化し、20箇所のアプコン工事を行った。オフィスの❷原状回復込みの工事だが、配線が複雑で図面なしで拡張工事を繰返し行っていることが判明したため、❸原状回復遅延防止方法を留意した。",
+      "vi": "❶Trong khuôn khổ công trình cải tạo tòa nhà văn phòng 8 tầng, vào ngày lễ đã thi công lắp máng cáp (mold) trên sàn để chuyển thành sàn OA, thi công 20 vị trí ổ cắm nâng sàn (upcon). ❷Đây là công trình bao gồm cả khôi phục hiện trạng văn phòng, nhưng do hệ thống dây phức tạp và phát hiện đã thi công mở rộng lặp lại nhiều lần mà không có bản vẽ, nên ❸đã lưu ý đến phương pháp phòng tránh chậm trễ trong việc khôi phục hiện trạng.",
+      "explanation_vi": null
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "jp": "対策又は処置①",
+      "vi": "Biện pháp hoặc cách xử lý ①",
+      "explanation_vi": null
+    },
+    {
+      "type": "paragraph",
+      "jp": "❹発注者へのヒアリングと現地調査を行い、可能な限りの現状の配線ルートを図面化した。❺それを元に作業員全員でミーティングを行い、分岐を切り離す際は、場所ごとに色の違うテープを巻かせ、一目で判るように徹底させることにより原状回復遅延を防止した。",
+      "vi": "❹Đã phỏng vấn chủ đầu tư và khảo sát hiện trường, lập bản vẽ tuyến dây hiện trạng trong phạm vi có thể. ❺Dựa trên đó, đã tổ chức họp toàn thể công nhân, khi tách các nhánh rẽ thì quấn băng dính màu khác nhau theo từng vị trí để dễ nhận biết, nhờ triệt để thực hiện điều này đã phòng tránh được chậm trễ khôi phục hiện trạng.",
+      "explanation_vi": null
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "jp": "留意すべき事項と理由②",
+      "vi": "Sự việc cần lưu ý và lý do ②",
+      "explanation_vi": null
+    },
+    {
+      "type": "paragraph",
+      "jp": "❶8F建ての事務所ビル改修工事の一環として、祝祭日に床のモール配線をOAフロア化し、20箇所のアプコン工事を行った。❷オフィスの原状回復込みの工事だが、配線が複雑で図面なしで拡張工事を繰返し行っていることが判明したため、❸原状回復遅延防止方法を留意した。",
+      "vi": "❶Trong khuôn khổ công trình cải tạo tòa nhà văn phòng 8 tầng, vào ngày lễ đã thi công lắp máng cáp trên sàn để chuyển thành sàn OA, thi công 20 vị trí ổ cắm nâng sàn. ❷Đây là công trình bao gồm cả khôi phục hiện trạng văn phòng, do hệ thống dây phức tạp và phát hiện đã thi công mở rộng lặp lại nhiều lần mà không có bản vẽ, nên ❸đã lưu ý đến phương pháp phòng tránh chậm trễ trong việc khôi phục hiện trạng.",
+      "explanation_vi": null
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "jp": "対策又は処置②",
+      "vi": "Biện pháp hoặc cách xử lý ②",
+      "explanation_vi": null
+    },
+    {
+      "type": "paragraph",
+      "jp": "❹工事責任者と打合せを行い、事前に絶縁抵抗を計測させるように決め、0.5MΩ以下を不良と定義し、リスト化するように作業責任者に指示した。❺作成したリストを元に、作業員にスムーズに補修を行わせ、補修時間を極力短縮し、工期に遅れず祝祭日のみで工事を完了させた。",
+      "vi": "❹Đã họp bàn với người phụ trách thi công, quyết định trước sẽ đo điện trở cách điện, định nghĩa dưới 0,5MΩ là không đạt, và chỉ thị người phụ trách thi công lập thành danh sách. ❺Dựa trên danh sách đã lập, đã cho công nhân sửa chữa một cách suôn sẻ, rút ngắn tối đa thời gian sửa chữa, hoàn thành công trình đúng tiến độ chỉ trong các ngày lễ.",
+      "explanation_vi": null
+    }
+  ]
+}

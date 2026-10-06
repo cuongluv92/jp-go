@@ -1,0 +1,74 @@
+{
+  "book_slug": "sougou-mondai",
+  "section_path": [
+    { "code": "doc2", "title_jp": "資料No.2 第二次検定用教材", "title_vi": "Cuốn 2 - Tài liệu ôn thi lần 2" },
+    { "code": "doc2-exp", "title_jp": "2. 施工経験記述", "title_vi": "2. Mô tả kinh nghiệm thi công" },
+    { "code": "doc2-exp-2", "title_jp": "【2】安全管理", "title_vi": "[2] Quản lý an toàn" }
+  ],
+  "page_number": 111,
+  "page_label": "p.11",
+  "source_image_path": null,
+  "notes_vi": "[資料No.2 2級電気工事施工管理技術研修 第二次検定用教材（2026年度用）. Đây là phần tiếp theo của bài giải R7解答例 (問Ｂ - công trình có hạng mục liên quan chồng chéo), nối tiếp sau trang 10 (問Ａ). Chữ ❺介錯ロープ (dây điều khiển hướng vật khi cẩu nâng - thuật ngữ xây dựng) viết tay hơi khó đọc, có thể sai lệch nhẹ về từ ngữ chính xác.]",
+  "review_status": "draft",
+  "blocks": [
+    {
+      "type": "heading",
+      "level": 3,
+      "jp": "問Ｂ　輻輳する現場における電気工事",
+      "vi": "Đề B: Công trình thi công điện tại hiện trường có công trình liên quan chồng chéo",
+      "explanation_vi": null
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "jp": "留意した事項と理由①",
+      "vi": "Sự việc đã lưu ý và lý do ①",
+      "explanation_vi": null
+    },
+    {
+      "type": "paragraph",
+      "jp": "❶10F建てのホテル新築工事にて、屋上での消防用非常発電機据付けとキュービクル据付け工事を別業者で輻輳して行った。❷使用部材置場が隣同士であり、似た部材が多かった為、誤使用による通電火災が発生する恐れがあった。❸不注意による誤使用防止に留意した。",
+      "vi": "❶Trong công trình xây mới khách sạn 10 tầng, việc lắp đặt máy phát điện khẩn cấp dùng cho phòng cháy chữa cháy trên mái và việc lắp đặt tủ điện cubicle do 2 nhà thầu khác nhau thi công chồng chéo nhau. ❷Do khu vực để vật tư sử dụng nằm sát cạnh nhau và có nhiều vật tư giống nhau, nên có nguy cơ xảy ra cháy do chập điện vì sử dụng nhầm vật tư. ❸Đã lưu ý đến việc phòng tránh sử dụng nhầm do bất cẩn.",
+      "explanation_vi": null
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "jp": "対策又は処置①",
+      "vi": "Biện pháp hoặc cách xử lý ①",
+      "explanation_vi": null
+    },
+    {
+      "type": "paragraph",
+      "jp": "❹発電機据付け業者責任者と使用部材について擦合わせを行い、お互いの部材の刻印の違う箇所を確認した。❺部材管理責任者にマークを入れるよう指示し、作業員にも使用する前に刻印を確認してから使用するよう指導し、誤使用による焼損事故を防止した。",
+      "vi": "❹Đã trao đổi với người phụ trách nhà thầu lắp đặt máy phát điện về vật tư sử dụng, xác nhận các điểm khác nhau trong ký hiệu khắc trên vật tư của hai bên. ❺Đã chỉ thị người phụ trách quản lý vật tư đánh dấu, đồng thời hướng dẫn công nhân phải kiểm tra ký hiệu khắc trước khi sử dụng, nhờ đó phòng tránh được sự cố cháy do sử dụng nhầm vật tư.",
+      "explanation_vi": null
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "jp": "留意した事項と理由②",
+      "vi": "Sự việc đã lưu ý và lý do ②",
+      "explanation_vi": null
+    },
+    {
+      "type": "paragraph",
+      "jp": "❶10F建てのホテル新築工事にて、屋上での消防用非常発電機据付けとキュービクル据付け工事を別業者で輻輳して行った。❷お互いの据付け位置が近く、キュービクルのクレーンによる揚重作業時、強風で落下する恐れがあるため、❸作業員への落下災害防止方法を留意した。",
+      "vi": "❶Trong công trình xây mới khách sạn 10 tầng, việc lắp đặt máy phát điện khẩn cấp dùng cho phòng cháy chữa cháy trên mái và việc lắp đặt tủ điện cubicle do 2 nhà thầu khác nhau thi công chồng chéo nhau. ❷Do vị trí lắp đặt của hai bên gần nhau, trong lúc cẩu nâng tủ điện cubicle bằng cần cẩu có nguy cơ rơi do gió mạnh, nên ❸đã lưu ý đến phương pháp phòng tránh tai nạn rơi vật cho công nhân.",
+      "explanation_vi": null
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "jp": "対策又は処置②",
+      "vi": "Biện pháp hoặc cách xử lý ②",
+      "explanation_vi": null
+    },
+    {
+      "type": "paragraph",
+      "jp": "❹揚重責任者と打合せを行い、平面図を用いてキュービクルの移動ルートと設置場所の範囲を5m取るよう指導し、当日もカラーコーンで区画した箇所を測定させた。❺介錯ロープを通常の2本から4本に増設して4人がかりで制御させ、作業員への落下災害を防止した。",
+      "vi": "❹Đã họp bàn với người phụ trách công việc cẩu nâng, dùng bản vẽ mặt bằng hướng dẫn tuyến di chuyển của tủ điện cubicle và lấy phạm vi khu vực lắp đặt là 5m, trong ngày thi công cũng cho đo đạc lại khu vực đã khoanh vùng bằng cọc tiêu màu. ❺Đã tăng số dây điều khiển (介錯ロープ) từ 2 dây thông thường lên 4 dây và cho 4 người cùng điều khiển, nhờ đó phòng tránh được tai nạn rơi vật cho công nhân.",
+      "explanation_vi": null
+    }
+  ]
+}
