@@ -16,12 +16,10 @@ type KuromojiTokenizer = {
 };
 
 const KANJI_RE = /[一-鿿々〆ヵヶ]/u;
-// Dựng dictionary kuromoji từ đĩa mất ~2s ở lần đầu mỗi instance serverless -
-// không được để request nào phải chờ quá lâu chỉ vì furigana (chỉ là phần hỗ
-// trợ đọc, không phải nội dung chính). Quá thời gian này thì trả về rỗng cho
-// lượt render đó, tokenizer vẫn tiếp tục dựng ở background và cache lại cho
-// lần sau (instance đã "warm").
-const TOKENIZE_TIMEOUT_MS = 1500;
+// Dựng dictionary kuromoji từ đĩa mất khoảng 2s ở lần đầu mỗi instance serverless.
+// Trang đề đã render trước, nên route furigana có thể chờ lâu hơn một chút để tránh
+// trả về mảng rỗng ở cold start; tokenizer vẫn được cache cho các lần sau.
+const TOKENIZE_TIMEOUT_MS = 4000;
 const tokenCache = new Map<string, Promise<FuriganaToken[]>>();
 let tokenizerPromise: Promise<KuromojiTokenizer> | null = null;
 let tokenizerUnavailable = false;
