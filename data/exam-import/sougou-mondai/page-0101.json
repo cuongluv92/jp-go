@@ -1,0 +1,117 @@
+{
+  "book_slug": "sougou-mondai",
+  "section_path": [
+    { "code": "1ji", "title_jp": "1次検定", "title_vi": "Kỳ thi lần 1" },
+    { "code": "1ji-book-01", "title_jp": "資料No.1 総合問題集", "title_vi": "Cuốn 1 - Tổng hợp bài tập" },
+    { "code": "ch3", "title_jp": "第3章 第二次検定基本問題", "title_vi": "Chương 3 - Bài cơ bản cho kỳ thi lần 2" },
+    { "code": "ch3-0", "title_jp": "第二次検定試験の概要", "title_vi": "Tổng quan kỳ thi lần 2" }
+  ],
+  "page_number": 101,
+  "page_label": "資料No.2 p.1",
+  "source_image_path": null,
+  "notes_vi": "[資料No.2 2級電気工事施工管理技術研修 第二次検定用教材（2026年度用）、建設管理センター 開発技術事業部編集。Trang này là từ bộ tài liệu riêng (資料No.2), gộp vào nhánh 第3章 第二次検定基本問題 của sách 総合問題集 theo yêu cầu. Còn thiếu các trang sau (問題2〜5, 施工管理の手順 chi tiết...), sẽ bổ sung khi có thêm ảnh.]",
+  "review_status": "draft",
+  "blocks": [
+    {
+      "type": "heading",
+      "level": 1,
+      "jp": "1. 第二次検定試験の概要",
+      "vi": "1. Tổng quan về kỳ thi lần 2 (第二次検定)",
+      "explanation_vi": null
+    },
+    {
+      "type": "table",
+      "headers_jp": ["区分", "問題", "出題内容"],
+      "rows_jp": [
+        ["経験記述", "問題１", "①工程管理、②安全管理のいずれかの経験記述"],
+        ["テーマ問題記述", "問題２", "①労働災害対策記述（安全管理）\n②施工上の留意点記述（品質管理）"],
+        ["テーマ問題記述", "問題３", "①電気工事用語の技術的記述"],
+        ["テーマ問題記述", "問題４", "①電気工事諸計算"],
+        ["テーマ問題記述", "問題５", "①建設業法の用語記述\n②労働安全衛生法の用語記述\n③電気工事士法の用語記述"]
+      ],
+      "headers_vi": ["Phân loại", "Câu hỏi", "Nội dung ra đề"],
+      "rows_vi": [
+        ["Mô tả kinh nghiệm", "Câu 1", "Mô tả kinh nghiệm về ① quản lý tiến độ hoặc ② quản lý an toàn (chọn 1 trong 2)"],
+        ["Mô tả theo chủ đề", "Câu 2", "① Mô tả biện pháp phòng tai nạn lao động (quản lý an toàn)\n② Mô tả điểm cần lưu ý khi thi công (quản lý chất lượng)"],
+        ["Mô tả theo chủ đề", "Câu 3", "① Mô tả kỹ thuật về thuật ngữ công trình điện"],
+        ["Mô tả theo chủ đề", "Câu 4", "① Các phép tính liên quan công trình điện"],
+        ["Mô tả theo chủ đề", "Câu 5", "① Mô tả thuật ngữ Luật Xây dựng\n② Mô tả thuật ngữ Luật An toàn vệ sinh lao động\n③ Mô tả thuật ngữ Luật Thợ điện"]
+      ],
+      "explanation_vi": "Bảng tóm tắt sơ đồ cấu trúc đề thi lần 2 (二次検定試験の構成) trong sách gốc: gồm phần Mô tả kinh nghiệm (Câu 1) và phần Mô tả theo chủ đề (Câu 2~5)."
+    },
+    {
+      "type": "table",
+      "headers_jp": ["年度", "(I) 施工経験記述", "(II) 施工管理", "(III) 電気設備", "(IV) 計算問題", "(V) 法規"],
+      "rows_jp": [
+        [
+          "令和4年度",
+          "施工経験記述\n工程管理",
+          "施工管理\n安全管理\n\n高圧受電設備\n単線結線図",
+          "電気設備全般\n電気用語記述",
+          "電気工事諸計算\n1. 直列回路\n2. 変圧器",
+          "法規\n1. 建設業法\n2. 労働安全\n  衛生法\n3. 電気工事士法"
+        ],
+        [
+          "令和5年度",
+          "施工経験記述\n安全管理",
+          "施工管理\n品質管理\n\n高圧受電設備\n単線結線図",
+          "電気設備全般\n電気用語記述",
+          "電気工事諸計算\n1. 直列回路\n2. 配電線路",
+          "法規\n1. 建設業法\n2. 労働安全\n  衛生法\n3. 電気工事士法"
+        ],
+        [
+          "令和6年度",
+          "施工経験記述\n工程管理",
+          "施工管理\n安全管理\n\n高圧受電設備\n単線結線図",
+          "電気設備全般\n電気用語記述",
+          "電気工事諸計算\n1. 直流回路\n2. 変圧器",
+          "法規\n1. 建設業法\n2. 労働安全\n  衛生法\n3. 電気工事士法"
+        ],
+        [
+          "令和7年度",
+          "施工経験記述\n安全管理",
+          "施工管理\n品質管理\n\n高圧受電設備\n単線結線図",
+          "電気設備全般\n電気用語記述",
+          "電気工事諸計算\n1. ブリッジ回路\n2. 変圧器",
+          "法規\n1. 建設業法\n2. 労働安全\n  衛生法\n3. 電気工事士法"
+        ]
+      ],
+      "headers_vi": ["Năm độ", "(I) Mô tả kinh nghiệm thi công", "(II) Quản lý thi công", "(III) Thiết bị điện", "(IV) Bài toán tính", "(V) Pháp quy"],
+      "rows_vi": [
+        [
+          "Năm Reiwa 4",
+          "Mô tả kinh nghiệm thi công\nQuản lý tiến độ",
+          "Quản lý thi công\nQuản lý an toàn\n\nSơ đồ một sợi thiết bị nhận điện cao áp",
+          "Thiết bị điện nói chung\nMô tả thuật ngữ điện",
+          "Các phép tính công trình điện\n1. Mạch nối tiếp\n2. Máy biến áp",
+          "Pháp quy\n1. Luật Xây dựng\n2. Luật An toàn\n  vệ sinh lao động\n3. Luật Thợ điện"
+        ],
+        [
+          "Năm Reiwa 5",
+          "Mô tả kinh nghiệm thi công\nQuản lý an toàn",
+          "Quản lý thi công\nQuản lý chất lượng\n\nSơ đồ một sợi thiết bị nhận điện cao áp",
+          "Thiết bị điện nói chung\nMô tả thuật ngữ điện",
+          "Các phép tính công trình điện\n1. Mạch nối tiếp\n2. Đường dây phân phối",
+          "Pháp quy\n1. Luật Xây dựng\n2. Luật An toàn\n  vệ sinh lao động\n3. Luật Thợ điện"
+        ],
+        [
+          "Năm Reiwa 6",
+          "Mô tả kinh nghiệm thi công\nQuản lý tiến độ",
+          "Quản lý thi công\nQuản lý an toàn\n\nSơ đồ một sợi thiết bị nhận điện cao áp",
+          "Thiết bị điện nói chung\nMô tả thuật ngữ điện",
+          "Các phép tính công trình điện\n1. Mạch một chiều\n2. Máy biến áp",
+          "Pháp quy\n1. Luật Xây dựng\n2. Luật An toàn\n  vệ sinh lao động\n3. Luật Thợ điện"
+        ],
+        [
+          "Năm Reiwa 7",
+          "Mô tả kinh nghiệm thi công\nQuản lý an toàn",
+          "Quản lý thi công\nQuản lý chất lượng\n\nSơ đồ một sợi thiết bị nhận điện cao áp",
+          "Thiết bị điện nói chung\nMô tả thuật ngữ điện",
+          "Các phép tính công trình điện\n1. Mạch cầu (bridge)\n2. Máy biến áp",
+          "Pháp quy\n1. Luật Xây dựng\n2. Luật An toàn\n  vệ sinh lao động\n3. Luật Thợ điện"
+        ]
+      ],
+      "explanation_vi": "Bảng thống kê xu hướng ra đề 4 năm gần nhất cho từng nhóm câu hỏi (I)~(V). Mục (II) luôn có phần 'thiết bị nhận điện cao áp - sơ đồ một sợi' vì đây là nội dung gần như cố định mỗi năm."
+    }
+  ]
+}
