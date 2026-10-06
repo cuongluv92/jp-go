@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 590">
+<style>text{font-family:serif;font-size:19px;fill:#111}.w{stroke:#111;stroke-width:2;fill:none}.d{stroke:#777;stroke-width:2;fill:none;stroke-dasharray:7 6}.n{fill:#fff;stroke:#111;stroke-width:2}.lbl{font-size:17px}</style>
+<defs><marker id="a" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto"><path d="M0,0 L10,3 L0,6 Z" fill="#111"/></marker></defs>
+<g class="n">
+<circle cx="65" cy="290" r="25"/><circle cx="225" cy="290" r="25"/><circle cx="225" cy="470" r="25"/>
+<circle cx="400" cy="110" r="25"/><circle cx="400" cy="430" r="25"/><circle cx="400" cy="290" r="25"/>
+<circle cx="585" cy="230" r="25"/><circle cx="760" cy="290" r="25"/><circle cx="920" cy="290" r="25"/>
+</g>
+<g text-anchor="middle"><text x="65" y="297">①</text><text x="225" y="297">②</text><text x="225" y="477">③</text><text x="400" y="117">④</text><text x="400" y="437">⑤</text><text x="400" y="297">⑥</text><text x="585" y="237">⑦</text><text x="760" y="297">⑧</text><text x="920" y="297">⑨</text></g>
+<g marker-end="url(#a)">
+<line class="w" x1="90" y1="290" x2="200" y2="290"/>
+<line class="w" x1="72" y1="314" x2="210" y2="450"/>
+<line class="w" x1="240" y1="270" x2="385" y2="128"/>
+<line class="w" x1="250" y1="290" x2="375" y2="290"/>
+<line class="w" x1="240" y1="310" x2="385" y2="412"/>
+<line class="w" x1="250" y1="470" x2="375" y2="440"/>
+<line class="w" x1="424" y1="116" x2="565" y2="214"/>
+<line class="w" x1="425" y1="282" x2="562" y2="238"/>
+<line class="w" x1="424" y1="430" x2="738" y2="307"/>
+<line class="w" x1="610" y1="238" x2="738" y2="282"/>
+<line class="w" x1="785" y1="290" x2="895" y2="290"/>
+</g>
+<line class="d" x1="400" y1="135" x2="400" y2="265" marker-end="url(#a)"/>
+<line class="d" x1="400" y1="405" x2="400" y2="315" marker-end="url(#a)"/>
+<g class="lbl">
+<text x="138" y="276">A</text><text x="138" y="320">3日</text>
+<text x="122" y="405">B</text><text x="150" y="450">4日</text>
+<text x="290" y="175">C</text><text x="308" y="198">7日</text>
+<text x="300" y="276">D</text><text x="300" y="320">8日</text>
+<text x="290" y="350">E</text><text x="305" y="380">11日</text>
+<text x="300" y="455">F</text><text x="310" y="490">9日</text>
+<text x="485" y="150">G</text><text x="500" y="178">7日</text>
+<text x="490" y="250">H</text><text x="500" y="278">8日</text>
+<text x="570" y="382">I</text><text x="605" y="400">10日</text>
+<text x="665" y="245">J</text><text x="675" y="275">3日</text>
+<text x="840" y="275">K</text><text x="842" y="315">5日</text>
+</g>
+<text x="50" y="545">※ 破線はダミー作業（0日）</text>
+</svg>
