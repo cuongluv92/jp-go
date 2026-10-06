@@ -1,19 +1,7 @@
 import "server-only";
 
-import path from "node:path";
-import kuromoji from "kuromoji";
-
+import { getKuromojiTokenizer, raceWithTimeout } from "./kuromoji-tokenizer";
 import type { ContentBlock, FuriganaToken } from "./content-blocks";
-
-type KuromojiToken = {
-  word_position?: number;
-  surface_form: string;
-  reading?: string;
-};
-
-type KuromojiTokenizer = {
-  tokenize(text: string): KuromojiToken[];
-};
 
 const KANJI_RE = /[一-鿿々〆ヵヶ]/u;
 // Dựng dictionary kuromoji từ đĩa mất ~2s ở lần đầu mỗi instance serverless -
@@ -23,49 +11,11 @@ const KANJI_RE = /[一-鿿々〆ヵヶ]/u;
 // lần sau (instance đã "warm").
 const TOKENIZE_TIMEOUT_MS = 1500;
 const tokenCache = new Map<string, Promise<FuriganaToken[]>>();
-let tokenizerPromise: Promise<KuromojiTokenizer> | null = null;
-let tokenizerUnavailable = false;
-
-function raceWithTimeout<T>(promise: Promise<T>, ms: number, fallback: T): Promise<T> {
-  return new Promise((resolve) => {
-    const timer = setTimeout(() => resolve(fallback), ms);
-    promise.then(
-      (value) => {
-        clearTimeout(timer);
-        resolve(value);
-      },
-      () => {
-        clearTimeout(timer);
-        resolve(fallback);
-      },
-    );
-  });
-}
 
 function katakanaToHiragana(value: string): string {
   return value.replace(/[ァ-ヶ]/g, (char) =>
     String.fromCharCode(char.charCodeAt(0) - 0x60),
   );
-}
-
-function getTokenizer(): Promise<KuromojiTokenizer> {
-  if (tokenizerUnavailable) return Promise.reject(new Error("kuromoji unavailable"));
-  if (tokenizerPromise) return tokenizerPromise;
-
-  tokenizerPromise = new Promise<KuromojiTokenizer>((resolve, reject) => {
-    const dicPath = path.join(process.cwd(), "node_modules", "kuromoji", "dict");
-    kuromoji.builder({ dicPath }).build((error, tokenizer) => {
-      if (error || !tokenizer) {
-        tokenizerUnavailable = true;
-        tokenizerPromise = null;
-        reject(error ?? new Error("Failed to initialize kuromoji"));
-        return;
-      }
-      resolve(tokenizer as KuromojiTokenizer);
-    });
-  });
-
-  return tokenizerPromise;
 }
 
 async function generatedTokens(text: string): Promise<FuriganaToken[]> {
@@ -75,7 +25,7 @@ async function generatedTokens(text: string): Promise<FuriganaToken[]> {
 
   const pending = (async () => {
     try {
-      const tokenizer = await getTokenizer();
+      const tokenizer = await getKuromojiTokenizer();
       const parsed = tokenizer.tokenize(text);
       const result: FuriganaToken[] = [];
       let cursor = 0;

@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useEffect, useMemo, useState } from "react";
 
 import { AnswerFeedbackModal } from "./answer-feedback-modal";
+import { AnswerPracticeModal } from "./answer-practice-modal";
 import { getExamSourceImageUrl } from "@/lib/exam/storage";
 import { segmentJapaneseText, type FuriganaToken } from "@/lib/japanese-text";
 import type { ExamQuestion, ExamTest } from "@/lib/exam/types";
@@ -123,6 +124,7 @@ export function TestRunner({ test, questions: initialQuestions }: { test: ExamTe
   // (đáp án + giải thích hiện sẵn ngay cả khi chưa nộp bài).
   const [quizMode, setQuizMode] = useState(() => questions.some((q) => q.choices.length > 0));
   const [feedback, setFeedback] = useState<AnswerFeedback | null>(null);
+  const [practiceOpen, setPracticeOpen] = useState(false);
 
   useEffect(() => {
     try {
@@ -199,6 +201,7 @@ export function TestRunner({ test, questions: initialQuestions }: { test: ExamTe
 
   const goTo = (index: number) => {
     if (index < 0 || index >= questions.length) return;
+    setPracticeOpen(false);
     setState((s) => ({ ...s, currentIndex: index }));
   };
 
@@ -294,6 +297,16 @@ export function TestRunner({ test, questions: initialQuestions }: { test: ExamTe
               alt={`Hình câu ${current.question_number}`}
               className="mt-4 h-auto max-w-full rounded-lg border border-border"
             />
+          )}
+
+          {current.choices.length === 0 && writtenAnswer && (
+            <button
+              type="button"
+              onClick={() => setPracticeOpen(true)}
+              className="mt-4 rounded-lg border border-accent/40 bg-accent/5 px-3 py-1.5 text-xs font-semibold text-accent hover:bg-accent/10"
+            >
+              回答練習
+            </button>
           )}
 
           {current.choices.length > 0 && (
@@ -435,6 +448,15 @@ export function TestRunner({ test, questions: initialQuestions }: { test: ExamTe
           isLastQuestion={isLastQuestion}
           onRetry={closeFeedbackAndRetry}
           onNext={closeFeedbackAndAdvance}
+        />
+      )}
+
+      {practiceOpen && writtenAnswer && (
+        <AnswerPracticeModal
+          key={current.id}
+          questionNumber={current.question_number}
+          officialAnswerJp={writtenAnswer}
+          onClose={() => setPracticeOpen(false)}
         />
       )}
     </div>
