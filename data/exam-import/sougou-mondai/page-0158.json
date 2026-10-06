@@ -1,0 +1,59 @@
+{
+  "book_slug": "sougou-mondai",
+  "section_path": [
+    { "code": "doc2", "title_jp": "資料No.2 第二次検定用教材", "title_vi": "Cuốn 2 - Tài liệu ôn thi lần 2" },
+    { "code": "doc2-7", "title_jp": "7. 令和7年度問題実例", "title_vi": "7. Ví dụ đề thi thực tế năm Reiwa 7" }
+  ],
+  "page_number": 158,
+  "page_label": "p.58",
+  "source_image_path": null,
+  "notes_vi": "[資料No.2 2級電気工事施工管理技術研修 第二次検定用教材（2026年度用）. 【問題No.3】- chọn 3 trong 9 thuật ngữ, điền vào khung 解答欄 trống (3 khung). Khung 解答欄 hoàn toàn trống trong sách, không tự ý điền giả định vào đây. Góc phải trang có chữ mờ bóng qua (phần đầu của 【解説】trang sau) - không phải nội dung thật của trang 58 nên loại bỏ.]",
+  "review_status": "draft",
+  "blocks": [
+    {
+      "type": "heading",
+      "level": 2,
+      "jp": "【問題 No.3】電気工事に関する次の用語の中から3つ選び、番号と用語を記入のうえ、技術的な内容について、それぞれ2つ具体的に記述しなさい。",
+      "vi": "[Câu hỏi số 3] Hãy chọn 3 trong số các thuật ngữ liên quan đến công trình điện dưới đây, điền số thứ tự và thuật ngữ, rồi nêu cụ thể 2 nội dung kỹ thuật cho mỗi thuật ngữ.",
+      "explanation_vi": null
+    },
+    {
+      "type": "note",
+      "jp": "ただし、技術的な内容とは、施工上の留意点、選定上の留意点、動作原理、発生原理、定義、目的、用途、方式、方法、特徴、対策などをいう。",
+      "vi": "Trong đó, \"nội dung kỹ thuật\" được hiểu là điểm cần lưu ý khi thi công, điểm cần lưu ý khi lựa chọn, nguyên lý hoạt động, nguyên lý phát sinh, định nghĩa, mục đích, công dụng, phương thức, phương pháp, đặc điểm, đối sách v.v.",
+      "explanation_vi": null
+    },
+    {
+      "type": "numbered_list",
+      "items_jp": [
+        "太陽光発電システム",
+        "単相変圧器のV結線",
+        "2Eリレー",
+        "屋内配線用差込形電線コネクタ",
+        "定温式スポット型感知器",
+        "電車線路の帰線",
+        "ループコイル式車両感知器",
+        "A種接地工事",
+        "電線の許容電流"
+      ],
+      "items_vi": [
+        "Hệ thống phát điện năng lượng mặt trời",
+        "Đấu nối chữ V máy biến áp 1 pha",
+        "Rơ-le 2E",
+        "Đầu nối dạng cắm của dây dẫn dùng cho dây dẫn trong nhà",
+        "Đầu báo nhiệt loại điểm cố định",
+        "Dây hồi lưu của tuyến đường dây điện xe lửa",
+        "Cảm biến xe dạng cuộn dây vòng",
+        "Công trình tiếp địa loại A",
+        "Dòng điện cho phép của dây dẫn"
+      ],
+      "explanation_vi": null
+    },
+    {
+      "type": "note",
+      "jp": "＜解答欄＞\n番号：　用語：\n内容①：\n内容②：\n\n番号：　用語：\n内容①：\n内容②：\n\n番号：　用語：\n内容①：\n内容②：",
+      "vi": "<Khung trả lời>\nSố thứ tự:　Thuật ngữ:\nNội dung①:\nNội dung②:\n\nSố thứ tự:　Thuật ngữ:\nNội dung①:\nNội dung②:\n\nSố thứ tự:　Thuật ngữ:\nNội dung①:\nNội dung②:",
+      "explanation_vi": "Đây là khung trả lời trống (3 khung, có các dòng kẻ để viết tay) dùng cho người học tự điền khi luyện tập, không phải nội dung đã in sẵn."
+    }
+  ]
+}

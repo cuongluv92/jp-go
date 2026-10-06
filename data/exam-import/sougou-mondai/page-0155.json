@@ -1,0 +1,54 @@
+{
+  "book_slug": "sougou-mondai",
+  "section_path": [
+    { "code": "doc2", "title_jp": "資料No.2 第二次検定用教材", "title_vi": "Cuốn 2 - Tài liệu ôn thi lần 2" },
+    { "code": "doc2-7", "title_jp": "7. 令和7年度問題実例", "title_vi": "7. Ví dụ đề thi thực tế năm Reiwa 7" }
+  ],
+  "page_number": 155,
+  "page_label": "p.55",
+  "source_image_path": null,
+  "notes_vi": "[資料No.2 2級電気工事施工管理技術研修 第二次検定用教材（2026年度用）. 【問題No.2】- câu 2-1 (chọn 2 trong 6 từ khóa, điền vào khung 解答欄 trống). Khung 解答欄 trong sách hoàn toàn trống (để người học tự viết tay), không có nội dung in sẵn nên không tự ý điền giả định vào đây.]",
+  "review_status": "draft",
+  "blocks": [
+    {
+      "type": "heading",
+      "level": 2,
+      "jp": "【問題 No.2】次の問に答えなさい。",
+      "vi": "[Câu hỏi số 2] Hãy trả lời câu hỏi sau.",
+      "explanation_vi": null
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "jp": "2-1　電気工事に関する次の語句の中から2つ選び、番号と語句を記入のうえ、施工管理上留意すべき内容について、それぞれ2つ具体的に記述しなさい。",
+      "vi": "2-1 Hãy chọn 2 trong số các từ ngữ liên quan đến công trình điện dưới đây, điền số thứ tự và từ ngữ, rồi nêu cụ thể 2 nội dung cần lưu ý về mặt quản lý thi công cho mỗi từ.",
+      "explanation_vi": null
+    },
+    {
+      "type": "numbered_list",
+      "items_jp": [
+        "機器の搬入",
+        "電線相互の接続",
+        "低圧ケーブルの敷設",
+        "資材の受入検査",
+        "低圧分岐回路の試験",
+        "分電盤の取付け"
+      ],
+      "items_vi": [
+        "Vận chuyển thiết bị vào",
+        "Đấu nối dây điện với nhau",
+        "Lắp đặt cáp hạ áp",
+        "Kiểm tra nhận vật tư",
+        "Thử nghiệm mạch nhánh hạ áp",
+        "Lắp đặt tủ điện phân phối"
+      ],
+      "explanation_vi": null
+    },
+    {
+      "type": "note",
+      "jp": "＜解答欄＞\n番号：　語句：\n内容①：\n内容②：\n\n番号：　語句：\n内容①：\n内容②：",
+      "vi": "<Khung trả lời>\nSố thứ tự:　Từ ngữ:\nNội dung①:\nNội dung②:\n\nSố thứ tự:　Từ ngữ:\nNội dung①:\nNội dung②:",
+      "explanation_vi": "Đây là khung trả lời trống (có các dòng kẻ để viết tay) dùng cho người học tự điền khi luyện tập, không phải nội dung đã in sẵn - đáp án tham khảo nằm ở 【解説No.2】trang sau."
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "book_slug": "sougou-mondai",
+  "section_path": [
+    { "code": "doc2", "title_jp": "資料No.2 第二次検定用教材", "title_vi": "Cuốn 2 - Tài liệu ôn thi lần 2" },
+    { "code": "doc2-7", "title_jp": "7. 令和7年度問題実例", "title_vi": "7. Ví dụ đề thi thực tế năm Reiwa 7" }
+  ],
+  "page_number": 156,
+  "page_label": "p.56",
+  "source_image_path": null,
+  "notes_vi": "[資料No.2 2級電気工事施工管理技術研修 第二次検定用教材（2026年度用）. Tiếp theo trang 55 - câu 2-2 (sơ đồ đấu nối một sợi của thiết bị nhận điện cao áp), có kèm sơ đồ mạch điện - chỉ mô tả bằng lời (image_placeholder), không vẽ lại dạng hình. Khung 解答欄 trống, không tự ý điền đáp án vào đây (đáp án tham khảo nằm ở 【解説No.2】trang 57).]",
+  "review_status": "draft",
+  "blocks": [
+    {
+      "type": "heading",
+      "level": 3,
+      "jp": "2-2　一般送配電事業者から供給を受ける、図に示す高圧受電設備の単線結線図について、次の問に答えなさい。",
+      "vi": "2-2 Về sơ đồ đấu nối một sợi của thiết bị nhận điện cao áp như hình vẽ, nhận điện từ công ty truyền tải - phân phối điện phổ thông, hãy trả lời các câu hỏi sau.",
+      "explanation_vi": null
+    },
+    {
+      "type": "paragraph",
+      "jp": "(1) アに示す機器の名称又は略称を記入しなさい。\n(2) アに示す機器の機能を記述しなさい。",
+      "vi": "(1) Hãy ghi tên gọi hoặc tên viết tắt của thiết bị được chỉ ra tại ア.\n(2) Hãy mô tả chức năng của thiết bị được chỉ ra tại ア.",
+      "explanation_vi": null
+    },
+    {
+      "type": "image_placeholder",
+      "caption_jp": "高圧受電設備の単線結線図",
+      "caption_vi": "Sơ đồ đấu nối một sợi của thiết bị nhận điện cao áp",
+      "explanation_vi": "Sơ đồ từ trên xuống: 架空引込 (đường dây trên không dẫn vào) nối xuống một hộp chứa ký hiệu cầu dao/máy cắt kèm rơ-le báo sự cố chạm đất (I≐>), có đường nét đứt nối sang; tiếp xuống qua ký hiệu hình tam giác (cầu chì); xuống đến VCT (biến áp đo lường tổ hợp) nối ngang với Wh (công tơ điện); tiếp xuống thanh cái ngang có: nhánh nối VS-V (công tắc chọn pha + vôn kế), nhánh chính (với rơ-le quá dòng I> và AS-A là công tắc chọn pha + ampe kế), và một nhánh trái riêng xuống thiết bị hình mũi tên (có thể là chống sét van - 避雷器) nối đất; từ thanh cái chính chia xuống 3 nhánh song song: nhánh trái có khung nét đứt chứa ký hiệu cầu chì - đây chính là vị trí mũi tên 'ア' chỉ vào - nối xuống máy biến áp (ký hiệu 2 vòng tròn) rồi đến 電灯回路 (mạch đèn chiếu sáng) với 3 cầu dao (×××); nhánh giữa có ký hiệu cầu chì nối xuống máy biến áp khác rồi đến 動力回路 (mạch động lực) với 3 cầu dao (×××); nhánh phải có ký hiệu cầu chì nối xuống một thiết bị rồi nối đất."
+    },
+    {
+      "type": "note",
+      "jp": "＜解答欄＞\n(1)\n(2)",
+      "vi": "<Khung trả lời>\n(1)\n(2)",
+      "explanation_vi": "Khung trả lời trống trong sách, không có nội dung in sẵn. Đáp án tham khảo nằm ở 【解説No.2】trang 57: (1) Tên gọi: 電力ヒューズ付高圧交流負荷開閉器 (cầu dao phụ tải xoay chiều cao áp có kèm cầu chì công suất), tên viết tắt: PF付LBS; (2) Chức năng: là thiết bị đóng/cắt điện cho mạch ở trạng thái bình thường, khi ngắn mạch hoặc quá tải thì dùng cầu chì để ngắt nhanh."
+    }
+  ]
+}

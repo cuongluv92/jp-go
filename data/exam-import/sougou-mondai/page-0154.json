@@ -1,0 +1,53 @@
+{
+  "book_slug": "sougou-mondai",
+  "section_path": [
+    { "code": "doc2", "title_jp": "資料No.2 第二次検定用教材", "title_vi": "Cuốn 2 - Tài liệu ôn thi lần 2" },
+    { "code": "doc2-7", "title_jp": "7. 令和7年度問題実例", "title_vi": "7. Ví dụ đề thi thực tế năm Reiwa 7" }
+  ],
+  "page_number": 154,
+  "page_label": "p.54",
+  "source_image_path": null,
+  "notes_vi": "[資料No.2 2級電気工事施工管理技術研修 第二次検定用教材（2026年度用）. 【問題No.1】- đề thi thực tế 令和7年度 (R7) 第二次検定 問題1（施工経験記述）an toàn quản lý - chỉ có đề bài, KHÔNG có bài mẫu/đáp án in sẵn trong sách nên không tự ý soạn thêm. Phần chữ mờ phía dưới bên trái (bóng xuyên qua từ mặt sau) không rõ ràng để chép lại chính xác nên loại bỏ.]",
+  "review_status": "draft",
+  "blocks": [
+    {
+      "type": "heading",
+      "level": 2,
+      "jp": "【問題 No.1】次の問A又は問Bのどちらかを選択して答えなさい。",
+      "vi": "[Câu hỏi số 1] Hãy chọn một trong hai câu 問A hoặc 問B để trả lời.",
+      "explanation_vi": null
+    },
+    {
+      "type": "note",
+      "jp": "解答する2項目の記述については、留意すべき事項とその理由、対策又は処置の内容は重複しないこと。\nなお、保護帽の着用のみ又は要求性能墜落制止用器具（安全帯）の着用のみの記述については配点しない。",
+      "vi": "Đối với 2 hạng mục trả lời, nội dung về sự việc cần lưu ý và lý do, cũng như đối sách hoặc biện pháp xử lý, không được trùng lặp nhau.\nLưu ý: nếu chỉ ghi \"đội mũ bảo hộ\" hoặc chỉ ghi \"đeo dây đai an toàn/thiết bị chống rơi ngã\" thì sẽ không được tính điểm.",
+      "explanation_vi": null
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "jp": "（問A）",
+      "vi": "(Câu hỏi A)",
+      "explanation_vi": null
+    },
+    {
+      "type": "paragraph",
+      "jp": "あなたの電気工事の経験を踏まえ、施設等が運用中で大勢の来客がある現場の電気工事において、安全管理上あなたが留意すべき事項とその理由について、2つ具体的に記述しなさい。\nそのうえで、適切な安全管理を実施するために、あなたがとるべき対策又は処置について、その事項ごとに具体的に記述しなさい。",
+      "vi": "Dựa trên kinh nghiệm thi công điện của bạn, hãy nêu cụ thể 2 sự việc cần lưu ý về mặt quản lý an toàn và lý do, trong công trình điện tại hiện trường mà cơ sở đang vận hành và có nhiều khách ra vào.\nSau đó, hãy nêu cụ thể đối sách hoặc biện pháp xử lý mà bạn cần thực hiện cho từng sự việc đó, để thực hiện quản lý an toàn một cách thích hợp.",
+      "explanation_vi": null
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "jp": "（問B）",
+      "vi": "(Câu hỏi B)",
+      "explanation_vi": null
+    },
+    {
+      "type": "paragraph",
+      "jp": "あなたの電気工事の経験を踏まえ、関連工事と輻輳する現場における電気工事において、安全管理上あなたが留意すべき事項とその理由について、2つ具体的に記述しなさい。\nそのうえで、適切な安全管理を実施するために、あなたがとるべき対策又は処置について、その事項ごとに具体的に記述しなさい。",
+      "vi": "Dựa trên kinh nghiệm thi công điện của bạn, hãy nêu cụ thể 2 sự việc cần lưu ý về mặt quản lý an toàn và lý do, trong công trình điện tại hiện trường có nhiều công trình liên quan thi công chồng chéo nhau.\nSau đó, hãy nêu cụ thể đối sách hoặc biện pháp xử lý mà bạn cần thực hiện cho từng sự việc đó, để thực hiện quản lý an toàn một cách thích hợp.",
+      "explanation_vi": null
+    }
+  ]
+}

@@ -1,0 +1,69 @@
+{
+  "book_slug": "sougou-mondai",
+  "section_path": [
+    { "code": "doc2", "title_jp": "資料No.2 第二次検定用教材", "title_vi": "Cuốn 2 - Tài liệu ôn thi lần 2" },
+    { "code": "doc2-7", "title_jp": "7. 令和7年度問題実例", "title_vi": "7. Ví dụ đề thi thực tế năm Reiwa 7" }
+  ],
+  "page_number": 157,
+  "page_label": "p.57",
+  "source_image_path": null,
+  "notes_vi": "[資料No.2 2級電気工事施工管理技術研修 第二次検定用教材（2026年度用）. 【解説No.2】- đáp án mẫu cho câu 2-1 (6 từ khóa, mỗi từ 2 nội dung mẫu) và câu 2-2 (tên gọi + chức năng của thiết bị ア trong sơ đồ単線結線図 trang 56). Sách ghi rõ đây chỉ là ví dụ tham khảo, nội dung đúng thì viết gì cũng được.]",
+  "review_status": "draft",
+  "blocks": [
+    {
+      "type": "heading",
+      "level": 2,
+      "jp": "【解説 No.2】",
+      "vi": "[Giải đáp số 2]",
+      "explanation_vi": null
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "jp": "2-1　電気テキスト　5-p.98",
+      "vi": "2-1 - Giáo trình điện 5-tr.98",
+      "explanation_vi": null
+    },
+    {
+      "type": "table",
+      "headers_jp": ["語句", "内容"],
+      "rows_jp": [
+        ["1. 機器の搬入", "①各種の機器は、誤搬入や搬入漏れが無いように、資材搬入表等を使用して現場に搬入する。\n②現場搬入時周囲との接触を防止するため、搬入口の位置、大きさを確認しておく。"],
+        ["2. 電線相互の接続", "①接続が確実に行われるように圧着スリーブ、電線コネクタ、圧着端子等の電線に適合する接続材を用いる。\n②電線の接続や点検が不十分になるので、金属管、PF管、CD管、硬質ビニル管、金属製可とう電線管の内部では、接続してはならない。"],
+        ["3. 低圧ケーブルの敷設", "①弱電流電線、水管、ガス管との漏電を防ぐため、接近または交差する場合は、これらと接触しないように支持する。\n②電線接続部に不要な張力を加えないよう、ボックス付近で支持する。"],
+        ["4. 資材の受入検査", "①仕様書で指定されている材料の場合、設計図書に定める品質及び性能を有する材料かどうか確認する。\n②納品書の内容と搬入された材料の仕様の相違や数量の不足がないか確認する。"],
+        ["5. 低圧分岐回路の試験", "①漏電がないことを確認するために、分電盤の分岐回路の絶縁を確認するには、絶縁抵抗計で測定する。\n②三相の内二相の電線を入れ替えると三相モータが逆回転するので、低圧三相動力回路の相順を検相器によって確認する。"],
+        ["6. 分電盤の取付け", "①外壁、建物へ取り付ける場合は、水が盤に侵入しないように盤隙間にコーキング処理を施す。\n②盤取付けには、分電盤が十分に固定できるように、事前に壁厚と取付け物厚を十分考慮する。"]
+      ],
+      "headers_vi": ["Từ ngữ", "Nội dung"],
+      "rows_vi": [
+        ["1. Vận chuyển thiết bị vào", "① Các loại thiết bị, dùng bảng vận chuyển vật tư v.v. để vận chuyển vào hiện trường, tránh vận chuyển nhầm hoặc sót.\n② Để phòng tránh va chạm với xung quanh khi vận chuyển vào hiện trường, xác nhận trước vị trí, kích thước cửa vận chuyển vào."],
+        ["2. Đấu nối dây điện với nhau", "① Dùng vật liệu đấu nối phù hợp với dây điện như ống nối ép, đầu nối dây, đầu cốt ép v.v. để việc đấu nối được thực hiện chắc chắn.\n② Không được đấu nối bên trong ống kim loại, ống PF, ống CD, ống nhựa cứng, ống luồn dây kim loại dạng mềm, vì việc đấu nối và kiểm tra sẽ không đầy đủ."],
+        ["3. Lắp đặt cáp hạ áp", "① Khi gần hoặc giao cắt với dây điện dòng yếu, ống nước, ống gas, phải đỡ sao cho không tiếp xúc với chúng để phòng tránh rò điện.\n② Đỡ gần hộp nối để không gây lực căng không cần thiết lên phần đấu nối dây điện."],
+        ["4. Kiểm tra nhận vật tư", "① Trường hợp vật liệu được chỉ định trong bản quy cách, xác nhận vật liệu có đạt chất lượng và tính năng theo hồ sơ thiết kế hay không.\n② Xác nhận nội dung phiếu giao hàng có khác với quy cách vật liệu được vận chuyển vào hay thiếu số lượng hay không."],
+        ["5. Thử nghiệm mạch nhánh hạ áp", "① Để xác nhận không có rò điện, khi kiểm tra cách điện của mạch nhánh tủ điện phân phối thì đo bằng đồng hồ đo điện trở cách điện.\n② Nếu đổi chỗ 2 trong 3 dây pha thì động cơ 3 pha sẽ quay ngược chiều, nên dùng máy kiểm tra thứ tự pha để xác nhận thứ tự pha của mạch động lực 3 pha hạ áp."],
+        ["6. Lắp đặt tủ điện phân phối", "① Khi lắp vào tường ngoài, công trình, xử lý trám khe (caulking) tại khe hở của tủ điện để nước không xâm nhập vào tủ.\n② Khi lắp tủ điện, phải xem xét kỹ độ dày tường và độ dày vật lắp đặt từ trước để tủ điện phân phối được cố định chắc chắn."]
+      ],
+      "explanation_vi": "※ Chọn 2 trong số 1〜6 ở trên, mỗi mục viết 2 nội dung là đủ. (Nội dung trên chỉ là ví dụ tham khảo - nếu nội dung đúng thì viết gì cũng được.)"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "jp": "2-2　電気テキスト　p.120, 121",
+      "vi": "2-2 - Giáo trình điện tr.120, 121",
+      "explanation_vi": null
+    },
+    {
+      "type": "bullet_list",
+      "items_jp": [
+        "(1) 名称：電力ヒューズ付高圧交流負荷開閉器\n　　略称：PF付LBS",
+        "(2) 機能：電路を通常状態で通電、遮断する装置で、短絡、過負荷時にはヒューズで高速しゃ断を行う。"
+      ],
+      "items_vi": [
+        "(1) Tên gọi: Cầu dao phụ tải xoay chiều cao áp có kèm cầu chì công suất\n　　Tên viết tắt: PF付LBS",
+        "(2) Chức năng: Là thiết bị đóng điện, cắt điện cho mạch điện ở trạng thái bình thường; khi ngắn mạch, quá tải thì dùng cầu chì để ngắt nhanh."
+      ],
+      "explanation_vi": null
+    }
+  ]
+}
