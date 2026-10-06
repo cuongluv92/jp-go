@@ -16,7 +16,11 @@
       "level": 3,
       "jp": "【解説】　電気テキスト p.120〜121",
       "vi": "[Giải đáp] - Giáo trình điện tr.120~121",
-      "explanation_vi": null
+      "explanation_vi": null,
+      "furigana_tokens": [
+        { "surface": "解説", "reading": "かいせつ" },
+        { "surface": "電気", "reading": "でんき" }
+      ]
     },
     {
       "type": "table",
@@ -42,7 +46,146 @@
         ["H30, R4", "Máy cắt cao áp / CB", "Ngắt mạch điện khi xảy ra sự cố như ngắn mạch v.v. phát sinh ở phía hạ áp tính từ biến dòng dưới máy cắt."],
         ["R3", "Tụ điện công suất (tụ bù sớm pha) / SC", "Cải thiện hệ số công suất của tải, giảm tổn thất điện năng."]
       ],
-      "explanation_vi": "Bảng này khớp theo đúng thứ tự năm/vị trí đã mô tả ở bảng trang 24 (ví dụ H28,R6 ở trang 24 mô tả 'ký hiệu hình trụ đứng nối đất' - đúng là ký hiệu chống sét van LA; R3 mô tả 'hình chữ nhật 2 gạch ngang' - đúng là tụ điện SC)."
+      "explanation_vi": "Bảng này khớp theo đúng thứ tự năm/vị trí đã mô tả ở bảng trang 24 (ví dụ H28,R6 ở trang 24 mô tả 'ký hiệu hình trụ đứng nối đất' - đúng là ký hiệu chống sét van LA; R3 mô tả 'hình chữ nhật 2 gạch ngang' - đúng là tụ điện SC).",
+      "headers_furigana_tokens": [
+        [{ "surface": "年度", "reading": "ねんど" }],
+        [
+          { "surface": "名称", "reading": "めいしょう" },
+          { "surface": "略称", "reading": "りゃくしょう" }
+        ],
+        [{ "surface": "機能", "reading": "きのう" }]
+      ],
+      "rows_furigana_tokens": [
+        [
+          [],
+          [
+            { "surface": "区分開閉器", "reading": "くぶんかいへいき" },
+            { "surface": "地絡継電装置付高圧負荷開閉器", "reading": "じらくけいでんそうちつきこうあつふかかいへいき" },
+            { "surface": "付", "reading": "つき" }
+          ],
+          [
+            { "surface": "保安上", "reading": "ほあんじょう" },
+            { "surface": "責任分界点", "reading": "せきにんぶんかいてん" },
+            { "surface": "工事", "reading": "こうじ" },
+            { "surface": "事故", "reading": "じこ" },
+            { "surface": "点検等", "reading": "てんけんとう" },
+            { "surface": "電路", "reading": "でんろ" },
+            { "surface": "開路", "reading": "かいろ" },
+            { "surface": "区別", "reading": "くべつ" },
+            { "surface": "分断", "reading": "ぶんだん" },
+            { "surface": "開閉器", "reading": "かいへいき" }
+          ]
+        ],
+        [
+          [],
+          [{ "surface": "電力需給用計器用変成器", "reading": "でんりょくじゅきゅうようけいきようへんせいき" }],
+          [
+            { "surface": "一般的", "reading": "いっぱんてき" },
+            { "surface": "電力会社", "reading": "でんりょくがいしゃ" },
+            { "surface": "取引用", "reading": "とりひきよう" },
+            { "surface": "電力量", "reading": "でんりょくりょう" },
+            { "surface": "計量", "reading": "けいりょう" },
+            { "surface": "需要家設備", "reading": "じゅようかせつび" },
+            { "surface": "受電点", "reading": "じゅでんてん" },
+            { "surface": "設置", "reading": "せっち" },
+            { "surface": "変成器", "reading": "へんせいき" },
+            { "surface": "計器用変圧器", "reading": "けいきようへんあつき" },
+            { "surface": "変流器", "reading": "へんりゅうき" },
+            { "surface": "箱", "reading": "はこ" },
+            { "surface": "中", "reading": "なか" },
+            { "surface": "組み込んだ", "reading": "くみこんだ" }
+          ]
+        ],
+        [
+          [],
+          [{ "surface": "断路器", "reading": "だんろき" }],
+          [
+            { "surface": "保守点検時", "reading": "ほしゅてんけんじ" },
+            { "surface": "作業員", "reading": "さぎょういん" },
+            { "surface": "感電", "reading": "かんでん" },
+            { "surface": "防止", "reading": "ぼうし" },
+            { "surface": "定格電圧", "reading": "ていかくでんあつ" },
+            { "surface": "充電", "reading": "じゅうでん" },
+            { "surface": "電路", "reading": "でんろ" },
+            { "surface": "開閉", "reading": "かいへい" }
+          ]
+        ],
+        [
+          [],
+          [{ "surface": "避雷器", "reading": "ひらいき" }],
+          [
+            { "surface": "架空送配電線路", "reading": "かくうそうはいでんせんろ" },
+            { "surface": "接続", "reading": "せつぞく" },
+            { "surface": "重要", "reading": "じゅうよう" },
+            { "surface": "機械器具", "reading": "きかいきぐ" },
+            { "surface": "雷電圧", "reading": "らいでんあつ" },
+            { "surface": "他", "reading": "た" },
+            { "surface": "異常電圧", "reading": "いじょうでんあつ" },
+            { "surface": "絶縁破壊", "reading": "ぜつえんはかい" },
+            { "surface": "保護", "reading": "ほご" }
+          ]
+        ],
+        [
+          [],
+          [
+            { "surface": "電力", "reading": "でんりょく" },
+            { "surface": "付高圧交流負荷開閉器", "reading": "つきこうあつこうりゅうふかかいへいき" },
+            { "surface": "付", "reading": "つき" }
+          ],
+          [
+            { "surface": "電路", "reading": "でんろ" },
+            { "surface": "通常状態", "reading": "つうじょうじょうたい" },
+            { "surface": "通電", "reading": "つうでん" },
+            { "surface": "遮断", "reading": "しゃだん" },
+            { "surface": "装置", "reading": "そうち" },
+            { "surface": "短絡", "reading": "たんらく" },
+            { "surface": "過負荷時", "reading": "かふかじ" },
+            { "surface": "高速", "reading": "こうそく" },
+            { "surface": "断", "reading": "だん" },
+            { "surface": "行う", "reading": "おこなう" }
+          ]
+        ],
+        [
+          [],
+          [{ "surface": "直列", "reading": "ちょくれつ" }],
+          [
+            { "surface": "電力用", "reading": "でんりょくよう" },
+            { "surface": "高調波", "reading": "こうちょうは" },
+            { "surface": "過熱", "reading": "かねつ" },
+            { "surface": "焼損", "reading": "しょうそん" },
+            { "surface": "防止", "reading": "ぼうし" }
+          ]
+        ],
+        [
+          [],
+          [{ "surface": "高圧遮断器", "reading": "こうあつしゃだんき" }],
+          [
+            { "surface": "遮断器下", "reading": "しゃだんきか" },
+            { "surface": "変流器", "reading": "へんりゅうき" },
+            { "surface": "負圧側", "reading": "ふあつそく" },
+            { "surface": "発生", "reading": "はっせい" },
+            { "surface": "短絡等", "reading": "たんらくとう" },
+            { "surface": "故障時", "reading": "こしょうじ" },
+            { "surface": "電路", "reading": "でんろ" },
+            { "surface": "遮断", "reading": "しゃだん" }
+          ]
+        ],
+        [
+          [],
+          [
+            { "surface": "電力用", "reading": "でんりょくよう" },
+            { "surface": "進相用", "reading": "しんそうよう" }
+          ],
+          [
+            { "surface": "負荷", "reading": "ふか" },
+            { "surface": "力率", "reading": "りきりつ" },
+            { "surface": "改善", "reading": "かいぜん" },
+            { "surface": "電力損失", "reading": "でんりょくそんしつ" },
+            { "surface": "軽減", "reading": "けいげん" },
+            { "surface": "図る", "reading": "はかる" }
+          ]
+        ]
+      ]
     }
   ]
 }

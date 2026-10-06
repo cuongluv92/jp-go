@@ -15,7 +15,13 @@
       "level": 2,
       "jp": "【問題 No.4】次の問いに答えなさい。",
       "vi": "[Câu hỏi số 4] Hãy trả lời các câu hỏi sau.",
-      "explanation_vi": "(R6)"
+      "explanation_vi": "(R6)",
+      "furigana_tokens": [
+        { "surface": "問題", "reading": "もんだい" },
+        { "surface": "次", "reading": "つぎ" },
+        { "surface": "問い", "reading": "とい" },
+        { "surface": "答え", "reading": "こたえ" }
+      ]
     },
     {
       "type": "heading",
@@ -28,7 +34,16 @@
       "type": "paragraph",
       "jp": "図に示す直流回路網における起電力E〔V〕の値として、最も適当なものはどれか。",
       "vi": "Trong mạng mạch điện một chiều như hình vẽ, giá trị sức điện động E [V] nào dưới đây là phù hợp nhất?",
-      "explanation_vi": null
+      "explanation_vi": null,
+      "furigana_tokens": [
+        { "surface": "図", "reading": "ず" },
+        { "surface": "示す", "reading": "しめす" },
+        { "surface": "直流回路網", "reading": "ちょくりゅうかいろもう" },
+        { "surface": "起電力", "reading": "きでんりょく" },
+        { "surface": "値", "reading": "ち" },
+        { "surface": "最も", "reading": "もっとも" },
+        { "surface": "適当", "reading": "てきとう" }
+      ]
     },
     {
       "type": "image_placeholder",
@@ -53,7 +68,23 @@
       "type": "paragraph",
       "jp": "図に示す配電線路において変圧器の一次電流I₁〔A〕の値として、最も適当なものはどれか。\nただし、負荷はすべて抵抗負荷であり、変圧器と配電線路の損失及び変圧器の励磁電流は無視する。",
       "vi": "Trong đường dây phân phối điện như hình vẽ, giá trị dòng điện sơ cấp I₁ [A] của máy biến áp nào dưới đây là phù hợp nhất?\nTuy nhiên, tải đều là tải điện trở, và bỏ qua tổn thất của máy biến áp, đường dây phân phối cũng như dòng điện kích từ của máy biến áp.",
-      "explanation_vi": null
+      "explanation_vi": null,
+      "furigana_tokens": [
+        { "surface": "図", "reading": "ず" },
+        { "surface": "示す", "reading": "しめす" },
+        { "surface": "配電線路", "reading": "はいでんせんろ" },
+        { "surface": "変圧器", "reading": "へんあつき" },
+        { "surface": "一次電流", "reading": "いちじでんりゅう" },
+        { "surface": "値", "reading": "ち" },
+        { "surface": "最も", "reading": "もっとも" },
+        { "surface": "適当", "reading": "てきとう" },
+        { "surface": "負荷", "reading": "ふか" },
+        { "surface": "抵抗負荷", "reading": "ていこうふか" },
+        { "surface": "損失", "reading": "そんしつ" },
+        { "surface": "及", "reading": "および" },
+        { "surface": "励磁電流", "reading": "れいじでんりゅう" },
+        { "surface": "無視", "reading": "むし" }
+      ]
     },
     {
       "type": "image_placeholder",
@@ -72,7 +103,11 @@
       "level": 4,
       "jp": "【解説 No.4】　電気テキスト　1-p.4　2-p.28",
       "vi": "[Giải đáp số 4] - Giáo trình điện 1-tr.4, 2-tr.28",
-      "explanation_vi": "Sách gốc ghi tham chiếu rút gọn \"1-p.4 2-p.28\" - trùng với trang tham chiếu của 問題No.1 (1-1 p.4, 1-2 p.28) vì cùng áp dụng công thức giống nhau."
+      "explanation_vi": "Sách gốc ghi tham chiếu rút gọn \"1-p.4 2-p.28\" - trùng với trang tham chiếu của 問題No.1 (1-1 p.4, 1-2 p.28) vì cùng áp dụng công thức giống nhau.",
+      "furigana_tokens": [
+        { "surface": "解説", "reading": "かいせつ" },
+        { "surface": "電気", "reading": "でんき" }
+      ]
     },
     {
       "type": "table",
@@ -80,7 +115,16 @@
       "rows_jp": [["4-1", "②", "12V"], ["4-2", "④", "7.5A"]],
       "headers_vi": ["Câu", "Đáp án đúng", "Giá trị"],
       "rows_vi": [["4-1", "②", "12V"], ["4-2", "④", "7.5A"]],
-      "explanation_vi": null
+      "explanation_vi": null,
+      "headers_furigana_tokens": [
+        [{ "surface": "問", "reading": "とい" }],
+        [],
+        []
+      ],
+      "rows_furigana_tokens": [
+        [[], [], []],
+        [[], [], []]
+      ]
     }
   ]
 }

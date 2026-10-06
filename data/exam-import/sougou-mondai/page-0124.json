@@ -16,13 +16,37 @@
       "level": 2,
       "jp": "3-2．高圧受電設備の単線結線図",
       "vi": "3-2. Sơ đồ đấu nối một sợi của thiết bị nhận điện cao áp",
-      "explanation_vi": null
+      "explanation_vi": null,
+      "furigana_tokens": [
+        { "surface": "高圧受電設備", "reading": "こうあつじゅでんせつび" },
+        { "surface": "単線結線図", "reading": "たんせんけっせんず" }
+      ]
     },
     {
       "type": "note",
       "jp": "【問題】図に示す、電気事業者から供給を受ける高圧受電設備の単線結線図において、次の問に答えなさい。\n(1) 機器の名称又は略称を記入しなさい。\n(2) 機器の機能を記述しなさい。",
       "vi": "[Câu hỏi] Trong sơ đồ đấu nối một sợi của thiết bị nhận điện cao áp nhận nguồn từ công ty điện lực như hình vẽ, hãy trả lời các câu hỏi sau.\n(1) Ghi tên hoặc tên viết tắt của thiết bị.\n(2) Mô tả chức năng của thiết bị.",
-      "explanation_vi": null
+      "explanation_vi": null,
+      "furigana_tokens": [
+        { "surface": "問題", "reading": "もんだい" },
+        { "surface": "図", "reading": "ず" },
+        { "surface": "示す", "reading": "しめす" },
+        { "surface": "電気事業者", "reading": "でんきじぎょうしゃ" },
+        { "surface": "供給", "reading": "きょうきゅう" },
+        { "surface": "受ける", "reading": "うける" },
+        { "surface": "高圧受電設備", "reading": "こうあつじゅでんせつび" },
+        { "surface": "単線結線図", "reading": "たんせんけっせんず" },
+        { "surface": "次", "reading": "つぎ" },
+        { "surface": "問", "reading": "とい" },
+        { "surface": "答え", "reading": "こたえ" },
+        { "surface": "機器", "reading": "きき" },
+        { "surface": "名称", "reading": "めいしょう" },
+        { "surface": "又", "reading": "また" },
+        { "surface": "略称", "reading": "りゃくしょう" },
+        { "surface": "記入", "reading": "きにゅう" },
+        { "surface": "機能", "reading": "きのう" },
+        { "surface": "記述", "reading": "きじゅつ" }
+      ]
     },
     {
       "type": "image_placeholder",
@@ -54,7 +78,18 @@
         ["H25, R1", "Khung nét đứt bao quanh ký hiệu hình tròn ở nhánh rẽ thứ ba."],
         ["R3", "Khung nét đứt ngay dưới vị trí H25,R1 - ký hiệu hình chữ nhật có 2 gạch ngang (tụ điện)."]
       ],
-      "explanation_vi": "Bảng này CHỈ mô tả vị trí/hình dạng ký hiệu quan sát được trên sơ đồ gốc để tiện tra cứu, KHÔNG phải đáp án (tên và chức năng thiết bị) vì bản thân trang sách không in sẵn đáp án - đó chính là nội dung học viên phải tự điền."
+      "explanation_vi": "Bảng này CHỈ mô tả vị trí/hình dạng ký hiệu quan sát được trên sơ đồ gốc để tiện tra cứu, KHÔNG phải đáp án (tên và chức năng thiết bị) vì bản thân trang sách không in sẵn đáp án - đó chính là nội dung học viên phải tự điền.",
+      "headers_furigana_tokens": [[], []],
+      "rows_furigana_tokens": [
+        [[], [{ "surface": "架空引込", "reading": "かくうひきこみ" }]],
+        [[], []],
+        [[], []],
+        [[], []],
+        [[], []],
+        [[], []],
+        [[], []],
+        [[], []]
+      ]
     }
   ]
 }

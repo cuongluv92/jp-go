@@ -15,7 +15,13 @@
       "level": 2,
       "jp": "【問題 No.2】次の問いに答えなさい。",
       "vi": "[Câu hỏi số 2] Hãy trả lời các câu hỏi sau.",
-      "explanation_vi": "(R4)"
+      "explanation_vi": "(R4)",
+      "furigana_tokens": [
+        { "surface": "問題", "reading": "もんだい" },
+        { "surface": "次", "reading": "つぎ" },
+        { "surface": "問い", "reading": "とい" },
+        { "surface": "答え", "reading": "こたえ" }
+      ]
     },
     {
       "type": "heading",
@@ -28,7 +34,18 @@
       "type": "paragraph",
       "jp": "図に示すRLC直列回路に交流電圧を加えたとき、当該回路の有効電力の値〔W〕として、正しいものはどれか。",
       "vi": "Khi đặt điện áp xoay chiều vào mạch nối tiếp RLC như hình vẽ, giá trị công suất tác dụng [W] của mạch đó nào dưới đây là đúng?",
-      "explanation_vi": null
+      "explanation_vi": null,
+      "furigana_tokens": [
+        { "surface": "図", "reading": "ず" },
+        { "surface": "示す", "reading": "しめす" },
+        { "surface": "直列回路", "reading": "ちょくれつかいろ" },
+        { "surface": "交流電圧", "reading": "こうりゅうでんあつ" },
+        { "surface": "加えた", "reading": "くわえた" },
+        { "surface": "当該回路", "reading": "とうがいかいろ" },
+        { "surface": "有効電力", "reading": "ゆうこうでんりょく" },
+        { "surface": "値", "reading": "ち" },
+        { "surface": "正しい", "reading": "ただしい" }
+      ]
     },
     {
       "type": "image_placeholder",
@@ -53,7 +70,20 @@
       "type": "paragraph",
       "jp": "出力450kWで運転している変圧器がある。そのときの無負荷損は20kW、負荷損は30kWであった。このときの変圧器の効率〔%〕として、正しいものはどれか。\nただし、無負荷損、負荷損以外の損失はないものとし、小数第一位を四捨五入する。",
       "vi": "Có một máy biến áp đang vận hành với công suất đầu ra 450kW. Khi đó tổn thất không tải là 20kW, tổn thất có tải là 30kW. Giá trị hiệu suất [%] của máy biến áp lúc này nào dưới đây là đúng?\nTuy nhiên, giả sử không có tổn thất nào khác ngoài tổn thất không tải và tổn thất có tải, và làm tròn đến hàng đơn vị (bỏ phần thập phân theo quy tắc làm tròn).",
-      "explanation_vi": null
+      "explanation_vi": null,
+      "furigana_tokens": [
+        { "surface": "出力", "reading": "しゅつりょく" },
+        { "surface": "運転", "reading": "うんてん" },
+        { "surface": "変圧器", "reading": "へんあつき" },
+        { "surface": "無負荷損", "reading": "むふかそん" },
+        { "surface": "負荷損", "reading": "ふかそん" },
+        { "surface": "効率", "reading": "こうりつ" },
+        { "surface": "正しい", "reading": "ただしい" },
+        { "surface": "以外", "reading": "いがい" },
+        { "surface": "損失", "reading": "そんしつ" },
+        { "surface": "小数第一位", "reading": "しょうすうだいいちい" },
+        { "surface": "四捨五入", "reading": "ししゃごにゅう" }
+      ]
     },
     {
       "type": "bullet_list",
@@ -66,7 +96,11 @@
       "level": 4,
       "jp": "【解説 No.2】　電気テキスト　2-1 p.17〜20　2-2 p.28",
       "vi": "[Giải đáp số 2] - Giáo trình điện 2-1 tr.17~20, 2-2 tr.28",
-      "explanation_vi": null
+      "explanation_vi": null,
+      "furigana_tokens": [
+        { "surface": "解説", "reading": "かいせつ" },
+        { "surface": "電気", "reading": "でんき" }
+      ]
     },
     {
       "type": "table",
@@ -74,7 +108,16 @@
       "rows_jp": [["2-1", "③", "1,600W"], ["2-2", "①", "90%"]],
       "headers_vi": ["Câu", "Đáp án đúng", "Giá trị"],
       "rows_vi": [["2-1", "③", "1.600W"], ["2-2", "①", "90%"]],
-      "explanation_vi": null
+      "explanation_vi": null,
+      "headers_furigana_tokens": [
+        [{ "surface": "問", "reading": "とい" }],
+        [],
+        []
+      ],
+      "rows_furigana_tokens": [
+        [[], [], []],
+        [[], [], []]
+      ]
     }
   ]
 }

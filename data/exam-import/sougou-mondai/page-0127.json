@@ -15,7 +15,10 @@
       "level": 1,
       "jp": "4．計算問題",
       "vi": "4. Bài toán tính toán",
-      "explanation_vi": null
+      "explanation_vi": null,
+      "furigana_tokens": [
+        { "surface": "計算問題", "reading": "けいさんもんだい" }
+      ]
     }
   ]
 }

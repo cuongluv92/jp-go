@@ -15,7 +15,13 @@
       "level": 2,
       "jp": "【問題 No.3】次の問いに答えなさい。",
       "vi": "[Câu hỏi số 3] Hãy trả lời các câu hỏi sau.",
-      "explanation_vi": null
+      "explanation_vi": null,
+      "furigana_tokens": [
+        { "surface": "問題", "reading": "もんだい" },
+        { "surface": "次", "reading": "つぎ" },
+        { "surface": "問い", "reading": "とい" },
+        { "surface": "答え", "reading": "こたえ" }
+      ]
     },
     {
       "type": "heading",
@@ -28,7 +34,18 @@
       "type": "paragraph",
       "jp": "図に示すRLC直列回路に交流電圧を加えたとき、XLの両端の電圧VL〔V〕として、最も適当なものはどれか。",
       "vi": "Khi đặt điện áp xoay chiều vào mạch nối tiếp RLC như hình vẽ, giá trị điện áp VL [V] ở hai đầu XL nào dưới đây là phù hợp nhất?",
-      "explanation_vi": null
+      "explanation_vi": null,
+      "furigana_tokens": [
+        { "surface": "図", "reading": "ず" },
+        { "surface": "示す", "reading": "しめす" },
+        { "surface": "直列回路", "reading": "ちょくれつかいろ" },
+        { "surface": "交流電圧", "reading": "こうりゅうでんあつ" },
+        { "surface": "加えた", "reading": "くわえた" },
+        { "surface": "両端", "reading": "りょうたん" },
+        { "surface": "電圧", "reading": "でんあつ" },
+        { "surface": "最も", "reading": "もっとも" },
+        { "surface": "適当", "reading": "てきとう" }
+      ]
     },
     {
       "type": "image_placeholder",
@@ -53,7 +70,24 @@
       "type": "paragraph",
       "jp": "図に示す配電線路において、C点の線間電圧〔V〕として、最も適当なものはどれか。\nただし、電線1線あたりの抵抗は、A-B間で0.2Ω、B-C間で0.1Ω、負荷は抵抗負荷とし、線路リアクタンスは無視する。",
       "vi": "Trong đường dây phân phối điện như hình vẽ, giá trị điện áp dây tại điểm C [V] nào dưới đây là phù hợp nhất?\nTuy nhiên, điện trở mỗi dây dẫn là 0,2Ω giữa A-B, 0,1Ω giữa B-C, tải là tải điện trở, và bỏ qua điện kháng đường dây.",
-      "explanation_vi": null
+      "explanation_vi": null,
+      "furigana_tokens": [
+        { "surface": "図", "reading": "ず" },
+        { "surface": "示す", "reading": "しめす" },
+        { "surface": "配電線路", "reading": "はいでんせんろ" },
+        { "surface": "点", "reading": "てん" },
+        { "surface": "線間電圧", "reading": "せんかんでんあつ" },
+        { "surface": "最も", "reading": "もっとも" },
+        { "surface": "適当", "reading": "てきとう" },
+        { "surface": "電線", "reading": "でんせん" },
+        { "surface": "線", "reading": "せん" },
+        { "surface": "抵抗", "reading": "ていこう" },
+        { "surface": "間", "reading": "かん" },
+        { "surface": "負荷", "reading": "ふか" },
+        { "surface": "抵抗負荷", "reading": "ていこうふか" },
+        { "surface": "線路", "reading": "せんろ" },
+        { "surface": "無視", "reading": "むし" }
+      ]
     },
     {
       "type": "image_placeholder",
@@ -72,7 +106,11 @@
       "level": 4,
       "jp": "【解説 No.3】　電気テキスト　3-1 p.17〜19　3-2 p.2〜3",
       "vi": "[Giải đáp số 3] - Giáo trình điện 3-1 tr.17~19, 3-2 tr.2~3",
-      "explanation_vi": null
+      "explanation_vi": null,
+      "furigana_tokens": [
+        { "surface": "解説", "reading": "かいせつ" },
+        { "surface": "電気", "reading": "でんき" }
+      ]
     },
     {
       "type": "table",
@@ -80,7 +118,16 @@
       "rows_jp": [["3-1", "④", "90V"], ["3-2", "②", "200V"]],
       "headers_vi": ["Câu", "Đáp án đúng", "Giá trị"],
       "rows_vi": [["3-1", "④", "90V"], ["3-2", "②", "200V"]],
-      "explanation_vi": null
+      "explanation_vi": null,
+      "headers_furigana_tokens": [
+        [{ "surface": "問", "reading": "とい" }],
+        [],
+        []
+      ],
+      "rows_furigana_tokens": [
+        [[], [], []],
+        [[], [], []]
+      ]
     }
   ]
 }

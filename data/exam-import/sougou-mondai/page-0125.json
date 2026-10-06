@@ -16,7 +16,10 @@
       "level": 3,
       "jp": "＜解答欄＞",
       "vi": "[Khung trả lời]",
-      "explanation_vi": null
+      "explanation_vi": null,
+      "furigana_tokens": [
+        { "surface": "解答欄", "reading": "かいとうらん" }
+      ]
     },
     {
       "type": "table",
@@ -42,7 +45,26 @@
         ["H30, R4", "", ""],
         ["R3", "", ""]
       ],
-      "explanation_vi": "Đây chỉ là khung trống để tự viết tay (sách gốc không in sẵn nội dung các ô này). Xem đáp án thật ở trang 26."
+      "explanation_vi": "Đây chỉ là khung trống để tự viết tay (sách gốc không in sẵn nội dung các ô này). Xem đáp án thật ở trang 26.",
+      "headers_furigana_tokens": [
+        [{ "surface": "年度", "reading": "ねんど" }],
+        [
+          { "surface": "名称", "reading": "めいしょう" },
+          { "surface": "又", "reading": "また" },
+          { "surface": "略称", "reading": "りゃくしょう" }
+        ],
+        [{ "surface": "機能", "reading": "きのう" }]
+      ],
+      "rows_furigana_tokens": [
+        [[], [], []],
+        [[], [], []],
+        [[], [], []],
+        [[], [], []],
+        [[], [], []],
+        [[], [], []],
+        [[], [], []],
+        [[], [], []]
+      ]
     }
   ]
 }

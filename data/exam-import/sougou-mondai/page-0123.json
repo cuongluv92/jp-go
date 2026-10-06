@@ -16,7 +16,15 @@
       "level": 4,
       "jp": "◎6．電動機への配管配線接続（R3, 5）　電気テキスト p.140（参考）",
       "vi": "◎6. Lắp đặt ống/dây dẫn đến động cơ điện (R3, 5) - Giáo trình điện tr.140 (tham khảo)",
-      "explanation_vi": null
+      "explanation_vi": null,
+      "furigana_tokens": [
+        { "surface": "電動機", "reading": "でんどうき" },
+        { "surface": "配管", "reading": "はいかん" },
+        { "surface": "配線", "reading": "はいせん" },
+        { "surface": "接続", "reading": "せつぞく" },
+        { "surface": "電気", "reading": "でんき" },
+        { "surface": "参考", "reading": "さんこう" }
+      ]
     },
     {
       "type": "bullet_list",
@@ -28,14 +36,46 @@
         "① Đối với phần dây dẫn đấu nối trực tiếp vào hộp đầu cực của động cơ điện, sử dụng ống luồn dây kim loại dạng mềm (trong nhà nói chung) để có thể hấp thụ độ rung của động cơ.",
         "② Tại nơi nhiều hơi ẩm, nhiều nước hoặc ngoài trời, sử dụng ống luồn dây kim loại dạng mềm bọc nhựa để phòng ngừa ống dẫn bị ăn mòn."
       ],
-      "explanation_vi": null
+      "explanation_vi": null,
+      "items_furigana_tokens": [
+        [
+          { "surface": "電動機端子箱", "reading": "でんどうきたんしばこ" },
+          { "surface": "直接接続", "reading": "ちょくせつせつぞく" },
+          { "surface": "部分", "reading": "ぶぶん" },
+          { "surface": "配線", "reading": "はいせん" },
+          { "surface": "電動機", "reading": "でんどうき" },
+          { "surface": "振動", "reading": "しんどう" },
+          { "surface": "吸収", "reading": "きゅうしゅう" },
+          { "surface": "一般屋内", "reading": "いっぱんおくない" },
+          { "surface": "金属製可", "reading": "きんぞくせいか" },
+          { "surface": "電線管", "reading": "でんせんかん" },
+          { "surface": "使用", "reading": "しよう" }
+        ],
+        [
+          { "surface": "湿気", "reading": "しっき" },
+          { "surface": "多い", "reading": "おおい" },
+          { "surface": "場所", "reading": "ばしょ" },
+          { "surface": "水気", "reading": "みずけ" },
+          { "surface": "屋外", "reading": "おくがい" },
+          { "surface": "電線管", "reading": "でんせんかん" },
+          { "surface": "腐食", "reading": "ふしょく" },
+          { "surface": "防ぐ", "reading": "ふせぐ" },
+          { "surface": "被覆", "reading": "ひふく" },
+          { "surface": "金属製可", "reading": "きんぞくせいか" },
+          { "surface": "使用", "reading": "しよう" }
+        ]
+      ]
     },
     {
       "type": "heading",
       "level": 4,
       "jp": "7．分電盤の取付け（R3, 5, 7）",
       "vi": "7. Lắp đặt tủ điện phân phối (R3, 5, 7)",
-      "explanation_vi": null
+      "explanation_vi": null,
+      "furigana_tokens": [
+        { "surface": "分電盤", "reading": "ぶんでんばん" },
+        { "surface": "取付け", "reading": "とりつけ" }
+      ]
     },
     {
       "type": "bullet_list",
@@ -47,14 +87,43 @@
         "① Khi lắp vào tường ngoài, công trình, xử lý trám khe (caulking) tại khe hở của tủ điện để nước không xâm nhập vào tủ.",
         "② Khi lắp tủ điện, phải xem xét kỹ độ dày tường và độ dày vật lắp đặt từ trước để tủ điện phân phối được cố định chắc chắn."
       ],
-      "explanation_vi": null
+      "explanation_vi": null,
+      "items_furigana_tokens": [
+        [
+          { "surface": "外壁", "reading": "がいへき" },
+          { "surface": "建物", "reading": "たてもの" },
+          { "surface": "取り付ける", "reading": "とりつける" },
+          { "surface": "場合", "reading": "ばあい" },
+          { "surface": "水", "reading": "みず" },
+          { "surface": "盤", "reading": "ばん" },
+          { "surface": "侵入", "reading": "しんにゅう" },
+          { "surface": "盤隙間", "reading": "ばんすきま" },
+          { "surface": "処理", "reading": "しょり" },
+          { "surface": "施す", "reading": "ほどこす" }
+        ],
+        [
+          { "surface": "盤", "reading": "ばん" },
+          { "surface": "取付", "reading": "とりつけ" },
+          { "surface": "分電盤", "reading": "ぶんでんばん" },
+          { "surface": "十分", "reading": "じゅうぶん" },
+          { "surface": "固定", "reading": "こてい" },
+          { "surface": "事前", "reading": "じぜん" },
+          { "surface": "壁厚", "reading": "へきこう" },
+          { "surface": "物厚", "reading": "ぶっこう" },
+          { "surface": "考慮", "reading": "こうりょ" }
+        ]
+      ]
     },
     {
       "type": "heading",
       "level": 4,
       "jp": "8．機器搬入（R3, 5, 7）",
       "vi": "8. Vận chuyển thiết bị vào (R3, 5, 7)",
-      "explanation_vi": null
+      "explanation_vi": null,
+      "furigana_tokens": [
+        { "surface": "機器", "reading": "きき" },
+        { "surface": "搬入", "reading": "はんにゅう" }
+      ]
     },
     {
       "type": "bullet_list",
@@ -66,14 +135,39 @@
         "① Sử dụng bảng vận chuyển vật tư v.v. khi vận chuyển các loại thiết bị vào hiện trường để tránh vận chuyển nhầm hoặc sót.",
         "② Xác nhận trước vị trí, kích thước cửa vận chuyển vào để phòng tránh va chạm với xung quanh."
       ],
-      "explanation_vi": null
+      "explanation_vi": null,
+      "items_furigana_tokens": [
+        [
+          { "surface": "各種", "reading": "かくしゅ" },
+          { "surface": "機器", "reading": "きき" },
+          { "surface": "誤搬入", "reading": "ごはんにゅう" },
+          { "surface": "搬入漏", "reading": "はんにゅうもれ" },
+          { "surface": "無", "reading": "な" },
+          { "surface": "資材搬入表等", "reading": "しざいはんにゅうひょうとう" },
+          { "surface": "使用", "reading": "しよう" },
+          { "surface": "現場", "reading": "げんば" },
+          { "surface": "搬入", "reading": "はんにゅう" }
+        ],
+        [
+          { "surface": "周囲", "reading": "しゅうい" },
+          { "surface": "接触", "reading": "せっしょく" },
+          { "surface": "防止", "reading": "ぼうし" },
+          { "surface": "搬入口", "reading": "はんにゅうこう" },
+          { "surface": "位置", "reading": "いち" },
+          { "surface": "大きさ", "reading": "おおきさ" },
+          { "surface": "確認", "reading": "かくにん" }
+        ]
+      ]
     },
     {
       "type": "heading",
       "level": 4,
       "jp": "◎9．ケーブルラックの施工（R5）",
       "vi": "◎9. Thi công giá đỡ cáp (cable rack) (R5)",
-      "explanation_vi": null
+      "explanation_vi": null,
+      "furigana_tokens": [
+        { "surface": "施工", "reading": "せこう" }
+      ]
     },
     {
       "type": "bullet_list",
@@ -85,14 +179,43 @@
         "① Chú ý khoảng cách lắp đặt giá đỡ cáp sao cho trong lúc làm việc không chạm vào đường dây điện v.v. phía trên đầu.",
         "② Vì dây dẫn thiết bị của các hệ thống khác xung quanh như điều hòa không khí cũng được lắp đặt, thi công, nên sau khi bàn giao cần xác nhận xem có vấn đề gì về mặt sử dụng hoặc bảo trì hay không."
       ],
-      "explanation_vi": null
+      "explanation_vi": null,
+      "items_furigana_tokens": [
+        [
+          { "surface": "設置高さ", "reading": "せっちたかさ" },
+          { "surface": "作業中頭上", "reading": "さぎょうちゅうずじょう" },
+          { "surface": "電線等", "reading": "でんせんとう" },
+          { "surface": "接触", "reading": "せっしょく" },
+          { "surface": "離隔距離", "reading": "りかくきょり" },
+          { "surface": "注意", "reading": "ちゅうい" }
+        ],
+        [
+          { "surface": "空調", "reading": "くうちょう" },
+          { "surface": "周辺", "reading": "しゅうへん" },
+          { "surface": "他", "reading": "ほか" },
+          { "surface": "設備", "reading": "せつび" },
+          { "surface": "機器配線", "reading": "ききはいせん" },
+          { "surface": "設置", "reading": "せっち" },
+          { "surface": "施工", "reading": "せこう" },
+          { "surface": "引渡し", "reading": "ひきわたし" },
+          { "surface": "後", "reading": "ご" },
+          { "surface": "使用上", "reading": "しようじょう" },
+          { "surface": "性", "reading": "せい" },
+          { "surface": "問題", "reading": "もんだい" },
+          { "surface": "確認", "reading": "かくにん" }
+        ]
+      ]
     },
     {
       "type": "heading",
       "level": 4,
       "jp": "◎10．引込口の防水処理（R5）",
       "vi": "◎10. Xử lý chống thấm nước tại cửa dẫn vào (R5)",
-      "explanation_vi": null
+      "explanation_vi": null,
+      "furigana_tokens": [
+        { "surface": "引込口", "reading": "ひきこみぐち" },
+        { "surface": "防水処理", "reading": "ぼうすいしょり" }
+      ]
     },
     {
       "type": "bullet_list",
@@ -104,7 +227,31 @@
         "① Khi lắp tủ phân phối điện vào công trình, thực hiện xử lý chống thấm như trám khe v.v. để nước không xâm nhập qua khe hở.",
         "② Khi lắp đặt ống dẫn dây ở ngoài trời, phải lưu ý tạo lỗ thoát nước ở vị trí thấp nhất."
       ],
-      "explanation_vi": null
+      "explanation_vi": null,
+      "items_furigana_tokens": [
+        [
+          { "surface": "配電箱", "reading": "はいでんばこ" },
+          { "surface": "建物", "reading": "たてもの" },
+          { "surface": "取付ける", "reading": "とりつける" },
+          { "surface": "場合", "reading": "ばあい" },
+          { "surface": "隙間", "reading": "すきま" },
+          { "surface": "水", "reading": "みず" },
+          { "surface": "浸入", "reading": "しんにゅう" },
+          { "surface": "処理等", "reading": "しょりとう" },
+          { "surface": "防水処理", "reading": "ぼうすいしょり" },
+          { "surface": "行う", "reading": "おこなう" }
+        ],
+        [
+          { "surface": "屋外", "reading": "おくがい" },
+          { "surface": "電線管", "reading": "でんせんかん" },
+          { "surface": "設ける", "reading": "もうける" },
+          { "surface": "場合", "reading": "ばあい" },
+          { "surface": "最下部", "reading": "さいかぶ" },
+          { "surface": "水抜き孔", "reading": "みずぬきこう" },
+          { "surface": "事", "reading": "こと" },
+          { "surface": "留意", "reading": "りゅうい" }
+        ]
+      ]
     }
   ]
 }
