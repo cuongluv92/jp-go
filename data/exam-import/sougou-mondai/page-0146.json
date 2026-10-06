@@ -1,0 +1,75 @@
+{
+  "book_slug": "sougou-mondai",
+  "section_path": [
+    { "code": "doc2", "title_jp": "資料No.2 第二次検定用教材", "title_vi": "Cuốn 2 - Tài liệu ôn thi lần 2" },
+    { "code": "doc2-6", "title_jp": "6. 法規", "title_vi": "6. Pháp quy" }
+  ],
+  "page_number": 146,
+  "page_label": "p.46",
+  "source_image_path": null,
+  "notes_vi": "[資料No.2 2級電気工事施工管理技術研修 第二次検定用教材（2026年度用）. 【問題No.1】và 【解説No.1】- đề R1, dạng tìm từ gạch chân sai trong văn bản luật (建設業法/労働安全衛生法/電気工事士法) và cho biết từ đúng. Các số khoanh tròn ①②③ đánh dấu đúng vị trí từ được gạch chân trong nguyên văn sách.]",
+  "review_status": "draft",
+  "blocks": [
+    {
+      "type": "heading",
+      "level": 2,
+      "jp": "【問題 No.1】「建設業法」、「労働安全衛生法」及び「電気工事士法」に定められている法文において、下線部の語句のうち誤っている語句の番号をそれぞれ1つあげ、それに対する正しい語句を答えなさい。",
+      "vi": "[Câu hỏi số 1] Trong các điều luật được quy định tại \"Luật Xây dựng\", \"Luật An toàn và Vệ sinh Lao động\" và \"Luật Thợ điện\", hãy nêu ra 1 số thứ tự của từ gạch chân bị sai trong mỗi câu, và trả lời từ đúng tương ứng.",
+      "explanation_vi": "(R1)"
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "jp": "1-1 「建設業法」",
+      "vi": "1-1 \"Luật Xây dựng\"",
+      "explanation_vi": null
+    },
+    {
+      "type": "paragraph",
+      "jp": "元請負人は、下請負人からその請け負った建設工事が完成した旨の通知①を受けたときは、当該通知を受けた日から20日②以内で、かつ、できる限り短い期間内に、その完成を確認するための試験③を完了しなければならない。",
+      "vi": "Khi nhà thầu chính nhận được thông báo① từ nhà thầu phụ rằng công trình xây dựng mà nhà thầu phụ đã nhận thầu đã hoàn thành, thì trong vòng 20 ngày② kể từ ngày nhận được thông báo đó, và trong khoảng thời gian ngắn nhất có thể, phải hoàn thành việc thử nghiệm③ để xác nhận sự hoàn thành đó.",
+      "explanation_vi": null
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "jp": "1-2 「労働安全衛生法」",
+      "vi": "1-2 \"Luật An toàn và Vệ sinh Lao động\"",
+      "explanation_vi": null
+    },
+    {
+      "type": "paragraph",
+      "jp": "事業者①は、労働者を雇い入れたときは、当該労働者に対し、厚生労働省令で定めるところにより、その従事する業務に関する安全又は衛生②のための聴取③を行わなければならない。",
+      "vi": "Người sử dụng lao động① khi tuyển dụng người lao động, phải thực hiện việc lắng nghe ý kiến③ về an toàn hoặc vệ sinh② liên quan đến công việc mà người lao động đó đảm nhận, đối với người lao động đó, theo quy định của Bộ lệnh Bộ Y tế, Lao động và Phúc lợi.",
+      "explanation_vi": null
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "jp": "1-3 「電気工事士法」",
+      "vi": "1-3 \"Luật Thợ điện\"",
+      "explanation_vi": null
+    },
+    {
+      "type": "paragraph",
+      "jp": "第一種電気工事士は、経済産業省令で定めるやむを得ない事由がある場合を除き、第一種電気工事士①免状の交付を受けた日から5年②以内に、経済産業省令で定めるところにより、経済産業大臣の指定する者が行う一般用③電気工作物等の保安に関する講習を受けなければならない。",
+      "vi": "Thợ điện hạng 1, trừ trường hợp có lý do bất khả kháng theo quy định của Bộ lệnh Kinh tế - Công nghiệp, trong vòng 5 năm② kể từ ngày được cấp Chứng chỉ thợ điện hạng 1①, phải tham gia khóa đào tạo về bảo trì thiết bị điện dùng chung③ do người được Bộ trưởng Bộ Kinh tế - Công nghiệp chỉ định tổ chức, theo quy định của Bộ lệnh Kinh tế - Công nghiệp.",
+      "explanation_vi": "Số ① trong ảnh gốc nằm ở vị trí '第一種電気工事士' ngay trước '免状の交付を受けた日から' (xuất hiện lần 2 trong câu, không phải lần đầu ở đầu câu)."
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "jp": "【解説 No.1】　施工マニュアル　1-p.173　2-p.227　電気テキスト　3-p.197",
+      "vi": "[Giải đáp số 1] - Sổ tay thi công 1-tr.173, 2-tr.227; Giáo trình điện 3-tr.197",
+      "explanation_vi": null
+    },
+    {
+      "type": "table",
+      "headers_jp": ["問", "誤っている番号", "正しい語句"],
+      "rows_jp": [["1-1", "③", "検査"], ["1-2", "③", "教育"], ["1-3", "③", "自家用"]],
+      "headers_vi": ["Câu", "Số sai", "Từ đúng"],
+      "rows_vi": [["1-1", "③", "kiểm tra (検査)"], ["1-2", "③", "đào tạo (教育)"], ["1-3", "③", "tự dùng riêng (自家用)"]],
+      "explanation_vi": null
+    }
+  ]
+}

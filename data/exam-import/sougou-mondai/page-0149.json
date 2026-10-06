@@ -1,0 +1,125 @@
+{
+  "book_slug": "sougou-mondai",
+  "section_path": [
+    { "code": "doc2", "title_jp": "資料No.2 第二次検定用教材", "title_vi": "Cuốn 2 - Tài liệu ôn thi lần 2" },
+    { "code": "doc2-6", "title_jp": "6. 法規", "title_vi": "6. Pháp quy" }
+  ],
+  "page_number": 149,
+  "page_label": "p.49",
+  "source_image_path": null,
+  "notes_vi": "[資料No.2 2級電気工事施工管理技術研修 第二次検定用教材（2026年度用）. 【問題No.4】và 【解説No.4】- đề R4, cùng dạng điền từ vào chỗ trống ［ア］［イ］như trang 48. Trong ảnh gốc, đáp án đúng được đánh dấu bằng chấm tròn đen (●) thay cho khoanh tròn số; ở đây ghi lại bằng bảng đáp án riêng ở phần 解説.]",
+  "review_status": "draft",
+  "blocks": [
+    {
+      "type": "heading",
+      "level": 2,
+      "jp": "【問題 No.4】「建設業法」、「労働安全衛生法」又は「電気工事士法」に関する次の問に答えなさい。",
+      "vi": "[Câu hỏi số 4] Hãy trả lời các câu hỏi sau liên quan đến \"Luật Xây dựng\", \"Luật An toàn và Vệ sinh Lao động\" hoặc \"Luật Thợ điện\".",
+      "explanation_vi": "(R4)"
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "jp": "4-1 建設工事に従事する者に関する次の記述の［　］に当てはまる語句として、「建設業法」上、定められているものはそれぞれどれか。",
+      "vi": "4-1 Từ nào dưới đây phù hợp với chỗ trống ［　］ trong đoạn mô tả sau về người tham gia công trình xây dựng, theo quy định của \"Luật Xây dựng\"?",
+      "explanation_vi": null
+    },
+    {
+      "type": "paragraph",
+      "jp": "「建設工事に従事する者は、建設工事を適正に実施するために必要な［ア］又は技能の［イ］に努めなければならない。」",
+      "vi": "\"Người tham gia công trình xây dựng phải nỗ lực ［イ］ ［ア］ hoặc kỹ năng cần thiết để thực hiện công trình xây dựng một cách đúng đắn.\"",
+      "explanation_vi": null
+    },
+    {
+      "type": "bullet_list",
+      "items_jp": ["ア　①知識及び経験　②知識及び技術　③技術及び経験　④技術及び実績"],
+      "items_vi": ["ア　① kiến thức và kinh nghiệm　② kiến thức và kỹ thuật　③ kỹ thuật và kinh nghiệm　④ kỹ thuật và thành tích"],
+      "explanation_vi": null
+    },
+    {
+      "type": "bullet_list",
+      "items_jp": ["イ　①習得　②進歩　③向上　④継承"],
+      "items_vi": ["イ　① lĩnh hội　② tiến bộ　③ nâng cao　④ kế thừa"],
+      "explanation_vi": null
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "jp": "4-2 事業者等の責務に関する次の記述の［　］に当てはまる語句として、「労働安全衛生法」上、定められているものはそれぞれどれか。",
+      "vi": "4-2 Từ nào dưới đây phù hợp với chỗ trống ［　］ trong đoạn mô tả sau về trách nhiệm của người sử dụng lao động, theo quy định của \"Luật An toàn và Vệ sinh Lao động\"?",
+      "explanation_vi": null
+    },
+    {
+      "type": "paragraph",
+      "jp": "「事業者は、単にこの法律で定める労働災害防止のための［ア］を守るだけでなく、快適な職場環境の実現と労働条件の改善を通じて職場における労働者の［イ］を確保するようにしなければならない。」",
+      "vi": "\"Người sử dụng lao động không chỉ đơn thuần phải tuân thủ ［ア］ nhằm phòng ngừa tai nạn lao động mà luật này quy định, mà còn phải đảm bảo ［イ］ của người lao động tại nơi làm việc thông qua việc hiện thực hóa môi trường làm việc thoải mái và cải thiện điều kiện lao động.\"",
+      "explanation_vi": null
+    },
+    {
+      "type": "bullet_list",
+      "items_jp": ["ア　①作業環境　②技術的事項　③最低基準　④勧告及び規則"],
+      "items_vi": ["ア　① môi trường làm việc　② vấn đề kỹ thuật　③ tiêu chuẩn tối thiểu　④ khuyến cáo và quy tắc"],
+      "explanation_vi": null
+    },
+    {
+      "type": "bullet_list",
+      "items_jp": ["イ　①安全と健康　②健康の保持　③労働災害の防止　④安全又は衛生"],
+      "items_vi": ["イ　① an toàn và sức khỏe　② duy trì sức khỏe　③ phòng ngừa tai nạn lao động　④ an toàn hoặc vệ sinh"],
+      "explanation_vi": null
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "jp": "4-3 電気工事士に関する次の記述の［　］に当てはまる語句として、「電気工事士法」上、定められているものはそれぞれどれか。",
+      "vi": "4-3 Từ nào dưới đây phù hợp với chỗ trống ［　］ trong đoạn mô tả sau về thợ điện, theo quy định của \"Luật Thợ điện\"?",
+      "explanation_vi": null
+    },
+    {
+      "type": "paragraph",
+      "jp": "「この法律は、電気工事の［ア］の資格及び義務を定め、もつて電気工事の欠陥による［イ］の防止に寄与することを目的とする。」",
+      "vi": "\"Luật này nhằm mục đích quy định tư cách và nghĩa vụ của ［ア］ trong công trình điện, qua đó góp phần phòng ngừa ［イ］ do khuyết tật của công trình điện gây ra.\"",
+      "explanation_vi": null
+    },
+    {
+      "type": "bullet_list",
+      "items_jp": ["ア　①作業に従事する者　②作業の管理をする者　③現場に従事する者　④現場の管理をする者"],
+      "items_vi": ["ア　① người tham gia thực hiện công việc　② người quản lý công việc　③ người tham gia hiện trường　④ người quản lý hiện trường"],
+      "explanation_vi": null
+    },
+    {
+      "type": "bullet_list",
+      "items_jp": ["イ　①施工不良　②災害の発生　③感電事故　④安全性の低下"],
+      "items_vi": ["イ　① thi công kém chất lượng　② xảy ra tai nạn　③ sự cố điện giật　④ suy giảm tính an toàn"],
+      "explanation_vi": null
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "jp": "【解説 No.4】　施工マニュアル　1-p.177　2-p.209　電気テキスト　3-p.193",
+      "vi": "[Giải đáp số 4] - Sổ tay thi công 1-tr.177, 2-tr.209; Giáo trình điện 3-tr.193",
+      "explanation_vi": null
+    },
+    {
+      "type": "table",
+      "headers_jp": ["問", "正解", "語句"],
+      "rows_jp": [
+        ["4-1 ア", "②", "知識及び技術"],
+        ["4-1 イ", "③", "向上"],
+        ["4-2 ア", "③", "最低基準"],
+        ["4-2 イ", "①", "安全と健康"],
+        ["4-3 ア", "①", "作業に従事する者"],
+        ["4-3 イ", "②", "災害の発生"]
+      ],
+      "headers_vi": ["Câu", "Đáp án đúng", "Từ"],
+      "rows_vi": [
+        ["4-1 ア", "②", "kiến thức và kỹ thuật"],
+        ["4-1 イ", "③", "nâng cao"],
+        ["4-2 ア", "③", "tiêu chuẩn tối thiểu"],
+        ["4-2 イ", "①", "an toàn và sức khỏe"],
+        ["4-3 ア", "①", "người tham gia thực hiện công việc"],
+        ["4-3 イ", "②", "xảy ra tai nạn"]
+      ],
+      "explanation_vi": null
+    }
+  ]
+}
