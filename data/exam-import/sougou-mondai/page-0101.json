@@ -23,7 +23,11 @@
       "level": 1,
       "jp": "1. 第二次検定試験の概要",
       "vi": "1. Tổng quan về kỳ thi lần 2 (第二次検定)",
-      "explanation_vi": null
+      "explanation_vi": null,
+      "furigana_tokens": [
+        { "surface": "第二次検定試験", "reading": "だいにじけんていしけん" },
+        { "surface": "概要", "reading": "がいよう" }
+      ]
     },
     {
       "type": "table",
@@ -91,7 +95,54 @@
           "① Mô tả thuật ngữ Luật Xây dựng\n② Mô tả thuật ngữ Luật An toàn vệ sinh lao động\n③ Mô tả thuật ngữ Luật Thợ điện"
         ]
       ],
-      "explanation_vi": "Bảng tóm tắt sơ đồ cấu trúc đề thi lần 2 (二次検定試験の構成) trong sách gốc: gồm phần Mô tả kinh nghiệm (Câu 1) và phần Mô tả theo chủ đề (Câu 2~5)."
+      "explanation_vi": "Bảng tóm tắt sơ đồ cấu trúc đề thi lần 2 (二次検定試験の構成) trong sách gốc: gồm phần Mô tả kinh nghiệm (Câu 1) và phần Mô tả theo chủ đề (Câu 2~5).",
+      "headers_furigana_tokens": [
+        [{ "surface": "区分", "reading": "くぶん" }],
+        [{ "surface": "問題", "reading": "もんだい" }],
+        [{ "surface": "出題内容", "reading": "しゅつだいないよう" }]
+      ],
+      "rows_furigana_tokens": [
+        [
+          [{ "surface": "経験記述", "reading": "けいけんきじゅつ" }],
+          [{ "surface": "問題", "reading": "もんだい" }],
+          [
+            { "surface": "工程管理", "reading": "こうていかんり" },
+            { "surface": "安全管理", "reading": "あんぜんかんり" },
+            { "surface": "経験記述", "reading": "けいけんきじゅつ" }
+          ]
+        ],
+        [
+          [{ "surface": "テーマ問題記述", "reading": "テーマもんだいきじゅつ" }],
+          [{ "surface": "問題", "reading": "もんだい" }],
+          [
+            { "surface": "労働災害対策記述", "reading": "ろうどうさいがいたいさくきじゅつ" },
+            { "surface": "安全管理", "reading": "あんぜんかんり" },
+            { "surface": "施工上", "reading": "せこうじょう" },
+            { "surface": "留意点記述", "reading": "りゅういてんきじゅつ" },
+            { "surface": "品質管理", "reading": "ひんしつかんり" }
+          ]
+        ],
+        [
+          [{ "surface": "テーマ問題記述", "reading": "テーマもんだいきじゅつ" }],
+          [{ "surface": "問題", "reading": "もんだい" }],
+          [{ "surface": "電気工事用語", "reading": "でんきこうじようご" }, { "surface": "技術的記述", "reading": "ぎじゅつてききじゅつ" }]
+        ],
+        [
+          [{ "surface": "テーマ問題記述", "reading": "テーマもんだいきじゅつ" }],
+          [{ "surface": "問題", "reading": "もんだい" }],
+          [{ "surface": "電気工事諸計算", "reading": "でんきこうじしょけいさん" }]
+        ],
+        [
+          [{ "surface": "テーマ問題記述", "reading": "テーマもんだいきじゅつ" }],
+          [{ "surface": "問題", "reading": "もんだい" }],
+          [
+            { "surface": "建設業法", "reading": "けんせつぎょうほう" },
+            { "surface": "用語記述", "reading": "ようごきじゅつ" },
+            { "surface": "労働安全衛生法", "reading": "ろうどうあんぜんえいせいほう" },
+            { "surface": "電気工事士法", "reading": "でんきこうじしほう" }
+          ]
+        ]
+      ]
     },
     {
       "type": "table",
@@ -179,7 +230,93 @@
           "Pháp quy\n1. Luật Xây dựng\n2. Luật An toàn\n  vệ sinh lao động\n3. Luật Thợ điện"
         ]
       ],
-      "explanation_vi": "Bảng thống kê xu hướng ra đề 4 năm gần nhất cho từng nhóm câu hỏi (I)~(V). Mục (II) luôn có phần 'thiết bị nhận điện cao áp - sơ đồ một sợi' vì đây là nội dung gần như cố định mỗi năm."
+      "explanation_vi": "Bảng thống kê xu hướng ra đề 4 năm gần nhất cho từng nhóm câu hỏi (I)~(V). Mục (II) luôn có phần 'thiết bị nhận điện cao áp - sơ đồ một sợi' vì đây là nội dung gần như cố định mỗi năm.",
+      "headers_furigana_tokens": [
+        [{ "surface": "年度", "reading": "ねんど" }],
+        [{ "surface": "施工経験記述", "reading": "せこうけいけんきじゅつ" }],
+        [{ "surface": "施工管理", "reading": "せこうかんり" }],
+        [{ "surface": "電気設備", "reading": "でんきせつび" }],
+        [{ "surface": "計算問題", "reading": "けいさんもんだい" }],
+        [{ "surface": "法規", "reading": "ほうき" }]
+      ],
+      "rows_furigana_tokens": [
+        [
+          [{ "surface": "令和4年度", "reading": "れいわよねんど" }],
+          [{ "surface": "施工経験記述", "reading": "せこうけいけんきじゅつ" }, { "surface": "工程管理", "reading": "こうていかんり" }],
+          [
+            { "surface": "施工管理", "reading": "せこうかんり" },
+            { "surface": "安全管理", "reading": "あんぜんかんり" },
+            { "surface": "高圧受電設備", "reading": "こうあつじゅでんせつび" },
+            { "surface": "単線結線図", "reading": "たんせんけっせんず" }
+          ],
+          [{ "surface": "電気設備全般", "reading": "でんきせつびぜんぱん" }, { "surface": "電気用語記述", "reading": "でんきようごきじゅつ" }],
+          [{ "surface": "電気工事諸計算", "reading": "でんきこうじしょけいさん" }, { "surface": "直列回路", "reading": "ちょくれつかいろ" }, { "surface": "変圧器", "reading": "へんあつき" }],
+          [
+            { "surface": "法規", "reading": "ほうき" },
+            { "surface": "建設業法", "reading": "けんせつぎょうほう" },
+            { "surface": "労働安全", "reading": "ろうどうあんぜん" },
+            { "surface": "衛生法", "reading": "えいせいほう" },
+            { "surface": "電気工事士法", "reading": "でんきこうじしほう" }
+          ]
+        ],
+        [
+          [{ "surface": "令和5年度", "reading": "れいわごねんど" }],
+          [{ "surface": "施工経験記述", "reading": "せこうけいけんきじゅつ" }, { "surface": "安全管理", "reading": "あんぜんかんり" }],
+          [
+            { "surface": "施工管理", "reading": "せこうかんり" },
+            { "surface": "品質管理", "reading": "ひんしつかんり" },
+            { "surface": "高圧受電設備", "reading": "こうあつじゅでんせつび" },
+            { "surface": "単線結線図", "reading": "たんせんけっせんず" }
+          ],
+          [{ "surface": "電気設備全般", "reading": "でんきせつびぜんぱん" }, { "surface": "電気用語記述", "reading": "でんきようごきじゅつ" }],
+          [{ "surface": "電気工事諸計算", "reading": "でんきこうじしょけいさん" }, { "surface": "直列回路", "reading": "ちょくれつかいろ" }, { "surface": "配電線路", "reading": "はいでんせんろ" }],
+          [
+            { "surface": "法規", "reading": "ほうき" },
+            { "surface": "建設業法", "reading": "けんせつぎょうほう" },
+            { "surface": "労働安全", "reading": "ろうどうあんぜん" },
+            { "surface": "衛生法", "reading": "えいせいほう" },
+            { "surface": "電気工事士法", "reading": "でんきこうじしほう" }
+          ]
+        ],
+        [
+          [{ "surface": "令和6年度", "reading": "れいわろくねんど" }],
+          [{ "surface": "施工経験記述", "reading": "せこうけいけんきじゅつ" }, { "surface": "工程管理", "reading": "こうていかんり" }],
+          [
+            { "surface": "施工管理", "reading": "せこうかんり" },
+            { "surface": "安全管理", "reading": "あんぜんかんり" },
+            { "surface": "高圧受電設備", "reading": "こうあつじゅでんせつび" },
+            { "surface": "単線結線図", "reading": "たんせんけっせんず" }
+          ],
+          [{ "surface": "電気設備全般", "reading": "でんきせつびぜんぱん" }, { "surface": "電気用語記述", "reading": "でんきようごきじゅつ" }],
+          [{ "surface": "電気工事諸計算", "reading": "でんきこうじしょけいさん" }, { "surface": "直流回路", "reading": "ちょくりゅうかいろ" }, { "surface": "変圧器", "reading": "へんあつき" }],
+          [
+            { "surface": "法規", "reading": "ほうき" },
+            { "surface": "建設業法", "reading": "けんせつぎょうほう" },
+            { "surface": "労働安全", "reading": "ろうどうあんぜん" },
+            { "surface": "衛生法", "reading": "えいせいほう" },
+            { "surface": "電気工事士法", "reading": "でんきこうじしほう" }
+          ]
+        ],
+        [
+          [{ "surface": "令和7年度", "reading": "れいわななねんど" }],
+          [{ "surface": "施工経験記述", "reading": "せこうけいけんきじゅつ" }, { "surface": "安全管理", "reading": "あんぜんかんり" }],
+          [
+            { "surface": "施工管理", "reading": "せこうかんり" },
+            { "surface": "品質管理", "reading": "ひんしつかんり" },
+            { "surface": "高圧受電設備", "reading": "こうあつじゅでんせつび" },
+            { "surface": "単線結線図", "reading": "たんせんけっせんず" }
+          ],
+          [{ "surface": "電気設備全般", "reading": "でんきせつびぜんぱん" }, { "surface": "電気用語記述", "reading": "でんきようごきじゅつ" }],
+          [{ "surface": "電気工事諸計算", "reading": "でんきこうじしょけいさん" }, { "surface": "回路", "reading": "かいろ" }, { "surface": "変圧器", "reading": "へんあつき" }],
+          [
+            { "surface": "法規", "reading": "ほうき" },
+            { "surface": "建設業法", "reading": "けんせつぎょうほう" },
+            { "surface": "労働安全", "reading": "ろうどうあんぜん" },
+            { "surface": "衛生法", "reading": "えいせいほう" },
+            { "surface": "電気工事士法", "reading": "でんきこうじしほう" }
+          ]
+        ]
+      ]
     }
   ]
 }

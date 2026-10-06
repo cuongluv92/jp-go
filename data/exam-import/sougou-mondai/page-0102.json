@@ -23,47 +23,122 @@
       "level": 1,
       "jp": "2. 施工経験記述",
       "vi": "2. Mô tả kinh nghiệm thi công",
-      "explanation_vi": null
+      "explanation_vi": null,
+      "furigana_tokens": [{ "surface": "施工経験記述", "reading": "せこうけいけんきじゅつ" }]
     },
     {
       "type": "heading",
       "level": 2,
       "jp": "2-1. 施工経験記述出題例【令和7年の出題】",
       "vi": "2-1. Ví dụ đề mô tả kinh nghiệm thi công [Đề thi năm Reiwa 7]",
-      "explanation_vi": null
+      "explanation_vi": null,
+      "furigana_tokens": [
+        { "surface": "施工経験記述", "reading": "せこうけいけんきじゅつ" },
+        { "surface": "出題例", "reading": "しゅつだいれい" },
+        { "surface": "令和7年", "reading": "れいわななねん" },
+        { "surface": "出題", "reading": "しゅつだい" }
+      ]
     },
     {
       "type": "note",
       "jp": "【問題１】　次の問Ａ又は問Ｂのどちらかを選択して答えなさい。\n解答する２項目の記述については、留意すべき事項とその理由、対策又は処置の内容は重複しないこと。\nなお、保護帽の着用のみ又は要求性能墜落制止用器具（安全帯）の着用のみの記述については配点しない。",
       "vi": "【Câu 1】 Chọn một trong hai câu hỏi A hoặc B dưới đây để trả lời.\nVới 2 nội dung mô tả cần trả lời, nội dung về sự việc cần lưu ý và lý do, biện pháp hoặc cách xử lý không được trùng nhau.\nLưu ý: mô tả chỉ đơn thuần là \"đội mũ bảo hộ\" hoặc chỉ đơn thuần là \"đeo dụng cụ chống rơi ngã có tính năng yêu cầu (dây an toàn)\" sẽ không được tính điểm.",
       "explanation_vi": null,
-      "furigana_tokens": []
+      "furigana_tokens": [
+        { "surface": "問題", "reading": "もんだい" },
+        { "surface": "次", "reading": "つぎ" },
+        { "surface": "問Ａ", "reading": "といエー" },
+        { "surface": "問Ｂ", "reading": "といビー" },
+        { "surface": "選択", "reading": "せんたく" },
+        { "surface": "答", "reading": "こた" },
+        { "surface": "解答", "reading": "かいとう" },
+        { "surface": "項目", "reading": "こうもく" },
+        { "surface": "記述", "reading": "きじゅつ" },
+        { "surface": "留意", "reading": "りゅうい" },
+        { "surface": "事項", "reading": "じこう" },
+        { "surface": "理由", "reading": "りゆう" },
+        { "surface": "対策", "reading": "たいさく" },
+        { "surface": "処置", "reading": "しょち" },
+        { "surface": "又", "reading": "また" },
+        { "surface": "内容", "reading": "ないよう" },
+        { "surface": "重複", "reading": "ちょうふく" },
+        { "surface": "保護帽", "reading": "ほごぼう" },
+        { "surface": "着用", "reading": "ちゃくよう" },
+        { "surface": "要求性能墜落制止用器具", "reading": "ようきゅうせいのうついらくせいしようきぐ" },
+        { "surface": "安全帯", "reading": "あんぜんたい" },
+        { "surface": "配点", "reading": "はいてん" }
+      ]
     },
     {
       "type": "heading",
       "level": 3,
       "jp": "（問Ａ）",
       "vi": "(Đề A)",
-      "explanation_vi": null
+      "explanation_vi": null,
+      "furigana_tokens": [{ "surface": "問Ａ", "reading": "といエー" }]
     },
     {
       "type": "paragraph",
       "jp": "あなたの電気工事の経験を踏まえ、施設等が運用中で大勢の来客がある現場の電気工事において、安全管理上あなたが留意すべき事項とその理由について、２つ具体的に記述しなさい。\nそのうえで、適切な安全管理を実施するために、あなたがとるべき対策又は処置について、その事項ごとに具体的に記述しなさい。",
       "vi": "Dựa trên kinh nghiệm thi công điện của bạn, tại công trường thi công điện ở nơi cơ sở đang vận hành và có đông khách ra vào, hãy mô tả cụ thể 2 sự việc bạn cần lưu ý về mặt quản lý an toàn và lý do của chúng.\nSau đó, hãy mô tả cụ thể theo từng sự việc về biện pháp hoặc cách xử lý bạn cần thực hiện để đảm bảo quản lý an toàn phù hợp.",
-      "explanation_vi": null
+      "explanation_vi": null,
+      "furigana_tokens": [
+        { "surface": "電気工事", "reading": "でんきこうじ" },
+        { "surface": "経験", "reading": "けいけん" },
+        { "surface": "踏", "reading": "ふ" },
+        { "surface": "施設等", "reading": "しせつとう" },
+        { "surface": "運用中", "reading": "うんようちゅう" },
+        { "surface": "大勢", "reading": "おおぜい" },
+        { "surface": "来客", "reading": "らいきゃく" },
+        { "surface": "現場", "reading": "げんば" },
+        { "surface": "安全管理上", "reading": "あんぜんかんりじょう" },
+        { "surface": "留意", "reading": "りゅうい" },
+        { "surface": "事項", "reading": "じこう" },
+        { "surface": "理由", "reading": "りゆう" },
+        { "surface": "具体的", "reading": "ぐたいてき" },
+        { "surface": "記述", "reading": "きじゅつ" },
+        { "surface": "適切", "reading": "てきせつ" },
+        { "surface": "安全管理", "reading": "あんぜんかんり" },
+        { "surface": "実施", "reading": "じっし" },
+        { "surface": "対策", "reading": "たいさく" },
+        { "surface": "又", "reading": "また" },
+        { "surface": "処置", "reading": "しょち" },
+        { "surface": "事項", "reading": "じこう" }
+      ]
     },
     {
       "type": "heading",
       "level": 3,
       "jp": "（問Ｂ）",
       "vi": "(Đề B)",
-      "explanation_vi": null
+      "explanation_vi": null,
+      "furigana_tokens": [{ "surface": "問Ｂ", "reading": "といビー" }]
     },
     {
       "type": "paragraph",
       "jp": "あなたの電気工事の経験を踏まえ、関連工事と輻輳する現場における電気工事において、安全管理上あなたが留意すべき事項とその理由について、２つ具体的に記述しなさい。\nそのうえで、適切な安全管理を実施するために、あなたがとるべき対策又は処置について、その事項ごとに具体的に記述しなさい。",
       "vi": "Dựa trên kinh nghiệm thi công điện của bạn, tại công trường thi công điện có nhiều công trình liên quan diễn ra chồng chéo, hãy mô tả cụ thể 2 sự việc bạn cần lưu ý về mặt quản lý an toàn và lý do của chúng.\nSau đó, hãy mô tả cụ thể theo từng sự việc về biện pháp hoặc cách xử lý bạn cần thực hiện để đảm bảo quản lý an toàn phù hợp.",
-      "explanation_vi": "輻輳 (fukusou) nghĩa đen là \"tắc nghẽn/chồng chéo\" - ở đây chỉ việc nhiều công trình thi công khác nhau diễn ra cùng lúc, chồng lấn nhau tại hiện trường."
+      "explanation_vi": "輻輳 (fukusou) nghĩa đen là \"tắc nghẽn/chồng chéo\" - ở đây chỉ việc nhiều công trình thi công khác nhau diễn ra cùng lúc, chồng lấn nhau tại hiện trường.",
+      "furigana_tokens": [
+        { "surface": "電気工事", "reading": "でんきこうじ" },
+        { "surface": "経験", "reading": "けいけん" },
+        { "surface": "踏", "reading": "ふ" },
+        { "surface": "関連工事", "reading": "かんれんこうじ" },
+        { "surface": "輻輳", "reading": "ふくそう" },
+        { "surface": "現場", "reading": "げんば" },
+        { "surface": "安全管理上", "reading": "あんぜんかんりじょう" },
+        { "surface": "留意", "reading": "りゅうい" },
+        { "surface": "事項", "reading": "じこう" },
+        { "surface": "理由", "reading": "りゆう" },
+        { "surface": "具体的", "reading": "ぐたいてき" },
+        { "surface": "記述", "reading": "きじゅつ" },
+        { "surface": "適切", "reading": "てきせつ" },
+        { "surface": "安全管理", "reading": "あんぜんかんり" },
+        { "surface": "実施", "reading": "じっし" },
+        { "surface": "対策", "reading": "たいさく" },
+        { "surface": "又", "reading": "また" },
+        { "surface": "処置", "reading": "しょち" }
+      ]
     },
     {
       "type": "table",
@@ -103,7 +178,25 @@
           "(Khung để viết câu trả lời)"
         ]
       ],
-      "explanation_vi": "Đây là mẫu phiếu trả lời trống (học viên tự điền khi làm bài thật), không phải đáp án mẫu. Mục (2) nằm ở trang tiếp theo."
+      "explanation_vi": "Đây là mẫu phiếu trả lời trống (học viên tự điền khi làm bài thật), không phải đáp án mẫu. Mục (2) nằm ở trang tiếp theo.",
+      "headers_furigana_tokens": [
+        [{ "surface": "区分", "reading": "くぶん" }],
+        [{ "surface": "内容", "reading": "ないよう" }, { "surface": "解答欄", "reading": "かいとうらん" }]
+      ],
+      "rows_furigana_tokens": [
+        [
+          [{ "surface": "問題", "reading": "もんだい" }, { "surface": "選択", "reading": "せんたく" }],
+          [{ "surface": "問Ａ", "reading": "といエー" }, { "surface": "問Ｂ", "reading": "といビー" }, { "surface": "一方", "reading": "いっぽう" }, { "surface": "選択", "reading": "せんたく" }]
+        ],
+        [
+          [{ "surface": "留意", "reading": "りゅうい" }, { "surface": "事項", "reading": "じこう" }, { "surface": "理由", "reading": "りゆう" }],
+          [{ "surface": "記述欄", "reading": "きじゅつらん" }]
+        ],
+        [
+          [{ "surface": "対策", "reading": "たいさく" }, { "surface": "又", "reading": "また" }, { "surface": "処置", "reading": "しょち" }],
+          [{ "surface": "記述欄", "reading": "きじゅつらん" }]
+        ]
+      ]
     }
   ]
 }
