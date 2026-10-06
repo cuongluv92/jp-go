@@ -111,6 +111,9 @@ export interface ExamQuestion {
   question_vi: string | null;
   question_furigana_tokens: FuriganaToken[];
   question_image_path: string | null;
+  answer_jp: string | null;
+  answer_vi: string | null;
+  answer_furigana_tokens: FuriganaToken[];
   explanation_vi: string | null;
   is_flagged_default: boolean;
   sort_order: number;

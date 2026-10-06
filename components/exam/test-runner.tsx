@@ -135,6 +135,7 @@ export function TestRunner({ test, questions: initialQuestions }: { test: ExamTe
   const current = questions[state.currentIndex];
   const hasAnyChoices = useMemo(() => questions.some((q) => q.choices.length > 0), [questions]);
   const correctChoice = current?.choices.find((choice) => choice.is_correct) ?? null;
+  const writtenAnswer = current?.answer_jp?.trim() ? current.answer_jp : null;
 
   const score = useMemo(() => {
     if (!submitted || !hasAnyChoices) return null;
@@ -360,6 +361,13 @@ export function TestRunner({ test, questions: initialQuestions }: { test: ExamTe
                     {renderExamJapanese(correctChoice.choice_jp, correctChoice.choice_furigana_tokens, showFurigana)}
                   </p>
                 </div>
+              ) : writtenAnswer ? (
+                <div className="space-y-3">
+                  <p className="font-jp text-sm font-bold text-accent">【解答例】</p>
+                  <p className="font-jp whitespace-pre-line text-sm leading-relaxed sm:text-base">
+                    {renderExamJapanese(writtenAnswer, current.answer_furigana_tokens, showFurigana)}
+                  </p>
+                </div>
               ) : (
                 <p className="text-sm italic text-muted">
                   Câu này chưa có đáp án tiếng Nhật được nhập trong dữ liệu.
@@ -369,6 +377,12 @@ export function TestRunner({ test, questions: initialQuestions }: { test: ExamTe
 
             <section className="min-w-0 rounded-2xl border border-border bg-surface p-4">
               <p className="mb-3 text-xs font-semibold uppercase tracking-wide text-muted">Giải thích</p>
+              {current.answer_vi && (
+                <div className="mb-4 rounded-xl border border-border bg-slate-50 p-3 dark:bg-white/5">
+                  <p className="mb-2 text-xs font-semibold uppercase tracking-wide text-muted">Dịch đáp án</p>
+                  <p className="whitespace-pre-line text-sm leading-relaxed">{current.answer_vi}</p>
+                </div>
+              )}
               {current.explanation_vi ? (
                 <p className="whitespace-pre-line text-sm leading-relaxed">{current.explanation_vi}</p>
               ) : (
