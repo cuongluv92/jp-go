@@ -1,15 +1,13 @@
 {
   "book_slug": "sougou-mondai",
   "section_path": [
-    { "code": "1ji", "title_jp": "1次検定", "title_vi": "Kỳ thi lần 1" },
-    { "code": "1ji-book-01", "title_jp": "資料No.1 総合問題集", "title_vi": "Cuốn 1 - Tổng hợp bài tập" },
-    { "code": "ch3", "title_jp": "第3章 第二次検定基本問題", "title_vi": "Chương 3 - Bài cơ bản cho kỳ thi lần 2" },
-    { "code": "ch3-0", "title_jp": "第二次検定試験の概要", "title_vi": "Tổng quan kỳ thi lần 2" }
+    { "code": "doc2", "title_jp": "資料No.2 第二次検定用教材", "title_vi": "Cuốn 2 - Tài liệu ôn thi lần 2" },
+    { "code": "doc2-0", "title_jp": "第二次検定試験の概要", "title_vi": "Tổng quan kỳ thi lần 2" }
   ],
   "page_number": 101,
   "page_label": "資料No.2 p.1",
   "source_image_path": null,
-  "notes_vi": "[資料No.2 2級電気工事施工管理技術研修 第二次検定用教材（2026年度用）、建設管理センター 開発技術事業部編集。Trang này là từ bộ tài liệu riêng (資料No.2), gộp vào nhánh 第3章 第二次検定基本問題 của sách 総合問題集 theo yêu cầu. Còn thiếu các trang sau (問題2〜5, 施工管理の手順 chi tiết...), sẽ bổ sung khi có thêm ảnh.]",
+  "notes_vi": "[資料No.2 2級電気工事施工管理技術研修 第二次検定用教材（2026年度用）、建設管理センター 開発技術事業部編集。Còn thiếu các trang sau (問題2〜5, 施工管理の手順 chi tiết...), sẽ bổ sung khi có thêm ảnh.]",
   "review_status": "draft",
   "blocks": [
     {
