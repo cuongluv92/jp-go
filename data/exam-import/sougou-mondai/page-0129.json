@@ -1,0 +1,80 @@
+{
+  "book_slug": "sougou-mondai",
+  "section_path": [
+    { "code": "doc2", "title_jp": "資料No.2 第二次検定用教材", "title_vi": "Cuốn 2 - Tài liệu ôn thi lần 2" },
+    { "code": "doc2-4", "title_jp": "4. 計算問題", "title_vi": "4. Bài toán tính toán" }
+  ],
+  "page_number": 129,
+  "page_label": "p.29",
+  "source_image_path": null,
+  "notes_vi": "[資料No.2 2級電気工事施工管理技術研修 第二次検定用教材（2026年度用）. Đề R4. Ảnh gốc có lời giải viết tay bằng mực đỏ của người chụp (không phải nội dung in sẵn của sách) nên KHÔNG chép vào đây - chỉ chép phần chữ in (đề bài, 4 lựa chọn, và bảng đáp án đúng ở cuối trang). Sơ đồ mạch điện là hình vẽ nên chỉ mô tả bằng lời, không chép lại dạng hình.]",
+  "review_status": "draft",
+  "blocks": [
+    {
+      "type": "heading",
+      "level": 2,
+      "jp": "【問題 No.2】次の問いに答えなさい。",
+      "vi": "[Câu hỏi số 2] Hãy trả lời các câu hỏi sau.",
+      "explanation_vi": "(R4)"
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "jp": "2-1",
+      "vi": "2-1",
+      "explanation_vi": null
+    },
+    {
+      "type": "paragraph",
+      "jp": "図に示すRLC直列回路に交流電圧を加えたとき、当該回路の有効電力の値〔W〕として、正しいものはどれか。",
+      "vi": "Khi đặt điện áp xoay chiều vào mạch nối tiếp RLC như hình vẽ, giá trị công suất tác dụng [W] của mạch đó nào dưới đây là đúng?",
+      "explanation_vi": null
+    },
+    {
+      "type": "image_placeholder",
+      "caption_jp": "RLC直列回路（有効電力を求める回路図）",
+      "caption_vi": "Mạch nối tiếp RLC (sơ đồ tìm công suất tác dụng)",
+      "explanation_vi": "Nguồn xoay chiều E=100V nối với mạch nối tiếp gồm điện trở R=4Ω, cuộn cảm XL=4Ω và tụ điện Xc=1Ω."
+    },
+    {
+      "type": "bullet_list",
+      "items_jp": ["① 1,111W", "② 1,200W", "③ 1,600W", "④ 2,000W"],
+      "items_vi": ["① 1.111W", "② 1.200W", "③ 1.600W", "④ 2.000W"],
+      "explanation_vi": null
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "jp": "2-2",
+      "vi": "2-2",
+      "explanation_vi": null
+    },
+    {
+      "type": "paragraph",
+      "jp": "出力450kWで運転している変圧器がある。そのときの無負荷損は20kW、負荷損は30kWであった。このときの変圧器の効率〔%〕として、正しいものはどれか。\nただし、無負荷損、負荷損以外の損失はないものとし、小数第一位を四捨五入する。",
+      "vi": "Có một máy biến áp đang vận hành với công suất đầu ra 450kW. Khi đó tổn thất không tải là 20kW, tổn thất có tải là 30kW. Giá trị hiệu suất [%] của máy biến áp lúc này nào dưới đây là đúng?\nTuy nhiên, giả sử không có tổn thất nào khác ngoài tổn thất không tải và tổn thất có tải, và làm tròn đến hàng đơn vị (bỏ phần thập phân theo quy tắc làm tròn).",
+      "explanation_vi": null
+    },
+    {
+      "type": "bullet_list",
+      "items_jp": ["① 90%", "② 93%", "③ 94%", "④ 96%"],
+      "items_vi": ["① 90%", "② 93%", "③ 94%", "④ 96%"],
+      "explanation_vi": null
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "jp": "【解説 No.2】　電気テキスト　2-1 p.17〜20　2-2 p.28",
+      "vi": "[Giải đáp số 2] - Giáo trình điện 2-1 tr.17~20, 2-2 tr.28",
+      "explanation_vi": null
+    },
+    {
+      "type": "table",
+      "headers_jp": ["問", "Đáp án đúng", "Giá trị"],
+      "rows_jp": [["2-1", "③", "1,600W"], ["2-2", "①", "90%"]],
+      "headers_vi": ["Câu", "Đáp án đúng", "Giá trị"],
+      "rows_vi": [["2-1", "③", "1.600W"], ["2-2", "①", "90%"]],
+      "explanation_vi": null
+    }
+  ]
+}

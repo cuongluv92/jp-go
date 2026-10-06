@@ -1,0 +1,21 @@
+{
+  "book_slug": "sougou-mondai",
+  "section_path": [
+    { "code": "doc2", "title_jp": "資料No.2 第二次検定用教材", "title_vi": "Cuốn 2 - Tài liệu ôn thi lần 2" },
+    { "code": "doc2-4", "title_jp": "4. 計算問題", "title_vi": "4. Bài toán tính toán" }
+  ],
+  "page_number": 127,
+  "page_label": "p.27",
+  "source_image_path": null,
+  "notes_vi": "[資料No.2 2級電気工事施工管理技術研修 第二次検定用教材（2026年度用）. Trang tiêu đề mở đầu chương mới '4. 計算問題', chỉ có 1 dòng tiêu đề. Phần chữ mờ nhìn xuyên qua (bảng 【問題No.1】và 【解説No.2】) là nội dung in ở MẶT SAU tờ giấy bị bóng qua (thực chất là nội dung trang 28-29), không phải nội dung thật của trang 27 nên không chép vào đây.]",
+  "review_status": "draft",
+  "blocks": [
+    {
+      "type": "heading",
+      "level": 1,
+      "jp": "4．計算問題",
+      "vi": "4. Bài toán tính toán",
+      "explanation_vi": null
+    }
+  ]
+}

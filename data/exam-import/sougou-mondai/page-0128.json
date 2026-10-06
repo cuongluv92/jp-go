@@ -1,0 +1,86 @@
+{
+  "book_slug": "sougou-mondai",
+  "section_path": [
+    { "code": "doc2", "title_jp": "資料No.2 第二次検定用教材", "title_vi": "Cuốn 2 - Tài liệu ôn thi lần 2" },
+    { "code": "doc2-4", "title_jp": "4. 計算問題", "title_vi": "4. Bài toán tính toán" }
+  ],
+  "page_number": 128,
+  "page_label": "p.28",
+  "source_image_path": null,
+  "notes_vi": "[資料No.2 2級電気工事施工管理技術研修 第二次検定用教材（2026年度用）. Đề R3. Ảnh gốc có lời giải viết tay bằng mực đỏ của người chụp (không phải nội dung in sẵn của sách) nên KHÔNG chép vào đây - chỉ chép phần chữ in (đề bài, 4 lựa chọn, và bảng đáp án đúng ở cuối trang). Sơ đồ mạch điện là hình vẽ nên chỉ mô tả bằng lời, không chép lại dạng hình.]",
+  "review_status": "draft",
+  "blocks": [
+    {
+      "type": "heading",
+      "level": 2,
+      "jp": "【問題 No.1】次の計算問題を答えなさい。",
+      "vi": "[Câu hỏi số 1] Hãy trả lời các bài toán tính toán sau.",
+      "explanation_vi": "(R3)"
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "jp": "1-1",
+      "vi": "1-1",
+      "explanation_vi": null
+    },
+    {
+      "type": "paragraph",
+      "jp": "図に示す直流回路網における起電力E〔V〕の値として、正しいものはどれか。",
+      "vi": "Trong mạng mạch điện một chiều như hình vẽ, giá trị sức điện động E [V] nào dưới đây là đúng?",
+      "explanation_vi": null
+    },
+    {
+      "type": "image_placeholder",
+      "caption_jp": "直流回路網（起電力Eを求める回路図）",
+      "caption_vi": "Mạng mạch điện một chiều (sơ đồ tìm sức điện động E)",
+      "explanation_vi": "Sơ đồ có nguồn E ở giữa trên, 2 nhánh song song bên trái và phải nối xuống 1 nhánh ngang ở dưới: nhánh trái có điện trở 1Ω mang dòng 6A, nhánh phải có điện trở 3Ω mang dòng 4A, nhánh ngang dưới cùng có điện trở 2Ω mang dòng 5A."
+    },
+    {
+      "type": "bullet_list",
+      "items_jp": ["① 8V", "② 10V", "③ 16V", "④ 20V"],
+      "items_vi": ["① 8V", "② 10V", "③ 16V", "④ 20V"],
+      "explanation_vi": null
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "jp": "1-2",
+      "vi": "1-2",
+      "explanation_vi": null
+    },
+    {
+      "type": "paragraph",
+      "jp": "図に示す配電線路の変圧器の一次電流I₁〔A〕の値として、正しいものはどれか。\nただし、負荷は全て抵抗負荷であり、変圧器と配電線路の損失及び変圧器の励磁電流は無視する。",
+      "vi": "Trong đường dây phân phối điện như hình vẽ, giá trị dòng điện sơ cấp I₁ [A] của máy biến áp nào dưới đây là đúng?\nTuy nhiên, tải đều là tải điện trở, và bỏ qua tổn thất của máy biến áp, đường dây phân phối cũng như dòng điện kích từ của máy biến áp.",
+      "explanation_vi": null
+    },
+    {
+      "type": "image_placeholder",
+      "caption_jp": "配電線路の変圧器（一次電流I₁を求める回路図）",
+      "caption_vi": "Máy biến áp đường dây phân phối (sơ đồ tìm dòng điện sơ cấp I₁)",
+      "explanation_vi": "Sơ đồ máy biến áp 1 pha 2 dây (1φ2W), sơ cấp 6600V với dòng điện I₁ cần tìm; thứ cấp chia 2 cuộn 100V nối tiếp có điểm giữa, cấp cho 2 tải điện trở: 19.8kW và 13.2kW."
+    },
+    {
+      "type": "bullet_list",
+      "items_jp": ["① 2.5A", "② 3.5A", "③ 5.0A", "④ 7.5A"],
+      "items_vi": ["① 2.5A", "② 3.5A", "③ 5.0A", "④ 7.5A"],
+      "explanation_vi": null
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "jp": "【解説 No.1】　電気テキスト　1-1 p.4　1-2 p.28",
+      "vi": "[Giải đáp số 1] - Giáo trình điện 1-1 tr.4, 1-2 tr.28",
+      "explanation_vi": null
+    },
+    {
+      "type": "table",
+      "headers_jp": ["問", "Đáp án đúng", "Giá trị"],
+      "rows_jp": [["1-1", "③", "16V"], ["1-2", "③", "5.0A"]],
+      "headers_vi": ["Câu", "Đáp án đúng", "Giá trị"],
+      "rows_vi": [["1-1", "③", "16V"], ["1-2", "③", "5.0A"]],
+      "explanation_vi": null
+    }
+  ]
+}

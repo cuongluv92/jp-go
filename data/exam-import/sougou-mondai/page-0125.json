@@ -1,0 +1,48 @@
+{
+  "book_slug": "sougou-mondai",
+  "section_path": [
+    { "code": "doc2", "title_jp": "資料No.2 第二次検定用教材", "title_vi": "Cuốn 2 - Tài liệu ôn thi lần 2" },
+    { "code": "doc2-3", "title_jp": "3. 施工管理法", "title_vi": "3. Phương pháp quản lý thi công" },
+    { "code": "doc2-3-3", "title_jp": "3-2. 高圧受電設備の単線結線図", "title_vi": "3-2. Sơ đồ đấu nối một sợi của thiết bị nhận điện cao áp" }
+  ],
+  "page_number": 125,
+  "page_label": "p.25",
+  "source_image_path": null,
+  "notes_vi": "[資料No.2 2級電気工事施工管理技術研修 第二次検定用教材（2026年度用）. Đây là khung trả lời trống (解答欄) để tự điền tay cho câu hỏi sơ đồ ở trang 24 - chia theo từng nhóm năm giống hệt bảng ở p.24, không có nội dung in sẵn nào khác. Đáp án thật nằm ở trang 26 (【解説】).]",
+  "review_status": "draft",
+  "blocks": [
+    {
+      "type": "heading",
+      "level": 3,
+      "jp": "＜解答欄＞",
+      "vi": "[Khung trả lời]",
+      "explanation_vi": null
+    },
+    {
+      "type": "table",
+      "headers_jp": ["年度", "(1) 名称又は略称", "(2) 機能"],
+      "rows_jp": [
+        ["H26, R5", "", ""],
+        ["H23", "", ""],
+        ["H27, R2", "", ""],
+        ["H28, R6", "", ""],
+        ["H24, H29, R7", "", ""],
+        ["H25, R1", "", ""],
+        ["H30, R4", "", ""],
+        ["R3", "", ""]
+      ],
+      "headers_vi": ["Năm", "(1) Tên hoặc tên viết tắt", "(2) Chức năng"],
+      "rows_vi": [
+        ["H26, R5", "", ""],
+        ["H23", "", ""],
+        ["H27, R2", "", ""],
+        ["H28, R6", "", ""],
+        ["H24, H29, R7", "", ""],
+        ["H25, R1", "", ""],
+        ["H30, R4", "", ""],
+        ["R3", "", ""]
+      ],
+      "explanation_vi": "Đây chỉ là khung trống để tự viết tay (sách gốc không in sẵn nội dung các ô này). Xem đáp án thật ở trang 26."
+    }
+  ]
+}

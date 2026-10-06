@@ -1,0 +1,48 @@
+{
+  "book_slug": "sougou-mondai",
+  "section_path": [
+    { "code": "doc2", "title_jp": "資料No.2 第二次検定用教材", "title_vi": "Cuốn 2 - Tài liệu ôn thi lần 2" },
+    { "code": "doc2-3", "title_jp": "3. 施工管理法", "title_vi": "3. Phương pháp quản lý thi công" },
+    { "code": "doc2-3-3", "title_jp": "3-2. 高圧受電設備の単線結線図", "title_vi": "3-2. Sơ đồ đấu nối một sợi của thiết bị nhận điện cao áp" }
+  ],
+  "page_number": 126,
+  "page_label": "p.26",
+  "source_image_path": null,
+  "notes_vi": "[資料No.2 2級電気工事施工管理技術研修 第二次検定用教材（2026年度用）. Đây là bảng giải đáp chính thức (解説) cho sơ đồ ở trang 24, khớp theo từng vị trí/năm đã mô tả ở bảng trang 24. Dấu ◎ đánh dấu các mục hay ra đề.]",
+  "review_status": "draft",
+  "blocks": [
+    {
+      "type": "heading",
+      "level": 3,
+      "jp": "【解説】　電気テキスト p.120〜121",
+      "vi": "[Giải đáp] - Giáo trình điện tr.120~121",
+      "explanation_vi": null
+    },
+    {
+      "type": "table",
+      "headers_jp": ["年度", "(1) 名称 / 略称", "(2) 機能"],
+      "rows_jp": [
+        ["H26, R5", "区分開閉器（地絡継電装置付高圧負荷開閉器）　/　GR付PAS", "保安上の責任分界点となり、工事、事故、点検等のため電路を開路、区別、分断する開閉器"],
+        ["H23", "電力需給用計器用変成器　/　VCT", "一般的には電力会社が取引用に電力量を計量するために、需要家設備の受電点に設置する変成器である。計器用変圧器（VT）と変流器（CT）とを1つにまとめ、箱の中に組み込んだもの。"],
+        ["◎ H27, R2", "断路器　/　DS", "保守点検時の作業員の感電を防止するため、定格電圧のもとに充電された電路を開閉する。"],
+        ["H28, R6", "避雷器　/　LA", "架空送配電線路に接続する重要な機械器具を雷電圧、その他の異常電圧による絶縁破壊から保護する。"],
+        ["H24, H29, R7", "電力ヒューズ付高圧交流負荷開閉器　/　PF付LBS", "電路を通常状態で通電、遮断する装置で短絡、過負荷時にはヒューズで高速しゃ断を行う。"],
+        ["◎ H25, R1", "直列リアクトル　/　SR", "電力用コンデンサの高調波による過熱、焼損を防止する。"],
+        ["H30, R4", "高圧遮断器　/　CB", "遮断器下の変流器から負圧側に発生した短絡等の故障時に電路を遮断する。"],
+        ["R3", "電力用（進相用）コンデンサ　/　SC", "負荷の力率を改善し、電力損失の軽減を図る。"]
+      ],
+      "headers_vi": ["Năm", "(1) Tên / Tên viết tắt", "(2) Chức năng"],
+      "rows_vi": [
+        ["H26, R5", "Bộ ngắt phân đoạn (bộ ngắt tải cao áp kèm thiết bị rơ-le báo sự cố chạm đất) / GR付PAS", "Là ranh giới trách nhiệm về mặt bảo trì an toàn, dùng để đóng/mở, phân biệt, ngắt mạch điện khi thi công, sự cố, kiểm tra v.v."],
+        ["H23", "Máy biến đổi đo lường dùng cho mua bán điện / VCT", "Thường là thiết bị biến đổi do công ty điện lực lắp đặt tại điểm nhận điện của khách hàng để đo lượng điện năng phục vụ giao dịch mua bán. Là thiết bị gộp chung biến áp đo lường (VT) và biến dòng (CT) vào một hộp."],
+        ["◎ H27, R2", "Dao cách ly / DS", "Dùng để đóng/mở mạch điện đang mang điện áp định mức, nhằm phòng tránh điện giật cho nhân viên bảo trì, kiểm tra."],
+        ["H28, R6", "Chống sét van / LA", "Bảo vệ các thiết bị máy móc quan trọng đấu nối với đường dây truyền tải/phân phối trên không khỏi hư hỏng cách điện do điện áp sét hoặc điện áp bất thường khác."],
+        ["H24, H29, R7", "Bộ ngắt tải xoay chiều cao áp kèm cầu chì công suất / PF付LBS", "Thiết bị đóng/ngắt điện ở trạng thái bình thường; khi ngắn mạch hoặc quá tải thì cầu chì sẽ ngắt nhanh."],
+        ["◎ H25, R1", "Cuộn kháng nối tiếp / SR", "Phòng ngừa quá nhiệt, cháy hỏng tụ điện công suất do sóng hài bậc cao."],
+        ["H30, R4", "Máy cắt cao áp / CB", "Ngắt mạch điện khi xảy ra sự cố như ngắn mạch v.v. phát sinh ở phía hạ áp tính từ biến dòng dưới máy cắt."],
+        ["R3", "Tụ điện công suất (tụ bù sớm pha) / SC", "Cải thiện hệ số công suất của tải, giảm tổn thất điện năng."]
+      ],
+      "explanation_vi": "Bảng này khớp theo đúng thứ tự năm/vị trí đã mô tả ở bảng trang 24 (ví dụ H28,R6 ở trang 24 mô tả 'ký hiệu hình trụ đứng nối đất' - đúng là ký hiệu chống sét van LA; R3 mô tả 'hình chữ nhật 2 gạch ngang' - đúng là tụ điện SC)."
+    }
+  ]
+}
