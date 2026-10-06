@@ -1,0 +1,110 @@
+{
+  "book_slug": "sougou-mondai",
+  "section_path": [
+    { "code": "doc2", "title_jp": "資料No.2 第二次検定用教材", "title_vi": "Cuốn 2 - Tài liệu ôn thi lần 2" },
+    { "code": "doc2-3", "title_jp": "3. 施工管理法", "title_vi": "3. Phương pháp quản lý thi công" },
+    { "code": "doc2-3-2", "title_jp": "3-1-2. 品質管理", "title_vi": "3-1-2. Quản lý chất lượng" }
+  ],
+  "page_number": 123,
+  "page_label": "p.23",
+  "source_image_path": null,
+  "notes_vi": "[資料No.2 2級電気工事施工管理技術研修 第二次検定用教材（2026年度用）. Tiếp theo trang 22 (giải nghĩa thuật ngữ 6-10). Trang này có hình mờ bóng từ mặt sau tờ giấy (sơ đồ đấu nối và khung 【問題No.1】của trang 24) hiện xuyên qua nền trang - không phải nội dung trang 23 nên không chép vào đây.]",
+  "review_status": "draft",
+  "blocks": [
+    {
+      "type": "heading",
+      "level": 4,
+      "jp": "◎6．電動機への配管配線接続（R3, 5）　電気テキスト p.140（参考）",
+      "vi": "◎6. Lắp đặt ống/dây dẫn đến động cơ điện (R3, 5) - Giáo trình điện tr.140 (tham khảo)",
+      "explanation_vi": null
+    },
+    {
+      "type": "bullet_list",
+      "items_jp": [
+        "①電動機端子箱に直接接続する部分の配線には、電動機の振動を吸収できるように、一般屋内では金属製可とう電線管を使用する。",
+        "②湿気の多い場所、水気の多い場所または屋外では、電線管の腐食を防ぐため、ビニル被覆金属製可とう電線管を使用する。"
+      ],
+      "items_vi": [
+        "① Đối với phần dây dẫn đấu nối trực tiếp vào hộp đầu cực của động cơ điện, sử dụng ống luồn dây kim loại dạng mềm (trong nhà nói chung) để có thể hấp thụ độ rung của động cơ.",
+        "② Tại nơi nhiều hơi ẩm, nhiều nước hoặc ngoài trời, sử dụng ống luồn dây kim loại dạng mềm bọc nhựa để phòng ngừa ống dẫn bị ăn mòn."
+      ],
+      "explanation_vi": null
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "jp": "7．分電盤の取付け（R3, 5, 7）",
+      "vi": "7. Lắp đặt tủ điện phân phối (R3, 5, 7)",
+      "explanation_vi": null
+    },
+    {
+      "type": "bullet_list",
+      "items_jp": [
+        "①外壁、建物へ取り付ける場合は、水が盤に侵入しないように盤隙間にコーキング処理を施す。",
+        "②盤取付けには、分電盤が十分に固定できるように、事前に壁厚と取付け物厚を十分考慮する。"
+      ],
+      "items_vi": [
+        "① Khi lắp vào tường ngoài, công trình, xử lý trám khe (caulking) tại khe hở của tủ điện để nước không xâm nhập vào tủ.",
+        "② Khi lắp tủ điện, phải xem xét kỹ độ dày tường và độ dày vật lắp đặt từ trước để tủ điện phân phối được cố định chắc chắn."
+      ],
+      "explanation_vi": null
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "jp": "8．機器搬入（R3, 5, 7）",
+      "vi": "8. Vận chuyển thiết bị vào (R3, 5, 7)",
+      "explanation_vi": null
+    },
+    {
+      "type": "bullet_list",
+      "items_jp": [
+        "①各種の機器は、誤搬入や搬入漏れが無いように資材搬入表等を使用して現場に搬入する。",
+        "②周囲との接触を防止するため、搬入口の位置、大きさを確認しておく。"
+      ],
+      "items_vi": [
+        "① Sử dụng bảng vận chuyển vật tư v.v. khi vận chuyển các loại thiết bị vào hiện trường để tránh vận chuyển nhầm hoặc sót.",
+        "② Xác nhận trước vị trí, kích thước cửa vận chuyển vào để phòng tránh va chạm với xung quanh."
+      ],
+      "explanation_vi": null
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "jp": "◎9．ケーブルラックの施工（R5）",
+      "vi": "◎9. Thi công giá đỡ cáp (cable rack) (R5)",
+      "explanation_vi": null
+    },
+    {
+      "type": "bullet_list",
+      "items_jp": [
+        "①ケーブルラックの設置高さは、作業中頭上の電線等に接触しないよう離隔距離に注意する。",
+        "②空調など周辺の他の設備の機器配線も設置、施工されるので引渡し後、使用上またはメンテナンス性に問題がないか確認する。"
+      ],
+      "items_vi": [
+        "① Chú ý khoảng cách lắp đặt giá đỡ cáp sao cho trong lúc làm việc không chạm vào đường dây điện v.v. phía trên đầu.",
+        "② Vì dây dẫn thiết bị của các hệ thống khác xung quanh như điều hòa không khí cũng được lắp đặt, thi công, nên sau khi bàn giao cần xác nhận xem có vấn đề gì về mặt sử dụng hoặc bảo trì hay không."
+      ],
+      "explanation_vi": null
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "jp": "◎10．引込口の防水処理（R5）",
+      "vi": "◎10. Xử lý chống thấm nước tại cửa dẫn vào (R5)",
+      "explanation_vi": null
+    },
+    {
+      "type": "bullet_list",
+      "items_jp": [
+        "①配電箱を建物に取付ける場合は、隙間から水が浸入しないようコーキング処理等の防水処理を行う。",
+        "②屋外で電線管を設ける場合は、最下部に水抜き孔を設ける事に留意する。"
+      ],
+      "items_vi": [
+        "① Khi lắp tủ phân phối điện vào công trình, thực hiện xử lý chống thấm như trám khe v.v. để nước không xâm nhập qua khe hở.",
+        "② Khi lắp đặt ống dẫn dây ở ngoài trời, phải lưu ý tạo lỗ thoát nước ở vị trí thấp nhất."
+      ],
+      "explanation_vi": null
+    }
+  ]
+}

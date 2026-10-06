@@ -1,0 +1,62 @@
+{
+  "book_slug": "sougou-mondai",
+  "section_path": [
+    { "code": "doc2", "title_jp": "資料No.2 第二次検定用教材", "title_vi": "Cuốn 2 - Tài liệu ôn thi lần 2" },
+    { "code": "doc2-3", "title_jp": "3. 施工管理法", "title_vi": "3. Phương pháp quản lý thi công" },
+    { "code": "doc2-3-2", "title_jp": "3-1-2. 品質管理", "title_vi": "3-1-2. Quản lý chất lượng" }
+  ],
+  "page_number": 120,
+  "page_label": "p.20",
+  "source_image_path": null,
+  "notes_vi": "[資料No.2 2級電気工事施工管理技術研修 第二次検定用教材（2026年度用）. Mục mới trong chương 3, song song với 3-1-1 安全管理. Sơ đồ 5 bước giống hệt khung đã gặp ở p.16 (chỉ tiêu đề mục khác).]",
+  "review_status": "draft",
+  "blocks": [
+    {
+      "type": "heading",
+      "level": 2,
+      "jp": "3-1-2．品質管理",
+      "vi": "3-1-2. Quản lý chất lượng",
+      "explanation_vi": null
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "jp": "品質管理の記述の方法について",
+      "vi": "Về cách mô tả phần quản lý chất lượng",
+      "explanation_vi": null
+    },
+    {
+      "type": "paragraph",
+      "jp": "過去に適正な品質を確保するための方法を記述する問題と電気工事の施工における対策を記述する問題が出題されている。\n品質管理の記述方法は、管理業務である「問題点を予測し対策を講ずる」展開である。\nしたがって、適正な品質を確保するための方法は、下記の施工管理業務の一部を記述するとよい。",
+      "vi": "Trước đây đã từng ra đề yêu cầu mô tả phương pháp đảm bảo chất lượng phù hợp, và đề yêu cầu mô tả biện pháp trong thi công công trình điện.\nCách mô tả phần quản lý chất lượng cũng là nghiệp vụ quản lý triển khai theo hướng \"dự đoán vấn đề rồi đưa ra biện pháp\".\nVì vậy, nên mô tả phương pháp đảm bảo chất lượng phù hợp như một phần trong nghiệp vụ quản lý thi công dưới đây.",
+      "explanation_vi": null
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "jp": "施工管理の手順",
+      "vi": "Trình tự nghiệp vụ quản lý thi công",
+      "explanation_vi": null
+    },
+    {
+      "type": "table",
+      "headers_jp": ["手順（理論の手順）", "応用能力の表現"],
+      "rows_jp": [
+        ["❶ 現場状況等", "発生する現場状況を過去の工事経験から具体的に記述する。"],
+        ["❷ 予測した問題", "予測した問題を具体的に記述し、その理由などを記述し明確にする。"],
+        ["❸ 特に留意した事項", "留意した事項は適切な手法・手順を絞って明確に記述する。\n留意した事項（重点管理項目）は1つにする。\n工事の目的や目標は留意した事項にはならない。"],
+        ["❹ 対策の決定", "問題の発生を防止するために特に留意する事項を十分に検討して、発生する問題を防止する対策を決定する。"],
+        ["❺ 対策の実施", "対策を実現するためにどのような指導・指揮をしたか具体的に記述すること。"]
+      ],
+      "headers_vi": ["Trình tự (lý luận)", "Cách thể hiện năng lực ứng dụng"],
+      "rows_vi": [
+        ["❶ Tình hình hiện trường...", "Mô tả cụ thể tình hình hiện trường phát sinh, dựa trên kinh nghiệm thi công trước đây."],
+        ["❷ Vấn đề đã dự đoán", "Mô tả cụ thể vấn đề đã dự đoán, nêu rõ lý do v.v. để làm rõ vấn đề."],
+        ["❸ Sự việc đặc biệt lưu ý", "Sự việc cần lưu ý phải được mô tả rõ ràng, thu hẹp vào đúng phương pháp/trình tự phù hợp.\nSự việc cần lưu ý (hạng mục quản lý trọng điểm) chỉ được nêu đúng 1 điều.\nMục đích hay mục tiêu công trình không được tính là sự việc cần lưu ý."],
+        ["❹ Quyết định biện pháp", "Xem xét kỹ sự việc đặc biệt cần lưu ý để phòng ngừa vấn đề phát sinh, từ đó quyết định biện pháp phòng ngừa vấn đề đó."],
+        ["❺ Thực hiện biện pháp", "Mô tả cụ thể đã chỉ đạo/chỉ huy như thế nào để thực hiện được biện pháp đã quyết định."]
+      ],
+      "explanation_vi": "Khung sơ đồ 5 bước giống hệt đã gặp ở p.5 và p.16, nay áp dụng lại cho mục 品質管理."
+    }
+  ]
+}

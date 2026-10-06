@@ -1,0 +1,114 @@
+{
+  "book_slug": "sougou-mondai",
+  "section_path": [
+    { "code": "doc2", "title_jp": "資料No.2 第二次検定用教材", "title_vi": "Cuốn 2 - Tài liệu ôn thi lần 2" },
+    { "code": "doc2-3", "title_jp": "3. 施工管理法", "title_vi": "3. Phương pháp quản lý thi công" },
+    { "code": "doc2-3-2", "title_jp": "3-1-2. 品質管理", "title_vi": "3-1-2. Quản lý chất lượng" }
+  ],
+  "page_number": 121,
+  "page_label": "p.21",
+  "source_image_path": null,
+  "notes_vi": "[資料No.2 2級電気工事施工管理技術研修 第二次検定用教材（2026年度用）. 3 đề luyện tập (R3, R5, R7) về thuật ngữ quản lý chất lượng trong thi công điện. Đề No.1 trong ảnh gốc có kèm khung trả lời trống (解答欄) để tự điền tay, không chép khung trống vào đây.]",
+  "review_status": "draft",
+  "blocks": [
+    {
+      "type": "heading",
+      "level": 3,
+      "jp": "【問題 No.1】",
+      "vi": "[Câu hỏi số 1]",
+      "explanation_vi": "(R3)"
+    },
+    {
+      "type": "note",
+      "jp": "電気工事に関する次の語句の中から2つを選び、番号と語句を記入のうえ、施工管理上留意すべき内容を、それぞれについて2つ具体的に記述しなさい。",
+      "vi": "Hãy chọn 2 trong số các thuật ngữ liên quan đến công trình điện dưới đây, ghi rõ số thứ tự và thuật ngữ, sau đó mô tả cụ thể 2 nội dung cần lưu ý về mặt quản lý thi công cho mỗi thuật ngữ.",
+      "explanation_vi": null
+    },
+    {
+      "type": "bullet_list",
+      "items_jp": [
+        "1. 機器の搬入",
+        "2. 分電盤の取付け",
+        "3. 低圧ケーブルの敷設",
+        "4. 電動機への配管配線",
+        "5. 資材の受入検査",
+        "6. 低圧分岐回路の試験"
+      ],
+      "items_vi": [
+        "1. Vận chuyển thiết bị vào",
+        "2. Lắp đặt tủ điện phân phối",
+        "3. Lắp đặt cáp hạ áp",
+        "4. Lắp đặt ống/dây dẫn đến động cơ điện",
+        "5. Kiểm tra nhận vật tư",
+        "6. Thử nghiệm mạch nhánh hạ áp"
+      ],
+      "explanation_vi": null
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "jp": "【問題 No.2】",
+      "vi": "[Câu hỏi số 2]",
+      "explanation_vi": "(R5)"
+    },
+    {
+      "type": "note",
+      "jp": "電気工事に関する次の語句の中から2つを選び、番号と語句を記入のうえ、施工管理上留意すべき内容を、それぞれについて2つ具体的に記述しなさい。",
+      "vi": "Hãy chọn 2 trong số các thuật ngữ liên quan đến công trình điện dưới đây, ghi rõ số thứ tự và thuật ngữ, sau đó mô tả cụ thể 2 nội dung cần lưu ý về mặt quản lý thi công cho mỗi thuật ngữ.",
+      "explanation_vi": null
+    },
+    {
+      "type": "bullet_list",
+      "items_jp": [
+        "1. 工具の取扱い",
+        "2. 機器の搬入",
+        "3. 分電盤の取付け",
+        "4. ケーブルラックの施工",
+        "5. 電動機への配管配線",
+        "6. 引込口の防水処理"
+      ],
+      "items_vi": [
+        "1. Sử dụng/quản lý dụng cụ",
+        "2. Vận chuyển thiết bị vào",
+        "3. Lắp đặt tủ điện phân phối",
+        "4. Thi công giá đỡ cáp (cable rack)",
+        "5. Lắp đặt ống/dây dẫn đến động cơ điện",
+        "6. Xử lý chống thấm nước tại cửa dẫn vào"
+      ],
+      "explanation_vi": null
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "jp": "【問題 No.3】",
+      "vi": "[Câu hỏi số 3]",
+      "explanation_vi": "(R7)"
+    },
+    {
+      "type": "note",
+      "jp": "電気工事に関する次の語句の中から2つを選び、番号と語句を記入のうえ、施工管理上留意すべき内容について、それぞれ2つ具体的に記述しなさい。",
+      "vi": "Hãy chọn 2 trong số các thuật ngữ liên quan đến công trình điện dưới đây, ghi rõ số thứ tự và thuật ngữ, sau đó mô tả cụ thể 2 nội dung cần lưu ý về mặt quản lý thi công cho mỗi thuật ngữ.",
+      "explanation_vi": null
+    },
+    {
+      "type": "bullet_list",
+      "items_jp": [
+        "1. 機器の搬入",
+        "2. 電線相互の接続",
+        "3. 低圧ケーブルの敷設",
+        "4. 資材の受入検査",
+        "5. 低圧分岐回路の試験",
+        "6. 分電盤の取付け"
+      ],
+      "items_vi": [
+        "1. Vận chuyển thiết bị vào",
+        "2. Đấu nối dây dẫn với nhau",
+        "3. Lắp đặt cáp hạ áp",
+        "4. Kiểm tra nhận vật tư",
+        "5. Thử nghiệm mạch nhánh hạ áp",
+        "6. Lắp đặt tủ điện phân phối"
+      ],
+      "explanation_vi": null
+    }
+  ]
+}

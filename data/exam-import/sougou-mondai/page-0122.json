@@ -1,0 +1,145 @@
+{
+  "book_slug": "sougou-mondai",
+  "section_path": [
+    { "code": "doc2", "title_jp": "資料No.2 第二次検定用教材", "title_vi": "Cuốn 2 - Tài liệu ôn thi lần 2" },
+    { "code": "doc2-3", "title_jp": "3. 施工管理法", "title_vi": "3. Phương pháp quản lý thi công" },
+    { "code": "doc2-3-2", "title_jp": "3-1-2. 品質管理", "title_vi": "3-1-2. Quản lý chất lượng" }
+  ],
+  "page_number": 122,
+  "page_label": "p.22",
+  "source_image_path": null,
+  "notes_vi": "[資料No.2 2級電気工事施工管理技術研修 第二次検定用教材（2026年度用）. Bảng tổng hợp 10 thuật ngữ quản lý chất lượng hay ra đề + giải nghĩa chi tiết 5 thuật ngữ đầu (phần còn lại ở trang 23). Dấu ◎ trong sách gốc đánh dấu thuật ngữ quan trọng/hay gặp.]",
+  "review_status": "draft",
+  "blocks": [
+    {
+      "type": "heading",
+      "level": 2,
+      "jp": "【品質管理】",
+      "vi": "[Quản lý chất lượng]",
+      "explanation_vi": null
+    },
+    {
+      "type": "numbered_list",
+      "items_jp": [
+        "材料（資材）の受入検査（R3, 7）",
+        "工具の取扱い（R5）",
+        "低圧分岐回線の試験（R3, 7）",
+        "電線相互の接続（R7）",
+        "低圧ケーブルの敷設（R3, 7）",
+        "電動機への配管配線（R3, 5）",
+        "分電盤の取付け（R3, 5, 7）",
+        "機器搬入（R3, 5, 7）",
+        "ケーブルラックの施工（R5）",
+        "引込口の防水処理（R5）"
+      ],
+      "items_vi": [
+        "Kiểm tra nhận vật liệu (vật tư) (R3, 7)",
+        "Sử dụng/quản lý dụng cụ (R5)",
+        "Thử nghiệm mạch nhánh hạ áp (R3, 7)",
+        "Đấu nối dây dẫn với nhau (R7)",
+        "Lắp đặt cáp hạ áp (R3, 7)",
+        "Lắp đặt ống/dây dẫn đến động cơ điện (R3, 5)",
+        "Lắp đặt tủ điện phân phối (R3, 5, 7)",
+        "Vận chuyển thiết bị vào (R3, 5, 7)",
+        "Thi công giá đỡ cáp (cable rack) (R5)",
+        "Xử lý chống thấm nước tại cửa dẫn vào (R5)"
+      ],
+      "explanation_vi": "Số trong ngoặc là các năm (Reiwa) từng ra đề về thuật ngữ đó. Lưu ý: mục 3 ở đây sách gốc ghi '低圧分岐回線の試験' (kanji 線), còn ở trang 21 (đề luyện tập) lại ghi '低圧分岐回路の試験' (kanji 路) - đã chép đúng theo từng chỗ xuất hiện trong ảnh gốc, có thể là điểm chưa thống nhất của sách."
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "jp": "1．材料（資材）の受入検査（R3, 7）　施工マニュアル p.61",
+      "vi": "1. Kiểm tra nhận vật liệu (vật tư) (R3, 7) - Sổ tay thi công tr.61",
+      "explanation_vi": null
+    },
+    {
+      "type": "bullet_list",
+      "items_jp": [
+        "①仕様書で指定されている材料の場合、設計図書に定める品質及び性能を有する材料かどうか確認する。",
+        "②納品書の内容と搬入された材料の仕様の相違や数量の不足がないか確認する。"
+      ],
+      "items_vi": [
+        "① Đối với vật liệu được chỉ định trong bản quy cách, xác nhận xem đó có phải là vật liệu có chất lượng và tính năng theo quy định trong hồ sơ thiết kế hay không.",
+        "② Xác nhận xem nội dung phiếu giao hàng có khác với quy cách vật liệu đã vận chuyển vào, hoặc có thiếu số lượng hay không."
+      ],
+      "explanation_vi": null
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "jp": "◎2．工具の取扱い（R5）",
+      "vi": "◎2. Sử dụng/quản lý dụng cụ (R5)",
+      "explanation_vi": null
+    },
+    {
+      "type": "bullet_list",
+      "items_jp": [
+        "①施工に適した工具を迅速に取り出せるように、工具の種類ごとに整理してプラスチックケースなどに収納する。",
+        "②現場に新たに持ち込む電動工具類は、運搬中に故障や損傷する場合があるので、持込み時現場にて検査し、合格したものに持込機械届受理証を添付する。"
+      ],
+      "items_vi": [
+        "① Sắp xếp dụng cụ theo từng loại và cất vào hộp nhựa v.v. để có thể lấy ra nhanh chóng dụng cụ phù hợp với công việc thi công.",
+        "② Các dụng cụ điện cầm tay mang mới vào hiện trường có thể bị hỏng hóc hoặc hư hại trong quá trình vận chuyển, nên khi mang vào phải kiểm tra tại hiện trường, và đính kèm giấy chứng nhận đã tiếp nhận khai báo máy móc mang vào cho những dụng cụ đạt yêu cầu."
+      ],
+      "explanation_vi": null
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "jp": "3．低圧分岐回線の試験（R3, 7）　電気テキスト p.98, 140（参考）",
+      "vi": "3. Thử nghiệm mạch nhánh hạ áp (R3, 7) - Giáo trình điện tr.98, 140 (tham khảo)",
+      "explanation_vi": null
+    },
+    {
+      "type": "bullet_list",
+      "items_jp": [
+        "①漏電がないことを確認するために、分電盤の分岐回路の絶縁を確認するには、絶縁抵抗計で測定する。",
+        "②三相の内二相の電線を入れ替えると三相モータが逆回転するので、低圧三相動力回路の相順を検相器によって確認する。"
+      ],
+      "items_vi": [
+        "① Để xác nhận không có rò điện, khi kiểm tra cách điện của mạch nhánh trong tủ điện phân phối, đo bằng đồng hồ đo điện trở cách điện.",
+        "② Nếu đổi chỗ 2 trong 3 dây pha thì động cơ 3 pha sẽ quay ngược chiều, nên phải xác nhận thứ tự pha của mạch động lực 3 pha hạ áp bằng máy kiểm tra thứ tự pha."
+      ],
+      "explanation_vi": null
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "jp": "4．電線相互の接続（R7）",
+      "vi": "4. Đấu nối dây dẫn với nhau (R7)",
+      "explanation_vi": null
+    },
+    {
+      "type": "bullet_list",
+      "items_jp": [
+        "①接続が確実に行われるように圧着スリーブ、電線コネクター、圧着端子等の電線に適合する接続材を用いる。",
+        "②電線の接続や点検が不十分になるので、金属管、PF管、CD管、硬質ビニル管、金属製可とう電線管の内部では、接続してはならない。"
+      ],
+      "items_vi": [
+        "① Sử dụng vật liệu đấu nối phù hợp với dây dẫn như ống ép, đầu nối dây, cốt ép đầu dây v.v. để việc đấu nối được chắc chắn.",
+        "② Không được đấu nối bên trong ống kim loại, ống PF, ống CD, ống nhựa cứng, ống luồn dây kim loại dạng mềm, vì việc đấu nối và kiểm tra sẽ không đầy đủ."
+      ],
+      "explanation_vi": null
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "jp": "5．低圧ケーブルの敷設（R3, 7）　電気テキスト p.115（参考）",
+      "vi": "5. Lắp đặt cáp hạ áp (R3, 7) - Giáo trình điện tr.115 (tham khảo)",
+      "explanation_vi": null
+    },
+    {
+      "type": "bullet_list",
+      "items_jp": [
+        "①弱電流電線、水管、ガス管との漏電を防ぐため、接近または交さする場合は、これらと接触しないように支持する。",
+        "②電線接続部に不要な張力を加えないよう、ボックス付近で支持する。"
+      ],
+      "items_vi": [
+        "① Để phòng ngừa rò điện với dây điện yếu, ống nước, ống ga, khi đi gần hoặc giao cắt với các đường ống này, phải cố định sao cho không tiếp xúc với chúng.",
+        "② Cố định gần hộp nối để tránh gây lực căng không cần thiết lên điểm đấu nối dây dẫn."
+      ],
+      "explanation_vi": null
+    }
+  ]
+}
