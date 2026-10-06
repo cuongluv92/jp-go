@@ -1,0 +1,130 @@
+{
+  "book_slug": "sougou-mondai",
+  "section_path": [
+    { "code": "doc2", "title_jp": "資料No.2 第二次検定用教材", "title_vi": "Cuốn 2 - Tài liệu ôn thi lần 2" },
+    { "code": "doc2-5", "title_jp": "5. 電気用語", "title_vi": "5. Thuật ngữ điện" }
+  ],
+  "page_number": 143,
+  "page_label": "p.43",
+  "source_image_path": null,
+  "notes_vi": "[資料No.2 2級電気工事施工管理技術研修 第二次検定用教材（2026年度用）. Giải nghĩa thuật ngữ 14-17 kết thúc nhóm 【構内電気設備】, và bắt đầu nhóm mới 【通信設備】(thiết bị thông tin liên lạc). Dấu ◎ đánh dấu thuật ngữ quan trọng/hay gặp.]",
+  "review_status": "draft",
+  "blocks": [
+    {
+      "type": "heading",
+      "level": 4,
+      "jp": "14．電動機の過負荷保護（R1）　電気テキスト p.139",
+      "vi": "14. Bảo vệ quá tải động cơ điện (R1) - Giáo trình điện tr.139",
+      "explanation_vi": null
+    },
+    {
+      "type": "bullet_list",
+      "items_jp": [
+        "①電動機にかかる電力数値が定格負荷以上になるとオーバーロードするので、過熱防止を目的とする。",
+        "②許容電流値に注意が必要であり、過負荷事故時は流れる過電流を検出する過電流継電器で遮断器を動作させる方法がある。"
+      ],
+      "items_vi": [
+        "① Khi giá trị công suất đặt lên động cơ vượt quá tải định mức sẽ gây quá tải (overload), nên mục đích là phòng tránh quá nhiệt.",
+        "② Cần lưu ý giá trị dòng điện cho phép; có phương pháp dùng rơ-le quá dòng để phát hiện dòng quá tải chạy qua khi xảy ra sự cố quá tải, từ đó cho máy cắt tác động."
+      ],
+      "explanation_vi": null
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "jp": "15．変流器（CT）（R1）　電気テキスト p.121",
+      "vi": "15. Biến dòng điện - CT (R1) - Giáo trình điện tr.121",
+      "explanation_vi": null
+    },
+    {
+      "type": "bullet_list",
+      "items_jp": [
+        "①大電流を小電流で測定するため、小電流に変成する。",
+        "②変流器は計器用変流器と保護継電器用変流器に大別されることを選定上の留意点とする。"
+      ],
+      "items_vi": [
+        "① Để đo dòng điện lớn bằng dòng điện nhỏ, biến đổi thành dòng điện nhỏ.",
+        "② Biến dòng điện được chia thành 2 loại lớn: biến dòng dùng cho đồng hồ đo và biến dòng dùng cho rơ-le bảo vệ - đây là điểm cần lưu ý khi lựa chọn."
+      ],
+      "explanation_vi": null
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "jp": "16．接地抵抗試験（R5）　電気テキスト p.102",
+      "vi": "16. Thử nghiệm điện trở tiếp địa (R5) - Giáo trình điện tr.102",
+      "explanation_vi": null
+    },
+    {
+      "type": "bullet_list",
+      "items_jp": [
+        "①機器、絶縁物からの感電を防止するために行うもので、所定の抵抗値以下であることを確認する試験である。",
+        "②接地抵抗値は、A種、C種で10Ω以下、D種で100Ω以下と規定されている。"
+      ],
+      "items_vi": [
+        "① Là thử nghiệm được thực hiện để phòng tránh điện giật từ thiết bị, vật cách điện, nhằm xác nhận điện trở đạt từ giá trị quy định trở xuống.",
+        "② Giá trị điện trở tiếp địa được quy định: loại A, loại C phải từ 10Ω trở xuống; loại D phải từ 100Ω trở xuống."
+      ],
+      "explanation_vi": null
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "jp": "17．2Eリレー（R7）　電気テキスト p.139",
+      "vi": "17. Rơ-le 2E (R7) - Giáo trình điện tr.139",
+      "explanation_vi": null
+    },
+    {
+      "type": "bullet_list",
+      "items_jp": [
+        "①2Eリレーは、主に電動機や電気機器の保護に使用されるリレーの一種で、過負荷や欠相を検出し、電磁接触器等に事故信号を送り、主回路を開放する。",
+        "②過負荷や欠相が発生する主な原因は配線用遮断器や電磁接触器の接点不良・劣化による断線やケーブルの劣化による断線、電動機等の作動による振動等がある。"
+      ],
+      "items_vi": [
+        "① Rơ-le 2E là một loại rơ-le chủ yếu dùng để bảo vệ động cơ điện và thiết bị điện, phát hiện quá tải hoặc mất pha, gửi tín hiệu sự cố đến công-tắc-tơ điện từ v.v. để ngắt mạch chính.",
+        "② Nguyên nhân chính gây quá tải hoặc mất pha là đứt dây do tiếp điểm của máy cắt hoặc công-tắc-tơ điện từ bị hỏng/suy giảm chất lượng, đứt dây do cáp bị lão hóa, hoặc rung động do hoạt động của động cơ v.v."
+      ],
+      "explanation_vi": null
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "jp": "【通信設備】",
+      "vi": "[Thiết bị thông tin liên lạc]",
+      "explanation_vi": null
+    },
+    {
+      "type": "numbered_list",
+      "items_jp": [
+        "光ファイバケーブル（R2, 5）",
+        "UTPケーブル（R1, 4）",
+        "高周波同軸ケーブル（R6）"
+      ],
+      "items_vi": [
+        "Cáp quang (R2, 5)",
+        "Cáp UTP (R1, 4)",
+        "Cáp đồng trục tần số cao (R6)"
+      ],
+      "explanation_vi": "Số trong ngoặc là các năm (Reiwa) từng ra đề về thuật ngữ đó."
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "jp": "◎1．光ファイバケーブル（R2, 5）　電気テキスト p.155",
+      "vi": "◎1. Cáp quang (R2, 5) - Giáo trình điện tr.155",
+      "explanation_vi": null
+    },
+    {
+      "type": "bullet_list",
+      "items_jp": [
+        "①同じ伝送量ならば他のケーブルと比較して細くて済み、軽量の上に可とう性にも優れている。また、マルチモード形やシングルモード形等の種類がある。",
+        "②デジタル化した電気信号を光信号に変えて伝送する通信用ケーブルであり、低損失、広帯域性、無誘導、無漏話等の利点がある。"
+      ],
+      "items_vi": [
+        "① Nếu cùng dung lượng truyền dẫn thì cáp này mảnh hơn so với các loại cáp khác, nhẹ và có tính mềm dẻo tốt. Ngoài ra còn có các loại như đa mode (multi-mode), đơn mode (single-mode) v.v.",
+        "② Là cáp thông tin liên lạc chuyển đổi tín hiệu điện đã số hóa thành tín hiệu quang để truyền dẫn, có các ưu điểm như tổn hao thấp, băng thông rộng, không cảm ứng, không nhiễu xuyên âm v.v."
+      ],
+      "explanation_vi": null
+    }
+  ]
+}

@@ -1,0 +1,109 @@
+{
+  "book_slug": "sougou-mondai",
+  "section_path": [
+    { "code": "doc2", "title_jp": "資料No.2 第二次検定用教材", "title_vi": "Cuốn 2 - Tài liệu ôn thi lần 2" },
+    { "code": "doc2-5", "title_jp": "5. 電気用語", "title_vi": "5. Thuật ngữ điện" }
+  ],
+  "page_number": 144,
+  "page_label": "p.44",
+  "source_image_path": null,
+  "notes_vi": "[資料No.2 2級電気工事施工管理技術研修 第二次検定用教材（2026年度用）. Tiếp theo trang 43 - giải nghĩa thuật ngữ 2-3 kết thúc nhóm 【通信設備】, và bắt đầu nhóm mới 【防災設備】(thiết bị phòng cháy chữa cháy) với 2 thuật ngữ. Góc dưới bên phải trang có chữ mờ in ngược từ mặt sau (bleed-through) thuộc nội dung 【計算問題】2-1/2-2 - đã loại bỏ, không thuộc nội dung thật của trang này. Dấu ◎ đánh dấu thuật ngữ quan trọng/hay gặp.]",
+  "review_status": "draft",
+  "blocks": [
+    {
+      "type": "heading",
+      "level": 4,
+      "jp": "◎2．UTPケーブル（R1, 4）　電気テキスト p.155",
+      "vi": "◎2. Cáp UTP (R1, 4) - Giáo trình điện tr.155",
+      "explanation_vi": null
+    },
+    {
+      "type": "bullet_list",
+      "items_jp": [
+        "①屋内電話用その他、一般通信用に用いられる通信ケーブルであり、LANに使われている代表的なケーブルである。",
+        "②電線を2本ずつより合わせて対にした通信用ケーブル（ツイストペアケーブル）で、平行型の電線に比べてノイズの影響を抑えることができる。"
+      ],
+      "items_vi": [
+        "① Là cáp thông tin liên lạc dùng cho điện thoại trong nhà và các mục đích thông tin thông thường khác, là loại cáp đại diện được dùng cho LAN.",
+        "② Là cáp thông tin liên lạc (cáp xoắn đôi) xoắn 2 dây điện thành một cặp, có thể hạn chế ảnh hưởng của nhiễu so với loại dây dẫn song song."
+      ],
+      "explanation_vi": null
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "jp": "3．高周波同軸ケーブル（R6）",
+      "vi": "3. Cáp đồng trục tần số cao (R6)",
+      "explanation_vi": null
+    },
+    {
+      "type": "bullet_list",
+      "items_jp": [
+        "①減衰量は、ケーブルサイズが小さいほど、周波数が大きいほど大きい。テレビジョン受信用同軸ケーブルの特性インピーダンスは、75Ωと規定されている。",
+        "②電気信号の漏洩や外部ノイズの侵入が少なく、4K、8Kのデジタル放送等の高い周波数の電気信号を安定的に長距離伝送することが可能である。"
+      ],
+      "items_vi": [
+        "① Độ suy giảm càng lớn khi kích thước cáp càng nhỏ và tần số càng cao. Trở kháng đặc tính của cáp đồng trục dùng để thu truyền hình được quy định là 75Ω.",
+        "② Ít rò rỉ tín hiệu điện và ít bị nhiễu từ bên ngoài xâm nhập, có thể truyền dẫn ổn định tín hiệu điện tần số cao như phát sóng số 4K, 8K v.v. qua khoảng cách xa."
+      ],
+      "explanation_vi": null
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "jp": "【防災設備】",
+      "vi": "[Thiết bị phòng cháy chữa cháy]",
+      "explanation_vi": null
+    },
+    {
+      "type": "numbered_list",
+      "items_jp": [
+        "定温式スポット型感知器（R3, 7）",
+        "差動式スポット型感知器（H30）"
+      ],
+      "items_vi": [
+        "Đầu báo khói nhiệt loại điểm cố định (R3, 7)",
+        "Đầu báo khói nhiệt loại điểm vi sai (H30)"
+      ],
+      "explanation_vi": "Số trong ngoặc là các năm (Reiwa/Heisei) từng ra đề về thuật ngữ đó."
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "jp": "1．定温式スポット型感知器（R3, 7）　電気テキスト p.150, 151",
+      "vi": "1. Đầu báo nhiệt loại điểm cố định (R3, 7) - Giáo trình điện tr.150, 151",
+      "explanation_vi": null
+    },
+    {
+      "type": "bullet_list",
+      "items_jp": [
+        "①自動火災報知設備等に用いられる火災の発生を自動的に感知し、受信器に信号を送る装置である。感知器の下端は、取付面の下方0.3m以内とする。",
+        "②発生する熱により火災を感知する感知器の一種であり、感知条件としては局所の温度が一定以上になると作動する。"
+      ],
+      "items_vi": [
+        "① Là thiết bị dùng trong hệ thống báo cháy tự động v.v., tự động phát hiện khi có hỏa hoạn xảy ra và gửi tín hiệu đến bộ thu nhận. Đầu dưới của đầu báo phải nằm trong phạm vi 0,3m phía dưới mặt lắp đặt.",
+        "② Là một loại đầu báo phát hiện hỏa hoạn nhờ nhiệt phát sinh; điều kiện phát hiện là khi nhiệt độ tại chỗ vượt quá một mức cố định thì đầu báo tác động."
+      ],
+      "explanation_vi": null
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "jp": "2．差動式スポット型感知器（H30）　電気テキスト p.150, 151",
+      "vi": "2. Đầu báo nhiệt loại điểm vi sai (H30) - Giáo trình điện tr.150, 151",
+      "explanation_vi": null
+    },
+    {
+      "type": "bullet_list",
+      "items_jp": [
+        "①自動火災報知設備に用いられる熱感知器の一つで、急激な温度上昇が発生し、温度上昇率が一定以上になった時に受信機に発報する。",
+        "②感知器選定上の留意点として、厨房は温度上昇率が大きいため、差動式ではなく定温式となる。また、感知器の下端は、取付面の下方0.3m以内とする。"
+      ],
+      "items_vi": [
+        "① Là một trong các đầu báo nhiệt dùng trong hệ thống báo cháy tự động; khi xảy ra tăng nhiệt độ đột ngột và tốc độ tăng nhiệt vượt quá một mức cố định thì báo tín hiệu đến bộ thu nhận.",
+        "② Điểm cần lưu ý khi lựa chọn đầu báo: khu vực bếp có tốc độ tăng nhiệt lớn nên dùng loại điểm cố định thay vì loại vi sai. Ngoài ra, đầu dưới của đầu báo phải nằm trong phạm vi 0,3m phía dưới mặt lắp đặt."
+      ],
+      "explanation_vi": null
+    }
+  ]
+}

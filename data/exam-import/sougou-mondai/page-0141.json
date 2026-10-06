@@ -1,0 +1,147 @@
+{
+  "book_slug": "sougou-mondai",
+  "section_path": [
+    { "code": "doc2", "title_jp": "資料No.2 第二次検定用教材", "title_vi": "Cuốn 2 - Tài liệu ôn thi lần 2" },
+    { "code": "doc2-5", "title_jp": "5. 電気用語", "title_vi": "5. Thuật ngữ điện" }
+  ],
+  "page_number": 141,
+  "page_label": "p.41",
+  "source_image_path": null,
+  "notes_vi": "[資料No.2 2級電気工事施工管理技術研修 第二次検定用教材（2026年度用）. Tiếp theo trang 40 - giải nghĩa chi tiết thuật ngữ 1-7 của nhóm 【構内電気設備】. Dấu ◎ đánh dấu thuật ngữ quan trọng/hay gặp.]",
+  "review_status": "draft",
+  "blocks": [
+    {
+      "type": "heading",
+      "level": 4,
+      "jp": "◎1．力率改善（R1, 4, 6）　電気テキスト p.20, 52",
+      "vi": "◎1. Cải thiện hệ số công suất (R1, 4, 6) - Giáo trình điện tr.20, 52",
+      "explanation_vi": null
+    },
+    {
+      "type": "bullet_list",
+      "items_jp": [
+        "①無効電力を減少させることで、電力損失の減少、電力料金の削減が図れる。",
+        "②遅れ力率の場合には、進相コンデンサを回路と並列に接続する。"
+      ],
+      "items_vi": [
+        "① Bằng cách giảm công suất phản kháng, có thể giảm tổn thất điện năng và giảm chi phí tiền điện.",
+        "② Trong trường hợp hệ số công suất trễ pha, đấu song song tụ bù (tụ sớm pha) vào mạch."
+      ],
+      "explanation_vi": null
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "jp": "2．漏電遮断器（R4, 6）　電気テキスト p.107",
+      "vi": "2. Cầu dao chống rò điện (R4, 6) - Giáo trình điện tr.107",
+      "explanation_vi": null
+    },
+    {
+      "type": "bullet_list",
+      "items_jp": [
+        "①人が容易に触れる恐れがある施設に電気を供給する電路には、感電、漏電を防止する遮断器を設ける。",
+        "②漏電遮断装置を一体として容器内に収めて製作したもので、手動で電路の開閉並びに自動遮断後の復帰が行える。"
+      ],
+      "items_vi": [
+        "① Tại mạch điện cấp điện cho cơ sở có nguy cơ con người dễ chạm phải, lắp cầu dao phòng tránh điện giật, rò điện.",
+        "② Là thiết bị được chế tạo tích hợp cơ cấu chống rò điện gọn trong một vỏ, có thể đóng/mở mạch bằng tay và tự động phục hồi sau khi ngắt tự động."
+      ],
+      "explanation_vi": null
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "jp": "◎3．絶縁抵抗試験（R2, 4, 6）　電気テキスト p.98",
+      "vi": "◎3. Thử nghiệm điện trở cách điện (R2, 4, 6) - Giáo trình điện tr.98",
+      "explanation_vi": null
+    },
+    {
+      "type": "bullet_list",
+      "items_jp": [
+        "①電気設備は、感電、火災などのおそれがないように絶縁しなければならない。絶縁抵抗試験は、所定の絶縁抵抗値以上ある事を確認する試験である。",
+        "②低圧交流電路の絶縁抵抗値の維持基準は、対地電圧を基準として定められている。"
+      ],
+      "items_vi": [
+        "① Thiết bị điện phải được cách điện sao cho không có nguy cơ điện giật, hỏa hoạn v.v. Thử nghiệm điện trở cách điện là thử nghiệm xác nhận điện trở cách điện đạt từ giá trị quy định trở lên.",
+        "② Tiêu chuẩn duy trì giá trị điện trở cách điện của mạch điện xoay chiều hạ áp được quy định dựa trên điện áp đối với đất."
+      ],
+      "explanation_vi": null
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "jp": "◎4．A種接地工事（R3, 7）　電気テキスト p.100",
+      "vi": "◎4. Công trình tiếp địa loại A (R3, 7) - Giáo trình điện tr.100",
+      "explanation_vi": null
+    },
+    {
+      "type": "bullet_list",
+      "items_jp": [
+        "①接地工事は、機器等を大地と電気的に接続することにより、異常電圧発生時の感電を防止し、機器等の絶縁強度を軽減するものである。",
+        "②A種接地工事は、高圧用又は特別高圧用機器の鉄台等に施設され、高電圧の侵入の恐れがあり、かつ、危険度の大きい場合に施設される。"
+      ],
+      "items_vi": [
+        "① Công trình tiếp địa là việc đấu nối thiết bị v.v. về mặt điện với đất, nhằm phòng tránh điện giật khi xảy ra điện áp bất thường, đồng thời giảm bớt yêu cầu về độ bền cách điện của thiết bị.",
+        "② Công trình tiếp địa loại A được thi công tại bệ sắt v.v. của thiết bị dùng cho cao áp hoặc siêu cao áp, áp dụng khi có nguy cơ điện áp cao xâm nhập và mức độ nguy hiểm lớn."
+      ],
+      "explanation_vi": null
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "jp": "◎5．D種接地工事（R2）　電気テキスト p.100",
+      "vi": "◎5. Công trình tiếp địa loại D (R2) - Giáo trình điện tr.100",
+      "explanation_vi": null
+    },
+    {
+      "type": "bullet_list",
+      "items_jp": [
+        "①電気設備の接地工事は、感電の防止のために行う工事であり、接地抵抗値は原則として100Ω以下とする。",
+        "②300V以下の機械器具の鉄台および金属製外箱には、D種接地工事を施すこととされている。"
+      ],
+      "items_vi": [
+        "① Công trình tiếp địa của thiết bị điện được thực hiện nhằm phòng tránh điện giật, giá trị điện trở tiếp địa về nguyên tắc phải từ 100Ω trở xuống.",
+        "② Bệ sắt và vỏ bọc kim loại của máy móc, dụng cụ có điện áp từ 300V trở xuống phải được thi công tiếp địa loại D."
+      ],
+      "explanation_vi": null
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "jp": "6．単相変圧器のV結線（R7）　電気テキスト p.122",
+      "vi": "6. Đấu nối chữ V máy biến áp 1 pha (R7) - Giáo trình điện tr.122",
+      "explanation_vi": null
+    },
+    {
+      "type": "bullet_list",
+      "items_jp": [
+        "①単相変圧器3台を用いるΔ-Δ結線のうち1台を取り外したもので、Δの一辺が無くなってV形になった結線である。",
+        "②将来の負荷増設でΔ結線が予定されている場合の暫定的な方法として使用されることが多い。"
+      ],
+      "items_vi": [
+        "① Là kiểu đấu nối có được bằng cách tháo bỏ 1 trong 3 máy biến áp 1 pha của đấu nối tam giác (Δ-Δ), khiến 1 cạnh của tam giác mất đi, trở thành hình chữ V.",
+        "② Thường được dùng như phương pháp tạm thời khi dự kiến sẽ chuyển sang đấu nối tam giác (Δ) do tăng tải trong tương lai."
+      ],
+      "explanation_vi": null
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "jp": "7．スコット結線変圧器（R2）　電気テキスト p.122",
+      "vi": "7. Máy biến áp đấu nối Scott (R2) - Giáo trình điện tr.122",
+      "explanation_vi": null
+    },
+    {
+      "type": "bullet_list",
+      "items_jp": [
+        "①単相変圧器2台を用いて三相回路から二相を取るときの結線法であり、電源側に不平衡が生じないようにするための変圧器である。",
+        "②工場、ビル等で三相非常用発電機に接続され、単相二系統負荷の給電用に使用されている。"
+      ],
+      "items_vi": [
+        "① Là phương pháp đấu nối dùng 2 máy biến áp 1 pha để lấy 2 pha từ mạch 3 pha; là máy biến áp nhằm tránh gây mất cân bằng ở phía nguồn điện.",
+        "② Được dùng tại nhà máy, tòa nhà v.v., đấu nối với máy phát điện khẩn cấp 3 pha, dùng để cấp điện cho 2 hệ thống tải 1 pha."
+      ],
+      "explanation_vi": null
+    }
+  ]
+}

@@ -1,0 +1,134 @@
+{
+  "book_slug": "sougou-mondai",
+  "section_path": [
+    { "code": "doc2", "title_jp": "資料No.2 第二次検定用教材", "title_vi": "Cuốn 2 - Tài liệu ôn thi lần 2" },
+    { "code": "doc2-5", "title_jp": "5. 電気用語", "title_vi": "5. Thuật ngữ điện" }
+  ],
+  "page_number": 142,
+  "page_label": "p.42",
+  "source_image_path": null,
+  "notes_vi": "[資料No.2 2級電気工事施工管理技術研修 第二次検定用教材（2026年度用）. Tiếp theo trang 41 - giải nghĩa chi tiết thuật ngữ 8-13 của nhóm 【構内電気設備】. Mục 8 có thêm mục con '施工の注意点' (điểm cần lưu ý khi thi công) - chữ in khá nhỏ nên một vài chỗ khó đọc hoàn toàn chắc chắn, đã chép theo cách hiểu hợp lý nhất, cần đối chiếu lại với sách gốc nếu dùng chính thức. Dấu ◎ đánh dấu thuật ngữ quan trọng/hay gặp.]",
+  "review_status": "draft",
+  "blocks": [
+    {
+      "type": "heading",
+      "level": 4,
+      "jp": "◎8．波付硬質合成樹脂管（FEP管）（H30, R4, 6）",
+      "vi": "◎8. Ống nhựa tổng hợp cứng dạng gợn sóng - ống FEP (H30, R4, 6)",
+      "explanation_vi": null
+    },
+    {
+      "type": "bullet_list",
+      "items_jp": [
+        "①地中管路等の布設に使用する配管であり、地盤沈下が激しい箇所にも使用できる。",
+        "②管内外ともに波状になっているので、曲げ加工がしやすく可とう性に優れている。"
+      ],
+      "items_vi": [
+        "① Là ống dùng để lắp đặt đường ống ngầm dưới đất v.v., có thể sử dụng ngay cả ở những nơi lún đất nghiêm trọng.",
+        "② Do cả mặt trong lẫn mặt ngoài ống đều dạng gợn sóng, nên dễ uốn cong và có tính mềm dẻo tốt."
+      ],
+      "explanation_vi": "Mục ② này đọc theo cách hiểu hợp lý nhất từ chữ in nhỏ trong ảnh gốc (tính chất 'dạng gợn sóng' thường gắn với đặc điểm dễ uốn/mềm dẻo của loại ống này) - nên kiểm tra lại với sách gốc nếu cần độ chính xác tuyệt đối."
+    },
+    {
+      "type": "note",
+      "jp": "施工の注意点\n①管路は堅ろうで車両その他重量物の圧力を耐えうるように、埋設深さに注意して施設する。\n②管相互の接合は、専用の付属品がある場合はそれを使用して堅ろうに行い、かつ水が容易に管路内部に浸入しないよう施設する。",
+      "vi": "Điểm cần lưu ý khi thi công\n① Lắp đặt chú ý đến độ sâu chôn ống để ống chịu được áp lực của xe cộ và các vật nặng khác một cách chắc chắn.\n② Khi nối ống với nhau, nếu có phụ kiện chuyên dụng thì dùng phụ kiện đó để nối chắc chắn, đồng thời lắp đặt sao cho nước không dễ xâm nhập vào bên trong đường ống.",
+      "explanation_vi": "Đây là mục con riêng trong sách gốc, tách biệt khỏi phần giải nghĩa ①② chính ở trên. Một số chữ trong ảnh gốc khá nhỏ và khó đọc hoàn toàn chắc chắn, đã chép theo cách hiểu hợp lý nhất."
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "jp": "9．VVFケーブルの差込形コネクタ（屋内配線用差込形電線コネクタ）（R3, 5, 7）",
+      "vi": "9. Đầu nối dạng cắm của cáp VVF - dùng cho dây dẫn trong nhà (R3, 5, 7)",
+      "explanation_vi": null
+    },
+    {
+      "type": "bullet_list",
+      "items_jp": [
+        "①この電線コネクタは、電線の延長や分岐を目的として電線相互の接続を行う結束端子である。",
+        "②ケーブルからIV線を取出しコネクタの穴に差し込むだけなので、施工時間の短縮や省力化を図ることができる。"
+      ],
+      "items_vi": [
+        "① Đầu nối dây điện này là đầu cực dùng để đấu nối các dây điện với nhau, nhằm mục đích nối dài hoặc rẽ nhánh dây điện.",
+        "② Chỉ cần lấy dây IV ra từ cáp rồi cắm vào lỗ của đầu nối, nên có thể rút ngắn thời gian thi công và tiết kiệm công sức."
+      ],
+      "explanation_vi": null
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "jp": "10．スターデルタ始動（R3）　電気テキスト p.137",
+      "vi": "10. Khởi động sao-tam giác (R3) - Giáo trình điện tr.137",
+      "explanation_vi": null
+    },
+    {
+      "type": "bullet_list",
+      "items_jp": [
+        "①始動電流による電圧降下を軽減でき、減電圧始動の中では最も安価で手軽に採用できる事から選定上の留意とする。",
+        "②減電圧始動の一種であり、始動電流をおさえるため、デルタ結線で運転する電動機を始動時のみスター結線で始動する。"
+      ],
+      "items_vi": [
+        "① Có thể giảm sụt áp do dòng khởi động gây ra; đây là phương pháp rẻ nhất và dễ áp dụng nhất trong số các phương pháp khởi động giảm áp, nên cần lưu ý khi lựa chọn.",
+        "② Là một dạng khởi động giảm áp: để hạn chế dòng khởi động, động cơ vận hành theo đấu nối tam giác (delta) chỉ được khởi động theo đấu nối sao (star) trong lúc khởi động."
+      ],
+      "explanation_vi": null
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "jp": "◎11．三相誘導電動機の始動方式（H30, R2, 5）　電気テキスト p.137",
+      "vi": "◎11. Phương thức khởi động động cơ cảm ứng 3 pha (H30, R2, 5) - Giáo trình điện tr.137",
+      "explanation_vi": null
+    },
+    {
+      "type": "bullet_list",
+      "items_jp": [
+        "①かご形誘導電動機は始動電流対策として行うスターデルタ始動法と始動電流の対策を行わない直入始動法がある。",
+        "②全電圧じか入れ始動法は電動機の巻線に全電圧を最初から印加して始動し、5.5Kw未満の電動機で一般に使用されている。"
+      ],
+      "items_vi": [
+        "① Động cơ cảm ứng rotor lồng sóc có phương pháp khởi động sao-tam giác (để đối phó với dòng khởi động) và phương pháp khởi động trực tiếp (không xử lý dòng khởi động).",
+        "② Phương pháp khởi động trực tiếp toàn điện áp là cấp toàn bộ điện áp vào cuộn dây động cơ ngay từ đầu để khởi động, thường được dùng cho động cơ dưới 5,5kW."
+      ],
+      "explanation_vi": null
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "jp": "12．うず電流（R1）　電気テキスト p.12",
+      "vi": "12. Dòng điện xoáy (R1) - Giáo trình điện tr.12",
+      "explanation_vi": null
+    },
+    {
+      "type": "bullet_list",
+      "items_jp": [
+        "①金属板や成層鉄心等の導体中で、貫いている磁束φを変化させると導体中に誘導起電力が生じ、誘導電流が導体中うず状に流れる現象である。",
+        "②うず電流より発生する熱損失はうず電流損と呼ばれ、鉄損の一部である。鉄損を利用した加熱方法にIHヒータの原理である誘導加熱がある。"
+      ],
+      "items_vi": [
+        "① Là hiện tượng: trong vật dẫn như tấm kim loại, lõi thép ghép lớp v.v., khi từ thông φ xuyên qua thay đổi, sẽ sinh ra sức điện động cảm ứng trong vật dẫn, khiến dòng điện cảm ứng chạy theo dạng xoáy trong vật dẫn.",
+        "② Tổn thất nhiệt phát sinh từ dòng điện xoáy gọi là tổn thất dòng xoáy, là một phần của tổn thất sắt. Phương pháp gia nhiệt tận dụng tổn thất sắt có nguyên lý gia nhiệt cảm ứng của bếp từ (IH heater)."
+      ],
+      "explanation_vi": null
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "jp": "13．変圧器の並行運転（R1）　電気テキスト p.124",
+      "vi": "13. Vận hành song song máy biến áp (R1) - Giáo trình điện tr.124",
+      "explanation_vi": null
+    },
+    {
+      "type": "bullet_list",
+      "items_jp": [
+        "①並行運転の条件として、各機の周波数や起電力の同相を施工上の留意点とする。",
+        "②三相変圧器の場合は、相回転方向および角変位を等しくし、1次と2次においてはΔ-ΔやΔ-YとY-Δ等の結線の組合せを施工上の留意点とする。"
+      ],
+      "items_vi": [
+        "① Điều kiện để vận hành song song là tần số và cùng pha của sức điện động giữa các máy, đây là điểm cần lưu ý khi thi công.",
+        "② Trường hợp máy biến áp 3 pha, cần làm cho chiều quay pha và độ lệch góc bằng nhau, đồng thời tổ hợp đấu nối sơ cấp-thứ cấp (ví dụ Δ-Δ, hoặc Δ-Y kết hợp Y-Δ v.v.) là điểm cần lưu ý khi thi công."
+      ],
+      "explanation_vi": null
+    }
+  ]
+}
