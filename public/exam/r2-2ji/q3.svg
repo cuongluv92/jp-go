@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 620">
+<style>text{font-family:serif;font-size:19px;fill:#111}.w{stroke:#111;stroke-width:2;fill:none}.d{stroke:#777;stroke-width:2;fill:none;stroke-dasharray:7 6}.n{fill:#fff;stroke:#111;stroke-width:2}.lbl{font-size:17px}</style>
+<defs><marker id="a" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto"><path d="M0,0 L10,3 L0,6 Z" fill="#111"/></marker></defs>
+<!-- nodes -->
+<g class="n"><circle cx="70" cy="300" r="26"/><circle cx="230" cy="170" r="26"/><circle cx="230" cy="430" r="26"/><circle cx="390" cy="300" r="26"/><circle cx="540" cy="300" r="26"/><circle cx="540" cy="120" r="26"/><circle cx="690" cy="455" r="26"/><circle cx="690" cy="145" r="26"/><circle cx="820" cy="300" r="26"/><circle cx="930" cy="300" r="26"/></g>
+<g text-anchor="middle"><text x="70" y="307">①</text><text x="230" y="177">②</text><text x="230" y="437">③</text><text x="390" y="307">④</text><text x="540" y="307">⑤</text><text x="540" y="127">⑥</text><text x="690" y="462">⑦</text><text x="690" y="152">⑧</text><text x="820" y="307">⑨</text><text x="930" y="307">⑩</text></g>
+<!-- edges -->
+<g marker-end="url(#a)">
+<line class="w" x1="91" y1="282" x2="208" y2="188"/><!--A-->
+<line class="w" x1="92" y1="318" x2="208" y2="412"/><!--B-->
+<line class="w" x1="96" y1="300" x2="364" y2="300"/><!--C-->
+<line class="w" x1="252" y1="186" x2="368" y2="284"/><!--D-->
+<line class="w" x1="244" y1="148" x2="516" y2="132"/><!--E-->
+<line class="w" x1="416" y1="300" x2="514" y2="300"/><!--F-->
+<line class="w" x1="254" y1="435" x2="664" y2="455"/><!--G-->
+<line class="w" x1="565" y1="125" x2="664" y2="143"/><!--H-->
+<line class="w" x1="565" y1="300" x2="794" y2="300"/><!--I-->
+<line class="w" x1="561" y1="320" x2="668" y2="438"/><!--J-->
+<line class="w" x1="714" y1="160" x2="800" y2="282"/><!--K-->
+<line class="w" x1="716" y1="150" x2="907" y2="288"/><!--L-->
+<line class="w" x1="846" y1="300" x2="904" y2="300"/><!--M-->
+<line class="w" x1="714" y1="443" x2="910" y2="316"/><!--N-->
+</g>
+<!-- dummy -->
+<line class="d" x1="253" y1="415" x2="368" y2="318" marker-end="url(#a)"/>
+<line class="d" x1="540" y1="274" x2="540" y2="146" marker-end="url(#a)"/>
+<!-- labels -->
+<g class="lbl">
+<text x="135" y="210">A 5日</text><text x="135" y="405">B 6日</text><text x="205" y="285">C 4日</text>
+<text x="288" y="220">D 4日</text><text x="370" y="130">E 7日</text><text x="455" y="285">F 7日</text>
+<text x="430" y="445">G 6日</text><text x="600" y="112">H 3日</text><text x="680" y="285">I 4日</text>
+<text x="605" y="390">J 6日</text><text x="744" y="205">K 6日</text><text x="815" y="190">L 7日</text>
+<text x="865" y="285">M 3日</text><text x="805" y="420">N 10日</text>
+</g>
+<text x="50" y="565">※ 破線はダミー作業（0日）</text>
+</svg>

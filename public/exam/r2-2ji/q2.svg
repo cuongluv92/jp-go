@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 900">
+<style>text{font-family:serif;font-size:20px;fill:#111}.w{stroke:#111;stroke-width:2;fill:none}.d{stroke:#111;stroke-width:2;fill:none;stroke-dasharray:7 5}</style>
+<text x="430" y="34">架空引込 6.6kV</text>
+<line class="w" x1="400" y1="50" x2="400" y2="155"/>
+<rect class="w" x="345" y="90" width="110" height="72"/><circle class="w" cx="400" cy="118" r="17"/><text x="388" y="125">3~</text>
+<rect class="w" x="500" y="98" width="65" height="40"/><text x="517" y="125">I&gt;</text><line class="d" x1="445" y1="125" x2="500" y2="118"/>
+<line class="w" x1="400" y1="162" x2="400" y2="248"/>
+<path class="w" d="M388 190 l12 16 l12 -16"/><path class="w" d="M388 232 l12 -16 l12 16"/>
+<rect class="w" x="366" y="268" width="68" height="42"/><text x="374" y="296">VCT</text>
+<line class="w" x1="434" y1="289" x2="565" y2="289"/><rect class="w" x="565" y="264" width="55" height="52"/><text x="575" y="296">Wh</text>
+<line class="w" x1="400" y1="310" x2="400" y2="500"/>
+<!-- ア: disconnecting device symbol; no answer text -->
+<rect class="d" x="355" y="335" width="90" height="105"/>
+<line class="w" x1="400" y1="345" x2="400" y2="370"/><line class="w" x1="400" y1="410" x2="400" y2="430"/>
+<circle cx="400" cy="373" r="4" fill="#111"/><circle cx="400" cy="407" r="4" fill="#111"/>
+<line class="w" x1="400" y1="373" x2="426" y2="395"/>
+<text x="270" y="397">ア →</text>
+<line class="w" x1="400" y1="500" x2="220" y2="500"/><line class="w" x1="400" y1="500" x2="580" y2="500"/>
+<line class="w" x1="220" y1="500" x2="220" y2="690"/><line class="w" x1="400" y1="500" x2="400" y2="690"/><line class="w" x1="580" y1="500" x2="580" y2="690"/>
+<line class="w" x1="205" y1="545" x2="235" y2="585"/><line class="w" x1="385" y1="545" x2="415" y2="585"/><line class="w" x1="565" y1="545" x2="595" y2="585"/>
+<circle class="w" cx="220" cy="625" r="26"/><circle class="w" cx="220" cy="660" r="26"/>
+<circle class="w" cx="400" cy="625" r="26"/><circle class="w" cx="400" cy="660" r="26"/>
+<path class="w" d="M560 625 q20 -32 40 0 q-20 32 -40 0"/>
+<text x="168" y="735">電灯回路</text><text x="348" y="735">動力回路</text><text x="520" y="735">進相設備</text>
+</svg>
