@@ -15,7 +15,10 @@
       "level": 2,
       "jp": "【送配電設備】",
       "vi": "[Thiết bị truyền tải - phân phối điện]",
-      "explanation_vi": null
+      "explanation_vi": null,
+      "furigana_tokens": [
+        { "surface": "送配電設備", "reading": "そうはいでんせつび" }
+      ]
     },
     {
       "type": "numbered_list",
@@ -31,14 +34,24 @@
         "Biện pháp chống nhiễm mặn cho đường dây truyền tải/phân phối trên không (R2, 5)",
         "Dòng điện cho phép của dây dẫn (R3, 5, 7)"
       ],
-      "explanation_vi": "Số trong ngoặc là các năm (Reiwa) từng ra đề về thuật ngữ đó."
+      "explanation_vi": "Số trong ngoặc là các năm (Reiwa) từng ra đề về thuật ngữ đó.",
+      "items_furigana_tokens": [
+        [ { "surface": "架空地線", "reading": "かくうちせん" } ],
+        [ { "surface": "架空送電線", "reading": "かくうそうでんせん" } ],
+        [ { "surface": "架空送配電線路", "reading": "かくうそうはいでんせんろ" }, { "surface": "塩害対策", "reading": "えんがいたいさく" } ],
+        [ { "surface": "電線", "reading": "でんせん" }, { "surface": "許容電流", "reading": "きょようでんりゅう" } ]
+      ]
     },
     {
       "type": "heading",
       "level": 4,
       "jp": "◎1．架空地線（R1, 4）　電気テキスト p.63",
       "vi": "◎1. Dây chống sét trên không (R1, 4) - Giáo trình điện tr.63",
-      "explanation_vi": null
+      "explanation_vi": null,
+      "furigana_tokens": [
+        { "surface": "架空地線", "reading": "かくうちせん" },
+        { "surface": "電気", "reading": "でんき" }
+      ]
     },
     {
       "type": "bullet_list",
@@ -50,14 +63,41 @@
         "① Là dây tiếp địa căng ở phía trên đường dây truyền tải, được tiếp đất qua tháp sắt, dùng để phòng tránh sét đánh trực tiếp vào đường dây truyền tải.",
         "② Góc che chắn đối với sét đánh trực tiếp càng nhỏ thì hiệu quả che chắn càng cao."
       ],
-      "explanation_vi": null
+      "explanation_vi": null,
+      "items_furigana_tokens": [
+        [
+          { "surface": "送電線", "reading": "そうでんせん" },
+          { "surface": "上方", "reading": "じょうほう" },
+          { "surface": "張", "reading": "は" },
+          { "surface": "接地線", "reading": "せっちせん" },
+          { "surface": "鉄塔", "reading": "てっとう" },
+          { "surface": "介", "reading": "かい" },
+          { "surface": "接地", "reading": "せっち" },
+          { "surface": "落雷", "reading": "らくらい" },
+          { "surface": "防止", "reading": "ぼうし" },
+          { "surface": "電線", "reading": "でんせん" }
+        ],
+        [
+          { "surface": "直撃雷", "reading": "ちょくげきらい" },
+          { "surface": "対", "reading": "たい" },
+          { "surface": "遮", "reading": "しゃ" },
+          { "surface": "角", "reading": "かく" },
+          { "surface": "小", "reading": "ちい" },
+          { "surface": "効果", "reading": "こうか" },
+          { "surface": "高", "reading": "たか" }
+        ]
+      ]
     },
     {
       "type": "heading",
       "level": 4,
       "jp": "2．架空送電線のたるみ（R3, 6）　電気テキスト p.64",
       "vi": "2. Độ võng dây dẫn trên không (R3, 6) - Giáo trình điện tr.64",
-      "explanation_vi": null
+      "explanation_vi": null,
+      "furigana_tokens": [
+        { "surface": "架空送電線", "reading": "かくうそうでんせん" },
+        { "surface": "電気", "reading": "でんき" }
+      ]
     },
     {
       "type": "bullet_list",
@@ -69,14 +109,58 @@
         "① Là thuật ngữ dùng trong thiết bị truyền tải/phân phối điện, biểu thị bằng độ chùng dây; cần thiết để phòng tránh nguy cơ đứt dây trên không do dây dẫn co lại vì nhiệt độ giảm.",
         "② Độ chùng tỉ lệ thuận với trọng lượng dây dẫn, tỉ lệ nghịch với lực căng ngang của dây dẫn; nếu độ chùng nhỏ thì lực căng dây lớn, nếu độ chùng lớn thì dây rung lắc nhiều, trở thành nguyên nhân tiếp xúc giữa các dây, với cây cối, với công trình khác."
       ],
-      "explanation_vi": null
+      "explanation_vi": null,
+      "items_furigana_tokens": [
+        [
+          { "surface": "送配電設備", "reading": "そうはいでんせつび" },
+          { "surface": "用", "reading": "もち" },
+          { "surface": "用語", "reading": "ようご" },
+          { "surface": "弛度", "reading": "しど" },
+          { "surface": "表", "reading": "あらわ" },
+          { "surface": "気温", "reading": "きおん" },
+          { "surface": "低下", "reading": "ていか" },
+          { "surface": "原因", "reading": "げんいん" },
+          { "surface": "電線", "reading": "でんせん" },
+          { "surface": "収縮", "reading": "しゅうしゅく" },
+          { "surface": "架空電線", "reading": "かくうでんせん" },
+          { "surface": "断線", "reading": "だんせん" },
+          { "surface": "起", "reading": "お" },
+          { "surface": "恐", "reading": "おそ" },
+          { "surface": "防止", "reading": "ぼうし" },
+          { "surface": "必要", "reading": "ひつよう" }
+        ],
+        [
+          { "surface": "電線", "reading": "でんせん" },
+          { "surface": "重量", "reading": "じゅうりょう" },
+          { "surface": "反比例", "reading": "はんぴれい" },
+          { "surface": "比例", "reading": "ひれい" },
+          { "surface": "水平張力", "reading": "すいへいちょうりょく" },
+          { "surface": "事", "reading": "こと" },
+          { "surface": "弛度", "reading": "しど" },
+          { "surface": "小", "reading": "ちい" },
+          { "surface": "張力", "reading": "ちょうりょく" },
+          { "surface": "大", "reading": "おお" },
+          { "surface": "振", "reading": "ふ" },
+          { "surface": "線間接触", "reading": "せんかんせっしょく" },
+          { "surface": "樹木", "reading": "じゅもく" },
+          { "surface": "他", "reading": "た" },
+          { "surface": "工作物", "reading": "こうさくぶつ" },
+          { "surface": "接触", "reading": "せっしょく" },
+          { "surface": "原因", "reading": "げんいん" }
+        ]
+      ]
     },
     {
       "type": "heading",
       "level": 4,
       "jp": "◎3．架空送配電線路の塩害対策（R2, 5）　電気テキスト p.62, 65",
       "vi": "◎3. Biện pháp chống nhiễm mặn cho đường dây truyền tải/phân phối trên không (R2, 5) - Giáo trình điện tr.62, 65",
-      "explanation_vi": null
+      "explanation_vi": null,
+      "furigana_tokens": [
+        { "surface": "架空送配電線路", "reading": "かくうそうはいでんせんろ" },
+        { "surface": "塩害対策", "reading": "えんがいたいさく" },
+        { "surface": "電気", "reading": "でんき" }
+      ]
     },
     {
       "type": "bullet_list",
@@ -88,20 +172,71 @@
         "① Sử dụng sứ cách điện chịu mặn tốt (smog insulator), hoặc sứ cách điện dạng thân dài có hiệu quả rửa trôi tốt nhờ nước mưa.",
         "② Tăng số lượng sứ cách điện nối tiếp, hoặc bôi silicon lên sứ cách điện."
       ],
-      "explanation_vi": null
+      "explanation_vi": null,
+      "items_furigana_tokens": [
+        [
+          { "surface": "耐塩性", "reading": "たいえんせい" },
+          { "surface": "強", "reading": "つよ" },
+          { "surface": "雨", "reading": "あめ" },
+          { "surface": "洗", "reading": "あら" },
+          { "surface": "流", "reading": "なが" },
+          { "surface": "効果", "reading": "こうか" },
+          { "surface": "長幹", "reading": "ちょうかん" },
+          { "surface": "使用", "reading": "しよう" }
+        ],
+        [
+          { "surface": "連結個数", "reading": "れんけつこすう" },
+          { "surface": "増", "reading": "ふ" },
+          { "surface": "塗", "reading": "ぬ" }
+        ]
+      ]
     },
     {
       "type": "heading",
       "level": 4,
       "jp": "◎4．電線の許容電流（R3, 5, 7）　電気テキスト p.97",
       "vi": "◎4. Dòng điện cho phép của dây dẫn (R3, 5, 7) - Giáo trình điện tr.97",
-      "explanation_vi": null
+      "explanation_vi": null,
+      "furigana_tokens": [
+        { "surface": "電線", "reading": "でんせん" },
+        { "surface": "許容電流", "reading": "きょようでんりゅう" },
+        { "surface": "電気", "reading": "でんき" }
+      ]
     },
     {
       "type": "bullet_list",
       "items_jp": [
         "①電線に電流を通じると抵抗により発熱し、絶縁体が熱劣化し、電線の諸性能が低下する。その限度となる温度を最高許容温度といい、その電流を許容電流という。",
         "②許容電流の値は、周囲温度、電線・絶縁物・外被の材質、構造、配線方法等によって異なる。"
+      ],
+      "items_furigana_tokens": [
+        [
+          { "surface": "電線", "reading": "でんせん" },
+          { "surface": "電流", "reading": "でんりゅう" },
+          { "surface": "通", "reading": "つう" },
+          { "surface": "抵抗", "reading": "ていこう" },
+          { "surface": "発熱", "reading": "はつねつ" },
+          { "surface": "絶縁体", "reading": "ぜつえんたい" },
+          { "surface": "熱劣化", "reading": "ねつれっか" },
+          { "surface": "諸性能", "reading": "しょせいのう" },
+          { "surface": "低下", "reading": "ていか" },
+          { "surface": "限度", "reading": "げんど" },
+          { "surface": "温度", "reading": "おんど" },
+          { "surface": "最高許容温度", "reading": "さいこうきょようおんど" },
+          { "surface": "許容電流", "reading": "きょようでんりゅう" }
+        ],
+        [
+          { "surface": "許容電流", "reading": "きょようでんりゅう" },
+          { "surface": "値", "reading": "あたい" },
+          { "surface": "周囲温度", "reading": "しゅういおんど" },
+          { "surface": "電線", "reading": "でんせん" },
+          { "surface": "絶縁物", "reading": "ぜつえんぶつ" },
+          { "surface": "外被", "reading": "がいひ" },
+          { "surface": "材質", "reading": "ざいしつ" },
+          { "surface": "構造", "reading": "こうぞう" },
+          { "surface": "配線方法等", "reading": "はいせんほうほうとう" },
+          { "surface": "異", "reading": "こと" }
+        ]
       ],
       "items_vi": [
         "① Khi cho dòng điện chạy qua dây dẫn, do điện trở mà sinh nhiệt, làm vật liệu cách điện bị lão hóa nhiệt, khiến các tính năng của dây dẫn suy giảm. Nhiệt độ giới hạn đó gọi là nhiệt độ cho phép tối đa, và dòng điện tương ứng gọi là dòng điện cho phép.",

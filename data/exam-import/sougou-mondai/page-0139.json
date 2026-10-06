@@ -15,7 +15,10 @@
       "level": 2,
       "jp": "【電気鉄道】",
       "vi": "[Đường sắt điện khí hóa]",
-      "explanation_vi": null
+      "explanation_vi": null,
+      "furigana_tokens": [
+        { "surface": "電気鉄道", "reading": "でんきてつどう" }
+      ]
     },
     {
       "type": "numbered_list",
@@ -31,14 +34,25 @@
         "Thiết bị điều khiển tàu tự động (ATC) (R5)",
         "Thiết bị dừng tàu tự động (ATS) (R2, 6)"
       ],
-      "explanation_vi": "Số trong ngoặc là các năm (Reiwa) từng ra đề về thuật ngữ đó."
+      "explanation_vi": "Số trong ngoặc là các năm (Reiwa) từng ra đề về thuật ngữ đó.",
+      "items_furigana_tokens": [
+        [ { "surface": "電気鉄道", "reading": "でんきてつどう" }, { "surface": "電方式", "reading": "でんほうしき" } ],
+        [ { "surface": "電気鉄道", "reading": "でんきてつどう" }, { "surface": "帰線", "reading": "きせん" } ],
+        [ { "surface": "自動列車制御装置", "reading": "じどうれっしゃせいぎょそうち" } ],
+        [ { "surface": "自動列車停止装置", "reading": "じどうれっしゃていしそうち" } ]
+      ]
     },
     {
       "type": "heading",
       "level": 4,
       "jp": "1．電気鉄道のき電方式（R3）　電気テキスト p.72〜74",
       "vi": "1. Phương thức cấp điện đường sắt điện khí hóa (R3) - Giáo trình điện tr.72~74",
-      "explanation_vi": null
+      "explanation_vi": null,
+      "furigana_tokens": [
+        { "surface": "電気鉄道", "reading": "でんきてつどう" },
+        { "surface": "電方式", "reading": "でんほうしき" },
+        { "surface": "電気", "reading": "でんき" }
+      ]
     },
     {
       "type": "bullet_list",
@@ -50,14 +64,44 @@
         "① Phương thức cấp điện là thiết bị cung cấp điện năng cho đường dây tàu điện; về cấu trúc hệ thống điện, cần có đường dây truyền tải chuyên dụng cho đường sắt, máy biến áp, đường dây tàu điện v.v.",
         "② Điện áp tiêu chuẩn của đường sắt thông thường dùng DC 1.500V, 750V v.v., còn với xoay chiều 1 pha thì dùng 20.000V; đường sắt Shinkansen dùng điện áp tiêu chuẩn xoay chiều 1 pha 25.000V."
       ],
-      "explanation_vi": null
+      "explanation_vi": null,
+      "items_furigana_tokens": [
+        [
+          { "surface": "電方式", "reading": "でんほうしき" },
+          { "surface": "電車線", "reading": "でんしゃせん" },
+          { "surface": "電力", "reading": "でんりょく" },
+          { "surface": "供給", "reading": "きょうきゅう" },
+          { "surface": "設備", "reading": "せつび" },
+          { "surface": "電力系統", "reading": "でんりょくけいとう" },
+          { "surface": "構成", "reading": "こうせい" },
+          { "surface": "鉄道専用送電線", "reading": "てつどうせんようそうでんせん" },
+          { "surface": "変圧器", "reading": "へんあつき" },
+          { "surface": "電車線路等", "reading": "でんしゃせんろとう" },
+          { "surface": "必要", "reading": "ひつよう" }
+        ],
+        [
+          { "surface": "普通鉄道", "reading": "ふつうてつどう" },
+          { "surface": "標準電圧", "reading": "ひょうじゅんでんあつ" },
+          { "surface": "直流", "reading": "ちょくりゅう" },
+          { "surface": "等", "reading": "とう" },
+          { "surface": "単相交流", "reading": "たんそうこうりゅう" },
+          { "surface": "採用", "reading": "さいよう" },
+          { "surface": "新幹線鉄道", "reading": "しんかんせんてつどう" }
+        ]
+      ]
     },
     {
       "type": "heading",
       "level": 4,
       "jp": "2．電気鉄道の帰線（R1, 4, 7）　電気テキスト p.74（参考）",
       "vi": "2. Đường dây hồi lưu đường sắt điện khí hóa (R1, 4, 7) - Giáo trình điện tr.74 (tham khảo)",
-      "explanation_vi": null
+      "explanation_vi": null,
+      "furigana_tokens": [
+        { "surface": "電気鉄道", "reading": "でんきてつどう" },
+        { "surface": "帰線", "reading": "きせん" },
+        { "surface": "電気", "reading": "でんき" },
+        { "surface": "参考", "reading": "さんこう" }
+      ]
     },
     {
       "type": "bullet_list",
@@ -69,14 +113,46 @@
         "① Là đường dây hồi lưu của mạch cấp điện đường sắt điện khí hóa; là tên gọi chung cho phần bao gồm ray hồi lưu, tạo thành mạch dòng điện hồi lưu để đưa điện năng vận hành đã cấp cho toa tàu trở về trạm biến điện.",
         "② Thông thường, đường hồi lưu sử dụng phương thức ray hồi lưu, nối điện ray chạy tàu bằng dây bond (bonding) để sử dụng; với phương thức đường dây trên không đơn tuyến thông thường, ray được dùng làm đường hồi lưu."
       ],
-      "explanation_vi": null
+      "explanation_vi": null,
+      "items_furigana_tokens": [
+        [
+          { "surface": "電気鉄道", "reading": "でんきてつどう" },
+          { "surface": "電回路", "reading": "でんかいろ" },
+          { "surface": "帰線", "reading": "きせん" },
+          { "surface": "電気車", "reading": "でんきしゃ" },
+          { "surface": "供給", "reading": "きょうきゅう" },
+          { "surface": "運転用電力", "reading": "うんてんようでんりょく" },
+          { "surface": "変電所", "reading": "へんでんしょ" },
+          { "surface": "戻", "reading": "もど" },
+          { "surface": "帰線電流", "reading": "きせんでんりゅう" },
+          { "surface": "回路", "reading": "かいろ" },
+          { "surface": "含", "reading": "ふく" },
+          { "surface": "部分", "reading": "ぶぶん" },
+          { "surface": "総称", "reading": "そうしょう" }
+        ],
+        [
+          { "surface": "一般", "reading": "いっぱん" },
+          { "surface": "帰線", "reading": "きせん" },
+          { "surface": "列車走行用", "reading": "れっしゃそうこうよう" },
+          { "surface": "電気的", "reading": "でんきてき" },
+          { "surface": "接続", "reading": "せつぞく" },
+          { "surface": "使用", "reading": "しよう" },
+          { "surface": "方式", "reading": "ほうしき" },
+          { "surface": "一般的", "reading": "いっぱんてき" },
+          { "surface": "架空単線方式", "reading": "かくうたんせんほうしき" }
+        ]
+      ]
     },
     {
       "type": "heading",
       "level": 4,
       "jp": "◎3．自動列車制御装置（ATC）（R5）　電気テキスト p.86",
       "vi": "◎3. Thiết bị điều khiển tàu tự động (ATC) (R5) - Giáo trình điện tr.86",
-      "explanation_vi": null
+      "explanation_vi": null,
+      "furigana_tokens": [
+        { "surface": "自動列車制御装置", "reading": "じどうれっしゃせいぎょそうち" },
+        { "surface": "電気", "reading": "でんき" }
+      ]
     },
     {
       "type": "bullet_list",
@@ -88,14 +164,49 @@
         "① Thiết bị điều khiển tàu tự động (ATC) là thiết bị điều khiển tốc độ tàu: trong đoạn kiểm soát tốc độ, khi tốc độ tàu vượt quá tốc độ giới hạn thì tự động phanh để giảm tốc.",
         "② Nếu áp dụng thiết bị này, kể cả khi người lái tàu nhận định sai tín hiệu, tàu vẫn vận hành an toàn, nâng cao mức độ bảo đảm an toàn. Vì vậy, thiết bị này được áp dụng cho Shinkansen, tàu điện ngầm và một phần các tuyến đường sắt thông thường."
       ],
-      "explanation_vi": null
+      "explanation_vi": null,
+      "items_furigana_tokens": [
+        [
+          { "surface": "自動列車制御装置", "reading": "じどうれっしゃせいぎょそうち" },
+          { "surface": "速度制御区間", "reading": "そくどせいぎょくかん" },
+          { "surface": "列車速度", "reading": "れっしゃそくど" },
+          { "surface": "制限速度", "reading": "せいげんそくど" },
+          { "surface": "以上", "reading": "いじょう" },
+          { "surface": "自動的", "reading": "じどうてき" },
+          { "surface": "減速", "reading": "げんそく" },
+          { "surface": "列車", "reading": "れっしゃ" },
+          { "surface": "速度", "reading": "そくど" },
+          { "surface": "制御", "reading": "せいぎょ" },
+          { "surface": "装置", "reading": "そうち" }
+        ],
+        [
+          { "surface": "装置", "reading": "そうち" },
+          { "surface": "採用", "reading": "さいよう" },
+          { "surface": "運転手", "reading": "うんてんしゅ" },
+          { "surface": "信号現示", "reading": "しんごうげんじ" },
+          { "surface": "誤認", "reading": "ごにん" },
+          { "surface": "安全", "reading": "あんぜん" },
+          { "surface": "運転", "reading": "うんてん" },
+          { "surface": "行", "reading": "おこな" },
+          { "surface": "保安度", "reading": "ほあんど" },
+          { "surface": "向上", "reading": "こうじょう" },
+          { "surface": "新幹線", "reading": "しんかんせん" },
+          { "surface": "地下鉄", "reading": "ちかてつ" },
+          { "surface": "一部", "reading": "いちぶ" },
+          { "surface": "在来線", "reading": "ざいらいせん" }
+        ]
+      ]
     },
     {
       "type": "heading",
       "level": 4,
       "jp": "4．自動列車停止装置（ATS）（R2, 6）　電気テキスト p.86",
       "vi": "4. Thiết bị dừng tàu tự động (ATS) (R2, 6) - Giáo trình điện tr.86",
-      "explanation_vi": null
+      "explanation_vi": null,
+      "furigana_tokens": [
+        { "surface": "自動列車停止装置", "reading": "じどうれっしゃていしそうち" },
+        { "surface": "電気", "reading": "でんき" }
+      ]
     },
     {
       "type": "bullet_list",
@@ -107,7 +218,29 @@
         "① Khi tàu đến gần tín hiệu dừng mà không thực hiện thao tác phanh, tự động dừng tàu ở phía ngoài tín hiệu đó.",
         "② Khi tàu đang chạy với tốc độ vượt quá tốc độ quy định, tự động dừng tàu lại."
       ],
-      "explanation_vi": null
+      "explanation_vi": null,
+      "items_furigana_tokens": [
+        [
+          { "surface": "列車", "reading": "れっしゃ" },
+          { "surface": "停止信号", "reading": "ていししんごう" },
+          { "surface": "接近", "reading": "せっきん" },
+          { "surface": "操作", "reading": "そうさ" },
+          { "surface": "行", "reading": "おこな" },
+          { "surface": "自動的", "reading": "じどうてき" },
+          { "surface": "信号機", "reading": "しんごうき" },
+          { "surface": "外側", "reading": "がいそく" },
+          { "surface": "停止", "reading": "ていし" }
+        ],
+        [
+          { "surface": "一定", "reading": "いってい" },
+          { "surface": "速度", "reading": "そくど" },
+          { "surface": "超", "reading": "こ" },
+          { "surface": "列車", "reading": "れっしゃ" },
+          { "surface": "走行", "reading": "そうこう" },
+          { "surface": "自動的", "reading": "じどうてき" },
+          { "surface": "停止", "reading": "ていし" }
+        ]
+      ]
     }
   ]
 }

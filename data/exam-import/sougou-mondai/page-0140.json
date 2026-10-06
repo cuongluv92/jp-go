@@ -15,7 +15,11 @@
       "level": 2,
       "jp": "【交通信号・道路照明】",
       "vi": "[Tín hiệu giao thông - Chiếu sáng đường bộ]",
-      "explanation_vi": null
+      "explanation_vi": null,
+      "furigana_tokens": [
+        { "surface": "交通信号", "reading": "こうつうしんごう" },
+        { "surface": "道路照明", "reading": "どうろしょうめい" }
+      ]
     },
     {
       "type": "numbered_list",
@@ -29,14 +33,23 @@
         "Cảm biến xe dạng cuộn dây vòng (R2, 4, 7)",
         "Phương thức chiếu sáng đường bộ (R1, 5)"
       ],
-      "explanation_vi": "Số trong ngoặc là các năm (Reiwa) từng ra đề về thuật ngữ đó."
+      "explanation_vi": "Số trong ngoặc là các năm (Reiwa) từng ra đề về thuật ngữ đó.",
+      "items_furigana_tokens": [
+        [ { "surface": "超音波式車両感知器", "reading": "ちょうおんぱしきしゃりょうかんちき" } ],
+        [ { "surface": "式車両感知器", "reading": "しきしゃりょうかんちき" } ],
+        [ { "surface": "道路", "reading": "どうろ" }, { "surface": "照明方式", "reading": "しょうめいほうしき" } ]
+      ]
     },
     {
       "type": "heading",
       "level": 4,
       "jp": "1．超音波式車両感知器（R3, 6）　電気テキスト p.90〜91",
       "vi": "1. Cảm biến xe dạng siêu âm (R3, 6) - Giáo trình điện tr.90~91",
-      "explanation_vi": null
+      "explanation_vi": null,
+      "furigana_tokens": [
+        { "surface": "超音波式車両感知器", "reading": "ちょうおんぱしきしゃりょうかんちき" },
+        { "surface": "電気", "reading": "でんき" }
+      ]
     },
     {
       "type": "bullet_list",
@@ -48,14 +61,42 @@
         "① Là thiết bị phát xung siêu âm từ bộ phát đặt ở phía trên hoặc bên cạnh mặt đường, để phát hiện xe cộ.",
         "② Cảm biến xe cũng có loại dạng cuộn dây vòng (loop coil), nhưng xét về mức độ dễ lắp đặt và bảo trì, hầu hết cảm biến dùng cho tín hiệu giao thông là loại siêu âm."
       ],
-      "explanation_vi": null
+      "explanation_vi": null,
+      "items_furigana_tokens": [
+        [
+          { "surface": "路面", "reading": "ろめん" },
+          { "surface": "上部", "reading": "じょうぶ" },
+          { "surface": "側部", "reading": "そくぶ" },
+          { "surface": "設置", "reading": "せっち" },
+          { "surface": "送波器", "reading": "そうはき" },
+          { "surface": "超音波", "reading": "ちょうおんぱ" },
+          { "surface": "発射", "reading": "はっしゃ" },
+          { "surface": "車両", "reading": "しゃりょう" },
+          { "surface": "検出", "reading": "けんしゅつ" },
+          { "surface": "行", "reading": "おこな" }
+        ],
+        [
+          { "surface": "車両感知器", "reading": "しゃりょうかんちき" },
+          { "surface": "式", "reading": "しき" },
+          { "surface": "設備", "reading": "せつび" },
+          { "surface": "容易", "reading": "ようい" },
+          { "surface": "保守管理", "reading": "ほしゅかんり" },
+          { "surface": "点", "reading": "てん" },
+          { "surface": "交通信号用", "reading": "こうつうしんごうよう" },
+          { "surface": "超音波式", "reading": "ちょうおんぱしき" }
+        ]
+      ]
     },
     {
       "type": "heading",
       "level": 4,
       "jp": "2．ループコイル式車両感知器（R2, 4, 7）　電気テキスト p.90〜91",
       "vi": "2. Cảm biến xe dạng cuộn dây vòng (R2, 4, 7) - Giáo trình điện tr.90~91",
-      "explanation_vi": null
+      "explanation_vi": null,
+      "furigana_tokens": [
+        { "surface": "式車両感知器", "reading": "しきしゃりょうかんちき" },
+        { "surface": "電気", "reading": "でんき" }
+      ]
     },
     {
       "type": "bullet_list",
@@ -67,14 +108,41 @@
         "① Là thiết bị phát hiện sự tồn tại hoặc đi qua của xe cộ nhờ cuộn dây vòng (loop coil), có độ chính xác phát hiện tốt hơn loại siêu âm.",
         "② Cho dòng điện tần số cao chạy qua cuộn dây vòng, khi xe đi qua sẽ làm thay đổi độ tự cảm của cuộn dây, nhờ đó phát hiện được xe."
       ],
-      "explanation_vi": null
+      "explanation_vi": null,
+      "items_furigana_tokens": [
+        [
+          { "surface": "車両", "reading": "しゃりょう" },
+          { "surface": "存在", "reading": "そんざい" },
+          { "surface": "又", "reading": "また" },
+          { "surface": "通過", "reading": "つうか" },
+          { "surface": "感知", "reading": "かんち" },
+          { "surface": "検出精度", "reading": "けんしゅつせいど" },
+          { "surface": "超音波式", "reading": "ちょうおんぱしき" },
+          { "surface": "優", "reading": "すぐ" }
+        ],
+        [
+          { "surface": "高周波電流", "reading": "こうしゅうはでんりゅう" },
+          { "surface": "流", "reading": "なが" },
+          { "surface": "車体", "reading": "しゃたい" },
+          { "surface": "通行", "reading": "つうこう" },
+          { "surface": "変化", "reading": "へんか" },
+          { "surface": "感知", "reading": "かんち" },
+          { "surface": "検出", "reading": "けんしゅつ" }
+        ]
+      ]
     },
     {
       "type": "heading",
       "level": 4,
       "jp": "◎3．道路の照明方式（トンネル照明を除く）（R1, 5）　電気テキスト p.93",
       "vi": "◎3. Phương thức chiếu sáng đường bộ (trừ chiếu sáng hầm) (R1, 5) - Giáo trình điện tr.93",
-      "explanation_vi": null
+      "explanation_vi": null,
+      "furigana_tokens": [
+        { "surface": "道路", "reading": "どうろ" },
+        { "surface": "照明方式", "reading": "しょうめいほうしき" },
+        { "surface": "除", "reading": "のぞ" },
+        { "surface": "電気", "reading": "でんき" }
+      ]
     },
     {
       "type": "bullet_list",
@@ -86,14 +154,45 @@
         "① Khi thi công, tùy theo điều kiện hiện trường mà có các phương thức phân loại như phương thức chiếu sáng cột (pole), phương thức cột cao (high pole), phương thức chiếu sáng lan can cầu v.v.",
         "② Để đảm bảo môi trường thị giác tốt như một yếu tố của chiếu sáng đường bộ, cần lưu ý điều chỉnh độ chói trung bình của mặt đường phù hợp, không gây chói khó chịu, và có tính dẫn hướng thị giác tốt v.v."
       ],
-      "explanation_vi": null
+      "explanation_vi": null,
+      "items_furigana_tokens": [
+        [
+          { "surface": "施工時", "reading": "せこうじ" },
+          { "surface": "現場条件", "reading": "げんばじょうけん" },
+          { "surface": "合", "reading": "あ" },
+          { "surface": "照明方式", "reading": "しょうめいほうしき" },
+          { "surface": "高欄", "reading": "こうらん" },
+          { "surface": "等", "reading": "とう" },
+          { "surface": "分類方式", "reading": "ぶんるいほうしき" }
+        ],
+        [
+          { "surface": "道路照明", "reading": "どうろしょうめい" },
+          { "surface": "要素", "reading": "ようそ" },
+          { "surface": "良好", "reading": "りょうこう" },
+          { "surface": "視環境", "reading": "しかんきょう" },
+          { "surface": "確保", "reading": "かくほ" },
+          { "surface": "路面", "reading": "ろめん" },
+          { "surface": "平均輝度", "reading": "へいきんきど" },
+          { "surface": "適切", "reading": "てきせつ" },
+          { "surface": "不快", "reading": "ふかい" },
+          { "surface": "生", "reading": "しょう" },
+          { "surface": "視線", "reading": "しせん" },
+          { "surface": "誘導性", "reading": "ゆうどうせい" },
+          { "surface": "良", "reading": "よ" },
+          { "surface": "等", "reading": "とう" },
+          { "surface": "留意", "reading": "りゅうい" }
+        ]
+      ]
     },
     {
       "type": "heading",
       "level": 2,
       "jp": "【構内電気設備】",
       "vi": "[Thiết bị điện trong khuôn viên]",
-      "explanation_vi": null
+      "explanation_vi": null,
+      "furigana_tokens": [
+        { "surface": "構内電気設備", "reading": "こうないでんきせつび" }
+      ]
     },
     {
       "type": "numbered_list",
@@ -115,6 +214,25 @@
         "接地抵抗試験（R5）",
         "変流器（CT）（R1）",
         "2Eリレー（R7）"
+      ],
+      "items_furigana_tokens": [
+        [ { "surface": "力率改善", "reading": "りきりつかいぜん" } ],
+        [ { "surface": "漏電遮断器", "reading": "ろうでんしゃだんき" } ],
+        [ { "surface": "絶縁抵抗試験", "reading": "ぜつえんていこうしけん" } ],
+        [ { "surface": "種接地工事", "reading": "しゅせっちこうじ" } ],
+        [ { "surface": "種接地工事", "reading": "しゅせっちこうじ" } ],
+        [ { "surface": "単相変圧器", "reading": "たんそうへんあつき" }, { "surface": "結線", "reading": "けっせん" } ],
+        [ { "surface": "結線変圧器", "reading": "けっせんへんあつき" } ],
+        [ { "surface": "波付硬質合成樹脂管", "reading": "なみつきこうしつごうせいじゅしかん" }, { "surface": "管", "reading": "かん" } ],
+        [ { "surface": "差込形", "reading": "さしこみがた" }, { "surface": "屋内配線用差込形電線", "reading": "おくないはいせんようさしこみがたでんせん" } ],
+        [ { "surface": "始動", "reading": "しどう" } ],
+        [ { "surface": "三相誘導電動機", "reading": "さんそうゆうどうでんどうき" }, { "surface": "始動方式", "reading": "しどうほうしき" } ],
+        [ { "surface": "電流", "reading": "でんりゅう" } ],
+        [ { "surface": "変圧器", "reading": "へんあつき" }, { "surface": "並行運転", "reading": "へいこううんてん" } ],
+        [ { "surface": "電動機", "reading": "でんどうき" }, { "surface": "過負荷保護", "reading": "かふかほご" } ],
+        [ { "surface": "接地抵抗試験", "reading": "せっちていこうしけん" } ],
+        [ { "surface": "変流器", "reading": "へんりゅうき" } ],
+        []
       ],
       "items_vi": [
         "Cải thiện hệ số công suất (R1, 4, 6)",

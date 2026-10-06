@@ -15,13 +15,42 @@
       "level": 3,
       "jp": "【問題 No.3】",
       "vi": "[Câu hỏi số 3]",
-      "explanation_vi": "(R3)"
+      "explanation_vi": "(R3)",
+      "furigana_tokens": [
+        { "surface": "問題", "reading": "もんだい" }
+      ]
     },
     {
       "type": "note",
       "jp": "電気工事に関する次の用語の中から3つを選び、番号と用語を記入のうえ、技術的な内容を、それぞれについて2つ具体的に記述しなさい。\nただし、技術的な内容とは、施工上の留意点、選定上の留意点、定義、動作原理、発生原理、目的、用途、方式、方法、特徴、対策などをいう。",
       "vi": "Hãy chọn 3 trong số các thuật ngữ liên quan đến công trình điện dưới đây, ghi rõ số thứ tự và thuật ngữ, sau đó mô tả cụ thể 2 nội dung kỹ thuật cho mỗi thuật ngữ.",
-      "explanation_vi": null
+      "explanation_vi": null,
+      "furigana_tokens": [
+        { "surface": "電気工事", "reading": "でんきこうじ" },
+        { "surface": "関", "reading": "かん" },
+        { "surface": "次", "reading": "つぎ" },
+        { "surface": "用語", "reading": "ようご" },
+        { "surface": "中", "reading": "なか" },
+        { "surface": "選", "reading": "えら" },
+        { "surface": "番号", "reading": "ばんごう" },
+        { "surface": "記入", "reading": "きにゅう" },
+        { "surface": "技術的", "reading": "ぎじゅつてき" },
+        { "surface": "内容", "reading": "ないよう" },
+        { "surface": "具体的", "reading": "ぐたいてき" },
+        { "surface": "記述", "reading": "きじゅつ" },
+        { "surface": "施工上", "reading": "せこうじょう" },
+        { "surface": "留意点", "reading": "りゅういてん" },
+        { "surface": "選定上", "reading": "せんていじょう" },
+        { "surface": "定義", "reading": "ていぎ" },
+        { "surface": "動作原理", "reading": "どうさげんり" },
+        { "surface": "発生原理", "reading": "はっせいげんり" },
+        { "surface": "目的", "reading": "もくてき" },
+        { "surface": "用途", "reading": "ようと" },
+        { "surface": "方式", "reading": "ほうしき" },
+        { "surface": "方法", "reading": "ほうほう" },
+        { "surface": "特徴", "reading": "とくちょう" },
+        { "surface": "対策", "reading": "たいさく" }
+      ]
     },
     {
       "type": "numbered_list",
@@ -35,6 +64,17 @@
         "超音波式車両感知器",
         "電線の許容電流",
         "A種接地工事"
+      ],
+      "items_furigana_tokens": [
+        [ { "surface": "風力発電", "reading": "ふうりょくはつでん" } ],
+        [ { "surface": "架空送電線", "reading": "かくうそうでんせん" } ],
+        [ { "surface": "始動", "reading": "しどう" } ],
+        [ { "surface": "差込形", "reading": "さしこみがた" } ],
+        [ { "surface": "定温式", "reading": "ていおんしき" }, { "surface": "型感知器", "reading": "がたかんちき" } ],
+        [ { "surface": "電気鉄道", "reading": "でんきてつどう" }, { "surface": "電方式", "reading": "でんほうしき" } ],
+        [ { "surface": "超音波式車両感知器", "reading": "ちょうおんぱしきしゃりょうかんちき" } ],
+        [ { "surface": "電線", "reading": "でんせん" }, { "surface": "許容電流", "reading": "きょようでんりゅう" } ],
+        [ { "surface": "種接地工事", "reading": "しゅせっちこうじ" } ]
       ],
       "items_vi": [
         "Phát điện bằng sức gió",
@@ -54,13 +94,42 @@
       "level": 3,
       "jp": "【問題 No.4】",
       "vi": "[Câu hỏi số 4]",
-      "explanation_vi": "(R4)"
+      "explanation_vi": "(R4)",
+      "furigana_tokens": [
+        { "surface": "問題", "reading": "もんだい" }
+      ]
     },
     {
       "type": "note",
       "jp": "電気工事に関する次の用語の中から3つを選び、番号と用語を記入のうえ、技術的な内容を、それぞれについて2つ具体的に記述しなさい。\nただし、技術的な内容とは、施工上の留意点、選定上の留意点、定義、動作原理、発生原理、目的、用途、方式、方法、特徴、対策などをいう。",
       "vi": "Hãy chọn 3 trong số các thuật ngữ liên quan đến công trình điện dưới đây, ghi rõ số thứ tự và thuật ngữ, sau đó mô tả cụ thể 2 nội dung kỹ thuật cho mỗi thuật ngữ.",
-      "explanation_vi": null
+      "explanation_vi": null,
+      "furigana_tokens": [
+        { "surface": "電気工事", "reading": "でんきこうじ" },
+        { "surface": "関", "reading": "かん" },
+        { "surface": "次", "reading": "つぎ" },
+        { "surface": "用語", "reading": "ようご" },
+        { "surface": "中", "reading": "なか" },
+        { "surface": "選", "reading": "えら" },
+        { "surface": "番号", "reading": "ばんごう" },
+        { "surface": "記入", "reading": "きにゅう" },
+        { "surface": "技術的", "reading": "ぎじゅつてき" },
+        { "surface": "内容", "reading": "ないよう" },
+        { "surface": "具体的", "reading": "ぐたいてき" },
+        { "surface": "記述", "reading": "きじゅつ" },
+        { "surface": "施工上", "reading": "せこうじょう" },
+        { "surface": "留意点", "reading": "りゅういてん" },
+        { "surface": "選定上", "reading": "せんていじょう" },
+        { "surface": "定義", "reading": "ていぎ" },
+        { "surface": "動作原理", "reading": "どうさげんり" },
+        { "surface": "発生原理", "reading": "はっせいげんり" },
+        { "surface": "目的", "reading": "もくてき" },
+        { "surface": "用途", "reading": "ようと" },
+        { "surface": "方式", "reading": "ほうしき" },
+        { "surface": "方法", "reading": "ほうほう" },
+        { "surface": "特徴", "reading": "とくちょう" },
+        { "surface": "対策", "reading": "たいさく" }
+      ]
     },
     {
       "type": "numbered_list",
@@ -74,6 +143,17 @@
         "ループコイル式車両感知器",
         "波付硬質合成樹脂管（FEP）",
         "絶縁抵抗試験"
+      ],
+      "items_furigana_tokens": [
+        [ { "surface": "揚水式発電", "reading": "ようすいしきはつでん" } ],
+        [ { "surface": "架空地線", "reading": "かくうちせん" } ],
+        [ { "surface": "力率改善", "reading": "りきりつかいぜん" } ],
+        [ { "surface": "漏電遮断器", "reading": "ろうでんしゃだんき" } ],
+        [],
+        [ { "surface": "電車線路", "reading": "でんしゃせんろ" }, { "surface": "帰線", "reading": "きせん" } ],
+        [ { "surface": "式車両感知器", "reading": "しきしゃりょうかんちき" } ],
+        [ { "surface": "波付硬質合成樹脂管", "reading": "なみつきこうしつごうせいじゅしかん" } ],
+        [ { "surface": "絶縁抵抗試験", "reading": "ぜつえんていこうしけん" } ]
       ],
       "items_vi": [
         "Phát điện kiểu bơm tích năng (thủy điện tích năng)",
@@ -93,13 +173,42 @@
       "level": 3,
       "jp": "【問題 No.5】",
       "vi": "[Câu hỏi số 5]",
-      "explanation_vi": "(R5)"
+      "explanation_vi": "(R5)",
+      "furigana_tokens": [
+        { "surface": "問題", "reading": "もんだい" }
+      ]
     },
     {
       "type": "note",
       "jp": "電気工事に関する次の用語の中から3つを選び、番号と用語を記入のうえ、技術的な内容を、それぞれについて2つ具体的に記述しなさい。\nただし、技術的な内容とは、施工上の留意点、選定上の留意点、定義、動作原理、発生原理、目的、用途、方式、方法、特徴、対策などをいう。",
       "vi": "Hãy chọn 3 trong số các thuật ngữ liên quan đến công trình điện dưới đây, ghi rõ số thứ tự và thuật ngữ, sau đó mô tả cụ thể 2 nội dung kỹ thuật cho mỗi thuật ngữ.",
-      "explanation_vi": null
+      "explanation_vi": null,
+      "furigana_tokens": [
+        { "surface": "電気工事", "reading": "でんきこうじ" },
+        { "surface": "関", "reading": "かん" },
+        { "surface": "次", "reading": "つぎ" },
+        { "surface": "用語", "reading": "ようご" },
+        { "surface": "中", "reading": "なか" },
+        { "surface": "選", "reading": "えら" },
+        { "surface": "番号", "reading": "ばんごう" },
+        { "surface": "記入", "reading": "きにゅう" },
+        { "surface": "技術的", "reading": "ぎじゅつてき" },
+        { "surface": "内容", "reading": "ないよう" },
+        { "surface": "具体的", "reading": "ぐたいてき" },
+        { "surface": "記述", "reading": "きじゅつ" },
+        { "surface": "施工上", "reading": "せこうじょう" },
+        { "surface": "留意点", "reading": "りゅういてん" },
+        { "surface": "選定上", "reading": "せんていじょう" },
+        { "surface": "定義", "reading": "ていぎ" },
+        { "surface": "動作原理", "reading": "どうさげんり" },
+        { "surface": "発生原理", "reading": "はっせいげんり" },
+        { "surface": "目的", "reading": "もくてき" },
+        { "surface": "用途", "reading": "ようと" },
+        { "surface": "方式", "reading": "ほうしき" },
+        { "surface": "方法", "reading": "ほうほう" },
+        { "surface": "特徴", "reading": "とくちょう" },
+        { "surface": "対策", "reading": "たいさく" }
+      ]
     },
     {
       "type": "numbered_list",
@@ -113,6 +222,17 @@
         "道路の照明方式（トンネル照明を除く）",
         "接地抵抗試験",
         "電線の許容電流"
+      ],
+      "items_furigana_tokens": [
+        [ { "surface": "風力発電", "reading": "ふうりょくはつでん" } ],
+        [ { "surface": "架空送配電線路", "reading": "かくうそうはいでんせんろ" }, { "surface": "耐塩対策", "reading": "たいえんたいさく" } ],
+        [ { "surface": "三相誘導電動機", "reading": "さんそうゆうどうでんどうき" }, { "surface": "始動方式", "reading": "しどうほうしき" } ],
+        [ { "surface": "屋内配線用差込形電線", "reading": "おくないはいせんようさしこみがたでんせん" } ],
+        [ { "surface": "光", "reading": "ひかり" } ],
+        [ { "surface": "自動列車制御装置", "reading": "じどうれっしゃせいぎょそうち" } ],
+        [ { "surface": "道路", "reading": "どうろ" }, { "surface": "照明方式", "reading": "しょうめいほうしき" }, { "surface": "除", "reading": "のぞ" } ],
+        [ { "surface": "接地抵抗試験", "reading": "せっちていこうしけん" } ],
+        [ { "surface": "電線", "reading": "でんせん" }, { "surface": "許容電流", "reading": "きょようでんりゅう" } ]
       ],
       "items_vi": [
         "Phát điện bằng sức gió",

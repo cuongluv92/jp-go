@@ -15,39 +15,134 @@
       "level": 2,
       "jp": "電気用語の記述の方法について",
       "vi": "Về cách mô tả phần thuật ngữ điện",
-      "explanation_vi": null
+      "explanation_vi": null,
+      "furigana_tokens": [
+        { "surface": "電気用語", "reading": "でんきようご" },
+        { "surface": "記述", "reading": "きじゅつ" },
+        { "surface": "方法", "reading": "ほうほう" }
+      ]
     },
     {
       "type": "paragraph",
       "jp": "技術的な内容について記述すると設問にあるが、この場合の技術的内容とは施工管理技術を指すことに注意する。\n従って、施工管理者として工事を実施するときに必要な事項を中心に記述すると良い。具体的には、機器等であれば、どの設備（用途）にどのような目的で使用されるか、どのような原理で作動するか、また、どのような特徴や種類があるか、選定や施工についてはどのような留意点があるか等、また、現象については、どの設備で発生するか、何が原因か、対策をどのようにとるかを記述すると良い。\n各用語について2項目、各2行程度で記述することになっているため、記述スペースを有効に利用し記述不足にならないよう注意し準備をすることが必要である。\n毎年9用語出題され、その中から3用語を選択し解答する形式になっている。",
       "vi": "Đề bài ghi là \"mô tả nội dung kỹ thuật\", nhưng cần lưu ý rằng nội dung kỹ thuật ở đây chỉ kỹ thuật quản lý thi công.\nVì vậy, nên mô tả tập trung vào những nội dung cần thiết đối với người quản lý thi công khi thực hiện công trình. Cụ thể, nếu là thiết bị, nên mô tả nó được dùng ở thiết bị (công dụng) nào với mục đích gì, hoạt động theo nguyên lý nào, có đặc điểm/chủng loại gì, khi lựa chọn hoặc thi công cần lưu ý điểm gì v.v.; còn nếu là hiện tượng, nên mô tả nó phát sinh ở thiết bị nào, nguyên nhân là gì, và biện pháp xử lý như thế nào.\nMỗi thuật ngữ cần mô tả 2 nội dung, mỗi nội dung khoảng 2 dòng, nên cần tận dụng hiệu quả không gian viết, chuẩn bị kỹ để tránh viết thiếu.\nMỗi năm ra đề 9 thuật ngữ, thí sinh chọn 3 trong số đó để trả lời.",
-      "explanation_vi": null
+      "explanation_vi": null,
+      "furigana_tokens": [
+        { "surface": "技術的", "reading": "ぎじゅつてき" },
+        { "surface": "内容", "reading": "ないよう" },
+        { "surface": "記述", "reading": "きじゅつ" },
+        { "surface": "設問", "reading": "せつもん" },
+        { "surface": "場合", "reading": "ばあい" },
+        { "surface": "施工", "reading": "せこう" },
+        { "surface": "管理", "reading": "かんり" },
+        { "surface": "技術", "reading": "ぎじゅつ" },
+        { "surface": "指", "reading": "さ" },
+        { "surface": "注意", "reading": "ちゅうい" },
+        { "surface": "従", "reading": "したが" },
+        { "surface": "者", "reading": "しゃ" },
+        { "surface": "工事", "reading": "こうじ" },
+        { "surface": "実施", "reading": "じっし" },
+        { "surface": "必要", "reading": "ひつよう" },
+        { "surface": "事項", "reading": "じこう" },
+        { "surface": "中心", "reading": "ちゅうしん" },
+        { "surface": "良い", "reading": "よい" },
+        { "surface": "具体的", "reading": "ぐたいてき" },
+        { "surface": "機器", "reading": "きき" },
+        { "surface": "等", "reading": "とう" },
+        { "surface": "設備", "reading": "せつび" },
+        { "surface": "用途", "reading": "ようと" },
+        { "surface": "目的", "reading": "もくてき" },
+        { "surface": "使用", "reading": "しよう" },
+        { "surface": "原理", "reading": "げんり" },
+        { "surface": "作動", "reading": "さどう" },
+        { "surface": "特徴", "reading": "とくちょう" },
+        { "surface": "種類", "reading": "しゅるい" },
+        { "surface": "選定", "reading": "せんてい" },
+        { "surface": "留意点", "reading": "りゅういてん" },
+        { "surface": "現象", "reading": "げんしょう" },
+        { "surface": "発生", "reading": "はっせい" },
+        { "surface": "原因", "reading": "げんいん" },
+        { "surface": "対策", "reading": "たいさく" },
+        { "surface": "何", "reading": "なに" },
+        { "surface": "各用語", "reading": "かくようご" },
+        { "surface": "項目", "reading": "こうもく" },
+        { "surface": "各", "reading": "かく" },
+        { "surface": "行程度", "reading": "ぎょうていど" },
+        { "surface": "有効", "reading": "ゆうこう" },
+        { "surface": "利用", "reading": "りよう" },
+        { "surface": "不足", "reading": "ふそく" },
+        { "surface": "準備", "reading": "じゅんび" },
+        { "surface": "毎年", "reading": "まいとし" },
+        { "surface": "用語", "reading": "ようご" },
+        { "surface": "出題", "reading": "しゅつだい" },
+        { "surface": "中", "reading": "なか" },
+        { "surface": "選択", "reading": "せんたく" },
+        { "surface": "解答", "reading": "かいとう" },
+        { "surface": "形式", "reading": "けいしき" }
+      ]
     },
     {
       "type": "heading",
       "level": 2,
       "jp": "記述の手順要領",
       "vi": "Hướng dẫn trình tự mô tả",
-      "explanation_vi": null
+      "explanation_vi": null,
+      "furigana_tokens": [
+        { "surface": "記述", "reading": "きじゅつ" },
+        { "surface": "手順", "reading": "てじゅん" },
+        { "surface": "要領", "reading": "ようりょう" }
+      ]
     },
     {
       "type": "heading",
       "level": 3,
       "jp": "◎ 風力発電",
       "vi": "◎ Phát điện bằng sức gió",
-      "explanation_vi": null
+      "explanation_vi": null,
+      "furigana_tokens": [
+        { "surface": "風力", "reading": "ふうりょく" },
+        { "surface": "発電", "reading": "はつでん" }
+      ]
     },
     {
       "type": "paragraph",
       "jp": "（目的）自然エネルギーの活用を目的とした発電設備で、風力を各種の風車により回転エネルギーに変換し発電機により電気エネルギーに変換する発電設備である。",
       "vi": "(Mục đích) Là thiết bị phát điện nhằm mục đích tận dụng năng lượng tự nhiên, chuyển đổi sức gió thành động năng quay thông qua các loại tua-bin gió, sau đó chuyển đổi thành điện năng nhờ máy phát điện.",
-      "explanation_vi": null
+      "explanation_vi": null,
+      "furigana_tokens": [
+        { "surface": "目的", "reading": "もくてき" },
+        { "surface": "自然", "reading": "しぜん" },
+        { "surface": "活用", "reading": "かつよう" },
+        { "surface": "発電設備", "reading": "はつでんせつび" },
+        { "surface": "風力", "reading": "ふうりょく" },
+        { "surface": "各種", "reading": "かくしゅ" },
+        { "surface": "風車", "reading": "ふうしゃ" },
+        { "surface": "回転", "reading": "かいてん" },
+        { "surface": "変換", "reading": "へんかん" },
+        { "surface": "発電機", "reading": "はつでんき" },
+        { "surface": "電気", "reading": "でんき" }
+      ]
     },
     {
       "type": "paragraph",
       "jp": "（特徴）風力発電は地球温暖化の原因となるCO2の発生もなく、有害物質を排出しないクリーンなエネルギー資源であるが、発電量は風速に左右されるため不規則で間欠的である。",
       "vi": "(Đặc điểm) Phát điện bằng sức gió là nguồn năng lượng sạch, không phát sinh CO2 (nguyên nhân gây nóng lên toàn cầu), không thải ra chất độc hại, nhưng sản lượng điện phụ thuộc vào tốc độ gió nên không ổn định và gián đoạn.",
-      "explanation_vi": "Đây là ví dụ mẫu minh họa cách trình bày 2 nội dung (mục đích + đặc điểm) cho 1 thuật ngữ, theo đúng khung hướng dẫn ở trên."
+      "explanation_vi": "Đây là ví dụ mẫu minh họa cách trình bày 2 nội dung (mục đích + đặc điểm) cho 1 thuật ngữ, theo đúng khung hướng dẫn ở trên.",
+      "furigana_tokens": [
+        { "surface": "特徴", "reading": "とくちょう" },
+        { "surface": "風力発電", "reading": "ふうりょくはつでん" },
+        { "surface": "地球温暖化", "reading": "ちきゅうおんだんか" },
+        { "surface": "原因", "reading": "げんいん" },
+        { "surface": "発生", "reading": "はっせい" },
+        { "surface": "有害物質", "reading": "ゆうがいぶっしつ" },
+        { "surface": "排出", "reading": "はいしゅつ" },
+        { "surface": "資源", "reading": "しげん" },
+        { "surface": "発電量", "reading": "はつでんりょう" },
+        { "surface": "風速", "reading": "ふうそく" },
+        { "surface": "左右", "reading": "さゆう" },
+        { "surface": "不規則", "reading": "ふきそく" },
+        { "surface": "間欠的", "reading": "かんけつてき" }
+      ]
     }
   ]
 }

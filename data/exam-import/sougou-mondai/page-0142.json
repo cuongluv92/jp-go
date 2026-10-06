@@ -15,7 +15,11 @@
       "level": 4,
       "jp": "◎8．波付硬質合成樹脂管（FEP管）（H30, R4, 6）",
       "vi": "◎8. Ống nhựa tổng hợp cứng dạng gợn sóng - ống FEP (H30, R4, 6)",
-      "explanation_vi": null
+      "explanation_vi": null,
+      "furigana_tokens": [
+        { "surface": "波付硬質合成樹脂管", "reading": "なみつきこうしつごうせいじゅしかん" },
+        { "surface": "管", "reading": "かん" }
+      ]
     },
     {
       "type": "bullet_list",
@@ -27,20 +31,70 @@
         "① Là ống dùng để lắp đặt đường ống ngầm dưới đất v.v., có thể sử dụng ngay cả ở những nơi lún đất nghiêm trọng.",
         "② Do cả mặt trong lẫn mặt ngoài ống đều dạng gợn sóng, nên dễ uốn cong và có tính mềm dẻo tốt."
       ],
-      "explanation_vi": "Mục ② này đọc theo cách hiểu hợp lý nhất từ chữ in nhỏ trong ảnh gốc (tính chất 'dạng gợn sóng' thường gắn với đặc điểm dễ uốn/mềm dẻo của loại ống này) - nên kiểm tra lại với sách gốc nếu cần độ chính xác tuyệt đối."
+      "explanation_vi": "Mục ② này đọc theo cách hiểu hợp lý nhất từ chữ in nhỏ trong ảnh gốc (tính chất 'dạng gợn sóng' thường gắn với đặc điểm dễ uốn/mềm dẻo của loại ống này) - nên kiểm tra lại với sách gốc nếu cần độ chính xác tuyệt đối.",
+      "items_furigana_tokens": [
+        [
+          { "surface": "地中管路等", "reading": "ちちゅうかんろとう" },
+          { "surface": "布設", "reading": "ふせつ" },
+          { "surface": "使用", "reading": "しよう" },
+          { "surface": "配管", "reading": "はいかん" },
+          { "surface": "地盤沈下", "reading": "じばんちんか" },
+          { "surface": "激", "reading": "はげ" },
+          { "surface": "箇所", "reading": "かしょ" }
+        ],
+        [
+          { "surface": "管内外", "reading": "かんないがい" },
+          { "surface": "波状", "reading": "はじょう" },
+          { "surface": "曲", "reading": "ま" },
+          { "surface": "加工", "reading": "かこう" },
+          { "surface": "可", "reading": "か" },
+          { "surface": "性", "reading": "せい" },
+          { "surface": "優", "reading": "すぐ" }
+        ]
+      ]
     },
     {
       "type": "note",
       "jp": "施工の注意点\n①管路は堅ろうで車両その他重量物の圧力を耐えうるように、埋設深さに注意して施設する。\n②管相互の接合は、専用の付属品がある場合はそれを使用して堅ろうに行い、かつ水が容易に管路内部に浸入しないよう施設する。",
       "vi": "Điểm cần lưu ý khi thi công\n① Lắp đặt chú ý đến độ sâu chôn ống để ống chịu được áp lực của xe cộ và các vật nặng khác một cách chắc chắn.\n② Khi nối ống với nhau, nếu có phụ kiện chuyên dụng thì dùng phụ kiện đó để nối chắc chắn, đồng thời lắp đặt sao cho nước không dễ xâm nhập vào bên trong đường ống.",
-      "explanation_vi": "Đây là mục con riêng trong sách gốc, tách biệt khỏi phần giải nghĩa ①② chính ở trên. Một số chữ trong ảnh gốc khá nhỏ và khó đọc hoàn toàn chắc chắn, đã chép theo cách hiểu hợp lý nhất."
+      "explanation_vi": "Đây là mục con riêng trong sách gốc, tách biệt khỏi phần giải nghĩa ①② chính ở trên. Một số chữ trong ảnh gốc khá nhỏ và khó đọc hoàn toàn chắc chắn, đã chép theo cách hiểu hợp lý nhất.",
+      "furigana_tokens": [
+        { "surface": "施工", "reading": "せこう" },
+        { "surface": "注意点", "reading": "ちゅういてん" },
+        { "surface": "管路", "reading": "かんろ" },
+        { "surface": "堅", "reading": "けん" },
+        { "surface": "車両", "reading": "しゃりょう" },
+        { "surface": "他", "reading": "た" },
+        { "surface": "重量物", "reading": "じゅうりょうぶつ" },
+        { "surface": "圧力", "reading": "あつりょく" },
+        { "surface": "耐", "reading": "た" },
+        { "surface": "埋設", "reading": "まいせつ" },
+        { "surface": "深", "reading": "ふか" },
+        { "surface": "注意", "reading": "ちゅうい" },
+        { "surface": "施設", "reading": "しせつ" },
+        { "surface": "管相互", "reading": "かんそうご" },
+        { "surface": "接合", "reading": "せつごう" },
+        { "surface": "専用", "reading": "せんよう" },
+        { "surface": "付属品", "reading": "ふぞくひん" },
+        { "surface": "場合", "reading": "ばあい" },
+        { "surface": "使用", "reading": "しよう" },
+        { "surface": "行", "reading": "おこな" },
+        { "surface": "水", "reading": "みず" },
+        { "surface": "容易", "reading": "ようい" },
+        { "surface": "管路内部", "reading": "かんろないぶ" },
+        { "surface": "浸入", "reading": "しんにゅう" }
+      ]
     },
     {
       "type": "heading",
       "level": 4,
       "jp": "9．VVFケーブルの差込形コネクタ（屋内配線用差込形電線コネクタ）（R3, 5, 7）",
       "vi": "9. Đầu nối dạng cắm của cáp VVF - dùng cho dây dẫn trong nhà (R3, 5, 7)",
-      "explanation_vi": null
+      "explanation_vi": null,
+      "furigana_tokens": [
+        { "surface": "差込形", "reading": "さしこみがた" },
+        { "surface": "屋内配線用差込形電線", "reading": "おくないはいせんようさしこみがたでんせん" }
+      ]
     },
     {
       "type": "bullet_list",
@@ -52,14 +106,41 @@
         "① Đầu nối dây điện này là đầu cực dùng để đấu nối các dây điện với nhau, nhằm mục đích nối dài hoặc rẽ nhánh dây điện.",
         "② Chỉ cần lấy dây IV ra từ cáp rồi cắm vào lỗ của đầu nối, nên có thể rút ngắn thời gian thi công và tiết kiệm công sức."
       ],
-      "explanation_vi": null
+      "explanation_vi": null,
+      "items_furigana_tokens": [
+        [
+          { "surface": "電線", "reading": "でんせん" },
+          { "surface": "延長", "reading": "えんちょう" },
+          { "surface": "分岐", "reading": "ぶんき" },
+          { "surface": "目的", "reading": "もくてき" },
+          { "surface": "相互", "reading": "そうご" },
+          { "surface": "接続", "reading": "せつぞく" },
+          { "surface": "行", "reading": "おこな" },
+          { "surface": "結束端子", "reading": "けっそくたんし" }
+        ],
+        [
+          { "surface": "線", "reading": "せん" },
+          { "surface": "取出", "reading": "とりだ" },
+          { "surface": "穴", "reading": "あな" },
+          { "surface": "差", "reading": "さ" },
+          { "surface": "込", "reading": "こ" },
+          { "surface": "施工時間", "reading": "せこうじかん" },
+          { "surface": "短縮", "reading": "たんしゅく" },
+          { "surface": "省力化", "reading": "しょうりょくか" },
+          { "surface": "図", "reading": "はか" }
+        ]
+      ]
     },
     {
       "type": "heading",
       "level": 4,
       "jp": "10．スターデルタ始動（R3）　電気テキスト p.137",
       "vi": "10. Khởi động sao-tam giác (R3) - Giáo trình điện tr.137",
-      "explanation_vi": null
+      "explanation_vi": null,
+      "furigana_tokens": [
+        { "surface": "始動", "reading": "しどう" },
+        { "surface": "電気", "reading": "でんき" }
+      ]
     },
     {
       "type": "bullet_list",
@@ -71,14 +152,45 @@
         "① Có thể giảm sụt áp do dòng khởi động gây ra; đây là phương pháp rẻ nhất và dễ áp dụng nhất trong số các phương pháp khởi động giảm áp, nên cần lưu ý khi lựa chọn.",
         "② Là một dạng khởi động giảm áp: để hạn chế dòng khởi động, động cơ vận hành theo đấu nối tam giác (delta) chỉ được khởi động theo đấu nối sao (star) trong lúc khởi động."
       ],
-      "explanation_vi": null
+      "explanation_vi": null,
+      "items_furigana_tokens": [
+        [
+          { "surface": "始動電流", "reading": "しどうでんりゅう" },
+          { "surface": "電圧降下", "reading": "でんあつこうか" },
+          { "surface": "軽減", "reading": "けいげん" },
+          { "surface": "減電圧始動", "reading": "げんでんあつしどう" },
+          { "surface": "中", "reading": "なか" },
+          { "surface": "最", "reading": "もっと" },
+          { "surface": "安価", "reading": "あんか" },
+          { "surface": "手軽", "reading": "てがる" },
+          { "surface": "採用", "reading": "さいよう" },
+          { "surface": "事", "reading": "こと" },
+          { "surface": "選定上", "reading": "せんていじょう" },
+          { "surface": "留意", "reading": "りゅうい" }
+        ],
+        [
+          { "surface": "減電圧始動", "reading": "げんでんあつしどう" },
+          { "surface": "一種", "reading": "いっしゅ" },
+          { "surface": "始動電流", "reading": "しどうでんりゅう" },
+          { "surface": "結線", "reading": "けっせん" },
+          { "surface": "運転", "reading": "うんてん" },
+          { "surface": "電動機", "reading": "でんどうき" },
+          { "surface": "始動時", "reading": "しどうじ" },
+          { "surface": "始動", "reading": "しどう" }
+        ]
+      ]
     },
     {
       "type": "heading",
       "level": 4,
       "jp": "◎11．三相誘導電動機の始動方式（H30, R2, 5）　電気テキスト p.137",
       "vi": "◎11. Phương thức khởi động động cơ cảm ứng 3 pha (H30, R2, 5) - Giáo trình điện tr.137",
-      "explanation_vi": null
+      "explanation_vi": null,
+      "furigana_tokens": [
+        { "surface": "三相誘導電動機", "reading": "さんそうゆうどうでんどうき" },
+        { "surface": "始動方式", "reading": "しどうほうしき" },
+        { "surface": "電気", "reading": "でんき" }
+      ]
     },
     {
       "type": "bullet_list",
@@ -90,14 +202,42 @@
         "① Động cơ cảm ứng rotor lồng sóc có phương pháp khởi động sao-tam giác (để đối phó với dòng khởi động) và phương pháp khởi động trực tiếp (không xử lý dòng khởi động).",
         "② Phương pháp khởi động trực tiếp toàn điện áp là cấp toàn bộ điện áp vào cuộn dây động cơ ngay từ đầu để khởi động, thường được dùng cho động cơ dưới 5,5kW."
       ],
-      "explanation_vi": null
+      "explanation_vi": null,
+      "items_furigana_tokens": [
+        [
+          { "surface": "形誘導電動機", "reading": "がたゆうどうでんどうき" },
+          { "surface": "始動電流対策", "reading": "しどうでんりゅうたいさく" },
+          { "surface": "行", "reading": "おこな" },
+          { "surface": "始動法", "reading": "しどうほう" },
+          { "surface": "始動電流", "reading": "しどうでんりゅう" },
+          { "surface": "対策", "reading": "たいさく" },
+          { "surface": "直入始動法", "reading": "じかにゅうしどうほう" }
+        ],
+        [
+          { "surface": "全電圧", "reading": "ぜんでんあつ" },
+          { "surface": "入", "reading": "い" },
+          { "surface": "始動法", "reading": "しどうほう" },
+          { "surface": "電動機", "reading": "でんどうき" },
+          { "surface": "巻線", "reading": "かんせん" },
+          { "surface": "最初", "reading": "さいしょ" },
+          { "surface": "印加", "reading": "いんか" },
+          { "surface": "始動", "reading": "しどう" },
+          { "surface": "未満", "reading": "みまん" },
+          { "surface": "一般", "reading": "いっぱん" },
+          { "surface": "使用", "reading": "しよう" }
+        ]
+      ]
     },
     {
       "type": "heading",
       "level": 4,
       "jp": "12．うず電流（R1）　電気テキスト p.12",
       "vi": "12. Dòng điện xoáy (R1) - Giáo trình điện tr.12",
-      "explanation_vi": null
+      "explanation_vi": null,
+      "furigana_tokens": [
+        { "surface": "電流", "reading": "でんりゅう" },
+        { "surface": "電気", "reading": "でんき" }
+      ]
     },
     {
       "type": "bullet_list",
@@ -109,14 +249,48 @@
         "① Là hiện tượng: trong vật dẫn như tấm kim loại, lõi thép ghép lớp v.v., khi từ thông φ xuyên qua thay đổi, sẽ sinh ra sức điện động cảm ứng trong vật dẫn, khiến dòng điện cảm ứng chạy theo dạng xoáy trong vật dẫn.",
         "② Tổn thất nhiệt phát sinh từ dòng điện xoáy gọi là tổn thất dòng xoáy, là một phần của tổn thất sắt. Phương pháp gia nhiệt tận dụng tổn thất sắt có nguyên lý gia nhiệt cảm ứng của bếp từ (IH heater)."
       ],
-      "explanation_vi": null
+      "explanation_vi": null,
+      "items_furigana_tokens": [
+        [
+          { "surface": "金属板", "reading": "きんぞくばん" },
+          { "surface": "成層鉄心等", "reading": "せいそうてっしんとう" },
+          { "surface": "導体中", "reading": "どうたいちゅう" },
+          { "surface": "貫", "reading": "つらぬ" },
+          { "surface": "磁束", "reading": "じそく" },
+          { "surface": "変化", "reading": "へんか" },
+          { "surface": "誘導起電力", "reading": "ゆうどうきでんりょく" },
+          { "surface": "生", "reading": "しょう" },
+          { "surface": "誘導電流", "reading": "ゆうどうでんりゅう" },
+          { "surface": "状", "reading": "じょう" },
+          { "surface": "流", "reading": "なが" },
+          { "surface": "現象", "reading": "げんしょう" }
+        ],
+        [
+          { "surface": "電流損", "reading": "でんりゅうそん" },
+          { "surface": "電流", "reading": "でんりゅう" },
+          { "surface": "発生", "reading": "はっせい" },
+          { "surface": "熱損失", "reading": "ねつそんしつ" },
+          { "surface": "呼", "reading": "よ" },
+          { "surface": "鉄損", "reading": "てっそん" },
+          { "surface": "一部", "reading": "いちぶ" },
+          { "surface": "利用", "reading": "りよう" },
+          { "surface": "加熱方法", "reading": "かねつほうほう" },
+          { "surface": "原理", "reading": "げんり" },
+          { "surface": "誘導加熱", "reading": "ゆうどうかねつ" }
+        ]
+      ]
     },
     {
       "type": "heading",
       "level": 4,
       "jp": "13．変圧器の並行運転（R1）　電気テキスト p.124",
       "vi": "13. Vận hành song song máy biến áp (R1) - Giáo trình điện tr.124",
-      "explanation_vi": null
+      "explanation_vi": null,
+      "furigana_tokens": [
+        { "surface": "変圧器", "reading": "へんあつき" },
+        { "surface": "並行運転", "reading": "へいこううんてん" },
+        { "surface": "電気", "reading": "でんき" }
+      ]
     },
     {
       "type": "bullet_list",
@@ -128,7 +302,32 @@
         "① Điều kiện để vận hành song song là tần số và cùng pha của sức điện động giữa các máy, đây là điểm cần lưu ý khi thi công.",
         "② Trường hợp máy biến áp 3 pha, cần làm cho chiều quay pha và độ lệch góc bằng nhau, đồng thời tổ hợp đấu nối sơ cấp-thứ cấp (ví dụ Δ-Δ, hoặc Δ-Y kết hợp Y-Δ v.v.) là điểm cần lưu ý khi thi công."
       ],
-      "explanation_vi": null
+      "explanation_vi": null,
+      "items_furigana_tokens": [
+        [
+          { "surface": "並行運転", "reading": "へいこううんてん" },
+          { "surface": "条件", "reading": "じょうけん" },
+          { "surface": "各機", "reading": "かくき" },
+          { "surface": "周波数", "reading": "しゅうはすう" },
+          { "surface": "起電力", "reading": "きでんりょく" },
+          { "surface": "同相", "reading": "どうそう" },
+          { "surface": "施工上", "reading": "せこうじょう" },
+          { "surface": "留意点", "reading": "りゅういてん" }
+        ],
+        [
+          { "surface": "三相変圧器", "reading": "さんそうへんあつき" },
+          { "surface": "場合", "reading": "ばあい" },
+          { "surface": "相回転方向", "reading": "そうかいてんほうこう" },
+          { "surface": "角変位", "reading": "かくへんい" },
+          { "surface": "等", "reading": "ひと", "start": 22 },
+          { "surface": "等", "reading": "とう", "start": 48 },
+          { "surface": "次", "reading": "じ" },
+          { "surface": "結線", "reading": "けっせん" },
+          { "surface": "組合", "reading": "くみあ" },
+          { "surface": "施工上", "reading": "せこうじょう" },
+          { "surface": "留意点", "reading": "りゅういてん" }
+        ]
+      ]
     }
   ]
 }

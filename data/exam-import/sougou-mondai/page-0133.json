@@ -15,7 +15,10 @@
       "level": 1,
       "jp": "5．電気用語",
       "vi": "5. Thuật ngữ điện",
-      "explanation_vi": null
+      "explanation_vi": null,
+      "furigana_tokens": [
+        { "surface": "電気用語", "reading": "でんきようご" }
+      ]
     }
   ]
 }

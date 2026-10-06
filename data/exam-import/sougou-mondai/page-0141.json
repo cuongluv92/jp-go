@@ -15,13 +15,36 @@
       "level": 4,
       "jp": "◎1．力率改善（R1, 4, 6）　電気テキスト p.20, 52",
       "vi": "◎1. Cải thiện hệ số công suất (R1, 4, 6) - Giáo trình điện tr.20, 52",
-      "explanation_vi": null
+      "explanation_vi": null,
+      "furigana_tokens": [
+        { "surface": "力率改善", "reading": "りきりつかいぜん" },
+        { "surface": "電気", "reading": "でんき" }
+      ]
     },
     {
       "type": "bullet_list",
       "items_jp": [
         "①無効電力を減少させることで、電力損失の減少、電力料金の削減が図れる。",
         "②遅れ力率の場合には、進相コンデンサを回路と並列に接続する。"
+      ],
+      "items_furigana_tokens": [
+        [
+          { "surface": "無効電力", "reading": "むこうでんりょく" },
+          { "surface": "減少", "reading": "げんしょう" },
+          { "surface": "電力損失", "reading": "でんりょくそんしつ" },
+          { "surface": "電力料金", "reading": "でんりょくりょうきん" },
+          { "surface": "削減", "reading": "さくげん" },
+          { "surface": "図", "reading": "はか" }
+        ],
+        [
+          { "surface": "遅", "reading": "おく" },
+          { "surface": "力率", "reading": "りきりつ" },
+          { "surface": "場合", "reading": "ばあい" },
+          { "surface": "進相", "reading": "しんそう" },
+          { "surface": "回路", "reading": "かいろ" },
+          { "surface": "並列", "reading": "へいれつ" },
+          { "surface": "接続", "reading": "せつぞく" }
+        ]
       ],
       "items_vi": [
         "① Bằng cách giảm công suất phản kháng, có thể giảm tổn thất điện năng và giảm chi phí tiền điện.",
@@ -34,13 +57,48 @@
       "level": 4,
       "jp": "2．漏電遮断器（R4, 6）　電気テキスト p.107",
       "vi": "2. Cầu dao chống rò điện (R4, 6) - Giáo trình điện tr.107",
-      "explanation_vi": null
+      "explanation_vi": null,
+      "furigana_tokens": [
+        { "surface": "漏電遮断器", "reading": "ろうでんしゃだんき" },
+        { "surface": "電気", "reading": "でんき" }
+      ]
     },
     {
       "type": "bullet_list",
       "items_jp": [
         "①人が容易に触れる恐れがある施設に電気を供給する電路には、感電、漏電を防止する遮断器を設ける。",
         "②漏電遮断装置を一体として容器内に収めて製作したもので、手動で電路の開閉並びに自動遮断後の復帰が行える。"
+      ],
+      "items_furigana_tokens": [
+        [
+          { "surface": "人", "reading": "ひと" },
+          { "surface": "容易", "reading": "ようい" },
+          { "surface": "触", "reading": "ふ" },
+          { "surface": "恐", "reading": "おそ" },
+          { "surface": "施設", "reading": "しせつ" },
+          { "surface": "電気", "reading": "でんき" },
+          { "surface": "供給", "reading": "きょうきゅう" },
+          { "surface": "電路", "reading": "でんろ" },
+          { "surface": "感電", "reading": "かんでん" },
+          { "surface": "漏電", "reading": "ろうでん" },
+          { "surface": "防止", "reading": "ぼうし" },
+          { "surface": "遮断器", "reading": "しゃだんき" },
+          { "surface": "設", "reading": "もう" }
+        ],
+        [
+          { "surface": "漏電遮断装置", "reading": "ろうでんしゃだんそうち" },
+          { "surface": "一体", "reading": "いったい" },
+          { "surface": "容器内", "reading": "ようきない" },
+          { "surface": "収", "reading": "おさ" },
+          { "surface": "製作", "reading": "せいさく" },
+          { "surface": "手動", "reading": "しゅどう" },
+          { "surface": "電路", "reading": "でんろ" },
+          { "surface": "開閉", "reading": "かいへい" },
+          { "surface": "並", "reading": "なら" },
+          { "surface": "自動遮断後", "reading": "じどうしゃだんご" },
+          { "surface": "復帰", "reading": "ふっき" },
+          { "surface": "行", "reading": "おこな" }
+        ]
       ],
       "items_vi": [
         "① Tại mạch điện cấp điện cho cơ sở có nguy cơ con người dễ chạm phải, lắp cầu dao phòng tránh điện giật, rò điện.",
@@ -53,13 +111,40 @@
       "level": 4,
       "jp": "◎3．絶縁抵抗試験（R2, 4, 6）　電気テキスト p.98",
       "vi": "◎3. Thử nghiệm điện trở cách điện (R2, 4, 6) - Giáo trình điện tr.98",
-      "explanation_vi": null
+      "explanation_vi": null,
+      "furigana_tokens": [
+        { "surface": "絶縁抵抗試験", "reading": "ぜつえんていこうしけん" },
+        { "surface": "電気", "reading": "でんき" }
+      ]
     },
     {
       "type": "bullet_list",
       "items_jp": [
         "①電気設備は、感電、火災などのおそれがないように絶縁しなければならない。絶縁抵抗試験は、所定の絶縁抵抗値以上ある事を確認する試験である。",
         "②低圧交流電路の絶縁抵抗値の維持基準は、対地電圧を基準として定められている。"
+      ],
+      "items_furigana_tokens": [
+        [
+          { "surface": "電気設備", "reading": "でんきせつび" },
+          { "surface": "感電", "reading": "かんでん" },
+          { "surface": "火災", "reading": "かさい" },
+          { "surface": "絶縁抵抗試験", "reading": "ぜつえんていこうしけん" },
+          { "surface": "絶縁抵抗値", "reading": "ぜつえんていこうち" },
+          { "surface": "絶縁", "reading": "ぜつえん" },
+          { "surface": "所定", "reading": "しょてい" },
+          { "surface": "以上", "reading": "いじょう" },
+          { "surface": "事", "reading": "こと" },
+          { "surface": "確認", "reading": "かくにん" },
+          { "surface": "試験", "reading": "しけん" }
+        ],
+        [
+          { "surface": "低圧交流電路", "reading": "ていあつこうりゅうでんろ" },
+          { "surface": "絶縁抵抗値", "reading": "ぜつえんていこうち" },
+          { "surface": "維持基準", "reading": "いじきじゅん" },
+          { "surface": "対地電圧", "reading": "たいちでんあつ" },
+          { "surface": "基準", "reading": "きじゅん" },
+          { "surface": "定", "reading": "さだ" }
+        ]
       ],
       "items_vi": [
         "① Thiết bị điện phải được cách điện sao cho không có nguy cơ điện giật, hỏa hoạn v.v. Thử nghiệm điện trở cách điện là thử nghiệm xác nhận điện trở cách điện đạt từ giá trị quy định trở lên.",
@@ -72,13 +157,45 @@
       "level": 4,
       "jp": "◎4．A種接地工事（R3, 7）　電気テキスト p.100",
       "vi": "◎4. Công trình tiếp địa loại A (R3, 7) - Giáo trình điện tr.100",
-      "explanation_vi": null
+      "explanation_vi": null,
+      "furigana_tokens": [
+        { "surface": "種接地工事", "reading": "しゅせっちこうじ" },
+        { "surface": "電気", "reading": "でんき" }
+      ]
     },
     {
       "type": "bullet_list",
       "items_jp": [
         "①接地工事は、機器等を大地と電気的に接続することにより、異常電圧発生時の感電を防止し、機器等の絶縁強度を軽減するものである。",
         "②A種接地工事は、高圧用又は特別高圧用機器の鉄台等に施設され、高電圧の侵入の恐れがあり、かつ、危険度の大きい場合に施設される。"
+      ],
+      "items_furigana_tokens": [
+        [
+          { "surface": "接地工事", "reading": "せっちこうじ" },
+          { "surface": "機器等", "reading": "ききとう" },
+          { "surface": "大地", "reading": "だいち" },
+          { "surface": "電気的", "reading": "でんきてき" },
+          { "surface": "接続", "reading": "せつぞく" },
+          { "surface": "異常電圧発生時", "reading": "いじょうでんあつはっせいじ" },
+          { "surface": "感電", "reading": "かんでん" },
+          { "surface": "防止", "reading": "ぼうし" },
+          { "surface": "絶縁強度", "reading": "ぜつえんきょうど" },
+          { "surface": "軽減", "reading": "けいげん" }
+        ],
+        [
+          { "surface": "種接地工事", "reading": "しゅせっちこうじ" },
+          { "surface": "高圧用", "reading": "こうあつよう" },
+          { "surface": "又", "reading": "また" },
+          { "surface": "特別高圧用機器", "reading": "とくべつこうあつようきき" },
+          { "surface": "鉄台等", "reading": "てつだいとう" },
+          { "surface": "施設", "reading": "しせつ" },
+          { "surface": "高電圧", "reading": "こうでんあつ" },
+          { "surface": "侵入", "reading": "しんにゅう" },
+          { "surface": "恐", "reading": "おそ" },
+          { "surface": "危険度", "reading": "きけんど" },
+          { "surface": "大", "reading": "おお" },
+          { "surface": "場合", "reading": "ばあい" }
+        ]
       ],
       "items_vi": [
         "① Công trình tiếp địa là việc đấu nối thiết bị v.v. về mặt điện với đất, nhằm phòng tránh điện giật khi xảy ra điện áp bất thường, đồng thời giảm bớt yêu cầu về độ bền cách điện của thiết bị.",
@@ -91,13 +208,38 @@
       "level": 4,
       "jp": "◎5．D種接地工事（R2）　電気テキスト p.100",
       "vi": "◎5. Công trình tiếp địa loại D (R2) - Giáo trình điện tr.100",
-      "explanation_vi": null
+      "explanation_vi": null,
+      "furigana_tokens": [
+        { "surface": "種接地工事", "reading": "しゅせっちこうじ" },
+        { "surface": "電気", "reading": "でんき" }
+      ]
     },
     {
       "type": "bullet_list",
       "items_jp": [
         "①電気設備の接地工事は、感電の防止のために行う工事であり、接地抵抗値は原則として100Ω以下とする。",
         "②300V以下の機械器具の鉄台および金属製外箱には、D種接地工事を施すこととされている。"
+      ],
+      "items_furigana_tokens": [
+        [
+          { "surface": "電気設備", "reading": "でんきせつび" },
+          { "surface": "接地工事", "reading": "せっちこうじ" },
+          { "surface": "感電", "reading": "かんでん" },
+          { "surface": "防止", "reading": "ぼうし" },
+          { "surface": "行", "reading": "おこな" },
+          { "surface": "工事", "reading": "こうじ" },
+          { "surface": "接地抵抗値", "reading": "せっちていこうち" },
+          { "surface": "原則", "reading": "げんそく" },
+          { "surface": "以下", "reading": "いか" }
+        ],
+        [
+          { "surface": "以下", "reading": "いか" },
+          { "surface": "機械器具", "reading": "きかいきぐ" },
+          { "surface": "鉄台", "reading": "てつだい" },
+          { "surface": "金属製外箱", "reading": "きんぞくせいがいばこ" },
+          { "surface": "種接地工事", "reading": "しゅせっちこうじ" },
+          { "surface": "施", "reading": "ほどこ" }
+        ]
       ],
       "items_vi": [
         "① Công trình tiếp địa của thiết bị điện được thực hiện nhằm phòng tránh điện giật, giá trị điện trở tiếp địa về nguyên tắc phải từ 100Ω trở xuống.",
@@ -110,13 +252,42 @@
       "level": 4,
       "jp": "6．単相変圧器のV結線（R7）　電気テキスト p.122",
       "vi": "6. Đấu nối chữ V máy biến áp 1 pha (R7) - Giáo trình điện tr.122",
-      "explanation_vi": null
+      "explanation_vi": null,
+      "furigana_tokens": [
+        { "surface": "単相変圧器", "reading": "たんそうへんあつき" },
+        { "surface": "結線", "reading": "けっせん" },
+        { "surface": "電気", "reading": "でんき" }
+      ]
     },
     {
       "type": "bullet_list",
       "items_jp": [
         "①単相変圧器3台を用いるΔ-Δ結線のうち1台を取り外したもので、Δの一辺が無くなってV形になった結線である。",
         "②将来の負荷増設でΔ結線が予定されている場合の暫定的な方法として使用されることが多い。"
+      ],
+      "items_furigana_tokens": [
+        [
+          { "surface": "単相変圧器", "reading": "たんそうへんあつき" },
+          { "surface": "台", "reading": "だい" },
+          { "surface": "用", "reading": "もち" },
+          { "surface": "結線", "reading": "けっせん" },
+          { "surface": "取", "reading": "と" },
+          { "surface": "外", "reading": "はず" },
+          { "surface": "一辺", "reading": "いっぺん" },
+          { "surface": "無", "reading": "な" },
+          { "surface": "形", "reading": "がた" }
+        ],
+        [
+          { "surface": "将来", "reading": "しょうらい" },
+          { "surface": "負荷増設", "reading": "ふかぞうせつ" },
+          { "surface": "結線", "reading": "けっせん" },
+          { "surface": "予定", "reading": "よてい" },
+          { "surface": "場合", "reading": "ばあい" },
+          { "surface": "暫定的", "reading": "ざんていてき" },
+          { "surface": "方法", "reading": "ほうほう" },
+          { "surface": "使用", "reading": "しよう" },
+          { "surface": "多", "reading": "おお" }
+        ]
       ],
       "items_vi": [
         "① Là kiểu đấu nối có được bằng cách tháo bỏ 1 trong 3 máy biến áp 1 pha của đấu nối tam giác (Δ-Δ), khiến 1 cạnh của tam giác mất đi, trở thành hình chữ V.",
@@ -129,13 +300,41 @@
       "level": 4,
       "jp": "7．スコット結線変圧器（R2）　電気テキスト p.122",
       "vi": "7. Máy biến áp đấu nối Scott (R2) - Giáo trình điện tr.122",
-      "explanation_vi": null
+      "explanation_vi": null,
+      "furigana_tokens": [
+        { "surface": "結線変圧器", "reading": "けっせんへんあつき" },
+        { "surface": "電気", "reading": "でんき" }
+      ]
     },
     {
       "type": "bullet_list",
       "items_jp": [
         "①単相変圧器2台を用いて三相回路から二相を取るときの結線法であり、電源側に不平衡が生じないようにするための変圧器である。",
         "②工場、ビル等で三相非常用発電機に接続され、単相二系統負荷の給電用に使用されている。"
+      ],
+      "items_furigana_tokens": [
+        [
+          { "surface": "単相変圧器", "reading": "たんそうへんあつき" },
+          { "surface": "台", "reading": "だい" },
+          { "surface": "用", "reading": "もち" },
+          { "surface": "三相回路", "reading": "さんそうかいろ" },
+          { "surface": "二相", "reading": "にそう" },
+          { "surface": "取", "reading": "と" },
+          { "surface": "結線法", "reading": "けっせんほう" },
+          { "surface": "電源側", "reading": "でんげんそく" },
+          { "surface": "不平衡", "reading": "ふへいこう" },
+          { "surface": "生", "reading": "しょう" },
+          { "surface": "変圧器", "reading": "へんあつき" }
+        ],
+        [
+          { "surface": "工場", "reading": "こうじょう" },
+          { "surface": "等", "reading": "とう" },
+          { "surface": "三相非常用発電機", "reading": "さんそうひじょうようはつでんき" },
+          { "surface": "接続", "reading": "せつぞく" },
+          { "surface": "単相二系統負荷", "reading": "たんそうにけいとうふか" },
+          { "surface": "給電用", "reading": "きゅうでんよう" },
+          { "surface": "使用", "reading": "しよう" }
+        ]
       ],
       "items_vi": [
         "① Là phương pháp đấu nối dùng 2 máy biến áp 1 pha để lấy 2 pha từ mạch 3 pha; là máy biến áp nhằm tránh gây mất cân bằng ở phía nguồn điện.",
