@@ -12,6 +12,26 @@ import {
   listExamPagesMeta,
 } from "@/lib/exam/queries";
 import { buildAggregatedFirstPageIndex, buildSectionPageIndex, flattenSectionTree } from "@/lib/exam/section-tree";
+import type { ExamSection } from "@/lib/exam/types";
+
+/**
+ * Một sách có thể có NHIỀU nhánh gốc độc lập (vd 資料No.1/資料No.2 cùng nằm
+ * trong 1 book_slug nhưng không liên quan nhau) - page_number chỉ unique
+ * trong TOÀN BỘ sách nên không dùng được để biết trang nào "cùng tài liệu".
+ * Hàm này tìm section gốc (depth 0, parent_id null) của 1 section bất kỳ,
+ * để prev/next/dropdown chỉ liệt kê trang trong CÙNG nhánh gốc, không lẫn
+ * sang tài liệu khác.
+ */
+function findRootSectionId(sectionId: string | null, sectionsById: Map<string, ExamSection>): string | null {
+  let current = sectionId ? sectionsById.get(sectionId) : undefined;
+  if (!current) return null;
+  while (current.parent_id) {
+    const parent = sectionsById.get(current.parent_id);
+    if (!parent) break;
+    current = parent;
+  }
+  return current.id;
+}
 
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
@@ -44,14 +64,20 @@ export default async function ExamPageReader({
   const aggregatedFirstPage = buildAggregatedFirstPageIndex(tree, directPageIndex);
   const sectionsById = new Map(flattenSectionTree(tree).map((section) => [section.id, section]));
 
-  const sortedPages = [...pagesMeta].sort((a, b) => a.page_number - b.page_number);
+  const currentRootId = findRootSectionId(page.section_id, sectionsById);
+  const scopedPagesMeta = currentRootId
+    ? pagesMeta.filter((p) => findRootSectionId(p.section_id, sectionsById) === currentRootId)
+    : pagesMeta;
+
+  const sortedPages = [...scopedPagesMeta].sort((a, b) => a.page_number - b.page_number);
   const idx = sortedPages.findIndex((p) => p.page_number === pageNum);
   const prevPage = idx > 0 ? sortedPages[idx - 1].page_number : null;
   const nextPage = idx >= 0 && idx < sortedPages.length - 1 ? sortedPages[idx + 1].page_number : null;
 
   const pageOptions = sortedPages.map((p) => {
     const title = p.section_id ? sectionsById.get(p.section_id)?.title_jp : null;
-    return { pageNumber: p.page_number, label: title ? `Trang ${p.page_number} — ${title}` : `Trang ${p.page_number}` };
+    const pageDisplay = p.page_label ?? `Trang ${p.page_number}`;
+    return { pageNumber: p.page_number, label: title ? `${pageDisplay} — ${title}` : pageDisplay };
   });
 
   return (

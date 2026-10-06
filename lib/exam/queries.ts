@@ -164,17 +164,19 @@ export async function listExamPagesForSection(sectionId: string): Promise<ExamPa
 
 export async function listExamPagesMeta(
   bookId: string,
-): Promise<{ id: string; section_id: string | null; page_number: number }[]> {
+): Promise<{ id: string; section_id: string | null; page_number: number; page_label: string | null }[]> {
   const supabase = getSupabaseClient();
   const { data, error } = await supabase
     .from("jp_exam_pages")
-    .select("id, section_id, page_number")
+    .select("id, section_id, page_number, page_label")
     .eq("book_id", bookId)
     .order("page_number", { ascending: true });
 
   if (error) throw error;
 
-  const rows = [...(data as { id: string; section_id: string | null; page_number: number }[])];
+  const rows = [
+    ...(data as { id: string; section_id: string | null; page_number: number; page_label: string | null }[]),
+  ];
   const staticContext = await getSougouStaticContext(bookId);
   if (!staticContext) return rows;
 
@@ -186,6 +188,7 @@ export async function listExamPagesMeta(
       id: `static-sougou-${pageNumber}`,
       section_id: staticContext.sectionIdByCode.get(seed.sectionCode) ?? null,
       page_number: pageNumber,
+      page_label: null,
     });
   }
 
