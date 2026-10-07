@@ -334,6 +334,8 @@ export function TestRunner({ test, questions: initialQuestions }: { test: ExamTe
   const goTo = (index: number) => {
     if (index < 0 || index >= questions.length) return;
     setPracticeOpen(false);
+    // Phóng to chỉ nên áp dụng cho câu đang xem - không mang sang câu khác.
+    setColumnFocus(null);
     setState((s) => ({ ...s, currentIndex: index }));
   };
 
