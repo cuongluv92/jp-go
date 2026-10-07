@@ -334,6 +334,8 @@ export function TestRunner({ test, questions: initialQuestions }: { test: ExamTe
   const goTo = (index: number) => {
     if (index < 0 || index >= questions.length) return;
     setPracticeOpen(false);
+    // Phóng to chỉ nên áp dụng cho câu đang xem - không mang sang câu khác.
+    setColumnFocus(null);
     setState((s) => ({ ...s, currentIndex: index }));
   };
 
@@ -442,6 +444,43 @@ export function TestRunner({ test, questions: initialQuestions }: { test: ExamTe
           Kết quả: {score.correct}/{score.total} câu đúng · {score.firstTry} câu đúng ngay lần đầu
         </div>
       )}
+
+      {/* Thanh này đứng ngoài lưới cột nên luôn hiện đủ, kể cả khi 1 cột đang bị
+          ẩn hoặc đang phóng to - không có nó thì nút ẩn/phóng to nằm trong
+          chính cột đó sẽ biến mất theo, không còn cách gọi lại cột đã ẩn. */}
+      <div className="flex flex-wrap items-center gap-1.5 rounded-xl border border-border bg-surface px-3 py-2">
+        <p className="mr-1 text-xs text-muted">Cột hiển thị</p>
+        {availableColumns.map((col) => {
+          const isOn = columnVisible[col];
+          const disableOff = isOn && visibleAvailableCount <= 1;
+          return (
+            <button
+              key={col}
+              type="button"
+              onClick={() => toggleColumnVisible(col)}
+              disabled={disableOff}
+              aria-pressed={isOn}
+              aria-label={isOn ? `Ẩn ${REF_COLUMN_LABELS[col]}` : `Hiện ${REF_COLUMN_LABELS[col]}`}
+              title={isOn ? `Ẩn ${REF_COLUMN_LABELS[col]}` : `Hiện ${REF_COLUMN_LABELS[col]}`}
+              className={`flex items-center gap-1.5 rounded-full border px-2.5 py-1 text-xs font-medium transition ${
+                isOn ? "border-accent/40 bg-accent-soft text-accent" : "border-border text-muted"
+              } ${disableOff ? "cursor-not-allowed opacity-60" : "hover:border-accent/60"}`}
+            >
+              <span className={`h-1.5 w-1.5 rounded-full ${isOn ? "bg-accent" : "bg-slate-300 dark:bg-white/20"}`} />
+              <span className="font-jp">{REF_COLUMN_LABELS[col]}</span>
+            </button>
+          );
+        })}
+        {columnFocus && (
+          <button
+            type="button"
+            onClick={() => setColumnFocus(null)}
+            className="ml-auto rounded-full border border-accent/40 bg-accent-soft px-2.5 py-1 text-xs font-medium text-accent hover:border-accent/60"
+          >
+            Thoát chế độ tập trung
+          </button>
+        )}
+      </div>
 
       <div className={`grid gap-3 ${gridColsClass(renderedColumns.length)}`}>
         {renderedColumns.includes("question") && (
