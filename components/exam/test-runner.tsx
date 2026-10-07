@@ -23,6 +23,132 @@ interface AnswerFeedback {
   correct: boolean;
 }
 
+type RefColumnKey = "question" | "questionVi" | "answer" | "explanation";
+
+const REF_COLUMN_ORDER: RefColumnKey[] = ["question", "questionVi", "answer", "explanation"];
+
+const REF_COLUMN_LABELS: Record<RefColumnKey, string> = {
+  question: "問題",
+  questionVi: "Dịch 問題",
+  answer: "解答",
+  explanation: "Giải thích",
+};
+
+const REF_COLUMN_STORAGE_KEYS: Record<RefColumnKey, string> = {
+  question: "jpgo-exam-test-show-question",
+  questionVi: "jpgo-exam-test-show-question-vi",
+  answer: "jpgo-exam-test-show-answer",
+  explanation: "jpgo-exam-test-show-explanation",
+};
+
+type ColumnVisibility = Record<RefColumnKey, boolean>;
+
+const ALL_COLUMNS_VISIBLE: ColumnVisibility = { question: true, questionVi: true, answer: true, explanation: true };
+
+function readStoredColumnVisibility(): ColumnVisibility {
+  if (typeof window === "undefined") return ALL_COLUMNS_VISIBLE;
+  const read = (key: string) => {
+    try {
+      const raw = window.localStorage.getItem(key);
+      return raw === null ? true : raw === "1";
+    } catch {
+      return true;
+    }
+  };
+  return {
+    question: read(REF_COLUMN_STORAGE_KEYS.question),
+    questionVi: read(REF_COLUMN_STORAGE_KEYS.questionVi),
+    answer: read(REF_COLUMN_STORAGE_KEYS.answer),
+    explanation: read(REF_COLUMN_STORAGE_KEYS.explanation),
+  };
+}
+
+function EyeIcon() {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" className="h-4 w-4">
+      <path strokeLinecap="round" strokeLinejoin="round" d="M2.5 12S6 5 12 5s9.5 7 9.5 7-3.5 7-9.5 7-9.5-7-9.5-7z" />
+      <circle cx="12" cy="12" r="2.75" strokeLinecap="round" strokeLinejoin="round" />
+    </svg>
+  );
+}
+
+function ExpandIcon() {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" className="h-4 w-4">
+      <path strokeLinecap="round" strokeLinejoin="round" d="M8 3H4v4M16 3h4v4M8 21H4v-4M16 21h4v-4" />
+    </svg>
+  );
+}
+
+function CompressIcon() {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" className="h-4 w-4">
+      <path strokeLinecap="round" strokeLinejoin="round" d="M4 8V4h4M20 8V4h-4M4 16v4h4M20 16v4h-4" />
+    </svg>
+  );
+}
+
+function gridColsClass(count: number): string {
+  if (count >= 4) return "md:grid-cols-2 xl:grid-cols-4";
+  if (count === 3) return "md:grid-cols-3";
+  if (count === 2) return "md:grid-cols-2";
+  return "md:grid-cols-1";
+}
+
+/**
+ * Nhãn cột + nút "ẩn"/"phóng to" - cùng kiểu với ColumnHeader của trang đọc
+ * sách (components/exam/column-workspace.tsx) để 2 nơi nhất quán hành vi.
+ */
+function ColumnHeader({
+  col,
+  focused,
+  visible,
+  visibleCount,
+  onToggleVisible,
+  onToggleFocus,
+}: {
+  col: RefColumnKey;
+  focused: boolean;
+  visible: boolean;
+  visibleCount: number;
+  onToggleVisible: () => void;
+  onToggleFocus: () => void;
+}) {
+  const disableHide = visible && visibleCount <= 1;
+  const label = REF_COLUMN_LABELS[col];
+
+  return (
+    <div className="mb-3 flex items-center justify-between gap-2">
+      <p className="font-jp truncate text-xs font-semibold uppercase tracking-wide text-muted">{label}</p>
+      <div className="flex shrink-0 items-center gap-1">
+        <button
+          type="button"
+          onClick={onToggleVisible}
+          disabled={disableHide}
+          aria-label={visible ? `Ẩn ${label}` : `Hiện ${label}`}
+          title={visible ? `Ẩn ${label}` : `Hiện ${label}`}
+          className={`flex h-7 w-7 items-center justify-center rounded-lg text-muted transition hover:bg-slate-100 dark:hover:bg-white/10 hover:text-foreground ${
+            disableHide ? "cursor-not-allowed opacity-40" : ""
+          }`}
+        >
+          <EyeIcon />
+        </button>
+        <button
+          type="button"
+          onClick={onToggleFocus}
+          aria-label={focused ? `Thoát chế độ tập trung ${label}` : `Phóng to ${label}`}
+          title={focused ? "Thoát chế độ tập trung" : `Phóng to ${label}`}
+          className={`flex h-7 w-7 items-center justify-center rounded-lg transition hover:bg-slate-100 dark:hover:bg-white/10 ${
+            focused ? "text-accent" : "text-muted hover:text-foreground"
+          }`}
+        >
+          {focused ? <CompressIcon /> : <ExpandIcon />}
+        </button>
+      </div>
+    </div>
+  );
+}
+
 function renderExamJapanese(text: string, tokens: FuriganaToken[] = [], showFurigana = false) {
   if (!showFurigana || tokens.length === 0) return text;
   return segmentJapaneseText(text, [], tokens).map((segment, index) =>
@@ -125,6 +251,12 @@ export function TestRunner({ test, questions: initialQuestions }: { test: ExamTe
   const [quizMode, setQuizMode] = useState(() => questions.some((q) => q.choices.length > 0));
   const [feedback, setFeedback] = useState<AnswerFeedback | null>(null);
   const [practiceOpen, setPracticeOpen] = useState(false);
+  const [columnVisible, setColumnVisible] = useState<ColumnVisibility>(ALL_COLUMNS_VISIBLE);
+  const [columnFocus, setColumnFocus] = useState<RefColumnKey | null>(null);
+  useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect
+    setColumnVisible(readStoredColumnVisibility());
+  }, []);
 
   useEffect(() => {
     try {
@@ -205,6 +337,34 @@ export function TestRunner({ test, questions: initialQuestions }: { test: ExamTe
     setState((s) => ({ ...s, currentIndex: index }));
   };
 
+  // Cột 解答/Giải thích chỉ thực sự tồn tại khi showReferenceColumns - ẩn/focus
+  // lưu trên cả 4 key nhưng chỉ áp dụng cho các cột đang thật sự có mặt.
+  const availableColumns = REF_COLUMN_ORDER.filter(
+    (col) => col === "question" || col === "questionVi" || showReferenceColumns,
+  );
+  const visibleAvailableCount = availableColumns.filter((col) => columnVisible[col]).length;
+  const renderedColumns = columnFocus && availableColumns.includes(columnFocus)
+    ? [columnFocus]
+    : availableColumns.filter((col) => columnVisible[col]);
+
+  function toggleColumnVisible(col: RefColumnKey) {
+    if (columnVisible[col] && visibleAvailableCount <= 1) return; // luôn giữ ít nhất 1 cột hiển thị
+    setColumnFocus(null);
+    const next = { ...columnVisible, [col]: !columnVisible[col] };
+    setColumnVisible(next);
+    for (const key of REF_COLUMN_ORDER) {
+      try {
+        window.localStorage.setItem(REF_COLUMN_STORAGE_KEYS[key], next[key] ? "1" : "0");
+      } catch {
+        // localStorage có thể bị chặn - không ảnh hưởng hiển thị trong phiên hiện tại.
+      }
+    }
+  }
+
+  function toggleColumnFocus(col: RefColumnKey) {
+    setColumnFocus((curr) => (curr === col ? null : col));
+  }
+
   return (
     <div className="flex flex-col gap-4 py-4">
       <div className="flex flex-wrap items-center justify-between gap-3 rounded-2xl border border-border bg-surface px-4 py-3">
@@ -283,9 +443,17 @@ export function TestRunner({ test, questions: initialQuestions }: { test: ExamTe
         </div>
       )}
 
-      <div className={`grid gap-3 md:grid-cols-2 ${showReferenceColumns ? "xl:grid-cols-4" : ""}`}>
+      <div className={`grid gap-3 ${gridColsClass(renderedColumns.length)}`}>
+        {renderedColumns.includes("question") && (
         <section className="min-w-0 rounded-2xl border border-border bg-surface p-4">
-          <p className="mb-3 text-xs font-semibold uppercase tracking-wide text-muted">問題</p>
+          <ColumnHeader
+            col="question"
+            focused={columnFocus === "question"}
+            visible={columnVisible.question}
+            visibleCount={visibleAvailableCount}
+            onToggleVisible={() => toggleColumnVisible("question")}
+            onToggleFocus={() => toggleColumnFocus("question")}
+          />
           <p className="font-jp whitespace-pre-line text-sm leading-relaxed sm:text-base">
             問{current.question_number}. {renderExamJapanese(current.question_jp, current.question_furigana_tokens, showFurigana)}
           </p>
@@ -342,9 +510,18 @@ export function TestRunner({ test, questions: initialQuestions }: { test: ExamTe
             </div>
           )}
         </section>
+        )}
 
+        {renderedColumns.includes("questionVi") && (
         <section className="min-w-0 rounded-2xl border border-border bg-surface p-4">
-          <p className="mb-3 text-xs font-semibold uppercase tracking-wide text-muted">Dịch 問題</p>
+          <ColumnHeader
+            col="questionVi"
+            focused={columnFocus === "questionVi"}
+            visible={columnVisible.questionVi}
+            visibleCount={visibleAvailableCount}
+            onToggleVisible={() => toggleColumnVisible("questionVi")}
+            onToggleFocus={() => toggleColumnFocus("questionVi")}
+          />
           {current.question_vi ? (
             <p className="whitespace-pre-line text-sm leading-relaxed sm:text-base">{current.question_vi}</p>
           ) : (
@@ -362,48 +539,63 @@ export function TestRunner({ test, questions: initialQuestions }: { test: ExamTe
             </div>
           )}
         </section>
+        )}
 
-        {showReferenceColumns && (
-          <>
-            <section className="min-w-0 rounded-2xl border border-border bg-surface p-4">
-              <p className="mb-3 text-xs font-semibold uppercase tracking-wide text-muted">解答</p>
-              {correctChoice ? (
-                <div className="space-y-3">
-                  <p className="font-jp text-sm font-bold text-accent">【正解】{correctChoice.choice_label}</p>
-                  <p className="font-jp whitespace-pre-line text-sm leading-relaxed sm:text-base">
-                    {renderExamJapanese(correctChoice.choice_jp, correctChoice.choice_furigana_tokens, showFurigana)}
-                  </p>
-                </div>
-              ) : writtenAnswer ? (
-                <div className="space-y-3">
-                  <p className="font-jp text-sm font-bold text-accent">【解答例】</p>
-                  <p className="font-jp whitespace-pre-line text-sm leading-relaxed sm:text-base">
-                    {renderExamJapanese(writtenAnswer, current.answer_furigana_tokens, showFurigana)}
-                  </p>
-                </div>
-              ) : (
-                <p className="text-sm italic text-muted">
-                  Câu này chưa có đáp án tiếng Nhật được nhập trong dữ liệu.
-                </p>
-              )}
-            </section>
+        {renderedColumns.includes("answer") && (
+        <section className="min-w-0 rounded-2xl border border-border bg-surface p-4">
+          <ColumnHeader
+            col="answer"
+            focused={columnFocus === "answer"}
+            visible={columnVisible.answer}
+            visibleCount={visibleAvailableCount}
+            onToggleVisible={() => toggleColumnVisible("answer")}
+            onToggleFocus={() => toggleColumnFocus("answer")}
+          />
+          {correctChoice ? (
+            <div className="space-y-3">
+              <p className="font-jp text-sm font-bold text-accent">【正解】{correctChoice.choice_label}</p>
+              <p className="font-jp whitespace-pre-line text-sm leading-relaxed sm:text-base">
+                {renderExamJapanese(correctChoice.choice_jp, correctChoice.choice_furigana_tokens, showFurigana)}
+              </p>
+            </div>
+          ) : writtenAnswer ? (
+            <div className="space-y-3">
+              <p className="font-jp text-sm font-bold text-accent">【解答例】</p>
+              <p className="font-jp whitespace-pre-line text-sm leading-relaxed sm:text-base">
+                {renderExamJapanese(writtenAnswer, current.answer_furigana_tokens, showFurigana)}
+              </p>
+            </div>
+          ) : (
+            <p className="text-sm italic text-muted">
+              Câu này chưa có đáp án tiếng Nhật được nhập trong dữ liệu.
+            </p>
+          )}
+        </section>
+        )}
 
-            <section className="min-w-0 rounded-2xl border border-border bg-surface p-4">
-              <p className="mb-3 text-xs font-semibold uppercase tracking-wide text-muted">Giải thích</p>
-              {current.answer_vi && (
-                <div className="mb-4 rounded-xl border border-border bg-slate-50 p-3 dark:bg-white/5">
-                  <p className="mb-2 text-xs font-semibold uppercase tracking-wide text-muted">Dịch đáp án</p>
-                  <p className="whitespace-pre-line text-sm leading-relaxed">{current.answer_vi}</p>
-                </div>
-              )}
-              {current.explanation_vi ? (
-                <p className="whitespace-pre-line text-sm leading-relaxed">{current.explanation_vi}</p>
-              ) : (
-                <p className="text-sm italic text-muted">Chưa có phần giải thích cho câu này.</p>
-              )}
-              <ReferencePages question={current} />
-            </section>
-          </>
+        {renderedColumns.includes("explanation") && (
+        <section className="min-w-0 rounded-2xl border border-border bg-surface p-4">
+          <ColumnHeader
+            col="explanation"
+            focused={columnFocus === "explanation"}
+            visible={columnVisible.explanation}
+            visibleCount={visibleAvailableCount}
+            onToggleVisible={() => toggleColumnVisible("explanation")}
+            onToggleFocus={() => toggleColumnFocus("explanation")}
+          />
+          {current.answer_vi && (
+            <div className="mb-4 rounded-xl border border-border bg-slate-50 p-3 dark:bg-white/5">
+              <p className="mb-2 text-xs font-semibold uppercase tracking-wide text-muted">Dịch đáp án</p>
+              <p className="whitespace-pre-line text-sm leading-relaxed">{current.answer_vi}</p>
+            </div>
+          )}
+          {current.explanation_vi ? (
+            <p className="whitespace-pre-line text-sm leading-relaxed">{current.explanation_vi}</p>
+          ) : (
+            <p className="text-sm italic text-muted">Chưa có phần giải thích cho câu này.</p>
+          )}
+          <ReferencePages question={current} />
+        </section>
         )}
       </div>
 
