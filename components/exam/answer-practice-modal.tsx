@@ -1,15 +1,24 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 
+import { parseAnswerItems } from "@/lib/exam/answer-items";
 import type { AnswerGradingResult, AnswerUnit } from "@/lib/exam/answer-grading";
 
 /**
  * "回答練習" - overlay riêng TRÊN trang làm đề (không chuyển route, không sửa
  * đề/解答例 gốc) để người dùng tự gõ câu trả lời rồi so với 解答例 đang có sẵn
  * trong dữ liệu. Chấm theo từ nội dung (không phải AI hiểu nghĩa 100%) nên có
- * thể lệch nhẹ với câu viết quá khác cấu trúc - xem lib/exam/answer-grading.ts.
+ * thể lệch nhẹ với câu viết quá khác cấu trúc, và KHÔNG phát hiện được việc
+ * đổi 1 từ khóa quan trọng thành 1 từ khác (vd đổi chiều 上部/下部) nếu phần
+ * còn lại của câu vẫn giống hệt - so từ không có khái niệm "từ nào quan
+ * trọng hơn". Xem lib/exam/answer-grading.ts.
+ *
+ * Đề dạng "chọn N trong M từ/thuật ngữ rồi giải thích" có nhiều mục độc lập
+ * trong cùng 1 answer_jp - cho luyện từng mục riêng (dễ viết, dễ nhìn kết
+ * quả hơn) thay vì bắt gõ nguyên khối, bằng cách tách qua parseAnswerItems.
  */
+const ALL_KEY = "__all__";
 
 function renderUnits(units: AnswerUnit[], variant: "official" | "user") {
   return units.map((unit, index) => {
@@ -50,10 +59,20 @@ export function AnswerPracticeModal({
   officialAnswerJp: string;
   onClose: () => void;
 }) {
-  const [answer, setAnswer] = useState("");
-  const [result, setResult] = useState<AnswerGradingResult | null>(null);
+  const items = useMemo(() => parseAnswerItems(officialAnswerJp), [officialAnswerJp]);
+  // Có >=2 mục tách được (dạng "chọn N trong M từ") thì mặc định luyện mục
+  // đầu tiên - gõ ít, kết quả dễ đọc hơn hẳn so với cả khối. Không tách được
+  // thì chỉ còn mỗi lựa chọn "toàn bộ".
+  const [selectedKey, setSelectedKey] = useState<string>(items.length >= 2 ? "0" : ALL_KEY);
+  const selectedText = selectedKey === ALL_KEY ? officialAnswerJp : items[Number(selectedKey)]?.text ?? officialAnswerJp;
+
+  const [answers, setAnswers] = useState<Record<string, string>>({});
+  const [results, setResults] = useState<Record<string, AnswerGradingResult | null>>({});
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
+
+  const answer = answers[selectedKey] ?? "";
+  const result = results[selectedKey] ?? null;
 
   useEffect(() => {
     const onKeyDown = (e: KeyboardEvent) => {
@@ -63,6 +82,11 @@ export function AnswerPracticeModal({
     return () => window.removeEventListener("keydown", onKeyDown);
   }, [onClose]);
 
+  function selectItem(key: string) {
+    setSelectedKey(key);
+    setError(null);
+  }
+
   async function grade() {
     if (!answer.trim() || loading) return;
     setLoading(true);
@@ -71,11 +95,11 @@ export function AnswerPracticeModal({
       const res = await fetch("/api/exam/grade-answer", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ officialJp: officialAnswerJp, userJp: answer }),
+        body: JSON.stringify({ officialJp: selectedText, userJp: answer }),
       });
       if (!res.ok) throw new Error("grade failed");
       const data = (await res.json()) as AnswerGradingResult;
-      setResult(data);
+      setResults((current) => ({ ...current, [selectedKey]: data }));
     } catch {
       setError("Không chấm được câu trả lời, thử lại nhé.");
     } finally {
@@ -84,8 +108,8 @@ export function AnswerPracticeModal({
   }
 
   function reset() {
-    setAnswer("");
-    setResult(null);
+    setAnswers((current) => ({ ...current, [selectedKey]: "" }));
+    setResults((current) => ({ ...current, [selectedKey]: null }));
     setError(null);
   }
 
@@ -105,13 +129,41 @@ export function AnswerPracticeModal({
         </div>
 
         <div className="flex-1 overflow-y-auto px-4 py-3">
+          {items.length >= 2 && (
+            <div className="mb-3 flex flex-wrap gap-1.5">
+              {items.map((item, index) => (
+                <button
+                  key={index}
+                  type="button"
+                  onClick={() => selectItem(String(index))}
+                  className={`font-jp rounded-lg border px-2.5 py-1 text-xs font-medium ${
+                    selectedKey === String(index) ? "border-accent bg-accent/5 text-accent" : "border-border text-muted"
+                  }`}
+                >
+                  {item.label}
+                  {results[String(index)] && " ✓"}
+                </button>
+              ))}
+              <button
+                type="button"
+                onClick={() => selectItem(ALL_KEY)}
+                className={`rounded-lg border px-2.5 py-1 text-xs font-medium ${
+                  selectedKey === ALL_KEY ? "border-accent bg-accent/5 text-accent" : "border-border text-muted"
+                }`}
+              >
+                Toàn bộ
+              </button>
+            </div>
+          )}
+
           <p className="mb-2 text-xs font-semibold uppercase tracking-wide text-muted">
             Câu trả lời của bạn (tiếng Nhật)
           </p>
           <textarea
+            key={selectedKey}
             value={answer}
-            onChange={(event) => setAnswer(event.target.value)}
-            rows={8}
+            onChange={(event) => setAnswers((current) => ({ ...current, [selectedKey]: event.target.value }))}
+            rows={items.length >= 2 && selectedKey !== ALL_KEY ? 5 : 8}
             placeholder="Gõ câu trả lời của bạn ở đây..."
             className="font-jp w-full resize-y rounded-xl border border-border bg-surface-muted p-3 text-sm leading-relaxed"
           />
@@ -167,7 +219,7 @@ export function AnswerPracticeModal({
               </div>
 
               <p className="text-[11px] italic text-muted">
-                Chấm theo từ khóa nội dung (không phải AI hiểu nghĩa hoàn toàn) - câu viết đúng ý nhưng diễn đạt quá khác cấu trúc có thể bị chấm thiếu nhẹ.
+                Chấm theo từ khóa nội dung (không phải AI hiểu nghĩa hoàn toàn): câu viết đúng ý nhưng diễn đạt khác cấu trúc có thể bị chấm thiếu nhẹ, và nếu chỉ đổi sai 1 từ quan trọng (vd đổi chiều 上部/下部) mà phần còn lại của câu vẫn giống hệt thì có thể KHÔNG bị phát hiện - vẫn nên tự đọc kỹ lại 解答例 phía trên, đừng chỉ tin vào %.
               </p>
             </div>
           )}
