@@ -55,7 +55,7 @@ export default async function ExamKakomonListPage() {
       <div className="flex flex-col gap-6 py-4">
         <div>
           <p className="text-sm text-muted">
-            <Link href="/exam" className="hover:text-accent">
+            <Link href="/exam" className="-m-1.5 inline-block rounded p-1.5 font-jp hover:text-accent hover:underline">
               2級電気工事施工管理
             </Link>{" "}
             / 過去問・実戦問題
