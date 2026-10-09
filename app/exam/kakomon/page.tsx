@@ -18,10 +18,10 @@ function TestCard({ test }: { test: ExamTest }) {
   return (
     <Link
       href={`/exam/kakomon/${test.slug}`}
-      className="flex flex-col gap-0.5 rounded-lg border border-border bg-surface px-3 py-2 transition hover:border-accent hover:shadow-sm"
+      className="flex items-baseline justify-between gap-2 rounded-md border border-border bg-surface px-2 py-1 transition hover:border-accent hover:shadow-sm"
     >
-      <span className="font-jp text-sm font-semibold leading-snug">{test.title}</span>
-      <span className="text-[11px] text-muted">
+      <span className="font-jp min-w-0 truncate text-xs font-semibold">{test.title}</span>
+      <span className="shrink-0 text-[10px] text-muted">
         {test.question_count ? `${test.question_count} câu` : ""}
         {test.duration_minutes ? ` · ${test.duration_minutes} phút` : ""}
       </span>
@@ -64,31 +64,31 @@ export default async function ExamKakomonListPage() {
             Chưa có đề thi nào.
           </p>
         ) : (
-          <div className="space-y-3">
+          <div className="space-y-2">
             {yearOrder.map((year) => {
               const yearTests = byYear.get(year) ?? [];
               const stages = ["1ji", "2ji"] as const;
               const extra = yearTests.filter((t) => !t.exam_stage);
 
               return (
-                <section key={year} className="rounded-xl border border-border bg-surface/50 p-3 sm:p-4">
-                  <h2 className="font-jp text-base font-bold">{year}</h2>
+                <section key={year} className="rounded-lg border border-border bg-surface/50 p-1.5 sm:p-2">
+                  <h2 className="font-jp text-xs font-bold">{year}</h2>
 
-                  <div className="mt-2 grid gap-2.5 lg:grid-cols-2">
+                  <div className="mt-1 grid gap-1.5 lg:grid-cols-2">
                     {stages.map((stage) => {
                       const stageTests = yearTests.filter((t) => t.exam_stage === stage);
                       return (
-                        <div key={stage} className="rounded-lg border border-border bg-surface p-2">
-                          <div className="mb-1.5 flex items-center justify-between">
-                            <h3 className="font-jp text-sm font-semibold">{STAGE_LABELS[stage]}</h3>
-                            <span className="text-[11px] text-muted">{stageTests.length} đề</span>
+                        <div key={stage} className="rounded-md border border-border bg-surface p-1">
+                          <div className="mb-0.5 flex items-center justify-between">
+                            <h3 className="font-jp text-[11px] font-semibold">{STAGE_LABELS[stage]}</h3>
+                            <span className="text-[10px] text-muted">{stageTests.length} đề</span>
                           </div>
                           {stageTests.length > 0 ? (
-                            <div className="grid gap-1.5">
+                            <div className="grid gap-0.5">
                               {stageTests.map((test) => <TestCard key={test.id} test={test} />)}
                             </div>
                           ) : (
-                            <p className="rounded-lg border border-dashed border-border px-3 py-2 text-center text-[11px] text-muted">
+                            <p className="rounded-md border border-dashed border-border px-2 py-0.5 text-center text-[10px] text-muted">
                               Chưa có đề
                             </p>
                           )}
@@ -98,7 +98,7 @@ export default async function ExamKakomonListPage() {
                   </div>
 
                   {extra.length > 0 && (
-                    <div className="mt-2.5 grid gap-1.5 sm:grid-cols-2 lg:grid-cols-3">
+                    <div className="mt-1.5 grid gap-0.5 sm:grid-cols-2 lg:grid-cols-3">
                       {extra.map((test) => <TestCard key={test.id} test={test} />)}
                     </div>
                   )}
