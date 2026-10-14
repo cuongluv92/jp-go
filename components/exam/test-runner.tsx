@@ -295,7 +295,7 @@ export function TestRunner({ test, questions: initialQuestions }: { test: ExamTe
     setPracticeOpen(false);
   };
 
-  // ←/↑ = câu trước, →/↓ = câu sau - tắt khi đang có modal (kết quả/回答練習)
+  // ← = câu trước, → = câu sau - tắt khi đang có modal (kết quả/回答練習)
   // mở để không vô tình nhảy câu lúc người dùng còn đang xem/gõ trong đó.
   // Đặt trước early-return bên dưới để không vi phạm rules-of-hooks.
   useArrowKeyNav({
@@ -355,14 +355,15 @@ export function TestRunner({ test, questions: initialQuestions }: { test: ExamTe
 
   // Phím số 1..n = ẩn/hiện cột theo đúng thứ tự đang thực sự hiển thị; Ctrl+số
   // = phóng to cột đó; Ctrl một mình (không kèm phím khác) = bật/tắt chế độ
-  // làm bài; phím 0 = bật/tắt furigana. Đặt trước early-return bên dưới để
-  // không vi phạm rules-of-hooks.
+  // làm bài; Shift một mình = làm lại từ đầu; phím 0 = bật/tắt furigana. Đặt
+  // trước early-return bên dưới để không vi phạm rules-of-hooks.
   useColumnKeyboardShortcuts({
     columns: availableColumns,
     onToggleVisible: toggleColumnVisible,
     onToggleFocus: toggleColumnFocus,
     onToggleQuizMode: hasAnyChoices && !submitted ? () => setQuizMode((v) => !v) : undefined,
     onToggleFurigana: () => setShowFurigana((v) => !v),
+    onReset: resetTest,
     enabled: !feedback && !practiceOpen,
   });
 
@@ -447,6 +448,7 @@ export function TestRunner({ test, questions: initialQuestions }: { test: ExamTe
         <button
           type="button"
           onClick={resetTest}
+          title="Phím tắt: Shift"
           className="rounded-lg border border-border px-2.5 py-1 text-xs font-medium text-muted hover:border-accent/60 hover:text-accent"
         >
           ↺ Làm lại từ đầu

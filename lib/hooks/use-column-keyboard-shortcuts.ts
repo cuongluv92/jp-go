@@ -16,6 +16,8 @@ interface ColumnKeyboardShortcutsOptions<T extends string> {
   // Không truyền (undefined) ở trang không có chế độ làm bài.
   onToggleQuizMode?: () => void;
   onToggleFurigana?: () => void;
+  // Không truyền ở trang không có đáp án để reset (vd trang đọc sách thường).
+  onReset?: () => void;
   enabled?: boolean;
 }
 
@@ -24,6 +26,7 @@ interface ColumnKeyboardShortcutsOptions<T extends string> {
  * - 1..n: ẩn/hiện cột tương ứng theo đúng thứ tự `columns` hiện có.
  * - Ctrl+1..n: phóng to (tập trung) cột tương ứng.
  * - Ctrl bấm một mình (không kèm phím khác): bật/tắt chế độ làm bài.
+ * - Shift bấm một mình (không kèm phím khác): làm lại từ đầu (reset đáp án).
  * - 0: bật/tắt furigana.
  */
 export function useColumnKeyboardShortcuts<T extends string>({
@@ -32,11 +35,14 @@ export function useColumnKeyboardShortcuts<T extends string>({
   onToggleFocus,
   onToggleQuizMode,
   onToggleFurigana,
+  onReset,
   enabled = true,
 }: ColumnKeyboardShortcutsOptions<T>) {
-  // true nếu Ctrl đang được giữ mà chưa kèm phím nào khác - dùng để phân biệt
-  // "bấm Ctrl một mình" (bật/tắt làm bài) với "Ctrl+số" (phóng to cột).
+  // true nếu phím bổ trợ (Ctrl/Shift) đang được giữ mà chưa kèm phím nào khác -
+  // dùng để phân biệt "bấm một mình" (bật/tắt làm bài, reset) với tổ hợp
+  // (Ctrl+số = phóng to cột).
   const ctrlAloneRef = useRef(false);
+  const shiftAloneRef = useRef(false);
 
   useEffect(() => {
     if (!enabled) return;
@@ -48,9 +54,18 @@ export function useColumnKeyboardShortcuts<T extends string>({
         ctrlAloneRef.current = true;
         return;
       }
+      if (event.key === "Shift") {
+        shiftAloneRef.current = true;
+        return;
+      }
+
+      // Phím bất kỳ khác đi kèm Ctrl/Shift nghĩa là không còn "bấm một mình"
+      // nữa - kể cả khi phím đó không khớp ý nghĩa nào bên dưới (vd Ctrl+C,
+      // Shift+chọn chữ) để không bị bật/tắt/reset nhầm lúc thả phím bổ trợ ra.
+      if (event.ctrlKey) ctrlAloneRef.current = false;
+      if (event.shiftKey) shiftAloneRef.current = false;
 
       if (event.ctrlKey) {
-        ctrlAloneRef.current = false;
         if (event.key >= "1" && event.key <= "9") {
           const index = Number(event.key) - 1;
           if (index < columns.length) {
@@ -60,6 +75,8 @@ export function useColumnKeyboardShortcuts<T extends string>({
         }
         return;
       }
+
+      if (event.shiftKey) return;
 
       if (event.key >= "1" && event.key <= "9") {
         const index = Number(event.key) - 1;
@@ -77,9 +94,13 @@ export function useColumnKeyboardShortcuts<T extends string>({
     }
 
     function handleKeyUp(event: KeyboardEvent) {
-      if (event.key !== "Control") return;
-      if (ctrlAloneRef.current) onToggleQuizMode?.();
-      ctrlAloneRef.current = false;
+      if (event.key === "Control") {
+        if (ctrlAloneRef.current) onToggleQuizMode?.();
+        ctrlAloneRef.current = false;
+      } else if (event.key === "Shift") {
+        if (shiftAloneRef.current) onReset?.();
+        shiftAloneRef.current = false;
+      }
     }
 
     window.addEventListener("keydown", handleKeyDown);
@@ -88,5 +109,5 @@ export function useColumnKeyboardShortcuts<T extends string>({
       window.removeEventListener("keydown", handleKeyDown);
       window.removeEventListener("keyup", handleKeyUp);
     };
-  }, [columns, onToggleVisible, onToggleFocus, onToggleQuizMode, onToggleFurigana, enabled]);
+  }, [columns, onToggleVisible, onToggleFocus, onToggleQuizMode, onToggleFurigana, onReset, enabled]);
 }

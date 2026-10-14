@@ -417,13 +417,15 @@ function ExerciseWorkspace({
   }
 
   // Phím số 1..4 = ẩn/hiện cột theo đúng thứ tự cố định; Ctrl+số = phóng to
-  // cột đó; Ctrl một mình = bật/tắt chế độ làm bài; phím 0 = bật/tắt furigana.
+  // cột đó; Ctrl một mình = bật/tắt chế độ làm bài; Shift một mình = làm lại
+  // từ đầu; phím 0 = bật/tắt furigana.
   useColumnKeyboardShortcuts({
     columns: EXERCISE_COLUMN_ORDER,
     onToggleVisible: toggleColumnVisible,
     onToggleFocus: toggleColumnFocus,
     onToggleQuizMode: hasAnyQuiz ? () => setQuizMode((v) => !v) : undefined,
     onToggleFurigana: toggleFurigana,
+    onReset: hasAnyQuiz ? resetExercises : undefined,
     enabled: !exerciseFeedback,
   });
 
@@ -591,6 +593,7 @@ function ExerciseWorkspace({
           <button
             type="button"
             onClick={resetExercises}
+            title="Phím tắt: Shift"
             className="flex items-center gap-1.5 rounded-lg border border-border px-2.5 py-1 text-xs font-semibold text-muted transition hover:border-accent/60 hover:text-foreground"
           >
             ↺ Làm lại từ đầu
