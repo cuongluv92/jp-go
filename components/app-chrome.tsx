@@ -9,6 +9,7 @@ import { GlobalCommandPalette } from "@/components/global-command-palette";
 import { MobileNavDrawer } from "@/components/mobile-nav-drawer";
 import { TopHeader } from "@/components/top-header";
 import styles from "@/components/app-chrome-polish.module.css";
+import { useVerticalScrollKeys } from "@/lib/hooks/use-vertical-scroll-keys";
 
 const LAYOUT_STORAGE_KEY = "jp-go-layout-mode";
 const SIDEBAR_STORAGE_KEY = "jp-go-desktop-sidebar-collapsed";
@@ -91,6 +92,11 @@ export function AppChrome({ children }: { children: ReactNode }) {
     window.addEventListener("keydown", handleGlobalShortcut);
     return () => window.removeEventListener("keydown", handleGlobalShortcut);
   }, [layoutMode]);
+
+  // ↑/↓ không kèm phím bổ trợ = tự cuộn vùng nội dung đang xem, áp dụng toàn
+  // app (cả desktop lẫn mobile) - khắc phục tình trạng trình duyệt tự nhảy
+  // focus sang liên kết khác thay vì cuộn mượt như lăn chuột.
+  useVerticalScrollKeys(!isLoginPage);
 
   const isDesktopMode = layoutMode === "desktop";
 
