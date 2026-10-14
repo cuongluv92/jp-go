@@ -6,6 +6,7 @@ import { useEffect, useMemo, useState } from "react";
 import { AnswerFeedbackModal } from "./answer-feedback-modal";
 import { AnswerPracticeModal } from "./answer-practice-modal";
 import { useArrowKeyNav } from "@/lib/hooks/use-arrow-key-nav";
+import { useColumnKeyboardShortcuts } from "@/lib/hooks/use-column-keyboard-shortcuts";
 import { getExamSourceImageUrl } from "@/lib/exam/storage";
 import { segmentJapaneseText, type FuriganaToken } from "@/lib/japanese-text";
 import type { ExamQuestion, ExamTest } from "@/lib/exam/types";
@@ -324,12 +325,50 @@ export function TestRunner({ test, questions: initialQuestions }: { test: ExamTe
     return { correct, firstTry, total: gradable };
   }, [submitted, hasAnyChoices, questions, state.answers, state.mistakes]);
 
+  const isLastQuestion = state.currentIndex === questions.length - 1;
+  const showReferenceColumns = !quizMode || submitted;
+
+  // Cột 解答/Giải thích chỉ thực sự tồn tại khi showReferenceColumns - ẩn/focus
+  // lưu trên cả 4 key nhưng chỉ áp dụng cho các cột đang thật sự có mặt.
+  const availableColumns = REF_COLUMN_ORDER.filter(
+    (col) => col === "question" || col === "questionVi" || showReferenceColumns,
+  );
+  const visibleAvailableCount = availableColumns.filter((col) => columnVisible[col]).length;
+
+  function toggleColumnVisible(col: RefColumnKey) {
+    if (columnVisible[col] && visibleAvailableCount <= 1) return; // luôn giữ ít nhất 1 cột hiển thị
+    setColumnFocus(null);
+    const next = { ...columnVisible, [col]: !columnVisible[col] };
+    setColumnVisible(next);
+    for (const key of REF_COLUMN_ORDER) {
+      try {
+        window.localStorage.setItem(REF_COLUMN_STORAGE_KEYS[key], next[key] ? "1" : "0");
+      } catch {
+        // localStorage có thể bị chặn - không ảnh hưởng hiển thị trong phiên hiện tại.
+      }
+    }
+  }
+
+  function toggleColumnFocus(col: RefColumnKey) {
+    setColumnFocus((curr) => (curr === col ? null : col));
+  }
+
+  // Phím số 1..n = ẩn/hiện cột theo đúng thứ tự đang thực sự hiển thị; Ctrl+số
+  // = phóng to cột đó; Ctrl một mình (không kèm phím khác) = bật/tắt chế độ
+  // làm bài; phím 0 = bật/tắt furigana. Đặt trước early-return bên dưới để
+  // không vi phạm rules-of-hooks.
+  useColumnKeyboardShortcuts({
+    columns: availableColumns,
+    onToggleVisible: toggleColumnVisible,
+    onToggleFocus: toggleColumnFocus,
+    onToggleQuizMode: hasAnyChoices && !submitted ? () => setQuizMode((v) => !v) : undefined,
+    onToggleFurigana: () => setShowFurigana((v) => !v),
+    enabled: !feedback && !practiceOpen,
+  });
+
   if (!current) {
     return <p className="p-6 text-sm text-muted">Đề thi này chưa có câu hỏi.</p>;
   }
-
-  const isLastQuestion = state.currentIndex === questions.length - 1;
-  const showReferenceColumns = !quizMode || submitted;
 
   const selectChoice = (choiceId: string) => {
     if (submitted) return;
@@ -367,33 +406,9 @@ export function TestRunner({ test, questions: initialQuestions }: { test: ExamTe
     setState((s) => ({ ...s, flagged: { ...s.flagged, [current.id]: !s.flagged[current.id] } }));
   };
 
-  // Cột 解答/Giải thích chỉ thực sự tồn tại khi showReferenceColumns - ẩn/focus
-  // lưu trên cả 4 key nhưng chỉ áp dụng cho các cột đang thật sự có mặt.
-  const availableColumns = REF_COLUMN_ORDER.filter(
-    (col) => col === "question" || col === "questionVi" || showReferenceColumns,
-  );
-  const visibleAvailableCount = availableColumns.filter((col) => columnVisible[col]).length;
   const renderedColumns = columnFocus && availableColumns.includes(columnFocus)
     ? [columnFocus]
     : availableColumns.filter((col) => columnVisible[col]);
-
-  function toggleColumnVisible(col: RefColumnKey) {
-    if (columnVisible[col] && visibleAvailableCount <= 1) return; // luôn giữ ít nhất 1 cột hiển thị
-    setColumnFocus(null);
-    const next = { ...columnVisible, [col]: !columnVisible[col] };
-    setColumnVisible(next);
-    for (const key of REF_COLUMN_ORDER) {
-      try {
-        window.localStorage.setItem(REF_COLUMN_STORAGE_KEYS[key], next[key] ? "1" : "0");
-      } catch {
-        // localStorage có thể bị chặn - không ảnh hưởng hiển thị trong phiên hiện tại.
-      }
-    }
-  }
-
-  function toggleColumnFocus(col: RefColumnKey) {
-    setColumnFocus((curr) => (curr === col ? null : col));
-  }
 
   return (
     <div className="flex flex-col gap-4 py-4">

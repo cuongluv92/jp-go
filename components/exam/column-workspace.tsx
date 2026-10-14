@@ -5,6 +5,7 @@ import { Fragment, useEffect, useMemo, useState } from "react";
 
 import { renderBlockColumns } from "./content-block-view";
 import type { ContentBlock, ExerciseBlock, FuriganaToken } from "@/lib/exam/content-blocks";
+import { useColumnKeyboardShortcuts } from "@/lib/hooks/use-column-keyboard-shortcuts";
 import { segmentJapaneseText } from "@/lib/japanese-text";
 
 type ColumnKey = "jp" | "vi" | "explanation";
@@ -414,6 +415,17 @@ function ExerciseWorkspace({
   function toggleColumnFocus(col: ExerciseColumnKey) {
     setColumnFocus((curr) => (curr === col ? null : col));
   }
+
+  // Phím số 1..4 = ẩn/hiện cột theo đúng thứ tự cố định; Ctrl+số = phóng to
+  // cột đó; Ctrl một mình = bật/tắt chế độ làm bài; phím 0 = bật/tắt furigana.
+  useColumnKeyboardShortcuts({
+    columns: EXERCISE_COLUMN_ORDER,
+    onToggleVisible: toggleColumnVisible,
+    onToggleFocus: toggleColumnFocus,
+    onToggleQuizMode: hasAnyQuiz ? () => setQuizMode((v) => !v) : undefined,
+    onToggleFurigana: toggleFurigana,
+    enabled: !exerciseFeedback,
+  });
 
   // Trạng thái đã làm đúng chỉ sống trong state (không lưu storage) nên tự
   // mất khi rời trang/tải lại - nút này cho reset ngay mà không cần tải lại.
@@ -844,6 +856,16 @@ function StandardColumnWorkspace({ blocks }: { blocks: ContentBlock[] }) {
   function toggleFocus(col: ColumnKey) {
     setFocus((current) => (current === col ? null : col));
   }
+
+  // Phím số 1..3 = ẩn/hiện cột theo đúng thứ tự cố định; Ctrl+số = phóng to
+  // cột đó; phím 0 = bật/tắt furigana. Trang này không có chế độ làm bài nên
+  // không truyền onToggleQuizMode - Ctrl bấm một mình sẽ không làm gì.
+  useColumnKeyboardShortcuts({
+    columns: COLUMN_ORDER,
+    onToggleVisible: toggleVisible,
+    onToggleFocus: toggleFocus,
+    onToggleFurigana: toggleFurigana,
+  });
 
   function showOnly(cols: ColumnKey[]) {
     setFocus(null);
