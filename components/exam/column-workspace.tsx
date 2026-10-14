@@ -115,6 +115,56 @@ const EXERCISE_COLUMN_LABELS: Record<ExerciseColumnKey, { title: string; subtitl
   solutionVi: { title: "Dịch 解説", subtitle: "Dịch lời giải + giải thích" },
 };
 
+const EXERCISE_STORAGE_KEYS: Record<ExerciseColumnKey, string> = {
+  questionJp: "jpgo-exam-exercise-show-question-jp",
+  questionVi: "jpgo-exam-exercise-show-question-vi",
+  solutionJp: "jpgo-exam-exercise-show-solution-jp",
+  solutionVi: "jpgo-exam-exercise-show-solution-vi",
+};
+
+type ExerciseVisibility = Record<ExerciseColumnKey, boolean>;
+
+const ALL_EXERCISE_COLUMNS_VISIBLE: ExerciseVisibility = {
+  questionJp: true,
+  questionVi: true,
+  solutionJp: true,
+  solutionVi: true,
+};
+
+function readStoredExerciseVisibility(): ExerciseVisibility {
+  if (typeof window === "undefined") return ALL_EXERCISE_COLUMNS_VISIBLE;
+  const read = (key: string) => {
+    try {
+      const raw = window.localStorage.getItem(key);
+      return raw === null ? true : raw === "1";
+    } catch {
+      return true;
+    }
+  };
+  return {
+    questionJp: read(EXERCISE_STORAGE_KEYS.questionJp),
+    questionVi: read(EXERCISE_STORAGE_KEYS.questionVi),
+    solutionJp: read(EXERCISE_STORAGE_KEYS.solutionJp),
+    solutionVi: read(EXERCISE_STORAGE_KEYS.solutionVi),
+  };
+}
+
+function exerciseGridColsClass(count: number): string {
+  if (count >= 4) return "lg:grid-cols-4";
+  if (count === 3) return "lg:grid-cols-3";
+  if (count === 2) return "lg:grid-cols-2";
+  return "lg:grid-cols-1";
+}
+
+/** Câu trắc nghiệm 1 đáp án đúng mới bật được "chế độ làm bài" - câu dạng
+ * khác (chọn nhiều mục để giải thích, điền nhiều chỗ trống...) không có
+ * correct_choice nên luôn hiển thị như cũ. */
+function isExerciseQuizzable(block: ExerciseBlock): boolean {
+  if (block.choices_jp.length === 0 || !block.correct_choice) return false;
+  const n = Number(block.correct_choice);
+  return Number.isInteger(n) && n >= 1 && n <= block.choices_jp.length;
+}
+
 
 function renderExerciseReference(reference: string) {
   let currentBook: "sekou-gijutsu" | "sekou-houki" | null = null;
@@ -310,10 +360,19 @@ function ExerciseWorkspace({
 }) {
   const [mobileTab, setMobileTab] = useState<ExerciseColumnKey>("questionJp");
   const [showFurigana, setShowFurigana] = useState(true);
+  const [columnVisible, setColumnVisible] = useState<ExerciseVisibility>(ALL_EXERCISE_COLUMNS_VISIBLE);
+  const [columnFocus, setColumnFocus] = useState<ExerciseColumnKey | null>(null);
+  const hasAnyQuiz = useMemo(() => blocks.some(isExerciseQuizzable), [blocks]);
+  const [quizMode, setQuizMode] = useState(() => blocks.some(isExerciseQuizzable));
+  // Số thứ tự (1-based) lựa chọn đúng người dùng đã bấm trúng cho từng câu,
+  // theo block.number - dùng để mở khóa 解説/Dịch解説 của đúng câu đó.
+  const [answeredCorrect, setAnsweredCorrect] = useState<Record<number, number>>({});
+  const [wrongTries, setWrongTries] = useState<Record<number, number[]>>({});
 
   useEffect(() => {
     // eslint-disable-next-line react-hooks/set-state-in-effect
     setShowFurigana(readStoredFurigana());
+    setColumnVisible(readStoredExerciseVisibility());
   }, []);
 
   function toggleFurigana() {
@@ -328,7 +387,45 @@ function ExerciseWorkspace({
     });
   }
 
+  const visibleExerciseCount = EXERCISE_COLUMN_ORDER.filter((col) => columnVisible[col]).length;
+  const renderedExerciseColumns = columnFocus
+    ? [columnFocus]
+    : EXERCISE_COLUMN_ORDER.filter((col) => columnVisible[col]);
+  const mobileAvailableColumns = EXERCISE_COLUMN_ORDER.filter((col) => columnVisible[col]);
+  const mobileActiveTab = mobileAvailableColumns.includes(mobileTab) ? mobileTab : mobileAvailableColumns[0];
+
+  function toggleColumnVisible(col: ExerciseColumnKey) {
+    if (columnVisible[col] && visibleExerciseCount <= 1) return; // luôn giữ ít nhất 1 cột hiển thị
+    setColumnFocus(null);
+    const next = { ...columnVisible, [col]: !columnVisible[col] };
+    setColumnVisible(next);
+    for (const key of EXERCISE_COLUMN_ORDER) {
+      try {
+        window.localStorage.setItem(EXERCISE_STORAGE_KEYS[key], next[key] ? "1" : "0");
+      } catch {
+        // localStorage có thể bị chặn - không ảnh hưởng hiển thị trong phiên hiện tại.
+      }
+    }
+  }
+
+  function toggleColumnFocus(col: ExerciseColumnKey) {
+    setColumnFocus((curr) => (curr === col ? null : col));
+  }
+
+  function selectExerciseChoice(block: ExerciseBlock, index: number) {
+    if (!isExerciseQuizzable(block) || answeredCorrect[block.number] != null) return;
+    if (index + 1 === Number(block.correct_choice)) {
+      setAnsweredCorrect((prev) => ({ ...prev, [block.number]: index + 1 }));
+    } else {
+      setWrongTries((prev) => ({
+        ...prev,
+        [block.number]: prev[block.number]?.includes(index) ? prev[block.number] : [...(prev[block.number] ?? []), index],
+      }));
+    }
+  }
+
   function renderExerciseCell(block: ExerciseBlock, column: ExerciseColumnKey) {
+    const quizLocked = quizMode && isExerciseQuizzable(block) && answeredCorrect[block.number] == null;
     if (column === "questionJp") {
       return (
         <div className="space-y-3">
@@ -342,14 +439,45 @@ function ExerciseWorkspace({
             </div>
           )}
           {block.choices_jp.length > 0 && (
-            <div className="space-y-1.5 font-jp text-sm">
-              {block.choices_jp.map((choice, index) => (
-                <div key={index} className="flex items-start gap-2">
-                  <span className="w-5 shrink-0 font-bold text-accent">{index + 1}.</span>
-                  <span className="min-w-0">{renderExerciseJapanese(choice, block.choices_furigana_tokens?.[index] ?? [], showFurigana)}</span>
-                </div>
-              ))}
-            </div>
+            quizMode && isExerciseQuizzable(block) ? (
+              <div className="space-y-1.5 font-jp text-sm">
+                {block.choices_jp.map((choice, index) => {
+                  const solved = answeredCorrect[block.number] != null;
+                  const isCorrectChoice = index + 1 === Number(block.correct_choice);
+                  const triedWrong = (wrongTries[block.number] ?? []).includes(index);
+                  let style = "border-border hover:border-accent/50";
+                  if (solved && isCorrectChoice) {
+                    style = "border-emerald-400 bg-emerald-50 dark:border-emerald-500/40 dark:bg-emerald-500/10";
+                  } else if (triedWrong) {
+                    style = "border-red-300 bg-red-50 dark:bg-red-500/10";
+                  }
+                  return (
+                    <button
+                      key={index}
+                      type="button"
+                      onClick={() => selectExerciseChoice(block, index)}
+                      disabled={solved}
+                      className={`flex w-full items-start gap-2 rounded-lg border px-2 py-1.5 text-left transition disabled:cursor-default ${style}`}
+                    >
+                      <span className="w-5 shrink-0 font-bold text-accent">{index + 1}.</span>
+                      <span className="min-w-0">{renderExerciseJapanese(choice, block.choices_furigana_tokens?.[index] ?? [], showFurigana)}</span>
+                    </button>
+                  );
+                })}
+                {answeredCorrect[block.number] != null && (
+                  <p className="text-xs font-semibold text-emerald-600 dark:text-emerald-400">✓ Chính xác</p>
+                )}
+              </div>
+            ) : (
+              <div className="space-y-1.5 font-jp text-sm">
+                {block.choices_jp.map((choice, index) => (
+                  <div key={index} className="flex items-start gap-2">
+                    <span className="w-5 shrink-0 font-bold text-accent">{index + 1}.</span>
+                    <span className="min-w-0">{renderExerciseJapanese(choice, block.choices_furigana_tokens?.[index] ?? [], showFurigana)}</span>
+                  </div>
+                ))}
+              </div>
+            )
           )}
         </div>
       );
@@ -379,6 +507,13 @@ function ExerciseWorkspace({
     }
 
     if (column === "solutionJp") {
+      if (quizLocked) {
+        return (
+          <p className="rounded-lg border border-dashed border-border bg-slate-50/60 p-3 text-xs text-muted dark:bg-white/5">
+            Chọn đáp án đúng ở cột 問題 để xem giải thích.
+          </p>
+        );
+      }
       return (
         <div className="space-y-3">
           <div className="font-jp text-xs font-bold text-accent">
@@ -391,6 +526,14 @@ function ExerciseWorkspace({
             {renderExerciseJapanese(block.solution_jp, block.solution_furigana_tokens, showFurigana)}
           </p>
         </div>
+      );
+    }
+
+    if (quizLocked) {
+      return (
+        <p className="rounded-lg border border-dashed border-border bg-slate-50/60 p-3 text-xs text-muted dark:bg-white/5">
+          Chọn đáp án đúng ở cột 問題 để xem giải thích.
+        </p>
       );
     }
 
@@ -413,8 +556,20 @@ function ExerciseWorkspace({
 
   return (
     <div className="flex flex-col gap-3">
-      <div className="flex items-center gap-3 rounded-xl border border-border bg-surface px-3 py-2">
-        <p className="text-xs text-muted">総合問題 · 4 cột</p>
+      <div className="flex flex-wrap items-center gap-3 rounded-xl border border-border bg-surface px-3 py-2">
+        <p className="text-xs text-muted">総合問題 · {EXERCISE_COLUMN_ORDER.length} cột</p>
+        {hasAnyQuiz && (
+          <button
+            type="button"
+            onClick={() => setQuizMode((v) => !v)}
+            aria-pressed={quizMode}
+            className={`flex items-center gap-1.5 rounded-lg border px-2.5 py-1 text-xs font-semibold transition ${
+              quizMode ? "border-accent bg-accent/5 text-accent" : "border-border text-muted"
+            }`}
+          >
+            Chế độ làm bài {quizMode ? "ON" : "OFF"}
+          </button>
+        )}
         <button
           type="button"
           onClick={toggleFurigana}
@@ -430,20 +585,90 @@ function ExerciseWorkspace({
         </button>
       </div>
 
+      {/* Thanh này đứng ngoài lưới cột nên luôn hiện đủ, kể cả khi 1 cột đang
+          bị ẩn hoặc đang phóng to - không có nó thì nút ẩn/phóng to nằm trong
+          chính cột đó sẽ biến mất theo, không còn cách gọi lại cột đã ẩn. */}
+      <div className="flex flex-wrap items-center gap-1.5 rounded-xl border border-border bg-surface px-3 py-2">
+        <p className="mr-1 text-xs text-muted">Cột hiển thị</p>
+        {EXERCISE_COLUMN_ORDER.map((col) => {
+          const isOn = columnVisible[col];
+          const disableOff = isOn && visibleExerciseCount <= 1;
+          return (
+            <button
+              key={col}
+              type="button"
+              onClick={() => toggleColumnVisible(col)}
+              disabled={disableOff}
+              aria-pressed={isOn}
+              aria-label={isOn ? `Ẩn ${EXERCISE_COLUMN_LABELS[col].title}` : `Hiện ${EXERCISE_COLUMN_LABELS[col].title}`}
+              title={isOn ? `Ẩn ${EXERCISE_COLUMN_LABELS[col].title}` : `Hiện ${EXERCISE_COLUMN_LABELS[col].title}`}
+              className={`flex items-center gap-1.5 rounded-full border px-2.5 py-1 text-xs font-medium transition ${
+                isOn ? "border-accent/40 bg-accent-soft text-accent" : "border-border text-muted"
+              } ${disableOff ? "cursor-not-allowed opacity-60" : "hover:border-accent/60"}`}
+            >
+              <span className={`h-1.5 w-1.5 rounded-full ${isOn ? "bg-accent" : "bg-slate-300 dark:bg-white/20"}`} />
+              <span className="font-jp">{EXERCISE_COLUMN_LABELS[col].title}</span>
+            </button>
+          );
+        })}
+        {columnFocus && (
+          <button
+            type="button"
+            onClick={() => setColumnFocus(null)}
+            className="ml-auto rounded-full border border-accent/40 bg-accent-soft px-2.5 py-1 text-xs font-medium text-accent hover:border-accent/60"
+          >
+            Thoát chế độ tập trung
+          </button>
+        )}
+      </div>
+
       {leadBlocks.length > 0 && (
         <IntroBlocksCard blocks={leadBlocks} showFurigana={showFurigana} compact />
       )}
 
-      <div className="hidden gap-x-4 lg:grid lg:grid-cols-4">
-        {EXERCISE_COLUMN_ORDER.map((column) => (
-          <div key={column} className="border-b-2 border-border pb-2">
-            <p className="font-jp text-sm font-bold">{EXERCISE_COLUMN_LABELS[column].title}</p>
-            <p className="text-[11px] text-muted">{EXERCISE_COLUMN_LABELS[column].subtitle}</p>
-          </div>
-        ))}
+      <div className={`hidden gap-x-4 lg:grid ${exerciseGridColsClass(renderedExerciseColumns.length)}`}>
+        {renderedExerciseColumns.map((column) => {
+          const focused = columnFocus === column;
+          const visible = columnVisible[column];
+          const disableHide = visible && visibleExerciseCount <= 1;
+          const label = EXERCISE_COLUMN_LABELS[column];
+          return (
+            <div key={column} className="flex items-center justify-between gap-2 border-b-2 border-border pb-2">
+              <div className="min-w-0">
+                <p className="font-jp truncate text-sm font-bold">{label.title}</p>
+                <p className="truncate text-[11px] text-muted">{label.subtitle}</p>
+              </div>
+              <div className="flex shrink-0 items-center gap-1">
+                <button
+                  type="button"
+                  onClick={() => toggleColumnVisible(column)}
+                  disabled={disableHide}
+                  aria-label={visible ? `Ẩn ${label.title}` : `Hiện ${label.title}`}
+                  title={visible ? `Ẩn ${label.title}` : `Hiện ${label.title}`}
+                  className={`flex h-7 w-7 items-center justify-center rounded-lg text-muted transition hover:bg-slate-100 dark:hover:bg-white/10 hover:text-foreground ${
+                    disableHide ? "cursor-not-allowed opacity-40" : ""
+                  }`}
+                >
+                  <EyeIcon />
+                </button>
+                <button
+                  type="button"
+                  onClick={() => toggleColumnFocus(column)}
+                  aria-label={focused ? `Thoát chế độ tập trung ${label.title}` : `Phóng to ${label.title}`}
+                  title={focused ? "Thoát chế độ tập trung" : `Phóng to ${label.title}`}
+                  className={`flex h-7 w-7 items-center justify-center rounded-lg transition hover:bg-slate-100 dark:hover:bg-white/10 ${
+                    focused ? "text-accent" : "text-muted hover:text-foreground"
+                  }`}
+                >
+                  {focused ? <CompressIcon /> : <ExpandIcon />}
+                </button>
+              </div>
+            </div>
+          );
+        })}
         {blocks.map((block) => (
           <Fragment key={block.number}>
-            {EXERCISE_COLUMN_ORDER.map((column) => (
+            {renderedExerciseColumns.map((column) => (
               <div key={column} className="min-w-0 border-b border-border py-4">
                 {renderExerciseCell(block, column)}
               </div>
@@ -453,27 +678,31 @@ function ExerciseWorkspace({
       </div>
 
       <div className="lg:hidden">
-        <div className="grid grid-cols-2 border-b border-border sm:grid-cols-4">
-          {EXERCISE_COLUMN_ORDER.map((column) => (
-            <button
-              key={column}
-              type="button"
-              onClick={() => setMobileTab(column)}
-              className={`border-b-2 px-2 py-2 text-xs font-medium transition ${
-                mobileTab === column ? "border-accent text-accent" : "border-transparent text-muted"
-              }`}
-            >
-              <span className="font-jp">{EXERCISE_COLUMN_LABELS[column].title}</span>
-            </button>
-          ))}
-        </div>
-        <div className="divide-y divide-border">
-          {blocks.map((block) => (
-            <div key={block.number} className="py-4">
-              {renderExerciseCell(block, mobileTab)}
-            </div>
-          ))}
-        </div>
+        {mobileAvailableColumns.length > 1 && (
+          <div className="grid grid-cols-2 border-b border-border sm:grid-cols-4">
+            {mobileAvailableColumns.map((column) => (
+              <button
+                key={column}
+                type="button"
+                onClick={() => setMobileTab(column)}
+                className={`border-b-2 px-2 py-2 text-xs font-medium transition ${
+                  mobileActiveTab === column ? "border-accent text-accent" : "border-transparent text-muted"
+                }`}
+              >
+                <span className="font-jp">{EXERCISE_COLUMN_LABELS[column].title}</span>
+              </button>
+            ))}
+          </div>
+        )}
+        {mobileActiveTab && (
+          <div className="divide-y divide-border">
+            {blocks.map((block) => (
+              <div key={block.number} className="py-4">
+                {renderExerciseCell(block, mobileActiveTab)}
+              </div>
+            ))}
+          </div>
+        )}
       </div>
     </div>
   );
