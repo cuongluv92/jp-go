@@ -367,7 +367,10 @@ function ExerciseWorkspace({
   // Số thứ tự (1-based) lựa chọn đúng người dùng đã bấm trúng cho từng câu,
   // theo block.number - dùng để mở khóa 解説/Dịch解説 của đúng câu đó.
   const [answeredCorrect, setAnsweredCorrect] = useState<Record<number, number>>({});
-  const [wrongTries, setWrongTries] = useState<Record<number, number[]>>({});
+  // Popup báo đúng/sai ngay khi bấm - cùng kiểu với 過去問 (TestRunner) cho
+  // nhất quán toàn app. Bấm sai không để lại dấu vết gì trên nút (không có
+  // khái niệm "bỏ chọn" vì chẳng có gì bị giữ lại để bỏ).
+  const [exerciseFeedback, setExerciseFeedback] = useState<{ choiceLabel: string; correct: boolean } | null>(null);
 
   useEffect(() => {
     // eslint-disable-next-line react-hooks/set-state-in-effect
@@ -415,15 +418,10 @@ function ExerciseWorkspace({
   function selectExerciseChoice(block: ExerciseBlock, index: number) {
     // Vẫn cho bấm lại kể cả sau khi đã chọn đúng - để đổi ý chọn thử đáp án
     // khác mà không bị khoá cứng, giải thích vẫn giữ nguyên trạng thái đã mở.
-    if (!isExerciseQuizzable(block)) return;
-    if (index + 1 === Number(block.correct_choice)) {
-      setAnsweredCorrect((prev) => ({ ...prev, [block.number]: index + 1 }));
-    } else {
-      setWrongTries((prev) => ({
-        ...prev,
-        [block.number]: prev[block.number]?.includes(index) ? prev[block.number] : [...(prev[block.number] ?? []), index],
-      }));
-    }
+    if (!isExerciseQuizzable(block) || exerciseFeedback) return;
+    const correct = index + 1 === Number(block.correct_choice);
+    if (correct) setAnsweredCorrect((prev) => ({ ...prev, [block.number]: index + 1 }));
+    setExerciseFeedback({ choiceLabel: String(index + 1), correct });
   }
 
   function renderExerciseCell(block: ExerciseBlock, column: ExerciseColumnKey) {
@@ -446,19 +444,17 @@ function ExerciseWorkspace({
                 {block.choices_jp.map((choice, index) => {
                   const solved = answeredCorrect[block.number] != null;
                   const isCorrectChoice = index + 1 === Number(block.correct_choice);
-                  const triedWrong = (wrongTries[block.number] ?? []).includes(index);
-                  let style = "border-border hover:border-accent/50";
-                  if (solved && isCorrectChoice) {
-                    style = "border-emerald-400 bg-emerald-50 dark:border-emerald-500/40 dark:bg-emerald-500/10";
-                  } else if (triedWrong) {
-                    style = "border-red-300 bg-red-50 dark:bg-red-500/10";
-                  }
+                  const style =
+                    solved && isCorrectChoice
+                      ? "border-emerald-400 bg-emerald-50 dark:border-emerald-500/40 dark:bg-emerald-500/10"
+                      : "border-border hover:border-accent/50";
                   return (
                     <button
                       key={index}
                       type="button"
                       onClick={() => selectExerciseChoice(block, index)}
-                      className={`flex w-full items-start gap-2 rounded-lg border px-2 py-1.5 text-left transition ${style}`}
+                      disabled={Boolean(exerciseFeedback)}
+                      className={`flex w-full items-start gap-2 rounded-lg border px-2 py-1.5 text-left transition disabled:cursor-default ${style}`}
                     >
                       <span className="w-5 shrink-0 font-bold text-accent">{index + 1}.</span>
                       <span className="min-w-0">{renderExerciseJapanese(choice, block.choices_furigana_tokens?.[index] ?? [], showFurigana)}</span>
@@ -705,6 +701,39 @@ function ExerciseWorkspace({
           </div>
         )}
       </div>
+
+      {exerciseFeedback && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 p-4">
+          <div className="w-full max-w-sm rounded-2xl bg-surface p-5 text-center shadow-xl">
+            <div
+              className={`mx-auto mb-3 flex h-16 w-16 items-center justify-center rounded-full border-[3px] text-3xl font-bold ${
+                exerciseFeedback.correct
+                  ? "border-emerald-500 text-emerald-600 dark:border-emerald-400 dark:text-emerald-400"
+                  : "border-red-500 text-red-600 dark:border-red-400 dark:text-red-400"
+              }`}
+            >
+              {exerciseFeedback.correct ? "○" : "✕"}
+            </div>
+            <p
+              className={`text-lg font-semibold ${
+                exerciseFeedback.correct ? "text-emerald-600 dark:text-emerald-400" : "text-red-600 dark:text-red-400"
+              }`}
+            >
+              {exerciseFeedback.correct ? "Chính xác!" : "Chưa đúng"}
+            </p>
+            {!exerciseFeedback.correct && (
+              <p className="mt-1 text-sm text-muted">Bạn đã chọn {exerciseFeedback.choiceLabel}. Thử lại nhé.</p>
+            )}
+            <button
+              type="button"
+              onClick={() => setExerciseFeedback(null)}
+              className="mt-4 w-full rounded-xl bg-accent py-2.5 text-sm font-semibold text-accent-foreground"
+            >
+              {exerciseFeedback.correct ? "Đóng" : "Làm lại"}
+            </button>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
