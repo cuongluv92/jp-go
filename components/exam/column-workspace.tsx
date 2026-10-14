@@ -415,6 +415,14 @@ function ExerciseWorkspace({
     setColumnFocus((curr) => (curr === col ? null : col));
   }
 
+  // Trạng thái đã làm đúng chỉ sống trong state (không lưu storage) nên tự
+  // mất khi rời trang/tải lại - nút này cho reset ngay mà không cần tải lại.
+  function resetExercises() {
+    if (!window.confirm("Xóa các câu đã làm đúng và làm lại từ đầu?")) return;
+    setAnsweredCorrect({});
+    setExerciseFeedback(null);
+  }
+
   function selectExerciseChoice(block: ExerciseBlock, index: number) {
     // Vẫn cho bấm lại kể cả sau khi đã chọn đúng - để đổi ý chọn thử đáp án
     // khác mà không bị khoá cứng, giải thích vẫn giữ nguyên trạng thái đã mở.
@@ -565,6 +573,15 @@ function ExerciseWorkspace({
             }`}
           >
             Chế độ làm bài {quizMode ? "ON" : "OFF"}
+          </button>
+        )}
+        {hasAnyQuiz && (
+          <button
+            type="button"
+            onClick={resetExercises}
+            className="flex items-center gap-1.5 rounded-lg border border-border px-2.5 py-1 text-xs font-semibold text-muted transition hover:border-accent/60 hover:text-foreground"
+          >
+            ↺ Làm lại từ đầu
           </button>
         )}
         <button

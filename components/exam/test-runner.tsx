@@ -5,6 +5,7 @@ import { useEffect, useMemo, useState } from "react";
 
 import { AnswerFeedbackModal } from "./answer-feedback-modal";
 import { AnswerPracticeModal } from "./answer-practice-modal";
+import { useArrowKeyNav } from "@/lib/hooks/use-arrow-key-nav";
 import { getExamSourceImageUrl } from "@/lib/exam/storage";
 import { segmentJapaneseText, type FuriganaToken } from "@/lib/japanese-text";
 import type { ExamQuestion, ExamTest } from "@/lib/exam/types";
@@ -267,6 +268,41 @@ export function TestRunner({ test, questions: initialQuestions }: { test: ExamTe
   }, [state, test.id]);
 
   const current = questions[state.currentIndex];
+
+  const goTo = (index: number) => {
+    if (index < 0 || index >= questions.length) return;
+    setPracticeOpen(false);
+    // Phóng to chỉ nên áp dụng cho câu đang xem - không mang sang câu khác.
+    setColumnFocus(null);
+    setState((s) => ({ ...s, currentIndex: index }));
+  };
+
+  // Xóa toàn bộ đáp án đã lưu (sessionStorage) để luyện lại từ đầu - tránh
+  // tình trạng quay lại ôn đề cũ mà vẫn thấy câu đã trả lời từ lần trước.
+  const resetTest = () => {
+    if (!window.confirm("Xóa toàn bộ đáp án đã lưu và làm lại đề này từ đầu?")) return;
+    try {
+      window.sessionStorage.removeItem(`jp-go-exam-test-${test.id}`);
+    } catch {
+      // Không ảnh hưởng việc reset state trong phiên hiện tại.
+    }
+    const flagged: Record<string, boolean> = {};
+    for (const q of questions) flagged[q.id] = q.is_flagged_default;
+    setState({ currentIndex: 0, answers: {}, flagged, mistakes: {} });
+    setSubmitted(false);
+    setFeedback(null);
+    setPracticeOpen(false);
+  };
+
+  // ←/↑ = câu trước, →/↓ = câu sau - tắt khi đang có modal (kết quả/回答練習)
+  // mở để không vô tình nhảy câu lúc người dùng còn đang xem/gõ trong đó.
+  // Đặt trước early-return bên dưới để không vi phạm rules-of-hooks.
+  useArrowKeyNav({
+    onPrev: state.currentIndex > 0 ? () => goTo(state.currentIndex - 1) : undefined,
+    onNext: state.currentIndex < questions.length - 1 ? () => goTo(state.currentIndex + 1) : undefined,
+    enabled: !feedback && !practiceOpen,
+  });
+
   const hasAnyChoices = useMemo(() => questions.some((q) => q.choices.length > 0), [questions]);
   const correctChoice = current?.choices.find((choice) => choice.is_correct) ?? null;
   const writtenAnswer = current?.answer_jp?.trim() ? current.answer_jp : null;
@@ -331,14 +367,6 @@ export function TestRunner({ test, questions: initialQuestions }: { test: ExamTe
     setState((s) => ({ ...s, flagged: { ...s.flagged, [current.id]: !s.flagged[current.id] } }));
   };
 
-  const goTo = (index: number) => {
-    if (index < 0 || index >= questions.length) return;
-    setPracticeOpen(false);
-    // Phóng to chỉ nên áp dụng cho câu đang xem - không mang sang câu khác.
-    setColumnFocus(null);
-    setState((s) => ({ ...s, currentIndex: index }));
-  };
-
   // Cột 解答/Giải thích chỉ thực sự tồn tại khi showReferenceColumns - ẩn/focus
   // lưu trên cả 4 key nhưng chỉ áp dụng cho các cột đang thật sự có mặt.
   const availableColumns = REF_COLUMN_ORDER.filter(
@@ -401,6 +429,13 @@ export function TestRunner({ test, questions: initialQuestions }: { test: ExamTe
           >
             ふりがな {showFurigana ? "ON" : "OFF"}
           </button>
+        <button
+          type="button"
+          onClick={resetTest}
+          className="rounded-lg border border-border px-2.5 py-1 text-xs font-medium text-muted hover:border-accent/60 hover:text-accent"
+        >
+          ↺ Làm lại từ đầu
+        </button>
         <button
           type="button"
           onClick={toggleFlag}

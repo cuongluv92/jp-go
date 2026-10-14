@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 
 import { ColumnWorkspace } from "@/components/exam/column-workspace";
 import { PageJumpSelect } from "@/components/exam/page-jump-select";
+import { PageKeyboardNav } from "@/components/exam/page-keyboard-nav";
 import { WideContainer } from "@/components/exam/wide-container";
 import {
   getExamBookBySlug,
@@ -80,8 +81,12 @@ export default async function ExamPageReader({
     return { pageNumber: p.page_number, label: title ? `${pageDisplay} — ${title}` : pageDisplay };
   });
 
+  const prevHref = prevPage != null ? `/exam/${book.slug}/page/${prevPage}` : null;
+  const nextHref = nextPage != null ? `/exam/${book.slug}/page/${nextPage}` : null;
+
   return (
     <WideContainer>
+      <PageKeyboardNav prevHref={prevHref} nextHref={nextHref} />
       <div className="flex flex-col gap-4 py-4">
         <div className="flex flex-wrap items-center justify-between gap-2">
           <p className="min-w-0 flex-1 text-sm text-muted">
@@ -111,9 +116,9 @@ export default async function ExamPageReader({
           </p>
 
           <div className="flex items-center gap-2">
-            {prevPage != null ? (
+            {prevHref ? (
               <Link
-                href={`/exam/${book.slug}/page/${prevPage}`}
+                href={prevHref}
                 className="rounded-lg border border-border px-3 py-1.5 text-sm hover:border-accent hover:text-accent"
               >
                 ← Trang trước
@@ -122,9 +127,9 @@ export default async function ExamPageReader({
               <span className="rounded-lg border border-border px-3 py-1.5 text-sm text-muted/50">← Trang trước</span>
             )}
             <PageJumpSelect bookSlug={book.slug} options={pageOptions} currentPage={page.page_number} />
-            {nextPage != null ? (
+            {nextHref ? (
               <Link
-                href={`/exam/${book.slug}/page/${nextPage}`}
+                href={nextHref}
                 className="rounded-lg border border-border px-3 py-1.5 text-sm hover:border-accent hover:text-accent"
               >
                 Trang sau →
