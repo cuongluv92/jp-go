@@ -8,14 +8,15 @@ export interface StaticSougouPageSeed {
 
 type ExerciseSeed = Omit<
   ExerciseBlock,
-  "question_furigana_tokens" | "choices_furigana_tokens" | "solution_furigana_tokens"
->;
+  "question_furigana_tokens" | "choices_furigana_tokens" | "solution_furigana_tokens" | "correct_choice"
+> & { correct_choice?: ExerciseBlock["correct_choice"] };
 
 export function ex(seed: ExerciseSeed): ExerciseBlock {
   return {
     question_furigana_tokens: [],
     choices_furigana_tokens: [],
     solution_furigana_tokens: [],
+    correct_choice: null,
     ...seed,
   };
 }

@@ -163,6 +163,11 @@ export const exerciseBlockSchema = z.object({
   solution_furigana_tokens: furiganaTokens,
   reference_jp: nullableString.default(null),
   explanation_vi: nullableString.default(null),
+  // Số thứ tự (1-based) của lựa chọn đúng trong choices_jp - chỉ có ở câu
+  // trắc nghiệm 1 đáp án đúng. Không có (null) nghĩa là câu dạng khác (chọn
+  // nhiều mục để giải thích, điền nhiều chỗ trống...) - không bật được chế
+  // độ làm bài cho câu đó.
+  correct_choice: nullableString.default(null),
 });
 
 export const contentLeafBlockSchema = z.discriminatedUnion("type", [
