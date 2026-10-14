@@ -413,7 +413,9 @@ function ExerciseWorkspace({
   }
 
   function selectExerciseChoice(block: ExerciseBlock, index: number) {
-    if (!isExerciseQuizzable(block) || answeredCorrect[block.number] != null) return;
+    // Vẫn cho bấm lại kể cả sau khi đã chọn đúng - để đổi ý chọn thử đáp án
+    // khác mà không bị khoá cứng, giải thích vẫn giữ nguyên trạng thái đã mở.
+    if (!isExerciseQuizzable(block)) return;
     if (index + 1 === Number(block.correct_choice)) {
       setAnsweredCorrect((prev) => ({ ...prev, [block.number]: index + 1 }));
     } else {
@@ -456,8 +458,7 @@ function ExerciseWorkspace({
                       key={index}
                       type="button"
                       onClick={() => selectExerciseChoice(block, index)}
-                      disabled={solved}
-                      className={`flex w-full items-start gap-2 rounded-lg border px-2 py-1.5 text-left transition disabled:cursor-default ${style}`}
+                      className={`flex w-full items-start gap-2 rounded-lg border px-2 py-1.5 text-left transition ${style}`}
                     >
                       <span className="w-5 shrink-0 font-bold text-accent">{index + 1}.</span>
                       <span className="min-w-0">{renderExerciseJapanese(choice, block.choices_furigana_tokens?.[index] ?? [], showFurigana)}</span>

@@ -292,8 +292,6 @@ export function TestRunner({ test, questions: initialQuestions }: { test: ExamTe
     return <p className="p-6 text-sm text-muted">Đề thi này chưa có câu hỏi.</p>;
   }
 
-  // Trong chế độ làm bài, chọn đúng rồi thì "khoá" câu đó lại, không bật lại modal nếu bấm nữa.
-  const isCurrentLocked = quizMode && Boolean(state.answers[current.id]);
   const isLastQuestion = state.currentIndex === questions.length - 1;
   const showReferenceColumns = !quizMode || submitted;
 
@@ -303,7 +301,9 @@ export function TestRunner({ test, questions: initialQuestions }: { test: ExamTe
       setState((s) => ({ ...s, answers: { ...s.answers, [current.id]: choiceId } }));
       return;
     }
-    if (feedback || isCurrentLocked) return;
+    // Chọn đúng rồi vẫn cho bấm lại chọn đáp án khác (vd quay lại câu đã
+    // trả lời từ danh sách câu hỏi) - chỉ chặn lúc modal kết quả đang hiện.
+    if (feedback) return;
     const choice = current.choices.find((c) => c.id === choiceId);
     if (!choice) return;
     if (choice.is_correct) {
@@ -538,7 +538,7 @@ export function TestRunner({ test, questions: initialQuestions }: { test: ExamTe
                     key={choice.id}
                     type="button"
                     onClick={() => selectChoice(choice.id)}
-                    disabled={submitted || isCurrentLocked || Boolean(feedback)}
+                    disabled={submitted || Boolean(feedback)}
                     className={`flex items-start gap-3 rounded-xl border px-3 py-2.5 text-left text-sm transition ${style}`}
                   >
                     <span className="font-jp font-semibold">{choice.choice_label}</span>
