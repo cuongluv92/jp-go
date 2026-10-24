@@ -275,6 +275,8 @@ export function TestRunner({ test, questions: initialQuestions }: { test: ExamTe
     setPracticeOpen(false);
     // Phóng to chỉ nên áp dụng cho câu đang xem - không mang sang câu khác.
     setColumnFocus(null);
+    // Sau khi hoàn thành vẫn được quay lại các câu để làm lại.
+    setSubmitted(false);
     setState((s) => ({ ...s, currentIndex: index }));
   };
 
@@ -382,11 +384,11 @@ export function TestRunner({ test, questions: initialQuestions }: { test: ExamTe
     if (feedback) return;
     const choice = current.choices.find((c) => c.id === choiceId);
     if (!choice) return;
-    if (choice.is_correct) {
-      setState((s) => ({ ...s, answers: { ...s.answers, [current.id]: choiceId } }));
-    } else {
-      setState((s) => ({ ...s, mistakes: { ...s.mistakes, [current.id]: true } }));
-    }
+    setState((s) => ({
+      ...s,
+      answers: { ...s.answers, [current.id]: choiceId },
+      mistakes: choice.is_correct ? s.mistakes : { ...s.mistakes, [current.id]: true },
+    }));
     setFeedback({ choiceLabel: choice.choice_label, correct: choice.is_correct });
   };
 
@@ -470,24 +472,33 @@ export function TestRunner({ test, questions: initialQuestions }: { test: ExamTe
 
       <div className="rounded-2xl border border-border bg-surface p-3">
         <p className="mb-2 text-xs font-semibold uppercase text-muted">Danh sách câu hỏi</p>
+        <p className="mb-2 text-xs text-muted">Xanh lá: đúng · Đỏ nhạt: chưa đúng · Bấm số câu để xem hoặc làm lại.</p>
         <div className="flex flex-wrap gap-1.5">
-          {questions.map((q, i) => (
-            <button
-              key={q.id}
-              type="button"
-              onClick={() => goTo(i)}
-              className={`relative flex h-8 min-w-8 items-center justify-center rounded-lg px-2 text-xs font-medium transition ${
-                i === state.currentIndex
-                  ? "bg-accent text-accent-foreground"
-                  : quizMode && state.answers[q.id]
-                    ? "bg-emerald-100 text-emerald-700 dark:bg-emerald-500/15 dark:text-emerald-400"
-                    : "bg-slate-100 text-muted dark:bg-white/10"
-              }`}
-            >
-              {q.question_number}
-              {state.flagged[q.id] && <span className="absolute -right-1 -top-1 h-2 w-2 rounded-full bg-amber-500" />}
-            </button>
-          ))}
+          {questions.map((q, i) => {
+            const selected = q.choices.find((choice) => choice.id === state.answers[q.id]);
+            const status = selected
+              ? (selected.is_correct ? "Đúng" : "Chưa đúng")
+              : state.mistakes[q.id] ? "Chưa đúng" : "Chưa trả lời";
+            return (
+              <button
+                key={q.id}
+                type="button"
+                onClick={() => goTo(i)}
+                aria-label={`Câu ${q.question_number}: ${status}`}
+                aria-current={i === state.currentIndex ? "step" : undefined}
+                className={`relative flex h-8 min-w-8 items-center justify-center rounded-lg px-2 text-xs font-medium transition ${
+                  status === "Đúng"
+                      ? "bg-emerald-100 text-emerald-700 dark:bg-emerald-500/15 dark:text-emerald-400"
+                      : status === "Chưa đúng"
+                        ? "bg-red-100 text-red-700 dark:bg-red-500/15 dark:text-red-400"
+                        : "bg-slate-100 text-muted dark:bg-white/10"
+                } ${i === state.currentIndex ? "ring-2 ring-accent ring-offset-2 ring-offset-surface" : ""}`}
+              >
+                {q.question_number}
+                {state.flagged[q.id] && <span className="absolute -right-1 -top-1 h-2 w-2 rounded-full bg-amber-500" />}
+              </button>
+            );
+          })}
         </div>
       </div>
 
