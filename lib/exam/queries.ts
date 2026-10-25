@@ -413,6 +413,9 @@ export async function listExamQuestionsForTest(testId: string): Promise<ExamQues
             row.answer_furigana_tokens,
           )
         : [],
+      explanation_furigana_tokens: row.explanation_jp
+        ? await enrichExamTextWithFurigana(row.explanation_jp)
+        : [],
       choices: await Promise.all(
         row.choices.map(async (choice) => ({
           ...choice,
