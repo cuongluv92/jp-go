@@ -486,7 +486,7 @@ export function TestRunner({ test, questions: initialQuestions }: { test: ExamTe
                 key={q.id}
                 type="button"
                 onClick={() => goTo(i)}
-                aria-label={`Câu ${q.question_number}: ${status}`}
+                aria-label={`Câu ${q.question_number}: ${status}${selected ? `, đã chọn đáp án ${selected.choice_label}` : ""}`}
                 aria-current={i === state.currentIndex ? "step" : undefined}
                 className={`relative flex h-8 min-w-8 items-center justify-center rounded-lg px-2 text-xs font-medium transition ${
                   status === "Đúng"
@@ -497,6 +497,14 @@ export function TestRunner({ test, questions: initialQuestions }: { test: ExamTe
                 } ${i === state.currentIndex ? "ring-2 ring-accent ring-offset-2 ring-offset-surface" : ""}`}
               >
                 {q.question_number}
+                {selected && (
+                  <span
+                    aria-hidden="true"
+                    className="pointer-events-none absolute right-0.5 top-0.5 text-[9px] font-bold leading-none opacity-75"
+                  >
+                    {selected.choice_label}
+                  </span>
+                )}
                 {state.flagged[q.id] && <span className="absolute -right-1 -top-1 h-2 w-2 rounded-full bg-amber-500" />}
               </button>
             );
