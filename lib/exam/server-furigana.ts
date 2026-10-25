@@ -7,7 +7,7 @@ const KANJI_RE = /[一-鿿々〆ヵヶ]/u;
 // Dựng dictionary kuromoji từ đĩa mất khoảng 2s ở lần đầu mỗi instance serverless.
 // Trang đề đã render trước, nên route furigana có thể chờ lâu hơn một chút để tránh
 // trả về mảng rỗng ở cold start; tokenizer vẫn được cache cho các lần sau.
-const TOKENIZE_TIMEOUT_MS = 4000;
+const TOKENIZE_TIMEOUT_MS = 7500;
 const tokenCache = new Map<string, Promise<FuriganaToken[]>>();
 
 function katakanaToHiragana(value: string): string {
@@ -63,8 +63,51 @@ async function generatedTokens(text: string): Promise<FuriganaToken[]> {
   return raceWithTimeout(pending, TOKENIZE_TIMEOUT_MS, []);
 }
 
+/**
+ * Some imported exams have legacy readings for isolated kanji (e.g. 電=でん,
+ * 線=せん), but no contextual reading for the compound 電線. Returning a
+ * non-empty legacy array without re-tokenizing left most kanji unreadable.
+ *
+ * Merge contextual kuromoji tokens with reviewed/legacy tokens rather than
+ * treating any non-empty array as complete. Explicitly positioned reviewed
+ * tokens retain precedence; contextual readings then win over unpositioned
+ * tokens for the same surface at a given occurrence.
+ *
+ * No changes are made to source Japanese, translations, or stored answers.
+ */
 async function withTokens(text: string, existing?: FuriganaToken[]): Promise<FuriganaToken[]> {
-  return existing && existing.length > 0 ? existing : generatedTokens(text);
+  if (!text || !KANJI_RE.test(text)) return [];
+  const reviewed = (existing ?? []).filter((token) =>
+    token && typeof token.surface === "string" &&
+    typeof token.reading === "string" &&
+    token.reading.trim().length > 0 &&
+    KANJI_RE.test(token.surface) &&
+    (token.start === undefined ||
+      (Number.isInteger(token.start) &&
+        (token.start as number) >= 0 &&
+        text.slice(token.start, token.start + token.surface.length) === token.surface)),
+  );
+  const contextual = await generatedTokens(text);
+  if (contextual.length === 0) return reviewed;
+
+  const placed = reviewed.filter((token) => token.start !== undefined);
+  const unplaced = reviewed.filter((token) => token.start === undefined);
+
+  const placedKeys = new Set(placed.map((token) => `${token.start}:${token.surface}`));
+  const merged = [
+    ...placed,
+    ...contextual.filter((token) => !placedKeys.has(`${token.start}:${token.surface}`)),
+    ...unplaced,
+  ];
+  // A word with no reading in the tokenizer may still be covered by an
+  // imported token; let the longest valid surface win in segmentJapaneseText.
+  const seen = new Set<string>();
+  return merged.filter((token) => {
+    const key = `${token.start ?? "all"}:${token.surface}:${token.reading}`;
+    if (seen.has(key)) return false;
+    seen.add(key);
+    return true;
+  });
 }
 
 async function withTokenGroups(items: string[], existing?: FuriganaToken[][]): Promise<FuriganaToken[][]> {
