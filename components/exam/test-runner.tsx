@@ -8,6 +8,7 @@ import { AnswerPracticeModal } from "./answer-practice-modal";
 import { useArrowKeyNav } from "@/lib/hooks/use-arrow-key-nav";
 import { useColumnKeyboardShortcuts } from "@/lib/hooks/use-column-keyboard-shortcuts";
 import { getExamSourceImageUrl } from "@/lib/exam/storage";
+import { getKakomonnQuestionUrl } from "@/lib/exam/kakomonn-links";
 import { segmentJapaneseText, type FuriganaToken } from "@/lib/japanese-text";
 import type { ExamQuestion, ExamTest } from "@/lib/exam/types";
 
@@ -309,6 +310,7 @@ export function TestRunner({ test, questions: initialQuestions }: { test: ExamTe
   const hasAnyChoices = useMemo(() => questions.some((q) => q.choices.length > 0), [questions]);
   const correctChoice = current?.choices.find((choice) => choice.is_correct) ?? null;
   const writtenAnswer = current?.answer_jp?.trim() ? current.answer_jp : null;
+  const kakomonnSourceUrl = getKakomonnQuestionUrl(test.slug, current?.question_number ?? 0);
 
   const score = useMemo(() => {
     if (!submitted || !hasAnyChoices) return null;
@@ -708,6 +710,7 @@ export function TestRunner({ test, questions: initialQuestions }: { test: ExamTe
             <p className="text-sm italic text-muted">Chưa có phần giải thích cho câu này.</p>
           )}
           <ReferencePages question={current} />
+          {kakomonnSourceUrl && <a href={kakomonnSourceUrl} target="_blank" rel="noopener noreferrer" className="mt-4 inline-block rounded-lg border border-accent/40 px-2.5 py-1.5 text-xs font-semibold text-accent hover:bg-accent/10">📖 Giải Nhật · Kakomon ↗</a>}
         </section>
         )}
       </div>
@@ -751,6 +754,7 @@ export function TestRunner({ test, questions: initialQuestions }: { test: ExamTe
           choiceLabel={feedback.choiceLabel}
           explanation={current.explanation_vi}
           explanationJp={current.explanation_jp}
+          sourceUrl={kakomonnSourceUrl}
           isLastQuestion={isLastQuestion}
           onRetry={closeFeedbackAndRetry}
           onNext={closeFeedbackAndAdvance}
