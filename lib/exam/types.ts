@@ -116,6 +116,8 @@ export interface ExamQuestion {
   answer_furigana_tokens: FuriganaToken[];
   explanation_vi: string | null;
   explanation_jp: string | null;
+  /** Generated at read time for the Japanese explanation (not a DB column). */
+  explanation_furigana_tokens?: FuriganaToken[];
   is_flagged_default: boolean;
   sort_order: number;
   choices: ExamQuestionChoice[];
