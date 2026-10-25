@@ -2,6 +2,8 @@
 
 import { useEffect, useId, useRef } from "react";
 
+import { segmentJapaneseText, type FuriganaToken } from "@/lib/japanese-text";
+
 /**
  * Overlay nổi ngay trên trang làm đề (KHÔNG chuyển route) báo đúng/sai ngay
  * khi bấm đáp án. Cả đáp án đúng và sai đều có thể sang câu tiếp theo;
@@ -12,6 +14,8 @@ export function AnswerFeedbackModal({
   choiceLabel,
   explanation,
   explanationJp,
+  explanationJpTokens = [],
+  showFurigana = false,
   sourceUrl,
   isLastQuestion,
   onRetry,
@@ -21,6 +25,8 @@ export function AnswerFeedbackModal({
   choiceLabel: string;
   explanation?: string | null;
   explanationJp?: string | null;
+  explanationJpTokens?: FuriganaToken[];
+  showFurigana?: boolean;
   sourceUrl?: string | null;
   isLastQuestion: boolean;
   onRetry: () => void;
@@ -70,7 +76,18 @@ export function AnswerFeedbackModal({
           {explanationJp && (
             <div>
               <p className="mb-2 font-jp text-sm font-semibold text-muted">日本語解説</p>
-              <p lang="ja" className="font-jp whitespace-pre-line text-base leading-relaxed sm:text-lg">{explanationJp}</p>
+              <p lang="ja" className="font-jp whitespace-pre-line text-base leading-relaxed sm:text-lg">{showFurigana && explanationJpTokens.length > 0
+                ? segmentJapaneseText(explanationJp, [], explanationJpTokens).map((segment, index) =>
+                    segment.reading ? (
+                      <ruby key={`${segment.start}-${index}`}>
+                        {segment.text}
+                        <rt className="text-[0.65em] font-medium leading-none text-muted">{segment.reading}</rt>
+                      </ruby>
+                    ) : (
+                      <span key={`${segment.start}-${index}`}>{segment.text}</span>
+                    ),
+                  )
+                : explanationJp}</p>
             </div>
           )}
           {explanation && (
