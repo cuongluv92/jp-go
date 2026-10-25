@@ -500,7 +500,7 @@ export function TestRunner({ test, questions: initialQuestions }: { test: ExamTe
                 {selected && (
                   <span
                     aria-hidden="true"
-                    className="pointer-events-none absolute right-0.5 top-0.5 text-[9px] font-bold leading-none text-yellow-500 dark:text-yellow-400"
+                    className="pointer-events-none absolute right-0.5 top-0.5 text-[9px] font-bold leading-none text-blue-800 dark:text-blue-300"
                   >
                     {selected.choice_label}
                   </span>
