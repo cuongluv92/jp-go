@@ -696,7 +696,7 @@ export function TestRunner({ test, questions: initialQuestions }: { test: ExamTe
           {current.explanation_jp && (
             <div className="mb-4 border-b border-border pb-4">
               <p className="mb-2 font-jp text-xs font-semibold uppercase tracking-wide text-muted">日本語解説</p>
-              <p lang="ja" className="font-jp whitespace-pre-line text-sm leading-relaxed">{current.explanation_jp}</p>
+              <p lang="ja" className="font-jp whitespace-pre-line text-sm leading-relaxed">{renderExamJapanese(current.explanation_jp, current.explanation_furigana_tokens ?? [], showFurigana)}</p>
             </div>
           )}
           {current.explanation_vi ? (
@@ -754,6 +754,8 @@ export function TestRunner({ test, questions: initialQuestions }: { test: ExamTe
           choiceLabel={feedback.choiceLabel}
           explanation={current.explanation_vi}
           explanationJp={current.explanation_jp}
+          explanationJpTokens={current.explanation_furigana_tokens ?? []}
+          showFurigana={showFurigana}
           sourceUrl={kakomonnSourceUrl}
           isLastQuestion={isLastQuestion}
           onRetry={closeFeedbackAndRetry}
