@@ -115,6 +115,7 @@ export interface ExamQuestion {
   answer_vi: string | null;
   answer_furigana_tokens: FuriganaToken[];
   explanation_vi: string | null;
+  explanation_jp: string | null;
   is_flagged_default: boolean;
   sort_order: number;
   choices: ExamQuestionChoice[];

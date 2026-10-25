@@ -11,6 +11,7 @@ export function AnswerFeedbackModal({
   correct,
   choiceLabel,
   explanation,
+  explanationJp,
   isLastQuestion,
   onRetry,
   onNext,
@@ -18,6 +19,7 @@ export function AnswerFeedbackModal({
   correct: boolean;
   choiceLabel: string;
   explanation?: string | null;
+  explanationJp?: string | null;
   isLastQuestion: boolean;
   onRetry: () => void;
   onNext: () => void;
@@ -61,10 +63,21 @@ export function AnswerFeedbackModal({
         {correct ? "Chính xác!" : "Chưa đúng"}
       </p>
       {!correct && <p className="mt-1 text-sm text-muted">Bạn đã chọn {choiceLabel}. Có thể làm lại ngay hoặc quay lại câu này sau.</p>}
-      {explanation && (
-        <p className="mt-3 rounded-xl bg-slate-50 p-3 text-left text-sm text-muted dark:bg-surface-muted">
-          {explanation}
-        </p>
+      {(explanationJp || explanation) && (
+        <div className="mt-3 space-y-3 rounded-xl bg-slate-50 p-3 text-left text-sm dark:bg-surface-muted">
+          {explanationJp && (
+            <div>
+              <p className="mb-1 font-jp text-xs font-semibold text-muted">日本語解説</p>
+              <p lang="ja" className="font-jp whitespace-pre-line text-sm leading-relaxed">{explanationJp}</p>
+            </div>
+          )}
+          {explanation && (
+            <div>
+              <p className="mb-1 text-xs font-semibold text-muted">Giải thích tiếng Việt</p>
+              <p className="whitespace-pre-line text-sm leading-relaxed">{explanation}</p>
+            </div>
+          )}
+        </div>
       )}
       <div className="mt-4 flex gap-2">
         {!correct && (

@@ -691,8 +691,19 @@ export function TestRunner({ test, questions: initialQuestions }: { test: ExamTe
               <p className="whitespace-pre-line text-sm leading-relaxed">{current.answer_vi}</p>
             </div>
           )}
+          {current.explanation_jp && (
+            <div className="mb-4 border-b border-border pb-4">
+              <p className="mb-2 font-jp text-xs font-semibold uppercase tracking-wide text-muted">日本語解説</p>
+              <p lang="ja" className="font-jp whitespace-pre-line text-sm leading-relaxed">{current.explanation_jp}</p>
+            </div>
+          )}
           {current.explanation_vi ? (
-            <p className="whitespace-pre-line text-sm leading-relaxed">{current.explanation_vi}</p>
+            <div>
+              <p className="mb-2 text-xs font-semibold uppercase tracking-wide text-muted">
+                {current.explanation_jp ? "Giải thích tiếng Việt" : "Giải thích"}
+              </p>
+              <p className="whitespace-pre-line text-sm leading-relaxed">{current.explanation_vi}</p>
+            </div>
           ) : (
             <p className="text-sm italic text-muted">Chưa có phần giải thích cho câu này.</p>
           )}
@@ -739,6 +750,7 @@ export function TestRunner({ test, questions: initialQuestions }: { test: ExamTe
           correct={feedback.correct}
           choiceLabel={feedback.choiceLabel}
           explanation={current.explanation_vi}
+          explanationJp={current.explanation_jp}
           isLastQuestion={isLastQuestion}
           onRetry={closeFeedbackAndRetry}
           onNext={closeFeedbackAndAdvance}
