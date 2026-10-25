@@ -12,6 +12,7 @@ export function AnswerFeedbackModal({
   choiceLabel,
   explanation,
   explanationJp,
+  sourceUrl,
   isLastQuestion,
   onRetry,
   onNext,
@@ -20,6 +21,7 @@ export function AnswerFeedbackModal({
   choiceLabel: string;
   explanation?: string | null;
   explanationJp?: string | null;
+  sourceUrl?: string | null;
   isLastQuestion: boolean;
   onRetry: () => void;
   onNext: () => void;
@@ -78,6 +80,17 @@ export function AnswerFeedbackModal({
             </div>
           )}
         </div>
+      )}
+      {sourceUrl && (
+        <a
+          href={sourceUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          title="Xem lời giải tiếng Nhật trên Kakomonn"
+          className="mt-3 inline-flex items-center gap-1 rounded-lg border border-accent/40 px-3 py-1.5 text-xs font-semibold text-accent hover:bg-accent/10"
+        >
+          📖 Giải Nhật · Kakomon <span aria-hidden="true">↗</span>
+        </a>
       )}
       <div className="mt-4 flex gap-2">
         {!correct && (
