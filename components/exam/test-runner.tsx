@@ -171,11 +171,14 @@ function loadState(testId: string, questions: ExamQuestion[]): TestState {
   for (const q of questions) flagged[q.id] = q.is_flagged_default;
 
   if (typeof window !== "undefined") {
-    try {
-      const raw = window.sessionStorage.getItem(`jp-go-exam-test-${testId}`);
-      if (raw) return { currentIndex: 0, answers: {}, flagged, mistakes: {}, ...JSON.parse(raw) };
-    } catch {
-      // sessionStorage có thể bị chặn - dùng state mặc định.
+    // Prefer durable progress; fall back to the old tab session for migration.
+    for (const storageName of ["localStorage", "sessionStorage"] as const) {
+      try {
+        const raw = window[storageName].getItem(`jp-go-exam-test-${testId}`);
+        if (raw) return { currentIndex: 0, answers: {}, flagged, mistakes: {}, ...JSON.parse(raw) };
+      } catch {
+        // A blocked store or malformed entry must not prevent trying the other store.
+      }
     }
   }
   return { currentIndex: 0, answers: {}, flagged, mistakes: {} };
@@ -263,7 +266,9 @@ export function TestRunner({ test, questions: initialQuestions }: { test: ExamTe
 
   useEffect(() => {
     try {
-      window.sessionStorage.setItem(`jp-go-exam-test-${test.id}`, JSON.stringify(state));
+      window.localStorage.setItem(`jp-go-exam-test-${test.id}`, JSON.stringify(state));
+      // Remove the old copy only after durable storage succeeds.
+      window.sessionStorage.removeItem(`jp-go-exam-test-${test.id}`);
     } catch {
       // Không ảnh hưởng việc đọc/làm đề.
     }
@@ -281,14 +286,15 @@ export function TestRunner({ test, questions: initialQuestions }: { test: ExamTe
     setState((s) => ({ ...s, currentIndex: index }));
   };
 
-  // Xóa toàn bộ đáp án đã lưu (sessionStorage) để luyện lại từ đầu - tránh
-  // tình trạng quay lại ôn đề cũ mà vẫn thấy câu đã trả lời từ lần trước.
+  // Chỉ xóa tiến độ khi người học xác nhận làm lại từ đầu.
   const resetTest = () => {
     if (!window.confirm("Xóa toàn bộ đáp án đã lưu và làm lại đề này từ đầu?")) return;
-    try {
-      window.sessionStorage.removeItem(`jp-go-exam-test-${test.id}`);
-    } catch {
-      // Không ảnh hưởng việc reset state trong phiên hiện tại.
+    for (const storageName of ["localStorage", "sessionStorage"] as const) {
+      try {
+        window[storageName].removeItem(`jp-go-exam-test-${test.id}`);
+      } catch {
+        // Không ảnh hưởng việc reset state trong phiên hiện tại.
+      }
     }
     const flagged: Record<string, boolean> = {};
     for (const q of questions) flagged[q.id] = q.is_flagged_default;
