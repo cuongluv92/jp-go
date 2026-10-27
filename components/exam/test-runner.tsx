@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { useExamProgress } from "@/lib/exam/use-exam-progress";
 import { useEffect, useMemo, useState } from "react";
 
 import { AnswerFeedbackModal } from "./answer-feedback-modal";
@@ -11,15 +12,6 @@ import { getExamSourceImageUrl } from "@/lib/exam/storage";
 import { getKakomonnQuestionUrl } from "@/lib/exam/kakomonn-links";
 import { segmentJapaneseText, type FuriganaToken } from "@/lib/japanese-text";
 import type { ExamQuestion, ExamTest } from "@/lib/exam/types";
-
-interface TestState {
-  currentIndex: number;
-  answers: Record<string, string>;
-  flagged: Record<string, boolean>;
-  // true nếu câu đó đã từng bị chọn sai ít nhất 1 lần trước khi chọn đúng -
-  // dùng để tính điểm "đúng ngay lần đầu" dù chế độ làm bài cho phép thử lại.
-  mistakes: Record<string, boolean>;
-}
 
 interface AnswerFeedback {
   choiceLabel: string;
@@ -166,24 +158,6 @@ function renderExamJapanese(text: string, tokens: FuriganaToken[] = [], showFuri
   );
 }
 
-function loadState(testId: string, questions: ExamQuestion[]): TestState {
-  const flagged: Record<string, boolean> = {};
-  for (const q of questions) flagged[q.id] = q.is_flagged_default;
-
-  if (typeof window !== "undefined") {
-    // Prefer durable progress; fall back to the old tab session for migration.
-    for (const storageName of ["localStorage", "sessionStorage"] as const) {
-      try {
-        const raw = window[storageName].getItem(`jp-go-exam-test-${testId}`);
-        if (raw) return { currentIndex: 0, answers: {}, flagged, mistakes: {}, ...JSON.parse(raw) };
-      } catch {
-        // A blocked store or malformed entry must not prevent trying the other store.
-      }
-    }
-  }
-  return { currentIndex: 0, answers: {}, flagged, mistakes: {} };
-}
-
 function ReferencePages({ question }: { question: ExamQuestion }) {
   if (question.references.length === 0) return null;
 
@@ -229,7 +203,7 @@ function ReferencePages({ question }: { question: ExamQuestion }) {
  * - 解答 chỉ dùng đáp án Nhật đã có trong dữ liệu, không tự suy đoán.
  * - Chỉ bật chấm điểm khi câu thực sự có choices/đáp án.
  */
-export function TestRunner({ test, questions: initialQuestions }: { test: ExamTest; questions: ExamQuestion[] }) {
+export function TestRunner({ test, questions: initialQuestions, userId }: { test: ExamTest; questions: ExamQuestion[]; userId: string }) {
   // Render ngay với dữ liệu gốc (chưa có furigana) để không phải chờ kuromoji
   // dựng dictionary - furigana (nếu có) tới sau qua API, state ở đây chỉ đổi
   // phần furigana_tokens, không đổi id/thứ tự câu nên không ảnh hưởng gì tới
@@ -248,8 +222,9 @@ export function TestRunner({ test, questions: initialQuestions }: { test: ExamTe
     };
   }, [test.slug]);
 
-  const [state, setState] = useState<TestState>(() => loadState(test.id, initialQuestions));
-  const [submitted, setSubmitted] = useState(false);
+  const {state, update: setState, ready, status, retry, reset} = useExamProgress(userId, test.id, initialQuestions);
+  const submitted = state.submitted;
+  const setSubmitted = (value: boolean) => setState(s => ({...s, submitted: value}));
   const [showFurigana, setShowFurigana] = useState(false);
   // Mặc định bật "chế độ làm bài" (ẩn đáp án, hiện bảng đúng/sai khi bấm chọn) -
   // đây là cách dùng chính khi làm đề; tắt đi mới chuyển qua xem tham khảo
@@ -263,16 +238,6 @@ export function TestRunner({ test, questions: initialQuestions }: { test: ExamTe
     // eslint-disable-next-line react-hooks/set-state-in-effect
     setColumnVisible(readStoredColumnVisibility());
   }, []);
-
-  useEffect(() => {
-    try {
-      window.localStorage.setItem(`jp-go-exam-test-${test.id}`, JSON.stringify(state));
-      // Remove the old copy only after durable storage succeeds.
-      window.sessionStorage.removeItem(`jp-go-exam-test-${test.id}`);
-    } catch {
-      // Không ảnh hưởng việc đọc/làm đề.
-    }
-  }, [state, test.id]);
 
   const current = questions[state.currentIndex];
 
@@ -289,16 +254,7 @@ export function TestRunner({ test, questions: initialQuestions }: { test: ExamTe
   // Chỉ xóa tiến độ khi người học xác nhận làm lại từ đầu.
   const resetTest = () => {
     if (!window.confirm("Xóa toàn bộ đáp án đã lưu và làm lại đề này từ đầu?")) return;
-    for (const storageName of ["localStorage", "sessionStorage"] as const) {
-      try {
-        window[storageName].removeItem(`jp-go-exam-test-${test.id}`);
-      } catch {
-        // Không ảnh hưởng việc reset state trong phiên hiện tại.
-      }
-    }
-    const flagged: Record<string, boolean> = {};
-    for (const q of questions) flagged[q.id] = q.is_flagged_default;
-    setState({ currentIndex: 0, answers: {}, flagged, mistakes: {} });
+    reset();
     setSubmitted(false);
     setFeedback(null);
     setPracticeOpen(false);
@@ -377,6 +333,8 @@ export function TestRunner({ test, questions: initialQuestions }: { test: ExamTe
     enabled: !feedback && !practiceOpen,
   });
 
+  if (!ready) return <p className="p-6 text-sm text-muted">Đang khôi phục tiến độ đã lưu…</p>;
+
   if (!current) {
     return <p className="p-6 text-sm text-muted">Đề thi này chưa có câu hỏi.</p>;
   }
@@ -423,6 +381,10 @@ export function TestRunner({ test, questions: initialQuestions }: { test: ExamTe
 
   return (
     <div className="flex flex-col gap-4 py-4">
+      <div className="flex items-center gap-3 text-xs text-muted" role="status">
+        <span>{status}</span>
+        <button type="button" onClick={retry} className="underline">Đồng bộ lại</button>
+      </div>
       <div className="flex flex-wrap items-center justify-between gap-3 rounded-2xl border border-border bg-surface px-4 py-3">
         <div>
           <p className="text-xs text-muted">

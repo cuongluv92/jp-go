@@ -1,3 +1,6 @@
+import { createClient } from "@/lib/supabase/server";
+import { redirect } from "next/navigation";
+
 import { notFound } from "next/navigation";
 
 import { TestRunner } from "@/components/exam/test-runner";
@@ -7,6 +10,8 @@ import { getExamTestBySlug, listExamQuestionsForTestRaw } from "@/lib/exam/queri
 export const dynamic = "force-dynamic";
 
 export default async function ExamTestPage({ params }: { params: Promise<{ testSlug: string }> }) {
+  const { data: { user } } = await (await createClient()).auth.getUser();
+  if (!user) redirect("/login");
   const { testSlug } = await params;
   const test = await getExamTestBySlug(testSlug);
   if (!test) notFound();
@@ -105,7 +110,7 @@ export default async function ExamTestPage({ params }: { params: Promise<{ testS
           </p>
         </section>
       )}
-      <TestRunner test={test} questions={questions} />
+      <TestRunner key={`${user.id}:${test.id}`} userId={user.id} test={test} questions={questions} />
     </WideContainer>
   );
 }
