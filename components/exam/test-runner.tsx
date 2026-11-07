@@ -231,6 +231,8 @@ export function TestRunner({ test, questions: initialQuestions, userId }: { test
   // (đáp án + giải thích hiện sẵn ngay cả khi chưa nộp bài).
   const [quizMode, setQuizMode] = useState(() => questions.some((q) => q.choices.length > 0));
   const [feedback, setFeedback] = useState<AnswerFeedback | null>(null);
+  const [retryIndices, setRetryIndices] = useState<number[] | null>(null);
+  const [retryFinished, setRetryFinished] = useState(false);
   const [practiceOpen, setPracticeOpen] = useState(false);
   const [columnVisible, setColumnVisible] = useState<ColumnVisibility>(ALL_COLUMNS_VISIBLE);
   const [columnFocus, setColumnFocus] = useState<RefColumnKey | null>(null);
@@ -240,9 +242,19 @@ export function TestRunner({ test, questions: initialQuestions, userId }: { test
   }, []);
 
   const current = questions[state.currentIndex];
+  const wrongIndices = questions.flatMap((q, index) => {
+    const selected = q.choices.find(choice => choice.id === state.answers[q.id]);
+    return selected && !selected.is_correct ? [index] : [];
+  });
+  // Freeze each retry round so a corrected question does not disappear mid-answer.
+  const navigationIndices = retryIndices ?? questions.map((_, index) => index);
+  const navigationPosition = navigationIndices.indexOf(state.currentIndex);
+  const previousIndex = navigationIndices[navigationPosition - 1];
+  const nextIndex = navigationIndices[navigationPosition + 1];
 
   const goTo = (index: number) => {
     if (index < 0 || index >= questions.length) return;
+    setRetryFinished(false);
     setPracticeOpen(false);
     // Phóng to chỉ nên áp dụng cho câu đang xem - không mang sang câu khác.
     setColumnFocus(null);
@@ -251,9 +263,25 @@ export function TestRunner({ test, questions: initialQuestions, userId }: { test
     setState((s) => ({ ...s, currentIndex: index }));
   };
 
+  const startWrongRetry = () => {
+    if (!wrongIndices.length) return;
+    setRetryIndices(wrongIndices);
+    setRetryFinished(false);
+    setQuizMode(true);
+    setFeedback(null);
+    setColumnVisible(v => ({...v, question: true, questionVi: true}));
+    goTo(wrongIndices[0]);
+  };
+  const leaveWrongRetry = () => {
+    setRetryIndices(null);
+    setRetryFinished(false);
+    setFeedback(null);
+  };
+
   // Chỉ xóa tiến độ khi người học xác nhận làm lại từ đầu.
   const resetTest = () => {
     if (!window.confirm("Xóa toàn bộ đáp án đã lưu và làm lại đề này từ đầu?")) return;
+    leaveWrongRetry();
     reset();
     setSubmitted(false);
     setFeedback(null);
@@ -264,8 +292,8 @@ export function TestRunner({ test, questions: initialQuestions, userId }: { test
   // mở để không vô tình nhảy câu lúc người dùng còn đang xem/gõ trong đó.
   // Đặt trước early-return bên dưới để không vi phạm rules-of-hooks.
   useArrowKeyNav({
-    onPrev: state.currentIndex > 0 ? () => goTo(state.currentIndex - 1) : undefined,
-    onNext: state.currentIndex < questions.length - 1 ? () => goTo(state.currentIndex + 1) : undefined,
+    onPrev: previousIndex !== undefined ? () => goTo(previousIndex) : undefined,
+    onNext: nextIndex !== undefined ? () => goTo(nextIndex) : undefined,
     enabled: !feedback && !practiceOpen,
   });
 
@@ -291,7 +319,7 @@ export function TestRunner({ test, questions: initialQuestions, userId }: { test
     return { correct, firstTry, total: gradable };
   }, [submitted, hasAnyChoices, questions, state.answers, state.mistakes]);
 
-  const isLastQuestion = state.currentIndex === questions.length - 1;
+  const isLastQuestion = nextIndex === undefined;
   const showReferenceColumns = !quizMode || submitted;
 
   // Cột 解答/Giải thích chỉ thực sự tồn tại khi showReferenceColumns - ẩn/focus
@@ -361,9 +389,10 @@ export function TestRunner({ test, questions: initialQuestions, userId }: { test
   const closeFeedbackAndAdvance = () => {
     setFeedback(null);
     if (isLastQuestion) {
-      setSubmitted(true);
+      if (retryIndices) setRetryFinished(true);
+      else setSubmitted(true);
     } else {
-      goTo(state.currentIndex + 1);
+      goTo(nextIndex);
     }
   };
 
@@ -393,7 +422,14 @@ export function TestRunner({ test, questions: initialQuestions, userId }: { test
           </p>
           <h1 className="font-jp text-base font-bold sm:text-lg">{test.title}</h1>
         </div>
-        <div className="flex items-center gap-2">
+        <div className="flex flex-wrap items-center gap-2">
+          {hasAnyChoices && (
+            <button type="button" onClick={retryIndices ? leaveWrongRetry : startWrongRetry}
+              disabled={!retryIndices && wrongIndices.length === 0} aria-pressed={retryIndices !== null}
+              className="rounded-lg border border-red-300 bg-red-50 px-2.5 py-1 text-xs font-medium text-red-700 disabled:opacity-40 dark:bg-red-500/10">
+              {retryIndices ? "Xem toàn bộ đề" : `Chỉ làm lại câu sai (${wrongIndices.length})`}
+            </button>
+          )}
           {hasAnyChoices && (
             <button
               type="button"
@@ -441,10 +477,17 @@ export function TestRunner({ test, questions: initialQuestions, userId }: { test
       </div>
 
       <div className="rounded-2xl border border-border bg-surface p-3">
-        <p className="mb-2 text-xs font-semibold uppercase text-muted">Danh sách câu hỏi</p>
+        <p className="mb-2 text-xs font-semibold uppercase text-muted">{retryIndices ? `Làm lại câu sai · ${retryIndices.length} câu` : "Danh sách câu hỏi"}</p>
+        {retryIndices && (
+          <div className="mb-3 space-y-2 text-sm" role="status">
+            <p>{retryFinished ? "Đã hoàn thành lượt ôn này." : "Đang ôn các câu sai lúc bắt đầu lượt. Câu sửa đúng sẽ chuyển xanh."} Còn {wrongIndices.filter(i => retryIndices.includes(i)).length} câu sai trong lượt này.</p>
+            {retryFinished && wrongIndices.length > 0 && <button type="button" onClick={startWrongRetry} className="rounded-lg border border-red-300 px-3 py-1.5 text-red-700">Ôn tiếp các câu còn sai ({wrongIndices.length})</button>}
+          </div>
+        )}
         <p className="mb-2 text-xs text-muted">Xanh lá: đúng · Đỏ nhạt: chưa đúng · Bấm số câu để xem hoặc làm lại.</p>
         <div className="flex flex-wrap gap-1.5">
-          {questions.map((q, i) => {
+          {navigationIndices.map((i) => {
+            const q = questions[i];
             const selected = q.choices.find((choice) => choice.id === state.answers[q.id]);
             const status = selected
               ? (selected.is_correct ? "Đúng" : "Chưa đúng")
@@ -694,29 +737,29 @@ export function TestRunner({ test, questions: initialQuestions, userId }: { test
       <div className="flex items-center justify-between gap-2">
         <button
           type="button"
-          onClick={() => goTo(state.currentIndex - 1)}
-          disabled={state.currentIndex === 0}
+          onClick={() => previousIndex !== undefined && goTo(previousIndex)}
+          disabled={previousIndex === undefined}
           className="rounded-lg border border-border px-4 py-2 text-sm disabled:opacity-40"
         >
           ← Câu trước
         </button>
         <span className="text-xs text-muted">
-          Câu {state.currentIndex + 1}/{questions.length}
+          {retryIndices ? `Câu sai ${navigationPosition + 1}/${retryIndices.length} · Câu gốc ${current.question_number}` : `Câu ${state.currentIndex + 1}/${questions.length}`}
         </span>
-        {hasAnyChoices && state.currentIndex === questions.length - 1 ? (
+        {hasAnyChoices && isLastQuestion ? (
           <button
             type="button"
-            onClick={() => setSubmitted(true)}
-            disabled={submitted}
+            onClick={() => retryIndices ? setRetryFinished(true) : setSubmitted(true)}
+            disabled={retryIndices ? retryFinished : submitted}
             className="rounded-lg bg-accent px-4 py-2 text-sm font-semibold text-accent-foreground disabled:opacity-40"
           >
-            Nộp bài
+            {retryIndices ? "Hoàn thành lượt ôn" : "Nộp bài"}
           </button>
         ) : (
           <button
             type="button"
-            onClick={() => goTo(state.currentIndex + 1)}
-            disabled={state.currentIndex === questions.length - 1}
+            onClick={() => nextIndex !== undefined && goTo(nextIndex)}
+            disabled={nextIndex === undefined}
             className="rounded-lg border border-border px-4 py-2 text-sm disabled:opacity-40"
           >
             Câu sau →
