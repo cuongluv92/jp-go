@@ -1,5 +1,5 @@
 import Link from "next/link";
-import type { ReactNode } from "react";
+import { Fraction } from "./fraction";
 import { frontMatter, lessons, quantitySymbols } from "./contents";
 
 export const metadata = { title: "電験三種 — jp-go" };
@@ -11,15 +11,6 @@ const subjects = [
   ["法規", "Pháp quy", 423, [[424,"電気関係法規"],[441,"電気設備の技術基準・解釈"],[494,"電気施設管理"]]],
   ["数学", "Toán bổ trợ", 515, [[516,"数学の基礎"],[524,"方程式、三角関数"],[530,"複素数、対数、ベクトル"]]],
 ] as const;
-
-function Fraction({ numerator, denominator }: { numerator: ReactNode; denominator: ReactNode }) {
-  return (
-    <span className="inline-grid align-middle text-center leading-snug">
-      <span className="border-b border-current px-2 pb-0.5">{numerator}</span>
-      <span className="px-2 pt-0.5">{denominator}</span>
-    </span>
-  );
-}
 
 const bookRed = "text-red-700 dark:text-red-300";
 
@@ -37,6 +28,7 @@ export default function DenkenPage() {
         <h1 className="font-jp mt-2 text-2xl font-bold">電験三種</h1>
         <p className="mt-1 text-sm text-muted">電験三種 合格ガイド 第4版 · Mục lục theo số trang in trong sách</p>
       </header>
+      <Link href="/denken/ohm" className="rounded-2xl border border-border bg-surface p-4 font-semibold text-accent">Học thử bài 1‑1 · オームの法則 · Trang 2–4 →</Link>
       <section className="space-y-3" aria-label="Mục lục">
         <details className="rounded-2xl border border-border bg-surface p-4">
           <summary className="cursor-pointer font-semibold">Phần mở đầu</summary>
@@ -70,7 +62,9 @@ export default function DenkenPage() {
                           <li key={line} className="flex items-baseline gap-3 py-2 text-sm">
                             <span className={`w-12 shrink-0 tabular-nums ${bookRed}`}>p.{pageNumber}</span>
                             <span lang="ja" className="font-jp leading-relaxed">
-                              <ContentsText text={before} />
+                              {title === "理論" && index === 0 && pageNumber === "002" ? (
+                                <Link href="/denken/ohm" className="underline underline-offset-2"><ContentsText text={before} /></Link>
+                              ) : <ContentsText text={before} />}
                               {after !== undefined && <><Fraction numerator="%z" denominator="100" /><ContentsText text={after} /></>}
                             </span>
                           </li>
@@ -129,7 +123,6 @@ export default function DenkenPage() {
           </div>
         </div>
       </section>
-      <p className="text-sm text-muted">Mục lục đã sẵn sàng. Nội dung từng bài sẽ được nhập từ các trang bài học.</p>
     </main>
   );
 }
