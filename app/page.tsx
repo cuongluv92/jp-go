@@ -155,6 +155,13 @@ export default function HomePage() {
           </div>
           <span className="shrink-0 text-accent">→</span>
         </Link>
+        <Link href="/denken" className="flex items-center justify-between gap-3 rounded-2xl border border-border bg-surface px-4 py-4 shadow-sm">
+          <div>
+            <p className="font-jp text-base font-bold">電験三種</p>
+            <p className="mt-0.5 text-xs text-muted">Mục lục học và công thức</p>
+          </div>
+          <span className="text-accent">→</span>
+        </Link>
       </section>
 
       <section className="grid grid-cols-2 gap-3">

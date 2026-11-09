@@ -101,7 +101,7 @@ const EXAM_NAV_ITEM: NavItem = {
  * hạn 5 mục như bottom tab bar) - "2級電気工事施工管理" nằm ngay sau
  * "Đang học", cùng nhóm chính, không còn ở nhóm "Nội dung" phía dưới.
  */
-export const PRIMARY_SIDEBAR_ITEMS: NavItem[] = [...NAV_ITEMS, EXAM_NAV_ITEM];
+export const PRIMARY_SIDEBAR_ITEMS: NavItem[] = [...NAV_ITEMS, EXAM_NAV_ITEM, { href: "/denken", label: "電験三種", description: "Lý thuyết, máy điện, hệ thống điện và pháp quy", icon: <BoltIcon /> }];
 
 /** Nhóm nội dung tra cứu - hiện ở sidebar desktop (nhóm "Nội dung") và mobile drawer. */
 export const CONTENT_ITEMS: NavItem[] = [
