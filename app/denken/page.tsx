@@ -44,20 +44,34 @@ export default function DenkenPage() {
           </table>
         </div>
       </section>
-      <section className="rounded-2xl border border-border bg-surface p-4">
+      <section id="cong-thuc-tra-cuu" className="scroll-mt-20 rounded-2xl border border-border bg-surface p-4">
         <h2 className="font-semibold">Công thức tra cứu · 直流回路</h2>
         <div className="mt-4 grid gap-5 sm:grid-cols-2">
           <div>
             <p className="font-jp text-sm">オームの法則 · Định luật Ohm</p>
             <p className="mt-2 font-serif text-2xl" aria-label="R bằng V chia I"><i>R</i> = <Fraction numerator={<i>V</i>} denominator={<i>I</i>} /></p>
-            <p className="mt-2 text-sm text-muted">Điện áp V tính bằng volt (V), dòng điện I tính bằng A, điện trở R tính bằng Ω.</p>
+            <p className="mt-2 text-sm text-muted"><strong>Điều kiện áp dụng.</strong> V (volt) là điện áp hai đầu điện trở đang xét. I (ampe) là dòng qua chính điện trở đó và I ≠ 0 khi tính R (Ω). Khi dùng R để dự đoán điện áp hoặc dòng điện ở điểm làm việc khác, R phải gần như không đổi trong phạm vi đang xét.</p>
           </div>
           <div>
             <p className="font-jp text-sm">並列合成抵抗 · Hai điện trở song song</p>
             <p className="mt-2 font-serif text-2xl" aria-label="R tương đương bằng tích R một nhân R hai chia tổng R một cộng R hai">
               <i>R</i><sub>tđ</sub> = <Fraction numerator={<><i>R</i><sub>1</sub><i>R</i><sub>2</sub></>} denominator={<><i>R</i><sub>1</sub> + <i>R</i><sub>2</sub></>} />
             </p>
+            <p className="mt-2 text-sm text-muted"><strong>Điều kiện áp dụng.</strong> Hai điện trở R₁ và R₂ phải cùng nối vào đúng hai nút, nên có cùng điện áp hai đầu. Dùng cùng đơn vị Ω và cần R₁ + R₂ ≠ 0.</p>
           </div>
+        </div>
+        <div id="quy-tac-bien-soan" className="mt-5 scroll-mt-20 border-t border-border pt-4">
+          <h3 className="font-semibold">Quy tắc biên soạn bài 電験三種</h3>
+          <p className="mt-2 text-sm text-muted">Dùng cho các bài từ sách 電験三種 合格ガイド 第4版. Trong chat mới, gửi đường dẫn mục này cùng ảnh trang sách. Nếu chat không mở được JP‑GO, dán phần quy tắc dưới đây cùng ảnh.</p>
+          <ol className="mt-3 list-decimal space-y-2 pl-5 text-sm">
+            <li><strong>Bố cục.</strong> Dùng ba cột như phần 2級 của JP‑GO gồm nguyên văn Nhật, dịch Việt và giải thích. Ghi số trang in trên sách.</li>
+            <li><strong>Nguyên văn.</strong> Chép đủ tiêu đề, từng đoạn, bảng, chú thích và nhãn hình. Giữ chữ đỏ, chữ đậm, số liệu và đơn vị. Nếu ảnh mờ hoặc bị cắt, ghi rõ trang và vị trí chưa đọc được.</li>
+            <li><strong>Furigana.</strong> Rà cách đọc theo cả cụm và ngữ cảnh kỹ thuật. Ví dụ 起電力（きでんりょく）, 内部抵抗（ないぶていこう）, 直列（ちょくれつ）. Đánh dấu cách đọc chưa chắc để đối chiếu.</li>
+            <li><strong>Dịch Việt.</strong> Dịch đủ từng đoạn, giữ điều kiện, ngoại lệ và quan hệ nguyên nhân–kết quả. Dùng thuật ngữ nhất quán và kèm chữ Nhật ở lần xuất hiện đầu tiên, ví dụ suất điện động (起電力). Đặt phần diễn giải thêm trong cột Giải thích.</li>
+            <li><strong>Công thức.</strong> Trình bày tử trên, mẫu dưới. Giữ đúng dấu, chỉ số và đơn vị. Ghi rõ đại lượng đo ở đâu, loại mạch và giả thiết áp dụng. Tách ghi chú bổ sung khỏi nguyên văn. Kiểm từng bước thế số và đáp án.</li>
+            <li><strong>Hình.</strong> Đặt hình cạnh đoạn liên quan. Bảng dịch chữ trong hình nằm ngay bên dưới và mặc định thu gọn, có nút mở và thu lại.</li>
+            <li><strong>Đối chiếu trước khi báo xong.</strong> Rà từng trang với ảnh gốc để tìm phần bỏ sót, lỗi dịch, lỗi cách đọc và lỗi công thức. Nêu rõ trang đã kiểm và chỗ còn chưa chắc. Chỉ báo đã cập nhật JP‑GO sau khi xác minh bản cập nhật.</li>
+          </ol>
         </div>
       </section>
     </main>
