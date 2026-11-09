@@ -21,6 +21,14 @@ function Fraction({ numerator, denominator }: { numerator: ReactNode; denominato
   );
 }
 
+const bookRed = "text-red-700 dark:text-red-300";
+
+function ContentsText({ text }: { text: string }) {
+  return text.split(/(といえば)/).map((part, index) =>
+    part === "といえば" ? <span key={index} className={bookRed}>{part}</span> : part,
+  );
+}
+
 export default function DenkenPage() {
   return (
     <main className="mx-auto flex w-full max-w-4xl flex-col gap-5 px-4 py-6">
@@ -33,19 +41,20 @@ export default function DenkenPage() {
         <details className="rounded-2xl border border-border bg-surface p-4">
           <summary className="cursor-pointer font-semibold">Phần mở đầu</summary>
           <ul className="mt-3 space-y-2">
-            {frontMatter.map(([page, title]) => <li key={page} className="text-sm">p.{page} · {title}</li>)}
+            {frontMatter.map(([page, title]) => <li key={page} className="text-sm"><span className={bookRed}>p.{page}</span> · {title}</li>)}
           </ul>
         </details>
         {subjects.map(([title, translation, page, chapters]) => (
           <details key={title} className="rounded-2xl border border-border bg-surface p-4">
-            <summary className="cursor-pointer font-semibold">{title} · {translation} <span className="text-sm font-normal text-muted">p.{page}</span></summary>
+            <summary className="cursor-pointer font-semibold">{title} · {translation} <span className={`text-sm font-normal ${bookRed}`}>p.{page}</span></summary>
             <ul className="mt-3 space-y-2">
               {chapters.map(([start, chapter], index) => (
                 <li key={start}>
                   <details className="rounded-lg border border-border px-3 py-2">
                     <summary className="cursor-pointer text-sm font-medium">
-                      <span className="font-jp">{index + 1}. {chapter}</span>
-                      <span className="ml-2 tabular-nums text-muted">p.{start}</span>
+                      <span className="mr-2 inline-block min-w-5 rounded bg-red-700 px-1 text-center text-xs font-semibold text-white">{index + 1}</span>
+                      <span className="font-jp">{chapter}</span>
+                      <span className={`ml-2 tabular-nums ${bookRed}`}>p.{start}</span>
                     </summary>
                     <ol className="mt-2 divide-y divide-border">
                       {lessons[title][index].split("\n").map((line) => {
@@ -53,9 +62,10 @@ export default function DenkenPage() {
                         const [before, after] = line.slice(4).split("{percentZ}");
                         return (
                           <li key={line} className="flex items-baseline gap-3 py-2 text-sm">
-                            <span className="w-12 shrink-0 tabular-nums text-muted">p.{pageNumber}</span>
+                            <span className={`w-12 shrink-0 tabular-nums ${bookRed}`}>p.{pageNumber}</span>
                             <span lang="ja" className="font-jp leading-relaxed">
-                              {before}{after !== undefined && <><Fraction numerator="%z" denominator="100" />{after}</>}
+                              <ContentsText text={before} />
+                              {after !== undefined && <><Fraction numerator="%z" denominator="100" /><ContentsText text={after} /></>}
                             </span>
                           </li>
                         );
@@ -67,7 +77,7 @@ export default function DenkenPage() {
             </ul>
           </details>
         ))}
-        <p className="px-4 py-2 text-sm">p.538 · 索引</p>
+        <p className="px-4 py-2 text-sm"><span className={bookRed}>p.538</span> · 索引</p>
       </section>
       <section className="rounded-2xl border border-border bg-surface p-4">
         <h2 className="font-semibold">Công thức mẫu · 直流回路</h2>
