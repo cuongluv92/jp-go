@@ -35,6 +35,54 @@ function Diagram({ file, width, height, title, labels }: {
 }
 
 export const diagrams = {
+  delta21: (<Diagram file="delta21" width={704} height={252} title="Trang 21 · Từ tam giác Δ sang sao Y" labels={[
+    ["Δ-Y 変換（デルタ・スター変換）", "Biến đổi tam giác–sao."],
+    ["(a)・(b)・a・b・c", "Mạng Δ và mạng Y tương đương. Ba đầu a, b, c giữ nguyên."],
+    ["R₁・R₂・R₃ → Rₐ・Rᵦ・R꜀", "Ba cạnh tam giác chuyển thành ba nhánh sao."],
+  ]} />),
+  deltaDetail21: (<Diagram file="deltaDetail21" width={302} height={251} title="Trang 21 · Chọn hai cạnh kề đầu a" labels={[
+    ["Rₐ の両側2抵抗の積", "Tích hai điện trở Δ ở hai phía đầu a, tức R₃ và R₁."],
+    ["3抵抗の和", "Tổng của cả ba điện trở Δ."],
+  ]} />),
+  delta22: (<Diagram file="delta22" width={179} height={143} title="Trang 22 · Mạch cầu trong đề bài" labels={[
+    ["I₁ (A)・I₂ (A)・10 V", "Hai dòng nhánh cần lấy tỷ số và điện áp nguồn."],
+    ["2 Ω・1 Ω・2 Ω・1 Ω・2 Ω", "Hai điện trở bên trái lần lượt 2 Ω và 1 Ω. Tam giác bên phải gồm điện trở giữa 2 Ω, cạnh trên 1 Ω và cạnh dưới 2 Ω."],
+  ]} />),
+  deltaSolve22: (<Diagram file="deltaSolve22" width={400} height={209} title="Trang 22 · Mạch sau khi đổi Δ sang Y" labels={[
+    ["ブリッジ回路の Δ-Y 変換", "Biến đổi tam giác–sao cho mạch cầu."],
+    ["Rₐ = 0.4 Ω・Rᵦ = 0.4 Ω・R꜀ = 0.8 Ω", "Điện trở ba nhánh sao."],
+    ["A・B・I₁・I₂", "Hai nút chung và hai dòng của phần mạch song song."],
+  ]} />),
+  joule23: (<Diagram file="joule23" width={188} height={190} title="Hình 1‑9‑1 · Mạch điện trở" labels={[
+    ["抵抗回路", "Mạch điện trở."],
+    ["I (A)・V (V)・R (Ω)", "Dòng qua điện trở, điện áp hai đầu và điện trở."],
+  ]} />),
+  sources24: (<Diagram file="sources24" width={643} height={152} title="Hình 1‑10‑1 · Ký hiệu nguồn áp và nguồn dòng" labels={[
+    ["定電圧源と定電流源の図記号", "Ký hiệu nguồn áp và nguồn dòng không đổi."],
+    ["(a) 定電圧源・(b) 理想電圧源", "Nguồn áp không đổi và nguồn áp lý tưởng."],
+    ["(c) 理想電流源", "Nguồn dòng lý tưởng."],
+    ["内部抵抗は0・内部抵抗は∞（無限大）", "Điện trở trong bằng 0 đối với nguồn áp, bằng vô hạn đối với nguồn dòng lý tưởng."],
+    ["E (V)・I (A)", "Điện áp hoặc dòng điện mà nguồn duy trì."],
+  ]} />),
+  super24: (<Diagram file="super24" width={501} height={210} title="Hình 1‑10‑2 · Ví dụ nguyên lý chồng chất" labels={[
+    ["重ね合せの理", "Nguyên lý chồng chất."],
+    ["E₁ = 24 V・E₂ = 6 V・R = 6 Ω", "Hai nguồn và điện trở của ví dụ."],
+    ["I・I₁・I₂", "Dòng tổng và phần dòng do từng nguồn."],
+  ]} />),
+  super25: (<Diagram file="super25" width={221} height={124} title="Trang 25 · Mạch đề bài chồng chất" labels={[
+    ["4 V・2 A", "Nguồn áp 4 V và nguồn dòng 2 A."],
+    ["3 Ω・5 Ω・I (A)", "Hai điện trở và dòng cần tìm qua điện trở 3 Ω."],
+  ]} />),
+  split25: (<Diagram file="split25" width={529} height={181} title="Trang 25 · Tách mạch theo từng nguồn" labels={[
+    ["電圧源のみ（電流源は開放除去）", "Chỉ giữ nguồn áp. Thay nguồn dòng bằng mạch hở."],
+    ["電流源のみ（電圧源は短絡除去）", "Chỉ giữ nguồn dòng. Thay nguồn áp bằng dây nối tắt."],
+    ["3 Ω と 5 Ω は、並列接続になっている", "Trong mạch chỉ còn nguồn dòng, 3 Ω và 5 Ω mắc song song."],
+    ["I₁・I₂", "Hai dòng thành phần qua 3 Ω theo hai chiều ngược nhau."],
+    ["重ね合せの理", "Nguyên lý chồng chất."],
+  ]} />),
+  current25: (<Diagram file="current25" width={157} height={105} title="Trang 25 · Nhìn rõ hai nhánh song song" labels={[
+    ["3 Ω・5 Ω・2 A・I₂", "Nguồn dòng 2 A chia qua hai điện trở. I₂ là dòng qua nhánh 3 Ω."],
+  ]} />),
   bridge19: (<Diagram file="bridge19" width={716} height={342} title="Trang 19 · Hai cách vẽ cùng một mạch cầu" labels={[
     ["ブリッジ回路", "Mạch cầu."],
     ["a・b・c・d", "Nguồn đặt giữa c và d. Điện kế G nối giữa hai điểm giữa a và b."],

@@ -22,7 +22,10 @@ export default async function OhmLesson({ searchParams }: { searchParams: Promis
   const next = pages[pages.indexOf(page) + 1];
   const prevHref = previous === undefined ? null : href(previous);
   const nextHref = next === undefined ? null : href(next);
-  const title = page >= 19 ? "1‑7 ブリッジ回路 · Mạch cầu"
+  const title = page >= 24 ? "1‑10 定電圧源と定電流源・重ね合せの理 · Nguồn lý tưởng và nguyên lý chồng chất"
+    : page === 23 ? "1‑9 直流回路の電力 · Công suất mạch một chiều"
+    : page >= 21 ? "1‑8 Δ-Y変換 · Biến đổi tam giác–sao"
+    : page >= 19 ? "1‑7 ブリッジ回路 · Mạch cầu"
     : page >= 16 ? "1‑6 ミルマンの定理 · Định lý Millman"
     : page >= 14 ? "1‑5 テブナンの定理 · Định lý Thévenin"
     : page >= 12 ? "1‑4 キルヒホッフの法則 · Định luật Kirchhoff"
