@@ -22,7 +22,7 @@ export default async function OhmLesson({ searchParams }: { searchParams: Promis
   const next = pages[pages.indexOf(page) + 1];
   const prevHref = previous === undefined ? null : href(previous);
   const nextHref = next === undefined ? null : href(next);
-  const title = page === 7 ? "1‑2 並列合成抵抗・分圧 · Điện trở song song và chia áp" : "1‑1 オームの法則 · Định luật Ohm";
+  const title = page >= 5 ? "1‑2 直列・並列合成抵抗 · Điện trở nối tiếp và song song" : "1‑1 オームの法則 · Định luật Ohm";
   const rows = await Promise.all(lesson[page].map(async row => "jp" in row
     ? { ...row, readings: await Promise.all(row.jp.split("**").map(part => enrichExamTextWithFurigana(part))) }
     : row));

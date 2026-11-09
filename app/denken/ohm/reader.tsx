@@ -28,7 +28,7 @@ function MarkedText({ text, readings }: { text: string; readings?: FuriganaToken
 
 const formula = "flex flex-wrap items-center gap-x-1.5 gap-y-2 font-serif text-lg";
 
-function Formula({ kind }: { kind: NonNullable<Extract<LessonRow, { jp: string }>["formula"]> }) {
+function Formula({ kind, japanese = false }: { japanese?: boolean; kind: NonNullable<Extract<LessonRow, { jp: string }>["formula"]> }) {
   switch (kind) {
     case "ohm":
       return (
@@ -36,6 +36,15 @@ function Formula({ kind }: { kind: NonNullable<Extract<LessonRow, { jp: string }
           <p className={formula}><i>R</i> = <Fraction numerator="V" denominator="I" /> [Ω]</p>
           <p className={formula}><i>I</i> = <Fraction numerator="V" denominator="R" /> [A]</p>
           <p className={formula}><i>V</i> = <i>RI</i> [V]</p>
+        </div>
+      );
+    case "connections":
+      return (
+        <div className="space-y-2">
+          <p className={formula}>R₀ = <span className={red}>R₁ + R₂</span> (Ω)</p>
+          <p className={formula}>R₀ = <span className={red}><Fraction numerator="R₁R₂" denominator="R₁ + R₂" /></span> (Ω)</p>
+          <p className={formula}>R₀ = <Fraction numerator="R₁R₂" denominator="R₁ + R₂" /> = <Fraction numerator="R₂" denominator={<>1 + <Fraction numerator="R₂" denominator="R₁" /></>} /> (Ω)</p>
+          <p className={formula}>R₀ = <span className={red}><Fraction numerator={japanese ? "大きい方の値" : "Giá trị lớn"} denominator={japanese ? "1＋抵抗値の比" : "1 + tỷ số điện trở"} /></span> (Ω)</p>
         </div>
       );
     case "parallelSolution":
@@ -79,7 +88,7 @@ export function OhmReader({ rows }: { rows: ReadingRow[] }) {
       const style = row.heading ? "text-base font-bold" : "whitespace-pre-line text-sm leading-relaxed";
       return {
         key,
-        jp: <div lang="ja" className="font-jp space-y-2"><Text className={style}><MarkedText text={row.jp} readings={showFurigana ? row.readings : undefined} /></Text>{row.formula && <Formula kind={row.formula} />}</div>,
+        jp: <div lang="ja" className="font-jp space-y-2"><Text className={style}><MarkedText text={row.jp} readings={showFurigana ? row.readings : undefined} /></Text>{row.formula && <Formula kind={row.formula} japanese />}</div>,
         vi: <div className="space-y-2"><Text className={style}><MarkedText text={row.vi} /></Text>{row.formula && <Formula kind={row.formula} />}</div>,
         explanation: row.note && <p className="text-sm leading-relaxed">{row.note}</p>,
       };

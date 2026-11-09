@@ -3,8 +3,8 @@ export type LessonRow = {
   vi: string;
   note?: string;
   heading?: boolean;
-  formula?: "ohm" | "drop" | "solution" | "parallelSolution" | "parallelReference";
-} | { diagram: "examples" | "circuit" | "potential" | "internal" | "exercise" | "parallel02" | "divider03" };
+  formula?: "ohm" | "drop" | "solution" | "parallelSolution" | "parallelReference" | "connections";
+} | { diagram: "examples" | "circuit" | "potential" | "internal" | "exercise" | "parallel02" | "divider03" | "connections" };
 
 // Dấu ** bao quanh các cụm cần giữ màu đỏ trong hai cột.
 export const lesson: Record<number, LessonRow[]> = {
@@ -92,6 +92,30 @@ export const lesson: Record<number, LessonRow[]> = {
     {
       jp: "※電源の内部抵抗 r が無視できる場合は、E ≒ V なので、E と V はどちらも電圧の文字記号として使われます。",
       vi: "Khi có thể bỏ qua điện trở trong r của nguồn, E ≈ V. Khi đó, cả E và V đều được dùng làm ký hiệu điện áp.",
+    },
+  ],
+  5: [
+    { jp: "2抵抗の直列合成抵抗 といえば 和、並列合成抵抗 といえば 和分の積", vi: "Điện trở tương đương của hai điện trở nối tiếp bằng tổng, còn mắc song song thì bằng tích chia tổng.", heading: true },
+    { jp: "2抵抗の直列合成抵抗と並列合成抵抗", vi: "Điện trở tương đương của hai điện trở mắc nối tiếp và song song", heading: true },
+    {
+      jp: "2個以上の抵抗を1列に接続する方法を**直列接続**といい、抵抗の両端を同じところに接続する方法を**並列接続**といいます。",
+      vi: "Mắc hai điện trở trở lên thành một hàng gọi là **mắc nối tiếp (直列接続)**. Mắc sao cho hai đầu của mỗi điện trở nối vào cùng hai nút gọi là **mắc song song (並列接続)**.",
+    },
+    {
+      jp: "2抵抗を直列接続した場合の**合成抵抗**は、**2抵抗の和**に等しくなります。一方、2抵抗を並列に接続したときの合成抵抗は、**和分の積（2抵抗の積 ÷ 和）**で求められます。",
+      vi: "Khi hai điện trở mắc nối tiếp, **điện trở tương đương (合成抵抗)** bằng **tổng hai điện trở**. Khi mắc song song, điện trở tương đương được tính bằng **tích chia tổng (和分の積)**, tức lấy tích hai điện trở chia cho tổng của chúng.",
+    },
+    { diagram: "connections" },
+    {
+      jp: "2抵抗の直列合成抵抗 R₀ といえば **和**\n2抵抗の並列合成抵抗 R₀ といえば **和分の積**\nまたは、R₂ を大きい方の値、R₁ を小さい方の値とすると",
+      vi: "Điện trở tương đương R₀ của hai điện trở nối tiếp bằng **tổng**.\nĐiện trở tương đương R₀ của hai điện trở song song bằng **tích chia tổng**.\nCũng có thể viết theo dạng dưới đây, với R₂ là giá trị lớn và R₁ là giá trị nhỏ.",
+      formula: "connections",
+      note: "Dạng chia cho 1 + R₂/R₁ cần R₁ khác 0. Tỷ số điện trở trong cách viết này là giá trị lớn chia giá trị nhỏ.",
+    },
+    { jp: "分圧と分流の式", vi: "Công thức chia áp và chia dòng", heading: true },
+    {
+      jp: "2抵抗を直列接続したとき、各抵抗の**分電圧**は、全体の電圧 V₀［V］を抵抗の大きさの比で**比例配分**します（R₁ と R₂ の比で分ける）。または、回路電流 I［A］に、各抵抗値を掛けると考えても同じです。2抵抗の並列回路において、全体の電流を I₀［A］としたとき、各抵抗の**分路電流**は、抵抗の比で**逆比例配分**します。",
+      vi: "Khi hai điện trở mắc nối tiếp, **điện áp trên từng điện trở (分電圧)** được tính bằng cách **chia điện áp tổng V₀ [V] theo tỷ lệ thuận** với giá trị điện trở, tức theo tỷ số R₁ và R₂. Cũng có thể nhân dòng điện mạch I [A] với từng điện trở. Khi hai điện trở mắc song song và dòng điện tổng là I₀ [A], **dòng điện từng nhánh (分路電流)** được **chia theo tỷ lệ nghịch** với giá trị điện trở.",
     },
   ],
   7: [

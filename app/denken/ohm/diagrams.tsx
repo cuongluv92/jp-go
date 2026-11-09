@@ -35,6 +35,11 @@ function Diagram({ file, width, height, title, labels }: {
 }
 
 export const diagrams = {
+  connections: (<Diagram file="connections" width={271} height={185} title="Hai điện trở mắc nối tiếp và song song" labels={[
+    ["直列接続", "Mắc nối tiếp. Hai điện trở nằm trên cùng một đường dòng điện."],
+    ["並列接続", "Mắc song song. Hai đầu mỗi điện trở nối vào cùng hai nút."],
+    ["R₁ (Ω)・R₂ (Ω)", "Hai điện trở, tính bằng ôm."],
+  ]} />),
   parallel02: (<Diagram file="parallel02" width={240} height={219} title="Bài tập 02 · Mạch điện trở song song" labels={[
     ["R₁ = 8 Ω、R₃ = 2R₄", "Hai điện trở nối tiếp ở nhánh trên. Tổng điện trở nhánh là 8 + 2R₄."],
     ["R₂ = 4 Ω、R₄ (Ω)", "Hai điện trở nối tiếp ở nhánh dưới. Tổng điện trở nhánh là 4 + R₄."],
