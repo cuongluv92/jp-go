@@ -35,6 +35,55 @@ function Diagram({ file, width, height, title, labels }: {
 }
 
 export const diagrams = {
+  thExercise: (<Diagram file="thExercise" width={314} height={141} title="Trang 15 · Mạch đề bài Thévenin" labels={[
+    ["E₁ = 200 V・E₂ = 100 V", "Hai nguồn áp của mạng."],
+    ["R₁ = 20 Ω・R₂ = 30 Ω・R₃ = 8 Ω", "Hai điện trở của mạng và tải R₃."],
+    ["I (A)", "Dòng qua tải R₃ theo chiều mũi tên."],
+  ]} />),
+  thTransform: (<Diagram file="thTransform" width={425} height={151} title="Hình 1–2 · Tách tải và quy đổi mạch" labels={[
+    ["図1・図2", "Hình 1 là mạng gốc. Hình 2 thay mạng trong khung nét đứt bằng mạch tương đương."],
+    ["テブナンの等価回路", "Mạch tương đương Thévenin."],
+    ["a・b・R₃・I", "Hai đầu nối tải, điện trở tải và dòng qua tải."],
+    ["R₁・R₂・E₁・E₂ → Rₐᵦ・Eₐᵦ", "Mạng gốc quy đổi thành điện trở trong nối tiếp nguồn tương đương."],
+  ]} />),
+  thOpen: (<Diagram file="thOpen" width={154} height={123} title="Hình 3 · Tính điện áp hở mạch" labels={[
+    ["R₁・R₂・E₁・E₂", "Các điện trở và nguồn của hai nhánh được giữ nguyên."],
+    ["a・b・Eₐᵦ", "Hai đầu a–b để hở khi tính điện áp Eₐᵦ."],
+  ]} />),
+  thResistance: (<Diagram file="thResistance" width={185} height={153} title="Hình 4 · Tính điện trở trong" labels={[
+    ["電源は短絡除去", "Triệt tiêu nguồn áp bằng cách nối tắt trên sơ đồ tính."],
+    ["R₁ = 20 Ω・R₂ = 30 Ω・Rₐᵦ", "Hai điện trở mắc song song khi nhìn từ a–b."],
+  ]} />),
+  thLoad: (<Diagram file="thLoad" width={190} height={144} title="Hình 5 · Gắn tải trở lại" labels={[
+    ["テブナンの等価回路", "Mạch tương đương Thévenin."],
+    ["Eₐᵦ = 160 V・Rₐᵦ = 12 Ω・R₃ = 8 Ω・I", "Suất điện động, điện trở trong, điện trở tải và dòng tải."],
+  ]} />),
+  millIntro: (<Diagram file="millIntro" width={308} height={219} title="Trang 16 · Sơ đồ định lý Millman" labels={[
+    ["Eₐᵦ は、公式で求めることができる。", "Có thể tính Eₐᵦ bằng công thức."],
+    ["R₁・R₂・R₃・E₁・E₂・E₃", "Điện trở và nguồn áp của ba nhánh."],
+    ["V・Eₐᵦ", "Vôn kế đo điện áp chung giữa hai nút."],
+  ]} />),
+  millBranches: (<Diagram file="millBranches" width={229} height={308} title="Trang 16 · Mạch hai nhánh và ba nhánh" labels={[
+    ["2枝路の場合・3枝路の場合", "Trường hợp hai nhánh và ba nhánh."],
+    ["R₁・R₂・R₃・E₁・E₂・E₃・Eₐᵦ", "Các điện trở, nguồn áp và điện áp chung hai đầu mạch."],
+  ]} />),
+  millExercise: (<Diagram file="millExercise" width={266} height={212} title="Trang 17 · Bài tập điện áp ba nhánh" labels={[
+    ["27 V・1 Ω", "Nguồn và điện trở nhánh trái."],
+    ["22 V・2 Ω", "Nguồn và điện trở nhánh giữa."],
+    ["2.5 Ω・a・b・Eₐᵦ", "Điện trở nhánh phải và điện áp cần tìm giữa a–b."],
+  ]} />),
+  millLoad: (<Diagram file="millLoad" width={338} height={166} title="Trang 18 · Bài tập dòng điện ba nhánh" labels={[
+    ["E₁ = 200 V・R₁ = 20 Ω・E₂ = 100 V・R₂ = 30 Ω", "Nguồn áp và điện trở của hai nhánh đầu."],
+    ["a・b・R₃ = 8 Ω・I₃", "Hai nút chung, điện trở nhánh ba và dòng cần tính."],
+  ]} />),
+  millThird: (<Diagram file="millThird" width={236} height={156} title="Trang 18 · Xét riêng nhánh R₃" labels={[
+    ["a・b・Eₐᵦ = 64 V・R₃ = 8 Ω・I₃", "Đặt điện áp 64 V giữa a–b của nhánh R₃ để tính I₃."],
+  ]} />),
+  millOther: (<Diagram file="millOther" width={548} height={159} title="Trang 18 · Xét riêng nhánh R₁ và R₂" labels={[
+    ["a・b・Eₐᵦ = 64 V", "Điện áp chung đặt lên từng nhánh khi xét riêng."],
+    ["R₁ = 20 Ω・E₁ = 200 V・I₁", "Điện trở, nguồn áp và dòng nhánh trái."],
+    ["R₂ = 30 Ω・E₂ = 100 V・I₂", "Điện trở, nguồn áp và dòng nhánh phải."],
+  ]} />),
   kirchhoffIntro: (<Diagram file="kirchhoffIntro" width={701} height={299} title="Trang 12 · Hai định luật Kirchhoff" labels={[
     ["キルヒホッフの第1法則・流入・流出", "Định luật thứ nhất. 流入 là dòng vào nút, 流出 là dòng ra khỏi nút."],
     ["キルヒホッフの第2法則", "Định luật thứ hai. Hai pin 1,5 V mắc nối tiếp cùng chiều tạo điện áp tổng 3,0 V."],

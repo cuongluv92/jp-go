@@ -1,4 +1,5 @@
 import { continuation } from "./continuation";
+import { networkPages } from "./network-pages";
 import { circuitPages } from "./circuit-pages";
 
 export type FormulaPart = string | { fraction: [FormulaPart[], FormulaPart[]]; red?: boolean };
@@ -12,12 +13,13 @@ export type LessonRow = {
   equations?: FormulaLine[];
   table?: { jp: string[]; vi: string[]; rows: string[][] };
   formula?: "ohm" | "drop" | "solution" | "parallelSolution" | "parallelReference" | "connections";
-} | { diagram: "examples" | "circuit" | "potential" | "internal" | "exercise" | "parallel02" | "divider03" | "connections" | "voltageRule" | "currentRule" | "parallel01" | "current04" | "conductor" | "kirchhoffIntro" | "node12" | "loop12" | "kirchhoff13" | "loops13" | "thevenin14" };
+} | { diagram: "examples" | "circuit" | "potential" | "internal" | "exercise" | "parallel02" | "divider03" | "connections" | "voltageRule" | "currentRule" | "parallel01" | "current04" | "conductor" | "kirchhoffIntro" | "node12" | "loop12" | "kirchhoff13" | "loops13" | "thevenin14" | "thExercise" | "thTransform" | "thOpen" | "thResistance" | "thLoad" | "millIntro" | "millBranches" | "millExercise" | "millLoad" | "millThird" | "millOther" };
 
 // Dấu ** bao quanh các cụm cần giữ màu đỏ trong hai cột.
 export const lesson: Record<number, LessonRow[]> = {
   ...continuation,
   ...circuitPages,
+  ...networkPages,
   2: [
     { jp: "オームの法則 **といえば** 電圧÷電流＝抵抗", vi: "Định luật Ohm · Điện áp chia dòng điện bằng điện trở", heading: true },
     { diagram: "examples" },

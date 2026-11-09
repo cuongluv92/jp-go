@@ -3,7 +3,7 @@ import { notFound } from "next/navigation";
 import { PageJumpSelect } from "@/components/exam/page-jump-select";
 import { PageKeyboardNav } from "@/components/exam/page-keyboard-nav";
 import { WideContainer } from "@/components/exam/wide-container";
-import { enrichExamTextWithFurigana } from "@/lib/exam/server-furigana";
+import { enrichLessonPart } from "./readings";
 import { ContentsTree } from "../contents-tree";
 import { lesson } from "./lesson";
 import { OhmReader } from "./reader";
@@ -14,35 +14,6 @@ const pages = Object.keys(lesson).map(Number);
 const href = (page: number) => page === 2 ? "/denken/ohm" : `/denken/ohm?trang=${page}`;
 const navButton = "rounded-lg border border-border px-3 py-1.5 text-sm hover:border-accent hover:text-accent";
 
-const technicalReadings = {
-  接頭語: "せっとうご",
-  電流和: "でんりゅうわ",
-  電圧和: "でんあつわ",
-  電圧降下: "でんあつこうか",
-  閉回路: "へいかいろ",
-  等価回路: "とうかかいろ",
-  起電力: "きでんりょく",
-  内部抵抗: "ないぶていこう",
-  短絡: "たんらく",
-  分電圧: "ぶんでんあつ",
-  分路電流: "ぶんろでんりゅう",
-  分圧: "ぶんあつ",
-  分流: "ぶんりゅう",
-  合成抵抗: "ごうせいていこう",
-  抵抗率: "ていこうりつ",
-  導電率: "どうでんりつ",
-  導体: "どうたい",
-  断面積: "だんめんせき",
-  国際標準軟銅: "こくさいひょうじゅんなんどう",
-} as const;
-
-function enrichLessonPart(part: string) {
-  const reviewed = Object.entries(technicalReadings).flatMap(([surface, reading]) =>
-    Array.from(part.matchAll(new RegExp(surface, "g")), match => ({ surface, reading, start: match.index })),
-  );
-  return enrichExamTextWithFurigana(part, reviewed);
-}
-
 export default async function OhmLesson({ searchParams }: { searchParams: Promise<{ trang?: string }> }) {
   const { trang } = await searchParams;
   const page = Number(trang ?? "2");
@@ -51,7 +22,8 @@ export default async function OhmLesson({ searchParams }: { searchParams: Promis
   const next = pages[pages.indexOf(page) + 1];
   const prevHref = previous === undefined ? null : href(previous);
   const nextHref = next === undefined ? null : href(next);
-  const title = page >= 14 ? "1‑5 テブナンの定理 · Định lý Thévenin"
+  const title = page >= 16 ? "1‑6 ミルマンの定理 · Định lý Millman"
+    : page >= 14 ? "1‑5 テブナンの定理 · Định lý Thévenin"
     : page >= 12 ? "1‑4 キルヒホッフの法則 · Định luật Kirchhoff"
     : page >= 9 ? "1‑3 導体の抵抗 · Điện trở của vật dẫn" : page >= 5 ? "1‑2 直列・並列合成抵抗 · Điện trở nối tiếp và song song" : "1‑1 オームの法則 · Định luật Ohm";
   const rows = await Promise.all(lesson[page].map(async row => "jp" in row
