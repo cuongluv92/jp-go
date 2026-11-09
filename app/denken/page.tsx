@@ -1,5 +1,6 @@
 import Link from "next/link";
 import type { ReactNode } from "react";
+import { frontMatter, lessons } from "./contents";
 
 export const metadata = { title: "電験三種 — jp-go" };
 
@@ -29,19 +30,44 @@ export default function DenkenPage() {
         <p className="mt-1 text-sm text-muted">電験三種 合格ガイド 第4版 · Mục lục theo số trang in trong sách</p>
       </header>
       <section className="space-y-3" aria-label="Mục lục">
+        <details className="rounded-2xl border border-border bg-surface p-4">
+          <summary className="cursor-pointer font-semibold">Phần mở đầu</summary>
+          <ul className="mt-3 space-y-2">
+            {frontMatter.map(([page, title]) => <li key={page} className="text-sm">p.{page} · {title}</li>)}
+          </ul>
+        </details>
         {subjects.map(([title, translation, page, chapters]) => (
           <details key={title} className="rounded-2xl border border-border bg-surface p-4">
             <summary className="cursor-pointer font-semibold">{title} · {translation} <span className="text-sm font-normal text-muted">p.{page}</span></summary>
             <ul className="mt-3 space-y-2">
               {chapters.map(([start, chapter], index) => (
-                <li key={start} className="flex gap-3 text-sm">
-                  <span className="w-12 shrink-0 tabular-nums text-muted">p.{start}</span>
-                  <span className="font-jp">{index + 1}. {chapter}</span>
+                <li key={start}>
+                  <details className="rounded-lg border border-border px-3 py-2">
+                    <summary className="cursor-pointer text-sm font-medium">
+                      <span className="font-jp">{index + 1}. {chapter}</span>
+                      <span className="ml-2 tabular-nums text-muted">p.{start}</span>
+                    </summary>
+                    <ol className="mt-2 divide-y divide-border">
+                      {lessons[title][index].split("\n").map((line) => {
+                        const pageNumber = line.slice(0, 3);
+                        const [before, after] = line.slice(4).split("{percentZ}");
+                        return (
+                          <li key={line} className="flex items-baseline gap-3 py-2 text-sm">
+                            <span className="w-12 shrink-0 tabular-nums text-muted">p.{pageNumber}</span>
+                            <span lang="ja" className="font-jp leading-relaxed">
+                              {before}{after !== undefined && <><Fraction numerator="%z" denominator="100" />{after}</>}
+                            </span>
+                          </li>
+                        );
+                      })}
+                    </ol>
+                  </details>
                 </li>
               ))}
             </ul>
           </details>
         ))}
+        <p className="px-4 py-2 text-sm">p.538 · 索引</p>
       </section>
       <section className="rounded-2xl border border-border bg-surface p-4">
         <h2 className="font-semibold">Công thức mẫu · 直流回路</h2>
