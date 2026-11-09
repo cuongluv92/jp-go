@@ -1,13 +1,20 @@
+import { continuation } from "./continuation";
+
+export type FormulaPart = string | { fraction: [FormulaPart[], FormulaPart[]]; red?: boolean };
+export type FormulaLine = FormulaPart[];
+
 export type LessonRow = {
   jp: string;
   vi: string;
   note?: string;
   heading?: boolean;
+  equations?: FormulaLine[];
   formula?: "ohm" | "drop" | "solution" | "parallelSolution" | "parallelReference" | "connections";
-} | { diagram: "examples" | "circuit" | "potential" | "internal" | "exercise" | "parallel02" | "divider03" | "connections" };
+} | { diagram: "examples" | "circuit" | "potential" | "internal" | "exercise" | "parallel02" | "divider03" | "connections" | "voltageRule" | "currentRule" | "parallel01" | "current04" | "conductor" };
 
 // Dấu ** bao quanh các cụm cần giữ màu đỏ trong hai cột.
 export const lesson: Record<number, LessonRow[]> = {
+  ...continuation,
   2: [
     { jp: "オームの法則 **といえば** 電圧÷電流＝抵抗", vi: "Định luật Ohm · Điện áp chia dòng điện bằng điện trở", heading: true },
     { diagram: "examples" },

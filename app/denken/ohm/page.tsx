@@ -14,6 +14,26 @@ const pages = Object.keys(lesson).map(Number);
 const href = (page: number) => page === 2 ? "/denken/ohm" : `/denken/ohm?trang=${page}`;
 const navButton = "rounded-lg border border-border px-3 py-1.5 text-sm hover:border-accent hover:text-accent";
 
+const technicalReadings = {
+  分電圧: "ぶんでんあつ",
+  分路電流: "ぶんろでんりゅう",
+  分圧: "ぶんあつ",
+  分流: "ぶんりゅう",
+  合成抵抗: "ごうせいていこう",
+  抵抗率: "ていこうりつ",
+  導電率: "どうでんりつ",
+  導体: "どうたい",
+  断面積: "だんめんせき",
+  国際標準軟銅: "こくさいひょうじゅんなんどう",
+} as const;
+
+function enrichLessonPart(part: string) {
+  const reviewed = Object.entries(technicalReadings).flatMap(([surface, reading]) =>
+    Array.from(part.matchAll(new RegExp(surface, "g")), match => ({ surface, reading, start: match.index })),
+  );
+  return enrichExamTextWithFurigana(part, reviewed);
+}
+
 export default async function OhmLesson({ searchParams }: { searchParams: Promise<{ trang?: string }> }) {
   const { trang } = await searchParams;
   const page = Number(trang ?? "2");
@@ -22,9 +42,9 @@ export default async function OhmLesson({ searchParams }: { searchParams: Promis
   const next = pages[pages.indexOf(page) + 1];
   const prevHref = previous === undefined ? null : href(previous);
   const nextHref = next === undefined ? null : href(next);
-  const title = page >= 5 ? "1‑2 直列・並列合成抵抗 · Điện trở nối tiếp và song song" : "1‑1 オームの法則 · Định luật Ohm";
+  const title = page >= 9 ? "1‑3 導体の抵抗 · Điện trở của vật dẫn" : page >= 5 ? "1‑2 直列・並列合成抵抗 · Điện trở nối tiếp và song song" : "1‑1 オームの法則 · Định luật Ohm";
   const rows = await Promise.all(lesson[page].map(async row => "jp" in row
-    ? { ...row, readings: await Promise.all(row.jp.split("**").map(part => enrichExamTextWithFurigana(part))) }
+    ? { ...row, readings: await Promise.all(row.jp.split("**").map(enrichLessonPart)) }
     : row));
 
   return (

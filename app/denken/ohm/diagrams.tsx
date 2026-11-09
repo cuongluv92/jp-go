@@ -35,6 +35,33 @@ function Diagram({ file, width, height, title, labels }: {
 }
 
 export const diagrams = {
+  voltageRule: (<Diagram file="voltageRule" width={198} height={147} title="Trang 6 · Sơ đồ chia áp" labels={[
+    ["V₀ (V)", "Điện áp tổng đặt lên cả hai điện trở nối tiếp."],
+    ["R₁ (Ω)・R₂ (Ω)", "Điện trở phía dưới và phía trên trong hình."],
+    ["V₁ (V)・V₂ (V)", "Điện áp hai đầu R₁ và R₂ tương ứng."],
+  ]} />),
+  currentRule: (<Diagram file="currentRule" width={212} height={148} title="Trang 6 · Sơ đồ chia dòng" labels={[
+    ["I₀ (A)", "Dòng điện tổng trước điểm chia nhánh."],
+    ["I₁ (A)・I₂ (A)", "Dòng điện qua nhánh R₁ và R₂ tương ứng."],
+    ["V₁ (V)・R₁ (Ω)・R₂ (Ω)", "Điện áp chung của hai nhánh và giá trị từng điện trở."],
+  ]} />),
+  parallel01: (<Diagram file="parallel01" width={224} height={104} title="Trang 6 · Bài tập 01" labels={[
+    ["a・b", "Hai đầu cần tính điện trở tương đương."],
+    ["R₁ = 60 Ω・R₂ = 180 Ω", "Hai điện trở mắc song song giữa a và b."],
+  ]} />),
+  current04: (<Diagram file="current04" width={254} height={158} title="Trang 8 · Bài tập 04" labels={[
+    ["I₀ = 30 A", "Dòng điện tổng đi vào điểm phân nhánh."],
+    ["R₁ = 60 Ω・I₁", "Điện trở nhánh trên và dòng điện qua nhánh đó."],
+    ["R₂ = 15 Ω・I₂", "Điện trở nhánh dưới và dòng điện qua nhánh đó."],
+  ]} />),
+  conductor: (<Diagram file="conductor" width={695} height={238} title="Trang 9 · Điện trở của vật dẫn" labels={[
+    ["導体の抵抗", "Điện trở của vật dẫn."],
+    ["断面積一定の場合", "Trường hợp giữ nguyên tiết diện."],
+    ["長さが短いほど抵抗は小さい", "Vật dẫn càng ngắn thì điện trở càng nhỏ."],
+    ["長さ一定の場合", "Trường hợp giữ nguyên chiều dài."],
+    ["太いほど抵抗は小さい", "Vật dẫn có tiết diện càng lớn thì điện trở càng nhỏ."],
+    ["大・抵抗・小", "Mũi tên chỉ chiều điện trở giảm từ lớn xuống nhỏ."],
+  ]} />),
   connections: (<Diagram file="connections" width={271} height={185} title="Hai điện trở mắc nối tiếp và song song" labels={[
     ["直列接続", "Mắc nối tiếp. Hai điện trở nằm trên cùng một đường dòng điện."],
     ["並列接続", "Mắc song song. Hai đầu mỗi điện trở nối vào cùng hai nút."],

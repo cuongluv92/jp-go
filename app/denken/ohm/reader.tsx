@@ -6,7 +6,7 @@ import { segmentJapaneseText } from "@/lib/japanese-text";
 import type { FuriganaToken } from "@/lib/exam/content-blocks";
 import { Fraction } from "../fraction";
 import { diagrams } from "./diagrams";
-import type { LessonRow } from "./lesson";
+import type { FormulaPart, FormulaLine, LessonRow } from "./lesson";
 
 export type ReadingRow = LessonRow & { readings?: FuriganaToken[][] };
 
@@ -27,6 +27,24 @@ function MarkedText({ text, readings }: { text: string; readings?: FuriganaToken
 }
 
 const formula = "flex flex-wrap items-center gap-x-1.5 gap-y-2 font-serif text-lg";
+
+function EquationParts({ parts }: { parts: FormulaPart[] }) {
+  return parts.map((part, index) => typeof part === "string"
+    ? <span key={index}>{part.split(/(\[\[.*?\]\])/).map((text, i) =>
+        text.startsWith("[[")
+          ? <span key={i} className="rounded-sm border border-red-500/60 px-0.5">{text.slice(2, -2)}</span>
+          : <MarkedText key={i} text={text} />
+      )}</span>
+    : <span key={index} className={part.red ? red : undefined}><Fraction
+        numerator={<EquationParts parts={part.fraction[0]} />}
+        denominator={<EquationParts parts={part.fraction[1]} />}
+      /></span>);
+}
+
+function Equations({ lines }: { lines: FormulaLine[] }) {
+  return <div className="space-y-2 overflow-x-auto">{lines.map((parts, index) =>
+    <p key={index} className={formula}><EquationParts parts={parts} /></p>)}</div>;
+}
 
 function Formula({ kind, japanese = false }: { japanese?: boolean; kind: NonNullable<Extract<LessonRow, { jp: string }>["formula"]> }) {
   switch (kind) {
@@ -88,8 +106,8 @@ export function OhmReader({ rows }: { rows: ReadingRow[] }) {
       const style = row.heading ? "text-base font-bold" : "whitespace-pre-line text-sm leading-relaxed";
       return {
         key,
-        jp: <div lang="ja" className="font-jp space-y-2"><Text className={style}><MarkedText text={row.jp} readings={showFurigana ? row.readings : undefined} /></Text>{row.formula && <Formula kind={row.formula} japanese />}</div>,
-        vi: <div className="space-y-2"><Text className={style}><MarkedText text={row.vi} /></Text>{row.formula && <Formula kind={row.formula} />}</div>,
+        jp: <div lang="ja" className="font-jp space-y-2"><Text className={style}><MarkedText text={row.jp} readings={showFurigana ? row.readings : undefined} /></Text>{row.formula && <Formula kind={row.formula} japanese />}{row.equations && <Equations lines={row.equations} />}</div>,
+        vi: <div className="space-y-2"><Text className={style}><MarkedText text={row.vi} /></Text>{row.formula && <Formula kind={row.formula} />}{row.equations && <Equations lines={row.equations} />}</div>,
         explanation: row.note && <p className="text-sm leading-relaxed">{row.note}</p>,
       };
     })} />
