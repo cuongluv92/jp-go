@@ -18,7 +18,7 @@ function ContentsText({ text }: { text: string }) {
   );
 }
 
-export function ContentsTree({ reading = false }: { reading?: boolean }) {
+export function ContentsTree({ currentPage }: { currentPage?: number }) {
   return (
       <nav className="space-y-3" aria-label="Mục lục">
         <details className="rounded-2xl border border-border bg-surface p-4">
@@ -54,7 +54,7 @@ export function ContentsTree({ reading = false }: { reading?: boolean }) {
                             <span className={`w-12 shrink-0 tabular-nums ${bookRed}`}>p.{pageNumber}</span>
                             <span lang="ja" className="font-jp leading-relaxed">
                               {title === "理論" && index === 0 && (pageNumber === "002" || pageNumber === "005") ? (
-                                <Link href={pageNumber === "005" ? "/denken/ohm?trang=5" : "/denken/ohm"} aria-current={reading ? "location" : undefined} className="underline underline-offset-2"><ContentsText text={before} /></Link>
+                                <Link href={pageNumber === "002" ? "/denken/ohm" : "/denken/ohm?trang=7"} aria-current={(pageNumber === "002" ? currentPage !== undefined && currentPage < 5 : currentPage === 7) ? "location" : undefined} className="underline underline-offset-2"><ContentsText text={before} /></Link>
                               ) : <ContentsText text={before} />}
                               {after !== undefined && <><Fraction numerator="%z" denominator="100" /><ContentsText text={after} /></>}
                             </span>

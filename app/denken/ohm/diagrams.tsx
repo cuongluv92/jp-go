@@ -34,25 +34,18 @@ function Diagram({ file, width, height, title, labels }: {
   );
 }
 
-
-function CombinationDiagrams() {
-  return (
-    <Diagram
-      file="combinations"
-      width={520}
-      height={357}
-      title="Hình gốc trang 5 · Hai điện trở mắc nối tiếp và mắc song song"
-      labels={[
-        ["直列接続", "Mắc nối tiếp: hai điện trở R₁ và R₂ trên cùng một nhánh."],
-        ["並列接続", "Mắc song song: hai đầu mỗi điện trở R₁, R₂ nối vào cùng hai nút."],
-        ["R₁［Ω］・R₂［Ω］", "Điện trở R₁ và R₂, đơn vị ôm (Ω)."],
-      ]}
-    />
-  );
-}
-
 export const diagrams = {
-  combinations: <CombinationDiagrams />,
+  parallel02: (<Diagram file="parallel02" width={240} height={219} title="Bài tập 02 · Mạch điện trở song song" labels={[
+    ["R₁ = 8 Ω、R₃ = 2R₄", "Hai điện trở nối tiếp ở nhánh trên. Tổng điện trở nhánh là 8 + 2R₄."],
+    ["R₂ = 4 Ω、R₄ (Ω)", "Hai điện trở nối tiếp ở nhánh dưới. Tổng điện trở nhánh là 4 + R₄."],
+    ["I = 30 A、V = 100 V", "Dòng điện tổng là 30 A. Điện áp hai đầu mạch song song là 100 V."],
+    ["抵抗値の比", "Tỷ số điện trở nhánh trên so với nhánh dưới bằng 2."],
+  ]} />),
+  divider03: (<Diagram file="divider03" width={242} height={154} title="Bài tập 03 · Mạch chia áp" labels={[
+    ["V₀ = 100 V", "Điện áp nguồn đặt lên cả hai điện trở nối tiếp."],
+    ["R₁ = 80 Ω、V₁", "Điện trở trên và điện áp hai đầu của nó."],
+    ["R₂ = 120 Ω、V₂", "Điện trở dưới và điện áp hai đầu của nó."],
+  ]} />),
   examples: (<Diagram file="examples" width={785} height={305} title="Ví dụ mạch điện · Bóng đèn và tàu điện" labels={[
           ["電気回路の例", "Ví dụ về mạch điện."],
           ["電流", "Dòng điện. Mũi tên chỉ chiều dòng điện quy ước."],

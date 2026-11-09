@@ -32,32 +32,40 @@ function Formula({ kind }: { kind: NonNullable<Extract<LessonRow, { jp: string }
   switch (kind) {
     case "ohm":
       return (
+        <div className={`space-y-2 ${red}`}>
+          <p className={formula}><i>R</i> = <Fraction numerator="V" denominator="I" /> [Ω]</p>
+          <p className={formula}><i>I</i> = <Fraction numerator="V" denominator="R" /> [A]</p>
+          <p className={formula}><i>V</i> = <i>RI</i> [V]</p>
+        </div>
+      );
+    case "parallelSolution":
+      return (
         <div className="space-y-2">
-          <p className={formula}><i>R</i> = <span className={red}><Fraction numerator="V" denominator="I" /></span> [Ω]</p>
-          <p className={formula}><i>I</i> = <span className={red}><Fraction numerator="V" denominator="R" /></span> [A]</p>
-          <p className={formula}><i>V</i> = <span className={red}><i>RI</i></span> [V]</p>
+          <p className={formula}>
+            <Fraction numerator={<span className="rounded-sm border border-red-500/60 px-0.5">8 + 2R₄</span>} denominator={<>1 + <span className="rounded-sm border border-red-500/60 px-0.5">2</span></>} />
+            = <Fraction numerator="8 + 2R₄" denominator="3" />
+            = <span className="rounded-sm border border-red-500/60"><Fraction numerator="100" denominator="30" /></span>
+            = <Fraction numerator="10" denominator="3" />
+          </p>
+          <p>8 + 2R₄ = 10</p>
+          <p>2R₄ = 2</p>
+          <p>R₄ = 1 Ω</p>
+        </div>
+      );
+    case "parallelReference":
+      return (
+        <div className="space-y-2 overflow-x-auto">
+          <p className={formula}>R₀ = <Fraction numerator="(8 + 2R₄)(4 + R₄)" denominator="(8 + 2R₄) + (4 + R₄)" /> (Ω) · (1)</p>
+          <p className={formula}>R₀ = <Fraction numerator="V" denominator="I" /> = <Fraction numerator="100" denominator="30" /> = <Fraction numerator="10" denominator="3" /> (Ω) · (2)</p>
         </div>
       );
     case "drop":
       return <p className={formula}><i>Ir</i> = <i>E − V</i> = 1.6 − 1.4 = 0.2 V</p>;
-    case "series":
-      return <p className={formula}><i>R</i><sub>0</sub> = <span className={red}><i>R</i><sub>1</sub> + <i>R</i><sub>2</sub></span> [Ω]</p>;
-    case "parallel":
-      return <p className={formula}><i>R</i><sub>0</sub> = <span className={red}><Fraction numerator={<><i>R</i><sub>1</sub><i>R</i><sub>2</sub></>} denominator={<><i>R</i><sub>1</sub> + <i>R</i><sub>2</sub></>} /></span> [Ω]</p>;
-    case "parallel-alt":
-      return (
-        <p className={formula}>
-          <i>R</i><sub>0</sub> = <Fraction numerator={<><i>R</i><sub>1</sub><i>R</i><sub>2</sub></>} denominator={<><i>R</i><sub>1</sub> + <i>R</i><sub>2</sub></>} />
-          {" = "}<Fraction numerator={<><i>R</i><sub>2</sub></>} denominator={<>1 + <Fraction numerator={<><i>R</i><sub>2</sub></>} denominator={<><i>R</i><sub>1</sub></>} /></>} /> [Ω]
-        </p>
-      );
-    case "parallel-ratio":
-      return <p className={formula}><i>R</i><sub>0</sub> = <span className={red}><Fraction numerator="大きい方の値" denominator="1 + 抵抗値の比" /></span> [Ω]</p>;
     case "solution":
       return (
         <div className="space-y-2">
-          <p className={formula}><i>V</i> = <i>RI</i> = 20 × 5.1 = 102 V</p>
-          <p className={formula}><i>r</i> = <Fraction numerator="E − V" denominator="I" /> = <Fraction numerator="105 − 102" denominator="5.1" /> = <Fraction numerator="3.0" denominator="5.1" /> ≒ 0.59 Ω</p>
+          <p className={formula}><i>V</i> = <i>RI</i> = 20 × 5.1 = <strong className={red}>102 V</strong></p>
+          <p className={formula}><i>r</i> = <Fraction numerator="E − V" denominator="I" /> = <Fraction numerator="105 − 102" denominator="5.1" /> = <Fraction numerator="3.0" denominator="5.1" /> ≈ <strong className={red}>0.59 Ω</strong></p>
         </div>
       );
   }
