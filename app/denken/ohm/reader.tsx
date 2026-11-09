@@ -48,7 +48,7 @@ function Formula({ kind }: { kind: NonNullable<Extract<LessonRow, { jp: string }
       return (
         <p className={formula}>
           <i>R</i><sub>0</sub> = <Fraction numerator={<><i>R</i><sub>1</sub><i>R</i><sub>2</sub></>} denominator={<><i>R</i><sub>1</sub> + <i>R</i><sub>2</sub></>} />
-          {" = "}<Fraction numerator={<i>R</i><sub>2</sub>} denominator={<>1 + <Fraction numerator={<i>R</i><sub>2</sub>} denominator={<i>R</i><sub>1</sub>} /></>} /> [Ω]
+          {" = "}<Fraction numerator={<><i>R</i><sub>2</sub></>} denominator={<>1 + <Fraction numerator={<><i>R</i><sub>2</sub></>} denominator={<><i>R</i><sub>1</sub></>} /></>} /> [Ω]
         </p>
       );
     case "parallel-ratio":
