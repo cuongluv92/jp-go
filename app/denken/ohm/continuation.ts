@@ -1,6 +1,6 @@
 import type { FormulaPart, LessonRow } from "./lesson";
 
-function fraction(numerator: string | FormulaPart[], denominator: string | FormulaPart[], red = false): FormulaPart {
+export function fraction(numerator: string | FormulaPart[], denominator: string | FormulaPart[], red = false): FormulaPart {
   return { fraction: [
     typeof numerator === "string" ? [numerator] : numerator,
     typeof denominator === "string" ? [denominator] : denominator,

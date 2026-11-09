@@ -98,6 +98,22 @@ function Formula({ kind, japanese = false }: { japanese?: boolean; kind: NonNull
   }
 }
 
+function PrefixTable({ headers, rows, japanese = false }: { headers: string[]; rows: string[][]; japanese?: boolean }) {
+  return (
+    <div className="overflow-x-auto">
+      <table className="w-full border-collapse text-left text-sm">
+        <thead className="bg-surface-muted"><tr>{headers.map(header =>
+          <th scope="col" key={header} className="px-2 py-1">{header}</th>)}</tr></thead>
+        <tbody>{rows.map(([jp, vi, symbol, value]) =>
+          <tr key={symbol} className="border-t border-border">
+            <th scope="row" className="px-2 py-1 font-normal">{japanese ? jp : vi}</th>
+            <td className="px-2 py-1">{symbol}</td><td className="px-2 py-1">{value}</td>
+          </tr>)}</tbody>
+      </table>
+    </div>
+  );
+}
+
 export function OhmReader({ rows }: { rows: ReadingRow[] }) {
   return (
     <StandardColumnWorkspace source={(showFurigana) => rows.map((row, key) => {
@@ -106,8 +122,8 @@ export function OhmReader({ rows }: { rows: ReadingRow[] }) {
       const style = row.heading ? "text-base font-bold" : "whitespace-pre-line text-sm leading-relaxed";
       return {
         key,
-        jp: <div lang="ja" className="font-jp space-y-2"><Text className={style}><MarkedText text={row.jp} readings={showFurigana ? row.readings : undefined} /></Text>{row.formula && <Formula kind={row.formula} japanese />}{row.equations && <Equations lines={row.equations} />}</div>,
-        vi: <div className="space-y-2"><Text className={style}><MarkedText text={row.vi} /></Text>{row.formula && <Formula kind={row.formula} />}{row.equations && <Equations lines={row.equations} />}</div>,
+        jp: <div lang="ja" className="font-jp space-y-2"><Text className={style}><MarkedText text={row.jp} readings={showFurigana ? row.readings : undefined} /></Text>{row.formula && <Formula kind={row.formula} japanese />}{row.equations && <Equations lines={row.equations} />}{row.table && <PrefixTable headers={row.table.jp} rows={row.table.rows} japanese />}</div>,
+        vi: <div className="space-y-2"><Text className={style}><MarkedText text={row.vi} /></Text>{row.formula && <Formula kind={row.formula} />}{row.equations && <Equations lines={row.equations} />}{row.table && <PrefixTable headers={row.table.vi} rows={row.table.rows} />}</div>,
         explanation: row.note && <p className="text-sm leading-relaxed">{row.note}</p>,
       };
     })} />

@@ -35,6 +35,37 @@ function Diagram({ file, width, height, title, labels }: {
 }
 
 export const diagrams = {
+  kirchhoffIntro: (<Diagram file="kirchhoffIntro" width={701} height={299} title="Trang 12 · Hai định luật Kirchhoff" labels={[
+    ["キルヒホッフの第1法則・流入・流出", "Định luật thứ nhất. 流入 là dòng vào nút, 流出 là dòng ra khỏi nút."],
+    ["キルヒホッフの第2法則", "Định luật thứ hai. Hai pin 1,5 V mắc nối tiếp cùng chiều tạo điện áp tổng 3,0 V."],
+    ["I (A)・R₁ (Ω)・R₂ (Ω)", "Dòng điện mạch và điện trở của hai tải."],
+    ["R₁I (V)・R₂I (V)", "Sụt áp trên từng tải."],
+  ]} />),
+  node12: (<Diagram file="node12" width={260} height={175} title="Hình 1‑4‑1 · Dòng điện tại nút a" labels={[
+    ["a・I₁・I₂・I₃", "Tại nút a, I₁ đi vào, I₂ và I₃ đi ra."],
+    ["V (V)・R₁ (Ω)・R₂ (Ω)", "Điện áp nguồn và hai điện trở ở hai nhánh."],
+  ]} />),
+  loop12: (<Diagram file="loop12" width={259} height={235} title="Hình 1‑4‑2 · Điện áp trong vòng kín" labels={[
+    ["E₁ (V)・E₂ (V)", "Hai suất điện động cùng chiều trong vòng nét đứt."],
+    ["I (A)・R₁ (Ω)・R₂ (Ω)", "Dòng chung qua hai điện trở nối tiếp."],
+    ["R₁I (V)・R₂I (V)", "Sụt áp trên mỗi điện trở."],
+  ]} />),
+  kirchhoff13: (<Diagram file="kirchhoff13" width={292} height={161} title="Trang 13 · Mạch đề bài Kirchhoff" labels={[
+    ["4 V・2 V", "Nguồn bên trái có cực dương ở trên, nguồn bên phải có cực dương ở dưới."],
+    ["4 Ω・2 Ω・5 Ω", "Ba điện trở của các nhánh trái, phải và giữa."],
+    ["I₁・I₂・I₃", "Các chiều dòng điện giả định trong đề."],
+  ]} />),
+  loops13: (<Diagram file="loops13" width={286} height={158} title="Trang 13 · Chiều đi vòng khi lập phương trình" labels={[
+    ["a・I₁・I₂・I₃", "Nút a và các dòng đã chọn chiều."],
+    ["（Ⅰ）・（Ⅱ）", "Hai vòng viết phương trình điện áp, đi ngược chiều nhau qua điện trở chung 5 Ω."],
+    ["4 V・2 V・4 Ω・2 Ω・5 Ω", "Các nguồn áp và điện trở giữ nguyên như sơ đồ đề bài."],
+  ]} />),
+  thevenin14: (<Diagram file="thevenin14" width={655} height={275} title="Trang 14 · Quy đổi mạch tương đương Thévenin" labels={[
+    ["テブナンの等価回路", "Mạch tương đương Thévenin."],
+    ["a・b・R・I", "Hai đầu nối tải, điện trở tải và dòng tải."],
+    ["E₁・E₂・R₁・R₂", "Các nguồn áp và điện trở ở mạng ban đầu."],
+    ["Eₐᵦ・Rₐᵦ", "Điện áp hở mạch và điện trở tương đương nhìn từ a–b."],
+  ]} />),
   voltageRule: (<Diagram file="voltageRule" width={198} height={147} title="Trang 6 · Sơ đồ chia áp" labels={[
     ["V₀ (V)", "Điện áp tổng đặt lên cả hai điện trở nối tiếp."],
     ["R₁ (Ω)・R₂ (Ω)", "Điện trở phía dưới và phía trên trong hình."],
