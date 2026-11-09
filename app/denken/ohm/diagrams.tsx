@@ -35,6 +35,70 @@ function Diagram({ file, width, height, title, labels }: {
 }
 
 export const diagrams = {
+  ex26: (<Diagram file="ex26" width={622} height={178} title="Trang 26 · Hai trạng thái của mạch" labels={[
+    ["図1・図2","Mạch ban đầu và mạch sau khi thêm R₃."],
+    ["V・R₁ = 1 Ω・R₂・I₂ = 5 A","Nguồn và hai điện trở ban đầu, với dòng qua R₂ bằng 5 A."],
+    ["R₃ = 5 Ω・I₃","Điện trở thêm vào song song với R₂ và dòng cần tính."],
+  ]} />),
+  solve26: (<Diagram file="solve26" width={323} height={349} title="Trang 26 · Mạch đã điền số liệu" labels={[
+    ["図1′・図2′","Hai sơ đồ sau khi xác định các giá trị."],
+    ["100 V・I₂ = 5 A・R₂ = 20 Ω","Áp và dòng trên R₂ ban đầu."],
+    ["V = 105 V・I = 21 A・I₃","Điện áp nguồn, dòng tổng và dòng qua R₃ sau khi mắc thêm."],
+  ]} />),
+  ex27: (<Diagram file="ex27" width={335} height={129} title="Trang 27 · Mạch cần tính công suất" labels={[
+    ["60 V・80 V","Hai nguồn áp."],
+    ["40 Ω・60 Ω・R = 10 Ω","Hai cặp điện trở chia áp và điện trở tải cần tính công suất."],
+  ]} />),
+  solve27: (<Diagram file="solve27" width={610} height={178} title="Trang 27 · Tháo tải và thay mạch Thévenin" labels={[
+    ["Vₐ = 30 V・Vᵦ = 40 V・0 V","Điện thế hai đầu tải khi hở mạch, tính theo nút mốc dưới."],
+    ["テブナンの等価回路","Mạch tương đương Thévenin."],
+    ["Rₐᵦ = 50 Ω・Eₐᵦ = −10 V・10 Ω・I","Điện trở trong, điện áp hở mạch theo Vₐ − Vᵦ, điện trở tải và dòng qua tải."],
+  ]} />),
+  ex28: (<Diagram file="ex28" width={177} height={182} title="Trang 28 · Bốn pin cấp điện cho tải" labels={[
+    ["r = 0.1 Ω・E = 9 V","Điện trở trong và suất điện động của mỗi pin."],
+    ["R = 0.5 Ω","Điện trở tải."],
+  ]} />),
+  solve28: (<Diagram file="solve28" width={381} height={188} title="Trang 28 · Quy đổi bốn pin thành một nguồn" labels={[
+    ["(a)・(b)・a・b","Mạng bốn pin và mạch tương đương, với cùng hai đầu a–b."],
+    ["Eₐᵦ = 9 V・Rₐᵦ = 0.1/4 Ω","Điện áp hở mạch và điện trở trong tương đương."],
+    ["R = 0.5 Ω・I","Điện trở tải và dòng qua tải."],
+  ]} />),
+  alt28: (<Diagram file="alt28" width={282} height={151} title="Trang 28 · Mạch năm nhánh tính bằng Millman" labels={[
+    ["r = 0.1 Ω・E = 9 V","Thông số của bốn nhánh nguồn."],
+    ["a・b・R = 0.5 Ω・I","Hai nút chung và nhánh tải."],
+  ]} />),
+  ex29: (<Diagram file="ex29" width={252} height={203} title="Trang 29 · Mạch cầu trong đề bài" labels={[
+    ["a・b・Rₓ","Hai đầu mạch và điện trở cần tìm."],
+    ["1 Ω・2 Ω","Điện trở hai cạnh trên là 1 Ω, hai cạnh dưới là 2 Ω. Điện trở ngang ở giữa cũng là 2 Ω."],
+  ]} />),
+  bridge29: (<Diagram file="bridge29" width={218} height={181} title="Hình 1 · Vẽ lại mạch cầu" labels={[
+    ["a・b・Rₓ","Rₓ nối trực tiếp giữa a và b."],
+    ["1 Ω・2 Ω","Hai bộ chia áp giống nhau, nối ngang bằng điện trở 2 Ω."],
+  ]} />),
+  solve29: (<Diagram file="solve29" width={473} height={238} title="Hình 2–3 · Rút gọn cầu cân bằng" labels={[
+    ["3 Ω の抵抗が並列 → 3/2 = 1.5 Ω","Hai nhánh 3 Ω song song thành 1,5 Ω."],
+    ["1.5 Ω・Rₓ・a・b","Khối 1,5 Ω song song với Rₓ giữa a và b."],
+  ]} />),
+  alt29: (<Diagram file="alt29" width={354} height={143} title="Trang 29 · Cách rút gọn khi nối hai điểm giữa" labels={[
+    ["短絡","Nối tắt hai điểm giữa cùng điện thế trên sơ đồ tính."],
+    ["1/2 = 0.5 Ω・2/2 = 1 Ω・1.5 Ω","Hai cặp song song thành 0,5 Ω và 1 Ω, cộng được 1,5 Ω."],
+    ["Rₓ","Nhánh Rₓ mắc song song với khối 1,5 Ω."],
+  ]} />),
+  ex30: (<Diagram file="ex30" width={256} height={199} title="Trang 30 · Mạch cầu nối tiếp điện trở 3 Ω" labels={[
+    ["4 Ω・5 Ω・8 Ω・10 Ω・12 Ω","Bốn điện trở cạnh và điện trở nhánh cầu 12 Ω."],
+    ["3 Ω・1.8 V・E (V)","Điện trở ngoài cầu, điện áp trên nó và điện áp nguồn cần tính."],
+  ]} />),
+  solve30a: (<Diagram file="solve30a" width={246} height={202} title="Hình 1 · Kiểm tra cầu cân bằng" labels={[
+    ["4×10 = 40・8×5 = 40","Hai tích đối diện bằng nhau nên nhánh 12 Ω không mang dòng."],
+    ["3 Ω・E (V)","Điện trở nối tiếp với cầu và điện áp nguồn."],
+  ]} />),
+  solve30b: (<Diagram file="solve30b" width={251} height={222} title="Hình 2 · Bỏ nhánh không mang dòng" labels={[
+    ["9 Ω・18 Ω","Tổng điện trở nhánh trên và nhánh dưới."],
+    ["3 Ω・E (V)","Điện trở ngoài cầu và nguồn."],
+  ]} />),
+  solve30c: (<Diagram file="solve30c" width={243} height={161} title="Hình 3 · Mạch nối tiếp đã rút gọn" labels={[
+    ["6 Ω・3 Ω・1.8 V・I・E (V)","Khối cầu tương đương 6 Ω, điện trở ngoài cầu 3 Ω, sụt áp trên 3 Ω, dòng chung và điện áp nguồn."],
+  ]} />),
   delta21: (<Diagram file="delta21" width={704} height={252} title="Trang 21 · Từ tam giác Δ sang sao Y" labels={[
     ["Δ-Y 変換（デルタ・スター変換）", "Biến đổi tam giác–sao."],
     ["(a)・(b)・a・b・c", "Mạng Δ và mạng Y tương đương. Ba đầu a, b, c giữ nguyên."],

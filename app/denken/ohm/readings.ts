@@ -1,6 +1,14 @@
 import { enrichExamTextWithFurigana } from "@/lib/exam/server-furigana";
 
 const technicalReadings = {
+  重要度: "じゅうようど",
+  令和: "れいわ",
+  上期: "かみき",
+  下期: "しもき",
+  電圧値: "でんあつち",
+  電源電圧: "でんげんでんあつ",
+  点線内: "てんせんない",
+  各電圧: "かくでんあつ",
   問題図: "もんだいず",
   問題図右側: "もんだいずみぎがわ",
   不平衡: "ふへいこう",
