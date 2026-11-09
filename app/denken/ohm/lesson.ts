@@ -6,10 +6,10 @@ export type LessonRow = {
   formula?: "ohm" | "drop" | "solution" | "series" | "parallel" | "parallel-alt" | "parallel-ratio";
 } | { diagram: "examples" | "circuit" | "potential" | "internal" | "exercise" | "combinations" };
 
-// Dấu ** bao quanh các cụm cần giữ màu đỏ trong hai cột.
+// Dấu ** đánh dấu từ/cụm in đỏ trên ảnh sách, ở cả hai cột Nhật và Việt.
 export const lesson: Record<number, LessonRow[]> = {
   2: [
-    { jp: "オームの法則 **といえば** 電圧÷電流＝抵抗", vi: "Định luật Ohm · Điện áp chia dòng điện bằng điện trở", heading: true },
+    { jp: "オームの法則 といえば 電圧÷電流＝抵抗", vi: "Định luật Ohm · Điện áp chia dòng điện bằng điện trở", heading: true },
     { diagram: "examples" },
     { jp: "電気回路", vi: "Mạch điện", heading: true },
     {
@@ -23,15 +23,19 @@ export const lesson: Record<number, LessonRow[]> = {
     },
     {
       jp: "また、電球のような負荷は電流の流れを妨げており、電流の流れを妨げる大きさ、すなわち電流の通しにくさのことを、**電気抵抗**または**抵抗**といいます。",
-      vi: "Tải như bóng đèn cản trở dòng điện. Mức cản trở dòng điện, tức mức độ khó để dòng điện chạy qua, gọi là **điện trở (電気抵抗・抵抗)**.",
+      vi: "Tải như bóng đèn cản trở dòng điện. Mức cản trở dòng điện, tức mức độ khó để dòng điện chạy qua, gọi là **điện trở (電気抵抗)** hoặc **điện trở (抵抗)**.",
     },
     {
       jp: "電圧、電流、抵抗（電気抵抗）の量記号と単位記号は、次のように表します。",
       vi: "Ký hiệu đại lượng (量記号) và ký hiệu đơn vị (単位記号) của điện áp, dòng điện và điện trở được viết như sau.",
     },
     {
-      jp: "表1-1-1 量記号と単位記号\n電圧：**V**［V］ボルト\n電流：**I**［A］アンペア\n抵抗（電気抵抗）：**R**［Ω］オーム",
-      vi: "Bảng 1‑1‑1 · Ký hiệu đại lượng và đơn vị\nĐiện áp (電圧) · **V** [V], volt\nDòng điện (電流) · **I** [A], ampe\nĐiện trở (抵抗) · **R** [Ω], ôm",
+      jp: "POINT　電圧、電流、抵抗の量記号\nといえば **V、I、R**",
+      vi: "Ghi nhớ: ký hiệu đại lượng của điện áp, dòng điện và điện trở lần lượt là **V, I, R**.",
+    },
+    {
+      jp: "表1-1-1 量記号と単位記号\n電圧：V［V］ボルト\n電流：I［A］アンペア\n抵抗（電気抵抗）：R［Ω］オーム",
+      vi: "Bảng 1‑1‑1 · Ký hiệu đại lượng và đơn vị\nĐiện áp (電圧) · V [V], volt\nDòng điện (電流) · I [A], ampe\nĐiện trở (抵抗) · R [Ω], ôm",
       note: "Trong V [V], chữ V đầu là ký hiệu đại lượng, chữ V trong ngoặc là ký hiệu đơn vị volt.",
     },
     {
@@ -47,7 +51,7 @@ export const lesson: Record<number, LessonRow[]> = {
     },
     { diagram: "circuit" },
     {
-      jp: "直流回路のオームの法則 **といえば 電圧÷電流＝抵抗**\n抵抗 R［Ω］は、電圧 V［V］を電流 I［A］で割った値。\n電流 I［A］は、電圧 V［V］を抵抗 R［Ω］で割った値。\n電圧 V［V］は、抵抗 R［Ω］と電流 I［A］を掛けた値。",
+      jp: "直流回路のオームの法則 といえば **電圧÷電流＝抵抗**\n抵抗 R［Ω］は、電圧 V［V］を電流 I［A］で割った値。\n電流 I［A］は、電圧 V［V］を抵抗 R［Ω］で割った値。\n電圧 V［V］は、抵抗 R［Ω］と電流 I［A］を掛けた値。",
       vi: "Định luật Ohm trong mạch một chiều (直流回路) · **Điện áp chia dòng điện bằng điện trở**.\nĐiện trở R [Ω] bằng điện áp chia dòng điện.\nDòng điện I [A] bằng điện áp chia điện trở.\nĐiện áp V [V] bằng điện trở nhân dòng điện.",
       note: "Nhân chéo hai vế của R/1 = V/I được R × I = 1 × V. Từ đó, chia hai vế cho R để tính I.",
       formula: "ohm",
@@ -93,8 +97,8 @@ export const lesson: Record<number, LessonRow[]> = {
       vi: "Giải thích (解説). Điện áp V trên tải bằng điện trở tải R nhân dòng điện tải I. Điện trở trong r bằng (suất điện động E − điện áp tải V) chia cho dòng điện tải I.",
     },
     {
-      jp: "解答　V = 102 V　r = 0.59 Ω",
-      vi: "Đáp án: V = 102 V; r ≈ 0,59 Ω.",
+      jp: "解答　**V = 102 V　r = 0.59 Ω**",
+      vi: "Đáp án: **V = 102 V; r ≈ 0,59 Ω**.",
     },
     {
       jp: "※電源の内部抵抗 r が無視できる場合は、E = V なので、E と V はどちらも電圧の文字記号として使われます。",
@@ -104,8 +108,8 @@ export const lesson: Record<number, LessonRow[]> = {
   ],
   5: [
     {
-      jp: "2抵抗の直列合成抵抗 **といえば 和**\n並列合成抵抗 **といえば 和分の積**",
-      vi: "Điện trở tương đương của hai điện trở mắc nối tiếp **bằng tổng**.\nĐiện trở tương đương của hai điện trở mắc song song **bằng tích chia tổng**.",
+      jp: "2抵抗の直列合成抵抗 といえば 和\n並列合成抵抗 といえば 和分の積",
+      vi: "Điện trở tương đương của hai điện trở mắc nối tiếp bằng tổng.\nĐiện trở tương đương của hai điện trở mắc song song bằng tích chia tổng.",
       heading: true,
     },
     {
@@ -115,7 +119,7 @@ export const lesson: Record<number, LessonRow[]> = {
     },
     {
       jp: "2個以上の抵抗を1列に接続する方法を**直列接続**といい、抵抗の両端を同じところに接続する方法を**並列接続**といいます。",
-      vi: "Cách nối **hai điện trở trở lên** thành một dãy gọi là **mắc nối tiếp (直列接続)**; cách nối hai đầu của các điện trở vào cùng hai điểm tương ứng gọi là **mắc song song (並列接続)**.",
+      vi: "Cách nối hai điện trở trở lên thành một dãy gọi là **mắc nối tiếp (直列接続)**; cách nối hai đầu của các điện trở vào cùng hai điểm tương ứng gọi là **mắc song song (並列接続)**.",
     },
     {
       jp: "2抵抗を直列接続した場合の**合成抵抗**は、**2抵抗の和**に等しくなります。一方、2抵抗を並列に接続したときの合成抵抗は、**和分の積（2抵抗の積 ÷ 和）**で求められます。",
