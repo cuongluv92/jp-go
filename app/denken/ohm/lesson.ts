@@ -97,8 +97,9 @@ export const lesson: Record<number, LessonRow[]> = {
       vi: "Đáp án: V = 102 V; r ≈ 0,59 Ω.",
     },
     {
-      jp: "※電源の内部抵抗 r が無視できる場合は、E ≒ V なので、E と V はどちらも電圧の文字記号として使われます。",
-      vi: "Khi có thể bỏ qua điện trở trong r của nguồn, E ≈ V. Khi đó, cả E và V đều được dùng làm ký hiệu điện áp.",
+      jp: "※電源の内部抵抗 r が無視できる場合は、E = V なので、E と V はどちらも電圧の文字記号として使われます。",
+      vi: "Khi có thể bỏ qua điện trở trong r của nguồn, E = V. Khi đó, cả E và V đều được dùng làm ký hiệu điện áp.",
+      note: "E = V là kết quả của giả thiết bỏ qua điện trở trong (r = 0 hoặc độ sụt áp nội bộ có thể bỏ qua). Nếu r khác 0, với nguồn đang cấp dòng, V = E − Ir.",
     },
   ],
   5: [
