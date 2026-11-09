@@ -1,0 +1,97 @@
+export type LessonRow = {
+  jp: string;
+  vi: string;
+  note?: string;
+  heading?: boolean;
+  formula?: "ohm" | "drop" | "solution";
+} | { diagram: "examples" | "circuit" | "potential" | "internal" | "exercise" };
+
+// Dấu ** bao quanh các cụm cần giữ màu đỏ trong hai cột.
+export const lesson: Record<number, LessonRow[]> = {
+  2: [
+    { jp: "オームの法則 **といえば** 電圧÷電流＝抵抗", vi: "Định luật Ohm · Điện áp chia dòng điện bằng điện trở", heading: true },
+    { diagram: "examples" },
+    { jp: "電気回路", vi: "Mạch điện", heading: true },
+    {
+      jp: "上図のように電池に電球を接続すると、電球が点灯します。電池には**電流**（電気の流れ）を流すための電気的な圧力、すなわち**電圧**があり、電圧により電流が流れて電球が点灯します。このように、電流の流れにより仕事を行う回路を**電気回路**といいます。電気自動車や電車のモータ回路、家電製品の回路など、電気を利用する機器のすべてが電気回路で構成されています。",
+      vi: "Khi nối bóng đèn với pin như hình trên, bóng đèn sẽ sáng. Pin có một sức đẩy điện để tạo ra **dòng điện (電流)**, gọi là **điện áp (電圧)**. Nhờ điện áp, dòng điện chạy qua và làm bóng đèn sáng. Mạch thực hiện công việc nhờ dòng điện như vậy gọi là **mạch điện (電気回路)**. Các thiết bị dùng điện đều có mạch điện, chẳng hạn mạch động cơ của ô tô điện và tàu điện, hoặc mạch trong thiết bị gia dụng.",
+    },
+    {
+      jp: "一方、電池やバッテリーのように電圧を発生し、電流を流す源となるものを**電源**といい、電流が流れて光を発したりモータを回したりするなど、仕事をするものを**負荷**といいます。電気を利用して負荷で仕事をするためには、電流が流れる回路、つまり電気回路が必要になるのです。",
+      vi: "Thiết bị tạo điện áp và cung cấp dòng điện như pin hay ắc quy gọi là **nguồn điện (電源)**. Thiết bị thực hiện công việc khi có dòng điện chạy qua, chẳng hạn phát sáng hoặc quay động cơ, gọi là **tải (負荷)**. Để tải dùng điện thực hiện công việc, cần có đường cho dòng điện chạy, tức là mạch điện.",
+      note: "Trong hình, pin là nguồn và bóng đèn là tải. Muốn đèn sáng, cần một vòng mạch kín.",
+    },
+    {
+      jp: "また、電球のような負荷は電流の流れを妨げており、電流の流れを妨げる大きさ、すなわち電流の通しにくさのことを、**電気抵抗**または**抵抗**といいます。",
+      vi: "Tải như bóng đèn cản trở dòng điện. Mức cản trở dòng điện, tức mức độ khó để dòng điện chạy qua, gọi là **điện trở (電気抵抗・抵抗)**.",
+    },
+    {
+      jp: "電圧、電流、抵抗（電気抵抗）の量記号と単位記号は、次のように表します。",
+      vi: "Ký hiệu đại lượng (量記号) và ký hiệu đơn vị (単位記号) của điện áp, dòng điện và điện trở được viết như sau.",
+    },
+    {
+      jp: "表1-1-1 量記号と単位記号\n電圧：**V**［V］ボルト\n電流：**I**［A］アンペア\n抵抗（電気抵抗）：**R**［Ω］オーム",
+      vi: "Bảng 1‑1‑1 · Ký hiệu đại lượng và đơn vị\nĐiện áp (電圧) · **V** [V], volt\nDòng điện (電流) · **I** [A], ampe\nĐiện trở (抵抗) · **R** [Ω], ôm",
+      note: "Trong V [V], chữ V đầu là ký hiệu đại lượng, chữ V trong ngoặc là ký hiệu đơn vị volt.",
+    },
+    {
+      jp: "※1 量記号：電圧、電流などの物理的な量を表す記号を量記号といい、日本産業規格（JIS）で決められた文字を用います。",
+      vi: "Chú thích 1. Ký hiệu đại lượng (量記号) biểu thị đại lượng vật lý như điện áp và dòng điện. Sách dùng các chữ cái theo Tiêu chuẩn công nghiệp Nhật Bản (JIS).",
+    },
+  ],
+  3: [
+    { jp: "オームの法則", vi: "Định luật Ohm", heading: true },
+    {
+      jp: "図1-1-1のように電球などの負荷に電圧 V［V］を加えると、電流 I［A］が流れます。このとき、電圧 V［V］を電流 I［A］で割った値が、抵抗 R［Ω］になります。これを、**オームの法則**といいます。",
+      vi: "Khi đặt điện áp V [V] lên tải như bóng đèn ở hình 1‑1‑1, dòng điện I [A] chạy qua. Điện áp V [V] chia cho dòng điện I [A] cho ta điện trở R [Ω]. Đây là **định luật Ohm (オームの法則)**.",
+    },
+    { diagram: "circuit" },
+    {
+      jp: "直流回路のオームの法則 **といえば 電圧÷電流＝抵抗**\n抵抗 R［Ω］は、電圧 V［V］を電流 I［A］で割った値。\n電流 I［A］は、電圧 V［V］を抵抗 R［Ω］で割った値。\n電圧 V［V］は、抵抗 R［Ω］と電流 I［A］を掛けた値。",
+      vi: "Định luật Ohm trong mạch một chiều (直流回路) · **Điện áp chia dòng điện bằng điện trở**.\nĐiện trở R [Ω] bằng điện áp chia dòng điện.\nDòng điện I [A] bằng điện áp chia điện trở.\nĐiện áp V [V] bằng điện trở nhân dòng điện.",
+      note: "Nhân chéo hai vế của R/1 = V/I được R × I = 1 × V. Từ đó, chia hai vế cho R để tính I.",
+      formula: "ohm",
+    },
+    { jp: "電位差、電圧、起電力", vi: "Hiệu điện thế, điện áp và suất điện động", heading: true },
+    {
+      jp: "水は水位の高いところから低いところへ流れます。これは水位差があるためで、水位差により水圧ができて、水が流れるのです。この理由は回路図にも当てはまります。",
+      vi: "Nước chảy từ nơi có mực nước cao xuống nơi có mực nước thấp. Chênh lệch mực nước tạo áp lực khiến nước chảy. Có thể dùng cách hình dung này cho mạch điện.",
+    },
+    {
+      jp: "図1-1-2の電池（電源）の端子間には、水位差に相当する**電位差**があり、水圧に相当する**電圧**が抵抗に加わり、水流に相当する**電流**が流れると考えます。",
+      vi: "Giữa hai cực của pin (nguồn điện) ở hình 1‑1‑2 có **hiệu điện thế (電位差)**, tương tự chênh lệch mực nước. **Điện áp (電圧)** đặt lên điện trở giống như áp lực nước, còn **dòng điện (電流)** chạy qua giống như dòng nước.",
+      note: "Điện thế của một điểm phụ thuộc mốc 0 V. Hiệu điện thế giữa hai điểm giữ nguyên khi đổi mốc.",
+    },
+    { diagram: "potential" },
+  ],
+  4: [
+    {
+      jp: "電流を流そうとする力の強さを、**起電力**といいます。起電力のあるところには必ず電位差が生じます。電池は化学作用で起電力をつくり、発電機は電磁誘導作用（第1部第6章を参照）で起電力をつくります。電位、電位差、電圧を表す量記号はいずれも **V**、起電力を表す量記号は **E** です。単位は、いずれも**ボルト［V］**です。",
+      vi: "**Suất điện động (起電力)** đặc trưng cho khả năng của nguồn tạo ra hiệu điện thế. Pin tạo suất điện động nhờ phản ứng hóa học, còn máy phát điện dùng cảm ứng điện từ (xem phần 1, chương 6). Sách dùng **E** cho suất điện động và **V** cho điện thế, hiệu điện thế hoặc điện áp. Các đại lượng này đều tính bằng **volt (V)**.",
+    },
+    { jp: "電源の起電力と内部抵抗", vi: "Suất điện động và điện trở trong của nguồn", heading: true },
+    {
+      jp: "図1-1-3のように、電池のような電源は、**起電力 E［V］**と**内部抵抗 r［Ω］**が**直列**に接続された回路で表すことができます。例えば、起電力 E［V］が 1.6 V の電池に豆電球などの負荷を接続したとき、豆電球に加わる電圧 V［V］が 1.4 V であったとすると、差の電圧 0.2 V（1.6 V − 1.4 V ＝ 0.2 V）が電池の内部抵抗 r［Ω］に加わる電圧となります。",
+      vi: "Có thể mô hình hóa pin bằng nguồn lý tưởng có **suất điện động E (起電力)** mắc **nối tiếp (直列)** với **điện trở trong r (内部抵抗)**, như hình 1‑1‑3. Ví dụ, nếu pin có suất điện động 1,6 V và điện áp trên bóng đèn là 1,4 V, thì phần chênh lệch 0,2 V là độ sụt áp trên điện trở trong của pin.",
+      note: "Khi pin cấp dòng cho tải, điện áp trên tải nhỏ hơn suất điện động một lượng bằng độ sụt áp trên điện trở trong.",
+    },
+    { diagram: "internal" },
+    { jp: "電池の内部抵抗に加わる電圧", vi: "Độ sụt áp trên điện trở trong của pin", formula: "drop" },
+    { jp: "練習問題 01 · オームの法則", vi: "Bài tập 01 · Định luật Ohm", heading: true },
+    {
+      jp: "図の電圧 V［V］と電源の内部抵抗 r［Ω］は。",
+      vi: "Tính điện áp V [V] trong hình và điện trở trong r [Ω] của nguồn.",
+    },
+    { diagram: "exercise" },
+    {
+      jp: "解き方・解説\n負荷抵抗の電圧 V は、負荷抵抗 R × 負荷電流 I です。内部抵抗 r は、（起電力 E − 負荷電圧 V）÷ 負荷電流 I です。",
+      vi: "Cách giải · Điện áp trên tải (負荷電圧) bằng điện trở tải (負荷抵抗) nhân dòng điện tải (負荷電流). Điện trở trong (内部抵抗) bằng chênh lệch giữa suất điện động E và điện áp tải V, chia cho dòng điện I.",
+      note: "Dùng chữ R hoa cho điện trở tải và r thường cho điện trở trong. Cả hai đều tính bằng Ω.",
+      formula: "solution",
+    },
+    {
+      jp: "※電源の内部抵抗 r が無視できる場合は、E ≒ V なので、E と V はどちらも電圧の文字記号として使われます。",
+      vi: "Khi có thể bỏ qua điện trở trong r của nguồn, E ≈ V. Khi đó, cả E và V đều được dùng làm ký hiệu điện áp.",
+    },
+  ],
+};

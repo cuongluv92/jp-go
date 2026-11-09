@@ -5,6 +5,7 @@ import { useRouter } from "next/navigation";
 export interface PageJumpOption {
   pageNumber: number;
   label: string;
+  href?: string;
 }
 
 /**
@@ -26,7 +27,10 @@ export function PageJumpSelect({
   return (
     <select
       value={currentPage}
-      onChange={(e) => router.push(`/exam/${bookSlug}/page/${e.target.value}`)}
+      onChange={(e) => {
+        const option = options.find(({ pageNumber }) => pageNumber === Number(e.target.value));
+        if (option) router.push(option.href ?? `/exam/${bookSlug}/page/${option.pageNumber}`);
+      }}
       aria-label="Chọn trang"
       className="max-w-[220px] truncate rounded-lg border border-border bg-surface px-2.5 py-1.5 text-sm font-medium text-foreground outline-none transition focus:border-accent sm:max-w-[280px]"
     >

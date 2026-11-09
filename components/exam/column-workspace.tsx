@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { Fragment, useEffect, useMemo, useState } from "react";
+import { Fragment, useEffect, useMemo, useState, type ReactNode } from "react";
 
 import { renderBlockColumns } from "./content-block-view";
 import type { ContentBlock, ExerciseBlock, FuriganaToken } from "@/lib/exam/content-blocks";
@@ -809,7 +809,7 @@ export function ColumnWorkspace({
   if (isIntroLikePage(blocks)) {
     return <IntroPageWorkspace blocks={blocks} />;
   }
-  return <StandardColumnWorkspace blocks={blocks} />;
+  return <StandardColumnWorkspace source={blocks} />;
 }
 
 /**
@@ -823,7 +823,13 @@ export function ColumnWorkspace({
  *   bật/tắt độc lập và ghi nhớ bằng localStorage.
  * Desktop: CSS grid song song. Mobile: tab, không ép nằm ngang.
  */
-function StandardColumnWorkspace({ blocks }: { blocks: ContentBlock[] }) {
+type ColumnRow = { key: number; shared?: ReactNode } & Partial<Record<ColumnKey, ReactNode>>;
+
+export function StandardColumnWorkspace({
+  source,
+}: {
+  source: ContentBlock[] | ((showFurigana: boolean) => ColumnRow[]);
+}) {
   const [visible, setVisible] = useState<Visibility>(ALL_VISIBLE);
   const [focus, setFocus] = useState<ColumnKey | null>(null);
   const [mobileTab, setMobileTab] = useState<ColumnKey>("jp");
@@ -890,9 +896,11 @@ function StandardColumnWorkspace({ blocks }: { blocks: ContentBlock[] }) {
   const isJpOnly = visible.jp && !visible.vi && !visible.explanation;
   const isAllVisible = visible.jp && visible.vi && visible.explanation;
   const renderedColumns = focus ? [focus] : COLUMN_ORDER.filter((key) => visible[key]);
-  const rows = useMemo(
-    () => blocks.map((block, index) => ({ key: index, ...renderBlockColumns(block, showFurigana) })),
-    [blocks, showFurigana],
+  const rows = useMemo<ColumnRow[]>(
+    () => typeof source === "function"
+      ? source(showFurigana)
+      : source.map((block, index) => ({ key: index, ...renderBlockColumns(block, showFurigana) })),
+    [source, showFurigana],
   );
   const mobileActiveTab = renderedColumns.includes(mobileTab) ? mobileTab : renderedColumns[0];
 
@@ -978,8 +986,10 @@ function StandardColumnWorkspace({ blocks }: { blocks: ContentBlock[] }) {
           />
         ))}
         {rows.map((row) =>
-          renderedColumns.map((col) => (
-            <div key={`${row.key}-${col}`} className="border-b border-border py-1.5">
+          row.shared ? (
+            <div key={row.key} className="col-span-full border-b border-border py-2">{row.shared}</div>
+          ) : renderedColumns.map((col) => (
+            <div key={`${row.key}-${col}`} className="min-w-0 border-b border-border py-1.5">
               {row[col] ?? <span className="text-sm text-muted/60">—</span>}
             </div>
           )),
@@ -1017,7 +1027,7 @@ function StandardColumnWorkspace({ blocks }: { blocks: ContentBlock[] }) {
             <div className="flex flex-col gap-4 pt-2">
               {rows.map((row) => (
                 <div key={row.key} className="border-b border-border pb-4 last:border-0">
-                  {row[mobileActiveTab] ?? <span className="text-sm text-muted/60">—</span>}
+                  {row.shared ?? row[mobileActiveTab] ?? <span className="text-sm text-muted/60">—</span>}
                 </div>
               ))}
             </div>
