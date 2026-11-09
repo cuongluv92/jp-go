@@ -59,8 +59,8 @@
   --color-surface-muted: var(--surface-muted);
   --color-border: var(--border);
   --color-muted: var(--muted);
-  --font-sans: var(--font-sans);
-  --font-jp: var(--font-jp);
+  --font-sans: system-ui, sans-serif;
+  --font-jp: "Noto Sans JP", "Yu Gothic", "Hiragino Sans", "Meiryo", sans-serif;
 }
 
 html {

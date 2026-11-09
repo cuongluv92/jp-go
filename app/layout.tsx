@@ -1,5 +1,4 @@
 import type { Metadata, Viewport } from "next";
-import { Inter, Noto_Sans_JP } from "next/font/google";
 
 import { AppChrome } from "@/components/app-chrome";
 import { VocabularyProvider } from "@/lib/data/vocabulary-context";
@@ -13,19 +12,6 @@ import "./globals.css";
 // sáng - không đọc prefers-color-scheme hệ điều hành, theo đúng yêu cầu "giữ
 // nền trắng làm mặc định, chỉ đổi khi người dùng tự bật".
 const THEME_INIT_SCRIPT = `try{var t=localStorage.getItem("jp-go-theme");if(t==="dark")document.documentElement.dataset.theme="dark"}catch(e){}`;
-
-const inter = Inter({
-  variable: "--font-sans",
-  subsets: ["latin", "vietnamese"],
-  display: "swap",
-});
-
-const notoSansJp = Noto_Sans_JP({
-  variable: "--font-jp",
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
-  display: "swap",
-});
 
 export const metadata: Metadata = {
   title: "jp-go",
@@ -55,7 +41,7 @@ export const viewport: Viewport = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="vi" className={`${inter.variable} ${notoSansJp.variable} h-full`}>
+    <html lang="vi" className="h-full">
       <head>
         <script dangerouslySetInnerHTML={{ __html: THEME_INIT_SCRIPT }} />
       </head>
