@@ -1,6 +1,6 @@
 import Link from "next/link";
 import type { ReactNode } from "react";
-import { frontMatter, lessons } from "./contents";
+import { frontMatter, lessons, quantitySymbols } from "./contents";
 
 export const metadata = { title: "電験三種 — jp-go" };
 
@@ -41,7 +41,13 @@ export default function DenkenPage() {
         <details className="rounded-2xl border border-border bg-surface p-4">
           <summary className="cursor-pointer font-semibold">Phần mở đầu</summary>
           <ul className="mt-3 space-y-2">
-            {frontMatter.map(([page, title]) => <li key={page} className="text-sm"><span className={bookRed}>p.{page}</span> · {title}</li>)}
+            {frontMatter.map(([page, title]) => (
+              <li key={page} className="text-sm">
+                <span className={bookRed}>p.{page}</span> · {page === "xx"
+                  ? <a href="#quantity-symbols" className="underline underline-offset-2">{title}</a>
+                  : title}
+              </li>
+            ))}
           </ul>
         </details>
         {subjects.map(([title, translation, page, chapters]) => (
@@ -79,13 +85,41 @@ export default function DenkenPage() {
         ))}
         <p className="px-4 py-2 text-sm"><span className={bookRed}>p.538</span> · 索引</p>
       </section>
+      <section id="quantity-symbols" className="scroll-mt-20 rounded-2xl border border-border bg-surface p-4" aria-labelledby="quantity-symbols-title">
+        <h2 id="quantity-symbols-title" className="font-jp font-semibold">
+          <span className={bookRed}>p.xx</span> · 本書で用いる主な量記号と単位記号
+        </h2>
+        <p className="mt-1 text-sm text-muted">Ký hiệu đại lượng và đơn vị dùng trong sách</p>
+        <div className="mt-3 overflow-x-auto">
+          <table className="w-full min-w-[34rem] border-collapse text-left text-sm" lang="ja">
+            <thead className="bg-surface-muted">
+              <tr>
+                <th scope="col" className="px-3 py-2">物理量</th>
+                <th scope="col" className="px-3 py-2">量記号</th>
+                <th scope="col" className="px-3 py-2">単位記号</th>
+                <th scope="col" className="px-3 py-2">単位の名称</th>
+              </tr>
+            </thead>
+            <tbody>
+              {quantitySymbols.map(([name, symbol, unit, unitName]) => (
+                <tr key={name} className="border-t border-border even:bg-surface-muted">
+                  <th scope="row" className="px-3 py-2 font-normal">{name}</th>
+                  <td className={`whitespace-nowrap px-3 py-2 font-serif italic ${bookRed}`}>{symbol}</td>
+                  <td className="whitespace-nowrap px-3 py-2">{unit}</td>
+                  <td className="px-3 py-2">{unitName}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </section>
       <section className="rounded-2xl border border-border bg-surface p-4">
         <h2 className="font-semibold">Công thức mẫu · 直流回路</h2>
         <div className="mt-4 grid gap-5 sm:grid-cols-2">
           <div>
             <p className="font-jp text-sm">オームの法則 · Định luật Ohm</p>
-            <p className="mt-2 font-serif text-2xl" aria-label="R bằng U chia I"><i>R</i> = <Fraction numerator={<i>U</i>} denominator={<i>I</i>} /></p>
-            <p className="mt-2 text-sm text-muted">Điện áp U tính bằng V, dòng điện I tính bằng A, điện trở R tính bằng Ω.</p>
+            <p className="mt-2 font-serif text-2xl" aria-label="R bằng V chia I"><i>R</i> = <Fraction numerator={<i>V</i>} denominator={<i>I</i>} /></p>
+            <p className="mt-2 text-sm text-muted">Điện áp V tính bằng volt (V), dòng điện I tính bằng A, điện trở R tính bằng Ω.</p>
           </div>
           <div>
             <p className="font-jp text-sm">並列合成抵抗 · Hai điện trở song song</p>
