@@ -3,8 +3,8 @@ export type LessonRow = {
   vi: string;
   note?: string;
   heading?: boolean;
-  formula?: "ohm" | "drop" | "solution";
-} | { diagram: "examples" | "circuit" | "potential" | "internal" | "exercise" };
+  formula?: "ohm" | "drop" | "solution" | "series" | "parallel" | "parallel-alt" | "parallel-ratio";
+} | { diagram: "examples" | "circuit" | "potential" | "internal" | "exercise" | "combinations" };
 
 // Dấu ** bao quanh các cụm cần giữ màu đỏ trong hai cột.
 export const lesson: Record<number, LessonRow[]> = {
@@ -76,7 +76,6 @@ export const lesson: Record<number, LessonRow[]> = {
       note: "Khi pin cấp dòng cho tải, điện áp trên tải nhỏ hơn suất điện động một lượng bằng độ sụt áp trên điện trở trong.",
     },
     { diagram: "internal" },
-    { jp: "電池の内部抵抗に加わる電圧", vi: "Độ sụt áp trên điện trở trong của pin", formula: "drop" },
     { jp: "練習問題 01 · オームの法則", vi: "Bài tập 01 · Định luật Ohm", heading: true },
     {
       jp: "図の電圧 V［V］と電源の内部抵抗 r［Ω］は。",
@@ -84,14 +83,77 @@ export const lesson: Record<number, LessonRow[]> = {
     },
     { diagram: "exercise" },
     {
-      jp: "解き方・解説\n負荷抵抗の電圧 V は、負荷抵抗 R × 負荷電流 I です。内部抵抗 r は、（起電力 E − 負荷電圧 V）÷ 負荷電流 I です。",
-      vi: "Cách giải · Điện áp trên tải (負荷電圧) bằng điện trở tải (負荷抵抗) nhân dòng điện tải (負荷電流). Điện trở trong (内部抵抗) bằng chênh lệch giữa suất điện động E và điện áp tải V, chia cho dòng điện I.",
-      note: "Dùng chữ R hoa cho điện trở tải và r thường cho điện trở trong. Cả hai đều tính bằng Ω.",
+      jp: "解き方",
+      vi: "Cách giải (解き方)",
+      note: "Dùng R (điện trở tải) và r (điện trở trong) phân biệt, cùng đơn vị Ω. V = RI = 102 V; r = (E − V)/I ≈ 0,59 Ω.",
       formula: "solution",
+    },
+    {
+      jp: "解説\n負荷抵抗の電圧 V は、負荷抵抗 R × 負荷電流 I です。内部抵抗 r は、（起電力 E − 負荷電圧 V）÷ 負荷電流 I です。",
+      vi: "Giải thích (解説). Điện áp V trên tải bằng điện trở tải R nhân dòng điện tải I. Điện trở trong r bằng (suất điện động E − điện áp tải V) chia cho dòng điện tải I.",
+    },
+    {
+      jp: "解答　V = 102 V　r = 0.59 Ω",
+      vi: "Đáp án: V = 102 V; r ≈ 0,59 Ω.",
     },
     {
       jp: "※電源の内部抵抗 r が無視できる場合は、E ≒ V なので、E と V はどちらも電圧の文字記号として使われます。",
       vi: "Khi có thể bỏ qua điện trở trong r của nguồn, E ≈ V. Khi đó, cả E và V đều được dùng làm ký hiệu điện áp.",
+    },
+  ],
+  5: [
+    {
+      jp: "2抵抗の直列合成抵抗 **といえば 和**\n並列合成抵抗 **といえば 和分の積**",
+      vi: "Điện trở tương đương của hai điện trở mắc nối tiếp **bằng tổng**.\nĐiện trở tương đương của hai điện trở mắc song song **bằng tích chia tổng**.",
+      heading: true,
+    },
+    {
+      jp: "2抵抗の直列合成抵抗と並列合成抵抗",
+      vi: "Điện trở tương đương của hai điện trở mắc nối tiếp và mắc song song",
+      heading: true,
+    },
+    {
+      jp: "2個以上の抵抗を1列に接続する方法を**直列接続**といい、抵抗の両端を同じところに接続する方法を**並列接続**といいます。",
+      vi: "Cách nối **hai điện trở trở lên** thành một dãy gọi là **mắc nối tiếp (直列接続)**; cách nối hai đầu của các điện trở vào cùng hai điểm tương ứng gọi là **mắc song song (並列接続)**.",
+    },
+    {
+      jp: "2抵抗を直列接続した場合の**合成抵抗**は、**2抵抗の和**に等しくなります。一方、2抵抗を並列に接続したときの合成抵抗は、**和分の積（2抵抗の積 ÷ 和）**で求められます。",
+      vi: "Khi mắc nối tiếp hai điện trở, **điện trở tương đương (合成抵抗)** bằng **tổng hai điện trở**. Ngược lại, khi mắc song song hai điện trở, điện trở tương đương tính theo **tích chia tổng (和分の積)**: tích hai điện trở chia cho tổng của chúng.",
+    },
+    { diagram: "combinations" },
+    {
+      jp: "POINT　2抵抗の直列合成抵抗 R₀ といえば **和**",
+      vi: "Ghi nhớ: điện trở tương đương R₀ của hai điện trở nối tiếp bằng **tổng**.",
+      formula: "series",
+      note: "Đây là hai điện trở mắc nối tiếp thực sự, cùng một dòng điện đi qua; R₁ và R₂ tính bằng Ω.",
+    },
+    {
+      jp: "2抵抗の並列合成抵抗 R₀ といえば **和分の積**",
+      vi: "Điện trở tương đương R₀ của hai điện trở song song bằng **tích chia tổng**.",
+      formula: "parallel",
+      note: "Hai đầu mỗi điện trở phải nối vào đúng cùng hai nút. Công thức cần R₁ + R₂ ≠ 0; trong mạch điện trở thụ động thông thường, R₁ và R₂ dương.",
+    },
+    {
+      jp: "または、",
+      vi: "Hoặc có thể biến đổi thành:",
+      formula: "parallel-alt",
+      note: "Dạng biến đổi R₂/(1 + R₂/R₁) còn đòi hỏi R₁ ≠ 0. Đây là điều kiện bổ sung để phép chia hợp lệ, không phải một dòng nguyên văn trong sách.",
+    },
+    {
+      jp: "R₂を大きい方の値、R₁を小さい方の値とすると",
+      vi: "Nếu đặt R₂ là điện trở có giá trị lớn hơn và R₁ là điện trở có giá trị nhỏ hơn thì:",
+      formula: "parallel-ratio",
+      note: "“Tỷ số điện trở” ở mẫu là R₂/R₁ (lớn chia nhỏ). Mẫu số lớn hơn 1 khi hai điện trở dương; do đó điện trở tương đương nhỏ hơn điện trở nhỏ nhất.",
+    },
+    {
+      jp: "分圧と分流の式",
+      vi: "Công thức chia điện áp và chia dòng điện",
+      heading: true,
+    },
+    {
+      jp: "2抵抗を直列接続したとき、各抵抗の**分電圧**は、全体の電圧 V₀［V］を抵抗の大きさの比で**比例配分**します（R₁とR₂の比で分ける）。または、回路電流 I［A］に、各抵抗値を掛けると考えても同じです。2抵抗の並列回路において、全体の電流を I₀［A］としたとき、各抵抗の**分路電流**は、抵抗の比で**逆比例配分**します。",
+      vi: "Khi mắc nối tiếp hai điện trở, **điện áp chia trên từng điện trở (分電圧)** được phân chia **tỷ lệ thuận (比例配分)** với giá trị điện trở từ điện áp tổng V₀ [V] (tức theo tỷ lệ R₁ : R₂). Cũng có thể lấy dòng điện I [A] trong mạch nhân với giá trị từng điện trở để được điện áp tương ứng. Trong mạch hai điện trở mắc song song, nếu dòng điện tổng là I₀ [A], thì **dòng điện trong từng nhánh (分路電流)** được phân chia **tỷ lệ nghịch (逆比例配分)** với các giá trị điện trở.",
+      note: "Lý do: mắc nối tiếp thì hai điện trở có cùng dòng nên V₁ : V₂ = R₁ : R₂; mắc song song có cùng điện áp nên I₁ : I₂ = R₂ : R₁. Các công thức chi tiết tiếp theo thuộc trang sau, không tự gộp sang trang 5.",
     },
   ],
 };

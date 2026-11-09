@@ -40,6 +40,19 @@ function Formula({ kind }: { kind: NonNullable<Extract<LessonRow, { jp: string }
       );
     case "drop":
       return <p className={formula}><i>Ir</i> = <i>E − V</i> = 1.6 − 1.4 = 0.2 V</p>;
+    case "series":
+      return <p className={formula}><i>R</i><sub>0</sub> = <i>R</i><sub>1</sub> + <i>R</i><sub>2</sub> [Ω]</p>;
+    case "parallel":
+      return <p className={formula}><i>R</i><sub>0</sub> = <Fraction numerator={<><i>R</i><sub>1</sub><i>R</i><sub>2</sub></>} denominator={<><i>R</i><sub>1</sub> + <i>R</i><sub>2</sub></>} /> [Ω]</p>;
+    case "parallel-alt":
+      return (
+        <p className={formula}>
+          <i>R</i><sub>0</sub> = <Fraction numerator={<><i>R</i><sub>1</sub><i>R</i><sub>2</sub></>} denominator={<><i>R</i><sub>1</sub> + <i>R</i><sub>2</sub></>} />
+          {" = "}<Fraction numerator={<i>R</i><sub>2</sub>} denominator={<>1 + <Fraction numerator={<i>R</i><sub>2</sub>} denominator={<i>R</i><sub>1</sub>} /></>} /> [Ω]
+        </p>
+      );
+    case "parallel-ratio":
+      return <p className={formula}><i>R</i><sub>0</sub> = <Fraction numerator="大きい方の値" denominator="1 + 抵抗値の比" /> [Ω]</p>;
     case "solution":
       return (
         <div className="space-y-2">

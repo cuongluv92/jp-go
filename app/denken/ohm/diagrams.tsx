@@ -34,7 +34,57 @@ function Diagram({ file, width, height, title, labels }: {
   );
 }
 
+
+function CombinationDiagrams() {
+  return (
+    <figure className="my-4 overflow-hidden rounded-xl border border-border">
+      <figcaption className="px-3 py-2 font-semibold">直列接続・並列接続 · Hai điện trở nối tiếp và song song</figcaption>
+      <div className="grid gap-3 px-3 py-3 sm:grid-cols-2">
+        <div className="min-w-0">
+          <p lang="ja" className="text-center text-sm font-semibold">直列接続</p>
+          <svg role="img" aria-label="Hai điện trở R1 và R2 mắc nối tiếp trên một nhánh" viewBox="0 0 360 115" className="h-auto w-full">
+            <g fill="none" stroke="currentColor" strokeWidth="2.5">
+              <path d="M14 75 H69 M145 75 H207 M283 75 H347" />
+              <rect x="69" y="63" width="76" height="24" />
+              <rect x="207" y="63" width="76" height="24" />
+            </g>
+            <g fill="currentColor" stroke="none" fontSize="17" textAnchor="middle">
+              <text x="107" y="46">R₁ [Ω]</text>
+              <text x="245" y="46">R₂ [Ω]</text>
+            </g>
+          </svg>
+        </div>
+        <div className="min-w-0">
+          <p lang="ja" className="text-center text-sm font-semibold">並列接続</p>
+          <svg role="img" aria-label="Hai điện trở R1 và R2 có hai đầu nối vào cùng hai nút" viewBox="0 0 360 165" className="h-auto w-full">
+            <g fill="none" stroke="currentColor" strokeWidth="2.5">
+              <path d="M10 83 H65 V35 H129 M205 35 H296 V83 H350 M65 83 V132 H129 M205 132 H296 V83" />
+              <rect x="129" y="23" width="76" height="24" />
+              <rect x="129" y="120" width="76" height="24" />
+            </g>
+            <g fill="currentColor" stroke="none" fontSize="17" textAnchor="middle">
+              <text x="167" y="17">R₁ [Ω]</text>
+              <text x="167" y="114">R₂ [Ω]</text>
+              <circle cx="65" cy="83" r="4"/><circle cx="296" cy="83" r="4"/>
+            </g>
+          </svg>
+        </div>
+      </div>
+      <details className="group border-t border-border">
+        <summary className="cursor-pointer px-3 py-2 text-sm font-medium text-accent">
+          <span className="group-open:hidden">Hiện phụ lục dịch chữ trong hình</span>
+          <span className="hidden group-open:inline">Ẩn phụ lục dịch chữ trong hình</span>
+        </summary>
+        <div className="px-3 py-2 text-sm">
+          <p>直列接続: mắc nối tiếp; 並列接続: mắc song song; R₁, R₂: hai điện trở, đơn vị Ω.</p>
+        </div>
+      </details>
+    </figure>
+  );
+}
+
 export const diagrams = {
+  combinations: <CombinationDiagrams />,
   examples: (<Diagram file="examples" width={785} height={305} title="Ví dụ mạch điện · Bóng đèn và tàu điện" labels={[
           ["電気回路の例", "Ví dụ về mạch điện."],
           ["電流", "Dòng điện. Mũi tên chỉ chiều dòng điện quy ước."],
