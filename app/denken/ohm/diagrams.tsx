@@ -35,6 +35,22 @@ function Diagram({ file, width, height, title, labels }: {
 }
 
 export const diagrams = {
+  bridge19: (<Diagram file="bridge19" width={716} height={342} title="Trang 19 · Hai cách vẽ cùng một mạch cầu" labels={[
+    ["ブリッジ回路", "Mạch cầu."],
+    ["a・b・c・d", "Nguồn đặt giữa c và d. Điện kế G nối giữa hai điểm giữa a và b."],
+    ["R₁・R₂・R₃・R₄", "Bốn điện trở của cầu. Ở hình bên phải, R₁ và R₃ ở nhánh trái, R₂ và R₄ ở nhánh phải."],
+    ["I₁・I₂・I₃・G", "Dòng ở hai nhánh và dòng qua điện kế G."],
+    ["R₁×R₄＝R₂×R₃ のとき、I₃ は 0 A", "Khi tích các cặp điện trở đối diện bằng nhau, dòng qua điện kế bằng 0 A."],
+  ]} />),
+  bridge20: (<Diagram file="bridge20" width={253} height={179} title="Trang 20 · Mạch cầu có công tắc S" labels={[
+    ["S・E = 100 V・I = 30 A", "Công tắc giữa hai điểm giữa, điện áp nguồn và dòng tổng."],
+    ["R₁ = 8 Ω・R₂ = 4 Ω・R₃・R₄", "Các điện trở ở nhánh trên và nhánh dưới. R₄ là điện trở cần tìm."],
+  ]} />),
+  bridge20Solution: (<Diagram file="bridge20Solution" width={240} height={221} title="Trang 20 · Tích chéo và điện trở từng nhánh" labels={[
+    ["R₁ = 8 Ω・R₂ = 4 Ω・R₃ = 2R₄・R₄", "Tích chéo ở cầu cân bằng cho R₃ bằng hai lần R₄."],
+    ["8 + 2R₄ (Ω)・4 + R₄ (Ω)", "Tổng điện trở nhánh trên và nhánh dưới khi S mở."],
+    ["S・I = 30 A・E = 100 V", "Công tắc, dòng điện tổng và điện áp nguồn."],
+  ]} />),
   thExercise: (<Diagram file="thExercise" width={314} height={141} title="Trang 15 · Mạch đề bài Thévenin" labels={[
     ["E₁ = 200 V・E₂ = 100 V", "Hai nguồn áp của mạng."],
     ["R₁ = 20 Ω・R₂ = 30 Ω・R₃ = 8 Ω", "Hai điện trở của mạng và tải R₃."],

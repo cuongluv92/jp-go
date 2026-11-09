@@ -118,12 +118,13 @@ export function OhmReader({ rows }: { rows: ReadingRow[] }) {
   return (
     <StandardColumnWorkspace source={(showFurigana) => rows.map((row, key) => {
       if ("diagram" in row) return { key, shared: diagrams[row.diagram] };
+      const vietnameseEquations = row.equationsVi ?? row.equations;
       const Text = row.heading ? "h2" : "p";
       const style = row.heading ? "text-base font-bold" : "whitespace-pre-line text-sm leading-relaxed";
       return {
         key,
         jp: <div lang="ja" className="font-jp space-y-2"><Text className={style}><MarkedText text={row.jp} readings={showFurigana ? row.readings : undefined} /></Text>{row.formula && <Formula kind={row.formula} japanese />}{row.equations && <Equations lines={row.equations} />}{row.table && <PrefixTable headers={row.table.jp} rows={row.table.rows} japanese />}</div>,
-        vi: <div className="space-y-2"><Text className={style}><MarkedText text={row.vi} /></Text>{row.formula && <Formula kind={row.formula} />}{row.equations && <Equations lines={row.equations} />}{row.table && <PrefixTable headers={row.table.vi} rows={row.table.rows} />}</div>,
+        vi: <div className="space-y-2"><Text className={style}><MarkedText text={row.vi} /></Text>{row.formula && <Formula kind={row.formula} />}{vietnameseEquations && <Equations lines={vietnameseEquations} />}{row.table && <PrefixTable headers={row.table.vi} rows={row.table.rows} />}</div>,
         explanation: row.note && <p className="text-sm leading-relaxed">{row.note}</p>,
       };
     })} />

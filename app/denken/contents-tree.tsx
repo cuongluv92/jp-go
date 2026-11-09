@@ -53,8 +53,8 @@ export function ContentsTree({ currentPage }: { currentPage?: number }) {
                           <li key={line} className="flex items-baseline gap-3 py-2 text-sm">
                             <span className={`w-12 shrink-0 tabular-nums ${bookRed}`}>p.{pageNumber}</span>
                             <span lang="ja" className="font-jp leading-relaxed">
-                              {title === "理論" && index === 0 && ["002", "005", "009", "012", "014", "016"].includes(pageNumber) ? (
-                                <Link href={pageNumber === "002" ? "/denken/ohm" : `/denken/ohm?trang=${Number(pageNumber)}`} aria-current={(currentPage !== undefined && (pageNumber === "002" ? currentPage < 5 : pageNumber === "005" ? currentPage >= 5 && currentPage < 9 : pageNumber === "009" ? currentPage >= 9 && currentPage < 12 : pageNumber === "012" ? currentPage >= 12 && currentPage < 14 : pageNumber === "014" ? currentPage >= 14 && currentPage < 16 : currentPage >= 16)) ? "location" : undefined} className="underline underline-offset-2"><ContentsText text={before} /></Link>
+                              {title === "理論" && index === 0 && ["002", "005", "009", "012", "014", "016", "019"].includes(pageNumber) ? (
+                                <Link href={pageNumber === "002" ? "/denken/ohm" : `/denken/ohm?trang=${Number(pageNumber)}`} aria-current={(currentPage !== undefined && (pageNumber === "002" ? currentPage < 5 : pageNumber === "005" ? currentPage >= 5 && currentPage < 9 : pageNumber === "009" ? currentPage >= 9 && currentPage < 12 : pageNumber === "012" ? currentPage >= 12 && currentPage < 14 : pageNumber === "014" ? currentPage >= 14 && currentPage < 16 : pageNumber === "016" ? currentPage >= 16 && currentPage < 19 : currentPage >= 19)) ? "location" : undefined} className="underline underline-offset-2"><ContentsText text={before} /></Link>
                               ) : <ContentsText text={before} />}
                               {after !== undefined && <><Fraction numerator="%z" denominator="100" /><ContentsText text={after} /></>}
                             </span>

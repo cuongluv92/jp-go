@@ -135,4 +135,59 @@ export const networkPages: Record<number, LessonRow[]> = {
     },
     { jp: "**解答　I₃ = 8 A**", vi: "**Đáp án　I₃ = 8 A**" },
   ],
+  19: [
+    { jp: "ブリッジ回路 といえば 平衡時は対辺抵抗値の積が等しい", vi: "Mạch cầu · Khi cân bằng, tích hai cặp điện trở đối diện bằng nhau.", heading: true },
+    { diagram: "bridge19" },
+    { jp: "ブリッジ回路", vi: "Mạch cầu", heading: true },
+    {
+      jp: "上図のような回路は、検流計 G（わずかな電流を検出する計器）で橋渡しの回路になっているので、**ブリッジ回路**といいます。回路図において、a-b 間の電位差（電圧）が 0 V のときは、I₃＝0 A になります。このとき、次式が成り立ちます。",
+      vi: "Mạch trong hình gọi là **mạch cầu (ブリッジ回路)** vì điện kế G, dụng cụ phát hiện dòng điện rất nhỏ, nối ngang hai điểm giữa. Khi hiệu điện thế a–b bằng 0 V thì dòng I₃ qua điện kế bằng 0 A. Khi đó có các phương trình sau.",
+      equations: [["R₁I₁ = R₂I₂"], ["R₃I₁ = R₄I₂"]],
+      note: "Nhìn sơ đồ bên phải. Khi a và b cùng điện thế, sụt áp từ c xuống a bằng sụt áp từ c xuống b. Tương tự, sụt áp từ a xuống d bằng sụt áp từ b xuống d. Nhánh giữa không mang dòng, nên hai điện trở trên mỗi nhánh có cùng dòng chạy qua.",
+    },
+    {
+      jp: "よって、＝をはさんだ積（R₁×R₄）と積（R₂×R₃）は等しい。",
+      vi: "Suy ra hai tích chéo qua dấu bằng, R₁×R₄ và R₂×R₃, bằng nhau.",
+      equations: [[fraction("I₂", "I₁"), "=", fraction("R₁", "R₂"), "=", fraction("R₃", "R₄")]],
+      note: "Với các điện trở và dòng nhánh khác 0 như trong hình, rút I₂/I₁ từ từng phương trình rồi cho hai tỷ số bằng nhau. Nhân chéo R₁/R₂ = R₃/R₄ cho ra điều kiện cân bằng.",
+    },
+    {
+      jp: "I₃＝0 A、すなわち検流計の触れが 0 になったとき、**ブリッジが平衡した**といいます。",
+      vi: "Khi I₃ = 0 A, tức kim điện kế không lệch, ta nói **mạch cầu đã cân bằng**.",
+    },
+    {
+      jp: "ブリッジの平衡条件 といえば **対辺抵抗値の積**が等しい\n**ブリッジの平衡条件**",
+      vi: "Điều kiện cân bằng của mạch cầu là **tích các điện trở ở hai cạnh đối diện** bằng nhau.\n**Điều kiện cân bằng mạch cầu**",
+      equations: [["**R₁R₄** = **R₂R₃**"]],
+      note: "Xác định cặp điện trở theo các nút nối thực tế. Hình vẽ kiểu hình thoi và hình vẽ kiểu hai nhánh đứng có cùng cách nối.",
+    },
+  ],
+  20: [
+    { jp: "練習問題 01", vi: "Bài tập 01 · Mạch cầu cân bằng", heading: true },
+    {
+      jp: "図の回路で、スイッチ S を開閉しても I＝30 A で一定であった。このとき R₄ の値は。",
+      vi: "Trong mạch ở hình, dù mở hay đóng công tắc S, dòng tổng vẫn bằng 30 A. Tính R₄.",
+    },
+    { diagram: "bridge20" },
+    {
+      jp: "**解き方**\nスイッチ S を開閉しても電流が一定の場合、ブリッジは平衡しています。平衡時は、対辺抵抗値の積が等しいので、4R₃＝8R₄ から R₃＝2R₄。S を開いたときの合成抵抗は、",
+      vi: "**Cách giải**\nĐóng hay mở S mà dòng tổng vẫn không đổi, nên mạch cầu cân bằng. Tích hai cặp điện trở đối diện bằng nhau, do đó 4R₃ = 8R₄ và R₃ = 2R₄. Sau đây là điện trở tương đương khi S mở.",
+      note: "Nguồn vẫn là 100 V. Nếu hai điểm giữa khác điện thế, đóng S sẽ tạo thêm đường dòng điện và làm thay đổi điện trở nhìn từ nguồn. Trong mạch này dòng tổng không đổi, nên hai điểm giữa cùng điện thế và ta có thể giải khi S mở.",
+    },
+    { diagram: "bridge20Solution" },
+    {
+      jp: "**大きい方の値／1＋抵抗値の比**・**電圧／電流**\n8＋2R₄＝10 より、R₄＝1.0 Ω。",
+      vi: "**Giá trị lớn chia cho 1 cộng tỷ số điện trở** · **Điện áp chia dòng điện**.\nTừ 8 + 2R₄ = 10 suy ra R₄ = 1,0 Ω.",
+      equations: [[fraction("[[8 + 2R₄]]", "[[1 + 2]]"), "=", fraction("[[100]]", "[[30]]"), "=", fraction("10", "3"), "Ω"]],
+      note: "Khi S mở, nhánh trên là 8 + R₃ = 8 + 2R₄, nhánh dưới là 4 + R₄. Nhánh trên gấp đôi nhánh dưới, nên điện trở song song bằng điện trở nhánh trên chia 3. Cả mạch có điện trở 100/30 = 10/3 Ω. Nhân hai vế với 3 cho ra 8 + 2R₄ = 10.",
+    },
+    {
+      jp: "**解説**\nブリッジが平衡しているときは、上下または左右の抵抗値の比は同じになります。（8 は 4 の 2 倍より R₃ は R₄ の 2 倍）\n2抵抗の並列合成抵抗の式を用いると簡単に求められます。",
+      vi: "**Giải thích**\nKhi cầu cân bằng, tỷ số điện trở ở các cặp trên–dưới hoặc trái–phải tương ứng bằng nhau. Vì 8 gấp đôi 4 nên R₃ gấp đôi R₄. Có thể tính nhanh bằng công thức điện trở tương đương song song của hai nhánh.",
+      equations: [[fraction("R₁R₂", "R₁ + R₂"), "=", fraction("R₂", ["1 +", fraction("R₂", "R₁")]), "=", fraction("大きい方の値", "1＋抵抗値の比")]],
+      equationsVi: [[fraction("R₁R₂", "R₁ + R₂"), "=", fraction("R₂", ["1 +", fraction("R₂", "R₁")]), "=", fraction("Giá trị lớn", "1 + tỷ số điện trở")]],
+      note: "Kiểm tra: R₄ = 1 Ω thì R₃ = 2 Ω. Hai nhánh là 10 Ω và 5 Ω, mang dòng 10 A và 20 A, tổng 30 A. Hai điểm giữa đều có cùng điện thế vì sụt áp trên 8 Ω là 10×8 = 80 V và trên 4 Ω là 20×4 = 80 V.",
+    },
+    { jp: "**解答　R₄ = 1.0 Ω**", vi: "**Đáp án　R₄ = 1,0 Ω**" },
+  ],
 };

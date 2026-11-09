@@ -22,7 +22,8 @@ export default async function OhmLesson({ searchParams }: { searchParams: Promis
   const next = pages[pages.indexOf(page) + 1];
   const prevHref = previous === undefined ? null : href(previous);
   const nextHref = next === undefined ? null : href(next);
-  const title = page >= 16 ? "1‑6 ミルマンの定理 · Định lý Millman"
+  const title = page >= 19 ? "1‑7 ブリッジ回路 · Mạch cầu"
+    : page >= 16 ? "1‑6 ミルマンの定理 · Định lý Millman"
     : page >= 14 ? "1‑5 テブナンの定理 · Định lý Thévenin"
     : page >= 12 ? "1‑4 キルヒホッフの法則 · Định luật Kirchhoff"
     : page >= 9 ? "1‑3 導体の抵抗 · Điện trở của vật dẫn" : page >= 5 ? "1‑2 直列・並列合成抵抗 · Điện trở nối tiếp và song song" : "1‑1 オームの法則 · Định luật Ohm";

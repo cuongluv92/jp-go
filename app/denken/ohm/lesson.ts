@@ -11,9 +11,10 @@ export type LessonRow = {
   note?: string;
   heading?: boolean;
   equations?: FormulaLine[];
+  equationsVi?: FormulaLine[];
   table?: { jp: string[]; vi: string[]; rows: string[][] };
   formula?: "ohm" | "drop" | "solution" | "parallelSolution" | "parallelReference" | "connections";
-} | { diagram: "examples" | "circuit" | "potential" | "internal" | "exercise" | "parallel02" | "divider03" | "connections" | "voltageRule" | "currentRule" | "parallel01" | "current04" | "conductor" | "kirchhoffIntro" | "node12" | "loop12" | "kirchhoff13" | "loops13" | "thevenin14" | "thExercise" | "thTransform" | "thOpen" | "thResistance" | "thLoad" | "millIntro" | "millBranches" | "millExercise" | "millLoad" | "millThird" | "millOther" };
+} | { diagram: "examples" | "circuit" | "potential" | "internal" | "exercise" | "parallel02" | "divider03" | "connections" | "voltageRule" | "currentRule" | "parallel01" | "current04" | "conductor" | "kirchhoffIntro" | "node12" | "loop12" | "kirchhoff13" | "loops13" | "thevenin14" | "thExercise" | "thTransform" | "thOpen" | "thResistance" | "thLoad" | "millIntro" | "millBranches" | "millExercise" | "millLoad" | "millThird" | "millOther" | "bridge19" | "bridge20" | "bridge20Solution" };
 
 // Dấu ** bao quanh các cụm cần giữ màu đỏ trong hai cột.
 export const lesson: Record<number, LessonRow[]> = {
