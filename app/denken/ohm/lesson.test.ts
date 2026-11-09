@@ -2,9 +2,9 @@ import { describe, expect, it } from "vitest";
 import { lesson } from "./lesson";
 
 const redSpans = (text: string) => {
-  const marks = text.match(/\\*\\*/g) ?? [];
-  expect(marks.length % 2).toBe(0);
-  return [...text.matchAll(/\\*\\*(.*?)\\*\\*/g)].map((match) => match[1]);
+  const parts = text.split("**");
+  expect(parts.length % 2).toBe(1);
+  return parts.filter((_, index) => index % 2 === 1);
 };
 
 describe("Source red highlights and bilingual parity — Denken 2–5", () => {
