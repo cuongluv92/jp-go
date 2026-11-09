@@ -11,19 +11,25 @@ function Diagram({ file, width, height, title, labels }: {
     <figure className="my-4 overflow-hidden rounded-xl border border-border">
       <figcaption className="px-3 py-2 font-semibold">{title}</figcaption>
       <Image src={`/denken/ohm/${file}.webp`} width={width} height={height} alt={title} className="block h-auto max-w-full" />
-      <table className="w-full border-collapse text-left text-sm">
-        <thead className="bg-surface-muted">
-          <tr><th scope="col" className="w-2/5 px-3 py-2">Chữ trên hình</th><th scope="col" className="px-3 py-2">Nghĩa tiếng Việt</th></tr>
-        </thead>
-        <tbody>
-          {labels.map(([ja, vi]) => (
-            <tr key={ja} className="border-t border-border">
-              <th scope="row" lang="ja" className="px-3 py-2 align-top font-medium">{ja}</th>
-              <td className="px-3 py-2">{vi}</td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
+      <details className="group border-t border-border">
+        <summary className="cursor-pointer px-3 py-2 text-sm font-medium text-accent">
+          <span className="group-open:hidden">Hiện phụ lục dịch chữ trong hình</span>
+          <span className="hidden group-open:inline">Ẩn phụ lục dịch chữ trong hình</span>
+        </summary>
+        <table className="w-full border-collapse text-left text-sm">
+          <thead className="bg-surface-muted">
+            <tr><th scope="col" className="w-2/5 px-3 py-2">Chữ trên hình</th><th scope="col" className="px-3 py-2">Nghĩa tiếng Việt</th></tr>
+          </thead>
+          <tbody>
+            {labels.map(([ja, vi]) => (
+              <tr key={ja} className="border-t border-border">
+                <th scope="row" lang="ja" className="px-3 py-2 align-top font-medium">{ja}</th>
+                <td className="px-3 py-2">{vi}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </details>
     </figure>
   );
 }
