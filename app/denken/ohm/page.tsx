@@ -12,6 +12,20 @@ export const metadata = { title: "1‑1 オームの法則 — 電験三種 — 
 
 const pages = Object.keys(lesson).map(Number);
 const href = (page: number) => page === 2 ? "/denken/ohm" : `/denken/ohm?trang=${page}`;
+const machineChapters = [
+  [162, "変圧器", "Máy biến áp"],
+  [186, "誘導電動機", "Động cơ cảm ứng"],
+  [205, "直流発電機と直流電動機", "Máy phát điện và động cơ một chiều"],
+  [219, "同期発電機と同期電動機", "Máy phát điện và động cơ đồng bộ"],
+  [238, "電動機応用", "Ứng dụng động cơ điện"],
+  [246, "パワーエレクトロニクス", "Điện tử công suất"],
+  [263, "照明", "Chiếu sáng"],
+  [274, "電熱と電気加熱", "Nhiệt điện và gia nhiệt bằng điện"],
+  [282, "電気化学", "Điện hóa"],
+  [286, "自動制御と制御理論", "Điều khiển tự động và lý thuyết điều khiển"],
+  [302, "論理回路とデジタル回路", "Mạch logic và mạch số"],
+] as const;
+
 const navButton = "rounded-lg border border-border px-3 py-1.5 text-sm hover:border-accent hover:text-accent";
 
 export default async function OhmLesson({ searchParams }: { searchParams: Promise<{ trang?: string }> }) {
@@ -22,7 +36,8 @@ export default async function OhmLesson({ searchParams }: { searchParams: Promis
   const next = pages[pages.indexOf(page) + 1];
   const prevHref = previous === undefined ? null : href(previous);
   const nextHref = next === undefined ? null : href(next);
-  const title = page >= 162 ? "変圧器 · Máy biến áp"
+  const machineChapter = page <= 320 ? machineChapters.findLast(([start]) => start <= page) : undefined;
+  const title = machineChapter ? `${machineChapter[1]} · ${machineChapter[2]}`
     : page === 161 ? "第2部 機械 · Máy điện và ứng dụng"
     : page === 160 ? "電圧の加算回路 · Mạch cộng điện áp"
     : page >= 158 ? "章末問題 · Bài tập cuối chương"
@@ -93,7 +108,7 @@ export default async function OhmLesson({ searchParams }: { searchParams: Promis
         <main className="min-w-0 space-y-4">
           <div className="flex flex-wrap items-center justify-between gap-2">
             <p className="min-w-0 text-sm text-muted">
-              <Link href="/denken" className="hover:text-accent">電験三種</Link> / {page >= 161 ? "機械" : "理論"} / {page >= 162 ? "変圧器" : page === 161 ? "目次" : page >= 141 ? "電子工学・電子回路" : page >= 115 ? "磁気と磁界" : page >= 99 ? "静電気と電界" : page >= 87 ? "電気・電子計測" : page >= 70 ? "三相交流回路" : page >= 31 ? "交流回路" : "直流回路"} / {title}
+              <Link href="/denken" className="hover:text-accent">電験三種</Link> / {page >= 161 ? "機械" : "理論"} / {machineChapter ? machineChapter[1] : page === 161 ? "目次" : page >= 141 ? "電子工学・電子回路" : page >= 115 ? "磁気と磁界" : page >= 99 ? "静電気と電界" : page >= 87 ? "電気・電子計測" : page >= 70 ? "三相交流回路" : page >= 31 ? "交流回路" : "直流回路"} / {title}
             </p>
             <nav aria-label="Chuyển trang" className="flex flex-wrap items-center gap-2">
               {prevHref ? <Link href={prevHref} className={navButton}>← Trang trước</Link> : <span className="text-sm text-muted">← Trang trước</span>}
