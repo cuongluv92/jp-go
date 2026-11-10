@@ -22,7 +22,9 @@ export default async function OhmLesson({ searchParams }: { searchParams: Promis
   const next = pages[pages.indexOf(page) + 1];
   const prevHref = previous === undefined ? null : href(previous);
   const nextHref = next === undefined ? null : href(next);
-  const title = page >= 93 ? "4‑4 電力の測定 · Đo công suất"
+  const title = page >= 99 ? "5‑1 クーロン力 · Lực Coulomb"
+    : page >= 97 ? "章末問題 · Bài tập cuối chương"
+    : page >= 93 ? "4‑4 電力の測定 · Đo công suất"
     : page >= 91 ? "4‑3 抵抗の測定 · Đo điện trở"
     : page >= 89 ? "4‑2 倍率器・分流器 · Mở rộng thang đo"
     : page >= 87 ? "4‑1 指示計器 · Đồng hồ chỉ kim"
@@ -70,7 +72,7 @@ export default async function OhmLesson({ searchParams }: { searchParams: Promis
         <main className="min-w-0 space-y-4">
           <div className="flex flex-wrap items-center justify-between gap-2">
             <p className="min-w-0 text-sm text-muted">
-              <Link href="/denken" className="hover:text-accent">電験三種</Link> / 理論 / {page >= 87 ? "電気・電子計測" : page >= 70 ? "三相交流回路" : page >= 31 ? "交流回路" : "直流回路"} / {title}
+              <Link href="/denken" className="hover:text-accent">電験三種</Link> / 理論 / {page >= 99 ? "静電気と電界" : page >= 87 ? "電気・電子計測" : page >= 70 ? "三相交流回路" : page >= 31 ? "交流回路" : "直流回路"} / {title}
             </p>
             <nav aria-label="Chuyển trang" className="flex flex-wrap items-center gap-2">
               {prevHref ? <Link href={prevHref} className={navButton}>← Trang trước</Link> : <span className="text-sm text-muted">← Trang trước</span>}
