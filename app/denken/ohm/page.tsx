@@ -22,7 +22,9 @@ export default async function OhmLesson({ searchParams }: { searchParams: Promis
   const next = pages[pages.indexOf(page) + 1];
   const prevHref = previous === undefined ? null : href(previous);
   const nextHref = next === undefined ? null : href(next);
-  const title = page >= 139 ? "章末問題 · Bài tập cuối chương"
+  const title = page >= 145 ? "7‑2 トランジスタ · Transistor"
+    : page >= 141 ? "7‑1 半導体 · Chất bán dẫn"
+    : page >= 139 ? "章末問題 · Bài tập cuối chương"
     : page >= 138 ? "6‑8 磁気エネルギー · Năng lượng từ trường"
     : page >= 133 ? "6‑7 インダクタンス · Điện cảm"
     : page >= 131 ? "6‑6 磁気回路 · Mạch từ"
@@ -84,7 +86,7 @@ export default async function OhmLesson({ searchParams }: { searchParams: Promis
         <main className="min-w-0 space-y-4">
           <div className="flex flex-wrap items-center justify-between gap-2">
             <p className="min-w-0 text-sm text-muted">
-              <Link href="/denken" className="hover:text-accent">電験三種</Link> / 理論 / {page >= 115 ? "磁気と磁界" : page >= 99 ? "静電気と電界" : page >= 87 ? "電気・電子計測" : page >= 70 ? "三相交流回路" : page >= 31 ? "交流回路" : "直流回路"} / {title}
+              <Link href="/denken" className="hover:text-accent">電験三種</Link> / 理論 / {page >= 141 ? "電子工学・電子回路" : page >= 115 ? "磁気と磁界" : page >= 99 ? "静電気と電界" : page >= 87 ? "電気・電子計測" : page >= 70 ? "三相交流回路" : page >= 31 ? "交流回路" : "直流回路"} / {title}
             </p>
             <nav aria-label="Chuyển trang" className="flex flex-wrap items-center gap-2">
               {prevHref ? <Link href={prevHref} className={navButton}>← Trang trước</Link> : <span className="text-sm text-muted">← Trang trước</span>}
