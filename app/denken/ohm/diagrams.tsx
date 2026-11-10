@@ -35,6 +35,8 @@ function Diagram({ file, width, height, title, labels }: {
 }
 
 export const diagrams = {
+  gear244: (<Diagram file="gear244" width={232} height={177} title="Động cơ và hộp giảm tốc" labels={[["電動機・負荷", "Động cơ và tải"]]} />),
+  lift245: (<Diagram file="lift245" width={313} height={344} title="Cơ cấu thang máy có đối trọng" labels={[["巻上荷重・かごの重力・定格積載荷重・釣合いおもりの重力・上昇速度・機械効率", "Lực nâng, trọng lượng cabin, tải định mức, trọng lượng đối trọng, tốc độ lên và hiệu suất cơ khí"]]} />),
   motorCircuit236: (<Diagram file="motorCircuit236" width={346} height={198} title="Mạch một pha động cơ đồng bộ" labels={[["界磁電流・三相同期電動機１相分の回路", "Dòng kích từ và mạch một pha của động cơ đồng bộ ba pha"]]} />),
   motorPhasor236: (<Diagram file="motorPhasor236" width={343} height={236} title="Giản đồ vectơ tại hệ số công suất 1" labels={[["力率が１・V と I は同相・π/2 遅れる", "Hệ số công suất bằng 1. V và I cùng pha. I trễ điện áp điện kháng π/2 rad."]]} />),
   shortExample237: (<Diagram file="shortExample237" width={444} height={136} title="Mạch tương đương của máy phát" labels={[["同期インピーダンス・定格電圧・定格出力（定格容量）", "Tổng trở đồng bộ, điện áp định mức và dung lượng định mức"]]} />),
