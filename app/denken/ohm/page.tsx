@@ -22,7 +22,9 @@ export default async function OhmLesson({ searchParams }: { searchParams: Promis
   const next = pages[pages.indexOf(page) + 1];
   const prevHref = previous === undefined ? null : href(previous);
   const nextHref = next === undefined ? null : href(next);
-  const title = page >= 31 ? "2‑1 正弦波交流 · Dòng điện xoay chiều hình sin"
+  const title = page >= 39 ? "2‑3 交流のベクトル表示 · Biểu diễn xoay chiều bằng vectơ pha"
+    : page >= 36 ? "2‑2 交流の大きさ · Độ lớn của đại lượng xoay chiều"
+    : page >= 31 ? "2‑1 正弦波交流 · Dòng điện xoay chiều hình sin"
     : page >= 26 ? "章末問題 · Bài tập cuối chương mạch một chiều"
     : page >= 24 ? "1‑10 定電圧源と定電流源・重ね合せの理 · Nguồn lý tưởng và nguyên lý chồng chất"
     : page === 23 ? "1‑9 直流回路の電力 · Công suất mạch một chiều"

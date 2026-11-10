@@ -35,6 +35,11 @@ function Diagram({ file, width, height, title, labels }: {
 }
 
 export const diagrams = {
+  magnitude36: (<Diagram file="magnitude36" width={668} height={315} title="Trang 36 · Đỉnh, trung bình và hiệu dụng" labels={[["最大値・平均値","Giá trị đỉnh và trung bình nửa chu kỳ."],["i² の平均値・実効値","Trung bình bình phương dòng và căn của giá trị đó."],["T/2・ωt・Iₘ・Vₘ","Nửa chu kỳ, góc quay, đỉnh dòng và đỉnh áp."]]} />),
+  rms37: (<Diagram file="rms37" width={308} height={171} title="Hình 2‑2‑1 · Hiệu dụng của sóng sin" labels={[["正弦波交流の実効値","Hiệu dụng của xoay chiều hình sin."],["Vₘ・V（実効値）","Giá trị đỉnh và hiệu dụng bằng đỉnh chia √2."]]} />),
+  phasor39: (<Diagram file="phasor39" width={722} height={310} title="Trang 39 · Từ đồ thị đến vectơ pha" labels={[["基準波形・π/3 進んでいます・π/3 遅れています","Sóng mốc và hai sóng sớm hoặc trễ π/3."],["最大値 141 V・実効値 100 V","Biên độ khoảng 141 V và hiệu dụng 100 V."],["波形・最大値と位相・実効値と位相","Dạng sóng, vectơ theo biên độ và vectơ theo hiệu dụng."]]} />),
+  phasor40: (<Diagram file="phasor40" width={630} height={250} title="Hình 2‑3‑1 · Độ lớn và pha" labels={[["大きさ（最大値）・θ＝位相","Độ lớn cực đại và góc pha θ."],["基準の方向","Hướng mốc."],["Vₘ と θ がわかれば、波形がわかる","Biết đỉnh và pha thì xác định được sóng khi tần số đã biết."]]} />),
+  vectors40: (<Diagram file="vectors40" width={431} height={214} title="Hình 2‑3‑2 · Hai cách ghi độ lớn vectơ" labels={[["長さ＝最大値・長さ＝実効値","Chiều dài mũi tên theo đỉnh hoặc hiệu dụng."],["基準の方向・θ","Hướng mốc và góc pha."]]} />),
   ac31: (<Diagram file="ac31" width={638} height={216} title="Trang 31 · Sóng xoay chiều hình sin" labels={[
     ["交流電源・負荷","Nguồn xoay chiều và tải."],
     ["電流（電圧）・時間 t","Trục dọc là dòng hoặc áp, trục ngang là thời gian."],
