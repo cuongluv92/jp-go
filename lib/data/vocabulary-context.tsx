@@ -1,5 +1,6 @@
 "use client";
 
+import { usePathname } from "next/navigation";
 import { createContext, useCallback, useContext, useEffect, useMemo, useRef, useState, type ReactNode } from "react";
 
 import { getVocabularyCollection } from "@/lib/data/vocabulary-collections";
@@ -102,6 +103,12 @@ function progressToRow(userId: string, wordId: string, progress: LearningProgres
 }
 
 export function VocabularyProvider({ children }: { children: ReactNode }) {
+  const pathname = usePathname();
+  const isReaderRoute = /^\/(?:exam|denken|login)(?:\/|$)/.test(pathname);
+  const [hasRequestedVocabulary, setHasRequestedVocabulary] = useState(!isReaderRoute);
+  // Keep loaded vocabulary and unsaved edits when returning from a reader.
+  if (!isReaderRoute && !hasRequestedVocabulary) setHasRequestedVocabulary(true);
+
   const [words, setWords] = useState<VocabWord[]>([]);
   const [examples, setExamples] = useState<VocabExample[]>([]);
   const userIdRef = useRef<string | null>(null);
@@ -110,6 +117,7 @@ export function VocabularyProvider({ children }: { children: ReactNode }) {
   // tự fetch/gộp tiến độ cho đúng các từ N3 vừa nạp (giống loadDbVocab bên
   // dưới) vì 2 effect chạy song song, không đảm bảo thứ tự.
   useEffect(() => {
+    if (!hasRequestedVocabulary) return;
     let cancelled = false;
     const supabase = createClient();
 
@@ -147,7 +155,7 @@ export function VocabularyProvider({ children }: { children: ReactNode }) {
     return () => {
       cancelled = true;
     };
-  }, []);
+  }, [hasRequestedVocabulary]);
 
   // Nạp từ vựng nội dung DB (N5 trở đi, xem vocab-content-service.ts) và gộp
   // vào cùng danh sách với N3 JSON tĩnh, để mọi UI/luyện tập/ôn tập hiện có
@@ -158,6 +166,7 @@ export function VocabularyProvider({ children }: { children: ReactNode }) {
   // các từ N5 được thêm vào state. Dùng chung pattern merge-bằng-Map nên
   // dù effect nào chạy xong trước, kết quả gộp cuối cùng vẫn giống nhau.
   useEffect(() => {
+    if (!hasRequestedVocabulary) return;
     let cancelled = false;
     const supabase = createClient();
 
@@ -199,7 +208,7 @@ export function VocabularyProvider({ children }: { children: ReactNode }) {
     return () => {
       cancelled = true;
     };
-  }, []);
+  }, [hasRequestedVocabulary]);
 
   const syncProgress = useCallback((wordId: string, progress: LearningProgress, isHidden: boolean) => {
     const userId = userIdRef.current;

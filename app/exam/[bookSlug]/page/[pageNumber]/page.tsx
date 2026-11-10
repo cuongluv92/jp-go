@@ -8,7 +8,6 @@ import { WideContainer } from "@/components/exam/wide-container";
 import {
   getExamBookBySlug,
   getExamPage,
-  getExamSectionAncestors,
   getExamSectionTree,
   listExamPagesMeta,
 } from "@/lib/exam/queries";
@@ -49,14 +48,12 @@ export default async function ExamPageReader({
   const book = await getExamBookBySlug(bookSlug);
   if (!book) notFound();
 
-  const page = await getExamPage(book.id, pageNum);
-  if (!page) notFound();
-
-  const [ancestors, tree, pagesMeta] = await Promise.all([
-    page.section_id ? getExamSectionAncestors(page.section_id) : Promise.resolve([]),
+  const [page, tree, pagesMeta] = await Promise.all([
+    getExamPage(book.id, pageNum),
     getExamSectionTree(book.id),
     listExamPagesMeta(book.id),
   ]);
+  if (!page) notFound();
 
   // Trang chỉ gắn section_id vào mục lá - mục cha (第1編...) không có trang
   // trực tiếp nên cần index gộp đệ quy mới bấm được ở MỌI cấp breadcrumb,
@@ -64,6 +61,13 @@ export default async function ExamPageReader({
   const directPageIndex = buildSectionPageIndex(pagesMeta);
   const aggregatedFirstPage = buildAggregatedFirstPageIndex(tree, directPageIndex);
   const sectionsById = new Map(flattenSectionTree(tree).map((section) => [section.id, section]));
+
+  const ancestors: ExamSection[] = [];
+  let ancestor = page.section_id ? sectionsById.get(page.section_id) : undefined;
+  while (ancestor) {
+    ancestors.unshift(ancestor);
+    ancestor = ancestor.parent_id ? sectionsById.get(ancestor.parent_id) : undefined;
+  }
 
   const currentRootId = findRootSectionId(page.section_id, sectionsById);
   const scopedPagesMeta = currentRootId
