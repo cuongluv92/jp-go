@@ -1,6 +1,52 @@
 import type { LessonRow } from "./lesson";
 
 export const machinePages: Record<number, LessonRow[]> = {
+  296: [
+    { jp: "フィードバック結合の合成伝達関数", vi: "Hàm truyền tổng hợp của ghép phản hồi", equations: [["G₀ = ", { fraction: [["Y"], ["X"]] }, " = ", { fraction: [["G"], ["1 + GH"]] }]] },
+    { diagram: "feedbackFormula296" },
+    { jp: "練習問題 01　一巡周波数伝達関数", vi: "Bài tập 01 · Hàm truyền tần số vòng hở", heading: true },
+    { jp: "図は、出力信号を Y、入力信号を X とするフィードバック制御系のブロック図である。(a) 図において、K＝5、T＝0.1 s として、入力信号からフィードバック信号までの一巡周波数伝達関数（開ループ周波数伝達関数）G(jω) は。(b) (a)で求めた一巡周波数伝達関数において、ωを変化したときのベクトル軌跡はどのような曲線を描くか。", vi: "Sơ đồ khối mô tả hệ phản hồi có đầu vào X và đầu ra Y. (a) Với K = 5, T = 0,1 s, tìm hàm truyền tần số vòng hở G(jω) từ tín hiệu vào đến tín hiệu phản hồi. (b) Khi thay đổi ω, quỹ tích vectơ của hàm vừa tìm có dạng gì?" },
+    { diagram: "loopExercise296" },
+    { jp: "解き方　(a) 一巡周波数伝達関数（開ループ周波数伝達関数）は、右図のように、入力信号を X、出力信号を Z としたときの関数です。直結フィードバック結合となっている制御対象部の周波数伝達関数 G₁(jω) は、次のとおりです。一巡周波数伝達関数 G(jω) は、制御器と制御対象の周波数伝達関数の積となります。", vi: "Cách giải (a). Mở vòng ngoài để dùng X làm đầu vào và Z làm đầu ra. Giữ vòng phản hồi trực tiếp bên trong đối tượng và rút gọn thành G₁(jω). Sau đó nhân G₁ với hàm truyền K của bộ điều khiển.", equations: [["G₁(jω) = ", { fraction: [["B"], ["A"]] }, " = ", { fraction: [["1"], ["1 + jωT"]] }], ["G(jω) = ", { fraction: [["Z"], ["X"]] }, " = K × ", { fraction: [["1"], ["1 + jωT"]], red: true }]], note: "Vòng hở ở đây chỉ mở đường phản hồi ngoài. Vòng nhỏ bên trong đối tượng vẫn khép kín." },
+    { diagram: "loopSolution296" },
+  ],
+  297: [
+    { diagram: "plantLoop297" },
+    { jp: "制御対象部の入力信号を A、出力信号を B として計算。分母、分子に jωT を掛ける。K＝5、T＝0.1 s を代入し、", vi: "Gọi đầu vào của đối tượng là A, đầu ra là B. Nhân tử và mẫu với jωT để rút gọn, rồi thay K = 5, T = 0,1 s.", equations: [["(A − B) × ", { fraction: [["1"], ["jωT"]] }, " = B"], ["A × ", { fraction: [["1"], ["jωT"]] }, " = B(1 + ", { fraction: [["1"], ["jωT"]] }, ")"], [{ fraction: [["B"], ["A"]] }, " = ", { fraction: [[{ fraction: [["1"], ["jωT"]] }], ["1 + ", { fraction: [["1"], ["jωT"]] }]] }, " = ", { fraction: [["1"], ["1 + jωT"]] }], ["G(jω) = ", { fraction: [["5"], ["1 + jω0.1"]] }]] },
+    { jp: "(b) G(jω) のベクトル軌跡は、右図のように半円になります。G(jω) の絶対値を3ポイント計算すると、ω＝0のとき、ω＝10のとき、ω＝∞のとき。∠G(jω)＝−tan⁻¹ωT で位相（偏角）は負の値をとるので、ベクトル軌跡は、第4象限の半円となります。", vi: "(b) Quỹ tích vectơ là nửa đường tròn như hình. Tính độ lớn tại ba mốc ω = 0, ω = 10 và ω tiến tới vô hạn. Góc pha −arctan(ωT) âm khi ω dương, nên quỹ tích nằm ở góc phần tư IV.", equations: [["ω = 0: |G| = |", { fraction: [["5"], ["1 + j0"]] }, "| = 5"], ["ω = 10: |G| = |", { fraction: [["5"], ["1 + j1"]] }, "| = ", { fraction: [["5"], ["√2"]] }], ["ω → ∞: |G| → 0"]], note: "Kiểm tra ngược tại ω = 10 rad/s: G = 2,5 − j2,5, có biên độ 5/√2 và pha −45°. Cùng hai mốc (5,0) và (0,0), nó nằm trên nửa đường tròn tâm (2,5; 0), bán kính 2,5." },
+    { diagram: "loopLocus297" },
+    { jp: "解説　一巡周波数伝達関数：入力信号を正弦波状に変化したとき、制御系を通してフィードバック信号がどのように変化するかを数式で表し、出力信号と入力信号の比を数式で表現したものです。ベクトル軌跡：入力信号の ω を0から∞まで変化させたとき G(jω) のベクトルの先端が描く軌跡のことです。", vi: "Giải thích. Hàm truyền vòng hở biểu thị bằng tỉ số tín hiệu ra trên tín hiệu vào, cho biết tín hiệu phản hồi thay đổi ra sao khi đầu vào biến thiên hình sin. Quỹ tích vectơ là đường mà đầu mút vectơ G(jω) vạch ra khi ω chạy từ 0 tới vô hạn." },
+    { jp: "解答　(a) G(jω)　(b) **第4象限の半円**", vi: "Đáp án · (a) G(jω) như công thức, (b) **nửa đường tròn ở góc phần tư IV**.", equations: [["G(jω) = ", { fraction: [["5"], ["1 + jω0.1"]], red: true }]] },
+  ],
+  298: [
+    { jp: "10-5 制御系の安定判別法といえば ナイキスト線図、ボード線図", vi: "10-5 Xét ổn định của hệ điều khiển · Đồ thị Nyquist và Bode", heading: true },
+    { diagram: "stepResponse298" },
+    { jp: "制御系のステップ応答と特性評価", vi: "Đáp ứng bước và đánh giá đặc tính hệ điều khiển", heading: true },
+    { jp: "上図は、フィードバック制御系のステップ応答波形※1の例です。この波形において、偏差の最大値と目標値との差、またはこれをパーセントで表したものを**行過ぎ量**、最大値まで変化するのに要する時間 Tₚ を**行過ぎ時間**、許容偏差内に入るまでの時間 Tₛ を**整定時間**といいます。これらの値は、小さいほど制御特性がよいといえます。また、振動は速やかに減少するほど安定であるといえます。", vi: "Hình trên là ví dụ đáp ứng bước của vòng phản hồi. Phần đỉnh vượt giá trị đặt, hoặc phần vượt biểu diễn theo phần trăm, gọi là **độ quá điều chỉnh**. Tₚ là **thời gian đến đỉnh**. Tₛ là **thời gian xác lập**, tức thời gian đến khi đầu ra vào và ở lại trong dải sai lệch cho phép. Theo các tiêu chí trong hình, các giá trị nhỏ hơn cho đáp ứng tốt hơn, và dao động tắt càng nhanh thì hệ càng ổn định." },
+    { jp: "ステップ応答が最終値（定常値）の10％から90％になるまでの時間 Tᵣ を**立ち上がり時間**、定常値の50％に達するまでの時間 T_d を**遅れ時間**（遅延時間）といいます。", vi: "**Thời gian tăng** Tᵣ là khoảng đầu ra tăng từ 10% lên 90% giá trị xác lập. **Thời gian trễ** T_d là thời gian từ lúc đặt bước đến khi đầu ra đạt 50% giá trị xác lập." },
+    { jp: "制御系の特性を評価するものとして、**過渡特性**と**定常特性**が用いられます。過渡特性は、急変する信号が加わったとき、定常状態になるまでの特性です。定常特性は、過渡的な変化がなくなり、一定値になった後の特性で制御量の目標値との定常偏差で評価します。", vi: "Đánh giá hệ bằng **đặc tính quá độ** và **đặc tính xác lập**. Quá độ mô tả đáp ứng từ khi tín hiệu đổi đột ngột đến khi ổn định. Xác lập mô tả đáp ứng sau khi biến thiên quá độ đã hết và được đánh giá bằng sai lệch giữa đầu ra xác lập với giá trị đặt." },
+    { jp: "制御系の安定判別法", vi: "Phương pháp xét ổn định của hệ điều khiển", heading: true },
+    { jp: "図10-5-1のようにフィードバック信号の位相が180°遅れたとき、加え合わせ点で入力信号にフィードバック信号が加算され、制御系は不安定になります。", vi: "Như hình 10-5-1, khi tín hiệu phản hồi trễ 180°, tại điểm cộng nó củng cố tín hiệu vào. Nếu độ lợi vòng đủ lớn, hệ mất ổn định.", note: "Pha −180° một mình chưa đủ để kết luận. Trang sau xét thêm độ lợi tại tần số đó." },
+    { jp: "※1 ステップ応答：入力信号をステップ状（階段状）に変化したときの応答（出力波形）をいいます。", vi: "Chú thích 1. Đáp ứng bước là dạng sóng đầu ra khi đầu vào đổi theo dạng bậc thang." },
+  ],
+  299: [
+    { diagram: "unstableLoop299" },
+    { jp: "制御系を一巡する関数（図10-5-1の場合、G₁G₂H）を**一巡周波数伝達関数**といいます。制御系が安定か不安定かは、一巡周波数伝達関数の位相が180°遅れたとき、このゲインが1より小さければ安定、1より大きければ不安定です。また、ゲインを g［dB］で表したとき、g＜0 dBのとき安定、g＞0 dBのとき不安定となります。いずれも、フィードバック信号の位相が180°遅れたとき、これが入力信号よりも大きくなったとき不安定になります。", vi: "**Hàm truyền vòng hở** mô tả tác động qua một vòng, bằng G₁G₂H trong hình 10-5-1. Với dạng hệ sách minh họa, tại pha −180°, độ lợi nhỏ hơn 1 cho hệ ổn định, lớn hơn 1 cho hệ không ổn định. Tương ứng theo dB là g < 0 và g > 0. Khi phản hồi trễ 180° và biên độ sau một vòng lớn hơn biên độ ban đầu, dao động được khuếch đại.", note: "Quy tắc đọc một điểm cắt pha áp dụng cho dạng vòng hở đơn giản như hình. Trường hợp tổng quát cần xét cực vòng hở và số vòng bao quanh điểm −1 theo tiêu chuẩn Nyquist." },
+    { jp: "ナイキスト線図による安定判別法", vi: "Xét ổn định bằng đồ thị Nyquist", heading: true },
+    { jp: "一巡周波数伝達関数のベクトル軌跡を、**ナイキスト線図**といいます。**ベクトル軌跡**とは、G(jω) の式で ω＝0～∞（無限大）まで変化したとき、ベクトルの先端を連ねて描く図形のことで、これを用いると数式の特性がよくわかります。", vi: "Sách gọi quỹ tích vectơ của hàm truyền vòng hở là **đồ thị Nyquist**. **Quỹ tích vectơ** nối các đầu mút của G(jω) khi ω chạy từ 0 đến vô hạn, giúp đọc đặc tính của biểu thức." },
+    { diagram: "nyquist299" },
+    { jp: "ナイキスト線図において、位相が−180°のとき（ベクトルが左を向いたとき）、大きさが1より大きいか小さいかで判別できます。|G(jω)|＜1のとき安定。|G(jω)|＞1のとき不安定、|G(jω)|＝1のとき安定限界（不安定に含める）。", vi: "Tại pha −180° trên đồ thị Nyquist, vectơ hướng sang trái. Theo trường hợp minh họa, |G| < 1 thì ổn định, |G| > 1 thì không ổn định và |G| = 1 là biên ổn định, được xếp vào trường hợp không ổn định theo quy ước của bài." },
+    { jp: "ボード線図による安定判別法", vi: "Xét ổn định bằng đồ thị Bode", heading: true },
+    { jp: "一巡周波数伝達関数 G(jω) において、デシベル表示のゲイン g［dB］と位相 θ［°］は、", vi: "Với hàm truyền vòng hở G(jω), xét độ lợi g (dB) và pha θ (°). Công thức tiếp tục ở trang 300." },
+  ],
+  300: [
+    { jp: "ω を変化したときの g［dB］と θ＝∠G(jω) を計算し、片対数グラフ用紙を用いて、横軸（対数目盛）に ω［rad/s］をとり、縦軸（平等目盛）にデシベル表示のゲイン g［dB］と位相 θ［°］をグラフにしたものを、**ボード線図**といいます。", vi: "Tính g (dB) và pha θ khi thay đổi ω. Vẽ ω (rad/s) trên trục ngang logarit, còn độ lợi dB và pha độ trên các thang tuyến tính của trục đứng. Đây là **đồ thị Bode**.", equations: [["g = 20 log₁₀|G(jω)| [dB], θ = ∠G(jω)"]] },
+    { diagram: "bode300" },
+    { jp: "一巡周波数伝達関数 G(jω) のボード線図において、位相が−180°のときの g［dB］の値を見ることで、安定、不安定の判別を行います。g＜0 dBのとき安定。g＞0 dBのとき不安定、g＝0 dBのとき安定限界（不安定に含める）。", vi: "Đọc g (dB) tại tần số có pha −180°. Với dạng hệ trong sách, g < 0 dB thì ổn định, g > 0 dB thì không ổn định và g = 0 dB là biên ổn định, được xếp vào trường hợp không ổn định theo quy ước của bài." },
+    { jp: "安定判別といえば一巡周波数伝達関数が−180°のときのゲインで判別。ナイキスト線図から **|G(jω)|＜1** のとき安定、**|G(jω)|＞1** のとき不安定。ボード線図から **g＜0 dB** のとき安定、**g＞0 dB** のとき不安定。", vi: "Xét độ lợi tại pha −180°. Trên Nyquist, **|G| < 1** tương ứng ổn định và **|G| > 1** tương ứng không ổn định. Trên Bode, các điều kiện tương ứng là **g < 0 dB** và **g > 0 dB**.", note: "Kiểm tra ngược: |G| = 1 thì 20 log₁₀1 = 0 dB. Ví dụ tại điểm cắt pha, |G| = 0,5 thì g ≈ −6,02 dB." },
+    { jp: "例題　重要度★★　令和5年度上期　機械　問13", vi: "Ví dụ · Mức quan trọng ★★ · Kỳ đầu Reiwa 5 (2023), phần 機械, câu 13", heading: true },
+    { jp: "図1に示す R-L回路において、端子 a、a′ 間に単位階段状のステップ電圧 v(t)［V］を加えたとき、抵抗 R［Ω］に流れる電流を i(t)［A］とすると、i(t) は図2のようになった。この回路の R［Ω］、L［H］の値及び入力を a、a′ 間の電圧とし、出力を R［Ω］に流れる電流としたときの周波数伝達関数 G(jω) の式として、正しいものを次の（1）～（5）のうちから一つ選べ。", vi: "Đặt điện áp bước đơn vị v(t) (V) giữa hai đầu a và a′ của mạch R–L ở hình 1. Dòng i(t) (A) qua điện trở R (Ω) có dạng như hình 2. Chọn phương án đúng trong (1) đến (5) cho R, L (H) và hàm truyền tần số G(jω), với đầu vào là điện áp a–a′ và đầu ra là dòng qua R. Hình và phương án ở trang 301." },
+  ],
   291: [
     { jp: "10-3 周波数伝達関数と伝達関数といえば 出力信号と入力信号の比", vi: "10-3 Hàm truyền tần số và hàm truyền · Tỉ số tín hiệu ra trên tín hiệu vào", heading: true },
     { diagram: "roomFrequency291" },

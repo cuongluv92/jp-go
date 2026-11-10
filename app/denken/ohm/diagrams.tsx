@@ -35,6 +35,15 @@ function Diagram({ file, width, height, title, labels }: {
 }
 
 export const diagrams = {
+  feedbackFormula296: (<Diagram file="feedbackFormula296" width={427} height={241} title="Hình 10-4-1 · Ghép phản hồi âm" labels={[["入力 X・フィードバック信号 YH・出力 Y の H 倍", "Đầu vào X, tín hiệu phản hồi YH và đầu ra Y nhân với H"]]} />),
+  loopExercise296: (<Diagram file="loopExercise296" width={340} height={151} title="Bài tập · Sơ đồ điều khiển hai vòng" labels={[["入力信号・出力信号・制御器・制御対象", "Tín hiệu vào, tín hiệu ra, bộ điều khiển và đối tượng"]]} />),
+  loopSolution296: (<Diagram file="loopSolution296" width={340} height={177} title="Bài tập · Đường đi qua một vòng" labels={[["信号が一巡・出力信号 Z", "Tín hiệu đi hết một vòng và tín hiệu ra Z"]]} />),
+  plantLoop297: (<Diagram file="plantLoop297" width={518} height={298} title="Rút gọn vòng phản hồi của đối tượng" labels={[["制御対象部の合成伝達関数の求め方", "Cách tìm hàm truyền tổng hợp của đối tượng"], ["入力・出力・分母、分子に jωT を掛ける", "Đầu vào, đầu ra, nhân tử và mẫu với jωT"]]} />),
+  loopLocus297: (<Diagram file="loopLocus297" width={340} height={214} title="Quỹ tích vectơ của hàm truyền vòng hở" labels={[["実軸・虚軸・ω増加", "Trục thực, trục ảo và chiều ω tăng"], ["ベクトルの先端がω＝0→∞まで円周上をたどる", "Đầu mút vectơ đi trên đường tròn khi ω tăng từ 0 đến vô hạn"]]} />),
+  stepResponse298: (<Diagram file="stepResponse298" width={761} height={391} title="Ví dụ đáp ứng bước" labels={[["出力・時間・許容偏差", "Đầu ra, thời gian và dải sai lệch cho phép"], ["行過ぎ量・行過ぎ時間・整定時間", "Độ quá điều chỉnh, thời gian đến đỉnh và thời gian xác lập"], ["立ち上がり時間・遅れ時間", "Thời gian tăng và thời gian trễ"]]} />),
+  unstableLoop299: (<Diagram file="unstableLoop299" width={643} height={291} title="Hình 10-5-1 · Phản hồi làm tăng dao động" labels={[["入力信号・フィードバック信号・180°遅れ", "Tín hiệu vào, tín hiệu phản hồi và trễ 180°"], ["偏差信号が拡大するとき不安定・出力の振幅が拡大", "Sai lệch tăng gây mất ổn định, biên độ đầu ra tăng"]]} />),
+  nyquist299: (<Diagram file="nyquist299" width={340} height={332} title="Hình 10-5-2 · Đồ thị Nyquist" labels={[["不安定・安定限界・安定", "Không ổn định, biên ổn định và ổn định"]]} />),
+  bode300: (<Diagram file="bode300" width={660} height={335} title="Hình 10-5-3 · Đồ thị Bode" labels={[["ゲイン・位相・角周波数", "Độ lợi, pha và tần số góc"], ["この値が0 dBより下側（負の値）であれば安定", "Trong hình này, hệ ổn định nếu độ lợi tại pha −180° thấp hơn 0 dB"]]} />),
   roomFrequency291: (<Diagram file="roomFrequency291" width={752} height={381} title="Đáp ứng nhiệt độ phòng với giá trị đặt hình sin" labels={[["目標値・入力・出力・実際の温度", "Giá trị đặt, đầu vào, đầu ra và nhiệt độ thực tế"], ["室内温度・分・速い変化には追いつかない", "Nhiệt độ phòng, phút và không bám kịp biến thiên nhanh"]]} />),
   rcFrequency292: (<Diagram file="rcFrequency292" width={340} height={195} title="Hình 10-3-1 · Mạch R–C" labels={[["入力信号・出力信号", "Tín hiệu vào và ra"], ["R・1/(jωC)・I(jω)", "Điện trở, tổng trở tụ và dòng mạch"]]} />),
   lrFrequency292: (<Diagram file="lrFrequency292" width={340} height={210} title="Hình 10-3-2 · Mạch L–R" labels={[["入力信号・出力信号", "Tín hiệu vào và ra"], ["jωL・R", "Tổng trở cuộn cảm và điện trở"]]} />),
