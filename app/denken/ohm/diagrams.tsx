@@ -35,6 +35,13 @@ function Diagram({ file, width, height, title, labels }: {
 }
 
 export const diagrams = {
+  external196: (<Diagram file="external196" width={264} height={132} title="Điện trở ngoài trong mạch rôto" labels={[["外部抵抗 4r₂", "Điện trở ngoài 4r₂ mắc nối tiếp với điện trở cuộn dây r₂"]]} />),
+  peakShift197: (<Diagram file="peakShift197" width={476} height={305} title="Dịch chuyển điểm mômen tới hạn" labels={[["トルク・滑り・始動トルク・停動トルク・等しい", "Mômen, hệ số trượt, mômen khởi động, mômen tới hạn và hai giá trị bằng nhau"]]} />),
+  starDelta198: (<Diagram file="starDelta198" width={586} height={261} title="Hình 2-4-1 · Khởi động sao–tam giác" labels={[["スター結線（Y 結線）・デルタ結線（Δ 結線）", "Nối sao lúc khởi động và nối tam giác sau khi tăng tốc"]]} />),
+  doubleCage199: (<Diagram file="doubleCage199" width={340} height={196} title="Hình 2-4-2 · Cấu tạo rôto lồng sóc kép" labels={[["二重かご形・普通かご形・外側導体・内側導体", "Lồng sóc kép, lồng sóc thường, thanh dẫn lớp ngoài và lớp trong"]]} />),
+  deepCage199: (<Diagram file="deepCage199" width={352} height={196} title="Hình 2-4-3 · Rôto lồng sóc rãnh sâu" labels={[["深みぞかご形・導体・鉄心", "Lồng sóc rãnh sâu, thanh dẫn và lõi sắt"]]} />),
+  cageTorque200: (<Diagram file="cageTorque200" width={287} height={219} title="Hình 2-4-4 · So sánh đường mômen–tốc độ" labels={[["トルク・速度（滑り）・普通かご形・二重かご形・深みぞかご形", "Mômen, tốc độ biểu diễn qua hệ số trượt, lồng sóc thường, kép và rãnh sâu"]]} />),
+  startTorque200: (<Diagram file="startTorque200" width={424} height={165} title="Đặc tính khởi động nối Y và toàn điện áp" labels={[["全電圧始動の特性・Y 結線での運転特性・Tₙ", "Đặc tính khởi động toàn điện áp, đặc tính chạy nối Y và mômen định mức"]]} />),
   standstill191: (<Diagram file="standstill191" width={691} height={256} title="Hình 2-2-2 · Mạch lúc rôto đứng yên" labels={[["固定子１相分の等価回路・回転子１相分の等価回路", "Mạch tương đương một pha stato và một pha rôto"], ["コンダクタンス・サセプタンス", "Điện dẫn là nghịch đảo điện trở, độ lớn điện nạp là nghịch đảo điện kháng. Hai nhánh mắc song song"]]} />),
   running192: (<Diagram file="running192" width={388} height={234} title="Hình 2-2-3 · Mạch khi rôto quay" labels={[["滑り s で運転中のときの回路", "Mạch khi chạy với hệ số trượt s"], ["sE₂・sx₂", "Sức điện động và điện kháng rôto ở hệ số trượt s"]]} />),
   rotor192: (<Diagram file="rotor192" width={793} height={241} title="Hình 2-2-4 · Mạch thứ cấp một pha" labels={[["滑り s で運転中の二次回路", "Mạch thứ cấp khi vận hành với hệ số trượt s"], ["各値を s で割った二次回路", "Mạch sau khi chia các đại lượng trong biểu thức dòng điện cho s"], ["負荷抵抗 R で表した二次回路", "Mạch biểu diễn bằng điện trở tải tương đương R"]]} />),
