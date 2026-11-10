@@ -35,6 +35,14 @@ function Diagram({ file, width, height, title, labels }: {
 }
 
 export const diagrams = {
+  deMorganPoint306: (<Diagram file="deMorganPoint306" width={728} height={135} title="Hai dạng tương đương theo De Morgan" labels={[["等しい", "Tương đương"], ["ANDとORの記号の入れ替えと○の付け替え", "Đổi AND và OR rồi chuyển vòng tròn phủ định"]]} />),
+  truthGates306: (<Diagram file="truthGates306" width={635} height={716} title="Hình 11-1-10 · Các cổng logic và bảng chân trị" labels={[["入力・出力・インバータ", "Đầu vào, đầu ra và bộ đảo"], ["真理値表", "Bảng chân trị theo từng cổng"]]} />),
+  logicExercise307: (<Diagram file="logicExercise307" width={354} height={192} title="Bài tập 01 · Sơ đồ mạch logic" labels={[["A・B・C・X・Y", "Ba đầu vào và hai đầu ra"]]} />),
+  logicSteps307: (<Diagram file="logicSteps307" width={601} height={315} title="Bài tập 01 · Biểu thức tại mỗi khối" labels={[["Xの論理式", "Biểu thức logic của X"], ["AND記号は「·」、OR記号は「＋」", "Ký hiệu AND viết bằng dấu ·, OR viết bằng dấu +"]]} />),
+  logicValues307: (<Diagram file="logicValues307" width={644} height={199} title="Bài tập 01 · Thay 0, 1, 1 vào mạch" labels={[["入力A＝0、B＝1で異なるので出力は1", "A và B khác nhau nên XOR cho 1"], ["入力が2つとも1で一致しているので出力は0", "Hai đầu vào cuối bằng nhau nên XOR cho 0"]]} />),
+  karnaughSteps309: (<Diagram file="karnaughSteps309" width={764} height={659} title="Hình 11-2-1 · Lập bản đồ Karnaugh" labels={[["グループⅠ・グループⅡ・グループⅢ", "Ba nhóm ô 1"]]} />),
+  karnaughRead310: (<Diagram file="karnaughRead310" width={506} height={331} title="Hình 11-2-2 · Đọc biểu thức từ bản đồ Karnaugh" labels={[["2つのマスで共通の変数はAとB・BとC・AとC", "Các cặp biến chung trong hai ô là A và B, B và C, hoặc A và C"]]} />),
+  majorityCircuit310: (<Diagram file="majorityCircuit310" width={340} height={274} title="Hình 11-2-3 · Mạch bật đèn khi có ít nhất hai công tắc bật" labels={[["発光ダイオード（ランプ）・抵抗・V_c", "LED (đèn), điện trở và điện áp nguồn"]]} />),
   rlStepProblem301: (<Diagram file="rlStepProblem301" width={608} height={241} title="Ví dụ · Mạch R–L và đáp ứng với bước 1 V" labels={[["v(t)・i(t)・t", "Điện áp bước, dòng điện và thời gian"], ["a・a′・R・L", "Hai đầu cấp điện, điện trở và cuộn cảm"]]} />),
   rlStepSolution301: (<Diagram file="rlStepSolution301" width={388} height={244} title="Đồ thị dùng để xác định hằng số thời gian" labels={[["電流の最終値・接線・Tは時定数", "Dòng xác lập, tiếp tuyến và T là hằng số thời gian"]]} />),
   logicBubble302: (<Diagram file="logicBubble302" width={340} height={319} title="Hình 11-1-1 · Ký hiệu mức tác động" labels={[["状態表示記号の例・AがHかつBがLのとき、出力YはH", "Ví dụ ký hiệu trạng thái: A ở H và B ở L thì Y ở H"]]} />),
