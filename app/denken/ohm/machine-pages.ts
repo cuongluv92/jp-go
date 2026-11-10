@@ -1,6 +1,107 @@
 import type { LessonRow } from "./lesson";
 
 export const machinePages: Record<number, LessonRow[]> = {
+  170: [
+    { diagram: "equivalentSteps170" },
+    { jp: "図1-2-2 一次等価回路（励磁回路を省略）・図1-2-3 理想変圧器を除いても同じ", vi: "Hình 1-2-2 · Quy về sơ cấp, bỏ nhánh kích từ. Hình 1-2-3 · Mạch vẫn tương đương khi bỏ máy biến áp lý tưởng.", equations: [["aE₂ = E₁"], [{ fraction: [["I₂"], ["a"]] }, " = I₁"]], note: "Sau quy đổi, aE₂ và E₁ cùng độ lớn và cùng cực tính theo hình. Hai điện trở nối tiếp mang cùng dòng quy đổi, nên có thể cộng lại. Kiểm tra tổn hao đồng và công suất phản kháng của điện kháng rò đều được bảo toàn." },
+    { jp: "したがって、図1-2-4のような簡単な回路になります。これは一次側に換算した回路なので、**一次等価回路**といいます。また、図1-2-5は二次側に換算した等価回路で、これを**二次等価回路**といいます。", vi: "Hình 1-2-4 cho mạch rút gọn quy về phía sơ cấp, gọi là **mạch tương đương sơ cấp (一次等価回路)**. Hình 1-2-5 quy về phía thứ cấp, gọi là **mạch tương đương thứ cấp (二次等価回路)**." },
+    { diagram: "equivalentSides170" },
+    { jp: "一次等価回路 といえば 二次定数に **a²** を乗ず。二次電圧は **a 倍**、二次電流は **1/a 倍**。", vi: "Khi quy về sơ cấp, nhân các thông số trở kháng thứ cấp với **a²**. Điện áp thứ cấp nhân **a**, dòng thứ cấp chia **a**.", equations: [["r = r₁ + a²r₂ [Ω]"], ["x = x₁ + a²x₂ [Ω]"]] },
+    { jp: "二次等価回路 といえば 一次定数に **1/a²** を乗ず。一次電圧は **1/a 倍**、一次電流は **a 倍**。", vi: "Khi quy về thứ cấp, chia các thông số trở kháng sơ cấp cho **a²**. Điện áp sơ cấp chia **a**, dòng sơ cấp nhân **a**.", equations: [["r = ", { fraction: [["r₁"], ["a²"]] }, " + r₂ [Ω]"], ["x = ", { fraction: [["x₁"], ["a²"]] }, " + x₂ [Ω]"]], note: "Ví dụ a = 10 và r₂ = 0,02 Ω thì điện trở thứ cấp quy về sơ cấp là 2 Ω. Chia ngược 2 Ω cho 100 được 0,02 Ω. Lỗi thường gặp là nhân điện trở với a thay vì a², hoặc cộng trực tiếp các thông số chưa quy về cùng phía." },
+  ],
+  166: [
+    { diagram: "transformerPolarity166" },
+    { jp: "単相変圧器の端子配列と極性", vi: "Bố trí đầu cực và cực tính của máy biến áp một pha", heading: true },
+    { jp: "極性は、**減極性**とする。一次巻線及び二次巻線の各々の一端を図1-1-5のように接続するときは、ほかの端子間において、**一次電圧と二次電圧との差**に等しい電圧が現れるような方式による。", vi: "Dùng quy ước **cực tính trừ (減極性)**. Khi nối một đầu của mỗi cuộn sơ cấp và thứ cấp như hình 1-1-5, điện áp giữa hai đầu còn lại bằng **hiệu điện áp sơ cấp và thứ cấp**.", note: "Nếu điện áp đo được bằng tổng hai điện áp thì đó là cực tính cộng (加極性). Theo hình 1-1-4, hai đoạn thứ cấp 105 V cộng lại thành 210 V giữa u và v." },
+    { jp: "三相変圧器の場合", vi: "Trường hợp máy biến áp ba pha", heading: true },
+    { diagram: "transformerTerminals166" },
+    { jp: "一次端子を U、V 及び W、二次端子を u、v 及び w とし、二次中性点端子は o または n とする。一次側の位相順序を U、V、W の順序とする場合、二次側も u、v、w の順序とする。", vi: "Đầu cực sơ cấp là U, V và W, thứ cấp là u, v và w. Đầu trung tính thứ cấp ký hiệu o hoặc n. Nếu thứ tự pha sơ cấp là U, V, W thì thứ cấp tương ứng là u, v, w." },
+    { jp: "一次端子は、一次端子側から見て右から左へ **U、V、W** の順序に配列する。二次端子は、二次端子側から見て左から右へ **u、v、w** の順に配列する。中性点端子の位置は、**u、v、w、o** の順序となるようにする。", vi: "Nhìn từ phía sơ cấp, bố trí **U, V, W** từ phải sang trái. Nhìn từ phía thứ cấp, bố trí **u, v, w** từ trái sang phải. Nếu có đầu trung tính thì thứ tự là **u, v, w, o**." },
+    { jp: "二次出力", vi: "Công suất đầu ra thứ cấp", heading: true },
+    { jp: "二次出力すなわち変圧器の二次から出す皮相電力 S₂ は、負荷の皮相電力 V₂I₂ と同じです。この二次出力を、**変圧器の容量**といいます。", vi: "Công suất biểu kiến S₂ ở đầu ra thứ cấp bằng công suất biểu kiến V₂I₂ của tải. Đầu ra thứ cấp này gọi là **dung lượng máy biến áp (変圧器の容量)**.", equations: [["S₂ = V₂I₂ [VA]"]], note: "Ở đây dùng điện áp và dòng hiệu dụng cho trường hợp một pha. VA là công suất biểu kiến, còn W là công suất tác dụng." },
+  ],
+  168: [
+    { jp: "練習問題 01 · 変圧器巻線の巻数", vi: "Bài luyện 01 · Số vòng dây máy biến áp", heading: true },
+    { jp: "周波数 f＝60 Hz、磁束の最大値 Φₘ＝0.02 Wb、巻数比 a＝60、一次起電力 E₁＝22 kV の変圧器において、一次巻数 N₁、二次巻数 N₂ は。", vi: "Một máy biến áp có tần số f = 60 Hz, từ thông cực đại Φₘ = 0,02 Wb, tỉ số vòng dây a = 60 và suất điện động sơ cấp E₁ = 22 kV. Tìm N₁ và N₂." },
+    { diagram: "transformerExercise168" },
+    { jp: "① 問題を図に表してみます。② 最大磁束密度と磁束の最大値の公式に数値を代入し、一次巻数 N₁ を求めます。", vi: "① Biểu diễn đề bằng sơ đồ. ② Dùng công thức mật độ từ thông cực đại và từ thông cực đại để tìm số vòng sơ cấp N₁.", equations: [
+      ["Bₘ = ", { fraction: [["E"], ["4.44 f N A"]] }, " [T]"],
+      ["Φₘ = BₘA = ", { fraction: [["E₁"], ["4.44 f N₁"]] }, " [Wb]"],
+      ["N₁ = ", { fraction: [["22 × 10³"], ["0.02 × 4.44 × 60"]] }, " ≈ 4,130"],
+    ], note: "Đổi 22 kV thành 22.000 V. Tiết diện A triệt tiêu vì đề cho sẵn từ thông cực đại Φₘ. Hệ số 4,44 áp dụng khi từ thông hình sin." },
+    { jp: "③ 二次巻数 N₂ は、一次巻数を巻数比で割って求めます。解答：**N₁＝4 130 回、N₂＝69 回**。", vi: "③ Chia số vòng sơ cấp cho tỉ số vòng dây để tìm N₂. Đáp số theo sách: **N₁ ≈ 4.130 vòng, N₂ ≈ 69 vòng**.", equations: [["N₂ = ", { fraction: [["N₁"], ["a"]] }, " = ", { fraction: [["4130"], ["60"]] }, " ≈ 68.8 → 69"]], note: "Thay ngược 4.130 vòng vào 4,44 × 60 × 4.130 × 0,02 cho khoảng 22,0 kV. Tỉ số 4.130 ÷ 69 xấp xỉ 60 vì số vòng thứ cấp đã làm tròn." },
+  ],
+  169: [
+    { jp: "1-2 変圧器の等価回路 **といえば** 理想変圧器と抵抗、リアクタンスで表した回路", vi: "1-2 Mạch tương đương máy biến áp · Biểu diễn bằng máy biến áp lý tưởng, điện trở và điện kháng", heading: true },
+    { jp: "理想変圧器と等価回路", vi: "Máy biến áp lý tưởng và mạch tương đương", heading: true },
+    { jp: "変圧器には一次巻線抵抗 r₁、二次巻線抵抗 r₂ があります。また、一次漏れリアクタンス x₁、二次漏れリアクタンス x₂ があります。", vi: "Máy biến áp có điện trở cuộn sơ cấp r₁ và cuộn thứ cấp r₂, cùng điện kháng rò sơ cấp x₁ và thứ cấp x₂." },
+    { jp: "巻線の抵抗や漏れリアクタンス及び励磁電流の回路を図1-2-1のように変圧器の外に出したとき、破線の内側を**理想変圧器**といいます。理想変圧器は抵抗や漏れリアクタンスがなく、励磁電流が流れない、理想的な変圧器です。", vi: "Khi đưa điện trở cuộn dây, điện kháng rò và nhánh dòng kích từ ra ngoài như hình 1-2-1, phần bên trong đường nét đứt gọi là **máy biến áp lý tưởng (理想変圧器)**. Phần này không có điện trở, điện kháng rò hay dòng kích từ." },
+    { jp: "理想変圧器に励磁回路、コイルの抵抗、漏れリアクタンスを加え電気回路で表すと、**変圧器の等価回路**になります。電圧降下や電圧変動率、短絡電流を考えるときは励磁回路を除いて考えます。", vi: "Thêm nhánh kích từ, điện trở cuộn dây và điện kháng rò vào máy biến áp lý tưởng sẽ được **mạch tương đương máy biến áp**. Khi xét sụt áp, độ biến động điện áp hoặc dòng ngắn mạch, sách bỏ qua nhánh kích từ.", note: "Nhánh song song biểu diễn tổn hao lõi và quá trình tạo từ thông. Các phần tử nối tiếp biểu diễn sụt áp của cuộn dây. Chỉ bỏ nhánh kích từ khi dòng nhánh này đủ nhỏ so với dòng cần tính." },
+    { diagram: "transformerEquivalent169" },
+    { jp: "励磁回路を省略した一次等価回路（一次側に換算した等価回路）", vi: "Mạch tương đương quy về sơ cấp khi bỏ nhánh kích từ", heading: true },
+    { jp: "変圧器には、**巻線抵抗 r** と **漏れリアクタンス x** による電圧降下があります。図1-2-2で a-b 間と c-d 間の起電力が同じ大きさになるように二次回路を変換します。二次起電力を **a 倍**、二次電流を **1/a 倍**、r₂ と x₂ をそれぞれ **a² 倍**すると、a-c と b-d を接続して理想変圧器を除けます（図1-2-3）。", vi: "Máy biến áp có sụt áp do **điện trở cuộn dây r** và **điện kháng rò x**. Trong hình 1-2-2, quy đổi mạch thứ cấp để suất điện động giữa a-b và c-d có cùng độ lớn. Nhân suất điện động thứ cấp với **a**, chia dòng thứ cấp cho **a**, và nhân r₂, x₂ với **a²**. Khi đó có thể nối a với c, b với d và bỏ khối máy biến áp lý tưởng (hình 1-2-3).", equations: [["a = ", { fraction: [["E₁"], ["E₂"]] }, " = ", { fraction: [["I₂"], ["I₁"]] }]], note: "Khi quy đổi về sơ cấp, điện áp tăng a lần còn dòng giảm a lần. Vì Z = V/I nên trở kháng tăng a² lần. Kiểm tra bằng tổn hao đồng: (I₂/a)² × a²r₂ = I₂²r₂. Với điện kháng, phép kiểm tra tương tự bảo toàn công suất phản kháng." },
+  ],
+  167: [
+    {
+      jp: "一次入力、すなわち変圧器の一次へ流入する皮相電力 S₁［V・A］は、一次電圧と一次電流の積であり、一次入力と二次出力は等しくなります。※2",
+      vi: "Công suất biểu kiến S₁ [VA] đi vào sơ cấp bằng tích điện áp và dòng điện sơ cấp. Trong phép tính gần đúng này, công suất biểu kiến đầu vào sơ cấp bằng đầu ra thứ cấp. Xem chú thích 2.",
+      equations: [["S₁ = V₁I₁ [VA]"], ["V₂I₂ = V₁I₁ [VA]"]],
+      note: "Chú thích 2 · Dòng sơ cấp khi có tải vẫn chứa dòng kích từ. Có thể bỏ qua thành phần này khi nó rất nhỏ so với dòng quy đổi của tải. Đẳng thức áp dụng cho mô hình lý tưởng, với điện áp và dòng hiệu dụng.",
+    },
+    { jp: "漏れ磁束、漏れリアクタンス", vi: "Từ thông rò và điện kháng rò", heading: true },
+    {
+      jp: "変圧器の一次、二次巻線には一次、二次電気抵抗があります。また、ほとんどの磁束は鉄心の中を通り、一次、二次の両巻線と鎖交（交わる）しますが、一次または二次巻線の片側の巻線と鎖交し、両巻線と鎖交しない磁束が少しあります。これを**漏れ磁束**といいます。漏れ磁束は、リアクタンスの作用（交流電流を妨げる作用）として働くので、漏れ磁束によるリアクタンスの成分を、**漏れリアクタンス**といいます。",
+      vi: "Các cuộn sơ cấp và thứ cấp đều có điện trở. Phần lớn từ thông đi qua lõi và móc vòng với cả hai cuộn. Một phần nhỏ chỉ móc vòng với một trong hai cuộn, gọi là **từ thông rò (漏れ磁束)**. Vì từ thông rò tạo hiệu ứng cản dòng xoay chiều, thành phần điện kháng do nó gây ra gọi là **điện kháng rò (漏れリアクタンス)**.",
+      note: "Từ thông rò do dòng trong một cuộn tạo ra sẽ cảm ứng điện áp trên chính cuộn đó, nên có thể biểu diễn bằng một điện kháng cảm mắc nối tiếp trong mạch tương đương.",
+    },
+    { jp: "実際の変圧器", vi: "Máy biến áp thực tế", heading: true },
+    { jp: "実際の変圧器では、一次、二次の**抵抗**、一次、二次の**漏れリアクタンス**を考慮し、鉄心の交番磁束によるヒステリシス損及び渦電流損などの**鉄損**（鉄心で生じる損失）も考慮する必要があります。", vi: "Với máy biến áp thực tế, cần xét **điện trở** và **điện kháng rò** ở cả hai phía, cùng **tổn hao lõi (鉄損)** như tổn hao từ trễ và dòng điện xoáy do từ thông xoay chiều." },
+    { jp: "励磁電流", vi: "Dòng kích từ", heading: true },
+    {
+      jp: "変圧器の無負荷電流を**励磁電流**といいます。無負荷の状態で V₁［V］を加えると、磁束 Φ［Wb］をつくるための電流 Iφ［A］（磁化電流）と鉄損 Pᵢ に対応する電流 Iᵢ［A］（鉄損分電流）が流れます。一次コイル中の電流を I₀［A］とすれば、これを**励磁電流**といいます。※3 無負荷でも流れる電流なので、**無負荷電流**ともいいます。",
+      vi: "Dòng không tải của máy biến áp gọi là **dòng kích từ (励磁電流)**. Khi đặt V₁ [V] vào sơ cấp ở trạng thái không tải, có dòng từ hóa Iφ [A] để tạo từ thông Φ [Wb] và thành phần dòng Iᵢ [A] tương ứng với tổn hao lõi Pᵢ. Tổng vectơ của hai thành phần là dòng sơ cấp I₀ [A]. Vì vẫn chạy khi không tải, nó còn gọi là **dòng không tải (無負荷電流)**.",
+      equations: [["İ₀ = İφ + İᵢ [A]"]],
+      note: "Chú thích 3 · Dấu chấm trên ký hiệu chỉ vectơ pha. Trong mô hình tương đương, dòng tổn hao lõi cùng pha với điện áp, còn dòng từ hóa chậm pha gần 90°. Vì vậy phải cộng theo vectơ, không cộng trực tiếp hai độ lớn.",
+    },
+  ],
+  165: [
+    {
+      jp: "コイルの起電力 **といえば** fNΦₘ に比例",
+      vi: "Suất điện động cảm ứng trong cuộn dây tỉ lệ với fNΦₘ.",
+      heading: true,
+      equations: [
+        ["E = 4.44 f N Φₘ [V]"],
+        ["Bₘ = ", { fraction: [["E"], ["4.44 f N A"]] }, " [T]"],
+        ["Φₘ = Bₘ A = ", { fraction: [["E"], ["4.44 f N"]] }, " [Wb]"],
+      ],
+      note: "E là suất điện động hiệu dụng, f là tần số (Hz), N là số vòng và A là tiết diện lõi (m²). B đo bằng tesla, với 1 T = 1 Wb/m². Φ đo bằng weber. Các công thức dùng cho từ thông hình sin.",
+    },
+    { jp: "定格", vi: "Định mức (定格)", heading: true },
+    {
+      jp: "**定格**とは機器の使用条件と機器の使用できる限度を表します。使用限度を出力で表したものを**定格出力**、または**定格容量**といいます。変圧器で指定される条件は、電圧、電流、周波数、力率などで、それぞれ定格電圧、定格電流、定格周波数、定格力率といい、銘板に記入されています。",
+      vi: "**Định mức (定格)** chỉ các điều kiện và giới hạn sử dụng thiết bị. Giới hạn biểu thị theo đầu ra gọi là **công suất đầu ra định mức (定格出力)** hoặc **dung lượng định mức (定格容量)**. Điện áp, dòng điện, tần số và hệ số công suất định mức được ghi trên nhãn máy.",
+    },
+    {
+      jp: "変圧器の使用限度である定格出力は、二次側を基準にした皮相電力（定格電圧×定格電流）により示され、単位は VA、kVA、MVA が使われます。",
+      vi: "Công suất đầu ra định mức của máy biến áp được biểu thị bằng công suất biểu kiến phía thứ cấp, lấy điện áp định mức nhân dòng định mức trong trường hợp một pha. Đơn vị là VA, kVA hoặc MVA.",
+      note: "Ví dụ máy một pha 20 kVA, thứ cấp 200 V thì dòng định mức là 100 A. Kiểm tra ngược: 200 V × 100 A = 20 kVA. Với hệ số công suất 0,8 thì công suất tác dụng là 16 kW.",
+    },
+    {
+      jp: "定格出力：二次端子間で得られる**皮相電力**の使用限度。定格二次電圧：定格出力を出しているときの**二次端子電圧**。定格二次電流：定格二次電圧に乗じて**定格出力**が得られる電流。",
+      vi: "Đầu ra định mức là giới hạn **công suất biểu kiến** giữa các đầu cực thứ cấp. Điện áp thứ cấp định mức là **điện áp đầu cực thứ cấp** khi máy cấp đầu ra định mức. Dòng thứ cấp định mức là dòng mà khi nhân với điện áp thứ cấp định mức sẽ cho **công suất đầu ra định mức**.",
+    },
+    {
+      jp: "定格一次電圧：定格二次電圧に**巻数比 a**を乗じたもの。定格一次電流：定格二次電流を**巻数比 a**で除したもの。定格力率：指定した負荷の力率で、指定がなければ100％とする。",
+      vi: "Điện áp sơ cấp định mức bằng điện áp thứ cấp định mức nhân **tỉ số vòng dây a**. Dòng sơ cấp định mức bằng dòng thứ cấp định mức chia **a**. Hệ số công suất định mức là hệ số công suất tải được chỉ định, mặc định 100% nếu không có chỉ định.",
+    },
+    { jp: "端子記号と極性 JIS 規格（JIS C4304 2013）", vi: "Ký hiệu đầu cực và cực tính theo JIS C4304:2013 như sách dẫn", heading: true },
+    { jp: "単相変圧器の場合", vi: "Trường hợp máy biến áp một pha", heading: true },
+    {
+      jp: "一次端子を U 及び V、二次端子を u 及び v とし、二次中性点端子は o または n とする（図1-1-4参照）。一次端子側から見て右から左へ **U、V**、二次端子側から見て左から右へ **u、o、v** の順に配列する（U、V、u、v の代わりに＋、－を用いてもよい）。",
+      vi: "Đầu cực sơ cấp ký hiệu U và V, thứ cấp ký hiệu u và v, đầu cực trung tính thứ cấp ký hiệu o hoặc n (xem hình 1-1-4). Nhìn từ phía sơ cấp, thứ tự từ phải sang trái là **U, V**. Nhìn từ phía thứ cấp, thứ tự từ trái sang phải là **u, o, v**. Có thể dùng dấu + và − thay cho U, V, u, v.",
+      note: "Đọc thứ tự theo phía nhìn được nêu cho từng cuộn. Dấu + và − chỉ quy ước cực tính tương đối của cuộn dây.",
+    },
+  ],
   163: [
     { jp: "巻線（コイル）", vi: "Cuộn dây (巻線)", heading: true },
     { jp: "電源に接続する巻線（入力側）を**一次巻線**（一次コイル）、変圧器の負荷に接続する巻線（出力側）を**二次巻線**（二次コイル）といいます。また、一次巻線の巻数 N₁ と二次巻線の巻数 N₂ の比を**巻数比**といい、a で表します。", vi: "Cuộn nối nguồn (phía đầu vào) gọi là **cuộn sơ cấp (一次巻線)**, cuộn nối tải máy biến áp (phía đầu ra) gọi là **cuộn thứ cấp (二次巻線)**. Tỉ số vòng dây (巻数比) ký hiệu là a.", equations: [["a = ", { fraction: [["N₁"], ["N₂"]] }]] },

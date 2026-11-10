@@ -35,6 +35,12 @@ function Diagram({ file, width, height, title, labels }: {
 }
 
 export const diagrams = {
+  transformerPolarity166: (<Diagram file="polarity166" width={940} height={435} title="Đầu cực một pha và cực tính" labels={[["減極性・加極性", "Cực tính trừ và cực tính cộng."]]} />),
+  transformerTerminals166: (<Diagram file="terminals166" width={558} height={445} title="Đầu cực máy biến áp ba pha" labels={[["中性点端子なし・あり", "Hai cấu hình không có và có đầu trung tính."]]} />),
+  transformerExercise168: (<Diagram file="exercise168" width={353} height={102} title="Sơ đồ bài số vòng dây" labels={[["巻数比", "Tỉ số số vòng sơ cấp trên số vòng thứ cấp."]]} />),
+  transformerEquivalent169: (<Diagram file="equivalent169" width={570} height={395} title="Mạch tương đương máy biến áp" labels={[["鉄損電流・磁化電流・負荷", "Dòng tổn hao lõi, dòng từ hóa và tải."]]} />),
+  equivalentSteps170: (<Diagram file="equivalent-steps170" width={525} height={392} title="Quy đổi thứ cấp về sơ cấp" labels={[["一次等価回路・理想変圧器を除いても同じ", "Mạch tương đương sơ cấp và bước bỏ khối máy lý tưởng."]]} />),
+  equivalentSides170: (<Diagram file="equivalent-sides170" width={535} height={196} title="Mạch tương đương ở hai phía" labels={[["一次等価回路・二次等価回路", "Mạch tương đương quy về sơ cấp và thứ cấp."]]} />),
   transformerTurns163: (<Diagram file="transformer-turns163" width={733} height={230} title="Hình 1-1-2 · Tỉ số vòng dây" labels={[
     ["一次端子・二次端子", "Đầu cực sơ cấp nối nguồn, đầu cực thứ cấp nối tải."],
     ["P・S・Φ", "Cuộn sơ cấp, cuộn thứ cấp và từ thông qua lõi."],
