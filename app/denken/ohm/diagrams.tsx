@@ -35,6 +35,10 @@ function Diagram({ file, width, height, title, labels }: {
 }
 
 export const diagrams = {
+  pitch221: (<Diagram file="pitch221" width={740} height={329} title="Hình 4-1-4 · Đủ bước và bước ngắn" labels={[["磁極ピッチ・巻線ピッチ・回転方向・全節巻・短節巻", "Bước cực, bước cuộn dây, chiều quay, quấn đủ bước, quấn bước ngắn"]]} />),
+  pitchVector221: (<Diagram file="pitchVector221" width={394} height={285} title="Hình 4-1-5 · Giản đồ vectơ" labels={[["ベクトル図・短節巻の合成起電力・全節巻の合成起電力", "Giản đồ vectơ, sức điện động tổng hợp của cuộn bước ngắn và cuộn đủ bước"]]} />),
+  reaction223: (<Diagram file="reaction223" width={748} height={537} title="Phản ứng phần ứng theo pha dòng tải" labels={[["電機子電流による磁束・主磁束・偏磁作用・減磁作用・増磁作用・右ねじの法則", "Từ thông do dòng phần ứng, từ thông chính, lệch từ, khử từ, tăng từ. Xác định chiều từ thông phần ứng bằng quy tắc vặn đinh ốc tay phải."]]} />),
+  impedance225: (<Diagram file="impedance225" width={106} height={155} title="Tam giác tổng trở đồng bộ" labels={[["rₐ・xₛ・Zₛ", "Điện trở phần ứng, điện kháng đồng bộ, độ lớn tổng trở đồng bộ"]]} />),
   speed216: (<Diagram file="speed216" width={280} height={176} title="Hình 1 · Động cơ kích từ song song" labels={[["図１・V・Iₐ・rₐ", "Hình 1. V là điện áp nguồn, Iₐ là dòng phần ứng, rₐ là điện trở phần ứng."]]} />),
   efficiency217: (<Diagram file="efficiency217" width={582} height={162} title="Mạch đứng yên và chạy định mức" labels={[["図１ 静止状態・図２ 定格運転時", "Hình 1 rôto đứng yên. Hình 2 chạy định mức."]]} />),
   motor220p218: (<Diagram file="motor220p218" width={346} height={166} title="Hình 1 · Chạy ở 220 V" labels={[["図１ 220 Vで運転・Iₐ₁・Eᵦ₁・P₁", "Chạy ở 220 V. Dòng phần ứng, sức phản điện động và công suất ra ở chế độ 1."]]} />),
