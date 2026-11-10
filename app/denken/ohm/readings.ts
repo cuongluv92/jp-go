@@ -1,6 +1,15 @@
 import { enrichExamTextWithFurigana } from "@/lib/exam/server-furigana";
 
 const technicalReadings = {
+  周回路: "しゅうかいろ",
+  磁路: "じろ",
+  無限長: "むげんちょう",
+  環状: "かんじょう",
+  巻数: "まきすう",
+  平均半径: "へいきんはんけい",
+  運動起電力: "うんどうきでんりょく",
+  鎖交: "さこう",
+  電磁誘導: "でんじゆうどう",
   磁界: "じかい",
   磁場: "じば",
   比透磁率: "ひとうじりつ",
