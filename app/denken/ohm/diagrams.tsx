@@ -35,6 +35,16 @@ function Diagram({ file, width, height, title, labels }: {
 }
 
 export const diagrams = {
+  cap46: (<Diagram file="cap46" width={680} height={173} title="Hình 2‑5‑3 · Dòng qua tụ sớm pha" labels={[["コンデンサの作用・電圧 v・電流 i・X꜀回路のベクトル図","Tác dụng của tụ. Sóng dòng dịch trái π/2, vectơ dòng hướng lên khi áp hướng phải."]]} />),
+  resistor46: (<Diagram file="resistor46" width={226} height={123} title="Trang 46 · Bài tính dòng qua điện trở" labels={[["f = 50 Hz・V = 100 V・R = 80 Ω・i・İ","Tần số, áp hiệu dụng, điện trở và hai cách biểu diễn dòng."]]} />),
+  coil47: (<Diagram file="coil47" width={220} height={116} title="Trang 47 · Bài tính dòng qua cảm kháng" labels={[["V = 100 V・Xₗ = 50 Ω・i・İ","Áp hiệu dụng, cảm kháng, dòng tức thời và vectơ pha."]]} />),
+  impedance48: (<Diagram file="impedance48" width={381} height={151} title="Hình 2‑6‑1 · Tổng trở" labels={[["インピーダンス・組合せ回路・R・L・C","Tổng trở của mạch kết hợp điện trở, cuộn cảm và tụ điện."]]} />),
+  rl48: (<Diagram file="rl48" width={390} height={156} title="Hình 2‑6‑2 · Tam giác R–L" labels={[["斜辺がインピーダンス・インピーダンス角・R・Xₗ","Cạnh huyền là Z, góc giữa Z và R là θ. Xₗ hướng lên."]]} />),
+  rc48: (<Diagram file="rc48" width={390} height={158} title="Hình 2‑6‑3 · Tam giác R–C" labels={[["斜辺がインピーダンス・インピーダンス角・R・X꜀","Cạnh huyền là Z, góc tổng trở hướng xuống vì X꜀ hướng xuống."]]} />),
+  rlc49: (<Diagram file="rlc49" width={741} height={191} title="Hình 2‑6‑4 · Tam giác R–L–C" labels={[["斜辺がインピーダンス・Xₗ − X꜀・X꜀ − Xₗ","Cạnh huyền là Z. Cạnh đứng hướng lên nếu cảm kháng lớn hơn và hướng xuống nếu dung kháng lớn hơn."]]} />),
+  factor50: (<Diagram file="factor50" width={692} height={241} title="Hình 2‑6‑5 · Hệ số công suất" labels={[["力率・底辺・斜辺・遅れ力率・進み力率","Hệ số công suất bằng cạnh đáy chia cạnh huyền. Mạch R–L có dòng trễ, mạch R–C có dòng sớm."]]} />),
+  exercise50: (<Diagram file="exercise50" width={291} height={131} title="Trang 50 · Mạch đề bài" labels={[["V = 100 V・R = 16 Ω・Xₗ = 24 Ω・X꜀ = 12 Ω","Áp nguồn, điện trở, cảm kháng và dung kháng nối tiếp."]]} />),
+  solve50: (<Diagram file="solve50" width={323} height={277} title="Trang 50 · Tam giác tổng trở và điện áp" labels={[["Z = 20 Ω・Xₗ − X꜀ = 12 Ω・V = 100 V・Vₗ − V꜀ = 60 V","Cạnh đứng của tam giác tổng trở là 12 Ω. Cạnh đứng của tam giác điện áp là 60 V."]]} />),
   elements41: (<Diagram file="elements41" width={703} height={333} title="Trang 41 · Điện trở, cuộn cảm và tụ điện" labels={[["変圧器・交流電源","Máy biến áp và nguồn xoay chiều."],["抵抗・コイル・コンデンサ","Điện trở, cuộn cảm và tụ điện."],["ギャップ（空隙）","Khe hở lõi sắt. Chiều dài khe hở ảnh hưởng đến cảm kháng."]]} />),
   resistor41: (<Diagram file="resistor41" width={156} height={184} title="Hình 2‑4‑1 · Mạch điện trở" labels={[["抵抗回路・V・I・R","Mạch điện trở. Áp V chia dòng I cho R."]]} />),
   coil42: (<Diagram file="coil42" width={719} height={233} title="Hình 2‑4‑2 · Cảm kháng" labels={[["誘導性リアクタンス・コイル","Cảm kháng của cuộn cảm."],["V・I・Xₗ","Điện áp, dòng điện và cảm kháng."]]} />),

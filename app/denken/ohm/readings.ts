@@ -1,6 +1,8 @@
 import { enrichExamTextWithFurigana } from "@/lib/exam/server-furigana";
 
 const technicalReadings = {
+  計算値: "けいさんち",
+  力率: "りきりつ",
   誘導性: "ゆうどうせい",
   容量性: "ようりょうせい",
   静電容量: "せいでんようりょう",

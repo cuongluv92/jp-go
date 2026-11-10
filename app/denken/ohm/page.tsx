@@ -22,7 +22,8 @@ export default async function OhmLesson({ searchParams }: { searchParams: Promis
   const next = pages[pages.indexOf(page) + 1];
   const prevHref = previous === undefined ? null : href(previous);
   const nextHref = next === undefined ? null : href(next);
-  const title = page >= 44 ? "2‑5 R、L、Cの作用 · Tác dụng của R, L, C"
+  const title = page >= 48 ? "2‑6 直列回路 · Mạch xoay chiều nối tiếp"
+    : page >= 44 ? "2‑5 R、L、Cの作用 · Tác dụng của R, L, C"
     : page >= 41 ? "2‑4 交流回路のオームの法則 · Định luật Ohm trong mạch xoay chiều"
     : page >= 39 ? "2‑3 交流のベクトル表示 · Biểu diễn xoay chiều bằng vectơ pha"
     : page >= 36 ? "2‑2 交流の大きさ · Độ lớn của đại lượng xoay chiều"
