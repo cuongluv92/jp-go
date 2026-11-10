@@ -35,6 +35,14 @@ function Diagram({ file, width, height, title, labels }: {
 }
 
 export const diagrams = {
+  sharing181: (<Diagram file="sharing181" width={420} height={227} title="Mạch chia tải hai máy biến áp" labels={[["電源・負荷", "Nguồn điện và tải"], ["Sₐ・Sᵦ", "Phần tải của máy A và B"], ["％zₐ′・％zᵦ′", "Tổng trở phần trăm sau đổi cơ sở"]]} />),
+  autotransformer182: (<Diagram file="autotransformer182" width={787} height={270} title="Hai cách biểu diễn máy tự ngẫu tăng áp" labels={[["巻線の途中に接続", "Nối tại điểm giữa cuộn dây"], ["分路巻線と直列巻線を分離して考える", "Tách cuộn chung và cuộn nối tiếp khi phân tích"], ["負荷", "Tải"]]} />),
+  stepUp182: (<Diagram file="stepUp182" width={332} height={189} title="Bài tập máy tự ngẫu tăng áp" labels={[["単巻変圧器", "Máy biến áp tự ngẫu"], ["力率75％ 遅れ", "Hệ số công suất 75% trễ"]]} />),
+  stepDown183: (<Diagram file="stepDown183" width={284} height={166} title="Hình 1-6-1 · Máy tự ngẫu hạ áp" labels={[["直列巻線", "Cuộn nối tiếp"], ["分路巻線", "Cuộn chung"]]} />),
+  separate183: (<Diagram file="separate183" width={287} height={171} title="Hình 1-6-2 · Tách hai cuộn khi phân tích" labels={[["直列巻線と分路巻線を分離して考える", "Xét riêng cuộn nối tiếp và cuộn chung"]]} />),
+  peak184: (<Diagram file="peak184" width={439} height={405} title="Hiệu suất cực đại ở nửa tải" labels={[["最大効率・効率", "Hiệu suất cực đại và hiệu suất"], ["効率・損失", "Hiệu suất và tổn hao"], ["鉄損＋銅損・銅損・鉄損", "Tổng tổn hao, tổn hao đồng và tổn hao sắt"], ["負荷の比・全負荷", "Hệ số tải và đầy tải"], ["(1/2)負荷のとき銅損は250 Wとなる", "Tổn hao đồng ở nửa tải là 250 W"]]} />),
+  short185: (<Diagram file="short185" width={515} height={184} title="Mạch thí nghiệm ngắn mạch" labels={[["変圧器の一次換算等価回路（励磁回路は無視）", "Mạch tương đương quy về sơ cấp, bỏ qua nhánh kích từ"], ["短絡", "Nối tắt"], ["A・V・W", "Ampe kế, vôn kế và oát kế"]]} />),
+  triangle185: (<Diagram file="triangle185" width={196} height={193} title="Tam giác tổng trở" labels={[["インピーダンスの直角三角形", "Tam giác vuông tổng trở"], ["r・x・Z", "Điện trở, điện kháng và độ lớn tổng trở"]]} />),
   impedanceTriangle176: (<Diagram file="impedance176" width={112} height={118} title="Tam giác tổng trở của bài tập" labels={[
     ["p = 1.25", "Cạnh ngang, phần trăm sụt áp điện trở."],
     ["q = 5", "Cạnh đứng, phần trăm sụt áp điện kháng."],
