@@ -35,6 +35,18 @@ function Diagram({ file, width, height, title, labels }: {
 }
 
 export const diagrams = {
+  rl61: (<Diagram file="rl61" width={186} height={65} title="Tổng trở R–L" labels={[["R = 16 Ω・Xₗ = 12 Ω","Điện trở và cảm kháng mắc nối tiếp."]]} />),
+  ex61: (<Diagram file="ex61" width={152} height={106} title="Mạch bài 02" labels={[["6 Ω・j8 Ω・V̇ = 200 V","Điện trở, tổng trở của cuộn cảm và áp nguồn."]]} />),
+  triangle61: (<Diagram file="triangle61" width={119} height={115} title="Tam giác dòng bài 02" labels={[["12 A・16 A・I","Phần thực 12 A, phần ảo hướng xuống 16 A, cạnh huyền là độ lớn dòng."]]} />),
+  transient62: (<Diagram file="transient62" width={674} height={280} title="Đồ thị quá độ tăng và giảm" labels={[["初期値・最終値・T・0.632・0.368","Giá trị đầu, giá trị cuối và hằng số thời gian. Sau T đáp ứng tăng đạt 63,2% quãng chuyển đổi, đáp ứng giảm còn 36,8%."]]} />),
+  rl62: (<Diagram file="rl62" width={654} height={272} title="Hình 2‑11‑1 và 2‑11‑2 · Đóng nguồn R–L" labels={[["過渡電流・初期値・最終値・接線・時定数","Dòng quá độ đi từ 0 đến E/R. T là hằng số thời gian."]]} />),
+  voltage63: (<Diagram file="voltage63" width={526} height={271} title="Hình 2‑11‑3 · Điện áp khi đóng nguồn" labels={[["Rの電圧・Lの電圧・初期値・最終値","Áp R tăng từ 0 đến E, áp L giảm từ E về 0."]]} />),
+  off63: (<Diagram file="off63" width={614} height={216} title="Hình 2‑11‑4 và 2‑11‑5 · Ngắt nguồn R–L" labels={[["逆起電力・過渡電流・初期値・最終値","Suất điện động ngược duy trì chiều dòng ban đầu. Dòng giảm từ E/R về 0."]]} />),
+  off64: (<Diagram file="off64" width={657} height={284} title="Hình 2‑11‑6 · Điện áp khi tách nguồn" labels={[["Rの電圧・Lの電圧・逆起電力","Áp R đi từ E về 0, áp L đi từ −E về 0."]]} />),
+  rc64: (<Diagram file="rc64" width={645} height={263} title="Hình 2‑11‑7 và 2‑11‑8 · Nạp tụ" labels={[["充電・過渡電圧・初期値・最終値","Điện áp tụ tăng từ 0 đến E, đạt khoảng 0,632E sau T."]]} />),
+  discharge65: (<Diagram file="discharge65" width={625} height={211} title="Hình 2‑11‑9 và 2‑11‑10 · Xả tụ" labels={[["放電・過渡電圧・初期値・最終値","Áp tụ giảm từ E đến 0, còn khoảng 0,368E sau T."]]} />),
+  ex65: (<Diagram file="ex65" width={602} height={131} title="Trang 65 · Hai mạch trong đề" labels={[["図1・図2・R₁・R₂・L・C","Hình 1 có L song song R₂, hình 2 có C song song R₂."]]} />),
+  solve65: (<Diagram file="solve65" width={482} height={253} title="Trang 65 · Hai mốc của hình 1" labels={[["初期値・最終値・開放・短絡","Ban đầu L coi như hở, sau khi xác lập L coi như nối tắt."]]} />),
   ex56: (<Diagram file="ex56" width={218} height={140} title="Mạch cộng hưởng trang 56" labels={[["L = 100 mH・C = 100 μF・R = 100 Ω・V = 100 V","Các phần tử nối tiếp và điện áp nguồn."]]} />),
   power57: (<Diagram file="power57" width={663} height={137} title="Hình 2‑9‑1 · Tam giác công suất" labels={[["有効電力・皮相電力・遅れの無効電力・進みの無効電力","Công suất tác dụng, biểu kiến và phản kháng trễ hoặc sớm."]]} />),
   power58: (<Diagram file="power58" width={716} height={449} title="Hình 2‑9‑2 · Ba tam giác cùng góc" labels={[["インピーダンス・電圧・電力の直角三角形","Tam giác tổng trở, điện áp và công suất. Mỗi lần nhân với I đổi tỷ lệ cạnh."]]} />),

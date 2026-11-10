@@ -22,7 +22,8 @@ export default async function OhmLesson({ searchParams }: { searchParams: Promis
   const next = pages[pages.indexOf(page) + 1];
   const prevHref = previous === undefined ? null : href(previous);
   const nextHref = next === undefined ? null : href(next);
-  const title = page >= 60 ? "2‑10 交流回路の複素数計算 · Tính mạch xoay chiều bằng số phức"
+  const title = page >= 62 ? "2‑11 過渡現象 · Quá trình quá độ"
+    : page >= 60 ? "2‑10 交流回路の複素数計算 · Tính mạch xoay chiều bằng số phức"
     : page >= 57 ? "2‑9 電力 · Công suất xoay chiều"
     : page >= 55 ? "2‑8 共振の条件 · Điều kiện cộng hưởng"
     : page >= 51 ? "2‑7 並列回路 · Mạch xoay chiều song song"
