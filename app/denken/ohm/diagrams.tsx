@@ -35,6 +35,28 @@ function Diagram({ file, width, height, title, labels }: {
 }
 
 export const diagrams = {
+  transformerTurns163: (<Diagram file="transformer-turns163" width={733} height={230} title="Hình 1-1-2 · Tỉ số vòng dây" labels={[
+    ["一次端子・二次端子", "Đầu cực sơ cấp nối nguồn, đầu cực thứ cấp nối tải."],
+    ["P・S・Φ", "Cuộn sơ cấp, cuộn thứ cấp và từ thông qua lõi."],
+  ]} />),
+  transformerCurrent164: (<Diagram file="transformer-current164" width={327} height={184} title="Hình 1-1-3 · Tỉ số dòng điện" labels={[
+    ["負荷 Z", "Tổng trở tải nối phía thứ cấp."],
+    ["I₁・Iφ・I₁′・I₂", "Dòng sơ cấp, dòng từ hóa, thành phần sơ cấp do tải và dòng thứ cấp."],
+  ]} />),
+  transformerRole162: (<Diagram file="transformer-role162" width={930} height={500} title="Vai trò của máy biến áp" labels={[
+    ["高い電圧・低い電圧", "Điện áp cao 6.600 V và điện áp thấp 100/200 V."],
+    ["容量・接続可能な負荷の大きさ", "Dung lượng định mức biểu thị mức tải máy có thể cấp, ví dụ 20 kVA."],
+  ]} />),
+  transformerStructure162: (<Diagram file="transformer-structure162" width={920} height={350} title="Hình 1-1-1 · Cấu tạo máy biến áp một pha" labels={[
+    ["一次巻線・二次巻線・鉄心", "Cuộn sơ cấp, cuộn thứ cấp và lõi sắt."],
+    ["内鉄形・外鉄形", "Kiểu lõi trụ và kiểu lõi bọc."],
+    ["巻線に鉄心を入れて製作する", "Lắp lõi sắt vào cuộn dây khi chế tạo."],
+  ]} />),
+  summer160: (<Diagram file="summer160" width={660} height={265} title="Trang 160 · Mạch cộng điện áp đảo" labels={[
+    ["出力電圧 Vₒ", "Điện áp đầu ra, đo so với đất."],
+    ["R₁ … Rₙ・Rꜰ", "Các điện trở đầu vào và điện trở hồi tiếp."],
+    ["I₁＋…＋Iₙ・0 V", "Tổng dòng qua nhánh hồi tiếp và điện thế của nút đất ảo."],
+  ]} />),
   sum71: (<Diagram file="sum71" width={665} height={269} title="Tổng ba pha cân bằng" labels={[["三相交流の正弦波・どの時刻でも","Ba sóng sin có tổng tức thời và tổng vectơ bằng 0."]]} />),
   neutral72: (<Diagram file="neutral72" width={674} height={256} title="Ba mạch một pha và dòng trung tính" labels={[["単相回路の組合せ・中性線の電流","Ba mạch ghép lại. Tổng dòng cân bằng bằng 0."]]} />),
   star72: (<Diagram file="star72" width={678} height={246} title="Nối Y bốn dây và ba dây" labels={[["三相4線式・三相3線式・中性線","Hình trái có dây trung tính; hình phải bỏ dây khi cân bằng."]]} />),

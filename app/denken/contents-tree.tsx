@@ -19,13 +19,13 @@ function ContentsText({ text }: { text: string }) {
   );
 }
 
-const availableStarts = lessons.理論
-  .flatMap(chapter => chapter.split("\n").map(line => Number(line.slice(0, 3))))
+const availableStarts = Object.values(lessons)
+  .flatMap(chapters => chapters.flatMap(chapter => chapter.split("\n").map(line => Number(line.slice(0, 3)))))
   .filter(page => Object.hasOwn(lesson, page));
 
 export function ContentsTree({ currentPage }: { currentPage?: number }) {
   const activeStart = currentPage === undefined ? undefined : availableStarts.findLast(page => page <= currentPage);
-  const openChapter = subjects[0][3].findLast(([start]) => start <= (currentPage ?? 2))?.[0];
+  const openChapter = (currentPage !== undefined && currentPage >= 161 ? subjects[1] : subjects[0])[3].findLast(([start]) => start <= (currentPage ?? 2))?.[0];
   return (
       <nav className="space-y-3" aria-label="Mục lục">
         <details className="rounded-2xl border border-border bg-surface p-4">
@@ -41,12 +41,12 @@ export function ContentsTree({ currentPage }: { currentPage?: number }) {
           </ul>
         </details>
         {subjects.map(([title, translation, page, chapters]) => (
-          <details key={title} open={title === "理論" ? true : undefined} className="rounded-2xl border border-border bg-surface p-4">
+          <details key={title} open={title === (currentPage !== undefined && currentPage >= 161 ? "機械" : "理論") ? true : undefined} className="rounded-2xl border border-border bg-surface p-4">
             <summary className="cursor-pointer font-semibold">{title} · {translation} <span className={`text-sm font-normal ${bookRed}`}>p.{page}</span></summary>
             <ul className="mt-3 space-y-2">
               {chapters.map(([start, chapter], index) => (
                 <li key={start}>
-                  <details open={title === "理論" && start === openChapter ? true : undefined} className="rounded-lg border border-border px-3 py-2">
+                  <details open={start === openChapter ? true : undefined} className="rounded-lg border border-border px-3 py-2">
                     <summary className="cursor-pointer text-sm font-medium">
                       <span className="mr-2 inline-block min-w-5 rounded bg-red-700 px-1 text-center text-xs font-semibold text-white">{index + 1}</span>
                       <span className="font-jp">{chapter}</span>
@@ -61,7 +61,7 @@ export function ContentsTree({ currentPage }: { currentPage?: number }) {
                           <li key={line} className="flex items-baseline gap-3 py-2 text-sm">
                             <span className={`w-12 shrink-0 tabular-nums ${bookRed}`}>p.{pageNumber}</span>
                             <span lang="ja" className="font-jp leading-relaxed">
-                              {title === "理論" && availableStarts.includes(startPage) ? (
+                              {availableStarts.includes(startPage) ? (
                                 <Link prefetch={false} href={startPage === 2 ? "/denken/ohm" : `/denken/ohm?trang=${startPage}`} aria-current={activeStart === startPage ? "location" : undefined} className="underline underline-offset-2"><ContentsText text={before} /></Link>
                               ) : <ContentsText text={before} />}
                               {after !== undefined && <><Fraction numerator="%z" denominator="100" /><ContentsText text={after} /></>}

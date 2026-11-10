@@ -22,7 +22,10 @@ export default async function OhmLesson({ searchParams }: { searchParams: Promis
   const next = pages[pages.indexOf(page) + 1];
   const prevHref = previous === undefined ? null : href(previous);
   const nextHref = next === undefined ? null : href(next);
-  const title = page >= 158 ? "章末問題 · Bài tập cuối chương"
+  const title = page >= 162 ? "変圧器 · Máy biến áp"
+    : page === 161 ? "第2部 機械 · Máy điện và ứng dụng"
+    : page === 160 ? "電圧の加算回路 · Mạch cộng điện áp"
+    : page >= 158 ? "章末問題 · Bài tập cuối chương"
     : page >= 155 ? "7‑5 オペアンプ · Bộ khuếch đại thuật toán"
     : page >= 152 ? "7‑4 FET · Transistor hiệu ứng trường"
     : page >= 148 ? "7‑3 トランジスタ回路 · Mạch khuếch đại transistor"
@@ -90,7 +93,7 @@ export default async function OhmLesson({ searchParams }: { searchParams: Promis
         <main className="min-w-0 space-y-4">
           <div className="flex flex-wrap items-center justify-between gap-2">
             <p className="min-w-0 text-sm text-muted">
-              <Link href="/denken" className="hover:text-accent">電験三種</Link> / 理論 / {page >= 141 ? "電子工学・電子回路" : page >= 115 ? "磁気と磁界" : page >= 99 ? "静電気と電界" : page >= 87 ? "電気・電子計測" : page >= 70 ? "三相交流回路" : page >= 31 ? "交流回路" : "直流回路"} / {title}
+              <Link href="/denken" className="hover:text-accent">電験三種</Link> / {page >= 161 ? "機械" : "理論"} / {page >= 162 ? "変圧器" : page === 161 ? "目次" : page >= 141 ? "電子工学・電子回路" : page >= 115 ? "磁気と磁界" : page >= 99 ? "静電気と電界" : page >= 87 ? "電気・電子計測" : page >= 70 ? "三相交流回路" : page >= 31 ? "交流回路" : "直流回路"} / {title}
             </p>
             <nav aria-label="Chuyển trang" className="flex flex-wrap items-center gap-2">
               {prevHref ? <Link href={prevHref} className={navButton}>← Trang trước</Link> : <span className="text-sm text-muted">← Trang trước</span>}

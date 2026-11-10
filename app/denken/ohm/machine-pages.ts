@@ -1,0 +1,111 @@
+import type { LessonRow } from "./lesson";
+
+export const machinePages: Record<number, LessonRow[]> = {
+  163: [
+    { jp: "巻線（コイル）", vi: "Cuộn dây (巻線)", heading: true },
+    { jp: "電源に接続する巻線（入力側）を**一次巻線**（一次コイル）、変圧器の負荷に接続する巻線（出力側）を**二次巻線**（二次コイル）といいます。また、一次巻線の巻数 N₁ と二次巻線の巻数 N₂ の比を**巻数比**といい、a で表します。", vi: "Cuộn nối nguồn (phía đầu vào) gọi là **cuộn sơ cấp (一次巻線)**, cuộn nối tải máy biến áp (phía đầu ra) gọi là **cuộn thứ cấp (二次巻線)**. Tỉ số vòng dây (巻数比) ký hiệu là a.", equations: [["a = ", { fraction: [["N₁"], ["N₂"]] }]] },
+    { jp: "鉄心（コア）", vi: "Lõi sắt (鉄心)", heading: true },
+    { jp: "変圧器の鉄心は**電磁鋼板**（電磁鋼帯を変圧器用に切ったもの）でつくられ、磁束の通り道をつくるための磁気回路をつくります。鉄心内で発生する損失（鉄損）を小さくするなど特性をよくするために、鉄に少しのけい素を含有させるので、これを**けい素鋼板**ということもあります。図1-1-1(a)のように、鉄心がコイルの内側にあってコイルが外側にある構造を**内鉄形**、図1-1-1(b)のように、コイルが鉄心の内側にあって鉄心が外側にある構造を**外鉄形**といいます。", vi: "Lõi máy biến áp được làm bằng **lá thép kỹ thuật điện (電磁鋼板)**, cắt từ dải thép kỹ thuật điện theo kích thước cần dùng. Lõi tạo thành mạch từ để dẫn từ thông. Thép được pha một lượng nhỏ silic để cải thiện đặc tính, chẳng hạn giảm **tổn hao lõi (鉄損)**, nên còn được gọi là **lá thép silic (けい素鋼板)**. Ở hình 1-1-1(a), lõi nằm trong cuộn dây, gọi là **kiểu lõi trụ (内鉄形)**. Ở hình 1-1-1(b), cuộn dây nằm trong lõi, gọi là **kiểu lõi bọc (外鉄形)**.", note: "Tổn hao lõi gồm tổn hao do từ trễ và dòng điện xoáy. Ghép các lá thép mỏng cách điện giúp hạn chế dòng xoáy." },
+    { jp: "理想的な変圧器", vi: "Máy biến áp lý tưởng", heading: true },
+    { diagram: "transformerTurns163" },
+    { jp: "巻線は抵抗がなく、磁束は全部鉄心を通り、鉄心の損失（磁束は磁化の方向を変えたり、渦電流を流すために、少しのエネルギーを消費します）がない、理想的な変圧器を考えます。この変圧器の二次端子を開放し、一次端子に電圧 V₁［V］を加えると、わずかな電流が流れ込み、鉄心中に交番磁束（交流状に変化する磁束）Φ ができ、Φ により一次巻線（巻数は N₁）に起電力 E₁［V］を誘起します。同時に、二次巻線（巻数は N₂）に起電力 E₂［V］を誘起します。両起電力の比は巻数比に等しく、a で表します。二次端子の電圧を V₂［V］とすれば、無負荷では二次電流は流れないので、V₂＝E₂ です。", vi: "Xét máy biến áp lý tưởng có cuộn dây không điện trở, toàn bộ từ thông đi qua lõi và không có tổn hao lõi. Trong lõi thực, việc đổi chiều từ hóa và tạo dòng điện xoáy tiêu thụ một phần năng lượng. Khi hở mạch thứ cấp và cấp V₁ vào sơ cấp, một dòng nhỏ tạo từ thông xoay chiều Φ trong lõi, từ đó cảm ứng các suất điện động E₁ và E₂. Tỉ số hai suất điện động bằng tỉ số vòng dây a. Khi không tải, dòng thứ cấp bằng 0 nên V₂ = E₂.", equations: [[{ fraction: [["E₁"], ["E₂"]] }, " = ", { fraction: [["N₁"], ["N₂"]] }, " = a"]], note: "Hai cuộn cùng móc vòng với một từ thông biến thiên. Theo định luật Faraday, suất điện động trên mỗi vòng bằng nhau về độ lớn. Vì vậy E₁ và E₂ tỉ lệ với số vòng N₁ và N₂." },
+  ],
+  164: [
+    { diagram: "transformerCurrent164" },
+    { jp: "**電圧比（変圧比）**と**巻数比**", vi: "**Tỉ số điện áp (変圧比)** và **tỉ số vòng dây (巻数比)**", heading: true, equations: [[{ fraction: [["V₁"], ["V₂"]] }, " = ", { fraction: [["E₁"], ["E₂"]] }, " = ", { fraction: [["N₁"], ["N₂"]] }, " = a"]] },
+    { jp: "電圧 V₁［V］を加えたときに流れるわずかな電流 Iφ［A］は、鉄心内に磁束 Φ をつくるために流れるもので、これを**磁化電流**と呼びます。図1-1-3のように電源電圧 V₁［V］を加え、変圧器の二次端子に負荷（インピーダンス Z）を接続すれば、負荷に二次端子電圧 V₂［V］が加わるので、I₂ が流れます。これを**負荷電流**といいます。このとき、一次側には負荷電流に相当する電流 I₁′ が新たに流入します。一次に流れる全電流、すなわち一次電流 I₁［A］は、磁化電流 Iφ［A］と I₁′［A］の合成電流となりますが、磁化電流 Iφ［A］はとても小さいので、I₁≒I₁′ です。", vi: "Khi đặt điện áp nguồn V₁ (V) vào sơ cấp, dòng nhỏ Iφ (A) tạo từ thông Φ trong lõi gọi là **dòng từ hóa (磁化電流)**. Khi nối tải có tổng trở Z vào thứ cấp, **dòng tải (負荷電流)** I₂ chạy qua tải do điện áp thứ cấp V₂ đặt lên tải và sơ cấp xuất hiện thêm thành phần dòng I₁′ tương ứng. Dòng sơ cấp I₁ là tổng vectơ của Iφ và I₁′. Vì dòng từ hóa thường rất nhỏ, sách lấy I₁ ≈ I₁′.", equations: [["I₂ = ", { fraction: [["V₂"], ["Z"]] }, " [A]"], ["I₁′ = ", { fraction: [["I₂"], ["a"]] }, " [A]"]], note: "Với tải xoay chiều tổng quát, V₂, Z và I₂ là các đại lượng phức. Dòng sơ cấp là tổng vectơ của dòng từ hóa và thành phần do tải. Khi Iφ rất nhỏ so với I₁′, có thể lấy I₁ ≈ I₁′." },
+    { jp: "**電流比（変流比）**は**巻数比**の逆数です。", vi: "**Tỉ số dòng điện (変流比)** là nghịch đảo của **tỉ số vòng dây** khi bỏ qua dòng từ hóa.", equations: [[{ fraction: [["I₁"], ["I₂"]] }, " = ", { fraction: [["N₂"], ["N₁"]] }, " = ", { fraction: [["1"], ["a"]] }]], note: "Ví dụ a = 10 thì áp sơ cấp gấp 10 lần áp thứ cấp, còn dòng sơ cấp xấp xỉ bằng một phần mười dòng thứ cấp. Kiểm tra bằng V₁I₁ ≈ V₂I₂ trong mô hình lý tưởng." },
+    { jp: "※1 磁化電流の大きさ：磁化電流はとても小さいので、計算上は、これを無視することが多いです。", vi: "Chú thích 1 · Độ lớn dòng từ hóa: vì dòng từ hóa rất nhỏ nên trong tính toán người ta thường bỏ qua nó.", note: "Chỉ dùng xấp xỉ I₁ ≈ I₁′ khi dòng từ hóa nhỏ so với thành phần dòng sơ cấp do tải. Khi không tải, I₁′ bằng 0, nên không dùng xấp xỉ này để tính dòng sơ cấp." },
+    { jp: "**最大磁束密度** Bₘ [T]", vi: "**Mật độ từ thông cực đại (最大磁束密度)** Bₘ [T]", heading: true },
+    { jp: "鉄心を通る交番磁束によってコイルに誘導起電力 E が生じます。E は周波数 f、巻数 N、最大磁束 Φₘ に比例します。最大磁束は最大磁束密度と鉄心の断面積 A の積です。", vi: "Từ thông xoay chiều qua lõi cảm ứng suất điện động E trong cuộn dây. E tỉ lệ với tần số f, số vòng N và từ thông cực đại Φₘ. Từ thông cực đại bằng tích mật độ từ thông cực đại và tiết diện lõi A.", equations: [["E = 4.44 f N Φₘ [V]"], ["Φₘ = Bₘ A [Wb]"]], note: "Hệ số 4,44 dùng cho từ thông hình sin và E là giá trị hiệu dụng. f tính bằng Hz, A bằng m², Φₘ bằng Wb và Bₘ bằng T. Giữ điện áp và số vòng không đổi mà giảm tần số sẽ làm từ thông cực đại tăng, dễ đẩy lõi vào bão hòa." },
+  ],
+  162: [
+    { jp: "1-1 変圧器 **といえば** 交流の電圧を変える装置", vi: "1-1 Máy biến áp (変圧器) · Thiết bị thay đổi điện áp xoay chiều", heading: true },
+    {
+      jp: "変圧器の役割",
+      vi: "Vai trò của máy biến áp",
+      note: "Hình minh họa lấy 100 V giữa điểm giữa và mỗi đầu cuộn thứ cấp, hoặc 200 V giữa hai đầu ngoài. Nhãn 20 kVA chỉ công suất biểu kiến định mức, không mặc nhiên bằng 20 kW.",
+    },
+    { diagram: "transformerRole162" },
+    { jp: "変圧器とは", vi: "Máy biến áp là gì?", heading: true },
+    {
+      jp: "**変圧器**はトランスともいい、電力会社から送られる 6 600 V の交流電圧を、家電製品で使える 100 V や工場で利用する電動機用電源の 200 V に変換するなど、目的にあった電圧に変える機器です。",
+      vi: "**Máy biến áp (変圧器)**, còn gọi là トランス, là thiết bị đổi điện áp cho phù hợp với mục đích sử dụng. Ví dụ, nó hạ điện áp xoay chiều 6.600 V từ công ty điện lực xuống 100 V cho thiết bị gia dụng hoặc 200 V để cấp cho động cơ trong nhà máy.",
+    },
+    { jp: "変圧器の構造", vi: "Cấu tạo máy biến áp", heading: true },
+    {
+      jp: "変圧器は鉄心に２つの巻線（コイル）を巻いた構造をしており、一方の巻線に交流電圧を加えると、他方の巻線に巻数に比例した電圧が得られます。",
+      vi: "Máy biến áp gồm hai cuộn dây (巻線) quấn trên lõi sắt (鉄心). Khi đặt điện áp xoay chiều vào một cuộn, ở cuộn kia xuất hiện điện áp tỉ lệ với số vòng dây.",
+      note: "Điện áp xoay chiều tạo từ thông biến thiên trong lõi. Từ thông chung cảm ứng điện áp trên từng vòng dây. Các điện áp cảm ứng cộng lại theo số vòng nên cuộn nhiều vòng hơn có điện áp lớn hơn trong mô hình lý tưởng.",
+    },
+    { diagram: "transformerStructure162" },
+  ],
+  160: [
+    { jp: "コラム **電圧の加算回路**", vi: "Chuyên mục · **Mạch cộng điện áp (電圧の加算回路)**", heading: true },
+    {
+      jp: "V₁＋…＋Vₙ に比例した出力電圧 Vₒ を得る回路を考えます。",
+      vi: "Xét mạch tạo ra điện áp đầu ra (出力電圧) Vₒ tỉ lệ với tổng V₁ + … + Vₙ.",
+      note: "V₁ đến Vₙ là các điện áp đầu vào (V), R₁ đến Rₙ là điện trở từng nhánh (Ω), Rꜰ là điện trở hồi tiếp (Ω).",
+    },
+    { diagram: "summer160" },
+    {
+      jp: "図の回路で、バーチャルショートより－端子と＋端子は 0 V として考えます。（電流は 0 V 方向へ流れる）",
+      vi: "Trong mạch ở hình, theo nguyên lý ngắn mạch ảo (バーチャルショート), coi chân − và chân + đều ở 0 V. Dòng điện đi về phía nút 0 V.",
+      equations: [["I₁ = ", { fraction: [["V₁"], ["R₁"]] }, " [A] … Iₙ = ", { fraction: [["Vₙ"], ["Rₙ"]] }, " [A]"]],
+      note: "Chân + nối đất. Khi có hồi tiếp âm và op-amp chưa bão hòa, chân − cũng xấp xỉ 0 V. Đặt chiều dương từ nguồn vào nút cộng thì Iₖ = Vₖ/Rₖ theo định luật Ohm. Nếu Vₖ âm, dòng thực chạy ngược chiều quy ước.",
+    },
+    {
+      jp: "－（マイナス）の入力端子には電流が流れ込まないので、I₁ … Iₙ はすべて Rꜰ を流れます。したがって、Vₒ は、",
+      vi: "Vì dòng điện không đi vào chân đầu vào âm (入力端子), tổng dòng từ các nhánh đi qua Rꜰ. Do đó điện áp đầu ra Vₒ được tính như dưới đây. Với tổng dòng dương, đầu ra có điện thế âm và dòng chạy vào chân đầu ra.",
+      equations: [
+        ["Vₒ = −Rꜰ(I₁ + … + Iₙ)"],
+        ["= −Rꜰ(", { fraction: [["V₁"], ["R₁"]] }, " + … + ", { fraction: [["Vₙ"], ["Rₙ"]] }, ") [V]"],
+      ],
+      note: "Theo Kirchhoff, dòng qua Rꜰ bằng tổng đại số các dòng nhánh vì dòng vào chân − gần bằng 0. Theo chiều từ nút cộng đến đầu ra, độ sụt áp là 0 − Vₒ = Rꜰ × tổng dòng. Đó là nguồn gốc của dấu trừ. Kiểm tra đơn vị: Ω × A = V.",
+    },
+    {
+      jp: "ここで、R₁＝…＝Rₙ＝R とすれば、電圧の和に比例した出力電圧が得られます。※ただし、出力は反転し、電圧は電源電圧よりも低い値で飽和します。",
+      vi: "Nếu R₁ = … = Rₙ = R, ta thu được điện áp đầu ra tỉ lệ với tổng các điện áp vào. Lưu ý: đầu ra đảo dấu (反転) và điện áp bão hòa (飽和) trước khi đạt tới giới hạn nguồn cấp trong mô hình của sách.",
+      equations: [["Vₒ = −", { fraction: [["Rꜰ"], ["R"]] }, "(V₁ + … + Vₙ) [V]"]],
+      note: "Ví dụ, hai đầu vào 1 V và 2 V, mọi điện trở đều 10 kΩ. Dòng nhánh lần lượt là 0,1 mA và 0,2 mA, nên đầu ra là −3 V. Kiểm tra ngược: điện áp từ nút 0 V đến đầu ra −3 V tạo đúng 0,3 mA qua Rꜰ. Kết quả chỉ đúng nếu nguồn cấp và op-amp cho phép đầu ra đạt −3 V.",
+    },
+  ],
+  161: [
+    { jp: "第2部 機械", vi: "Phần 2 · Máy điện và ứng dụng (機械)", heading: true },
+    {
+      jp: "機械の章構成",
+      vi: "Các chương trong phần Máy điện và ứng dụng",
+      table: {
+        jp: ["ページ", "章", "題名"],
+        vi: ["Trang", "Chương", "Tên chương"],
+        rows: [
+          ["162", "1", "変圧器"],
+          ["186", "2", "誘導電動機"],
+          ["205", "3", "直流発電機と直流電動機"],
+          ["219", "4", "同期発電機と同期電動機"],
+          ["238", "5", "電動機応用"],
+          ["246", "6", "パワーエレクトロニクス"],
+          ["263", "7", "照明"],
+          ["274", "8", "電熱と電気加熱"],
+          ["282", "9", "電気化学"],
+          ["286", "10", "自動制御と制御理論"],
+          ["302", "11", "論理回路とデジタル回路"],
+        ],
+        rowsVi: [
+          ["162", "1", "Máy biến áp"],
+          ["186", "2", "Động cơ cảm ứng"],
+          ["205", "3", "Máy phát điện và động cơ một chiều"],
+          ["219", "4", "Máy phát điện và động cơ đồng bộ"],
+          ["238", "5", "Ứng dụng động cơ điện"],
+          ["246", "6", "Điện tử công suất"],
+          ["263", "7", "Chiếu sáng"],
+          ["274", "8", "Nhiệt điện và gia nhiệt bằng điện"],
+          ["282", "9", "Điện hóa"],
+          ["286", "10", "Điều khiển tự động và lý thuyết điều khiển"],
+          ["302", "11", "Mạch logic và mạch số"],
+        ],
+      },
+      note: "Bài đầu bắt đầu ở trang 162. Máy biến áp thay đổi mức điện áp xoay chiều bằng cảm ứng điện từ. Các chương sau mở rộng sang chuyển đổi giữa điện năng và cơ năng, rồi đến ứng dụng và điều khiển.",
+    },
+  ],
+};
