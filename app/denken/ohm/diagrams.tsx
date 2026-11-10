@@ -35,6 +35,12 @@ function Diagram({ file, width, height, title, labels }: {
 }
 
 export const diagrams = {
+  shortExercise232: (<Diagram file="shortExercise232" width={258} height={258} title="Đường bão hòa không tải và đường ngắn mạch" labels={[["無負荷飽和曲線・短絡曲線・定格電圧・定格電流・励磁電流", "Đường bão hòa không tải, đường ngắn mạch, điện áp định mức, dòng định mức, dòng kích từ"]]} />),
+  startSync233: (<Diagram file="startSync233" width={466} height={228} title="Hình 4-5-1 · Mômen trung bình bằng 0 khi đứng yên" labels={[["吸引力によるトルク（右回り）・反発力によるトルク（左回り）", "Mômen do lực hút quay phải và do lực đẩy quay trái"]]} />),
+  loadSync233: (<Diagram file="loadSync233" width={447} height={286} title="Hình 4-5-2 · Góc tải thay đổi theo tải" labels={[["無負荷時・負荷時・負荷角 δ", "Không tải, có tải và góc tải δ"]]} />),
+  comparison234: (<Diagram file="comparison234" width={685} height={578} title="Hình 4-5-3 · So sánh động cơ và máy phát đồng bộ" labels={[["同期電動機・同期発電機・供給電圧・端子電圧・負荷・負荷角", "Động cơ đồng bộ, máy phát đồng bộ, điện áp cấp, điện áp đầu cực, tải và góc tải"]]} />),
+  vCurve235: (<Diagram file="vCurve235" width={255} height={280} title="Hình 4-5-4 · Đường đặc tính V" labels={[["電機子電流・界磁電流・遅れ電流・進み電流", "Dòng phần ứng, dòng kích từ, dòng trễ pha và dòng sớm pha"]]} />),
+  phase235: (<Diagram file="phase235" width={792} height={283} title="Hình 4-5-5 · Pha dòng điện khi thay đổi kích từ" labels={[["遅れ電流・同位相・進み電流", "Dòng trễ pha, cùng pha và sớm pha so với V"]]} />),
   syncEquivalent226: (<Diagram file="syncEquivalent226" width={735} height={360} title="Hình 4-3-1 · Mạch một pha và giản đồ vectơ" labels={[["同期発電機の等価回路・負荷インピーダンス・負荷力率・ベクトル図", "Mạch tương đương máy phát đồng bộ, tổng trở tải, hệ số công suất tải và giản đồ vectơ"]]} />),
   syncSimplified226: (<Diagram file="syncSimplified226" width={716} height={364} title="Hình 4-3-2 · Mạch khi bỏ qua điện trở phần ứng" labels={[["負荷・同期発電機の等価回路・ベクトル図", "Tải, mạch tương đương và giản đồ vectơ"]]} />),
   loadAngleCircuit227: (<Diagram file="loadAngleCircuit227" width={290} height={170} title="Mạch một pha của bài tập góc tải" labels={[["負荷・xₛI・E/√3・V/√3", "Tải, sụt áp điện kháng đồng bộ, sức điện động pha, điện áp pha"]]} />),
