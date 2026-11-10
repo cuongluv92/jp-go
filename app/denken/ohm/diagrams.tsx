@@ -35,6 +35,12 @@ function Diagram({ file, width, height, title, labels }: {
 }
 
 export const diagrams = {
+  acGenerator206: (<Diagram file="acGenerator206" width={769} height={443} title="Hình 3-1-1 · Nguyên lý máy phát xoay chiều" labels={[["交流発電機の原理（参考）・起電力・１周期", "Nguyên lý máy phát xoay chiều (tham khảo), sức điện động, một chu kỳ"]]} />),
+  dcGenerator206: (<Diagram file="dcGenerator206" width={771} height={443} title="Hình 3-1-2 · Nguyên lý máy phát một chiều" labels={[["直流発電機の原理・起電力・１周期", "Nguyên lý máy phát một chiều, sức điện động, một chu kỳ"]]} />),
+  ripple206: (<Diagram file="ripple206" width={241} height={233} title="Hình 3-1-3 · Sức điện động ít nhấp nhô" labels={[["脈動の小さな起電力・ブラシ間の起電力・導体中の起電力", "Sức điện động ít nhấp nhô, giữa hai chổi than, và trong từng dây dẫn"]]} />),
+  structure207: (<Diagram file="structure207" width={291} height={217} title="Hình 3-1-4 · Cấu tạo máy phát điện" labels={[["磁束・継鉄・界磁鉄心・界磁巻線・整流子・電機子・回転子・固定子", "Từ thông, gông từ, lõi kích từ, cuộn kích từ, cổ góp, phần ứng, rôto và stato"]]} />),
+  windings207: (<Diagram file="windings207" width={588} height={199} title="Hình 3-1-5 · Dây quấn xếp và sóng" labels={[["コイル・整流子・重ね巻・波巻・並列回路数（a＝4）", "Cuộn dây, cổ góp, quấn xếp, quấn sóng, số nhánh song song (a = 4)"]]} />),
+  types209: (<Diagram file="types209" width={654} height={371} title="Hình 3-1-6 · Các loại máy phát một chiều" labels={[["磁石発電機・他励発電機・分巻発電機・直巻発電機・複巻発電機（内分巻／外分巻）", "Nam châm vĩnh cửu, kích từ độc lập, song song, nối tiếp, hỗn hợp (nối song song ngắn hoặc dài). G là máy phát, F là cuộn kích từ và Fₛ là cuộn kích từ nối tiếp"]]} />),
   twoPhase201: (<Diagram file="twoPhase201" width={549} height={183} title="Hình 2-5-1 và 2-5-2 · Hai cuộn dây và hai dòng lệch pha" labels={[["２個のコイル・二相交流電流・電流", "Hai cuộn dây, dòng xoay chiều hai pha và dòng điện"]]} />),
   rotating201: (<Diagram file="rotating201" width={764} height={228} title="Hình 2-5-3 · Từ trường quay do dòng hai pha" labels={[["磁界の回転方向・t₁～t₄のときの磁界", "Chiều quay của từ trường và hướng từ trường ở bốn thời điểm"]]} />),
   split202: (<Diagram file="split202" width={182} height={260} title="Hình 2-5-4 · Khởi động chia pha" labels={[["M 主巻線・S 始動巻線・SW 遠心力スイッチ", "M cuộn chính, S cuộn khởi động, SW công tắc ly tâm"]]} />),
