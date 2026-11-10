@@ -1,6 +1,47 @@
 import type { LessonRow } from "./lesson";
 
 export const machinePages: Record<number, LessonRow[]> = {
+  256: [
+    { diagram: "acWave256" },
+    { jp: "交流回路の位相制御といえば**サイリスタ（SCR）2個**を用いる。または、交流回路の位相制御といえば**トライアック1個**で交流電力の制御を行う。", vi: "Điều khiển pha mạch AC có thể dùng **hai SCR** hoặc dùng **một triac** để điều khiển công suất xoay chiều.", note: "Hai SCR mắc song song ngược chiều để lần lượt dẫn hai bán kỳ. Với tải thuần trở, dòng tắt lúc điện áp qua 0. Với tải cảm, dòng trễ nên tắt muộn hơn." },
+  ],
+  257: [
+    { jp: "6-3 チョッパ回路といえば 直流平均電圧の制御を行う", vi: "6-3 Mạch băm áp · Điều khiển điện áp một chiều trung bình", heading: true },
+    { diagram: "buck257" },
+    { jp: "直流降圧チョッパ", vi: "Mạch băm giảm áp DC", heading: true },
+    { jp: "上図の(a)は、直流降圧チョッパの回路です。スイッチの開閉を繰り返すことで、負荷の**直流平均電圧**を制御します。上図(b)は、各部の電圧波形と電流波形を表しています。IGBTをオンすると i_t［A］が流れ、オフすると L に蓄えられたエネルギーによる電流が D_f を通り、負荷に環流電流が流れます。", vi: "Hình (a) là mạch băm giảm áp DC. Việc đóng cắt liên tục cho phép điều chỉnh **điện áp một chiều trung bình** trên tải. Hình (b) vẽ dạng sóng áp và dòng tại các vị trí. Khi IGBT dẫn, dòng i_t (A) đi qua nó. Khi IGBT tắt, năng lượng tích trong L duy trì dòng tuần hoàn qua diode D_f và tải." },
+    { jp: "負荷には、i_t と i_d［A］が交互に流れ、図の i_o［A］のように連続した脈動電流になります。また、周期 T でオン、オフを繰り返すとき、出力電圧 v_o［V］の平均値 V_o［V］は、次式となります。波形の1周期（T＝T_ON＋T_OFF）に対するオン時間（T_ON）を d で表し、これを**通流率**または**デューティファクタ**といいます。", vi: "Dòng qua tải lần lượt được duy trì qua nhánh i_t và i_d (A), tạo dòng i_o (A) liên tục có gợn. Khi đóng cắt với chu kỳ T, điện áp đầu ra tức thời v_o (V) có giá trị trung bình V_o (V) như dưới đây. Tỉ số thời gian dẫn T_ON trên một chu kỳ gọi là **hệ số đóng cắt (通流率)** hay **duty factor**.", equations: [["d = ", { fraction: [["T_ON"], ["T"]] }, " = ", { fraction: [["T_ON"], ["T_ON + T_OFF"]] }]], note: "Các thời gian dùng cùng đơn vị, chẳng hạn giây. d không có đơn vị và nằm trong khoảng 0 đến 1." },
+    { jp: "降圧チョッパの平均電圧といえばオン時間に比例。※ d：通流率", vi: "Khi chu kỳ cố định, điện áp trung bình của mạch giảm áp tỉ lệ với thời gian dẫn. d là hệ số đóng cắt.", equations: [["V_o = ", { fraction: [["T_ON"], ["T_ON + T_OFF"]], red: true }, " V_i = dV_i [V]"]], note: "Trong mô hình lý tưởng ở chế độ xác lập, điện áp trung bình trên cuộn cảm bằng 0. Vì nút đóng cắt ở V_i trong khoảng dẫn và gần 0 trong khoảng ngắt, điện áp ra trung bình bằng dV_i." },
+  ],
+  258: [
+    { jp: "直流昇圧チョッパ", vi: "Mạch băm tăng áp DC", heading: true },
+    { jp: "図6-3-1は直流昇圧チョッパの回路です。IGBTをオンすると、インダクタンス L に電流が流れ、エネルギーが蓄積されます。次にIGBTをオフすると、L に流れる電流の減少を妨げるための逆起電力が発生し、これが電源電圧に加算されるため、図6-3-2のように、負荷には電源電圧よりも高い電圧が加わります。", vi: "Hình 6-3-1 là mạch băm tăng áp DC. Khi IGBT dẫn, dòng chạy qua cuộn cảm L và năng lượng được tích lũy. Khi tắt IGBT, L sinh suất điện động chống lại sự giảm dòng. Điện áp này cộng với điện áp nguồn, nên tải nhận điện áp cao hơn điện áp nguồn như ở hình 6-3-2." },
+    { diagram: "boost258" },
+    { jp: "直流出力電圧の平均値 V_o［V］は、次のようになります。", vi: "Giá trị trung bình V_o (V) của điện áp DC đầu ra được tính như sau.", equations: [["V_o = ", { fraction: [["T_ON + T_OFF"], ["T_OFF"]] }, " V_i = ", { fraction: [["T"], ["T − T_ON"]] }, " V_i"], ["= ", { fraction: [["1"], ["1 − ", { fraction: [["T_ON"], ["T"]] }]] }, " V_i = ", { fraction: [["V_i"], ["1 − d"]] }, " [V]"]], note: "Công thức dùng cho mạch lý tưởng ở trạng thái xác lập, dòng cuộn cảm liên tục và 0 ≤ d < 1. Khi khóa dẫn, L tích năng lượng. Khi khóa ngắt, nguồn và L cấp năng lượng qua diode đến tải và tụ." },
+    { jp: "昇圧チョッパの平均電圧といえばオフ時間に反比例。", vi: "Khi giữ chu kỳ cố định, điện áp trung bình của mạch tăng áp tỉ lệ nghịch với thời gian ngắt.", equations: [["V_o = ", { fraction: [["T_ON + T_OFF"], ["T_OFF"]], red: true }, " V_i [V]"]] },
+    { jp: "練習問題 01　チョッパ", vi: "Bài tập 01 · Mạch băm áp", heading: true },
+    { jp: "図1は降圧チョッパ、図2は昇圧チョッパを示している。電源電圧 E＝200 V 一定とし、各回路のスイッチ S の通流率を0.7とした場合、抵抗 R の電圧 v_d1、v_d2 の平均値 V_d1、V_d2［V］は（R、L、C で決まる時定数が S の動作周期に対して十分に大きいものとする）。", vi: "Hình 1 là mạch giảm áp và hình 2 là mạch tăng áp. Nguồn E không đổi bằng 200 V. Khi hệ số đóng cắt của S trong mỗi mạch bằng 0,7, tìm các giá trị trung bình V_d1 và V_d2 (V) của điện áp v_d1 và v_d2 trên điện trở R. Giả sử các hằng số thời gian do R, L và C quyết định đủ lớn so với chu kỳ đóng cắt S." },
+    { diagram: "chopperExercise258" },
+  ],
+  259: [
+    { jp: "解き方", vi: "Cách giải", heading: true },
+    { diagram: "chopperBalance259" },
+    { jp: "降圧チョッパの出力電圧の平均値 V_d1 は、図1（①の面積＝②の面積の式）から求めます。", vi: "Tính điện áp ra trung bình V_d1 của mạch giảm áp bằng cách cho diện tích ① bằng diện tích ② ở hình 1.", equations: [["(E − V_d1)T_ON = V_d1 T_OFF"], ["V_d1(T_ON + T_OFF) = ET_ON"], ["V_d1 = ", { fraction: [["T_ON"], ["T_ON + T_OFF"]], red: true }, " E = 0.7 × 200 = 140 V"]], note: "Điện áp cuộn cảm là E − V_d1 khi khóa dẫn và −V_d1 khi khóa ngắt. Kiểm tra ngược khi T_ON = 0,7T và T_OFF = 0,3T: (200 − 140) × 0,7 = 140 × 0,3 = 42. Hai diện tích có cùng độ lớn." },
+    { jp: "昇圧チョッパの出力電圧の平均値 V_d2 は、図2（③の面積＝④の面積の式）から求めます。", vi: "Tính điện áp ra trung bình V_d2 của mạch tăng áp bằng cách cho diện tích ③ bằng diện tích ④ ở hình 2.", equations: [["ET_ON = (V_d2 − E)T_OFF"], ["V_d2 = ", { fraction: [["T_ON + T_OFF"], ["T_OFF"]] }, " E = E × ", { fraction: [["T"], ["T − T_ON"]] }], ["= E × ", { fraction: [["1"], ["1 − ", { fraction: [["T_ON"], ["T"]], red: true }]] }, " = 200 × ", { fraction: [["1"], ["1 − 0.7"]] }, " ≃ 667 V"]], note: "Điện áp cuộn cảm là E khi khóa dẫn và E − V_d2 khi khóa ngắt. Kiểm tra ngược với giá trị chưa làm tròn: 200 × 0,7 = (666,666… − 200) × 0,3 = 140. V·s là đơn vị của mỗi diện tích điện áp theo thời gian." },
+    { jp: "参考　昇圧チョッパの原理として、Sをオンすると E（＋）→L→S→E（0 V）に電流 i が流れ、L に電磁エネルギーが蓄積します。また、Sをオフすると i の減少を阻止する方向の逆起電力が L に生じ、E と L の電圧が加算され、昇圧された電圧が R に加わり負荷電流を流すと同時に C を充電します。時定数が大きい（C が十分大きい）ので、V_d2 が維持されます。", vi: "Tham khảo. Khi đóng S, dòng i đi từ E (+) qua L, S rồi về E (0 V). L tích năng lượng từ trường. Khi ngắt S, L sinh suất điện động chống dòng i giảm. Điện áp của E và L cộng lại, tạo điện áp tăng cao trên R để cấp dòng tải đồng thời nạp tụ C. Hằng số thời gian lớn do C đủ lớn giúp duy trì V_d2." },
+    { jp: "解答　**V_d1＝140 V　V_d2＝667 V**", vi: "Đáp số · **V_d1 = 140 V và V_d2 = 667 V**." },
+  ],
+  260: [
+    { jp: "6-4 インバータといえば直流・交流変換、サイクロコンバータといえば交流変換", vi: "6-4 Nghịch lưu đổi DC thành AC. Cycloconverter biến đổi AC thành AC.", heading: true },
+    { diagram: "inverter260" },
+    { jp: "インバータ", vi: "Bộ nghịch lưu", heading: true },
+    { jp: "直流電力を交流電力に変換する装置を**インバータ**といいます。太陽光発電の直流電力を交流に変換する装置や交流電動機の可変速運転に用いる交流電源、インバータエアコンなど、広範囲に利用されるようになりました。", vi: "**Bộ nghịch lưu (インバータ)** biến đổi điện một chiều thành điện xoay chiều. Nó được dùng rộng rãi để đổi nguồn DC của hệ thống điện mặt trời thành AC, cấp nguồn AC cho động cơ chạy thay đổi tốc độ và trong máy điều hòa inverter." },
+    { jp: "インバータの基本原理", vi: "Nguyên lý cơ bản của bộ nghịch lưu", heading: true },
+    { jp: "インバータは、上図(a)の単相ブリッジ形インバータの基本原理のように、スイッチを切り替えることで、同図(b)のような交流波形に変換することができます。", vi: "Theo nguyên lý cầu nghịch lưu một pha ở hình (a), đổi trạng thái công tắc cho phép tạo dạng sóng AC như hình (b).", note: "Lấy điện thế đầu S₁ trừ điện thế đầu S₂. Hai đầu ở hai thanh nguồn khác nhau thì điện áp là +V hoặc −V. Hai đầu ở cùng thanh thì điện áp tải bằng 0." },
+    { jp: "トランジスタインバータ", vi: "Nghịch lưu dùng transistor", heading: true },
+    { jp: "図6-4-1(a)は、トランジスタを使用したインバータの回路です。インバータの出力に誘導性の負荷が接続される場合、同図(b)のような電圧、電流波形となります。ダイオード D₁～D₄ は、遅れて変化する電流の流れを確保し、電流を電源に帰還させるためのもので、トランジスタなどの半導体デバイスと逆並列に接続します。これを、**帰還ダイオード**といいます。", vi: "Hình 6-4-1(a) là mạch nghịch lưu dùng transistor. Với tải cảm, điện áp và dòng điện có dạng như hình (b). Các diode D₁ đến D₄ duy trì đường dẫn cho dòng trễ và đưa dòng về nguồn. Chúng mắc song song ngược chiều với các linh kiện bán dẫn như transistor, nên được gọi là **diode hồi năng lượng (帰還ダイオード)**." },
+    { jp: "図6-4-1のようなトランジスタスイッチの断続によりつくられるインバータの交流出力波形は、方形波です。そこで、図6-4-2のように、方形波をさらに断続すること", vi: "Đóng cắt transistor như hình 6-4-1 tạo đầu ra AC dạng sóng vuông. Sau đó tiếp tục chia sóng vuông thành các xung bằng cách đóng cắt như hình 6-4-2. Phần này tiếp tục ở trang 261." },
+  ],
   251: [
     { jp: "6-2 位相制御といえば 電力の制御", vi: "6-2 Điều khiển pha · Điều khiển công suất", heading: true },
     { diagram: "phaseIntro251" },
