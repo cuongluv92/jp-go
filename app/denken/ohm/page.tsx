@@ -22,7 +22,8 @@ export default async function OhmLesson({ searchParams }: { searchParams: Promis
   const next = pages[pages.indexOf(page) + 1];
   const prevHref = previous === undefined ? null : href(previous);
   const nextHref = next === undefined ? null : href(next);
-  const title = page >= 124 ? "6‑4 導体の運動起電力 · Suất điện động do chuyển động"
+  const title = page >= 127 ? "6‑5 磁界中の電流に作用する力 · Lực điện từ"
+    : page >= 124 ? "6‑4 導体の運動起電力 · Suất điện động do chuyển động"
     : page >= 120 ? "6‑3 磁界の強さ · Từ trường do dòng điện"
     : page >= 117 ? "6‑2 磁界の強さ · Cường độ từ trường"
     : page >= 115 ? "6‑1 磁気に関するクーロンの法則 · Lực giữa hai cực từ"
