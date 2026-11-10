@@ -1,3 +1,4 @@
+import { resonancePowerPages } from "./resonance-power-pages";
 import { parallelPages } from "./parallel-pages";
 import { seriesPages } from "./series-pages";
 import { reactancePages } from "./reactance-pages";
@@ -36,6 +37,7 @@ export const lesson: Record<number, LessonRow[]> = {
   ...reactancePages,
   ...seriesPages,
   ...parallelPages,
+  ...resonancePowerPages,
   2: [
     { jp: "オームの法則 **といえば** 電圧÷電流＝抵抗", vi: "Định luật Ohm · Điện áp chia dòng điện bằng điện trở", heading: true },
     { diagram: "examples" },

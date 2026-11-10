@@ -35,6 +35,12 @@ function Diagram({ file, width, height, title, labels }: {
 }
 
 export const diagrams = {
+  ex56: (<Diagram file="ex56" width={218} height={140} title="Mạch cộng hưởng trang 56" labels={[["L = 100 mH・C = 100 μF・R = 100 Ω・V = 100 V","Các phần tử nối tiếp và điện áp nguồn."]]} />),
+  power57: (<Diagram file="power57" width={663} height={137} title="Hình 2‑9‑1 · Tam giác công suất" labels={[["有効電力・皮相電力・遅れの無効電力・進みの無効電力","Công suất tác dụng, biểu kiến và phản kháng trễ hoặc sớm."]]} />),
+  power58: (<Diagram file="power58" width={716} height={449} title="Hình 2‑9‑2 · Ba tam giác cùng góc" labels={[["インピーダンス・電圧・電力の直角三角形","Tam giác tổng trở, điện áp và công suất. Mỗi lần nhân với I đổi tỷ lệ cạnh."]]} />),
+  ex59a: (<Diagram file="ex59a" width={239} height={110} title="Tam giác công suất bài 01" labels={[["P = 240 kW・S = 300 kVA・Q = 180 kvar","Cạnh đáy, cạnh huyền và độ lớn cạnh phản kháng."]]} />),
+  ex59b: (<Diagram file="ex59b" width={210} height={94} title="Tam giác tỷ lệ bài 02" labels={[["P = 3 kW・Q = 1 kvar・S","Cạnh đáy, cạnh đứng và cạnh huyền của tam giác tỷ lệ."]]} />),
+  complex60: (<Diagram file="complex60" width={583} height={185} title="Hình 2‑10‑1 · Tổng trở phức" labels={[["実軸・虚軸・Ż = Z∠θ = R + jXₗ","Trục thực, trục ảo và hai cách viết cùng một tổng trở."]]} />),
   parallel51: (<Diagram file="parallel51" width={472} height={161} title="Tam giác dòng R–L" labels={[["電流の直角三角形","Dòng qua R hướng phải, dòng qua L hướng xuống."]]} />),
   parallel52: (<Diagram file="parallel52" width={490} height={157} title="Tam giác dòng R–C" labels={[["電流の直角三角形","Dòng qua R hướng phải, dòng qua tụ hướng lên."]]} />),
   rlc52: (<Diagram file="rlc52" width={701} height={178} title="Tam giác dòng ba nhánh" labels={[["Iᵣ・Iₗ・I꜀","Cạnh đứng là hiệu hai dòng phản kháng, hướng theo dòng lớn hơn."]]} />),

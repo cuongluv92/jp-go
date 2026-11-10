@@ -18,7 +18,7 @@ function ContentsText({ text }: { text: string }) {
   );
 }
 
-const availableStarts = [2, 5, 9, 12, 14, 16, 19, 21, 23, 24, 26, 31, 36, 39, 41, 44, 48, 51, 55];
+const availableStarts = [2, 5, 9, 12, 14, 16, 19, 21, 23, 24, 26, 31, 36, 39, 41, 44, 48, 51, 55, 57, 60];
 
 export function ContentsTree({ currentPage }: { currentPage?: number }) {
   const activeStart = currentPage === undefined ? undefined : availableStarts.filter(page => page <= currentPage).at(-1);
