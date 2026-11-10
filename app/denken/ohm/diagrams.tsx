@@ -35,6 +35,14 @@ function Diagram({ file, width, height, title, labels }: {
 }
 
 export const diagrams = {
+  syncEquivalent226: (<Diagram file="syncEquivalent226" width={735} height={360} title="Hình 4-3-1 · Mạch một pha và giản đồ vectơ" labels={[["同期発電機の等価回路・負荷インピーダンス・負荷力率・ベクトル図", "Mạch tương đương máy phát đồng bộ, tổng trở tải, hệ số công suất tải và giản đồ vectơ"]]} />),
+  syncSimplified226: (<Diagram file="syncSimplified226" width={716} height={364} title="Hình 4-3-2 · Mạch khi bỏ qua điện trở phần ứng" labels={[["負荷・同期発電機の等価回路・ベクトル図", "Tải, mạch tương đương và giản đồ vectơ"]]} />),
+  loadAngleCircuit227: (<Diagram file="loadAngleCircuit227" width={290} height={170} title="Mạch một pha của bài tập góc tải" labels={[["負荷・xₛI・E/√3・V/√3", "Tải, sụt áp điện kháng đồng bộ, sức điện động pha, điện áp pha"]]} />),
+  loadAngleVector227: (<Diagram file="loadAngleVector227" width={333} height={218} title="Giản đồ vectơ để tính góc tải" labels={[["ベクトル図・δ・θ・xₛI cos θ・xₛI sin θ", "Giản đồ vectơ, góc tải, góc hệ số công suất, thành phần đứng và thành phần ngang của sụt áp"]]} />),
+  syncTests228: (<Diagram file="syncTests228" width={730} height={245} title="Sơ đồ thí nghiệm không tải và ngắn mạch" labels={[["無負荷試験・短絡試験・I𝒻・Iₛ", "Thí nghiệm không tải, thí nghiệm ngắn mạch, dòng kích từ và dòng ngắn mạch"]]} />),
+  syncCurves228: (<Diagram file="syncCurves228" width={715} height={303} title="Hình 4-4-1 · Hai đường đặc tính" labels={[["端子電圧・短絡電流・界磁電流", "Điện áp đầu cực, dòng ngắn mạch và dòng kích từ. Khi tăng kích từ, điện áp không tải hoặc dòng ngắn mạch tăng tùy phép thử."]]} />),
+  syncShort229: (<Diagram file="syncShort229" width={205} height={211} title="Hình 4-4-2 · Tổng trở đồng bộ" labels={[["同期インピーダンス・Iₛ", "Tổng trở đồng bộ và dòng ngắn mạch"]]} />),
+  shortRatio230: (<Diagram file="shortRatio230" width={290} height={293} title="Hình 4-4-3 · Dòng ngắn mạch và dòng định mức" labels={[["無負荷端子電圧・短絡電流・定格電圧・定格電流・界磁電流", "Điện áp đầu cực không tải, dòng ngắn mạch, điện áp định mức, dòng định mức và dòng kích từ"]]} />),
   pitch221: (<Diagram file="pitch221" width={740} height={329} title="Hình 4-1-4 · Đủ bước và bước ngắn" labels={[["磁極ピッチ・巻線ピッチ・回転方向・全節巻・短節巻", "Bước cực, bước cuộn dây, chiều quay, quấn đủ bước, quấn bước ngắn"]]} />),
   pitchVector221: (<Diagram file="pitchVector221" width={394} height={285} title="Hình 4-1-5 · Giản đồ vectơ" labels={[["ベクトル図・短節巻の合成起電力・全節巻の合成起電力", "Giản đồ vectơ, sức điện động tổng hợp của cuộn bước ngắn và cuộn đủ bước"]]} />),
   reaction223: (<Diagram file="reaction223" width={748} height={537} title="Phản ứng phần ứng theo pha dòng tải" labels={[["電機子電流による磁束・主磁束・偏磁作用・減磁作用・増磁作用・右ねじの法則", "Từ thông do dòng phần ứng, từ thông chính, lệch từ, khử từ, tăng từ. Xác định chiều từ thông phần ứng bằng quy tắc vặn đinh ốc tay phải."]]} />),
