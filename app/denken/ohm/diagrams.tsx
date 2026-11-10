@@ -35,6 +35,8 @@ function Diagram({ file, width, height, title, labels }: {
 }
 
 export const diagrams = {
+  lightExercise266: (<Diagram file="lightExercise266" width={340} height={456} title="Bài tập 01 · Nguồn điểm và điểm tính độ rọi" labels={[["均等放射の点光源・全光束", "Nguồn điểm phát đều và tổng quang thông"], ["L・A・B", "Nguồn, hình chiếu của nguồn trên mặt ngang và điểm cần tính"]]} />),
+  lightSolution266: (<Diagram file="lightSolution266" width={340} height={276} title="Bài tập 01 · Tam giác tính khoảng cách và góc" labels={[["点光源・水平面照度", "Nguồn sáng điểm và độ rọi mặt ngang"], ["θ・r＝2.5 m", "Góc với phương thẳng đứng và khoảng cách tới điểm B"]]} />),
   transistorInverter261: (<Diagram file="transistorInverter261" width={707} height={323} title="Hình 6-4-1 · Nghịch lưu transistor" labels={[["誘導性負荷", "Tải cảm"], ["入力信号を加えるベース・オン状態のデバイス", "Bazơ nhận tín hiệu và linh kiện đang dẫn"], ["ベース入力と出力電圧・電流波形", "Tín hiệu bazơ và dạng sóng điện áp, dòng đầu ra"], ["B₁～B₄・Tr₁～Tr₄・D₁～D₄", "Các cực bazơ, transistor và diode"]]} />),
   pwm261: (<Diagram file="pwm261" width={567} height={166} title="Hình 6-4-2 · Điện áp ra điều chế PWM" labels={[["PWM制御の出力電圧波形の例・出力電圧の平均値", "Ví dụ điện áp ra PWM và giá trị trung bình của điện áp ra"], ["V・−V", "Mức điện áp dương và âm"]]} />),
   cycloconverter261: (<Diagram file="cycloconverter261" width={725} height={227} title="Hình 6-4-3 và 6-4-4 · Cycloconverter và dạng sóng" labels={[["正群・負群", "Nhóm van dương và nhóm van âm"], ["商用周波交流電源・負荷・低周波交流出力", "Nguồn AC tần số lưới, tải và đầu ra AC tần số thấp"]]} />),
