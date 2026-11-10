@@ -35,6 +35,16 @@ function Diagram({ file, width, height, title, labels }: {
 }
 
 export const diagrams = {
+  rlStepProblem301: (<Diagram file="rlStepProblem301" width={608} height={241} title="Ví dụ · Mạch R–L và đáp ứng với bước 1 V" labels={[["v(t)・i(t)・t", "Điện áp bước, dòng điện và thời gian"], ["a・a′・R・L", "Hai đầu cấp điện, điện trở và cuộn cảm"]]} />),
+  rlStepSolution301: (<Diagram file="rlStepSolution301" width={388} height={244} title="Đồ thị dùng để xác định hằng số thời gian" labels={[["電流の最終値・接線・Tは時定数", "Dòng xác lập, tiếp tuyến và T là hằng số thời gian"]]} />),
+  logicBubble302: (<Diagram file="logicBubble302" width={340} height={319} title="Hình 11-1-1 · Ký hiệu mức tác động" labels={[["状態表示記号の例・AがHかつBがLのとき、出力YはH", "Ví dụ ký hiệu trạng thái: A ở H và B ở L thì Y ở H"]]} />),
+  logicAnd302: (<Diagram file="logicAnd302" width={766} height={197} title="Hình 11-1-2 · Cổng AND và mạch tiếp điểm" labels={[["入力A and BがHのとき、出力YはH", "Khi cả A và B ở H thì Y ở H"], ["スイッチ・リレーのコイル・旧記号・新記号", "Công tắc, cuộn rơle, ký hiệu cũ và ký hiệu mới"]]} />),
+  logicOr303: (<Diagram file="logicOr303" width={393} height={171} title="Hình 11-1-3 · Mạch OR" labels={[["入力A or BがHのとき、出力YはH", "Khi ít nhất một đầu vào A hoặc B ở H thì Y ở H"]]} />),
+  logicNot303: (<Diagram file="logicNot303" width={753} height={210} title="Hình 11-1-4 · Mạch NOT và tiếp điểm rơle" labels={[["インバータ・リレーの動作・コイル", "Bộ đảo, hoạt động của rơle và cuộn dây"], ["コイルを励磁したとき、a接点は閉じる、b接点は開く", "Khi cấp điện cuộn dây, tiếp điểm a đóng và tiếp điểm b mở"], ["入力Aが1のとき、出力Yは0", "Khi A = 1 thì Y = 0"]]} />),
+  logicNandNor303: (<Diagram file="logicNandNor303" width={543} height={205} title="Hình 11-1-5 và 11-1-6 · NAND và NOR" labels={[["NAND回路・NOR回路", "Mạch NAND và mạch NOR"]]} />),
+  logicLaws304: (<Diagram file="logicLaws304" width={731} height={354} title="Hình 11-1-7 · Quy luật AND và OR" labels={[["ANDに関する基本法則・ORに関する基本法則", "Quy luật cơ bản của AND và OR"]]} />),
+  logicXor304: (<Diagram file="logicXor304" width={556} height={294} title="Hình 11-1-8 · Bảng chân trị và ký hiệu XOR" labels={[["入力・出力・真理値表・図記号", "Đầu vào, đầu ra, bảng chân trị và ký hiệu mạch"]]} />),
+  deMorgan305: (<Diagram file="deMorgan305" width={573} height={212} title="Hình 11-1-9 · De Morgan trong sơ đồ mạch" labels={[["どちらもNAND回路（右図はOR記号を使ったNAND回路）", "Cả hai đều là NAND, hình bên phải dùng ký hiệu OR"], ["○のあるところは○を取る、○のないところに○を付ける", "Bỏ vòng tròn ở vị trí đã có và thêm ở vị trí chưa có"], ["ANDとORを入れ替える", "Đổi AND và OR cho nhau"]]} />),
   feedbackFormula296: (<Diagram file="feedbackFormula296" width={427} height={241} title="Hình 10-4-1 · Ghép phản hồi âm" labels={[["入力 X・フィードバック信号 YH・出力 Y の H 倍", "Đầu vào X, tín hiệu phản hồi YH và đầu ra Y nhân với H"]]} />),
   loopExercise296: (<Diagram file="loopExercise296" width={340} height={151} title="Bài tập · Sơ đồ điều khiển hai vòng" labels={[["入力信号・出力信号・制御器・制御対象", "Tín hiệu vào, tín hiệu ra, bộ điều khiển và đối tượng"]]} />),
   loopSolution296: (<Diagram file="loopSolution296" width={340} height={177} title="Bài tập · Đường đi qua một vòng" labels={[["信号が一巡・出力信号 Z", "Tín hiệu đi hết một vòng và tín hiệu ra Z"]]} />),
