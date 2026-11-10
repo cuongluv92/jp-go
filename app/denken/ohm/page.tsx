@@ -22,7 +22,9 @@ export default async function OhmLesson({ searchParams }: { searchParams: Promis
   const next = pages[pages.indexOf(page) + 1];
   const prevHref = previous === undefined ? null : href(previous);
   const nextHref = next === undefined ? null : href(next);
-  const title = page >= 79 ? "3‑3 三相電力 · Công suất ba pha"
+  const title = page >= 84 ? "章末問題 · Bài tập cuối chương"
+    : page >= 81 ? "3‑4 V 結線 · Nối V"
+    : page >= 79 ? "3‑3 三相電力 · Công suất ba pha"
     : page >= 77 ? "3‑2 Δ‑Y 変換 · Đổi tam giác sang sao"
     : page >= 70 ? "3‑1 三相交流回路 · Mạch xoay chiều ba pha"
     : page >= 67 ? "章末問題 · Bài tập cuối chương xoay chiều"
