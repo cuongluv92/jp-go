@@ -35,6 +35,14 @@ function Diagram({ file, width, height, title, labels }: {
 }
 
 export const diagrams = {
+  dropIntro172: (<Diagram file="drop-intro172" width={650} height={290} title="Minh họa sụt áp" labels={[["電圧降下・負荷電圧","Sụt áp và điện áp trên tải."]]} />),
+  dropSeries172: (<Diagram file="drop-series172" width={410} height={204} title="Hình 1-3-1 · Điện áp tổng trở" labels={[["抵抗電圧・リアクタンス電圧","Điện áp điện trở và điện áp điện kháng."]]} />),
+  dropVector173: (<Diagram file="drop-vector173" width={590} height={441} title="Hình 1-3-2 và 1-3-3 · Mạch nối tiếp và giản đồ vectơ" labels={[["ベクトル図・巻線抵抗・漏れリアクタンス","Giản đồ vectơ, điện trở cuộn dây và điện kháng rò."]]} />),
+  impedance174: (<Diagram file="impedance174" width={270} height={170} title="Hình 1-3-4 · Đo điện áp tổng trở" labels={[["インピーダンス電圧・短絡","Điện áp tổng trở và đầu thứ cấp được ngắn mạch."]]} />),
+  simplified171: (<Diagram file="simplified171" width={378} height={204} title="Hình 1-2-6 · Mạch tương đương đơn giản hóa" labels={[
+    ["一次電圧・負荷", "Điện áp sơ cấp và tải."],
+    ["一次に換算した簡易等価回路", "Mạch tương đương đơn giản hóa quy về sơ cấp."],
+  ]} />),
   transformerPolarity166: (<Diagram file="polarity166" width={940} height={435} title="Đầu cực một pha và cực tính" labels={[["減極性・加極性", "Cực tính trừ và cực tính cộng."]]} />),
   transformerTerminals166: (<Diagram file="terminals166" width={558} height={445} title="Đầu cực máy biến áp ba pha" labels={[["中性点端子なし・あり", "Hai cấu hình không có và có đầu trung tính."]]} />),
   transformerExercise168: (<Diagram file="exercise168" width={353} height={102} title="Sơ đồ bài số vòng dây" labels={[["巻数比", "Tỉ số số vòng sơ cấp trên số vòng thứ cấp."]]} />),

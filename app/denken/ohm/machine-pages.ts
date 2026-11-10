@@ -1,6 +1,55 @@
 import type { LessonRow } from "./lesson";
 
 export const machinePages: Record<number, LessonRow[]> = {
+  173: [
+    { diagram: "dropVector173" },
+    { jp: "パーセント抵抗電圧・パーセントリアクタンス電圧・パーセントインピーダンス電圧", vi: "Điện áp điện trở, điện kháng và tổng trở tính theo phần trăm", heading: true },
+    { jp: "変圧器に負荷電流を流すとき、一次端子電圧が一定であっても、巻線抵抗と漏れリアクタンスに流れる電流により、電圧降下があります。二次に換算した等価回路において、抵抗電圧 I₂ₙr、リアクタンス電圧 I₂ₙx、インピーダンス電圧 I₂ₙZ を定格二次電圧に対する％で表します。", vi: "Khi máy biến áp mang tải, dù điện áp đầu cực sơ cấp không đổi, dòng qua điện trở cuộn dây và điện kháng rò vẫn tạo sụt áp. Trong mạch quy về thứ cấp, biểu diễn I₂ₙr, I₂ₙx và I₂ₙZ theo phần trăm điện áp thứ cấp định mức.", equations: [
+      ["p = ", { fraction: [["I₂ₙr"], ["V₂ₙ"]] }, " × 100 [%]"],
+      ["q = ", { fraction: [["I₂ₙx"], ["V₂ₙ"]] }, " × 100 [%]"],
+      ["%z = ", { fraction: [["I₂ₙ|Z|"], ["V₂ₙ"]] }, " × 100 [%]"],
+    ], note: "p là phần trăm điện áp điện trở, q là phần trăm điện áp điện kháng, %z là phần trăm điện áp tổng trở. Khi quy về sơ cấp, dùng I₁ₙ và V₁ₙ cùng các thông số quy về sơ cấp. Không trộn đại lượng hai phía." },
+    { jp: "図1-3-2のように、変圧器を巻線抵抗 r と漏れリアクタンス x の直列回路で表したとき、電圧と電流のベクトル図は図1-3-3のようになります。斜辺の長さ V₂₀ と底辺の長さは、ほぼ同じ長さです。", vi: "Khi biểu diễn máy biến áp bằng r và x mắc nối tiếp như hình 1-3-2, ta có giản đồ vectơ điện áp và dòng điện ở hình 1-3-3. Độ dài cạnh huyền V₂₀ xấp xỉ cạnh đáy.", equations: [["V₂₀ ≈ V₂ₙ + I₂ₙr cos θ + I₂ₙx sin θ [V]"]], note: "Hình phóng đại sụt áp cho dễ nhìn. Khi thành phần vuông góc nhỏ so với điện áp thứ cấp, có thể dùng hình chiếu dọc trục điện áp. θ là góc tải, lấy dương khi dòng trễ pha." },
+  ],
+  174: [
+    { jp: "電圧降下と電圧変動率", vi: "Sụt áp và độ biến động điện áp", heading: true },
+    { jp: "無負荷電圧 V₂₀ と定格負荷時の電圧 V₂ₙ の差、すなわち電圧降下 ΔV は、次のようになります。これを電圧変動率の式に代入します。", vi: "Sụt áp ΔV là hiệu giữa điện áp không tải V₂₀ và điện áp khi tải định mức V₂ₙ. Thay biểu thức sụt áp vào công thức độ biến động điện áp.", equations: [["ΔV = V₂₀ − V₂ₙ ≈ I₂ₙ(r cos θ + x sin θ) [V]"], ["ε = ", { fraction: [["ΔV"], ["V₂ₙ"]] }, " × 100 ≈ p cos θ + q sin θ [%]"]], note: "Dấu cộng dùng với θ dương cho tải trễ pha. Tải sớm pha cho θ âm nên thành phần q sin θ mang dấu trừ. Ví dụ p = 2%, q = 3%, cos θ = 0,8 và sin θ = 0,6 thì ε ≈ 3,4%." },
+    { jp: "インピーダンス電圧の測定", vi: "Đo điện áp tổng trở", heading: true },
+    { diagram: "impedance174" },
+    { jp: "負荷を短絡し電圧を加え、短絡一次電流が定格一次電流 I₁ₙ に等しいとき、そのときの供給電圧 V₁𝓏 が**インピーダンス電圧**となります。インピーダンス電圧と定格一次電圧との比を**パーセントインピーダンス降下**といい、%z で表します。", vi: "Trong phép thử ngắn mạch, khi dòng sơ cấp bằng dòng định mức I₁ₙ, điện áp cấp V₁𝓏 là **điện áp tổng trở**. Tỉ số giữa điện áp này và điện áp sơ cấp định mức, tính theo phần trăm, gọi là **phần trăm sụt áp tổng trở (%z)**.", equations: [["%z = ", { fraction: [["V₁𝓏"], ["V₁ₙ"]] }, " × 100 = ", { fraction: [["I₁ₙ|Z₁|"], ["V₁ₙ"]] }, " × 100 = √(p² + q²) [%]"]], note: "Hai thành phần p và q vuông pha, nên tổng độ lớn là căn bậc hai của tổng bình phương. %z còn được gọi là tổng trở ngắn mạch phần trăm." },
+  ],
+  175: [
+    { jp: "インピーダンスワット", vi: "Công suất tổn hao do điện trở cuộn dây", heading: true },
+    { jp: "一次または二次等価回路において、等価抵抗を r、定格電流を Iₙ、定格電圧を Vₙ としたとき、パーセント抵抗降下 p は次の式で表されます。分子と分母に Iₙ を掛けると、分子は銅損、分母は変圧器容量になります。銅損を**インピーダンスワット**ともいいます。", vi: "Trong mạch tương đương quy về một phía, gọi r là điện trở tương đương, Iₙ là dòng định mức và Vₙ là điện áp định mức. Nhân cả tử và mẫu của công thức phần trăm sụt áp điện trở với Iₙ thì tử số là tổn hao đồng, mẫu số là dung lượng máy biến áp. Tổn hao đồng này còn được gọi là **インピーダンスワット**.", equations: [["p = ", { fraction: [["Iₙr"], ["Vₙ"]] }, " × 100 = ", { fraction: [["Iₙ²r"], ["VₙIₙ"]] }, " × 100 [%]"]], note: "Iₙ²r là tổn hao đồng ở dòng định mức, tính bằng W. VₙIₙ là dung lượng một pha, tính bằng VA. Tỉ số này là p, chỉ gồm thành phần điện trở, không phải %z." },
+    { jp: "短絡電流", vi: "Dòng ngắn mạch", heading: true },
+    { jp: "一次側に換算したインピーダンスが Z₁ のとき、定格電圧を加えたときの短絡電流 Iₛ は V₁ₙ を Z₁ で割った値です。パーセントインピーダンス降下の式を変形して、Z₁ を代入します。", vi: "Nếu tổng trở quy về sơ cấp là Z₁, dòng ngắn mạch Iₛ khi đặt điện áp định mức bằng V₁ₙ chia cho độ lớn tổng trở. Biến đổi công thức %z để thay Z₁ vào.", equations: [
+      ["Iₛ = ", { fraction: [["V₁ₙ"], ["|Z₁|"]] }, " [A]"],
+      ["|Z₁| = ", { fraction: [["(%z) V₁ₙ"], ["100 I₁ₙ"]] }, " [Ω]"],
+      ["Iₛ = ", { fraction: [["100 I₁ₙ"], ["%z"]] }, " [A]"],
+    ], note: "Nếu %z = 5% và I₁ₙ = 100 A, chia 100 A cho 0,05 để được 2.000 A. Kết quả giả thiết nguồn lý tưởng, bỏ qua tổng trở nguồn và đường dây. Đừng chia cho 5 nếu chưa đổi 5% sang số thập phân." },
+  ],
+  172: [
+    { jp: "1-3 電圧降下 **といえば** インピーダンス電圧", vi: "1-3 Sụt áp · Điện áp tổng trở", heading: true },
+    { diagram: "dropIntro172" },
+    { jp: "抵抗電圧、リアクタンス電圧、インピーダンス電圧", vi: "Điện áp điện trở, điện áp điện kháng và điện áp tổng trở", heading: true },
+    { jp: "図1-3-1のように、変圧器は電源と負荷の中間に接続され、**コイルの抵抗**による電圧降下及び**漏れリアクタンス**による電圧降下があります。", vi: "Như hình 1-3-1, máy biến áp nằm giữa nguồn và tải. Sụt áp xuất hiện do **điện trở cuộn dây** và **điện kháng rò**." },
+    { jp: "定格電流を流したときの抵抗による電圧降下を**抵抗電圧**、リアクタンス（漏れリアクタンス）による電圧降下を**リアクタンス電圧**、インピーダンス（漏れインピーダンスともいいます）による電圧降下を**インピーダンス電圧**といいます。インピーダンス電圧は、二次側を短絡し、一次電圧を徐々に上昇させ、短絡電流が定格電流に等しくなったときの一次側の供給電圧として測定します。", vi: "Khi dòng định mức chạy qua, độ sụt áp do điện trở gọi là **điện áp điện trở (抵抗電圧)**, do điện kháng rò gọi là **điện áp điện kháng (リアクタンス電圧)**, và do tổng trở rò gọi là **điện áp tổng trở (インピーダンス電圧)**. Theo phép thử trong sách, ngắn mạch phía thứ cấp và tăng dần điện áp sơ cấp đến khi dòng ngắn mạch đạt dòng định mức. Điện áp cấp sơ cấp tại thời điểm đó là điện áp tổng trở.", note: "Nếu quy về cùng một phía, các độ lớn lần lượt là Iₙr, Iₙx và Iₙ|Z|. Hai thành phần do r và x vuông pha nên không cộng trực tiếp độ lớn." },
+    { diagram: "dropSeries172" },
+    { jp: "電圧変動率", vi: "Độ biến động điện áp", heading: true },
+    { jp: "無負荷時と定格負荷時の、二次端子電圧の差と定格二次電圧の比を％で表したものを**電圧変動率**といい、次式で表します。", vi: "**Độ biến động điện áp (電圧変動率)** là chênh lệch điện áp đầu cực thứ cấp giữa không tải và tải định mức, chia cho điện áp thứ cấp định mức và biểu thị bằng phần trăm.", equations: [["ε = ", { fraction: [["V₂₀ − V₂ₙ"], ["V₂ₙ"]] }, " × 100 [%]"]], note: "V₂₀ là điện áp đầu cực thứ cấp lúc không tải. V₂ₙ là điện áp thứ cấp định mức. Cả hai tính bằng volt. Mẫu số là điện áp định mức, không phải điện áp không tải." },
+  ],
+  171: [
+    { jp: "簡易等価回路", vi: "Mạch tương đương đơn giản hóa", heading: true },
+    { diagram: "simplified171" },
+    { jp: "等価回路において、励磁回路を電源側端子に移したものを、**簡易等価回路**といいます。並列回路は電源側にある方が計算や考え方が簡単になるので、特性計算は一般に簡易等価回路を用います。", vi: "Khi chuyển nhánh kích từ về đầu cực phía nguồn trong mạch tương đương, ta được **mạch tương đương đơn giản hóa (簡易等価回路)**. Đặt nhánh song song ở phía nguồn giúp tính toán dễ hơn, nên thường dùng mạch này để tính đặc tính máy.", note: "Đây là phép gần đúng. Dòng kích từ nhỏ nên ảnh hưởng của việc chuyển vị trí nhánh qua tổng trở nối tiếp thường nhỏ. Khác với việc bỏ nhánh kích từ, sơ đồ này vẫn giữ nhánh đó." },
+    { jp: "練習問題 01 · 二次定数を一次に換算", vi: "Bài luyện 01 · Quy đổi đại lượng thứ cấp về sơ cấp", heading: true },
+    { jp: "巻数比 a＝60 の変圧器で、V₂＝105 V、I₂＝48 A のとき、(1) Zᴸ［Ω］、(2) V₁［V］、(3) I₁［A］、(4) Zᴸ′［kΩ］（一次換算負荷インピーダンス）は。", vi: "Máy biến áp có tỉ số vòng dây a = 60. Khi V₂ = 105 V và I₂ = 48 A, hãy tìm (1) tổng trở tải, (2) điện áp sơ cấp, (3) dòng sơ cấp, (4) tổng trở tải quy về sơ cấp.", equations: [
+      ["Zᴸ = ", { fraction: [["V₂"], ["I₂"]] }, " = ", { fraction: [["105"], ["48"]] }, " ≈ 2.19 Ω"],
+      ["V₁ = aV₂ = 60 × 105 = 6300 V"],
+      ["I₁ = ", { fraction: [["I₂"], ["a"]] }, " = ", { fraction: [["48"], ["60"]] }, " = 0.80 A"],
+      ["Zᴸ′ = a²Zᴸ ≈ 60² × 2.19 = 7884 Ω ≈ 7.88 kΩ"],
+    ], note: "Tính theo mô hình lý tưởng cho tỉ số áp và dòng. Có thể kiểm tra ngược tổng trở quy đổi bằng 6.300 V ÷ 0,80 A = 7,875 kΩ, làm tròn thành 7,88 kΩ. Sách làm tròn tổng trở tải ở bước đầu nên kết quả trung gian chênh 9 Ω." },
+  ],
   170: [
     { diagram: "equivalentSteps170" },
     { jp: "図1-2-2 一次等価回路（励磁回路を省略）・図1-2-3 理想変圧器を除いても同じ", vi: "Hình 1-2-2 · Quy về sơ cấp, bỏ nhánh kích từ. Hình 1-2-3 · Mạch vẫn tương đương khi bỏ máy biến áp lý tưởng.", equations: [["aE₂ = E₁"], [{ fraction: [["I₂"], ["a"]] }, " = I₁"]], note: "Sau quy đổi, aE₂ và E₁ cùng độ lớn và cùng cực tính theo hình. Hai điện trở nối tiếp mang cùng dòng quy đổi, nên có thể cộng lại. Kiểm tra tổn hao đồng và công suất phản kháng của điện kháng rò đều được bảo toàn." },
