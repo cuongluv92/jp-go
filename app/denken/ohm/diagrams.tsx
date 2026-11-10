@@ -35,6 +35,18 @@ function Diagram({ file, width, height, title, labels }: {
 }
 
 export const diagrams = {
+  sum71: (<Diagram file="sum71" width={665} height={269} title="Tổng ba pha cân bằng" labels={[["三相交流の正弦波・どの時刻でも","Ba sóng sin có tổng tức thời và tổng vectơ bằng 0."]]} />),
+  neutral72: (<Diagram file="neutral72" width={674} height={256} title="Ba mạch một pha và dòng trung tính" labels={[["単相回路の組合せ・中性線の電流","Ba mạch ghép lại. Tổng dòng cân bằng bằng 0."]]} />),
+  star72: (<Diagram file="star72" width={678} height={246} title="Nối Y bốn dây và ba dây" labels={[["三相4線式・三相3線式・中性線","Hình trái có dây trung tính; hình phải bỏ dây khi cân bằng."]]} />),
+  delta72: (<Diagram file="delta72" width={674} height={253} title="Ghép ba mạch thành nối Δ" labels={[["三相3線式（Δ結線）・電源・負荷","Nguồn và tải nối tam giác với ba dây pha."]]} />),
+  star73: (<Diagram file="star73" width={401} height={270} title="Đại lượng pha và dây trong nối Y" labels={[["相電圧・相電流・線間電圧・線電流・中性点","Áp và dòng pha, áp và dòng dây, điểm trung tính."]]} />),
+  delta73: (<Diagram file="delta73" width={402} height={249} title="Đại lượng pha và dây trong nối Δ" labels={[["相電圧・相電流・線間電圧・線電流","Áp pha đo trên một cạnh Δ, áp dây đo giữa hai dây."]]} />),
+  star74: (<Diagram file="star74" width={693} height={215} title="Hiệu vectơ điện áp trong nối Y" labels={[["Y結線の電源・基準点・V̇ₐᵦ","Đổi mốc từ N sang b để thấy V̇ₐᵦ = Ėₐ − Ėᵦ."]]} />),
+  vectors74: (<Diagram file="vectors74" width={462} height={265} title="Giản đồ áp dây nối Y" labels={[["電圧ベクトル図・π/6 進み位相","Áp dây sớm pha tương ứng 30° theo thứ tự pha của sách."]]} />),
+  delta74: (<Diagram file="delta74" width={363} height={230} title="Tổng áp hai pha" labels={[["eᵦ＋e꜀ の位相を反転したものは eₐ に等しい","Đổi dấu tổng hai pha b, c thì bằng pha a."]]} />),
+  delta75: (<Diagram file="delta75" width={372} height={220} title="Điện áp nối Δ" labels={[["Δ結線電圧・eₐ・eᵦ・e꜀","Mỗi điện áp pha bằng áp dây cùng cặp đầu nối."]]} />),
+  currents75: (<Diagram file="currents75" width={370} height={220} title="Giản đồ dòng dây trong Δ" labels={[["線電流のベクトル図・İₐ = İ₁ − İ₃","Hiệu hai dòng pha cho dòng dây; hình cho góc lệch 30°."]]} />),
+  ex75: (<Diagram file="ex75" width={209} height={174} title="Bài tập tải nối sao" labels={[["Vℓ・Vₚ・R = 80 Ω・Xₗ = 60 Ω","Áp dây, áp pha và các thông số mỗi nhánh."]]} />),
   rc66: (<Diagram file="rc66" width={438} height={189} title="Quá độ R–C của hình 2" labels={[["初期値・最終値","Khi vừa đóng tụ coi như nối tắt, khi xác lập tụ coi như hở."]]} />),
   ex66: (<Diagram file="ex66" width={552} height={168} title="Mạch và đồ thị bài 02" labels={[["R・L・iₗ・R = 1 Ω のとき","Đường liền ứng với 1 Ω, các đường số là phương án."]]} />),
   solve67: (<Diagram file="solve67" width={263} height={126} title="Đường cong phương án ③" labels={[["初期値・最終値","Dòng bắt đầu từ 0, tiến đến 1,5 A."]]} />),
