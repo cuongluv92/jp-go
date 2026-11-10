@@ -22,7 +22,8 @@ export default async function OhmLesson({ searchParams }: { searchParams: Promis
   const next = pages[pages.indexOf(page) + 1];
   const prevHref = previous === undefined ? null : href(previous);
   const nextHref = next === undefined ? null : href(next);
-  const title = page >= 102 ? "5‑2 電界の強さ · Cường độ điện trường"
+  const title = page >= 107 ? "5‑3 静電容量 · Điện dung"
+    : page >= 102 ? "5‑2 電界の強さ · Cường độ điện trường"
     : page >= 99 ? "5‑1 クーロン力 · Lực Coulomb"
     : page >= 97 ? "章末問題 · Bài tập cuối chương"
     : page >= 93 ? "4‑4 電力の測定 · Đo công suất"
