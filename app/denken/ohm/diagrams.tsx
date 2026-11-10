@@ -35,6 +35,14 @@ function Diagram({ file, width, height, title, labels }: {
 }
 
 export const diagrams = {
+  motor186: (<Diagram file="motor186" width={755} height={282} title="Cấu tạo động cơ cảm ứng ba pha" labels={[["固定子巻線・固定子鉄心・回転子・ベアリング", "Cuộn dây stato, lõi stato, rôto và ổ bi"]]} />),
+  can186: (<Diagram file="can186" width={148} height={303} title="Hình 2-1-1 · Lon nhôm quay" labels={[["動かす・誘導電流・回転", "Di chuyển nam châm, dòng điện cảm ứng và chiều quay"]]} />),
+  cage186: (<Diagram file="cage186" width={438} height={254} title="Hình 2-1-2 · Rôto lồng sóc" labels={[["回転子鉄心・かご形導体・一体化・回転子", "Lõi rôto, lồng dẫn điện, ghép thành một khối và rôto"]]} />),
+  wound187: (<Diagram file="wound187" width={283} height={228} title="Hình 2-1-3 · Rôto dây quấn" labels={[["スリップリング・ブラシ・コイル・外部の可変抵抗器", "Vành trượt, chổi than, cuộn dây và điện trở biến đổi bên ngoài"]]} />),
+  fieldDirection187: (<Diagram file="fieldDirection187" width={285} height={293} title="Hình 2-1-4 · Hướng từ trường" labels={[["固定子鉄心・回転子鉄心・磁界の方向", "Lõi stato, lõi rôto và hướng từ trường tổng hợp"]]} />),
+  threeCurrent187: (<Diagram file="threeCurrent187" width={535} height={278} title="Hình 2-1-5 · Dòng điện xoay chiều ba pha" labels={[["周期・Iₘ・t", "Chu kỳ, dòng cực đại và thời gian"]]} />),
+  fieldSequence188: (<Diagram file="fieldSequence188" width={786} height={582} title="Hình 2-1-6 · Từ trường quay theo thời gian" labels={[["回転磁界・N・S・H", "Từ trường quay, cực bắc, cực nam và từ trường tổng hợp"]]} />),
+  equiv190: (<Diagram file="equiv190" width={800} height={664} title="Hình 2-2-1 · Mạch tương đương" labels={[["回路の概念図・等価回路・固定子・回転子", "Sơ đồ khái niệm, mạch tương đương, stato và rôto"]]} />),
   sharing181: (<Diagram file="sharing181" width={420} height={227} title="Mạch chia tải hai máy biến áp" labels={[["電源・負荷", "Nguồn điện và tải"], ["Sₐ・Sᵦ", "Phần tải của máy A và B"], ["％zₐ′・％zᵦ′", "Tổng trở phần trăm sau đổi cơ sở"]]} />),
   autotransformer182: (<Diagram file="autotransformer182" width={787} height={270} title="Hai cách biểu diễn máy tự ngẫu tăng áp" labels={[["巻線の途中に接続", "Nối tại điểm giữa cuộn dây"], ["分路巻線と直列巻線を分離して考える", "Tách cuộn chung và cuộn nối tiếp khi phân tích"], ["負荷", "Tải"]]} />),
   stepUp182: (<Diagram file="stepUp182" width={332} height={189} title="Bài tập máy tự ngẫu tăng áp" labels={[["単巻変圧器", "Máy biến áp tự ngẫu"], ["力率75％ 遅れ", "Hệ số công suất 75% trễ"]]} />),

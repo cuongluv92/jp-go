@@ -1,6 +1,53 @@
 import type { LessonRow } from "./lesson";
 
 export const machinePages: Record<number, LessonRow[]> = {
+  186: [
+    { jp: "2-1 三相誘導電動機といえば回転磁界で回転する", vi: "2-1 Động cơ cảm ứng ba pha quay nhờ từ trường quay", heading: true },
+    { diagram: "motor186" },
+    { jp: "三相誘導電動機", vi: "Động cơ cảm ứng ba pha", heading: true },
+    { jp: "三相誘導電動機は、構造が簡単で取り扱いやすいので、動力用として広く使われています。図2-1-1のように、アルミニウムの缶をつるして永久磁石を素早く動かすと、缶が回転します。磁石を動かすことでアルミ缶に誘導電流が流れ、電流と磁界との作用で回転力を生じるためです。見かけ上、これはアルミ缶に磁極ができたのと同じような作用をします。誘導電動機は、磁石を回転する代わりに回転磁界（後述）を利用したものです。", vi: "Động cơ cảm ứng ba pha có cấu tạo đơn giản, dễ sử dụng nên được dùng rộng rãi để tạo động lực. Như hình 2-1-1, khi treo một lon nhôm rồi di chuyển nhanh nam châm vĩnh cửu, lon quay. Nam châm chuyển động làm xuất hiện dòng điện cảm ứng trong lon. Dòng điện tương tác với từ trường tạo mômen quay. Hiện tượng trông giống như các cực từ xuất hiện trên lon nhôm. Động cơ cảm ứng dùng từ trường quay thay cho việc quay nam châm.", note: "Từ trường biến thiên so với rôto làm phát sinh dòng điện cảm ứng. Tương tác giữa dòng này và từ trường sinh mômen theo chiều giảm chuyển động tương đối." },
+    { diagram: "can186" },
+    { jp: "かご形回転子", vi: "Rôto lồng sóc", heading: true },
+    { jp: "図2-1-2のようなかごの形をした回転子を、**かご形回転子**といいます。磁束を通りやすくするため、鉄心の中にかご形導体を埋めた形になっています。", vi: "Rôto có hình lồng như hình 2-1-2 gọi là **rôto lồng sóc** (かご形回転子). Lồng dẫn điện được đặt trong lõi sắt để từ thông dễ đi qua.", note: "Các thanh dẫn được nối ở hai đầu để tạo mạch kín cho dòng cảm ứng." },
+    { diagram: "cage186" },
+  ],
+  187: [
+    { jp: "巻線形回転子", vi: "Rôto dây quấn", heading: true },
+    { jp: "図2-1-3のようなコイルを巻いた回転子を**巻線形回転子**といいます。スリップリングという環状の導体に接続され、ブラシを通して外部抵抗を接続し、これを変化させることで、始動特性の改善や速度制御を可能にしています。", vi: "Rôto quấn cuộn dây như hình 2-1-3 gọi là **rôto dây quấn**. Cuộn dây nối với vành trượt (スリップリング). Qua chổi than, có thể nối điện trở ngoài và thay đổi điện trở để cải thiện đặc tính khởi động hoặc điều chỉnh tốc độ.", note: "Vành trượt và chổi than nối mạch rôto đang quay với điện trở ngoài đứng yên." },
+    { diagram: "wound187" },
+    { jp: "回転磁界", vi: "Từ trường quay", heading: true },
+    { jp: "図2-1-4のように３個のコイルを120°間隔に配置し、a、b、cの順に三相の電流 iₐ、iᵦ、i꜀［A］を流したとき、各電流による合成磁界は相順と同じ方向に回転します。これを**回転磁界**といいます。３個のコイルに50 Hzの三相交流電流を流したとき、１秒間に50回転する回転磁界ができます。１分（60秒）間では、60倍の毎分3 000回転となります。", vi: "Đặt ba cuộn dây cách nhau 120° như hình 2-1-4, rồi cho dòng ba pha iₐ, iᵦ, i꜀ (A) chạy theo thứ tự a, b, c. Từ trường tổng hợp quay theo thứ tự pha, gọi là **từ trường quay**. Khi cấp dòng ba pha 50 Hz cho ba cuộn như hình, từ trường quay 50 vòng mỗi giây, tương đương 3.000 vòng trong một phút.", note: "Tốc độ này áp dụng cho bố trí hai cực trong hình. Đổi chỗ hai pha sẽ đảo chiều quay của từ trường." },
+    { diagram: "fieldDirection187" },
+    { jp: "２極の回転磁界", vi: "Từ trường quay hai cực", heading: true },
+    { jp: "図2-1-4の場合、磁極は固定子、回転子ともに**N極**と**S極**ができるので、これを**２極**といいます。図2-1-5のような三相交流電流を流したとき、各時刻 t＝t₁、t₂、t₃、…における合成磁界は図2-1-6のようになり、波形の１周期の変化で、磁界の方向が１回転することがわかります。これを、**２極の回転磁界**といいます。周波数 f［Hz］の三相交流電流が流れるときは、１秒間で f 回転することになります。", vi: "Trong hình 2-1-4, cả stato và rôto đều có một **cực N** và một **cực S**, gọi là **hai cực**. Khi dòng ba pha có dạng như hình 2-1-5, từ trường tổng hợp ở các thời điểm t₁, t₂, t₃,… được thể hiện ở hình 2-1-6. Sau một chu kỳ điện, hướng từ trường quay đúng một vòng. Đó là **từ trường quay hai cực**. Với dòng ba pha tần số f (Hz), từ trường quay f vòng mỗi giây." },
+    { diagram: "threeCurrent187" },
+  ],
+  188: [
+    { diagram: "fieldSequence188" },
+    { jp: "同期回転速度 Nₛ", vi: "Tốc độ đồng bộ Nₛ", heading: true },
+    { jp: "回転磁界の回転速度は、電源の周波数に同期しているので、これを**同期回転速度**といいます。Nₛ［min⁻¹］は、極数 p と電源の周波数 f［Hz］によって決まります。", vi: "Tốc độ của từ trường quay đồng bộ với tần số nguồn, nên được gọi là **tốc độ đồng bộ**. Nₛ (vòng/phút) do số cực p và tần số nguồn f (Hz) quyết định." },
+    { jp: "同期回転速度 Nₛ といえば回転磁界の回転速度。p：極数（磁極の数。N極とS極で２極と数える）。f：電源周波数［Hz］。", vi: "Nₛ là tốc độ quay của từ trường. p là số cực từ, một cực N và một cực S tính là hai cực. f là tần số nguồn (Hz).", equations: [["Nₛ = ", { fraction: [["120f"], ["p"]], red: true }, " [min⁻¹]"], ["nₛ = ", { fraction: [["f"], [{ fraction: [["p"], ["2"]] }]] }, " = ", { fraction: [["2f"], ["p"]] }, " [s⁻¹]"]], note: "p/2 là số đôi cực. Chia số chu kỳ mỗi giây cho số đôi cực để ra vòng/giây. Nhân với 60 để đổi sang vòng/phút." },
+    { jp: "本書では回転速度を表すのに、N（大文字）は毎分［min⁻¹］、n（小文字）は毎秒［s⁻¹］としています。例えば、f＝50 Hz、p＝2 のとき、同期回転速度 Nₛ［min⁻¹］、nₛ［s⁻¹］は次のようになります。", vi: "Sách dùng N viết hoa cho vòng/phút và n viết thường cho vòng/giây. Với f = 50 Hz và p = 2, tốc độ đồng bộ được tính như sau.", equations: [["Nₛ = ", { fraction: [["120 × 50"], ["2"]] }, " = 3 000 min⁻¹"], ["nₛ = ", { fraction: [["2 × 50"], ["2"]] }, " = 50 s⁻¹"]], note: "Kiểm tra ngược: 3.000 chia 60 bằng 50 vòng/giây." },
+  ],
+  189: [
+    { jp: "滑り", vi: "Hệ số trượt", heading: true },
+    { jp: "回転磁界の回転速度（同期回転速度）Nₛ［min⁻¹］と回転子の回転速度 N［min⁻¹］との差（Nₛ − N）を、**滑り速度**、または**相対速度**といいます。この滑り速度（Nₛ − N）を同期回転速度 Nₛ［min⁻¹］で割った値を**滑り**といい、s で表します。", vi: "Hiệu giữa tốc độ đồng bộ Nₛ và tốc độ rôto N gọi là **tốc độ trượt** hay **tốc độ tương đối**. Chia hiệu Nₛ − N cho tốc độ đồng bộ Nₛ được **hệ số trượt**, ký hiệu s." },
+    { jp: "滑りといえば滑り速度と同期回転速度の比。s は100倍してパーセントでいうことが多い。", vi: "Hệ số trượt là tỉ số tốc độ trượt trên tốc độ đồng bộ. Thường nhân s với 100 để biểu diễn theo phần trăm.", equations: [["s = ", { fraction: [["Nₛ − N"], ["Nₛ"]], red: true }], ["s [%] = ", { fraction: [["Nₛ − N"], ["Nₛ"]], red: true }, " × 100"]] },
+    { jp: "s＝1（100％）は停止状態、s＝0 は同期速度で回転することを表します。一般に、滑り s は３～６％くらいです。原理上、誘導電動機は、同期回転速度 Nₛ［min⁻¹］よりも少し遅い速度 N［min⁻¹］で回転します。", vi: "s = 1 (100%) nghĩa là rôto đứng yên, còn s = 0 nghĩa là rôto quay đồng bộ. Hệ số trượt thường khoảng 3–6%. Khi chạy ở chế độ động cơ, tốc độ N thấp hơn một chút so với tốc độ đồng bộ Nₛ.", note: "Ở đúng tốc độ đồng bộ, từ trường không chuyển động tương đối so với rôto nên mômen cảm ứng lý tưởng bằng 0." },
+    { jp: "誘導電動機の回転速度 N といえば sNₛ だけ遅れる。s：小数で表した滑り。誘導電動機の回転速度は、同期回転速度よりも滑りの分だけ遅く回転します。", vi: "Tốc độ động cơ cảm ứng thấp hơn tốc độ đồng bộ một lượng sNₛ. Trong công thức này s dùng dạng thập phân.", equations: [["N = Nₛ(1 − s) = Nₛ − sNₛ [min⁻¹]"]] },
+    { jp: "練習問題 01　定格回転速度", vi: "Bài tập 01 · Tốc độ quay định mức", heading: true },
+    { jp: "定格周波数 f＝50 Hz、８極の三相かご形誘導電動機の滑りが４％のとき電動機の回転速度 N［min⁻¹］は。", vi: "Động cơ cảm ứng ba pha lồng sóc 8 cực có tần số định mức 50 Hz và hệ số trượt 4%. Tính tốc độ N (vòng/phút)." },
+    { jp: "解き方　①同期回転速度 Nₛ［min⁻¹］は、②滑りが４％であることから、定格回転速度 N［min⁻¹］は、", vi: "Cách giải. ① Tính tốc độ đồng bộ. ② Đổi 4% thành 0,04 rồi tính tốc độ quay.", equations: [["Nₛ = ", { fraction: [["120f"], ["p"]] }, " = ", { fraction: [["120 × 50"], ["8"]] }, " = 750 min⁻¹"], ["N = Nₛ(1 − 0.04) = 750(1 − 0.04) = 720 min⁻¹"]] },
+    { jp: "解説　回転速度の計算は、この例でいうと、750円の品を４％引きにしたらいくらか？という計算と同じです。750 × 0.96＝720。解答　**N＝720 min⁻¹**", vi: "Giải thích. Phép tính giống như giảm giá 4% cho món hàng 750 yên. 750 × 0,96 = 720. Đáp án **720 vòng/phút**.", note: "Kiểm tra ngược: tốc độ trượt bằng 30 vòng/phút và 30 chia 750 bằng 0,04." },
+  ],
+  190: [
+    { jp: "2-2 三相誘導電動機の回路といえば変圧器と同じ", vi: "2-2 Mạch của động cơ cảm ứng ba pha tương tự máy biến áp", heading: true },
+    { jp: "三相誘導電動機の等価回路", vi: "Mạch tương đương động cơ cảm ứng ba pha", heading: true },
+    { jp: "固定子鉄心に巻かれた巻線を**一次巻線**、回転子の導体を**二次巻線**とし、変圧器と同様な回路で表すことができます。図2-2-1は、三相誘導電動機の回路を考えるときの概念図を表したものです。これを一次、二次回路ともに三相のY結線とし、１相を取り出して回路をつくります。", vi: "Coi cuộn quấn trên lõi stato là **cuộn sơ cấp** và dây dẫn rôto là **cuộn thứ cấp** thì có thể biểu diễn động cơ bằng mạch tương tự máy biến áp. Hình 2-2-1 trình bày sơ đồ khái niệm. Biểu diễn cả sơ cấp lẫn thứ cấp bằng mạch ba pha nối sao (Y), rồi tách một pha để lập mạch.", note: "r₁ là điện trở stato, x₁ là điện kháng rò stato (Ω). g₀ và b₀ lần lượt biểu diễn điện dẫn tổn hao lõi và độ lớn điện nạp từ hóa (S). U, V, W là ba đầu pha." },
+    { diagram: "equiv190" },
+    { jp: "停止時（始動時）", vi: "Khi đứng yên (lúc khởi động)", heading: true },
+    { jp: "停止しているときは、誘導電動機の電圧、電流の関係は変圧器と同じように考えます。このとき、１相分の回路（一次、二次ともに三相Y結線としたときの１相分を取り出した回路）は図2-2-2のようになります。", vi: "Khi rôto đứng yên, xét quan hệ điện áp và dòng điện như với máy biến áp. Mạch một pha tách từ hai phía nối sao được trình bày ở hình 2-2-2.", note: "Rôto đứng yên có s = 1, nên tần số dòng rôto bằng tần số nguồn." },
+  ],
   181: [
     { jp: "分担負荷といえば％z′で**逆比例配分**する。分担負荷＝負荷容量×相手の％z′／％z′の和。％z′は、同一基準容量に合わせた値。", vi: "Chia tải **tỉ lệ nghịch** với %z′. Phần tải của một máy bằng tổng tải nhân với %z′ của máy kia rồi chia cho tổng %z′. Các %z′ đều đã quy về cùng dung lượng cơ sở.", equations: [["Sₐ = S × ", { fraction: [["%zᵦ′"], ["%zₐ′ + %zᵦ′"]], red: true }, " [kVA]"], ["Sᵦ = S × ", { fraction: [["%zₐ′"], ["%zₐ′ + %zᵦ′"]], red: true }, " [kVA]"]], note: "Công thức dùng độ lớn khi hai tổng trở có cùng góc và điện áp không tải bằng nhau. S, Sₐ và Sᵦ tính bằng kVA." },
     { jp: "練習問題 01　分担負荷", vi: "Bài tập 01 · Phân chia tải", heading: true },
