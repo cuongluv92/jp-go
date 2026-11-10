@@ -104,10 +104,10 @@ function PrefixTable({ headers, rows, japanese = false }: { headers: string[]; r
       <table className="w-full border-collapse text-left text-sm">
         <thead className="bg-surface-muted"><tr>{headers.map(header =>
           <th scope="col" key={header} className="px-2 py-1">{header}</th>)}</tr></thead>
-        <tbody>{rows.map(([jp, vi, symbol, value]) =>
-          <tr key={symbol} className="border-t border-border">
+        <tbody>{rows.map(([jp, vi, ...cells]) =>
+          <tr key={jp} className="border-t border-border">
             <th scope="row" className="px-2 py-1 font-normal">{japanese ? jp : vi}</th>
-            <td className="px-2 py-1">{symbol}</td><td className="px-2 py-1">{value}</td>
+            {cells.map((cell, index) => <td key={index} className="px-2 py-1">{cell}</td>)}
           </tr>)}</tbody>
       </table>
     </div>
@@ -124,7 +124,7 @@ export function OhmReader({ rows }: { rows: ReadingRow[] }) {
       return {
         key,
         jp: <div lang="ja" className="font-jp space-y-2"><Text className={style}><MarkedText text={row.jp} readings={showFurigana ? row.readings : undefined} /></Text>{row.formula && <Formula kind={row.formula} japanese />}{row.equations && <Equations lines={row.equations} />}{row.table && <PrefixTable headers={row.table.jp} rows={row.table.rows} japanese />}</div>,
-        vi: <div className="space-y-2"><Text className={style}><MarkedText text={row.vi} /></Text>{row.formula && <Formula kind={row.formula} />}{vietnameseEquations && <Equations lines={vietnameseEquations} />}{row.table && <PrefixTable headers={row.table.vi} rows={row.table.rows} />}</div>,
+        vi: <div className="space-y-2"><Text className={style}><MarkedText text={row.vi} /></Text>{row.formula && <Formula kind={row.formula} />}{vietnameseEquations && <Equations lines={vietnameseEquations} />}{row.table && <PrefixTable headers={row.table.vi} rows={row.table.rowsVi ?? row.table.rows} />}</div>,
         explanation: row.note && <p className="text-sm leading-relaxed">{row.note}</p>,
       };
     })} />

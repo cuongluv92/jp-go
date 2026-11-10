@@ -35,6 +35,18 @@ function Diagram({ file, width, height, title, labels }: {
 }
 
 export const diagrams = {
+  rc66: (<Diagram file="rc66" width={438} height={189} title="Quá độ R–C của hình 2" labels={[["初期値・最終値","Khi vừa đóng tụ coi như nối tắt, khi xác lập tụ coi như hở."]]} />),
+  ex66: (<Diagram file="ex66" width={552} height={168} title="Mạch và đồ thị bài 02" labels={[["R・L・iₗ・R = 1 Ω のとき","Đường liền ứng với 1 Ω, các đường số là phương án."]]} />),
+  solve67: (<Diagram file="solve67" width={263} height={126} title="Đường cong phương án ③" labels={[["初期値・最終値","Dòng bắt đầu từ 0, tiến đến 1,5 A."]]} />),
+  ex67: (<Diagram file="ex67" width={206} height={125} title="Mạch R–L nối tiếp" labels={[["E・R・Xₗ","Nguồn áp, điện trở và cảm kháng."]]} />),
+  triangle67: (<Diagram file="triangle67" width={156} height={138} title="Tam giác tổng trở" labels={[["R = 1・Xₗ = √2・Z・φ","Cạnh đáy, cạnh đứng, cạnh huyền và góc pha."]]} />),
+  ex68: (<Diagram file="ex68" width={317} height={163} title="Mạch RC hai nhánh" labels={[["8 Ω・6 Ω・4 Ω・3 Ω・12 V","Hai nhánh song song. Áp trên tụ 6 Ω là 12 V."]]} />),
+  solve68: (<Diagram file="solve68" width={383} height={169} title="Điện áp và dòng từng nhánh" labels={[["16 V・12 V・I₁・I₂","Điện áp từng phần tử và dòng hai nhánh."]]} />),
+  triangles68: (<Diagram file="triangles68" width={335} height={105} title="Hai tam giác cùng tỷ lệ" labels={[["インピーダンスの三角形・電圧の三角形","Nhân các cạnh tổng trở với dòng để có tam giác điện áp."]]} />),
+  series69: (<Diagram file="series69" width={578} height={155} title="Cộng hưởng RLC nối tiếp" labels={[["インピーダンスのベクトル図・電圧のベクトル図","Tổng áp của L và C bằng 0; áp nguồn bằng áp trên R."]]} />),
+  parallel69: (<Diagram file="parallel69" width={565} height={137} title="Cộng hưởng RLC song song" labels={[["電流のベクトル図・I₀ = 0","Dòng tổng trong nhánh LC bằng 0; nguồn vẫn cấp dòng qua R."]]} />),
+  resistor69: (<Diagram file="resistor69" width={107} height={96} title="Mạch nhìn từ nguồn khi cộng hưởng" labels={[["V・I・R","Nguồn nhìn thấy tải thuần trở."]]} />),
+  phases70: (<Diagram file="phases70" width={564} height={260} title="Ba sóng lệch nhau 120°" labels={[["三相交流・電圧・eₐ・eᵦ・e꜀・ωt","Ba điện áp pha hình sin theo trục góc, lệch nhau 2π/3 rad."]]} />),
   rl61: (<Diagram file="rl61" width={186} height={65} title="Tổng trở R–L" labels={[["R = 16 Ω・Xₗ = 12 Ω","Điện trở và cảm kháng mắc nối tiếp."]]} />),
   ex61: (<Diagram file="ex61" width={152} height={106} title="Mạch bài 02" labels={[["6 Ω・j8 Ω・V̇ = 200 V","Điện trở, tổng trở của cuộn cảm và áp nguồn."]]} />),
   triangle61: (<Diagram file="triangle61" width={119} height={115} title="Tam giác dòng bài 02" labels={[["12 A・16 A・I","Phần thực 12 A, phần ảo hướng xuống 16 A, cạnh huyền là độ lớn dòng."]]} />),

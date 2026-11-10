@@ -1,3 +1,4 @@
+import { acReviewPages } from "./ac-review-pages";
 import { transientPages } from "./transient-pages";
 import { resonancePowerPages } from "./resonance-power-pages";
 import { parallelPages } from "./parallel-pages";
@@ -22,7 +23,7 @@ export type LessonRow = {
   heading?: boolean;
   equations?: FormulaLine[];
   equationsVi?: FormulaLine[];
-  table?: { jp: string[]; vi: string[]; rows: string[][] };
+  table?: { jp: string[]; vi: string[]; rows: string[][]; rowsVi?: string[][] };
   formula?: "ohm" | "drop" | "solution" | "parallelSolution" | "parallelReference" | "connections";
 } | { diagram: keyof typeof diagrams };
 
@@ -40,6 +41,7 @@ export const lesson: Record<number, LessonRow[]> = {
   ...parallelPages,
   ...resonancePowerPages,
   ...transientPages,
+  ...acReviewPages,
   2: [
     { jp: "オームの法則 **といえば** 電圧÷電流＝抵抗", vi: "Định luật Ohm · Điện áp chia dòng điện bằng điện trở", heading: true },
     { diagram: "examples" },

@@ -22,7 +22,9 @@ export default async function OhmLesson({ searchParams }: { searchParams: Promis
   const next = pages[pages.indexOf(page) + 1];
   const prevHref = previous === undefined ? null : href(previous);
   const nextHref = next === undefined ? null : href(next);
-  const title = page >= 62 ? "2‑11 過渡現象 · Quá trình quá độ"
+  const title = page >= 70 ? "3‑1 三相交流回路 · Mạch xoay chiều ba pha"
+    : page >= 67 ? "章末問題 · Bài tập cuối chương xoay chiều"
+    : page >= 62 ? "2‑11 過渡現象 · Quá trình quá độ"
     : page >= 60 ? "2‑10 交流回路の複素数計算 · Tính mạch xoay chiều bằng số phức"
     : page >= 57 ? "2‑9 電力 · Công suất xoay chiều"
     : page >= 55 ? "2‑8 共振の条件 · Điều kiện cộng hưởng"
@@ -60,7 +62,7 @@ export default async function OhmLesson({ searchParams }: { searchParams: Promis
         <main className="min-w-0 space-y-4">
           <div className="flex flex-wrap items-center justify-between gap-2">
             <p className="min-w-0 text-sm text-muted">
-              <Link href="/denken" className="hover:text-accent">電験三種</Link> / 理論 / {page >= 31 ? "交流回路" : "直流回路"} / {title}
+              <Link href="/denken" className="hover:text-accent">電験三種</Link> / 理論 / {page >= 70 ? "三相交流回路" : page >= 31 ? "交流回路" : "直流回路"} / {title}
             </p>
             <nav aria-label="Chuyển trang" className="flex flex-wrap items-center gap-2">
               {prevHref ? <Link href={prevHref} className={navButton}>← Trang trước</Link> : <span className="text-sm text-muted">← Trang trước</span>}
