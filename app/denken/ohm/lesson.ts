@@ -1,3 +1,4 @@
+import { acPages } from "./ac-pages";
 import type { diagrams } from "./diagrams";
 import { reviewPages } from "./review-pages";
 import { powerPages } from "./power-pages";
@@ -26,6 +27,7 @@ export const lesson: Record<number, LessonRow[]> = {
   ...networkPages,
   ...powerPages,
   ...reviewPages,
+  ...acPages,
   2: [
     { jp: "オームの法則 **といえば** 電圧÷電流＝抵抗", vi: "Định luật Ohm · Điện áp chia dòng điện bằng điện trở", heading: true },
     { diagram: "examples" },

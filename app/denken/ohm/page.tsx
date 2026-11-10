@@ -22,7 +22,8 @@ export default async function OhmLesson({ searchParams }: { searchParams: Promis
   const next = pages[pages.indexOf(page) + 1];
   const prevHref = previous === undefined ? null : href(previous);
   const nextHref = next === undefined ? null : href(next);
-  const title = page >= 26 ? "章末問題 · Bài tập cuối chương mạch một chiều"
+  const title = page >= 31 ? "2‑1 正弦波交流 · Dòng điện xoay chiều hình sin"
+    : page >= 26 ? "章末問題 · Bài tập cuối chương mạch một chiều"
     : page >= 24 ? "1‑10 定電圧源と定電流源・重ね合せの理 · Nguồn lý tưởng và nguyên lý chồng chất"
     : page === 23 ? "1‑9 直流回路の電力 · Công suất mạch một chiều"
     : page >= 21 ? "1‑8 Δ-Y変換 · Biến đổi tam giác–sao"
@@ -49,7 +50,7 @@ export default async function OhmLesson({ searchParams }: { searchParams: Promis
         <main className="min-w-0 space-y-4">
           <div className="flex flex-wrap items-center justify-between gap-2">
             <p className="min-w-0 text-sm text-muted">
-              <Link href="/denken" className="hover:text-accent">電験三種</Link> / 理論 / 直流回路 / {title}
+              <Link href="/denken" className="hover:text-accent">電験三種</Link> / 理論 / {page >= 31 ? "交流回路" : "直流回路"} / {title}
             </p>
             <nav aria-label="Chuyển trang" className="flex flex-wrap items-center gap-2">
               {prevHref ? <Link href={prevHref} className={navButton}>← Trang trước</Link> : <span className="text-sm text-muted">← Trang trước</span>}

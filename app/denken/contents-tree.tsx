@@ -18,7 +18,7 @@ function ContentsText({ text }: { text: string }) {
   );
 }
 
-const availableStarts = [2, 5, 9, 12, 14, 16, 19, 21, 23, 24, 26];
+const availableStarts = [2, 5, 9, 12, 14, 16, 19, 21, 23, 24, 26, 31];
 
 export function ContentsTree({ currentPage }: { currentPage?: number }) {
   const activeStart = currentPage === undefined ? undefined : availableStarts.filter(page => page <= currentPage).at(-1);
@@ -42,7 +42,7 @@ export function ContentsTree({ currentPage }: { currentPage?: number }) {
             <ul className="mt-3 space-y-2">
               {chapters.map(([start, chapter], index) => (
                 <li key={start}>
-                  <details open={start === 2 ? true : undefined} className="rounded-lg border border-border px-3 py-2">
+                  <details open={start === (currentPage !== undefined && currentPage >= 31 ? 31 : 2) ? true : undefined} className="rounded-lg border border-border px-3 py-2">
                     <summary className="cursor-pointer text-sm font-medium">
                       <span className="mr-2 inline-block min-w-5 rounded bg-red-700 px-1 text-center text-xs font-semibold text-white">{index + 1}</span>
                       <span className="font-jp">{chapter}</span>
@@ -57,7 +57,7 @@ export function ContentsTree({ currentPage }: { currentPage?: number }) {
                           <li key={line} className="flex items-baseline gap-3 py-2 text-sm">
                             <span className={`w-12 shrink-0 tabular-nums ${bookRed}`}>p.{pageNumber}</span>
                             <span lang="ja" className="font-jp leading-relaxed">
-                              {title === "理論" && index === 0 && availableStarts.includes(startPage) ? (
+                              {title === "理論" && availableStarts.includes(startPage) ? (
                                 <Link href={startPage === 2 ? "/denken/ohm" : `/denken/ohm?trang=${startPage}`} aria-current={activeStart === startPage ? "location" : undefined} className="underline underline-offset-2"><ContentsText text={before} /></Link>
                               ) : <ContentsText text={before} />}
                               {after !== undefined && <><Fraction numerator="%z" denominator="100" /><ContentsText text={after} /></>}

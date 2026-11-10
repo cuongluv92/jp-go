@@ -35,6 +35,50 @@ function Diagram({ file, width, height, title, labels }: {
 }
 
 export const diagrams = {
+  ac31: (<Diagram file="ac31" width={638} height={216} title="Trang 31 · Sóng xoay chiều hình sin" labels={[
+    ["交流電源・負荷","Nguồn xoay chiều và tải."],
+    ["電流（電圧）・時間 t","Trục dọc là dòng hoặc áp, trục ngang là thời gian."],
+    ["電流または電圧の大きさと方向が周期的に変化します","Độ lớn và chiều hoặc cực tính thay đổi theo chu kỳ."],
+    ["端子 b を基準電位（0 V）とする","Chọn b làm mốc 0 V. Điện thế tại a luân phiên dương và âm."],
+  ]} />),
+  rotation31: (<Diagram file="rotation31" width={623} height={215} title="Hình 2‑1‑1 · Đường sin từ vectơ quay" labels={[
+    ["動径・瞬時値・最大値・角度","Bán kính quay, giá trị tức thời, giá trị cực đại và góc quay."],
+    ["正弦波は、動径（矢）を左回転したときの高さをグラフにしたものです","Đồ thị sin biểu diễn độ cao của đầu mũi tên khi quay ngược chiều kim đồng hồ."],
+    ["①〜⑤・0・π・2π・3π・4π","Các vị trí theo thứ tự quay và góc trên trục ngang. Một vòng là 2π rad."],
+  ]} />),
+  rad32: (<Diagram file="rad32" width={155} height={230} title="Hình 2‑1‑2 · Ý nghĩa của 1 radian" labels={[
+    ["弧・半径","Cung tròn và bán kính."],
+    ["1 rad＝半径と弧の長さが等しくなる角度","Góc 1 rad ứng với cung có chiều dài bằng bán kính, xấp xỉ 57,3°."],
+  ]} />),
+  phase32: (<Diagram file="phase32" width={514} height={271} title="Hình 2‑1‑3 · So sánh pha của ba sóng" labels={[
+    ["v₂ は、v₁ よりも θ₂ だけ進んでいる（左にずれている）","v₂ sớm pha θ₂ so với v₁, dịch sang trái."],
+    ["v₃ は、v₁ よりも θ₃ だけ遅れている（右にずれている）","v₃ trễ pha θ₃ so với v₁, dịch sang phải."],
+    ["最大値・Vₘ₁・Vₘ₂・Vₘ₃・ωt","Các giá trị cực đại và trục góc."],
+  ]} />),
+  same33: (<Diagram file="same33" width={501} height={191} title="Hình 2‑1‑4 · Hai sóng đồng pha" labels={[
+    ["同位相・0になるときが同じ","Đồng pha. Hai sóng trong hình cùng qua 0 và cùng chiều tại các mốc đó."],
+    ["v₁・v₂・ωt","Hai sóng có biên độ khác nhau và cùng trục góc."],
+  ]} />),
+  period33: (<Diagram file="period33" width={480} height={185} title="Hình 2‑1‑5 · Chu kỳ và tần số" labels={[
+    ["1秒間に変化する回数＝周波数","Tần số là số chu kỳ trong một giây."],
+    ["周期 T (s)・f (Hz)・時間 t","Chu kỳ, tần số và trục thời gian."],
+    ["1 s","Khoảng một giây chứa f chu kỳ."],
+  ]} />),
+  dc34: (<Diagram file="dc34" width={625} height={210} title="Hình 2‑1‑6 · Điện áp pin một chiều" labels={[
+    ["負荷を接続したとき・負荷を接続しないとき","Trạng thái có tải và không tải."],
+    ["乾電池の電圧波形は直流","Điện áp pin khô là điện áp một chiều."],
+    ["スイッチ・負荷・0 V（基準電位）","Công tắc, tải và điện thế mốc 0 V."],
+  ]} />),
+  ac34: (<Diagram file="ac34" width={619} height={205} title="Hình 2‑1‑6 · Điện áp xoay chiều trong ví dụ của sách" labels={[
+    ["コンセントの電圧波形は交流","Đồ thị điện áp ổ cắm là dạng xoay chiều."],
+    ["右の短い方の電位の変化が交流波形になります","Trong hình, điện thế phía khe ngắn bên phải biến đổi thành dạng sóng xoay chiều."],
+    ["左の長い方は大地に接地されています・0 V（基準電位）","Hình minh họa phía khe dài bên trái được nối về đất và dùng làm mốc 0 V."],
+  ]} />),
+  ex35: (<Diagram file="ex35" width={624} height={176} title="Trang 35 · Đồ thị điện áp và mạch điện trở" labels={[
+    ["(a)・v (V)・ωt (rad)","Đồ thị điện áp theo góc."],
+    ["100√2・−100√2・π/6・7π/6・13π/6・f = 50 Hz","Biên độ dương và âm, các mốc qua 0 và tần số cho trước."],
+    ["(b)・i (A)・v (V)・R = 10 Ω","Mạch áp dụng điện áp ở hình (a) lên điện trở 10 Ω để tìm dòng."],
+  ]} />),
   ex26: (<Diagram file="ex26" width={622} height={178} title="Trang 26 · Hai trạng thái của mạch" labels={[
     ["図1・図2","Mạch ban đầu và mạch sau khi thêm R₃."],
     ["V・R₁ = 1 Ω・R₂・I₂ = 5 A","Nguồn và hai điện trở ban đầu, với dòng qua R₂ bằng 5 A."],
