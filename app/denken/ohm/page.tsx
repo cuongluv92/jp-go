@@ -22,7 +22,9 @@ export default async function OhmLesson({ searchParams }: { searchParams: Promis
   const next = pages[pages.indexOf(page) + 1];
   const prevHref = previous === undefined ? null : href(previous);
   const nextHref = next === undefined ? null : href(next);
-  const title = page >= 89 ? "4‑2 倍率器・分流器 · Mở rộng thang đo"
+  const title = page >= 93 ? "4‑4 電力の測定 · Đo công suất"
+    : page >= 91 ? "4‑3 抵抗の測定 · Đo điện trở"
+    : page >= 89 ? "4‑2 倍率器・分流器 · Mở rộng thang đo"
     : page >= 87 ? "4‑1 指示計器 · Đồng hồ chỉ kim"
     : page >= 84 ? "章末問題 · Bài tập cuối chương"
     : page >= 81 ? "3‑4 V 結線 · Nối V"
