@@ -1,6 +1,76 @@
 import type { LessonRow } from "./lesson";
 
 export const machinePages: Record<number, LessonRow[]> = {
+  311: [
+    { jp: "練習問題 01　論理式", vi: "Bài tập 01 · Biểu thức logic", heading: true },
+    { jp: "次の真理値表の出力信号 X の論理式は。", vi: "Tìm biểu thức logic của đầu ra X trong bảng chân trị sau.", table: {
+      jp: ["入力 A", "入力 B", "入力 C", "出力 X"], vi: ["Đầu vào A", "Đầu vào B", "Đầu vào C", "Đầu ra X"],
+      rows: [["0","0","0","0"],["0","0","1","1"],["0","1","0","0"],["0","1","1","1"],["1","0","0","0"],["1","0","1","1"],["1","1","0","1"],["1","1","1","1"]],
+    } },
+    { jp: "解き方　カルノー図を用いた解法を用います。出力 X が1の論理式からカルノー図に該当番号を記入し、論理式を読み取ります。", vi: "Cách giải bằng bản đồ Karnaugh. Đánh số các hàng cho X = 1 rồi điền số tương ứng vào bản đồ. Đọc hai nhóm: cột C = 1 cho C, hàng A = B = 1 cho AB." },
+    { diagram: "karnaughExercise311" },
+    { jp: "別解　論理式による解法もあります。同一積項は簡単化のため加えてもよい。ORに関する基本法則による。", vi: "Cách khác là rút gọn đại số. Có thể lặp lại một tích hạng để dễ nhóm vì OR với chính nó giữ nguyên giá trị. Dùng quy luật OR với hai biến bù nhau.", equations: [
+      ["X = ① + ② + ③ + ④ + ⑤"],
+      ["= A̅ · B̅ · C + A̅ · B · C + A · B̅ · C + A · B · C̅ + A · B · C"],
+      ["= C · (A̅ · B̅ + A̅ · B + A · B̅ + A · B) + A · B · C̅"],
+      ["= C · {A̅ · (B̅ + B) + A · (B̅ + B)} + A · B · C̅ + A · B · C"],
+      ["= C · (A̅ + A) + A · B · (C̅ + C)"],
+      ["= A · B + C"],
+    ], note: "Kiểm tra ngược: C = 1 cho X = 1 với mọi A, B. Với C = 0, chỉ hàng 110 cho X = 1. Hai điều kiện tạo đúng năm hàng trong bảng." },
+    { jp: "解答　**X＝A·B＋C**", vi: "Đáp án · **X = A · B + C**." },
+  ],
+  312: [
+    { jp: "11-3 フリップフロップといえば 反転動作の記憶素子", vi: "11-3 Flip-flop · Phần tử nhớ có thể đảo trạng thái", heading: true },
+    { diagram: "rsSymbol312" },
+    { jp: "RS-FF", vi: "RS-FF", heading: true },
+    { jp: "RS-FF（リセットセットフリップフロップ）は、図11-3-1のように、NAND回路2個の出力を互いにたすきがけにして入力に接続した回路です。**S** と **R** の2つの入力があり、出力は **Q** と **Q̅** があります。図11-3-2のように、AND記号を用いた回路をOR記号の回路に書き直すと、動作がわかりやすくなります（次ページコラム参照）。RS-FFを、真理値表（表11-3-1）を用いて考えます。", vi: "RS-FF (reset–set flip-flop) dùng hai cổng NAND hồi tiếp chéo từ đầu ra cổng này sang đầu vào cổng kia. Hai đầu vào là **S** và **R**, hai đầu ra là **Q** và **Q̅**. Đổi cách vẽ từ ký hiệu AND sang OR như hình 11-3-2 giúp dễ đọc hoạt động. Xem chuyên mục ở trang sau và bảng 11-3-1." },
+    { jp: "S＝0、R＝1のとき Q＝1で、Qが**1にセット**されます。S＝1、R＝0のとき Q̅＝1で、Qが**0にリセット**されます。S＝1、R＝1のとき、すなわちセットまたはリセットの状態から S＝R＝1 に変化したとき、出力は変化せず保持されます。これを、出力は**保持（ホールド）**されるといいます。S＝0、R＝0のとき、Q＝Q̅＝1 となってしまい、QとQ̅の関係を満足しないので、**禁止**（S＝0、かつR＝0にしてはいけない）です。", vi: "S = 0, R = 1 thì **đặt Q lên 1**. S = 1, R = 0 thì Q̅ = 1 và **đặt lại Q về 0**. Sau trạng thái đặt hoặc đặt lại, đưa S và R về 1 thì đầu ra **giữ nguyên**. S = R = 0 buộc cả Q và Q̅ lên 1, phá quan hệ bù nên đây là **trạng thái cấm**." },
+    { jp: "また、図11-3-2のように入力端子に○があるとき、入力は「Lレベルで能動（L信号で動作する）」といいます。すなわち、セット入力端子 S が L すなわち「0」のとき、Q出力が1にセットされ、リセット入力端子 R が L すなわち「0」のとき、Q出力が0にリセットされます。", vi: "Vòng tròn ở đầu vào chỉ chân tác động mức L. Đưa S xuống 0 để đặt Q lên 1 và đưa R xuống 0 để đặt lại Q về 0.", note: "Quy tắc tác động mức thấp ở đây áp dụng cho cấu hình NAND. Khi thử giữ trạng thái, hãy đặt hoặc đặt lại trước rồi trả hai đầu vào về 1." },
+    { diagram: "rsNand312" },
+    { jp: "表11-3-1 RS-FFの真理値表", vi: "Bảng 11-3-1 · Bảng chân trị RS-FF", heading: true, table: {
+      jp: ["S", "R", "Q", "Q̅", "状態"], vi: ["S", "R", "Q", "Q̅", "Trạng thái"],
+      rows: [["0","0","1","1","禁止"],["0","1","1","0","セット"],["1","0","0","1","リセット"],["1","1","保持","保持","ホールド"]],
+      rowsVi: [["0","0","1","1","Cấm"],["0","1","1","0","Đặt"],["1","0","0","1","Đặt lại"],["1","1","Giữ","Giữ","Giữ"]],
+    } },
+  ],
+  313: [
+    { jp: "コラム　**回路の読み方**", vi: "Chuyên mục · **Cách đọc mạch**", heading: true },
+    { jp: "○がないときは「1」で、○があるときは「0」で読むと、回路が読みやすくなります。また、図の2つの論理回路は、同じ意味になります。", vi: "Đọc chân không có vòng tròn theo mức tác động 1 và chân có vòng tròn theo mức tác động 0. Hai cách vẽ trong hình biểu diễn cùng một hàm logic." },
+    { diagram: "logicReading313" },
+    { jp: "同期式FF", vi: "Flip-flop đồng bộ", heading: true },
+    { jp: "同期式FF（フリップフロップ）は、入力状態が変化しても出力は変化せず、クロックパルスが与えられたときに出力が変化するもので、クロック信号に同期して動作します。", vi: "Flip-flop đồng bộ chỉ cập nhật đầu ra khi có sự kiện đồng hồ tương ứng. Thay đổi ở đầu vào dữ liệu giữa hai sự kiện đồng hồ chưa làm đổi đầu ra." },
+    { jp: "同期式はエッジ動作", vi: "Tác động theo cạnh đồng hồ", heading: true },
+    { jp: "同期式FFは、図11-3-3のように CK入力端子（同期入力端子）があります。(a)は**ポジティブエッジトリガ形**で、CK入力の立ち上がりで動作します。(b)は**ネガティブエッジトリガ形**で、CK入力の立ち下がりで動作します。", vi: "Flip-flop đồng bộ có đầu vào đồng hồ CK như hình 11-3-3. Loại (a) **kích cạnh lên**, hoạt động khi CK từ thấp lên cao. Loại (b) **kích cạnh xuống**, hoạt động khi CK từ cao xuống thấp." },
+    { diagram: "clockEdges313" },
+    { jp: "JK-FF", vi: "JK-FF", heading: true },
+    { jp: "代表的な同期式FFであるJK-FFについて説明します。図11-3-4のJK-FFは、2つのデータ入力 **J、K** とクロック入力 **CK** があり、出力は **Q、Q̅** があります。CK入力端子に **↓（立ち下げエッジ）** を検知したとき動作します。真理値表の J＝K＝1 のとき **反転**（トグル）となっているのは、CK端子に **↓（立ち下げエッジ）** を検知するごとに、Q出力が**反転**（1のときは0、0のときは1に変化）することを表しています。", vi: "JK-FF là một flip-flop đồng bộ. Hình 11-3-4 có hai đầu vào dữ liệu **J, K**, đồng hồ **CK** và hai đầu ra **Q, Q̅**. Mạch hoạt động tại **cạnh xuống** CK. Khi J = K = 1, Q **đảo trạng thái** mỗi cạnh xuống: từ 1 thành 0 hoặc từ 0 thành 1." },
+    { diagram: "jkSymbol313" },
+    { jp: "表11-3-2 JK-FFの真理値表", vi: "Bảng 11-3-2 · Bảng chân trị JK-FF", heading: true, table: {
+      jp: ["J", "K", "CK", "Q", "Q̅", "状態"], vi: ["J", "K", "CK", "Q", "Q̅", "Trạng thái"],
+      rows: [["0","0","↓","保持","保持","ホールド"],["0","1","↓","0","1","リセット"],["1","0","↓","1","0","セット"],["1","1","↓","反転","反転","反転"]],
+      rowsVi: [["0","0","↓","Giữ","Giữ","Giữ"],["0","1","↓","0","1","Đặt lại"],["1","0","↓","1","0","Đặt"],["1","1","↓","Đảo","Đảo","Đảo"]],
+    }, note: "Vòng tròn ở ký hiệu CK chỉ cạnh xuống trong hình. Nó khác vòng tròn ở chân dữ liệu của RS-FF trang 312, nơi ký hiệu mức tác động thấp." },
+  ],
+  314: [
+    { jp: "カウンタ", vi: "Bộ đếm", heading: true },
+    { jp: "JK-FFを用いて、数を数える働きをする**カウンタ**を構成することができます。すべての J、K 入力を「H」（＋5 Vに接続）にし、CK入力にカウントパルスを加えると、入力に↓（立ち下げエッジ）を検知するごとに Q 出力が反転します。Q₁はQ₀の、Q₂はQ₁の↓（立ち下げエッジ）で反転します。Q₂Q₁Q₀出力は、2進数の（000）₂～（111）₂をカウントする**8進カウンタ**となります（進数については次節参照）。", vi: "Dùng JK-FF để tạo **bộ đếm**. Đặt mọi đầu vào J và K lên H, nối +5 V trong ví dụ, rồi đưa xung đếm vào CK. Q đảo sau mỗi cạnh xuống của CK tương ứng. Q₁ đảo khi Q₀ có cạnh xuống, Q₂ đảo khi Q₁ có cạnh xuống. Chuỗi Q₂Q₁Q₀ chạy từ (000)₂ tới (111)₂, tạo **bộ đếm modulo 8**. Xem mục sau về hệ cơ số.", note: "Q₀ là bit thấp nhất, đổi ở mỗi xung. Kiểm tra từ 011 sang 100: Q₀ hạ, làm Q₁ hạ, rồi Q₂ lên. Sau 111, trạng thái trở về 000." },
+    { diagram: "jkCounter314" },
+    { diagram: "counterTiming314" },
+    { jp: "RS-FFといえば **S＝0**、R＝1で Q 出力が**1にセット**、S＝1、**R＝0**で Q 出力が**0にリセット**。JK-FFといえば J＝1、K＝0のとき↓で Q 出力が**1にセット**、J＝0、K＝1のとき↓で Q 出力が**0にリセット**、J＝1、K＝1のとき↓で Q 出力が**反転**。", vi: "RS-FF: **S = 0**, R = 1 thì **đặt Q lên 1**. S = 1, **R = 0** thì **đặt lại Q về 0**. JK-FF ở cạnh xuống: J = 1, K = 0 thì **đặt Q lên 1**. J = 0, K = 1 thì **đặt lại Q về 0**. J = K = 1 thì **đảo Q**." },
+  ],
+  315: [
+    { jp: "11-4 基数変換といえば 数値を別の進数に変換すること", vi: "11-4 Đổi cơ số · Biểu diễn cùng giá trị trong hệ cơ số khác", heading: true },
+    { jp: "数の表し方", vi: "Cách biểu diễn số", heading: true },
+    { jp: "日常使用する数は10進数ですが、デジタル回路では、「0」と「1」の2つの状態を扱う**2進数**や、8進数、16進数、BCDコードなどを用います。", vi: "Hằng ngày ta dùng hệ thập phân. Mạch số dùng **hệ nhị phân** với 0 và 1, cũng như hệ bát phân, thập lục phân và mã BCD." },
+    { jp: "基数変換", vi: "Đổi cơ số", heading: true },
+    { jp: "数や数値を表現するときに、基本となる数を**基数**といいます。10進数は「0」～「9」の数字で表し、10倍ごとにけたが上がります。10進数の基数は10で、2進数、8進数、16進数の基数はそれぞれ2、8、16です。2進数を10進数に変換するなど、ある進数の数値を別の進数の数値に変換することを、**基数変換**といいます。", vi: "**Cơ số** là số làm nền cho cách biểu diễn. Hệ thập phân có các chữ số từ 0 đến 9, mỗi vị trí sang trái có trọng số gấp 10 lần. Cơ số của hệ thập phân là 10, của nhị phân, bát phân và thập lục phân lần lượt là 2, 8 và 16. Viết giá trị từ hệ này sang hệ khác, như từ nhị phân sang thập phân, gọi là **đổi cơ số**." },
+    { jp: "また、ただ数字が並んでいる状態では、それが2進数の数値なのか10進数なのかがわからないので、基数を用いて次のように表現します。（1101）₂：2進数の1101。（123）₁₀：10進数の123。", vi: "Để xác định hệ đang dùng, ghi cơ số ở chỉ số dưới. (1101)₂ là 1101 trong hệ nhị phân, (123)₁₀ là 123 trong hệ thập phân." },
+    { jp: "基数と重み", vi: "Cơ số và trọng số", heading: true },
+    { jp: "例えば、10進数の（123）₁₀は、次のように表すことができます。ここで、10²、10¹、10⁰を**重み**といい、10を**基数**といいます。同様に2進数の（101）₂を表すと、重みは2²、2¹、2⁰、基数は**2**です。", vi: "Khai triển (123)₁₀ theo trọng số 10², 10¹, 10⁰ và **cơ số 10**. Tương tự, (101)₂ có **trọng số** 2², 2¹, 2⁰ và **cơ số 2**.", equations: [["(123)₁₀ = 1 × 10² + 2 × 10¹ + 3 × 10⁰"], ["(101)₂ = 1 × 2² + 0 × 2¹ + 1 × 2⁰"]] },
+    { jp: "2進数の重み（計算値）：1から左へ順に2倍していった数。", vi: "Trọng số nhị phân bắt đầu từ 1 ở bên phải và gấp đôi qua mỗi cột bên trái.", table: {
+      jp: ["2進数の重み", "…", "2⁵", "2⁴", "2³", "2²", "2¹", "2⁰"], vi: ["Trọng số nhị phân", "…", "2⁵", "2⁴", "2³", "2²", "2¹", "2⁰"], rows: [["計算値","…","32","16","8","4","2","1"]], rowsVi: [["Giá trị","…","32","16","8","4","2","1"]],
+    }, note: "Chữ số ngoài cùng bên phải của phần nguyên có số mũ 0, nên trọng số bằng 1." },
+  ],
   306: [
     { jp: "ド・モルガンの定理といえば AND と OR の記号の入れ替えと○の付け替えを行う。", vi: "Theo De Morgan, đổi ký hiệu AND và OR cho nhau và chuyển các vòng tròn phủ định.", equations: [["(A · B)̅ = A̅ + B̅"], ["(A + B)̅ = A̅ · B̅"]] },
     { diagram: "deMorganPoint306" },

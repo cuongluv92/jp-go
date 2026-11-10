@@ -35,6 +35,14 @@ function Diagram({ file, width, height, title, labels }: {
 }
 
 export const diagrams = {
+  karnaughExercise311: (<Diagram file="karnaughExercise311" width={662} height={381} title="Bài tập 01 · Rút gọn bằng bản đồ Karnaugh" labels={[["X＝1の項目・カルノー図・グループ", "Các hàng X bằng 1, bản đồ Karnaugh và nhóm"], ["グループ内で共通変数を読み取る", "Đọc các biến có cùng giá trị trong từng nhóm"]]} />),
+  rsSymbol312: (<Diagram file="rsSymbol312" width={795} height={144} title="Ký hiệu RS-FF" labels={[["RS-FFの図記号", "Ký hiệu sơ đồ của RS-FF"], ["S・R・Q・Q̅", "Đầu vào đặt, đầu vào đặt lại, đầu ra và đầu ra bù"]]} />),
+  rsNand312: (<Diagram file="rsNand312" width={557} height={328} title="Hình 11-3-1 và 11-3-2 · Mạch RS-FF" labels={[["セット入力・リセット入力・キュー出力・キューバー出力", "Đầu vào đặt, đầu vào đặt lại, đầu ra Q và đầu ra Q bù"], ["どちらかが0でQは1・どちらかが0でQ̅は1", "Nếu có một đầu vào tương ứng bằng 0 thì đầu ra cổng đó bằng 1"]]} />),
+  logicReading313: (<Diagram file="logicReading313" width={383} height={96} title="Hai cách vẽ cùng một cổng NAND" labels={[["A、Bともに1のときのみYは0", "Y bằng 0 chỉ khi A và B đều bằng 1"], ["AまたはBが0のときYは1", "Y bằng 1 nếu A hoặc B bằng 0"]]} />),
+  clockEdges313: (<Diagram file="clockEdges313" width={340} height={277} title="Hình 11-3-3 · Ký hiệu đầu vào đồng hồ" labels={[["同期式FFの入力端子", "Đầu vào đồng hồ của flip-flop đồng bộ"], ["CK（a）・CK（b）", "CK kích cạnh lên và CK kích cạnh xuống"]]} />),
+  jkSymbol313: (<Diagram file="jkSymbol313" width={340} height={203} title="Hình 11-3-4 · Ký hiệu JK-FF" labels={[["入力・出力", "Đầu vào và đầu ra"], ["J・K・CK・Q・Q̅", "Đầu vào J, K, đồng hồ CK, đầu ra Q và đầu ra bù"]]} />),
+  jkCounter314: (<Diagram file="jkCounter314" width={489} height={201} title="Hình 11-3-5 · Bộ đếm dùng JK-FF" labels={[["カウントパルス", "Xung đếm"], ["J、K端子は、すべてH（＋5 Vに接続）", "Mọi chân J và K đều ở H, nối +5 V"]]} />),
+  counterTiming314: (<Diagram file="counterTiming314" width={687} height={286} title="Hình 11-3-6 · Dạng sóng của bộ đếm modulo 8" labels={[["カウントパルス・8進カウンタ", "Xung đếm và bộ đếm modulo 8"], ["Q₀・Q₁・Q₂", "Bit thấp nhất, bit giữa và bit cao nhất"]]} />),
   deMorganPoint306: (<Diagram file="deMorganPoint306" width={728} height={135} title="Hai dạng tương đương theo De Morgan" labels={[["等しい", "Tương đương"], ["ANDとORの記号の入れ替えと○の付け替え", "Đổi AND và OR rồi chuyển vòng tròn phủ định"]]} />),
   truthGates306: (<Diagram file="truthGates306" width={635} height={716} title="Hình 11-1-10 · Các cổng logic và bảng chân trị" labels={[["入力・出力・インバータ", "Đầu vào, đầu ra và bộ đảo"], ["真理値表", "Bảng chân trị theo từng cổng"]]} />),
   logicExercise307: (<Diagram file="logicExercise307" width={354} height={192} title="Bài tập 01 · Sơ đồ mạch logic" labels={[["A・B・C・X・Y", "Ba đầu vào và hai đầu ra"]]} />),
