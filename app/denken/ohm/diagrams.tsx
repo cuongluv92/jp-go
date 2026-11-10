@@ -35,6 +35,12 @@ function Diagram({ file, width, height, title, labels }: {
 }
 
 export const diagrams = {
+  twoPhase201: (<Diagram file="twoPhase201" width={549} height={183} title="Hình 2-5-1 và 2-5-2 · Hai cuộn dây và hai dòng lệch pha" labels={[["２個のコイル・二相交流電流・電流", "Hai cuộn dây, dòng xoay chiều hai pha và dòng điện"]]} />),
+  rotating201: (<Diagram file="rotating201" width={764} height={228} title="Hình 2-5-3 · Từ trường quay do dòng hai pha" labels={[["磁界の回転方向・t₁～t₄のときの磁界", "Chiều quay của từ trường và hướng từ trường ở bốn thời điểm"]]} />),
+  split202: (<Diagram file="split202" width={182} height={260} title="Hình 2-5-4 · Khởi động chia pha" labels={[["M 主巻線・S 始動巻線・SW 遠心力スイッチ", "M cuộn chính, S cuộn khởi động, SW công tắc ly tâm"]]} />),
+  capacitor202: (<Diagram file="capacitor202" width={186} height={296} title="Hình 2-5-5 · Khởi động bằng tụ" labels={[["M 主巻線・S 始動巻線・SW 遠心力スイッチ・Cₛ コンデンサ", "M cuộn chính, S cuộn khởi động, SW công tắc ly tâm, Cₛ tụ điện"]]} />),
+  shaded202: (<Diagram file="shaded202" width={333} height={328} title="Hình 2-5-6 · Cực từ có vòng chập" labels={[["かご形回転子・くま取りコイル・主巻線・一次コイル", "Rôto lồng sóc, vòng chập, cuộn chính và cuộn sơ cấp"]]} />),
+  dc205: (<Diagram file="dc205" width={768} height={286} title="Cơ cấu máy phát một chiều và xoay chiều" labels={[["直流発電機の仕組み・直流発電機・（参考）交流発電機", "Cơ cấu máy phát một chiều và hình tham khảo máy phát xoay chiều. N, S là hai cực từ, B₁/B₂ là chổi than, C₁/C₂ là phiến góp, S₁/S₂ là vành trượt, R là tải"]]} />),
   external196: (<Diagram file="external196" width={264} height={132} title="Điện trở ngoài trong mạch rôto" labels={[["外部抵抗 4r₂", "Điện trở ngoài 4r₂ mắc nối tiếp với điện trở cuộn dây r₂"]]} />),
   peakShift197: (<Diagram file="peakShift197" width={476} height={305} title="Dịch chuyển điểm mômen tới hạn" labels={[["トルク・滑り・始動トルク・停動トルク・等しい", "Mômen, hệ số trượt, mômen khởi động, mômen tới hạn và hai giá trị bằng nhau"]]} />),
   starDelta198: (<Diagram file="starDelta198" width={586} height={261} title="Hình 2-4-1 · Khởi động sao–tam giác" labels={[["スター結線（Y 結線）・デルタ結線（Δ 結線）", "Nối sao lúc khởi động và nối tam giác sau khi tăng tốc"]]} />),
