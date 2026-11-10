@@ -35,6 +35,11 @@ function Diagram({ file, width, height, title, labels }: {
 }
 
 export const diagrams = {
+  armature211: (<Diagram file="armature211" width={705} height={241} title="Hình 3-2-1 · Phản ứng phần ứng" labels={[["界磁極による磁束分布・電機子電流による磁束分布・合成磁束分布・電気的中性軸", "Phân bố từ thông cực kích từ, phân bố từ thông do dòng phần ứng, từ thông tổng hợp và trục trung tính điện"]]} />),
+  compensation211: (<Diagram file="compensation211" width={587} height={266} title="Hình 3-2-2 và 3-2-3 · Cực phụ và dây quấn bù" labels={[["補極・補償巻線・電動機・発電機・負荷", "Cực từ phụ, dây quấn bù, động cơ, máy phát và tải"]]} />),
+  coilTorque212: (<Diagram file="coilTorque212" width={216} height={240} title="Hình 3-3-1 · Lực điện từ và mômen" labels={[["電磁力とトルクの関係・F₁・F₂・I・D・ℓ", "Quan hệ giữa lực điện từ và mômen. F₁/F₂ là lực, I là dòng, D là bề rộng giữa hai cạnh, ℓ là chiều dài cạnh tác dụng"]]} />),
+  backEmf213: (<Diagram file="backEmf213" width={245} height={212} title="Hình 3-3-2 · Mạch sinh sức phản điện động" labels={[["逆起電力が発生する回路・Iₐrₐ・Eᵦ", "Mạch sinh sức phản điện động, sụt áp phần ứng và sức phản điện động"]]} />),
+  losses215: (<Diagram file="losses215" width={710} height={240} title="Hình 3-3-3 · Công suất vào, ra và tổn hao" labels={[["発電機・電動機・機械入力・出力電力・入力電力・機械出力・銅損・鉄損・機械損", "Máy phát, động cơ, cơ năng vào, công suất điện ra, công suất điện vào, công suất cơ ra, tổn hao đồng, sắt và cơ"]]} />),
   acGenerator206: (<Diagram file="acGenerator206" width={769} height={443} title="Hình 3-1-1 · Nguyên lý máy phát xoay chiều" labels={[["交流発電機の原理（参考）・起電力・１周期", "Nguyên lý máy phát xoay chiều (tham khảo), sức điện động, một chu kỳ"]]} />),
   dcGenerator206: (<Diagram file="dcGenerator206" width={771} height={443} title="Hình 3-1-2 · Nguyên lý máy phát một chiều" labels={[["直流発電機の原理・起電力・１周期", "Nguyên lý máy phát một chiều, sức điện động, một chu kỳ"]]} />),
   ripple206: (<Diagram file="ripple206" width={241} height={233} title="Hình 3-1-3 · Sức điện động ít nhấp nhô" labels={[["脈動の小さな起電力・ブラシ間の起電力・導体中の起電力", "Sức điện động ít nhấp nhô, giữa hai chổi than, và trong từng dây dẫn"]]} />),
