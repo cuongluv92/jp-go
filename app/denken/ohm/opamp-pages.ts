@@ -1,0 +1,53 @@
+import { fraction as f } from "./continuation";
+import type { LessonRow } from "./lesson";
+
+export const opampPages: Record<number, LessonRow[]> = {
+  156: [
+    {diagram:"ideal156"},
+    {jp:"反転増幅回路と非反転増幅回路",vi:"Mạch khuếch đại đảo và không đảo",heading:true},
+    {jp:"負帰還で入力端子間の電圧がほぼ0になることを **バーチャルショート** といいます。",
+     vi:"Khi hồi tiếp âm giữ op-amp làm việc tuyến tính, điện áp hai ngõ vào gần bằng nhau. Đó là **ngắn mạch ảo (バーチャルショート)**.",
+     note:"Hai chân không nối tắt thật. Mô hình lý tưởng cho dòng vào bằng 0. Ngắn mạch ảo không áp dụng khi ngõ ra đã bão hòa."},
+    {diagram:"inverting156"},
+    {jp:"反転増幅回路では、−端子を0 Vとみなし、同じ電流が R₁ と R₂ に流れます。",
+     vi:"Ở mạch đảo, chân + nối mốc 0 V nên chân − cũng gần 0 V. Do không có dòng vào op-amp, dòng qua R₁ và R₂ có cùng độ lớn.",
+     equations:[["V₁ = R₁I₁"],["V₂ = −R₂I₁"],["Aᵥ =",f("V₂","V₁"),"= −",f("R₂","R₁")]]},
+    {diagram:"noninverting156"},
+    {jp:"非反転増幅回路では、−端子の電圧が入力 V₁ と等しくなります。R₁ = 10 kΩ、R₂ = 20 kΩ なら増幅度は3です。",
+     vi:"Ở mạch không đảo, điện áp chân − gần bằng điện áp vào V₁. Với R₁ = 10 kΩ và R₂ = 20 kΩ, hệ số khuếch đại bằng 3.",
+     equations:[["V₁ = R₁I₁"],["V₂ = (R₁ + R₂)I₁"],["Aᵥ = 1 +",f("R₂","R₁")]]},
+  ],
+  157: [
+    {jp:"練習問題 01 · 出力電圧",vi:"Bài 01 · Tính điện áp ra",heading:true},
+    {jp:"図1と図2の出力電圧 Vₒ₁、Vₒ₂ を求めます。",
+     vi:"Tính điện áp đầu ra Vₒ₁ và Vₒ₂ của hai mạch trong hình."},
+    {diagram:"ex157"},
+    {jp:"**解き方**　図1は非反転増幅回路、図2は反転増幅回路です。",
+     vi:"**Cách giải**. Hình 1 đưa tín hiệu vào chân +, nên dùng hệ số không đảo. Hình 2 đưa tín hiệu vào chân − qua điện trở, nên dùng hệ số đảo.",
+     equations:[["Vₒ₁ = 0.6 × (1 +",f("100","10"),") = **6.6 V**"],["Vₒ₂ = −",f("200","30"),"× 0.45 = **−3.0 V**"]]},
+    {jp:"別解。図1では仮想短絡により、10 kΩ の両端に 0.6 V がかかります。",
+     vi:"Cách khác. Ở hình 1, chân − ở 0,6 V, nên điện trở 10 kΩ có 0,6 V trên hai đầu. Dòng đó đi qua điện trở hồi tiếp 100 kΩ, tạo chênh lệch 6,0 V.",
+     equations:[["I =",f("0.6","10 kΩ"),"= 60 μA"],["Vₒ₁ = 0.6 + 6.0 = 6.6 V"]]},
+    {diagram:"alt157"},
+  ],
+  158: [
+    {jp:"別解の続き · 図2",vi:"Tiếp cách giải theo dòng điện · Hình 2",heading:true},
+    {diagram:"alt158"},
+    {jp:"−端子は0 Vです。30 kΩ に流れる電流は 200 kΩ にも流れます。",
+     vi:"Chân − gần 0 V. Dòng từ nguồn vào đi qua 30 kΩ rồi qua 200 kΩ về ngõ ra. Ngõ ra thấp hơn nút chân − đúng 3,0 V.",
+     equations:[["I =",f("0.45","30 kΩ"),"= 15 μA"],["Vₒ₂ = 0 − 15 μA × 200 kΩ = **−3.0 V**"]]},
+    {jp:"例題1 · 令和2年度 理論 問13",vi:"Ví dụ 1 · R2, Lý thuyết, câu 13",heading:true},
+    {jp:"誤っているものを選べ。\n(1) 演算増幅器には電源が必要。\n(2) 入力インピーダンスは非常に大きい。\n(3) 比較器として用いることがある。\n(4) 図1は正相増幅回路、図2は逆相増幅回路。\n(5) 図1で Rₛ を短絡し、Rꜰ を開放するとボルテージホロワになる。",
+     vi:"Chọn phát biểu sai.\n(1) Op-amp cần nguồn cấp.\n(2) Trở kháng vào rất lớn.\n(3) Có thể dùng op-amp làm bộ so sánh.\n(4) Hình 1 là mạch không đảo, hình 2 là mạch đảo.\n(5) Hình 1 trở thành mạch theo áp nếu nối tắt Rₛ và để hở Rꜰ."},
+    {diagram:"question158"},
+  ],
+  159: [
+    {jp:"**解き方**　(1)〜(4) は正しく、(5) は誤りです。ボルテージホロワでは Rₛ を開放し、Rꜰ を短絡します。",
+     vi:"**Cách giải**. Các phát biểu (1)–(4) đúng. Chọn **(5)**. Muốn thành mạch theo áp, để hở Rₛ và nối tắt Rꜰ, đưa ngõ ra về thẳng chân −.",
+     note:"Bộ so sánh dùng chênh lệch giữa hai ngõ vào để quyết định đầu ra mức cao hay thấp. Mạch theo áp dùng hồi tiếp âm để giữ hai điện áp vào gần bằng nhau."},
+    {diagram:"follower159"},
+    {jp:"ボルテージホロワは増幅度1の非反転増幅回路です。入力インピーダンスが大きく、出力インピーダンスが小さいため、インピーダンス変換に用いられます。",
+     vi:"Mạch theo áp (ボルテージホロワ) là mạch không đảo có hệ số khuếch đại bằng 1. Trở kháng vào cao và trở kháng ra thấp nên dùng làm tầng đệm giữa nguồn tín hiệu và tải.",
+     equations:[["Aᵥ = 1"],["Vₒ ≈ Vᵢ"]]},
+  ],
+};
