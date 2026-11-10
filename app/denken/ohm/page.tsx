@@ -22,7 +22,9 @@ export default async function OhmLesson({ searchParams }: { searchParams: Promis
   const next = pages[pages.indexOf(page) + 1];
   const prevHref = previous === undefined ? null : href(previous);
   const nextHref = next === undefined ? null : href(next);
-  const title = page >= 115 ? "6‑1 磁気に関するクーロンの法則 · Lực giữa hai cực từ"
+  const title = page >= 120 ? "6‑3 磁界の強さ · Từ trường do dòng điện"
+    : page >= 117 ? "6‑2 磁界の強さ · Cường độ từ trường"
+    : page >= 115 ? "6‑1 磁気に関するクーロンの法則 · Lực giữa hai cực từ"
     : page >= 112 ? "章末問題 · Bài tập cuối chương"
     : page >= 107 ? "5‑3 静電容量 · Điện dung"
     : page >= 102 ? "5‑2 電界の強さ · Cường độ điện trường"

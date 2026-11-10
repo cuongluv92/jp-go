@@ -1,3 +1,4 @@
+import { magneticFieldPages } from "./magnetic-field-pages";
 import { capacitanceReviewPages } from "./capacitance-review-pages";
 import { capacitancePages } from "./capacitance-pages";
 import { electricFieldPages } from "./electric-field-pages";
@@ -60,6 +61,7 @@ export const lesson: Record<number, LessonRow[]> = {
   ...electricFieldPages,
   ...capacitancePages,
   ...capacitanceReviewPages,
+  ...magneticFieldPages,
   2: [
     { jp: "オームの法則 **といえば** 電圧÷電流＝抵抗", vi: "Định luật Ohm · Điện áp chia dòng điện bằng điện trở", heading: true },
     { diagram: "examples" },
