@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { Fraction } from "./fraction";
 import { frontMatter, lessons } from "./contents";
+import { lesson } from "./ohm/lesson";
 
 const subjects = [
   ["理論", "Lý thuyết", 1, [[2,"直流回路"],[31,"交流回路"],[70,"三相交流回路"],[87,"電気・電子計測"],[99,"静電気と電界、コンデンサの静電容量と接続"],[115,"磁気と磁界、電流の磁気作用"],[141,"電子工学・電子回路"]]],
@@ -18,10 +19,13 @@ function ContentsText({ text }: { text: string }) {
   );
 }
 
-const availableStarts = [2, 5, 9, 12, 14, 16, 19, 21, 23, 24, 26, 31, 36, 39, 41, 44, 48, 51, 55, 57, 60, 62, 67, 70];
+const availableStarts = lessons.理論
+  .flatMap(chapter => chapter.split("\n").map(line => Number(line.slice(0, 3))))
+  .filter(page => Object.hasOwn(lesson, page));
 
 export function ContentsTree({ currentPage }: { currentPage?: number }) {
-  const activeStart = currentPage === undefined ? undefined : availableStarts.filter(page => page <= currentPage).at(-1);
+  const activeStart = currentPage === undefined ? undefined : availableStarts.findLast(page => page <= currentPage);
+  const openChapter = subjects[0][3].findLast(([start]) => start <= (currentPage ?? 2))?.[0];
   return (
       <nav className="space-y-3" aria-label="Mục lục">
         <details className="rounded-2xl border border-border bg-surface p-4">
@@ -42,7 +46,7 @@ export function ContentsTree({ currentPage }: { currentPage?: number }) {
             <ul className="mt-3 space-y-2">
               {chapters.map(([start, chapter], index) => (
                 <li key={start}>
-                  <details open={start === (currentPage !== undefined && currentPage >= 70 ? 70 : currentPage !== undefined && currentPage >= 31 ? 31 : 2) ? true : undefined} className="rounded-lg border border-border px-3 py-2">
+                  <details open={title === "理論" && start === openChapter ? true : undefined} className="rounded-lg border border-border px-3 py-2">
                     <summary className="cursor-pointer text-sm font-medium">
                       <span className="mr-2 inline-block min-w-5 rounded bg-red-700 px-1 text-center text-xs font-semibold text-white">{index + 1}</span>
                       <span className="font-jp">{chapter}</span>
@@ -58,7 +62,7 @@ export function ContentsTree({ currentPage }: { currentPage?: number }) {
                             <span className={`w-12 shrink-0 tabular-nums ${bookRed}`}>p.{pageNumber}</span>
                             <span lang="ja" className="font-jp leading-relaxed">
                               {title === "理論" && availableStarts.includes(startPage) ? (
-                                <Link href={startPage === 2 ? "/denken/ohm" : `/denken/ohm?trang=${startPage}`} aria-current={activeStart === startPage ? "location" : undefined} className="underline underline-offset-2"><ContentsText text={before} /></Link>
+                                <Link prefetch={false} href={startPage === 2 ? "/denken/ohm" : `/denken/ohm?trang=${startPage}`} aria-current={activeStart === startPage ? "location" : undefined} className="underline underline-offset-2"><ContentsText text={before} /></Link>
                               ) : <ContentsText text={before} />}
                               {after !== undefined && <><Fraction numerator="%z" denominator="100" /><ContentsText text={after} /></>}
                             </span>
