@@ -35,6 +35,16 @@ function Diagram({ file, width, height, title, labels }: {
 }
 
 export const diagrams = {
+  parallel51: (<Diagram file="parallel51" width={472} height={161} title="Tam giác dòng R–L" labels={[["電流の直角三角形","Dòng qua R hướng phải, dòng qua L hướng xuống."]]} />),
+  parallel52: (<Diagram file="parallel52" width={490} height={157} title="Tam giác dòng R–C" labels={[["電流の直角三角形","Dòng qua R hướng phải, dòng qua tụ hướng lên."]]} />),
+  rlc52: (<Diagram file="rlc52" width={701} height={178} title="Tam giác dòng ba nhánh" labels={[["Iᵣ・Iₗ・I꜀","Cạnh đứng là hiệu hai dòng phản kháng, hướng theo dòng lớn hơn."]]} />),
+  factor53: (<Diagram file="factor53" width={691} height={238} title="Hệ số công suất mạch song song" labels={[["力率・底辺・斜辺・遅れ・進み","Hệ số công suất bằng cạnh đáy chia cạnh huyền. Nhánh L cho dòng trễ, nhánh C cho dòng sớm."]]} />),
+  ex53: (<Diagram file="ex53" width={286} height={118} title="Mạch đề bài trang 53" labels={[["Iᵣ = 10 A・Iₗ = 32 A・I꜀ = 8 A","Ba dòng nhánh."]]} />),
+  solve53: (<Diagram file="solve53" width={232} height={151} title="Tam giác dòng trang 53" labels={[["Iᵣ = 10 A・Iₗ − I꜀ = 24 A","Hai cạnh vuông là 10 A và 24 A."]]} />),
+  ex54: (<Diagram file="ex54" width={318} height={130} title="Mạch đề bài trang 54" labels={[["1 V・100 kΩ・10 μF・1 mH","Áp hiệu dụng và thông số các nhánh R, C, L."]]} />),
+  intro55: (<Diagram file="intro55" width={719} height={180} title="Hai dạng cộng hưởng" labels={[["直列共振・並列共振・流れない","Cộng hưởng nối tiếp triệt tiêu tổng điện áp L–C. Cộng hưởng song song lý tưởng triệt tiêu dòng tổng cấp cho L–C."]]} />),
+  series55: (<Diagram file="series55" width={503} height={172} title="Cộng hưởng nối tiếp" labels={[["Xₗ = X꜀ のとき、R だけ残ります","Khi hai điện kháng bằng nhau, phần phản kháng tổng bằng 0, chỉ còn R."]]} />),
+  parallel55: (<Diagram file="parallel55" width={717} height={197} title="Cộng hưởng song song" labels={[["i꜀ は進み・iₗ は遅れ・i = iₗ + i꜀ = 0","Dòng tụ sớm π/2 và dòng cuộn cảm trễ π/2. Hai dòng bằng độ lớn và ngược pha nên tổng bằng 0."]]} />),
   cap46: (<Diagram file="cap46" width={680} height={173} title="Hình 2‑5‑3 · Dòng qua tụ sớm pha" labels={[["コンデンサの作用・電圧 v・電流 i・X꜀回路のベクトル図","Tác dụng của tụ. Sóng dòng dịch trái π/2, vectơ dòng hướng lên khi áp hướng phải."]]} />),
   resistor46: (<Diagram file="resistor46" width={226} height={123} title="Trang 46 · Bài tính dòng qua điện trở" labels={[["f = 50 Hz・V = 100 V・R = 80 Ω・i・İ","Tần số, áp hiệu dụng, điện trở và hai cách biểu diễn dòng."]]} />),
   coil47: (<Diagram file="coil47" width={220} height={116} title="Trang 47 · Bài tính dòng qua cảm kháng" labels={[["V = 100 V・Xₗ = 50 Ω・i・İ","Áp hiệu dụng, cảm kháng, dòng tức thời và vectơ pha."]]} />),
