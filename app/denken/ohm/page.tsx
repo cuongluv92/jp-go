@@ -22,7 +22,9 @@ export default async function OhmLesson({ searchParams }: { searchParams: Promis
   const next = pages[pages.indexOf(page) + 1];
   const prevHref = previous === undefined ? null : href(previous);
   const nextHref = next === undefined ? null : href(next);
-  const title = page >= 133 ? "6‑7 インダクタンス · Điện cảm"
+  const title = page >= 139 ? "章末問題 · Bài tập cuối chương"
+    : page >= 138 ? "6‑8 磁気エネルギー · Năng lượng từ trường"
+    : page >= 133 ? "6‑7 インダクタンス · Điện cảm"
     : page >= 131 ? "6‑6 磁気回路 · Mạch từ"
     : page >= 127 ? "6‑5 磁界中の電流に作用する力 · Lực điện từ"
     : page >= 124 ? "6‑4 導体の運動起電力 · Suất điện động do chuyển động"

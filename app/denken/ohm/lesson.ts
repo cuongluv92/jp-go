@@ -1,3 +1,4 @@
+import { inductanceReviewPages } from "./inductance-review-pages";
 import { inductancePages } from "./inductance-pages";
 import { forcePages } from "./force-pages";
 import { inductionPages } from "./induction-pages";
@@ -68,6 +69,7 @@ export const lesson: Record<number, LessonRow[]> = {
   ...inductionPages,
   ...forcePages,
   ...inductancePages,
+  ...inductanceReviewPages,
   2: [
     { jp: "オームの法則 **といえば** 電圧÷電流＝抵抗", vi: "Định luật Ohm · Điện áp chia dòng điện bằng điện trở", heading: true },
     { diagram: "examples" },
