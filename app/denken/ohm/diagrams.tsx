@@ -35,6 +35,11 @@ function Diagram({ file, width, height, title, labels }: {
 }
 
 export const diagrams = {
+  standstill191: (<Diagram file="standstill191" width={691} height={256} title="Hình 2-2-2 · Mạch lúc rôto đứng yên" labels={[["固定子１相分の等価回路・回転子１相分の等価回路", "Mạch tương đương một pha stato và một pha rôto"], ["コンダクタンス・サセプタンス", "Điện dẫn là nghịch đảo điện trở, độ lớn điện nạp là nghịch đảo điện kháng. Hai nhánh mắc song song"]]} />),
+  running192: (<Diagram file="running192" width={388} height={234} title="Hình 2-2-3 · Mạch khi rôto quay" labels={[["滑り s で運転中のときの回路", "Mạch khi chạy với hệ số trượt s"], ["sE₂・sx₂", "Sức điện động và điện kháng rôto ở hệ số trượt s"]]} />),
+  rotor192: (<Diagram file="rotor192" width={793} height={241} title="Hình 2-2-4 · Mạch thứ cấp một pha" labels={[["滑り s で運転中の二次回路", "Mạch thứ cấp khi vận hành với hệ số trượt s"], ["各値を s で割った二次回路", "Mạch sau khi chia các đại lượng trong biểu thức dòng điện cho s"], ["負荷抵抗 R で表した二次回路", "Mạch biểu diễn bằng điện trở tải tương đương R"]]} />),
+  torque195: (<Diagram file="torque195" width={666} height={262} title="Đường đặc tính mômen–tốc độ" labels={[["トルク・速度曲線", "Đường đặc tính mômen–tốc độ"], ["トルク T・滑り s", "Mômen T và hệ số trượt s"], ["始動トルク・最大トルク（停動トルク）", "Mômen khởi động và mômen cực đại (mômen tới hạn)"]]} />),
+  shift195: (<Diagram file="shift195" width={702} height={310} title="Hình 2-3-1 · Dịch chuyển tỉ lệ" labels={[["トルクの比例推移の曲線", "Các đường đặc tính khi thay đổi điện trở rôto"], ["外部抵抗", "Điện trở ngoài"], ["トルク T・滑り s・T₁", "Mômen T, hệ số trượt s và mômen tải T₁"]]} />),
   motor186: (<Diagram file="motor186" width={755} height={282} title="Cấu tạo động cơ cảm ứng ba pha" labels={[["固定子巻線・固定子鉄心・回転子・ベアリング", "Cuộn dây stato, lõi stato, rôto và ổ bi"]]} />),
   can186: (<Diagram file="can186" width={148} height={303} title="Hình 2-1-1 · Lon nhôm quay" labels={[["動かす・誘導電流・回転", "Di chuyển nam châm, dòng điện cảm ứng và chiều quay"]]} />),
   cage186: (<Diagram file="cage186" width={438} height={254} title="Hình 2-1-2 · Rôto lồng sóc" labels={[["回転子鉄心・かご形導体・一体化・回転子", "Lõi rôto, lồng dẫn điện, ghép thành một khối và rôto"]]} />),
