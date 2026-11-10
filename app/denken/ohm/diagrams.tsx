@@ -35,6 +35,11 @@ function Diagram({ file, width, height, title, labels }: {
 }
 
 export const diagrams = {
+  motorCircuit236: (<Diagram file="motorCircuit236" width={346} height={198} title="Mạch một pha động cơ đồng bộ" labels={[["界磁電流・三相同期電動機１相分の回路", "Dòng kích từ và mạch một pha của động cơ đồng bộ ba pha"]]} />),
+  motorPhasor236: (<Diagram file="motorPhasor236" width={343} height={236} title="Giản đồ vectơ tại hệ số công suất 1" labels={[["力率が１・V と I は同相・π/2 遅れる", "Hệ số công suất bằng 1. V và I cùng pha. I trễ điện áp điện kháng π/2 rad."]]} />),
+  shortExample237: (<Diagram file="shortExample237" width={444} height={136} title="Mạch tương đương của máy phát" labels={[["同期インピーダンス・定格電圧・定格出力（定格容量）", "Tổng trở đồng bộ, điện áp định mức và dung lượng định mức"]]} />),
+  hoist238: (<Diagram file="hoist238" width={760} height={452} title="Cơ cấu kéo nâng" labels={[["平衡おもり・巻上速度・昇降箱・積載荷重・スパン・クラブ（トロリ）・ガータ・走行レール・運転室・補助フック・主フック", "Đối trọng, tốc độ nâng, cabin nâng hạ, tải, khẩu độ, xe con, dầm, ray di chuyển, buồng điều khiển, móc phụ và móc chính"]]} />),
+  hoistExercise240: (<Diagram file="hoistExercise240" width={283} height={235} title="Thông số cơ cấu nâng" labels={[["機械効率・巻上速度・余裕係数・巻上荷重", "Hiệu suất cơ khí, tốc độ nâng, hệ số dự phòng và lực nâng"]]} />),
   shortExercise232: (<Diagram file="shortExercise232" width={258} height={258} title="Đường bão hòa không tải và đường ngắn mạch" labels={[["無負荷飽和曲線・短絡曲線・定格電圧・定格電流・励磁電流", "Đường bão hòa không tải, đường ngắn mạch, điện áp định mức, dòng định mức, dòng kích từ"]]} />),
   startSync233: (<Diagram file="startSync233" width={466} height={228} title="Hình 4-5-1 · Mômen trung bình bằng 0 khi đứng yên" labels={[["吸引力によるトルク（右回り）・反発力によるトルク（左回り）", "Mômen do lực hút quay phải và do lực đẩy quay trái"]]} />),
   loadSync233: (<Diagram file="loadSync233" width={447} height={286} title="Hình 4-5-2 · Góc tải thay đổi theo tải" labels={[["無負荷時・負荷時・負荷角 δ", "Không tải, có tải và góc tải δ"]]} />),

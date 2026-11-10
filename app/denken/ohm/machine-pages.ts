@@ -1,6 +1,52 @@
 import type { LessonRow } from "./lesson";
 
 export const machinePages: Record<number, LessonRow[]> = {
+  236: [
+    { jp: "練習問題 01　三相同期電動機の誘導起電力", vi: "Bài tập 01 · Sức điện động cảm ứng của động cơ đồng bộ ba pha", heading: true },
+    { jp: "図は三相同期電動機の１相分の回路図である。図の条件で運転し、力率が１になるように界磁電流を調整したところ、I＝10 Aになった。このときの誘導起電力 E［V］の値は。", vi: "Hình là mạch một pha của động cơ đồng bộ ba pha. Chạy theo điều kiện trong hình rồi chỉnh dòng kích từ để hệ số công suất bằng 1, khi đó I = 10 A. Tìm sức điện động cảm ứng E (V)." },
+    { diagram: "motorCircuit236" },
+    { jp: "解き方　加えた電圧 V＝200 V は、逆起電力 E［V］とリアクタンス電圧 xₛI＝8×10＝80 V のベクトル和となる。ベクトル図より E の大きさは、", vi: "Cách giải. Điện áp cấp 200 V là tổng vectơ của sức phản điện động E và điện áp điện kháng có độ lớn 8 × 10 = 80 V. Hệ số công suất bằng 1 nên V cùng pha I. Dòng I trễ vectơ điện áp điện kháng π/2 rad.", equations: [["E = √(200² + 80²) ≈ 215 V"]], note: "Lấy V làm trục thực. Khi bỏ qua điện trở phần ứng, Ė = 200 − j80 V. Kiểm tra ngược: cộng j80 V trở lại được 200 V." },
+    { diagram: "motorPhasor236" },
+    { jp: "参考　界磁電流 I𝒻［A］を変化すると電磁石の強さが変化し逆起電力 E［V］の大きさが変化します。E［V］の大きさが変化すると、リアクタンス電圧 xₛI［V］が変化し、電動機に流入する電流 I［A］は大きさと位相が変化し、V 特性曲線となります。解答　**E＝215 V**", vi: "Tham khảo. Thay đổi dòng kích từ I𝒻 làm thay đổi độ mạnh nam châm điện và độ lớn sức phản điện động E. Khi E thay đổi, điện áp điện kháng cũng đổi, nên cả độ lớn lẫn pha của dòng vào động cơ thay đổi, tạo đường đặc tính V. Đáp án **E ≈ 215 V**." },
+    { jp: "例題１　要重要度★★　令和４年度下期　機械　問５", vi: "Ví dụ 1 · Mức quan trọng ★★ · R4 kỳ cuối · Máy điện · Câu 5", heading: true },
+    { jp: "定格出力8 000 kV・A、定格電圧6 600 Vの三相同期発電機がある。この発電機の同期インピーダンスが4.73のとき、短絡比の値として、最も近いものを次の（1）～（5）のうちから一つ選べ。", vi: "Máy phát đồng bộ ba pha có dung lượng định mức 8.000 kVA, điện áp định mức 6.600 V và tổng trở đồng bộ 4,73 Ω theo hình lời giải. Chọn giá trị gần nhất của tỉ số ngắn mạch." },
+    { jp: "(1) 0.384　(2) 0.665　(3) 1.15　(4) 1.50　(5) 2.61", vi: "(1) 0,384 · (2) 0,665 · (3) 1,15 · (4) 1,50 · (5) 2,61" },
+  ],
+  237: [
+    { jp: "解き方　解答（3）", vi: "Cách giải ví dụ 1 · Đáp án (3)", heading: true },
+    { diagram: "shortExample237" },
+    { jp: "Sₙ＝√3 VₙIₙ［V・A］より、定格電流を求めます。Sₙ：定格容量［V・A］、Vₙ：定格電圧［V］、Iₙ：定格電流［A］。％同期インピーダンスを求め、短絡比 kₛ は、小数で表した％zₛ と逆数関係にあるので、次式で求めます。", vi: "① Tính dòng định mức Iₙ (A) từ dung lượng Sₙ (VA) và điện áp dây Vₙ (V). ② Tính tổng trở đồng bộ phần trăm. ③ Lấy nghịch đảo của giá trị này sau khi đổi sang dạng thập phân.", equations: [["Iₙ = ", { fraction: [["Sₙ"], ["√3 Vₙ"]] }, " = ", { fraction: [["8 000 × 10³"], ["√3 × 6 600"]] }, " ≈ 700 A"], ["%zₛ = ", { fraction: [["ZₛIₙ"], [{ fraction: [["Vₙ"], ["√3"]] }]] }, " × 100 = ", { fraction: [["√3 × 4.73 × 700"], ["6 600"]] }, " × 100 ≈ 86.9%"], ["kₛ = ", { fraction: [["1"], [{ fraction: [["%zₛ"], ["100"]] }]] }, " = ", { fraction: [["1"], ["0.869"]] }, " ≈ 1.15"]], note: "Kiểm tra ngược: Iₛ ≈ (6.600/√3)/4,73 ≈ 806 A. Chia cho 700 A được khoảng 1,15." },
+    { jp: "参考　％zₛ は、インピーダンス電圧と定格電圧（１相分）の比を％表示したものです。また、短絡比 kₛ と％zₛ は次の関係があります。", vi: "Tham khảo. %zₛ là tỉ số phần trăm giữa điện áp rơi trên tổng trở và điện áp định mức mỗi pha. Tỉ số ngắn mạch và tổng trở phần trăm liên hệ như sau.", equations: [["kₛ = ", { fraction: [["Iₛ"], ["Iₙ"]] }, " · %zₛ = ", { fraction: [["Iₙ"], ["Iₛ"]] }, " × 100 [%]"]] },
+    { jp: "例題２　要重要度★★　令和４年度上期　機械　問５", vi: "Ví dụ 2 · Mức quan trọng ★★ · R4 kỳ đầu · Máy điện · Câu 5", heading: true },
+    { jp: "定格出力1 500 kV・A、定格電圧3 300 Vの三相同期発電機がある。無負荷時に定格電圧となる界磁電流に対する三相短絡電流（持続短絡電流）は、310 Aであった。この同期発電機の短絡比の値として、最も近いものを次の（1）～（5）のうちから一つ選べ。", vi: "Máy phát đồng bộ ba pha có dung lượng định mức 1.500 kVA và điện áp dây 3.300 V. Ở dòng kích từ làm điện áp không tải bằng định mức, dòng ngắn mạch ba pha duy trì là 310 A. Chọn tỉ số ngắn mạch gần nhất." },
+    { jp: "(1) 0.488　(2) 0.847　(3) 1.18　(4) 1.47　(5) 2.05", vi: "(1) 0,488 · (2) 0,847 · (3) 1,18 · (4) 1,47 · (5) 2,05" },
+    { jp: "解き方　定格電流 Iₙ と短絡比 kₛ を求めます。解答（3）", vi: "Cách giải. Tính dòng định mức Iₙ rồi lấy dòng ngắn mạch chia cho dòng định mức. Đáp án **(3) 1,18**.", equations: [["Iₙ = ", { fraction: [["Sₙ"], ["√3 Vₙ"]] }, " = ", { fraction: [["1 500 × 10³"], ["√3 × 3 300"]] }, " ≈ 262 A"], ["kₛ = ", { fraction: [["Iₛ"], ["Iₙ"]] }, " = ", { fraction: [["310"], ["262"]] }, " ≈ 1.18"]], note: "Kiểm tra ngược: 1,18 × 262 ≈ 309 A, gần 310 A do làm tròn." },
+  ],
+  238: [
+    { jp: "5-1 電動機の所要出力といえば同じ形式の公式となる", vi: "5-1 Các công thức công suất cần thiết của động cơ có dạng chung", heading: true },
+    { diagram: "hoist238" },
+    { jp: "巻上機（クレーン、エレベータ）用電動機の所要出力", vi: "Công suất động cơ kéo nâng (cần trục, thang máy)", heading: true },
+    { jp: "巻き上げに要する出力を P［W］、巻上荷重を W［kgf］、巻上速度を v［m/s］、装置効率を η（小数）、余裕係数を k としたとき、次式となります。巻上機用電動機の出力といえば荷重 W と v 速度に比例。", vi: "Gọi P (W) là công suất cần để nâng, W (kgf) là tải nâng, v (m/s) là tốc độ nâng, η là hiệu suất cơ cấu dạng thập phân và k là hệ số dự phòng. Công suất tỉ lệ với tải và tốc độ nâng.", equations: [["P = 9.8Wv", { fraction: [["k"], ["η"]], red: true }, " [W]"]], note: "9,8 đổi kgf sang N. Lực nhân vận tốc cho công suất hữu ích tại tải. Chia η để tính công suất động cơ và nhân k để dự phòng." },
+    { jp: "巻上荷重 W が、力の単位の**キロニュートン［kN］**で与えられる場合、巻上機用電動機の所要出力 **P［kW］**は、次式となります。※単位に注意しましょう。１kg の力（１kgf）≒9.8 N、１N≒0.102 kgf。", vi: "Nếu tải W cho theo **kilônewton (kN)**, công suất cần thiết **P** tính theo **kW** bằng công thức dưới đây. Chú ý 1 kgf ≈ 9,8 N và 1 N ≈ 0,102 kgf.", equations: [["P = Wv", { fraction: [["k"], ["η"]], red: true }, " [kW]"]], note: "Nếu lực đã cho theo kN, không nhân thêm 9,8. kN·m/s cho kW." },
+  ],
+  239: [
+    { jp: "ポンプ用電動機の所要出力", vi: "Công suất động cơ bơm", heading: true },
+    { jp: "ポンプ用電動機に要する出力を P［kW］、揚水量を Q［m³/s］、総揚程※１を H［m］、装置効率を η、余裕係数を k としたとき、次式となります。ポンプ用電動機の出力といえば揚水量と揚程に比例。※水１m³は1 000 kg。", vi: "Gọi P (kW) là công suất cần thiết, Q (m³/s) là lưu lượng nước, H (m) là tổng cột áp, η là hiệu suất cơ cấu và k là hệ số dự phòng. Công suất tỉ lệ với lưu lượng và cột áp. Một mét khối nước có khối lượng khoảng 1.000 kg.", equations: [["P = 9.8QH", { fraction: [["k"], ["η"]], red: true }, " [kW]"]], note: "Công suất thủy lực là ρgQH tính bằng W. Với nước, ρ ≈ 1.000 kg/m³. Chia 1.000 để đổi W sang kW, còn hệ số 9,8." },
+    { jp: "送風機用電動機の所要出力", vi: "Công suất động cơ quạt", heading: true },
+    { jp: "送風機用電動機に要する出力を P［W］、風量を Q［m³/s］、風圧を H［Pa］（パスカル）、装置効率を η、余裕係数を k としたとき、次式となります。送風機用電動機の出力といえば風量と風圧に比例。", vi: "Gọi P (W) là công suất cần thiết, Q (m³/s) là lưu lượng khí, H (Pa) là độ tăng áp suất, η là hiệu suất cơ cấu và k là hệ số dự phòng. Công suất tỉ lệ với lưu lượng và độ tăng áp.", equations: [["P = QH", { fraction: [["k"], ["η"]], red: true }, " [W]"]], note: "H ở đây tính bằng Pa, khác cột áp H tính bằng mét trong công thức bơm. Pa·m³/s bằng W." },
+    { jp: "回転機の所要出力", vi: "Công suất của máy quay", heading: true },
+    { jp: "電動機など、回転機に要する出力を P［W］、回転体の角速度を ω［rad/s］、トルクを T［N・m］としたとき、次式となります。回転機の出力といえば角速度とトルクに比例。n は毎秒の回転速度、N は毎分の回転速度。", vi: "Gọi P (W) là công suất máy quay, ω (rad/s) là tốc độ góc và T (N·m) là mômen. Công suất tỉ lệ với tốc độ góc và mômen. n là số vòng mỗi giây, N là số vòng mỗi phút.", equations: [["P = ωT = 2πnT = 2π", { fraction: [["N"], ["60"]], red: true }, "T [W]"]] },
+    { jp: "※１ 揚程：水の吸込み水面から吐出し（はきだし）水面までの高さのこと。", vi: "Chú thích 1. Sách mô tả cột áp nâng nước là độ cao từ mặt nước hút đến mặt nước xả.", note: "Khi đề cho tổng cột áp, dùng trực tiếp giá trị đã cho. Tổng cột áp thực tế có thể gồm chênh áp và tổn thất đường ống ngoài chênh cao." },
+  ],
+  240: [
+    { jp: "回転体のトルク", vi: "Mômen của vật quay", heading: true },
+    { jp: "半径 r［m］の外周に F［N］の力が接線方向に働いた場合、F×r を**トルク**といいます。量記号は T、単位はニュートンメートル［N・m］です。トルク T といえば F と r の積。", vi: "Lực F (N) tác dụng theo tiếp tuyến tại bán kính r (m) tạo **mômen** bằng F × r. Ký hiệu T, đơn vị N·m.", equations: [["T = Fr [N·m]"]], note: "Công thức này dùng thành phần lực tiếp tuyến. Lực hướng qua tâm không tạo mômen quanh tâm." },
+    { jp: "練習問題 01　巻上用電動機の出力", vi: "Bài tập 01 · Công suất động cơ nâng", heading: true },
+    { jp: "図の巻上機について、電動機出力 P［kW］の値は。", vi: "Tính công suất động cơ P (kW) của cơ cấu nâng trong hình." },
+    { diagram: "hoistExercise240" },
+    { jp: "解き方　巻上機の電動機出力 P は、W＝1 000 kgf、v＝0.5 m/s。解答　**P＝5.4 kW**", vi: "Cách giải. ① Đổi lực nâng 1.000 kgf sang khoảng 9.800 N. ② Nhân với tốc độ 0,5 m/s rồi nhân hệ số dự phòng 1 và chia hiệu suất 0,9. Đáp án **P ≈ 5,4 kW**.", equations: [["P = 9.8Wv", { fraction: [["k"], ["η"]] }, " [W]"], ["= 9.8 × 1 000 × 0.5 × ", { fraction: [["1"], ["0.9"]] }, " ≈ 5 444 W ≈ 5.4 kW"]], note: "Kiểm tra ngược với số chưa làm tròn: 5.444 × 0,9 ≈ 4.900 W, đúng bằng 9.800 × 0,5." },
+    { jp: "参考　巻上荷重がニュートン単位のとき（W＝9.8 kN、v＝0.5 m/s と与えられた場合）。※荷重の単位が kgf の場合と kN の場合では、単位が異なるので注意を要する。", vi: "Tham khảo. Nếu lực nâng cho theo đơn vị newton, ở đây W = 9,8 kN và v = 0,5 m/s, dùng trực tiếp công thức kN. Cần phân biệt kgf với kN vì công thức cho công suất theo hai đơn vị khác nhau.", equations: [["P = Wv", { fraction: [["k"], ["η"]] }, " = 9.8 × 0.5 × ", { fraction: [["1"], ["0.9"]] }, " ≈ 5.4 kW"]] },
+  ],
   231: [
     { jp: "直流発電機の並行運転は、極性と電圧を一致させればよいわけですが、同期発電機の場合は、電圧、位相、相順、周波数を合わせなければなりません。相順は相回転ともいい、相回転計、または相順検定器で調べることができます。電圧は電圧計で合わせ、周波数と位相を合わせるのには**同期検定器**があります。", vi: "Khi nối song song máy phát một chiều, cần khớp cực tính và điện áp. Với máy phát đồng bộ, cần khớp điện áp, góc pha, thứ tự pha và tần số. Có thể kiểm tra thứ tự pha bằng máy đo thứ tự pha, dùng vôn kế để so điện áp và dùng **thiết bị kiểm tra đồng bộ** để so tần số và góc pha." },
     { jp: "並行運転の条件", vi: "Điều kiện vận hành song song", heading: true },
