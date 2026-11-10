@@ -35,6 +35,13 @@ function Diagram({ file, width, height, title, labels }: {
 }
 
 export const diagrams = {
+  speed216: (<Diagram file="speed216" width={280} height={176} title="Hình 1 · Động cơ kích từ song song" labels={[["図１・V・Iₐ・rₐ", "Hình 1. V là điện áp nguồn, Iₐ là dòng phần ứng, rₐ là điện trở phần ứng."]]} />),
+  efficiency217: (<Diagram file="efficiency217" width={582} height={162} title="Mạch đứng yên và chạy định mức" labels={[["図１ 静止状態・図２ 定格運転時", "Hình 1 rôto đứng yên. Hình 2 chạy định mức."]]} />),
+  motor220p218: (<Diagram file="motor220p218" width={346} height={166} title="Hình 1 · Chạy ở 220 V" labels={[["図１ 220 Vで運転・Iₐ₁・Eᵦ₁・P₁", "Chạy ở 220 V. Dòng phần ứng, sức phản điện động và công suất ra ở chế độ 1."]]} />),
+  motor200p218: (<Diagram file="motor200p218" width={356} height={167} title="Hình 2 · Chạy ở 200 V" labels={[["図２ 200 Vで運転・Iₐ₂・Eᵦ₂・N₂", "Chạy ở 200 V. Dòng phần ứng, sức phản điện động và tốc độ ở chế độ 2."]]} />),
+  poles219: (<Diagram file="poles219" width={691} height={248} title="Hình 4-1-1 · Cực từ rôto máy phát đồng bộ" labels={[["円筒形磁極・突極形磁極・枠・電機子鉄心・界磁巻線・２極用・４極用", "Cực hình trụ, cực lồi, khung, lõi phần ứng, cuộn kích từ, loại hai cực và loại bốn cực."]]} />),
+  distributed220: (<Diagram file="distributed220" width={673} height={377} title="Hình 4-1-2 · Quấn tập trung và quấn phân bố" labels={[["集中巻・分布巻・磁極ピッチ・回転方向", "Quấn tập trung, quấn phân bố, bước cực và chiều quay."]]} />),
+  phasors220: (<Diagram file="phasors220" width={273} height={203} title="Hình 4-1-3 · Giản đồ vectơ" labels={[["ベクトル図・α・Ėᵣ・Ėᵣ′", "Giản đồ vectơ. α là góc lệch pha giữa các thành phần. Ėᵣ là tổng khi quấn phân bố và Ėᵣ′ là tổng khi quấn tập trung."]]} />),
   armature211: (<Diagram file="armature211" width={705} height={241} title="Hình 3-2-1 · Phản ứng phần ứng" labels={[["界磁極による磁束分布・電機子電流による磁束分布・合成磁束分布・電気的中性軸", "Phân bố từ thông cực kích từ, phân bố từ thông do dòng phần ứng, từ thông tổng hợp và trục trung tính điện"]]} />),
   compensation211: (<Diagram file="compensation211" width={587} height={266} title="Hình 3-2-2 và 3-2-3 · Cực phụ và dây quấn bù" labels={[["補極・補償巻線・電動機・発電機・負荷", "Cực từ phụ, dây quấn bù, động cơ, máy phát và tải"]]} />),
   coilTorque212: (<Diagram file="coilTorque212" width={216} height={240} title="Hình 3-3-1 · Lực điện từ và mômen" labels={[["電磁力とトルクの関係・F₁・F₂・I・D・ℓ", "Quan hệ giữa lực điện từ và mômen. F₁/F₂ là lực, I là dòng, D là bề rộng giữa hai cạnh, ℓ là chiều dài cạnh tác dụng"]]} />),
