@@ -1,6 +1,50 @@
 import type { LessonRow } from "./lesson";
 
 export const machinePages: Record<number, LessonRow[]> = {
+  291: [
+    { jp: "10-3 周波数伝達関数と伝達関数といえば 出力信号と入力信号の比", vi: "10-3 Hàm truyền tần số và hàm truyền · Tỉ số tín hiệu ra trên tín hiệu vào", heading: true },
+    { diagram: "roomFrequency291" },
+    { jp: "周波数伝達関数の意味", vi: "Ý nghĩa của hàm truyền tần số", heading: true },
+    { jp: "周波数伝達関数は、制御系や制御要素の周波数特性を表します。上図のように、入力（目標値）を正弦波状に変化した場合、出力（制御量）も正弦波状に変化します。このとき、出力の波形は制御系や制御要素の性質で違ってきます。性質を数式で表した特性式が、周波数伝達関数です。", vi: "Hàm truyền tần số mô tả đặc tính theo tần số của hệ hoặc phần tử điều khiển. Khi cho đầu vào, tức giá trị đặt, thay đổi hình sin như hình trên, đầu ra cũng thay đổi hình sin trong chế độ xác lập của hệ tuyến tính. Biên độ và pha của đầu ra phụ thuộc đặc tính của hệ. Hàm truyền tần số biểu diễn các đặc tính đó bằng công thức." },
+    { jp: "制御系、制御要素の性質", vi: "Đặc tính của hệ và phần tử điều khiển", heading: true },
+    { jp: "室内の温度制御で、上の左図のように目標値をゆっくりと変化すれば、実際の温度は目標値に追従します。右図のように変化を速くしたときは、変化の振幅が小さくなり、位相のずれが大きくなることが想像できます。このような性質を数式で表すと便利です。制御系または要素の入力信号と出力信号は、正弦波で変化します。正弦波を複素表示（ベクトル表示）して出力信号と入力信号の比を求めたものが**周波数伝達関数**です。", vi: "Khi điều khiển nhiệt độ phòng, thay đổi giá trị đặt chậm như hình trái giúp nhiệt độ thực tế bám theo. Khi thay đổi nhanh như hình phải, biên độ đáp ứng nhỏ hơn và lệch pha lớn hơn. Biểu diễn các tín hiệu hình sin dưới dạng số phức rồi lấy tỉ số tín hiệu ra trên tín hiệu vào cho **hàm truyền tần số**." },
+    { jp: "周波数伝達関数といえば出力信号と入力信号の比。※自動制御理論で扱う信号は、jω の関数であることがわかるように、変数の後ろに（jω）を付ける。", vi: "Hàm truyền tần số bằng tỉ số đầu ra trên đầu vào. Ký hiệu (jω) cho biết đại lượng phụ thuộc tần số góc ω.", equations: [["G(jω) = ", { fraction: [["Eₒ(jω)"], ["Eᵢ(jω)"]], red: true }, " = ", { fraction: [["出力信号"], ["入力信号"]], red: true }]], equationsVi: [["G(jω) = ", { fraction: [["Eₒ(jω)"], ["Eᵢ(jω)"]], red: true }, " = ", { fraction: [["Tín hiệu ra"], ["Tín hiệu vào"]], red: true }]], note: "j là đơn vị ảo, ω = 2πf tính bằng rad/s. Độ lớn tỉ số cho độ khuếch đại biên độ, góc của tỉ số cho độ lệch pha." },
+  ],
+  292: [
+    { jp: "周波数伝達関数の計算1", vi: "Tính hàm truyền tần số 1", heading: true },
+    { jp: "図10-3-1の回路の周波数伝達関数 G(jω) を求めます。なお、自動制御に使われる要素は電気回路の特性と同じ性質を持つので、特性計算には電気回路が使われます。", vi: "Tìm hàm truyền tần số G(jω) của mạch ở hình 10-3-1. Các phần tử điều khiển có thể có đặc tính cùng dạng với mạch điện nên có thể dùng mạch điện để tính minh họa." },
+    { diagram: "rcFrequency292" },
+    { jp: "入力信号は抵抗の電圧とコンデンサの電圧の和。出力信号はコンデンサの電圧。上式の分母、分子に jωC を掛けて、CR＝T（時定数）として求めます。", vi: "Điện áp vào bằng tổng điện áp trên điện trở và trên tụ. Điện áp ra lấy trên tụ. Rút gọn bằng cách nhân tử và mẫu với jωC rồi đặt T = CR là hằng số thời gian.", equations: [["Eᵢ(jω) = RI(jω) + ", { fraction: [["1"], ["jωC"]] }, " I(jω)"], ["Eₒ(jω) = ", { fraction: [["1"], ["jωC"]] }, " I(jω)"], ["G(jω) = ", { fraction: [["Eₒ(jω)"], ["Eᵢ(jω)"]] }, " = ", { fraction: [[{ fraction: [["1"], ["jωC"]] }, " I(jω)"], ["RI(jω) + ", { fraction: [["1"], ["jωC"]] }, " I(jω)"]] }, " = ", { fraction: [[{ fraction: [["1"], ["jωC"]] }], ["R + ", { fraction: [["1"], ["jωC"]] }]] }], ["= ", { fraction: [["1"], ["1 + jωCR"]] }, " = ", { fraction: [["1"], ["1 + jωT"]], red: true }]], note: "Kiểm tra giới hạn: khi ω tiến về 0, G tiến về 1. Ở tần số rất cao, điện áp ra trên tụ giảm gần về 0." },
+    { jp: "このように、分母が jω の一次式になっているものを**一次遅れの周波数伝達関数**といいます。", vi: "Hàm truyền có mẫu là biểu thức bậc nhất theo jω như trên gọi là **hàm truyền tần số của khâu quán tính bậc nhất**." },
+    { jp: "周波数伝達関数の計算2", vi: "Tính hàm truyền tần số 2", heading: true },
+    { jp: "図10-3-2の回路の周波数伝達関数 G(jω) を求めます。", vi: "Tìm hàm truyền tần số G(jω) của mạch ở hình 10-3-2." },
+    { diagram: "lrFrequency292" },
+    { jp: "G(jω) は出力側から見たインピーダンスを入力側から見たインピーダンスで割っても求められます。", vi: "Với mạch chia áp nối tiếp này, có thể tính G(jω) bằng tổng trở phần lấy điện áp ra chia tổng trở toàn mạch ở đầu vào.", equations: [["G(jω) = ", { fraction: [["出力側から見たインピーダンス"], ["入力側から見たインピーダンス"]] }]], equationsVi: [["G(jω) = ", { fraction: [["Tổng trở phần lấy điện áp ra"], ["Tổng trở nhìn từ đầu vào"]] }]] },
+  ],
+  293: [
+    { jp: "分母、分子を R で割ると、L/R＝T（時定数）として次式になります。このように、R-C回路とL-R回路の G(jω) は同じ形をしているので、同じ特性式、すなわち同じ性質を持つことがわかります。", vi: "Chia tử và mẫu cho R rồi đặt T = L/R là hằng số thời gian. Mạch R–C và L–R cho hàm truyền cùng dạng, nên có cùng dạng đặc tính.", equations: [["G(jω) = ", { fraction: [["R"], ["R + jωL"]] }, " = ", { fraction: [["1"], ["1 + jω", { fraction: [["L"], ["R"]] }]] }, " = ", { fraction: [["1"], ["1 + jωT"]], red: true }]] },
+    { jp: "一次遅れの周波数伝達関数といえば分母が jω の一次式。", vi: "Với khâu quán tính bậc nhất, mẫu của hàm truyền là biểu thức bậc nhất theo jω.", equations: [["G(jω) = ", { fraction: [["1"], ["1 + jωT"]], red: true }]] },
+    { jp: "周波数伝達関数とゲイン", vi: "Hàm truyền tần số và độ lợi", heading: true },
+    { jp: "周波数伝達関数が、一次遅れのときのゲインを計算してみます。周波数伝達関数が G(jω)＝1/(1＋jωT) のとき、G(jω) の絶対値（大きさ）を |G(jω)|、位相角を ∠G(jω) とする。", vi: "Xét độ lợi của khâu quán tính bậc nhất. Gọi |G(jω)| là độ lớn và ∠G(jω) là góc pha của hàm truyền.", equations: [["|G(jω)| = |", { fraction: [["1"], ["1 + jωT"]] }, "| = ", { fraction: [["1"], ["√(1 + (ωT)²)"]] }], ["∠G(jω) = −tan⁻¹(ωT)"]] },
+    { jp: "G(jω)の絶対値は、入力信号と出力信号の大きさの比、すなわち振幅比を表すので、|G(jω)| は周波数伝達関数の**ゲイン**または**利得**といいます。∠G(jω) は、入力信号と出力信号の位相差を表しています。また、ゲインをデシベルで表す方法があり、これを**デシベル表示のゲイン**といいます。これはゲインの常用対数をとり、20倍して求めます。例として G(jω) のデシベル表示のゲイン g［dB］を求めると、次のようになります。", vi: "Độ lớn |G(jω)| biểu thị tỉ số biên độ ra trên biên độ vào và gọi là **độ lợi**. Góc ∠G(jω) là độ lệch pha của đầu ra so với đầu vào. Có thể biểu diễn **độ lợi theo decibel** bằng 20 lần logarit cơ số 10 của độ lợi biên độ. Ví dụ cho khâu quán tính bậc nhất như sau.", equations: [["g = 20 log₁₀|G(jω)| = 20 log₁₀|", { fraction: [["1"], ["1 + jωT"]] }, "| [dB]"], ["= 20 log₁₀", { fraction: [["1"], ["√(1 + (ωT)²)"]] }, " = 20 log₁₀{1 + (ωT)²}⁻½"], ["= −", { fraction: [["1"], ["2"]] }, " × 20 log₁₀{1 + (ωT)²}"], ["= −10 log₁₀{1 + (ωT)²} [dB]"]], note: "Kiểm tra tại ωT = 1: độ lợi biên độ bằng 1/√2, tương ứng xấp xỉ −3,01 dB và pha −45°. Dấu âm của pha nghĩa là đầu ra trễ." },
+  ],
+  294: [
+    { jp: "伝達関数", vi: "Hàm truyền", heading: true },
+    { jp: "伝達関数 G(s) は、周波数伝達関数 G(jω) の、jω の代わりに s を置き換えたものと同じです。G(s) は、急変する信号を扱うときに用います。", vi: "Trong các ví dụ này, hàm truyền G(s) có dạng của G(jω) khi thay jω bằng s. G(s) dùng để phân tích cả các tín hiệu thay đổi đột ngột." },
+    { diagram: "lrLaplace294" },
+    { jp: "図10-3-3のL-R回路の伝達関数 G(s) を求めてみます。はじめに、回路方程式（微分方程式）をつくります。", vi: "Tìm hàm truyền G(s) của mạch L–R ở hình 10-3-3. Đầu tiên lập phương trình vi phân của mạch.", equations: [["eᵢ(t) = L", { fraction: [["di(t)"], ["dt"]] }, " + Ri(t)"], ["eₒ(t) = Ri(t)"]] },
+    { jp: "両式をラプラス変換（小文字→大文字、(t)→(s)、d/dt→sに置き換える）します。入力信号は、Eᵢ(s)＝LsI(s)＋RI(s)。出力信号は、Eₒ(s)＝RI(s)。L/R＝T（時定数）として求めます。", vi: "Biến đổi Laplace hai phương trình. Ký hiệu chữ thường chuyển sang chữ hoa, biến t chuyển sang s, và đạo hàm cho phép nhân với s khi điều kiện ban đầu bằng 0. Tính tỉ số với hằng số thời gian T = L/R.", equations: [["Eᵢ(s) = LsI(s) + RI(s)"], ["Eₒ(s) = RI(s)"], ["G(s) = ", { fraction: [["Eₒ(s)"], ["Eᵢ(s)"]] }, " = ", { fraction: [["RI(s)"], ["LsI(s) + RI(s)"]] }, " = ", { fraction: [["R"], ["R + Ls"]] }], ["= ", { fraction: [["1"], ["1 + s", { fraction: [["L"], ["R"]] }]] }, " = ", { fraction: [["1"], ["1 + sT"]] }]], note: "Nếu dòng cuộn cảm ban đầu khác 0, biến đổi Laplace của đạo hàm có thêm số hạng chứa dòng ban đầu. Hàm truyền được định nghĩa với điều kiện ban đầu bằng 0." },
+    { jp: "伝達関数といえば出力信号と入力信号のラプラス変換式の比。※周波数伝達関数の jω を s に置き換えても同じ。", vi: "Hàm truyền là tỉ số biến đổi Laplace của đầu ra và đầu vào. Trong ví dụ này cũng có thể lấy dạng G(jω) rồi thay jω bằng s.", equations: [["G(s) = ", { fraction: [["Eₒ(s)"], ["Eᵢ(s)"]], red: true }, " = ", { fraction: [["出力信号"], ["入力信号"]], red: true }]], equationsVi: [["G(s) = ", { fraction: [["Eₒ(s)"], ["Eᵢ(s)"]], red: true }, " = ", { fraction: [["Tín hiệu ra"], ["Tín hiệu vào"]], red: true }]] },
+  ],
+  295: [
+    { jp: "10-4 フィードバック結合といえば G を1＋GHで割る", vi: "10-4 Ghép phản hồi âm · Chia G cho 1 + GH", heading: true },
+    { diagram: "feedbackConnections295" },
+    { jp: "ブロック線図の記号と合成伝達関数", vi: "Ký hiệu sơ đồ khối và hàm truyền tổng hợp", heading: true },
+    { jp: "自動制御系は、上図のように (a) **要素のブロック**、(b) **加え合わせ点**、(c) **引き出し点**の3つの記号で表します。また、(d) 直列結合、(e) 並列結合、(f) フィードバック結合があります。各結合の合成伝達関数 G₀ を示すと、次のようになります。", vi: "Sơ đồ khối dùng ba ký hiệu như hình trên: (a) **khối phần tử**, (b) **điểm cộng đại số**, (c) **điểm lấy tín hiệu**. Các kiểu ghép gồm (d) nối tiếp, (e) song song, (f) phản hồi. Hàm truyền tổng hợp G₀ được tính như dưới đây." },
+    { jp: "直列結合といえば積。並列結合といえば和。フィードバック結合といえば G を（1＋GH）で割る。", vi: "Ghép nối tiếp lấy tích. Ghép song song với hai dấu cộng lấy tổng. Với phản hồi âm, chia G cho 1 + GH.", equations: [["G₀ = G₁G₂"], ["G₀ = G₁ + G₂"], ["G₀ = ", { fraction: [["G"], ["1 + GH"]], red: true }]], note: "Kiểm tra dấu tại điểm cộng trước. Khi tín hiệu H đi về chân trừ, mẫu là 1 + GH. Khi H = 0, hàm truyền trở về G." },
+    { jp: "フィードバック結合の合成伝達関数 G₀ の求め方", vi: "Cách suy ra hàm truyền tổng hợp G₀ của ghép phản hồi", heading: true },
+    { jp: "（X−YH）を G 倍したものが出力 Y に等しくなるので、したがって、Y（1＋GH）＝GX より、", vi: "Tín hiệu sai lệch X − YH đi qua khối G để cho đầu ra Y. Chuyển các số hạng chứa Y về một vế, được Y(1 + GH) = GX. Bước lấy tỉ số tiếp tục ở trang 296.", equations: [["Y = G(X − YH)"], ["Y = GX − YGH"], ["Y(1 + GH) = GX"]] },
+  ],
   286: [
     { jp: "10-1 フィードバック制御といえば 制御量、目標値等で分類", vi: "10-1 Điều khiển phản hồi · Phân loại theo đại lượng được điều khiển, giá trị đặt và các tiêu chí khác", heading: true },
     { diagram: "controlExamples286" },
