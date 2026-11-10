@@ -22,7 +22,9 @@ export default async function OhmLesson({ searchParams }: { searchParams: Promis
   const next = pages[pages.indexOf(page) + 1];
   const prevHref = previous === undefined ? null : href(previous);
   const nextHref = next === undefined ? null : href(next);
-  const title = page >= 70 ? "3‑1 三相交流回路 · Mạch xoay chiều ba pha"
+  const title = page >= 79 ? "3‑3 三相電力 · Công suất ba pha"
+    : page >= 77 ? "3‑2 Δ‑Y 変換 · Đổi tam giác sang sao"
+    : page >= 70 ? "3‑1 三相交流回路 · Mạch xoay chiều ba pha"
     : page >= 67 ? "章末問題 · Bài tập cuối chương xoay chiều"
     : page >= 62 ? "2‑11 過渡現象 · Quá trình quá độ"
     : page >= 60 ? "2‑10 交流回路の複素数計算 · Tính mạch xoay chiều bằng số phức"
