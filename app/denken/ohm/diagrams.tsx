@@ -35,6 +35,32 @@ function Diagram({ file, width, height, title, labels }: {
 }
 
 export const diagrams = {
+  impedanceTriangle176: (<Diagram file="impedance176" width={112} height={118} title="Tam giác tổng trở của bài tập" labels={[
+    ["p = 1.25", "Cạnh ngang, phần trăm sụt áp điện trở."],
+    ["q = 5", "Cạnh đứng, phần trăm sụt áp điện kháng."],
+    ["%z", "Cạnh huyền, phần trăm sụt áp tổng trở."],
+  ]} />),
+  transformerLoss177: (<Diagram file="transformer-loss177" width={931} height={458} title="Tổn hao trong máy biến áp" labels={[
+    ["変圧器での損失", "Tổn hao trong máy biến áp."],
+    ["変圧器で少しの電力を消費する", "Máy biến áp tiêu hao một phần công suất."],
+    ["負荷電流", "Dòng điện tải."],
+    ["電源・変圧器・負荷", "Nguồn điện, máy biến áp và tải."],
+    ["入力電力・出力電力・変圧器の損失電力", "Công suất đầu vào, công suất đầu ra và công suất tổn hao của máy biến áp."],
+    ["U・V／u・v", "Các đầu cực phía sơ cấp và phía thứ cấp."],
+  ]} />),
+  transformerEfficiency179: (<Diagram file="transformer-efficiency179" width={263} height={290} title="Hình 1-4-1 · Hiệu suất máy biến áp theo tải" labels={[
+    ["変圧器の効率・効率", "Hiệu suất máy biến áp, đường cong hiệu suất."],
+    ["負荷", "Tải, trục ngang."],
+    ["効率・損失", "Hiệu suất và tổn hao, trục dọc."],
+    ["最大効率 ηₘ", "Hiệu suất cực đại."],
+    ["鉄損＋銅損・銅損・鉄損", "Tổng tổn hao, tổn hao đồng và tổn hao sắt."],
+  ]} />),
+  transformerParallel180: (<Diagram file="transformer-parallel180" width={938} height={367} title="Hai máy biến áp vận hành song song" labels={[
+    ["変圧器２台の並行運転", "Hai máy biến áp vận hành song song."],
+    ["電源", "Nguồn điện xoay chiều."],
+    ["A変圧器・B変圧器", "Máy biến áp A và máy biến áp B."],
+    ["負荷", "Tải dùng chung của hai máy."],
+  ]} />),
   dropIntro172: (<Diagram file="drop-intro172" width={650} height={290} title="Minh họa sụt áp" labels={[["電圧降下・負荷電圧","Sụt áp và điện áp trên tải."]]} />),
   dropSeries172: (<Diagram file="drop-series172" width={410} height={204} title="Hình 1-3-1 · Điện áp tổng trở" labels={[["抵抗電圧・リアクタンス電圧","Điện áp điện trở và điện áp điện kháng."]]} />),
   dropVector173: (<Diagram file="drop-vector173" width={590} height={441} title="Hình 1-3-2 và 1-3-3 · Mạch nối tiếp và giản đồ vectơ" labels={[["ベクトル図・巻線抵抗・漏れリアクタンス","Giản đồ vectơ, điện trở cuộn dây và điện kháng rò."]]} />),
