@@ -22,7 +22,9 @@ export default async function OhmLesson({ searchParams }: { searchParams: Promis
   const next = pages[pages.indexOf(page) + 1];
   const prevHref = previous === undefined ? null : href(previous);
   const nextHref = next === undefined ? null : href(next);
-  const title = page >= 148 ? "7‑3 トランジスタ回路 · Mạch khuếch đại transistor"
+  const title = page >= 155 ? "7‑5 オペアンプ · Bộ khuếch đại thuật toán"
+    : page >= 152 ? "7‑4 FET · Transistor hiệu ứng trường"
+    : page >= 148 ? "7‑3 トランジスタ回路 · Mạch khuếch đại transistor"
     : page >= 145 ? "7‑2 トランジスタ · Transistor"
     : page >= 141 ? "7‑1 半導体 · Chất bán dẫn"
     : page >= 139 ? "章末問題 · Bài tập cuối chương"

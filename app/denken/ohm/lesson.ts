@@ -1,3 +1,4 @@
+import { fetPages } from "./fet-pages";
 import { transistorPages } from "./transistor-pages";
 import { semiconductorPages } from "./semiconductor-pages";
 import { inductanceReviewPages } from "./inductance-review-pages";
@@ -74,6 +75,7 @@ export const lesson: Record<number, LessonRow[]> = {
   ...inductanceReviewPages,
   ...semiconductorPages,
   ...transistorPages,
+  ...fetPages,
   2: [
     { jp: "オームの法則 **といえば** 電圧÷電流＝抵抗", vi: "Định luật Ohm · Điện áp chia dòng điện bằng điện trở", heading: true },
     { diagram: "examples" },
