@@ -35,6 +35,14 @@ function Diagram({ file, width, height, title, labels }: {
 }
 
 export const diagrams = {
+  elements41: (<Diagram file="elements41" width={703} height={333} title="Trang 41 · Điện trở, cuộn cảm và tụ điện" labels={[["変圧器・交流電源","Máy biến áp và nguồn xoay chiều."],["抵抗・コイル・コンデンサ","Điện trở, cuộn cảm và tụ điện."],["ギャップ（空隙）","Khe hở lõi sắt. Chiều dài khe hở ảnh hưởng đến cảm kháng."]]} />),
+  resistor41: (<Diagram file="resistor41" width={156} height={184} title="Hình 2‑4‑1 · Mạch điện trở" labels={[["抵抗回路・V・I・R","Mạch điện trở. Áp V chia dòng I cho R."]]} />),
+  coil42: (<Diagram file="coil42" width={719} height={233} title="Hình 2‑4‑2 · Cảm kháng" labels={[["誘導性リアクタンス・コイル","Cảm kháng của cuộn cảm."],["V・I・Xₗ","Điện áp, dòng điện và cảm kháng."]]} />),
+  cap42: (<Diagram file="cap42" width={495} height={187} title="Hình 2‑4‑3 · Dung kháng" labels={[["容量性リアクタンス・コンデンサ","Dung kháng của tụ điện."],["V・I・X꜀","Điện áp, dòng điện và dung kháng."]]} />),
+  exercise43: (<Diagram file="exercise43" width={231} height={126} title="Trang 43 · Bài tập cảm kháng" labels={[["f = 50 Hz・V = 100 V・L = 50 mH・I","Tần số, điện áp, độ tự cảm và dòng cần tìm."]]} />),
+  elements44: (<Diagram file="elements44" width={719} height={311} title="Trang 44 · Tác dụng của R, L và C" labels={[["抵抗・コイル・コンデンサ","Điện trở tiêu thụ năng lượng. Cuộn cảm lý tưởng làm dòng trễ π/2, tụ lý tưởng làm dòng sớm π/2. Hai phần tử lý tưởng này không tiêu thụ năng lượng ròng."]]} />),
+  resistor44: (<Diagram file="resistor44" width={710} height={210} title="Hình 2‑5‑1 · Điện áp và dòng điện đồng pha" labels={[["抵抗の作用・電圧 v・電流 i","Tác dụng của điện trở. Đồ thị áp và dòng cùng qua 0 theo cùng chiều."],["R回路のベクトル図","Giản đồ pha của mạch R. Hai vectơ cùng hướng."]]} />),
+  coil45: (<Diagram file="coil45" width={620} height={174} title="Hình 2‑5‑2 · Dòng qua cuộn cảm trễ pha" labels={[["コイルの作用・電圧 v・電流 i","Tác dụng của cuộn cảm. Sóng dòng nằm bên phải sóng áp một phần tư chu kỳ."],["Xₗ回路のベクトル図","Giản đồ pha mạch cuộn cảm. Vectơ dòng hướng xuống khi vectơ áp hướng phải."]]} />),
   magnitude36: (<Diagram file="magnitude36" width={668} height={315} title="Trang 36 · Đỉnh, trung bình và hiệu dụng" labels={[["最大値・平均値","Giá trị đỉnh và trung bình nửa chu kỳ."],["i² の平均値・実効値","Trung bình bình phương dòng và căn của giá trị đó."],["T/2・ωt・Iₘ・Vₘ","Nửa chu kỳ, góc quay, đỉnh dòng và đỉnh áp."]]} />),
   rms37: (<Diagram file="rms37" width={308} height={171} title="Hình 2‑2‑1 · Hiệu dụng của sóng sin" labels={[["正弦波交流の実効値","Hiệu dụng của xoay chiều hình sin."],["Vₘ・V（実効値）","Giá trị đỉnh và hiệu dụng bằng đỉnh chia √2."]]} />),
   phasor39: (<Diagram file="phasor39" width={722} height={310} title="Trang 39 · Từ đồ thị đến vectơ pha" labels={[["基準波形・π/3 進んでいます・π/3 遅れています","Sóng mốc và hai sóng sớm hoặc trễ π/3."],["最大値 141 V・実効値 100 V","Biên độ khoảng 141 V và hiệu dụng 100 V."],["波形・最大値と位相・実効値と位相","Dạng sóng, vectơ theo biên độ và vectơ theo hiệu dụng."]]} />),
