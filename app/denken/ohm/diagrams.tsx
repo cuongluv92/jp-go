@@ -35,6 +35,8 @@ function Diagram({ file, width, height, title, labels }: {
 }
 
 export const diagrams = {
+  mercuryLamp271: (<Diagram file="mercuryLamp271" width={340} height={385} title="Hình 7-3-1 · Cấu tạo đèn thủy ngân" labels={[["口金・外管・支持物", "Đui đèn, vỏ ống ngoài và giá đỡ"], ["抵抗体・しゃへい板", "Phần tử điện trở và tấm chắn"], ["補助電極・主電極・発光管", "Điện cực phụ, điện cực chính và ống phát sáng"], ["アルゴンガス・水銀・窒素ガス・モリブデン箔", "Khí argon, thủy ngân, khí nitơ và lá molypden"]]} />),
+  waterHeat274: (<Diagram file="waterHeat274" width={745} height={342} title="Chuyển pha và nhiệt độ của 1 kg nước" labels={[["固体（氷）・液体（水）・気体（水蒸気）", "Rắn (băng), lỏng (nước) và khí (hơi nước)"], ["温度・融点・沸点", "Nhiệt độ, điểm nóng chảy và điểm sôi"], ["潜熱・融解熱（凝固熱）・気化熱（液化熱）", "Nhiệt ẩn, nhiệt nóng chảy (đông đặc) và nhiệt hóa hơi (hóa lỏng)"], ["熱エネルギー", "Nhiệt năng"]]} />),
   lightExercise266: (<Diagram file="lightExercise266" width={340} height={456} title="Bài tập 01 · Nguồn điểm và điểm tính độ rọi" labels={[["均等放射の点光源・全光束", "Nguồn điểm phát đều và tổng quang thông"], ["L・A・B", "Nguồn, hình chiếu của nguồn trên mặt ngang và điểm cần tính"]]} />),
   lightSolution266: (<Diagram file="lightSolution266" width={340} height={276} title="Bài tập 01 · Tam giác tính khoảng cách và góc" labels={[["点光源・水平面照度", "Nguồn sáng điểm và độ rọi mặt ngang"], ["θ・r＝2.5 m", "Góc với phương thẳng đứng và khoảng cách tới điểm B"]]} />),
   transistorInverter261: (<Diagram file="transistorInverter261" width={707} height={323} title="Hình 6-4-1 · Nghịch lưu transistor" labels={[["誘導性負荷", "Tải cảm"], ["入力信号を加えるベース・オン状態のデバイス", "Bazơ nhận tín hiệu và linh kiện đang dẫn"], ["ベース入力と出力電圧・電流波形", "Tín hiệu bazơ và dạng sóng điện áp, dòng đầu ra"], ["B₁～B₄・Tr₁～Tr₄・D₁～D₄", "Các cực bazơ, transistor và diode"]]} />),
