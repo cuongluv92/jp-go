@@ -35,6 +35,82 @@ function Diagram({ file, width, height, title, labels }: {
 }
 
 export const diagrams = {
+  lawReservoirBalance509: (
+    <Diagram file="lawReservoirBalance509" width={383} height={281} title="貯水量と放出量の面積" labels={[
+      ["①＋②", "Thể tích nước tích trong 8 giờ đầu và 4 giờ cuối"],
+      ["③＋④", "Thể tích nước xả thêm trong hai khoảng 5 giờ"],
+    ]} />
+  ),
+  lawReservoirExercise509: (
+    <Diagram file="lawReservoirExercise509" width={378} height={256} title="調整池式水力発電所の使用水量" labels={[
+      ["使用水量［m³/s］", "Lưu lượng sử dụng [m³/s]"],
+      ["2時間", "2 giờ phát với lưu lượng tự nhiên"],
+      ["時", "Giờ"],
+    ]} />
+  ),
+  lawReservoirFlow508: (
+    <Diagram file="lawReservoirFlow508" width={774} height={381} title="図3-6-1 流量と調整池容量の関係" labels={[
+      ["流量 Q［m³/s］", "Lưu lượng Q [m³/s]"],
+      ["時刻［h］", "Thời điểm [giờ]"],
+      ["図のAの面積（余剰分の貯水）", "Diện tích vùng A: thể tích nước dư được tích lại"],
+      ["図のBの面積（重負荷時の放出）", "Diện tích vùng B: thể tích xả thêm khi tải cao"],
+    ]} />
+  ),
+  lawGuyExerciseForce504: (
+    <Diagram file="lawGuyExerciseForce504" width={365} height={320} title="支線に生じる力" labels={[
+      ["水平張力 15 kN", "Lực căng ngang 15 kN"],
+      ["T₀", "Lực căng theo hướng dây néo"],
+      ["θ", "Góc dây néo hợp với phương ngang"],
+    ]} />
+  ),
+  lawGuyExercise504: (
+    <Diagram file="lawGuyExercise504" width={1054} height={459} title="支線の設置位置" labels={[
+      ["既設支持物", "Cột đỡ hiện có"],
+      ["新設支持物", "Cột đỡ mới"],
+      ["A種鉄筋コンクリート柱", "Cột bê tông cốt thép loại A"],
+      ["高圧架空電線", "Dây cao áp trên không"],
+      ["支線", "Dây néo"],
+      ["8 m／4 m", "Độ cao gắn dây néo 8 m, khoảng cách ngang đến điểm neo 4 m"],
+    ]} />
+  ),
+  lawGuyForce503: (
+    <Diagram file="lawGuyForce503" width={414} height={408} title="図3-4-1 電線の張力と支線の張力" labels={[
+      ["高圧架空電線", "Dây điện cao áp trên không"],
+      ["支持物", "Cột đỡ"],
+      ["支線", "Dây néo"],
+      ["T₂", "Thành phần ngang của lực căng dây néo"],
+    ]} />
+  ),
+  lawCompensationTriangle502: (
+    <Diagram file="lawCompensationTriangle502" width={630} height={438} title="力率改善の電力の三角形" labels={[
+      ["300 kW 力率0.6の負荷", "Tải 300 kW, hệ số công suất 0,6"],
+      ["力率を0.8に改善した負荷", "Tải sau khi cải thiện lên 0,8"],
+      ["Q₁ = 400 kvar、Q₂ = 225 kvar", "Công suất phản kháng trước và sau khi bù là 400 và 225 kvar"],
+    ]} />
+  ),
+  lawReactanceVector501: (
+    <Diagram file="lawReactanceVector501" width={877} height={258} title="リアクトルとコンデンサのリアクタンス" labels={[
+      ["リアクトルとコンデンサ", "Cuộn kháng và tụ điện"],
+      ["X_C の6%", "6% của X_C"],
+      ["リアクタンスのベクトル", "Vectơ điện kháng"],
+    ]} />
+  ),
+  lawCompensationCircuit501: (
+    <Diagram file="lawCompensationCircuit501" width={824} height={374} title="進相コンデンサ設備" labels={[
+      ["高圧電路 6600 V", "Mạch cao áp 6.600 V"],
+      ["SR：直列リアクトル", "SR: cuộn kháng nối tiếp"],
+      ["SC：三相コンデンサ", "SC: tụ ba pha"],
+      ["三相負荷 300 kW、力率0.6（遅れ）", "Tải ba pha 300 kW, hệ số công suất 0,6 trễ"],
+    ]} />
+  ),
+  lawPowerTriangle500: (
+    <Diagram file="lawPowerTriangle500" width={1196} height={403} title="電力の三角形と力率改善" labels={[
+      ["有効電力 P", "Công suất tác dụng P"],
+      ["皮相電力 S → S′ に軽減", "Công suất biểu kiến giảm từ S xuống S′"],
+      ["無効電力 Q → Q′ に減少", "Công suất phản kháng giảm từ Q xuống Q′"],
+      ["力率 cos θ → cos θ′（1に近づく）", "Hệ số công suất tăng từ cos θ lên cos θ′, gần 1 hơn"],
+    ]} />
+  ),
   lawThevenin498: (
     <Diagram file="lawThevenin498" width={759} height={338} title="テブナンの等価回路" labels={[
       ["3線は短絡し1導体と考える", "Nối tắt ba dây và coi là một dây dẫn"],

@@ -9207,5 +9207,1567 @@ export const lawPages: Record<number, LessonRow[]> = {
         ]
       ]
     }
+  ],
+  "500": [
+    {
+      "jp": "3-3 力率改善　といえば　電力の三角形をつくる",
+      "vi": "3-3 Cải thiện hệ số công suất: dùng tam giác công suất.",
+      "heading": true
+    },
+    {
+      "diagram": "lawPowerTriangle500"
+    },
+    {
+      "jp": "力率改善とは",
+      "vi": "Khái niệm cải thiện hệ số công suất.",
+      "heading": true
+    },
+    {
+      "jp": "電動機や蛍光灯などの需要設備は、電流位相が電圧位相よりも遅れます。このように、電流位相が遅れる負荷を**遅れ力率の負荷**といいます。",
+      "vi": "Động cơ và đèn huỳnh quang thường làm dòng trễ pha so với áp, gọi là **tải có hệ số công suất trễ**."
+    },
+    {
+      "jp": "遅れ力率の負荷を電力の三角形で表すと、上図(a)のように電力の直角三角形で表すことができます。電気エネルギーとして利用されるのが**有効電力 P**であり、**皮相電力 S**は見かけ上の大きさで、**無効電力 Q**はエネルギーにならない成分です。",
+      "vi": "Tải có hệ số công suất trễ được biểu diễn bằng tam giác vuông công suất như hình (a). **Công suất tác dụng P** là phần được sử dụng dưới dạng điện năng. **Công suất biểu kiến S** là độ lớn biểu kiến. **Công suất phản kháng Q** là thành phần không tạo ra điện năng hữu ích."
+    },
+    {
+      "jp": "負荷に並列に**コンデンサ**を接続すると、コンデンサに流れる進みの電流により**無効電力**を減少させることができ、**力率**の値（cos θ）を1に近づけることができます。これを、**力率改善**といいます。",
+      "vi": "Mắc **tụ điện** song song với tải. Dòng sớm pha qua tụ làm giảm **công suất phản kháng**, đưa **hệ số công suất** cos θ tiến gần 1. Đó là **cải thiện hệ số công suất**."
+    },
+    {
+      "jp": "力率改善を行うことで、有効電力Pが同じでも皮相電力を小さくでき、配電線の有効利用と電力損失の軽減ができます。",
+      "vi": "Khi cải thiện hệ số công suất, như hình (b), công suất tác dụng P giữ nguyên nhưng công suất biểu kiến có thể giảm. Nhờ đó sử dụng đường dây phân phối hiệu quả hơn và giảm tổn hao điện."
+    },
+    {
+      "jp": "POINT",
+      "vi": "Ghi nhớ",
+      "heading": true
+    },
+    {
+      "jp": "力率は**有効**電力と**皮相**電力の比。",
+      "vi": "Hệ số công suất là tỷ số giữa công suất **tác dụng** và công suất **biểu kiến**.",
+      "equations": [
+        [
+          "cos θ = ",
+          {
+            "fraction": [
+              [
+                "P"
+              ],
+              [
+                "S"
+              ]
+            ]
+          }
+        ]
+      ],
+      "equationsVi": [
+        [
+          "cos θ = ",
+          {
+            "fraction": [
+              [
+                "P"
+              ],
+              [
+                "S"
+              ]
+            ]
+          }
+        ]
+      ]
+    },
+    {
+      "jp": "力率改善といえば力率を**1**に近づけることをいう。",
+      "vi": "Cải thiện hệ số công suất là đưa hệ số công suất tiến gần **1**."
+    },
+    {
+      "jp": "力率改善の効果といえば**損失**の減少、設備の有効利用ができる。",
+      "vi": "Cải thiện hệ số công suất giúp giảm **tổn hao** và sử dụng thiết bị hiệu quả hơn."
+    }
+  ],
+  "501": [
+    {
+      "jp": "練習問題01　力率改善",
+      "vi": "Bài luyện 01 · Bù hệ số công suất.",
+      "heading": true
+    },
+    {
+      "jp": "三相3線式6 600 Vの高圧電路に300 kW、遅れ力率0.6の三相負荷が接続されている。",
+      "vi": "Lưới cao áp ba pha ba dây 6.600 V cấp tải 300 kW với cosφ trễ 0,6."
+    },
+    {
+      "jp": "この負荷の力率改善を行う。進相コンデンサ設備は図に示すように直列リアクトル付三相コンデンサとし、直列リアクトル SR のリアクタンス X_L［Ω］は、三相コンデンサ SC のリアクタンス X_C［Ω］の6%とする。次の(a)、(b)の問に答えよ。",
+      "vi": "Cần cải thiện hệ số công suất của tải. Bộ tụ bù gồm tụ điện ba pha và cuộn kháng mắc nối tiếp như hình. Cảm kháng X_L [Ω] của cuộn kháng SR bằng 6% dung kháng X_C [Ω] của tụ ba pha SC. Trả lời (a) và (b)."
+    },
+    {
+      "diagram": "lawCompensationCircuit501"
+    },
+    {
+      "jp": "(a) 進相コンデンサ設備を高圧電路に接続したとき、三相コンデンサSCの端子電圧V_C[V]は。",
+      "vi": "(a) Điện áp đầu cực tụ SC khi nối vào lưới là bao nhiêu?"
+    },
+    {
+      "jp": "(b) 進相コンデンサ設備を負荷と並列に接続し、力率を遅れ0.6から遅れ0.8に改善したとき、三相コンデンサSCの容量Q_C[kvar]は。",
+      "vi": "(b) Để nâng cosφ từ 0,6 lên 0,8 trễ, tìm dung lượng tụ SC [kvar]."
+    },
+    {
+      "jp": "解き方　(a)",
+      "vi": "Cách giải (a)",
+      "heading": true
+    },
+    {
+      "jp": "コンデンサとリアクトルの一相分を取り出すと、下図のようになります。",
+      "vi": "Xét một pha của tụ điện và cuộn kháng như hình dưới."
+    },
+    {
+      "diagram": "lawReactanceVector501"
+    },
+    {
+      "jp": "X_L＝0.06X_C、合成リアクタンスはX_L−X_C＝−0.94X_C。",
+      "vi": "X_L=0,06X_C; tổng kháng nối tiếp =−0,94X_C."
+    },
+    {
+      "jp": "リアクタンスの比は、電圧の比に等しい。",
+      "vi": "Tỷ số điện kháng bằng tỷ số điện áp vì dòng qua hai phần tử nối tiếp bằng nhau.",
+      "equations": [
+        [
+          "X_C(0.06 − 1) : (−X_C) = 6600 : V_C"
+        ]
+      ],
+      "equationsVi": [
+        [
+          "X_C(0.06 − 1) : (−X_C) = 6600 : V_C"
+        ]
+      ]
+    },
+    {
+      "jp": "外項の積＝内項の積。",
+      "vi": "Tích hai số hạng ngoài bằng tích hai số hạng trong.",
+      "equations": [
+        [
+          "V_C X_C(0.06 − 1) = −6600 X_C"
+        ]
+      ],
+      "equationsVi": [
+        [
+          "V_C X_C(0.06 − 1) = −6600 X_C"
+        ]
+      ]
+    },
+    {
+      "jp": "コンデンサの端子電圧 V_C。",
+      "vi": "Điện áp đầu cực tụ V_C.",
+      "equations": [
+        [
+          "V_C = ",
+          {
+            "fraction": [
+              [
+                "−6600 X_C"
+              ],
+              [
+                "X_C(0.06 − 1)"
+              ]
+            ]
+          },
+          " = ",
+          {
+            "fraction": [
+              [
+                "6600"
+              ],
+              [
+                "0.94"
+              ]
+            ]
+          },
+          " ≒ 7021 V"
+        ]
+      ],
+      "equationsVi": [
+        [
+          "V_C = ",
+          {
+            "fraction": [
+              [
+                "−6600 X_C"
+              ],
+              [
+                "X_C(0.06 − 1)"
+              ]
+            ]
+          },
+          " = ",
+          {
+            "fraction": [
+              [
+                "6600"
+              ],
+              [
+                "0.94"
+              ]
+            ]
+          },
+          " ≒ 7021 V"
+        ]
+      ]
+    }
+  ],
+  "502": [
+    {
+      "jp": "(b) コンデンサ容量",
+      "vi": "(b) Dung lượng tụ điện",
+      "heading": true
+    },
+    {
+      "jp": "力率を遅れ0.6から遅れ0.8に改善するには、図の三角形から、175 kV・Aのコンデンサ容量が必要です。ただし SR が挿入されるため SC の容量 Q_C は電圧と同様に大きくなります。",
+      "vi": "Để cải thiện hệ số công suất từ 0,6 trễ lên 0,8 trễ, tam giác công suất cho thấy cần bù 175 kvar. Do có cuộn kháng SR mắc nối tiếp, dung lượng Q_C của tụ SC tăng theo cùng tỷ lệ với điện áp.",
+      "note": "Đoạn văn Nhật in kV・A. Đại lượng đang tính là công suất phản kháng, dùng kvar như trong phép tính và đáp án."
+    },
+    {
+      "diagram": "lawCompensationTriangle502"
+    },
+    {
+      "jp": "力率0.6のとき。",
+      "vi": "Với hệ số công suất 0,6.",
+      "equations": [
+        [
+          "S₁ = ",
+          {
+            "fraction": [
+              [
+                "300"
+              ],
+              [
+                "0.6"
+              ]
+            ]
+          },
+          " = 500 kV・A、Q₁ = 500 × 0.8 = 400 kvar"
+        ]
+      ],
+      "equationsVi": [
+        [
+          "S₁ = ",
+          {
+            "fraction": [
+              [
+                "300"
+              ],
+              [
+                "0.6"
+              ]
+            ]
+          },
+          " = 500 kV・A、Q₁ = 500 × 0.8 = 400 kvar"
+        ]
+      ]
+    },
+    {
+      "jp": "力率0.8のとき。",
+      "vi": "Với hệ số công suất 0,8.",
+      "equations": [
+        [
+          "S₂ = ",
+          {
+            "fraction": [
+              [
+                "300"
+              ],
+              [
+                "0.8"
+              ]
+            ]
+          },
+          " = 375 kV・A、Q₂ = 375 × 0.6 = 225 kvar"
+        ]
+      ],
+      "equationsVi": [
+        [
+          "S₂ = ",
+          {
+            "fraction": [
+              [
+                "300"
+              ],
+              [
+                "0.8"
+              ]
+            ]
+          },
+          " = 375 kV・A、Q₂ = 375 × 0.6 = 225 kvar"
+        ]
+      ]
+    },
+    {
+      "jp": "図中の計算表記：400 − 255 ＝ **175 kvar**。",
+      "vi": "Phép tính in trong hình ghi 400 − 255 = **175 kvar**.",
+      "note": "Hình in nhầm 255. Từ Q₂ = 225 kvar trên cùng hình, phép tính đúng là 400 − 225 = 175 kvar."
+    },
+    {
+      "jp": "三相コンデンサ SC の容量。",
+      "vi": "Dung lượng tụ ba pha SC.",
+      "equations": [
+        [
+          "Q_C = ",
+          {
+            "fraction": [
+              [
+                "175"
+              ],
+              [
+                "1 − 0.06"
+              ]
+            ]
+          },
+          " = ",
+          {
+            "fraction": [
+              [
+                "175"
+              ],
+              [
+                "0.94"
+              ]
+            ]
+          },
+          " ≒ 186 kvar"
+        ]
+      ],
+      "equationsVi": [
+        [
+          "Q_C = ",
+          {
+            "fraction": [
+              [
+                "175"
+              ],
+              [
+                "1 − 0.06"
+              ]
+            ]
+          },
+          " = ",
+          {
+            "fraction": [
+              [
+                "175"
+              ],
+              [
+                "0.94"
+              ]
+            ]
+          },
+          " ≒ 186 kvar"
+        ]
+      ]
+    },
+    {
+      "jp": "SR：Series reactor（直列リアクトル）\nSC：Static capacitor（進相コンデンサ）",
+      "vi": "SR: cuộn kháng nối tiếp.\nSC: tụ bù sớm pha."
+    },
+    {
+      "jp": "暗記　cos θ＝0.6 のとき sin θ＝0.8。cos θ＝0.8 のとき sin θ＝0.6。",
+      "vi": "Ghi nhớ. Khi cos θ = 0,6 thì sin θ = 0,8. Khi cos θ = 0,8 thì sin θ = 0,6."
+    },
+    {
+      "jp": "解答　(a) **V_C＝7021 V**　(b) **Q_C＝186 kvar**",
+      "vi": "Đáp án (a) **V_C = 7.021 V** (b) **Q_C = 186 kvar**"
+    },
+    {
+      "jp": "参考　SRとSCのリアクタンスを複素表示すると、jX_L−jX_C＝jX_C(0.06−1)。",
+      "vi": "Biểu diễn số phức: jX_L−jX_C=jX_C(0,06−1)."
+    }
+  ],
+  "503": [
+    {
+      "jp": "3-4 支線に関する計算　といえば　安全率は2.5又は1.5以上",
+      "vi": "3-4 Tính dây néo cột: hệ số an toàn ≥2,5 hoặc ≥1,5.",
+      "heading": true
+    },
+    {
+      "jp": "支線の役割",
+      "vi": "Vai trò dây néo.",
+      "heading": true
+    },
+    {
+      "jp": "支線は、鉄柱、鉄筋コンクリート柱、木柱等の強度を分担します。支線には次のような条件が必要です。",
+      "vi": "Dây néo hỗ trợ chịu lực cho cột thép, bê tông cốt thép, cột gỗ. Dây néo phải đáp ứng các điều kiện sau."
+    },
+    {
+      "jp": "①支線の安全率は**2.5**（引き留め箇所に使用する場合は**1.5**）以上であること。",
+      "vi": "① Hệ số an toàn dây néo ≥**2,5**, nếu tại điểm neo cuối ≥**1,5**."
+    },
+    {
+      "jp": "②支線をより線とした場合は、素線**3条**以上（**3本**以上）をより合わせたものであること。",
+      "vi": "② Nếu dây néo là dây xoắn, phải xoắn từ **3 sợi thành phần** trở lên (**ít nhất 3 sợi**)."
+    },
+    {
+      "jp": "③素線の直径が**2 mm**以上及び引張強さ0.69 kN/mm²以上の金属線を用いること。",
+      "vi": "③ Mỗi sợi kim loại đường kính ≥**2 mm**, độ bền kéo ≥0,69 kN/mm²."
+    },
+    {
+      "jp": "支線が支える力",
+      "vi": "Lực dây néo chống lực kéo ngang.",
+      "heading": true
+    },
+    {
+      "jp": "電線の張力を T₁、支線の張力（支線の引張荷重）を T₀ とすると、支持物の根本を支点とするモーメント（力×支点からの長さ）は等しい。",
+      "vi": "Gọi T₁ là lực căng dây điện và T₀ là lực căng (tải kéo) của dây néo. Hai mômen quanh chân cột (lực nhân cánh tay đòn) cân bằng."
+    },
+    {
+      "diagram": "lawGuyForce503"
+    },
+    {
+      "jp": "支持物の根本を支点とするモーメントのつり合い。",
+      "vi": "Cân bằng mômen quanh chân cột.",
+      "equations": [
+        [
+          "T₁H₁ = T₂H₂"
+        ]
+      ],
+      "equationsVi": [
+        [
+          "T₁H₁ = T₂H₂"
+        ]
+      ]
+    },
+    {
+      "jp": "支線の張力の水平成分。",
+      "vi": "Thành phần ngang của lực căng dây néo.",
+      "equations": [
+        [
+          "cos θ = ",
+          {
+            "fraction": [
+              [
+                "T₂"
+              ],
+              [
+                "T₀"
+              ]
+            ]
+          },
+          " → T₂ = T₀ cos θ"
+        ]
+      ],
+      "equationsVi": [
+        [
+          "cos θ = ",
+          {
+            "fraction": [
+              [
+                "T₂"
+              ],
+              [
+                "T₀"
+              ]
+            ]
+          },
+          " → T₂ = T₀ cos θ"
+        ]
+      ]
+    },
+    {
+      "jp": "モーメントの式に代入する。",
+      "vi": "Thay vào phương trình mômen.",
+      "equations": [
+        [
+          "T₁H₁ = T₂H₂ = T₀ cos θ H₂"
+        ]
+      ],
+      "equationsVi": [
+        [
+          "T₁H₁ = T₂H₂ = T₀ cos θ H₂"
+        ]
+      ]
+    },
+    {
+      "jp": "POINT",
+      "vi": "Ghi nhớ",
+      "heading": true
+    },
+    {
+      "jp": "支持物の根本を支点とするモーメントから**支線の張力**を求める。",
+      "vi": "Tính **lực căng dây néo** từ cân bằng mômen quanh chân cột.",
+      "equations": [
+        [
+          "T₀ = ",
+          {
+            "fraction": [
+              [
+                "T₁H₁"
+              ],
+              [
+                "H₂ cos θ"
+              ]
+            ],
+            "red": true
+          },
+          " [kN]"
+        ]
+      ],
+      "equationsVi": [
+        [
+          "T₀ = ",
+          {
+            "fraction": [
+              [
+                "T₁H₁"
+              ],
+              [
+                "H₂ cos θ"
+              ]
+            ],
+            "red": true
+          },
+          " [kN]"
+        ]
+      ]
+    },
+    {
+      "jp": "H₁＝H₂ のとき。",
+      "vi": "Khi hai điểm đặt lực có cùng độ cao H₁ = H₂.",
+      "equations": [
+        [
+          "T₀ = ",
+          {
+            "fraction": [
+              [
+                "T₁"
+              ],
+              [
+                "cos θ"
+              ]
+            ],
+            "red": true
+          },
+          " [kN]"
+        ]
+      ],
+      "equationsVi": [
+        [
+          "T₀ = ",
+          {
+            "fraction": [
+              [
+                "T₁"
+              ],
+              [
+                "cos θ"
+              ]
+            ],
+            "red": true
+          },
+          " [kN]"
+        ]
+      ]
+    },
+    {
+      "jp": "T₁：電線の張力［kN］、H₁：電線の取付高さ、H₂：支線の取付高さ。",
+      "vi": "T₁ là lực căng dây điện [kN], H₁ là độ cao gắn dây điện và H₂ là độ cao gắn dây néo."
+    }
+  ],
+  "504": [
+    {
+      "jp": "支線条数",
+      "vi": "Tính số sợi dây néo.",
+      "heading": true
+    },
+    {
+      "jp": "支線に加わる張力 T₀ に安全率を掛けた大きさを、支線1条当たりの引張荷重で割った値が、支線の必要条数 n になります。条とは本数です。小数以下は、切り上げて整数とします。",
+      "vi": "Lấy lực căng T₀ tác dụng lên dây néo nhân hệ số an toàn rồi chia cho sức chịu kéo của một sợi để được số sợi cần thiết n. Nếu kết quả có phần thập phân, làm tròn lên số nguyên."
+    },
+    {
+      "jp": "支線条数 n",
+      "vi": "Số sợi dây néo n",
+      "equations": [
+        [
+          "支線条数 n＝",
+          {
+            "fraction": [
+              [
+                "T₀ × 安全率"
+              ],
+              [
+                "1条当たりの引張荷重"
+              ]
+            ],
+            "red": true
+          },
+          ""
+        ]
+      ],
+      "equationsVi": [
+        [
+          "Số sợi dây néo n = ",
+          {
+            "fraction": [
+              [
+                "T₀ × hệ số an toàn"
+              ],
+              [
+                "Sức chịu kéo của một sợi"
+              ]
+            ],
+            "red": true
+          },
+          ""
+        ]
+      ]
+    },
+    {
+      "jp": "練習問題01　支線",
+      "vi": "Bài luyện 01 · Tính dây néo.",
+      "heading": true
+    },
+    {
+      "jp": "図のように既設の高圧架空電線路から、高圧架空電線を高低差なく径間30 m延長することにした。次の(a)及び(b)の問に答えよ。",
+      "vi": "Như hình, đường dây cao áp trên không được kéo dài từ tuyến hiện có thêm một nhịp 30 m, không chênh cao. Trả lời (a) và (b)."
+    },
+    {
+      "diagram": "lawGuyExercise504"
+    },
+    {
+      "jp": "(a) 電線の水平張力が15 kNである。支線に生じる引張荷重 T₀［kN］は。",
+      "vi": "(a) Lực căng ngang của dây điện là 15 kN. Tính tải kéo T₀ [kN] trong dây néo."
+    },
+    {
+      "jp": "(b) 支線の安全率を1.5とした場合、支線の最少素線条数 n は。ただし、支線の素線には、直径2.9 mmの亜鉛めっき鋼より線（引張強さ1.23 kN/mm²）を使用し、素線のより合わせによる引張荷重の減少係数は無視するものとする。",
+      "vi": "(b) Với hệ số an toàn của dây néo là 1,5, tìm số sợi thành phần tối thiểu n. Dùng sợi thép mạ kẽm đường kính 2,9 mm, độ bền kéo 1,23 kN/mm². Bỏ qua hệ số giảm tải kéo do xoắn các sợi với nhau."
+    },
+    {
+      "jp": "解き方　(a)",
+      "vi": "Cách giải (a)",
+      "heading": true
+    },
+    {
+      "diagram": "lawGuyExerciseForce504"
+    },
+    {
+      "jp": "図の三角形から。",
+      "vi": "Từ tam giác trong hình.",
+      "equations": [
+        [
+          "cos θ = ",
+          {
+            "fraction": [
+              [
+                "15"
+              ],
+              [
+                "T₀"
+              ]
+            ]
+          },
+          " = ",
+          {
+            "fraction": [
+              [
+                "4"
+              ],
+              [
+                "√(8² + 4²)"
+              ]
+            ]
+          }
+        ]
+      ],
+      "equationsVi": [
+        [
+          "cos θ = ",
+          {
+            "fraction": [
+              [
+                "15"
+              ],
+              [
+                "T₀"
+              ]
+            ]
+          },
+          " = ",
+          {
+            "fraction": [
+              [
+                "4"
+              ],
+              [
+                "√(8² + 4²)"
+              ]
+            ]
+          }
+        ]
+      ]
+    },
+    {
+      "jp": "支線に生じる引張荷重 T₀。",
+      "vi": "Tải kéo T₀ trong dây néo.",
+      "equations": [
+        [
+          "T₀ = 15 × ",
+          {
+            "fraction": [
+              [
+                "√(8² + 4²)"
+              ],
+              [
+                "4"
+              ]
+            ]
+          },
+          " ≒ 33.5 kN → 34 kN"
+        ]
+      ],
+      "equationsVi": [
+        [
+          "T₀ = 15 × ",
+          {
+            "fraction": [
+              [
+                "√(8² + 4²)"
+              ],
+              [
+                "4"
+              ]
+            ]
+          },
+          " ≒ 33.5 kN → 34 kN"
+        ]
+      ]
+    }
+  ],
+  "505": [
+    {
+      "jp": "(b) 素線1条の引張強さ F₁条 は、",
+      "vi": "(b) Sức chịu kéo F₁ của một sợi.",
+      "note": "Nhân độ bền kéo tính theo kN/mm² với tiết diện sợi tính theo mm².",
+      "equations": [
+        [
+          "F₁ = 1.23 × π × (",
+          {
+            "fraction": [
+              [
+                "2.9"
+              ],
+              [
+                "2"
+              ]
+            ]
+          },
+          ")² ≒ 8.12 kN"
+        ]
+      ],
+      "equationsVi": [
+        [
+          "F₁ = 1.23 × π × (",
+          {
+            "fraction": [
+              [
+                "2.9"
+              ],
+              [
+                "2"
+              ]
+            ]
+          },
+          ")² ≒ 8.12 kN"
+        ]
+      ]
+    },
+    {
+      "jp": "素線条数 n は、",
+      "vi": "Số sợi n, làm tròn lên số nguyên.",
+      "note": "Dùng 33,5 kN ở bước trung gian.",
+      "equations": [
+        [
+          "n = ",
+          {
+            "fraction": [
+              [
+                "1.5 T₀"
+              ],
+              [
+                "F₁"
+              ]
+            ]
+          },
+          " = ",
+          {
+            "fraction": [
+              [
+                "1.5 × 33.5"
+              ],
+              [
+                "8.12"
+              ]
+            ]
+          },
+          " ≒ 6.19 → 7"
+        ]
+      ],
+      "equationsVi": [
+        [
+          "n = ",
+          {
+            "fraction": [
+              [
+                "1.5 T₀"
+              ],
+              [
+                "F₁"
+              ]
+            ]
+          },
+          " = ",
+          {
+            "fraction": [
+              [
+                "1.5 × 33.5"
+              ],
+              [
+                "8.12"
+              ]
+            ]
+          },
+          " ≒ 6.19 → 7"
+        ]
+      ]
+    },
+    {
+      "jp": "解説",
+      "vi": "Giải thích",
+      "heading": true
+    },
+    {
+      "jp": "水平張力15 kNと支線の引張荷重 T₀ [kN] の関係を表す力の釣り合いの三角形から",
+      "vi": "Từ tam giác cân bằng lực biểu diễn quan hệ giữa lực kéo ngang 15 kN và lực kéo của dây néo T₀ [kN]:"
+    },
+    {
+      "jp": "底辺と斜辺から cos θ を表す。",
+      "vi": "Tính cos θ bằng cạnh kề chia cạnh huyền. Cạnh kề là khoảng cách ngang 4 m, cạnh huyền là chiều dài dây néo.",
+      "equations": [
+        [
+          "cos θ = ",
+          {
+            "fraction": [
+              [
+                "底辺"
+              ],
+              [
+                "斜辺"
+              ]
+            ]
+          },
+          " = ",
+          {
+            "fraction": [
+              [
+                "15"
+              ],
+              [
+                "T₀"
+              ]
+            ]
+          },
+          "、cos θ = ",
+          {
+            "fraction": [
+              [
+                "4"
+              ],
+              [
+                "支線の長さ"
+              ]
+            ]
+          },
+          " = ",
+          {
+            "fraction": [
+              [
+                "4"
+              ],
+              [
+                "√(8² + 4²)"
+              ]
+            ]
+          }
+        ]
+      ],
+      "equationsVi": [
+        [
+          "cos θ = ",
+          {
+            "fraction": [
+              [
+                "Cạnh kề"
+              ],
+              [
+                "Cạnh huyền"
+              ]
+            ]
+          },
+          " = ",
+          {
+            "fraction": [
+              [
+                "15"
+              ],
+              [
+                "T₀"
+              ]
+            ]
+          },
+          " và cos θ = ",
+          {
+            "fraction": [
+              [
+                "4"
+              ],
+              [
+                "Chiều dài dây néo"
+              ]
+            ]
+          },
+          " = ",
+          {
+            "fraction": [
+              [
+                "4"
+              ],
+              [
+                "√(8² + 4²)"
+              ]
+            ]
+          }
+        ]
+      ]
+    },
+    {
+      "jp": "次の関係から T₀ が求められる。",
+      "vi": "Giải phương trình sau để tìm T₀.",
+      "equations": [
+        [
+          {
+            "fraction": [
+              [
+                "15"
+              ],
+              [
+                "T₀"
+              ]
+            ]
+          },
+          " = ",
+          {
+            "fraction": [
+              [
+                "4"
+              ],
+              [
+                "√(8² + 4²)"
+              ]
+            ]
+          }
+        ]
+      ],
+      "equationsVi": [
+        [
+          {
+            "fraction": [
+              [
+                "15"
+              ],
+              [
+                "T₀"
+              ]
+            ]
+          },
+          " = ",
+          {
+            "fraction": [
+              [
+                "4"
+              ],
+              [
+                "√(8² + 4²)"
+              ]
+            ]
+          }
+        ]
+      ]
+    },
+    {
+      "jp": "素線条数 n は、支線に生じる引張荷重の安全率倍の荷重に耐える条数とします。",
+      "vi": "Số sợi phải đủ chịu lực bằng lực kéo của dây néo nhân hệ số an toàn."
+    },
+    {
+      "jp": "解答　(a) **T₀ = 34 kN**　(b) **n = 7条**",
+      "vi": "Đáp án: (a) **T₀ = 34 kN**; (b) **n = 7 sợi**."
+    }
+  ],
+  "506": [
+    {
+      "jp": "3-5 変圧器の全日効率　といえば　1日の電力量の効率",
+      "vi": "3-5 Hiệu suất cả ngày của máy biến áp: tỷ lệ điện năng trong 24 giờ.",
+      "heading": true
+    },
+    {
+      "jp": "全日効率とは",
+      "vi": "Khái niệm hiệu suất ngày.",
+      "heading": true
+    },
+    {
+      "jp": "変圧器の負荷電流は時間とともに変化し、**銅損**も変化します。一次側は常時電圧が加わっているので、負荷の大小に関係なく、**鉄損**が生じています。このことから、変圧器の効率のよい利用のされ方を表すために**全日効率**が使われます。",
+      "vi": "Dòng tải của máy biến áp thay đổi theo thời gian nên **tổn hao đồng** cũng thay đổi. Phía sơ cấp luôn được cấp điện áp nên có **tổn hao sắt** bất kể tải lớn hay nhỏ. Vì vậy dùng **hiệu suất cả ngày** để biểu thị hiệu quả sử dụng máy biến áp."
+    },
+    {
+      "jp": "全日効率は、1日を通しての効率で、次式で表されます。",
+      "vi": "Hiệu suất cả ngày tính theo điện năng suốt 24 giờ."
+    },
+    {
+      "jp": "POINT　全日効率",
+      "vi": "Ghi nhớ · Hiệu suất cả ngày",
+      "heading": true
+    },
+    {
+      "jp": "全日効率といえば1日の電力量の効率。",
+      "vi": "Hiệu suất cả ngày tính theo điện năng trong một ngày.",
+      "equations": [
+        [
+          "η_d = ",
+          {
+            "fraction": [
+              [
+                "W"
+              ],
+              [
+                "W + W_i + W_c"
+              ]
+            ],
+            "red": true
+          },
+          " × 100 [%]"
+        ]
+      ],
+      "equationsVi": [
+        [
+          "η_d = ",
+          {
+            "fraction": [
+              [
+                "W"
+              ],
+              [
+                "W + W_i + W_c"
+              ]
+            ],
+            "red": true
+          },
+          " × 100 [%]"
+        ]
+      ]
+    },
+    {
+      "jp": "W：1日の全出力電力量、W_i：1日の鉄損電力量、W_c：1日の銅損電力量。",
+      "vi": "W: điện năng ra ngày; W_i: điện năng tổn hao lõi; W_c: điện năng tổn hao đồng."
+    },
+    {
+      "jp": "鉄損電力量 W_i は、鉄損 P_i に1日の時間すなわち24を掛けます。",
+      "vi": "Điện năng tổn hao sắt W_i bằng tổn hao sắt P_i nhân 24 giờ.",
+      "note": "Áp dụng khi sơ cấp được cấp điện cả ngày.",
+      "equations": [
+        [
+          "W_i = P_i × 24 [W・h]"
+        ]
+      ],
+      "equationsVi": [
+        [
+          "W_i = P_i × 24 [W・h]"
+        ]
+      ]
+    },
+    {
+      "jp": "全負荷銅損を P_c とし、定格の n 分の1の負荷で T 時間使用した場合の銅損電力量。",
+      "vi": "Gọi P_c là tổn hao đồng ở đầy tải. Tính điện năng tổn hao đồng khi tải bằng một phần n tải định mức trong T giờ.",
+      "note": "Nếu tải thay đổi theo từng khoảng, tính riêng điện năng tổn hao của mỗi khoảng rồi cộng lại.",
+      "equations": [
+        [
+          "W_c = (",
+          {
+            "fraction": [
+              [
+                "1"
+              ],
+              [
+                "n"
+              ]
+            ]
+          },
+          ")² P_c T [W・h]"
+        ]
+      ],
+      "equationsVi": [
+        [
+          "W_c = (",
+          {
+            "fraction": [
+              [
+                "1"
+              ],
+              [
+                "n"
+              ]
+            ]
+          },
+          ")² P_c T [W・h]"
+        ]
+      ]
+    },
+    {
+      "jp": "練習問題01　変圧器の損失",
+      "vi": "Bài luyện 01 · Tính tổn hao và hiệu suất máy biến áp.",
+      "heading": true
+    },
+    {
+      "jp": "定格容量500 kV・A、無負荷損500 W、負荷損（定格電流通電時）6700 W の変圧器を更新する。更新後の変圧器はトップランナー制度に適合した変圧器で、変圧器の容量、電圧及び周波数仕様は従来器と同じであるが、無負荷損は150 W、省エネ基準達成率は140%である。このとき、次の(a)及び(b)の問に答えよ。ただし、省エネ基準達成率は次式で与えられるものとする。",
+      "vi": "Thay máy biến áp có công suất định mức 500 kVA, tổn hao không tải 500 W và tổn hao có tải ở dòng định mức 6.700 W. Máy mới phù hợp chương trình Top Runner, có cùng công suất, điện áp và tần số như máy cũ. Tổn hao không tải là 150 W và tỷ lệ đạt chuẩn tiết kiệm năng lượng là 140%. Trả lời (a) và (b), dùng công thức dưới đây để tính tỷ lệ đạt chuẩn."
+    },
+    {
+      "jp": "省エネ基準達成率",
+      "vi": "Tỷ lệ đạt chuẩn tiết kiệm năng lượng",
+      "equations": [
+        [
+          "省エネ基準達成率＝",
+          {
+            "fraction": [
+              [
+                "基準エネルギー消費効率"
+              ],
+              [
+                "W_i + W_C40"
+              ]
+            ]
+          },
+          " × 100 [%]"
+        ]
+      ],
+      "equationsVi": [
+        [
+          "Tỷ lệ đạt chuẩn tiết kiệm năng lượng = ",
+          {
+            "fraction": [
+              [
+                "Mức tổn hao chuẩn"
+              ],
+              [
+                "W_i + W_C40"
+              ]
+            ]
+          },
+          " × 100 [%]"
+        ]
+      ]
+    }
+  ],
+  "507": [
+    {
+      "jp": "基準エネルギー消費効率は1250 W、W_i は無負荷損、W_c40 は負荷率40%時の負荷損とする。",
+      "vi": "Mức tiêu thụ năng lượng chuẩn là 1.250 W. W_i là tổn hao không tải [W] và W_C40 là tổn hao có tải [W] ở mức tải 40%."
+    },
+    {
+      "jp": "注）基準エネルギー消費効率とは判断の基準となる全損失をいう。",
+      "vi": "Chú thích. Mức tiêu thụ năng lượng chuẩn ở đây là tổng tổn hao dùng làm mốc đánh giá."
+    },
+    {
+      "jp": "(a) 更新後の変圧器の負荷損（定格電流通電時）W_cn2は。",
+      "vi": "(a) Tìm tổn hao đồng định mức của máy mới."
+    },
+    {
+      "jp": "(b) 出力電圧が定格状態で300 kW、遅れ力率0.8の負荷のとき、更新後全損失W₂の更新前全損失W₁に対する比率は。",
+      "vi": "(b) Điện áp đầu ra của máy biến áp ở mức định mức, tải nối vào có công suất tác dụng 300 kW và hệ số công suất 0,8 trễ. Gọi W₁ là tổng tổn hao máy cũ và W₂ là tổng tổn hao máy mới ở điều kiện này. Tìm tỷ lệ W₂ so với W₁ theo phần trăm."
+    },
+    {
+      "jp": "解き方　(a)",
+      "vi": "Cách giải (a)",
+      "heading": true
+    },
+    {
+      "jp": "更新後の負荷率40%時の負荷損 W_C40 を求める。",
+      "vi": "Tính tổn hao có tải W_C40 của máy mới tại mức tải 40%.",
+      "equations": [
+        [
+          "140 = ",
+          {
+            "fraction": [
+              [
+                "1250"
+              ],
+              [
+                "150 + W_C40"
+              ]
+            ]
+          },
+          " × 100"
+        ]
+      ],
+      "equationsVi": [
+        [
+          "140 = ",
+          {
+            "fraction": [
+              [
+                "1250"
+              ],
+              [
+                "150 + W_C40"
+              ]
+            ]
+          },
+          " × 100"
+        ]
+      ]
+    },
+    {
+      "jp": "式を変形する。",
+      "vi": "Biến đổi công thức.",
+      "equations": [
+        [
+          "150 + W_C40 = ",
+          {
+            "fraction": [
+              [
+                "1250"
+              ],
+              [
+                "140"
+              ]
+            ]
+          },
+          " × 100"
+        ]
+      ],
+      "equationsVi": [
+        [
+          "150 + W_C40 = ",
+          {
+            "fraction": [
+              [
+                "1250"
+              ],
+              [
+                "140"
+              ]
+            ]
+          },
+          " × 100"
+        ]
+      ]
+    },
+    {
+      "jp": "40%負荷時の負荷損。",
+      "vi": "Tổn hao có tải ở mức tải 40%.",
+      "equations": [
+        [
+          "W_C40 = ",
+          {
+            "fraction": [
+              [
+                "1250"
+              ],
+              [
+                "140"
+              ]
+            ]
+          },
+          " × 100 − 150 ≒ 743 W"
+        ]
+      ],
+      "equationsVi": [
+        [
+          "W_C40 = ",
+          {
+            "fraction": [
+              [
+                "1250"
+              ],
+              [
+                "140"
+              ]
+            ]
+          },
+          " × 100 − 150 ≒ 743 W"
+        ]
+      ]
+    },
+    {
+      "jp": "負荷損は負荷率の2乗に比例する。",
+      "vi": "Tổn hao có tải tỷ lệ với bình phương tỷ lệ tải.",
+      "equations": [
+        [
+          "743 = 0.40² W_Cn2 → W_Cn2 = ",
+          {
+            "fraction": [
+              [
+                "743"
+              ],
+              [
+                "0.40²"
+              ]
+            ]
+          },
+          " ≒ 4640 W"
+        ]
+      ],
+      "equationsVi": [
+        [
+          "743 = 0.40² W_Cn2 → W_Cn2 = ",
+          {
+            "fraction": [
+              [
+                "743"
+              ],
+              [
+                "0.40²"
+              ]
+            ]
+          },
+          " ≒ 4640 W"
+        ]
+      ]
+    },
+    {
+      "jp": "(b) 全損失の比較",
+      "vi": "(b) So sánh tổng tổn hao",
+      "heading": true
+    },
+    {
+      "jp": "300 kW、遅れ力率0.8のときの負荷率。",
+      "vi": "Tỷ lệ tải ở 300 kW và hệ số công suất 0,8 trễ.",
+      "note": "Chia công suất tác dụng cho hệ số công suất để được kVA rồi so với 500 kVA định mức.",
+      "equations": [
+        [
+          "負荷率 = ",
+          {
+            "fraction": [
+              [
+                {
+                  "fraction": [
+                    [
+                      "300"
+                    ],
+                    [
+                      "0.8"
+                    ]
+                  ]
+                }
+              ],
+              [
+                "500"
+              ]
+            ]
+          },
+          " = 0.75"
+        ]
+      ],
+      "equationsVi": [
+        [
+          "Tỷ lệ tải = ",
+          {
+            "fraction": [
+              [
+                {
+                  "fraction": [
+                    [
+                      "300"
+                    ],
+                    [
+                      "0,8"
+                    ]
+                  ]
+                }
+              ],
+              [
+                "500"
+              ]
+            ]
+          },
+          " = 0,75"
+        ]
+      ]
+    },
+    {
+      "jp": "W₁＝500＋0.75²×6700＝4270 W。",
+      "vi": "Tổn hao máy cũ 500+0,75²×6700≈4270 W."
+    },
+    {
+      "jp": "W₂＝150＋0.75²×4640＝2760 W。",
+      "vi": "Tổn hao máy mới 150+0,75²×4640≈2760 W."
+    },
+    {
+      "jp": "W₂の W₁ に対する比率。",
+      "vi": "Tỷ lệ W₂ so với W₁.",
+      "equations": [
+        [
+          {
+            "fraction": [
+              [
+                "W₂"
+              ],
+              [
+                "W₁"
+              ]
+            ]
+          },
+          " = ",
+          {
+            "fraction": [
+              [
+                "2760"
+              ],
+              [
+                "4270"
+              ]
+            ]
+          },
+          " ≒ 0.65 → 65%"
+        ]
+      ],
+      "equationsVi": [
+        [
+          {
+            "fraction": [
+              [
+                "W₂"
+              ],
+              [
+                "W₁"
+              ]
+            ]
+          },
+          " = ",
+          {
+            "fraction": [
+              [
+                "2760"
+              ],
+              [
+                "4270"
+              ]
+            ]
+          },
+          " ≒ 0.65 → 65%"
+        ]
+      ]
+    },
+    {
+      "jp": "※トップランナー制度とは、最も省エネ性能の高い製品を基準として機器の省エネ化を推進する制度です。また基準値をクリアした変圧器を「トップランナー制度に適合した変圧器」といいます。",
+      "vi": "Chú thích. Chương trình Top Runner lấy sản phẩm có hiệu quả tiết kiệm năng lượng cao nhất làm chuẩn nhằm thúc đẩy thiết bị tiết kiệm năng lượng. Máy biến áp đáp ứng giá trị chuẩn được gọi là máy biến áp phù hợp chương trình Top Runner."
+    },
+    {
+      "jp": "解答　(a) **W_Cn2＝4640 W**　(b) **65%**",
+      "vi": "Đáp án (a) **W_Cn2 = 4.640 W** (b) **65%**"
+    }
+  ],
+  "508": [
+    {
+      "jp": "3-6 調整池式水力発電所の運用　といえば　余剰分の利用",
+      "vi": "3-6 Vận hành thủy điện có hồ điều tiết: tận dụng lượng nước thừa vào giờ thấp tải.",
+      "heading": true
+    },
+    {
+      "jp": "調整池式水力発電所の仕組み",
+      "vi": "Nguyên lý của nhà máy thủy điện dùng hồ điều tiết.",
+      "heading": true
+    },
+    {
+      "jp": "**調整池式水力発電所**は、流量調整ができる**調整池**を持ち、軽負荷時に河川流量の**余剰分**を貯水し、重負荷時に放出して発電の調整を行います。",
+      "vi": "**Nhà máy thủy điện có hồ điều tiết** sử dụng **hồ điều tiết** để điều chỉnh lưu lượng. Khi tải nhẹ, hồ tích **lượng nước dư** của sông. Khi tải cao, hồ xả phần nước đó để điều chỉnh phát điện."
+    },
+    {
+      "diagram": "lawReservoirFlow508"
+    },
+    {
+      "jp": "河川流量をQ₀ [m³/s]、オフピーク負荷時（軽負荷時）の使用水量をQ₁ [m³/s]、ピーク負荷時の使用水量をQ₂ [m³/s]とします。",
+      "vi": "Gọi Q₀ là lưu lượng sông; Q₁ nước dùng giờ thấp điểm; Q₂ nước dùng giờ cao điểm."
+    },
+    {
+      "jp": "POINT　調整池容量",
+      "vi": "Ghi nhớ · Dung tích hồ điều tiết",
+      "heading": true
+    },
+    {
+      "jp": "調整池容量といえば軽負荷時の余剰分。",
+      "vi": "Dung tích hồ điều tiết bằng thể tích nước dư trong thời gian tải nhẹ."
+    },
+    {
+      "jp": "V＝**(Q₀−Q₁)(24−T)×3600**＝**(Q₂−Q₀)T×3600**［m³］。",
+      "vi": "V = **(Q₀ − Q₁)(24 − T) × 3600** = **(Q₂ − Q₀)T × 3600** [m³].",
+      "note": "T là số giờ cao điểm. Dùng khi lưu lượng mỗi giai đoạn không đổi và lượng nước tích bằng lượng xả thêm trong một chu kỳ ngày. Nhân 3600 để đổi giờ sang giây."
+    }
+  ],
+  "509": [
+    {
+      "jp": "練習問題01　調整池式水力発電所",
+      "vi": "Bài luyện 01 · Thủy điện hồ điều tiết.",
+      "heading": true
+    },
+    {
+      "jp": "有効落差 H＝80 m の調整池式水力発電所がある。調整池に取水する自然流量は10 m³/s 一定とし、図のように1日のうち12時間は発電せずに自然流量の全量を貯水する。残り12時間のうち2時間は自然流量と同じ10 m³/sの使用水量で発電を行い、他の10時間は自然流量より多い Qₚ［m³/s］の使用水量で発電して貯水分全量を使い切るものとする。このとき、次の(a)及び(b)の問に答えよ。",
+      "vi": "Một nhà máy thủy điện có hồ điều tiết với cột nước hữu ích H = 80 m. Lưu lượng tự nhiên chảy vào hồ không đổi ở 10 m³/s. Theo biểu đồ, trong 12 giờ của một ngày nhà máy dừng phát và tích toàn bộ nước tự nhiên. Trong 12 giờ còn lại, có 2 giờ phát với lưu lượng bằng lưu lượng tự nhiên 10 m³/s, và 10 giờ phát với lưu lượng Qₚ [m³/s] lớn hơn lưu lượng tự nhiên, dùng hết nước đã tích. Trả lời (a) và (b)."
+    },
+    {
+      "diagram": "lawReservoirExercise509"
+    },
+    {
+      "jp": "(a) 運用に最低限必要な有効貯水量V[m³]は。",
+      "vi": "(a) Tính dung tích hữu ích tối thiểu cần có."
+    },
+    {
+      "jp": "(b) 使用水量Qₚ[m³/s]で運転しているときの発電機出力P_g[kW]は。ただし水車効率ηₜ＝90%、発電機効率η_g＝95%。",
+      "vi": "(b) Tính công suất phát ở Qₚ, với hiệu suất tua-bin 90%, máy phát 95%."
+    },
+    {
+      "jp": "解き方",
+      "vi": "Cách giải",
+      "heading": true
+    },
+    {
+      "jp": "(a) 有効貯水量 V［m³］は、図の①、②の面積に当たります。",
+      "vi": "(a) Dung tích hữu ích V [m³] bằng tổng diện tích hai vùng ① và ② trong hình."
+    },
+    {
+      "jp": "貯水量V＝10×(8＋4)×3600＝432 000 m³。",
+      "vi": "Nước trữ trong 8 giờ đầu +4 giờ cuối: V=10×12×3600=432.000 m³."
+    },
+    {
+      "diagram": "lawReservoirBalance509"
+    },
+    {
+      "jp": "(b) 発電機出力",
+      "vi": "(b) Công suất máy phát",
+      "heading": true
+    },
+    {
+      "jp": "432 000＝(Qₚ−10)×5×3600×2＝(Qₚ−10)×36 000。",
+      "vi": "Phần phát tăng trong 2 khối 5 giờ: 432.000=(Qₚ−10)×36.000."
+    },
+    {
+      "jp": "Qₚ−10＝12よりQₚ＝22 m³/s。",
+      "vi": "Qₚ−10=12 nên Qₚ=22 m³/s."
+    },
+    {
+      "jp": "P_g＝9.8QₚHηₜη_g＝9.8×22×80×0.9×0.95≒14 700 kW。",
+      "vi": "Công suất P=9,8×22×80×0,9×0,95≈14.700 kW."
+    },
+    {
+      "jp": "解答　(a) **V＝432 × 10³ m³**　(b) **P_g＝14700 kW**",
+      "vi": "Đáp án (a) **V = 432.000 m³** (b) **P_g = 14.700 kW**"
+    },
+    {
+      "jp": "参考　図の①、②で貯水した水は、水量 Qₚ で発電するときに使用するので、図の①＋②＝③＋④が成り立ちます。",
+      "vi": "Tham khảo. Nước tích ở vùng ① và ② được dùng khi phát điện với lưu lượng Qₚ, nên ① + ② = ③ + ④."
+    }
   ]
 };
