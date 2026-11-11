@@ -35,6 +35,34 @@ function Diagram({ file, width, height, title, labels }: {
 }
 
 export const diagrams = {
+  lawThevenin498: (
+    <Diagram file="lawThevenin498" width={759} height={338} title="テブナンの等価回路" labels={[
+      ["3線は短絡し1導体と考える", "Nối tắt ba dây và coi là một dây dẫn"],
+      ["回路から外す", "Tháo R_B khỏi mạch"],
+      ["テブナンの等価回路", "Mạch tương đương Thévenin"],
+      ["接続点", "Điểm đấu nối"],
+    ]} />
+  ),
+  lawGroundLeakage498: (
+    <Diagram file="lawGroundLeakage498" width={442} height={331} title="B種接地抵抗・漏えい電流の回路" labels={[
+      ["線間電圧 200 V", "Điện áp dây 200 V"],
+      ["対地静電容量 C", "Điện dung đối đất C"],
+      ["接地抵抗 R_B", "Điện trở nối đất R_B"],
+    ]} />
+  ),
+  lawZeroSequence497: (
+    <Diagram file="lawZeroSequence497" width={1103} height={360} title="地絡電流" labels={[
+      ["零相電流", "Dòng thứ tự không"],
+      ["零相電圧", "Điện áp thứ tự không"],
+      ["地絡電流", "Dòng chạm đất"],
+    ]} />
+  ),
+  lawDiversity494: (
+    <Diagram file="lawDiversity494" width={395} height={243} title="図3-1-1 不等率" labels={[
+      ["需要家", "Hộ sử dụng điện"],
+      ["需要家間で最大電力の時刻が異なる", "Các hộ đạt công suất cực đại vào những thời điểm khác nhau"],
+    ]} />
+  ),
   lawOutageExercise493: (
     <Diagram file="lawOutageExercise493" width={429} height={754} title="Sơ đồ nhận điện của bài tập thao tác khi mất điện toàn bộ" labels={[
       ["3φ3W 6.6 kV", "Nguồn ba pha ba dây 6,6 kV"],

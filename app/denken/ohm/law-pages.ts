@@ -7796,5 +7796,1416 @@ export const lawPages: Record<number, LessonRow[]> = {
       "jp": "解答　（ア）**配線用遮断器**（MCCB）　（イ）**真空遮断器**（VCB）　（ウ）**断路器**（DS）　（エ）**電源側**",
       "vi": "Đáp án. (ア) **Áp-tô-mát bảo vệ dây** (MCCB) · (イ) **Máy cắt chân không** (VCB) · (ウ) **Dao cách ly** (DS) · (エ) **Phía nguồn**."
     }
+  ],
+  "494": [
+    {
+      "jp": "3-1 需要率、負荷率、不等率　といえば　最大負荷を算定する係数",
+      "vi": "3-1 Hệ số nhu cầu, phụ tải và không đồng thời: các hệ số xác định tải cực đại.",
+      "heading": true
+    },
+    {
+      "jp": "負荷の特性を示す係数",
+      "vi": "Các hệ số thể hiện đặc tính phụ tải.",
+      "heading": true
+    },
+    {
+      "jp": "電気の需要設備は、住宅、工場、商店など需要家の種類や業種、規模などによって負荷の使われ方が異なります。このような負荷の最大需要電力を算定する係数として、需要率、負荷率、不等率が用いられます。",
+      "vi": "Cách sử dụng phụ tải của các thiết bị tiêu thụ điện khác nhau tùy loại hộ sử dụng như nhà ở, nhà máy, cửa hàng, cũng như ngành nghề và quy mô. Để tính công suất nhu cầu cực đại của những phụ tải này, dùng hệ số nhu cầu, hệ số phụ tải và hệ số không đồng thời."
+    },
+    {
+      "jp": "需要率",
+      "vi": "Hệ số nhu cầu",
+      "heading": true
+    },
+    {
+      "jp": "需要家の最大需要電力と負荷設備電力の合計との比をパーセントで表し、これを**需要率**といいます。",
+      "vi": "Tỷ số giữa công suất nhu cầu cực đại của hộ sử dụng và tổng công suất thiết bị phụ tải, biểu thị theo phần trăm, được gọi là **hệ số nhu cầu**."
+    },
+    {
+      "jp": "需要率",
+      "vi": "Hệ số nhu cầu",
+      "equations": [
+        [
+          "需要率＝",
+          {
+            "fraction": [
+              [
+                "最大需要電力［kW］"
+              ],
+              [
+                "負荷設備電力の合計［kW］"
+              ]
+            ],
+            "red": true
+          },
+          " × 100［%］"
+        ]
+      ],
+      "equationsVi": [
+        [
+          "Hệ số nhu cầu = ",
+          {
+            "fraction": [
+              [
+                "Công suất nhu cầu cực đại [kW]"
+              ],
+              [
+                "Tổng công suất thiết bị phụ tải [kW]"
+              ]
+            ],
+            "red": true
+          },
+          " × 100［%］"
+        ]
+      ]
+    },
+    {
+      "jp": "負荷設備のすべてが同時に使用されることはないので、最大需要電力は、負荷設備電力の合計よりも小さくなります。",
+      "vi": "Do thiết bị không vận hành đồng thời toàn bộ, công suất nhu cầu cực đại thường thấp hơn tổng công suất lắp đặt."
+    },
+    {
+      "jp": "負荷率",
+      "vi": "Hệ số phụ tải",
+      "heading": true
+    },
+    {
+      "jp": "電力の消費は、時間や季節により変化します。ある期間中の平均需要電力と最大需要電力の比をパーセントで表し、これを**負荷率**といいます。",
+      "vi": "Mức tiêu thụ điện thay đổi theo giờ và mùa. Tỷ số giữa công suất nhu cầu trung bình và công suất nhu cầu cực đại trong cùng kỳ, biểu thị theo phần trăm, được gọi là **hệ số phụ tải**."
+    },
+    {
+      "jp": "負荷率",
+      "vi": "Hệ số phụ tải",
+      "equations": [
+        [
+          "負荷率＝",
+          {
+            "fraction": [
+              [
+                "ある期間中の平均需要電力［kW］"
+              ],
+              [
+                "ある期間中の最大需要電力［kW］"
+              ]
+            ],
+            "red": true
+          },
+          " × 100［%］"
+        ]
+      ],
+      "equationsVi": [
+        [
+          "Hệ số phụ tải = ",
+          {
+            "fraction": [
+              [
+                "Công suất nhu cầu trung bình trong kỳ [kW]"
+              ],
+              [
+                "Công suất nhu cầu cực đại trong kỳ [kW]"
+              ]
+            ],
+            "red": true
+          },
+          " × 100［%］"
+        ]
+      ]
+    },
+    {
+      "jp": "これは、電力設備のある期間中の使用状況を表すもので、期間の取り方により、日負荷率、月負荷率、年負荷率があります。",
+      "vi": "Hệ số này cho biết tình trạng sử dụng thiết bị điện trong một kỳ. Tùy kỳ xét có hệ số phụ tải ngày, tháng hoặc năm."
+    },
+    {
+      "jp": "不等率",
+      "vi": "Hệ số không đồng thời",
+      "heading": true
+    },
+    {
+      "jp": "いくつかある需要家の個々の負荷の最大需要電力の和と合成最大需要電力の比を、**不等率**といいます。",
+      "vi": "Tỷ số giữa tổng các công suất nhu cầu cực đại riêng lẻ của nhiều hộ sử dụng và công suất nhu cầu cực đại tổng hợp được gọi là **hệ số không đồng thời**."
+    },
+    {
+      "jp": "不等率",
+      "vi": "Hệ số không đồng thời",
+      "equations": [
+        [
+          "不等率＝",
+          {
+            "fraction": [
+              [
+                "個々の負荷の最大需要電力の和［kW］"
+              ],
+              [
+                "合成最大需要電力［kW］"
+              ]
+            ],
+            "red": true
+          },
+          ""
+        ]
+      ],
+      "equationsVi": [
+        [
+          "Hệ số không đồng thời = ",
+          {
+            "fraction": [
+              [
+                "Tổng công suất nhu cầu cực đại riêng lẻ [kW]"
+              ],
+              [
+                "Công suất nhu cầu cực đại tổng hợp [kW]"
+              ]
+            ],
+            "red": true
+          },
+          ""
+        ]
+      ]
+    },
+    {
+      "jp": "図3-1-1の例では、A、B、C各需要家において、最大需要電力が同時に発生することはなく、最大電力の発生する時刻に差があるので、A、B、C全体の合成最大需要電力は、個々の負荷の最大需要電力の和よりも小さくなります。不等率は1.1～1.6程度",
+      "vi": "Trong ví dụ ở hình 3-1-1, các hộ A, B, C đạt công suất cực đại vào những thời điểm khác nhau. Vì vậy, công suất nhu cầu cực đại tổng hợp của A, B, C thấp hơn tổng các công suất nhu cầu cực đại riêng lẻ. Hệ số không đồng thời vào khoảng 1,1–1,6."
+    },
+    {
+      "diagram": "lawDiversity494"
+    }
+  ],
+  "495": [
+    {
+      "jp": "です。最大需要電力の発生時刻が分散していると、不等率が大きくなります。なお、以下では「最大需要電力」「平均需要電力」の「需要」を省略して表記しています。",
+      "vi": "Khi thời điểm xuất hiện công suất nhu cầu cực đại phân tán, hệ số không đồng thời tăng. Từ đây, sách lược chữ “nhu cầu” trong “công suất nhu cầu cực đại” và “công suất nhu cầu trung bình”."
+    },
+    {
+      "jp": "POINT",
+      "vi": "Ghi nhớ",
+      "heading": true
+    },
+    {
+      "jp": "需要率",
+      "vi": "Hệ số nhu cầu",
+      "equations": [
+        [
+          "需要率＝",
+          {
+            "fraction": [
+              [
+                "最大電力"
+              ],
+              [
+                "設備電力の合計"
+              ]
+            ],
+            "red": true
+          },
+          " × 100［%］"
+        ]
+      ],
+      "equationsVi": [
+        [
+          "Hệ số nhu cầu = ",
+          {
+            "fraction": [
+              [
+                "Công suất cực đại"
+              ],
+              [
+                "Tổng công suất thiết bị"
+              ]
+            ],
+            "red": true
+          },
+          " × 100［%］"
+        ]
+      ]
+    },
+    {
+      "jp": "負荷率",
+      "vi": "Hệ số phụ tải",
+      "equations": [
+        [
+          "負荷率＝",
+          {
+            "fraction": [
+              [
+                "平均電力"
+              ],
+              [
+                "最大電力"
+              ]
+            ],
+            "red": true
+          },
+          " × 100［%］"
+        ]
+      ],
+      "equationsVi": [
+        [
+          "Hệ số phụ tải = ",
+          {
+            "fraction": [
+              [
+                "Công suất trung bình"
+              ],
+              [
+                "Công suất cực đại"
+              ]
+            ],
+            "red": true
+          },
+          " × 100［%］"
+        ]
+      ]
+    },
+    {
+      "jp": "不等率",
+      "vi": "Hệ số không đồng thời",
+      "equations": [
+        [
+          "不等率＝",
+          {
+            "fraction": [
+              [
+                "個々の最大電力の和"
+              ],
+              [
+                "最大電力"
+              ]
+            ],
+            "red": true
+          },
+          ""
+        ]
+      ],
+      "equationsVi": [
+        [
+          "Hệ số không đồng thời = ",
+          {
+            "fraction": [
+              [
+                "Tổng công suất cực đại riêng lẻ"
+              ],
+              [
+                "Công suất cực đại tổng hợp"
+              ]
+            ],
+            "red": true
+          },
+          ""
+        ]
+      ]
+    },
+    {
+      "jp": "練習問題01　需要率、負荷率、不等率",
+      "vi": "Bài luyện 01 · Hệ số nhu cầu, phụ tải, không đồng thời.",
+      "heading": true
+    },
+    {
+      "jp": "ある変電所から需要家A～Cに電力を供給している。表は、ある1日（0～24時）の需要率、負荷率及び需要家A～Cの不等率を示している。次の(a)、(b)の問に答えよ。",
+      "vi": "Một trạm biến áp cấp điện cho các hộ A–C. Bảng cho biết hệ số nhu cầu, hệ số phụ tải trong một ngày (0–24 giờ) và hệ số không đồng thời của A–C. Trả lời các câu (a) và (b)."
+    },
+    {
+      "jp": "表　需要家A～C",
+      "vi": "Bảng số liệu của các hộ A–C",
+      "table": {
+        "jp": [
+          "需要家",
+          "設備容量［kW］",
+          "需要率［%］",
+          "負荷率［%］"
+        ],
+        "vi": [
+          "Hộ",
+          "Công suất lắp đặt [kW]",
+          "Hệ số nhu cầu [%]",
+          "Hệ số phụ tải [%]"
+        ],
+        "rows": [
+          [
+            "A",
+            "A",
+            "800",
+            "55",
+            "50"
+          ],
+          [
+            "B",
+            "B",
+            "500",
+            "60",
+            "70"
+          ],
+          [
+            "C",
+            "C",
+            "600",
+            "70",
+            "60"
+          ]
+        ],
+        "rowsVi": [
+          [
+            "A",
+            "A",
+            "800",
+            "55",
+            "50"
+          ],
+          [
+            "B",
+            "B",
+            "500",
+            "60",
+            "70"
+          ],
+          [
+            "C",
+            "C",
+            "600",
+            "70",
+            "60"
+          ]
+        ]
+      }
+    },
+    {
+      "jp": "不等率＝1.25。",
+      "vi": "Hệ số không đồng thời 1,25."
+    },
+    {
+      "jp": "(a) 3需要家A～Cの1日の需要電力量を合計した総需要電力量は。",
+      "vi": "(a) Tính tổng điện năng tiêu thụ một ngày của A–C."
+    },
+    {
+      "jp": "(b) 変電所から見た総合負荷率は。",
+      "vi": "(b) Hệ số phụ tải tổng nhìn từ trạm là bao nhiêu?"
+    },
+    {
+      "jp": "解き方　(a)",
+      "vi": "Cách giải (a)",
+      "heading": true
+    },
+    {
+      "jp": "需要率から最大需要電力を求める。",
+      "vi": "Tính công suất nhu cầu cực đại từ hệ số nhu cầu.",
+      "note": "Đổi hệ số phần trăm thành số thập phân trước khi nhân.",
+      "equations": [
+        [
+          "需要率＝",
+          {
+            "fraction": [
+              [
+                "最大需要電力"
+              ],
+              [
+                "設備電力"
+              ]
+            ]
+          },
+          " → 最大需要電力＝設備電力 × 需要率"
+        ]
+      ],
+      "equationsVi": [
+        [
+          "Hệ số nhu cầu = ",
+          {
+            "fraction": [
+              [
+                "Công suất nhu cầu cực đại"
+              ],
+              [
+                "Công suất thiết bị"
+              ]
+            ]
+          },
+          " → Công suất nhu cầu cực đại = công suất thiết bị × hệ số nhu cầu"
+        ]
+      ]
+    },
+    {
+      "jp": "Aの最大需要電力＝800×0.55＝440 kW、B＝500×0.60＝300 kW、C＝600×0.70＝420 kW。",
+      "vi": "Đỉnh riêng: A 440 kW, B 300 kW, C 420 kW."
+    },
+    {
+      "jp": "※問いの設備容量は、単位がkWなので設備電力とした。",
+      "vi": "Chú thích. Vì công suất lắp đặt trong đề có đơn vị kW nên dùng làm công suất thiết bị."
+    }
+  ],
+  "496": [
+    {
+      "jp": "負荷率から平均需要電力を求める。",
+      "vi": "Tính công suất nhu cầu trung bình từ hệ số phụ tải.",
+      "equations": [
+        [
+          "負荷率＝",
+          {
+            "fraction": [
+              [
+                "平均需要電力"
+              ],
+              [
+                "最大需要電力"
+              ]
+            ]
+          },
+          " → 平均需要電力＝最大需要電力 × 負荷率"
+        ]
+      ],
+      "equationsVi": [
+        [
+          "Hệ số phụ tải = ",
+          {
+            "fraction": [
+              [
+                "Công suất nhu cầu trung bình"
+              ],
+              [
+                "Công suất nhu cầu cực đại"
+              ]
+            ]
+          },
+          " → Công suất nhu cầu trung bình = công suất nhu cầu cực đại × hệ số phụ tải"
+        ]
+      ]
+    },
+    {
+      "jp": "A～Cの平均需要電力は、A：440×0.50＝220 kW、B：300×0.70＝210 kW、C：420×0.60＝252 kW。",
+      "vi": "Trung bình: A 220 kW; B 210 kW; C 252 kW."
+    },
+    {
+      "jp": "平均需要電力の合計は220＋210＋252＝682 kW。",
+      "vi": "Tổng công suất trung bình = 682 kW."
+    },
+    {
+      "jp": "1日の総需要電力量＝682×24＝16 368 kW・h≒16 370 kW・h。",
+      "vi": "Điện năng cả ngày = 682×24 = 16.368 kWh ≈ 16.370 kWh."
+    },
+    {
+      "jp": "(b) 総合負荷率",
+      "vi": "(b) Hệ số phụ tải tổng hợp",
+      "heading": true
+    },
+    {
+      "jp": "不等率",
+      "vi": "Hệ số không đồng thời",
+      "equations": [
+        [
+          "不等率＝",
+          {
+            "fraction": [
+              [
+                "個々の最大需要電力の和"
+              ],
+              [
+                "合成最大需要電力"
+              ]
+            ]
+          },
+          ""
+        ]
+      ],
+      "equationsVi": [
+        [
+          "Hệ số không đồng thời = ",
+          {
+            "fraction": [
+              [
+                "Tổng các công suất nhu cầu cực đại riêng"
+              ],
+              [
+                "Công suất nhu cầu cực đại tổng hợp"
+              ]
+            ]
+          },
+          ""
+        ]
+      ]
+    },
+    {
+      "jp": "合成最大需要電力",
+      "vi": "Công suất nhu cầu cực đại tổng hợp",
+      "equations": [
+        [
+          "合成最大需要電力＝",
+          {
+            "fraction": [
+              [
+                "個々の最大需要電力の和"
+              ],
+              [
+                "不等率"
+              ]
+            ]
+          },
+          ""
+        ]
+      ],
+      "equationsVi": [
+        [
+          "Công suất nhu cầu cực đại tổng hợp = ",
+          {
+            "fraction": [
+              [
+                "Tổng các công suất nhu cầu cực đại riêng"
+              ],
+              [
+                "Hệ số không đồng thời"
+              ]
+            ]
+          },
+          ""
+        ]
+      ]
+    },
+    {
+      "jp": "合成最大需要電力は次のとおり。",
+      "vi": "Công suất nhu cầu cực đại tổng hợp được tính như sau.",
+      "equations": [
+        [
+          {
+            "fraction": [
+              [
+                "440 + 300 + 420"
+              ],
+              [
+                "1.25"
+              ]
+            ]
+          },
+          " = 928 kW"
+        ]
+      ],
+      "equationsVi": [
+        [
+          {
+            "fraction": [
+              [
+                "440 + 300 + 420"
+              ],
+              [
+                "1,25"
+              ]
+            ]
+          },
+          " = 928 kW"
+        ]
+      ]
+    },
+    {
+      "jp": "総合負荷率",
+      "vi": "Hệ số phụ tải tổng hợp",
+      "equations": [
+        [
+          "総合負荷率＝",
+          {
+            "fraction": [
+              [
+                "平均需要電力の合計"
+              ],
+              [
+                "合成最大需要電力"
+              ]
+            ]
+          },
+          ""
+        ]
+      ],
+      "equationsVi": [
+        [
+          "Hệ số phụ tải tổng hợp = ",
+          {
+            "fraction": [
+              [
+                "Tổng công suất nhu cầu trung bình"
+              ],
+              [
+                "Công suất nhu cầu cực đại tổng hợp"
+              ]
+            ]
+          },
+          ""
+        ]
+      ]
+    },
+    {
+      "jp": "総合負荷率",
+      "vi": "Hệ số phụ tải tổng hợp",
+      "equations": [
+        [
+          "総合負荷率＝",
+          {
+            "fraction": [
+              [
+                "682"
+              ],
+              [
+                "928"
+              ]
+            ]
+          },
+          " × 100 ≒ 73%"
+        ]
+      ],
+      "equationsVi": [
+        [
+          "Hệ số phụ tải tổng hợp = ",
+          {
+            "fraction": [
+              [
+                "682"
+              ],
+              [
+                "928"
+              ]
+            ]
+          },
+          " × 100 ≒ 73%"
+        ]
+      ]
+    },
+    {
+      "jp": "解説",
+      "vi": "Giải thích",
+      "heading": true
+    },
+    {
+      "jp": "設備容量（設備電力kW）に需要率を掛けると、最大需要電力が求められます。また、最大需要電力に負荷率を掛けると、平均需要電力が求められます。なお、1日の電力量は、平均需要電力の24倍です。設備に需要率を掛けて最大電力、最大に負荷率を掛けて平均電力、1日の電力量は平均の24倍のように短い文章にすると覚えやすくなります。",
+      "vi": "Nhân công suất lắp đặt (công suất thiết bị tính bằng kW) với hệ số nhu cầu để tính công suất nhu cầu cực đại. Nhân công suất cực đại với hệ số phụ tải để tính công suất nhu cầu trung bình. Điện năng trong một ngày bằng công suất trung bình nhân 24 giờ. Cách nhớ ngắn gọn: thiết bị nhân hệ số nhu cầu ra cực đại, cực đại nhân hệ số phụ tải ra trung bình, trung bình nhân 24 giờ ra điện năng một ngày."
+    },
+    {
+      "jp": "解答　(a) **16370 kW・h**　(b) **73 %**",
+      "vi": "Đáp án (a) **16.370 kWh** (b) **73%**"
+    }
+  ],
+  "497": [
+    {
+      "jp": "3-2 地絡電流　といえば　単相交流回路の電流となる",
+      "vi": "3-2 Dòng chạm đất: trở thành dòng trong mạch một pha tương đương.",
+      "heading": true
+    },
+    {
+      "diagram": "lawZeroSequence497"
+    },
+    {
+      "jp": "地絡電流、B種接地工事の抵抗値",
+      "vi": "Dòng chạm đất và điện trở nối đất loại B.",
+      "heading": true
+    },
+    {
+      "jp": "地絡電流は零相電流ともいい、各相とも同一の大きさ、同一の位相で、単相交流電流の成分です。",
+      "vi": "Dòng chạm đất còn gọi dòng thứ tự không; ba thành phần cùng pha và cùng biên độ, tạo thành mạch tương đương một pha.",
+      "note": "Trong phân tích thành phần đối xứng, mỗi pha có cùng thành phần I₀. Dòng đi về qua đất trong sơ đồ là tổng ba thành phần, 3I₀."
+    },
+    {
+      "jp": "零相電圧は、地絡したときに生じる単相交流電圧の成分です。",
+      "vi": "Điện áp thứ tự không là thành phần điện áp một pha khi xảy ra chạm đất."
+    },
+    {
+      "jp": "B種接地工事の接地抵抗値 R_B は、1線地絡電流を I_g とすると、次のように決められています。",
+      "vi": "Gọi I_g là dòng chạm đất một pha. Giới hạn điện trở nối đất loại B R_B được tính như sau.",
+      "equations": [
+        [
+          "R_B = ",
+          {
+            "fraction": [
+              [
+                "150"
+              ],
+              [
+                "I_g"
+              ]
+            ],
+            "red": true
+          },
+          "［Ω］以下"
+        ]
+      ],
+      "equationsVi": [
+        [
+          "R_B ≤ ",
+          {
+            "fraction": [
+              [
+                "150"
+              ],
+              [
+                "I_g"
+              ]
+            ],
+            "red": true
+          },
+          " [Ω]"
+        ]
+      ]
+    },
+    {
+      "jp": "高低圧が混触の場合で1秒を超え2秒以内に高圧電路を自動遮断のとき。",
+      "vi": "Khi chạm lẫn cao–hạ áp và mạch cao áp tự động cắt sau hơn 1 giây đến tối đa 2 giây.",
+      "equations": [
+        [
+          "R_B = ",
+          {
+            "fraction": [
+              [
+                "300"
+              ],
+              [
+                "I_g"
+              ]
+            ],
+            "red": true
+          },
+          "［Ω］以下"
+        ]
+      ],
+      "equationsVi": [
+        [
+          "R_B ≤ ",
+          {
+            "fraction": [
+              [
+                "300"
+              ],
+              [
+                "I_g"
+              ]
+            ],
+            "red": true
+          },
+          " [Ω]"
+        ]
+      ]
+    },
+    {
+      "jp": "高低圧が混触の場合で1秒以内に高圧電路を自動遮断のとき。",
+      "vi": "Khi chạm lẫn cao–hạ áp và mạch cao áp tự động cắt trong tối đa 1 giây.",
+      "equations": [
+        [
+          "R_B = ",
+          {
+            "fraction": [
+              [
+                "600"
+              ],
+              [
+                "I_g"
+              ]
+            ],
+            "red": true
+          },
+          "［Ω］以下"
+        ]
+      ],
+      "equationsVi": [
+        [
+          "R_B ≤ ",
+          {
+            "fraction": [
+              [
+                "600"
+              ],
+              [
+                "I_g"
+              ]
+            ],
+            "red": true
+          },
+          " [Ω]"
+        ]
+      ]
+    },
+    {
+      "jp": "これは、高圧電路と低圧側との混触により、低圧電路の電圧が**150 V**以上に上昇しないように決められています。また、自動遮断装置を設けたときは、2秒以内で**300 V**、1秒以内で**600 V**に緩和されています。",
+      "vi": "Giới hạn này nhằm tránh để điện áp mạch hạ áp tăng lên tới **150 V** hoặc cao hơn khi chạm lẫn cao–hạ áp. Khi có thiết bị tự động cắt, mức được nới lên **300 V** nếu cắt trong 2 giây và **600 V** nếu cắt trong 1 giây."
+    },
+    {
+      "jp": "POINT",
+      "vi": "Ghi nhớ",
+      "heading": true
+    },
+    {
+      "jp": "地絡電流といえば**零相電流**のことで単相交流電流の成分。",
+      "vi": "Khi xét dòng chạm đất, **dòng thứ tự không** là thành phần dòng xoay chiều một pha."
+    },
+    {
+      "jp": "B種接地の抵抗値は2秒遮断で**300**、1秒遮断で**600**に緩和。",
+      "vi": "Giới hạn điện trở nối đất loại B dùng tử số **300** khi cắt trong 2 giây, **600** khi cắt trong 1 giây.",
+      "equations": [
+        [
+          "R_B ≤ ",
+          {
+            "fraction": [
+              [
+                "150"
+              ],
+              [
+                "1線地絡電流"
+              ]
+            ],
+            "red": true
+          }
+        ]
+      ],
+      "equationsVi": [
+        [
+          "R_B ≤ ",
+          {
+            "fraction": [
+              [
+                "150"
+              ],
+              [
+                "Dòng chạm đất một pha"
+              ]
+            ],
+            "red": true
+          }
+        ]
+      ]
+    }
+  ],
+  "498": [
+    {
+      "jp": "練習問題01　B種接地抵抗、漏えい電流",
+      "vi": "Bài luyện 01 · Điện trở nối đất B và dòng rò.",
+      "heading": true
+    },
+    {
+      "jp": "図は三相3線式高圧電路に変圧器で結合された変圧器低圧側電路を示したものである。",
+      "vi": "Sơ đồ mạch thứ cấp của máy biến áp nối lưới cao áp ba pha ba dây."
+    },
+    {
+      "jp": "B種接地工事の接地抵抗を R_B、対地静電容量 C＝0.1 μF、線間電圧 V＝200 V、周波数 f＝50 Hz として、次の(a)、(b)に答えよ。",
+      "vi": "Cho điện trở nối đất B là R_B, điện dung tới đất mỗi pha C=0,1 μF, điện áp dây 200 V, f=50 Hz."
+    },
+    {
+      "jp": "ただし、変圧器の高圧電路の1線地絡電流 I_g＝5 A、高低圧混触時に低圧電路の対地電圧が150 Vを超えた場合は1.3秒で自動的に高圧電路を遮断する装置が設けられている。",
+      "vi": "Dòng chạm đất một pha phía cao áp I_g=5 A; nếu chạm lẫn cao–hạ áp gây điện áp tới đất phía hạ vượt 150 V, thiết bị sẽ cắt cao áp trong 1,3 giây."
+    },
+    {
+      "jp": "(a) R_B の抵抗値について『電気設備技術基準の解釈』で許容される上限の値 R_Bmax は。",
+      "vi": "(a) Tìm giới hạn trên R_Bmax của điện trở R_B được phép theo «Giải thích Tiêu chuẩn kỹ thuật thiết bị điện»."
+    },
+    {
+      "jp": "(b) R_B＝10 Ω としたとき、R_B に流れる電流 I_B は。",
+      "vi": "(b) Nếu R_B=10 Ω, tìm dòng I_B qua điện trở nối đất."
+    },
+    {
+      "diagram": "lawGroundLeakage498"
+    },
+    {
+      "jp": "解き方",
+      "vi": "Cách giải",
+      "heading": true
+    },
+    {
+      "jp": "(a) 混触時に2秒以内で高圧電路を遮断する装置がある場合、1線地絡電流 I_g＝5 A により R_Bmax を求める。",
+      "vi": "(a) Có thiết bị cắt mạch cao áp trong vòng 2 giây khi chạm lẫn. Dùng dòng chạm đất một pha I_g = 5 A để tính R_Bmax.",
+      "equations": [
+        [
+          "R_Bmax = ",
+          {
+            "fraction": [
+              [
+                "300"
+              ],
+              [
+                "I_g"
+              ]
+            ]
+          },
+          " = ",
+          {
+            "fraction": [
+              [
+                "300"
+              ],
+              [
+                "5"
+              ]
+            ]
+          },
+          " = 60 Ω"
+        ]
+      ],
+      "equationsVi": [
+        [
+          "R_Bmax = ",
+          {
+            "fraction": [
+              [
+                "300"
+              ],
+              [
+                "I_g"
+              ]
+            ]
+          },
+          " = ",
+          {
+            "fraction": [
+              [
+                "300"
+              ],
+              [
+                "5"
+              ]
+            ]
+          },
+          " = 60 Ω"
+        ]
+      ]
+    },
+    {
+      "jp": "(b) R_B を除き、テブナンの等価回路で考えます。",
+      "vi": "(b) Bỏ tải R_B và dùng tương đương Thévenin để tính dòng."
+    },
+    {
+      "diagram": "lawThevenin498"
+    },
+    {
+      "jp": "図aの地絡前のa-b間の電圧 E_ab（CはY結線）。",
+      "vi": "Điện áp E_ab giữa a–b trước khi chạm đất ở hình a (các tụ C đấu hình sao).",
+      "equations": [
+        [
+          "E_ab = ",
+          {
+            "fraction": [
+              [
+                "200"
+              ],
+              [
+                "√3"
+              ]
+            ]
+          },
+          " V"
+        ]
+      ],
+      "equationsVi": [
+        [
+          "E_ab = ",
+          {
+            "fraction": [
+              [
+                "200"
+              ],
+              [
+                "√3"
+              ]
+            ]
+          },
+          " V"
+        ]
+      ]
+    },
+    {
+      "jp": "a-b間のインピーダンス Z_ab。",
+      "vi": "Tổng trở giữa a–b.",
+      "equations": [
+        [
+          "Z_ab = ",
+          {
+            "fraction": [
+              [
+                "1"
+              ],
+              [
+                "3ωC"
+              ]
+            ]
+          },
+          "［Ω］"
+        ]
+      ],
+      "equationsVi": [
+        [
+          "Z_ab = ",
+          {
+            "fraction": [
+              [
+                "1"
+              ],
+              [
+                "3ωC"
+              ]
+            ]
+          },
+          " [Ω]"
+        ]
+      ]
+    },
+    {
+      "jp": "R_B を無視できる条件。",
+      "vi": "Điều kiện bỏ qua R_B.",
+      "note": "Ở đây, điện kháng xấp xỉ 10,6 kΩ, lớn hơn nhiều so với 10 Ω.",
+      "equations": [
+        [
+          {
+            "fraction": [
+              [
+                "1"
+              ],
+              [
+                "3ωC"
+              ]
+            ]
+          },
+          " ≫ R_B"
+        ]
+      ],
+      "equationsVi": [
+        [
+          {
+            "fraction": [
+              [
+                "1"
+              ],
+              [
+                "3ωC"
+              ]
+            ]
+          },
+          " ≫ R_B"
+        ]
+      ]
+    }
+  ],
+  "499": [
+    {
+      "jp": "I_B の計算。",
+      "vi": "Tính dòng I_B.",
+      "equations": [
+        [
+          "I_B = ",
+          {
+            "fraction": [
+              [
+                "E_ab"
+              ],
+              [
+                "Z_ab"
+              ]
+            ]
+          },
+          " = ",
+          {
+            "fraction": [
+              [
+                {
+                  "fraction": [
+                    [
+                      "200"
+                    ],
+                    [
+                      "√3"
+                    ]
+                  ]
+                }
+              ],
+              [
+                {
+                  "fraction": [
+                    [
+                      "1"
+                    ],
+                    [
+                      "3ωC"
+                    ]
+                  ]
+                }
+              ]
+            ]
+          },
+          " = 3ωC × ",
+          {
+            "fraction": [
+              [
+                "200"
+              ],
+              [
+                "√3"
+              ]
+            ]
+          }
+        ]
+      ],
+      "equationsVi": [
+        [
+          "I_B = ",
+          {
+            "fraction": [
+              [
+                "E_ab"
+              ],
+              [
+                "Z_ab"
+              ]
+            ]
+          },
+          " = ",
+          {
+            "fraction": [
+              [
+                {
+                  "fraction": [
+                    [
+                      "200"
+                    ],
+                    [
+                      "√3"
+                    ]
+                  ]
+                }
+              ],
+              [
+                {
+                  "fraction": [
+                    [
+                      "1"
+                    ],
+                    [
+                      "3ωC"
+                    ]
+                  ]
+                }
+              ]
+            ]
+          },
+          " = 3ωC × ",
+          {
+            "fraction": [
+              [
+                "200"
+              ],
+              [
+                "√3"
+              ]
+            ]
+          }
+        ]
+      ]
+    },
+    {
+      "jp": "数値を代入する。",
+      "vi": "Thay số.",
+      "equations": [
+        [
+          "3 × 2 × π × 50 × 0.1 × 10⁻⁶ × ",
+          {
+            "fraction": [
+              [
+                "200"
+              ],
+              [
+                "√3"
+              ]
+            ]
+          },
+          " ≒ 10.9 × 10⁻³ A → 11 mA"
+        ]
+      ],
+      "equationsVi": [
+        [
+          "3 × 2 × π × 50 × 0,1 × 10⁻⁶ × ",
+          {
+            "fraction": [
+              [
+                "200"
+              ],
+              [
+                "√3"
+              ]
+            ]
+          },
+          " ≈ 10,9 × 10⁻³ A → 11 mA"
+        ]
+      ]
+    },
+    {
+      "jp": "解答　(a) **R_Bmax＝60 Ω**　(b) **I_B＝11 mA**",
+      "vi": "Đáp án (a) **R_Bmax = 60 Ω** (b) **I_B = 11 mA**"
+    },
+    {
+      "jp": "参考",
+      "vi": "Tham khảo",
+      "heading": true
+    },
+    {
+      "jp": "テブナンの定理を利用することで、次のような手順で(b)の解答を求めることができます。\n・電流を求める抵抗 R_B を回路から外す。\n・a-b間の電圧 E_ab を求める。\n・a-b間のインピーダンス Z_ab を求める。（3線を短絡して考えると3つのCは並列接続）\n・テブナンの等価回路により I_B を求める。",
+      "vi": "Có thể dùng định lý Thévenin để giải câu (b) theo các bước sau.\n• Tháo điện trở R_B cần tính dòng ra khỏi mạch.\n• Tính điện áp E_ab giữa a–b.\n• Tính tổng trở Z_ab giữa a–b. Khi nối tắt ba dây để tính tổng trở, ba tụ C mắc song song.\n• Dùng mạch tương đương Thévenin để tính I_B."
+    },
+    {
+      "jp": "CはY結線になっているので、E_ab は相電圧となる。",
+      "vi": "Do các tụ C đấu hình sao nên E_ab là điện áp pha.",
+      "equations": [
+        [
+          "E_ab = ",
+          {
+            "fraction": [
+              [
+                "200"
+              ],
+              [
+                "√3"
+              ]
+            ]
+          },
+          "［V］"
+        ]
+      ],
+      "equationsVi": [
+        [
+          "E_ab = ",
+          {
+            "fraction": [
+              [
+                "200"
+              ],
+              [
+                "√3"
+              ]
+            ]
+          },
+          " [V]"
+        ]
+      ]
+    },
+    {
+      "jp": "R_B² は小さいので無視できる。",
+      "vi": "Có thể bỏ qua R_B² vì rất nhỏ so với bình phương điện kháng.",
+      "equations": [
+        [
+          "I_B = ",
+          {
+            "fraction": [
+              [
+                "E_ab"
+              ],
+              [
+                "√(R_B² + (",
+                {
+                  "fraction": [
+                    [
+                      "1"
+                    ],
+                    [
+                      "3ωC"
+                    ]
+                  ]
+                },
+                ")²)"
+              ]
+            ]
+          },
+          " ≒ ",
+          {
+            "fraction": [
+              [
+                {
+                  "fraction": [
+                    [
+                      "200"
+                    ],
+                    [
+                      "√3"
+                    ]
+                  ]
+                }
+              ],
+              [
+                {
+                  "fraction": [
+                    [
+                      "1"
+                    ],
+                    [
+                      "3ωC"
+                    ]
+                  ]
+                }
+              ]
+            ]
+          },
+          "　（",
+          {
+            "fraction": [
+              [
+                "1"
+              ],
+              [
+                "3ωC"
+              ]
+            ]
+          },
+          " ≫ R_B）"
+        ]
+      ],
+      "equationsVi": [
+        [
+          "I_B = ",
+          {
+            "fraction": [
+              [
+                "E_ab"
+              ],
+              [
+                "√(R_B² + (",
+                {
+                  "fraction": [
+                    [
+                      "1"
+                    ],
+                    [
+                      "3ωC"
+                    ]
+                  ]
+                },
+                ")²)"
+              ]
+            ]
+          },
+          " ≈ ",
+          {
+            "fraction": [
+              [
+                {
+                  "fraction": [
+                    [
+                      "200"
+                    ],
+                    [
+                      "√3"
+                    ]
+                  ]
+                }
+              ],
+              [
+                {
+                  "fraction": [
+                    [
+                      "1"
+                    ],
+                    [
+                      "3ωC"
+                    ]
+                  ]
+                }
+              ]
+            ]
+          },
+          "  (",
+          {
+            "fraction": [
+              [
+                "1"
+              ],
+              [
+                "3ωC"
+              ]
+            ]
+          },
+          " ≫ R_B)"
+        ]
+      ]
+    }
   ]
 };
