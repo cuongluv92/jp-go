@@ -114,7 +114,7 @@ export default async function OhmLesson({ searchParams }: { searchParams: Promis
   const rows = await Promise.all(lesson[page].map(async row => {
     if ("diagram" in row) return row;
     const readings = await read(row.jp);
-    if (!isLaw || !row.table) return { ...row, readings };
+    if ((!isLaw && page !== 321 && !powerChapter) || !row.table) return { ...row, readings };
     const [headers, tableRows] = await Promise.all([
       Promise.all(row.table.jp.map(read)),
       Promise.all(row.table.rows.map(([label, , ...cells]) => Promise.all([label, ...cells].map(read)))),

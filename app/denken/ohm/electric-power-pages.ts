@@ -312,6 +312,7 @@ export const electricPowerPages: Record<number, LessonRow[]> = {
     { jp: "**汽力発電**は、燃料の持つエネルギーを、ボイラで蒸気の**熱エネルギー**に変え、蒸気タービンで**機械エネルギー**に変換し、発電機を回して**電気エネルギー**を発生します。", vi: "Nhiệt điện hơi nước chuyển hóa **năng lượng hóa học của nhiên liệu → nhiệt năng của hơi trong nồi hơi → cơ năng trên tua-bin hơi → điện năng trong máy phát**.", note: "Phân biệt tua-bin khí sử dụng trực tiếp khí nóng; tua-bin hơi sử dụng hơi được tạo trong nồi hơi." },
     { jp: "熱サイクル", vi: "Chu trình nhiệt", heading: true },
     { jp: "汽力発電所では、燃料を燃焼し、その熱エネルギーで給水を加熱し、蒸気を発生させます。蒸気はタービンで仕事を行った後、タービンから排気され、復水器に入り、冷却されて水に戻されます（これを、復水といいます）。給水は再び加熱し蒸気となります。この連続した流れを、**熱サイクル**といいます。", vi: "Tại nhà máy, đốt nhiên liệu để gia nhiệt nước cấp, tạo hơi. Hơi giãn nở sinh công ở tua-bin, sau đó qua **bình ngưng (復水器)** để làm mát thành nước, rồi được bơm và gia nhiệt lại. Quá trình lặp lại gọi là **chu trình nhiệt**." },
+    { diagram: "powerHeatCycle341" },
     { jp: "ランキンサイクル", vi: "Chu trình Rankine", heading: true },
     { jp: "次の**断熱変化**と**等圧変化**とからなる最も基本的な熱サイクルを、**ランキンサイクル**といいます。図2-1-2はランキンサイクルを表しています。", vi: "**Rankine** là chu trình nhiệt cơ bản gồm các quá trình **đoạn nhiệt** và **đẳng áp**; hình 2-1-2 biểu diễn sơ đồ và đường T–s.", note: "T là nhiệt độ; s là entropy riêng. Đoạn nhiệt lý tưởng của máy bơm và tua-bin thường đồng thời giả định thuận nghịch (đẳng entropy)." },
   ],
@@ -661,11 +662,13 @@ export const electricPowerPages: Record<number, LessonRow[]> = {
   366: [
     {jp:"3-5 他の発電方式 **といえば** 太陽光、風力、燃料電池、バイオマス",vi:"3-5 Các nguồn điện khác: mặt trời, gió, pin nhiên liệu và sinh khối",heading:true},
     {jp:"太陽電池の発電イメージ",vi:"Minh họa nguyên lý tế bào quang điện",heading:true},
+    { diagram: "powerSolarCrossSection366" },
     {diagram:"powerSolarCell366"},
     {jp:"1. 太陽光発電（太陽電池発電）",vi:"1. Phát điện quang điện",heading:true},
     {jp:"発電の原理",vi:"Nguyên lý phát điện",heading:true},
     {jp:"太陽光発電は太陽電池によって光のエネルギーを電気エネルギーに変換するもので、太陽電池は、p形半導体とn形半導体を接合したものです。",vi:"Pin mặt trời chuyển năng lượng ánh sáng thành điện. Tế bào quang điện cơ bản gồm **bán dẫn loại p** và **loại n** ghép tạo tiếp giáp pn."},
     {jp:"太陽光が接合部に入射すると負の電荷を持つ電子と正の電荷を持つ正孔が発生し、接合部の電界によって電子はn形半導体に、正孔はp形半導体に集まります。",vi:"Photon tạo cặp **electron–lỗ trống** ở gần tiếp giáp; điện trường vùng nghèo tách chúng: electron về phía n, lỗ trống về phía p.",note:"Vùng nghèo (空乏層) có điện trường bên trong giúp tách hạt tải, không phải một nguồn điện riêng bên ngoài."},
+    { diagram: "powerSolarCell366" },
     {jp:"p形半導体はプラス、n形半導体はマイナスに帯電し、これが負荷を通して電流を流し電力が得られます。",vi:"Sự tách hạt tải tạo chênh điện thế giữa hai cực; nối tải thì có dòng điện và công suất DC."},
     {jp:"単体をセルとし、数枚から数十枚を集めガラスで覆いパッケージを作り、これをモジュールと呼びます。",vi:"Một tế bào là **cell**; nhiều cell ghép thành **module/panel**, được bảo vệ bằng vật liệu bao gói."},
     {jp:"太陽エネルギーは、夏季晴天時で最大1m²当たり1kW程度とされており、太陽電池の変換効率を20％とすると、200Wの直流電力が得られます。",vi:"Ví dụ theo sách, bức xạ nắng khoảng 1 kW/m², hiệu suất 20% → tấm diện tích 1 m² cho khoảng 200 W DC.",equations:[["P = 1000 W/m² × 1 m² × 0.20 = 200 W"]],note:"Đây là giá trị ở mức chiếu sáng giả định, không phải sản lượng cố định; phải xét góc nắng, nhiệt độ, che bóng và tổn hao inverter."},
@@ -1046,16 +1049,17 @@ export const electricPowerPages: Record<number, LessonRow[]> = {
       jp: ["名称","内容"],
       vi: ["Loại","Đặc điểm"],
       rows: [
-        ["懸垂がいし","Sứ treo","笠状の磁器絶縁層の両側に連結用金具を接着したがいし。複数個を連結して送電線の絶縁支持に使用される。"],
+        ["懸垂がいし","Sứ treo","笠状の磁器絶縁層の両側に連結用金具を接着したがいし。複数個を連結して送電線の絶縁支持に使用される。磁器の傘下面部はひだ状になっており、雨水が伝わるのを防止する。"],
         ["長幹がいし","Sứ thanh dài","笠付磁器棒の両端に連結用金具を接着したがいし。単独または数本連結して送電線の絶縁支持に使用される。"],
         ["ラインポストがいし（LPがいし）","Sứ đứng đường dây (LP)","磁器棒の片方に電線支持用の電線クランプ、もう片方に固定用金具が取り付けられており、鉄塔や腕金に固定できるようになっている。"]
       ],
       rowsVi: [
-        ["懸垂がいし","Sứ treo","Hai đầu phần sứ cách điện dạng đĩa có phụ kiện liên kết. Ghép nhiều đĩa để đỡ và cách điện dây truyền tải."],
+        ["懸垂がいし","Sứ treo","Hai đầu phần sứ cách điện dạng đĩa có phụ kiện liên kết. Ghép nhiều đĩa để đỡ và cách điện dây truyền tải. Các gân ở mặt dưới tán sứ hạn chế nước mưa chảy lan."],
         ["長幹がいし","Sứ thanh dài","Thanh sứ có tán, hai đầu gắn phụ kiện liên kết. Dùng đơn lẻ hoặc ghép nhiều thanh để đỡ và cách điện dây truyền tải."],
         ["ラインポストがいし（LPがいし）","Sứ đứng đường dây (LP)","Một đầu thanh sứ có kẹp đỡ dây, đầu kia có phụ kiện để cố định lên cột hoặc xà."]
       ],
     }},
+    { diagram: "powerInsulatorTypes387" },
   ],
   388: [
     {jp:"アークホーン",vi:"Sừng phóng điện (arc horn)",heading:true},
