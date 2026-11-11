@@ -883,5 +883,725 @@ export const lawPages: Record<number, LessonRow[]> = {
       "vi": "Khi xảy ra sự cố do công trình điện, **chủ lắp đặt công trình điện tự dùng** phải báo cáo cho trưởng cơ quan giám sát an toàn công nghiệp có thẩm quyền theo quy tắc báo cáo liên quan đến điện lực.",
       "note": ""
     }
+  ],
+  "433": [
+    {
+      "jp": "表1-1-5 報告しなくてはならない主な電気事故",
+      "vi": "Bảng 1-1-5 · Các sự cố điện chính phải báo cáo",
+      "heading": true,
+      "table": {
+        "jp": [
+          "事故の種類",
+          "報告期限等（速報）",
+          "報告期限等（詳報）",
+          "報告先"
+        ],
+        "vi": [
+          "Loại sự cố",
+          "Hạn báo cáo nhanh",
+          "Hạn báo cáo chi tiết",
+          "Nơi nhận báo cáo"
+        ],
+        "rows": [
+          [
+            "①感電又は破損事故若しくは電気工作物の誤操作や操作しなかったことにより**人が死傷した**事故（死亡又は入院した場合に限る）\n\n②**電気火災事故**（工作物にあっては半焼以上の場合に限る）\n\n③破損事故又は電気工作物の誤操作若しくは操作しなかったことにより、公共の財産に被害を与え、公共施設の使用を不可能にした事故又は社会的に影響を及ぼした事故\n\n④主要電気工作物（需要設備においては電圧１万Ｖ以上の場合）の破損事故\n\n⑤電気事業者の電気工作物と電気的に接続されている電圧3千 V以上の自家用電気工作物の破損事故又は誤操作若しくは操作しなかったことにより電気事業者に**供給支障**を発生させた事故（**波及事故**）",
+            "① Tai nạn **gây chết người hoặc thương tích** do điện giật, sự cố hư hỏng, thao tác sai hoặc không thao tác công trình điện (chỉ áp dụng khi tử vong hoặc nhập viện).\n\n② **Cháy do điện** (với công trình, chỉ áp dụng khi bị cháy từ một nửa trở lên).\n\n③ Tai nạn do hư hỏng, thao tác sai hoặc không thao tác công trình điện, gây thiệt hại tài sản công và khiến cơ sở công cộng không thể sử dụng, hoặc gây ảnh hưởng xã hội.\n\n④ Hư hỏng công trình điện chính (đối với thiết bị phụ tải, thuộc trường hợp điện áp từ 10.000 V).\n\n⑤ **Sự cố lan truyền** gây **gián đoạn cấp điện** cho đơn vị kinh doanh điện lực do hư hỏng, thao tác sai hoặc không thao tác công trình điện tự dùng từ 3 kV trở lên có kết nối điện với công trình của đơn vị đó.",
+            "事故の発生を知った時から**24時間以内**に速やかに電話等で報告する",
+            "事故の発生を知った日から起算して**30日以内**に報告書を提出する",
+            "電気工作物の設置の場所を管轄する**産業保安監督部長**"
+          ]
+        ],
+        "rowsVi": [
+          [
+            "①感電又は破損事故若しくは電気工作物の誤操作や操作しなかったことにより**人が死傷した**事故（死亡又は入院した場合に限る）\n\n②**電気火災事故**（工作物にあっては半焼以上の場合に限る）\n\n③破損事故又は電気工作物の誤操作若しくは操作しなかったことにより、公共の財産に被害を与え、公共施設の使用を不可能にした事故又は社会的に影響を及ぼした事故\n\n④主要電気工作物（需要設備においては電圧１万Ｖ以上の場合）の破損事故\n\n⑤電気事業者の電気工作物と電気的に接続されている電圧3千 V以上の自家用電気工作物の破損事故又は誤操作若しくは操作しなかったことにより電気事業者に**供給支障**を発生させた事故（**波及事故**）",
+            "① Tai nạn **gây chết người hoặc thương tích** do điện giật, sự cố hư hỏng, thao tác sai hoặc không thao tác công trình điện (chỉ áp dụng khi tử vong hoặc nhập viện).\n\n② **Cháy do điện** (với công trình, chỉ áp dụng khi bị cháy từ một nửa trở lên).\n\n③ Tai nạn do hư hỏng, thao tác sai hoặc không thao tác công trình điện, gây thiệt hại tài sản công và khiến cơ sở công cộng không thể sử dụng, hoặc gây ảnh hưởng xã hội.\n\n④ Hư hỏng công trình điện chính (đối với thiết bị phụ tải, thuộc trường hợp điện áp từ 10.000 V).\n\n⑤ **Sự cố lan truyền** gây **gián đoạn cấp điện** cho đơn vị kinh doanh điện lực do hư hỏng, thao tác sai hoặc không thao tác công trình điện tự dùng từ 3 kV trở lên có kết nối điện với công trình của đơn vị đó.",
+            "Báo cáo sớm qua điện thoại hoặc phương thức tương đương trong **24 giờ** kể từ thời điểm biết sự cố.",
+            "Nộp báo cáo bằng văn bản trong **30 ngày** tính từ ngày biết sự cố.",
+            "**Trưởng cơ quan giám sát an toàn công nghiệp** có thẩm quyền tại nơi lắp đặt công trình điện."
+          ]
+        ]
+      }
+    },
+    {
+      "jp": "POINT　電気事故報告 といえば 速報 **24時間**以内、詳報 **30日**以内に報告する",
+      "vi": "Ghi nhớ. Báo cáo nhanh trong **24 giờ** và báo cáo chi tiết trong **30 ngày**.",
+      "note": "Báo cáo nhanh tính từ thời điểm biết sự cố. Báo cáo chi tiết tính từ ngày biết sự cố."
+    },
+    {
+      "jp": "電気関連事故に関する用語",
+      "vi": "Thuật ngữ về sự cố điện",
+      "note": "",
+      "heading": true
+    },
+    {
+      "jp": "「電気火災事故」とは、**漏電**、**短絡**、**せん絡**（アーク放電）その他の電気的要因により建造物、車両その他の工作物、山林等に火災が発生することをいいます。",
+      "vi": "Cháy do điện là cháy ở tòa nhà, xe, công trình khác hoặc rừng do **rò điện**, **ngắn mạch**, **phóng điện hồ quang** hoặc nguyên nhân điện khác."
+    },
+    {
+      "jp": "「破損事故」とは、電気工作物の破損等で機能が低下又は喪失したことにより、直ちに、その運転が**停止**し、若しくはその運転を**停止**しなければならなくなること、若しくはその使用を中止することをいいます。",
+      "vi": "Sự cố hư hỏng là trường hợp công trình điện hỏng hoặc gặp sự cố tương tự, làm suy giảm hoặc mất chức năng và dẫn đến **dừng** vận hành ngay, buộc phải **dừng** vận hành ngay hoặc ngừng sử dụng."
+    },
+    {
+      "jp": "「供給支障事故」とは、破損事故又は電気工作物の**誤操作**若しくは電気工作物を**操作しないこと**により電気の使用者に対し、電気の供給が**停止**し、又は電気の使用を緊急に**制限**することをいいます。ただし、電路が自動的に**再閉路**されることにより電気の供給の停止が終了した場合を除きます。",
+      "vi": "Sự cố gián đoạn cấp điện là trường hợp sự cố hư hỏng, **thao tác sai** hoặc **không thao tác** công trình điện làm **ngừng** cấp điện cho người dùng hoặc phải **hạn chế** khẩn cấp việc sử dụng điện. Trừ trường hợp việc ngừng cấp điện kết thúc nhờ mạch điện tự động **đóng lại**."
+    }
+  ],
+  "434": [
+    {
+      "jp": "練習問題 01　電気工作物の保安体系",
+      "vi": "Bài luyện 01 · Hệ thống bảo đảm an toàn công trình điện",
+      "note": "",
+      "heading": true
+    },
+    {
+      "jp": "次の図は、「電気事業法」に基づく電気工作物の保安体系に関する記述である。空白箇所（ア）～（エ）の字句は。",
+      "vi": "Sơ đồ nói về hệ thống bảo đảm an toàn công trình điện theo Luật Kinh doanh điện lực. Điền các từ phù hợp vào chỗ trống (ア)–(エ).",
+      "note": ""
+    },
+    {
+      "diagram": "lawSafetyExercise434"
+    },
+    {
+      "jp": "一般用電気工作物",
+      "vi": "Công trình điện loại thông thường",
+      "heading": true
+    },
+    {
+      "jp": "（ア）は、電気工作物が技術基準に適合しているかどうかを調査しなければならない。",
+      "vi": "(ア) phải điều tra công trình điện có phù hợp tiêu chuẩn kỹ thuật hay không.",
+      "note": ""
+    },
+    {
+      "jp": "（イ）に、技術基準に適合しているかどうかの調査を委託することができる。",
+      "vi": "Có thể ủy thác việc kiểm tra sự phù hợp cho (イ).",
+      "note": ""
+    },
+    {
+      "jp": "経済産業大臣は、技術基準に適合していないときは、使用の一時停止を命じ、又は制限することができる。",
+      "vi": "Bộ trưởng Kinh tế, Thương mại và Công nghiệp có thể ra lệnh tạm dừng hoặc hạn chế sử dụng nếu không phù hợp tiêu chuẩn.",
+      "note": ""
+    },
+    {
+      "jp": "その職員に、電気工作物の設置の場所に立ち入り、電気工作物を検査させることができる。",
+      "vi": "Có thể cho nhân viên vào nơi đặt công trình điện để kiểm tra.",
+      "note": ""
+    },
+    {
+      "jp": "自家用電気工作物（小規模事業用電気工作物を除く）",
+      "vi": "Công trình điện tự dùng (trừ công trình điện 事業用 quy mô nhỏ)",
+      "heading": true
+    },
+    {
+      "jp": "電気工作物を設置する者は、電気工作物を技術基準に適合するように維持しなければならない。",
+      "vi": "Chủ công trình phải duy trì công trình phù hợp tiêu chuẩn kỹ thuật.",
+      "note": ""
+    },
+    {
+      "jp": "（ウ）を定め、電気工作物の使用の開始前に、主務大臣に届け出なければならない。",
+      "vi": "Phải lập (ウ) và nộp cho bộ trưởng phụ trách trước khi bắt đầu sử dụng công trình.",
+      "note": ""
+    },
+    {
+      "jp": "主任技術者を選任し、遅滞なく、その旨を主務大臣に届け出なければならない。",
+      "vi": "Phải bổ nhiệm kỹ sư trưởng và kịp thời thông báo cho bộ trưởng phụ trách.",
+      "note": ""
+    },
+    {
+      "jp": "電気工作物の使用の開始の後、その旨を主務大臣に届け出なければならない。",
+      "vi": "Sau khi bắt đầu sử dụng phải thông báo theo quy định.",
+      "note": ""
+    },
+    {
+      "jp": "経済産業大臣は、電気工作物を設置する者に対し、その業務の状況に関し報告又は資料の（エ）をさせることができる。",
+      "vi": "Bộ trưởng có thể yêu cầu chủ công trình báo cáo hoặc (エ) tài liệu về tình trạng hoạt động.",
+      "note": ""
+    },
+    {
+      "jp": "解説",
+      "vi": "Lời giải",
+      "heading": true
+    },
+    {
+      "jp": "電気工作物は、一般用電気工作物と事業用電気工作物に区分され、後者は電気事業の用に供する電気工作物と自家用電気工作物に分けられています。一般送配電事業者などの（ア）電線路維持運用者は、一般用電気工作物が技術基準に適合しているかどうかの調査業務を（イ）登録調査機関に委託することができます。また事業用電気工作物を設置する者は、（ウ）保安規程を定め、主任技術者を選任し、主務大臣に届け出なければなりません。さらに、使用の開始の後、その旨を主務大臣に届け出なければなりません。なお経済産業大臣は、業務の状況に関し報告又は資料の（エ）提出をさせることができます。",
+      "vi": "Công trình điện được chia thành loại thông thường và loại 事業用. Loại 事業用 gồm công trình phục vụ kinh doanh điện lực và công trình điện tự dùng. (ア) Đơn vị duy trì và vận hành đường dây, như đơn vị truyền tải–phân phối chung, có thể ủy thác việc kiểm tra sự phù hợp với tiêu chuẩn kỹ thuật của công trình điện thông thường cho (イ) tổ chức kiểm tra đã đăng ký. Chủ lắp đặt công trình điện loại 事業用 phải lập (ウ) quy chế an toàn, bổ nhiệm người phụ trách kỹ thuật và báo cho bộ trưởng có thẩm quyền. Sau khi bắt đầu sử dụng, còn phải thông báo việc đó cho bộ trưởng có thẩm quyền. Bộ trưởng Bộ Kinh tế, Thương mại và Công nghiệp có thể yêu cầu báo cáo tình trạng hoạt động hoặc (エ) nộp tài liệu.",
+      "note": "Để điền (ア), tìm chủ thể phải kiểm tra. Để điền (イ), tìm bên nhận ủy thác kiểm tra. Chỗ (ウ) là văn bản phải lập trước khi sử dụng, còn (エ) là hành động với hồ sơ."
+    },
+    {
+      "jp": "参考",
+      "vi": "Tham khảo",
+      "heading": true
+    },
+    {
+      "jp": "主務大臣≒経済産業大臣です。主務大臣は行政事務関連、経済産業大臣は行政、政策関連などを所管します。令和4年度の問題では、主務大臣を経済産業大臣として出題されています。",
+      "vi": "Trong ngữ cảnh này, bộ trưởng có thẩm quyền tương ứng với Bộ trưởng Bộ Kinh tế, Thương mại và Công nghiệp. Sách phân biệt cách gọi theo thẩm quyền hành chính và chức danh phụ trách hành chính, chính sách. Đề năm Reiwa 4 dùng chức danh Bộ trưởng Bộ Kinh tế, Thương mại và Công nghiệp."
+    },
+    {
+      "jp": "解答　（ア）**電線路維持運用者**　（イ）**登録調査機関**　（ウ）**保安規程**　（エ）**提出**",
+      "vi": "Đáp án. (ア) **Đơn vị duy trì và vận hành đường dây** · (イ) **Tổ chức kiểm tra đã đăng ký** · (ウ) **Quy chế an toàn** · (エ) **Nộp**."
+    }
+  ],
+  "435": [
+    {
+      "jp": "1-2 電気工事士法 といえば 欠陥工事による災害防止を目的とする法律",
+      "vi": "1-2 Luật Thợ điện · Luật nhằm ngăn ngừa tai nạn do thi công điện khiếm khuyết",
+      "note": "",
+      "heading": true
+    },
+    {
+      "jp": "電気工事士の義務",
+      "vi": "Nghĩa vụ của thợ điện",
+      "note": "",
+      "heading": true
+    },
+    {
+      "jp": "第二種電気工事士の作業範囲は、一般用電気工作物等の電気工事で、次の義務があります。",
+      "vi": "Phạm vi làm việc của thợ điện hạng hai là thi công công trình điện loại thông thường và loại tương ứng, kèm các nghĩa vụ:",
+      "note": ""
+    },
+    {
+      "jp": "・**電気設備技術基準**に適合した作業を行う。",
+      "vi": "Thi công phù hợp **tiêu chuẩn kỹ thuật thiết bị điện**.",
+      "note": ""
+    },
+    {
+      "jp": "・作業に従事するときは、電気工事士**免状を携帯**する。",
+      "vi": "**Mang theo chứng chỉ** thợ điện khi làm việc.",
+      "note": ""
+    },
+    {
+      "jp": "・都道府県知事から工事内容に関して報告を求められた場合は、**報告し**なければならない。",
+      "vi": "**Báo cáo** khi thống đốc tỉnh yêu cầu về nội dung thi công.",
+      "note": ""
+    },
+    {
+      "jp": "・**電気用品安全法**の適用を受ける工事材料は、表示のあるものを使用しなければならない。",
+      "vi": "Chỉ sử dụng vật tư thuộc phạm vi **Luật An toàn sản phẩm điện** có dấu hiệu phù hợp.",
+      "note": ""
+    },
+    {
+      "jp": "電気工事士免状の交付等",
+      "vi": "Cấp, cấp lại và trả lại chứng chỉ thợ điện",
+      "note": "",
+      "heading": true
+    },
+    {
+      "jp": "・免状の**交付**、**再交付**及び**返納命令**は、**都道府県知事**が行う。",
+      "vi": "• **Thống đốc tỉnh hoặc đô** thực hiện việc **cấp**, **cấp lại** và **ra lệnh nộp lại** chứng chỉ."
+    },
+    {
+      "jp": "・氏名を変更した場合は、交付を受けた都道府県知事に書き換えを申請する。",
+      "vi": "Khi đổi họ tên, xin điều chỉnh chứng chỉ tại tỉnh đã cấp.",
+      "note": ""
+    },
+    {
+      "jp": "POINT　電気工事士の義務 といえば **電技**に適合した作業、**免状**の携帯、**電気用品**を使用",
+      "vi": "Ghi nhớ. Thợ điện làm việc theo **tiêu chuẩn kỹ thuật thiết bị điện**, mang **chứng chỉ** và sử dụng **sản phẩm điện** phù hợp."
+    },
+    {
+      "jp": "電気工事士法",
+      "vi": "Luật Thợ điện",
+      "note": "",
+      "heading": true
+    },
+    {
+      "jp": "電気工事の欠陥による災害の発生を防止するために、**電気工事士法**によって一定範囲の電気工作物について電気工事の作業に従事する者の資格が定められています。",
+      "vi": "**Luật Thợ điện** quy định tư cách người thực hiện thi công cho một số loại công trình nhằm ngăn tai nạn do thi công điện có khiếm khuyết.",
+      "note": ""
+    },
+    {
+      "jp": "電気工事士の資格には、免状の種類により**第一種**電気工事士と**第二種**電気工事士があり、従事できる電気工作物の範囲が決められています。",
+      "vi": "Theo loại chứng chỉ, thợ điện được chia thành **loại I** và **loại II**. Mỗi loại có phạm vi công trình điện được phép làm việc."
+    },
+    {
+      "jp": "表1-2-1 電気工事士が従事できる業務",
+      "vi": "Bảng 1-2-1 · Công việc thợ điện được phép làm",
+      "heading": true,
+      "table": {
+        "jp": [
+          "資格",
+          "従事できる業務"
+        ],
+        "vi": [
+          "Chứng chỉ",
+          "Công việc được phép làm"
+        ],
+        "rows": [
+          [
+            "第一種電気工事士",
+            "Thợ điện loại I",
+            "自家用電気工作物で最大電力**500 kW未満**の**需要設備**の電気工事の作業（工場、ビル等の電気設備の工事）"
+          ],
+          [
+            "第二種電気工事士",
+            "Thợ điện loại II",
+            "**一般用電気工作物等**※1の電気工事の作業（住宅、小規模な店舗等の電気設備の工事）"
+          ]
+        ],
+        "rowsVi": [
+          [
+            "第一種電気工事士",
+            "Thợ điện loại I",
+            "Thi công điện cho **thiết bị sử dụng điện** thuộc công trình điện tự dùng có công suất cực đại **dưới 500 kW** (như thiết bị điện tại nhà máy, tòa nhà)."
+          ],
+          [
+            "第二種電気工事士",
+            "Thợ điện loại II",
+            "Thi công điện cho **công trình điện loại thông thường và các loại thuộc chú thích 1** (như thiết bị điện tại nhà ở, cửa hàng nhỏ)."
+          ]
+        ]
+      }
+    },
+    {
+      "jp": "注）自家用500 kW未満の設備において「ネオン工事」と「非常用予備発電装置工事」については、特種電気工事資格者という認定証が必要。",
+      "vi": "Chú thích. Với thiết bị điện tự dùng dưới 500 kW, thi công đèn neon và thiết bị máy phát dự phòng khẩn cấp cần chứng nhận thi công điện đặc biệt."
+    },
+    {
+      "jp": "※1 「一般用電気工作物等」とは、一般用電気工作物及び小規模事業用電気工作物をいう。",
+      "vi": "Chú thích 1. Cụm 一般用電気工作物等 bao gồm công trình điện loại thông thường và công trình điện 事業用 quy mô nhỏ."
+    }
+  ],
+  "436": [
+    {
+      "jp": "電気工事業法（電気工事業の業務の適正化に関する法律）",
+      "vi": "Luật Kinh doanh thi công điện (luật về chuẩn hóa hoạt động kinh doanh thi công điện)",
+      "note": "",
+      "heading": true
+    },
+    {
+      "jp": "**電気工事業法**は、電気工事業の登録や業務の規制により、電気工作物の保安の確保を目的としています。",
+      "vi": "**Luật Kinh doanh thi công điện** nhằm bảo đảm an toàn công trình điện thông qua đăng ký hoạt động và điều chỉnh nghiệp vụ thi công điện."
+    },
+    {
+      "jp": "電気工事業の登録",
+      "vi": "Đăng ký hoạt động thi công điện",
+      "note": "",
+      "heading": true
+    },
+    {
+      "jp": "**一般用電気工作物等**に係る電気工事業を営もうとする者は、2つ以上の都道府県の区域内に営業所を設置するときは**経済産業大臣**の、1つの都道府県の場合は**都道府県知事**の、**登録**を受ける必要があります。",
+      "vi": "Người muốn kinh doanh thi công **công trình điện loại thông thường và công trình điện 事業用 quy mô nhỏ** phải **đăng ký** với **Bộ trưởng Bộ Kinh tế, Thương mại và Công nghiệp** nếu đặt cơ sở kinh doanh tại ít nhất hai tỉnh hoặc đô. Nếu chỉ đặt trong một tỉnh hoặc đô, đăng ký với **thống đốc địa phương**."
+    },
+    {
+      "jp": "また、登録の有効期間は**5年**で、引き続き電気工事業を営もうとする者は、更新の登録を受けなければなりません。また、登録を受けた者を**登録電気工事業者**といいます。",
+      "vi": "Đăng ký có hiệu lực **5 năm**. Người muốn tiếp tục kinh doanh thi công điện phải gia hạn. Người đã đăng ký gọi là **đơn vị kinh doanh thi công điện đã đăng ký**."
+    },
+    {
+      "jp": "電気工事業の通知",
+      "vi": "Thông báo về hoạt động thi công điện",
+      "note": "",
+      "heading": true
+    },
+    {
+      "jp": "500 kW未満の**自家用電気工作物**のみに係る電気工事業を営もうとする者は、その事業を開始しようとする日の**10日**前までに、2つ以上の都道府県の区域内に営業所を設置するときは**経済産業大臣**に、1つの都道府県の区域内のみの場合は**都道府県知事**に、その旨を**通知**しなければなりません。この電気工事業者は**通知電気工事業者**といいます。",
+      "vi": "Người chỉ kinh doanh thi công **công trình điện tự dùng** dưới 500 kW phải **thông báo** chậm nhất **10 ngày** trước ngày dự kiến bắt đầu. Nếu có cơ sở kinh doanh tại ít nhất hai tỉnh hoặc đô, báo cho **Bộ trưởng Bộ Kinh tế, Thương mại và Công nghiệp**. Nếu chỉ trong một tỉnh hoặc đô, báo cho **thống đốc địa phương**. Người thực hiện thủ tục này gọi là **đơn vị kinh doanh thi công điện đã thông báo**.",
+      "note": "Phân biệt thủ tục 登録 ở đoạn trên với 通知 khi chỉ thi công công trình điện tự dùng thuộc phạm vi sách nêu."
+    },
+    {
+      "jp": "主任電気工事士を置く",
+      "vi": "Bố trí người phụ trách thi công điện",
+      "note": "",
+      "heading": true
+    },
+    {
+      "jp": "登録電気工事業者は、その営業所ごとに電気工事業の作業を管理させるため、第一種電気工事士又は第二種電気工事士免状の交付を受けた後電気工事に関し**3年以上**の実務経験を有する者を、**主任電気工事士**として置かなければなりません。",
+      "vi": "Đơn vị đã đăng ký phải bố trí tại mỗi cơ sở kinh doanh một **thợ điện phụ trách** để quản lý công việc. Có thể chọn thợ điện loại I hoặc người có kinh nghiệm thực tế về thi công điện **từ 3 năm trở lên** sau khi được cấp chứng chỉ thợ điện loại II."
+    },
+    {
+      "jp": "器具の備え付け",
+      "vi": "Trang bị dụng cụ",
+      "note": "",
+      "heading": true
+    },
+    {
+      "jp": "一般用電気工作物の電気工事を行う営業所は、次の器具を備える必要があります。",
+      "vi": "Cơ sở thi công công trình điện loại thông thường phải có các dụng cụ sau."
+    },
+    {
+      "jp": "①**絶縁抵抗計**、②**接地抵抗計**、③**回路計**（抵抗、交流電圧を測定できるもの）",
+      "vi": "① **Máy đo điện trở cách điện**, ② **máy đo điện trở nối đất**, ③ **đồng hồ đo mạch** (đo được điện trở và điện áp xoay chiều)."
+    },
+    {
+      "jp": "自家用電気工作物の電気工事を行う営業所は、次の器具を備える必要があります※2。",
+      "vi": "Cơ sở thi công công trình điện tự dùng phải có các dụng cụ sau (xem chú thích 2)."
+    },
+    {
+      "jp": "①絶縁抵抗計、②接地抵抗計、③回路計、④**低圧検電器**、⑤**高圧検電器**、⑥**継電器試験装置**、⑦**絶縁耐力試験装置**",
+      "vi": "① Máy đo điện trở cách điện, ② máy đo điện trở nối đất, ③ đồng hồ đo mạch, ④ **dụng cụ kiểm tra có điện hạ áp**, ⑤ **dụng cụ kiểm tra có điện cao áp**, ⑥ **thiết bị thử rơ-le**, ⑦ **thiết bị thử khả năng chịu điện áp của cách điện**."
+    },
+    {
+      "jp": "標識の掲示",
+      "vi": "Niêm yết biển hiệu",
+      "note": "",
+      "heading": true
+    },
+    {
+      "jp": "営業所、施工場所ごとに次の事項を記載した標識を掲げる必要があります。",
+      "vi": "Phải treo biển ghi các nội dung sau tại từng cơ sở kinh doanh và từng nơi thi công."
+    },
+    {
+      "jp": "①氏名（又は名称）、法人にあっては代表者の氏名、②営業所の名称、③電気工事の種類、④登録年月日、登録番号、⑤主任電気工事士の氏名",
+      "vi": "① Họ tên hoặc tên đơn vị, với pháp nhân ghi họ tên người đại diện. ② Tên cơ sở kinh doanh. ③ Loại công trình điện thi công. ④ Ngày và số đăng ký. ⑤ Họ tên thợ điện phụ trách."
+    },
+    {
+      "jp": "※2 器具の備え付け：⑥と⑦は必要なとき使用できる状態であれば、常時備えなくてもよいことになっています。",
+      "vi": "Chú thích 2. Các thiết bị ⑥ và ⑦ có thể bố trí theo nhu cầu, miễn là sử dụng được khi cần."
+    }
+  ],
+  "437": [
+    {
+      "jp": "帳簿の備えと保存",
+      "vi": "Chuẩn bị và lưu giữ sổ sách",
+      "note": "",
+      "heading": true
+    },
+    {
+      "jp": "電気工事ごとに次の事項を記載した帳簿を営業所ごとに備え、これを**5年間**保存しなければなりません。",
+      "vi": "Mỗi cơ sở kinh doanh phải có sổ ghi các thông tin dưới đây cho từng công trình điện và lưu sổ **5 năm**.",
+      "note": ""
+    },
+    {
+      "jp": "①注文者の氏名又は名称、②電気工事の種類、③施工場所、④施工年月日、⑤主任電気工事士、⑥作業者の氏名、⑦配線図、⑧検査の結果",
+      "vi": "① Khách hàng; ② loại công việc; ③ địa điểm; ④ ngày thi công; ⑤ người phụ trách; ⑥ tên nhân viên; ⑦ sơ đồ đấu dây; ⑧ kết quả kiểm tra.",
+      "note": ""
+    },
+    {
+      "jp": "POINT　第一種電気工事士 といえば **500 kW**未満の設備、第二種 といえば **一般用**設備の工事",
+      "vi": "Ghi nhớ. Thợ điện loại I thi công thiết bị dưới **500 kW**. Thợ điện loại II thi công thiết bị loại **thông thường**."
+    },
+    {
+      "jp": "電気工事業に必要な器具 といえば **絶縁抵抗計**、**接地抵抗計**、**回路計**",
+      "vi": "Dụng cụ cần cho thi công điện gồm **máy đo điện trở cách điện**, **máy đo điện trở nối đất** và **đồng hồ đo mạch**."
+    },
+    {
+      "jp": "※自家用の工事の場合は、他に**検電器**（低圧、高圧）、**継電器試験装置**、**絶縁耐力試験装置**が必要",
+      "vi": "Với công trình điện tự dùng còn cần **dụng cụ kiểm tra có điện** (hạ áp, cao áp), **thiết bị thử rơ-le** và **thiết bị thử khả năng chịu điện áp của cách điện**."
+    },
+    {
+      "jp": "練習問題 01　電気工事業法",
+      "vi": "Bài luyện 01 · Luật Kinh doanh thi công điện",
+      "note": "",
+      "heading": true
+    },
+    {
+      "jp": "電気工事業の業務の適正化に関する法律（電気工事業法）に基づく記述として、誤っているものは。",
+      "vi": "Trong các phát biểu sau theo Luật Kinh doanh thi công điện, phát biểu nào sai?",
+      "note": ""
+    },
+    {
+      "jp": "（1）電気工事業とは、電気事業法に規定する電気工事を行う事業であって、その事業を営もうとする者は、経済産業大臣の事業許可を受けなければならない。",
+      "vi": "(1) Doanh nghiệp muốn hoạt động thi công điện theo luật phải xin giấy phép kinh doanh của bộ trưởng.",
+      "note": ""
+    },
+    {
+      "jp": "（2）登録電気工事業者の登録には有効期間がある。",
+      "vi": "(2) Đăng ký của doanh nghiệp thi công điện có thời hạn hiệu lực.",
+      "note": ""
+    },
+    {
+      "jp": "（3）電気工事業者は、その営業所ごとに、絶縁抵抗計その他の経済産業省令で定める器具を備えなければならない。",
+      "vi": "(3) Mỗi cơ sở phải trang bị điện trở kế cách điện và dụng cụ khác theo quy định.",
+      "note": ""
+    },
+    {
+      "jp": "（4）電気工事業者は、その営業所及び電気工事の施工場所ごとに、その見やすい場所に、氏名又は名称、登録番号その他の経済産業省令で定める事項を記載した標識を掲げなければならない。",
+      "vi": "(4) Phải niêm yết biển chứa họ tên/tên doanh nghiệp, số đăng ký và thông tin bắt buộc ở chỗ dễ thấy tại cơ sở và nơi thi công.",
+      "note": ""
+    },
+    {
+      "jp": "（5）電気工事業者は、その営業所ごとに帳簿を備え、その業務に関し経済産業省令で定める事項を記載し、これを保存しなければならない。",
+      "vi": "(5) Phải lưu sổ tại mỗi cơ sở và ghi chép các mục bắt buộc.",
+      "note": ""
+    },
+    {
+      "jp": "解説　（1）が誤りです。（電気工事業法の規定）「電気工事業」とは、電気工事士法に規定する電気工事を行う事業であって、その事業を営もうとする者は、二以上の都道府県の区域内に営業所を設置するときは、経済産業大臣の、一都道府県のみの場合は、都道府県知事の登録を受けなければなりません（自家用電気工作物のみの場合は、通知を行います）。",
+      "vi": "Lời giải. Mệnh đề (1) sai. Theo Luật Kinh doanh thi công điện, kinh doanh thi công điện là thực hiện công việc thi công quy định trong Luật Thợ điện. Nếu có cơ sở tại từ hai tỉnh hoặc đô trở lên, phải đăng ký với Bộ trưởng Bộ Kinh tế, Thương mại và Công nghiệp. Nếu chỉ ở một tỉnh hoặc đô, đăng ký với thống đốc địa phương. Nếu chỉ thi công công trình điện tự dùng thì thực hiện thủ tục thông báo.",
+      "note": "Mệnh đề (1) có hai điểm cần nhận ra. Luật định nghĩa công việc thi công là 電気工事士法. Thủ tục trong bài là đăng ký hoặc thông báo."
+    },
+    {
+      "jp": "解答　**（1）**",
+      "vi": "Đáp án **(1)**."
+    }
+  ],
+  "438": [
+    {
+      "jp": "1-3 電気用品安全法 といえば ひし形PSEと丸形PSEによる安全性確保の法律",
+      "vi": "1-3 Luật An toàn sản phẩm điện · Bảo đảm an toàn bằng dấu PSE hình thoi và hình tròn",
+      "heading": true
+    },
+    {
+      "diagram": "lawPseMarks438"
+    },
+    {
+      "jp": "電気用品安全法、電気用品",
+      "vi": "Luật An toàn sản phẩm điện và sản phẩm điện",
+      "note": "",
+      "heading": true
+    },
+    {
+      "jp": "**電気用品安全法**は、電気用品の**製造**、**販売**等を規制するとともに、電気用品の安全性の確保につき民間業者の自主的な活動を促進することにより、電気用品による危険及び障害※1の発生を防止することを目的としています。",
+      "vi": "**Luật An toàn sản phẩm điện** nhằm ngăn ngừa nguy hiểm và nhiễu do sản phẩm điện gây ra (xem chú thích 1) bằng cách điều chỉnh việc **sản xuất**, **bán** sản phẩm và khuyến khích doanh nghiệp tư nhân chủ động bảo đảm an toàn."
+    },
+    {
+      "jp": "電気用品とは",
+      "vi": "Sản phẩm điện là gì?",
+      "note": "",
+      "heading": true
+    },
+    {
+      "jp": "**一般用**電気工作物等の部分となり、又はこれに接続して用いられる機械、器具又は材料、及び**携帯発電機**であって、政令で定められたものをいいます。",
+      "vi": "Sản phẩm điện là máy móc, dụng cụ hoặc vật liệu dùng làm bộ phận của hoặc kết nối với công trình điện loại **thông thường** và các loại liên quan, cũng như **máy phát điện xách tay**, thuộc danh mục quy định bằng nghị định."
+    },
+    {
+      "jp": "特定電気用品とは",
+      "vi": "Sản phẩm điện đặc định là gì?",
+      "note": "",
+      "heading": true
+    },
+    {
+      "jp": "構造又は使用方法その他の使用状況から見て特に**危険**又は**障害**の発生するおそれが多い電気用品であって、政令で定めるものをいいます。",
+      "vi": "Sản phẩm điện đặc định là sản phẩm thuộc danh mục quy định bằng nghị định, có nguy cơ cao gây **nguy hiểm** hoặc **nhiễu**, xét theo cấu tạo, cách sử dụng và các tình huống sử dụng khác."
+    },
+    {
+      "jp": "電気用品の表示、使用の制限",
+      "vi": "Nhãn sản phẩm điện và hạn chế sử dụng",
+      "note": "",
+      "heading": true
+    },
+    {
+      "jp": "電気用品を製造又は輸入する場合において、その電気用品を販売するときまでに、検査機関による検査を受け、技術基準の適合証明が得られた場合は、表1-3-1のような表示をすることができます。",
+      "vi": "Khi sản xuất hoặc nhập khẩu và bán sản phẩm điện, nếu đã được kiểm tra và đáp ứng yêu cầu chứng nhận phù hợp, có thể ghi nhãn theo bảng 1-3-1.",
+      "note": ""
+    },
+    {
+      "jp": "電気用品安全法による表示がない電気用品を使用することはできません。",
+      "vi": "Không được sử dụng sản phẩm điện thuộc diện bắt buộc nhưng không có nhãn phù hợp.",
+      "note": ""
+    },
+    {
+      "jp": "電気用品安全法の目的は、粗悪な電気用品が出ないようにすることで、不良品を①製造又は輸入させない、②販売させない、③使用させない、の各段階で取締りを行うものです。",
+      "vi": "Luật An toàn sản phẩm điện nhằm ngăn sản phẩm điện kém chất lượng xuất hiện. Luật kiểm soát để sản phẩm lỗi ① không được sản xuất hoặc nhập khẩu, ② không được bán, ③ không được sử dụng."
+    },
+    {
+      "jp": "※1 危険及び障害：危険とは感電や火災、障害とは電波障害などです。",
+      "vi": "Chú thích 1. Nguy hiểm gồm điện giật hoặc cháy. Nhiễu gồm nhiễu sóng vô tuyến, v.v."
+    }
+  ],
+  "439": [
+    {
+      "jp": "表1-3-1 電気用品の表示",
+      "vi": "Bảng 1-3-1 · Nhãn sản phẩm điện",
+      "heading": true,
+      "table": {
+        "jp": [
+          "電気用品",
+          "表示"
+        ],
+        "vi": [
+          "Sản phẩm điện",
+          "Nhãn"
+        ],
+        "rows": [
+          [
+            "特定電気用品の表示",
+            "Sản phẩm điện đặc định",
+            "①**届出事業者**の名称\n②**登録検査機関**の名称\n③表示：ひし形PSE\n又は**〈PS〉E**（上の表示が困難なもの）"
+          ],
+          [
+            "特定電気用品以外の電気用品の表示",
+            "Sản phẩm điện ngoài nhóm đặc định",
+            "①**届出事業者**の名称\n②表示：丸形PSE\n又は**（PS）E**（上の表示が困難なもの）"
+          ]
+        ],
+        "rowsVi": [
+          [
+            "特定電気用品の表示",
+            "Sản phẩm điện đặc định",
+            "① Tên **đơn vị đã thông báo**\n② Tên **tổ chức kiểm tra đã đăng ký**\n③ Dấu PSE hình thoi hoặc **〈PS〉E** nếu khó in dấu hình thoi."
+          ],
+          [
+            "特定電気用品以外の電気用品の表示",
+            "Sản phẩm điện ngoài nhóm đặc định",
+            "① Tên **đơn vị đã thông báo**\n② Dấu PSE hình tròn hoặc **(PS) E** nếu khó in dấu hình tròn."
+          ]
+        ]
+      }
+    },
+    {
+      "jp": "注1）PSE：Product（製品）、Safety（安全）、Electrical Appliances & Materials（電気の器具と材料）を意味している。",
+      "vi": "Chú thích 1. PSE chỉ Product (sản phẩm), Safety (an toàn) và Electrical Appliances & Materials (thiết bị và vật liệu điện)."
+    },
+    {
+      "jp": "注2）登録検査機関の例：JET（財団法人電気安全環境研究所）、JQA（財団法人日本品質保証機構）、他。",
+      "vi": "Chú thích 2. Ví dụ tổ chức kiểm tra đã đăng ký gồm JET (Viện Nghiên cứu An toàn và Môi trường Điện) và JQA (Tổ chức Đảm bảo Chất lượng Nhật Bản)."
+    },
+    {
+      "jp": "電気用品の範囲",
+      "vi": "Phạm vi sản phẩm điện",
+      "note": "",
+      "heading": true
+    },
+    {
+      "jp": "電気用品の範囲は、**一般用電気工作物等の部分**となり、又はこれに接続して用いられる機械、器具又は材料で、定格電圧**100 V**以上**300 V**以下、周波数**50 Hz**及び**60 Hz**のもの、容量は比較的小さいもの、携帯発電機にあっては定格電圧**30 V**以上**300 V**以下のもの、リチウムイオン蓄電池などです。",
+      "vi": "Phạm vi sản phẩm điện gồm máy móc, dụng cụ hoặc vật liệu là **bộ phận của công trình điện loại thông thường và các loại liên quan**, hoặc kết nối với công trình đó, có điện áp định mức từ **100 V** đến **300 V**, tần số **50 Hz** và **60 Hz**, công suất tương đối nhỏ. Phạm vi còn gồm máy phát xách tay có điện áp định mức từ **30 V** đến **300 V**, pin lithium-ion, v.v."
+    },
+    {
+      "jp": "特定電気用品及び特定電気用品以外の電気用品の具体例は、表1-3-2を参照してください。",
+      "vi": "Xem bảng 1-3-2 để biết ví dụ cụ thể về sản phẩm điện thuộc nhóm đặc định và ngoài nhóm đặc định."
+    },
+    {
+      "jp": "表1-3-2 特定電気用品の例",
+      "vi": "Bảng 1-3-2 · Ví dụ sản phẩm điện đặc định",
+      "heading": true,
+      "table": {
+        "jp": [
+          "種類",
+          "特定電気用品の例"
+        ],
+        "vi": [
+          "Loại",
+          "Ví dụ sản phẩm điện đặc định"
+        ],
+        "rows": [
+          [
+            "電線類",
+            "Dây điện",
+            "絶縁電線：**100 mm²**以下、ケーブル：**22 mm²**以下、**コード**"
+          ],
+          [
+            "ヒューズ類",
+            "Cầu chì",
+            "温度ヒューズ、その他のヒューズ：1 A以上200 A以下（筒形、栓形ヒューズは除く）"
+          ],
+          [
+            "配線器具類",
+            "Thiết bị đấu dây",
+            "**点滅器**、**コンセント**、**配線用遮断器**、**漏電遮断器**、**差込接続器**、**電流制限器**"
+          ],
+          [
+            "小形単相変圧器類",
+            "Máy biến áp nhỏ một pha",
+            "変圧器：500 V・A以下、安定器：500 W以下"
+          ],
+          [
+            "電熱器具類",
+            "Thiết bị gia nhiệt bằng điện",
+            "電気便座、電気温水器：10 kW以下"
+          ],
+          [
+            "電動力応用機械器具類",
+            "Máy và dụng cụ dùng động cơ điện",
+            "ポンプ：1.5 kW以下、ショウケース：300 W以下"
+          ],
+          [
+            "携帯発電機",
+            "Máy phát xách tay",
+            "30 V以上300 V以下"
+          ]
+        ],
+        "rowsVi": [
+          [
+            "電線類",
+            "Dây điện",
+            "Dây cách điện đến **100 mm²**, cáp đến **22 mm²**, **dây mềm**."
+          ],
+          [
+            "ヒューズ類",
+            "Cầu chì",
+            "Cầu chì nhiệt và cầu chì khác từ 1 A đến 200 A (trừ cầu chì dạng ống và dạng nút)."
+          ],
+          [
+            "配線器具類",
+            "Thiết bị đấu dây",
+            "**Công tắc**, **ổ cắm**, **áp-tô-mát**, **thiết bị cắt dòng rò**, **bộ nối kiểu cắm**, **thiết bị giới hạn dòng**."
+          ],
+          [
+            "小形単相変圧器類",
+            "Máy biến áp nhỏ một pha",
+            "Máy biến áp đến 500 VA, chấn lưu đến 500 W."
+          ],
+          [
+            "電熱器具類",
+            "Thiết bị gia nhiệt bằng điện",
+            "Bệ ngồi vệ sinh gia nhiệt bằng điện, bình nước nóng điện đến 10 kW."
+          ],
+          [
+            "電動力応用機械器具類",
+            "Máy và dụng cụ dùng động cơ điện",
+            "Máy bơm đến 1,5 kW, tủ trưng bày đến 300 W."
+          ],
+          [
+            "携帯発電機",
+            "Máy phát xách tay",
+            "Từ 30 V đến 300 V."
+          ]
+        ]
+      }
+    },
+    {
+      "jp": "特定電気用品の以外の電気用品の例\n電線管、フロアダクト、線ぴ、換気扇、電灯器具、ラジオ、テレビ、LEDランプ、LED電灯器具、リチウムイオン蓄電池、他",
+      "vi": "Ví dụ sản phẩm điện ngoài nhóm đặc định\nỐng luồn dây, máng cáp sàn, nẹp dây, quạt thông gió, bộ đèn, radio, TV, bóng LED, bộ đèn LED, pin lithium-ion, v.v."
+    },
+    {
+      "jp": "POINT　特定電気用品 といえば **電線** **100 mm²**以下、**点滅器**、**コンセント**、**配線用遮断器**、**小形単相変圧器**、**携帯発電機**など、危険又は障害の発生するおそれが多い電気用品",
+      "vi": "Ghi nhớ. Sản phẩm điện đặc định có nguy cơ cao gây nguy hiểm hoặc nhiễu, như **dây điện** đến **100 mm²**, **công tắc**, **ổ cắm**, **áp-tô-mát**, **máy biến áp nhỏ một pha** và **máy phát xách tay**."
+    },
+    {
+      "jp": "特定電気用品以外の電気用品 といえば **電線管類**、**電灯器具**、**電子応用機械器具**、他",
+      "vi": "Sản phẩm điện ngoài nhóm đặc định gồm **ống luồn dây**, **bộ đèn**, **máy và thiết bị ứng dụng điện tử**, v.v."
+    }
+  ],
+  "440": [
+    {
+      "jp": "練習問題01　電気用品",
+      "vi": "Bài luyện 01 · Sản phẩm điện",
+      "note": "",
+      "heading": true
+    },
+    {
+      "jp": "「電気用品安全法」に基づく記述において、空白箇所に当てはまる字句、数字又は記号は。",
+      "vi": "Điền từ, số hoặc ký hiệu phù hợp vào các chỗ trống theo Luật An toàn sản phẩm điện.",
+      "note": ""
+    },
+    {
+      "jp": "a.（ア）電気用品は、構造又は使用方法その他の使用状況から見て特に危険又は障害の発生するおそれが多い電気用品である。",
+      "vi": "a. Sản phẩm điện (ア) là sản phẩm có nguy cơ đặc biệt cao gây tai nạn hoặc hư hại do cấu tạo/cách dùng.",
+      "note": ""
+    },
+    {
+      "jp": "b. 定格電圧が（イ）V以上600 V以下のコードは、導体の公称断面積及び線心の本数に関わらず、（ア）電気用品である。",
+      "vi": "b. Dây nguồn có điện áp định mức từ (イ) V đến 600 V thuộc nhóm điện dụng (ア), không phụ thuộc tiết diện lõi và số lõi.",
+      "note": ""
+    },
+    {
+      "jp": "c. 電気用品を製造し、又は（ウ）する場合においては、経済産業省令で定める技術基準に適合するようにしなければならない。",
+      "vi": "c. Khi sản xuất hoặc (ウ) sản phẩm điện phải đáp ứng tiêu chuẩn kỹ thuật quy định.",
+      "note": ""
+    },
+    {
+      "jp": "d. 電気工事士は、電気工作物の設置又は変更の工事に（ア）電気用品を使用する場合、（エ）又は（オ）の記号が表示されたものでなければ使用してはならない。",
+      "vi": "d. Khi dùng sản phẩm điện (ア) trong thi công, thợ điện chỉ được dùng sản phẩm có dấu (エ) hoặc (オ) phù hợp.",
+      "note": ""
+    },
+    {
+      "jp": "解説",
+      "vi": "Lời giải",
+      "heading": true
+    },
+    {
+      "jp": "「電気用品」とは、一般用電気工作物の部分となり、又はこれに接続して用いられる機械、器具又は材料であって政令で定めるもの、及び携帯発電機、蓄電池であって、政令で定めるものをいいます。「特定電気用品」とは、構造又は使用方法その他の使用状況から見て特に危険又は障害の発生するおそれが多い電気用品であって、政令で定めるものをいいます。",
+      "vi": "Sản phẩm điện gồm máy móc, dụng cụ hoặc vật liệu làm bộ phận của hay kết nối với công trình điện loại thông thường và thuộc danh mục quy định bằng nghị định, cùng máy phát điện xách tay và pin lưu trữ thuộc danh mục do nghị định quy định. Sản phẩm điện đặc định là sản phẩm thuộc danh mục do nghị định quy định, có nguy cơ cao gây nguy hiểm hoặc nhiễu xét theo cấu tạo, cách sử dụng và các tình huống sử dụng khác."
+    },
+    {
+      "jp": "定格電圧が100 V以上600 V以下の電線（①絶縁電線（100 mm²以下）、②ケーブル（22 mm²以下）、③コード（すべて）、④キャブタイヤケーブル（100 mm²以下））は、特定電気用品です。電気用品を製造し、又は輸入する場合においては、経済産業省令で定める技術基準に適合しなければなりません。電気工事士は、所定の表示のない電気用品を電気工作物の設置又は変更の工事に使用することはできません。",
+      "vi": "Dây dẫn có điện áp định mức từ 100 V đến 600 V thuộc nhóm đặc định gồm ① dây cách điện đến 100 mm², ② cáp đến 22 mm², ③ mọi loại dây mềm, ④ cáp mềm vỏ bọc cao su kiểu cabtyre đến 100 mm². Khi sản xuất hoặc nhập khẩu sản phẩm điện, phải đáp ứng tiêu chuẩn kỹ thuật theo thông tư của Bộ Kinh tế, Thương mại và Công nghiệp. Thợ điện không được dùng sản phẩm thiếu nhãn quy định khi lắp mới hoặc thay đổi công trình điện.",
+      "note": "Câu b hỏi riêng dải điện áp của dây mềm. Trong dải này, tiết diện và số lõi không làm thay đổi đáp án."
+    },
+    {
+      "diagram": "lawPseTable440"
+    },
+    {
+      "jp": "解答　（ア）**特定**　（イ）**100**　（ウ）**輸入**　（エ）**ひし形PSE**　（オ）**〈PS〉E**",
+      "vi": "Đáp án. (ア) **đặc định** · (イ) **100** · (ウ) **nhập khẩu** · (エ) **PSE hình thoi** · (オ) **〈PS〉E**."
+    }
   ]
 };

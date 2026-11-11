@@ -10,7 +10,9 @@ import type { FormulaPart, FormulaLine, LessonRow } from "./lesson";
 
 type MarkedReadings = FuriganaToken[][];
 
-export type ReadingRow = LessonRow & { readings?: MarkedReadings; tableReadings?: MarkedReadings[][] };
+type TableReadings = { headers: MarkedReadings[]; rows: MarkedReadings[][] };
+
+export type ReadingRow = LessonRow & { readings?: MarkedReadings; tableReadings?: TableReadings };
 
 const red = "font-semibold text-red-700 dark:text-red-300";
 
@@ -104,18 +106,18 @@ function PrefixTable({ headers, rows, japanese = false, readings, marked = false
   headers: string[];
   rows: string[][];
   japanese?: boolean;
-  readings?: MarkedReadings[][];
+  readings?: TableReadings;
   marked?: boolean;
 }) {
   return (
     <div className="overflow-x-auto">
-      <table className="w-full border-collapse text-left text-sm">
-        <thead className="bg-surface-muted"><tr>{headers.map(header =>
-          <th scope="col" key={header} className="px-2 py-1">{header}</th>)}</tr></thead>
+      <table className={`w-full border-collapse text-left text-sm ${marked && headers.length > 2 ? "min-w-[36rem]" : ""}`}>
+        <thead className="bg-surface-muted"><tr>{headers.map((header, index) =>
+          <th scope="col" key={header} className="px-2 py-1">{marked ? <MarkedText text={header} readings={readings?.headers[index]} /> : header}</th>)}</tr></thead>
         <tbody>{rows.map(([jp, vi, ...cells], rowIndex) =>
           <tr key={jp} className="border-t border-border">
-            <th scope="row" className="px-2 py-1 font-normal">{marked ? <MarkedText text={japanese ? jp : vi} readings={readings?.[rowIndex]?.[0]} /> : japanese ? jp : vi}</th>
-            {cells.map((cell, index) => <td key={index} className="whitespace-pre-line px-2 py-1">{marked ? <MarkedText text={cell} readings={readings?.[rowIndex]?.[index + 1]} /> : cell}</td>)}
+            <th scope="row" className={`px-2 py-1 font-normal ${marked ? "whitespace-pre-line align-top" : ""}`}>{marked ? <MarkedText text={japanese ? jp : vi} readings={readings?.rows[rowIndex]?.[0]} /> : japanese ? jp : vi}</th>
+            {cells.map((cell, index) => <td key={index} className={`px-2 py-1 ${marked ? "whitespace-pre-line align-top" : ""}`}>{marked ? <MarkedText text={cell} readings={readings?.rows[rowIndex]?.[index + 1]} /> : cell}</td>)}
           </tr>)}</tbody>
       </table>
     </div>

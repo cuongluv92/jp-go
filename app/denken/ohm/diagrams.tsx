@@ -35,6 +35,28 @@ function Diagram({ file, width, height, title, labels }: {
 }
 
 export const diagrams = {
+  lawSafetyExercise434: (
+    <Diagram file="lawSafetyExercise434" width={1065} height={688} title="Sơ đồ bài tập về hệ thống bảo đảm an toàn điện" labels={[
+      ["一般用電気工作物", "Công trình điện loại thông thường"],
+      ["自家用電気工作物", "Công trình điện tự dùng"],
+      ["小規模事業用電気工作物を除く", "Trừ công trình điện 事業用 quy mô nhỏ"],
+      ["経済産業大臣", "Bộ trưởng Bộ Kinh tế, Thương mại và Công nghiệp"],
+      ["電気工作物を設置する者", "Chủ lắp đặt công trình điện"],
+      ["主務大臣", "Bộ trưởng có thẩm quyền"],
+    ]} />
+  ),
+  lawPseMarks438: (
+    <Diagram file="lawPseMarks438" width={1160} height={319} title="Dấu PSE hình thoi và hình tròn" labels={[
+      ["特定電気用品の表示", "Dấu của sản phẩm điện đặc định (PSE hình thoi)"],
+      ["特定電気用品以外の電気用品の表示", "Dấu của sản phẩm điện ngoài nhóm đặc định (PSE hình tròn)"],
+    ]} />
+  ),
+  lawPseTable440: (
+    <Diagram file="lawPseTable440" width={1029} height={221} title="Các dạng ký hiệu PSE trong lời giải" labels={[
+      ["特定電気用品の表示", "PSE hình thoi hoặc 〈PS〉E"],
+      ["特定電気用品以外の電気用品の表示", "PSE hình tròn hoặc (PS) E"],
+    ]} />
+  ),
   lawElectricWorks424: (
     <Diagram file="lawElectricWorks424" width={1126} height={426} title="Công trình điện từ nhà máy đến hộ sử dụng" labels={[
       ["事業用電気工作物", "Công trình điện loại 事業用"],
