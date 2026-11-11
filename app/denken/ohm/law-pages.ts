@@ -6710,5 +6710,538 @@ export const lawPages: Record<number, LessonRow[]> = {
       "jp": "管の曲げ半径は管内径の**6倍**以上で、管の支持点間距離は**2 m**以下とすることが望ましいです（内線規程）。",
       "vi": "Theo quy định đi dây trong công trình được sách dẫn, nên giữ bán kính uốn ống ít nhất **6 lần** đường kính trong và khoảng cách điểm đỡ ống không quá **2 m**."
     }
+  ],
+  "483": [
+    {
+      "jp": "金属管には、**D種**接地工事（300 V以下）、**C種**接地工事（300 V超過の場合）を施します。",
+      "vi": "Ống kim loại dùng nối đất **loại D** khi điện áp đến 300 V, và **loại C** khi trên 300 V."
+    },
+    {
+      "jp": "次の場合は、接地工事を省略してもよいことになっています。",
+      "vi": "Có thể miễn nối đất trong các trường hợp dưới đây."
+    },
+    {
+      "jp": "①管の長さが**4 m**以下のものを乾燥した場所に施設する場合",
+      "vi": "① Ống dài đến **4 m** lắp ở nơi khô ráo."
+    },
+    {
+      "jp": "②対地電圧が150 V以下で、管の長さが**8 m**以下のものに簡易接触防護措置を施すとき、又は乾燥した場所に施設する場合",
+      "vi": "② Điện áp so với đất đến 150 V, ống dài đến **8 m**, đồng thời áp dụng biện pháp bảo vệ đơn giản chống tiếp xúc hoặc lắp ở nơi khô ráo."
+    },
+    {
+      "jp": "金属管工事は、すべての場所での施工ができます。ただし、木造の屋側電線路は、禁止されています。",
+      "vi": "Có thể thi công bằng ống kim loại ở mọi vị trí, trừ đường dây dọc mặt ngoài của công trình bằng gỗ."
+    },
+    {
+      "jp": "合成樹脂管工事",
+      "vi": "Thi công ống nhựa tổng hợp",
+      "heading": true
+    },
+    {
+      "jp": "**合成樹脂管工事**では、管の曲げ半径は管内径の**6倍**以上で、管の支持点間距離は**1.5 m**以下です。合成樹脂製電線管は、硬質ビニル管、PF管、CD管があります。PF管（プラスチックフレキシブル管）、CD管（コンバインドダクト管）は曲げが自由な可とう管です。",
+      "vi": "Khi **thi công ống nhựa tổng hợp**, bán kính uốn ít nhất **6 lần** đường kính trong và khoảng cách điểm đỡ không quá **1,5 m**. Ống luồn dây bằng nhựa tổng hợp gồm ống vinyl cứng, ống PF và ống CD. PF và CD là loại ống mềm có thể uốn linh hoạt."
+    },
+    {
+      "jp": "**PF管**は、自己消火性（耐熱性）のポリエチレンを用いたもので、露出工事、コンクリート埋め込み工事のいずれでも使用できます。**CD管**はオレンジ色をしており、原則としてコンクリートに直接埋め込んだり、地中配線のケーブルの保護用などに使用されます。",
+      "vi": "**Ống PF** dùng polyetylen có tính tự tắt (chịu nhiệt) và dùng được cho lắp nổi hoặc chôn trong bê tông. **Ống CD** màu cam, về nguyên tắc dùng để chôn trực tiếp trong bê tông, bảo vệ cáp ngầm hoặc mục đích tương tự."
+    },
+    {
+      "jp": "合成樹脂管工事（CD管は除く）は、すべての場所での施工ができます。ただし、爆燃性粉じんや可燃性ガスのある場所では施工できません。",
+      "vi": "Thi công bằng ống nhựa tổng hợp (trừ ống CD) được thực hiện ở mọi vị trí, trừ nơi có bụi dễ cháy nổ hoặc khí dễ cháy."
+    },
+    {
+      "jp": "金属可とう電線管工事",
+      "vi": "Thi công ống luồn dây kim loại mềm",
+      "heading": true
+    },
+    {
+      "jp": "**金属可とう電線管工事**には、二種金属製可とう電線管（プリカチューブ）と、一種金属製可とう電線管（フレキシブルコンジット）があり、可とう性があります。",
+      "vi": "**Thi công ống luồn dây kim loại mềm** có hai loại ống có thể uốn: loại II (Plica tube) và loại I (flexible conduit)."
+    },
+    {
+      "jp": "プリカチューブは、金属管工事と同じ場所に施工できます。フレキシブルコンジットは、300 V以下の乾燥した展開場所、点検できる隠ぺい場所に施工できます。",
+      "vi": "Ống Plica dùng được ở các nơi được phép thi công ống kim loại. Với điện áp đến 300 V, ống flexible conduit có thể lắp ở nơi khô ráo và lộ thiên, hoặc ở chỗ lắp kín kiểm tra được."
+    },
+    {
+      "jp": "原則として**D種**接地工事（300 V以下）、**C種**接地工事（300 V超過の場合）を施します。",
+      "vi": "Về nguyên tắc, nối đất **loại D** khi điện áp đến 300 V và **loại C** khi trên 300 V."
+    },
+    {
+      "jp": "次の場合は、接地工事を省略又は緩和できます。\n①管の長さが**4 m**以下の場合 D種接地工事を省略可能\n②接触防護措置を施す場合は、C種をD種に緩和可能",
+      "vi": "Có thể miễn hoặc giảm yêu cầu nối đất như sau.\n① Ống dài đến **4 m** có thể miễn nối đất loại D.\n② Nếu có biện pháp bảo vệ chống tiếp xúc, có thể dùng loại D thay loại C."
+    },
+    {
+      "jp": "金属線ぴ工事",
+      "vi": "Thi công nẹp kim loại",
+      "heading": true
+    },
+    {
+      "jp": "**300 V**以下の展開、乾燥した場所、又は点検できる隠ぺい、乾燥した場所に施工できます。",
+      "vi": "Với điện áp đến **300 V**, có thể lắp ở nơi khô ráo, đi dây lộ thiên hoặc đi dây kín nhưng có thể kiểm tra."
+    },
+    {
+      "jp": "金属線ぴには、**D種**接地工事を施します。接地工事の省略規定は金属管工事に準じます。",
+      "vi": "Nẹp kim loại dùng nối đất **loại D**. Trường hợp miễn nối đất áp dụng như đối với ống kim loại."
+    }
+  ],
+  "484": [
+    {
+      "jp": "各種ダクト工事",
+      "vi": "Các loại thi công bằng máng dẫn điện.",
+      "heading": true
+    },
+    {
+      "jp": "ダクト工事には、金属ダクト工事、バスダクト工事、フロアダクト工事、ライティングダクト工事などがあります。",
+      "vi": "Thi công bằng máng gồm máng kim loại, máng thanh cái, máng sàn và ray cấp điện chiếu sáng, v.v."
+    },
+    {
+      "jp": "**金属ダクト工事**は、太い電線を多数集中して施設する場合、配線をダクトに収めて施設する工事方法です。",
+      "vi": "**Thi công máng kim loại** là đặt dây trong máng khi cần lắp tập trung nhiều dây dẫn cỡ lớn."
+    },
+    {
+      "jp": "**バスダクト工事**は、金属製のダクトの中に銅帯やアルミ帯の導体を絶縁物で固定し、大電流を流すことができるようにしたものです。",
+      "vi": "**Thi công máng thanh cái** dùng chất cách điện cố định các thanh dẫn bằng đồng hoặc nhôm trong máng kim loại để dẫn dòng lớn."
+    },
+    {
+      "jp": "**フロアダクト工事**は、コンクリート建物の床下にダクトを施設し、床面に受け口を設けて配線する方法です。受け口にコンセントなどを取り付けて、床から電源をとることができるようにするものです。",
+      "vi": "**Thi công máng sàn** là lắp máng dưới sàn công trình bê tông, bố trí hộp trên mặt sàn để đi dây. Có thể lắp ổ cắm hoặc thiết bị tương tự tại hộp để lấy điện từ sàn."
+    },
+    {
+      "jp": "**ライティングダクト工事**は、照明器具などを、専用プラグを介してダクトのどこからでも自由に接続できるようにしたものです。開口部は下に向けて施設し、終端は閉そくします。また、造営材を貫通して施設することはできません。",
+      "vi": "**Thi công ray cấp điện chiếu sáng** cho phép đấu thiết bị chiếu sáng và thiết bị tương tự vào bất cứ vị trí nào trên ray bằng đầu cắm chuyên dụng. Lắp mặt hở hướng xuống, bịt kín đầu ray và không lắp xuyên qua kết cấu."
+    },
+    {
+      "jp": "表2-7-4は、ダクト工事の支持点間の距離と接地工事についての表です。",
+      "vi": "Bảng 2-7-4 trình bày khoảng cách điểm đỡ và nối đất đối với các loại máng."
+    },
+    {
+      "jp": "表2-7-4 ダクト工事の施設",
+      "vi": "Bảng 2-7-4 · Lắp đặt máng dẫn điện",
+      "heading": true,
+      "table": {
+        "jp": [
+          "工事の種類",
+          "支持点間の距離",
+          "接地工事"
+        ],
+        "vi": [
+          "Phương pháp",
+          "Khoảng cách điểm đỡ",
+          "Nối đất"
+        ],
+        "rows": [
+          [
+            "金属ダクト工事",
+            "Máng kim loại",
+            "**3 m**以下（垂直取付は6 m以下）",
+            "D種（300 V以下）、C種（300 V超）\n接触防護措置を施す場合（C種をD種に緩和できる）"
+          ],
+          [
+            "バスダクト工事",
+            "Máng thanh cái",
+            "**3 m**以下（垂直取付は6 m以下）",
+            "D種（300 V以下）、C種（300 V超）\n接触防護措置を施す場合（C種をD種に緩和できる）"
+          ],
+          [
+            "ライティングダクト工事",
+            "Ray cấp điện chiếu sáng",
+            "**2 m**以下",
+            "D種（150 V以下、4 m以下の場合D種を省略できる）"
+          ],
+          [
+            "フロアダクト工事",
+            "Máng sàn",
+            "―",
+            "D種"
+          ]
+        ],
+        "rowsVi": [
+          [
+            "金属ダクト工事",
+            "Máng kim loại",
+            "Đến **3 m** (lắp đứng đến 6 m)",
+            "Loại D đến 300 V, loại C trên 300 V. Có thể dùng loại D thay C nếu có biện pháp bảo vệ chống tiếp xúc."
+          ],
+          [
+            "バスダクト工事",
+            "Máng thanh cái",
+            "Đến **3 m** (lắp đứng đến 6 m)",
+            "Loại D đến 300 V, loại C trên 300 V. Có thể dùng loại D thay C nếu có biện pháp bảo vệ chống tiếp xúc."
+          ],
+          [
+            "ライティングダクト工事",
+            "Ray cấp điện chiếu sáng",
+            "Đến **2 m**",
+            "Loại D, có thể miễn nếu đến 150 V và dài đến 4 m"
+          ],
+          [
+            "フロアダクト工事",
+            "Máng sàn",
+            "—",
+            "Loại D"
+          ]
+        ]
+      }
+    },
+    {
+      "jp": "がいし引き工事",
+      "vi": "Thi công dây dẫn trên sứ cách điện",
+      "heading": true
+    },
+    {
+      "jp": "がいしで電線を支持して配線するものです。展開した場所、点検できる隠ぺい場所（点検できる場所のみ）で施工できます。",
+      "vi": "Dùng sứ cách điện đỡ dây dẫn. Có thể lắp ở vị trí lộ thiên hoặc vị trí đi dây kín có thể kiểm tra."
+    },
+    {
+      "jp": "表2-7-5 がいし引き工事の施設",
+      "vi": "Bảng 2-7-5 · Thi công dây dẫn trên sứ",
+      "heading": true,
+      "table": {
+        "jp": [
+          "区分",
+          "300 V以下",
+          "300 Vを超える場合"
+        ],
+        "vi": [
+          "Khoảng cách",
+          "Đến 300 V",
+          "Trên 300 V"
+        ],
+        "rows": [
+          [
+            "電線相互の間隔",
+            "Giữa các dây",
+            "6 cm以上",
+            "6 cm以上"
+          ],
+          [
+            "電線と造営材との距離",
+            "Giữa dây và kết cấu",
+            "2.5 cm以上",
+            "4.5 cm以上（乾燥した場所：2.5 cm以上）"
+          ],
+          [
+            "電線支持点間の距離",
+            "Giữa các điểm đỡ dây",
+            "2 m以下",
+            "2 m以下"
+          ]
+        ],
+        "rowsVi": [
+          [
+            "電線相互の間隔",
+            "Giữa các dây",
+            "Từ 6 cm",
+            "Từ 6 cm"
+          ],
+          [
+            "電線と造営材との距離",
+            "Giữa dây và kết cấu",
+            "Từ 2,5 cm",
+            "Từ 4,5 cm (nơi khô: từ 2,5 cm)"
+          ],
+          [
+            "電線支持点間の距離",
+            "Giữa các điểm đỡ dây",
+            "Đến 2 m",
+            "Đến 2 m"
+          ]
+        ]
+      }
+    }
+  ],
+  "485": [
+    {
+      "jp": "支持点間の距離と曲げ半径",
+      "vi": "Bảng tổng hợp khoảng cách giá đỡ và bán kính uốn.",
+      "heading": true
+    },
+    {
+      "jp": "表2-7-6は、屋内配線工事の支持点間距離と曲げ半径などで、覚える内容を表にしたものです。",
+      "vi": "Bảng 2-7-6 tóm tắt khoảng cách giữa các điểm đỡ, bán kính uốn và các thông số cần nhớ khi đi dây trong nhà."
+    },
+    {
+      "jp": "表2-7-6 支持点間距離と曲げ半径など",
+      "vi": "Bảng 2-7-6 · Khoảng cách điểm đỡ và bán kính uốn",
+      "heading": true,
+      "table": {
+        "jp": [
+          "工事の種類",
+          "支持点間距離",
+          "曲げ半径",
+          "その他特記事項"
+        ],
+        "vi": [
+          "Phương pháp",
+          "Khoảng cách điểm đỡ",
+          "Bán kính uốn",
+          "Điều kiện khác"
+        ],
+        "rows": [
+          [
+            "ケーブル工事",
+            "Cáp",
+            "水平**2 m**以下、垂直**6 m**以下",
+            "ケーブル外径の**6倍**以上",
+            "キャブタイヤケーブルの場合、支持点間距離は1 m以下"
+          ],
+          [
+            "金属管工事",
+            "Ống kim loại",
+            "**2 m**以下",
+            "管**内径**の**6倍**以上",
+            "―"
+          ],
+          [
+            "合成樹脂管工事",
+            "Ống nhựa tổng hợp",
+            "**1.5 m**以下",
+            "管**内径**の**6倍**以上",
+            "合成樹脂管の接続、差込深さ（管の外径の1.2倍、接着ありでは0.8倍以上）"
+          ],
+          [
+            "がいし引き工事",
+            "Dây trên sứ cách điện",
+            "**2 m**以下",
+            "―",
+            "電線相互間：6 cm、造営材との距離：2.5 cm以上"
+          ],
+          [
+            "ダクト工事",
+            "Máng dẫn điện",
+            "水平**3 m**以下、垂直**6 m**以下",
+            "―",
+            "―"
+          ],
+          [
+            "ライティングダクト工事",
+            "Ray cấp điện chiếu sáng",
+            "**2 m**以下",
+            "―",
+            "―"
+          ],
+          [
+            "金属可とう電線管工事",
+            "Ống kim loại mềm",
+            "水平**1 m**以下、垂直**2 m**以下",
+            "管**内径**の**6倍**以上",
+            "ボックスとの接続箇所0.3 m"
+          ],
+          [
+            "金属線ぴ工事",
+            "Nẹp kim loại",
+            "**1.5 m**以下",
+            "―",
+            "幅が5 cm以下、線ぴ内で電線の接続はしない"
+          ]
+        ],
+        "rowsVi": [
+          [
+            "ケーブル工事",
+            "Cáp",
+            "Ngang đến **2 m**, đứng đến **6 m**",
+            "Ít nhất **6 lần** đường kính ngoài cáp",
+            "Cáp mềm cabtyre: điểm đỡ cách nhau đến 1 m"
+          ],
+          [
+            "金属管工事",
+            "Ống kim loại",
+            "Đến **2 m**",
+            "Ít nhất **6 lần đường kính trong** ống",
+            "—"
+          ],
+          [
+            "合成樹脂管工事",
+            "Ống nhựa tổng hợp",
+            "Đến **1,5 m**",
+            "Ít nhất **6 lần đường kính trong** ống",
+            "Độ sâu lồng ống khi nối: 1,2 lần đường kính ngoài, nếu dán keo thì ít nhất 0,8 lần"
+          ],
+          [
+            "がいし引き工事",
+            "Dây trên sứ cách điện",
+            "Đến **2 m**",
+            "—",
+            "Giữa hai dây: 6 cm. Đến kết cấu: từ 2,5 cm (xem bảng 2-7-5)"
+          ],
+          [
+            "ダクト工事",
+            "Máng dẫn điện",
+            "Ngang đến **3 m**, đứng đến **6 m**",
+            "—",
+            "—"
+          ],
+          [
+            "ライティングダクト工事",
+            "Ray cấp điện chiếu sáng",
+            "Đến **2 m**",
+            "—",
+            "—"
+          ],
+          [
+            "金属可とう電線管工事",
+            "Ống kim loại mềm",
+            "Ngang đến **1 m**, đứng đến **2 m**",
+            "Ít nhất **6 lần đường kính trong** ống",
+            "Vị trí nối với hộp: 0,3 m"
+          ],
+          [
+            "金属線ぴ工事",
+            "Nẹp kim loại",
+            "Đến **1,5 m**",
+            "—",
+            "Rộng không quá 5 cm, không nối dây bên trong nẹp"
+          ]
+        ]
+      }
+    },
+    {
+      "jp": "POINT　接地工事の省略 といえば 150 V以下の**乾燥**した場所、**木製**の床上の機器、**4 m**以下の金属管、又は**8 m**以下の金属管（150 V以下）\n工事方法の制限 といえば ケーブル、金属管、合成樹脂管工事はすべての場所（一部除く）\n支持点間距離 といえば ケーブル水平**2 m**、垂直**6 m**、金属管**2 m**、合成樹脂管**1.5 m**",
+      "vi": "Ghi nhớ. Miễn nối đất trong các trường hợp đã nêu, như thiết bị đến 150 V ở nơi **khô ráo**, thiết bị trên sàn **gỗ**, ống kim loại dài đến **4 m** hoặc đến **8 m** (điện áp so với đất đến 150 V).\nCó thể dùng cáp, ống kim loại, ống nhựa tổng hợp ở mọi vị trí trừ các ngoại lệ.\nKhoảng cách điểm đỡ: cáp ngang **2 m**, đứng **6 m**, ống kim loại **2 m**, ống nhựa **1,5 m**."
+    },
+    {
+      "jp": "引込口、小勢力回路、ショウウィンドーの配線",
+      "vi": "Dây dẫn vào, mạch công suất nhỏ, hệ thống tủ trưng bày.",
+      "heading": true
+    },
+    {
+      "jp": "引込口配線は、一般にケーブル工事、合成樹脂管工事が行われます。小勢力回路の配線は、細い線を用い、ショウウィンドーの配線はビニルコードなどが用いられます。",
+      "vi": "Dây ở điểm đưa điện vào thường thi công bằng cáp hoặc ống nhựa tổng hợp. Mạch công suất nhỏ dùng dây nhỏ, còn tủ kính trưng bày dùng dây mềm vinyl hoặc loại tương tự."
+    },
+    {
+      "jp": "低圧引込口配線工事",
+      "vi": "Thi công đường dây dẫn vào hạ áp.",
+      "heading": true
+    },
+    {
+      "jp": "電気事業者の配電線の取付点から引込口開閉器までの配線を、**引込口配線**といいます。",
+      "vi": "**Đoạn dây ở điểm đưa điện vào** kéo từ điểm gắn dây phân phối của đơn vị điện lực tới thiết bị đóng cắt đầu vào."
+    }
+  ],
+  "486": [
+    {
+      "jp": "道路を横断する場合は、路面上**5 m**（技術上やむを得ない場合、交通に支障がないときは、**3 m**）以上必要です。",
+      "vi": "Khi vượt đường, chiều cao tối thiểu trên mặt đường là **5 m**, hoặc **3 m** nếu bất khả kháng về kỹ thuật và không cản giao thông."
+    },
+    {
+      "jp": "引込線の取付点の高さは**4 m**以上で、技術上やむを得ない場合で、交通に支障がないときは、**2.5 m**以上にできます。",
+      "vi": "Điểm gắn dây dẫn vào cao ít nhất **4 m**. Khi bất khả kháng về kỹ thuật và không cản giao thông, có thể giảm còn ít nhất **2,5 m**."
+    },
+    {
+      "jp": "引込口配線の工事方法は、①**ケーブル工事**、②**合成樹脂管工事**、③がいし引き工事（展開した場所に限る）、④金属管工事（木造以外の造営物に限る）、によって行います。",
+      "vi": "Dây ở điểm đưa điện vào có thể thi công bằng ① **cáp**, ② **ống nhựa tổng hợp**, ③ dây trên sứ cách điện (chỉ ở nơi lộ thiên), hoặc ④ ống kim loại (chỉ ở công trình không phải bằng gỗ)."
+    },
+    {
+      "jp": "小勢力回路の配線工事",
+      "vi": "Thi công dây mạch công suất nhỏ.",
+      "heading": true
+    },
+    {
+      "jp": "対地電圧300 V以下の電源と絶縁変圧器で結合され、ベルやチャイム、リモコン回路などを動作させるための最大電圧60 V以下の電路を、**小勢力回路**といいます。",
+      "vi": "**Mạch công suất nhỏ** nối qua máy biến áp cách ly với nguồn có điện áp so với đất đến 300 V. Mạch có điện áp lớn nhất đến 60 V, dùng cho chuông, chuông báo, điều khiển từ xa và mạch tương tự."
+    },
+    {
+      "jp": "電線を造営材に取り付けて施設する場合、ケーブル又は**0.8 mm**以上の軟銅線又はこれと同等以上のコード又はキャブタイヤケーブル等を使用します。",
+      "vi": "Khi gắn dây vào kết cấu, dùng cáp, dây đồng mềm đường kính ít nhất **0,8 mm**, dây mềm tương đương trở lên hoặc cáp mềm cabtyre, v.v."
+    },
+    {
+      "jp": "ショウウィンドー又はショウケース内の配線工事",
+      "vi": "Thi công dây điện trong tủ kính trưng bày.",
+      "heading": true
+    },
+    {
+      "jp": "ショウウィンドー、ショウケース内の配線は、美観上からコード配線工事が認められています。電圧は300 V以下、電線は**0.75 mm²**以上のコード又はキャブタイヤケーブルを使用し、支持点間距離は**1 m**以下とします。",
+      "vi": "Có thể đi dây mềm trong cửa kính hoặc tủ kính trưng bày vì lý do thẩm mỹ. Điện áp đến 300 V, dây mềm hoặc cáp mềm cabtyre có tiết diện từ **0,75 mm²**. Khoảng cách điểm đỡ đến **1 m**."
+    },
+    {
+      "jp": "POINT　引込線の取付点の高さ といえば **2.5 m**以上（原則**4 m**以上）\n木造の屋側配線 といえば ケーブル工事、合成樹脂管工事、がいし引き工事\n小勢力回路 といえば ケーブル又は**0.8 mm**以上の軟銅線\nショウウィンドー配線 といえば **0.75 mm²**以上、支持点間距離は**1 m**以下",
+      "vi": "Ghi nhớ. Điểm gắn dây dẫn vào ít nhất **2,5 m** trong ngoại lệ, thông thường ít nhất **4 m**. Đi dây ngoài nhà gỗ dùng cáp, ống nhựa hoặc dây trên sứ. Mạch công suất nhỏ dùng cáp hoặc dây đồng mềm từ **0,8 mm**. Dây tủ kính từ **0,75 mm²**, điểm đỡ cách nhau đến **1 m**."
+    },
+    {
+      "jp": "電気工事士でなくても作業ができる軽微な工事",
+      "vi": "Những việc đơn giản không bắt buộc thợ điện có chứng chỉ.",
+      "heading": true
+    },
+    {
+      "jp": "低圧用の接続器、開閉器、電気機器などへのコード、キャブタイヤケーブルの接続、ねじ止めなど、簡単で技能がいらず、日常よく行われる作業である軽微な工事については、電気工事から除外されており、電気工事士でなくてもこれらの工事に係る作業ができることになっています。",
+      "vi": "Công việc đơn giản, thường gặp và không cần tay nghề như nối dây mềm, cáp mềm cabtyre hoặc bắt vít vào đầu nối, thiết bị đóng cắt hay thiết bị điện hạ áp được xếp vào công việc nhỏ. Người không có chứng chỉ thợ điện được phép thực hiện các công việc thuộc nhóm này."
+    },
+    {
+      "jp": "①電圧600 V以下で使用する差込接続器、ねじ込み接続器、ソケット、ローゼットその他の接続器又は電圧600 V以下で使用するナイフスイッチ、カットアウトスイッチ、スナップスイッチその他の開閉器に**コード**又は**キャブタイヤケーブルを接続**する工事。",
+      "vi": "① **Đấu dây mềm** hoặc **cáp mềm cabtyre** vào đầu nối kiểu cắm, kiểu vít, đui, đế nối và đầu nối tương tự dùng đến 600 V, hoặc vào cầu dao kiểu dao, kiểu cut-out, công tắc bật nhanh hay thiết bị đóng cắt tương tự dùng đến 600 V."
+    },
+    {
+      "jp": "②電圧600 V以下で使用する電気機器（配線器具を除く。以下同。）又は電圧600 V以下で使用する**蓄電池の端子**に電線（コード、キャブタイヤケーブル及びケーブルを含む）を**ねじ止め**する工事。",
+      "vi": "② **Bắt vít** dây dẫn (gồm dây mềm, cáp mềm cabtyre và cáp) vào đầu cực thiết bị điện dùng đến 600 V (trừ phụ kiện đi dây), hoặc vào **đầu cực ắc quy** dùng đến 600 V."
+    },
+    {
+      "jp": "③電圧600 V以下で使用する**電力量計**若しくは**電流制限器**又は**ヒューズ**を取り付け、又は取り外す工事。",
+      "vi": "③ Lắp hoặc tháo **công tơ điện**, **bộ hạn dòng** hoặc **cầu chì** dùng ở điện áp đến 600 V."
+    }
+  ],
+  "487": [
+    {
+      "jp": "④電鈴、インターホン、火災感知器、豆電球その他これらに類する施設に使用する**小型変圧器**（二次電圧が36 V以下のものに限る）**の二次側の配線**工事",
+      "vi": "④ **Đi dây phía thứ cấp** của **máy biến áp nhỏ** dùng cho chuông điện, intercom, đầu báo cháy, bóng đèn nhỏ hoặc thiết bị tương tự, với điện áp thứ cấp đến 36 V."
+    },
+    {
+      "jp": "⑤電線を支持する**柱**、**腕木**その他これらに類する工作物を設置し、又は変更する工事",
+      "vi": "⑤ Lắp hoặc thay đổi **cột**, **xà** đỡ dây dẫn hoặc công trình tương tự."
+    },
+    {
+      "jp": "⑥地中電線用の**暗渠**又は**管**を設置し、又は変更する工事",
+      "vi": "⑥ Lắp hoặc thay đổi **hầm** hoặc **ống** dùng cho dây ngầm."
+    },
+    {
+      "jp": "⑦600 V以下の電気機器の**接地線の取付**作業",
+      "vi": "⑦ **Gắn dây nối đất** cho thiết bị điện dùng ở điện áp đến 600 V."
+    },
+    {
+      "jp": "POINT　軽微な工事 といえば **コードの接続**、**電線のねじ止め**、**地中の管**、**接地線の取付**など",
+      "vi": "Ghi nhớ. Công việc nhỏ gồm **nối dây mềm**, **bắt vít dây**, **lắp ống ngầm**, **gắn dây nối đất**, v.v."
+    },
+    {
+      "jp": "コラム　配線工事の場所",
+      "vi": "Chuyên mục · Vị trí thi công đi dây",
+      "heading": true
+    },
+    {
+      "jp": "本節に出てきた工事の場所は、具体的にはそれぞれ次のようなものです。",
+      "vi": "Các vị trí thi công được nhắc trong mục này gồm các trường hợp cụ thể dưới đây."
+    },
+    {
+      "jp": "展開した場所：配線が簡単に見られる場所。",
+      "vi": "Vị trí lắp hở: có thể nhìn thấy dây dễ dàng."
+    },
+    {
+      "jp": "点検できる隠ぺい場所：点検口のある天井裏、押入れなど。",
+      "vi": "Chỗ lắp kín nhưng kiểm tra được: trần giả có cửa, tủ âm v.v."
+    },
+    {
+      "jp": "点検できない隠ぺい場所：コンクリート、壁の中、天井のふところなど。",
+      "vi": "Chỗ lắp kín không kiểm tra được: trong bê tông, tường, khoảng trần không có cửa."
+    },
+    {
+      "jp": "湿気の多い場所：浴室、床下。水気のある場所：土間、洗車場。",
+      "vi": "Nơi ẩm: phòng tắm, dưới sàn; nơi có nước: nền đất ướt, khu rửa xe."
+    },
+    {
+      "jp": "接触防護措置",
+      "vi": "Biện pháp bảo vệ chống tiếp xúc",
+      "heading": true
+    },
+    {
+      "jp": "次のいずれかに適合するように施設すること。\nイ）設備を、屋内にあっては床上2.3 m以上、屋外にあっては地表上2.5 m以上の高さに、かつ、人が通る場所から手を伸ばしても触れることのない範囲に施設すること。\nロ）設備に人が接近又は接触しないよう、さく、へい等を設け、又は設備を金属管に収める等の防護措置を施すこと。",
+      "vi": "Áp dụng một trong hai cách.\na) Lắp thiết bị cao ít nhất 2,3 m trên sàn trong nhà hoặc 2,5 m trên mặt đất ngoài trời, đồng thời nằm ngoài tầm với từ nơi người qua lại.\nb) Dùng hàng rào, tường chắn, ống kim loại chứa thiết bị hoặc biện pháp tương tự để người không đến gần hoặc chạm vào thiết bị."
+    },
+    {
+      "jp": "簡易接触防護措置",
+      "vi": "Biện pháp bảo vệ đơn giản chống tiếp xúc",
+      "heading": true
+    },
+    {
+      "jp": "次のいずれかに適合するように施設すること。\nイ）設備を、屋内にあっては床上1.8 m以上、屋外にあっては地表上2 m以上の高さに、かつ、人が通る場所から容易に触れることのない範囲に施設すること。\nロ）設備に人が接近又は接触しないよう、さく、へい等を設け、又は設備を金属管に収める等の防護措置を施すこと。",
+      "vi": "Áp dụng một trong hai cách.\na) Lắp thiết bị cao ít nhất 1,8 m trên sàn trong nhà hoặc 2 m trên mặt đất ngoài trời, ở phạm vi người qua lại không dễ chạm.\nb) Dùng hàng rào, tường chắn, ống kim loại chứa thiết bị hoặc biện pháp tương tự để người không đến gần hoặc chạm vào thiết bị."
+    }
   ]
 };
