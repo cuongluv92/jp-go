@@ -3150,5 +3150,374 @@ export const lawPages: Record<number, LessonRow[]> = {
       "jp": "POINT　計器用変成器の二次側の接地工事\n高圧計器用変成器の二次側電路は、**D種**接地工事\n特別高圧計器用変成器の二次側電路は、**A種**接地工事",
       "vi": "Ghi nhớ. Mạch thứ cấp máy biến điện đo lường cao áp nối đất **loại D**. Với loại siêu cao áp, nối đất **loại A**."
     }
+  ],
+  "452": [
+    {
+      "jp": "2-2 電気機械器具、発電所などの保安原則 といえば危険のない場所に施設する",
+      "vi": "2-2 Nguyên tắc an toàn khi lắp thiết bị điện, nhà máy điện · Đặt ở nơi không nguy hiểm.",
+      "note": "",
+      "heading": true
+    },
+    {
+      "jp": "高圧の機械器具の施設",
+      "vi": "Lắp đặt thiết bị điện cao áp",
+      "note": "",
+      "heading": true
+    },
+    {
+      "jp": "高圧の機械器具（これに附属する高圧電線であってケーブル以外のものを含む）は、次のいずれかにより施設することが求められています。",
+      "vi": "Thiết bị cao áp (gồm dây cao áp đi kèm, trừ dây dạng cáp) phải được lắp theo một trong các phương án dưới đây.",
+      "note": ""
+    },
+    {
+      "jp": "ただし、発電所又は変電所、開閉所若しくはこれらに準ずる場所に施設する場合は除きます。",
+      "vi": "Trừ trường hợp lắp trong nhà máy điện, trạm biến áp, trạm đóng cắt hoặc nơi tương đương."
+    },
+    {
+      "jp": "①屋内であって、**取扱者以外の者**が出入りできないように措置した場所に施設すること。",
+      "vi": "① Đặt trong nhà ở nơi đã có biện pháp ngăn **người không được phép vận hành thiết bị** ra vào."
+    },
+    {
+      "jp": "②次により施設すること。",
+      "vi": "② Bố trí theo điều kiện bảo vệ dưới đây.",
+      "note": ""
+    },
+    {
+      "jp": "ただし、工場等の構内においては、ロ及びハの規定によらないことができる。",
+      "vi": "Trong khuôn viên nhà máy hoặc cơ sở tương tự, có thể áp dụng ngoại lệ đối với mục b và c."
+    },
+    {
+      "jp": "イ 人が触れるおそれがないように、機械器具の周囲に適当な**さく**、**へい**等を設けること。",
+      "vi": "a) Dùng **hàng rào**, **tường chắn** thích hợp quanh thiết bị để người không thể chạm vào."
+    },
+    {
+      "jp": "ロ イの規定により施設するさく、へい等の高さと、当該さく、へい等から機械器具の充電部分までの距離との和を**5 m以上**とすること。",
+      "vi": "b) Tổng chiều cao hàng rào hoặc tường chắn ở mục a và khoảng cách từ đó đến phần mang điện của thiết bị phải **từ 5 m trở lên**."
+    },
+    {
+      "jp": "ハ 危険である旨の**表示**をすること。",
+      "vi": "c) Đặt **biển cảnh báo** nguy hiểm."
+    },
+    {
+      "diagram": "lawHighVoltageEquipment452"
+    },
+    {
+      "jp": "③機械器具に附属する高圧電線にケーブル又は引下げ用高圧絶縁電線を使用し、機械器具を人が触れるおそれがないように地表上**4.5 m**（市街地外においては**4 m**）以上の高さに施設すること。",
+      "vi": "③ Dùng cáp hoặc dây cách điện cao áp dẫn xuống cho dây cao áp đi kèm. Lắp thiết bị cao ít nhất **4,5 m** tính từ mặt đất (ngoài đô thị ít nhất **4 m**) để người không chạm vào được."
+    },
+    {
+      "jp": "④機械器具を**コンクリート製の箱**又はD種接地工事を施した**金属製の箱**に収め、かつ、充電部分が露出しないように施設すること。",
+      "vi": "④ Đặt thiết bị trong **hộp bê tông** hoặc **hộp kim loại** nối đất loại D, không để lộ phần mang điện."
+    }
+  ],
+  "453": [
+    {
+      "jp": "⑤充電部分が露出しない機械器具を、次のいずれかにより施設すること。",
+      "vi": "⑤ Lắp thiết bị không để lộ phần mang điện theo một trong những biện pháp sau.",
+      "note": ""
+    },
+    {
+      "jp": "イ **簡易接触防護措置**を施すこと。",
+      "vi": "a) Áp dụng **biện pháp bảo vệ đơn giản chống tiếp xúc**."
+    },
+    {
+      "jp": "ロ　温度上昇により、又は故障の際に、その近傍の大地との間に生じる電位差により、人若しくは家畜又は他の工作物に危険のおそれがないように施設すること。",
+      "vi": "b) Lắp sao cho sự tăng nhiệt hoặc chênh lệch điện thế với đất lân cận khi có sự cố không gây nguy hiểm cho người, gia súc hay công trình khác.",
+      "note": ""
+    },
+    {
+      "jp": "特別高圧の機械器具の施設",
+      "vi": "Lắp thiết bị điện siêu cao áp",
+      "note": "",
+      "heading": true
+    },
+    {
+      "jp": "特別高圧の機械器具の施設の規制としては、機械器具を地表上**5 m以上**の高さに施設し、さくの高さと、当該さくから機械器具の充電部分までの距離との和を表2-2-1に規定する値以上とすることが決められています。",
+      "vi": "Thiết bị siêu cao áp phải đặt cao **ít nhất 5 m** so với mặt đất. Tổng chiều cao hàng rào và khoảng cách từ hàng rào đến phần mang điện phải đạt ít nhất trị số ở bảng 2-2-1."
+    },
+    {
+      "jp": "表2-2-1 充電部分までの距離",
+      "vi": "Bảng 2-2-1 · Khoảng cách tới phần mang điện",
+      "heading": true,
+      "table": {
+        "jp": [
+          "使用電圧の区分",
+          "さくの高さとさくから充電部分までの距離との和又は地表上の高さ"
+        ],
+        "vi": [
+          "Điện áp sử dụng",
+          "Chiều cao hàng rào cộng khoảng cách tới phần mang điện, hoặc chiều cao trên mặt đất"
+        ],
+        "rows": [
+          [
+            "35 000 V以下",
+            "Đến 35.000 V",
+            "5 m"
+          ],
+          [
+            "35 000 Vを超え160 000 V以下",
+            "Trên 35.000 V đến 160.000 V",
+            "6 m"
+          ],
+          [
+            "160 000 V超過",
+            "Trên 160.000 V",
+            "(6 + c)［m］"
+          ]
+        ],
+        "rowsVi": [
+          [
+            "35 000 V以下",
+            "Đến 35.000 V",
+            "5 m"
+          ],
+          [
+            "35 000 Vを超え160 000 V以下",
+            "Trên 35.000 V đến 160.000 V",
+            "6 m"
+          ],
+          [
+            "160 000 V超過",
+            "Trên 160.000 V",
+            "(6 + c) m"
+          ]
+        ]
+      }
+    },
+    {
+      "jp": "備考　cは、使用電圧と160 000 Vの差を10 000 Vで除した値（小数点以下を切り上げる。）に0.12を乗じたもの。",
+      "vi": "Ghi chú. Với điện áp sử dụng U trên 160.000 V, lấy hiệu giữa U và 160.000 V chia 10.000 V, làm tròn lên số nguyên rồi nhân 0,12.",
+      "equations": [
+        [
+          "c = 0.12 × 切上げ［",
+          {
+            "fraction": [
+              [
+                "U − 160 000 V"
+              ],
+              [
+                "10 000 V"
+              ]
+            ]
+          },
+          "］"
+        ]
+      ],
+      "equationsVi": [
+        [
+          "c = 0,12 × làm tròn lên [",
+          {
+            "fraction": [
+              [
+                "U − 160.000 V"
+              ],
+              [
+                "10.000 V"
+              ]
+            ]
+          },
+          "]"
+        ]
+      ]
+    },
+    {
+      "jp": "POINT　高圧の機械器具の施設\n・**取扱者以外の者**が出入りできないように措置をした場所に施設する\n・**さく**、**へい**等を設ける\n・充電部分までの距離との和を**5 m以上**とする\n・危険である旨の**表示**をする\n・地表上**4.5 m**（市街地外においては**4 m**）以上の高さに施設する\n・**コンクリート製の箱**又はD種接地工事を施した**金属製の箱**に収め、充電部分が露出しないように施設する\n・**簡易接触防護措置**を施す\n・特別高圧の機械器具は、地表上**5 m以上**の高さに施設する",
+      "vi": "Ghi nhớ cách lắp thiết bị cao áp.\n• Ngăn **người không được phép vận hành thiết bị** ra vào.\n• Lắp **hàng rào**, **tường chắn**.\n• Tổng chiều cao hàng rào và khoảng cách tới phần mang điện **ít nhất 5 m**.\n• Có **biển cảnh báo** nguy hiểm.\n• Lắp cao ít nhất **4,5 m** (ngoài đô thị **4 m**).\n• Đặt trong **hộp bê tông** hoặc **hộp kim loại** nối đất loại D, không để lộ phần mang điện.\n• Áp dụng **biện pháp bảo vệ đơn giản chống tiếp xúc**.\n• Thiết bị siêu cao áp lắp **ít nhất 5 m** trên mặt đất."
+    },
+    {
+      "jp": "アークを生じる器具の施設",
+      "vi": "Lắp thiết bị tạo hồ quang",
+      "note": "",
+      "heading": true
+    },
+    {
+      "jp": "高圧又は特別高圧用の開閉器、遮断器又は避雷器その他これらに類する器具（「開閉器等」という）であって、動作時にアークを生じるものは、次の各号のいずれかにより施設します。",
+      "vi": "Thiết bị đóng cắt, máy cắt, chống sét van cao áp hoặc siêu cao áp và thiết bị tương tự (gọi chung là thiết bị đóng cắt và thiết bị liên quan) phát sinh hồ quang khi hoạt động được lắp theo một trong hai phương án dưới đây."
+    },
+    {
+      "jp": "①耐火性のもので**アーク**を生じる部分を囲むことにより、木製の壁又は天井その他の可燃性のものから**隔離する**こと。",
+      "vi": "① Bao phần phát sinh **hồ quang** bằng vật liệu chịu lửa để **cách ly** với tường gỗ, trần gỗ hoặc vật liệu dễ cháy khác."
+    },
+    {
+      "jp": "②木製の壁又は天井その他の可燃性のものとの離隔距離を表2-2-2に規定する値以上とすること。",
+      "vi": "② Giữ khoảng cách với vật dễ cháy theo bảng 2-2-2.",
+      "note": ""
+    }
+  ],
+  "454": [
+    {
+      "jp": "表2-2-2 開閉器等との離隔距離",
+      "vi": "Bảng 2-2-2 · Khoảng cách an toàn với thiết bị đóng cắt và thiết bị liên quan",
+      "heading": true,
+      "table": {
+        "jp": [
+          "開閉器等の使用電圧の区分",
+          "離隔距離"
+        ],
+        "vi": [
+          "Điện áp sử dụng",
+          "Khoảng cách"
+        ],
+        "rows": [
+          [
+            "高圧",
+            "Cao áp",
+            "**1 m**"
+          ],
+          [
+            "特別高圧 35 000 V以下",
+            "Siêu cao áp đến 35.000 V",
+            "**2 m**（動作時に生じるアークの方向及び長さを火災が発生するおそれがないように制限した場合にあっては、**1 m**）"
+          ],
+          [
+            "特別高圧 35 000 V超過",
+            "Siêu cao áp trên 35.000 V",
+            "**2 m**"
+          ]
+        ],
+        "rowsVi": [
+          [
+            "高圧",
+            "Cao áp",
+            "**1 m**"
+          ],
+          [
+            "特別高圧 35 000 V以下",
+            "Siêu cao áp đến 35.000 V",
+            "**2 m** (hoặc **1 m** nếu hướng và độ dài hồ quang khi thiết bị hoạt động được khống chế để tránh nguy cơ cháy)"
+          ],
+          [
+            "特別高圧 35 000 V超過",
+            "Siêu cao áp trên 35.000 V",
+            "**2 m**"
+          ]
+        ]
+      }
+    },
+    {
+      "jp": "POINT　アークを生じる器具は、**耐火性**のもので囲み、可燃性のものから**隔離**する\n高圧の開閉器等と可燃性のものとの離隔距離は、**1 m**以上\n特別高圧の開閉器等と可燃性のものとの離隔距離は、**2 m**以上",
+      "vi": "Ghi nhớ. Bao thiết bị phát sinh hồ quang bằng vật liệu **chịu lửa** để **cách ly** với vật liệu dễ cháy. Khoảng cách với vật liệu dễ cháy ít nhất **1 m** đối với cao áp và **2 m** đối với siêu cao áp.",
+      "note": "Bảng phía trên nêu trường hợp siêu cao áp đến 35.000 V có thể giảm còn 1 m."
+    },
+    {
+      "jp": "発電所等への取扱者以外の者の立入りの防止",
+      "vi": "Ngăn người không phận sự vào nhà máy và trạm điện",
+      "note": "",
+      "heading": true
+    },
+    {
+      "jp": "高圧又は特別高圧の機械器具及び母線等を屋外に施設する発電所又は変電所、開閉所若しくはこれらに準ずる場所（「発電所等」という）は、次により構内に**取扱者以外の者**が立ち入らないような措置を講じることとしています。",
+      "vi": "Nhà máy điện, trạm biến áp, trạm đóng cắt hoặc nơi tương đương có thiết bị hoặc thanh cái cao áp hay siêu cao áp đặt ngoài trời phải áp dụng các biện pháp dưới đây để **người không được phép vận hành thiết bị** không vào khuôn viên."
+    },
+    {
+      "jp": "①**さく**、**へい**等を設けること。",
+      "vi": "① Lắp **hàng rào**, **tường chắn** hoặc bộ phận tương tự."
+    },
+    {
+      "jp": "②出入口に**立入を禁止する**旨を表示すること。",
+      "vi": "② Gắn biển **cấm vào** ở cửa ra vào."
+    },
+    {
+      "jp": "③出入口に**施錠装置**を施設して施錠する等、取扱者以外の者の出入りを制限する措置を講じること。",
+      "vi": "③ Gắn **thiết bị khóa** và khóa cửa ra vào, hoặc áp dụng biện pháp khác để hạn chế người không được phép."
+    },
+    {
+      "jp": "POINT　発電所等への取扱者以外の者の立入の防止措置は、\n・**さく**、**へい**等を設ける\n・さく、へいの**高さ**と特別高圧の機械器具等の**充電部分までの距離**との和は、35 000 V以下の場合は、**5 m**以上",
+      "vi": "Ghi nhớ biện pháp ngăn người không phận sự vào nhà máy điện, trạm điện và nơi tương tự.\n• Lắp **hàng rào**, **tường chắn**.\n• Khi điện áp đến 35.000 V, tổng **chiều cao** hàng rào, tường chắn và **khoảng cách đến phần mang điện** siêu cao áp ít nhất **5 m**."
+    },
+    {
+      "jp": "避雷器の施設",
+      "vi": "Lắp đặt thiết bị chống sét",
+      "note": "",
+      "heading": true
+    },
+    {
+      "jp": "高圧避雷器は、雷サージ※1、開閉サージなどの過電圧の侵入による受電設備機器の破損を防止するために設置します。",
+      "vi": "Chống sét van cao áp dùng để ngăn hư hỏng thiết bị nhận điện do quá điện áp xâm nhập, như xung sét (chú thích 1) hoặc xung đóng cắt.",
+      "note": ""
+    },
+    {
+      "jp": "避雷器の施設箇所と接地工事",
+      "vi": "Vị trí lắp thiết bị chống sét và phương pháp nối đất",
+      "note": "Danh sách vị trí cụ thể tiếp tục ở trang 455.",
+      "heading": true
+    },
+    {
+      "jp": "高圧及び特別高圧の電路中、次の箇所には避雷器を施設します。",
+      "vi": "Lắp chống sét van tại các vị trí sau trên mạch cao áp và siêu cao áp. Xem tiếp trang 455."
+    },
+    {
+      "jp": "※1 サージ：異常に高い電圧が瞬間的に発生する現象のこと。",
+      "vi": "Chú thích 1. Xung quá điện áp là hiện tượng điện áp cao bất thường xuất hiện tức thời."
+    }
+  ],
+  "455": [
+    {
+      "jp": "①発電所又は変電所若しくはこれに準ずる場所の架空電線の**引込口**及び**引出口**",
+      "vi": "① **Điểm đưa dây vào** và **điểm đưa dây ra** của đường dây trên không ở nhà máy điện, trạm biến áp hoặc nơi tương đương."
+    },
+    {
+      "jp": "②架空電線路に接続する配電用変圧器の**高圧側**及び**特別高圧側**",
+      "vi": "② **Phía cao áp** và **phía siêu cao áp** của máy biến áp phân phối nối với đường dây trên không."
+    },
+    {
+      "jp": "③高圧架空電線路から供給を受ける受電電力の容量が**500 kW**以上の**需要場所の引込口**",
+      "vi": "③ **Điểm đưa dây vào nơi sử dụng điện** nhận điện cao áp từ đường dây trên không với công suất nhận từ **500 kW**."
+    },
+    {
+      "jp": "④特別高圧架空電線路から供給を受ける需要場所の引込口",
+      "vi": "④ Điểm vào cơ sở nhận điện từ đường dây siêu cao áp trên không.",
+      "note": ""
+    },
+    {
+      "jp": "また、高圧及び特別高圧の電路に施設する避雷器には、**A種**接地工事を施します。",
+      "vi": "Chống sét van trên mạch cao áp và siêu cao áp phải nối đất **loại A**."
+    },
+    {
+      "jp": "架空地線の施設",
+      "vi": "Lắp đặt dây chống sét trên không",
+      "note": "",
+      "heading": true
+    },
+    {
+      "jp": "**架空地線**は、架空電線路を**雷**から保護するために、架空電線路の上方に並行して施設する**接地線**です。",
+      "vi": "**Dây chống sét trên không** là **dây nối đất** đặt song song phía trên đường dây để bảo vệ khỏi **sét**."
+    },
+    {
+      "jp": "高圧架空電線路に使用する架空地線は、直径**4 mm**以上の裸硬銅線又は引張強さ5.26 kN以上のものとします。",
+      "vi": "Dây chống sét của đường dây cao áp trên không là dây đồng cứng trần đường kính ít nhất **4 mm** hoặc dây chịu lực kéo ít nhất 5,26 kN."
+    },
+    {
+      "jp": "POINT　避雷器の施設箇所 といえば 架空電線の**引込口**と**引出口**、配電用変圧器の**高圧側**及び**特別高圧側**、**500 kW**以上の需要場所の**引込口**\n避雷器の接地 といえば **A種**接地工事\n架空地線 といえば 電線路を**雷**から保護する**接地線**、**4 mm**以上の**裸硬銅線**（高圧架空電線路）",
+      "vi": "Ghi nhớ. Lắp chống sét van ở **điểm đưa dây vào** và **điểm đưa dây ra** của đường dây trên không tại nơi nêu trên, **phía cao áp** và **phía siêu cao áp** của máy biến áp phân phối, và **điểm đưa dây vào** nơi nhận điện cao áp từ **500 kW**. Chống sét van nối đất **loại A**. Dây chống sét là **dây nối đất** bảo vệ đường dây khỏi **sét**. Với đường dây cao áp trên không, sách nêu **dây đồng cứng trần** từ **4 mm**."
+    },
+    {
+      "jp": "変電所等からの電磁誘導作用による人の健康影響の防止",
+      "vi": "Phòng ảnh hưởng sức khỏe do cảm ứng điện từ từ trạm điện",
+      "note": "",
+      "heading": true
+    },
+    {
+      "jp": "変電所又は開閉所（「変電所等」という）から発生する磁界は、磁束密度の測定値が、商用周波数において**200** μT以下であること。ただし、田畑、山林その他の人の往来が少ない場所において、人体に危害を及ぼすおそれがないように施設する場合は、この限りではありません。",
+      "vi": "Mật độ từ thông đo được của từ trường do trạm biến áp hoặc trạm đóng cắt sinh ra ở tần số lưới không quá **200** µT. Ngoại lệ áp dụng nếu lắp ở đồng ruộng, rừng hoặc nơi ít người qua lại và bố trí sao cho không có nguy cơ gây hại cho người."
+    },
+    {
+      "jp": "測定に当たっては、測定地点の地表、路面又は床（「地表等」という）から**0.5 m**、**1 m**及び**1.5 m**の高さで測定し、3点の**平均値**を測定値とします。",
+      "vi": "Đo ở ba độ cao **0,5 m**, **1 m** và **1,5 m** tính từ mặt đất, mặt đường hoặc sàn, rồi lấy **giá trị trung bình** của ba điểm."
+    },
+    {
+      "jp": "架空電線路からの静電誘導作用又は電磁誘導作用による感電の防止",
+      "vi": "Chống điện giật do cảm ứng điện trường/từ trường từ dây trên không",
+      "note": "",
+      "heading": true
+    },
+    {
+      "jp": "特別高圧の架空電線路は、通常の使用状態において、静電誘導作用により人による感知のおそれがないよう、地表上1 mにおける電界強度が**3 kV/m**以下になるように施設しなければなりません。",
+      "vi": "Trong điều kiện sử dụng bình thường, đường dây siêu cao áp trên không phải được lắp sao cho cường độ điện trường tại độ cao 1 m trên mặt đất không quá **3 kV/m**, để người không cảm nhận được tác động của cảm ứng tĩnh điện."
+    },
+    {
+      "jp": "POINT　電磁誘導作用又は静電誘導作用による人への影響防止の規定 といえば\n変電所等からの磁界は、**磁束密度**の測定値が**200 μT**以下\n特高の架空電線路からの電界は、**電界強度**が**3 kV/m**以下",
+      "vi": "Ghi nhớ. **Mật độ từ thông** đo được của từ trường từ trạm biến áp và nơi tương đương không quá **200 µT**. **Cường độ điện trường** do đường dây siêu cao áp trên không không quá **3 kV/m**."
+    }
   ]
 };

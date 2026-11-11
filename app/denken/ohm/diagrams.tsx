@@ -35,6 +35,21 @@ function Diagram({ file, width, height, title, labels }: {
 }
 
 export const diagrams = {
+  lawHighVoltageEquipment452: (
+    <Diagram file="lawHighVoltageEquipment452" width={1164} height={449} title="Hình 2-2-1 đến 2-2-3 · Ba cách bố trí thiết bị cao áp" labels={[
+      ["高圧機械器具を地上に施設する場合", "Lắp thiết bị cao áp trên mặt đất"],
+      ["保護さく（へい）を全周に設ける", "Lắp hàng rào hoặc tường chắn quanh toàn bộ thiết bị"],
+      ["危険の表示", "Biển cảnh báo nguy hiểm"],
+      ["開閉器", "Thiết bị đóng cắt"],
+      ["変圧器等", "Máy biến áp hoặc thiết bị tương tự"],
+      ["H + L ≥ 5 m、H ≥ 1.5 m", "Tổng H và L ít nhất 5 m, chiều cao H ít nhất 1,5 m"],
+      ["最小離隔距離 ≥ 0.5 m", "Khoảng cách tối thiểu từ phần mang điện đến hàng rào là 0,5 m"],
+      ["高圧機械器具を柱上などに施設する場合", "Lắp thiết bị cao áp trên cột hoặc vị trí tương tự"],
+      ["4.5 m以上", "Cao ít nhất 4,5 m so với mặt đất"],
+      ["市街地外4 m以上", "Ngoài đô thị cao ít nhất 4 m"],
+      ["高圧機械器具を金属製の箱に施設する場合", "Lắp thiết bị cao áp trong hộp kim loại"],
+    ]} />
+  ),
   lawGroundElectrode449: (
     <Diagram file="lawGroundElectrode449" width={668} height={526} title="Hình 2-1-2 · Nối đất loại A hoặc B ở nơi người có thể chạm vào" labels={[
       ["鉄柱等", "Cột sắt hoặc cấu kiện tương tự"],
