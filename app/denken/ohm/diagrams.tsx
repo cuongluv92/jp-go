@@ -35,6 +35,45 @@ function Diagram({ file, width, height, title, labels }: {
 }
 
 export const diagrams = {
+  lawCalculatorKeys514: (
+    <Diagram file="lawCalculatorKeys514" width={1086} height={1149} title="電卓での計算例・キー操作" labels={[
+      ["メモ", "Ghi lại kết quả trung gian"],
+      ["分子と分母を別々に計算", "Tính riêng tử số và mẫu số"],
+      ["√の中は手計算", "Tính phần trong dấu căn bằng tay"],
+    ]} />
+  ),
+  lawGroundThevenin513: (
+    <Diagram file="lawGroundThevenin513" width={899} height={351} title="地絡電流を求めるテブナンの等価回路" labels={[
+      ["テブナンの等価回路にする", "Đổi sang mạch tương đương Thévenin"],
+      ["3線は短絡し1導体と考える", "Nối tắt ba dây và coi như một dây dẫn khi tính tổng trở"],
+      ["地絡前の電圧", "Điện áp trước khi chạm đất"],
+    ]} />
+  ),
+  lawGroundProtection512: (
+    <Diagram file="lawGroundProtection512" width={763} height={456} title="高圧地絡保護システムの単線図" labels={[
+      ["高圧配電線路", "Đường dây phân phối cao áp"],
+      ["地絡事故点", "Điểm sự cố chạm đất"],
+      ["受電点", "Điểm nhận điện"],
+      ["需要設備", "Thiết bị của cơ sở sử dụng điện"],
+      ["零相変流器", "Biến dòng thứ tự không"],
+      ["地絡継電器", "Rơ-le chạm đất"],
+      ["遮断器", "Máy cắt"],
+      ["地絡電流 I_g", "Dòng chạm đất I_g"],
+    ]} />
+  ),
+  lawWindIce510: (
+    <Diagram file="lawWindIce510" width={458} height={336} title="図2 乙種風圧荷重" labels={[
+      ["氷雪", "Băng tuyết"],
+      ["甲種の0.5倍", "Áp lực bằng 0,5 lần loại 甲"],
+      ["15 ＋ 6 × 2 ＝ 27 mm", "Đường kính có băng phủ là 27 mm"],
+    ]} />
+  ),
+  lawWindBare510: (
+    <Diagram file="lawWindBare510" width={438} height={199} title="図1 甲種風圧荷重" labels={[
+      ["電線1 mの垂直投影面積", "Diện tích hình chiếu vuông góc của 1 m dây"],
+      ["仕上り外径 15 mm", "Đường kính ngoài hoàn thiện 15 mm"],
+    ]} />
+  ),
   lawReservoirBalance509: (
     <Diagram file="lawReservoirBalance509" width={383} height={281} title="貯水量と放出量の面積" labels={[
       ["①＋②", "Thể tích nước tích trong 8 giờ đầu và 4 giờ cuối"],

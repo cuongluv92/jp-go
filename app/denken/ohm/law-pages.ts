@@ -10769,5 +10769,948 @@ export const lawPages: Record<number, LessonRow[]> = {
       "jp": "参考　図の①、②で貯水した水は、水量 Qₚ で発電するときに使用するので、図の①＋②＝③＋④が成り立ちます。",
       "vi": "Tham khảo. Nước tích ở vùng ① và ② được dùng khi phát điện với lưu lượng Qₚ, nên ① + ② = ③ + ④."
     }
+  ],
+  "510": [
+    {
+      "jp": "例題1　令和5年度上期　法規　問13",
+      "vi": "Ví dụ 1 · Đề 法規 kỳ đầu Reiwa 5 (2023), câu 13.",
+      "heading": true
+    },
+    {
+      "jp": "人家が多く連なっている場所以外の場所であって、氷雪の多い地方のうち、海岸地その他の低温季に最大風圧を生じる地方に設置されている公称断面積60 mm²、仕上り外径15 mmの6600 V屋外用ポリエチレン絶縁電線（6600 V OE）を使用した高圧架空電線路がある。この電線路の電線の風圧荷重について「電気設備技術基準の解釈」に基づき、次の(a)及び(b)の問に答えよ。",
+      "vi": "Một đường dây cao áp trên không dùng dây cách điện polyetylen ngoài trời 6.600 V (6600 V OE), tiết diện danh định 60 mm² và đường kính ngoài hoàn thiện 15 mm. Đường dây đặt ngoài khu vực có nhiều nhà liền nhau, ở vùng nhiều băng tuyết như ven biển hoặc khu vực khác có áp lực gió lớn nhất vào mùa lạnh. Dựa vào «Giải thích Tiêu chuẩn kỹ thuật thiết bị điện», trả lời (a) và (b) về tải trọng gió tác dụng lên dây."
+    },
+    {
+      "jp": "電線に対する甲種風圧荷重は980 Pa、乙種風圧荷重の計算で用いる氷雪の厚さは6 mmとする。",
+      "vi": "Cho áp lực gió loại 甲 tác dụng lên dây là 980 Pa. Khi tính tải trọng gió loại 乙, lớp băng tuyết dày 6 mm."
+    },
+    {
+      "jp": "(a) 低温季において電線1条、長さ1 m当たりに加わる風圧荷重Nとして、最も近いものを選べ。",
+      "vi": "(a) Chọn giá trị [N] gần nhất với tải trọng gió tác dụng lên 1 m chiều dài của một dây trong mùa lạnh."
+    },
+    {
+      "jp": "(1)10.3 (2)13.2 (3)14.7 (4)20.6 (5)26.5［N］。",
+      "vi": "Các phương án: 10,3; 13,2; 14,7; 20,6; 26,5 N."
+    },
+    {
+      "jp": "(b) 低温季に適用される風圧荷重が乙種風圧荷重となる電線の仕上り外径mmとして最も大きいものを選べ。",
+      "vi": "(b) Chọn đường kính ngoài hoàn thiện lớn nhất [mm] mà tải trọng gió loại 乙 vẫn là mức áp dụng vào mùa lạnh."
+    },
+    {
+      "jp": "(1)10 (2)12 (3)15 (4)18 (5)21［mm］。",
+      "vi": "Các lựa chọn: 10, 12, 15, 18, 21 mm."
+    },
+    {
+      "jp": "解き方",
+      "vi": "Cách giải",
+      "heading": true
+    },
+    {
+      "jp": "解答　(a) **(3) 14.7 N**　(b) **(2) 12 mm**",
+      "vi": "Đáp án (a) **③ 14,7 N** (b) **② 12 mm**"
+    },
+    {
+      "jp": "甲種風圧荷重W₁＝980×15×10⁻³×1＝14.7 N。",
+      "vi": "Loại A W₁=980×0,015×1=14,7 N."
+    },
+    {
+      "diagram": "lawWindBare510"
+    },
+    {
+      "jp": "図2のように、乙種風圧荷重 W₂ は 0.5 × 980 × 27 × 10⁻³ × 1.0 ≒ 13.2 N。W₁ ＞ W₂。大きい方を採用して14.7 N。",
+      "vi": "Như hình 2, tải trọng gió loại 乙 là W₂ = 0,5 × 980 × 27 × 10⁻³ × 1,0 ≈ 13,2 N. Vì W₁ > W₂ nên lấy giá trị lớn hơn là 14,7 N."
+    },
+    {
+      "diagram": "lawWindIce510"
+    },
+    {
+      "jp": "(b) 甲種風圧荷重≦乙種風圧荷重となる電線の仕上り外径を x［mm］とします。",
+      "vi": "(b) Gọi x [mm] là đường kính ngoài hoàn thiện của dây khi tải trọng gió loại 甲 nhỏ hơn hoặc bằng loại 乙."
+    },
+    {
+      "jp": "980 × x × 10⁻³ × 1.0 ≦ 0.5 × 980 × (x ＋ 6 × 2) × 10⁻³ × 1.0\nx ≦ 0.5x ＋ 6\n0.5x ≦ 6\nx ≦ 12",
+      "vi": "980 × x × 10⁻³ × 1,0 ≤ 0,5 × 980 × (x + 6 × 2) × 10⁻³ × 1,0\nx ≤ 0,5x + 6\n0,5x ≤ 6\nx ≤ 12",
+      "note": "Cộng hai lần 6 mm vì lớp băng phủ cả hai phía theo đường kính."
+    }
+  ],
+  "511": [
+    {
+      "jp": "風圧荷重が乙種風圧荷重となる最も大きいものは、仕上り外径が12 mmとなります。",
+      "vi": "Đường kính ngoài hoàn thiện lớn nhất để tải trọng gió loại 乙 được áp dụng là 12 mm."
+    },
+    {
+      "jp": "参考　氷雪の多い地方のうち、低温季に最大風圧を生じる地方で低温季に適用される風圧荷重は、甲種及び乙種の大きい方を適用します。",
+      "vi": "Tham khảo. Ở vùng nhiều băng tuyết và có áp lực gió lớn nhất vào mùa lạnh, trong mùa lạnh lấy giá trị lớn hơn giữa tải trọng gió loại 甲 và loại 乙."
+    },
+    {
+      "jp": "例題2　令和4年度上期　法規　問11",
+      "vi": "Ví dụ 2 · Đề 法規 kỳ đầu Reiwa 4 (2022), câu 11.",
+      "heading": true
+    },
+    {
+      "jp": "定格容量50 kVA、一次電圧6600 V、二次電圧210/105 Vの単相変圧器の二次側に接続した単相3線式架空電線路がある。",
+      "vi": "Biến áp một pha 50 kVA, 6600/210/105 V cấp đường dây trên không một pha ba dây."
+    },
+    {
+      "jp": "この低圧電線路に最大供給電流が流れたときの絶縁性能が「電気設備技術基準」に適合することを確認するため、低圧電線の3線を一括して大地との間に使用電圧（105 V）を加える絶縁性能試験を実施した。次の(a)及び(b)の問に答えよ。",
+      "vi": "Để xác nhận khả năng cách điện của đường dây hạ áp này đạt «Tiêu chuẩn kỹ thuật thiết bị điện» khi có dòng cấp lớn nhất chạy qua, tiến hành thử cách điện bằng cách nối chung ba dây hạ áp rồi đặt điện áp sử dụng 105 V giữa chúng và đất. Trả lời (a) và (b)."
+    },
+    {
+      "jp": "(a) この試験で許容される漏えい電流の最大値[A]は。",
+      "vi": "(a) Tính dòng rò lớn nhất cho phép khi thử."
+    },
+    {
+      "jp": "(1)0.11 (2)0.238 (3)0.357 (4)0.460 (5)0.714。",
+      "vi": "Các lựa chọn 0,11; 0,238; 0,357; 0,460; 0,714 A."
+    },
+    {
+      "jp": "(b) 二次側電線路と大地との間で許容される絶縁抵抗値は。1線当たりの最小値［Ω］として、最も近いものを次の(1)～(5)のうちから一つ選べ。",
+      "vi": "(b) Chọn giá trị gần nhất với điện trở cách điện tối thiểu cho phép [Ω] của mỗi dây giữa đường dây thứ cấp và đất."
+    },
+    {
+      "jp": "(1)295 (2)442 (3)883 (4)1765 (5)3530。",
+      "vi": "Các lựa chọn 295; 442; 883; 1.765; 3.530 Ω."
+    },
+    {
+      "jp": "解き方　(a)",
+      "vi": "Cách giải (a)",
+      "heading": true
+    },
+    {
+      "jp": "単相変圧器の定格容量を S_n、二次電圧を V₂ としたとき、単相3線式架空電線路の最大供給電流 I_n は次のとおり。",
+      "vi": "Gọi S_n là công suất định mức và V₂ là điện áp thứ cấp của máy biến áp một pha. Dòng cấp lớn nhất I_n của đường dây trên không một pha ba dây được tính như sau.",
+      "note": "Dùng 210 V giữa hai dây ngoài để tính dòng định mức và dùng 105 V đối đất để tính điện trở cách điện.",
+      "equations": [
+        [
+          "I_n = ",
+          {
+            "fraction": [
+              [
+                "S_n"
+              ],
+              [
+                "V₂"
+              ]
+            ]
+          },
+          " = ",
+          {
+            "fraction": [
+              [
+                "50 × 10³"
+              ],
+              [
+                "210"
+              ]
+            ]
+          },
+          " ≒ 238 A"
+        ]
+      ],
+      "equationsVi": [
+        [
+          "I_n = ",
+          {
+            "fraction": [
+              [
+                "S_n"
+              ],
+              [
+                "V₂"
+              ]
+            ]
+          },
+          " = ",
+          {
+            "fraction": [
+              [
+                "50 × 10³"
+              ],
+              [
+                "210"
+              ]
+            ]
+          },
+          " ≒ 238 A"
+        ]
+      ]
+    },
+    {
+      "jp": "電線と大地間及び線心相互間の絶縁抵抗は、使用電圧に対する漏えい電流が最大供給電流の2000分の1を超えないようにしなければならないため、1線の漏えい電流 I₁線 は次のとおり。",
+      "vi": "Điện trở cách điện giữa dây với đất và giữa các lõi dây phải đủ để dòng rò ở điện áp sử dụng không vượt quá một phần 2.000 dòng cấp lớn nhất. Từ đó tính dòng rò cho một dây.",
+      "equations": [
+        [
+          "I₁線 = ",
+          {
+            "fraction": [
+              [
+                "238"
+              ],
+              [
+                "2000"
+              ]
+            ]
+          },
+          " = 0.119 A"
+        ]
+      ],
+      "equationsVi": [
+        [
+          "I₁ dây = ",
+          {
+            "fraction": [
+              [
+                "238"
+              ],
+              [
+                "2000"
+              ]
+            ]
+          },
+          " = 0,119 A"
+        ]
+      ]
+    },
+    {
+      "jp": "3線を一括したときの漏えい電流は I₃線＝3 × I₁線＝3 × 0.119＝0.357 A。",
+      "vi": "Dòng rò khi nối chung ba dây là I₃ dây = 3 × I₁ dây = 3 × 0,119 = 0,357 A."
+    }
+  ],
+  "512": [
+    {
+      "jp": "(b) 対地との間に V_t＝105 V を加えて絶縁性能試験を実施したとき、大地との間で許容される1線当たりの絶縁抵抗値の最小値 R は次のとおり。",
+      "vi": "(b) Khi thử cách điện với điện áp đối đất V_t = 105 V, điện trở cách điện tối thiểu R giữa một dây và đất được tính như sau.",
+      "equations": [
+        [
+          "R = ",
+          {
+            "fraction": [
+              [
+                "V_t"
+              ],
+              [
+                "I₁線"
+              ]
+            ]
+          },
+          " = ",
+          {
+            "fraction": [
+              [
+                "105"
+              ],
+              [
+                "0.119"
+              ]
+            ]
+          },
+          " ≒ 882 Ω"
+        ]
+      ],
+      "equationsVi": [
+        [
+          "R = ",
+          {
+            "fraction": [
+              [
+                "V_t"
+              ],
+              [
+                "I₁ dây"
+              ]
+            ]
+          },
+          " = ",
+          {
+            "fraction": [
+              [
+                "105"
+              ],
+              [
+                "0,119"
+              ]
+            ]
+          },
+          " ≈ 882 Ω"
+        ]
+      ]
+    },
+    {
+      "jp": "(3)の883 Ωが最も近い値となります。",
+      "vi": "Giá trị gần nhất là 883 Ω ở phương án ③."
+    },
+    {
+      "jp": "解答　(a) **(3) 0.357 A**　(b) **(3) 883 Ω**",
+      "vi": "Đáp án (a) **③ 0,357 A** (b) **③ 883 Ω**"
+    },
+    {
+      "jp": "参考　最大供給電流＝変圧器の定格二次電流となります。",
+      "vi": "Tham khảo. Dòng cấp lớn nhất bằng dòng thứ cấp định mức của máy biến áp."
+    },
+    {
+      "jp": "例題3　平成28年度　法規　問13 改",
+      "vi": "Ví dụ 3 · Phỏng theo đề 法規 năm Heisei 28 (2016), câu 13.",
+      "heading": true
+    },
+    {
+      "jp": "図は、線間電圧 V［V］、周波数 f［Hz］の中性点非接地方式の三相3線式高圧配電線路及びある需要設備の高圧地絡保護システムを簡易に示した単線図である。",
+      "vi": "Sơ đồ một sợi biểu diễn đơn giản đường dây phân phối cao áp ba pha ba dây có trung tính không nối đất, với điện áp dây V [V], tần số f [Hz], cùng hệ thống bảo vệ chạm đất cao áp của một cơ sở sử dụng điện."
+    },
+    {
+      "jp": "高圧配電線路一相の全対地静電容量をC₁[F]、需要設備一相の全対地静電容量をC₂[F]とする。次の(a)及び(b)に答えよ。",
+      "vi": "Điện dung tổng tới đất của một pha đường dây phân phối C₁, của cơ sở tải C₂. Trả lời (a) và (b)."
+    },
+    {
+      "jp": "ただし、図示されていない負荷、線路定数及び配電用変電所の制限抵抗は無視する。",
+      "vi": "Bỏ qua tải, thông số đường dây và điện trở hạn dòng trạm điện không thể hiện trên hình."
+    },
+    {
+      "diagram": "lawGroundProtection512"
+    },
+    {
+      "jp": "(a) 図の配電線路において、遮断器が「入」の状態で地絡事故点に一線完全地絡事故が発生し地絡電流 I_g［A］が流れた。このとき I_g の大きさを表す式として正しいものは次のうちどれか。",
+      "vi": "(a) Khi máy cắt đang đóng, tại điểm sự cố trên hình xảy ra chạm đất hoàn toàn một pha và có dòng chạm đất I_g [A]. Chọn công thức đúng biểu diễn độ lớn I_g."
+    },
+    {
+      "jp": "選択肢",
+      "vi": "Các phương án",
+      "equations": [
+        [
+          "(1) ",
+          {
+            "fraction": [
+              [
+                "2"
+              ],
+              [
+                "√3"
+              ]
+            ]
+          },
+          " Vπf√(C₁² + C₂²)"
+        ],
+        [
+          "(2) 2√3 Vπf√(C₁² + C₂²)"
+        ],
+        [
+          "(3) 2√3 Vπf(C₁ + C₂)"
+        ],
+        [
+          "(4) 2√3 Vπf√(C₁C₂)"
+        ]
+      ]
+    }
+  ],
+  "513": [
+    {
+      "jp": "例題3　中性点非接地方式の三相3線式高圧配電線路（続き）",
+      "vi": "Ví dụ 3 · Hệ phân phối cao áp ba pha ba dây không nối đất trung tính (tiếp).",
+      "heading": true
+    },
+    {
+      "jp": "(b) I_gのうち需要設備の零相変流器で検出される電流の値[mA]として、最も近いものを次の(1)～(5)から選べ。",
+      "vi": "(b) Trong dòng I_g, chọn giá trị [mA] gần nhất với dòng được biến dòng thứ tự không ở cơ sở sử dụng điện phát hiện."
+    },
+    {
+      "jp": "ただし、V＝6600 V、f＝60 Hz、C₁＝2.3 μF、C₂＝0.02 μF。",
+      "vi": "Cho điện áp dây 6.600 V, tần số 60 Hz, C₁=2,3 μF, C₂=0,02 μF."
+    },
+    {
+      "jp": "(1)54　(2)86　(3)124　(4)152　(5)256［mA］。",
+      "vi": "Các lựa chọn: 54; 86; 124; 152; 256 mA."
+    },
+    {
+      "jp": "解き方",
+      "vi": "Cách giải",
+      "heading": true
+    },
+    {
+      "jp": "解答　(a) **(3)**　(b) **(2)**",
+      "vi": "Đáp án (a) **③** (b) **②**"
+    },
+    {
+      "jp": "解き方　(a) テブナンの定理により、I_gを求めます。",
+      "vi": "Giải (a): tìm dòng chạm đất theo tương đương Thévenin."
+    },
+    {
+      "diagram": "lawGroundThevenin513"
+    },
+    {
+      "jp": "地絡前のa-b間電圧。",
+      "vi": "Điện áp a–b trước khi chạm đất.",
+      "equations": [
+        [
+          "E_ab = ",
+          {
+            "fraction": [
+              [
+                "V"
+              ],
+              [
+                "√3"
+              ]
+            ]
+          },
+          " [V]"
+        ]
+      ],
+      "equationsVi": [
+        [
+          "E_ab = ",
+          {
+            "fraction": [
+              [
+                "V"
+              ],
+              [
+                "√3"
+              ]
+            ]
+          },
+          " [V]"
+        ]
+      ]
+    },
+    {
+      "jp": "a-b間のインピーダンス。",
+      "vi": "Độ lớn tổng trở giữa a–b.",
+      "equations": [
+        [
+          "Z_ab = ",
+          {
+            "fraction": [
+              [
+                "1"
+              ],
+              [
+                "3ω(C₁ + C₂)"
+              ]
+            ]
+          },
+          " = ",
+          {
+            "fraction": [
+              [
+                "1"
+              ],
+              [
+                "3 × 2πf(C₁ + C₂)"
+              ]
+            ]
+          },
+          " [Ω]"
+        ]
+      ],
+      "equationsVi": [
+        [
+          "Z_ab = ",
+          {
+            "fraction": [
+              [
+                "1"
+              ],
+              [
+                "3ω(C₁ + C₂)"
+              ]
+            ]
+          },
+          " = ",
+          {
+            "fraction": [
+              [
+                "1"
+              ],
+              [
+                "3 × 2πf(C₁ + C₂)"
+              ]
+            ]
+          },
+          " [Ω]"
+        ]
+      ]
+    },
+    {
+      "jp": "地絡電流 I_g。",
+      "vi": "Dòng chạm đất I_g.",
+      "equations": [
+        [
+          "I_g = ",
+          {
+            "fraction": [
+              [
+                "E_ab"
+              ],
+              [
+                "Z_ab"
+              ]
+            ]
+          },
+          " = ",
+          {
+            "fraction": [
+              [
+                "V"
+              ],
+              [
+                "√3"
+              ]
+            ]
+          },
+          " × 3 × 2πf(C₁ + C₂) = 2√3 Vπf(C₁ + C₂) [A]"
+        ]
+      ],
+      "equationsVi": [
+        [
+          "I_g = ",
+          {
+            "fraction": [
+              [
+                "E_ab"
+              ],
+              [
+                "Z_ab"
+              ]
+            ]
+          },
+          " = ",
+          {
+            "fraction": [
+              [
+                "V"
+              ],
+              [
+                "√3"
+              ]
+            ]
+          },
+          " × 3 × 2πf(C₁ + C₂) = 2√3 Vπf(C₁ + C₂) [A]"
+        ]
+      ]
+    },
+    {
+      "jp": "(b) 3C₂に流れる電流を求めます。(a)の式でC₁を除いてC₂のみで計算します。",
+      "vi": "(b) Tính dòng qua nhóm ba tụ C₂. Trong công thức ở (a), bỏ thành phần C₁ và chỉ dùng C₂."
+    },
+    {
+      "jp": "I_g₂＝2√3 Vπf C₂＝2√3×6600×3.14×60×0.02×10⁻⁶≒86.1×10⁻³ A→86 mA。",
+      "vi": "I_ZCT=2√3×6600×3,14×60×0,02×10⁻⁶≈86,1 mA, chọn ②."
+    },
+    {
+      "jp": "解説",
+      "vi": "Giải thích",
+      "heading": true
+    },
+    {
+      "jp": "中性点非接地方式の三相3線式高圧配電線路の対地電圧。",
+      "vi": "Điện áp đối đất của đường dây cao áp ba pha ba dây có trung tính không nối đất.",
+      "equations": [
+        [
+          {
+            "fraction": [
+              [
+                "V"
+              ],
+              [
+                "√3"
+              ]
+            ]
+          },
+          " [V]"
+        ]
+      ],
+      "equationsVi": [
+        [
+          {
+            "fraction": [
+              [
+                "V"
+              ],
+              [
+                "√3"
+              ]
+            ]
+          },
+          " [V]"
+        ]
+      ]
+    },
+    {
+      "jp": "地絡電流を計算するとき、3線の静電容量は並列接続となります。",
+      "vi": "Khi tính dòng chạm đất, các điện dung của ba dây được quy về mắc song song."
+    },
+    {
+      "jp": "対地電圧を対地静電容量の合成リアクタンスで割って I_g を求めます。",
+      "vi": "Tính I_g bằng cách chia điện áp đối đất cho điện kháng dung tổng hợp.",
+      "equations": [
+        [
+          "I_g = ",
+          {
+            "fraction": [
+              [
+                {
+                  "fraction": [
+                    [
+                      "V"
+                    ],
+                    [
+                      "√3"
+                    ]
+                  ]
+                }
+              ],
+              [
+                {
+                  "fraction": [
+                    [
+                      "1"
+                    ],
+                    [
+                      "3ω(C₁ + C₂)"
+                    ]
+                  ]
+                }
+              ]
+            ]
+          },
+          " [A]"
+        ]
+      ],
+      "equationsVi": [
+        [
+          "I_g = ",
+          {
+            "fraction": [
+              [
+                {
+                  "fraction": [
+                    [
+                      "V"
+                    ],
+                    [
+                      "√3"
+                    ]
+                  ]
+                }
+              ],
+              [
+                {
+                  "fraction": [
+                    [
+                      "1"
+                    ],
+                    [
+                      "3ω(C₁ + C₂)"
+                    ]
+                  ]
+                }
+              ]
+            ]
+          },
+          " [A]"
+        ]
+      ]
+    },
+    {
+      "jp": "需要設備の零相変流器で検出される電流は、3C₂に流れる電流です。",
+      "vi": "Biến dòng thứ tự không ở cơ sở sử dụng điện phát hiện dòng chạy qua nhóm điện dung 3C₂."
+    }
+  ],
+  "514": [
+    {
+      "jp": "コラム　使用できる電卓について",
+      "vi": "Chuyên mục · Loại máy tính được phép dùng trong kỳ thi.",
+      "heading": true
+    },
+    {
+      "jp": "電気主任技術者試験においては、四則演算、開平計算（√）を行うための電卓を使用することができます。",
+      "vi": "Theo sách, kỳ thi kỹ sư phụ trách điện cho phép dùng máy tính thực hiện bốn phép tính cơ bản và tính căn bậc hai."
+    },
+    {
+      "jp": "ただし、関数電卓や数式が記憶できる電卓は使用できません。",
+      "vi": "Không được dùng máy tính khoa học có hàm hoặc máy có chức năng nhớ biểu thức."
+    },
+    {
+      "jp": "使用できる電卓は、関数電卓とは操作が異なります。試験に使用する電卓を準備し、操作に慣れておきましょう。",
+      "vi": "Máy tính cho phép có cách thao tác khác máy khoa học; nên tập thao tác trước khi đi thi."
+    },
+    {
+      "jp": "計算例",
+      "vi": "Ví dụ tính",
+      "heading": true
+    },
+    {
+      "jp": "105 [−] 102 [÷] 5.1 [＝] **0.5882…**",
+      "vi": "105 [−] 102 [÷] 5,1 [=] **0,5882…**",
+      "note": "Trên máy tính phổ thông kiểu thực hiện phép tính ngay, bấm phím chia sau 102 sẽ tính xong phép trừ trước.",
+      "equations": [
+        [
+          {
+            "fraction": [
+              [
+                "105 − 102"
+              ],
+              [
+                "5.1"
+              ]
+            ]
+          }
+        ]
+      ],
+      "equationsVi": [
+        [
+          {
+            "fraction": [
+              [
+                "105 − 102"
+              ],
+              [
+                "5.1"
+              ]
+            ]
+          }
+        ]
+      ]
+    },
+    {
+      "jp": "1.8 [÷] 3.14 [÷] 0.8 [÷] 0.8 [＝] **0.8957…**",
+      "vi": "1,8 [÷] 3,14 [÷] 0,8 [÷] 0,8 [=] **0,8957…**",
+      "note": "Chia lần lượt cho các thừa số ở mẫu.",
+      "equations": [
+        [
+          {
+            "fraction": [
+              [
+                "1.8"
+              ],
+              [
+                "3.14 × 0.8²"
+              ]
+            ]
+          }
+        ]
+      ],
+      "equationsVi": [
+        [
+          {
+            "fraction": [
+              [
+                "1.8"
+              ],
+              [
+                "3.14 × 0.8²"
+              ]
+            ]
+          }
+        ]
+      ]
+    },
+    {
+      "jp": "30 [×] 15 [＝] 450。60 [＋] 15 [＝] 75。450 [÷] 75 [＝] **6**。",
+      "vi": "30 [×] 15 [=] 450. 60 [+] 15 [=] 75. 450 [÷] 75 [=] **6**.",
+      "note": "Ghi riêng tử 450 và mẫu 75 rồi chia.",
+      "equations": [
+        [
+          {
+            "fraction": [
+              [
+                "30 × 15"
+              ],
+              [
+                "60 + 15"
+              ]
+            ]
+          }
+        ]
+      ],
+      "equationsVi": [
+        [
+          {
+            "fraction": [
+              [
+                "30 × 15"
+              ],
+              [
+                "60 + 15"
+              ]
+            ]
+          }
+        ]
+      ]
+    },
+    {
+      "jp": "180 [÷] 60 [＋] 1 [＝] 4。180 [÷] 4 [＝] **45**。",
+      "vi": "180 [÷] 60 [+] 1 [=] 4. 180 [÷] 4 [=] **45**.",
+      "note": "Tính và ghi mẫu số 4 trước khi lấy 180 chia.",
+      "equations": [
+        [
+          {
+            "fraction": [
+              [
+                "180"
+              ],
+              [
+                "1 + ",
+                {
+                  "fraction": [
+                    [
+                      "180"
+                    ],
+                    [
+                      "60"
+                    ]
+                  ]
+                }
+              ]
+            ]
+          }
+        ]
+      ],
+      "equationsVi": [
+        [
+          {
+            "fraction": [
+              [
+                "180"
+              ],
+              [
+                "1 + ",
+                {
+                  "fraction": [
+                    [
+                      "180"
+                    ],
+                    [
+                      "60"
+                    ]
+                  ]
+                }
+              ]
+            ]
+          }
+        ]
+      ]
+    },
+    {
+      "jp": "3 [÷] 10 [√] [＝] **0.9486…**",
+      "vi": "3 [÷] 10 [√] [=] **0,9486…**",
+      "note": "Dãy phím được chép theo hình sách.",
+      "equations": [
+        [
+          {
+            "fraction": [
+              [
+                "3"
+              ],
+              [
+                "√10"
+              ]
+            ]
+          }
+        ]
+      ],
+      "equationsVi": [
+        [
+          {
+            "fraction": [
+              [
+                "3"
+              ],
+              [
+                "√10"
+              ]
+            ]
+          }
+        ]
+      ]
+    },
+    {
+      "jp": "10 [×] 10 [＝] 100。32 [−] 8 [＝] 24。24 [×] 24 [＝] 576。100 [＋] 576 [＝] 676。676 [√] [＝] **26**。",
+      "vi": "10 [×] 10 [=] 100. 32 [−] 8 [=] 24. 24 [×] 24 [=] 576. 100 [+] 576 [=] 676. 676 [√] [=] **26**.",
+      "note": "Tính tổng trong căn trước rồi lấy căn bậc hai.",
+      "equations": [
+        [
+          "√(10² + (32 − 8)²)"
+        ]
+      ],
+      "equationsVi": [
+        [
+          "√(10² + (32 − 8)²)"
+        ]
+      ]
+    },
+    {
+      "jp": "平方根の中は手計算。",
+      "vi": "Rút gọn biểu thức trong căn bằng tay.",
+      "equations": [
+        [
+          {
+            "fraction": [
+              [
+                "1"
+              ],
+              [
+                "2 × 3.14 × √(100 × 10⁻³ × 100 × 10⁻⁶)"
+              ]
+            ]
+          }
+        ]
+      ],
+      "equationsVi": [
+        [
+          {
+            "fraction": [
+              [
+                "1"
+              ],
+              [
+                "2 × 3.14 × √(100 × 10⁻³ × 100 × 10⁻⁶)"
+              ]
+            ]
+          }
+        ]
+      ]
+    },
+    {
+      "jp": "平方根の計算。",
+      "vi": "Biến đổi phần căn.",
+      "equations": [
+        [
+          "√(100 × 10⁻³ × 100 × 10⁻⁶) = √0.1 × √(10⁻⁴) = √0.1 × 10⁻² = ",
+          {
+            "fraction": [
+              [
+                "√0.1"
+              ],
+              [
+                "100"
+              ]
+            ]
+          }
+        ]
+      ],
+      "equationsVi": [
+        [
+          "√(100 × 10⁻³ × 100 × 10⁻⁶) = √0.1 × √(10⁻⁴) = √0.1 × 10⁻² = ",
+          {
+            "fraction": [
+              [
+                "√0.1"
+              ],
+              [
+                "100"
+              ]
+            ]
+          }
+        ]
+      ]
+    },
+    {
+      "jp": "0.1 [√] [÷] 100 [＝] 0.003162…（√の計算）\n2 [×] 3.14 [×] 0.003162 [＝] 0.01985…（分母の計算）\n1 [÷] 0.01985 [＝] **50.37…**",
+      "vi": "0,1 [√] [÷] 100 [=] 0,003162… (tính căn)\n2 [×] 3,14 [×] 0,003162 [=] 0,01985… (tính mẫu theo số ghi trong sách)\n1 [÷] 0,01985 [=] **50,37…**",
+      "note": "Sách ghi mẫu 0,01985 ở bước trung gian. Phép nhân với 0,003162 thực tế cho 0,01985736. Nếu giữ đủ chữ số từ biểu thức ban đầu, kết quả khoảng 50,35474."
+    },
+    {
+      "diagram": "lawCalculatorKeys514"
+    }
   ]
 };
