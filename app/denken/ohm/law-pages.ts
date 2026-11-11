@@ -7243,5 +7243,558 @@ export const lawPages: Record<number, LessonRow[]> = {
       "jp": "次のいずれかに適合するように施設すること。\nイ）設備を、屋内にあっては床上1.8 m以上、屋外にあっては地表上2 m以上の高さに、かつ、人が通る場所から容易に触れることのない範囲に施設すること。\nロ）設備に人が接近又は接触しないよう、さく、へい等を設け、又は設備を金属管に収める等の防護措置を施すこと。",
       "vi": "Áp dụng một trong hai cách.\na) Lắp thiết bị cao ít nhất 1,8 m trên sàn trong nhà hoặc 2 m trên mặt đất ngoài trời, ở phạm vi người qua lại không dễ chạm.\nb) Dùng hàng rào, tường chắn, ống kim loại chứa thiết bị hoặc biện pháp tương tự để người không đến gần hoặc chạm vào thiết bị."
     }
+  ],
+  "488": [
+    {
+      "jp": "2-8 分散型電源の系統連系　といえば　小規模な発電システムとの並列運転",
+      "vi": "2-8 Hòa lưới nguồn phân tán: vận hành song song hệ phát điện nhỏ.",
+      "heading": true
+    },
+    {
+      "jp": "太陽電池発電設備などの分散型電源が一般送配電事業者や配電事業者の電力系統と連系する設備に係る主な用語は、次のように定義されています。",
+      "vi": "Dưới đây là các thuật ngữ về thiết bị đấu nối nguồn điện phân tán như hệ thống điện mặt trời với lưới của đơn vị truyền tải–phân phối chung hoặc đơn vị phân phối."
+    },
+    {
+      "jp": "分散型電源の系統連系設備に係る主な用語",
+      "vi": "Các thuật ngữ chủ yếu về thiết bị hòa lưới nguồn điện phân tán.",
+      "heading": true
+    },
+    {
+      "jp": "一　発電設備等：発電設備又は電力貯蔵装置であって、常用電源の停電時又は電圧低下発生時にのみ使用する非常用予備電源以外のもの。",
+      "vi": "Thiết bị phát điện/lưu trữ, trừ nguồn dự phòng khẩn cấp chỉ dùng khi nguồn thường mất điện hoặc tụt áp."
+    },
+    {
+      "jp": "二　分散型電源：電気事業を営む者以外の者が設置する発電設備等であって、一般送配電事業者若しくは配電事業者が運用する電力系統又は地域独立系統に連系するもの。",
+      "vi": "Nguồn phân tán: thiết bị phát điện do chủ thể ngoài đơn vị điện lực lắp, được nối vào lưới truyền tải/phân phối hoặc lưới độc lập khu vực."
+    },
+    {
+      "jp": "三　解列：電力系統から切り離すこと。",
+      "vi": "解列: tách khỏi lưới."
+    },
+    {
+      "jp": "四　逆潮流：分散型電源設置者の構内から、一般送配電事業者が運用する電力系統側へ向かう有効電力の流れ。",
+      "vi": "Dòng công suất ngược: công suất tác dụng chạy từ cơ sở có nguồn phân tán về phía lưới điện lực."
+    },
+    {
+      "jp": "五　単独運転：分散型電源を連系している電力系統が事故等によって系統電源と切り離された状態において、当該分散型電源が発電を継続し、線路負荷に有効電力を供給している状態。",
+      "vi": "Vận hành đảo ngoài ý muốn: lưới đã tách nguồn chính nhưng nguồn phân tán vẫn phát và cấp điện cho tải đường dây."
+    },
+    {
+      "jp": "六　逆充電：分散型電源を連系している電力系統が事故等によって系統電源と切り離された状態において、分散型電源のみが、連系している電力系統を加圧し、かつ、当該電力系統へ有効電力を供給していない状態。",
+      "vi": "6. Đặt điện áp ngược lên lưới (逆充電). Khi phần lưới nối nguồn phân tán bị tách khỏi nguồn lưới do sự cố hoặc lý do tương tự, chỉ nguồn phân tán duy trì điện áp trên phần lưới đó và không cấp công suất tác dụng cho lưới."
+    },
+    {
+      "jp": "七　自立運転：分散型電源が連系している電力系統から解列された状態において、当該分散型電源設置者の構内負荷にのみ電力を供給している状態。",
+      "vi": "Chạy độc lập: nguồn phân tán đã tách lưới, chỉ cấp cho tải bên trong cơ sở."
+    },
+    {
+      "jp": "直流流出防止変圧器の施設",
+      "vi": "Bố trí biến áp chống thành phần dòng DC chảy vào lưới.",
+      "heading": true
+    },
+    {
+      "jp": "逆変換装置を用いて分散型電源を電力系統に連系する場合は、逆変換装置から直流が電力系統へ流出することを防止するために、受電点と逆変換装置との間に**変圧器**（単巻変圧器を除く）を施設する必要があります。ただし、次の各号に適合する場合は、この限りではありません。",
+      "vi": "Khi dùng bộ nghịch lưu để đấu nối nguồn điện phân tán vào lưới, lắp **máy biến áp** (trừ máy biến áp tự ngẫu) giữa điểm nhận điện và bộ nghịch lưu để ngăn dòng một chiều từ bộ nghịch lưu đi vào lưới. Có thể miễn nếu đáp ứng các điều kiện sau."
+    },
+    {
+      "jp": "一　逆変換装置の交流出力側で直流を検出し、かつ、直流検出時に交流出力を**停止**する機能を有すること。",
+      "vi": "1. Bộ nghịch lưu có chức năng phát hiện dòng một chiều ở đầu ra xoay chiều và **dừng** đầu ra xoay chiều khi phát hiện."
+    },
+    {
+      "jp": "二　次のいずれかに適合すること。\nイ　逆変換装置の直流側電路が**非接地**であること。\nロ　逆変換装置に**高周波変圧器**※1を用いていること。",
+      "vi": "2. Đáp ứng một trong hai điều kiện.\na) Mạch phía một chiều của bộ nghịch lưu **không nối đất**.\nb) Bộ nghịch lưu dùng **máy biến áp cao tần** (chú thích 1).",
+      "note": "Để áp dụng ngoại lệ, cần đáp ứng mục 1 và một trong hai phương án của mục 2."
+    },
+    {
+      "jp": "※1 変圧器は、高い周波数で動作させた方が損失が少なく小型にできることからパワーコンディショナーで採用されています。",
+      "vi": "Chú thích 1. Theo sách, máy biến áp hoạt động ở tần số cao có thể giảm tổn hao và làm nhỏ kích thước nên được dùng trong bộ điều hòa công suất."
+    }
+  ],
+  "489": [
+    {
+      "jp": "低圧連系時の施設要件",
+      "vi": "Điều kiện thiết bị khi hòa lưới hạ áp.",
+      "heading": true
+    },
+    {
+      "jp": "・単相3線式の低圧の電力系統に分散型電源を連系する場合において、**負荷**の不平衡により中性線に大電流が生じるおそれがあるときは、分散型電源を施設した構内の電路であって、負荷及び分散型電源の並列点よりも**系統側**に、3極に過電流引き外し素子を有する遮断器を施設すること。",
+      "vi": "• Khi nối nguồn phân tán với lưới hạ áp một pha ba dây, nếu mất cân bằng **phụ tải** có thể gây dòng lớn trong dây trung tính, lắp thiết bị cắt có phần tử tác động quá dòng trên cả ba cực. Vị trí lắp nằm trong khuôn viên, về **phía lưới** so với điểm đấu song song của phụ tải và nguồn phân tán."
+    },
+    {
+      "jp": "・低圧の電力系統に逆変換装置を用いずに分散型電源を連系する場合は、**逆潮流**を生じさせないこと。",
+      "vi": "• Khi đấu nối nguồn phân tán vào lưới hạ áp mà không dùng bộ nghịch lưu, không để phát sinh **dòng công suất ngược về lưới**."
+    },
+    {
+      "jp": "高圧連系時の施設要件",
+      "vi": "Điều kiện khi hòa lưới cao áp.",
+      "heading": true
+    },
+    {
+      "jp": "高圧の電力系統に分散型電源を連系する場合は、分散型電源を連系する配電用変電所の**配電用変圧器**において、逆向きの潮流を生じさせないようにする必要があります。ただし、当該配電用変電所に保護装置を施設する等の方法により分散型電源と電力系統との協調をとることができる場合は、この限りではありません。",
+      "vi": "Khi đấu nối nguồn phân tán vào lưới cao áp, không để công suất chảy ngược ở **máy biến áp phân phối** của trạm phân phối nơi đấu nối. Ngoại lệ áp dụng nếu có thể phối hợp bảo vệ giữa nguồn phân tán và lưới, chẳng hạn bằng cách lắp thiết bị bảo vệ tại trạm đó."
+    },
+    {
+      "jp": "練習問題01　分散型電源の低圧連系時及び高圧連系時の施設要件",
+      "vi": "Bài luyện 01 · Điều kiện hòa lưới hạ áp và cao áp.",
+      "heading": true
+    },
+    {
+      "jp": "次の文章は、「電気設備技術基準の解釈」における分散型電源の低圧連系時及び高圧連系時の施設要件に関する記述である。空白箇所の用語は。",
+      "vi": "Điền thuật ngữ vào đoạn trích về điều kiện lắp đặt khi đấu nối nguồn phân tán ở hạ áp và cao áp theo phần giải thích tiêu chuẩn kỹ thuật."
+    },
+    {
+      "jp": "a) 単相3線式の低圧の電力系統に分散型電源を連系する場合において、（ア）の不平衡により中性線に最大電流が生じるおそれがあるときは、分散型電源を施設した構内の電路であって、負荷及び分散型電源の並列点よりも（イ）に、3極に過電流引き外し素子を有する遮断器を施設すること。",
+      "vi": "a) Khi đấu nối nguồn phân tán vào lưới hạ áp một pha ba dây, nếu mất cân bằng (ア) có thể tạo dòng cực đại ở dây trung tính, lắp thiết bị cắt có phần tử tác động quá dòng ở cả ba cực tại mạch trong khuôn viên, về phía (イ) so với điểm đấu song song của phụ tải và nguồn phân tán."
+    },
+    {
+      "jp": "b) 低圧の電力系統に逆変換装置を用いずに分散型電源を連系する場合は、（ウ）を生じさせないこと。ただし、逆変換装置を用いて分散型電源を連系する場合と同等の単独運転検出及び解列ができる場合は、この限りではない。",
+      "vi": "b) Khi đấu nối nguồn phân tán vào lưới hạ áp mà không dùng bộ nghịch lưu, không để phát sinh (ウ). Ngoại lệ áp dụng nếu có thể phát hiện vận hành cô lập và tách lưới tương đương trường hợp dùng bộ nghịch lưu."
+    },
+    {
+      "jp": "c) 高圧の電力系統に分散型電源を連系する場合は、分散型電源を連系する配電用変電所の（エ）において、逆向きの潮流を生じさせないこと。ただし、当該配電用変電所に保護装置を施設する等の方法により分散型電源と電力系統との協調をとることができる場合は、この限りではない。",
+      "vi": "c) Khi đấu nối nguồn phân tán vào lưới cao áp, không để công suất chảy ngược tại (エ) của trạm phân phối nơi đấu nối. Ngoại lệ áp dụng khi bảo đảm được phối hợp bảo vệ với lưới, chẳng hạn nhờ lắp thiết bị bảo vệ tại trạm."
+    },
+    {
+      "jp": "解説\na) 単相3線式の電力系統と連系する場合、負荷の不平衡により中性線に過電流を生じても電路を保護できるように、3極に過電流引き外し素子を有する遮断器を系統側に施設します。\nb) 低圧の電力系統に逆変換装置を用いず連系する場合は、逆潮流を生じさせないようにします。\nc) 高圧の電力系統に連系する場合は、配電用変圧器の保護協調ができないので、逆向きの潮流を生じさせないようにします。",
+      "vi": "Lời giải. a) Với lưới một pha ba dây, thiết bị cắt bảo vệ cả ba cực đặt phía lưới để bảo vệ mạch khi mất cân bằng phụ tải làm quá dòng ở dây trung tính. b) Đấu nối vào lưới hạ áp không dùng bộ nghịch lưu thì ngăn công suất chảy ngược. c) Khi nối lưới cao áp, ngăn công suất chảy ngược nếu không thể phối hợp bảo vệ ở máy biến áp phân phối."
+    },
+    {
+      "jp": "解答　（ア）**負荷**　（イ）**系統側**　（ウ）**逆潮流**　（エ）**配電用変圧器**",
+      "vi": "Đáp án. (ア) **Phụ tải** · (イ) **Phía lưới** · (ウ) **Công suất chảy ngược về lưới** · (エ) **Máy biến áp phân phối**."
+    }
+  ],
+  "490": [
+    {
+      "jp": "2-9 高圧受電設備　といえば CB形とPF・S形がある",
+      "vi": "2-9 Thiết bị nhận điện cao áp: có kiểu CB và PF・S.",
+      "heading": true
+    },
+    {
+      "jp": "高圧受電設備（CB形）の単線結線図",
+      "vi": "Sơ đồ một sợi thiết bị nhận điện cao áp kiểu CB.",
+      "heading": true
+    },
+    {
+      "jp": "**高圧受電設備**は、三相の高圧配電線路（6 600 V）から受電し、低圧の負荷設備で使用する電圧（三相210 Vや単相210/105 V）に変成する設備です。",
+      "vi": "**Thiết bị nhận điện cao áp** nhận điện từ đường dây phân phối cao áp ba pha 6.600 V và biến đổi thành điện áp sử dụng cho tải hạ áp, ví dụ ba pha 210 V hoặc một pha 210/105 V."
+    },
+    {
+      "jp": "受電設備全体の構成や機器の接続を表すために、単線結線図が多く用いられます。表2-9-1は、高圧受電設備（**CB形**）の構成機器、図2-9-1は**単線結線図**の例です。",
+      "vi": "Thường dùng sơ đồ một sợi để thể hiện cấu hình hệ thống nhận điện và cách nối thiết bị. Bảng 2-9-1 liệt kê thiết bị của **kiểu CB**. Hình 2-9-1 là ví dụ **sơ đồ một sợi**."
+    },
+    {
+      "jp": "表2-9-1 高圧受電設備（CB形）の構成機器",
+      "vi": "Bảng 2-9-1 · Các thiết bị trong hệ thống nhận điện cao áp kiểu CB",
+      "heading": true,
+      "table": {
+        "jp": [
+          "機器",
+          "文字記号",
+          "役割"
+        ],
+        "vi": [
+          "Thiết bị",
+          "Ký hiệu",
+          "Vai trò"
+        ],
+        "rows": [
+          [
+            "① 地絡方向継電装置付高圧交流負荷開閉器",
+            "Cầu dao phụ tải AC cao áp có rơ-le chạm đất có hướng",
+            "DGR付PAS",
+            "需要家の高圧電路に地絡電流が流れたとき、地絡電流の方向を判別し自動的に電路を開放する、点検時に電路を開放する"
+          ],
+          [
+            "② ケーブルヘッド",
+            "Đầu cáp",
+            "CH",
+            "高圧ケーブルと高圧絶縁電線の接続処理部"
+          ],
+          [
+            "③ 電力需給用計器用変成器",
+            "Bộ biến điện áp và dòng cho đo đếm điện năng",
+            "VCT",
+            "高圧母線の電圧・電流を低圧・小電流に変成し電力量計で計測するための変成器"
+          ],
+          [
+            "④ 電力量計",
+            "Công tơ điện năng",
+            "WHM",
+            "使用した有効電力量・無効電力量を計測し表示する"
+          ],
+          [
+            "⑤ 断路器",
+            "Dao cách ly",
+            "DS",
+            "無負荷状態で電路の開閉を行う、点検時に電路を開放する"
+          ],
+          [
+            "⑥ 高圧交流遮断器",
+            "Máy cắt AC cao áp",
+            "CB",
+            "過電流・短絡電流を遮断、事故時に電路を遮断、負荷電流の開閉をする。一般にVCB（真空遮断器）が用いられる"
+          ],
+          [
+            "⑦ 計器用変圧器",
+            "Máy biến điện áp đo lường",
+            "VT",
+            "高圧を低圧に変成する、一次定格電圧は6.6 kV、二次定格電圧は110 V"
+          ],
+          [
+            "⑧ 避雷器",
+            "Chống sét van",
+            "LA",
+            "雷や開閉サージによる異常電圧を大地に放電し機器を保護する"
+          ],
+          [
+            "⑨ 変流器",
+            "Máy biến dòng",
+            "CT",
+            "高圧の電流を低圧電流計で計測するための変成器、二次定格電流は5 A"
+          ],
+          [
+            "⑩ 過電流継電器",
+            "Rơ-le quá dòng",
+            "OCR",
+            "過電流・短絡電流を検出したとき動作し遮断器をトリップさせる"
+          ],
+          [
+            "⑪ 高圧交流負荷開閉器",
+            "Cầu dao phụ tải AC cao áp",
+            "LBS",
+            "負荷電流の開閉、高圧限流ヒューズと組み合わせて遮断装置とする"
+          ],
+          [
+            "⑫ 高圧カットアウト",
+            "Bộ cut-out cao áp",
+            "PC",
+            "無負荷状態で電路の開閉を行う、高圧ヒューズで過負荷・短絡時は遮断"
+          ],
+          [
+            "⑬ 直列リアクトル",
+            "Cuộn kháng nối tiếp",
+            "SR",
+            "高調波電流の抑制、コンデンサ投入時の突入電流を抑制する効果もある"
+          ],
+          [
+            "⑭ 高圧進相コンデンサ",
+            "Tụ bù cao áp",
+            "SC",
+            "高圧電路の力率を改善する"
+          ],
+          [
+            "⑮ 三相変圧器",
+            "Máy biến áp ba pha",
+            "3φT",
+            "高電圧を三相3線式210 Vの使用電圧に変圧する"
+          ],
+          [
+            "⑯ 単相変圧器",
+            "Máy biến áp một pha",
+            "1φT",
+            "高電圧を単相3線式105 V/210 Vの使用電圧に変圧する"
+          ],
+          [
+            "⑰ 電圧計切替スイッチ",
+            "Công tắc chọn điện áp",
+            "VS",
+            "1台の電圧計で三相の線間電圧を測定できるようにした切替スイッチ"
+          ],
+          [
+            "⑱ 電圧計",
+            "Vôn kế",
+            "VM",
+            "VTの二次電圧を測定し、一次電圧に換算した高電圧の値を指示する"
+          ],
+          [
+            "⑲ 電流計切替スイッチ",
+            "Công tắc chọn dòng điện",
+            "AS",
+            "1台の電流計で三相の線電流を測定できるようにした切替スイッチ"
+          ],
+          [
+            "⑳ 電流計",
+            "Ampe kế",
+            "AM",
+            "CTの二次電流を測定し、一次電流に換算した電流の値を指示する"
+          ]
+        ],
+        "rowsVi": [
+          [
+            "① 地絡方向継電装置付高圧交流負荷開閉器",
+            "Cầu dao phụ tải AC cao áp có rơ-le chạm đất có hướng",
+            "DGR付PAS",
+            "Khi có dòng chạm đất trong mạch cao áp của khách hàng, nhận biết hướng dòng và tự động mở mạch. Cũng dùng để mở mạch khi kiểm tra."
+          ],
+          [
+            "② ケーブルヘッド",
+            "Đầu cáp",
+            "CH",
+            "Bộ phận xử lý đầu nối giữa cáp cao áp và dây cách điện cao áp."
+          ],
+          [
+            "③ 電力需給用計器用変成器",
+            "Bộ biến điện áp và dòng cho đo đếm điện năng",
+            "VCT",
+            "Hạ điện áp và biến dòng trên thanh cái cao áp thành dòng nhỏ để công tơ đo được."
+          ],
+          [
+            "④ 電力量計",
+            "Công tơ điện năng",
+            "WHM",
+            "Đo và hiển thị điện năng tác dụng và phản kháng đã sử dụng."
+          ],
+          [
+            "⑤ 断路器",
+            "Dao cách ly",
+            "DS",
+            "Đóng cắt mạch khi không tải và mở mạch để kiểm tra."
+          ],
+          [
+            "⑥ 高圧交流遮断器",
+            "Máy cắt AC cao áp",
+            "CB",
+            "Cắt quá dòng và dòng ngắn mạch, ngắt mạch khi có sự cố và đóng cắt dòng tải. Thường dùng máy cắt chân không VCB."
+          ],
+          [
+            "⑦ 計器用変圧器",
+            "Máy biến điện áp đo lường",
+            "VT",
+            "Hạ điện áp cao áp xuống hạ áp. Điện áp định mức sơ cấp 6,6 kV, thứ cấp 110 V."
+          ],
+          [
+            "⑧ 避雷器",
+            "Chống sét van",
+            "LA",
+            "Phóng quá điện áp do sét hoặc xung đóng cắt xuống đất để bảo vệ thiết bị."
+          ],
+          [
+            "⑨ 変流器",
+            "Máy biến dòng",
+            "CT",
+            "Biến dòng để đo dòng của mạch cao áp bằng ampe kế hạ áp. Dòng định mức thứ cấp 5 A."
+          ],
+          [
+            "⑩ 過電流継電器",
+            "Rơ-le quá dòng",
+            "OCR",
+            "Tác động khi phát hiện quá dòng hoặc dòng ngắn mạch và ra lệnh máy cắt mở."
+          ],
+          [
+            "⑪ 高圧交流負荷開閉器",
+            "Cầu dao phụ tải AC cao áp",
+            "LBS",
+            "Đóng cắt dòng tải. Kết hợp cầu chì hạn dòng cao áp để làm thiết bị cắt."
+          ],
+          [
+            "⑫ 高圧カットアウト",
+            "Bộ cut-out cao áp",
+            "PC",
+            "Đóng cắt khi không tải. Cầu chì cao áp cắt khi quá tải hoặc ngắn mạch."
+          ],
+          [
+            "⑬ 直列リアクトル",
+            "Cuộn kháng nối tiếp",
+            "SR",
+            "Hạn chế dòng sóng hài và dòng xung kích khi đóng tụ."
+          ],
+          [
+            "⑭ 高圧進相コンデンサ",
+            "Tụ bù cao áp",
+            "SC",
+            "Cải thiện hệ số công suất của mạch cao áp."
+          ],
+          [
+            "⑮ 三相変圧器",
+            "Máy biến áp ba pha",
+            "3φT",
+            "Hạ điện áp cao áp xuống điện áp sử dụng 210 V ba pha ba dây."
+          ],
+          [
+            "⑯ 単相変圧器",
+            "Máy biến áp một pha",
+            "1φT",
+            "Hạ điện áp cao áp xuống điện áp sử dụng 105/210 V một pha ba dây."
+          ],
+          [
+            "⑰ 電圧計切替スイッチ",
+            "Công tắc chọn điện áp",
+            "VS",
+            "Cho phép một vôn kế đo điện áp giữa các cặp dây của hệ ba pha."
+          ],
+          [
+            "⑱ 電圧計",
+            "Vôn kế",
+            "VM",
+            "Đo điện áp thứ cấp VT và hiển thị trị số quy đổi về điện áp cao áp sơ cấp."
+          ],
+          [
+            "⑲ 電流計切替スイッチ",
+            "Công tắc chọn dòng điện",
+            "AS",
+            "Cho phép một ampe kế đo dòng trên từng dây của hệ ba pha."
+          ],
+          [
+            "⑳ 電流計",
+            "Ampe kế",
+            "AM",
+            "Đo dòng thứ cấp CT và hiển thị trị số quy đổi về dòng sơ cấp."
+          ]
+        ]
+      }
+    }
+  ],
+  "491": [
+    {
+      "diagram": "lawCbSingleLine491"
+    },
+    {
+      "jp": "3φ3W 6 600 V：三相3線式6 600 Vで引き込みます。",
+      "vi": "Đầu vào ba pha ba dây 6.600 V."
+    },
+    {
+      "jp": "DGR付PAS：電源側から負荷側に地絡電流が流れたとき開放します。過電流のときはロック、無電圧で開放します。",
+      "vi": "DGR付PAS mở khi phát hiện dòng chạm đất chạy từ phía nguồn sang phía tải. Khi có quá dòng, khóa tác động, sau đó mở khi mất điện áp."
+    },
+    {
+      "jp": "ZCT：零相電流を検出します。VT：DGRの電源を得ます。ZPD：零相電圧を検出します。DGR：設定値以上の地絡電流が流れたとき動作します。",
+      "vi": "ZCT phát hiện dòng thứ tự không. VT cấp nguồn cho DGR. ZPD phát hiện điện áp thứ tự không. DGR tác động khi dòng chạm đất đạt ngưỡng cài đặt."
+    },
+    {
+      "jp": "CH：遮へい銅テープの切断部における電気力線の集中を緩和します。",
+      "vi": "CH giảm tập trung đường sức điện tại nơi kết thúc băng đồng chắn điện."
+    },
+    {
+      "jp": "VCT：高圧を低圧に、電流を小電流に変成します。WHM：検定付電力量計で、使用電力を計量します。",
+      "vi": "VCT hạ điện áp và biến dòng xuống trị số nhỏ. WHM đo điện năng sử dụng bằng công tơ đã được kiểm định."
+    },
+    {
+      "jp": "DS：電流が流れない状態で開閉します。",
+      "vi": "DS chỉ thao tác khi không mang dòng tải."
+    },
+    {
+      "jp": "VCB：過電流や短絡電流を遮断します。OCR：過電流のとき動作します。",
+      "vi": "VCB cắt quá dòng/ngắn mạch; OCR phát lệnh khi có quá dòng."
+    },
+    {
+      "jp": "LA：雷など異常電圧を対地に放電します。CT：高圧電路の電流を小電流に変成します。",
+      "vi": "LA xả quá điện áp; CT đổi dòng cao áp thành dòng đo lường."
+    },
+    {
+      "jp": "VT：6 600 Vを110 Vに変成する。高圧部の電気量を測定します（電圧、電力、力率、電流）。",
+      "vi": "VT hạ điện áp từ 6.600 V xuống 110 V. Bộ đồng hồ đo các đại lượng phía cao áp: điện áp, công suất, hệ số công suất và dòng điện."
+    },
+    {
+      "jp": "LBS：高圧進相コンデンサの開閉と過電流の保護をします。PC：高圧ヒューズで過電流を保護します。",
+      "vi": "LBS đóng/cắt mạch tụ bù; PC dùng cầu chì cao áp bảo vệ quá dòng."
+    },
+    {
+      "jp": "SR：高調波電流を抑制し、コンデンサ投入時の突入電流を抑制します。SC：力率を改善します。",
+      "vi": "SR hạn chế hài/dòng xung khi đóng tụ; SC bù công suất phản kháng."
+    },
+    {
+      "jp": "3φT：6 600 Vを三相210 Vに、1φT：6 600 Vを単相105/210 Vに変圧します。",
+      "vi": "Biến áp 3φ xuống 210 V ba pha; 1φ xuống 105/210 V."
+    }
+  ],
+  "492": [
+    {
+      "jp": "練習問題01　受電設備",
+      "vi": "Bài luyện 01 · Thiết bị nhận điện cao áp.",
+      "heading": true
+    },
+    {
+      "jp": "キュービクル式高圧受電設備には主遮断装置の形式によってCB形とPF・S形がある。",
+      "vi": "Trạm/tủ nhận điện cao áp kiểu cubicle chia CB và PF・S theo thiết bị cắt chính."
+    },
+    {
+      "jp": "CB形は主遮断装置として（ア）が使用されているが、PF・S形は変圧器設備容量の小さなキュービクルの設備簡素化の目的から、主遮断装置は（イ）と（ウ）の組み合わせによっている。",
+      "vi": "Kiểu CB dùng (ア) làm bộ cắt chính; kiểu PF・S cho công suất nhỏ dùng cặp (イ)+(ウ) để đơn giản hóa."
+    },
+    {
+      "jp": "高圧母線等の高圧側の短絡事故に対する保護は、CB形では（ア）と（エ）で行うのに対し、PF・S形は（イ）で行う仕組みとなっている。",
+      "vi": "Bảo vệ ngắn mạch phía cao áp: kiểu CB dùng (ア)+(エ), kiểu PF・S dùng (イ)."
+    },
+    {
+      "jp": "上記の記述中の空白箇所に当てはまる用語は。",
+      "vi": "Điền thuật ngữ phù hợp vào các chỗ trống trên."
+    },
+    {
+      "jp": "解説　キュービクル式高圧受電設備には主遮断装置の形式によってCB形とPF・S形があります。",
+      "vi": "Lời giải. Tủ nhận điện cao áp dạng khối có hai kiểu CB và PF・S, phân theo thiết bị cắt chính."
+    },
+    {
+      "diagram": "lawCbPfComparison492"
+    },
+    {
+      "jp": "①CB形　CB形は主遮断装置として高圧交流遮断器を用い、CT（高圧計器用変流器）、OCR（過電流継電器）、CB（高圧交流遮断器）の組合せにより過負荷、短絡事故などの保護を行います。",
+      "vi": "① Kiểu CB dùng máy cắt AC cao áp làm thiết bị cắt chính. Phối hợp CT (máy biến dòng cao áp), OCR (rơ-le quá dòng) và CB để bảo vệ khi quá tải hoặc ngắn mạch."
+    },
+    {
+      "jp": "②PF・S形　PF・S形は、高圧限流ヒューズ付高圧交流負荷開閉器で過負荷、短絡事故に対する保護を行います。この方式は、PF付LBSがCB形におけるDS、CB、OCR、CTの役割をなしており設備の小型化、単純化、経済化を図ることができます。",
+      "vi": "② Kiểu PF・S dùng cầu dao phụ tải AC cao áp có cầu chì hạn dòng cao áp để bảo vệ quá tải và ngắn mạch. Cụm PF–LBS đảm nhiệm vai trò của DS, CB, OCR và CT trong kiểu CB, giúp hệ thống nhỏ, đơn giản và tiết kiệm hơn."
+    },
+    {
+      "jp": "解答　（ア）**高圧交流遮断器**　（イ）**高圧限流ヒューズ**　（ウ）**高圧交流負荷開閉器**　（エ）**過電流継電器**",
+      "vi": "Đáp án. (ア) **Máy cắt AC cao áp** · (イ) **Cầu chì hạn dòng cao áp** · (ウ) **Cầu dao phụ tải AC cao áp** · (エ) **Rơ-le quá dòng**."
+    }
+  ],
+  "493": [
+    {
+      "jp": "練習問題02　停電作業の手順",
+      "vi": "Bài luyện 02 · Trình tự thao tác khi cắt toàn bộ điện để làm việc.",
+      "heading": true
+    },
+    {
+      "jp": "次の文章は、高圧受電設備において全停電作業を実施するときの操作手順の一例について、一部を述べたものである。",
+      "vi": "Điền thiết bị tương ứng vào các bước thao tác cắt toàn bộ điện cho thiết bị nhận cao áp."
+    },
+    {
+      "diagram": "lawOutageExercise493"
+    },
+    {
+      "jp": "a) （ア）をすべて開放する。",
+      "vi": "a) Mở tất cả (ア)."
+    },
+    {
+      "jp": "b) （イ）を開放する。",
+      "vi": "b) Mở (イ)."
+    },
+    {
+      "jp": "c) 地絡方向継電装置付高圧交流負荷開閉器（DGR付PAS）を開放する。",
+      "vi": "c) Mở PAS có rơ-le chạm đất có hướng (DGR)."
+    },
+    {
+      "jp": "d) （ウ）を開放する。",
+      "vi": "d) Mở (ウ)."
+    },
+    {
+      "jp": "e) 断路器（DS）の電源側及び負荷側を検電して無電圧を確認する。",
+      "vi": "e) Dùng bút thử điện chuyên dụng kiểm tra hai phía DS để xác nhận hết điện."
+    },
+    {
+      "jp": "f) 高圧電路に接地金具等を接続して残留電荷を放電させた後、誤通電、他の電路との混触又は他の電路からの誘導による感電の危険を防止するため、断路器（DS）の（エ）に短絡接地器具を取り付けて接地する。",
+      "vi": "f) Nối dụng cụ tiếp địa vào mạch cao áp để xả điện tích dư. Sau đó gắn dụng cụ nối đất ngắn mạch ở vị trí (エ) của dao cách ly DS để phòng điện giật do cấp điện nhầm, chạm với mạch khác hoặc cảm ứng từ mạch khác."
+    },
+    {
+      "jp": "g) 断路器（DS）、開閉器等にはそれぞれ操作後速やかに、操作禁止、投入禁止、通電禁止等の通電を禁止する表示をする。",
+      "vi": "g) Ngay sau mỗi thao tác, gắn biển cấm thao tác, cấm đóng điện, cấm cấp điện hoặc biển tương tự ở dao cách ly DS và các thiết bị đóng cắt."
+    },
+    {
+      "jp": "上記の記述中の空白箇所当てはまる字句は。",
+      "vi": "Điền thuật ngữ phù hợp vào các chỗ trống trên."
+    },
+    {
+      "jp": "解説　高圧受電設備の全停電作業を実施するときの操作手順は次の通りです。\n①配線用遮断器（MCCB）を開放→②真空遮断器（VCB）を開放→③地絡方向継電装置付高圧交流負荷開閉器（DGR付PAS）を開放→④断路器（DS）を開放→⑤検電して無電圧を確認→⑥残留電荷を放電し断路器（DS）の電源側に短絡接地器具を取り付けて接地する→⑦断路器（DS）、開閉器等に操作禁止、投入禁止、通電禁止などの表示をする。",
+      "vi": "Lời giải theo sơ đồ của đề. ① Mở MCCB. ② Mở máy cắt chân không VCB. ③ Mở cầu dao phụ tải cao áp DGR付PAS. ④ Mở dao cách ly DS. ⑤ Thử và xác nhận không còn điện áp. ⑥ Xả điện tích dư, gắn dụng cụ nối đất ngắn mạch ở phía nguồn DS và nối đất. ⑦ Gắn biển cấm thao tác, cấm đóng điện hoặc cấm cấp điện trên DS và các thiết bị đóng cắt."
+    },
+    {
+      "jp": "断路器（DS）は、電流を開閉する能力がないことから、電流が流れていない状態（真空遮断器（VCB）が開放の状態）で操作を行わなければなりません。また、受電設備を点検時に誤送電してしまった場合に、短絡接地器具は作業者の感電を防止します。",
+      "vi": "Dao cách ly DS không có khả năng đóng cắt dòng điện. Phải thao tác khi không có dòng chạy qua, tức VCB đã mở trong sơ đồ của đề. Dụng cụ nối đất ngắn mạch giúp bảo vệ người thao tác khỏi điện giật nếu cấp điện nhầm trong lúc kiểm tra."
+    },
+    {
+      "jp": "解答　（ア）**配線用遮断器**（MCCB）　（イ）**真空遮断器**（VCB）　（ウ）**断路器**（DS）　（エ）**電源側**",
+      "vi": "Đáp án. (ア) **Áp-tô-mát bảo vệ dây** (MCCB) · (イ) **Máy cắt chân không** (VCB) · (ウ) **Dao cách ly** (DS) · (エ) **Phía nguồn**."
+    }
   ]
 };

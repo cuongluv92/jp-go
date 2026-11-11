@@ -35,6 +35,69 @@ function Diagram({ file, width, height, title, labels }: {
 }
 
 export const diagrams = {
+  lawOutageExercise493: (
+    <Diagram file="lawOutageExercise493" width={429} height={754} title="Sơ đồ nhận điện của bài tập thao tác khi mất điện toàn bộ" labels={[
+      ["3φ3W 6.6 kV", "Nguồn ba pha ba dây 6,6 kV"],
+      ["DGR付PAS", "Cầu dao phụ tải trên cột có rơ-le chạm đất có hướng"],
+      ["CH", "Đầu cáp"],
+      ["DS", "Dao cách ly"],
+      ["VCB", "Máy cắt chân không"],
+      ["LBS1・LBS2・LBS3", "Cầu dao phụ tải"],
+      ["PF1・PF2・PF3", "Cầu chì hạn dòng cao áp"],
+      ["SR", "Cuộn kháng nối tiếp"],
+      ["SC", "Tụ bù"],
+      ["TR1・TR2", "Máy biến áp"],
+      ["MCCB1・MCCB2", "Áp-tô-mát bảo vệ dây"],
+    ]} />
+  ),
+  lawCbPfComparison492: (
+    <Diagram file="lawCbPfComparison492" width={936} height={657} title="So sánh sơ đồ tủ nhận điện kiểu CB và PF・S" labels={[
+      ["G付PAS", "Cầu dao phụ tải trên cột có bảo vệ chạm đất"],
+      ["VCT", "Bộ biến điện áp và dòng cho đo đếm"],
+      ["DS", "Dao cách ly"],
+      ["LA", "Chống sét van"],
+      ["CB", "Máy cắt cao áp"],
+      ["CT", "Máy biến dòng"],
+      ["OCR", "Rơ-le quá dòng"],
+      ["PF付LBS", "Cầu dao phụ tải LBS kèm cầu chì hạn dòng PF"],
+      ["変圧器、コンデンサ設備などへ至る", "Đến máy biến áp, thiết bị tụ bù và tải tương tự"],
+    ]} />
+  ),
+  lawCbSingleLine491: (
+    <Diagram file="lawCbSingleLine491" width={1141} height={1840} title="Hình 2-9-1 · Sơ đồ một sợi kiểu CB" labels={[
+      ["3φ3W 6 600 V", "Nhận điện ba pha ba dây 6.600 V"],
+      ["屋外", "Ngoài trời"],
+      ["屋内又は屋外", "Trong nhà hoặc ngoài trời"],
+      ["ZCT", "Biến dòng thứ tự không"],
+      ["ZPD", "Bộ phát hiện điện áp thứ tự không"],
+      ["DGR", "Rơ-le chạm đất có hướng"],
+      ["VT（PAS内）", "Biến điện áp cấp nguồn cho rơ-le DGR"],
+      ["DGR付PAS", "Cầu dao phụ tải AC cao áp có rơ-le chạm đất có hướng"],
+      ["CH", "Đầu cáp"],
+      ["VCT", "Bộ biến điện áp và dòng cho đo đếm điện năng"],
+      ["WHM", "Công tơ điện năng"],
+      ["DS", "Dao cách ly"],
+      ["CB", "Máy cắt AC cao áp"],
+      ["VT", "Máy biến điện áp đo lường"],
+      ["LA", "Chống sét van"],
+      ["CT", "Máy biến dòng"],
+      ["OCR", "Rơ-le quá dòng"],
+      ["LBS", "Cầu dao phụ tải AC cao áp"],
+      ["PC", "Bộ cut-out cao áp"],
+      ["SR", "Cuộn kháng nối tiếp"],
+      ["SC", "Tụ bù cao áp"],
+      ["3φT", "Máy biến áp ba pha"],
+      ["1φT", "Máy biến áp một pha"],
+      ["VS", "Công tắc chọn điện áp"],
+      ["VM", "Vôn kế"],
+      ["AS", "Công tắc chọn dòng điện"],
+      ["AM", "Ampe kế"],
+      ["PF", "Cầu chì cao áp"],
+      ["F", "Cầu chì"],
+      ["W", "Oát kế"],
+      ["cosφ", "Đồng hồ hệ số công suất"],
+    ]} />
+  ),
   lawBranchBreaker480: (
     <Diagram file="lawBranchBreaker480" width={976} height={427} title="Hình 2-7-3 · Vị trí thiết bị cắt quá dòng của mạch nhánh" labels={[
       ["Iᵦ", "Dòng định mức thiết bị cắt bảo vệ dây trục"],
