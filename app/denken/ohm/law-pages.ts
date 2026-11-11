@@ -3519,5 +3519,822 @@ export const lawPages: Record<number, LessonRow[]> = {
       "jp": "POINT　電磁誘導作用又は静電誘導作用による人への影響防止の規定 といえば\n変電所等からの磁界は、**磁束密度**の測定値が**200 μT**以下\n特高の架空電線路からの電界は、**電界強度**が**3 kV/m**以下",
       "vi": "Ghi nhớ. **Mật độ từ thông** đo được của từ trường từ trạm biến áp và nơi tương đương không quá **200 µT**. **Cường độ điện trường** do đường dây siêu cao áp trên không không quá **3 kV/m**."
     }
+  ],
+  "456": [
+    {
+      "jp": "2-3 架空電線路の支持物 といえば 木柱、鉄柱、鉄筋コンクリート柱など",
+      "vi": "2-3 Vật đỡ đường dây trên không: cột gỗ, cột thép, cột bê tông cốt thép…",
+      "note": "",
+      "heading": true
+    },
+    {
+      "jp": "架空電線路の支持物",
+      "vi": "Vật đỡ đường dây trên không",
+      "note": "",
+      "heading": true
+    },
+    {
+      "jp": "電線路の定義",
+      "vi": "Định nghĩa đường dây điện",
+      "note": "",
+      "heading": true
+    },
+    {
+      "jp": "電技において、「電線路」とは、発電所、変電所、開閉所及びこれらに類する場所並びに電気使用場所相互間の電線並びにこれを支持し、又は保蔵する工作物注）をいうと定義しています。",
+      "vi": "Theo tiêu chuẩn kỹ thuật, đường dây điện gồm dây dẫn giữa các nhà máy điện, trạm biến áp, trạm đóng cắt, nơi tương tự và nơi sử dụng điện, cùng công trình dùng để đỡ hoặc chứa các dây này (xem chú thích)."
+    },
+    {
+      "jp": "主な電線路として、架空電線路、屋側電線路、屋上電線路、地中電線路などがあります。",
+      "vi": "Các loại chính gồm đường dây trên không, dọc tường, trên mái và ngầm.",
+      "note": ""
+    },
+    {
+      "jp": "注）電線を支持するのに要する腕木、がいし、支線など及びケーブルの布設に要する暗きょ、地中箱、接続箱など",
+      "vi": "Chú thích. Ví dụ công trình đỡ dây gồm xà, sứ cách điện và dây néo. Công trình phục vụ rải cáp gồm hầm cáp, hộp ngầm và hộp nối, v.v."
+    },
+    {
+      "jp": "支持物の種類",
+      "vi": "Các loại cột đỡ",
+      "note": "",
+      "heading": true
+    },
+    {
+      "jp": "支持物の種類には、木柱、鉄柱、鉄筋コンクリート柱及び鉄塔があり、安全性の差による規制があります。",
+      "vi": "Vật đỡ gồm cột gỗ, thép, bê tông cốt thép và tháp thép; quy định phụ thuộc mức an toàn.",
+      "note": ""
+    },
+    {
+      "jp": "・**A種鉄筋コンクリート柱**：基礎の強度計算を行わず、根入れの深さを表2-3-1に示す値以上とするものと規定されています。",
+      "vi": "• **Cột bê tông cốt thép loại A**: không tính sức bền móng và chôn chân cột sâu ít nhất bằng trị số trong bảng 2-3-1."
+    },
+    {
+      "jp": "・**A種鉄柱**：基礎の強度計算は行わず、根入れの深さを表2-3-2に示す値以上とするものと規定されています。",
+      "vi": "• **Cột thép loại A**: không tính sức bền móng và chôn chân cột sâu ít nhất bằng trị số trong bảng 2-3-2."
+    },
+    {
+      "jp": "B種鉄筋コンクリート柱：A種鉄筋コンクリート柱以外の鉄筋コンクリート柱。",
+      "vi": "Cột BTCT loại B là loại khác A.",
+      "note": ""
+    },
+    {
+      "jp": "B種鉄柱：A種鉄柱以外のもの。",
+      "vi": "Cột thép loại B là loại khác A.",
+      "note": ""
+    },
+    {
+      "jp": "表2-3-1 A種鉄筋コンクリート柱の根入れ深さ",
+      "vi": "Bảng 2-3-1 · Độ chôn chân cột bê tông cốt thép loại A",
+      "heading": true,
+      "table": {
+        "jp": [
+          "設計荷重",
+          "全長",
+          "根入れ深さ"
+        ],
+        "vi": [
+          "Tải trọng thiết kế",
+          "Tổng chiều dài",
+          "Độ chôn chân cột"
+        ],
+        "rows": [
+          [
+            "6.87 kN以下",
+            "Đến 6,87 kN",
+            "15 m以下",
+            "全長の**1/6**"
+          ],
+          [
+            "6.87 kN以下",
+            "Đến 6,87 kN",
+            "15 mを超え16 m以下",
+            "**2.5 m**"
+          ],
+          [
+            "6.87 kN以下",
+            "Đến 6,87 kN",
+            "16 mを超え20 m以下",
+            "2.8 m"
+          ],
+          [
+            "6.87 kNを超え9.81 kN以下",
+            "Trên 6,87 kN đến 9,81 kN",
+            "14 m以上15 m以下",
+            "全長の1/6に0.3 mを加えた値"
+          ],
+          [
+            "6.87 kNを超え9.81 kN以下",
+            "Trên 6,87 kN đến 9,81 kN",
+            "15 mを超え20 m以下",
+            "2.8 m"
+          ]
+        ],
+        "rowsVi": [
+          [
+            "6.87 kN以下",
+            "Đến 6,87 kN",
+            "Đến 15 m",
+            "**1/6** tổng chiều dài"
+          ],
+          [
+            "6.87 kN以下",
+            "Đến 6,87 kN",
+            "Trên 15 m đến 16 m",
+            "**2,5 m**"
+          ],
+          [
+            "6.87 kN以下",
+            "Đến 6,87 kN",
+            "Trên 16 m đến 20 m",
+            "2,8 m"
+          ],
+          [
+            "6.87 kNを超え9.81 kN以下",
+            "Trên 6,87 kN đến 9,81 kN",
+            "Từ 14 m đến 15 m",
+            "1/6 tổng chiều dài cộng 0,3 m"
+          ],
+          [
+            "6.87 kNを超え9.81 kN以下",
+            "Trên 6,87 kN đến 9,81 kN",
+            "Trên 15 m đến 20 m",
+            "2,8 m"
+          ]
+        ]
+      }
+    },
+    {
+      "jp": "表2-3-2 A種鉄柱の根入れ深さ",
+      "vi": "Bảng 2-3-2 · Độ chôn chân cột thép loại A",
+      "heading": true,
+      "table": {
+        "jp": [
+          "設計荷重",
+          "全長",
+          "根入れ深さ"
+        ],
+        "vi": [
+          "Tải trọng thiết kế",
+          "Tổng chiều dài",
+          "Độ chôn chân cột"
+        ],
+        "rows": [
+          [
+            "6.87 kN以下",
+            "Đến 6,87 kN",
+            "15 m以下",
+            "全長の**1/6**"
+          ],
+          [
+            "6.87 kN以下",
+            "Đến 6,87 kN",
+            "15 mを超え16 m以下",
+            "**2.5 m**"
+          ]
+        ],
+        "rowsVi": [
+          [
+            "6.87 kN以下",
+            "Đến 6,87 kN",
+            "Đến 15 m",
+            "**1/6** tổng chiều dài"
+          ],
+          [
+            "6.87 kN以下",
+            "Đến 6,87 kN",
+            "Trên 15 m đến 16 m",
+            "**2,5 m**"
+          ]
+        ]
+      }
+    },
+    {
+      "jp": "POINT　**A種**鉄筋コンクリート柱と**A種**鉄柱は、強度計算を行わずに使用できる。\n根入れ深さ：15 m以下は、全長の**1/6**、15 mを超え20 m以下は、**2.5 m**\nA種以外をB種という",
+      "vi": "Ghi nhớ. Cột bê tông cốt thép **loại A** và cột thép **loại A** có thể dùng mà không tính sức bền móng.\nĐộ chôn chân cột trong ô ghi nhớ: nếu dài đến 15 m thì chôn **1/6** tổng chiều dài, nếu dài trên 15 m đến 20 m thì ghi **2,5 m**.\nNgoài loại A gọi là loại B.",
+      "note": "Ô POINT ghi gộp. Khi tra trị số, dùng hai bảng theo loại cột, tải trọng và chiều dài. Ví dụ cột bê tông cốt thép loại A dài trên 16 đến 20 m, tải đến 6,87 kN, dùng 2,8 m theo bảng 2-3-1.",
+      "equations": [
+        [
+          "全長の ",
+          {
+            "fraction": [
+              [
+                "1"
+              ],
+              [
+                "6"
+              ]
+            ],
+            "red": true
+          }
+        ]
+      ],
+      "equationsVi": [
+        [
+          {
+            "fraction": [
+              [
+                "1"
+              ],
+              [
+                "6"
+              ]
+            ],
+            "red": true
+          },
+          " tổng chiều dài"
+        ]
+      ]
+    }
+  ],
+  "457": [
+    {
+      "jp": "支持物の強度",
+      "vi": "Sức bền vật đỡ",
+      "note": "",
+      "heading": true
+    },
+    {
+      "jp": "支持物の強度の算定は、風圧荷重のほか、電線の強度やがいし装置の重量などの事項が規定されています。",
+      "vi": "Khi tính sức bền vật đỡ, ngoài tải trọng áp lực gió còn có quy định về sức bền dây dẫn và trọng lượng bộ cách điện, v.v.",
+      "note": ""
+    },
+    {
+      "jp": "風圧荷重",
+      "vi": "Tải trọng áp lực gió",
+      "note": "",
+      "heading": true
+    },
+    {
+      "jp": "支持物に加わる荷重のうち、風圧荷重について、甲種、乙種、丙種及び着雪時の4種類を、地域によりその適用範囲を定めています。",
+      "vi": "Tải gió được phân thành các dạng 甲, 乙, 丙 và trường hợp tuyết bám; vùng áp dụng phụ thuộc địa phương.",
+      "note": ""
+    },
+    {
+      "jp": "・**甲種風圧荷重**：10分間平均で風速**40 m/sの風**があるものと仮定した場合に生じる風圧荷重で、**高温季**について適用します。",
+      "vi": "• **Tải gió loại 甲**: tính với giả thiết **gió 40 m/s** trung bình trong 10 phút, áp dụng vào **mùa nóng**."
+    },
+    {
+      "jp": "低温季において最大風圧を生じる地方にあっては**低温季について**も適用します。",
+      "vi": "Vùng gió cực đại xuất hiện mùa lạnh cũng áp dụng loại này **vào mùa lạnh**.",
+      "note": ""
+    },
+    {
+      "jp": "**甲種風圧荷重**は、支持物、電線その他の架渉線、がいし装置及び腕金類について、構成材の垂直投影面積**1 m²にかかる圧力**（風圧荷重［Pa］）を定めています。",
+      "vi": "**Tải gió loại 甲** quy định **áp lực lên 1 m²** diện tích hình chiếu đứng của vật đỡ, dây điện và các dây giăng khác, bộ cách điện và xà kim loại."
+    },
+    {
+      "jp": "甲種風圧の適用地域の配電線路では、電線については**980 Pa**（100 kg/m²）の風圧がかかるものとして支持物の強度を計算します。",
+      "vi": "Đối với dây phân phối ở vùng áp dụng tải 甲, dùng áp lực gió **980 Pa** (100 kg/m²) để tính sức bền.",
+      "note": ""
+    },
+    {
+      "jp": "・**乙種風圧荷重**：電線その他の架渉線の周囲に厚さ**6 mm**、比重0.9の氷雪が付着した状態に対し、甲種風圧荷重の**0.5倍**を基礎として計算したもので、氷雪の多い地方において**低温季**について適用します。",
+      "vi": "• **Tải gió loại 乙**: giả định băng tuyết dày **6 mm**, tỷ trọng 0,9, bám quanh dây điện và các dây giăng khác. Tính trên cơ sở **0,5 lần** tải loại 甲, áp dụng vào **mùa lạnh** ở vùng nhiều băng tuyết."
+    },
+    {
+      "jp": "・**丙種風圧荷重**：甲種風圧荷重の0.5倍を基礎として計算したもので、氷雪の多くない地方において低温季について適用します。",
+      "vi": "• **Tải gió loại 丙**: tính trên cơ sở 0,5 lần tải loại 甲, áp dụng vào mùa lạnh ở vùng ít băng tuyết."
+    },
+    {
+      "jp": "・**着雪時風圧荷重**：架渉線の周囲に比重0.6の雪が同心円状に付着した状態に対し、甲種風圧荷重の0.3倍を基礎として計算したもので、降雪の多い地域の河川等を横断する鉄塔に用います。",
+      "vi": "• **Tải gió khi tuyết bám**: giả định tuyết có tỷ trọng 0,6 bám đồng tâm quanh dây giăng và tính trên cơ sở 0,3 lần tải loại 甲. Dùng cho tháp thép vượt sông và địa hình tương tự ở vùng tuyết rơi nhiều."
+    },
+    {
+      "jp": "風圧荷重の適用",
+      "vi": "Áp dụng tải áp lực gió",
+      "note": "",
+      "heading": true
+    },
+    {
+      "jp": "風圧荷重の計算を適用する地方は、表2-3-3のように適用します。",
+      "vi": "Dùng bảng 2-3-3 để chọn loại tải gió theo địa phương."
+    },
+    {
+      "jp": "表2-3-3 風圧荷重の適用",
+      "vi": "Bảng 2-3-3 · Loại tải gió áp dụng theo vùng và mùa",
+      "heading": true,
+      "table": {
+        "jp": [
+          "地方の別",
+          "高温季",
+          "低温季"
+        ],
+        "vi": [
+          "Loại vùng",
+          "Mùa nóng",
+          "Mùa lạnh"
+        ],
+        "rows": [
+          [
+            "氷雪の多い地方以外の地方",
+            "Vùng ít băng tuyết",
+            "**甲種**",
+            "**丙種**"
+          ],
+          [
+            "氷雪の多い地方：下記以外の地方",
+            "Vùng nhiều băng tuyết, trừ trường hợp dòng dưới",
+            "**甲種**",
+            "**乙種**"
+          ],
+          [
+            "氷雪の多い地方：冬季に最大風圧を生ずる地方",
+            "Vùng nhiều băng tuyết có áp lực gió lớn nhất vào mùa đông",
+            "**甲種**",
+            "**甲種**及び**乙種**の大きい方を適用"
+          ]
+        ],
+        "rowsVi": [
+          [
+            "氷雪の多い地方以外の地方",
+            "Vùng ít băng tuyết",
+            "**Loại 甲**",
+            "**Loại 丙**"
+          ],
+          [
+            "氷雪の多い地方：下記以外の地方",
+            "Vùng nhiều băng tuyết, trừ trường hợp dòng dưới",
+            "**Loại 甲**",
+            "**Loại 乙**"
+          ],
+          [
+            "氷雪の多い地方：冬季に最大風圧を生ずる地方",
+            "Vùng nhiều băng tuyết có áp lực gió lớn nhất vào mùa đông",
+            "**Loại 甲**",
+            "Lấy giá trị lớn hơn giữa **loại 甲** và **loại 乙**"
+          ]
+        ]
+      }
+    },
+    {
+      "jp": "なお、人家が多く連なっている場所に施設される架空電線路の構成材のうち、低圧又は高圧の架空電線路の支持物及び架渉線、使用電圧35 000 V以下の特別高圧架空電線路の支持物に施設する低・高圧の架空電線などには、甲種又は乙種風圧荷重に代えて丙種風圧荷重を適用することができます。これは、人家の連なる場所では風速が一般に減衰することが知られているからです。",
+      "vi": "Ở nơi có nhiều nhà liền nhau, có thể dùng tải loại 丙 thay loại 甲 hoặc 乙 đối với vật đỡ và dây giăng của đường dây hạ áp hoặc cao áp trên không, dây hạ áp hoặc cao áp lắp trên vật đỡ của đường dây siêu cao áp trên không có điện áp sử dụng đến 35.000 V, và các trường hợp tương tự. Lý do là tốc độ gió thường giảm ở nơi nhà cửa san sát."
+    }
+  ],
+  "458": [
+    {
+      "jp": "POINT　風圧荷重は甲種、乙種、丙種",
+      "vi": "Ghi nhớ: tải trọng gió chia loại 甲 (A), 乙 (B), 丙 (C).",
+      "note": ""
+    },
+    {
+      "jp": "**甲種**風圧荷重：電線については**980 Pa**の風圧（10分間平均で風速40 m/sの風を想定、**高温季**に適用）",
+      "vi": "Tải gió **loại 甲**: áp lực **980 Pa** lên dây, giả định gió trung bình 10 phút 40 m/s, áp dụng vào **mùa nóng**."
+    },
+    {
+      "jp": "**乙種**風圧荷重：甲種風圧荷重の**0.5**倍＝**490 Pa**の風圧（厚さ**6 mm**の氷雪の付着を想定、氷雪の多い地方で**低温季**に適用）",
+      "vi": "Tải gió **loại 乙**: bằng **0,5** lần loại 甲, tức **490 Pa**, giả định băng tuyết bám dày **6 mm**, áp dụng vào **mùa lạnh** ở vùng nhiều băng tuyết."
+    },
+    {
+      "jp": "**丙種**風圧荷重：甲種風圧荷重の**0.5**倍＝**490 Pa**の風圧（氷雪の多くない地方において低温季に適用）",
+      "vi": "Tải gió **loại 丙**: bằng **0,5** lần loại 甲, tức **490 Pa**, áp dụng vào mùa lạnh ở vùng ít băng tuyết."
+    },
+    {
+      "jp": "支線の施設",
+      "vi": "Lắp dây néo",
+      "note": "",
+      "heading": true
+    },
+    {
+      "jp": "支線による強度の補強",
+      "vi": "Gia cường cột bằng dây néo",
+      "note": "",
+      "heading": true
+    },
+    {
+      "jp": "鉄塔以外の支持物は、支線により支持物の強度の一部を分担させることができます。",
+      "vi": "Cột không phải tháp thép có thể được gia cường bằng dây néo chia sẻ một phần tải.",
+      "note": ""
+    },
+    {
+      "jp": "この場合、支持物自体の強度は、風圧荷重の1/2以上の荷重に耐えうる強度を有していなければならないことを定めており、支線で分担できる荷重の限度が規制されています。",
+      "vi": "Khi đó, bản thân vật đỡ vẫn phải chịu được ít nhất một nửa tải gió. Đây là giới hạn cho phần tải mà dây néo có thể chia sẻ."
+    },
+    {
+      "jp": "木柱、A種鉄柱、A種鉄筋コンクリート柱は、風圧荷重に耐えるだけで、支持物の強度には架渉線の不平均張力が見込まれていないので、高圧架空電線路において次のような不平均張力のかかる部分は、その**不平均張力に耐える**ための支線を施設します。",
+      "vi": "Cột gỗ, cột thép loại A và cột bê tông cốt thép loại A được tính để chịu tải gió, chưa tính lực căng mất cân bằng của các dây giăng. Do đó phải lắp dây néo để **chịu lực căng mất cân bằng** ở các vị trí sau trên đường dây cao áp trên không.",
+      "note": ""
+    },
+    {
+      "diagram": "lawOverheadGuyWire458"
+    },
+    {
+      "jp": "①電線路の直線部分（水平5°以下を含む）で径間差の大きい箇所。図2-3-1の(a)。",
+      "vi": "① Đường thẳng (góc ngang ≤5°) có chênh lệch khoảng cột lớn.",
+      "note": ""
+    },
+    {
+      "jp": "径間差により生ずる不平均張力による水平力に耐える支線を、電線路の方向にその両側に設ける。",
+      "vi": "Lắp dây néo hai bên dọc hướng đường dây để chịu lực ngang do chênh khoảng cột.",
+      "note": ""
+    },
+    {
+      "jp": "②電線路の水平角度**5°を超える**箇所。図2-3-1の(b)。",
+      "vi": "② Vị trí đổi hướng có góc ngang **trên 5°**, hình 2-3-1(b)."
+    },
+    {
+      "jp": "想定最大張力の水平横分力に耐える支線を設ける。",
+      "vi": "Néo để chịu thành phần lực ngang của lực căng cực đại.",
+      "note": ""
+    },
+    {
+      "jp": "③電線路中、全架渉線を**引き留める箇所**。図2-3-1の(c)。",
+      "vi": "③ **Vị trí neo giữ** tất cả dây giăng của tuyến, hình 2-3-1(c)."
+    },
+    {
+      "jp": "想定最大張力に等しい不平均張力による水平力に耐える支線を、電線路に平行な方向に設ける。",
+      "vi": "Đặt dây néo song song với đường dây để chịu lực ngang do lực căng mất cân bằng bằng lực căng lớn nhất giả định.",
+      "note": ""
+    }
+  ],
+  "459": [
+    {
+      "jp": "支線の施設方法及び支柱による代用",
+      "vi": "Phương pháp lắp dây néo và thay bằng thanh chống.",
+      "note": "",
+      "heading": true
+    },
+    {
+      "jp": "架空電線路の支持物において施設する支線は、次によることと定められています。",
+      "vi": "Dây néo của cột đường dây trên không phải đáp ứng các điều kiện:",
+      "note": ""
+    },
+    {
+      "jp": "①支線の引張強さは、10.7 kN（図2-3-1の支線にあっては6.46 kN）以上であること。",
+      "vi": "① Sức chịu kéo tối thiểu 10,7 kN (một số dây theo hình 2-3-1 là 6,46 kN).",
+      "note": ""
+    },
+    {
+      "jp": "②支線の安全率は、**2.5**（図2-3-1の支線にあっては、1.5以上）であること。",
+      "vi": "② Hệ số an toàn của dây néo ít nhất **2,5**. Dây néo ở hình 2-3-1 dùng mức tối thiểu 1,5."
+    },
+    {
+      "jp": "③支線に**より線**を使用する場合は次によること。",
+      "vi": "③ Nếu dùng **dây bện** để làm dây néo:",
+      "note": ""
+    },
+    {
+      "jp": "素線を**３条以上**より合わせたものであること。",
+      "vi": "Phải bện từ **ít nhất 3 sợi** thành phần.",
+      "note": ""
+    },
+    {
+      "jp": "素線は、直径が**２mm以上**、かつ、引張強さが0.69 kN/mm²以上の金属線であること。",
+      "vi": "Sợi thành phần đường kính **≥2 mm**, sức bền kéo ≥0,69 kN/mm².",
+      "note": ""
+    },
+    {
+      "jp": "・支線を木柱に施設する場合を除き、地中の部分及び地表上**30 cm**までの地際部分には耐食性のあるもの又は亜鉛めっきを施した**鉄棒**を使用し、これを容易に腐食し難い**根かせ**に堅ろうに取り付けること（図2-3-2の左）。",
+      "vi": "• Trừ dây néo lắp vào cột gỗ, dùng **thanh sắt** chống ăn mòn hoặc mạ kẽm cho phần ngầm và phần sát đất đến **30 cm** trên mặt đất. Gắn chắc vào **khối neo** khó bị ăn mòn, như phía trái hình 2-3-2."
+    },
+    {
+      "jp": "支線の根かせは、支線の引張荷重に十分耐えるように施設すること。",
+      "vi": "Khối neo phải đủ sức chịu tải kéo.",
+      "note": ""
+    },
+    {
+      "jp": "④道路を横断して施設する支線の高さは、路面上**5 m以上**とすること。ただし、技術上やむを得ない場合で、かつ、交通に支障を及ぼすおそれがないときは、**4.5 m以上**、歩行の用にのみ供する部分においては**2.5 m以上**とすることができる（図2-3-2の右）。",
+      "vi": "④ Dây néo vượt đường cao **ít nhất 5 m** so với mặt đường. Khi bất khả kháng về kỹ thuật và không có nguy cơ cản trở giao thông, được giảm còn **ít nhất 4,5 m**. Phần đường chỉ dành cho người đi bộ được giảm còn **ít nhất 2,5 m**, như phía phải hình 2-3-2."
+    },
+    {
+      "jp": "⑤低圧又は高圧の架空電線路の支持物に施設する支線であって、電線と接触するおそれがあるものには、その上部に**がいし**を挿入すること。ただし、低圧架空電線路の支持物に施設する支線を水田その他の湿地以外の場所に施設する場合は、この限りでない。",
+      "vi": "⑤ Dây néo của vật đỡ đường dây hạ áp hoặc cao áp trên không có nguy cơ chạm dây điện phải lắp **sứ cách điện** ở phần trên. Ngoại lệ áp dụng cho dây néo của đường dây hạ áp trên không đặt ngoài ruộng nước và các vùng đất ẩm khác."
+    },
+    {
+      "jp": "⑥架空電線路の支持物に施設する支線は、これと同等以上の効力のある支柱で代えることができる。",
+      "vi": "⑥ Có thể thay dây néo bằng thanh chống có hiệu quả tương đương.",
+      "note": ""
+    },
+    {
+      "diagram": "lawGuyAnchor459"
+    },
+    {
+      "jp": "径間の制限",
+      "vi": "Giới hạn khoảng cột",
+      "note": "",
+      "heading": true
+    },
+    {
+      "jp": "高・低圧架空電線路の径間は、表2-3-4の値以下にします。",
+      "vi": "Khoảng cách giữa các cột đường dây hạ/cao áp không vượt bảng 2-3-4.",
+      "note": ""
+    }
+  ],
+  "460": [
+    {
+      "jp": "表2-3-4 高・低圧架空電線路の径間",
+      "vi": "Bảng 2-3-4 · Nhịp đường dây hạ áp và cao áp trên không",
+      "heading": true,
+      "table": {
+        "jp": [
+          "支持物の種類",
+          "低圧・一般",
+          "低圧・保安工事",
+          "高圧・一般",
+          "高圧・保安工事",
+          "高圧・長径間工事"
+        ],
+        "vi": [
+          "Loại vật đỡ",
+          "Hạ áp thường",
+          "Hạ áp bảo an",
+          "Cao áp thường",
+          "Cao áp bảo an",
+          "Cao áp nhịp dài"
+        ],
+        "rows": [
+          [
+            "木柱、A種鉄柱、A種鉄筋コンクリート柱",
+            "Cột gỗ, cột thép loại A, cột bê tông cốt thép loại A",
+            "制限なし",
+            "**100 m**",
+            "**150 m**",
+            "**100 m**",
+            "300 m"
+          ],
+          [
+            "B種鉄柱、B種鉄筋コンクリート柱",
+            "Cột thép loại B, cột bê tông cốt thép loại B",
+            "制限なし",
+            "**150 m**",
+            "**250 m**",
+            "**150 m**",
+            "500 m"
+          ],
+          [
+            "鉄塔",
+            "Tháp thép",
+            "制限なし",
+            "400 m",
+            "600 m",
+            "400 m",
+            "制限なし"
+          ]
+        ],
+        "rowsVi": [
+          [
+            "木柱、A種鉄柱、A種鉄筋コンクリート柱",
+            "Cột gỗ, cột thép loại A, cột bê tông cốt thép loại A",
+            "Không giới hạn",
+            "**100 m**",
+            "**150 m**",
+            "**100 m**",
+            "300 m"
+          ],
+          [
+            "B種鉄柱、B種鉄筋コンクリート柱",
+            "Cột thép loại B, cột bê tông cốt thép loại B",
+            "Không giới hạn",
+            "**150 m**",
+            "**250 m**",
+            "**150 m**",
+            "500 m"
+          ],
+          [
+            "鉄塔",
+            "Tháp thép",
+            "Không giới hạn",
+            "400 m",
+            "600 m",
+            "400 m",
+            "Không giới hạn"
+          ]
+        ]
+      }
+    },
+    {
+      "jp": "POINT　架空電線路の径間\n保安工事：安全に対する規制を一般の場合より強化する工事\n高圧架空電線路の径間は、**150 m**、保安工事**100 m**以下（A種支持物）\n**250 m**、保安工事**150 m**以下（B種支持物）",
+      "vi": "Ghi nhớ. Thi công bảo an áp dụng yêu cầu an toàn nghiêm hơn trường hợp thường. Nhịp đường dây cao áp trên không với vật đỡ loại A là **150 m**, hoặc **100 m** nếu thi công bảo an. Với vật đỡ loại B là **250 m**, hoặc **150 m** nếu thi công bảo an."
+    },
+    {
+      "jp": "架空電線路の弛度（たるみ）",
+      "vi": "Độ võng dây trên không",
+      "note": "",
+      "heading": true
+    },
+    {
+      "jp": "径間をS［m］、電線の水平張力（許容引張荷重）をT［N］、電線１m当たりの合成荷重をW［N/m］としたとき、電線の弛度D［m］は次式となります。",
+      "vi": "Với khoảng cột S (m), lực căng ngang T (N), tải trên mỗi mét W (N/m), độ võng D (m) theo công thức:",
+      "note": ""
+    },
+    {
+      "jp": "弛度の式",
+      "vi": "Công thức độ võng",
+      "note": "Dùng S theo mét, tải tổng hợp trên mỗi mét W theo N/m và lực căng ngang T theo N. Với S và W cố định, độ võng giảm khi T tăng.",
+      "equations": [
+        [
+          "D = ",
+          {
+            "fraction": [
+              [
+                "W S²"
+              ],
+              [
+                "8 T"
+              ]
+            ]
+          },
+          " [m]"
+        ]
+      ]
+    },
+    {
+      "diagram": "lawWireSag460"
+    },
+    {
+      "jp": "このとき、電線の引張強さに対する安全率Rが規定された値以上となる弛度により施設します。",
+      "vi": "Độ võng phải phù hợp với lực căng để hệ số an toàn R đạt mức quy định.",
+      "note": ""
+    },
+    {
+      "jp": "表2-3-5 架空電線の安全率",
+      "vi": "Bảng 2-3-5 · Hệ số an toàn dây dẫn trên không",
+      "heading": true,
+      "table": {
+        "jp": [
+          "電線の種類",
+          "安全率 R"
+        ],
+        "vi": [
+          "Loại dây",
+          "Hệ số an toàn R"
+        ],
+        "rows": [
+          [
+            "**硬銅線**又は耐熱銅合金線",
+            "**Dây đồng cứng** hoặc dây hợp kim đồng chịu nhiệt",
+            "**2.2**"
+          ],
+          [
+            "その他",
+            "Loại khác",
+            "2.5"
+          ]
+        ],
+        "rowsVi": [
+          [
+            "**硬銅線**又は耐熱銅合金線",
+            "**Dây đồng cứng** hoặc dây hợp kim đồng chịu nhiệt",
+            "**2,2**"
+          ],
+          [
+            "その他",
+            "Loại khác",
+            "2,5"
+          ]
+        ]
+      }
+    }
+  ],
+  "461": [
+    {
+      "jp": "練習問題01　架空電線路の弛度",
+      "vi": "Bài luyện 01 · Độ võng dây trên không.",
+      "note": "",
+      "heading": true
+    },
+    {
+      "jp": "高圧架空電線において、電線に硬銅線を使用して架設する場合、電線の設計に伴う許容引張荷重と弛度について、問に答えよ。ただし、径間S［m］、電線の引張強さT´［N］、電線の重量による垂直荷重と風圧による水平荷重の合成荷重がW［N/m］とする。",
+      "vi": "Khi dùng dây đồng cứng cho đường dây cao áp trên không, hãy trả lời các câu hỏi thiết kế về tải kéo cho phép và độ võng. Gọi S (m) là nhịp, T′ (N) là sức chịu kéo của dây, W (N/m) là hợp lực tải thẳng đứng do trọng lượng dây và tải ngang do gió.",
+      "note": ""
+    },
+    {
+      "jp": "(a) 電線の引張強さT´に対する安全率が、R以上となるような弛度に施設しなければならない。この場合Rの値は。",
+      "vi": "(a) Phải chọn độ võng để hệ số an toàn đối với sức chịu kéo T′ của dây đạt ít nhất R. Tìm R trong trường hợp này.",
+      "note": ""
+    },
+    {
+      "jp": "(b) 弛度の計算において、最小の弛度を求める場合の許容引張荷重T［N］は。",
+      "vi": "(b) Tìm tải kéo cho phép T (N) để tính độ võng nhỏ nhất.",
+      "note": ""
+    },
+    {
+      "jp": "解き方：(a) 硬銅線を使用するので、安全率R＝2.2以上となる弛度で施設します。",
+      "vi": "(a) Dùng đồng cứng nên R≥2,2.",
+      "note": ""
+    },
+    {
+      "jp": "解き方 (b) 許容引張荷重 T は、",
+      "vi": "Cách giải (b). Tính tải kéo cho phép T.",
+      "equations": [
+        [
+          "T = ",
+          {
+            "fraction": [
+              [
+                "T′"
+              ],
+              [
+                "R"
+              ]
+            ]
+          },
+          " [N]"
+        ],
+        [
+          "許容引張荷重 = ",
+          {
+            "fraction": [
+              [
+                "電線の引張強さ"
+              ],
+              [
+                "安全率"
+              ]
+            ]
+          },
+          " [N]"
+        ]
+      ],
+      "equationsVi": [
+        [
+          "T = ",
+          {
+            "fraction": [
+              [
+                "T′"
+              ],
+              [
+                "R"
+              ]
+            ]
+          },
+          " [N]"
+        ],
+        [
+          "Tải kéo cho phép = ",
+          {
+            "fraction": [
+              [
+                "Sức chịu kéo của dây"
+              ],
+              [
+                "Hệ số an toàn"
+              ]
+            ]
+          },
+          " [N]"
+        ]
+      ]
+    },
+    {
+      "jp": "解説 (a) 電線に硬銅線を使用して架設する場合、表2-3-5より安全率を2.2以上（実際の荷重は、電線が耐えうる荷重の1/2.2以下とする）とします。",
+      "vi": "Lời giải (a). Dùng dây đồng cứng thì theo bảng 2-3-5, hệ số an toàn ít nhất 2,2. Tải thực tế không được vượt quá mức dưới đây.",
+      "equations": [
+        [
+          "実際の荷重 ≤ ",
+          {
+            "fraction": [
+              [
+                "電線が耐えうる荷重"
+              ],
+              [
+                "2.2"
+              ]
+            ]
+          }
+        ]
+      ],
+      "equationsVi": [
+        [
+          "Tải thực tế ≤ ",
+          {
+            "fraction": [
+              [
+                "Tải dây chịu được"
+              ],
+              [
+                "2,2"
+              ]
+            ]
+          }
+        ]
+      ]
+    },
+    {
+      "jp": "解説 (b) 許容引張荷重は、安全を考慮して、電線が耐えうる荷重よりも小さな値（1/安全率）になるようにします。",
+      "vi": "Lời giải (b). Để có dự phòng an toàn, lấy sức chịu kéo của dây nhân với nghịch đảo hệ số an toàn.",
+      "note": "Ở cùng tải W và nhịp S, độ võng nhỏ nhất tương ứng với lực căng lớn nhất được phép theo hệ số an toàn."
+    },
+    {
+      "jp": "解答　(a) **R = 2.2**　(b) 許容引張荷重 T",
+      "vi": "Đáp án. (a) **R = 2,2**. (b) Tải kéo cho phép T theo công thức dưới đây.",
+      "equations": [
+        [
+          "T = ",
+          {
+            "fraction": [
+              [
+                "T′"
+              ],
+              [
+                "R"
+              ]
+            ],
+            "red": true
+          },
+          " [N]"
+        ]
+      ]
+    }
   ]
 };

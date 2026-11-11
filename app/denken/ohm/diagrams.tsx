@@ -35,6 +35,32 @@ function Diagram({ file, width, height, title, labels }: {
 }
 
 export const diagrams = {
+  lawWireSag460: (
+    <Diagram file="lawWireSag460" width={373} height={364} title="Sơ đồ các đại lượng trong công thức độ võng" labels={[
+      ["径間 S［m］", "Nhịp S (m)"],
+      ["弛度 D［m］", "Độ võng D (m)"],
+      ["水平張力 T［N］", "Lực căng ngang T (N)"],
+      ["電線1 mの合成荷重 W［N/m］", "Tải tổng hợp trên một mét dây W (N/m)"],
+    ]} />
+  ),
+  lawGuyAnchor459: (
+    <Diagram file="lawGuyAnchor459" width={1050} height={445} title="Hình 2-3-2 · Dây néo có neo đất và dây néo vượt đường" labels={[
+      ["玉がいし", "Sứ cách điện cho dây néo"],
+      ["亜鉛めっきした鉄棒と根かせ（アンカ）", "Thanh sắt mạ kẽm và khối neo"],
+      ["歩道", "Lối đi bộ"],
+      ["車道", "Phần đường xe chạy"],
+      ["交通に支障がないとき4.5 m", "4,5 m khi không cản trở giao thông"],
+    ]} />
+  ),
+  lawOverheadGuyWire458: (
+    <Diagram file="lawOverheadGuyWire458" width={556} height={1023} title="Hình 2-3-1 · Bố trí dây néo trên đường dây cao áp trên không" labels={[
+      ["支線", "Dây néo"],
+      ["径間差の大きい直線箇所", "Đoạn thẳng có chênh lệch nhịp lớn"],
+      ["5°を超える角度", "Góc lớn hơn 5°"],
+      ["角度箇所", "Vị trí đổi hướng"],
+      ["引き留める箇所", "Vị trí neo giữ dây"],
+    ]} />
+  ),
   lawHighVoltageEquipment452: (
     <Diagram file="lawHighVoltageEquipment452" width={1164} height={449} title="Hình 2-2-1 đến 2-2-3 · Ba cách bố trí thiết bị cao áp" labels={[
       ["高圧機械器具を地上に施設する場合", "Lắp thiết bị cao áp trên mặt đất"],

@@ -115,7 +115,7 @@ function PrefixTable({ headers, rows, japanese = false, readings, marked = false
         <thead className="bg-surface-muted"><tr>{headers.map((header, index) =>
           <th scope="col" key={header} className="px-2 py-1">{marked ? <MarkedText text={header} readings={readings?.headers[index]} /> : header}</th>)}</tr></thead>
         <tbody>{rows.map(([jp, vi, ...cells], rowIndex) =>
-          <tr key={jp} className="border-t border-border">
+          <tr key={`${rowIndex}:${jp}`} className="border-t border-border">
             <th scope="row" className={`px-2 py-1 font-normal ${marked ? "whitespace-pre-line align-top" : ""}`}>{marked ? <MarkedText text={japanese ? jp : vi} readings={readings?.rows[rowIndex]?.[0]} /> : japanese ? jp : vi}</th>
             {cells.map((cell, index) => <td key={index} className={`px-2 py-1 ${marked ? "whitespace-pre-line align-top" : ""}`}>{marked ? <MarkedText text={cell} readings={readings?.rows[rowIndex]?.[index + 1]} /> : cell}</td>)}
           </tr>)}</tbody>
