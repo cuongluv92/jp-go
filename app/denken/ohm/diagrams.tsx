@@ -35,6 +35,68 @@ function Diagram({ file, width, height, title, labels }: {
 }
 
 export const diagrams = {
+  powerWaterway322: (
+    <Diagram file="powerWaterway322" width={1450} height={643} title="図1-1-1 水路式発電所" labels={[
+      ["取水ダム", "Đập lấy nước"],
+      ["取水口", "Cửa lấy nước"],
+      ["沈砂池", "Bể lắng cát"],
+      ["水路", "Đường dẫn nước"],
+      ["ヘッドタンク（水槽）", "Bể đầu đường ống áp lực"],
+      ["水圧管路", "Đường ống áp lực"],
+      ["本流", "Dòng chính"],
+      ["発電所", "Nhà máy phát điện"],
+      ["発電機", "Máy phát điện"],
+      ["水車", "Tua-bin nước"],
+      ["放水路", "Kênh xả"],
+    ]} />
+  ),
+  powerDamPlant323: (
+    <Diagram file="powerDamPlant323" width={1450} height={685} title="図1-1-2 ダム式発電所" labels={[
+      ["人造湖", "Hồ nhân tạo"],
+      ["ダム", "Đập"],
+      ["取水口", "Cửa lấy nước"],
+      ["水圧管", "Ống áp lực"],
+      ["発電所", "Nhà máy phát điện"],
+      ["発電機", "Máy phát điện"],
+      ["水車", "Tua-bin nước"],
+      ["放水路", "Kênh xả"],
+    ]} />
+  ),
+  powerDamWaterway323: (
+    <Diagram file="powerDamWaterway323" width={1450} height={922} title="図1-1-3 ダム水路式発電所" labels={[
+      ["貯水池", "Hồ chứa"],
+      ["ダム", "Đập"],
+      ["取水口", "Cửa lấy nước"],
+      ["圧力水路", "Đường dẫn nước có áp"],
+      ["サージタンク", "Tháp điều áp"],
+      ["水圧管", "Ống áp lực"],
+      ["本流", "Dòng chính"],
+      ["発電所", "Nhà máy phát điện"],
+      ["発電機", "Máy phát điện"],
+      ["水車", "Tua-bin nước"],
+      ["放水路", "Kênh xả"],
+    ]} />
+  ),
+  powerPumpedPlant324: (
+    <Diagram file="powerPumpedPlant324" width={1450} height={783} title="図1-1-4 揚水式発電所" labels={[
+      ["上部貯水池", "Hồ chứa trên"],
+      ["下部貯水池", "Hồ chứa dưới"],
+      ["サージタンク", "Tháp điều áp"],
+      ["発電所", "Nhà máy phát điện"],
+      ["発電電動機", "Máy điện thuận nghịch"],
+      ["可逆式ポンプ水車", "Bơm–tua-bin thuận nghịch"],
+      ["発電", "Chế độ phát điện"],
+      ["揚水", "Chế độ bơm tích nước"],
+    ]} />
+  ),
+  powerWaterHead325: (
+    <Diagram file="powerWaterHead325" width={1450} height={475} title="流水が持つエネルギーと水頭" labels={[
+      ["速度水頭", "Cột nước vận tốc"],
+      ["圧力水頭", "Cột nước áp suất"],
+      ["位置水頭", "Cột nước vị trí"],
+      ["基準面", "Mặt chuẩn"],
+    ]} />
+  ),
   lawCalculatorKeys514: (
     <Diagram file="lawCalculatorKeys514" width={1086} height={1149} title="電卓での計算例・キー操作" labels={[
       ["メモ", "Ghi lại kết quả trung gian"],

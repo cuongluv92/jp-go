@@ -1,8 +1,6 @@
 import type { LessonRow } from "./lesson";
 
-// Pages 391–395, directly transcribed against the book photos.
-// Source photos are preserved separately in denryoku_391_422_anh_goc.zip.
-// Not merged or deployed. Furigana must be checked in the full JP-GO renderer.
+// Printed pages 391–422 of 電験三種 合格ガイド 第4版.
 export const electricPowerContinuation: Record<number, LessonRow[]> = {
   391: [
     { jp: "5-3 異常電圧の発生 **といえば** 雷と線路の開閉、塩害対策 **といえば** がいしの増加と洗浄", vi: "5-3 Phát sinh quá điện áp: **sét và thao tác đóng cắt đường dây**. Chống tác hại muối: **tăng số bát sứ và vệ sinh sứ cách điện**.", heading: true },
@@ -426,8 +424,8 @@ export const electricPowerContinuation: Record<number, LessonRow[]> = {
     { jp: "機器の金属製外箱を接地しても漏電したときは危険です。図のような回路で、B種接地工事の接地抵抗値 Rʙ を100 Ωとします。", vi: "Ngay cả khi vỏ kim loại thiết bị đã nối đất, rò điện vẫn có thể gây nguy hiểm. Xét mạch có điện trở nối đất loại B là Rʙ = 100 Ω." },
     { jp: "図の回路で、電動機に完全地絡事故が発生した場合、電動機の金属製外箱の対地電圧を25 V以下としたいとします。このための、金属製外箱に施すD種接地工事の接地抵抗値 Rᴅ [Ω] の上限値を考えてみましょう。", vi: "Khi động cơ bị chạm đất hoàn toàn, muốn điện áp vỏ kim loại so với đất không quá 25 V. Hãy tính giới hạn trên của điện trở nối đất D, Rᴅ.", note: "Bài tính theo sơ đồ mô hình trong sách. Đây không phải con số giới hạn áp dụng chung cho mọi thiết bị hoặc quy định nối đất hiện hành." },
     { jp: "完全地絡が発生したときの電動機の金属製外箱の対地電圧 Vᴅ を25 Vとすると、Rʙの電圧 Vʙ は、Vʙ＝100－25＝75 V。", vi: "Với điện áp nguồn 100 V, điện áp trên vỏ 25 V thì phần điện áp trên điện trở nối đất B là 75 V.", equations: [["Vʙ = 100 − 25 = 75 [V]"]] },
-    { jp: "このとき地絡電流を Iɢ とすると、Iɢ は、", vi: "Dòng điện chạm đất trong mô hình:", equations: [["Iɢ = Vʙ/Rʙ = 75/100 = 0.75 [A]"]] },
-    { jp: "電動機の金属製外箱の対地電圧を25 V以下にするためのD種接地工事の接地抵抗値 Rᴅ の上限値は、", vi: "Điện trở nối đất D tối đa trong mô hình để giữ điện áp vỏ không quá 25 V:", equations: [["Rᴅ = Vᴅ/Iɢ = 25/0.75 ≒ 33 [Ω]"]] },
+    { jp: "このとき地絡電流を Iɢ とすると、Iɢ は、", vi: "Dòng điện chạm đất trong mô hình:", equations: [["Iɢ = ", { fraction: [["Vʙ"], ["Rʙ"]] }, " = ", { fraction: [["75"], ["100"]] }, " = 0.75 [A]"]] },
+    { jp: "電動機の金属製外箱の対地電圧を25 V以下にするためのD種接地工事の接地抵抗値 Rᴅ の上限値は、", vi: "Điện trở nối đất D tối đa trong mô hình để giữ điện áp vỏ không quá 25 V:", equations: [["Rᴅ = ", { fraction: [["Vᴅ"], ["Iɢ"]] }, " = ", { fraction: [["25"], ["0.75"]] }, " ≒ 33 [Ω]"]] },
     { jp: "となります。なお、漏電した場合は、金属製外箱に接地を施しても外箱に電位を生じます。", vi: "Kết quả khoảng 33 Ω. Khi có dòng rò/chạm đất, dù đã nối đất vỏ kim loại vẫn có thể tồn tại điện áp chạm.", note: "Nối đất không loại trừ hoàn toàn nguy cơ điện giật; hệ thống thực tế phải phối hợp thiết bị bảo vệ, thời gian cắt và quy chuẩn áp dụng." },
     { diagram: "powerOriginalPage422" },
   ],

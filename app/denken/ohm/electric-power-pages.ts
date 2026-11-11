@@ -1,16 +1,30 @@
 import type { LessonRow } from "./lesson";
 
-// Transcribed from the printed pages 321–325 of 電験三種 合格ガイド 第4版.
-// These draft rows have NOT been merged into JP-GO production.
+// Printed pages 321–390 of 電験三種 合格ガイド 第4版.
 export const electricPowerPages: Record<number, LessonRow[]> = {
   321: [
     { jp: "第3部 **電力**", vi: "Phần 3 · **Hệ thống điện (電力)**", heading: true },
     { jp: "電力", vi: "Các chương của phần Điện lực", heading: true,
       table: {
-        jp: ["ページ", "章", "題名"], vi: ["Trang", "Chương", "Chủ đề"],
-        rows: [["322", "第1章", "水力発電"], ["341", "第2章", "火力発電"], ["357", "第3章", "原子力発電、特殊発電"], ["372", "第4章", "変電所"], ["385", "第5章", "送電、配電"], ["415", "第6章", "電気材料"]],
-        rowsVi: [["322", "1", "Phát điện thủy lực"], ["341", "2", "Phát điện nhiệt điện"], ["357", "3", "Điện hạt nhân và các nguồn điện đặc biệt"], ["372", "4", "Trạm biến điện"], ["385", "5", "Truyền tải, phân phối điện"], ["415", "6", "Vật liệu điện"]],
-      },
+      jp: ["ページ","章","題名"],
+      vi: ["Trang","Chương","Chủ đề"],
+      rows: [
+        ["322","322","第1章","水力発電"],
+        ["341","341","第2章","火力発電"],
+        ["357","357","第3章","原子力発電、特殊発電"],
+        ["372","372","第4章","変電所"],
+        ["385","385","第5章","送電、配電"],
+        ["415","415","第6章","電気材料"]
+      ],
+      rowsVi: [
+        ["322","322","1","Phát điện thủy lực"],
+        ["341","341","2","Phát điện nhiệt điện"],
+        ["357","357","3","Điện hạt nhân và các nguồn điện đặc biệt"],
+        ["372","372","4","Trạm biến điện"],
+        ["385","385","5","Truyền tải, phân phối điện"],
+        ["415","415","6","Vật liệu điện"]
+      ],
+    },
       note: "Đây là trang mở đầu và mục lục, không phải trang bài học. Chương thủy điện bắt đầu ở trang 322.",
     },
   ],
@@ -23,15 +37,18 @@ export const electricPowerPages: Record<number, LessonRow[]> = {
     { jp: "水路式発電所", vi: "Nhà máy thủy điện kiểu dẫn nước", heading: true },
     { jp: "自然の河川こう配を利用します。川の上流に**取水ダム**をつくり、取水口から水を取り入れ、緩やかなこう配の**水路**をつくり、河川の下流との間の**落差**を利用して、発電する方式です。", vi: "Tận dụng độ dốc tự nhiên của sông. Xây **đập lấy nước (取水ダム)** ở thượng lưu, đưa nước vào đường dẫn có độ dốc nhỏ rồi tận dụng **độ chênh cao (落差)** với khu vực hạ lưu để phát điện.", note: "Đường dẫn nước tạo chênh cao hiệu dụng lớn hơn dòng chảy tự nhiên dọc đoạn sông; không nhất thiết phải có hồ chứa lớn." },
     { jp: "図1-1-1 水路式発電所", vi: "Hình 1-1-1 · Nhà máy kiểu dẫn nước", heading: true },
+    { diagram: "powerWaterway322" },
     { jp: "ダム式発電所", vi: "Nhà máy thủy điện kiểu đập", heading: true },
     { jp: "河川を横切って**ダム**を築き、水をせき止めて人造湖をつくり、その**落差**を利用して発電する方式です。流量のコントロールにより農業用水、工業用水、飲料水など**多目的**に利用できます。", vi: "Xây **đập (ダム)** ngang sông, giữ nước tạo hồ nhân tạo và dùng **độ chênh cao** để phát điện. Điều tiết dòng chảy còn phục vụ **đa mục đích** như nước nông nghiệp, công nghiệp và sinh hoạt." },
     { jp: "ダム式発電所は工期が長く、建設費用が高くなります。", vi: "Nhà máy kiểu đập có thời gian thi công dài và chi phí xây dựng cao." },
   ],
   323: [
     { jp: "図1-1-2 ダム式発電所", vi: "Hình 1-1-2 · Nhà máy thủy điện kiểu đập", heading: true },
+    { diagram: "powerDamPlant323" },
     { jp: "ダム水路式発電所", vi: "Nhà máy thủy điện kiểu đập kết hợp đường dẫn", heading: true },
     { jp: "**ダム**により上流と下流の間に落差をつくり、取水した水をゆるやかなこう配の**圧力水路**で発電所近くまで導水し、河川との間にさらに落差を加えるもので、**ダムと水路**を利用します。高い落差で**大容量**の発電ができます。ダム水路式発電所は工期が長く、建設費用が高くなります。", vi: "**Đập** tạo chênh cao thượng–hạ lưu. Nước được dẫn qua **đường dẫn áp lực (圧力水路)** dốc nhẹ tới gần nhà máy, tạo thêm chênh cao so với sông. Vì kết hợp **đập và đường dẫn**, có thể phát công suất lớn nhờ cột nước cao. Đổi lại thời gian thi công và chi phí xây dựng cao." },
     { jp: "図1-1-3 ダム水路式発電所", vi: "Hình 1-1-3 · Nhà máy kiểu đập kết hợp đường dẫn", heading: true },
+    { diagram: "powerDamWaterway323" },
     { jp: "流域変更式発電所", vi: "Nhà máy thủy điện kiểu chuyển lưu vực", heading: true },
     { jp: "流域変更式発電所は、他の河川の流域に放流して落差を得る方式です。他の河川に水を導いた方が落差をとりやすい場合、水を他の流域に導いて貯水したり、下流の落差を有効に利用するときなどに用いられます。", vi: "Kiểu **chuyển lưu vực (流域変更式)** dẫn nước sang lưu vực sông khác để lấy độ chênh cao. Áp dụng khi chuyển nước sang dòng sông khác giúp tạo độ chênh cao dễ hơn, hoặc có lợi cho việc trữ nước và tận dụng độ chênh ở hạ lưu." },
   ],
@@ -46,12 +63,14 @@ export const electricPowerPages: Record<number, LessonRow[]> = {
     { jp: "調整池より大きな貯水池に水をため、自然流量の少ない季節（水の不足した時期）の発電に貯水を利用する発電所を**貯水池式発電所**といいます。", vi: "Trữ nước trong hồ lớn hơn hồ điều tiết để dùng phát điện trong **mùa ít nước**." },
     { jp: "揚水式発電所", vi: "Thủy điện tích năng bơm", heading: true },
     { jp: "図1-1-4 揚水式発電所", vi: "Hình 1-1-4 · Nhà máy thủy điện tích năng", heading: true },
+    { diagram: "powerPumpedPlant324" },
     { jp: "**揚水式発電所**は、**余剰電力**により上部貯水池に**揚水**し、必要なときに**発電**するものです。一種の蓄電方式で、余剰電力を用い、上部貯水池に揚水してエネルギーを貯蔵するもので、**ピーク負荷時に発電**します。", vi: "Nhà máy **tích năng bơm (揚水式)** dùng **điện dư (余剰電力)** bơm nước lên hồ trên, rồi **phát điện** khi cần, đặc biệt vào giờ **phụ tải đỉnh (ピーク負荷)**. Đây là hình thức lưu trữ năng lượng dưới dạng thế năng nước.", note: "Không tạo thêm năng lượng: điện tiêu thụ khi bơm lớn hơn điện thu lại do tổn thất. Tác dụng chính là dịch chuyển năng lượng từ giờ dư điện sang giờ cần công suất cao." },
     { jp: "POINT　落差のつくり方といえば 水路式、ダム式、ダム水路式、流域変更式。水の利用方法といえば 流込式、調整池式、貯水池式、揚水式。", vi: "**Ghi nhớ:** Theo cách tạo chênh cao: dẫn nước, đập, đập+dẫn nước, chuyển lưu vực. Theo cách dùng nước: dòng chảy trực tiếp, hồ điều tiết, hồ chứa, tích năng bơm." },
   ],
   325: [
     { jp: "1-2 水頭 **といえば** 位置水頭、圧力水頭、速度水頭", vi: "1-2 Cột nước (水頭): **cột nước vị trí, áp lực và vận tốc**", heading: true },
     { jp: "流れ水が持つエネルギーと水頭", vi: "Năng lượng và cột nước của dòng chảy", heading: true },
+    { diagram: "powerWaterHead325" },
     { jp: "流れ水が持つエネルギー", vi: "Năng lượng mà nước chảy mang theo", heading: true },
     { jp: "流水は、**位置**エネルギー、**運動**エネルギー、**圧力**によるエネルギーを持っています。上図のように、基準面より hₐ［m］の高さにある m［kg］の水は、**mghₐ［J］**の位置エネルギーを持っています（静止状態の水が持つエネルギー、g＝9.8 m/s²）。この水が水管を下降するとき、基準面より高さ hᵦ［m］の点における流水のエネルギーは、次の3つの形態で表すことができます。", vi: "Nước chảy mang **thế năng (位置エネルギー)**, **động năng (運動エネルギー)** và **năng lượng áp suất (圧力エネルギー)**. Khối lượng nước m [kg] ở độ cao hₐ [m] so với mặt chuẩn có thế năng mghₐ [J] khi đứng yên, g = 9,8 m/s². Tại điểm b có độ cao hᵦ [m], năng lượng gồm ba phần dưới đây." },
     { jp: "位置エネルギー", vi: "Thế năng do độ cao", heading: true, equations: [["m g hᵦ [J]"]] },
@@ -118,47 +137,62 @@ export const electricPowerPages: Record<number, LessonRow[]> = {
     { jp: "ダムの種類", vi: "Các loại đập", heading: true },
     { diagram: "powerDamTypes331" },
     { jp: "水力発電所の水力設備には発電用ダム、水槽、水圧管路、入口弁などがあります。発電用ダムは、表1-5-1のような種類があります。", vi: "Thiết bị thủy lực trong nhà máy thủy điện có **đập phát điện, bể nước, ống áp lực, van đầu vào**. Các kiểu đập phát điện được phân loại như bảng 1-5-1." },
-    { jp: "表1-5-1 ダムの種類", vi: "Bảng 1-5-1 · Các kiểu đập", heading: true, table: {jp:["名称","内容"],vi:["Tên","Đặc điểm"],rows:[
-      ["重力ダム","コンクリートを主材料とし、自重を大きくすることで水圧に耐えられるようにしたダム"],
-      ["アーチダム","コンクリートで築造し、谷間の堅固なところを利用して、アーチ作用により水圧に耐えるようにしたダム。水圧を両岸の岩盤で支持する"],
-      ["ロックフィルダム","岩石を積み上げたダム。岩石がとれる場所で採用される"],
-      ["アースダム","土壌（土砂、砂利、粘土など）を主材料としたダム"],
-    ],rowsVi:[
-      ["Đập trọng lực","Chủ yếu làm từ bê tông, chịu áp lực nước bằng trọng lượng bản thân"],
-      ["Đập vòm","Bê tông dạng vòm; truyền lực nước tới nền đá chắc ở hai bờ thung lũng"],
-      ["Đập đá đổ","Đắp bằng đá, dùng ở nơi có sẵn vật liệu đá"],
-      ["Đập đất","Chủ yếu dùng đất, cát, sỏi, đất sét"],
-    ]} },
+    { jp: "表1-5-1 ダムの種類", vi: "Bảng 1-5-1 · Các kiểu đập", heading: true, table: {
+      jp: ["名称","内容"],
+      vi: ["Tên","Đặc điểm"],
+      rows: [
+        ["重力ダム","Đập trọng lực","コンクリートを主材料とし、自重を大きくすることで水圧に耐えられるようにしたダム"],
+        ["アーチダム","Đập vòm","コンクリートで築造し、谷間の堅固なところを利用して、アーチ作用により水圧に耐えるようにしたダム。水圧を両岸の岩盤で支持する"],
+        ["ロックフィルダム","Đập đá đổ","岩石を積み上げたダム。岩石がとれる場所で採用される"],
+        ["アースダム","Đập đất","土壌（土砂、砂利、粘土など）を主材料としたダム"]
+      ],
+      rowsVi: [
+        ["重力ダム","Đập trọng lực","Chủ yếu làm từ bê tông, chịu áp lực nước bằng trọng lượng bản thân"],
+        ["アーチダム","Đập vòm","Bê tông dạng vòm; truyền lực nước tới nền đá chắc ở hai bờ thung lũng"],
+        ["ロックフィルダム","Đập đá đổ","Đắp bằng đá, dùng ở nơi có sẵn vật liệu đá"],
+        ["アースダム","Đập đất","Chủ yếu dùng đất, cát, sỏi, đất sét"]
+      ],
+    } },
     { jp: "POINT　コンクリートダムといえば重力ダム、アーチダム。フィルダムといえばロックフィルダム、アースダム。", vi: "**Ghi nhớ:** Đập bê tông gồm **trọng lực và vòm**; đập đắp gồm **đá đổ và đất**.", note: "Đập vòm cần nền đá hai bên vững chắc để chịu lực; đập trọng lực chủ yếu dựa vào trọng lượng bản thân." },
   ],
   332: [
     { jp: "ダムの付属設備", vi: "Thiết bị phụ trợ của đập", heading: true },
     { jp: "ダムの付属設備としては、表1-5-2のようなものがあります。", vi: "Các thiết bị phụ trợ của đập được liệt kê ở bảng 1-5-2." },
-    { jp: "表1-5-2 ダムの付属設備", vi: "Bảng 1-5-2 · Thiết bị phụ trợ đập",heading:true,table:{jp:["名称","内容"],vi:["Tên","Chức năng"],rows:[
-      ["余水吐き","余分な水を放流するもので、コンクリートダムでは堤体（ていたい）に設けることが多い。フィルダムの場合は、水路かトンネルを設けている。"],
-      ["魚道","魚がさかのぼるのを助けるために設ける設備。"],
-      ["放流設備","水位を下げる目的でつくられ、コンクリートダムの放流設備は堤体に設置する。フィルダムの場合は、工事用仮排水トンネルに設けることが多い。"],
-      ["取水口","流水を水路に導水するための設備。土砂や魚、流木などが流れ込むのを防ぐため、スクリーンを設ける。"],
-      ["沈砂池","水から土砂などを取り除くために土砂を沈殿させる設備。ダム式、ダム水路式発電の場合は設けないことが多い。"],
-      ["導水路","流水が水圧を受けない導水路を無圧水路といい、管内に流水が充満し水圧を受けるものを圧力水路という。"],
-    ],rowsVi:[
-      ["Tràn xả thừa","Xả nước dư; ở đập bê tông thường đặt trên thân đập, đập đắp thường dùng kênh hoặc đường hầm"],
-      ["Đường cá đi","Giúp cá di chuyển ngược dòng"],
-      ["Công trình xả","Hạ mực nước; đập bê tông có thể đặt trên thân đập, đập đắp thường tận dụng đường hầm xả tạm khi thi công"],
-      ["Cửa lấy nước","Đưa nước vào đường dẫn và có lưới chắn ngăn cát, cá, gỗ trôi"],
-      ["Bể lắng cát","Lắng cát, đất trước khi nước vào đường dẫn; một số kiểu đập thường không cần"],
-      ["Đường dẫn nước","Chia thành đường không áp và đường có áp, tùy nước có đầy ống và chịu áp lực hay không"],
-    ]}},
+    { jp: "表1-5-2 ダムの付属設備", vi: "Bảng 1-5-2 · Thiết bị phụ trợ đập",heading:true,table:{
+      jp: ["名称","内容"],
+      vi: ["Tên","Chức năng"],
+      rows: [
+        ["余水吐き","Tràn xả thừa","余分な水を放流するもので、コンクリートダムでは堤体（ていたい）に設けることが多い。フィルダムの場合は、水路かトンネルを設けている。"],
+        ["魚道","Đường cá đi","魚がさかのぼるのを助けるために設ける設備。"],
+        ["放流設備","Công trình xả","水位を下げる目的でつくられ、コンクリートダムの放流設備は堤体に設置する。フィルダムの場合は、工事用仮排水トンネルに設けることが多い。"],
+        ["取水口","Cửa lấy nước","流水を水路に導水するための設備。土砂や魚、流木などが流れ込むのを防ぐため、スクリーンを設ける。"],
+        ["沈砂池","Bể lắng cát","水から土砂などを取り除くために土砂を沈殿させる設備。ダム式、ダム水路式発電の場合は設けないことが多い。"],
+        ["導水路","Đường dẫn nước","流水が水圧を受けない導水路を無圧水路といい、管内に流水が充満し水圧を受けるものを圧力水路という。"]
+      ],
+      rowsVi: [
+        ["余水吐き","Tràn xả thừa","Xả nước dư; ở đập bê tông thường đặt trên thân đập, đập đắp thường dùng kênh hoặc đường hầm"],
+        ["魚道","Đường cá đi","Giúp cá di chuyển ngược dòng"],
+        ["放流設備","Công trình xả","Hạ mực nước; đập bê tông có thể đặt trên thân đập, đập đắp thường tận dụng đường hầm xả tạm khi thi công"],
+        ["取水口","Cửa lấy nước","Đưa nước vào đường dẫn và có lưới chắn ngăn cát, cá, gỗ trôi"],
+        ["沈砂池","Bể lắng cát","Lắng cát, đất trước khi nước vào đường dẫn; một số kiểu đập thường không cần"],
+        ["導水路","Đường dẫn nước","Chia thành đường không áp và đường có áp, tùy nước có đầy ống và chịu áp lực hay không"]
+      ],
+    }},
     { jp: "POINT　付属設備といえば余水吐き、魚道、放流設備、取水口、沈砂池、導水路など。導水路といえば無圧水路、圧力水路。", vi: "**Ghi nhớ:** Phân biệt cửa lấy nước (dẫn vào nhà máy), tràn xả thừa (xả lũ/dư), bể lắng cát (loại cát) và đường dẫn có áp/không áp." },
     { jp: "水槽（すいそう）", vi: "Bể nước (水槽)", heading: true },
     { jp: "水槽には表1-5-3のような種類のものがあります。", vi: "Có hai loại bể nước thường gặp trong bảng 1-5-3." },
-    { jp: "表1-5-3 水槽の種類", vi: "Bảng 1-5-3 · Các loại bể nước", heading:true,table:{jp:["名称","内容"],vi:["Tên","Chức năng"],rows:[
-      ["ヘッドタンク","無圧式の水路の末端と水圧管の間に設ける水槽。負荷の急変による流量の調節、流水中の土砂、浮遊物を取り除くなどの目的がある。"],
-      ["サージタンク（調圧水槽）","圧力水路と水圧管路の間に設けられ、負荷変動やバルブ（弁）の開閉時に生じる水圧の急激な変化、すなわち水撃（すいげき）を抑える働きをする。水撃をサージという。"],
-    ],rowsVi:[
-      ["Bể đầu nguồn (head tank)","Ở cuối đường dẫn không áp, trước ống áp lực; điều tiết nước khi tải đổi đột ngột, lắng tạp chất"],
-      ["Tháp điều áp (surge tank)","Giữa đường dẫn áp lực và ống áp lực, giảm dao động áp suất và hiện tượng nước va khi van đóng/mở hoặc tải đổi"],
-    ]}},
+    { jp: "表1-5-3 水槽の種類", vi: "Bảng 1-5-3 · Các loại bể nước", heading:true,table:{
+      jp: ["名称","内容"],
+      vi: ["Tên","Chức năng"],
+      rows: [
+        ["ヘッドタンク","Bể đầu nguồn (head tank)","無圧式の水路の末端と水圧管の間に設ける水槽。負荷の急変による流量の調節、流水中の土砂、浮遊物を取り除くなどの目的がある。"],
+        ["サージタンク（調圧水槽）","Tháp điều áp (surge tank)","圧力水路と水圧管路の間に設けられ、負荷変動やバルブ（弁）の開閉時に生じる水圧の急激な変化、すなわち水撃（すいげき）を抑える働きをする。水撃をサージという。"]
+      ],
+      rowsVi: [
+        ["ヘッドタンク","Bể đầu nguồn (head tank)","Ở cuối đường dẫn không áp, trước ống áp lực; điều tiết nước khi tải đổi đột ngột, lắng tạp chất"],
+        ["サージタンク（調圧水槽）","Tháp điều áp (surge tank)","Giữa đường dẫn áp lực và ống áp lực, giảm dao động áp suất và hiện tượng nước va khi van đóng/mở hoặc tải đổi"]
+      ],
+    }},
     { jp: "POINT　水槽といえば無圧水路のヘッドタンク、圧力水路のサージタンク。", vi: "**Ghi nhớ:** Đường dẫn **không áp → head tank**; đường dẫn **có áp → surge tank (tháp điều áp)**." },
   ],
   333: [
@@ -187,15 +221,20 @@ export const electricPowerPages: Record<number, LessonRow[]> = {
   ],
   335: [
     { jp: "反動水車には**フランシス水車、プロペラ水車、斜流水車**などがあります。", vi: "Các tua-bin phản lực gồm **Francis, chân vịt (propeller), dòng chéo**." },
-    { jp: "図1-6-1 反動水車の種類", vi: "Bảng 1-6-1 · Các loại tua-bin phản lực", heading:true, table:{jp:["名称","説明"],vi:["Loại","Nguyên lý"],rows:[
-      ["フランシス水車","らせん状に形成されているケーシング（うず形室）からガイドベーン（案内羽根）を通った流水が、ランナの外周部に半径方向から流入し、軸方向に流出する水車。水車は、高い圧力が加わっている取水口部分と、圧力の低い放水口部分との間に位置している。ランナ出口の圧力は低下し、ランナ出口から水面までの高さを有効落差に含めることができ、これを吸出し水頭という。"],
-      ["プロペラ水車","流水がランナの軸方向に通る水車。低落差の発電所で用いられる。落差や水量に応じてランナの羽根の角度を調節できるものを、カプラン水車という。"],
-      ["斜流水車","水を水車軸に対し斜め方向より流入させる水車の総称。羽根の角度を調整できる可動羽根斜流水車（デリア水車）がある。"],
-    ],rowsVi:[
-      ["Francis","Nước từ buồng xoắn qua cánh hướng vào runner theo bán kính rồi thoát dọc trục; ống hút giúp tận dụng chiều cao từ cửa ra đến mặt nước hạ lưu"],
-      ["Chân vịt (propeller)","Nước đi dọc trục runner; phù hợp cột nước thấp. Kaplan là loại điều chỉnh được góc cánh"],
-      ["Dòng chéo","Nước đi vào nghiêng với trục; Deriaz có cánh điều chỉnh được góc"],
-    ]}},
+    { jp: "図1-6-1 反動水車の種類", vi: "Bảng 1-6-1 · Các loại tua-bin phản lực", heading:true, table:{
+      jp: ["名称","説明"],
+      vi: ["Loại","Nguyên lý"],
+      rows: [
+        ["フランシス水車","Francis","らせん状に形成されているケーシング（うず形室）からガイドベーン（案内羽根）を通った流水が、ランナの外周部に半径方向から流入し、軸方向に流出する水車。水車は、高い圧力が加わっている取水口部分と、圧力の低い放水口部分との間に位置している。ランナ出口の圧力は低下し、ランナ出口から水面までの高さを有効落差に含めることができ、これを吸出し水頭という。"],
+        ["プロペラ水車","Chân vịt (propeller)","流水がランナの軸方向に通る水車。低落差の発電所で用いられる。落差や水量に応じてランナの羽根の角度を調節できるものを、カプラン水車という。"],
+        ["斜流水車","Dòng chéo","水を水車軸に対し斜め方向より流入させる水車の総称。羽根の角度を調整できる可動羽根斜流水車（デリア水車）がある。"]
+      ],
+      rowsVi: [
+        ["フランシス水車","Francis","Nước từ buồng xoắn qua cánh hướng vào runner theo bán kính rồi thoát dọc trục; ống hút giúp tận dụng chiều cao từ cửa ra đến mặt nước hạ lưu"],
+        ["プロペラ水車","Chân vịt (propeller)","Nước đi dọc trục runner; phù hợp cột nước thấp. Kaplan là loại điều chỉnh được góc cánh"],
+        ["斜流水車","Dòng chéo","Nước đi vào nghiêng với trục; Deriaz có cánh điều chỉnh được góc"]
+      ],
+    }},
     { jp: "POINT　水車の種類といえば ペルトン、フランシス、プロペラ、斜流水車など。ペルトン水車（衝動水車）高落差：250m以上。フランシス水車（反動水車）適用落差が広範囲：50～500m。プロペラ水車（反動水車）低落差：5～80m。斜流水車（反動水車）中落差：40～200m。", vi: "**Ghi nhớ theo sách:** Pelton (xung lực) ≥250 m; Francis (phản lực) 50–500 m; chân vịt (phản lực) 5–80 m; dòng chéo (phản lực) 40–200 m.", note: "Đây là khoảng áp dụng điển hình do sách nêu, không phải giới hạn thiết kế tuyệt đối." },
     { jp: "吸出し管", vi: "Ống hút (draft tube)", heading: true },
     { jp: "**吸出し管**はドラフトチューブともいいます。反動水車のランナの出口から放水面までの落差を有効に利用するために設けられるもので、内部の水の重さが吸出し力として働きます。", vi: "**Ống hút (吸出し管, draft tube)** tận dụng chênh cao từ cửa thoát runner của tua-bin phản lực đến mặt nước xả. Khối nước trong ống góp phần tạo áp suất hút, giúp thu hồi năng lượng." },
@@ -319,27 +358,32 @@ export const electricPowerPages: Record<number, LessonRow[]> = {
     { jp: "ドラムや大型管が不要になり、小口径の水管となり軽量化される。ボイラの保有水量が少なく、始動停止が容易で、負荷の応答性がよい。給水処理を十分行う必要がある。軽負荷時の蒸気バイパス装置が必要となる。高精度の自動制御装置が必要となる。", vi: "**Nồi hơi xuyên dòng:** không cần bao hơi và ống lớn nên nhẹ; ít nước tồn trong nồi, dễ khởi động/dừng, đáp ứng tải nhanh. Đòi hỏi xử lý nước cấp nghiêm ngặt, đường hơi bypass khi tải thấp và hệ điều khiển chính xác." },
     { jp: "ボイラ設備", vi: "Thiết bị phụ trợ nồi hơi", heading: true },
     { jp: "ボイラには、表2-2-1のような設備が装備されています。", vi: "Bảng 2-2-1 liệt kê các bộ phận và thiết bị phụ trợ nồi hơi." },
-    { jp: "表2-2-1 ボイラ設備", vi: "Bảng 2-2-1 · Thiết bị nồi hơi", heading:true,table:{jp:["名称","内容"],vi:["Thiết bị","Chức năng"],rows:[
-      ["火炉","燃料を燃焼させる設備で、最小の過剰空気で燃料を完全燃焼させるようにする。"],
-      ["蒸発部","水を加熱する部分で、水管とドラムからなり、ドラムから蒸気を取り出す（貫流ボイラにはドラムはない）。"],
-      ["過熱器","ドラムまたは蒸発管から出た蒸気を過熱し、過熱蒸気とする部分。"],
-      ["再熱器","タービンで膨張して飽和蒸気に近づいた蒸気を再び過熱し、過熱蒸気として低圧タービンに送る。再熱サイクルのための過熱蒸気をつくる部分。"],
-      ["給水加熱器","タービンで膨張した蒸気の一部を復水器に送る前に抽気して、ボイラ給水を加熱する部分。再生サイクルを行う場合に設ける。"],
-      ["節炭器","煙道内にあり、ボイラ排ガスの熱で給水を加熱する部分。廃熱の一部を回収するために設けられる。"],
-      ["空気予熱器","煙道に出る排ガスを利用して火炉に供給する空気を加熱する部分。廃熱の一部を回収するとともに、炉の温度を高くするために設ける。"],
-      ["通風装置","燃焼に必要な通風力を与える部分で、煙突、送風機がある。"],
-      ["集じん装置","すす、粉じんなどの浮遊粒子に電荷を与え、電界を加えて有害物質などを捕集し取り除く設備。"],
-    ],rowsVi:[
-      ["Buồng lửa","Đốt nhiên liệu đủ cháy với lượng không khí thừa ít nhất"],
-      ["Dàn bốc hơi","Ống nước và bao hơi sinh hơi; nồi xuyên dòng không có bao hơi"],
-      ["Bộ quá nhiệt","Gia nhiệt hơi ra khỏi bao hơi/ống bốc hơi thành hơi quá nhiệt"],
-      ["Bộ tái nhiệt","Gia nhiệt lại hơi sau tua-bin cao áp trước khi vào tua-bin hạ áp"],
-      ["Bộ gia nhiệt nước cấp","Dùng hơi trích từ tua-bin để gia nhiệt nước cấp (chu trình hồi nhiệt)"],
-      ["Bộ hâm nước/economizer","Thu hồi nhiệt khí thải để làm nóng nước cấp"],
-      ["Bộ sấy không khí","Thu hồi nhiệt khí thải gia nhiệt không khí cấp buồng lửa"],
-      ["Hệ thống thông gió","Tạo lưu lượng/áp lực gió cháy, có ống khói và quạt"],
-      ["Bộ lọc bụi tĩnh điện","Tích điện cho bụi rồi dùng điện trường thu giữ các hạt"],
-    ]}},
+    { jp: "表2-2-1 ボイラ設備", vi: "Bảng 2-2-1 · Thiết bị nồi hơi", heading:true,table:{
+      jp: ["名称","内容"],
+      vi: ["Thiết bị","Chức năng"],
+      rows: [
+        ["火炉","Buồng lửa","燃料を燃焼させる設備で、最小の過剰空気で燃料を完全燃焼させるようにする。"],
+        ["蒸発部","Dàn bốc hơi","水を加熱する部分で、水管とドラムからなり、ドラムから蒸気を取り出す（貫流ボイラにはドラムはない）。"],
+        ["過熱器","Bộ quá nhiệt","ドラムまたは蒸発管から出た蒸気を過熱し、過熱蒸気とする部分。"],
+        ["再熱器","Bộ tái nhiệt","タービンで膨張して飽和蒸気に近づいた蒸気を再び過熱し、過熱蒸気として低圧タービンに送る。再熱サイクルのための過熱蒸気をつくる部分。"],
+        ["給水加熱器","Bộ gia nhiệt nước cấp","タービンで膨張した蒸気の一部を復水器に送る前に抽気して、ボイラ給水を加熱する部分。再生サイクルを行う場合に設ける。"],
+        ["節炭器","Bộ hâm nước/economizer","煙道内にあり、ボイラ排ガスの熱で給水を加熱する部分。廃熱の一部を回収するために設けられる。"],
+        ["空気予熱器","Bộ sấy không khí","煙道に出る排ガスを利用して火炉に供給する空気を加熱する部分。廃熱の一部を回収するとともに、炉の温度を高くするために設ける。"],
+        ["通風装置","Hệ thống thông gió","燃焼に必要な通風力を与える部分で、煙突、送風機がある。"],
+        ["集じん装置","Bộ lọc bụi tĩnh điện","すす、粉じんなどの浮遊粒子に電荷を与え、電界を加えて有害物質などを捕集し取り除く設備。"]
+      ],
+      rowsVi: [
+        ["火炉","Buồng lửa","Đốt nhiên liệu đủ cháy với lượng không khí thừa ít nhất"],
+        ["蒸発部","Dàn bốc hơi","Ống nước và bao hơi sinh hơi; nồi xuyên dòng không có bao hơi"],
+        ["過熱器","Bộ quá nhiệt","Gia nhiệt hơi ra khỏi bao hơi/ống bốc hơi thành hơi quá nhiệt"],
+        ["再熱器","Bộ tái nhiệt","Gia nhiệt lại hơi sau tua-bin cao áp trước khi vào tua-bin hạ áp"],
+        ["給水加熱器","Bộ gia nhiệt nước cấp","Dùng hơi trích từ tua-bin để gia nhiệt nước cấp (chu trình hồi nhiệt)"],
+        ["節炭器","Bộ hâm nước/economizer","Thu hồi nhiệt khí thải để làm nóng nước cấp"],
+        ["空気予熱器","Bộ sấy không khí","Thu hồi nhiệt khí thải gia nhiệt không khí cấp buồng lửa"],
+        ["通風装置","Hệ thống thông gió","Tạo lưu lượng/áp lực gió cháy, có ống khói và quạt"],
+        ["集じん装置","Bộ lọc bụi tĩnh điện","Tích điện cho bụi rồi dùng điện trường thu giữ các hạt"]
+      ],
+    }},
     { jp: "POINT　自然循環ボイラといえば蒸発管と降水管中の水の比重差によってボイラ水が循環。強制循環ボイラといえば循環ポンプでボイラ水を循環。貫流ボイラといえば給水ポンプで圧力をかけて給水。", vi: "**Ghi nhớ:** Nồi hơi **tự nhiên** = chênh khối lượng riêng; **cưỡng bức** = bơm tuần hoàn; **xuyên dòng** = bơm cấp nước áp lực và hơi đi một lượt." },
   ],
 
@@ -349,26 +393,36 @@ export const electricPowerPages: Record<number, LessonRow[]> = {
     { diagram: "powerSteamTurbines346" },
     { jp: "蒸気タービンの分類と装置", vi: "Phân loại và cấu tạo tua-bin hơi", heading:true },
     { jp: "**蒸気タービン**を蒸気の作用で分類すると、**衝動タービン**と**反動タービン**、熱サイクルにより分類すると、代表的なものには**復水タービン、背圧タービン、混圧タービン**などがあります。", vi: "Phân theo tác động của hơi: **tua-bin xung lực (衝動タービン)** và **tua-bin phản lực (反動タービン)**. Phân theo chu trình/cách khai thác hơi: **ngưng hơi, đối áp, hỗn áp**." },
-    { jp: "表2-3-1 蒸気タービンの蒸気の作用による分類", vi: "Bảng 2-3-1 · Phân loại theo tác động của hơi", heading:true,table:{jp:["名称","内容"],vi:["Loại","Đặc điểm"],rows:[
-      ["衝動タービン","ノズルから出る蒸気の圧力を速度に変換し、衝動力で動翼（回転羽根）を回転させるもの。"],
-      ["反動タービン","静翼（固定羽根）と動翼を交互に配置し、過熱蒸気がタービン羽根を通過するときの反動力によって動翼を回転させる。蒸気が動翼を押す作用と蒸気が動翼を通過後に引く作用により回転する。"],
-    ],rowsVi:[
-      ["Xung lực","Vòi phun đổi áp suất hơi thành vận tốc; tia hơi tác động lên cánh động để quay rotor"],
-      ["Phản lực","Bố trí xen kẽ cánh tĩnh và cánh động; hơi giãn nở qua cánh tạo lực phản ứng làm quay rotor"],
-    ]}},
-    { jp: "表2-3-2 タービンの熱サイクルによる分類", vi: "Bảng 2-3-2 · Phân loại theo chu trình nhiệt",heading:true,table:{jp:["名称","内容"],vi:["Loại","Ứng dụng"],rows:[
-      ["復水タービン","タービンの排気蒸気を復水器で水に戻すタービン。発電用として多く用いられる。"],
-      ["再生タービン","タービンの中間段から抽気を行い、ボイラ給水を加熱するタービン。"],
-      ["再熱タービン","高圧タービンで膨張した蒸気を取り出し、ボイラに戻して再熱器で再加熱し、低圧段のタービンで膨張させるもの。"],
-      ["背圧タービン","タービンで使用した蒸気を工場用などに利用するタービン。工場用蒸気が2種類以上必要な場合に、タービンの中間段からも蒸気を抽気するものを抽気背圧タービンという。"],
-      ["混圧タービン","圧力の異なった蒸気を同一タービンに入れて仕事をさせるようにしたタービン。"],
-    ],rowsVi:[
-      ["Ngưng hơi","Hơi xả ngưng tụ trong bình ngưng; thường dùng phát điện"],
-      ["Hồi nhiệt","Trích hơi giữa các cấp tua-bin để làm nóng nước cấp"],
-      ["Tái nhiệt","Hơi ra tua-bin cao áp được tái nhiệt rồi đi qua tua-bin hạ áp"],
-      ["Đối áp","Hơi xả còn dùng cho phụ tải nhiệt công nghiệp; trích thêm hơi nếu cần nhiều mức áp"],
-      ["Hỗn áp","Đưa các nguồn hơi áp suất khác nhau vào cùng tua-bin"],
-    ]}},
+    { jp: "表2-3-1 蒸気タービンの蒸気の作用による分類", vi: "Bảng 2-3-1 · Phân loại theo tác động của hơi", heading:true,table:{
+      jp: ["名称","内容"],
+      vi: ["Loại","Đặc điểm"],
+      rows: [
+        ["衝動タービン","Xung lực","ノズルから出る蒸気の圧力を速度に変換し、衝動力で動翼（回転羽根）を回転させるもの。"],
+        ["反動タービン","Phản lực","静翼（固定羽根）と動翼を交互に配置し、過熱蒸気がタービン羽根を通過するときの反動力によって動翼を回転させる。蒸気が動翼を押す作用と蒸気が動翼を通過後に引く作用により回転する。"]
+      ],
+      rowsVi: [
+        ["衝動タービン","Xung lực","Vòi phun đổi áp suất hơi thành vận tốc; tia hơi tác động lên cánh động để quay rotor"],
+        ["反動タービン","Phản lực","Bố trí xen kẽ cánh tĩnh và cánh động; hơi giãn nở qua cánh tạo lực phản ứng làm quay rotor"]
+      ],
+    }},
+    { jp: "表2-3-2 タービンの熱サイクルによる分類", vi: "Bảng 2-3-2 · Phân loại theo chu trình nhiệt",heading:true,table:{
+      jp: ["名称","内容"],
+      vi: ["Loại","Ứng dụng"],
+      rows: [
+        ["復水タービン","Ngưng hơi","タービンの排気蒸気を復水器で水に戻すタービン。発電用として多く用いられる。"],
+        ["再生タービン","Hồi nhiệt","タービンの中間段から抽気を行い、ボイラ給水を加熱するタービン。"],
+        ["再熱タービン","Tái nhiệt","高圧タービンで膨張した蒸気を取り出し、ボイラに戻して再熱器で再加熱し、低圧段のタービンで膨張させるもの。"],
+        ["背圧タービン","Đối áp","タービンで使用した蒸気を工場用などに利用するタービン。工場用蒸気が2種類以上必要な場合に、タービンの中間段からも蒸気を抽気するものを抽気背圧タービンという。"],
+        ["混圧タービン","Hỗn áp","圧力の異なった蒸気を同一タービンに入れて仕事をさせるようにしたタービン。"]
+      ],
+      rowsVi: [
+        ["復水タービン","Ngưng hơi","Hơi xả ngưng tụ trong bình ngưng; thường dùng phát điện"],
+        ["再生タービン","Hồi nhiệt","Trích hơi giữa các cấp tua-bin để làm nóng nước cấp"],
+        ["再熱タービン","Tái nhiệt","Hơi ra tua-bin cao áp được tái nhiệt rồi đi qua tua-bin hạ áp"],
+        ["背圧タービン","Đối áp","Hơi xả còn dùng cho phụ tải nhiệt công nghiệp; trích thêm hơi nếu cần nhiều mức áp"],
+        ["混圧タービン","Hỗn áp","Đưa các nguồn hơi áp suất khác nhau vào cùng tua-bin"]
+      ],
+    }},
   ],
   347: [
     { jp: "ターニング装置", vi: "Thiết bị quay chậm trục (turning gear)", heading:true },
@@ -499,7 +553,28 @@ export const electricPowerPages: Record<number, LessonRow[]> = {
     { jp: "核分裂で発生した熱を取り出すため、放射線を外部に出さないようにするものです。鉄、コンクリート、鉛板、軽水などが用いられます。",vi:"Vật liệu che chắn hạn chế bức xạ lan ra bên ngoài, sử dụng thép/sắt, bê tông, chì, nước nhẹ theo yêu cầu thiết kế." },
   ],
   359: [
-    { jp: "POINT　原子炉の主要材料",vi:"Bảng ghi nhớ vật liệu lò phản ứng",heading:true,table:{jp:["名称","主な材料","役割"],vi:["Bộ phận","Vật liệu","Chức năng"],rows:[ ["原子燃料","ウラン235、プルトニウム239","核分裂して熱を発生"],["減速材","軽水、重水、黒鉛、ベリリウム","高速中性子を減速"],["冷却材","軽水、重水、二酸化炭素、ヘリウム、ナトリウム","炉心から熱を運ぶ"],["制御材","カドミウム、ほう素、ハフニウム","中性子を吸収し出力調整"],["反射材","黒鉛、軽水","中性子の漏出を減らす"],["構造材","アルミニウム、ステンレス鋼、ジルコニウム合金","構成部品を支持"],["遮へい材","鉄、コンクリート、鉛、軽水","放射線を遮へい"]] } },
+    { jp: "POINT　原子炉の主要材料",vi:"Bảng ghi nhớ vật liệu lò phản ứng",heading:true,table:{
+      jp: ["名称","主な材料","役割"],
+      vi: ["Bộ phận","Vật liệu","Chức năng"],
+      rows: [
+        ["原子燃料","Nhiên liệu hạt nhân","ウラン235、プルトニウム239","核分裂して熱を発生"],
+        ["減速材","Chất làm chậm","軽水、重水、黒鉛、ベリリウム","高速中性子を減速"],
+        ["冷却材","Chất tải nhiệt","軽水、重水、二酸化炭素、ヘリウム、ナトリウム","炉心から熱を運ぶ"],
+        ["制御材","Vật liệu điều khiển","カドミウム、ほう素、ハフニウム","中性子を吸収し出力調整"],
+        ["反射材","Vật liệu phản xạ","黒鉛、軽水","中性子の漏出を減らす"],
+        ["構造材","Vật liệu kết cấu","アルミニウム、ステンレス鋼、ジルコニウム合金","構成部品を支持"],
+        ["遮へい材","Vật liệu che chắn","鉄、コンクリート、鉛、軽水","放射線を遮へい"]
+      ],
+      rowsVi: [
+        ["原子燃料","Nhiên liệu hạt nhân","Urani-235, plutoni-239","Phân hạch và tỏa nhiệt"],
+        ["減速材","Chất làm chậm","Nước nhẹ, nước nặng, graphit, berili","Làm chậm nơtron nhanh"],
+        ["冷却材","Chất tải nhiệt","Nước nhẹ, nước nặng, CO₂, heli, natri","Mang nhiệt ra khỏi vùng hoạt"],
+        ["制御材","Vật liệu điều khiển","Cadmi, bo, hafni","Hấp thụ nơtron để điều chỉnh công suất"],
+        ["反射材","Vật liệu phản xạ","Graphit, nước nhẹ","Giảm nơtron thoát ra ngoài"],
+        ["構造材","Vật liệu kết cấu","Nhôm, thép không gỉ, hợp kim zirconi","Đỡ các bộ phận cấu thành"],
+        ["遮へい材","Vật liệu che chắn","Sắt, bê tông, chì, nước nhẹ","Che chắn bức xạ"]
+      ],
+    } },
     { jp: "練習問題 01　核分裂エネルギー", vi: "Bài tập 01 · Năng lượng phân hạch",heading:true },
     { jp: "1 kg のウラン燃料は3.5％の濃縮ウラン235が核分裂し、0.09％の質量欠損が生じる。このとき発生するエネルギー E［J］と、発熱量が H＝40 000 kJ/Lの石油に換算した量 M［kL］を求める。ただし、光速 c＝3×10⁸ m/sとする。", vi: "Một kg nhiên liệu chứa 3,5% U-235 tham gia phân hạch, trong lượng U-235 ấy hụt khối 0,09%. Tính năng lượng E và lượng dầu tương đương M, biết c=3×10⁸ m/s và nhiệt trị dầu H=40.000 kJ/L.",note:"Hai tỷ lệ phần trăm phải nhân liên tiếp: 3,5% × 0,09%; không được lấy 0,09% của cả 1 kg rồi dừng." },
     { jp: "質量欠損量 m は、1 kg ×3.5/100×0.09/100＝3.15×10⁻⁵ kg。",vi:"Bước 1: tính đúng khối lượng chuyển thành năng lượng:",equations:[["m = 1 × ",{fraction:[["3.5"],["100"]]}," × ",{fraction:[["0.09"],["100"]]}," = 3.15 × 10⁻⁵ kg"]] },
@@ -661,7 +736,22 @@ export const electricPowerPages: Record<number, LessonRow[]> = {
     {jp:"**変電所**とは、構外から伝送される電気を構内に施設した変圧器、整流器その他の機械器具により変成し、変成した電気をさらに構外に伝送するところをいいます。",vi:"**Trạm biến điện** nhận điện từ ngoài hàng rào, qua máy biến áp, bộ chỉnh lưu hoặc thiết bị điện khác để biến đổi rồi truyền điện đã biến đổi ra ngoài."},
     {jp:"構内とは、さくやへいなどによって区切られ、ある程度以上の大きさを有する場所で、施設関係者以外の者が自由に出入りできないところです。",vi:"**Khuôn viên trạm** là vùng có rào chắn/ranh giới và kiểm soát ra vào, không cho người không có nhiệm vụ tự do tiếp cận."},
     {jp:"変電所の用途による分類　送電用変電所、配電用変電所、周波数変換所、直流送電用変電所。",vi:"Phân loại theo chức năng: trạm truyền tải; trạm phân phối; trạm biến đổi tần số 50/60 Hz; trạm chuyển đổi AC/DC cho truyền tải HVDC."},
-    {jp:"表4-1-1 変電所の用途による分類",vi:"Bảng 4-1-1 · Các loại trạm theo chức năng",heading:true,table:{jp:["名称","内容"],vi:["Loại trạm","Vai trò"],rows:[["送電用変電所","特別高圧で受電し、特別高圧に変成して送電"],["配電用変電所","特別高圧で受電し、高圧に下げて配電"],["周波数変換所","50Hzと60Hzの異なる電力系統を連系"],["直流送電用変電所","交流と直流の変換を行う"]] }},
+    {jp:"表4-1-1 変電所の用途による分類",vi:"Bảng 4-1-1 · Các loại trạm theo chức năng",heading:true,table:{
+      jp: ["名称","内容"],
+      vi: ["Loại trạm","Vai trò"],
+      rows: [
+        ["送電用変電所","Trạm biến áp truyền tải","特別高圧で受電し、特別高圧に変成して送電"],
+        ["配電用変電所","Trạm biến áp phân phối","特別高圧で受電し、高圧に下げて配電"],
+        ["周波数変換所","Trạm đổi tần số","50Hzと60Hzの異なる電力系統を連系"],
+        ["直流送電用変電所","Trạm biến đổi cho truyền tải một chiều","交流と直流の変換を行う"]
+      ],
+      rowsVi: [
+        ["送電用変電所","Trạm biến áp truyền tải","Nhận điện ở cấp siêu cao áp, biến đổi sang cấp siêu cao áp khác để truyền tải"],
+        ["配電用変電所","Trạm biến áp phân phối","Nhận điện siêu cao áp, hạ xuống cấp cao áp để phân phối"],
+        ["周波数変換所","Trạm đổi tần số","Liên kết các hệ thống điện 50 Hz và 60 Hz"],
+        ["直流送電用変電所","Trạm biến đổi cho truyền tải một chiều","Chuyển đổi giữa điện xoay chiều và điện một chiều"]
+      ],
+    }},
   ],
   373: [
     {jp:"変電所の送電系統上による分類",vi:"Phân loại trạm theo vị trí trên hệ thống truyền tải",heading:true},
@@ -669,7 +759,28 @@ export const electricPowerPages: Record<number, LessonRow[]> = {
     {jp:"POINT　変電所の用途別分類：送電用、配電用、周波数変換所、直流送電用など。系統上の分類：一次変電所、二次変電所、中間変電所、配電用変電所など。",vi:"Ghi nhớ: phân loại theo **mục đích** khác với phân loại theo **cấp/vị trí mạng lưới**."},
     {jp:"変電所の設備",vi:"Thiết bị của trạm biến điện",heading:true},
     {jp:"変電所の主な設備をあげると、主変圧器、母線と開閉設備、計器用変成器、避雷器、調相設備、その他の設備などがあります。",vi:"Thiết bị chính: **máy biến áp lực**, thanh cái và thiết bị đóng cắt, biến điện áp/dòng đo lường, chống sét van, thiết bị bù phản kháng và phụ trợ."},
-    {jp:"表4-1-2 変電所の設備",vi:"Bảng 4-1-2 · Thiết bị trong trạm",heading:true,table:{jp:["名称","内容"],vi:["Thiết bị","Vai trò"],rows:[["主変圧器","変電所の中心となる設備。電圧を変成する"],["母線","電力の集中と配分をする"],["開閉設備","送電、停止、切換、故障時の遮断を行う"],["計器用変成器","高い電圧や大きい電流を計測・保護用に変換"],["避雷器","異常電圧、開閉サージを抑えて機器を保護"],["調相設備","無効電力や電圧を調整する"],["その他の設備","制御、所内電源、蓄電池、消火など"]]},note:"Điểm phân biệt: dao cách ly không dùng ngắt dòng sự cố như máy cắt; CT/VT cung cấp tín hiệu đo và bảo vệ. Cần kiểm tra thiết bị tại đúng vị trí và điều kiện thao tác."},
+    {jp:"表4-1-2 変電所の設備",vi:"Bảng 4-1-2 · Thiết bị trong trạm",heading:true,table:{
+      jp: ["名称","内容"],
+      vi: ["Thiết bị","Vai trò"],
+      rows: [
+        ["主変圧器","Máy biến áp chính","変電所の中心となる設備。電圧を変成する"],
+        ["母線","Thanh cái","電力の集中と配分をする"],
+        ["開閉設備","Thiết bị đóng cắt","送電、停止、切換、故障時の遮断を行う"],
+        ["計器用変成器","Máy biến điện đo lường","高い電圧や大きい電流を計測・保護用に変換"],
+        ["避雷器","Chống sét van","異常電圧、開閉サージを抑えて機器を保護"],
+        ["調相設備","Thiết bị điều chỉnh công suất phản kháng","無効電力や電圧を調整する"],
+        ["その他の設備","Thiết bị khác","制御、所内電源、蓄電池、消火など"]
+      ],
+      rowsVi: [
+        ["主変圧器","Máy biến áp chính","Thiết bị trung tâm của trạm, dùng để biến đổi điện áp"],
+        ["母線","Thanh cái","Tập trung và phân phối điện năng"],
+        ["開閉設備","Thiết bị đóng cắt","Đóng điện, ngừng cấp điện, chuyển mạch và cắt khi có sự cố"],
+        ["計器用変成器","Máy biến điện đo lường","Biến đổi điện áp cao hoặc dòng điện lớn để đo lường và bảo vệ"],
+        ["避雷器","Chống sét van","Hạn chế quá điện áp và xung đóng cắt để bảo vệ thiết bị"],
+        ["調相設備","Thiết bị điều chỉnh công suất phản kháng","Điều chỉnh công suất phản kháng và điện áp"],
+        ["その他の設備","Thiết bị khác","Điều khiển, nguồn tự dùng, ắc quy và thiết bị chữa cháy"]
+      ],
+    },note:"Điểm phân biệt: dao cách ly không dùng ngắt dòng sự cố như máy cắt; CT/VT cung cấp tín hiệu đo và bảo vệ. Cần kiểm tra thiết bị tại đúng vị trí và điều kiện thao tác."},
   ],
   374: [
     {jp:"4-2 変圧器の結線 **といえば** Y結線とΔ結線、経済的運転 **といえば** 並行運転",vi:"4-2 Đấu dây máy biến áp: sao/tam giác và vận hành kinh tế song song",heading:true},
@@ -718,7 +829,18 @@ export const electricPowerPages: Record<number, LessonRow[]> = {
   377: [
     {jp:"練習問題 01　変圧器の並行運転",vi:"Bài luyện tập 01 · Vận hành song song máy biến áp",heading:true},
     {jp:"下表の A、B 変圧器 2 台を並行運転し、Sₗ＝6 000 kV・A の負荷に電力を供給する場合、過負荷となる変圧器の過負荷運転状態［%］は。",vi:"Hai máy biến áp A, B hoạt động song song, cấp tải Sₗ = 6.000 kVA. Hỏi máy nào quá tải và mức vận hành quá tải bao nhiêu phần trăm?"},
-    {jp:"定格容量／%インピーダンス",vi:"Dung lượng định mức / % tổng trở",table:{jp:["変圧器","定格容量","%インピーダンス"],vi:["Máy","Công suất định mức","% tổng trở"],rows:[["A","5 000 kV・A","9.0%"],["B","1 500 kV・A","7.5%"]]}},
+    {jp:"定格容量／%インピーダンス",vi:"Dung lượng định mức / % tổng trở",table:{
+      jp: ["変圧器","定格容量","%インピーダンス"],
+      vi: ["Máy","Công suất định mức","% tổng trở"],
+      rows: [
+        ["A","A","5 000 kV・A","9.0%"],
+        ["B","B","1 500 kV・A","7.5%"]
+      ],
+      rowsVi: [
+        ["A","A","5.000 kVA","9,0%"],
+        ["B","B","1.500 kVA","7,5%"]
+      ],
+    }},
     {jp:"解き方　基準容量を 1 500 kV・A に換算した %z′ を求めます。",vi:"Bước 1. Đổi % tổng trở về cùng cơ sở **1.500 kVA**.",equations:[["%zₐ′ = 9.0 × ",{fraction:[["1 500"],["5 000"]]}," = 2.7%"],["%zᵦ′ = 7.5%"]],note:"%Z trên cơ sở mới = %Z trên cơ sở cũ × (S cơ sở mới / S định mức cũ), khi điện áp cơ sở giữ nguyên."},
     {jp:"変圧器 B の分担負荷 Sᵦ′ は、",vi:"Bước 2. Tính tải mà máy B gánh:",equations:[["Sᵦ′ = Sₗ × ",{fraction:[["%zₐ′"],["%zₐ′ + %zᵦ′"]]}," = 6 000 × ",{fraction:[["2.7"],["2.7 + 7.5"]]}],["Sᵦ′ ≈ 1 588 kV・A"]],note:"Tính chính xác: 6.000 × 2,7/10,2 = 1.588,235 kVA."},
     {jp:"過負荷運転状態［%］は、",vi:"Bước 3. So với dung lượng định mức máy B:",equations:[[{fraction:[["Sᵦ′"],["Sᵦ"]]}," = ",{fraction:[["1 588"],["1 500"]]}," ≈ 1.059 → 105.9%"]],note:"**105,9%** là mức tải so với định mức, tương ứng **quá định mức khoảng 5,9%**, không phải vượt 105,9%."},
@@ -736,10 +858,34 @@ export const electricPowerPages: Record<number, LessonRow[]> = {
     {jp:"遮断器",vi:"Máy cắt điện (遮断器)",heading:true},
     {jp:"遮断器によって電流の流れを切ることを**遮断**といい、遮断するために電極を開放する動作を**引き外し**といいます。電力回路では流れる電流も大きく、電流を遮断しようと開閉器を開放しても、電極間にアーク放電が発生し、遮断できずに開閉器自体を損傷してしまいます。発生したアーク放電を迅速に消滅させることが遮断器の役割で、アーク放電を消滅することを**消弧**といいます。",vi:"**Cắt dòng (遮断)** là ngắt dòng chạy; **nhả/cắt (引き外し)** là thao tác mở tiếp điểm. Với dòng điện lớn, khi tách tiếp điểm xuất hiện hồ quang, có thể không ngắt được và làm hỏng thiết bị. Máy cắt cần **dập hồ quang (消弧)** nhanh để cắt an toàn."},
     {jp:"遮断器は、アークを消弧する方式により、表4-3-1のように分類されます。",vi:"Máy cắt được phân loại theo phương thức dập hồ quang như bảng 4-3-1."},
-    {jp:"表4-3-1 遮断器の種類",vi:"Bảng 4-3-1 · Các loại máy cắt",table:{jp:["名称","内容"],vi:["Loại","Nguyên lý"],rows:[["油遮断器（OCB）","タンク形油遮断器は、絶縁油で満たした容器内に開閉器接点をおいた油遮断器。少油量形油遮断器は、油量が少なくてすむように改良した油遮断器"],["磁気遮断器（MBB）","アーク放電による電流を、遮断電流によってつくられる電磁力によって吸引し、アークシュート内に押し込めて遮断する遮断器"]]},note:"OCB dùng dầu cách điện; MBB sử dụng lực điện từ đẩy hồ quang vào buồng dập hồ quang. Bảng tiếp tục ở trang 379."},
+    {jp:"表4-3-1 遮断器の種類",vi:"Bảng 4-3-1 · Các loại máy cắt",table:{
+      jp: ["名称","内容"],
+      vi: ["Loại","Nguyên lý"],
+      rows: [
+        ["油遮断器（OCB）","Máy cắt dầu (OCB)","タンク形油遮断器は、絶縁油で満たした容器内に開閉器接点をおいた油遮断器。少油量形油遮断器は、油量が少なくてすむように改良した油遮断器"],
+        ["磁気遮断器（MBB）","Máy cắt từ (MBB)","アーク放電による電流を、遮断電流によってつくられる電磁力によって吸引し、アークシュート内に押し込めて遮断する遮断器"]
+      ],
+      rowsVi: [
+        ["油遮断器（OCB）","Máy cắt dầu (OCB)","Kiểu thùng dầu đặt tiếp điểm trong bình chứa đầy dầu cách điện. Kiểu ít dầu được cải tiến để giảm lượng dầu cần dùng."],
+        ["磁気遮断器（MBB）","Máy cắt từ (MBB)","Dùng lực điện từ do dòng cắt tạo ra để hút và đẩy hồ quang vào buồng dập."]
+      ],
+    },note:"OCB dùng dầu cách điện; MBB sử dụng lực điện từ đẩy hồ quang vào buồng dập hồ quang. Bảng tiếp tục ở trang 379."},
   ],
   379: [
-    {jp:"表4-3-1 遮断器の種類（続き）",vi:"Bảng 4-3-1 · Các loại máy cắt (tiếp)",heading:true,table:{jp:["名称","内容"],vi:["Loại","Nguyên lý"],rows:[["空気遮断器（ABB）","開閉器接点を開放すると同時に、超高速の空気流を吹き付けてアーク放電を強力に冷却し消弧する遮断器。動作時に大きな騒音を発すること、据え付け面積が大きくなることが欠点。"],["ガス遮断器（GCB）","電流を遮断するとき、電極間に発生するアーク放電に対し、六ふっ化硫黄（SF₆）ガスを吹き付けることで消弧させる遮断器。SF₆は絶縁性が高く、不活性であり、熱伝導性も高い。"],["真空遮断器（VCB）","高真空の容器に電極を収めた構造で、高真空の優れた絶縁耐力とアークの消弧能力を利用する。動作時の騒音が小さい。"]]},note:"Các loại ABB/GCB/VCB đều có thể cắt dòng sự cố trong phạm vi định mức. Với SF₆, cần lưu ý quản lý khí vì tác động nhà kính rất cao."},
+    {jp:"表4-3-1 遮断器の種類（続き）",vi:"Bảng 4-3-1 · Các loại máy cắt (tiếp)",heading:true,table:{
+      jp: ["名称","内容"],
+      vi: ["Loại","Nguyên lý"],
+      rows: [
+        ["空気遮断器（ABB）","Máy cắt khí nén (ABB)","開閉器接点を開放すると同時に、超高速の空気流を吹き付けてアーク放電を強力に冷却し消弧する遮断器。動作時に大きな騒音を発すること、据え付け面積が大きくなることが欠点。"],
+        ["ガス遮断器（GCB）","Máy cắt khí (GCB)","電流を遮断するとき、電極間に発生するアーク放電に対し、六ふっ化硫黄（SF₆）ガスを吹き付けることで消弧させる遮断器。SF₆は絶縁性が高く、不活性であり、熱伝導性も高い。"],
+        ["真空遮断器（VCB）","Máy cắt chân không (VCB)","高真空の容器に電極を収めた構造で、高真空の優れた絶縁耐力とアークの消弧能力を利用する。動作時の騒音が小さい。"]
+      ],
+      rowsVi: [
+        ["空気遮断器（ABB）","Máy cắt khí nén (ABB)","Khi tiếp điểm mở, luồng khí tốc độ rất cao làm nguội và dập hồ quang. Nhược điểm là vận hành ồn và cần diện tích lắp đặt lớn."],
+        ["ガス遮断器（GCB）","Máy cắt khí (GCB)","Thổi khí lưu huỳnh hexaflorua (SF₆) vào hồ quang giữa các điện cực để dập hồ quang. SF₆ cách điện tốt, trơ và dẫn nhiệt tốt."],
+        ["真空遮断器（VCB）","Máy cắt chân không (VCB)","Các điện cực nằm trong bình chân không cao, tận dụng độ bền cách điện và khả năng dập hồ quang của chân không. Tiếng ồn khi vận hành thấp."]
+      ],
+    },note:"Các loại ABB/GCB/VCB đều có thể cắt dòng sự cố trong phạm vi định mức. Với SF₆, cần lưu ý quản lý khí vì tác động nhà kính rất cao."},
     {jp:"断路器",vi:"Dao cách ly (断路器)",heading:true},
     {jp:"断路器は、**電流が流れない状態**で開閉するスイッチです。接続変更、機器の点検、修理のときに、電源から切り離す役割をします。操作方法は、手動のものと圧縮空気や電動機により遠方で操作できるものがあります。",vi:"Dao cách ly chỉ thao tác khi **không có dòng tải** (hoặc trong giới hạn thao tác riêng được cho phép). Dùng cách ly nguồn khi đổi đấu nối, kiểm tra hay sửa chữa; có thể thao tác tay hoặc từ xa."},
     {jp:"負荷開閉器",vi:"Dao cắt phụ tải (負荷開閉器)",heading:true},
@@ -776,8 +922,32 @@ export const electricPowerPages: Record<number, LessonRow[]> = {
   382: [
     {jp:"コラム　公称電圧",vi:"Chuyên mục · Điện áp danh định",heading:true},
     {jp:"公称電圧とは、電線路を代表する線間電圧をいいます。",vi:"**Điện áp danh định (公称電圧)** là điện áp dây đại diện để gọi tên đường dây."},
-    {jp:"表4-4-1 電線路の公称電圧",vi:"Bảng 4-4-1 · Điện áp danh định đường dây",heading:true,table:{jp:["種別","公称電圧"],vi:["Loại đường dây","Các mức điện áp danh định"],rows:[["送電線路の公称電圧 kV","11、22、33、(66、77)、110、(154、187)、(220、275)、500、1000"],["配電線路の公称電圧 V","低圧：100、200、100/200、415、240/415。高圧：3300、6600。特別高圧：11000、22000、33000"]]},note:"Số trong ngoặc là các mức sử dụng tại từng vùng theo ghi chú sách. Các giá trị này mang tính liệt kê trong tài liệu, không mặc định đúng cho mọi lưới."},
-    {jp:"表4-4-2 電気設備技術基準による電圧の区分",vi:"Bảng 4-4-2 · Phân loại điện áp theo quy định kỹ thuật mà sách dẫn",heading:true,table:{jp:["電圧の区分","交流","直流"],vi:["Loại","AC","DC"],rows:[["低圧","600 V 以下","750 V 以下"],["高圧","600 V を超え 7 kV 以下","750 V を超え 7 kV 以下"],["特別高圧","7 kV を超えるもの","7 kV を超えるもの"]]},note:"Đây là số liệu theo tài liệu in; trước khi dùng như quy định pháp lý hiện hành cần xác minh văn bản pháp luật mới nhất."},
+    {jp:"表4-4-1 電線路の公称電圧",vi:"Bảng 4-4-1 · Điện áp danh định đường dây",heading:true,table:{
+      jp: ["種別","公称電圧"],
+      vi: ["Loại đường dây","Các mức điện áp danh định"],
+      rows: [
+        ["送電線路の公称電圧 kV","Điện áp danh định đường dây truyền tải [kV]","11、22、33、(66、77)、110、(154、187)、(220、275)、500、1000"],
+        ["配電線路の公称電圧 V","Điện áp danh định đường dây phân phối [V]","低圧：100、200、100/200、415、240/415。高圧：3300、6600。特別高圧：11000、22000、33000"]
+      ],
+      rowsVi: [
+        ["送電線路の公称電圧 kV","Điện áp danh định đường dây truyền tải [kV]","11, 22, 33, (66, 77), 110, (154, 187), (220, 275), 500, 1.000"],
+        ["配電線路の公称電圧 V","Điện áp danh định đường dây phân phối [V]","Hạ áp: 100, 200, 100/200, 415, 240/415. Cao áp: 3.300, 6.600. Siêu cao áp: 11.000, 22.000, 33.000."]
+      ],
+    },note:"Số trong ngoặc là các mức sử dụng tại từng vùng theo ghi chú sách. Các giá trị này mang tính liệt kê trong tài liệu, không mặc định đúng cho mọi lưới."},
+    {jp:"表4-4-2 電気設備技術基準による電圧の区分",vi:"Bảng 4-4-2 · Phân loại điện áp theo quy định kỹ thuật mà sách dẫn",heading:true,table:{
+      jp: ["電圧の区分","交流","直流"],
+      vi: ["Loại","AC","DC"],
+      rows: [
+        ["低圧","Hạ áp","600 V 以下","750 V 以下"],
+        ["高圧","Cao áp","600 V を超え 7 kV 以下","750 V を超え 7 kV 以下"],
+        ["特別高圧","Siêu cao áp","7 kV を超えるもの","7 kV を超えるもの"]
+      ],
+      rowsVi: [
+        ["低圧","Hạ áp","Đến 600 V","Đến 750 V"],
+        ["高圧","Cao áp","Trên 600 V đến 7 kV","Trên 750 V đến 7 kV"],
+        ["特別高圧","Siêu cao áp","Trên 7 kV","Trên 7 kV"]
+      ],
+    },note:"Đây là số liệu theo tài liệu in; trước khi dùng như quy định pháp lý hiện hành cần xác minh văn bản pháp luật mới nhất."},
     {jp:"練習問題 01　遮断容量",vi:"Bài luyện tập 01 · Dung lượng cắt",heading:true},
     {jp:"ある発電所で合成パーセントインピーダンスが 0.4%（10 000 kV・A 基準）の箇所に施設する遮断器に必要な遮断容量の最小値 Sₛ は。",vi:"Tại vị trí có tổng trở phần trăm tổng hợp bằng 0,4% theo cơ sở 10.000 kVA, tính dung lượng cắt tối thiểu yêu cầu của máy cắt."},
     {jp:"解き方　遮断容量は、施設場所での短絡容量 Sₛ 以上のものを採用します。",vi:"Chọn khả năng cắt ít nhất bằng dung lượng ngắn mạch tại điểm đặt.",equations:[["Sₛ = ",{fraction:[["基準容量"],["%z"]]}," × 100"],["= ",{fraction:[["10 000"],["0.4"]]}," × 100 = 2.5 × 10⁶ kVA"],["= 2.5 × 10³ MVA"]],note:"Kiểm tra ngược: 10 MVA / 0,004 = **2.500 MVA**. Không lấy 10.000 / 0,4 mà bỏ sót nhân 100."},
@@ -824,7 +994,20 @@ export const electricPowerPages: Record<number, LessonRow[]> = {
   386: [
     {jp:"電線の種類",vi:"Các loại dây điện",heading:true},
     {jp:"電線には、銅線とアルミ線があります。架空送電用の電線には、裸より線が多く使用されます。耐熱性をよくしたり引張り強さを大きくするために、合金線も用いられます。",vi:"Có dây đồng và dây nhôm. Đường dây truyền tải trên không thường dùng dây bện trần, đôi khi dùng hợp kim để tăng khả năng chịu nhiệt và chịu lực."},
-    {jp:"表5-1-1 電線の種類",vi:"Bảng 5-1-1 · Các loại dây",heading:true,table:{jp:["名称","材料・特徴など"],vi:["Loại dây","Vật liệu, đặc trưng"],rows:[["硬銅より線","硬銅線を同心円により合わせたもので、導電率が97%と高く、機械的強度に優れている。"],["鋼心アルミより線（ACSR）","亜鉛メッキ鋼線を中心とし、その周囲に硬アルミ線を同心円に各層交互より合わせた構造を持つ。硬銅線より導電率は小さいが、機械的強度が大きく軽量である。同一抵抗の硬銅線と比べて外径が大きくなり、コロナ臨界電圧が高く、雷容量の送電線用として多く用いられている。"],["鋼心耐熱アルミ合金より線（TACSR）","耐熱アルミ合金線を使用し、耐熱性に優れているので許容電流が大きく、超高圧の送電線として多く採用されている。"]]},note:"ACSR = Aluminium Conductor Steel Reinforced. Lõi thép chịu lực, nhôm bên ngoài dẫn điện; đường kính lớn giúp giảm điện trường bề mặt."},
+    {jp:"表5-1-1 電線の種類",vi:"Bảng 5-1-1 · Các loại dây",heading:true,table:{
+      jp: ["名称","材料・特徴など"],
+      vi: ["Loại dây","Vật liệu, đặc trưng"],
+      rows: [
+        ["硬銅より線","Dây đồng cứng bện","硬銅線を同心円により合わせたもので、導電率が97%と高く、機械的強度に優れている。"],
+        ["鋼心アルミより線（ACSR）","Dây nhôm lõi thép (ACSR)","亜鉛メッキ鋼線を中心とし、その周囲に硬アルミ線を同心円に各層交互より合わせた構造を持つ。硬銅線より導電率は小さいが、機械的強度が大きく軽量である。同一抵抗の硬銅線と比べて外径が大きくなり、コロナ臨界電圧が高く、高電圧の送電線用として多く用いられている。"],
+        ["鋼心耐熱アルミ合金より線（TACSR）","Dây hợp kim nhôm chịu nhiệt lõi thép (TACSR)","耐熱アルミ合金線を使用し、耐熱性に優れているので許容電流が大きく、超高圧の送電線として多く採用されている。"]
+      ],
+      rowsVi: [
+        ["硬銅より線","Dây đồng cứng bện","Các sợi đồng cứng bện đồng tâm, có độ dẫn điện cao (97%) và độ bền cơ học tốt."],
+        ["鋼心アルミより線（ACSR）","Dây nhôm lõi thép (ACSR)","Lõi thép mạ kẽm, bao quanh bởi các lớp nhôm cứng bện đồng tâm theo chiều xen kẽ. Độ dẫn điện thấp hơn dây đồng cứng nhưng nhẹ và bền cơ học. Với cùng điện trở, đường kính ngoài lớn hơn nên điện áp tới hạn vầng quang cao hơn. Loại dây này dùng nhiều cho đường dây truyền tải cao áp."],
+        ["鋼心耐熱アルミ合金より線（TACSR）","Dây hợp kim nhôm chịu nhiệt lõi thép (TACSR)","Dùng sợi hợp kim nhôm chịu nhiệt, cho phép dòng điện lớn và được dùng nhiều cho đường dây siêu cao áp."]
+      ],
+    },note:"ACSR = Aluminium Conductor Steel Reinforced. Lõi thép chịu lực, nhôm bên ngoài dẫn điện; đường kính lớn giúp giảm điện trường bề mặt."},
     {diagram:"powerAcSr386"},
     {jp:"多導体送電線と特徴",vi:"Đường dây bó nhiều phân dẫn và đặc điểm",heading:true},
     {jp:"送電線で一線分の導体として2～8本を並列にしたものを**多導体**といい、超高圧送電線路のほとんどに使用されています。",vi:"Khi một pha sử dụng 2–8 dây phân dẫn mắc song song, gọi là **dây bó nhiều phân dẫn (多導体)**, dùng phổ biến ở lưới siêu cao áp."},
@@ -838,10 +1021,34 @@ export const electricPowerPages: Record<number, LessonRow[]> = {
     {diagram:"powerOverheadGroundWire387"},
     {jp:"電線の着雪と着氷の影響",vi:"Ảnh hưởng tuyết và băng bám dây",heading:true},
     {jp:"電線への着雪や着氷が原因で、**スリートジャンプ**や**ギャロッピング**といった跳ね上がり現象や振動を生じることがあります。これは、送電線の相間短絡事故や支持物の破損事故の原因になります。",vi:"Băng/tuyết bám có thể gây **sleet jump** (dây bật nảy sau khi băng tuyết rơi) và **galloping** (dao động lớn do gió), dẫn tới ngắn mạch giữa pha hoặc hư hại cột."},
-    {jp:"表5-1-2 電線への着雪や着氷で起こる現象",vi:"Bảng 5-1-2 · Hiện tượng do băng/tuyết bám",heading:true,table:{jp:["名称","内容"],vi:["Hiện tượng","Mô tả"],rows:[["スリートジャンプ","電線に付着した氷雪が、気温や風などの気象条件の変化により一斉に脱落して、電線がはね上がる現象のこと。"],["ギャロッピング","送電線に雪や氷が付着した状態で強風が吹き寄せたとき、送電線が複雑に激しく振動する現象のこと。着雪・着氷と風による送電線の振動現象。"]]}},
+    {jp:"表5-1-2 電線への着雪や着氷で起こる現象",vi:"Bảng 5-1-2 · Hiện tượng do băng/tuyết bám",heading:true,table:{
+      jp: ["名称","内容"],
+      vi: ["Hiện tượng","Mô tả"],
+      rows: [
+        ["スリートジャンプ","Dây nảy khi băng tuyết rơi (sleet jump)","電線に付着した氷雪が、気温や風などの気象条件の変化により一斉に脱落して、電線がはね上がる現象のこと。"],
+        ["ギャロッピング","Dao động galloping","送電線に雪や氷が付着した状態で強風が吹き寄せたとき、送電線が複雑に激しく振動する現象のこと。着雪・着氷と風による送電線の振動現象。"]
+      ],
+      rowsVi: [
+        ["スリートジャンプ","Dây nảy khi băng tuyết rơi (sleet jump)","Khi nhiệt độ, gió hoặc điều kiện thời tiết thay đổi, lớp băng tuyết rơi đồng loạt làm dây dẫn nảy lên."],
+        ["ギャロッピング","Dao động galloping","Gió mạnh tác động lên dây dẫn có băng tuyết bám gây dao động phức tạp và mạnh."]
+      ],
+    }},
     {jp:"がいし",vi:"Sứ cách điện (がいし)",heading:true},
     {jp:"がいしは、電線とその支持物である鉄塔や電柱を絶縁するために用いるものです。表5-1-3 のような種類があります。",vi:"Sứ/cách điện đường dây dùng cách ly điện giữa dây dẫn và cột/tháp đỡ."},
-    {jp:"表5-1-3 がいしの種類",vi:"Bảng 5-1-3 · Các loại cách điện",heading:true,table:{jp:["名称","内容"],vi:["Loại","Đặc điểm"],rows:[["懸垂がいし","笠状の磁器絶縁層の両側に連結用金具を接着したがいし。複数個を連結して送電線の絶縁支持に使用される。"],["長幹がいし","笠付磁器棒の両端に連結用金具を接着したがいし。単独または数本連結して送電線の絶縁支持に使用される。"],["ラインポストがいし（LPがいし）","磁器棒の片方に電線支持用の電線クランプ、もう片方に固定用金具が取り付けられており、鉄塔や腕金に固定できるようになっている。"]]}},
+    {jp:"表5-1-3 がいしの種類",vi:"Bảng 5-1-3 · Các loại cách điện",heading:true,table:{
+      jp: ["名称","内容"],
+      vi: ["Loại","Đặc điểm"],
+      rows: [
+        ["懸垂がいし","Sứ treo","笠状の磁器絶縁層の両側に連結用金具を接着したがいし。複数個を連結して送電線の絶縁支持に使用される。"],
+        ["長幹がいし","Sứ thanh dài","笠付磁器棒の両端に連結用金具を接着したがいし。単独または数本連結して送電線の絶縁支持に使用される。"],
+        ["ラインポストがいし（LPがいし）","Sứ đứng đường dây (LP)","磁器棒の片方に電線支持用の電線クランプ、もう片方に固定用金具が取り付けられており、鉄塔や腕金に固定できるようになっている。"]
+      ],
+      rowsVi: [
+        ["懸垂がいし","Sứ treo","Hai đầu phần sứ cách điện dạng đĩa có phụ kiện liên kết. Ghép nhiều đĩa để đỡ và cách điện dây truyền tải."],
+        ["長幹がいし","Sứ thanh dài","Thanh sứ có tán, hai đầu gắn phụ kiện liên kết. Dùng đơn lẻ hoặc ghép nhiều thanh để đỡ và cách điện dây truyền tải."],
+        ["ラインポストがいし（LPがいし）","Sứ đứng đường dây (LP)","Một đầu thanh sứ có kẹp đỡ dây, đầu kia có phụ kiện để cố định lên cột hoặc xà."]
+      ],
+    }},
   ],
   388: [
     {jp:"アークホーン",vi:"Sừng phóng điện (arc horn)",heading:true},
@@ -857,7 +1064,20 @@ export const electricPowerPages: Record<number, LessonRow[]> = {
     {jp:"電線の素線切れの防止と電線振動を防止するには、表5-1-4 のような方法があります。",vi:"Các phương pháp chống mỏi/đứt sợi do rung được tổng hợp tại bảng 5-1-4 ở trang kế tiếp."},
   ],
   389: [
-    {jp:"表5-1-4 素線切れの防止と電線振動の防止法",vi:"Bảng 5-1-4 · Biện pháp chống đứt sợi và rung dây",heading:true,table:{jp:["名称","内容"],vi:["Thiết bị","Chức năng"],rows:[["アーマロッド","懸垂クランプ内の電線に巻き付けて、電線の振動による応力の軽減により、素線切れを防止する。"],["ストックブリッジダンパ","電線の振動エネルギーを吸収して振動を防止する。"],["トーショナルダンパ","なす形のおもりを互いに反対方向に取り付けたもので、電線の上下振動をねじり振動に変えて振動エネルギーを吸収する。"]]}},
+    {jp:"表5-1-4 素線切れの防止と電線振動の防止法",vi:"Bảng 5-1-4 · Biện pháp chống đứt sợi và rung dây",heading:true,table:{
+      jp: ["名称","内容"],
+      vi: ["Thiết bị","Chức năng"],
+      rows: [
+        ["アーマロッド","Thanh giáp bảo vệ (armor rod)","懸垂クランプ内の電線に巻き付けて、電線の振動による応力の軽減により、素線切れを防止する。"],
+        ["ストックブリッジダンパ","Bộ giảm rung Stockbridge","電線の振動エネルギーを吸収して振動を防止する。"],
+        ["トーショナルダンパ","Bộ giảm rung xoắn","なす形のおもりを互いに反対方向に取り付けたもので、電線の上下振動をねじり振動に変えて振動エネルギーを吸収する。"]
+      ],
+      rowsVi: [
+        ["アーマロッド","Thanh giáp bảo vệ (armor rod)","Quấn quanh dây tại kẹp treo để giảm ứng suất do rung, hạn chế đứt sợi thành phần."],
+        ["ストックブリッジダンパ","Bộ giảm rung Stockbridge","Hấp thụ năng lượng dao động của dây dẫn để giảm rung."],
+        ["トーショナルダンパ","Bộ giảm rung xoắn","Hai quả nặng dạng quả cà được lắp ngược hướng nhau, biến dao động lên xuống của dây thành dao động xoắn để hấp thụ năng lượng."]
+      ],
+    }},
     {diagram:"powerVibrationDampers389"},
     {jp:"フェランチ効果",vi:"Hiệu ứng Ferranti",heading:true},
     {jp:"地中送電線のように対地間の**静電容量**が大きい場合、受電端電圧 Vᵣ［V］が送電端電圧 Vₛ［V］よりも上昇することがあります。この現象を**フェランチ効果**といいます。",vi:"Đường cáp ngầm có điện dung đối đất lớn; khi tải nhỏ hoặc không tải, điện áp cuối đường dây **Vᵣ có thể cao hơn Vₛ**, gọi là **hiệu ứng Ferranti**."},
