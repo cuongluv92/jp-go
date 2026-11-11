@@ -5462,5 +5462,615 @@ export const lawPages: Record<number, LessonRow[]> = {
       "jp": "解答　（ア）**下**　（イ）**腕金類**　（ウ）**0.5**　（エ）**0.3**",
       "vi": "Đáp án. (ア) **Dưới**, (イ) **xà đỡ**, (ウ) **0,5**, (エ) **0,3**."
     }
+  ],
+  "470": [
+    {
+      "jp": "2-5 地中電線路 といえば 管路式、暗きょ式、直接埋設式がある",
+      "vi": "2-5 Đường dây điện ngầm: có kiểu ống, kiểu hào cáp và chôn trực tiếp.",
+      "note": "",
+      "heading": true
+    },
+    {
+      "jp": "地中電線路の施設",
+      "vi": "Lắp đường dây ngầm",
+      "note": "",
+      "heading": true
+    },
+    {
+      "jp": "地中電線路は、電線を地中に施設する電線路をいい、地中電線路にはケーブルを使用することが規定されています。",
+      "vi": "Đường dây ngầm là dây được lắp trong đất; bắt buộc dùng cáp.",
+      "note": ""
+    },
+    {
+      "jp": "施設方法",
+      "vi": "Phương pháp lắp đặt",
+      "note": "",
+      "heading": true
+    },
+    {
+      "jp": "地中電線路は、電線に**ケーブル**を使用し、かつ、**管路式**、**暗きょ式**又は**直接埋設式**により施設します。",
+      "vi": "Đường dây ngầm dùng **cáp**, lắp theo một trong ba cách: **đặt trong ống**, **đặt trong hầm cáp** hoặc **chôn trực tiếp**."
+    },
+    {
+      "jp": "①地中電線路を**管路式**により施設する場合は、次によります（図2-5-1の(a)）。\n・電線を収める管は、これに加わる車両その他の重量物の**圧力に耐えるもの**を使用します。",
+      "vi": "① Với phương pháp **đặt trong ống**, xem hình 2-5-1(a). Ống chứa dây phải **chịu được áp lực** của xe và vật nặng khác."
+    },
+    {
+      "jp": "・高圧又は特別高圧の地中電線路には、次により**表示**を施します。ただし、需要場所に施設する高圧地中電線路であって、その長さが**15 m**以下のものにあっては表示を省略できます。",
+      "vi": "• **Đánh dấu** đường dây ngầm cao áp và siêu cao áp theo quy định sau. Có thể miễn đánh dấu đường dây ngầm cao áp lắp tại nơi sử dụng điện nếu chiều dài không quá **15 m**."
+    },
+    {
+      "jp": "［表示］ケーブル標識シートによる表示（図2-5-2参照）\n物件の**名称**、**管理者名**及び**電圧**（需要場所に施設する場合にあっては、物件の名称及び管理者名を除く）をおおむね**2 m**の間隔で表示します。",
+      "vi": "Đánh dấu bằng băng cảnh báo cáp (hình 2-5-2). Ghi **tên công trình**, **tên đơn vị quản lý** và **điện áp** theo khoảng cách khoảng **2 m**. Khi lắp tại nơi sử dụng điện, bỏ tên công trình và tên đơn vị quản lý."
+    },
+    {
+      "jp": "②地中電線路を**暗きょ式**により施設する場合は、次によります（図2-5-1の(b)）。\n・暗きょは、車両その他の重量物の圧力に耐えるものを使用し、地中電線に**耐燃措置**を施すか、暗きょ内に**自動消火設備**を施設します。また、共同溝方式は暗きょ式に含めます。",
+      "vi": "② Với phương pháp **đặt trong hầm cáp**, xem hình 2-5-1(b). Hầm phải chịu áp lực của xe và vật nặng khác. Áp dụng **biện pháp chống cháy** cho cáp ngầm hoặc lắp **thiết bị chữa cháy tự động** trong hầm. Hầm kỹ thuật dùng chung cũng thuộc phương pháp này."
+    },
+    {
+      "jp": "③地中電線路を**直接埋設式**により施設する場合は、次によります（図2-5-1の(c)）。\n・地中電線路の埋設深さは、車両その他の重量物の圧力を受けるおそれがある場所においては**1.2 m**以上、その他の場所においては**0.6 m**以上とします。",
+      "vi": "③ Với phương pháp **chôn trực tiếp**, xem hình 2-5-1(c). Chôn sâu ít nhất **1,2 m** ở nơi có thể chịu áp lực của xe hoặc vật nặng khác, và ít nhất **0,6 m** ở nơi còn lại."
+    },
+    {
+      "diagram": "lawUndergroundMethods470"
+    }
+  ],
+  "471": [
+    {
+      "jp": "・地中電線を**トラフ**その他の防護物に収めて施設します。",
+      "vi": "• Đặt cáp ngầm trong **máng bảo vệ** hoặc thiết bị bảo vệ khác."
+    },
+    {
+      "jp": "低圧又は高圧の地中電線路を、車両その他の重量物の圧力を受けるおそれがない場所に施設する場合は、地中電線の上部を堅ろうな板又はといで覆ってもよい。",
+      "vi": "• Với đường dây ngầm hạ áp hoặc cao áp ở nơi không có nguy cơ chịu áp lực xe hay vật nặng khác, có thể phủ phía trên bằng tấm hoặc máng cứng chắc.",
+      "note": ""
+    },
+    {
+      "jp": "・高圧又は特別高圧の地中電線路を直接埋設式により施設する場合は、管路式による場合と同様に**表示**を施します。",
+      "vi": "• **Đánh dấu** đường dây ngầm cao áp hoặc siêu cao áp chôn trực tiếp như trường hợp đặt trong ống."
+    },
+    {
+      "jp": "ケーブル埋設箇所の表示",
+      "vi": "Đánh dấu vị trí chôn cáp",
+      "note": "",
+      "heading": true
+    },
+    {
+      "jp": "**地中引込線**を管路式又は直接埋設式により需要場所に施設する場合は、ケーブル埋設箇所の表示を行う必要があります。ただし、地中引込線の長さが**15 m**以下のものにあっては、表示を省略できます。",
+      "vi": "Phải đánh dấu vị trí chôn cáp khi lắp **dây dẫn vào ngầm** trong ống hoặc chôn trực tiếp tại nơi sử dụng điện. Có thể miễn đánh dấu với dây dài không quá **15 m**."
+    },
+    {
+      "jp": "①電圧を概ね**2 m**の間隔で表示した耐久性のある**ケーブル標識シート**をケーブルの直上の地中に連続して埋設します。",
+      "vi": "① Chôn liên tục **băng cảnh báo cáp** bền ngay phía trên cáp, trên đó ghi điện áp cách nhau khoảng **2 m**."
+    },
+    {
+      "jp": "②ケーブル埋設位置が容易に判明するように、ケーブル直上の地表面に耐久性のある**標識**（**標柱**又は**標石**）を必要な地点に設置します。",
+      "vi": "② Đặt **dấu mốc** bền (**cọc mốc** hoặc **đá mốc**) ở những điểm cần thiết trên mặt đất ngay trên cáp để dễ xác định vị trí."
+    },
+    {
+      "diagram": "lawCableMarking471"
+    },
+    {
+      "jp": "POINT　地中電線路及び引込線の施設",
+      "vi": "Ghi nhớ thi công cáp ngầm và dây dẫn vào.",
+      "note": ""
+    },
+    {
+      "jp": "・管路式**0.3 m**以上\n・直接埋設式**1.2 m**（重量物の圧力あり）、**0.6 m**以上",
+      "vi": "• Đặt trong ống: độ sâu từ **0,3 m**.\n• Chôn trực tiếp: ít nhất **1,2 m** khi chịu áp lực vật nặng, **0,6 m** ở nơi khác."
+    },
+    {
+      "jp": "ケーブル埋設箇所の表示 といえば **ケーブル標識シート**の埋設、**標識**（標柱、標石）の設置",
+      "vi": "Đánh dấu vị trí chôn cáp bằng **băng cảnh báo** chôn trên cáp và **dấu mốc** trên mặt đất (cọc hoặc đá)."
+    },
+    {
+      "jp": "地中箱の施設",
+      "vi": "Lắp hộp cáp ngầm",
+      "note": "",
+      "heading": true
+    },
+    {
+      "jp": "地中電線路に使用する地中箱（マンホール、ハンドホール）は、次のようにします。",
+      "vi": "Hộp cáp ngầm như manhole, handhole phải đáp ứng các điều kiện:",
+      "note": ""
+    },
+    {
+      "jp": "・地中箱は、車両その他の重量物の**圧力に耐える**堅ろうな構造にします。",
+      "vi": "• Hộp ngầm phải có kết cấu chắc chắn, **chịu được áp lực** của xe và vật nặng khác."
+    },
+    {
+      "jp": "・爆発性又は燃焼性のガスが侵入するおそれのある場所に設ける地中箱でその大きさが1 m³以上のものには、**通風装置**その他ガスを放散させるための装置を設けます。",
+      "vi": "• Hộp ngầm có thể tích từ 1 m³ lắp ở nơi khí dễ nổ hoặc dễ cháy có thể xâm nhập phải có **thiết bị thông gió** hoặc thiết bị khác để thoát khí."
+    },
+    {
+      "jp": "・地中箱のふたは、**取扱者**以外の者が容易にあけることができないように施設します。",
+      "vi": "• Lắp nắp hộp ngầm sao cho người ngoài **người phụ trách thao tác** không dễ mở được."
+    }
+  ],
+  "472": [
+    {
+      "jp": "地中電線と弱電流電線、管などとの接近又は交さ",
+      "vi": "Cáp ngầm gần/giao cắt dây thông tin, ống khác.",
+      "note": "",
+      "heading": true
+    },
+    {
+      "jp": "地中電線路と地中弱電流電線、管との接近又は交さについては、地中電線が故障し、アーク放電により地中弱電流電線に影響を与えることがないように、最低離隔距離を表2-5-1のように定めています。",
+      "vi": "Để tránh hồ quang khi cáp điện sự cố gây ảnh hưởng dây thông tin, quy định khoảng cách tối thiểu.",
+      "note": ""
+    },
+    {
+      "jp": "地中電線相互の接近又は交さにおいて、地中線の事故によるアーク放電によって他の地中電線に損傷を与えないように、最低離隔距離を表2-5-2のように定めています。",
+      "vi": "Khi các cáp ngầm tiếp cận hoặc giao cắt nhau, dùng khoảng cách tối thiểu ở bảng 2-5-2 để hồ quang từ cáp gặp sự cố không làm hỏng cáp ngầm khác."
+    },
+    {
+      "jp": "表2-5-1 地中電線と他の埋設物との接近",
+      "vi": "Bảng 2-5-1 · Khoảng cách từ cáp ngầm đến vật chôn khác",
+      "heading": true,
+      "table": {
+        "jp": [
+          "埋設物の種類",
+          "低圧",
+          "高圧",
+          "特別高圧"
+        ],
+        "vi": [
+          "Vật chôn",
+          "Hạ áp",
+          "Cao áp",
+          "Siêu cao áp"
+        ],
+        "rows": [
+          [
+            "弱電流電線",
+            "Dây điện nhẹ",
+            "**0.3** m",
+            "**0.3** m",
+            "**0.6** m"
+          ],
+          [
+            "可燃性又は有毒性の液体を内包する管",
+            "Ống chứa chất lỏng dễ cháy hoặc độc",
+            "—",
+            "—",
+            "**1** m"
+          ],
+          [
+            "上記以外の管",
+            "Ống khác",
+            "—",
+            "—",
+            "**0.3** m"
+          ]
+        ],
+        "rowsVi": [
+          [
+            "弱電流電線",
+            "Dây điện nhẹ",
+            "**0,3** m",
+            "**0,3** m",
+            "**0,6** m"
+          ],
+          [
+            "可燃性又は有毒性の液体を内包する管",
+            "Ống chứa chất lỏng dễ cháy hoặc độc",
+            "—",
+            "—",
+            "**1** m"
+          ],
+          [
+            "上記以外の管",
+            "Ống khác",
+            "—",
+            "—",
+            "**0,3** m"
+          ]
+        ]
+      }
+    },
+    {
+      "jp": "表2-5-2 地中電線と他の地中電線との接近",
+      "vi": "Bảng 2-5-2 · Khoảng cách giữa các cáp điện ngầm",
+      "heading": true,
+      "table": {
+        "jp": [
+          "接近する地中電線路の種類",
+          "低圧",
+          "高圧",
+          "特別高圧"
+        ],
+        "vi": [
+          "Cấp điện áp của cáp đi gần",
+          "Hạ áp",
+          "Cao áp",
+          "Siêu cao áp"
+        ],
+        "rows": [
+          [
+            "低圧",
+            "Hạ áp",
+            "—",
+            "**0.15** m",
+            "**0.3** m"
+          ],
+          [
+            "高圧",
+            "Cao áp",
+            "**0.15** m",
+            "—",
+            "**0.3** m"
+          ],
+          [
+            "特別高圧",
+            "Siêu cao áp",
+            "**0.3** m",
+            "**0.3** m",
+            "—"
+          ]
+        ],
+        "rowsVi": [
+          [
+            "低圧",
+            "Hạ áp",
+            "—",
+            "**0,15** m",
+            "**0,3** m"
+          ],
+          [
+            "高圧",
+            "Cao áp",
+            "**0,15** m",
+            "—",
+            "**0,3** m"
+          ],
+          [
+            "特別高圧",
+            "Siêu cao áp",
+            "**0,3** m",
+            "**0,3** m",
+            "—"
+          ]
+        ]
+      }
+    },
+    {
+      "jp": "また、次のいずれかによってもよいとしています。\n・地中電線相互の間に堅ろうな耐火性の隔壁を設けること。",
+      "vi": "Có thể dùng một trong các phương án sau.\n• Lắp vách ngăn chịu lửa vững chắc giữa các cáp ngầm."
+    },
+    {
+      "jp": "・**いずれか**の地中電線が、次のいずれかに該当するものである場合は、地中電線相互の離隔距離が、0 m以上であること。\n①不燃性の被覆を有すること。\n②堅ろうな不燃性の管に収められていること。",
+      "vi": "• Khoảng cách giữa các cáp ngầm có thể từ 0 m nếu **một trong các cáp** có ① vỏ không cháy hoặc ② nằm trong ống cứng chắc, không cháy."
+    },
+    {
+      "jp": "・**それぞれ**の地中電線が、次のいずれかに該当するものである場合は、地中電線相互の離隔距離が、0 m以上であること。\n①自消性のある難燃性の被覆を有すること。\n②堅ろうな自消性のある難燃性の管に収められていること。",
+      "vi": "• Khoảng cách giữa các cáp ngầm có thể từ 0 m nếu **mỗi cáp** đều có ① vỏ khó cháy tự tắt hoặc ② nằm trong ống cứng chắc, khó cháy tự tắt."
+    },
+    {
+      "jp": "地中電線の被覆金属体の接地",
+      "vi": "Nối đất lớp vỏ kim loại cáp ngầm.",
+      "note": "",
+      "heading": true
+    },
+    {
+      "jp": "管、暗きょその他の地中電線路を収める防護装置の金属製部分、金属製の電線接続箱及び地中電線の被覆に使用する金属体には、**D種接地工事**を施します。ただし、これらのものに防食措置を施した部分については、この限りでないと定めています。",
+      "vi": "**Nối đất loại D** cho phần kim loại của ống, hầm và thiết bị bảo vệ khác dùng chứa đường dây ngầm, hộp nối kim loại và kim loại dùng trong lớp bọc cáp. Ngoại lệ áp dụng cho phần đã có biện pháp chống ăn mòn."
+    },
+    {
+      "jp": "POINT　地中箱は、重量物の**圧力に耐える**、通風装置やガスを放散する装置を設ける\nふたは、**取扱者**以外はあけることができないように施設する\n地中電線路（低圧・高圧）と弱電流電線は、**0.3 m**以上離す\n地中電線路（低圧・高圧）相互の接近又は交さは、**0.15 m**以上離す\n地中電線路の被覆金属体は、**D種接地工事**を施す",
+      "vi": "Ghi nhớ. Hộp ngầm **chịu được áp lực** của vật nặng và bố trí thông gió hoặc thoát khí khi có điều kiện nêu ở trang trước. Nắp hộp chỉ cho **người phụ trách thao tác** mở. Dây điện ngầm hạ áp hoặc cao áp cách dây điện nhẹ ít nhất **0,3 m**. Dây hạ áp và cao áp ngầm tiếp cận hoặc giao cắt nhau cách ít nhất **0,15 m**. **Nối đất loại D** cho lớp bọc kim loại của cáp ngầm."
+    }
+  ],
+  "473": [
+    {
+      "jp": "練習問題01　地中電線と他の地中電線等との接近又は交差",
+      "vi": "Bài luyện 01 · Cáp ngầm tiếp cận hoặc giao cắt cáp ngầm khác",
+      "heading": true
+    },
+    {
+      "jp": "下記は、「電技解釈」の一部である。空白箇所の数字、字句は。\n地中電線相互が接近又は交差する場合、次のいずれかによること。",
+      "vi": "Đoạn dưới đây trích từ phần giải thích tiêu chuẩn kỹ thuật. Điền số và thuật ngữ vào chỗ trống. Khi các cáp ngầm tiếp cận hoặc giao cắt nhau, áp dụng một trong các phương án sau."
+    },
+    {
+      "jp": "a) 地中電線相互の離隔距離が、次に規定する値以上であること。\n①低圧地中電線と高圧地中電線との離隔距離は、（ア）m\n②低圧又は高圧の地中電線と特別高圧地中電線との離隔距離は、（イ）m",
+      "vi": "a) Khoảng cách giữa các cáp ngầm phải đạt ít nhất các giá trị sau.\n① Hạ áp với cao áp: (ア) m.\n② Hạ áp hoặc cao áp với siêu cao áp: (イ) m."
+    },
+    {
+      "jp": "b) 地中電線相互の間に堅ろうな（ウ）の隔壁を設けること。",
+      "vi": "b) Lắp vách ngăn (ウ) vững chắc giữa các cáp ngầm."
+    },
+    {
+      "jp": "c) （エ）の地中電線が、次のいずれかに該当するものである場合は、地中電線相互の離隔距離が、0 m以上であること。\n①不燃性の被覆を有すること。\n②堅ろうな不燃性の管に収められていること。",
+      "vi": "c) Khoảng cách giữa các cáp ngầm có thể từ 0 m nếu (エ) cáp ① có vỏ không cháy hoặc ② nằm trong ống cứng chắc, không cháy."
+    },
+    {
+      "jp": "d) （オ）の地中電線が、次のいずれかに該当するものである場合は、地中電線相互の離隔距離が、0 m以上であること。\n①自消性のある難燃性の被覆を有すること。\n②堅ろうな自消性のある難燃性の管に収められていること。",
+      "vi": "d) Khoảng cách giữa các cáp ngầm có thể từ 0 m nếu (オ) cáp ① có vỏ khó cháy tự tắt hoặc ② nằm trong ống cứng chắc, khó cháy tự tắt."
+    },
+    {
+      "jp": "解答　（ア）**0.15**　（イ）**0.3**　（ウ）**耐火性**　（エ）**いずれか**　（オ）**それぞれ**",
+      "vi": "Đáp án. (ア) **0,15** · (イ) **0,3** · (ウ) **chịu lửa** · (エ) **một trong các cáp** · (オ) **mỗi cáp**."
+    },
+    {
+      "jp": "解説\n・低圧地中電線と高圧地中電線との離隔距離は0.15 m以上です。\n・低圧若しくは高圧の地中電線と特別高圧地中電線との離隔距離は0.3 m以上必要です。\n・地中電線相互の間に堅ろうな耐火性の隔壁を設ける必要があります。\n・いずれかが不燃性の被覆であるか不燃性の管に収められている場合、離隔距離は0 m以上必要です。\n・それぞれが難燃性の被覆であるか難燃性の管に収められている場合、離隔距離は0 m以上必要です。",
+      "vi": "Lời giải. Hạ áp với cao áp cách ít nhất 0,15 m. Hạ áp hoặc cao áp với siêu cao áp cách ít nhất 0,3 m. Phương án khác là dùng vách chịu lửa chắc chắn. Nếu một cáp có vỏ hoặc ống không cháy, hoặc nếu từng cáp đều có vỏ hoặc ống khó cháy theo điều kiện d, khoảng cách có thể từ 0 m.",
+      "note": "Điểm phân biệt là いずれか (một cáp đạt điều kiện không cháy) và それぞれ (mỗi cáp đều đạt điều kiện khó cháy tự tắt)."
+    },
+    {
+      "jp": "参考　「難燃性」とは、炎を当てても燃え広がらない性質、「自消性のある」とは、炎を除くと自然に消える性質です。\n「不燃性」とは、炎を当てても燃えない性質、「耐火性」とは、炎により加熱された状態で変形又は破壊しない性質です。",
+      "vi": "Tham khảo. Khó cháy: lửa không lan khi tiếp xúc ngọn lửa. Tự tắt: lửa tự tắt khi bỏ nguồn lửa. Không cháy: không cháy khi tiếp xúc ngọn lửa. Chịu lửa: không biến dạng hoặc phá hủy khi bị ngọn lửa nung nóng."
+    }
+  ],
+  "474": [
+    {
+      "jp": "2-6　電路の保護装置　といえば　過電流遮断器、地絡遮断装置",
+      "vi": "2-6 Thiết bị bảo vệ mạch: thiết bị cắt quá dòng và thiết bị cắt chạm đất.",
+      "note": "",
+      "heading": true
+    },
+    {
+      "jp": "電路の保護装置の施設",
+      "vi": "Lắp thiết bị bảo vệ mạch điện",
+      "heading": true
+    },
+    {
+      "jp": "過電流遮断器",
+      "vi": "Thiết bị cắt quá dòng",
+      "heading": true
+    },
+    {
+      "jp": "過電流遮断器とは、電路に過電流を生じたときに自動的に電路を遮断する装置をいい、過電流とは、短絡電流と過負荷電流とを意味しています。",
+      "vi": "Thiết bị cắt quá dòng tự động ngắt mạch khi xuất hiện quá dòng. Quá dòng gồm dòng ngắn mạch và dòng quá tải."
+    },
+    {
+      "jp": "高圧及び特別高圧の電路においては、**高圧ヒューズ**及び**継電器によって動作する遮断器**であり、低圧電路においては**ヒューズ**及び**配線用遮断器**などをいいます。",
+      "vi": "Trong mạch cao áp hoặc siêu cao áp, thiết bị này gồm **cầu chì cao áp** và **máy cắt tác động qua rơ-le**. Trong mạch hạ áp, ví dụ là **cầu chì** và **áp-tô-mát bảo vệ đường dây**."
+    },
+    {
+      "jp": "高圧又は特別高圧の電路に施設する過電流遮断器の性能",
+      "vi": "Tính năng thiết bị cắt quá dòng trong mạch cao áp hoặc siêu cao áp",
+      "heading": true
+    },
+    {
+      "jp": "高圧又は特別高圧の電路に施設する過電流遮断器は、次の各号に適合するものであること。",
+      "vi": "Thiết bị cắt quá dòng trong mạch cao áp hoặc siêu cao áp phải đáp ứng các yêu cầu sau."
+    },
+    {
+      "jp": "・電路に**短絡**を生じたときに作動するものにあっては、これを施設する箇所を通過する**短絡電流**を遮断する能力を有すること。",
+      "vi": "• Thiết bị tác động khi **ngắn mạch** phải có khả năng cắt **dòng ngắn mạch** qua vị trí lắp."
+    },
+    {
+      "jp": "・その作動に伴いその**開閉**状態を表示する装置を有すること。ただし、その**開閉**状態を容易に確認できるものは、この限りでない。",
+      "vi": "• Có bộ chỉ thị trạng thái **đóng cắt** khi thiết bị tác động. Ngoại lệ áp dụng nếu có thể dễ dàng xác định trạng thái **đóng cắt**."
+    },
+    {
+      "jp": "・過電流遮断器として高圧電路に施設する**包装ヒューズ**（ヒューズ以外の過電流遮断器と組み合わせて1の過電流遮断器として使用するものを除く）は、次の各号のいずれかのものであること。",
+      "vi": "• **Cầu chì có vỏ** dùng để cắt quá dòng trong mạch cao áp phải thuộc một trong các loại dưới đây, trừ loại kết hợp với thiết bị cắt quá dòng khác cầu chì để làm thành một bộ cắt quá dòng."
+    },
+    {
+      "jp": "・定格電流の**1.3倍**の電流に耐え、かつ、**2**倍の電流で**120**分以内に溶断するもの（コンデンサ用は除く）であること。",
+      "vi": "• Chịu được **1,3 lần** dòng định mức và nóng chảy trong **120** phút khi dòng bằng **2** lần định mức (trừ cầu chì dùng cho tụ điện)."
+    },
+    {
+      "jp": "・JISに適合する**高圧限流ヒューズ**であること。",
+      "vi": "• **Cầu chì hạn dòng cao áp** phù hợp JIS."
+    },
+    {
+      "jp": "・過電流遮断器として高圧電路に施設する**非包装ヒューズ**は、定格電流の**1.25倍**の電流に耐え、かつ、**2倍**の電流で**2分**以内に溶断するものであること。",
+      "vi": "• **Cầu chì không vỏ** dùng để cắt quá dòng trong mạch cao áp phải chịu được **1,25 lần** dòng định mức và nóng chảy trong **2 phút** khi dòng bằng **2 lần** định mức."
+    },
+    {
+      "jp": "POINT　高圧電路に施設するヒューズの溶断時間\n包装ヒューズ：**1.3倍**の電流に耐え、**2**倍の電流で**120**分以内に溶断\n非包装ヒューズ：**1.25倍**の電流に耐え、**2**倍の電流で**2分**以内に溶断",
+      "vi": "Ghi nhớ thời gian nóng chảy của cầu chì cao áp.\nCó vỏ: chịu **1,3 lần** dòng định mức, nóng chảy trong **120** phút ở **2** lần định mức.\nKhông vỏ: chịu **1,25 lần**, nóng chảy trong **2 phút** ở **2** lần định mức."
+    }
+  ],
+  "475": [
+    {
+      "jp": "過電流遮断器の設置箇所",
+      "vi": "Vị trí lắp thiết bị cắt quá dòng.",
+      "note": "",
+      "heading": true
+    },
+    {
+      "jp": "高圧又は特別高圧電路",
+      "vi": "Mạch cao áp hoặc siêu cao áp.",
+      "note": "",
+      "heading": true
+    },
+    {
+      "jp": "高圧及び特別高圧の電路や機械器具については、電路の短絡などによって電線や機械器具に損傷を与えて火災を招く原因ともなるので、機械器具及び電線を保護する必要のある箇所には**過電流遮断器**を設置します。",
+      "vi": "Mạch/thiết bị cao áp và siêu cao áp có thể gây cháy nếu ngắn mạch làm hư dây, thiết bị, nên phải lắp **bộ cắt quá dòng** tại vị trí cần bảo vệ.",
+      "note": ""
+    },
+    {
+      "jp": "低圧配線",
+      "vi": "Mạch hạ áp.",
+      "note": "",
+      "heading": true
+    },
+    {
+      "jp": "**幹線**、**分岐回路**などには、過電流遮断器の設置を義務付けています。",
+      "vi": "**Dây trục** và **mạch nhánh** hạ áp thuộc những nơi bắt buộc bố trí bảo vệ quá dòng.",
+      "note": ""
+    },
+    {
+      "jp": "過電流遮断器の設置を禁止している箇所",
+      "vi": "Các vị trí không được lắp thiết bị cắt quá dòng.",
+      "note": "",
+      "heading": true
+    },
+    {
+      "jp": "**接地線**、多線式電路の**中性線**、B種接地工事を施した低圧電線路の**接地側電線**は、過電流遮断器の設置を禁止しています。",
+      "vi": "**Dây nối đất**, **dây trung tính** của mạch nhiều dây và **dây phía nối đất** của đường dây hạ áp đã nối đất B không được bố trí bộ cắt quá dòng.",
+      "note": ""
+    },
+    {
+      "jp": "ただし、過電流遮断器が動作した場合において、各極が同時に遮断されるときは除きます。",
+      "vi": "Ngoại lệ khi thiết bị bảo vệ làm ngắt đồng thời tất cả các cực.",
+      "note": ""
+    },
+    {
+      "jp": "POINT　過電流遮断器の設置を禁止している箇所\n**接地線**、**中性線**、接地工事を施した低圧電線路の接地側電線",
+      "vi": "Ghi nhớ vị trí cấm lắp thiết bị cắt quá dòng: **dây nối đất**, **dây trung tính** và dây phía nối đất của đường dây hạ áp đã nối đất."
+    },
+    {
+      "jp": "地絡遮断装置",
+      "vi": "Thiết bị cắt chạm đất.",
+      "note": "",
+      "heading": true
+    },
+    {
+      "jp": "**地絡遮断装置**（電路に地絡を生じたとき自動的に電路を遮断する装置）は、次のような箇所に施設します。",
+      "vi": "**Thiết bị tự ngắt khi xảy ra chạm đất** phải lắp tại các vị trí sau.",
+      "note": ""
+    },
+    {
+      "jp": "高圧又は特別高圧の電路",
+      "vi": "Mạch cao áp hoặc siêu cao áp.",
+      "note": "",
+      "heading": true
+    },
+    {
+      "jp": "・**発電所**又は**変電所**若しくはこれに準ずる場所の引出口",
+      "vi": "• Điểm ra của **nhà máy điện**, **trạm biến áp** hoặc nơi tương đương."
+    },
+    {
+      "jp": "他のものから供給を受ける**受電点**",
+      "vi": "**Điểm nhận điện** từ nguồn cung cấp khác.",
+      "note": ""
+    },
+    {
+      "jp": "配電用変圧器の**負荷側**の電路",
+      "vi": "Mạch **phía tải** của máy biến áp phân phối.",
+      "note": ""
+    },
+    {
+      "jp": "低圧電路",
+      "vi": "Mạch hạ áp.",
+      "note": "",
+      "heading": true
+    },
+    {
+      "jp": "金属製外箱を有する使用電圧**60 V**を超える低圧の機械器具に接続する電路",
+      "vi": "Mạch nối tới thiết bị hạ áp có vỏ kim loại, điện áp sử dụng trên **60 V**.",
+      "note": ""
+    },
+    {
+      "jp": "特別高圧又は高圧電路と変圧器により結合される**300 V**を超える低圧電路",
+      "vi": "Mạch hạ áp trên **300 V** liên kết với mạch cao/siêu cao áp qua biến áp.",
+      "note": ""
+    },
+    {
+      "jp": "対地電圧**150 V**を超える住宅の低圧電路（住宅の三相**200 V**の電路）",
+      "vi": "Mạch hạ áp trong nhà ở có điện áp so với đất trên **150 V** (ví dụ ba pha **200 V**).",
+      "note": ""
+    },
+    {
+      "jp": "地絡遮断装置の施設を省略できる電路",
+      "vi": "Các trường hợp có thể miễn bộ cắt chạm đất.",
+      "note": "",
+      "heading": true
+    },
+    {
+      "jp": "使用電圧が60 Vを超える低圧の金属製外箱を有する機械器具に電気を供給する電路には、漏電遮断器を施設します。ただし、次の場合は省略できます。",
+      "vi": "Lắp bộ cắt dòng rò cho mạch cấp điện cho thiết bị hạ áp có vỏ kim loại với điện áp sử dụng trên 60 V. Có thể miễn trong các trường hợp sau."
+    },
+    {
+      "jp": "①機械器具に簡易接触防護措置を施す場合",
+      "vi": "① Có biện pháp bảo vệ đơn giản chống tiếp xúc với thiết bị."
+    },
+    {
+      "jp": "②発電所、変電所などに施設した機械器具",
+      "vi": "② Thiết bị lắp trong nhà máy điện, trạm biến áp hoặc nơi tương tự."
+    },
+    {
+      "jp": "③**乾燥した場所**に施設した機械器具",
+      "vi": "③ Thiết bị lắp ở **nơi khô ráo**."
+    },
+    {
+      "jp": "④対地電圧が150 V以下で**水気のある場所以外の場所**の機械器具",
+      "vi": "④ Thiết bị có điện áp so với đất không quá 150 V tại **nơi không ẩm ướt**."
+    },
+    {
+      "jp": "⑤機械器具に施された接地抵抗値が**3** Ω以下の場合",
+      "vi": "⑤ Điện trở nối đất của thiết bị không quá **3** Ω."
+    }
+  ],
+  "476": [
+    {
+      "jp": "⑥電気用品安全法の適用を受ける**二重絶縁構造**の機械器具",
+      "vi": "⑥ Thiết bị **cách điện kép** thuộc Luật An toàn sản phẩm điện.",
+      "note": ""
+    },
+    {
+      "jp": "⑦絶縁変圧器を施設し、機械器具側の電路を非接地とする場合",
+      "vi": "⑦ Có biến áp cách ly và mạch phía thiết bị không nối đất.",
+      "note": ""
+    },
+    {
+      "jp": "⑧ゴム、合成樹脂などで被覆してある場合",
+      "vi": "⑧ Thiết bị được bọc cao su/nhựa tổng hợp.",
+      "note": ""
+    },
+    {
+      "jp": "⑨対地から絶縁することができないもの",
+      "vi": "⑨ Thiết bị không thể cách điện khỏi đất (trường hợp thuộc điều kiện miễn của sách).",
+      "note": ""
+    },
+    {
+      "jp": "⑩器具内に漏電遮断器を取り付けた場合",
+      "vi": "⑩ Thiết bị có sẵn cầu dao chống dòng rò.",
+      "note": ""
+    },
+    {
+      "jp": "⑪60 V以下の機器の電路",
+      "vi": "⑪ Mạch thiết bị điện áp ≤60 V.",
+      "note": ""
+    },
+    {
+      "jp": "POINT　地絡遮断装置の設置場所",
+      "vi": "Ghi nhớ nơi lắp thiết bị cắt chạm đất.",
+      "note": ""
+    },
+    {
+      "jp": "・**発電所**や**変電所**の引出口、**受電点**、配電用変圧器の負荷側\n・**60** Vを超える機械器具\n・**三相200** Vの電路、他",
+      "vi": "• Điểm ra của **nhà máy điện** hoặc **trạm biến áp**, **điểm nhận điện**, mạch phía tải của máy biến áp phân phối.\n• Thiết bị trên **60** V.\n• Mạch **ba pha 200** V, v.v."
+    },
+    {
+      "jp": "地絡遮断装置を省略できる電路\n・乾燥した場所の機械器具、接地抵抗が3 Ω以下、二重絶縁の機器、他",
+      "vi": "Có thể miễn bộ cắt chạm đất trong các trường hợp như thiết bị lắp ở nơi khô, điện trở nối đất không quá 3 Ω, thiết bị cách điện kép và các trường hợp khác đã liệt kê."
+    },
+    {
+      "jp": "サイバーセキュリティの確保",
+      "vi": "Bảo đảm an ninh mạng.",
+      "note": "",
+      "heading": true
+    },
+    {
+      "jp": "「事業用電気工作物（小規模事業用電気工作物を除く）」の運転を管理する電子計算機は、当該電気工作物が人体に危害を及ぼし、又は物件に損傷を与えるおそれ及び一般送配電事業又は配電事業に係る電気の供給に著しい支障を及ぼすおそれがないよう、サイバーセキュリティ※1を確保しなければなりません。",
+      "vi": "Máy tính quản lý vận hành công trình điện loại 事業用, trừ loại quy mô nhỏ, phải bảo đảm an ninh mạng (chú thích 1) để công trình không có nguy cơ gây hại cho người, làm hư hại tài sản hoặc gây gián đoạn nghiêm trọng việc cấp điện trong hoạt động truyền tải–phân phối chung hoặc phân phối điện."
+    },
+    {
+      "jp": "練習問題01　過電流からの保護対策",
+      "vi": "Bài luyện 01 · Biện pháp bảo vệ quá dòng.",
+      "note": "",
+      "heading": true
+    },
+    {
+      "jp": "（ア）の必要な箇所には、過電流による（イ）から電線及び電気機械器具を保護し、かつ、（ウ）の発生を防止できるよう、過電流遮断器を施設しなければならない。",
+      "vi": "Điền từ: tại các vị trí cần thiết trên (ア), phải lắp thiết bị cắt quá dòng để bảo vệ dây và thiết bị khỏi (イ) do quá dòng và phòng (ウ).",
+      "note": ""
+    },
+    {
+      "jp": "解説　過電流遮断器は、電路に過電流（短絡電流や過負荷電流）が生じたときに自動的に電路を遮断する装置です。高圧及び特別高圧の電路では各種遮断器や高圧ヒューズなどがあり、低圧電路では配線用遮断器や低圧ヒューズなどがあります。",
+      "vi": "Lời giải. Thiết bị cắt quá dòng tự động ngắt mạch khi có dòng ngắn mạch hoặc quá tải. Mạch cao áp và siêu cao áp dùng các loại máy cắt, cầu chì cao áp, v.v. Mạch hạ áp dùng áp-tô-mát bảo vệ dây, cầu chì hạ áp, v.v."
+    },
+    {
+      "jp": "解答　（ア）**電路**　（イ）**加熱焼損**　（ウ）**火災**",
+      "vi": "Đáp án. (ア) **mạch điện** · (イ) **cháy hỏng do quá nhiệt** · (ウ) **hỏa hoạn**."
+    },
+    {
+      "jp": "※1 サイバーセキュリティ：コンピュータシステムやそのソフトウェア、ネットワーク、データなどを、外部からの攻撃や脅威から保護すること。",
+      "vi": "Chú thích 1. An ninh mạng là bảo vệ hệ thống máy tính, phần mềm, mạng và dữ liệu trước các cuộc tấn công và mối đe dọa từ bên ngoài."
+    }
   ]
 };

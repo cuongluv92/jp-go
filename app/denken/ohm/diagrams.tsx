@@ -35,6 +35,33 @@ function Diagram({ file, width, height, title, labels }: {
 }
 
 export const diagrams = {
+  lawCableMarking471: (
+    <Diagram file="lawCableMarking471" width={944} height={328} title="Hình 2-5-2 · Đánh dấu vị trí chôn cáp" labels={[
+      ["ケーブル標識シート", "Băng cảnh báo cáp"],
+      ["地色：オレンジ色", "Nền màu cam"],
+      ["文字：赤色", "Chữ màu đỏ"],
+      ["標柱", "Cọc mốc"],
+      ["標石", "Đá mốc"],
+      ["トラフ", "Máng bảo vệ"],
+      ["ケーブル", "Cáp"],
+    ]} />
+  ),
+  lawUndergroundMethods470: (
+    <Diagram file="lawUndergroundMethods470" width={1189} height={416} title="Hình 2-5-1 · Ba phương pháp lắp đường dây ngầm" labels={[
+      ["管路式", "Đặt trong ống"],
+      ["鋼管・合成樹脂管など", "Ống thép, ống nhựa tổng hợp hoặc tương tự"],
+      ["舗装部分", "Lớp mặt đường"],
+      ["0.3 m以上（除く舗装部分）", "Ít nhất 0,3 m, không tính lớp mặt đường"],
+      ["暗きょ式", "Đặt trong hầm cáp"],
+      ["自動消火装置", "Thiết bị chữa cháy tự động"],
+      ["直接埋設式", "Chôn trực tiếp"],
+      ["土冠", "Lớp đất phủ"],
+      ["砂", "Cát"],
+      ["トラフ", "Máng bảo vệ"],
+      ["ケーブル標識シート", "Băng cảnh báo cáp"],
+      ["h：1.2 m以上／0.6 m以上", "Lớp đất phủ ít nhất 1,2 m nếu chịu tải xe hoặc vật nặng, ít nhất 0,6 m ở nơi khác"],
+    ]} />
+  ),
   lawLowVoltageService467: (
     <Diagram file="lawLowVoltageService467" width={861} height={549} title="Hình 2-4-2 · Chiều cao dây dẫn vào hạ áp trên không" labels={[
       ["引込線取付点", "Điểm gắn dây dẫn vào"],
