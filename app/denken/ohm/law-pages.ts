@@ -2678,5 +2678,477 @@ export const lawPages: Record<number, LessonRow[]> = {
       "jp": "**B種**接地工事は、高圧電路又は特別高圧電路と低圧電路とを結合する変圧器の**低圧側の中性点**、中性点に接地を施し難いときは**低圧側の1端子**、巻線との間に設けた金属製の**混触防止板**などに施すものです。",
       "vi": "Nối đất **loại B** tại **điểm trung tính phía hạ áp** của máy biến áp nối mạch cao áp hoặc siêu cao áp với mạch hạ áp. Khi khó nối đất tại điểm trung tính, dùng **một đầu cực phía hạ áp**. Vị trí áp dụng còn gồm **tấm kim loại ngăn chạm lẫn** đặt giữa các cuộn dây, v.v."
     }
+  ],
+  "448": [
+    {
+      "jp": "接地工事の接地抵抗値と接地線の太さ",
+      "vi": "Điện trở nối đất và kích thước dây nối đất",
+      "note": "",
+      "heading": true
+    },
+    {
+      "jp": "表2-1-7は、接地工事の接地抵抗値と主な適用電気工作物及び接地線の太さを示しています。",
+      "vi": "Bảng 2-1-7 trình bày điện trở nối đất, các công trình điện áp dụng chính và kích thước dây nối đất.",
+      "note": ""
+    },
+    {
+      "jp": "表2-1-7 接地工事の抵抗値と適用電気工作物及び接地線の太さ",
+      "vi": "Bảng 2-1-7 · Điện trở nối đất, công trình áp dụng và kích thước dây nối đất",
+      "heading": true,
+      "table": {
+        "jp": [
+          "種別",
+          "接地抵抗値",
+          "接地工作物",
+          "接地線の太さ"
+        ],
+        "vi": [
+          "Loại",
+          "Điện trở nối đất",
+          "Đối tượng nối đất",
+          "Kích thước dây"
+        ],
+        "rows": [
+          [
+            "**A種**接地",
+            "Nối đất **loại A**",
+            "**10 Ω**以下",
+            "・**高圧・特別高圧**の機器の**鉄台**、**外箱**\n・高圧電路の**避雷器**\n・**特別高圧計器用変成器**2次側電路\n・高圧ケーブルを収める管等\n・電線接続箱、金属被覆",
+            "**2.6 mm**以上（**5.5 mm²**以上）（避雷器を除く）"
+          ],
+          [
+            "**B種**接地",
+            "Nối đất **loại B**",
+            "下の式参照",
+            "・高圧・低圧結合変圧器の**低圧側の中性点**（低圧側が300 V以下の場合で中性点接地が難しい場合は**低圧側の一端子**）\n・高圧及び特高と低圧結合変圧器の巻線間の金属製混触防止板\n・特高・低圧結合変圧器の低圧側の中性点",
+            "2.6 mm以上（5.5 mm²以上）"
+          ],
+          [
+            "**C種**接地",
+            "Nối đất **loại C**",
+            "**10 Ω**以下",
+            "・**300 V**超過の機器の**鉄台**、**外箱**\n・**300 V**超過の**電線管**、金属ダクト、バスダクト、ラック、メッセンジャーワイヤ、低圧配線と弱電流電線との間の金属製隔壁",
+            "**1.6 mm**以上（**2 mm²**以上）"
+          ],
+          [
+            "**D種**接地",
+            "Nối đất **loại D**",
+            "**100 Ω**以下",
+            "・**高圧計器用変成器**の2次側電路\n・300 V以下の機器の**鉄台**、**外箱**\n・地中電線を収める**管**等、電線接続**箱**、金属被覆\n・架空ケーブルのちょう架用金属線\n・300 V以下の**電線管**、**金属ダクト**、バスダクト、ラック、フロアダクト、ライティングダクト、線ぴ\n・X線装置等",
+            "1.6 mm以上（2 mm²以上）"
+          ]
+        ],
+        "rowsVi": [
+          [
+            "**A種**接地",
+            "Nối đất **loại A**",
+            "Không quá **10 Ω**",
+            "• **Khung sắt**, **vỏ** thiết bị **cao áp, siêu cao áp**\n• **Chống sét van** ở mạch cao áp\n• Mạch thứ cấp của **máy biến điện đo lường siêu cao áp**\n• Ống chứa cáp cao áp và bộ phận tương tự\n• Hộp nối dây, lớp bọc kim loại",
+            "Từ **2,6 mm** (từ **5,5 mm²**), trừ chống sét van"
+          ],
+          [
+            "**B種**接地",
+            "Nối đất **loại B**",
+            "Xem công thức bên dưới",
+            "• **Điểm trung tính phía hạ áp** của máy biến áp nối cao áp với hạ áp. Nếu phía hạ áp đến 300 V và khó nối đất trung tính, dùng **một đầu cực phía hạ áp**.\n• Tấm kim loại ngăn chạm lẫn giữa các cuộn dây của máy biến áp nối cao áp hoặc siêu cao áp với hạ áp.\n• Điểm trung tính phía hạ áp của máy biến áp nối siêu cao áp với hạ áp.",
+            "Từ 2,6 mm (từ 5,5 mm²)"
+          ],
+          [
+            "**C種**接地",
+            "Nối đất **loại C**",
+            "Không quá **10 Ω**",
+            "• **Khung sắt**, **vỏ** thiết bị trên **300 V**\n• **Ống luồn dây** trên **300 V**, máng kim loại, ống thanh cái, giá đỡ, dây treo, vách kim loại giữa dây hạ áp và dây điện nhẹ",
+            "Từ **1,6 mm** (từ **2 mm²**)"
+          ],
+          [
+            "**D種**接地",
+            "Nối đất **loại D**",
+            "Không quá **100 Ω**",
+            "• Mạch thứ cấp của **máy biến điện đo lường cao áp**\n• **Khung sắt**, **vỏ** thiết bị đến 300 V\n• **Ống** chứa dây ngầm và bộ phận tương tự, **hộp** nối dây, lớp bọc kim loại\n• Dây kim loại treo cáp trên không\n• **Ống luồn dây**, **máng kim loại** đến 300 V, ống thanh cái, giá đỡ, máng sàn, máng đèn, nẹp dây\n• Thiết bị tia X, v.v.",
+            "Từ 1,6 mm (từ 2 mm²)"
+          ]
+        ]
+      }
+    },
+    {
+      "jp": "B種接地抵抗値：I₁は**1線地絡電流**。I₁の値又は所要抵抗値を電力供給者と打ち合わせる。",
+      "vi": "Điện trở nối đất loại B. I₁ là **dòng chạm đất một dây**. Trao đổi với đơn vị cấp điện về giá trị I₁ hoặc điện trở yêu cầu.",
+      "equations": [
+        [
+          "Rᴮ ≤ ",
+          {
+            "fraction": [
+              [
+                "150"
+              ],
+              [
+                "I₁"
+              ]
+            ],
+            "red": true
+          },
+          " Ω"
+        ]
+      ]
+    },
+    {
+      "jp": "注1）B種接地工事：高圧又は35 000 V以下の特高電路と低圧側との混触の場合、**1秒**超過**2秒**以内に自動遮断のときは300／I₁［Ω］、1秒以内のとき600／I₁［Ω］以下。",
+      "vi": "Chú thích 1. Khi có chạm lẫn giữa mạch cao áp hoặc siêu cao áp đến 35.000 V với phía hạ áp, dùng các giới hạn bên dưới nếu tự động cắt sau hơn **1 giây** đến hết **2 giây**, hoặc trong 1 giây.",
+      "equations": [
+        [
+          "1秒超過2秒以内：Rᴮ ≤ ",
+          {
+            "fraction": [
+              [
+                "300"
+              ],
+              [
+                "I₁"
+              ]
+            ],
+            "red": true
+          },
+          " Ω"
+        ],
+        [
+          "1秒以内：Rᴮ ≤ ",
+          {
+            "fraction": [
+              [
+                "600"
+              ],
+              [
+                "I₁"
+              ]
+            ],
+            "red": true
+          },
+          " Ω"
+        ]
+      ],
+      "equationsVi": [
+        [
+          "Hơn 1 giây đến hết 2 giây: Rᴮ ≤ ",
+          {
+            "fraction": [
+              [
+                "300"
+              ],
+              [
+                "I₁"
+              ]
+            ],
+            "red": true
+          },
+          " Ω"
+        ],
+        [
+          "Trong 1 giây: Rᴮ ≤ ",
+          {
+            "fraction": [
+              [
+                "600"
+              ],
+              [
+                "I₁"
+              ]
+            ],
+            "red": true
+          },
+          " Ω"
+        ]
+      ]
+    },
+    {
+      "jp": "注2）C種及びD種接地工事：**地絡**を生じた場合、**0.5秒**以内で自動遮断のとき**500 Ω**以下。",
+      "vi": "Chú thích 2. Với nối đất loại C và D, nếu tự động cắt trong **0,5 giây** khi xảy ra **chạm đất**, điện trở tối đa là **500 Ω**."
+    },
+    {
+      "jp": "POINT　接地抵抗値 といえば A種 **10 Ω**以下、C種 **10 Ω**以下、D種 **100 Ω**以下。地絡時に0.5秒以内で遮断のときは、C種とD種は500 Ω以下。",
+      "vi": "Ghi nhớ. Loại A không quá **10 Ω**, loại C không quá **10 Ω**, loại D không quá **100 Ω**. Khi chạm đất và cắt trong 0,5 giây, loại C và D không quá 500 Ω."
+    },
+    {
+      "jp": "B種：1線地絡電流で割って求める。混触時**自動遮断**の時間で分子を選ぶ。",
+      "vi": "Loại B: chia cho dòng chạm đất một dây. Khi **tự động cắt** lúc chạm lẫn, chọn tử số theo thời gian cắt.",
+      "equations": [
+        [
+          {
+            "fraction": [
+              [
+                "150"
+              ],
+              [
+                "1線地絡電流"
+              ]
+            ],
+            "red": true
+          },
+          " Ω"
+        ],
+        [
+          {
+            "fraction": [
+              [
+                "300"
+              ],
+              [
+                "1線地絡電流"
+              ]
+            ],
+            "red": true
+          },
+          " Ω（1秒超2秒以内）"
+        ],
+        [
+          {
+            "fraction": [
+              [
+                "600"
+              ],
+              [
+                "1線地絡電流"
+              ]
+            ],
+            "red": true
+          },
+          " Ω（1秒以内）"
+        ]
+      ],
+      "equationsVi": [
+        [
+          {
+            "fraction": [
+              [
+                "150"
+              ],
+              [
+                "Dòng chạm đất một dây"
+              ]
+            ],
+            "red": true
+          },
+          " Ω"
+        ],
+        [
+          {
+            "fraction": [
+              [
+                "300"
+              ],
+              [
+                "Dòng chạm đất một dây"
+              ]
+            ],
+            "red": true
+          },
+          " Ω (hơn 1 đến hết 2 giây)"
+        ],
+        [
+          {
+            "fraction": [
+              [
+                "600"
+              ],
+              [
+                "Dòng chạm đất một dây"
+              ]
+            ],
+            "red": true
+          },
+          " Ω (trong 1 giây)"
+        ]
+      ]
+    }
+  ],
+  "449": [
+    {
+      "jp": "接地線を人が触れるおそれがある場所に施設する場合",
+      "vi": "Lắp dây nối đất ở nơi người có thể chạm vào.",
+      "note": "",
+      "heading": true
+    },
+    {
+      "jp": "A種又はB種接地工事において、接地極及び接地線を人が触れるおそれがある場所に施設する場合は、接地線が損傷を受けたり、大地に危険な電位の傾きが生じないように、次のように施設する必要があります。",
+      "vi": "Với nối đất A/B đặt ở nơi người có thể chạm, phải bảo vệ dây khỏi hư hỏng và giảm nguy cơ chênh điện thế nguy hiểm trên đất.",
+      "note": ""
+    },
+    {
+      "diagram": "lawGroundElectrode449"
+    },
+    {
+      "jp": "①接地極は、地下**75 cm**以上の深さに埋設します。",
+      "vi": "① Chôn điện cực nối đất sâu ít nhất **75 cm**."
+    },
+    {
+      "jp": "②接地線を、鉄柱その他の金属体に沿って施設する場合は、接地極を鉄柱の底面から**30 cm**以上の深さに埋設する。又は、接地極を地中でその金属体から**1 m**以上離して埋設します。",
+      "vi": "② Nếu dây nối đất đi dọc cột sắt hoặc cấu kiện kim loại khác, chôn điện cực thấp hơn đáy cột ít nhất **30 cm** hoặc chôn cách cấu kiện đó trong đất ít nhất **1 m**."
+    },
+    {
+      "jp": "③接地線の地下**75 cm**から地表上**2 m**までの部分は、**合成樹脂管**又はこれと同等以上の絶縁効力及び強さのあるもので覆うことになっています。",
+      "vi": "③ Bọc đoạn dây nối đất từ **75 cm** dưới đất đến **2 m** trên mặt đất bằng **ống nhựa tổng hợp** hoặc vật liệu có khả năng cách điện và độ bền ít nhất tương đương."
+    },
+    {
+      "jp": "④接地線には、**絶縁電線**（屋外用ビニル絶縁電線を除く）又は通信用ケーブル以外の**ケーブル**を使用すること。ただし、接地線を鉄柱その他の金属体に沿って施設する場合以外には、接地線の地表上60 cmを超える部分については、この限りではありません。",
+      "vi": "④ Dùng **dây cách điện** (trừ dây cách điện vinyl dùng ngoài trời) hoặc **cáp** (trừ cáp thông tin liên lạc). Nếu dây không đi dọc cột sắt hay cấu kiện kim loại khác, yêu cầu này được miễn cho đoạn dây cao hơn 60 cm so với mặt đất."
+    },
+    {
+      "jp": "POINT　人が触れるおそれのある場所の接地工事 といえば\n・**75 cm**以上の深さに埋設し金属体からは**1 m**以上離す、又は鉄柱の底面から**30 cm**以上の深さに埋設する\n・地表上**2 m**～地下**75 cm**を**合成樹脂管**等で覆う",
+      "vi": "Ghi nhớ. Nối đất ở nơi người có thể chạm vào.\n• Chôn sâu ít nhất **75 cm** và cách cấu kiện kim loại ít nhất **1 m**, hoặc chôn thấp hơn đáy cột sắt ít nhất **30 cm**.\n• Bọc đoạn từ **2 m** trên đất đến **75 cm** dưới đất bằng **ống nhựa tổng hợp** hoặc vật liệu tương đương."
+    },
+    {
+      "jp": "接地工事の特例",
+      "vi": "Các ngoại lệ của công trình nối đất",
+      "note": "",
+      "heading": true
+    },
+    {
+      "jp": "接地工事の省略",
+      "vi": "Các trường hợp được bỏ nối đất",
+      "note": "",
+      "heading": true
+    },
+    {
+      "jp": "C種又はD種接地工事を施さなければならない金属体を建物の鉄骨、鉄筋などと電気的に接続すること等により、金属体と大地との間の接地抵抗がC種接地工事では**10 Ω**以下、D種接地工事では**100 Ω**以下である場合は、当該接地工事を省略することができます。",
+      "vi": "Có thể bỏ nối đất riêng C/D khi kim loại liên kết điện với khung thép, cốt thép… và đã bảo đảm điện trở tới đất không vượt ngưỡng C **10 Ω** hoặc D **100 Ω**.",
+      "note": ""
+    },
+    {
+      "jp": "建物の鉄骨等の接地極",
+      "vi": "Dùng khung thép tòa nhà và cấu kiện tương tự làm điện cực nối đất",
+      "note": "",
+      "heading": true
+    },
+    {
+      "jp": "大地との電気抵抗値が**2 Ω**以下の建物の鉄骨その他の金属体は、これを非接地式",
+      "vi": "Khung thép tòa nhà hoặc cấu kiện kim loại khác có điện trở với đất không quá **2 Ω** có thể được dùng…",
+      "note": "Xem tiếp phạm vi áp dụng ở trang 450."
+    }
+  ],
+  "450": [
+    {
+      "jp": "高圧電路に施設する機械器具の鉄台若しくは金属製外箱等に施す**A種**接地工事、又は非接地式高圧電路と低圧電路を結合する変圧器に施す**B種**接地工事の接地極に使用することができます。",
+      "vi": "…làm điện cực nối đất **loại A** cho khung sắt hoặc vỏ kim loại của thiết bị trên mạch cao áp không nối đất, hoặc điện cực nối đất **loại B** cho máy biến áp nối mạch cao áp không nối đất với mạch hạ áp."
+    },
+    {
+      "jp": "POINT　接地工事の特例 といえば 鉄骨、鉄筋と接続し**10 Ω**以下はC種、**100 Ω**以下はD種接地工事とすることができる",
+      "vi": "Ghi nhớ. Khi nối điện với khung thép hoặc cốt thép, không quá **10 Ω** có thể dùng cho loại C, không quá **100 Ω** có thể dùng cho loại D."
+    },
+    {
+      "jp": "**2 Ω**以下の金属体は、A種、B種接地工事の接地極に使用できる",
+      "vi": "Cấu kiện kim loại có điện trở đến đất không quá **2 Ω** có thể dùng làm điện cực nối đất loại A hoặc B trong trường hợp trên."
+    },
+    {
+      "jp": "機械器具の鉄台及び外箱の接地工事の省略",
+      "vi": "Bỏ nối đất khung và vỏ kim loại của thiết bị",
+      "note": "",
+      "heading": true
+    },
+    {
+      "jp": "機械器具の鉄台及び金属製外箱には、機械器具の使用電圧に応じて、接地工事を施します。ただし、次に示すような場合は、**接地工事の省略**が認められています。",
+      "vi": "Nối đất khung sắt và vỏ kim loại theo điện áp sử dụng của thiết bị. Các trường hợp dưới đây được phép **miễn nối đất**."
+    },
+    {
+      "jp": "①交流の対地電圧が**150 V以下**又は直流の使用電圧が300 V以下の機械器具を、**乾燥した場所**に施設する場合。",
+      "vi": "① Thiết bị có điện áp AC so với đất **không quá 150 V** hoặc điện áp sử dụng DC không quá 300 V, lắp ở **nơi khô ráo**."
+    },
+    {
+      "jp": "②低圧用の機械器具を乾燥した**木製の床**その他これに類する**絶縁性**のものの上で取り扱うように施設する場合。",
+      "vi": "② Bố trí thiết bị hạ áp để thao tác trên **sàn gỗ** khô hoặc bề mặt **cách điện** tương tự."
+    },
+    {
+      "jp": "③電気用品安全法の適用を受ける**2重絶縁**の構造の機械器具を施設する場合。",
+      "vi": "③ Lắp thiết bị có cấu tạo **cách điện kép** thuộc phạm vi áp dụng của Luật An toàn sản phẩm điện."
+    },
+    {
+      "jp": "④低圧用の機械器具に電気を供給する電路の電源側に**絶縁変圧器**（2次側線間電圧が300 V以下であって、容量が3 kV・A以下のものに限る）を施設し、かつ、当該絶縁変圧器の負荷側の電路を接地しない場合。",
+      "vi": "④ Dùng **máy biến áp cách ly** phía nguồn của thiết bị hạ áp (áp dây thứ cấp ≤300 V, dung lượng ≤3 kVA) và mạch tải thứ cấp không nối đất.",
+      "note": ""
+    },
+    {
+      "jp": "⑤**水気のある場所以外**の場所に施設する低圧用の機械器具に電気を供給する電路に、電気用品安全法の適用を受ける漏電遮断器（定格感度電流が15 mA以下、動作時間が0.1秒以下の電流動作型のものに限る）を施設する場合。",
+      "vi": "⑤ Mạch cấp cho thiết bị hạ áp lắp ở **nơi không ẩm ướt** có bộ cắt dòng rò thuộc Luật An toàn sản phẩm điện, loại tác động theo dòng, với dòng nhạy định mức không quá 15 mA và thời gian tác động không quá 0,1 giây."
+    },
+    {
+      "jp": "⑥金属製外箱等の周囲に適当な**絶縁台**を設ける場合。",
+      "vi": "⑥ Có **bệ cách điện** thích hợp quanh vỏ kim loại hoặc bộ phận tương tự."
+    },
+    {
+      "jp": "⑦外箱のない計器用変成器がゴム、合成樹脂その他の絶縁物で被覆したものである場合",
+      "vi": "⑦ Máy biến điện đo lường không có vỏ nhưng được bọc cao su, nhựa tổng hợp hoặc vật liệu cách điện khác.",
+      "note": ""
+    },
+    {
+      "jp": "⑧低圧用若しくは高圧用の機械器具を、木柱その他これに類する絶縁性のものの上であって、**人が触れるおそれがない高さ**に施設する場合。",
+      "vi": "⑧ Lắp thiết bị hạ áp hoặc cao áp trên cột gỗ hay vật cách điện tương tự, ở **độ cao mà người không có khả năng chạm vào**."
+    },
+    {
+      "jp": "POINT　接地工事が省略できる機器と条件 といえば\n・**乾燥**した場所（150 V以下）に施設する機械器具\n・乾燥した木製など**絶縁性**の床の上で扱う低圧の機械器具\n・**2重絶縁**の構造の機械器具\n・**絶縁変圧器**を使用\n・**水気のある場所以外**で高感度の漏電遮断器を使用\n・**人が触れるおそれがない高さ**に施設する機械器具",
+      "vi": "Ghi nhớ. Một số trường hợp được phép miễn nối đất theo các điều kiện nêu ở trên.\n• Thiết bị ở nơi **khô ráo** (đến 150 V trong trường hợp AC).\n• Thiết bị hạ áp thao tác trên sàn **cách điện** như sàn gỗ khô.\n• Thiết bị **cách điện kép**.\n• Dùng **máy biến áp cách ly**.\n• Dùng thiết bị cắt dòng rò độ nhạy cao tại **nơi không ẩm ướt**.\n• Thiết bị ở **độ cao mà người không có khả năng chạm vào**."
+    }
+  ],
+  "451": [
+    {
+      "jp": "高圧又は特別高圧と低圧との混触による危険防止施設",
+      "vi": "Biện pháp chống nguy hiểm do chạm lẫn cao/siêu cao áp với hạ áp",
+      "note": "",
+      "heading": true
+    },
+    {
+      "jp": "高圧電路又は特別高圧電路と低圧電路とを結合する変圧器には、次のいずれかの箇所に**B種接地工事**を施す必要があります。",
+      "vi": "Máy biến áp nối mạch cao/siêu cao áp với mạch hạ áp phải thực hiện **nối đất loại B** tại một trong các vị trí.",
+      "note": ""
+    },
+    {
+      "jp": "①低圧側の**中性点**",
+      "vi": "① **Điểm trung tính** phía hạ áp."
+    },
+    {
+      "jp": "②低圧電路の使用電圧が300 V以下の場合において、接地工事を低圧側の中性点に施し難いときは、**低圧側の1端子**",
+      "vi": "② Nếu điện áp sử dụng của mạch hạ áp không quá 300 V và khó nối đất điểm trung tính phía hạ áp, dùng **một đầu cực phía hạ áp**."
+    },
+    {
+      "jp": "③低圧電路が非接地である場合においては、高圧巻線又は特別高圧巻線と低圧巻線との間に設けた金属製の**混触防止板**",
+      "vi": "③ Nếu mạch hạ áp không nối đất, dùng **tấm chắn chống chạm lẫn** bằng kim loại đặt giữa cuộn dây cao áp hoặc siêu cao áp và cuộn dây hạ áp."
+    },
+    {
+      "diagram": "lawInterwindingShield451"
+    },
+    {
+      "jp": "混触防止板により接地工事を施した変圧器に接続する低圧線を屋外に施設する場合は、次の各号により施設すること。",
+      "vi": "Khi lắp ngoài trời dây hạ áp nối với máy biến áp đã nối đất qua tấm chắn chống chạm lẫn, phải tuân theo các điều kiện sau."
+    },
+    {
+      "jp": "低圧電線は、１構内だけに施設すること。",
+      "vi": "Dây hạ áp chỉ được bố trí trong một khuôn viên.",
+      "note": ""
+    },
+    {
+      "jp": "低圧架空電線路又は低圧屋上電線路の電線は、ケーブルであること。",
+      "vi": "Dây hạ áp trên không/trên mái phải là cáp.",
+      "note": ""
+    },
+    {
+      "jp": "低圧架空電線と高圧又は特別高圧の架空電線とは、同一支持物に施設しないこと。ただし、高圧又は特別高圧の架空電線がケーブルである場合は、この限りではない。",
+      "vi": "Không lắp dây hạ áp và cao/siêu cao áp trên cùng vật đỡ, trừ trường hợp dây cao/siêu cao áp là cáp.",
+      "note": ""
+    },
+    {
+      "jp": "POINT　B種接地工事を施す場所\n変圧器低圧側の**中性点**、低圧側の**1端子**、金属製の**混触防止板**",
+      "vi": "Ghi nhớ vị trí nối đất loại B. **Điểm trung tính** phía hạ áp của máy biến áp, **một đầu cực** phía hạ áp hoặc **tấm chắn chống chạm lẫn** bằng kim loại."
+    },
+    {
+      "jp": "計器用変成器二次側の接地",
+      "vi": "Nối đất thứ cấp biến điện đo lường",
+      "note": "",
+      "heading": true
+    },
+    {
+      "jp": "高圧計器用変成器の二次側電路は、**D種**接地工事を、特別高圧計器用変成器の二次側電路には、**A種**接地工事を施さなければならないと定められています。高圧の場合でもD種接地工事としているのは、計器用変成器の二次側電路は一般の配電盤のように操作員以外の者が立ち入らない場所に施設されることによっています。",
+      "vi": "Mạch thứ cấp máy biến điện đo lường cao áp phải nối đất **loại D**, còn mạch thứ cấp loại siêu cao áp phải nối đất **loại A**. Với loại cao áp, sách giải thích dùng loại D vì mạch thứ cấp nằm ở nơi chỉ người vận hành được vào, chẳng hạn tủ phân phối thông thường."
+    },
+    {
+      "jp": "POINT　計器用変成器の二次側の接地工事\n高圧計器用変成器の二次側電路は、**D種**接地工事\n特別高圧計器用変成器の二次側電路は、**A種**接地工事",
+      "vi": "Ghi nhớ. Mạch thứ cấp máy biến điện đo lường cao áp nối đất **loại D**. Với loại siêu cao áp, nối đất **loại A**."
+    }
   ]
 };

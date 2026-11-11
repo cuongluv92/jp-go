@@ -35,6 +35,26 @@ function Diagram({ file, width, height, title, labels }: {
 }
 
 export const diagrams = {
+  lawGroundElectrode449: (
+    <Diagram file="lawGroundElectrode449" width={668} height={526} title="Hình 2-1-2 · Nối đất loại A hoặc B ở nơi người có thể chạm vào" labels={[
+      ["鉄柱等", "Cột sắt hoặc cấu kiện tương tự"],
+      ["接地線", "Dây nối đất"],
+      ["地下75 cmから地表上2 mまでの部分は合成樹脂管等で覆う", "Bọc từ 75 cm dưới đất đến 2 m trên mặt đất bằng ống nhựa tổng hợp hoặc vật liệu tương đương"],
+      ["75 cm以上の深さに埋設する", "Chôn sâu ít nhất 75 cm"],
+      ["30 cm以上離す", "Chôn thấp hơn đáy cột ít nhất 30 cm"],
+      ["1 m以上離す", "Chôn cách cấu kiện kim loại ít nhất 1 m"],
+      ["aの部分の接地線", "Dây nối đất đoạn a dùng dây cách điện (trừ dây OW), cáp mềm cabtyre hoặc cáp"],
+    ]} />
+  ),
+  lawInterwindingShield451: (
+    <Diagram file="lawInterwindingShield451" width={477} height={351} title="Hình 2-1-3 · Nối đất tấm chắn chống chạm lẫn" labels={[
+      ["高圧又は特別高圧", "Cao áp hoặc siêu cao áp"],
+      ["低圧", "Hạ áp"],
+      ["金属製の混触防止板", "Tấm kim loại chống chạm lẫn"],
+      ["Eᴮ", "Nối đất loại B"],
+      ["同一構内", "Cùng khuôn viên"],
+    ]} />
+  ),
   lawApproach441: (
     <Diagram file="lawApproach441" width={499} height={424} title="Hình 2-1-1 · Tiếp cận cấp 1 và cấp 2" labels={[
       ["架空電線", "Dây dẫn trên không"],
