@@ -35,6 +35,28 @@ function Diagram({ file, width, height, title, labels }: {
 }
 
 export const diagrams = {
+  lawLowVoltageService467: (
+    <Diagram file="lawLowVoltageService467" width={861} height={549} title="Hình 2-4-2 · Chiều cao dây dẫn vào hạ áp trên không" labels={[
+      ["引込線取付点", "Điểm gắn dây dẫn vào"],
+      ["車道", "Phần đường xe chạy"],
+      ["歩道", "Lối đi bộ"],
+      ["へい", "Tường chắn"],
+      ["車道以外の場所", "Ngoài phần đường xe chạy"],
+      ["構内", "Trong khuôn viên"],
+      ["技術上やむを得ない場合において交通に支障がないとき", "Trường hợp bất khả kháng về kỹ thuật và không cản giao thông"],
+    ]} />
+  ),
+  lawHighVoltageService466: (
+    <Diagram file="lawHighVoltageService466" width={552} height={438} title="Hình 2-4-1 · Dây dẫn vào cao áp trên không" labels={[
+      ["車道", "Phần đường xe chạy"],
+      ["構外", "Ngoài khuôn viên"],
+      ["構内", "Trong khuôn viên"],
+      ["G付PAS", "Thiết bị đóng cắt trên cột có bảo vệ chạm đất"],
+      ["CH", "Đầu cáp"],
+      ["6 m以上", "Ít nhất 6 m"],
+      ["3.5 m以上", "Ít nhất 3,5 m"],
+    ]} />
+  ),
   lawWireSag460: (
     <Diagram file="lawWireSag460" width={373} height={364} title="Sơ đồ các đại lượng trong công thức độ võng" labels={[
       ["径間 S［m］", "Nhịp S (m)"],

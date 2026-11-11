@@ -4336,5 +4336,1131 @@ export const lawPages: Record<number, LessonRow[]> = {
         ]
       ]
     }
+  ],
+  "462": [
+    {
+      "jp": "2-4 架空電線路、架空引込線 といえば交通に支障なく安全性を確保",
+      "vi": "2-4 Đường dây và dây dẫn vào trên không · Bảo đảm an toàn giao thông và điện.",
+      "note": "",
+      "heading": true
+    },
+    {
+      "jp": "架空電線路の施設",
+      "vi": "Lắp đặt đường dây trên không.",
+      "note": "",
+      "heading": true
+    },
+    {
+      "jp": "架空電線路は電圧の区分に応じて、低圧架空電線路、高圧架空電線路、特別高圧架空電線路があります。ここでは、主に低圧と高圧の架空電線路の規定を述べます。",
+      "vi": "Đường dây trên không chia thành hạ áp, cao áp và siêu cao áp. Phần này chủ yếu trình bày quy định cho đường dây hạ áp và cao áp.",
+      "note": ""
+    },
+    {
+      "jp": "低高圧架空電線路に使用する電線",
+      "vi": "Loại dây dùng cho đường dây hạ/cao áp",
+      "note": "",
+      "heading": true
+    },
+    {
+      "jp": "低圧架空電線路又は高圧架空電線路に使用する電線は、使用電圧の区分に応じ電線の種類が表2-4-1のように決められ、ケーブルを除く電線の太さ又は引張強さが表2-4-2に規定する値以上であることが決められています。",
+      "vi": "Loại dây dùng cho đường dây hạ áp hoặc cao áp trên không được chọn theo điện áp sử dụng ở bảng 2-4-1. Với dây không phải cáp, kích thước hoặc sức chịu kéo phải đạt ít nhất trị số ở bảng 2-4-2.",
+      "note": ""
+    },
+    {
+      "jp": "表2-4-1 電線の種類",
+      "vi": "Bảng 2-4-1 · Loại dây dẫn",
+      "heading": true,
+      "table": {
+        "jp": [
+          "使用電圧の区分",
+          "電線の種類"
+        ],
+        "vi": [
+          "Điện áp sử dụng",
+          "Loại dây dẫn"
+        ],
+        "rows": [
+          [
+            "低圧 300 V以下",
+            "Hạ áp đến 300 V",
+            "**絶縁電線**、多心型電線又は**ケーブル**"
+          ],
+          [
+            "低圧 300 V超過",
+            "Hạ áp trên 300 V",
+            "引込用ビニル絶縁電線以外の**絶縁電線**又は**ケーブル**"
+          ],
+          [
+            "高圧",
+            "Cao áp",
+            "**高圧絶縁電線**、特別高圧絶縁電線又は**ケーブル**"
+          ]
+        ],
+        "rowsVi": [
+          [
+            "低圧 300 V以下",
+            "Hạ áp đến 300 V",
+            "**Dây cách điện**, dây nhiều lõi hoặc **cáp**"
+          ],
+          [
+            "低圧 300 V超過",
+            "Hạ áp trên 300 V",
+            "**Dây cách điện** (trừ dây cách điện vinyl dùng làm dây dẫn vào) hoặc **cáp**"
+          ],
+          [
+            "高圧",
+            "Cao áp",
+            "**Dây cách điện cao áp**, dây cách điện siêu cao áp hoặc **cáp**"
+          ]
+        ]
+      }
+    },
+    {
+      "jp": "表2-4-2 電線の太さ又は引張強さ",
+      "vi": "Bảng 2-4-2 · Kích thước hoặc sức chịu kéo của dây",
+      "heading": true,
+      "table": {
+        "jp": [
+          "使用電圧の区分",
+          "施設場所",
+          "電線の種類",
+          "電線の太さ又は引張強さ"
+        ],
+        "vi": [
+          "Điện áp sử dụng",
+          "Nơi lắp",
+          "Loại dây",
+          "Kích thước hoặc sức chịu kéo"
+        ],
+        "rows": [
+          [
+            "300 V以下",
+            "Đến 300 V",
+            "すべて",
+            "絶縁電線（硬銅線）",
+            "直径**2.6 mm**"
+          ],
+          [
+            "300 V以下",
+            "Đến 300 V",
+            "すべて",
+            "絶縁電線（その他）",
+            "引張強さ**2.3 kN**"
+          ],
+          [
+            "300 V超過",
+            "Trên 300 V",
+            "市街地",
+            "硬銅線",
+            "直径**5 mm**"
+          ],
+          [
+            "300 V超過",
+            "Trên 300 V",
+            "市街地",
+            "その他",
+            "引張強さ**8.01 kN**"
+          ],
+          [
+            "300 V超過",
+            "Trên 300 V",
+            "市街地外",
+            "硬銅線",
+            "直径**4 mm**"
+          ],
+          [
+            "300 V超過",
+            "Trên 300 V",
+            "市街地外",
+            "その他",
+            "引張強さ**5.26 kN**"
+          ]
+        ],
+        "rowsVi": [
+          [
+            "300 V以下",
+            "Đến 300 V",
+            "Mọi nơi",
+            "Dây cách điện (đồng cứng)",
+            "Đường kính **2,6 mm**"
+          ],
+          [
+            "300 V以下",
+            "Đến 300 V",
+            "Mọi nơi",
+            "Dây cách điện khác",
+            "Sức chịu kéo **2,3 kN**"
+          ],
+          [
+            "300 V超過",
+            "Trên 300 V",
+            "Đô thị",
+            "Dây đồng cứng",
+            "Đường kính **5 mm**"
+          ],
+          [
+            "300 V超過",
+            "Trên 300 V",
+            "Đô thị",
+            "Loại khác",
+            "Sức chịu kéo **8,01 kN**"
+          ],
+          [
+            "300 V超過",
+            "Trên 300 V",
+            "Ngoài đô thị",
+            "Dây đồng cứng",
+            "Đường kính **4 mm**"
+          ],
+          [
+            "300 V超過",
+            "Trên 300 V",
+            "Ngoài đô thị",
+            "Loại khác",
+            "Sức chịu kéo **5,26 kN**"
+          ]
+        ]
+      }
+    },
+    {
+      "jp": "低高圧架空電線路の架空ケーブルによる施設",
+      "vi": "Lắp đặt cáp treo của đường dây hạ/cao áp",
+      "note": "",
+      "heading": true
+    },
+    {
+      "jp": "低圧架空電線又は高圧架空電線にケーブルを使用する場合は、次の方法により施設します。",
+      "vi": "Nếu dùng cáp cho đường dây hạ áp hoặc cao áp trên không, lắp theo các phương án sau."
+    },
+    {
+      "jp": "①ケーブルをハンガーによりちょう架用線に支持する方法（**ハンガー**の間隔は**50 cm**以下）であること",
+      "vi": "① Dùng móc treo đỡ cáp trên dây treo. Khoảng cách giữa các **móc treo** không quá **50 cm**."
+    },
+    {
+      "jp": "②ケーブルをちょう架用線に接触させ、その上に容易に腐食し難い**金属テープ**等を**20 cm**以下の間隔でらせん状に巻き付ける方法",
+      "vi": "② Đặt cáp tiếp xúc với dây treo rồi quấn xoắn ốc bằng **băng kim loại** khó ăn mòn hoặc vật liệu tương tự, với bước quấn không quá **20 cm**."
+    }
+  ],
+  "463": [
+    {
+      "jp": "③ちょう架用線をケーブルの外装に堅ろうに取り付けて施設する方法",
+      "vi": "③ Gắn chặt dây treo vào vỏ ngoài cáp rồi lắp đặt.",
+      "note": ""
+    },
+    {
+      "jp": "④ちょう架用線とケーブルをより合わせて施設する方法",
+      "vi": "④ Xoắn dây treo và cáp với nhau khi lắp.",
+      "note": ""
+    },
+    {
+      "jp": "⑤ちょう架用線の規定等",
+      "vi": "⑤ Các yêu cầu về dây treo.",
+      "note": ""
+    },
+    {
+      "jp": "・ちょう架用線は、引張強さ5.93 kN以上のもの又は断面積**22 mm²**以上の亜鉛めっき鉄より線（メッセンジャーワイヤ）であること。",
+      "vi": "• Dây treo phải có sức chịu kéo ít nhất 5,93 kN hoặc là dây sắt bện mạ kẽm có tiết diện ít nhất **22 mm²**."
+    },
+    {
+      "jp": "・ちょう架用線及びケーブルの被覆に使用する金属体には、**D種接地工事**を施すこと。",
+      "vi": "• **Nối đất loại D** cho dây treo và phần kim loại dùng trong lớp bọc cáp."
+    },
+    {
+      "jp": "・高圧架空電線のちょう架用線の安全率は**2.5**以上",
+      "vi": "• Hệ số an toàn của dây treo đường dây cao áp trên không ít nhất **2,5**."
+    },
+    {
+      "jp": "低高圧架空電線の高さ",
+      "vi": "Độ cao dây điện trên không hạ/cao áp.",
+      "note": "",
+      "heading": true
+    },
+    {
+      "jp": "低圧架空電線又は高圧架空電線の高さは、表2-4-3に規定する値以上であることが必要です。",
+      "vi": "Chiều cao đường dây hạ áp hoặc cao áp trên không phải đạt ít nhất trị số ở bảng 2-4-3."
+    },
+    {
+      "jp": "表2-4-3 架空電線の高さ",
+      "vi": "Bảng 2-4-3 · Chiều cao dây dẫn trên không",
+      "heading": true,
+      "table": {
+        "jp": [
+          "区分",
+          "高さ"
+        ],
+        "vi": [
+          "Trường hợp",
+          "Chiều cao tối thiểu"
+        ],
+        "rows": [
+          [
+            "**道路を横断する場合**（車両の往来がまれであるもの及び歩行の用にのみ供される部分を除く）",
+            "**Vượt đường** (trừ nơi hiếm xe qua lại và phần đường chỉ dành cho người đi bộ)",
+            "路面上**6 m**"
+          ],
+          [
+            "鉄道又は軌道を横断する場合",
+            "Vượt đường sắt hoặc đường ray",
+            "レール面上**5.5 m**"
+          ],
+          [
+            "低圧架空電線を横断歩道橋の上に施設する場合",
+            "Dây hạ áp đi phía trên cầu vượt bộ hành",
+            "横断歩道橋の路面上**3 m**"
+          ],
+          [
+            "高圧架空電線を横断歩道橋の上に施設する場合",
+            "Dây cao áp đi phía trên cầu vượt bộ hành",
+            "横断歩道橋の路面上**3.5 m**"
+          ],
+          [
+            "上記以外：屋外照明用であって、**対地電圧150 V以下**のものを交通に支障のないように施設する場合",
+            "Ngoài các trường hợp trên: chiếu sáng ngoài trời, **điện áp so với đất không quá 150 V**, lắp sao cho không cản giao thông",
+            "地表上**4 m**"
+          ],
+          [
+            "上記以外：**低圧架空電線**を**道路以外**の場所に施設する場合",
+            "Ngoài các trường hợp trên: **dây hạ áp** lắp **ngoài đường giao thông**",
+            "地表上**4 m**"
+          ],
+          [
+            "その他の場合",
+            "Trường hợp còn lại",
+            "地表上**5 m**"
+          ]
+        ],
+        "rowsVi": [
+          [
+            "**道路を横断する場合**（車両の往来がまれであるもの及び歩行の用にのみ供される部分を除く）",
+            "**Vượt đường** (trừ nơi hiếm xe qua lại và phần đường chỉ dành cho người đi bộ)",
+            "**6 m** trên mặt đường"
+          ],
+          [
+            "鉄道又は軌道を横断する場合",
+            "Vượt đường sắt hoặc đường ray",
+            "**5,5 m** trên mặt ray"
+          ],
+          [
+            "低圧架空電線を横断歩道橋の上に施設する場合",
+            "Dây hạ áp đi phía trên cầu vượt bộ hành",
+            "**3 m** trên mặt cầu"
+          ],
+          [
+            "高圧架空電線を横断歩道橋の上に施設する場合",
+            "Dây cao áp đi phía trên cầu vượt bộ hành",
+            "**3,5 m** trên mặt cầu"
+          ],
+          [
+            "上記以外：屋外照明用であって、**対地電圧150 V以下**のものを交通に支障のないように施設する場合",
+            "Ngoài các trường hợp trên: chiếu sáng ngoài trời, **điện áp so với đất không quá 150 V**, lắp sao cho không cản giao thông",
+            "**4 m** trên mặt đất"
+          ],
+          [
+            "上記以外：**低圧架空電線**を**道路以外**の場所に施設する場合",
+            "Ngoài các trường hợp trên: **dây hạ áp** lắp **ngoài đường giao thông**",
+            "**4 m** trên mặt đất"
+          ],
+          [
+            "その他の場合",
+            "Trường hợp còn lại",
+            "**5 m** trên mặt đất"
+          ]
+        ]
+      }
+    },
+    {
+      "jp": "POINT　架空電線路の**絶縁電線**の太さ といえば **2.6 mm**以上（300 V以下）、**5 mm**以上（300 V超過、市街地）、**4 mm**以上（300 V超過、市街地外）\nケーブルのちょう架 といえば ハンガーの間隔は**50 cm**以下、金属テープは**20 cm**以下で巻き付ける\nちょう架用線 といえば **22 mm²**以上の亜鉛めっき鉄より線、**D種**接地、安全率**2.5**以上\n架空電線の高さ といえば 道路横断は**6 m**、他は**5 m**、低圧電線で道路以外は**4 m**以上",
+      "vi": "Ghi nhớ. Với **dây cách điện** bằng đồng cứng, đường kính ít nhất **2,6 mm** đến 300 V, **5 mm** trên 300 V trong đô thị và **4 mm** trên 300 V ngoài đô thị.\nMóc treo cách nhau không quá **50 cm**, bước quấn băng kim loại không quá **20 cm**.\nDây treo bằng dây sắt bện mạ kẽm từ **22 mm²**, nối đất **loại D**, hệ số an toàn tối thiểu **2,5** cho dây treo cao áp.\nChiều cao khi vượt đường là **6 m**, các trường hợp còn lại thông thường **5 m**, dây hạ áp ngoài đường giao thông **4 m** trở lên."
+    }
+  ],
+  "464": [
+    {
+      "jp": "低高圧架空電線と建造物との接近",
+      "vi": "Khoảng cách dây trên không hạ/cao áp đến công trình.",
+      "note": "",
+      "heading": true
+    },
+    {
+      "jp": "低圧架空電線又は高圧架空電線が、建造物と**接近状態**に施設される場合において、電線と建造物の造営材との離隔距離は、表2-4-4に規定する値以上であることが必要です。**建造物の下方**に接近して施設される場合は、表2-4-5に規定する値以上とし、危険のおそれがないように施設します。また、アンテナと接近状態に施設される場合は、表2-4-6に規定する値以上とします。",
+      "vi": "Khi dây hạ áp hoặc cao áp trên không ở **trạng thái tiếp cận** công trình, giữ khoảng cách tối thiểu tới kết cấu công trình theo bảng 2-4-4. Khi đi gần **phía dưới công trình**, dùng bảng 2-4-5 và bố trí sao cho không gây nguy hiểm. Khi ở trạng thái tiếp cận ăng-ten, dùng bảng 2-4-6."
+    },
+    {
+      "jp": "表2-4-4 建造物と接近状態に施設される場合",
+      "vi": "Bảng 2-4-4 · Dây dẫn ở trạng thái tiếp cận công trình",
+      "heading": true,
+      "table": {
+        "jp": [
+          "架空電線の種類",
+          "区分",
+          "離隔距離"
+        ],
+        "vi": [
+          "Loại dây trên không",
+          "Vị trí",
+          "Khoảng cách"
+        ],
+        "rows": [
+          [
+            "ケーブル",
+            "Cáp",
+            "上部造営材の上方",
+            "**1 m**"
+          ],
+          [
+            "ケーブル",
+            "Cáp",
+            "その他",
+            "**0.4 m**"
+          ],
+          [
+            "高圧絶縁電線又は特別高圧絶縁電線を使用する低圧架空電線",
+            "Dây hạ áp trên không dùng dây cách điện cao áp hoặc siêu cao áp",
+            "上部造営材の上方",
+            "1 m"
+          ],
+          [
+            "高圧絶縁電線又は特別高圧絶縁電線を使用する低圧架空電線",
+            "Dây hạ áp trên không dùng dây cách điện cao áp hoặc siêu cao áp",
+            "その他",
+            "0.4 m"
+          ],
+          [
+            "その他",
+            "Dây loại khác",
+            "上部造営材の上方",
+            "**2 m**"
+          ],
+          [
+            "その他",
+            "Dây loại khác",
+            "人が建造物の外へ手を伸ばす又は身を乗り出すことなどができない部分",
+            "**0.8 m**"
+          ],
+          [
+            "その他",
+            "Dây loại khác",
+            "その他",
+            "**1.2 m** 注"
+          ]
+        ],
+        "rowsVi": [
+          [
+            "ケーブル",
+            "Cáp",
+            "Phía trên kết cấu trên cùng",
+            "**1 m**"
+          ],
+          [
+            "ケーブル",
+            "Cáp",
+            "Vị trí khác",
+            "**0,4 m**"
+          ],
+          [
+            "高圧絶縁電線又は特別高圧絶縁電線を使用する低圧架空電線",
+            "Dây hạ áp trên không dùng dây cách điện cao áp hoặc siêu cao áp",
+            "Phía trên kết cấu trên cùng",
+            "1 m"
+          ],
+          [
+            "高圧絶縁電線又は特別高圧絶縁電線を使用する低圧架空電線",
+            "Dây hạ áp trên không dùng dây cách điện cao áp hoặc siêu cao áp",
+            "Vị trí khác",
+            "0,4 m"
+          ],
+          [
+            "その他",
+            "Dây loại khác",
+            "Phía trên kết cấu trên cùng",
+            "**2 m**"
+          ],
+          [
+            "その他",
+            "Dây loại khác",
+            "Vị trí người không thể vươn tay hoặc nghiêng người ra ngoài công trình",
+            "**0,8 m**"
+          ],
+          [
+            "その他",
+            "Dây loại khác",
+            "Vị trí khác",
+            "**1,2 m** (chú thích)"
+          ]
+        ]
+      }
+    },
+    {
+      "jp": "注）手を伸ばす又は身を乗り出す可能性がある部分は1.2 m",
+      "vi": "Chú thích. Nếu người có thể vươn tay hoặc nghiêng người ra ngoài, khoảng cách là 1,2 m."
+    },
+    {
+      "jp": "表2-4-5 建造物の下方に接近して施設される場合",
+      "vi": "Bảng 2-4-5 · Dây dẫn đi gần phía dưới công trình",
+      "heading": true,
+      "table": {
+        "jp": [
+          "使用電圧区分",
+          "電線の種類",
+          "離隔距離"
+        ],
+        "vi": [
+          "Điện áp sử dụng",
+          "Loại dây",
+          "Khoảng cách"
+        ],
+        "rows": [
+          [
+            "低圧",
+            "Hạ áp",
+            "高圧絶縁電線注、特別高圧絶縁電線又はケーブル",
+            "0.3 m"
+          ],
+          [
+            "低圧",
+            "Hạ áp",
+            "その他",
+            "0.6 m"
+          ],
+          [
+            "高圧",
+            "Cao áp",
+            "**ケーブル**",
+            "**0.4 m**"
+          ],
+          [
+            "高圧",
+            "Cao áp",
+            "**その他**",
+            "**0.8 m**"
+          ]
+        ],
+        "rowsVi": [
+          [
+            "低圧",
+            "Hạ áp",
+            "Dây cách điện cao áp (xem chú thích), dây cách điện siêu cao áp hoặc cáp",
+            "0,3 m"
+          ],
+          [
+            "低圧",
+            "Hạ áp",
+            "Loại khác",
+            "0,6 m"
+          ],
+          [
+            "高圧",
+            "Cao áp",
+            "**Cáp**",
+            "**0,4 m**"
+          ],
+          [
+            "高圧",
+            "Cao áp",
+            "**Loại khác**",
+            "**0,8 m**"
+          ]
+        ]
+      }
+    },
+    {
+      "jp": "注）低圧の配線に高圧絶縁電線を使用する場合",
+      "vi": "Chú thích. Trường hợp dùng dây cách điện cao áp cho đường dây hạ áp."
+    },
+    {
+      "jp": "表2-4-6 アンテナと接近状態に施設される場合",
+      "vi": "Bảng 2-4-6 · Dây dẫn ở trạng thái tiếp cận ăng-ten",
+      "heading": true,
+      "table": {
+        "jp": [
+          "架空電線の種類",
+          "電線の種類",
+          "離隔距離"
+        ],
+        "vi": [
+          "Loại dây trên không",
+          "Loại dây",
+          "Khoảng cách"
+        ],
+        "rows": [
+          [
+            "低圧架空電線",
+            "Hạ áp trên không",
+            "高圧絶縁電線注、特別高圧絶縁電線又はケーブル",
+            "0.3 m"
+          ],
+          [
+            "低圧架空電線",
+            "Hạ áp trên không",
+            "その他",
+            "0.6 m"
+          ],
+          [
+            "高圧架空電線",
+            "Cao áp trên không",
+            "**ケーブル**",
+            "**0.4 m**"
+          ],
+          [
+            "高圧架空電線",
+            "Cao áp trên không",
+            "**その他**",
+            "**0.8 m**"
+          ]
+        ],
+        "rowsVi": [
+          [
+            "低圧架空電線",
+            "Hạ áp trên không",
+            "Dây cách điện cao áp (xem chú thích), dây cách điện siêu cao áp hoặc cáp",
+            "0,3 m"
+          ],
+          [
+            "低圧架空電線",
+            "Hạ áp trên không",
+            "Loại khác",
+            "0,6 m"
+          ],
+          [
+            "高圧架空電線",
+            "Cao áp trên không",
+            "**Cáp**",
+            "**0,4 m**"
+          ],
+          [
+            "高圧架空電線",
+            "Cao áp trên không",
+            "**Loại khác**",
+            "**0,8 m**"
+          ]
+        ]
+      }
+    },
+    {
+      "jp": "注）低圧の配線に高圧絶縁電線を使用する場合",
+      "vi": "Chú thích. Trường hợp dùng dây cách điện cao áp cho đường dây hạ áp."
+    }
+  ],
+  "465": [
+    {
+      "jp": "低高圧架空電線と植物との接近",
+      "vi": "Dây hạ/cao áp gần cây xanh",
+      "note": "",
+      "heading": true
+    },
+    {
+      "jp": "低圧架空電線又は高圧架空電線は、平時吹いている風等により、植物に**接触しない**ように施設することが必要です。",
+      "vi": "Bố trí dây hạ áp hoặc cao áp trên không sao cho **không chạm** cây cối khi có gió bình thường hoặc tác động tương tự."
+    },
+    {
+      "jp": "POINT　低高圧架空電線路と建造物等との離隔距離 といえば\n・造営材の上方、ケーブル**1 m**以上、絶縁電線**2 m**以上\n・その他（上方以外）、ケーブル**0.4 m**以上、絶縁電線**0.8 m**以上（手を伸ばす、身を乗り出すことができない部分）又は**1.2 m**以上（窓やベランダなど、手を伸ばしたり身を乗り出すことができる部分）\n・造営材の下方、ケーブル**0.4 m**以上、絶縁電線**0.8 m**以上\n・アンテナとの離隔距離は、ケーブル**0.4 m**以上、絶縁電線**0.8 m**以上",
+      "vi": "Ghi nhớ khoảng cách với công trình.\n• Phía trên kết cấu: cáp ít nhất **1 m**, dây cách điện ít nhất **2 m**.\n• Vị trí khác: cáp ít nhất **0,4 m**, dây cách điện ít nhất **0,8 m** ở chỗ không thể vươn tay hoặc nghiêng người ra ngoài, hoặc **1,2 m** ở cửa sổ, ban công và vị trí có thể làm vậy.\n• Phía dưới kết cấu: cáp ít nhất **0,4 m**, dây cách điện ít nhất **0,8 m**.\n• Với ăng-ten: cáp ít nhất **0,4 m**, dây cách điện ít nhất **0,8 m**.",
+      "note": "Ô POINT tóm tắt các trường hợp thường gặp. Tra ba bảng ở trang 464 để phân biệt riêng các loại dây hạ áp và cao áp."
+    },
+    {
+      "jp": "低高圧架空電線と植物との離隔距離 といえば 平時吹いている風等により**接触しない**",
+      "vi": "Khoảng cách với cây cối phải đủ để dây hạ áp và cao áp trên không **không chạm** cây khi có gió bình thường hoặc tác động tương tự."
+    },
+    {
+      "jp": "山間部等、植物と接触を避けられない場合は、次によります。",
+      "vi": "Nếu ở miền núi hoặc nơi không thể tránh cây chạm dây:",
+      "note": ""
+    },
+    {
+      "jp": "・規定の性能を有する**防護具に収めて施設する**。",
+      "vi": "• **Đặt dây trong thiết bị bảo vệ** có tính năng theo quy định."
+    },
+    {
+      "jp": "・JISで定めた摩耗検知層、摩耗層などを有した**トリワイヤ**（tree wire）を使用する。",
+      "vi": "• Dùng **dây chống cọ xát với cây** (tree wire) có lớp phát hiện mài mòn, lớp chịu mài mòn và các lớp liên quan theo JIS."
+    },
+    {
+      "jp": "・**ケーブル用防護具**（高圧架空ケーブル工事による場合）を使用する。",
+      "vi": "• Dùng **thiết bị bảo vệ cáp** nếu thi công bằng cáp cao áp trên không."
+    },
+    {
+      "jp": "架空引込線の施設",
+      "vi": "Lắp đường dây dẫn vào trên không",
+      "note": "",
+      "heading": true
+    },
+    {
+      "jp": "架空引込線は、高圧架空引込線及び低圧架空引込線について、電線の高さや建造物との離隔距離等が規定されています。",
+      "vi": "Dây dẫn vào trên không, cả loại cao áp và hạ áp, có quy định về chiều cao dây, khoảng cách với công trình và các điều kiện liên quan."
+    },
+    {
+      "jp": "高圧架空引込線の施設",
+      "vi": "Lắp dây dẫn vào cao áp",
+      "note": "",
+      "heading": true
+    },
+    {
+      "jp": "高圧架空引込線は、高圧絶縁電線による場合と高圧ケーブルによる場合があり、高圧架空引込線の**電線の高さ**は、表2-4-7に規定する値以上であることが必要です。",
+      "vi": "Dây dẫn vào cao áp trên không có thể là dây cách điện cao áp hoặc cáp cao áp. **Chiều cao dây** phải đạt ít nhất trị số ở bảng 2-4-7."
+    },
+    {
+      "jp": "表2-4-7 高圧架空引込線の電線の高さ",
+      "vi": "Bảng 2-4-7 · Chiều cao dây dẫn vào cao áp trên không",
+      "heading": true,
+      "table": {
+        "jp": [
+          "区分",
+          "高さ"
+        ],
+        "vi": [
+          "Trường hợp",
+          "Chiều cao tối thiểu"
+        ],
+        "rows": [
+          [
+            "**道路を横断する場合**",
+            "**Vượt đường**",
+            "路面上**6 m**"
+          ],
+          [
+            "鉄道又は軌道を横断する場合",
+            "Vượt đường sắt hoặc đường ray",
+            "レール面上**5.5 m**"
+          ],
+          [
+            "高圧架空電線を横断歩道橋の上に施設する場合",
+            "Dây cao áp đi phía trên cầu vượt bộ hành",
+            "横断歩道橋の路面上**3.5 m**"
+          ]
+        ],
+        "rowsVi": [
+          [
+            "**道路を横断する場合**",
+            "**Vượt đường**",
+            "**6 m** trên mặt đường"
+          ],
+          [
+            "鉄道又は軌道を横断する場合",
+            "Vượt đường sắt hoặc đường ray",
+            "**5,5 m** trên mặt ray"
+          ],
+          [
+            "高圧架空電線を横断歩道橋の上に施設する場合",
+            "Dây cao áp đi phía trên cầu vượt bộ hành",
+            "**3,5 m** trên mặt cầu"
+          ]
+        ]
+      }
+    },
+    {
+      "jp": "高圧架空引込線の**電線の高さ**は、表2-4-7以外においては、地表上**3.5 m**以上とすることができます。電線がケーブル以外のものであるときは、その電線の下方に**危険である旨**の表示をすることが必要です。",
+      "vi": "Ngoài các trường hợp ở bảng 2-4-7, **chiều cao dây** được phép từ **3,5 m** trên mặt đất. Nếu dây không phải cáp, phải đặt biển **cảnh báo nguy hiểm** phía dưới dây."
+    }
+  ],
+  "466": [
+    {
+      "diagram": "lawHighVoltageService466"
+    },
+    {
+      "jp": "高圧架空引込線が建造物と接近する場合、電線との離隔距離は、表2-4-8に規定する値以上であることが必要です。",
+      "vi": "Dây dẫn vào cao áp khi gần công trình phải giữ khoảng cách theo bảng 2-4-8.",
+      "note": ""
+    },
+    {
+      "jp": "表2-4-8 建造物と接近する場合の電線との離隔距離",
+      "vi": "Bảng 2-4-8 · Khoảng cách khi dây dẫn vào cao áp ở gần công trình",
+      "heading": true,
+      "table": {
+        "jp": [
+          "架空電線の種類",
+          "区分",
+          "離隔距離"
+        ],
+        "vi": [
+          "Loại dây trên không",
+          "Vị trí",
+          "Khoảng cách tối thiểu"
+        ],
+        "rows": [
+          [
+            "高圧ケーブル",
+            "Cáp cao áp",
+            "上部造営材の上方",
+            "**1 m**"
+          ],
+          [
+            "高圧ケーブル",
+            "Cáp cao áp",
+            "その他",
+            "**0.4 m**"
+          ],
+          [
+            "高圧絶縁電線",
+            "Dây cách điện cao áp",
+            "上部造営材の上方",
+            "**2 m**"
+          ],
+          [
+            "高圧絶縁電線",
+            "Dây cách điện cao áp",
+            "人が建造物の外へ手を伸ばす又は身を乗り出すことなどができない部分",
+            "**0.8 m**"
+          ],
+          [
+            "高圧絶縁電線",
+            "Dây cách điện cao áp",
+            "その他",
+            "**1.2 m**"
+          ]
+        ],
+        "rowsVi": [
+          [
+            "高圧ケーブル",
+            "Cáp cao áp",
+            "Phía trên kết cấu trên cùng",
+            "**1 m**"
+          ],
+          [
+            "高圧ケーブル",
+            "Cáp cao áp",
+            "Vị trí khác",
+            "**0,4 m**"
+          ],
+          [
+            "高圧絶縁電線",
+            "Dây cách điện cao áp",
+            "Phía trên kết cấu trên cùng",
+            "**2 m**"
+          ],
+          [
+            "高圧絶縁電線",
+            "Dây cách điện cao áp",
+            "Vị trí người không thể vươn tay hoặc nghiêng người ra ngoài công trình",
+            "**0,8 m**"
+          ],
+          [
+            "高圧絶縁電線",
+            "Dây cách điện cao áp",
+            "Vị trí khác",
+            "**1,2 m**"
+          ]
+        ]
+      }
+    },
+    {
+      "jp": "低圧架空引込線の施設",
+      "vi": "Lắp dây dẫn vào hạ áp",
+      "note": "",
+      "heading": true
+    },
+    {
+      "jp": "低圧架空引込線の**電線の高さ**は、表2-4-9に規定する値以上であることが必要です。",
+      "vi": "**Chiều cao dây** dẫn vào hạ áp trên không phải đạt ít nhất trị số ở bảng 2-4-9."
+    },
+    {
+      "jp": "表2-4-9 低圧架空引込線の電線の高さ",
+      "vi": "Bảng 2-4-9 · Chiều cao dây dẫn vào hạ áp trên không",
+      "heading": true,
+      "table": {
+        "jp": [
+          "区分",
+          "高さ"
+        ],
+        "vi": [
+          "Trường hợp",
+          "Chiều cao tối thiểu"
+        ],
+        "rows": [
+          [
+            "**道路**（歩行の用にのみ供される部分を除く）**を横断する場合**：技術上やむを得ない場合において交通に支障のないとき",
+            "**Vượt đường** (trừ phần chỉ dành cho người đi bộ), khi bất khả kháng về kỹ thuật và không cản trở giao thông",
+            "路面上**3 m**"
+          ],
+          [
+            "道路を横断する場合：その他の場合",
+            "Vượt đường trong các trường hợp còn lại",
+            "路面上**5 m**"
+          ],
+          [
+            "鉄道又は軌道を横断する場合",
+            "Vượt đường sắt hoặc đường ray",
+            "レール面上**5.5 m**"
+          ],
+          [
+            "横断歩道橋の上に施設する場合",
+            "Phía trên cầu vượt bộ hành",
+            "横断歩道橋の路面上**3 m**"
+          ],
+          [
+            "上記以外の場合：技術上やむを得ない場合において**交通に支障のないとき**",
+            "Ngoài các trường hợp trên, khi bất khả kháng về kỹ thuật và **không cản trở giao thông**",
+            "地表上**2.5 m**"
+          ],
+          [
+            "上記以外の場合：その他の場合",
+            "Ngoài các trường hợp trên, điều kiện thông thường",
+            "地表上**4 m**"
+          ]
+        ],
+        "rowsVi": [
+          [
+            "**道路**（歩行の用にのみ供される部分を除く）**を横断する場合**：技術上やむを得ない場合において交通に支障のないとき",
+            "**Vượt đường** (trừ phần chỉ dành cho người đi bộ), khi bất khả kháng về kỹ thuật và không cản trở giao thông",
+            "**3 m** trên mặt đường"
+          ],
+          [
+            "道路を横断する場合：その他の場合",
+            "Vượt đường trong các trường hợp còn lại",
+            "**5 m** trên mặt đường"
+          ],
+          [
+            "鉄道又は軌道を横断する場合",
+            "Vượt đường sắt hoặc đường ray",
+            "**5,5 m** trên mặt ray"
+          ],
+          [
+            "横断歩道橋の上に施設する場合",
+            "Phía trên cầu vượt bộ hành",
+            "**3 m** trên mặt cầu"
+          ],
+          [
+            "上記以外の場合：技術上やむを得ない場合において**交通に支障のないとき**",
+            "Ngoài các trường hợp trên, khi bất khả kháng về kỹ thuật và **không cản trở giao thông**",
+            "**2,5 m** trên mặt đất"
+          ],
+          [
+            "上記以外の場合：その他の場合",
+            "Ngoài các trường hợp trên, điều kiện thông thường",
+            "**4 m** trên mặt đất"
+          ]
+        ]
+      }
+    }
+  ],
+  "467": [
+    {
+      "diagram": "lawLowVoltageService467"
+    },
+    {
+      "jp": "絶縁電線のときは、**2.6 mm**以上。径間15 m以下の場合は、**2.0 mm**以上。",
+      "vi": "Với dây cách điện, đường kính ít nhất **2,6 mm**. Khi nhịp không quá 15 m, đường kính ít nhất **2,0 mm**."
+    },
+    {
+      "jp": "低圧架空引込線の高さ",
+      "vi": "Chiều cao dây dẫn vào hạ áp",
+      "table": {
+        "jp": [
+          "位置",
+          "低圧架空引込線の高さ",
+          "技術上やむを得ない場合において交通に支障がないとき"
+        ],
+        "vi": [
+          "Vị trí",
+          "Chiều cao thông thường",
+          "Bất khả kháng về kỹ thuật và không cản giao thông"
+        ],
+        "rows": [
+          [
+            "h₁",
+            "h₁",
+            "路面上**5 m**以上",
+            "路面上**3 m**以上"
+          ],
+          [
+            "h₂",
+            "h₂",
+            "路面上**4 m**以上",
+            "路面上**2.5 m**以上"
+          ],
+          [
+            "h₃",
+            "h₃",
+            "路面上**4 m**以上",
+            "路面上**2.5 m**以上"
+          ]
+        ],
+        "rowsVi": [
+          [
+            "h₁",
+            "h₁",
+            "Ít nhất **5 m** trên mặt đường",
+            "Ít nhất **3 m** trên mặt đường"
+          ],
+          [
+            "h₂",
+            "h₂",
+            "Ít nhất **4 m** trên mặt đường",
+            "Ít nhất **2,5 m** trên mặt đường"
+          ],
+          [
+            "h₃",
+            "h₃",
+            "Ít nhất **4 m** trên mặt đường",
+            "Ít nhất **2,5 m** trên mặt đường"
+          ]
+        ]
+      }
+    },
+    {
+      "jp": "POINT　高圧架空引込線の電線の高さ といえば\n・道路横断**6 m**以上、レール面上**5.5 m**以上、横断歩道橋の路面上**3.5 m**以上\n・上記以外**3.5 m**以上、ケーブル以外のとき下方に**危険である旨**の表示をする",
+      "vi": "Ghi nhớ. Dây dẫn vào cao áp trên không khi vượt đường cao ít nhất **6 m**, trên mặt ray ít nhất **5,5 m**, trên mặt cầu vượt bộ hành ít nhất **3,5 m**. Các trường hợp khác ít nhất **3,5 m** và đặt biển **cảnh báo nguy hiểm** phía dưới nếu dây không phải cáp."
+    },
+    {
+      "jp": "高圧架空引込線が建造物と接近する場合の離隔距離 といえば\n・高圧ケーブルの場合：造営材の上方**1 m**、上方以外**0.4 m**以上\n・高圧絶縁電線の場合：造営材の上方**2 m**、上方以外**1.2 m**以上。手を伸ばす又は身を乗り出すことができない部分は**0.8 m**",
+      "vi": "Khoảng cách giữa dây dẫn vào cao áp và công trình. Cáp cao áp cách phía trên kết cấu ít nhất **1 m**, vị trí khác **0,4 m**. Dây cách điện cao áp cách phía trên ít nhất **2 m**, vị trí khác **1,2 m**, hoặc **0,8 m** nếu người không thể vươn tay hoặc nghiêng ra ngoài."
+    },
+    {
+      "jp": "低圧架空引込線の電線の高さ といえば\n・道路横断**5 m**以上、**3 m**以上（技術上やむを得ない場合において交通に支障のないとき）\n（注）架空電線の高さは6 m、引込線の高さは5 m以上\n・レール面上**5.5 m**以上、横断歩道橋の路面上**3 m**以上\n・上記以外の場合**4 m**以上、**2.5 m**以上（技術上やむを得ない場合において交通に支障のないとき）",
+      "vi": "Dây dẫn vào hạ áp trên không vượt đường cao ít nhất **5 m**, hoặc **3 m** khi bất khả kháng về kỹ thuật và không cản giao thông. Chú thích: đường dây trên không thông thường vượt đường cần 6 m, còn dây dẫn vào cần 5 m. Trên mặt ray ít nhất **5,5 m**, trên mặt cầu vượt bộ hành ít nhất **3 m**. Trường hợp khác ít nhất **4 m**, hoặc **2,5 m** khi bất khả kháng về kỹ thuật và không cản giao thông."
+    },
+    {
+      "jp": "高圧屋側電線路の施設",
+      "vi": "Lắp đường dây cao áp dọc tường",
+      "note": "",
+      "heading": true
+    },
+    {
+      "jp": "高圧屋側電線路は、次のように施設します。",
+      "vi": "Đường dây cao áp chạy dọc tường phải lắp theo điều kiện ở trang tiếp theo.",
+      "note": ""
+    }
+  ],
+  "468": [
+    {
+      "jp": "①展開した場所（見える場所）に施設します。",
+      "vi": "① Lắp nơi thoáng, nhìn thấy.",
+      "note": ""
+    },
+    {
+      "jp": "②電線は、**ケーブル**を使用します。",
+      "vi": "② Dùng **cáp** làm dây dẫn."
+    },
+    {
+      "jp": "③ケーブルには、**接触防護措置**を施します。",
+      "vi": "③ Áp dụng **biện pháp bảo vệ chống tiếp xúc** cho cáp."
+    },
+    {
+      "jp": "④ケーブルを造営材の側面又は下面に沿って取り付ける場合は、ケーブルの支持点間の距離を**2 m**（垂直に取り付ける場合は**6 m**）以下とします。",
+      "vi": "④ Nếu lắp cáp dọc theo mặt bên hoặc mặt dưới của kết cấu, khoảng cách giữa các điểm đỡ không quá **2 m**, hoặc **6 m** nếu lắp thẳng đứng."
+    },
+    {
+      "jp": "⑤管、ケーブルを収める防護装置の金属部分、金属製の接続箱及びケーブルの被覆に使用する金属体には、大地との間に**A種**接地工事（接触防護措置を施す場合は、**D種**接地工事）を施します。",
+      "vi": "⑤ Nối đất **loại A** cho ống, phần kim loại của thiết bị bảo vệ cáp, hộp nối kim loại và phần kim loại của lớp bọc cáp. Nếu đã áp dụng biện pháp bảo vệ chống tiếp xúc thì nối đất **loại D**."
+    },
+    {
+      "jp": "POINT　高圧引込線の屋側部分などの施設 といえば\n・ケーブル支持点間距離**2 m**、垂直**6 m**以下\n・**A種**接地工事（ケーブルの被覆、金属製の接続箱、防護装置、金属管）、**D種**接地工事（接触防護措置を施す場合）",
+      "vi": "Ghi nhớ. Dây cao áp dọc tường có khoảng cách giữa các điểm đỡ cáp không quá **2 m**, hoặc **6 m** khi lắp thẳng đứng. Nối đất **loại A** cho lớp bọc kim loại của cáp, hộp nối, thiết bị bảo vệ và ống kim loại. Khi có biện pháp chống tiếp xúc, dùng **loại D**."
+    },
+    {
+      "jp": "併架と共架の工事方法",
+      "vi": "Lắp chung trên vật đỡ và lắp chung với dây viễn thông",
+      "note": "",
+      "heading": true
+    },
+    {
+      "jp": "同一支持物に他の架空電線を架線することを**併架**といい、同一支持物に架空弱電流電線等を架線することを**共架**といいます。",
+      "vi": "**併架** là treo các dây điện lực trên cùng vật đỡ. **共架** là treo dây điện lực cùng dây điện nhẹ hoặc dây tương tự trên cùng vật đỡ."
+    },
+    {
+      "jp": "低圧架空電線と高圧架空電線の併架",
+      "vi": "Treo chung đường dây hạ áp và cao áp",
+      "note": "",
+      "heading": true
+    },
+    {
+      "jp": "低圧架空電線と高圧架空電線の併架については、①低圧架空電線を高圧架空電線の**下**とし、②別の**腕金**類に施設し、③離隔距離は**0.5 m**以上、④高圧架空電線にケーブルを使用した場合の離隔距離は**0.3 m**以上と規定しています。",
+      "vi": "Khi treo dây hạ áp và cao áp trên cùng vật đỡ, ① dây hạ áp ở **phía dưới**, ② dùng **xà đỡ** riêng, ③ khoảng cách ít nhất **0,5 m**, ④ nếu dây cao áp là cáp thì ít nhất **0,3 m**."
+    },
+    {
+      "jp": "低、高圧架空電線と架空弱電流電線等の共架",
+      "vi": "Treo chung dây điện hạ/cao áp với dây thông tin",
+      "note": "",
+      "heading": true
+    },
+    {
+      "jp": "低、高圧架空電線と架空弱電流電線等の共架については、①架空電線を架空弱電流電線の**上**とし、②別の**腕金**類に施設し、③離隔距離は、低圧にあっては**0.75 m**以上、高圧にあっては、**1.5 m**以上、高圧架空電線がケーブルの場合は**0.5 m**以上と規定しています。",
+      "vi": "Khi treo dây điện lực chung vật đỡ với dây điện nhẹ, ① dây điện lực ở **phía trên**, ② dùng **xà đỡ** riêng, ③ khoảng cách ít nhất **0,75 m** với dây hạ áp, **1,5 m** với dây cao áp, hoặc **0,5 m** nếu dây cao áp là cáp."
+    },
+    {
+      "jp": "POINT　低圧と高圧架空電線の併架 といえば 低圧が**下**、**0.5 m**、高圧線がケーブルの場合は**0.3 m**以上\n架空弱電流電線との共架 といえば 低圧電線と**0.75 m**、高圧電線と**1.5 m**、高圧線がケーブルの場合は**0.5 m**以上\n※低圧架空電線と高圧架空電線とを同一支持物に施設する場合は、併架\n※低圧又は高圧架空電線と架空弱電流電線とを同一支持物に施設する場合は、共架",
+      "vi": "Ghi nhớ. 併架: dây hạ áp ở **dưới**, cách dây cao áp ít nhất **0,5 m**, hoặc **0,3 m** nếu dây cao áp là cáp. 共架: dây điện nhẹ cách dây hạ áp **0,75 m**, dây cao áp **1,5 m**, hoặc cáp cao áp **0,5 m** trở lên."
+    }
+  ],
+  "469": [
+    {
+      "jp": "練習問題01　高圧屋側電線路の施設",
+      "vi": "Bài luyện 01 · Lắp dây cao áp dọc tường",
+      "note": "",
+      "heading": true
+    },
+    {
+      "jp": "高圧屋側電線路の施設に関する記述として、誤っているものは。",
+      "vi": "Trong các phát biểu về lắp dây cao áp dọc tường, phát biểu nào sai?",
+      "note": ""
+    },
+    {
+      "jp": "(1) 展開した場所に施設した。",
+      "vi": "(1) Lắp tại nơi thoáng và nhìn thấy.",
+      "note": ""
+    },
+    {
+      "jp": "(2) 電線はケーブルとした。",
+      "vi": "(2) Sử dụng cáp.",
+      "note": ""
+    },
+    {
+      "jp": "(3) 屋外であることから、ケーブルを地表上2.3mの高さに施設した。",
+      "vi": "(3) Vì lắp ngoài trời nên đặt cáp ở độ cao 2,3 m trên mặt đất.",
+      "note": ""
+    },
+    {
+      "jp": "(4) ケーブルを造営材の側面に沿って垂直に取付け、支持点間の距離を6 mとした。",
+      "vi": "(4) Lắp cáp thẳng đứng dọc mặt bên của kết cấu, với khoảng cách giữa hai điểm đỡ là 6 m."
+    },
+    {
+      "jp": "(5) ケーブルを収める防護装置の金属製部分にA種接地工事を施した。",
+      "vi": "(5) Nối đất loại A cho phần kim loại của thiết bị bảo vệ chứa cáp."
+    },
+    {
+      "jp": "解説　解答 (3) は誤りです。接触防護措置を施す必要があり、屋外にあっては地表上2.5 m以上の高さとしています（接触防護措置：屋内2.3 m以上、屋外2.5 m以上、簡易接触防護措置：屋内1.8 m以上、屋外2 m以上）。",
+      "vi": "Lời giải. Phương án (3) sai. Phải có biện pháp bảo vệ chống tiếp xúc, với độ cao ngoài trời ít nhất 2,5 m trên mặt đất. Biện pháp chống tiếp xúc: trong nhà ít nhất 2,3 m, ngoài trời ít nhất 2,5 m. Biện pháp chống tiếp xúc đơn giản: trong nhà ít nhất 1,8 m, ngoài trời ít nhất 2 m."
+    },
+    {
+      "jp": "解答　**(3)**",
+      "vi": "Đáp án **(3)**."
+    },
+    {
+      "jp": "練習問題02　併架",
+      "vi": "Bài luyện 02 · Treo chung hai cấp điện áp.",
+      "note": "",
+      "heading": true
+    },
+    {
+      "jp": "低圧架空電線と高圧架空電線とを同一支持物に併架する場合、空白箇所の字句、数字は。",
+      "vi": "Điền từ/số trong các điều kiện treo dây hạ áp và cao áp chung cột.",
+      "note": ""
+    },
+    {
+      "jp": "a) 次により施設すること。",
+      "vi": "a) Lắp theo các điều kiện sau."
+    },
+    {
+      "jp": "①低圧架空電線を高圧架空電線の（ア）に施設すること。",
+      "vi": "① Lắp dây hạ áp trên không ở vị trí (ア) so với dây cao áp trên không."
+    },
+    {
+      "jp": "②低圧架空電線と高圧架空電線は、別個の（イ）に施設すること。",
+      "vi": "② Lắp dây hạ áp và dây cao áp trên các (イ) riêng."
+    },
+    {
+      "jp": "③低圧架空電線と高圧架空電線との離隔距離は、（ウ）m以上であること。ただし、かど柱、分岐柱等で混触のおそれがないように施設する場合は、この限りでない。",
+      "vi": "③ Giữ khoảng cách giữa dây hạ áp và dây cao áp ít nhất (ウ) m, trừ trường hợp bố trí tại cột góc, cột rẽ nhánh hoặc vị trí tương tự sao cho không có nguy cơ chạm lẫn."
+    },
+    {
+      "jp": "b) 高圧架空電線にケーブルを使用するとともに、高圧架空電線と低圧架空電線との離隔距離を（エ）m以上とすること。",
+      "vi": "b) Dùng cáp cho đường dây cao áp và giữ khoảng cách đến dây hạ áp ít nhất (エ) m."
+    },
+    {
+      "jp": "解説　低圧架空電線と高圧架空電線を併架する場合、「低圧電線が下」「別個の腕金類に施設」「離隔距離は0.5 m以上」「高圧架空電線がケーブルの場合の離隔距離は0.3 m以上」である必要があります。",
+      "vi": "Lời giải. Khi treo chung dây hạ áp và cao áp, dây hạ áp ở dưới, dùng xà đỡ riêng và cách nhau ít nhất 0,5 m. Nếu dây cao áp là cáp, khoảng cách ít nhất 0,3 m."
+    },
+    {
+      "jp": "解答　（ア）**下**　（イ）**腕金類**　（ウ）**0.5**　（エ）**0.3**",
+      "vi": "Đáp án. (ア) **Dưới**, (イ) **xà đỡ**, (ウ) **0,5**, (エ) **0,3**."
+    }
   ]
 };
