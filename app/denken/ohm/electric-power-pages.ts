@@ -710,7 +710,9 @@ export const electricPowerPages: Record<number, LessonRow[]> = {
     {jp:"図3-5-3 バイオマス発電の原理",vi:"Hình 3-5-3 · Sơ đồ khối phát điện sinh khối",heading:true},
     {diagram:"powerBiomass369"},
     {jp:"バイオマス発電の特徴",vi:"Đặc điểm phát điện sinh khối",heading:true},
-    {jp:"地球温暖化対策：バイオマス燃料に吸収されている二酸化炭素量と発電時の二酸化炭素排出量が同じならば、環境負荷を小さくすることができる。循環型社会を構築：廃棄物の再利用。農産漁村の活性化。",vi:"Có thể giảm phát thải ròng nếu nguồn nguyên liệu tái sinh bền vững; giúp tái sử dụng chất thải và thúc đẩy kinh tế nông lâm nghiệp.",note:"Không mặc nhiên mọi hệ thống sinh khối đều trung hòa carbon; còn cần xét vận chuyển, chế biến và thay đổi sử dụng đất."},
+    {jp:"① 地球温暖化対策：バイオマス燃料に吸収されている二酸化炭素量と発電時の二酸化炭素量が同じならば、環境負荷を小さくすることができる。",vi:"① Hạn chế nóng lên toàn cầu. Nếu lượng CO₂ mà nguồn sinh khối hấp thụ bằng lượng CO₂ phát ra khi phát điện, có thể giảm tác động môi trường.",note:"Khi tính phát thải ròng còn phải xét khâu chế biến, vận chuyển và thay đổi sử dụng đất."},
+    {jp:"② 循環型社会を構築：未活用の廃棄物を燃料とするバイオマス発電は、廃棄物の再利用や減少につながり、循環型社会構築に大きく寄与する。",vi:"② Xây dựng xã hội tuần hoàn. Dùng chất thải chưa được tận dụng làm nhiên liệu giúp tái sử dụng và giảm lượng chất thải, góp phần xây dựng xã hội tuần hoàn."},
+    {jp:"③ 農産漁村の活性化：家畜排泄物、稲わら、林地残材など、国内の農産漁村に存在するバイオマス資源を活用することにより、農産漁村の自然循環機能を維持増進し、その持続的発展を図ることが可能となる。",vi:"③ Phát triển vùng nông thôn và làng chài. Tận dụng phân gia súc, rơm rạ, phụ phẩm rừng và các nguồn sinh khối địa phương giúp duy trì và tăng cường chu trình tự nhiên, tạo điều kiện phát triển bền vững."},
     {jp:"バイオマス発電の問題点　事業として成立するためのエネルギー源やエネルギー作物等の量的確保。生物資源や食料をエネルギーとして消費することによる価格への影響。",vi:"Khó khăn: phải bảo đảm nguồn nhiên liệu đủ và ổn định; sử dụng cây/nông sản làm nhiên liệu có thể tác động đến giá thực phẩm và tài nguyên."},
   ],
   370: [

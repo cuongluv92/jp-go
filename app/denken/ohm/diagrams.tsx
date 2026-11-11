@@ -44,6 +44,159 @@ function PowerPageReference({ page }: { page: number }) {
 }
 
 export const diagrams = {
+  powerCVCable396: (
+    <Diagram file="powerCVCable396" width={587} height={236} title="図5-5-1 CVケーブルの例" labels={[
+      ["単心", "Một lõi"],
+      ["CVTケーブル", "Cáp CVT bện ba lõi riêng"],
+      ["3心共通シース形", "Ba lõi chung vỏ"],
+    ]} />
+  ),
+  powerOFCable396: (
+    <Diagram file="powerOFCable396" width={226} height={237} title="図5-5-2 OFケーブルの例" labels={[
+      ["油通路", "Đường dẫn dầu"],
+      ["絶縁紙", "Giấy cách điện"],
+      ["アルミ箔", "Lá nhôm"],
+    ]} />
+  ),
+  powerDirectBurial397: (
+    <Diagram file="powerDirectBurial397" width={253} height={219} title="図5-5-3 直接埋設式" labels={[
+      ["地表面", "Mặt đất"],
+      ["トラフ", "Máng bảo vệ cáp"],
+      ["砂を詰める", "Lấp cát"],
+    ]} />
+  ),
+  powerDuctAndTunnel397: (
+    <Diagram file="powerDuctAndTunnel397" width={795} height={273} title="図5-5-4・5-5-5 管路式と暗きょ式" labels={[
+      ["管路式", "Đặt trong ống"],
+      ["暗きょ式", "Đặt trong hầm kỹ thuật"],
+      ["道路", "Mặt đường"],
+      ["ケーブル", "Cáp"],
+    ]} />
+  ),
+  powerCableCapacitance397: (
+    <Diagram file="powerCableCapacitance397" width={203} height={275} title="図5-5-6 3心ケーブルの静電容量" labels={[
+      ["心線", "Lõi dẫn điện"],
+      ["Cₘ", "Điện dung giữa hai lõi"],
+      ["C₀", "Điện dung từ lõi đến đất"],
+    ]} />
+  ),
+  powerSinglePhaseCircuit401: (
+    <Diagram file="powerSinglePhaseCircuit401" width={374} height={212} title="図5-7-1 単相交流回路" labels={[
+      ["送電端", "Đầu phát"],
+      ["受電端", "Đầu nhận"],
+      ["負荷", "Tải"],
+    ]} />
+  ),
+  powerVoltagePhasor401: (
+    <Diagram file="powerVoltagePhasor401" width={627} height={292} title="図5-7-2 電圧降下のベクトル図" labels={[
+      ["ΔV", "Sụt áp"],
+      ["Vₛ", "Điện áp đầu phát"],
+      ["Vᵣ", "Điện áp đầu nhận"],
+    ]} />
+  ),
+  powerCompensationEquipment404: (
+    <Diagram file="powerCompensationEquipment404" width={657} height={240} title="変圧器と進相コンデンサ" labels={[
+      ["変圧器", "Máy biến áp"],
+      ["進相コンデンサ", "Tụ bù"],
+    ]} />
+  ),
+  powerPowerTriangle404: (
+    <Diagram file="powerPowerTriangle404" width={290} height={145} title="図5-8-1 電力の直角三角形" labels={[
+      ["有効電力 P", "Công suất tác dụng P"],
+      ["無効電力 Q", "Công suất phản kháng Q"],
+      ["皮相電力 S", "Công suất biểu kiến S"],
+    ]} />
+  ),
+  powerDistributionNetworks408: (
+    <Diagram file="powerDistributionNetworks408" width={812} height={299} title="樹枝状方式・ループ方式" labels={[
+      ["樹枝状方式", "Lưới hình cây"],
+      ["ループ方式", "Lưới vòng"],
+      ["開閉器", "Thiết bị đóng cắt"],
+      ["変圧器", "Máy biến áp"],
+    ]} />
+  ),
+  powerDistribution400V409: (
+    <Diagram file="powerDistribution400V409" width={355} height={209} title="400 V級配電方式" labels={[
+      ["中性線", "Dây trung tính"],
+      ["415 V", "Điện áp dây cấp động lực"],
+      ["240 V", "Điện áp pha với trung tính"],
+    ]} />
+  ),
+  powerLowVoltageConnections410: (
+    <Diagram file="powerLowVoltageConnections410" width={632} height={630} title="図5-10-1 低圧配電線路の電気方式" labels={[
+      ["単相2線式", "Một pha hai dây"],
+      ["単相3線式", "Một pha ba dây"],
+      ["Δ結線", "Nối tam giác"],
+      ["V結線", "Nối V"],
+      ["電灯動力共用方式", "Dùng chung chiếu sáng và động lực"],
+    ]} />
+  ),
+  powerThreeWireUnbalance411: (
+    <Diagram file="powerThreeWireUnbalance411" width={503} height={273} title="図5-11-1 単相3線式配電線路" labels={[
+      ["負荷", "Tải"],
+      ["r", "Điện trở dây ngoài"],
+      ["rₙ", "Điện trở dây trung tính"],
+    ]} />
+  ),
+  powerVoltageDropNetwork413: (
+    <Diagram file="powerVoltageDropNetwork413" width={535} height={287} title="例題1 三相3線式高圧配電線" labels={[
+      ["負荷電流", "Dòng điện tải"],
+      ["遅れ力率", "Hệ số công suất trễ"],
+    ]} />
+  ),
+  powerCurrentTriangles413: (
+    <Diagram file="powerCurrentTriangles413" width={813} height={291} title="負荷電流とS–A間の電流の三角形" labels={[
+      ["Iₐ・Iᵦ・I꜀", "Dòng tải tại A, B, C"],
+      ["Iₛₐ", "Dòng tổng trên đoạn S–A"],
+    ]} />
+  ),
+  powerHysteresisLoop417: (
+    <Diagram file="powerHysteresisLoop417" width={236} height={323} title="図6-2-1 ヒステリシス曲線" labels={[
+      ["磁束密度 B", "Mật độ từ thông B"],
+      ["磁界の強さ H", "Cường độ từ trường H"],
+      ["残留磁気 Bᵣ", "Từ dư Bᵣ"],
+      ["保磁力 H꜀", "Lực kháng từ H꜀"],
+    ]} />
+  ),
+  powerTransformerHysteresis417: (
+    <Diagram file="powerTransformerHysteresis417" width={205} height={296} title="図6-2-2 変圧器鉄心のヒステリシス曲線" labels={[
+      ["B", "Mật độ từ thông"],
+      ["H", "Cường độ từ trường"],
+    ]} />
+  ),
+  powerSteelHysteresis418: (
+    <Diagram file="powerSteelHysteresis418" width={275} height={325} title="図6-2-3 電磁鋼板のヒステリシス特性例" labels={[
+      ["飽和", "Bão hòa từ"],
+    ]} />
+  ),
+  powerDCCore418: (
+    <Diagram file="powerDCCore418" width={448} height={276} title="図6-2-4 直流機の鉄心" labels={[
+      ["継鉄", "Gông từ"],
+      ["磁極の鉄心", "Lõi cực từ"],
+      ["磁路", "Đường đi của từ thông"],
+    ]} />
+  ),
+  powerPermanentMagnetHysteresis419: (
+    <Diagram file="powerPermanentMagnetHysteresis419" width={268} height={331} title="図6-2-5 永久磁石のヒステリシス特性例" labels={[
+      ["残留磁気", "Từ dư"],
+      ["保磁力", "Lực kháng từ"],
+    ]} />
+  ),
+  powerGroundingCircuit422: (
+    <Diagram file="powerGroundingCircuit422" width={522} height={232} title="低圧電動機の接地回路" labels={[
+      ["電動機", "Động cơ"],
+      ["地絡", "Chạm đất"],
+      ["外箱", "Vỏ kim loại"],
+      ["Rʙ・Rᴅ", "Điện trở nối đất loại B và D"],
+    ]} />
+  ),
+  powerGroundFaultLoop422: (
+    <Diagram file="powerGroundFaultLoop422" width={545} height={254} title="完全地絡時の電流経路" labels={[
+      ["地絡電流", "Dòng chạm đất"],
+      ["外箱", "Vỏ kim loại"],
+      ["25 V", "Điện áp vỏ so với đất trong bài tính"],
+    ]} />
+  ),
   powerHeatCycle341: (
     <Diagram file="powerHeatCycle341" width={320} height={118} title="図2-1-1 熱サイクル" labels={[
       ["給水", "Nước cấp"],
@@ -715,7 +868,17 @@ export const diagrams = {
   ),
   powerAcSr386: (<Diagram file="powerAcSr386" width={756} height={504} title="Hình sách: powerAcSr386" labels={[["原図", "Nhãn Nhật giữ theo hình sách; dịch và giải thích ở cột bên cạnh"]]} />),
   powerArcHorn388: (<Diagram file="powerArcHorn388" width={432} height={456} title="Hình sách: powerArcHorn388" labels={[["原図", "Nhãn Nhật giữ theo hình sách; dịch và giải thích ở cột bên cạnh"]]} />),
-  powerBiomass369: (<Diagram file="powerBiomass369" width={2298} height={967} title="Hình sách: powerBiomass369" labels={[["原図", "Nhãn Nhật giữ theo hình sách; dịch và giải thích ở cột bên cạnh"]]} />),
+  powerBiomass369: (
+    <Diagram file="powerBiomass369" width={2298} height={967} title="図3-5-3 バイオマス発電の原理" labels={[
+      ["バイオマス", "Sinh khối"],
+      ["燃焼・ガス化", "Đốt và khí hóa"],
+      ["バイオガス", "Khí sinh học"],
+      ["熱エネルギー", "Nhiệt năng"],
+      ["ガスタービン・蒸気タービン", "Tua-bin khí và tua-bin hơi"],
+      ["エンジン", "Động cơ"],
+      ["電力", "Điện năng"],
+    ]} />
+  ),
   powerBoilerTypes344: (<Diagram file="powerBoilerTypes344" width={2023} height={975} title="Hình sách: powerBoilerTypes344" labels={[["原図", "Nhãn Nhật giữ theo hình sách; dịch và giải thích ở cột bên cạnh"]]} />),
   powerBoilingReactor360: (<Diagram file="powerBoilingReactor360" width={1784} height={766} title="Hình sách: powerBoilingReactor360" labels={[["原図", "Nhãn Nhật giữ theo hình sách; dịch và giải thích ở cột bên cạnh"]]} />),
   powerBundleConductors386: (<Diagram file="powerBundleConductors386" width={846} height={576} title="Hình sách: powerBundleConductors386" labels={[["原図", "Nhãn Nhật giữ theo hình sách; dịch và giải thích ở cột bên cạnh"]]} />),
@@ -755,33 +918,33 @@ export const diagrams = {
   powerOriginalPage393: (<Diagram file="powerOriginalPage393" width={1800} height={2400} title="Ảnh sách trang 393" labels={[["原図", "Ảnh sách gốc để đối chiếu các nhãn và công thức"]]} />),
   powerOriginalPage394: (<Diagram file="powerOriginalPage394" width={1800} height={2400} title="Ảnh sách trang 394" labels={[["原図", "Ảnh sách gốc để đối chiếu các nhãn và công thức"]]} />),
   powerOriginalPage395: (<Diagram file="powerOriginalPage395" width={1800} height={2400} title="Ảnh sách trang 395" labels={[["原図", "Ảnh sách gốc để đối chiếu các nhãn và công thức"]]} />),
-  powerOriginalPage396: (<Diagram file="powerOriginalPage396" width={1800} height={2400} title="Ảnh sách trang 396" labels={[["原図", "Ảnh sách gốc để đối chiếu các nhãn và công thức"]]} />),
-  powerOriginalPage397: (<Diagram file="powerOriginalPage397" width={1800} height={2400} title="Ảnh sách trang 397" labels={[["原図", "Ảnh sách gốc để đối chiếu các nhãn và công thức"]]} />),
+  powerOriginalPage396: <PowerPageReference page={396} />,
+  powerOriginalPage397: <PowerPageReference page={397} />,
   powerOriginalPage398: <PowerPageReference page={398} />,
   powerOriginalPage399: <PowerPageReference page={399} />,
   powerOriginalPage400: <PowerPageReference page={400} />,
-  powerOriginalPage401: (<Diagram file="powerOriginalPage401" width={1800} height={2400} title="Ảnh sách trang 401" labels={[["原図", "Ảnh sách gốc để đối chiếu các nhãn và công thức"]]} />),
+  powerOriginalPage401: <PowerPageReference page={401} />,
   powerOriginalPage402: <PowerPageReference page={402} />,
   powerOriginalPage403: <PowerPageReference page={403} />,
-  powerOriginalPage404: (<Diagram file="powerOriginalPage404" width={1800} height={2400} title="Ảnh sách trang 404" labels={[["原図", "Ảnh sách gốc để đối chiếu các nhãn và công thức"]]} />),
+  powerOriginalPage404: <PowerPageReference page={404} />,
   powerOriginalPage405: (<Diagram file="powerOriginalPage405" width={1800} height={2400} title="Ảnh sách trang 405" labels={[["原図", "Ảnh sách gốc để đối chiếu các nhãn và công thức"]]} />),
   powerOriginalPage406: <PowerPageReference page={406} />,
   powerOriginalPage407: <PowerPageReference page={407} />,
-  powerOriginalPage408: (<Diagram file="powerOriginalPage408" width={1800} height={2400} title="Ảnh sách trang 408" labels={[["原図", "Ảnh sách gốc để đối chiếu các nhãn và công thức"]]} />),
-  powerOriginalPage409: (<Diagram file="powerOriginalPage409" width={1800} height={2400} title="Ảnh sách trang 409" labels={[["原図", "Ảnh sách gốc để đối chiếu các nhãn và công thức"]]} />),
-  powerOriginalPage410: (<Diagram file="powerOriginalPage410" width={1800} height={2400} title="Ảnh sách trang 410" labels={[["原図", "Ảnh sách gốc để đối chiếu các nhãn và công thức"]]} />),
-  powerOriginalPage411: (<Diagram file="powerOriginalPage411" width={1800} height={2400} title="Ảnh sách trang 411" labels={[["原図", "Ảnh sách gốc để đối chiếu các nhãn và công thức"]]} />),
+  powerOriginalPage408: <PowerPageReference page={408} />,
+  powerOriginalPage409: <PowerPageReference page={409} />,
+  powerOriginalPage410: <PowerPageReference page={410} />,
+  powerOriginalPage411: <PowerPageReference page={411} />,
   powerOriginalPage412: <PowerPageReference page={412} />,
-  powerOriginalPage413: (<Diagram file="powerOriginalPage413" width={1800} height={2400} title="Ảnh sách trang 413" labels={[["原図", "Ảnh sách gốc để đối chiếu các nhãn và công thức"]]} />),
+  powerOriginalPage413: <PowerPageReference page={413} />,
   powerOriginalPage414: (<Diagram file="powerOriginalPage414" width={1800} height={2400} title="Ảnh sách trang 414" labels={[["原図", "Ảnh sách gốc để đối chiếu các nhãn và công thức"]]} />),
   powerOriginalPage415: <PowerPageReference page={415} />,
   powerOriginalPage416: (<Diagram file="powerOriginalPage416" width={1800} height={2400} title="Ảnh sách trang 416" labels={[["原図", "Ảnh sách gốc để đối chiếu các nhãn và công thức"]]} />),
-  powerOriginalPage417: (<Diagram file="powerOriginalPage417" width={1800} height={2400} title="Ảnh sách trang 417" labels={[["原図", "Ảnh sách gốc để đối chiếu các nhãn và công thức"]]} />),
-  powerOriginalPage418: (<Diagram file="powerOriginalPage418" width={1800} height={2400} title="Ảnh sách trang 418" labels={[["原図", "Ảnh sách gốc để đối chiếu các nhãn và công thức"]]} />),
-  powerOriginalPage419: (<Diagram file="powerOriginalPage419" width={1800} height={2400} title="Ảnh sách trang 419" labels={[["原図", "Ảnh sách gốc để đối chiếu các nhãn và công thức"]]} />),
+  powerOriginalPage417: <PowerPageReference page={417} />,
+  powerOriginalPage418: <PowerPageReference page={418} />,
+  powerOriginalPage419: <PowerPageReference page={419} />,
   powerOriginalPage420: (<Diagram file="powerOriginalPage420" width={1800} height={2400} title="Ảnh sách trang 420" labels={[["原図", "Ảnh sách gốc để đối chiếu các nhãn và công thức"]]} />),
   powerOriginalPage421: <PowerPageReference page={421} />,
-  powerOriginalPage422: (<Diagram file="powerOriginalPage422" width={1800} height={2400} title="Ảnh sách trang 422" labels={[["原図", "Ảnh sách gốc để đối chiếu các nhãn và công thức"]]} />),
+  powerOriginalPage422: <PowerPageReference page={422} />,
   powerOverheadGroundWire387: (<Diagram file="powerOverheadGroundWire387" width={504} height={504} title="Hình sách: powerOverheadGroundWire387" labels={[["原図", "Nhãn Nhật giữ theo hình sách; dịch và giải thích ở cột bên cạnh"]]} />),
   powerParallelTransformers376: (<Diagram file="powerParallelTransformers376" width={414} height={456} title="Hình sách: powerParallelTransformers376" labels={[["原図", "Nhãn Nhật giữ theo hình sách; dịch và giải thích ở cột bên cạnh"]]} />),
   powerPressurizedReactor360: (<Diagram file="powerPressurizedReactor360" width={1784} height={887} title="Hình sách: powerPressurizedReactor360" labels={[["原図", "Nhãn Nhật giữ theo hình sách; dịch và giải thích ở cột bên cạnh"]]} />),
