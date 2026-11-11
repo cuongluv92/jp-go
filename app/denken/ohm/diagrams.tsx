@@ -35,6 +35,42 @@ function Diagram({ file, width, height, title, labels }: {
 }
 
 export const diagrams = {
+  lawBranchBreaker480: (
+    <Diagram file="lawBranchBreaker480" width={976} height={427} title="Hình 2-7-3 · Vị trí thiết bị cắt quá dòng của mạch nhánh" labels={[
+      ["Iᵦ", "Dòng định mức thiết bị cắt bảo vệ dây trục"],
+      ["Bの位置は3 m以内が原則", "Theo nguyên tắc, đặt thiết bị cắt nhánh trong 3 m"],
+      ["Iᵦの35 %以上の許容電流の電線", "Dây nhánh chịu được từ 35% Iᵦ: thiết bị cắt trong 8 m"],
+      ["Iᵦの55 %以上の許容電流の電線", "Dây nhánh chịu được từ 55% Iᵦ: không giới hạn vị trí thiết bị cắt"],
+    ]} />
+  ),
+  lawIndoorSwitch480: (
+    <Diagram file="lawIndoorSwitch480" width={989} height={388} title="Hình 2-7-4 · Trường hợp được bỏ thiết bị đóng cắt của mạch hạ áp trong nhà" labels={[
+      ["母屋", "Nhà chính"],
+      ["他の建物", "Công trình khác"],
+      ["分電盤", "Tủ phân phối"],
+      ["屋外灯", "Đèn ngoài trời"],
+      ["①に15 A又は20 Aの配線用遮断器がある場合", "Hình minh họa vị trí ① có áp-tô-mát 15 A hoặc 20 A"],
+      ["ℓが15 m以下のとき②は省略できる", "Đường đến công trình khác dài không quá 15 m: có thể bỏ ②"],
+      ["ℓが8 m以下のとき②は省略できる", "Đường đèn ngoài trời dài không quá 8 m: có thể bỏ ②"],
+    ]} />
+  ),
+  lawFeederBreaker479: (
+    <Diagram file="lawFeederBreaker479" width={941} height={285} title="Hình 2-7-2 · Xác định định mức thiết bị cắt quá dòng" labels={[
+      ["過電流遮断器 Iᵦ", "Định mức thiết bị cắt quá dòng"],
+      ["幹線 Iₐ", "Dòng cho phép của dây trục"],
+      ["電動機 Iₘ", "Tổng dòng định mức động cơ"],
+      ["他の電気機械器具 Iₕ", "Tổng dòng định mức thiết bị khác"],
+      ["比較して小さい方とする", "Lấy giá trị nhỏ hơn trong hai giới hạn khi có động cơ"],
+    ]} />
+  ),
+  lawFeederAmpacity478: (
+    <Diagram file="lawFeederAmpacity478" width={896} height={319} title="Hình 2-7-1 · Dòng điện cho phép của dây trục" labels={[
+      ["過電流遮断器 B", "Thiết bị cắt quá dòng B"],
+      ["幹線 I", "Dây trục, dòng cho phép I"],
+      ["電動機 M", "Động cơ M, tổng dòng Iₘ"],
+      ["他の電気機械器具 H", "Thiết bị điện khác H, tổng dòng Iₕ"],
+    ]} />
+  ),
   lawCableMarking471: (
     <Diagram file="lawCableMarking471" width={944} height={328} title="Hình 2-5-2 · Đánh dấu vị trí chôn cáp" labels={[
       ["ケーブル標識シート", "Băng cảnh báo cáp"],

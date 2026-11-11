@@ -6072,5 +6072,643 @@ export const lawPages: Record<number, LessonRow[]> = {
       "jp": "※1 サイバーセキュリティ：コンピュータシステムやそのソフトウェア、ネットワーク、データなどを、外部からの攻撃や脅威から保護すること。",
       "vi": "Chú thích 1. An ninh mạng là bảo vệ hệ thống máy tính, phần mềm, mạng và dữ liệu trước các cuộc tấn công và mối đe dọa từ bên ngoài."
     }
+  ],
+  "477": [
+    {
+      "jp": "2-7 電気使用場所の施設　といえば　幹線、分岐回路と保護装置、接地工事など",
+      "vi": "2-7 Hệ thống điện tại nơi sử dụng: dây trục, mạch nhánh, bảo vệ và nối đất.",
+      "note": "",
+      "heading": true
+    },
+    {
+      "jp": "低圧電路中の過電流遮断器の施設",
+      "vi": "Thiết bị cắt quá dòng trên đường dây hạ áp.",
+      "note": "",
+      "heading": true
+    },
+    {
+      "jp": "低圧電路中の過電流遮断器にはヒューズ、配線用遮断器などがあり、電路内に生じた過負荷や短絡事故のとき動作して、電路の保護と事故の波及拡大を防止するために設けます。",
+      "vi": "Các cầu chì, aptomat phân phối cắt khi quá tải hoặc ngắn mạch để bảo vệ mạch và tránh sự cố lan rộng.",
+      "note": ""
+    },
+    {
+      "jp": "低圧ヒューズの適合条件",
+      "vi": "Điều kiện phù hợp của cầu chì hạ áp.",
+      "note": "",
+      "heading": true
+    },
+    {
+      "jp": "低圧ヒューズの適合条件は、①定格電流の**1.1倍**の電流に**耐える**こと、②表2-7-1の左欄の定格電流の区分に応じ、定格電流の**1.6倍**及び**2倍**の電流を通じた場合において、右欄の時間内に溶断すること、が必要です。",
+      "vi": "Cầu chì hạ áp phải ① **chịu được** dòng bằng **1,1 lần** dòng định mức, và ② nóng chảy trong thời gian ở bảng 2-7-1 khi cho dòng bằng **1,6 lần** hoặc **2 lần** định mức đi qua, tùy dải dòng định mức."
+    },
+    {
+      "jp": "表2-7-1 低圧電路に使用するヒューズの溶断時間",
+      "vi": "Bảng 2-7-1 · Thời gian nóng chảy của cầu chì trong mạch hạ áp",
+      "heading": true,
+      "table": {
+        "jp": [
+          "定格電流の区分",
+          "定格電流の1.6倍の電流を通じた場合",
+          "定格電流の2倍の電流を通じた場合"
+        ],
+        "vi": [
+          "Dòng định mức",
+          "Ở 1,6 lần dòng định mức",
+          "Ở 2 lần dòng định mức"
+        ],
+        "rows": [
+          [
+            "30 A以下",
+            "Đến 30 A",
+            "**60 分**",
+            "**2 分**"
+          ],
+          [
+            "30 Aを超え60 A以下",
+            "Trên 30 A đến 60 A",
+            "**60 分**",
+            "**4 分**"
+          ],
+          [
+            "60 Aを超え100 A以下",
+            "Trên 60 A đến 100 A",
+            "120 分",
+            "6 分"
+          ]
+        ],
+        "rowsVi": [
+          [
+            "30 A以下",
+            "Đến 30 A",
+            "**60 phút**",
+            "**2 phút**"
+          ],
+          [
+            "30 Aを超え60 A以下",
+            "Trên 30 A đến 60 A",
+            "**60 phút**",
+            "**4 phút**"
+          ],
+          [
+            "60 Aを超え100 A以下",
+            "Trên 60 A đến 100 A",
+            "120 phút",
+            "6 phút"
+          ]
+        ]
+      }
+    },
+    {
+      "jp": "配線用遮断器の適合条件",
+      "vi": "Điều kiện phù hợp của aptomat phân phối.",
+      "note": "",
+      "heading": true
+    },
+    {
+      "jp": "配線用遮断器の適合条件は、①定格電流の**1倍**の電流で自動的に**動作しない**こと、②表2-7-2の左欄の定格電流の区分に応じ、定格電流の**1.25倍**及び**2倍**の電流を通じた場合において、右欄の時間内に自動的に動作すること、が必要です。",
+      "vi": "Áp-tô-mát bảo vệ dây phải ① **không tự tác động** ở dòng bằng **1 lần** dòng định mức, và ② tự tác động trong thời gian ở bảng 2-7-2 khi dòng bằng **1,25 lần** hoặc **2 lần** định mức, tùy dải dòng định mức."
+    },
+    {
+      "jp": "表2-7-2 低圧電路に使用する配線用遮断器の動作時間",
+      "vi": "Bảng 2-7-2 · Thời gian tác động của áp-tô-mát bảo vệ dây trong mạch hạ áp",
+      "heading": true,
+      "table": {
+        "jp": [
+          "定格電流の区分",
+          "定格電流の1.25倍の電流を通じた場合",
+          "定格電流の2倍の電流を通じた場合"
+        ],
+        "vi": [
+          "Dòng định mức",
+          "Ở 1,25 lần dòng định mức",
+          "Ở 2 lần dòng định mức"
+        ],
+        "rows": [
+          [
+            "30 A以下",
+            "Đến 30 A",
+            "**60 分**",
+            "**2 分**"
+          ],
+          [
+            "30 Aを超え50 A以下",
+            "Trên 30 A đến 50 A",
+            "**60 分**",
+            "**4 分**"
+          ],
+          [
+            "50 Aを超え100 A以下",
+            "Trên 50 A đến 100 A",
+            "120 分",
+            "6 分"
+          ]
+        ],
+        "rowsVi": [
+          [
+            "30 A以下",
+            "Đến 30 A",
+            "**60 phút**",
+            "**2 phút**"
+          ],
+          [
+            "30 Aを超え50 A以下",
+            "Trên 30 A đến 50 A",
+            "**60 phút**",
+            "**4 phút**"
+          ],
+          [
+            "50 Aを超え100 A以下",
+            "Trên 50 A đến 100 A",
+            "120 phút",
+            "6 phút"
+          ]
+        ]
+      }
+    }
+  ],
+  "478": [
+    {
+      "jp": "POINT　ヒューズ といえば **1.1倍**に耐え、**1.6倍**で**60分**以内に溶断、**2倍**で**2分**以内に溶断（30 A以下）",
+      "vi": "Ghi nhớ. Cầu chì đến 30 A chịu **1,1 lần** dòng định mức, nóng chảy trong **60 phút** ở **1,6 lần** và trong **2 phút** ở **2 lần** định mức."
+    },
+    {
+      "jp": "配線用遮断器 といえば **1倍**に耐え、**1.25倍**で**60分**以内に遮断、**2倍**で**2分**以内に遮断（30 A以下）",
+      "vi": "Áp-tô-mát đến 30 A chịu **1 lần** dòng định mức, cắt trong **60 phút** ở **1,25 lần** và trong **2 phút** ở **2 lần** định mức."
+    },
+    {
+      "jp": "幹線の電線の太さ、許容電流 I の計算",
+      "vi": "Tính tiết diện và dòng cho phép I của dây trục.",
+      "note": "",
+      "heading": true
+    },
+    {
+      "jp": "低圧屋内幹線は、次のように施設します。",
+      "vi": "Dây trục hạ áp trong nhà được lắp theo các điều kiện sau."
+    },
+    {
+      "jp": "①低圧屋内幹線は、損傷を受けるおそれがない場所に施設します。",
+      "vi": "① Lắp dây trục hạ áp trong nhà ở nơi không có nguy cơ bị hư hỏng.",
+      "note": ""
+    },
+    {
+      "jp": "②電線は、使用機械器具の定格電流の合計以上の**許容電流**のあるものを使用します。",
+      "vi": "② Dùng dây có **dòng điện cho phép** ít nhất bằng tổng dòng định mức của thiết bị sử dụng."
+    },
+    {
+      "jp": "また、電動機等の定格電流の合計を Iₘ［A］、ヒータなど他の電気機械器具の定格電流の合計を Iₕ［A］としたとき、幹線の許容電流 I［A］は次のように求めます。",
+      "vi": "Gọi Iₘ (A) là tổng dòng định mức của động cơ và thiết bị cùng nhóm, Iₕ (A) là tổng dòng định mức của thiết bị điện khác như bộ gia nhiệt. Tính dòng cho phép I (A) của dây trục như sau."
+    },
+    {
+      "jp": "幹線に用いる電線の許容電流の求め方",
+      "vi": "Tính dòng điện cho phép của dây trục",
+      "heading": true
+    },
+    {
+      "jp": "① Iₘ ≤ Iₕ の場合（電動機等の定格電流の合計が他の電気機械器具の定格電流の合計以下の場合）",
+      "vi": "① Nếu tổng dòng định mức động cơ và thiết bị cùng nhóm không vượt tổng dòng định mức các thiết bị điện khác.",
+      "equations": [
+        [
+          "I = Iₘ + Iₕ [A]"
+        ]
+      ]
+    },
+    {
+      "jp": "② Iₘ > Iₕ の場合（電動機等の定格電流の合計が他の電気機械器具の定格電流の合計よりも大きい場合）\n(i) 電動機等の定格電流の合計 Iₘ が50 A以下の場合",
+      "vi": "② Nếu tổng dòng định mức động cơ và thiết bị cùng nhóm lớn hơn tổng dòng của thiết bị điện khác.\n(i) Khi Iₘ không quá 50 A.",
+      "equations": [
+        [
+          "I ≥ 1.25 × Iₘ + Iₕ [A]"
+        ]
+      ],
+      "equationsVi": [
+        [
+          "I ≥ 1,25 × Iₘ + Iₕ [A]"
+        ]
+      ]
+    },
+    {
+      "jp": "(ii) 電動機等の定格電流の合計 Iₘ が50 Aを超える場合",
+      "vi": "(ii) Khi Iₘ trên 50 A.",
+      "equations": [
+        [
+          "I ≥ 1.1 × Iₘ + Iₕ [A]"
+        ]
+      ],
+      "equationsVi": [
+        [
+          "I ≥ 1,1 × Iₘ + Iₕ [A]"
+        ]
+      ]
+    },
+    {
+      "jp": "需要率、力率等が明らかな場合は、補正した負荷電流値以上の許容電流の電線を使用することができます。",
+      "vi": "Khi biết hệ số nhu cầu/công suất có thể xác định dòng sau điều chỉnh để chọn dây.",
+      "note": ""
+    },
+    {
+      "diagram": "lawFeederAmpacity478"
+    },
+    {
+      "jp": "幹線を保護する過電流遮断器の定格値 I_B の計算",
+      "vi": "Tính dòng định mức I_B của bộ cắt bảo vệ dây trục.",
+      "note": "",
+      "heading": true
+    },
+    {
+      "jp": "低圧屋内幹線の電源側電路には、幹線を保護する過電流遮断器を施設します。電動機等の定格電流の合計を Iₘ［A］、ヒータなど他の電気機械器具の定格電流の合計を Iₕ［A］としたとき、過電流遮断器の定格値 Iᵦ［A］は、次のように求めます。",
+      "vi": "Lắp thiết bị cắt quá dòng phía nguồn để bảo vệ dây trục hạ áp trong nhà. Gọi Iₘ (A) là tổng dòng định mức của động cơ và thiết bị cùng nhóm, Iₕ (A) là tổng dòng định mức của thiết bị điện khác như bộ gia nhiệt. Cách xác định dòng định mức Iᵦ của thiết bị cắt xem trang 479."
+    }
+  ],
+  "479": [
+    {
+      "jp": "過電流遮断器の定格値の求め方",
+      "vi": "Cách xác định định mức bộ cắt quá dòng.",
+      "note": "",
+      "heading": true
+    },
+    {
+      "jp": "①電動機等が接続されない場合：過電流遮断器の定格値 Iᵦ は**幹線の許容電流**以下。",
+      "vi": "① Khi không nối động cơ hoặc thiết bị cùng nhóm, dòng định mức Iᵦ của thiết bị cắt không vượt **dòng cho phép của dây trục**.",
+      "equations": [
+        [
+          "Iᵦ ≤ Iₐ [A]"
+        ]
+      ]
+    },
+    {
+      "jp": "②電動機等が接続されている場合：過電流遮断器の定格値 Iᵦ は**3 × Iₘ + Iₕ**以下。",
+      "vi": "② Khi có nối động cơ hoặc thiết bị cùng nhóm, dòng định mức Iᵦ của thiết bị cắt không vượt **3 × Iₘ + Iₕ**.",
+      "equations": [
+        [
+          "Iᵦ ≤ 3 × Iₘ + Iₕ [A]"
+        ]
+      ]
+    },
+    {
+      "jp": "注）Iᵦの値が幹線の許容電流を**2.5倍**した値を超える場合は、その許容電流を**2.5倍**した値以下のものを使用します。",
+      "vi": "Chú thích. Nếu Iᵦ tính ra vượt **2,5 lần** dòng cho phép của dây trục, chọn thiết bị có định mức không quá **2,5 lần** dòng cho phép."
+    },
+    {
+      "diagram": "lawFeederBreaker479"
+    },
+    {
+      "jp": "電動機等がある場合の二つの上限",
+      "vi": "Hai giới hạn khi có động cơ hoặc thiết bị cùng nhóm.",
+      "note": "Iₐ là dòng cho phép của dây trục đã chọn. Khi có động cơ, định mức thiết bị cắt phải đáp ứng cả hai giới hạn.",
+      "equations": [
+        [
+          "Iᵦ ≤ min(3 × Iₘ + Iₕ, 2.5 × Iₐ) [A]"
+        ]
+      ],
+      "equationsVi": [
+        [
+          "Iᵦ ≤ min(3 × Iₘ + Iₕ, 2,5 × Iₐ) [A]"
+        ]
+      ]
+    },
+    {
+      "jp": "POINT　幹線の太さ（許容電流）の下限 といえば\n・電動機電流の合計 Iₘ が50 A以下のときは、Iₘ を**1.25倍**し他の電流の合計 Iₕ を加える\n・電動機電流の合計 Iₘ が50 Aを超えたら、Iₘ を**1.1倍**し他の電流の合計 Iₕ を加える\n過電流遮断器の定格 といえば 電動機電流の合計 Iₘ を**3倍**し他の電流の合計 Iₕ を加えた値で決める",
+      "vi": "Ghi nhớ. Với Iₘ lớn hơn Iₕ, để chọn dây trục, nhân Iₘ với **1,25 lần** nếu Iₘ đến 50 A hoặc **1,1 lần** nếu Iₘ trên 50 A, rồi cộng Iₕ. Để tính giới hạn định mức thiết bị cắt, lấy **3 lần** Iₘ cộng Iₕ.",
+      "note": "Hai hệ số 1,25 và 1,1 thuộc phần chọn dây. Hệ số 3 thuộc phần chọn thiết bị cắt, vẫn phải xét giới hạn 2,5 × Iₐ."
+    },
+    {
+      "jp": "分岐回路の種類とコンセントの配線",
+      "vi": "Phân loại mạch nhánh và chọn dây/ổ cắm.",
+      "note": "",
+      "heading": true
+    },
+    {
+      "jp": "分岐回路の過電流遮断器の定格、コンセントの定格、電線の太さの組合せは次のように規定されています。",
+      "vi": "Bảng dưới đây quy định tổ hợp dòng định mức thiết bị cắt quá dòng, dòng định mức ổ cắm và kích thước dây cho mạch nhánh."
+    },
+    {
+      "jp": "表2-7-3 分岐回路の種類と過電流遮断器・コンセントの定格電流及び電線の最小太さ",
+      "vi": "Bảng 2-7-3 · Loại mạch nhánh, định mức thiết bị cắt và ổ cắm, kích thước dây tối thiểu",
+      "heading": true,
+      "table": {
+        "jp": [
+          "分岐回路の種類",
+          "過電流遮断器の定格電流",
+          "コンセントの定格電流",
+          "軟銅線の最小太さ",
+          "左と同等の太さ"
+        ],
+        "vi": [
+          "Loại mạch nhánh",
+          "Định mức thiết bị cắt",
+          "Định mức ổ cắm",
+          "Đường kính tối thiểu dây đồng mềm",
+          "Tiết diện tương đương"
+        ],
+        "rows": [
+          [
+            "15 A分岐回路",
+            "Mạch nhánh 15 A",
+            "**15** A",
+            "**15** A以下",
+            "直径**1.6** mm",
+            "断面積2 mm²"
+          ],
+          [
+            "20 A分岐回路",
+            "Mạch nhánh 20 A",
+            "**20** A",
+            "**20** A",
+            "直径**2.0** mm",
+            "断面積3.5 mm²"
+          ],
+          [
+            "30 A分岐回路",
+            "Mạch nhánh 30 A",
+            "**30** A",
+            "**20～30** A",
+            "直径**2.6** mm",
+            "断面積5.5 mm²"
+          ],
+          [
+            "40 A分岐回路",
+            "Mạch nhánh 40 A",
+            "**40** A",
+            "**30～40** A",
+            "直径3.2 mm",
+            "断面積**8** mm²"
+          ],
+          [
+            "50 A分岐回路",
+            "Mạch nhánh 50 A",
+            "**50** A",
+            "**40～50** A",
+            "―",
+            "断面積**14** mm²"
+          ],
+          [
+            "20 A配線用遮断器分岐回路",
+            "Mạch nhánh dùng áp-tô-mát 20 A",
+            "**20** A",
+            "**20** A以下",
+            "直径**1.6** mm",
+            "断面積2 mm²"
+          ]
+        ],
+        "rowsVi": [
+          [
+            "15 A分岐回路",
+            "Mạch nhánh 15 A",
+            "**15** A",
+            "Đến **15** A",
+            "**1,6** mm",
+            "2 mm²"
+          ],
+          [
+            "20 A分岐回路",
+            "Mạch nhánh 20 A",
+            "**20** A",
+            "**20** A",
+            "**2,0** mm",
+            "3,5 mm²"
+          ],
+          [
+            "30 A分岐回路",
+            "Mạch nhánh 30 A",
+            "**30** A",
+            "**20–30** A",
+            "**2,6** mm",
+            "5,5 mm²"
+          ],
+          [
+            "40 A分岐回路",
+            "Mạch nhánh 40 A",
+            "**40** A",
+            "**30–40** A",
+            "3,2 mm",
+            "**8** mm²"
+          ],
+          [
+            "50 A分岐回路",
+            "Mạch nhánh 50 A",
+            "**50** A",
+            "**40–50** A",
+            "—",
+            "**14** mm²"
+          ],
+          [
+            "20 A配線用遮断器分岐回路",
+            "Mạch nhánh dùng áp-tô-mát 20 A",
+            "**20** A",
+            "Đến **20** A",
+            "**1,6** mm",
+            "2 mm²"
+          ]
+        ]
+      }
+    }
+  ],
+  "480": [
+    {
+      "jp": "分岐回路の過電流遮断器の施設",
+      "vi": "Vị trí lắp bộ cắt quá dòng cho mạch nhánh.",
+      "note": "",
+      "heading": true
+    },
+    {
+      "jp": "分岐回路には、分岐点から原則として**3 m**以内に開閉器及び過電流遮断器を施設しなければなりません。",
+      "vi": "Theo nguyên tắc, lắp thiết bị đóng cắt và thiết bị cắt quá dòng trong phạm vi **3 m** từ điểm rẽ nhánh."
+    },
+    {
+      "jp": "ただし、分岐回路の許容電流が過電流遮断器の定格電流の**55 %**以上の場合は、8 mを超えて（長さの制限はなし）施設できます。",
+      "vi": "Nếu dòng cho phép của dây nhánh đạt ít nhất **55%** định mức thiết bị cắt quá dòng bảo vệ dây trục, có thể lắp xa hơn 8 m (không giới hạn chiều dài)."
+    },
+    {
+      "jp": "また**35 %**以上の場合は、**8 m**以内に施設します。",
+      "vi": "Nếu đạt từ **35%** đến dưới 55%, lắp trong phạm vi **8 m**."
+    },
+    {
+      "jp": "幹線から分岐するときの過電流遮断器の位置（距離を決める）は、図2-7-3のようになります。",
+      "vi": "Hình 2-7-3 minh họa khoảng cách từ điểm rẽ đến thiết bị cắt quá dòng của mạch nhánh."
+    },
+    {
+      "diagram": "lawBranchBreaker480"
+    },
+    {
+      "jp": "POINT　分岐回路の過電流遮断器の位置 といえば\n・分岐した電線の許容電流が過電流遮断器の定格電流 Iᵦ の**55 %**以上あれば、Bの位置は**制限なし**\n・**35 %**以上55 %未満では**8 m**以内、**35 %**未満では**3 m**以内",
+      "vi": "Ghi nhớ. Nếu dòng cho phép của dây nhánh đạt ít nhất **55%** định mức Iᵦ của thiết bị cắt dây trục, **không giới hạn** vị trí lắp thiết bị cắt nhánh. Từ **35%** đến dưới 55%, lắp trong **8 m**. Dưới **35%**, lắp trong **3 m**."
+    },
+    {
+      "jp": "低圧屋内電路の引込口、引出口の開閉器",
+      "vi": "Bộ đóng cắt ở đầu vào/ra đường dây hạ áp trong nhà.",
+      "note": "",
+      "heading": true
+    },
+    {
+      "jp": "低圧屋内電路には、引込口に近い箇所にあって、容易に開閉することができる箇所に開閉器を施設しなければなりません。",
+      "vi": "Lắp công tắc dễ thao tác gần chỗ dây dẫn vào.",
+      "note": ""
+    },
+    {
+      "jp": "ただし、図2-7-4のように長さが15 m以下で、他の屋内電路（母屋など）で15 A以下の過電流遮断器又は15 Aを超え20 A以下の配線用遮断器に接続し、保護されている屋内電路（小屋など）の場合は省略できます。",
+      "vi": "Có thể bỏ thiết bị đóng cắt ở mạch trong nhà phụ nếu dây dài không quá 15 m và mạch được nối với, đồng thời được bảo vệ bởi, thiết bị cắt quá dòng đến 15 A hoặc áp-tô-mát trên 15 A đến 20 A ở mạch trong nhà khác (như nhà chính). Xem hình 2-7-4."
+    },
+    {
+      "jp": "屋外灯の場合は、長さが8 m以下の場合、引出口の開閉器は省略できます。",
+      "vi": "Với đèn ngoài trời, chiều dài ≤8 m có thể miễn công tắc tại đầu ra.",
+      "note": ""
+    },
+    {
+      "diagram": "lawIndoorSwitch480"
+    }
+  ],
+  "481": [
+    {
+      "jp": "POINT　開閉器の省略 といえば 長さ**15 m**以下の引込口、**8 m**以下の**屋外灯**引出口",
+      "vi": "Ghi nhớ. Có thể bỏ thiết bị đóng cắt ở điểm dây vào nếu dài không quá **15 m**, hoặc ở điểm dây ra cấp **đèn ngoài trời** nếu dài không quá **8 m**, theo các điều kiện trang 480."
+    },
+    {
+      "jp": "電動機の過負荷保護装置の施設",
+      "vi": "Lắp thiết bị chống quá tải động cơ.",
+      "note": "",
+      "heading": true
+    },
+    {
+      "jp": "屋内に施設する電動機には、電動機が焼損するおそれがある過電流を生じた場合に自動的にこれを阻止し、又はこれを警報する装置を設けなければなりません。",
+      "vi": "Động cơ đặt trong nhà cần thiết bị ngăn hoặc báo quá dòng có nguy cơ cháy cuộn dây.",
+      "note": ""
+    },
+    {
+      "jp": "過負荷保護装置を省略できる条件",
+      "vi": "Điều kiện miễn bộ bảo vệ quá tải.",
+      "note": "",
+      "heading": true
+    },
+    {
+      "jp": "①**0.2 kW**以下の電動機の場合",
+      "vi": "① Động cơ ≤**0,2 kW**.",
+      "note": ""
+    },
+    {
+      "jp": "②運転中常時**取扱者**が監視できる場合",
+      "vi": "② **Người phụ trách vận hành** có thể giám sát liên tục khi máy hoạt động."
+    },
+    {
+      "jp": "③過電流の生じるおそれがない場合",
+      "vi": "③ Không có nguy cơ phát sinh quá dòng.",
+      "note": ""
+    },
+    {
+      "jp": "④電動機が単相のものであって、その電源側電路に施設する過電流遮断器の定格電流が15 A（配線用遮断器にあっては20 A）以下の場合",
+      "vi": "④ Động cơ một pha được bảo vệ phía nguồn bằng cầu chì ≤15 A hoặc aptomat ≤20 A.",
+      "note": ""
+    },
+    {
+      "jp": "POINT　電動機の過負荷保護装置を省略できる条件 といえば **20 A**以下の配線用遮断器で保護されている場合、**0.2 kW**以下の電動機、他",
+      "vi": "Ghi nhớ. Có thể miễn bảo vệ quá tải cho động cơ một pha được bảo vệ bằng áp-tô-mát không quá **20 A**, động cơ đến **0,2 kW**, và các trường hợp khác đã nêu."
+    },
+    {
+      "jp": "屋内電路に対する対地電圧の制限",
+      "vi": "Giới hạn điện áp so với đất trong mạch điện nhà ở.",
+      "note": "",
+      "heading": true
+    },
+    {
+      "jp": "住宅の屋内電路の対地電圧は**150 V**以下と制限されていますが、**2 kW**以上の電気機械器具を施設する場合は対地電圧を**300 V**以下にできます（**三相200 Vの機器も可能**）。その場合は専用の開閉器、過電流遮断器、漏電遮断器を施設し、**屋内配線**と**直接接続**する必要があります（コンセントは使用できません）。",
+      "vi": "Điện áp so với đất của mạch trong nhà ở không quá **150 V**. Khi lắp thiết bị điện từ **2 kW** trở lên, có thể dùng điện áp so với đất đến **300 V**, kể cả **thiết bị ba pha 200 V**. Khi đó phải có thiết bị đóng cắt riêng, bảo vệ quá dòng và chống dòng rò, đồng thời **đấu trực tiếp** với **dây trong nhà**. Không dùng ổ cắm."
+    },
+    {
+      "jp": "POINT　対地電圧の制限 といえば 住宅**150 V**以下、**2 kW**以上の電気機械器具は**300 V**以下",
+      "vi": "Ghi nhớ. Nhà ở: điện áp so với đất đến **150 V**. Với thiết bị điện từ **2 kW** trở lên: có thể đến **300 V** theo các điều kiện trên."
+    }
+  ],
+  "482": [
+    {
+      "jp": "電線の接続法",
+      "vi": "Phương pháp nối dây dẫn điện.",
+      "note": "",
+      "heading": true
+    },
+    {
+      "jp": "電線の接続について次のように定められています。",
+      "vi": "Việc nối dây dẫn phải theo các yêu cầu dưới đây."
+    },
+    {
+      "jp": "①電線の電気**抵抗を増加させない**こと。",
+      "vi": "① **Không làm tăng điện trở** của dây."
+    },
+    {
+      "jp": "②電線の引張強さを**20 %**以上減少させないこと。",
+      "vi": "② Không làm sức chịu kéo của dây giảm từ **20%** trở lên."
+    },
+    {
+      "jp": "③接続は、**接続器具**（スリーブ、電線コネクタなど）を用いるか直接接続して**ろう付け**（半田付け）する。",
+      "vi": "③ Dùng **phụ kiện nối dây** (ống nối, đầu nối dây hoặc tương tự) hoặc nối trực tiếp và **hàn** (hàn thiếc)."
+    },
+    {
+      "jp": "④接続部に接続器を使用する場合を除き、もとの絶縁物と同等以上の絶縁効力のあるもので被覆する。",
+      "vi": "④ Trừ trường hợp dùng phụ kiện nối, phải bọc lại với khả năng cách điện ít nhất bằng lớp cũ.",
+      "note": ""
+    },
+    {
+      "jp": "⑤コード相互、キャブタイヤケーブル相互の接続は、コード接続器、接続箱を用いる。",
+      "vi": "⑤ Nối các dây mềm/cord, cáp cabtyre bằng phụ kiện/hộp nối phù hợp.",
+      "note": ""
+    },
+    {
+      "jp": "⑥導体にアルミニウムを使用する電線と銅を使用する電線とを接続するなど、電気化学的性質の異なる導体を接続する場合には、接続部分に電気的腐食が生じないようにする。",
+      "vi": "⑥ Khi nối nhôm với đồng hoặc các vật liệu khác nhau phải chống ăn mòn điện hóa tại mối nối.",
+      "note": ""
+    },
+    {
+      "jp": "POINT　電線の接続法 といえば **抵抗**を**増加させない**、**強度を20 %以上減少させない**、**接続器具**を用いるか**ろう付け**",
+      "vi": "Ghi nhớ. **Không làm tăng** **điện trở**, **không làm giảm sức chịu kéo từ 20% trở lên**. Dùng **phụ kiện nối dây** hoặc **hàn**."
+    },
+    {
+      "jp": "低圧屋内配線工事の種類",
+      "vi": "Các loại thi công dây hạ áp trong nhà.",
+      "note": "",
+      "heading": true
+    },
+    {
+      "jp": "低圧屋内配線工事として、ケーブル工事、金属管工事、合成樹脂管工事、金属可とう電線管工事、金属線ぴ工事、フロアダクト工事、金属ダクト工事、バスダクト工事、ライティングダクト工事、がいし引き工事などがあります。",
+      "vi": "Thi công cáp, ống kim loại, ống nhựa, ống kim loại mềm, nẹp kim loại, floor duct, máng kim loại, busduct, lighting duct, dây trên sứ.",
+      "note": ""
+    },
+    {
+      "jp": "ケーブル工事",
+      "vi": "Thi công bằng cáp.",
+      "note": "",
+      "heading": true
+    },
+    {
+      "jp": "**ケーブル工事**はケーブル又はキャブタイヤケーブルを使用し、電線を造営材に直接取り付けることができ、工事が簡単にできます。",
+      "vi": "**Thi công bằng cáp** dùng cáp hoặc cáp mềm cabtyre. Có thể gắn dây trực tiếp vào kết cấu nên thi công đơn giản."
+    },
+    {
+      "jp": "支持点間距離は、**2 m**以下（造営材の下面又は側面に沿って取り付ける場合）、**6 m**以下（接触防護措置を施した場所において垂直に取り付ける場合）、キャブタイヤケーブルの場合は**1 m**以下です。",
+      "vi": "Khoảng cách giữa các điểm đỡ không quá **2 m** khi lắp dọc mặt dưới hoặc mặt bên của kết cấu, không quá **6 m** khi lắp thẳng đứng tại nơi có biện pháp chống tiếp xúc, và không quá **1 m** với cáp mềm cabtyre."
+    },
+    {
+      "jp": "また、曲げ半径はケーブル外径の**6倍**以上です。",
+      "vi": "Bán kính uốn ít nhất **6 lần** đường kính ngoài của cáp."
+    },
+    {
+      "jp": "重量物の圧力又は機械的衝撃を受けるおそれがある箇所に施設するケーブルには、防護装置を設けます。",
+      "vi": "Cáp lắp ở nơi có nguy cơ chịu áp lực vật nặng hoặc va đập cơ học phải có thiết bị bảo vệ."
+    },
+    {
+      "jp": "金属管工事",
+      "vi": "Thi công ống kim loại.",
+      "note": "",
+      "heading": true
+    },
+    {
+      "jp": "**金属管工事**は、金属管を造営材に直接取り付けるか、コンクリートに埋め込んで管内に電線を通して施設するものです。",
+      "vi": "**Thi công ống kim loại** là gắn ống trực tiếp lên kết cấu hoặc chôn ống trong bê tông, rồi luồn dây qua ống."
+    },
+    {
+      "jp": "使用電線にはより線を用います、銅線の場合3.2 mm以下であれば単線も使用できます。",
+      "vi": "Dùng dây bện. Với dây đồng có đường kính đến 3,2 mm, cũng có thể dùng dây một sợi."
+    },
+    {
+      "jp": "管の曲げ半径は管内径の**6倍**以上で、管の支持点間距離は**2 m**以下とすることが望ましいです（内線規程）。",
+      "vi": "Theo quy định đi dây trong công trình được sách dẫn, nên giữ bán kính uốn ống ít nhất **6 lần** đường kính trong và khoảng cách điểm đỡ ống không quá **2 m**."
+    }
   ]
 };
