@@ -93,7 +93,8 @@ export const electricPowerPages: Record<number, LessonRow[]> = {
   327: [
     { jp: "1-3 水力発電所の理論水力 **といえば** 流量と有効落差に比例", vi: "1-3 Công suất thủy điện lý thuyết tỉ lệ với **lưu lượng và cột nước hữu ích**", heading: true },
     { jp: "総落差と有効落差", vi: "Cột nước tổng và cột nước hữu ích", heading: true },
-    { jp: "水力発電所では、上図のように、取水口→導水路→ヘッドタンク（水槽）→水圧管路→水車→放水路の順で水が流れます。取水口から放水路までの水位の差 H［m］を**総落差**といいます。", vi: "Nước đi từ cửa lấy nước → đường dẫn → bể điều áp (head tank) → ống áp lực → tua-bin → kênh xả. Chênh lệch cao độ mực nước giữa cửa lấy và kênh xả H [m] là **cột nước tổng (総落差)**." },
+    { diagram: "powerEffectiveHead327" },
+    { jp: "水力発電所では、上図のように、取水口→導水路→ヘッドタンク（水槽）→水圧管路→水車→放水路の順で水が流れます。取水口から放水路までの水位の差 H［m］を**総落差**といいます。", vi: "Nước đi từ cửa lấy nước → đường dẫn → bể đầu đường ống áp lực (head tank) → ống áp lực → tua-bin → kênh xả. Chênh lệch cao độ mực nước giữa cửa lấy và kênh xả H [m] là **cột nước tổng (総落差)**." },
     { jp: "実際には、導水路、水圧管路などに流水の摩擦によるエネルギーの損失があり、これを水頭で表して**損失水頭**といいます。総落差から損失水頭を差し引き、実際に水車に有効に働く落差を**有効落差**といいます。", vi: "Trên đường dẫn và ống áp lực có tổn thất ma sát, quy đổi thành **cột nước tổn thất (損失水頭)**. Lấy cột nước tổng trừ các tổn thất sẽ được **cột nước hữu ích (有効落差)** thực sự tác dụng lên tua-bin.", equations: [["Hₑ = H − (h₁ + h₂ + h₃) [m]"]], note: "H là cột nước tổng, h₁, h₂, h₃ là các tổn thất tại đường dẫn, ống áp lực và kênh xả; Hₑ luôn không vượt H nếu không có bơm thêm năng lượng." },
     { jp: "水力発電所の出力", vi: "Công suất nhà máy thủy điện", heading: true },
     { jp: "水力発電所において、有効落差 Hₑ［m］（水車に有効に作用する水頭）、流量 Q［m³/s］（1秒間に水車を通過する水量）としたとき、Hₑ［m］と Q［m³/s］の積は、1秒間に水車に与えられるエネルギー 1 000QHₑ［kgf・m/s］となります。1 kgf・m/s は、9.8 W に相当するので、水車に与えられる動力 P₀［kW］は次式となり、これを**理論水力**といいます。", vi: "Với cột nước hữu ích Hₑ [m], lưu lượng Q [m³/s], năng lượng nước cấp cho tua-bin mỗi giây tạo công suất **lý thuyết** P₀. Theo quy đổi 1 kgf·m/s ≈ 9,8 W, ta có:", equations: [["P₀ = 9.8 Q Hₑ [kW]"]], note: "Q tính m³/s, Hₑ tính m. Kiểm tra đơn vị: ρgQH [W] = 1000×9,8×Q×H, chia 1000 thành kW nên hệ số 9,8." },
@@ -123,6 +124,7 @@ export const electricPowerPages: Record<number, LessonRow[]> = {
   ],
   330: [
     { jp: "ピトー管法", vi: "Phương pháp ống Pitot", heading: true },
+    { diagram: "powerPitot330" },
     { jp: "ピトー管は、流体の**流れの速さを測定**する計測器です。図1-4-1において、直角に立てた細管 a の h₁ は圧力水頭、流水に向かって開口のある細管 b の h₂ は圧力水頭と速度水頭の和になります。両水面の差（h＝h₂－h₁）は、速度水頭に比例するので、", vi: "Ống Pitot dùng đo vận tốc dòng chảy. Trong hình 1-4-1, ống a vuông góc dòng chảy chỉ cột nước áp lực h₁; ống b mở hướng ngược dòng thể hiện tổng cột nước áp lực và cột nước vận tốc h₂. Độ chênh mực nước h = h₂ − h₁ liên quan đến cột nước vận tốc:", equations: [["h ∝ ",{fraction:[["v²"],["2g"]]},";  v = k √(2gh) [m/s]"]], note: "k là hệ số thực nghiệm hiệu chỉnh; g [m/s²], h [m], v [m/s]. Để tính lưu lượng Q cần thêm diện tích tiết diện A dòng chảy: Q = vA." },
     { jp: "管内の流速を求め、流速と断面積から流量がわかります。", vi: "Tính vận tốc dòng chảy trong ống rồi nhân với diện tích mặt cắt để tìm lưu lượng." },
     { jp: "POINT　流量の測定法といえば 流速計法、ピトー管法など", vi: "**Ghi nhớ:** Đo lưu lượng dùng lưu tốc kế hoặc ống Pitot." },
@@ -471,6 +473,7 @@ export const electricPowerPages: Record<number, LessonRow[]> = {
     { jp: "**タービン室効率**とは、タービンの機械出力熱量換算値とボイラでの発生蒸気熱量の比になります。タービン出力とボイラ熱量の比です。", vi: "Hiệu suất buồng tua-bin ηₜʀ bằng công cơ tua-bin chia nhiệt lượng tăng của hơi ở nồi hơi.", equations: [["ηₜʀ = ",{fraction:[["Pₜ"],[{fraction:[["Z"],["3600"]]}," (i₂ − i₁)"]]}," = η꜀ ηₜ"]], note: "Z là lưu lượng hơi [kg/h], Pₜ công suất tua-bin [kW], i₂ và i₁ [kJ/kg]. Tích η꜀ ηₜ do hai mẫu số trung gian triệt tiêu; không nhầm với ηg của máy phát điện." },
     { jp: "POINT　タービン室効率 ηₜʀ といえばタービンの機械出力とボイラ発生蒸気熱量の比。", vi: "**Ghi nhớ:** Hiệu suất buồng tua-bin = công suất cơ trục / nhiệt cấp cho hơi = hiệu suất chu trình × hiệu suất tua-bin." },
     { jp: "練習問題 01　ボイラ効率", vi: "Bài tập 01 · Hiệu suất nồi hơi", heading:true },
+    { diagram: "powerBoilerExercise351" },
     { jp: "ボイラ入口の給水の比エンタルピー i₁＝900 kJ/kg、ボイラ出口の比エンタルピー i₂＝4 000 kJ/kg、蒸気及び給水量 Z＝2 200 t/h、燃料消費量 B＝168 kL/h、燃料発熱量 H＝46 000 kJ/L の汽力発電所のボイラ効率 ηᵦ［％］の値は。", vi: "Dữ liệu: nước cấp i₁=900 kJ/kg, hơi ra i₂=4.000 kJ/kg, lưu lượng Z=2.200 t/h, nhiên liệu B=168 kL/h, nhiệt trị H=46.000 kJ/L. Tính hiệu suất nồi hơi.", equations:[["ηᵦ = ",{fraction:[["Z (i₂ − i₁)"],["B H"]]}],["= ",{fraction:[["2 200 × 10³ × (4 000 − 900)"],["168 × 10³ × 46 000"]]}," ≈ 0.883 = 88%"]],note:"Bước 1: đổi 2.200 t/h = 2.200.000 kg/h, 168 kL/h =168.000 L/h. Bước 2: nhiệt hơi nhận ZΔi =6,82×10⁹ kJ/h; nhiệt nhiên liệu cấp BH=7,728×10⁹ kJ/h. Bước 3: chia được 0,883, làm tròn 88%. Kiểm tra ngược 0,883×7,728×10⁹≈6,82×10⁹ kJ/h." },
     { jp: "解答　ηᵦ＝**88％**", vi: "Đáp án: **88%**." },
   ],
@@ -508,6 +511,7 @@ export const electricPowerPages: Record<number, LessonRow[]> = {
   355: [
     { jp: "練習問題 01　タービン効率", vi: "Bài tập 01 · Hiệu suất tua-bin", heading:true },
     { jp: "汽力発電設備の発電機出力 Pg＝19MWで運転している。このとき、蒸気タービン入口の蒸気の比エンタルピー i₂＝3550kJ/kg、復水器入口の蒸気の比エンタルピー i₃＝2500kJ/kg、使用蒸気量 Z＝80t/hであった。発電機効率 ηg＝95％とすると、タービン効率 ηt［％］の値は。", vi: "Máy phát công suất điện Pg=19 MW, hơi vào tua-bin i₂=3550 kJ/kg, hơi vào bình ngưng i₃=2500 kJ/kg, lưu lượng hơi Z=80 t/h, hiệu suất máy phát ηg=95%. Tìm hiệu suất tua-bin ηt." },
+    { diagram: "powerTurbineExercise355" },
     { jp: "解き方　発電機出力 Pg＝発電機入力 Pt×発電機効率 ηg なので、タービン出力 Pt は次の式になります。", vi: "Bước 1: từ Pg=ηg Pt suy ra công suất cơ tua-bin:", equations:[["Pt = ",{fraction:[["Pg"],["ηg"]]}," = ",{fraction:[["19"],["0.95"]]}," = 20 MW = 20 × 10³ kW"]] },
     { jp: "したがって、タービン効率 ηt は、タービンの出力と入力の比より", vi: "Bước 2: nhiệt năng hơi cấp cho tua-bin mỗi giây:", equations:[["Pin = ",{fraction:[["Z"],["3600"]]}," (i₂ − i₃)"],["= ",{fraction:[["80 × 10³"],["3600"]]}," × (3550−2500) ≈ 23 333 kW"]] },
     { jp: "ηt＝Pt/｛Z/3600(i₂−i₃)｝≒0.857→86％。", vi: "Bước 3: chia công suất cơ cho nhiệt năng hơi cấp:", equations:[["ηt = ",{fraction:[["20 000"],["23 333.3"]]}," ≈ 0.857 = 86%"]],note:"Kiểm tra ngược: ηt×Pin ≈0,857×23,33MW ≈20MW, nhân ηg=0,95 cho công suất phát ≈19MW. Đổi 80 t/h thành 80.000 kg/h trước khi chia 3600." },
@@ -785,10 +789,11 @@ export const electricPowerPages: Record<number, LessonRow[]> = {
   374: [
     {jp:"4-2 変圧器の結線 **といえば** Y結線とΔ結線、経済的運転 **といえば** 並行運転",vi:"4-2 Đấu dây máy biến áp: sao/tam giác và vận hành kinh tế song song",heading:true},
     {jp:"いろいろな変圧器",vi:"Các dạng máy biến áp",heading:true},
+    { diagram: "powerTransformerTypes374" },
     {jp:"変圧器の三相結線",vi:"Cách nối ba pha của máy biến áp",heading:true},
     {jp:"変圧器の結線方式には次のようなものがあります。それぞれの特徴を覚えておきましょう。",vi:"Các kiểu đấu cuộn ba pha có đặc điểm khác nhau về trung tính, góc pha, điều hòa bậc ba và tính thích hợp theo phía điện áp."},
     {jp:"Y-Y-Δ結線の特徴",vi:"Đặc điểm nối Y–Y có cuộn tam giác thứ ba",heading:true},
-    {jp:"Y-Y結線にΔ結線の三次巻線（巻数）を設けたもので、変電所用の変圧器として幅広く使われます。",vi:"Có cuộn sơ/thứ cấp đấu sao và cuộn tam giác thứ ba, được dùng rộng rãi cho trạm biến điện."},
+    {jp:"Y-Y結線にΔ結線の三次巻線（後述）を設けたもので、変電所用の変圧器として幅広く使われます。",vi:"Có cuộn sơ/thứ cấp đấu sao và cuộn tam giác thứ ba, được dùng rộng rãi cho trạm biến điện."},
     {jp:"一次、二次ともに中性点接地系統に用い、異常電圧を低減できます。一次、二次の位相変位を生じません。",vi:"Dùng được hệ có nối đất trung tính cả hai phía và hỗ trợ hạn chế quá điện áp bất thường. Góc lệch giữa điện áp dây hai phía chính bằng 0° trong nhóm đấu dây tương ứng."},
     {jp:"三次巻線（Δ結線）の役割：第三高調波を循環させ波形ひずみを少なくします。調相設備や所内負荷などの低電圧を供給します。",vi:"Cuộn tam giác thứ ba tạo đường cho dòng điều hòa bậc ba tuần hoàn, giảm méo dạng; có thể cấp điện áp thấp cho thiết bị bù phản kháng hoặc phụ tải tự dùng."},
     {jp:"Y-Δ（Δ-Y）結線の特徴",vi:"Đặc điểm Y–Δ và Δ–Y",heading:true},
@@ -797,14 +802,15 @@ export const electricPowerPages: Record<number, LessonRow[]> = {
     {jp:"一次、二次の位相変位を生じません。第三高調波を循環させ波形ひずみを少なくします。3台の変圧器でΔ結線運転を行っているとき、1台に故障が生じてもV-V結線として運転できます。",vi:"Không lệch pha cơ bản giữa hai phía trong nhóm đấu tương ứng; dòng điều hòa bậc ba tuần hoàn trong tam giác. Nếu dùng ba MBA một pha và một máy hỏng, có thể tạm vận hành nối V–V bằng hai máy còn lại."},
   ],
   375: [
-    {jp:"Δ結線の特徴　中性点の接地ができないので、異常電圧を発生しやすくなります。地絡保護を行うのに、接地用変圧器が必要になります。主として77kV以下の回路で使用されます。",vi:"Kết nối tam giác không có điểm trung tính tự nhiên để nối đất, có thể cần MBA tạo trung tính phục vụ bảo vệ chạm đất; sách nêu ứng dụng chủ yếu ở mạch đến 77 kV.",note:"Thông tin cấp điện áp là mô tả phạm vi trong sách, không phải tiêu chuẩn bắt buộc chung cho mọi trạm."},
+    {jp:"Δ結線の特徴　中性点の接地ができないので、異常電圧を発生しやすくなります。地絡保護を行うのに、接地用変圧器が必要になります。主として77kV以下の回路で使用されます。",vi:"Nối tam giác không có điểm trung tính để nối đất nên dễ phát sinh quá điện áp. Sách nêu cần máy biến áp nối đất để bảo vệ chạm đất và kiểu đấu này chủ yếu dùng ở mạch đến 77 kV.",note:"Thông tin cấp điện áp là mô tả phạm vi trong sách, không phải tiêu chuẩn bắt buộc chung cho mọi trạm."},
     {jp:"V-V結線の特徴",vi:"Đặc điểm nối V–V (open delta)",heading:true},
     {jp:"6.6kV用の配電用変圧器に利用されます。変圧器の利用率が悪くなります。V結線変圧器の利用率は**86.6％**です。",vi:"Dùng cho một số MBA phân phối 6,6 kV. Hệ số sử dụng dung lượng MBA kém hơn tam giác kín; với hai máy bằng nhau, mức sử dụng theo sách **86,6%**.",equations:[["利用率 = ",{fraction:[["√3"],["2"]]}," ≈ 0.866 = 86.6%"]],note:"Nếu mỗi MBA có định mức S, tổng định mức danh định hai máy là 2S nhưng tải ba pha tối đa của V–V là √3S. Tỷ số √3S/(2S)=86,6%."},
     {jp:"POINT　Y結線：中性点の接地。Δ結線：波形ひずみ軽減、非接地系統。三次巻線（Δ結線）：調相設備や所内負荷。V結線：配電用変圧器に多い。",vi:"Ghi nhớ: **Y** tạo điểm trung tính nối đất; **Δ** giúp tuần hoàn điều hòa bậc ba; **cuộn Δ thứ ba** hỗ trợ thiết bị bù/tải tự dùng; **V–V** dùng ở một số MBA phân phối."},
     {jp:"変圧器での電圧調整",vi:"Điều chỉnh điện áp bằng MBA",heading:true},
     {jp:"配電用変電所では、負荷時タップ切換変圧器により配電線路の電圧を調整します。高圧配電線路では、柱上変圧器のタップ切換による調整や配電用自動電圧調整器を用います。",vi:"Tại trạm phân phối dùng **MBA đổi nấc dưới tải (OLTC)** để điều chỉnh điện áp; trên lưới trung áp có thể dùng nấc MBA cột và bộ điều chỉnh điện áp tự động."},
+    { diagram: "powerSvr375" },
     {jp:"負荷時タップ切換変圧器",vi:"MBA đổi nấc dưới tải",heading:true},
-    {jp:"負荷時タップ切換変圧器は、電力系統の適正な電圧調整を行います。電圧調整は電動操作で自動的に行われます。",vi:"MBA OLTC thay đổi tỷ số vòng dây/nấc khi vẫn có tải nhờ bộ chuyển nấc được thiết kế cho thao tác dưới tải."},
+    {jp:"負荷時タップ切換変圧器は、電力系統の適正な電圧調整を行います。この装置は直列巻線を持つ変圧器（単巻変圧器）と負荷時タップ切換装置を組み合わせたものと、変圧器（2巻線の絶縁変圧器）の一次側に負荷時タップ切換装置を組み込んだ負荷時タップ切換変圧器があり、電圧調整は電動操作で自動的に行われます。",vi:"Máy biến áp đổi nấc dưới tải giúp điều chỉnh điện áp hệ thống điện. Có kiểu kết hợp máy biến áp tự ngẫu có cuộn dây nối tiếp với bộ đổi nấc dưới tải và kiểu tích hợp bộ đổi nấc vào phía sơ cấp của máy biến áp cách ly hai cuộn dây. Điện áp được điều chỉnh tự động bằng cơ cấu truyền động điện."},
     {jp:"配電用自動電圧調整器",vi:"Bộ tự động điều chỉnh điện áp phân phối",heading:true},
     {jp:"柱上変圧器のタップ切換で対応できない電圧降下に対しては、高圧配電線の電圧を補償するために**配電用自動電圧調整器（SVR：ステップボルテージレギュレータ）**を設けます。",vi:"Khi đổi nấc MBA cột không đủ bù sụt áp đường dây, lắp **SVR (Step Voltage Regulator)** để điều chỉnh điện áp phân phối theo các nấc."},
     {jp:"POINT　電圧調整といえば負荷時タップ切換変圧器、SVRなどがある。",vi:"Ghi nhớ: OLTC và SVR đều dùng điều chỉnh điện áp nhưng vị trí, chức năng và cấu trúc khác nhau."},
@@ -829,6 +835,7 @@ export const electricPowerPages: Record<number, LessonRow[]> = {
   377: [
     {jp:"練習問題 01　変圧器の並行運転",vi:"Bài luyện tập 01 · Vận hành song song máy biến áp",heading:true},
     {jp:"下表の A、B 変圧器 2 台を並行運転し、Sₗ＝6 000 kV・A の負荷に電力を供給する場合、過負荷となる変圧器の過負荷運転状態［%］は。",vi:"Hai máy biến áp A, B hoạt động song song, cấp tải Sₗ = 6.000 kVA. Hỏi máy nào quá tải và mức vận hành quá tải bao nhiêu phần trăm?"},
+    { diagram: "powerParallelTransformers377" },
     {jp:"定格容量／%インピーダンス",vi:"Dung lượng định mức / % tổng trở",table:{
       jp: ["変圧器","定格容量","%インピーダンス"],
       vi: ["Máy","Công suất định mức","% tổng trở"],
@@ -877,13 +884,13 @@ export const electricPowerPages: Record<number, LessonRow[]> = {
       vi: ["Loại","Nguyên lý"],
       rows: [
         ["空気遮断器（ABB）","Máy cắt khí nén (ABB)","開閉器接点を開放すると同時に、超高速の空気流を吹き付けてアーク放電を強力に冷却し消弧する遮断器。動作時に大きな騒音を発すること、据え付け面積が大きくなることが欠点。"],
-        ["ガス遮断器（GCB）","Máy cắt khí (GCB)","電流を遮断するとき、電極間に発生するアーク放電に対し、六ふっ化硫黄（SF₆）ガスを吹き付けることで消弧させる遮断器。SF₆は絶縁性が高く、不活性であり、熱伝導性も高い。"],
-        ["真空遮断器（VCB）","Máy cắt chân không (VCB)","高真空の容器に電極を収めた構造で、高真空の優れた絶縁耐力とアークの消弧能力を利用する。動作時の騒音が小さい。"]
+        ["ガス遮断器（GCB）","Máy cắt khí (GCB)","電流を遮断するとき、電極間に発生するアーク放電に対し、六ふっ化硫黄（SF₆）ガスを吹き付けることで消弧させる遮断器。六ふっ化硫黄ガスは絶縁性が高く、不活性であり、熱伝導性も高いことから、アーク放電によって過熱した電極を速やかに冷却することができる。"],
+        ["真空遮断器（VCB）","Máy cắt chân không (VCB)","高真空の容器に電極を収めた構造で、高真空の優れた絶縁耐力とアークの消弧能力を利用する。遮断性能に優れ、小形、軽量で火災の危険もなく、規定遮断回数までは点検の必要がなく、動作時の騒音が小さいなどの多くの長所がある。"]
       ],
       rowsVi: [
         ["空気遮断器（ABB）","Máy cắt khí nén (ABB)","Khi tiếp điểm mở, luồng khí tốc độ rất cao làm nguội và dập hồ quang. Nhược điểm là vận hành ồn và cần diện tích lắp đặt lớn."],
-        ["ガス遮断器（GCB）","Máy cắt khí (GCB)","Thổi khí lưu huỳnh hexaflorua (SF₆) vào hồ quang giữa các điện cực để dập hồ quang. SF₆ cách điện tốt, trơ và dẫn nhiệt tốt."],
-        ["真空遮断器（VCB）","Máy cắt chân không (VCB)","Các điện cực nằm trong bình chân không cao, tận dụng độ bền cách điện và khả năng dập hồ quang của chân không. Tiếng ồn khi vận hành thấp."]
+        ["ガス遮断器（GCB）","Máy cắt khí (GCB)","Thổi khí lưu huỳnh hexaflorua (SF₆) vào hồ quang giữa các điện cực để dập hồ quang. SF₆ cách điện tốt, trơ và dẫn nhiệt tốt nên có thể nhanh chóng làm nguội các điện cực bị quá nhiệt do hồ quang."],
+        ["真空遮断器（VCB）","Máy cắt chân không (VCB)","Các điện cực nằm trong bình chân không cao, tận dụng độ bền cách điện và khả năng dập hồ quang của chân không. Khả năng cắt tốt, nhỏ gọn, nhẹ, không có nguy cơ cháy theo mô tả của sách, chưa cần kiểm tra trước số lần cắt quy định và vận hành ít ồn."]
       ],
     },note:"Các loại ABB/GCB/VCB đều có thể cắt dòng sự cố trong phạm vi định mức. Với SF₆, cần lưu ý quản lý khí vì tác động nhà kính rất cao."},
     {jp:"断路器",vi:"Dao cách ly (断路器)",heading:true},

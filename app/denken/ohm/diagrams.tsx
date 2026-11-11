@@ -35,6 +35,67 @@ function Diagram({ file, width, height, title, labels }: {
 }
 
 export const diagrams = {
+  powerEffectiveHead327: (
+    <Diagram file="powerEffectiveHead327" width={810} height={410} title="総落差と有効落差" labels={[
+      ["取水口", "Cửa lấy nước"],
+      ["沈砂池", "Bể lắng cát"],
+      ["導水路", "Đường dẫn nước"],
+      ["ヘッドタンク", "Bể đầu đường ống áp lực"],
+      ["水圧管路", "Đường ống áp lực"],
+      ["発電所", "Nhà máy phát điện"],
+      ["水車", "Tua-bin nước"],
+      ["放水路", "Kênh xả"],
+      ["総落差 H", "Cột nước tổng H"],
+      ["有効落差 Hₑ", "Cột nước hữu ích Hₑ"],
+      ["h₁・h₂・h₃", "Tổn thất cột nước ở đường dẫn, ống áp lực và kênh xả"],
+    ]} />
+  ),
+  powerPitot330: (
+    <Diagram file="powerPitot330" width={237} height={280} title="図1-4-1 ピトー管法" labels={[
+      ["流速 v", "Vận tốc dòng nước v"],
+      ["h₁", "Cột nước áp suất trong ống a"],
+      ["h₂", "Tổng cột nước áp suất và vận tốc trong ống b"],
+      ["h", "Chênh lệch mực nước giữa hai ống"],
+    ]} />
+  ),
+  powerBoilerExercise351: (
+    <Diagram file="powerBoilerExercise351" width={322} height={239} title="ボイラ効率の練習問題の図" labels={[
+      ["ボイラ", "Nồi hơi"],
+      ["Z", "Lưu lượng hơi và nước cấp"],
+      ["B", "Lưu lượng nhiên liệu"],
+      ["H", "Nhiệt trị nhiên liệu"],
+      ["i₁・i₂", "Entanpi riêng của nước cấp và hơi ra"],
+    ]} />
+  ),
+  powerTurbineExercise355: (
+    <Diagram file="powerTurbineExercise355" width={321} height={229} title="タービン効率の練習問題の図" labels={[
+      ["タービン", "Tua-bin"],
+      ["発電機", "Máy phát điện"],
+      ["復水器", "Bình ngưng"],
+      ["Z", "Lưu lượng hơi"],
+      ["Pₜ", "Công suất cơ của tua-bin"],
+      ["Pɢ", "Công suất điện của máy phát"],
+      ["i₂・i₃", "Entanpi riêng của hơi vào tua-bin và vào bình ngưng"],
+    ]} />
+  ),
+  powerTransformerTypes374: (
+    <Diagram file="powerTransformerTypes374" width={803} height={256} title="いろいろな変圧器" labels={[
+      ["変圧器", "Máy biến áp"],
+    ]} />
+  ),
+  powerSvr375: (
+    <Diagram file="powerSvr375" width={150} height={270} title="図4-2-1 SVR" labels={[
+      ["SVR", "Bộ điều chỉnh điện áp phân phối theo nấc"],
+    ]} />
+  ),
+  powerParallelTransformers377: (
+    <Diagram file="powerParallelTransformers377" width={344} height={141} title="変圧器の並行運転" labels={[
+      ["変圧器 A・B", "Hai máy biến áp A và B"],
+      ["Sₐ・Sᵦ", "Phần tải của mỗi máy"],
+      ["%zₐ・%zᵦ", "Tổng trở phần trăm của từng máy"],
+      ["Sₗ", "Tổng tải 6.000 kVA"],
+    ]} />
+  ),
   powerWaterway322: (
     <Diagram file="powerWaterway322" width={1450} height={643} title="図1-1-1 水路式発電所" labels={[
       ["取水ダム", "Đập lấy nước"],
