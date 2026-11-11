@@ -1603,5 +1603,1080 @@ export const lawPages: Record<number, LessonRow[]> = {
       "jp": "解答　（ア）**特定**　（イ）**100**　（ウ）**輸入**　（エ）**ひし形PSE**　（オ）**〈PS〉E**",
       "vi": "Đáp án. (ア) **đặc định** · (イ) **100** · (ウ) **nhập khẩu** · (エ) **PSE hình thoi** · (オ) **〈PS〉E**."
     }
+  ],
+  "441": [
+    {
+      "jp": "2-1 電気設備技術基準・解釈 といえば「解釈」で技術的内容を示す",
+      "vi": "2-1 Tiêu chuẩn kỹ thuật thiết bị điện và phần giải thích · “Phần giải thích” trình bày các yêu cầu kỹ thuật cụ thể.",
+      "note": "",
+      "heading": true
+    },
+    {
+      "jp": "「電技」と「解釈」、用語の定義",
+      "vi": "“Tiêu chuẩn kỹ thuật” và “Phần giải thích”; định nghĩa thuật ngữ.",
+      "note": "",
+      "heading": true
+    },
+    {
+      "jp": "電気設備の技術基準（以下「電技」）は、電気事業法に基づいて制定された省令で、**感電**、**火災**などの電気災害の防止、電気供給支障の防止等のために定めており、電気設備技術基準の解釈（以下「解釈」）は、技術的要件を満たすべき技術的内容を具体的に示したものです。",
+      "vi": "Tiêu chuẩn kỹ thuật thiết bị điện (gọi tắt là 電技) là thông tư ban hành theo Luật Kinh doanh điện lực để phòng ngừa tai nạn điện như **điện giật**, **cháy** và ngăn gián đoạn cấp điện. Phần giải thích tiêu chuẩn kỹ thuật thiết bị điện (gọi tắt là 解釈) trình bày cụ thể nội dung kỹ thuật để đáp ứng các yêu cầu kỹ thuật.",
+      "note": ""
+    },
+    {
+      "jp": "用語の定義",
+      "vi": "Định nghĩa thuật ngữ",
+      "note": "",
+      "heading": true
+    },
+    {
+      "jp": "「電技」や「解釈」で用いられる用語の定義を理解することが重要です。ここでは一般的な基本用語を学びます。",
+      "vi": "Cần hiểu đúng thuật ngữ dùng trong tiêu chuẩn và phần giải thích; phần này giới thiệu các khái niệm cơ bản.",
+      "note": ""
+    },
+    {
+      "jp": "表2-1-1 「電技」や「解釈」で使用される用語",
+      "vi": "Bảng 2-1-1 · Thuật ngữ dùng trong tiêu chuẩn và phần giải thích",
+      "heading": true,
+      "table": {
+        "jp": [
+          "用語",
+          "定義"
+        ],
+        "vi": [
+          "Thuật ngữ",
+          "Định nghĩa"
+        ],
+        "rows": [
+          [
+            "**発電所**",
+            "**Nhà máy điện**",
+            "発電機、原動機、燃料電池、太陽電池その他の機械器具を施設して**電気を発生させる所**をいう。"
+          ],
+          [
+            "**変電所**",
+            "**Trạm biến áp**",
+            "**構外**から伝送される電気を構内に施設した変圧器、回転変流器、整流器その他の電気機械器具により変成する所であって、変成した電気をさらに**構外**に伝送するものをいう。"
+          ],
+          [
+            "**架空引込線**",
+            "**Dây dẫn vào trên không**",
+            "架空電線路の支持物から他の支持物を経ないで需要場所の**取付点**に至る架空電線をいう。"
+          ],
+          [
+            "**引込線**",
+            "**Dây dẫn vào**",
+            "架空引込線及び需要場所の造営物の側面等に施設する電線であって当該需要場所の**引込口**に至るものをいう。"
+          ]
+        ],
+        "rowsVi": [
+          [
+            "**発電所**",
+            "**Nhà máy điện**",
+            "Nơi bố trí máy phát, động cơ sơ cấp, pin nhiên liệu, pin mặt trời và máy móc, dụng cụ khác để **phát điện**."
+          ],
+          [
+            "**変電所**",
+            "**Trạm biến áp**",
+            "Nơi biến đổi điện truyền từ **bên ngoài khuôn viên** bằng máy biến áp, bộ biến đổi quay, bộ chỉnh lưu hay máy móc điện khác bố trí trong khuôn viên, rồi truyền điện đã biến đổi ra **ngoài khuôn viên**."
+          ],
+          [
+            "**架空引込線**",
+            "**Dây dẫn vào trên không**",
+            "Dây trên không đi từ vật đỡ đường dây trên không tới **điểm gắn dây** ở nơi sử dụng điện, không qua vật đỡ khác."
+          ],
+          [
+            "**引込線**",
+            "**Dây dẫn vào**",
+            "Gồm dây dẫn vào trên không và dây lắp dọc mặt bên công trình ở nơi sử dụng điện tới **điểm đưa điện vào**."
+          ]
+        ]
+      }
+    },
+    {
+      "jp": "接近状態に関する用語",
+      "vi": "Thuật ngữ về trạng thái tiếp cận",
+      "heading": true
+    },
+    {
+      "jp": "「解釈」では、架空電線が他の工作物と接近する場合に、接近する状態により、**第1次**接近状態と**第2次**接近状態に分けて規制しています。",
+      "vi": "Phần giải thích chia trường hợp dây trên không tiếp cận công trình khác thành tiếp cận **cấp 1** và **cấp 2** để quy định theo từng trạng thái."
+    },
+    {
+      "diagram": "lawApproach441"
+    },
+    {
+      "jp": "**第1次**接近状態とは、架空電線が他の工作物と接近（併行する場合を含み、交差する場合及び同一支持物に施設される場合を除く。以下同じ。）する場合において、当該架空電線が他の工作物の上方又は側方において、水平距",
+      "vi": "Tiếp cận **cấp 1** áp dụng khi dây trên không đến gần công trình khác, kể cả chạy song song, trừ trường hợp giao cắt hoặc cùng đặt trên một vật đỡ (phần sau cũng vậy). Xét dây nằm phía trên hoặc phía bên công trình khác và có khoảng cách ngang…"
+    }
+  ],
+  "442": [
+    {
+      "jp": "離で架空電線路の支持物の地表上の高さに相当する距離以内に施設されること（水平距離で**3 m**未満に施設されることを除く）により、架空電線路の電線の**切断**、支持物の**倒壊**等の際に、当該電線が他の工作物に**接触する**おそれがある状態をいいます。",
+      "vi": "…trong phạm vi bằng chiều cao của vật đỡ đường dây trên không tính từ mặt đất (trừ khoảng cách ngang dưới **3 m**). Đây là tình trạng dây có thể **chạm** công trình khác khi dây **đứt**, vật đỡ **đổ** hoặc có sự cố tương tự.",
+      "note": "Đọc tiếp định nghĩa từ trang 441. Khoảng cách ngang dưới 3 m thuộc tiếp cận cấp 2."
+    },
+    {
+      "jp": "**第2次**接近状態とは、架空電線が他の工作物と接近する場合において、当該架空電線が他の工作物の**上方**又は**側方**において、水平距離で**3 m**未満に施設される状態をいいます。",
+      "vi": "Tiếp cận **cấp 2** là tình trạng dây trên không được lắp ở **phía trên** hoặc **phía bên** công trình khác với khoảng cách ngang dưới **3 m**."
+    },
+    {
+      "jp": "POINT　第1次接近状態 といえば **支持物**の地表上の高さに相当する**距離**以内",
+      "vi": "Ghi nhớ. Tiếp cận cấp 1 xét **khoảng cách** bằng chiều cao **vật đỡ** tính từ mặt đất."
+    },
+    {
+      "jp": "第2次接近状態 といえば **3 m**未満",
+      "vi": "Tiếp cận cấp 2 có khoảng cách ngang dưới **3 m**."
+    },
+    {
+      "jp": "電圧の種別",
+      "vi": "Phân loại điện áp",
+      "note": "Bảng song ngữ được dựng lại từ các dòng chữ đã ghi trong trang; vẫn giữ những dòng gốc bên dưới để đối chiếu.",
+      "table": {
+        "jp": [
+          "電源",
+          "区分"
+        ],
+        "vi": [
+          "Dòng điện",
+          "Phân loại điện áp"
+        ],
+        "rows": [
+          [
+            "交流",
+            "Xoay chiều",
+            "交流：低圧600 V以下、高圧600 Vを超え7000 V以下、特別高圧7000 Vを超えるもの。"
+          ],
+          [
+            "直流",
+            "Một chiều",
+            "直流：低圧750 V以下、高圧750 Vを超え7000 V以下、特別高圧7000 Vを超えるもの。"
+          ]
+        ],
+        "rowsVi": [
+          [
+            "交流",
+            "Xoay chiều",
+            "AC: hạ áp ≤600 V; cao áp trên 600 V đến 7.000 V; siêu cao áp trên 7.000 V."
+          ],
+          [
+            "直流",
+            "Một chiều",
+            "DC: hạ áp ≤750 V; cao áp trên 750 V đến 7.000 V; siêu cao áp trên 7.000 V."
+          ]
+        ]
+      },
+      "heading": true
+    },
+    {
+      "jp": "「電技」では、電圧を表2-1-2のように**低圧**、**高圧**、**特別高圧**に区分しています。電気設備に対しては、この区分に応じた規制を行うことで安全の確保を図っています。",
+      "vi": "Tiêu chuẩn kỹ thuật chia điện áp thành **hạ áp**, **cao áp** và **siêu cao áp** theo bảng 2-1-2. Quy định tương ứng với từng nhóm điện áp nhằm bảo đảm an toàn cho thiết bị điện."
+    },
+    {
+      "jp": "表2-1-2 電圧の種別",
+      "vi": "Bảng 2-1-2 · Phân loại điện áp",
+      "heading": true,
+      "table": {
+        "jp": [
+          "電圧の区分",
+          "交流",
+          "直流"
+        ],
+        "vi": [
+          "Phân loại",
+          "Xoay chiều",
+          "Một chiều"
+        ],
+        "rows": [
+          [
+            "低圧",
+            "Hạ áp",
+            "**600 V**以下のもの",
+            "**750 V**以下のもの"
+          ],
+          [
+            "高圧",
+            "Cao áp",
+            "600 Vを超え**7 000 V**以下のもの",
+            "750 Vを超え**7 000 V**以下のもの"
+          ],
+          [
+            "特別高圧",
+            "Siêu cao áp",
+            "**7 000 V**を超えるもの",
+            "**7 000 V**を超えるもの"
+          ]
+        ],
+        "rowsVi": [
+          [
+            "低圧",
+            "Hạ áp",
+            "Không quá **600 V**",
+            "Không quá **750 V**"
+          ],
+          [
+            "高圧",
+            "Cao áp",
+            "Trên 600 V đến **7.000 V**",
+            "Trên 750 V đến **7.000 V**"
+          ],
+          [
+            "特別高圧",
+            "Siêu cao áp",
+            "Trên **7.000 V**",
+            "Trên **7.000 V**"
+          ]
+        ]
+      }
+    },
+    {
+      "jp": "低圧は電気使用場所で使用する電圧であり、高圧は架空及び地中配電線路で使用する電圧、特別高圧は発変電所、送電線路で使用される電圧です。",
+      "vi": "Hạ áp là điện áp dùng tại nơi sử dụng điện. Cao áp được dùng ở đường dây phân phối trên không và ngầm. Siêu cao áp được dùng ở nhà máy điện, trạm biến áp và đường dây truyền tải."
+    },
+    {
+      "jp": "POINT　低圧 といえば 交流**600 V**、直流**750 V**以下\n高圧 といえば **7 000 V**以下、特別高圧は7 000 Vを超えるもの",
+      "vi": "Ghi nhớ. Hạ áp đến **600 V** xoay chiều hoặc **750 V** một chiều.\nCao áp đến **7.000 V**, siêu cao áp trên 7.000 V."
+    },
+    {
+      "jp": "電圧に関する用語",
+      "vi": "Thuật ngữ về điện áp",
+      "heading": true
+    },
+    {
+      "jp": "電圧については、「公称電圧」「使用電圧」「最大使用電圧」「対地電圧」などの用語が使用されます。**公称電圧**は、電線路を代表する線間電圧です。**使用電圧**は、線間電圧をいい、普通は公称電圧を指します。",
+      "vi": "Các thuật ngữ gồm điện áp danh định, điện áp sử dụng, điện áp sử dụng lớn nhất và điện áp so với đất. **Điện áp danh định** là điện áp dây đại diện cho đường dây. **Điện áp sử dụng** là điện áp dây và thường chỉ điện áp danh định."
+    },
+    {
+      "jp": "**最大使用電圧**は、2つの意味で使われ、1つは波高値（最大値）を表し、もう1つは、電路に想定される使用状態における最大線間電圧を表す場合で次の表2-1-3の式で求めた値を用います。",
+      "vi": "**Điện áp sử dụng lớn nhất** có hai nghĩa. Một nghĩa là giá trị đỉnh sóng. Nghĩa còn lại là điện áp dây lớn nhất trong trạng thái sử dụng dự kiến, tính bằng công thức trong bảng 2-1-3."
+    },
+    {
+      "jp": "**対地電圧**は、接地式電路においては、電路と大地の間の電圧、非接地式電路では線間電圧※1をいいます。",
+      "vi": "**Điện áp so với đất** là điện áp giữa mạch và đất đối với mạch nối đất. Đối với mạch không nối đất, thuật ngữ này chỉ điện áp dây (xem chú thích 1)."
+    },
+    {
+      "jp": "※1 地絡電流、漏れ電流の計算では、線間電圧÷√3。",
+      "vi": "Chú thích 1. Khi tính dòng chạm đất hoặc dòng rò trong ngữ cảnh này, dùng điện áp dây chia cho √3.",
+      "equations": [
+        [
+          "線間電圧 ÷ √3 = ",
+          {
+            "fraction": [
+              [
+                "線間電圧"
+              ],
+              [
+                "√3"
+              ]
+            ]
+          }
+        ]
+      ],
+      "equationsVi": [
+        [
+          "Điện áp dùng để tính dòng = ",
+          {
+            "fraction": [
+              [
+                "Điện áp dây"
+              ],
+              [
+                "√3"
+              ]
+            ]
+          }
+        ]
+      ]
+    }
+  ],
+  "443": [
+    {
+      "jp": "POINT　最大使用電圧といえば公称電圧に係数を掛けた値",
+      "vi": "Ghi nhớ: điện áp sử dụng lớn nhất = điện áp danh định × hệ số.",
+      "note": ""
+    },
+    {
+      "jp": "表2-1-3 最大使用電圧計算式",
+      "vi": "Bảng 2-1-3 · Tính điện áp sử dụng lớn nhất.",
+      "note": "",
+      "heading": true
+    },
+    {
+      "jp": "1 000 V以下の電路",
+      "vi": "Mạch có điện áp sử dụng đến 1.000 V.",
+      "equations": [
+        [
+          "最大使用電圧 = 公称電圧 × 1.15"
+        ]
+      ],
+      "equationsVi": [
+        [
+          "Điện áp sử dụng lớn nhất = điện áp danh định × 1,15"
+        ]
+      ]
+    },
+    {
+      "jp": "1 000 Vを超え500 000 V未満の電路",
+      "vi": "Mạch có điện áp sử dụng trên 1.000 V và dưới 500.000 V.",
+      "equations": [
+        [
+          "最大使用電圧 = 公称電圧 × ",
+          {
+            "fraction": [
+              [
+                "1.15"
+              ],
+              [
+                "1.1"
+              ]
+            ],
+            "red": true
+          }
+        ]
+      ],
+      "equationsVi": [
+        [
+          "Điện áp sử dụng lớn nhất = điện áp danh định × ",
+          {
+            "fraction": [
+              [
+                "1,15"
+              ],
+              [
+                "1,1"
+              ]
+            ],
+            "red": true
+          }
+        ]
+      ]
+    },
+    {
+      "jp": "電路の絶縁",
+      "vi": "Cách điện của mạch điện",
+      "note": "",
+      "heading": true
+    },
+    {
+      "jp": "電路は、大地から絶縁しなければならないと規定しています。ただし危険のおそれがない場合や接地など、保安上必要な場合は除きます。",
+      "vi": "Mạch điện phải cách điện với đất. Trừ trường hợp không có nguy cơ hoặc trường hợp cần thiết để bảo đảm an toàn, chẳng hạn khi nối đất.",
+      "note": ""
+    },
+    {
+      "jp": "電気使用場所の低圧電路の絶縁抵抗",
+      "vi": "Điện trở cách điện mạch hạ áp tại nơi sử dụng điện.",
+      "note": "",
+      "heading": true
+    },
+    {
+      "jp": "使用電圧が低圧の電路の電線相互間及び電路と大地との間の絶縁抵抗は、開閉器又は過電流遮断器で区切ることのできる電路ごとに（分岐回路ごとに）、表2-1-4の値以上あればよいことになっています。",
+      "vi": "Điện trở cách điện giữa các dây và giữa mạch với đất phải đạt mức tối thiểu theo bảng 2-1-4 cho từng đoạn mạch có thể cô lập bằng công tắc hoặc bộ cắt quá dòng (từng mạch nhánh).",
+      "note": ""
+    },
+    {
+      "jp": "また、絶縁抵抗の測定が困難な場合には、**漏えい電流**が**1 mA**以下であればよいとされています。",
+      "vi": "Nếu khó đo điện trở cách điện, **dòng rò** phải không quá **1 mA**."
+    },
+    {
+      "jp": "表2-1-4 低圧電路の絶縁抵抗",
+      "vi": "Bảng 2-1-4 · Điện trở cách điện mạch hạ áp",
+      "heading": true,
+      "table": {
+        "jp": [
+          "電路の使用電圧の区分",
+          "絶縁抵抗値"
+        ],
+        "vi": [
+          "Điện áp sử dụng của mạch",
+          "Điện trở cách điện"
+        ],
+        "rows": [
+          [
+            "**300 V**以下：対地電圧が**150 V**以下の場合",
+            "Đến **300 V**, điện áp so với đất đến **150 V**",
+            "**0.1 MΩ**以上（単相100/200 V回路）"
+          ],
+          [
+            "300 V以下：その他の場合",
+            "Đến 300 V, trường hợp còn lại",
+            "**0.2 MΩ**以上（三相200 V回路）"
+          ],
+          [
+            "**300 V**を超えるもの",
+            "Trên **300 V**",
+            "**0.4 MΩ**以上（400 V回路）"
+          ]
+        ],
+        "rowsVi": [
+          [
+            "**300 V**以下：対地電圧が**150 V**以下の場合",
+            "Đến **300 V**, điện áp so với đất đến **150 V**",
+            "Từ **0,1 MΩ** (mạch một pha 100/200 V)"
+          ],
+          [
+            "300 V以下：その他の場合",
+            "Đến 300 V, trường hợp còn lại",
+            "Từ **0,2 MΩ** (mạch ba pha 200 V)"
+          ],
+          [
+            "**300 V**を超えるもの",
+            "Trên **300 V**",
+            "Từ **0,4 MΩ** (mạch 400 V)"
+          ]
+        ]
+      }
+    },
+    {
+      "jp": "POINT　分岐回路の絶縁抵抗 といえば 単相100/200 V回路は**0.1 MΩ**以上\n三相200 V回路は**0.2 MΩ**以上\n400 V回路は**0.4 MΩ**以上\n漏えい電流が**1 mA**以下",
+      "vi": "Ghi nhớ. Điện trở cách điện mạch nhánh một pha 100/200 V từ **0,1 MΩ**\nMạch ba pha 200 V từ **0,2 MΩ**\nMạch 400 V từ **0,4 MΩ**\nDòng rò không quá **1 mA**."
+    },
+    {
+      "jp": "低圧電線路の絶縁抵抗",
+      "vi": "Điện trở cách điện của đường dây hạ áp.",
+      "note": "",
+      "heading": true
+    },
+    {
+      "jp": "電線と大地間及び電線の心線相互間の絶縁抵抗は、使用電圧に対する漏えい電流が、最大供給電流の1／2 000を超えないように保つように決められています。",
+      "vi": "Duy trì cách điện giữa dây và đất, cũng như giữa các lõi dây, sao cho dòng rò ở điện áp sử dụng không vượt giới hạn dưới đây.",
+      "note": "Trang này có hai trường hợp riêng: mạch hạ áp tại nơi sử dụng điện và đường dây hạ áp.",
+      "equations": [
+        [
+          "漏えい電流 ≤ 最大供給電流 × ",
+          {
+            "fraction": [
+              [
+                "1"
+              ],
+              [
+                "2 000"
+              ]
+            ],
+            "red": true
+          }
+        ]
+      ],
+      "equationsVi": [
+        [
+          "Dòng rò ≤ dòng cấp tối đa × ",
+          {
+            "fraction": [
+              [
+                "1"
+              ],
+              [
+                "2.000"
+              ]
+            ],
+            "red": true
+          }
+        ]
+      ]
+    }
+  ],
+  "444": [
+    {
+      "jp": "POINT　低圧電線路の絶縁抵抗 といえば 漏えい電流が最大供給電流の1／2 000以下",
+      "vi": "Ghi nhớ. Dòng rò đường dây hạ áp không quá giới hạn dưới đây.",
+      "equations": [
+        [
+          "漏えい電流 ≤ 最大供給電流 × ",
+          {
+            "fraction": [
+              [
+                "1"
+              ],
+              [
+                "2 000"
+              ]
+            ],
+            "red": true
+          }
+        ]
+      ],
+      "equationsVi": [
+        [
+          "Dòng rò ≤ dòng cấp tối đa × ",
+          {
+            "fraction": [
+              [
+                "1"
+              ],
+              [
+                "2.000"
+              ]
+            ],
+            "red": true
+          }
+        ]
+      ]
+    },
+    {
+      "jp": "絶縁耐力試験",
+      "vi": "Thử độ bền điện môi",
+      "note": "",
+      "heading": true
+    },
+    {
+      "jp": "絶縁性能を絶縁耐力試験により確認する場合、表2-1-5の試験電圧を**連続**して**10分間**加えて耐えることが規定されています。",
+      "vi": "Khi xác nhận cách điện bằng phép thử độ bền điện môi, thiết bị phải chịu điện áp thử trong bảng 2-1-5 trong **10 phút** **liên tục**.",
+      "note": ""
+    },
+    {
+      "jp": "試験電圧は、使用電圧が交流であれば交流、直流であれば直流によるのが原則ですが、高圧や特別高圧の電線路にケーブルを使用する場合は交流の試験電圧の**2倍**、交流の回転機の場合は**1.6倍**の**直流電圧**で試験をすることが認められています。",
+      "vi": "Về nguyên tắc, dùng điện áp thử AC cho mạch AC và DC cho mạch DC. Với đường dây cao áp hoặc siêu cao áp dùng cáp, được dùng **điện áp DC** gấp **2 lần** điện áp thử AC. Với máy điện quay AC, dùng điện áp DC gấp **1,6 lần**.",
+      "note": ""
+    },
+    {
+      "jp": "表2-1-5 電路、変圧器等の絶縁耐力試験電圧",
+      "vi": "Bảng 2-1-5 · Điện áp thử độ bền điện môi của mạch điện, máy biến áp và thiết bị khác",
+      "heading": true,
+      "table": {
+        "jp": [
+          "電路の種類",
+          "試験電圧（10分間加える）"
+        ],
+        "vi": [
+          "Đối tượng và dải điện áp",
+          "Điện áp thử trong 10 phút"
+        ],
+        "rows": [
+          [
+            "電路：**7 000 V**以下",
+            "Mạch điện đến **7.000 V**",
+            "電圧の**1.5倍**"
+          ],
+          [
+            "電路：7 000 V超過15 000 V以下（中性線多重接地式）",
+            "Mạch trên 7.000 V đến 15.000 V, dây trung tính nối đất nhiều điểm",
+            "電圧の0.92倍"
+          ],
+          [
+            "電路：7 000 V超過60 000 V以下",
+            "Mạch trên 7.000 V đến 60.000 V",
+            "電圧の**1.25倍**（10 500 V未満は**10 500 V**）"
+          ],
+          [
+            "電路：60 000 Vを超えるもの（中性点非接地式）",
+            "Mạch trên 60.000 V, điểm trung tính không nối đất",
+            "電圧の1.25倍"
+          ],
+          [
+            "電路：60 000 Vを超えるもの（中性点接地式）",
+            "Mạch trên 60.000 V, điểm trung tính nối đất",
+            "電圧の1.1倍（75 000 V未満は75 000 V）"
+          ],
+          [
+            "回転機：**7 000 V**以下（回転変流器※2を除く）",
+            "Máy điện quay đến **7.000 V**, trừ bộ biến đổi quay (chú thích ※2)",
+            "電圧の**1.5倍**（500 V未満は**500 V**）"
+          ],
+          [
+            "回転機：7 000 Vを超えるもの（回転変流器を除く）",
+            "Máy điện quay trên 7.000 V, trừ bộ biến đổi quay",
+            "電圧の1.25倍（10 500 V未満は10 500 V）"
+          ],
+          [
+            "変圧器：**7 000 V**以下",
+            "Máy biến áp đến **7.000 V**",
+            "電圧の**1.5倍**（500 V未満は**500 V**）"
+          ],
+          [
+            "変圧器：7 000 V超過15 000 V以下（中性線多重接地式）",
+            "Máy biến áp trên 7.000 V đến 15.000 V, dây trung tính nối đất nhiều điểm",
+            "電圧の0.92倍"
+          ],
+          [
+            "変圧器：7 000 V超過60 000 V以下",
+            "Máy biến áp trên 7.000 V đến 60.000 V",
+            "電圧の**1.25倍**（10 500 V未満は**10 500 V**）"
+          ],
+          [
+            "変圧器：60 000 Vを超えるもの（中性点非接地式）",
+            "Máy biến áp trên 60.000 V, điểm trung tính không nối đất",
+            "電圧の1.25倍"
+          ],
+          [
+            "変圧器：60 000 Vを超える星形で中性点接地式",
+            "Máy biến áp trên 60.000 V nối sao, điểm trung tính nối đất",
+            "電圧の1.1倍（75 000 V未満は75 000 V）"
+          ],
+          [
+            "変圧器：その他の巻線",
+            "Máy biến áp · Cuộn dây khác",
+            "電圧の1.1倍（75 000 V未満は75 000 V）"
+          ]
+        ],
+        "rowsVi": [
+          [
+            "電路：**7 000 V**以下",
+            "Mạch điện đến **7.000 V**",
+            "**1,5 lần** điện áp"
+          ],
+          [
+            "電路：7 000 V超過15 000 V以下（中性線多重接地式）",
+            "Mạch trên 7.000 V đến 15.000 V, dây trung tính nối đất nhiều điểm",
+            "0,92 lần điện áp"
+          ],
+          [
+            "電路：7 000 V超過60 000 V以下",
+            "Mạch trên 7.000 V đến 60.000 V",
+            "**1,25 lần**, tối thiểu **10.500 V**"
+          ],
+          [
+            "電路：60 000 Vを超えるもの（中性点非接地式）",
+            "Mạch trên 60.000 V, điểm trung tính không nối đất",
+            "1,25 lần điện áp"
+          ],
+          [
+            "電路：60 000 Vを超えるもの（中性点接地式）",
+            "Mạch trên 60.000 V, điểm trung tính nối đất",
+            "1,1 lần, tối thiểu 75.000 V"
+          ],
+          [
+            "回転機：**7 000 V**以下（回転変流器※2を除く）",
+            "Máy điện quay đến **7.000 V**, trừ bộ biến đổi quay (chú thích ※2)",
+            "**1,5 lần**, tối thiểu **500 V**"
+          ],
+          [
+            "回転機：7 000 Vを超えるもの（回転変流器を除く）",
+            "Máy điện quay trên 7.000 V, trừ bộ biến đổi quay",
+            "1,25 lần, tối thiểu 10.500 V"
+          ],
+          [
+            "変圧器：**7 000 V**以下",
+            "Máy biến áp đến **7.000 V**",
+            "**1,5 lần**, tối thiểu **500 V**"
+          ],
+          [
+            "変圧器：7 000 V超過15 000 V以下（中性線多重接地式）",
+            "Máy biến áp trên 7.000 V đến 15.000 V, dây trung tính nối đất nhiều điểm",
+            "0,92 lần điện áp"
+          ],
+          [
+            "変圧器：7 000 V超過60 000 V以下",
+            "Máy biến áp trên 7.000 V đến 60.000 V",
+            "**1,25 lần**, tối thiểu **10.500 V**"
+          ],
+          [
+            "変圧器：60 000 Vを超えるもの（中性点非接地式）",
+            "Máy biến áp trên 60.000 V, điểm trung tính không nối đất",
+            "1,25 lần điện áp"
+          ],
+          [
+            "変圧器：60 000 Vを超える星形で中性点接地式",
+            "Máy biến áp trên 60.000 V nối sao, điểm trung tính nối đất",
+            "1,1 lần, tối thiểu 75.000 V"
+          ],
+          [
+            "変圧器：その他の巻線",
+            "Máy biến áp · Cuộn dây khác",
+            "1,1 lần, tối thiểu 75.000 V"
+          ]
+        ]
+      },
+      "note": "Tra theo đúng đối tượng. Dòng mạch điện đến 7.000 V trong sách ghi hệ số 1,5. Mức sàn 500 V xuất hiện ở các dòng tương ứng của máy điện quay và máy biến áp."
+    },
+    {
+      "jp": "注1）電圧は最大使用電圧とする。",
+      "vi": "Chú thích 1. Điện áp làm cơ sở là điện áp sử dụng lớn nhất."
+    },
+    {
+      "jp": "注2）使用電圧が17万 Vを超えるものは表から省略した。",
+      "vi": "Chú thích 2. Bảng lược các trường hợp có điện áp sử dụng trên 170 kV."
+    },
+    {
+      "jp": "注3）電路は心線相互間及び心線と大地間、回転機は巻線と大地間、変圧器は試験する巻線と他の巻線、試験する巻線と鉄心及び外箱との間の絶縁耐力とする。",
+      "vi": "Chú thích 3. Xét độ bền điện môi giữa các lõi với nhau và với đất đối với mạch điện, giữa cuộn dây và đất đối với máy điện quay, giữa cuộn thử với các cuộn khác và giữa cuộn thử với lõi thép và vỏ đối với máy biến áp."
+    },
+    {
+      "jp": "注4）開閉器、遮断器などの器具の電圧に対する絶縁耐力試験電圧は電路に準じる。",
+      "vi": "Chú thích 4. Điện áp thử độ bền điện môi của thiết bị đóng cắt, máy cắt và thiết bị tương tự lấy theo mạch điện."
+    },
+    {
+      "jp": "注5）接地形計器用変圧器、避雷器もしくは電線にケーブルを使用する機械器具の絶縁耐力試験は表の試験電圧の2倍の直流電圧で10分間としてもよいことになっている。",
+      "vi": "Chú thích 5. Đối với máy biến điện áp đo lường kiểu nối đất, chống sét van hoặc thiết bị dùng cáp, có thể thử 10 phút bằng điện áp DC gấp 2 lần điện áp thử trong bảng."
+    },
+    {
+      "jp": "注6）交流の回転機は表の試験電圧の1.6倍の直流電圧で10分間としてもよいことになっている。",
+      "vi": "Chú thích 6. Có thể thử máy điện quay AC trong 10 phút bằng điện áp DC gấp 1,6 lần điện áp thử trong bảng."
+    },
+    {
+      "jp": "※2 回転変流器：交流を直流に、又は直流を交流に変換する回転機（現在はあまり使われていません）。",
+      "vi": "Chú thích ※2. Bộ biến đổi quay là máy điện quay biến đổi AC thành DC hoặc ngược lại. Hiện ít được sử dụng."
+    }
+  ],
+  "445": [
+    {
+      "jp": "燃料電池及び太陽電池モジュールの絶縁耐力",
+      "vi": "Độ bền điện môi của pin nhiên liệu và mô-đun pin mặt trời",
+      "note": "",
+      "heading": true
+    },
+    {
+      "jp": "燃料電池及び太陽電池モジュールは、最大使用電圧の**1.5倍**の直流電圧又は**1倍**の交流電圧（500 V未満となる場合は、**500 V**）を充電部分と大地との間に連続して**10分間**加えて絶縁耐力試験をしたとき、これに耐えることが規定されています。",
+      "vi": "Pin nhiên liệu và mô-đun pin mặt trời phải chịu được phép thử đặt điện áp giữa bộ phận mang điện và đất liên tục **10 phút**. Điện áp thử bằng **1,5 lần** điện áp sử dụng lớn nhất nếu thử DC hoặc **1 lần** nếu thử AC. Nếu kết quả dưới 500 V thì dùng **500 V**."
+    },
+    {
+      "jp": "POINT　絶縁耐力試験 といえば 最大使用電圧の**1.5倍**を**10分**間加える（7 000 V以下）",
+      "vi": "Ghi nhớ. Với mạch đến 7.000 V, đặt điện áp bằng **1,5 lần** điện áp sử dụng lớn nhất trong **10 phút**."
+    },
+    {
+      "jp": "絶縁耐力試験 といえば 試験電圧の**2倍**の直流、回転機は**1.6倍**の直流で**10分**間でもよい",
+      "vi": "Cũng có thể thử trong **10 phút** bằng DC gấp **2 lần** điện áp thử AC ở trường hợp cáp nêu ở trang trước, hoặc **1,6 lần** đối với máy điện quay AC."
+    },
+    {
+      "jp": "燃料電池、太陽電池の耐圧 といえば **1.5倍**の直流、**1倍**の交流、最低500 V、**10分**間",
+      "vi": "Pin nhiên liệu và pin mặt trời: DC **1,5 lần**, AC **1 lần**, tối thiểu 500 V, trong **10 phút**."
+    },
+    {
+      "jp": "練習問題01　絶縁耐力試験",
+      "vi": "Bài luyện 01 · Thử chịu cách điện",
+      "note": "",
+      "heading": true
+    },
+    {
+      "jp": "使用電圧6600 Vの高圧ケーブルの絶縁耐力試験を実施する。次の(a)及び(b)の問に答えよ。",
+      "vi": "Thử độ bền cách điện cáp cao áp có điện áp sử dụng 6.600 V. Trả lời (a) và (b).",
+      "note": ""
+    },
+    {
+      "jp": "(a) 高圧ケーブルの絶縁耐力試験を直流で行う場合の試験電圧と試験時間は。",
+      "vi": "(a) Khi dùng điện áp DC, điện áp và thời gian thử là bao nhiêu?",
+      "note": ""
+    },
+    {
+      "jp": "(b) 高圧ケーブルの絶縁耐力試験を、図のような試験回路で行う。この絶縁耐力試験に必要な皮相電力（試験容量）Sₜ［kV・A］は。",
+      "vi": "(b) Với mạch thử trong hình, tính dung lượng công suất biểu kiến cần thiết Sₜ (kVA).",
+      "note": ""
+    },
+    {
+      "jp": "【高圧ケーブルの仕様】\nケーブルの種類：6 600 Vトリプレックス形架橋ポリエチレン絶縁ビニルシースケーブル\n公称断面積：100 mm²、ケーブルのこう長：220 m、1線の対地静電容量：0.45 μF/km",
+      "vi": "Thông số cáp cao áp\nLoại cáp: CVT 6.600 V, ba sợi cáp xoắn, cách điện polyetylen liên kết ngang, vỏ vinyl.\nTiết diện danh định 100 mm², chiều dài 220 m, điện dung so với đất của một dây 0,45 μF/km.",
+      "note": ""
+    },
+    {
+      "jp": "試験用変圧器の仕様：定格入力電圧AC 0～120 V、定格出力電圧AC 0～12000 V、入力電源周波数50 Hz",
+      "vi": "Máy biến áp thử: đầu vào điều chỉnh 0–120 V AC, đầu ra 0–12.000 V AC, tần số 50 Hz.",
+      "note": ""
+    },
+    {
+      "diagram": "lawInsulationTest445"
+    }
+  ],
+  "446": [
+    {
+      "jp": "解き方 (a)",
+      "vi": "Cách giải (a)",
+      "heading": true
+    },
+    {
+      "jp": "試験電圧を直流とする場合は、交流試験電圧の２倍とします。",
+      "vi": "Thử bằng DC thì điện áp thử bằng hai lần điện áp thử AC.",
+      "note": ""
+    },
+    {
+      "jp": "交流の最大使用電圧は、",
+      "vi": "Tính điện áp sử dụng lớn nhất phía xoay chiều.",
+      "equations": [
+        [
+          "交流の最大使用電圧 = 公称電圧 × ",
+          {
+            "fraction": [
+              [
+                "1.15"
+              ],
+              [
+                "1.1"
+              ]
+            ]
+          },
+          " = 6 600 × ",
+          {
+            "fraction": [
+              [
+                "1.15"
+              ],
+              [
+                "1.1"
+              ]
+            ]
+          },
+          " = 6 900 V"
+        ]
+      ],
+      "equationsVi": [
+        [
+          "Điện áp sử dụng lớn nhất AC = điện áp danh định × ",
+          {
+            "fraction": [
+              [
+                "1,15"
+              ],
+              [
+                "1,1"
+              ]
+            ]
+          },
+          " = 6.600 × ",
+          {
+            "fraction": [
+              [
+                "1,15"
+              ],
+              [
+                "1,1"
+              ]
+            ]
+          },
+          " = 6.900 V"
+        ]
+      ]
+    },
+    {
+      "jp": "交流試験電圧 Vₜ は、最大使用電圧の1.5倍より、",
+      "vi": "Điện áp thử AC = 1,5 lần điện áp sử dụng lớn nhất.",
+      "note": ""
+    },
+    {
+      "jp": "直流の試験電圧 V直流 は、",
+      "vi": "Tính điện áp thử DC.",
+      "equations": [
+        [
+          "V直流 = (6 900 × 1.5) × 2 = 20 700 V"
+        ]
+      ],
+      "equationsVi": [
+        [
+          "V DC = (6.900 × 1,5) × 2 = 20.700 V"
+        ]
+      ]
+    },
+    {
+      "jp": "試験時間は、連続して10分間。",
+      "vi": "Thời gian thử liên tục 10 phút.",
+      "note": ""
+    },
+    {
+      "jp": "(b)",
+      "vi": "Cách giải (b)",
+      "heading": true
+    },
+    {
+      "jp": "最大使用電圧より、交流試験電圧 Vₜ は、",
+      "vi": "Từ điện áp sử dụng lớn nhất, tính điện áp thử AC.",
+      "equations": [
+        [
+          "最大使用電圧 = 6 600 × ",
+          {
+            "fraction": [
+              [
+                "1.15"
+              ],
+              [
+                "1.1"
+              ]
+            ]
+          },
+          " = 6 900 V"
+        ],
+        [
+          "Vₜ = 6 900 × 1.5 = 10 350 V"
+        ]
+      ],
+      "equationsVi": [
+        [
+          "Điện áp sử dụng lớn nhất = 6.600 × ",
+          {
+            "fraction": [
+              [
+                "1,15"
+              ],
+              [
+                "1,1"
+              ]
+            ]
+          },
+          " = 6.900 V"
+        ],
+        [
+          "Vₜ = 6.900 × 1,5 = 10.350 V"
+        ]
+      ]
+    },
+    {
+      "jp": "３線一括で試験電圧を印加するのでCは１線の３倍となります。",
+      "vi": "Vì thử đồng thời ba dây nên điện dung bằng ba lần điện dung một dây.",
+      "note": ""
+    },
+    {
+      "jp": "したがってケーブルの対地静電容量 C は、",
+      "vi": "Điện dung của cáp so với đất.",
+      "equations": [
+        [
+          "C = 3 × (0.45 × 10⁻⁶) × 0.22 = 0.297 × 10⁻⁶ F"
+        ]
+      ],
+      "equationsVi": [
+        [
+          "C = 3 × (0,45 × 10⁻⁶ F/km) × 0,22 km = 0,297 × 10⁻⁶ F"
+        ]
+      ]
+    },
+    {
+      "jp": "ケーブルに流れる充電電流 I𝚌 は、",
+      "vi": "Dòng điện nạp điện dung của cáp.",
+      "equations": [
+        [
+          "I𝚌 = ωCVₜ = 2πfCVₜ"
+        ],
+        [
+          "= 2 × 3.14 × 50 × 0.297 × 10⁻⁶ × 10 350 ≒ 0.965 A"
+        ]
+      ],
+      "equationsVi": [
+        [
+          "I𝚌 = ωCVₜ = 2πfCVₜ"
+        ],
+        [
+          "= 2 × 3,14 × 50 × 0,297 × 10⁻⁶ × 10.350 ≈ 0,965 A"
+        ]
+      ]
+    },
+    {
+      "diagram": "lawChargingCurrent446"
+    },
+    {
+      "jp": "試験に必要な皮相電力（試験容量）Sₜ は、",
+      "vi": "Công suất biểu kiến cần cho phép thử (dung lượng thử).",
+      "equations": [
+        [
+          "Sₜ = Vₜ × I𝚌 = 10 350 × 0.965 ≒ 9 988 V・A → 10 kV・A"
+        ]
+      ],
+      "equationsVi": [
+        [
+          "Sₜ = Vₜ × I𝚌 = 10.350 × 0,965 ≈ 9.988 VA → 10 kVA"
+        ]
+      ]
+    },
+    {
+      "jp": "試験容量が試験用変圧器の容量よりも大きい場合は、高圧補償リアクトルを接続し、試験容量を小さくします。",
+      "vi": "Nếu dung lượng thử vượt khả năng máy biến áp thử thì dùng cuộn kháng bù cao áp để giảm nhu cầu công suất.",
+      "note": ""
+    },
+    {
+      "jp": "解説　絶縁耐力試験は、使用電圧が交流であれば交流の試験電圧を加え、直流であれば直流の試験電圧を加えますが、ケーブルを用いた電路や大形の機器では静電容量が大きく、試験電流も大きくなります。大容量の試験器が必要になることから、交流機器であっても試験電圧を高くして直流電圧で試験をすることが認められています。",
+      "vi": "Lời giải. Phép thử độ bền điện môi dùng AC khi điện áp sử dụng là AC, và dùng DC khi điện áp sử dụng là DC. Mạch dùng cáp hoặc thiết bị lớn có điện dung lớn nên dòng thử cũng lớn và cần máy thử công suất lớn. Vì vậy sách nêu trường hợp được thử thiết bị AC bằng điện áp DC với mức điện áp thử cao hơn."
+    },
+    {
+      "jp": "解答　(a) **試験電圧：20 700 V　試験時間：連続して10分間**　(b) **Sₜ = 10 kV・A**",
+      "vi": "Đáp án. (a) **Điện áp thử 20.700 V, thời gian thử 10 phút liên tục**. (b) **Sₜ = 10 kVA**."
+    }
+  ],
+  "447": [
+    {
+      "jp": "練習問題02　太陽電池モジュールの絶縁性能",
+      "vi": "Bài luyện 02 · Tính năng cách điện mô-đun pin mặt trời.",
+      "note": "",
+      "heading": true
+    },
+    {
+      "jp": "次の文章は、「電気設備技術基準の解釈」に基づく太陽電池モジュールの絶縁性能に関する記述の一部である。空白箇所に当てはまる数字は。",
+      "vi": "Điền số còn thiếu vào đoạn quy định về cách điện pin mặt trời theo phần giải thích tiêu chuẩn.",
+      "note": ""
+    },
+    {
+      "jp": "太陽電池モジュールは、最大使用電圧の（ア）倍の直流電圧又は（イ）倍の交流電圧（（ウ）V未満となる場合は、（ウ）V）を充電部分と大地との間に連続して（エ）分間加えたとき、これに耐える性能を有すること。",
+      "vi": "Mô-đun phải chịu DC (ア)× hoặc AC (イ)× điện áp sử dụng lớn nhất, tối thiểu (ウ) V, đặt giữa phần mang điện và đất trong (エ) phút.",
+      "note": ""
+    },
+    {
+      "jp": "解説　1.5倍の直流電圧は、1倍の交流電圧（実効値）の波高値に近い値であることから、太陽電池モジュールの絶縁性能は、最大使用電圧の1.5倍の直流電圧又は1倍の交流電圧に耐える性能があればよいとしています。",
+      "vi": "Lời giải. Điện áp DC gấp 1,5 lần gần với giá trị đỉnh của điện áp AC gấp 1 lần tính theo trị hiệu dụng. Sách dùng điều này để giải thích vì sao mô-đun pin mặt trời được thử với DC gấp 1,5 lần hoặc AC gấp 1 lần điện áp sử dụng lớn nhất.",
+      "note": "Với sóng sin, giá trị đỉnh bằng √2 lần giá trị hiệu dụng."
+    },
+    {
+      "jp": "解答　（ア）**1.5**　（イ）**1**　（ウ）**500**　（エ）**10**",
+      "vi": "Đáp án. (ア) **1,5** · (イ) **1** · (ウ) **500** · (エ) **10**."
+    },
+    {
+      "jp": "接地工事の種類と抵抗値",
+      "vi": "Các loại nối đất và giá trị điện trở",
+      "note": "",
+      "heading": true
+    },
+    {
+      "jp": "異常時の電位上昇、高電圧の侵入等による**感電**、**火災**その他人体に危害を及ぼし、又は物件への損傷を与えるおそれがないよう、電気設備の必要な箇所には**接地**を施します。",
+      "vi": "**Nối đất** tại các vị trí cần thiết của thiết bị điện để tránh **điện giật**, **cháy**, nguy hiểm khác cho người hoặc hư hại tài sản do điện thế tăng bất thường, điện áp cao xâm nhập, v.v."
+    },
+    {
+      "jp": "接地工事の種類",
+      "vi": "Các loại công trình nối đất",
+      "note": "",
+      "heading": true
+    },
+    {
+      "jp": "**接地工事**にはA種、B種、C種、D種の４種類があります。",
+      "vi": "Có bốn loại **nối đất**: A, B, C và D.",
+      "note": ""
+    },
+    {
+      "jp": "A種、C種、D種接地工事は、電路に施設する機械器具の鉄台及び金属製外箱に施すもので、表2-1-6のように機械器具の電圧によって区分されています。",
+      "vi": "A/C/D áp dụng cho khung sắt, vỏ kim loại thiết bị, được phân loại theo điện áp thiết bị.",
+      "note": ""
+    },
+    {
+      "jp": "表2-1-6 接地工事の区分と種類",
+      "vi": "Bảng 2-1-6 · Phân loại nối đất",
+      "heading": true,
+      "table": {
+        "jp": [
+          "機械器具の電圧の区分",
+          "接地工事"
+        ],
+        "vi": [
+          "Phân loại điện áp thiết bị",
+          "Loại nối đất"
+        ],
+        "rows": [
+          [
+            "300 V以下の低圧用のもの",
+            "Thiết bị hạ áp đến 300 V",
+            "**D種**接地工事"
+          ],
+          [
+            "300 Vを超える低圧用のもの",
+            "Thiết bị hạ áp trên 300 V",
+            "**C種**接地工事"
+          ],
+          [
+            "高圧用又は特別高圧用のもの",
+            "Thiết bị cao áp hoặc siêu cao áp",
+            "**A種**接地工事"
+          ]
+        ],
+        "rowsVi": [
+          [
+            "300 V以下の低圧用のもの",
+            "Thiết bị hạ áp đến 300 V",
+            "Nối đất **loại D**"
+          ],
+          [
+            "300 Vを超える低圧用のもの",
+            "Thiết bị hạ áp trên 300 V",
+            "Nối đất **loại C**"
+          ],
+          [
+            "高圧用又は特別高圧用のもの",
+            "Thiết bị cao áp hoặc siêu cao áp",
+            "Nối đất **loại A**"
+          ]
+        ]
+      }
+    },
+    {
+      "jp": "**B種**接地工事は、高圧電路又は特別高圧電路と低圧電路とを結合する変圧器の**低圧側の中性点**、中性点に接地を施し難いときは**低圧側の1端子**、巻線との間に設けた金属製の**混触防止板**などに施すものです。",
+      "vi": "Nối đất **loại B** tại **điểm trung tính phía hạ áp** của máy biến áp nối mạch cao áp hoặc siêu cao áp với mạch hạ áp. Khi khó nối đất tại điểm trung tính, dùng **một đầu cực phía hạ áp**. Vị trí áp dụng còn gồm **tấm kim loại ngăn chạm lẫn** đặt giữa các cuộn dây, v.v."
+    }
   ]
 };

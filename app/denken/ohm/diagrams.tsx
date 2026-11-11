@@ -35,6 +35,37 @@ function Diagram({ file, width, height, title, labels }: {
 }
 
 export const diagrams = {
+  lawApproach441: (
+    <Diagram file="lawApproach441" width={499} height={424} title="Hình 2-1-1 · Tiếp cận cấp 1 và cấp 2" labels={[
+      ["架空電線", "Dây dẫn trên không"],
+      ["第1次接近状態", "Tiếp cận cấp 1"],
+      ["第2次接近状態", "Tiếp cận cấp 2"],
+      ["制限されない範囲", "Phạm vi không bị giới hạn"],
+      ["接近境界", "Ranh giới của vùng tiếp cận"],
+      ["接近状態の範囲", "Phạm vi tiếp cận"],
+      ["右側は接近状態ではない", "Phía bên phải nằm ngoài vùng tiếp cận"],
+    ]} />
+  ),
+  lawInsulationTest445: (
+    <Diagram file="lawInsulationTest445" width={983} height={500} title="Mạch thử độ bền điện môi của cáp CVT 6,6 kV" labels={[
+      ["試験用電源", "Nguồn thử AC 100 V, 50 Hz"],
+      ["スライダック", "Biến áp điều chỉnh 100 V → 0–120 V"],
+      ["試験用変圧器", "Máy biến áp thử"],
+      ["導体", "Ruột dẫn"],
+      ["絶縁体", "Lớp cách điện"],
+      ["金属遮へい層", "Lớp chắn kim loại"],
+      ["ケーブル外装", "Vỏ ngoài của cáp"],
+      ["高圧ケーブル", "Cáp cao áp CVT 6.600 V, 100 mm², dài 220 m"],
+    ]} />
+  ),
+  lawChargingCurrent446: (
+    <Diagram file="lawChargingCurrent446" width={523} height={266} title="Mạch tương đương và công thức dòng nạp điện dung" labels={[
+      ["充電電流 I꜀ の計算式", "Công thức tính dòng nạp điện dung"],
+      ["Vₜ", "Điện áp thử AC (V)"],
+      ["I꜀", "Dòng nạp điện dung (A)"],
+      ["1/(ωC)", "Dung kháng (Ω)"],
+    ]} />
+  ),
   lawSafetyExercise434: (
     <Diagram file="lawSafetyExercise434" width={1065} height={688} title="Sơ đồ bài tập về hệ thống bảo đảm an toàn điện" labels={[
       ["一般用電気工作物", "Công trình điện loại thông thường"],
