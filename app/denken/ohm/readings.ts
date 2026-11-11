@@ -1,5 +1,7 @@
 import { enrichExamTextWithFurigana } from "@/lib/exam/server-furigana";
 
+import lawReadings from "./law-readings.json";
+
 const technicalReadings = {
   "水力発電": "すいりょくはつでん",
   "火力発電": "かりょくはつでん",
@@ -712,8 +714,11 @@ const technicalReadings = {
   国際標準軟銅: "こくさいひょうじゅんなんどう",
 } as const;
 
-export function enrichLessonPart(part: string) {
-  const reviewed = Object.entries(technicalReadings).flatMap(([surface, reading]) =>
+const technicalEntries = Object.entries(technicalReadings);
+const lawEntries = Object.entries({ ...technicalReadings, ...lawReadings });
+
+export function enrichLessonPart(part: string, section?: "law") {
+  const reviewed = (section === "law" ? lawEntries : technicalEntries).flatMap(([surface, reading]) =>
     Array.from(part.matchAll(new RegExp(surface, "g")), match => ({ surface, reading, start: match.index })),
   );
   return enrichExamTextWithFurigana(part, reviewed);

@@ -25,7 +25,8 @@ const availableStarts = Object.values(lessons)
 
 export function ContentsTree({ currentPage }: { currentPage?: number }) {
   const activeStart = currentPage === undefined ? undefined : availableStarts.findLast(page => page <= currentPage);
-  const openChapter = (currentPage !== undefined && currentPage >= 321 ? subjects[2] : currentPage !== undefined && currentPage >= 161 ? subjects[1] : subjects[0])[3].findLast(([start]) => start <= (currentPage ?? 2))?.[0];
+  const activeSubject = subjects.findLast(([, , start]) => start <= (currentPage ?? 2));
+  const openChapter = activeSubject?.[3].findLast(([start]) => start <= (currentPage ?? 2))?.[0];
   return (
       <nav className="space-y-3" aria-label="Mục lục">
         <details className="rounded-2xl border border-border bg-surface p-4">
@@ -41,8 +42,11 @@ export function ContentsTree({ currentPage }: { currentPage?: number }) {
           </ul>
         </details>
         {subjects.map(([title, translation, page, chapters]) => (
-          <details key={title} open={title === (currentPage !== undefined && currentPage >= 321 ? "電力" : currentPage !== undefined && currentPage >= 161 ? "機械" : "理論") ? true : undefined} className="rounded-2xl border border-border bg-surface p-4">
+          <details key={title} open={title === activeSubject?.[0] ? true : undefined} className="rounded-2xl border border-border bg-surface p-4">
             <summary className="cursor-pointer font-semibold">{title} · {translation} <span className={`text-sm font-normal ${bookRed}`}>p.{page}</span></summary>
+            {title === "法規" && Object.hasOwn(lesson, page) && (
+              <Link prefetch={false} href={`/denken/ohm?trang=${page}`} aria-current={currentPage === page ? "page" : undefined} className="mt-3 inline-block text-sm underline underline-offset-2">Trang mở đầu · p.{page}</Link>
+            )}
             <ul className="mt-3 space-y-2">
               {chapters.map(([start, chapter], index) => (
                 <li key={start}>

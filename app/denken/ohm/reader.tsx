@@ -8,7 +8,9 @@ import { Fraction } from "../fraction";
 import { diagrams } from "./diagrams";
 import type { FormulaPart, FormulaLine, LessonRow } from "./lesson";
 
-export type ReadingRow = LessonRow & { readings?: FuriganaToken[][] };
+type MarkedReadings = FuriganaToken[][];
+
+export type ReadingRow = LessonRow & { readings?: MarkedReadings; tableReadings?: MarkedReadings[][] };
 
 const red = "font-semibold text-red-700 dark:text-red-300";
 
@@ -98,16 +100,22 @@ function Formula({ kind, japanese = false }: { japanese?: boolean; kind: NonNull
   }
 }
 
-function PrefixTable({ headers, rows, japanese = false }: { headers: string[]; rows: string[][]; japanese?: boolean }) {
+function PrefixTable({ headers, rows, japanese = false, readings, marked = false }: {
+  headers: string[];
+  rows: string[][];
+  japanese?: boolean;
+  readings?: MarkedReadings[][];
+  marked?: boolean;
+}) {
   return (
     <div className="overflow-x-auto">
       <table className="w-full border-collapse text-left text-sm">
         <thead className="bg-surface-muted"><tr>{headers.map(header =>
           <th scope="col" key={header} className="px-2 py-1">{header}</th>)}</tr></thead>
-        <tbody>{rows.map(([jp, vi, ...cells]) =>
+        <tbody>{rows.map(([jp, vi, ...cells], rowIndex) =>
           <tr key={jp} className="border-t border-border">
-            <th scope="row" className="px-2 py-1 font-normal">{japanese ? jp : vi}</th>
-            {cells.map((cell, index) => <td key={index} className="px-2 py-1">{cell}</td>)}
+            <th scope="row" className="px-2 py-1 font-normal">{marked ? <MarkedText text={japanese ? jp : vi} readings={readings?.[rowIndex]?.[0]} /> : japanese ? jp : vi}</th>
+            {cells.map((cell, index) => <td key={index} className="whitespace-pre-line px-2 py-1">{marked ? <MarkedText text={cell} readings={readings?.[rowIndex]?.[index + 1]} /> : cell}</td>)}
           </tr>)}</tbody>
       </table>
     </div>
@@ -123,8 +131,8 @@ export function OhmReader({ rows }: { rows: ReadingRow[] }) {
       const style = row.heading ? "text-base font-bold" : "whitespace-pre-line text-sm leading-relaxed";
       return {
         key,
-        jp: <div lang="ja" className="font-jp space-y-2"><Text className={style}><MarkedText text={row.jp} readings={showFurigana ? row.readings : undefined} /></Text>{row.formula && <Formula kind={row.formula} japanese />}{row.equations && <Equations lines={row.equations} />}{row.table && <PrefixTable headers={row.table.jp} rows={row.table.rows} japanese />}</div>,
-        vi: <div className="space-y-2"><Text className={style}><MarkedText text={row.vi} /></Text>{row.formula && <Formula kind={row.formula} />}{vietnameseEquations && <Equations lines={vietnameseEquations} />}{row.table && <PrefixTable headers={row.table.vi} rows={row.table.rowsVi ?? row.table.rows} />}</div>,
+        jp: <div lang="ja" className="font-jp space-y-2"><Text className={style}><MarkedText text={row.jp} readings={showFurigana ? row.readings : undefined} /></Text>{row.formula && <Formula kind={row.formula} japanese />}{row.equations && <Equations lines={row.equations} />}{row.table && <PrefixTable headers={row.table.jp} rows={row.table.rows} japanese marked={Boolean(row.tableReadings)} readings={showFurigana ? row.tableReadings : undefined} />}</div>,
+        vi: <div className="space-y-2"><Text className={style}><MarkedText text={row.vi} /></Text>{row.formula && <Formula kind={row.formula} />}{vietnameseEquations && <Equations lines={vietnameseEquations} />}{row.table && <PrefixTable headers={row.table.vi} rows={row.table.rowsVi ?? row.table.rows} marked={Boolean(row.tableReadings)} />}</div>,
         explanation: row.note && <p className="text-sm leading-relaxed">{row.note}</p>,
       };
     })} />

@@ -35,6 +35,25 @@ function Diagram({ file, width, height, title, labels }: {
 }
 
 export const diagrams = {
+  lawElectricWorks424: (
+    <Diagram file="lawElectricWorks424" width={1126} height={426} title="Công trình điện từ nhà máy đến hộ sử dụng" labels={[
+      ["事業用電気工作物", "Công trình điện loại 事業用"],
+      ["発電所", "Nhà máy điện"],
+      ["変電所", "Trạm biến áp"],
+      ["配電用変電所", "Trạm biến áp phân phối"],
+      ["柱上トランス", "Máy biến áp trên cột"],
+      ["一般用電気工作物", "Công trình điện loại thông thường"],
+    ]} />
+  ),
+  lawElectricWorksClasses426: (
+    <Diagram file="lawElectricWorksClasses426" width={1133} height={304} title="Hình 1-1-1 · Phân loại công trình điện" labels={[
+      ["電気工作物", "Công trình điện"],
+      ["一般用電気工作物", "Công trình điện loại thông thường"],
+      ["事業用電気工作物", "Công trình điện loại 事業用"],
+      ["電気事業の用に供する電気工作物", "Công trình điện phục vụ kinh doanh điện lực"],
+      ["自家用電気工作物", "Công trình điện tự dùng"],
+    ]} />
+  ),
   powerAcSr386: (<Diagram file="powerAcSr386" width={756} height={504} title="Hình sách: powerAcSr386" labels={[["原図", "Nhãn Nhật giữ theo hình sách; dịch và giải thích ở cột bên cạnh"]]} />),
   powerArcHorn388: (<Diagram file="powerArcHorn388" width={432} height={456} title="Hình sách: powerArcHorn388" labels={[["原図", "Nhãn Nhật giữ theo hình sách; dịch và giải thích ở cột bên cạnh"]]} />),
   powerBiomass369: (<Diagram file="powerBiomass369" width={2298} height={967} title="Hình sách: powerBiomass369" labels={[["原図", "Nhãn Nhật giữ theo hình sách; dịch và giải thích ở cột bên cạnh"]]} />),

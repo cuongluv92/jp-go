@@ -33,6 +33,12 @@ const powerChapters = [
   [415, "電気材料", "Vật liệu điện"],
 ] as const;
 
+const lawChapters = [
+  [424, "電気関係法規", "Các văn bản pháp luật liên quan đến điện"],
+  [441, "電気設備の技術基準・解釈", "Tiêu chuẩn kỹ thuật thiết bị điện và phần giải thích"],
+  [494, "電気施設管理", "Quản lý công trình điện"],
+] as const;
+
 const navButton = "rounded-lg border border-border px-3 py-1.5 text-sm hover:border-accent hover:text-accent";
 
 export default async function OhmLesson({ searchParams }: { searchParams: Promise<{ trang?: string }> }) {
@@ -45,7 +51,11 @@ export default async function OhmLesson({ searchParams }: { searchParams: Promis
   const nextHref = next === undefined ? null : href(next);
   const machineChapter = page <= 320 ? machineChapters.findLast(([start]) => start <= page) : undefined;
   const powerChapter = page >= 322 && page <= 422 ? powerChapters.findLast(([start]) => start <= page) : undefined;
-  const title = page === 321 ? "第3部 電力 · Hệ thống điện"
+  const isLaw = page >= 423;
+  const lawChapter = isLaw ? lawChapters.findLast(([start]) => start <= page) : undefined;
+  const title = page === 423 ? "第4部 法規 · Pháp quy"
+    : lawChapter ? `${lawChapter[1]} · ${lawChapter[2]}`
+    : page === 321 ? "第3部 電力 · Hệ thống điện"
     : powerChapter ? `${powerChapter[1]} · ${powerChapter[2]}`
     : machineChapter ? `${machineChapter[1]} · ${machineChapter[2]}`
     : page === 161 ? "第2部 機械 · Máy điện và ứng dụng"
@@ -100,9 +110,15 @@ export default async function OhmLesson({ searchParams }: { searchParams: Promis
     : page >= 14 ? "1‑5 テブナンの定理 · Định lý Thévenin"
     : page >= 12 ? "1‑4 キルヒホッフの法則 · Định luật Kirchhoff"
     : page >= 9 ? "1‑3 導体の抵抗 · Điện trở của vật dẫn" : page >= 5 ? "1‑2 直列・並列合成抵抗 · Điện trở nối tiếp và song song" : "1‑1 オームの法則 · Định luật Ohm";
-  const rows = await Promise.all(lesson[page].map(async row => "jp" in row
-    ? { ...row, readings: await Promise.all(row.jp.split("**").map(enrichLessonPart)) }
-    : row));
+  const read = (text: string) => Promise.all(text.split("**").map(part => enrichLessonPart(part, isLaw ? "law" : undefined)));
+  const rows = await Promise.all(lesson[page].map(async row => {
+    if ("diagram" in row) return row;
+    const readings = await read(row.jp);
+    const tableReadings = isLaw && row.table ? await Promise.all(row.table.rows.map(
+      ([label, , ...cells]) => Promise.all([label, ...cells].map(read)),
+    )) : undefined;
+    return { ...row, readings, tableReadings };
+  }));
 
   return (
     <WideContainer>
@@ -118,7 +134,7 @@ export default async function OhmLesson({ searchParams }: { searchParams: Promis
         <main className="min-w-0 space-y-4">
           <div className="flex flex-wrap items-center justify-between gap-2">
             <p className="min-w-0 text-sm text-muted">
-              <Link href="/denken" className="hover:text-accent">電験三種</Link> / {page >= 321 ? "電力" : page >= 161 ? "機械" : "理論"} / {powerChapter ? powerChapter[1] : page === 321 ? "目次" : machineChapter ? machineChapter[1] : page === 161 ? "目次" : page >= 141 ? "電子工学・電子回路" : page >= 115 ? "磁気と磁界" : page >= 99 ? "静電気と電界" : page >= 87 ? "電気・電子計測" : page >= 70 ? "三相交流回路" : page >= 31 ? "交流回路" : "直流回路"} / {title}
+              <Link href="/denken" className="hover:text-accent">電験三種</Link> / {isLaw ? "法規" : page >= 321 ? "電力" : page >= 161 ? "機械" : "理論"} / {isLaw ? lawChapter?.[1] ?? "目次" : powerChapter ? powerChapter[1] : page === 321 ? "目次" : machineChapter ? machineChapter[1] : page === 161 ? "目次" : page >= 141 ? "電子工学・電子回路" : page >= 115 ? "磁気と磁界" : page >= 99 ? "静電気と電界" : page >= 87 ? "電気・電子計測" : page >= 70 ? "三相交流回路" : page >= 31 ? "交流回路" : "直流回路"} / {title}
             </p>
             <nav aria-label="Chuyển trang" className="flex flex-wrap items-center gap-2">
               {prevHref ? <Link href={prevHref} className={navButton}>← Trang trước</Link> : <span className="text-sm text-muted">← Trang trước</span>}
