@@ -435,6 +435,51 @@ export function TestRunner({
     ? [columnFocus]
     : availableColumns.filter((col) => columnVisible[col]);
 
+  function renderChoiceList(language: "ja" | "vi") {
+    if (!current || current.choices.length === 0) return null;
+    const interactive = language === "ja" || staticQuestions;
+    const Choice = interactive ? "button" : "div";
+
+    return (
+      <div className="mt-4 flex flex-col gap-2">
+        {current.choices.map((choice) => {
+          const selected = state.answers[current.id] === choice.id;
+          const showResult = submitted || (selected && quizMode);
+          let style = interactive ? "border-border hover:border-accent/50" : "border-border";
+          if (interactive && showResult && (choice.is_correct || (selected && !staticQuestions && !submitted))) {
+            style = "border-emerald-400 bg-emerald-50 dark:border-emerald-500/40 dark:bg-emerald-500/10";
+          } else if (interactive && showResult && selected) {
+            style = "border-red-300 bg-red-50 dark:border-red-500/40 dark:bg-red-500/10";
+          } else if (interactive && selected) {
+            style = "border-accent bg-accent/5";
+          }
+
+          const label = language === "ja"
+            ? choice.choice_jp
+              ? renderExamJapanese(choice.choice_jp, choice.choice_furigana_tokens, showFurigana)
+              : "Chọn phương án theo đề gốc"
+            : choice.choice_vi ?? (hasOriginalPages ? "Xem phương án trong đề gốc" : "(chưa dịch lựa chọn)");
+          return (
+            <Choice
+              key={choice.id}
+              {...(interactive ? {
+                type: "button" as const,
+                onClick: () => selectChoice(choice.id),
+                disabled: submitted || Boolean(feedback),
+                "aria-pressed": selected,
+              } : {})}
+              lang={language}
+              className={`flex min-w-0 items-start gap-3 rounded-xl border px-3 py-2.5 text-left text-sm transition ${style} ${language === "ja" ? "font-jp" : ""}`}
+            >
+              <span className="shrink-0 font-semibold">{choice.choice_label}</span>
+              <span className="min-w-0 whitespace-pre-line wrap-break-word">{label}</span>
+            </Choice>
+          );
+        })}
+      </div>
+    );
+  }
+
   return (
     <div className="flex flex-col gap-4 py-4">
       <div className="flex items-center gap-3 text-xs text-muted" role="status">
@@ -642,40 +687,7 @@ export function TestRunner({
             </button>
           )}
 
-          {current.choices.length > 0 && (
-            <div className="mt-4 flex flex-col gap-2">
-              {current.choices.map((choice) => {
-                const isSelected = state.answers[current.id] === choice.id;
-                const showCorrectness = submitted;
-                let style: string;
-                if (showCorrectness && choice.is_correct) {
-                  style = "border-emerald-400 bg-emerald-50 dark:border-emerald-500/40 dark:bg-emerald-500/10";
-                } else if (showCorrectness && isSelected && !choice.is_correct) {
-                  style = "border-red-300 bg-red-50 dark:bg-red-500/10";
-                } else if (isSelected) {
-                  style = quizMode
-                    ? "border-emerald-400 bg-emerald-50 dark:border-emerald-500/40 dark:bg-emerald-500/10"
-                    : "border-accent bg-accent/5";
-                } else {
-                  style = "border-border hover:border-accent/50";
-                }
-                return (
-                  <button
-                    key={choice.id}
-                    type="button"
-                    onClick={() => selectChoice(choice.id)}
-                    disabled={submitted || Boolean(feedback)}
-                    className={`flex items-start gap-3 rounded-xl border px-3 py-2.5 text-left text-sm transition ${style}`}
-                  >
-                    <span className="font-jp font-semibold">{choice.choice_label}</span>
-                    <span className="font-jp">{choice.choice_jp
-                      ? renderExamJapanese(choice.choice_jp, choice.choice_furigana_tokens, showFurigana)
-                      : "Chọn phương án theo đề gốc"}</span>
-                  </button>
-                );
-              })}
-            </div>
-          )}
+          {renderChoiceList("ja")}
         </section>
         )}
 
@@ -695,16 +707,16 @@ export function TestRunner({
             <p className="text-sm italic text-muted">(chưa dịch)</p>
           )}
 
-          {current.choices.length > 0 && (
-            <div className="mt-4 flex flex-col gap-2">
-              {current.choices.map((choice) => (
-                <div key={choice.id} className="flex items-start gap-3 rounded-xl border border-border px-3 py-2.5 text-sm">
-                  <span className="font-semibold">{choice.choice_label}</span>
-                  <span>{choice.choice_vi ?? (hasOriginalPages ? "Xem phương án trong đề gốc" : "(chưa dịch lựa chọn)")}</span>
-                </div>
+          {hasOriginalPages && !renderedColumns.includes("question") && (
+            <div className="mt-4 flex flex-wrap gap-x-3 gap-y-1">
+              {details?.originalPages?.map(({ href, label }) => (
+                <a key={href} href={href} target="_blank" rel="noopener noreferrer" className="text-sm font-medium text-accent underline">
+                  {label} ↗
+                </a>
               ))}
             </div>
           )}
+          {renderChoiceList("vi")}
         </section>
         )}
 
@@ -722,8 +734,13 @@ export function TestRunner({
             <div className="space-y-3">
               <p className="font-jp text-sm font-bold text-accent">【正解】{correctChoice.choice_label}</p>
               <p className="font-jp whitespace-pre-line text-sm leading-relaxed sm:text-base">
-                {renderExamJapanese(correctChoice.choice_jp, correctChoice.choice_furigana_tokens, showFurigana)}
+                {correctChoice.choice_jp
+                  ? renderExamJapanese(correctChoice.choice_jp, correctChoice.choice_furigana_tokens, showFurigana)
+                  : "Xem hình tương ứng trong đề gốc."}
               </p>
+              {staticQuestions && correctChoice.choice_vi && (
+                <p lang="vi" className="whitespace-pre-line text-sm leading-relaxed">{correctChoice.choice_vi}</p>
+              )}
             </div>
           ) : writtenAnswer ? (
             <div className="space-y-3">
@@ -815,6 +832,10 @@ export function TestRunner({
         <AnswerFeedbackModal
           correct={feedback.correct}
           choiceLabel={feedback.choiceLabel}
+          officialAnswer={staticQuestions && correctChoice ? {
+            label: correctChoice.choice_label,
+            text: correctChoice.choice_vi ?? correctChoice.choice_jp,
+          } : undefined}
           explanation={details?.explanation ?? current.explanation_vi}
           explanationJp={current.explanation_jp}
           explanationJpTokens={current.explanation_furigana_tokens ?? []}

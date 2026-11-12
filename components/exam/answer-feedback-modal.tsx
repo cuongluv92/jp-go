@@ -12,6 +12,7 @@ import { segmentJapaneseText, type FuriganaToken } from "@/lib/japanese-text";
 export function AnswerFeedbackModal({
   correct,
   choiceLabel,
+  officialAnswer,
   explanation,
   explanationJp,
   explanationJpTokens = [],
@@ -24,6 +25,7 @@ export function AnswerFeedbackModal({
 }: {
   correct: boolean;
   choiceLabel: string;
+  officialAnswer?: { label: string; text: string };
   explanation?: ReactNode;
   explanationJp?: string | null;
   explanationJpTokens?: FuriganaToken[];
@@ -73,6 +75,12 @@ export function AnswerFeedbackModal({
         {correct ? "Chính xác!" : "Chưa đúng"}
       </p>
       {!correct && <p className="mt-2 text-base text-muted">Bạn đã chọn {choiceLabel}. Có thể làm lại ngay hoặc quay lại câu này sau.</p>}
+      {officialAnswer && (
+        <div className="mt-3 rounded-lg border border-border px-3 py-2 text-left">
+          <p className="text-sm font-semibold">Đáp án chính thức ({officialAnswer.label})</p>
+          {officialAnswer.text && <p className="mt-1 whitespace-pre-line text-sm">{officialAnswer.text}</p>}
+        </div>
+      )}
       {(explanationJp || explanation) && (
         <div className="mt-4 space-y-4 rounded-xl bg-slate-50 p-4 text-left dark:bg-surface-muted sm:p-5">
           {explanationJp && (

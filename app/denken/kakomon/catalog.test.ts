@@ -24,6 +24,10 @@ describe("Denken past exams", () => {
       for (const { key, question, originalPages, theory, solution } of questions) {
         expect(question.choices).toHaveLength(5);
         expect(question.choices.filter((choice) => choice.is_correct)).toHaveLength(1);
+        for (const choice of question.choices) {
+          expect(choice.choice_jp.trim()).not.toBe("");
+          expect(choice.choice_vi?.trim()).toBeTruthy();
+        }
         expect(question.question_jp).toBeTruthy();
         expect(question.question_vi).toBeTruthy();
         expect(theory.length).toBeGreaterThan(0);
@@ -41,4 +45,17 @@ describe("Denken past exams", () => {
       }
     },
   );
+
+  it("keeps both H21 theory ammeter experiments and their answer in the original order", () => {
+    const exam = denkenPastExams.find(({ test }) => test.slug === "h21-riron");
+    const row = exam?.questions.find(({ key }) => key === "14");
+    expect(row?.question.question_vi).toContain("10 V");
+    expect(row?.question.question_vi).toContain("50 Hz");
+    expect(row?.question.question_vi).toContain("500 Ω");
+    expect(row?.question.choices.find(({ is_correct }) => is_correct)).toMatchObject({
+      choice_label: "3",
+      choice_vi: "(ア) 100 mA · (イ) 0 mA",
+    });
+    expect(row?.solution?.join(" ")).toContain("0,200 A");
+  });
 });
