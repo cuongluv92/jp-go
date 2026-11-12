@@ -553,13 +553,13 @@ export const electricPowerPages: Record<number, LessonRow[]> = {
     { jp: "第3章 原子力発電、特殊発電", vi: "Chương 3 · Điện hạt nhân và các loại nguồn điện đặc biệt", heading:true },
     { jp: "3-1 原子力発電質量欠損 **といえば** 質量mと光速cの2乗に比例", vi: "3-1 Năng lượng hạt nhân do hao hụt khối lượng: E=mc²", heading:true },
     { jp: "核分裂エネルギー", vi: "Năng lượng phân hạch", heading:true },
-    { jp: "原子力発電は、原子の核分裂反応によって発生する熱エネルギーを利用します。核分裂に伴い質量の一部がエネルギーに変換され、このエネルギーで蒸気を発生させ発電します。", vi: "Điện hạt nhân khai thác nhiệt phát sinh khi hạt nhân nguyên tử phân hạch. Một phần khối lượng được chuyển thành năng lượng, dùng tạo hơi nước quay tua-bin và máy phát." },
+    { jp: "**原子力発電**は、原子の核分裂反応を原子炉で制御し、発生した熱エネルギーを利用して蒸気を発生させタービンを回転して発電します。", vi: "**Điện hạt nhân** kiểm soát phản ứng phân hạch trong lò phản ứng. Nhiệt sinh ra được dùng để tạo hơi, quay tua-bin và phát điện." },
     { jp: "原子の構造、核分裂の様子", vi: "Cấu tạo nguyên tử và mô hình phản ứng phân hạch", heading:true },
     { diagram:"powerFission357" },
     { jp: "質量欠損", vi: "Hao hụt khối lượng (質量欠損)", heading:true },
     { jp: "核分裂前後の質量の差を**質量欠損**といいます。質量欠損 m［kg］によって生じるエネルギー E［J］は光速 c［m/s］を用いて、**E＝mc²**で表されます。", vi: "Độ chênh giữa tổng khối lượng trước và sau phản ứng gọi là **độ hụt khối m**. Năng lượng tương ứng được xác định bằng:", equations:[["E = m c² [J]"],["c ≈ 3 × 10⁸ m/s"]],note:"m tính kg, c tính m/s; đơn vị kg×m²/s² chính là joule (J). Sử dụng khối lượng đã chuyển thành năng lượng, KHÔNG dùng toàn bộ khối lượng nhiên liệu." },
     { jp: "核分裂連鎖反応と臨界", vi: "Phản ứng dây chuyền và trạng thái tới hạn", heading:true },
-    { jp: "核分裂で放出された中性子がさらに核分裂を生じさせる反応を核分裂連鎖反応といい、連鎖反応が継続する状態を臨界といいます。", vi: "Neutron sinh ra từ một lần phân hạch kích thích các phân hạch tiếp theo thành **phản ứng dây chuyền**. Trạng thái **tới hạn** là khi phản ứng duy trì ổn định (hệ số nhân neutron hiệu dụng bằng 1).",note:"Tới hạn không đồng nghĩa với sự cố; trong vận hành ổn định, lò phản ứng thường duy trì kₑff≈1." },
+    { jp: "核分裂エネルギーを発電に利用するには、核分裂反応が連続する必要があります。この連続する反応を、**核分裂連鎖反応**といいます。核分裂連鎖反応が持続して進むことを、**臨界**といいます。", vi: "Muốn dùng năng lượng phân hạch để phát điện, phản ứng phải diễn ra liên tục. Chuỗi phản ứng liên tiếp gọi là **phản ứng dây chuyền phân hạch**. Trạng thái **tới hạn** là khi chuỗi phản ứng tự duy trì.",note:"Tới hạn không đồng nghĩa với sự cố; trong vận hành ổn định, lò phản ứng thường duy trì kₑff≈1." },
   ],
   358: [
     { jp: "原子炉の構成", vi: "Cấu tạo và các thành phần của lò phản ứng", heading:true },
@@ -567,46 +567,47 @@ export const electricPowerPages: Record<number, LessonRow[]> = {
     { jp: "原子燃料", vi: "Nhiên liệu hạt nhân",heading:true },
     { jp: "原子燃料には、ウラン（ウラン235）、プルトニウム239などがあります。天然ウランのほとんどは核分裂しにくいウラン238で、核分裂しやすいウラン235は約0.7％です。この割合を2～4％程度に濃縮したもの（濃縮ウラン）を燃料棒として用います。", vi: "Nhiên liệu thường dùng uranium (đặc biệt U-235), plutonium-239. Uranium tự nhiên có khoảng 0,7% U-235, phần lớn là U-238. Một số lò nước nhẹ dùng uranium làm giàu khoảng 2–4% U-235 theo mô tả sách, chế tạo thành thanh nhiên liệu.",note:"Tỷ lệ làm giàu ghi theo sách; trong thực tế phụ thuộc loại lò và thế hệ nhiên liệu." },
     { jp: "減速材",vi:"Chất làm chậm neutron",heading:true },
-    { jp: "ウランの核分裂で放出した高速中性子を、連鎖的に分裂を起こしやすい低速の熱中性子に減速するものが減速材です。軽水、重水、黒鉛、ベリリウムなどが使用されます。", vi: "Chất làm chậm làm giảm động năng neutron nhanh, tạo neutron nhiệt dễ duy trì phân hạch trong các lò thích hợp. Ví dụ: nước nhẹ, nước nặng, graphite, beryllium." },
+    { jp: "ウランの核分裂で放出した高速中性子を、連鎖的に分裂を起こしやすい低速の熱中性子に減速するものが減速材です。減速材には、軽水、重水、黒鉛、ベリリウムなどがあり、軽水炉では**軽水**が減速材として使用されます。", vi: "Chất làm chậm làm giảm động năng neutron nhanh, tạo neutron nhiệt dễ duy trì phân hạch trong các lò thích hợp. Ví dụ: nước nhẹ, nước nặng, graphit và berili. Trong lò nước nhẹ, **nước nhẹ** là chất làm chậm." },
     { jp: "冷却材",vi:"Chất làm mát",heading:true },
-    { jp: "原子炉内で発生した熱を外部に取り出すための流体で、軽水、重水、二酸化炭素、ヘリウム、液体ナトリウムなどを用います。", vi: "Chất làm mát chuyển nhiệt khỏi vùng hoạt. Các ví dụ trong sách: nước nhẹ, nước nặng, CO₂, helium, natri lỏng.",note:"Chất làm chậm và chất làm mát có thể cùng là nước nhẹ trong BWR/PWR nhưng chức năng kỹ thuật khác nhau." },
+    { jp: "原子炉内で発生した熱を外部に取り出すための流体で、軽水、重水、二酸化炭素（炭酸ガス）、ヘリウム、液体ナトリウム（液体金属）などがあり、軽水炉では**軽水**が冷却材として使用されます。", vi: "Chất làm mát chuyển nhiệt khỏi vùng hoạt. Có thể dùng nước nhẹ, nước nặng, CO₂, heli hoặc natri lỏng. Trong lò nước nhẹ, **nước nhẹ** là chất làm mát.",note:"Chất làm chậm và chất làm mát có thể cùng là nước nhẹ trong BWR/PWR nhưng chức năng kỹ thuật khác nhau." },
     { jp: "制御材",vi:"Vật liệu điều khiển",heading:true },
     { jp: "炉内で核分裂を制御して出力を調整する制御棒に、**カドミウム、ほう素、ハフニウム**などを用います。", vi: "Thanh điều khiển hấp thụ neutron để điều chỉnh phản ứng và công suất; vật liệu điển hình là cadmium, boron, hafnium." },
     { jp: "反射材（反射体）",vi:"Vật liệu phản xạ neutron",heading:true },
-    { jp: "反射材は中性子が原子炉外へ漏れるのを防ぎます。黒鉛や軽水などを用います。",vi:"Vật liệu phản xạ làm giảm thất thoát neutron ra khỏi vùng hoạt, ví dụ graphite hoặc nước nhẹ." },
+    { jp: "**反射材**は中性子を反射し、**中性子**が原子炉の外へ漏れるのを防ぎます。",vi:"**Vật liệu phản xạ** phản xạ neutron để hạn chế **neutron** thoát ra ngoài lò." },
     { jp: "構造材",vi:"Vật liệu cấu trúc",heading:true },
-    { jp: "構造材は燃料棒、減速材、制御棒、冷却材などからなる原子炉の形を支持する構造部材です。アルミニウム、ステンレス鋼、ジルコニウム合金などを用います。",vi:"Vật liệu cấu trúc đỡ và cố định các bộ phận trong lò: hợp kim nhôm, thép không gỉ, hợp kim zirconium." },
+    { jp: "構造材は燃料棒、減速材、制御棒、冷却材などからなる原子炉の**炉心**を支持する材料です。アルミニウム、ステンレス鋼、ジルコニウム合金などを用います。",vi:"Vật liệu kết cấu đỡ **vùng hoạt của lò**, gồm thanh nhiên liệu, chất làm chậm, thanh điều khiển và chất làm mát. Vật liệu dùng gồm nhôm, thép không gỉ và hợp kim zirconi." },
     { jp: "遮へい材（遮へい壁）",vi:"Vật liệu chắn bức xạ",heading:true },
-    { jp: "核分裂で発生した熱を取り出すため、放射線を外部に出さないようにするものです。鉄、コンクリート、鉛板、軽水などが用いられます。",vi:"Vật liệu che chắn hạn chế bức xạ lan ra bên ngoài, sử dụng thép/sắt, bê tông, chì, nước nhẹ theo yêu cầu thiết kế." },
+    { jp: "炉内で発生した熱を遮へいするのと、**放射線**を外部に出さないようにするものです。鉄、コンクリート、軽水、鉛などが用いられます。",vi:"Vật liệu che chắn có tác dụng chắn nhiệt sinh ra trong lò và ngăn **bức xạ** thoát ra ngoài. Ví dụ gồm sắt, bê tông, nước nhẹ và chì." },
+    { jp: "※1 重水と軽水：重水とは質量数の大きい水分子を多く含み、通常の水より比重の大きい水のことで、自然界ではほとんど存在しません。重水に対し普通の水を軽水といいます。", vi: "※1 Nước nặng chứa nhiều phân tử nước có số khối lớn hơn, nên có tỷ trọng cao hơn nước thường và chỉ có rất ít trong tự nhiên. Nước thường được gọi là nước nhẹ khi phân biệt với nước nặng." },
   ],
   359: [
-    { jp: "POINT　原子炉の主要材料",vi:"Bảng ghi nhớ vật liệu lò phản ứng",heading:true,table:{
+    { jp: "表3-1-1 原子炉の基本構成",vi:"Bảng 3-1-1 · Cấu tạo cơ bản của lò phản ứng",heading:true,table:{
       jp: ["名称","主な材料","役割"],
       vi: ["Bộ phận","Vật liệu","Chức năng"],
       rows: [
         ["原子燃料","Nhiên liệu hạt nhân","ウラン235、プルトニウム239","核分裂して熱を発生"],
-        ["減速材","Chất làm chậm","軽水、重水、黒鉛、ベリリウム","高速中性子を減速"],
-        ["冷却材","Chất tải nhiệt","軽水、重水、二酸化炭素、ヘリウム、ナトリウム","炉心から熱を運ぶ"],
-        ["制御材","Vật liệu điều khiển","カドミウム、ほう素、ハフニウム","中性子を吸収し出力調整"],
-        ["反射材","Vật liệu phản xạ","黒鉛、軽水","中性子の漏出を減らす"],
-        ["構造材","Vật liệu kết cấu","アルミニウム、ステンレス鋼、ジルコニウム合金","構成部品を支持"],
+        ["減速材","Chất làm chậm","軽水、重水、黒鉛、ベリリウム","高速中性子を熱中性子に減速する。"],
+        ["冷却材","Chất tải nhiệt","軽水、重水、液体ナトリウム","熱エネルギーを外部へ取り出す。"],
+        ["制御材","Vật liệu điều khiển","カドミウム、ほう素、ハフニウム","中性子が核燃料に衝突する割合を制御する。"],
+        ["反射材","Vật liệu phản xạ","軽水、重水、黒鉛、ベリリウム","中性子の漏出を減らす"],
+        ["構造材","Vật liệu kết cấu","アルミニウム、ステンレス鋼","炉心を支持する材料。"],
         ["遮へい材","Vật liệu che chắn","鉄、コンクリート、鉛、軽水","放射線を遮へい"]
       ],
       rowsVi: [
         ["原子燃料","Nhiên liệu hạt nhân","Urani-235, plutoni-239","Phân hạch và tỏa nhiệt"],
-        ["減速材","Chất làm chậm","Nước nhẹ, nước nặng, graphit, berili","Làm chậm nơtron nhanh"],
-        ["冷却材","Chất tải nhiệt","Nước nhẹ, nước nặng, CO₂, heli, natri","Mang nhiệt ra khỏi vùng hoạt"],
-        ["制御材","Vật liệu điều khiển","Cadmi, bo, hafni","Hấp thụ nơtron để điều chỉnh công suất"],
-        ["反射材","Vật liệu phản xạ","Graphit, nước nhẹ","Giảm nơtron thoát ra ngoài"],
-        ["構造材","Vật liệu kết cấu","Nhôm, thép không gỉ, hợp kim zirconi","Đỡ các bộ phận cấu thành"],
+        ["減速材","Chất làm chậm","Nước nhẹ, nước nặng, graphit, berili","Làm chậm neutron nhanh thành neutron nhiệt"],
+        ["冷却材","Chất tải nhiệt","Nước nhẹ, nước nặng, natri lỏng","Mang nhiệt ra khỏi vùng hoạt"],
+        ["制御材","Vật liệu điều khiển","Cadmi, bo, hafni","Điều chỉnh tỷ lệ neutron va vào nhiên liệu hạt nhân"],
+        ["反射材","Vật liệu phản xạ","Nước nhẹ, nước nặng, graphit, berili","Giảm nơtron thoát ra ngoài"],
+        ["構造材","Vật liệu kết cấu","Nhôm, thép không gỉ","Đỡ vùng hoạt của lò"],
         ["遮へい材","Vật liệu che chắn","Sắt, bê tông, chì, nước nhẹ","Che chắn bức xạ"]
       ],
     } },
     { jp: "練習問題 01　核分裂エネルギー", vi: "Bài tập 01 · Năng lượng phân hạch",heading:true },
-    { jp: "1 kg のウラン燃料は3.5％の濃縮ウラン235が核分裂し、0.09％の質量欠損が生じる。このとき発生するエネルギー E［J］と、発熱量が H＝40 000 kJ/Lの石油に換算した量 M［kL］を求める。ただし、光速 c＝3×10⁸ m/sとする。", vi: "Một kg nhiên liệu chứa 3,5% U-235 tham gia phân hạch, trong lượng U-235 ấy hụt khối 0,09%. Tính năng lượng E và lượng dầu tương đương M, biết c=3×10⁸ m/s và nhiệt trị dầu H=40.000 kJ/L.",note:"Hai tỷ lệ phần trăm phải nhân liên tiếp: 3,5% × 0,09%; không được lấy 0,09% của cả 1 kg rồi dừng." },
+    { jp: "1 kg のウラン燃料は3.5％の濃縮ウラン235が核分裂し、0.09％の質量欠損が生じる。このとき発生するエネルギー E［J］と、発熱量が H＝40 000 kJ/Lの重油に換算した量 M［kL］を求める。ただし、光速 c＝3×10⁸ m/sとする。", vi: "Một kg nhiên liệu chứa 3,5% U-235 tham gia phân hạch, trong lượng U-235 ấy hụt khối 0,09%. Tính năng lượng E và lượng dầu nặng tương đương M, biết c=3×10⁸ m/s và nhiệt trị dầu H=40.000 kJ/L.",note:"Hai tỷ lệ phần trăm phải nhân liên tiếp: 3,5% × 0,09%; không được lấy 0,09% của cả 1 kg rồi dừng." },
     { jp: "質量欠損量 m は、1 kg ×3.5/100×0.09/100＝3.15×10⁻⁵ kg。",vi:"Bước 1: tính đúng khối lượng chuyển thành năng lượng:",equations:[["m = 1 × ",{fraction:[["3.5"],["100"]]}," × ",{fraction:[["0.09"],["100"]]}," = 3.15 × 10⁻⁵ kg"]] },
     { jp: "E＝mc²＝3.15×10⁻⁵×（3×10⁸）²≒2.8×10¹² J。",vi:"Bước 2: dùng E=mc²:",equations:[["E = 3.15 × 10⁻⁵ × (3 × 10⁸)² = 2.835 × 10¹² J ≈ 2.8 × 10¹² J"]],note:"Kiểm tra đơn vị kg·m²/s²=J; phép tính tích (3×10⁸)²=9×10¹⁶." },
-    { jp: "石油の量 M は E/H より、約71 kL。",vi:"Bước 3: nhiệt trị dầu 40.000 kJ/L = 4×10⁷ J/L:",equations:[["M = ",{fraction:[["2.835 × 10¹² J"],["4 × 10⁷ J/L"]]}," = 70 875 L ≈ 71 kL"]],note:"Kiểm tra ngược: 71.000 L × 4×10⁷ J/L ≈ 2,84×10¹² J, gần kết quả E." },
+    { jp: "重油の量 M は E/H より、約71 kL。",vi:"Bước 3: nhiệt trị dầu 40.000 kJ/L = 4×10⁷ J/L:",equations:[["M = ",{fraction:[["2.835 × 10¹² J"],["4 × 10⁷ J/L"]]}," = 70 875 L ≈ 71 kL"]],note:"Kiểm tra ngược: 71.000 L × 4×10⁷ J/L ≈ 2,84×10¹² J, gần kết quả E." },
     { jp: "解答　E＝**2.8×10¹² J**、M＝**71 kL**",vi:"Đáp án: **2,8×10¹² J** và **71 kL dầu**." },
   ],
   360: [
@@ -630,7 +631,7 @@ export const electricPowerPages: Record<number, LessonRow[]> = {
     { jp:"**ガスタービン発電**は原動機としてガスタービンを使用する発電方式です。原理は、空気を圧縮機で圧縮し、これを加熱した**高温、高圧**の気体がタービンで膨張する過程においてタービンを駆動します。**圧縮、加熱、膨張、放熱**の４過程からなります。",vi:"Phát điện bằng tua-bin khí dùng máy nén nén không khí, đốt nhiên liệu để gia nhiệt và tăng năng lượng dòng khí, khí nóng áp cao giãn nở qua tua-bin tạo cơ năng. Chu trình gồm **nén → gia nhiệt → giãn nở → thải nhiệt**.",note:"Không nhầm chu trình khí với Rankine của tua-bin hơi. Công suất máy nén cũng tiêu thụ một phần công của tua-bin." },
     { jp:"空気圧縮機、燃焼器、ガスタービン、及び発電機で構成されます。",vi:"Bộ phận chính: **máy nén khí, buồng đốt, tua-bin khí, máy phát điện**." },
     { jp:"上図左のように排気を大気中に放出する**オープンサイクルガスタービン**（開放サイクル）と、上図右のように流体を循環して使用する**クローズドサイクルガスタービン**（密閉サイクル）があります。",vi:"Chu trình **hở** thải khí sau tua-bin ra khí quyển; chu trình **kín** tuần hoàn môi chất và làm nguội trước khi nén lại." },
-    { jp:"ガスタービン発電の特徴：構造が簡単で始動、停止が容易。負荷変動への追従性がよい。多量の冷却水を必要としない。建設費が安く、立地に制約を受けない。高温ガスに耐える高価な材料が必要。空気圧縮の動力が大きく、熱効率があまりよくない（20～30％）。大量の空気を高速で吸入、排出するので騒音が大きい。",vi:"Ưu điểm: thiết bị gọn, khởi động/dừng nhanh, theo tải tốt, ít cần nước làm mát, chi phí xây dựng tương đối thấp. Nhược điểm: vật liệu chịu nhiệt đắt, máy nén tốn công, hiệu suất chu trình đơn theo sách khoảng 20–30%, tiếng ồn lớn.",note:"Khoảng hiệu suất 20–30% là dữ liệu sách cho loại nêu trong chương, không phải hiệu suất của mọi tua-bin khí đời mới." },
+    { jp:"ガスタービン発電の特徴：構造が簡単で始動、停止が容易。負荷変動への追従性がよい。多量の冷却水を必要としない。建設費が安く、立地に制約を受けない。高温ガスに耐える高価な材料が必要。空気圧縮の動力が大きく、熱効率があまりよくない（20～30％）。大量の空気を高速で吸入、排出するので騒音が大きい。",vi:"Ưu điểm: thiết bị gọn, khởi động/dừng nhanh, theo tải tốt, ít cần nước làm mát, chi phí xây dựng thấp và ít bị giới hạn địa điểm. Khí có nhiệt độ cao nên phải dùng vật liệu chịu nhiệt đắt tiền. Công suất nén khí lớn, hiệu suất chu trình đơn theo sách khoảng 20–30%. Hút và xả lượng khí lớn ở tốc độ cao gây tiếng ồn.",note:"Khoảng hiệu suất 20–30% là dữ liệu sách cho loại nêu trong chương, không phải hiệu suất của mọi tua-bin khí đời mới." },
   ],
   362: [
     { jp:"POINT　オープンサイクルガスタービンといえば、タービンの排気は**空気予熱器**に送られ、圧縮空気を予熱して外部に放出。",vi:"**Ghi nhớ chu trình hở:** khí xả đi qua bộ sấy không khí, truyền nhiệt cho khí nén rồi thoát ra ngoài." },
@@ -645,13 +646,14 @@ export const electricPowerPages: Record<number, LessonRow[]> = {
     { jp:"コンバインドサイクル発電は複合サイクル発電ともいい、**ガスタービン**と**蒸気タービン**を組み合わせた発電方式です。燃焼器に圧縮空気と燃料を供給し、圧縮空気中で燃料を燃焼して高温・高圧の燃焼ガスを発生させ、ガスの圧力でガスタービンを回転し、発電を行います。",vi:"Chu trình hỗn hợp kết hợp **tua-bin khí** và **tua-bin hơi**. Máy nén cấp khí cho buồng đốt, khí cháy nóng quay tua-bin khí và máy phát; phần nhiệt còn lại trong khí xả được tái sử dụng để tạo hơi quay tua-bin hơi." },
   ],
   363: [
-    { jp:"ガスタービンから排出される高温ガスを**排熱回収ボイラ**で回収し、高温・高圧の蒸気を発生させ、蒸気タービンによる発電を行います。発電効率をより高めた改良型コンバインドサイクル発電では、**60％以上**の熱効率を達成しています。",vi:"Thu hồi nhiệt từ khí xả bằng **nồi hơi thu hồi nhiệt** để tạo hơi nóng áp cao, quay tua-bin hơi. Sách nêu các hệ thống hỗn hợp cải tiến có thể đạt hiệu suất trên **60%**." },
-    { jp:"コンバインドサイクル発電の特長：始動時間が短く、負荷変動に対する追従性がよい。ガスタービンと蒸気タービンを用い、2重に発電を行うため、熱効率が高い。冷却水量、温排水量が少ない。",vi:"Đặc trưng: khởi động tương đối nhanh, đáp ứng tải tốt; tận dụng cả tua-bin khí và hơi để tăng hiệu suất; giảm lượng nước làm mát và nước thải nhiệt." },
+    { jp:"ガスタービンから排出される高温ガスを**排熱回収ボイラ**で回収し、高温・高圧の蒸気を発生させ、蒸気タービンによる発電を行います。発電効率をより高めた改良型コンバインドサイクル発電では、**60％以上**の熱効率を達成しています。",vi:"Thu hồi nhiệt từ khí xả bằng **nồi hơi thu hồi nhiệt** để tạo hơi nóng áp cao, quay tua-bin hơi. Sách nêu các hệ thống hỗn hợp cải tiến có thể đạt hiệu suất nhiệt **từ 60% trở lên**." },
+    { jp:"コンバインドサイクル発電の特長：始動時間が短く、負荷変動に対する追従性がよい。ガスタービンと蒸気タービンを用い、2重に発電を行うため、熱効率が高い。冷却水量、温排水量が少ない。熱効率が上昇する分、廃棄される熱エネルギーも少ない。",vi:"Đặc trưng: khởi động tương đối nhanh, đáp ứng tải tốt; tận dụng cả tua-bin khí và hơi để tăng hiệu suất; lượng nước làm mát và nước thải nóng ít hơn. Hiệu suất nhiệt tăng cũng làm giảm phần năng lượng nhiệt thải bỏ." },
     { jp:"POINT　コンバインドサイクル発電といえばガスタービンと蒸気タービンの複合サイクル発電。**熱効率**がとても高い。",vi:"**Ghi nhớ:** Chu trình hỗn hợp = tua-bin khí + tua-bin hơi, hiệu suất cao do tận dụng nhiệt khí xả." },
     { jp:"練習問題 01　コンバインドサイクル発電",vi:"Bài tập 01 · Nhận định sai về chu trình hỗn hợp",heading:true },
     { jp:"ガスタービン発電と汽力発電を組み合わせたコンバインドサイクル発電方式を、同一出力の汽力発電方式と比較した記述として、誤っているものは。",vi:"So sánh nhà máy chu trình hỗn hợp với nhà máy tua-bin hơi đơn thuần cùng công suất; phát biểu nào **sai**?" },
     { jp:"(1) 熱効率が高い。(2) 起動・停止時間が短い。(3) 復水器の冷却水量が少ない。(4) 最大出力が外気温度の影響を受けやすい。(5) 大型所内補機が多く所内率が大きい。",vi:"(1) Hiệu suất nhiệt cao. (2) Khởi động/dừng nhanh. (3) Nước làm mát bình ngưng ít. (4) Công suất tối đa nhạy với nhiệt độ không khí. (5) Có nhiều máy phụ trợ lớn nên tỷ lệ điện tự dùng cao." },
     { jp:"解説　廃棄される熱エネルギーが少なく熱効率が高い。起動・停止時間が短く、負荷変動に対する追従性がよい。蒸気タービンが小さく、復水器の冷却水量が少ない。空気密度が外気温度により変化することで影響を受ける。大型補機が少なく、所内率が小さい。",vi:"Đối chiếu từng ý: (1) đúng vì thu hồi nhiệt; (2) đúng vì tua-bin khí khởi động nhanh; (3) đúng vì phần tua-bin hơi/bình ngưng nhỏ hơn; (4) đúng vì mật độ khí vào máy nén phụ thuộc nhiệt độ ngoài trời; **(5) sai**, thường ít thiết bị phụ trợ cỡ lớn hơn và tỷ lệ tự dùng nhỏ hơn." },
+    { jp:"※所内率（所内比率）：発電所内の機器で使用する消費電力と発電機出力の割合。",vi:"※ Tỷ lệ tự dùng là công suất điện mà thiết bị trong nhà máy tiêu thụ chia cho công suất phát tại đầu cực máy phát." },
     { jp:"解答　**(5)**",vi:"Đáp án **⑤**. Kiểm tra ngược: nếu tỷ lệ tự dùng thật sự cao do nhiều phụ trợ lớn thì mâu thuẫn đặc điểm nêu trong lời giải sách." },
   ],
   364: [
@@ -659,7 +661,7 @@ export const electricPowerPages: Record<number, LessonRow[]> = {
     { jp:"地熱発電の仕組み",vi:"Sơ đồ nhà máy địa nhiệt",heading:true },
     { diagram:"powerGeothermal364" },
     { jp:"コジェネレーション発電",vi:"Đồng phát (cogeneration)",heading:true },
-    { jp:"**コジェネレーション発電**は、**複数のエネルギー（電気、熱など）**を利用するもので、発電で発生した廃熱を活用する自家発電システムです。発電で発生した熱を給湯や暖房などに利用すれば、システム全体の熱効率が向上します。熱効率は80％以上を可能にし、石油や天然ガスなどの一次エネルギーの消費を抑えることができます。",vi:"**Đồng phát** sử dụng đồng thời điện và nhiệt hữu ích. Tận dụng nhiệt thải của máy phát để cấp nước nóng/sưởi, nâng hiệu suất sử dụng tổng năng lượng; sách nêu có thể trên 80%. Giảm tiêu thụ nhiên liệu sơ cấp.",note:"Hiệu suất tổng điện+nhiệt 80% không phải hiệu suất chuyển riêng nhiên liệu thành điện năng." },
+    { jp:"**コジェネレーション発電**は、**複数のエネルギー（電気、熱など）**を利用するもので、発電で発生した廃熱を活用する自家発電システムです。発電で発生した熱を給湯や暖房などに利用すれば、システム全体の熱効率が向上します。熱効率は80％以上を可能にし、石油や天然ガスなどの一次エネルギーの消費を抑えることができます。",vi:"**Đồng phát** là hệ thống tự phát điện tận dụng **nhiều dạng năng lượng như điện và nhiệt** từ cùng nguồn. Tận dụng nhiệt thải của máy phát để cấp nước nóng/sưởi, nâng hiệu suất sử dụng tổng năng lượng; sách nêu có thể trên 80%. Giảm tiêu thụ nhiên liệu sơ cấp.",note:"Hiệu suất tổng điện+nhiệt 80% không phải hiệu suất chuyển riêng nhiên liệu thành điện năng." },
     { jp:"POINT　コジェネレーション発電といえば自家発電の**廃熱**を利用、熱効率の向上を図る。",vi:"**Ghi nhớ:** Đồng phát tận dụng nhiệt thải bên cạnh điện." },
     { jp:"地熱発電",vi:"Điện địa nhiệt",heading:true },
     { jp:"**地熱発電**は、火山地帯などの地下の地熱貯蔵層から噴出する蒸気を利用する発電方式で、次の3つの方式があります。",vi:"Điện địa nhiệt khai thác hơi hoặc nước nóng từ tầng chứa nhiệt dưới lòng đất (thường ở vùng núi lửa); sách chia thành ba phương thức." },
@@ -701,13 +703,14 @@ export const electricPowerPages: Record<number, LessonRow[]> = {
     {jp:"②多結晶型シリコン太陽電池",vi:"② Pin silic đa tinh thể",heading:true},
     {jp:"多くの結晶が混在し、効率は単結晶より低い（10～15％程度）が、比較的安く製造できます。",vi:"Gồm nhiều hạt tinh thể; hiệu suất trong sách khoảng 10–15%, nhưng dễ chế tạo với giá thấp hơn."},
     {jp:"③アモルファス太陽電池",vi:"③ Pin silic vô định hình",heading:true},
-    {jp:"非結晶型ともいわれ、結晶を含まずガラスやステンレス等の表面に薄くシリコンを蒸着したもので、結晶系に比べ非常に薄くでき、シリコンが節約できます。効率は結晶に比べて悪く約6～9％程度で日射により出力が極端に低下する欠点があります。",vi:"Còn gọi là pin **vô định hình**, phủ lớp silic mỏng lên kính hoặc thép không gỉ, giúp giảm vật liệu. Hiệu suất nêu trong sách khoảng 6–9% và có hạn chế suy giảm công suất khi chiếu sáng kéo dài.",note:"Các số hiệu suất là ví dụ trong sách, không đại diện mọi sản phẩm mới năm 2026."},
+    {jp:"非結晶型ともいわれ、結晶を含まずガラスやステンレス等の表面に薄くシリコンを蒸着したもので、結晶系に比べ非常に薄くでき、シリコンが節約できます。効率は結晶に比べて悪く約6～9％程度で日射により出力が極端に低下する欠点があります。",vi:"Còn gọi là pin **vô định hình**, phủ lớp silic mỏng lên kính hoặc thép không gỉ, giúp giảm vật liệu. Hiệu suất nêu trong sách khoảng 6–9% và có nhược điểm là công suất có thể suy giảm mạnh do chiếu sáng.",note:"Các số hiệu suất là ví dụ trong sách, không đại diện mọi sản phẩm mới năm 2026."},
     {jp:"住宅用太陽電池発電システム",vi:"Hệ thống điện mặt trời gia đình",heading:true},
-    {jp:"住宅用太陽電池発電システムは、屋根又はベランダに設置した太陽電池で発電した直流を**インバータ**で交流に変換し、まず家庭内の負荷へ電力を供給します。余剰電力が生じれば、系統を連系した電力会社へ売電用メータを通じて逆送し、ピーク電力の軽減に役立て、不足のときは買電用メータを通じ電力会社からの電力を使用するシステムです。",vi:"Điện DC từ tấm pin trên mái/ban công được inverter đổi sang AC cấp tải gia đình. Điện dư có thể đưa lên lưới qua công tơ bán điện nếu được đấu nối/hợp đồng; thiếu thì mua điện qua công tơ mua.",note:"Điện mặt trời tạo DC, muốn hòa lưới AC cần inverter đồng bộ và bảo vệ chống đảo lưới."},
+    {jp:"住宅用太陽電池発電システムは、屋根又はベランダに設置した太陽電池で発電した直流を**インバータ**で交流に変換し、まず家庭内の負荷へ電力を供給します。余剰電力が生じれば、系統を連系した電力会社へ売電用メータを通じて逆送し、ピーク電力の軽減に役立て、不足のときは買電用メータを通じ電力会社からの電力を使用するシステムです。",vi:"Điện một chiều từ tấm pin trên mái hoặc ban công được **inverter** chuyển sang điện xoay chiều để cấp trước cho tải trong nhà. Điện dư truyền ngược lên lưới công ty điện lực qua công tơ bán điện, giúp giảm nhu cầu công suất đỉnh. Khi thiếu, dùng điện từ công ty điện lực qua công tơ mua điện.",note:"Điện mặt trời tạo DC, muốn hòa lưới AC cần inverter đồng bộ và bảo vệ chống đảo lưới."},
     {jp:"2. 風力発電",vi:"2. Phát điện gió",heading:true},
     {jp:"発電の原理　風が持つエネルギーを風車で回転運動に変換し、風車の回転エネルギーを発電機により電気エネルギーに変換します。",vi:"Động năng của không khí được rotor thu thành cơ năng quay, rồi máy phát đổi thành điện năng."},
     {jp:"風が持つ運動エネルギー P［J/s］は、風速v［m/s］、1秒間に通過する空気の質量m［kg/s］とすると、",vi:"Công suất động năng gió với lưu lượng khối lượng m và tốc độ v:",equations:[["P = ",{fraction:[["1"],["2"]]}," m v² [J/s]"]]},
     {jp:"空気密度をρ［kg/m³］、風車の受風面積をA［m²］とすると、m＝ρAv［kg/s］。風車の出力Po（風車効率をηt）",vi:"Với mật độ không khí ρ và diện tích rotor quét A, khối lượng khí qua rotor mỗi giây m=ρAv. Công suất cơ thu được:",equations:[["m = ρ A v [kg/s]"],["Po = ",{fraction:[["1"],["2"]]}," ρ A v³ ηt [W]"]],note:"Vận tốc gió tăng 2 lần thì công suất theo mô hình tăng 8 lần, trước giới hạn rotor/công suất định mức. ρ kg/m³ × A m² × v³ m³/s³ = kg·m²/s³ = W."},
+    { jp:"風車から得られるエネルギーは、**受風面積 A**［m²］に比例し、**風速 v**［m/s］の**3乗**に比例します。",vi:"Theo công thức, khi khối lượng riêng và hiệu suất giữ nguyên, công suất thu từ tua-bin gió tỷ lệ với **diện tích đón gió A** và với **lũy thừa bậc ba** của **tốc độ gió v**." },
   ],
   368: [
     {jp:"なお、風力発電において発電を開始するときの風速をカットイン風速、強風時に安全のため発電を停止する風速をカットアウト風速と呼んでいます。",vi:"**Tốc độ gió khởi phát** (cut-in) là tốc độ gió tại đó tua-bin bắt đầu phát điện. **Tốc độ gió ngắt** (cut-out) là tốc độ gió tại đó tua-bin dừng phát để bảo đảm an toàn khi gió mạnh."},
@@ -767,7 +770,11 @@ export const electricPowerPages: Record<number, LessonRow[]> = {
     {jp:"（3）バイオマス発電は、植物などの有機物から得られる燃料を利用した発電方式である。さとうきびから得られるエタノールや、家畜の糞から得られるメタンガスなどが燃料として用いられている。",vi:"(3) Điện sinh khối dùng nhiên liệu từ vật chất hữu cơ như thực vật. Ví dụ có ethanol từ mía và khí methane từ phân gia súc."},
     {jp:"（4）風力発電は、風のエネルギーによって風車で発電機を駆動し発電を行う。プロペラ型風車は羽根の角度により回転速度の制御が可能である。設定値を超える強風時には羽根の面を風向きに平行になるように制御し、ブレーキ装置によって風車を停止させる。",vi:"(4) Điện gió dùng năng lượng gió làm quay rotor và máy phát. Tua-bin cánh quạt có thể điều chỉnh tốc độ bằng góc cánh. Khi gió mạnh vượt mức đặt, xoay mặt cánh gần song song hướng gió và dùng phanh dừng tua-bin."},
     {jp:"（5）燃料電池発電は、水素と酸素との化学反応を利用して直流の電力を発生させる。発電に伴って発生する熱を給湯などに利用できるが、発電時の振動や騒音が大きい。",vi:"(5) Pin nhiên liệu dùng phản ứng hóa học giữa hydro và oxy tạo điện một chiều. Có thể dùng nhiệt sinh ra để cấp nước nóng, **nhưng khi phát điện có độ rung và tiếng ồn lớn**."},
-    {jp:"解説　太陽光発電、地熱発電、バイオマス発電、風力発電、燃料電池発電の特徴。燃料電池発電の発電時の振動や騒音は少ないという特徴があります。したがって、発電時の『振動や騒音が大きい』という（5）の記述は誤っています。",vi:"Giải thích: Bốn phát biểu (1)–(4) phù hợp nguyên lý và đặc trưng từng phương thức. Pin nhiên liệu tạo điện theo phản ứng điện hóa, thường **ít rung và ồn**. Vì vậy mệnh đề cuối của (5) nói tiếng ồn và độ rung lớn là sai.",note:"Chú ý phân biệt **phát điện bằng phản ứng điện hóa** (ít bộ phận chuyển động) với máy phát chạy động cơ đốt trong. Kiểm tra ngược đáp án: chỉ cần thay 'lớn' ở cuối (5) bằng 'ít' thì mô tả phù hợp đặc trưng pin nhiên liệu."},
+    {jp:"解説　太陽光発電：単結晶シリコン太陽電池、多結晶シリコン太陽電池、アモルファス太陽電池などがあります。",vi:"Giải thích · Điện mặt trời dùng các loại pin như silic đơn tinh thể, silic đa tinh thể hoặc silic vô định hình."},
+    {jp:"地熱発電における熱源の利用法：不純物を除去した天然蒸気を利用する、熱水から分離した蒸気を利用する、熱源により熱交換器で蒸気を発生させる、などがあります。",vi:"Điện địa nhiệt có thể dùng hơi tự nhiên đã loại tạp chất, hơi tách từ nước nóng hoặc hơi được tạo ra trong bộ trao đổi nhiệt."},
+    {jp:"バイオマス発電：廃棄物系資源（食品廃棄物、家畜排泄物など）、未利用資源（稲わら、もみ殻）、資源作物（トウモロコシ）などを利用します。",vi:"Điện sinh khối sử dụng phế thải như rác thực phẩm và chất thải chăn nuôi, nguồn chưa tận dụng như rơm và trấu, hoặc cây trồng năng lượng như ngô."},
+    {jp:"風力発電：風車から得られるエネルギーは、受風面積に比例し、風速の3乗に比例します。",vi:"Điện gió · Với cùng thời gian và các điều kiện khác giữ nguyên, năng lượng thu được tỷ lệ với diện tích đón gió và lũy thừa bậc ba của tốc độ gió."},
+    {jp:"燃料電池発電：水素と酸素の化学反応により直流電力を発生させます。発生する熱を給湯などに利用でき、発電時の振動や騒音は少ないという特徴があります。したがって、発電時の『振動や騒音が大きい』という（5）の記述は誤っています。",vi:"Pin nhiên liệu tạo điện một chiều từ phản ứng hóa học giữa hydro và oxy. Có thể dùng nhiệt sinh ra để cấp nước nóng. Khi phát điện, thiết bị thường **ít rung và ồn**, nên mệnh đề cuối của (5) là sai.",note:"Chú ý phân biệt **phát điện bằng phản ứng điện hóa** (ít bộ phận chuyển động) với máy phát chạy động cơ đốt trong. Kiểm tra ngược đáp án: chỉ cần thay 'lớn' ở cuối (5) bằng 'ít' thì mô tả phù hợp đặc trưng pin nhiên liệu."},
     {jp:"解答　**（5）**",vi:"Đáp án: **⑤**."},
   ],
   372: [
@@ -779,21 +786,21 @@ export const electricPowerPages: Record<number, LessonRow[]> = {
     {jp:"変電所は、発電所から送られる電気の電圧の変成、電力潮流の調整、無効電力の配分や制御、並びに送電線や配電線、変電所の保護などを行います。",vi:"Trạm biến điện đổi cấp điện áp, điều tiết dòng công suất, phân phối/điều khiển công suất phản kháng, bảo vệ đường dây và thiết bị trạm."},
     {jp:"**変電所**とは、構外から伝送される電気を構内に施設した変圧器、整流器その他の機械器具により変成し、変成した電気をさらに構外に伝送するところをいいます。",vi:"**Trạm biến điện** nhận điện từ ngoài hàng rào, qua máy biến áp, bộ chỉnh lưu hoặc thiết bị điện khác để biến đổi rồi truyền điện đã biến đổi ra ngoài."},
     {jp:"構内とは、さくやへいなどによって区切られ、ある程度以上の大きさを有する場所で、施設関係者以外の者が自由に出入りできないところです。",vi:"**Khuôn viên trạm** là vùng có rào chắn/ranh giới và kiểm soát ra vào, không cho người không có nhiệm vụ tự do tiếp cận."},
-    {jp:"変電所の用途による分類　送電用変電所、配電用変電所、周波数変換所、直流送電用変電所。",vi:"Phân loại theo chức năng: trạm truyền tải; trạm phân phối; trạm biến đổi tần số 50/60 Hz; trạm chuyển đổi AC/DC cho truyền tải HVDC."},
+    {jp:"変電所の用途による分類　変電所を用途によって分類すると、表4-1-1のようなものがあります。",vi:"Bảng 4-1-1 phân loại trạm theo mục đích sử dụng."},
     {jp:"表4-1-1 変電所の用途による分類",vi:"Bảng 4-1-1 · Các loại trạm theo chức năng",heading:true,table:{
       jp: ["名称","内容"],
       vi: ["Loại trạm","Vai trò"],
       rows: [
-        ["送電用変電所","Trạm biến áp truyền tải","特別高圧で受電し、特別高圧に変成して送電"],
-        ["配電用変電所","Trạm biến áp phân phối","特別高圧で受電し、高圧に下げて配電"],
-        ["周波数変換所","Trạm đổi tần số","50Hzと60Hzの異なる電力系統を連系"],
-        ["直流送電用変電所","Trạm biến đổi cho truyền tải một chiều","交流と直流の変換を行う"]
+        ["送電用変電所","Trạm biến áp truyền tải","**特別高圧**で受電し、他の**特別高圧**に変成して送電する変電所。昇圧用変電所、降圧用変電所がある。昇圧用設備は、発電所に併設される変電所などがある。"],
+        ["配電用変電所","Trạm biến áp phân phối","**特別高圧**で受電し、**高圧**に下げて配電する変電所。"],
+        ["周波数変換所","Trạm đổi tần số","50 Hzと60 Hzの異なる**電力系統**を連系する変電所。佐久間周波数変換所、新信濃周波数変換所、東清水周波数変換所がある。"],
+        ["直流送電用変電所","Trạm biến đổi cho truyền tải một chiều","**直流送電**を行う場合に設置される変電所。**交流**と**直流**の変換が行われる。\n・北本連系（北海道・本州間連系）：本州（上北変換所）～北海道（函館変換所）間を結ぶ、日本初の本格的な直流送電。\n・紀伊水道直流連系：本州（紀北変換所）～四国（阿南変換所）間を結ぶ直流送電。"]
       ],
       rowsVi: [
-        ["送電用変電所","Trạm biến áp truyền tải","Nhận điện ở cấp siêu cao áp, biến đổi sang cấp siêu cao áp khác để truyền tải"],
-        ["配電用変電所","Trạm biến áp phân phối","Nhận điện siêu cao áp, hạ xuống cấp cao áp để phân phối"],
-        ["周波数変換所","Trạm đổi tần số","Liên kết các hệ thống điện 50 Hz và 60 Hz"],
-        ["直流送電用変電所","Trạm biến đổi cho truyền tải một chiều","Chuyển đổi giữa điện xoay chiều và điện một chiều"]
+        ["送電用変電所","Trạm biến áp truyền tải","Nhận điện ở cấp **đặc biệt cao áp** và đổi sang một cấp **đặc biệt cao áp** khác để truyền tải. Có trạm tăng áp và trạm hạ áp. Một số trạm tăng áp được đặt cùng nhà máy điện."],
+        ["配電用変電所","Trạm biến áp phân phối","Nhận điện **đặc biệt cao áp**, hạ xuống **cao áp** để phân phối."],
+        ["周波数変換所","Trạm đổi tần số","Liên kết hai **hệ thống điện** 50 Hz và 60 Hz. Sách nêu các trạm đổi tần số Sakuma, Shin-Shinano và Higashi-Shimizu."],
+        ["直流送電用変電所","Trạm biến đổi cho truyền tải một chiều","Trạm dùng cho **truyền tải điện một chiều**, thực hiện chuyển đổi giữa **xoay chiều** và **một chiều**.\n• Tuyến Kitahon nối trạm Kamikita ở Honshū và trạm Hakodate ở Hokkaidō, là tuyến truyền tải điện một chiều quy mô đầy đủ đầu tiên ở Nhật Bản theo sách.\n• Tuyến qua eo biển Kii nối trạm Kihoku ở Honshū và trạm Anan ở Shikoku."]
       ],
     }},
   ],
@@ -832,7 +839,7 @@ export const electricPowerPages: Record<number, LessonRow[]> = {
     {jp:"いろいろな変圧器",vi:"Các dạng máy biến áp",heading:true},
     { diagram: "powerTransformerTypes374" },
     {jp:"変圧器の三相結線",vi:"Cách nối ba pha của máy biến áp",heading:true},
-    {jp:"変圧器の結線方式には次のようなものがあります。それぞれの特徴を覚えておきましょう。",vi:"Các kiểu đấu cuộn ba pha có đặc điểm khác nhau về trung tính, góc pha, điều hòa bậc ba và tính thích hợp theo phía điện áp."},
+    {jp:"変圧器の結線方式には次のようなものがあります。それぞれの特徴を覚えておきましょう。",vi:"Máy biến áp có các kiểu đấu dây dưới đây. Cần nhớ đặc điểm của từng kiểu."},
     {jp:"Y-Y-Δ結線の特徴",vi:"Đặc điểm nối Y–Y có cuộn tam giác thứ ba",heading:true},
     {jp:"Y-Y結線にΔ結線の三次巻線（後述）を設けたもので、変電所用の変圧器として幅広く使われます。",vi:"Có cuộn sơ/thứ cấp đấu sao và cuộn tam giác thứ ba, được dùng rộng rãi cho trạm biến điện."},
     {jp:"一次、二次ともに中性点接地系統に用い、異常電圧を低減できます。一次、二次の位相変位を生じません。",vi:"Dùng được hệ có nối đất trung tính cả hai phía và hỗ trợ hạn chế quá điện áp bất thường. Góc lệch giữa điện áp dây hai phía chính bằng 0° trong nhóm đấu dây tương ứng."},
@@ -894,6 +901,7 @@ export const electricPowerPages: Record<number, LessonRow[]> = {
     {jp:"過負荷運転状態［%］は、",vi:"Bước 3. So với dung lượng định mức máy B:",equations:[[{fraction:[["Sᵦ′"],["Sᵦ"]]}," = ",{fraction:[["1 588"],["1 500"]]}," ≈ 1.059 → 105.9%"]],note:"**105,9%** là mức tải so với định mức, tương ứng **quá định mức khoảng 5,9%**, không phải vượt 105,9%."},
     {jp:"参考　変圧器 A の分担負荷 Sₐ′ は、",vi:"Kiểm tra ngược: tính công suất máy A.",equations:[["Sₐ′ = 6 000 × ",{fraction:[["7.5"],["2.7 + 7.5"]]}," ≈ 4 412 kV・A"],["Sₐ′ + Sᵦ′ = 4 412 + 1 588 = 6 000 kV・A"]],note:"A chỉ chịu 4.412/5.000 ≈ 88,24% định mức, nên không quá tải. Hai công suất cộng lại đúng 6.000 kVA."},
     {jp:"並行運転の条件は %z が等しいことが原則ですが、問題のように異なる場合は、%z の小さい変圧器 B が過負荷となります。",vi:"Nguyên tắc là % tổng trở phù hợp nhau; trong bài này máy B có % tổng trở tương đối thấp nên nhận tải vượt định mức."},
+    {jp:"基準容量を 5 000 kV・A とした場合、%zₐ′＝9.0％、%zᵦ′＝25％となります。変圧器 B の分担負荷は、",vi:"Tính lại trên cơ sở 5.000 kVA để đối chiếu. Tổng trở phần trăm của A là 9,0%. Đổi tổng trở phần trăm của B sang cơ sở mới rồi tính phần tải của B:",equations:[["%zᵦ′ = 7.5 × ",{fraction:[["5 000"],["1 500"]]}," = 25%"],["Sᵦ′ = 6 000 × ",{fraction:[["9.0"],["9.0 + 25"]]}," ≈ 1 588 kVA"]] },
     {jp:"解答　過負荷となる変圧器は B、過負荷運転状態は **105.9%**",vi:"**Đáp án: máy B, mức tải 105,9% định mức.**"},
   ],
   378: [
@@ -935,7 +943,7 @@ export const electricPowerPages: Record<number, LessonRow[]> = {
       ],
     },note:"Các loại ABB/GCB/VCB đều có thể cắt dòng sự cố trong phạm vi định mức. Với SF₆, cần lưu ý quản lý khí vì tác động nhà kính rất cao."},
     {jp:"断路器",vi:"Dao cách ly (断路器)",heading:true},
-    {jp:"断路器は、**電流が流れない状態**で開閉するスイッチです。接続変更、機器の点検、修理のときに、電源から切り離す役割をします。操作方法は、手動のものと圧縮空気や電動機により遠方で操作できるものがあります。",vi:"Dao cách ly chỉ thao tác khi **không có dòng tải** (hoặc trong giới hạn thao tác riêng được cho phép). Dùng cách ly nguồn khi đổi đấu nối, kiểm tra hay sửa chữa; có thể thao tác tay hoặc từ xa."},
+    {jp:"断路器は、**電流が流れない状態**で開閉するスイッチです。接続変更、機器の点検、修理のときに、電源から切り離す役割をします。操作方法は、手動のものと圧縮空気や電動機により遠方で操作できるものがあります。",vi:"Dao cách ly chỉ thao tác khi **không có dòng tải** (hoặc trong giới hạn thao tác riêng được cho phép). Dùng cách ly nguồn khi đổi đấu nối, kiểm tra hay sửa chữa; có thể thao tác bằng tay hoặc điều khiển từ xa bằng khí nén hay động cơ điện."},
     {jp:"負荷開閉器",vi:"Dao cắt phụ tải (負荷開閉器)",heading:true},
     {jp:"負荷開閉器は、**負荷電流の開閉**に用いられ、短絡電流の遮断能力はありません。すなわち、定格電流までの電流を開閉する能力を持つものです。負荷開閉器は、電力用コンデンサや分路リアクトルの開閉用としても用いられます。また遮断容量の大きな電力ヒューズと組み合わせて、事故電流をヒューズで遮断するものもあります。",vi:"Thiết bị cắt phụ tải đóng/ngắt **dòng tải trong định mức**, nhưng bản thân không có khả năng cắt dòng ngắn mạch như máy cắt. Dùng đóng cắt tụ bù hoặc cuộn kháng; có thể ghép cầu chì công suất lớn để cầu chì xử lý dòng sự cố."},
     {jp:"ガス絶縁開閉装置（GIS）",vi:"Thiết bị đóng cắt cách điện bằng khí (GIS)",heading:true},
@@ -965,7 +973,7 @@ export const electricPowerPages: Record<number, LessonRow[]> = {
     {jp:"パーセントインピーダンス（インピーダンスの電圧が定格電圧の何%かという比率）は、",vi:"Định nghĩa **% tổng trở** là tỉ số điện áp rơi trên tổng trở ứng với dòng định mức so với điện áp định mức, nhân 100.",equations:[["%z = ",{fraction:[["I Z"],[{"fraction": [["V"], ["√3"]]}]]}," × 100 = ",{fraction:[["√3 I Z"],["V"]]}," × 100 [%]"]],note:"I là dòng định mức [A] trên cùng cơ sở; Z [Ω]. Kết quả %z là số tính theo **phần trăm**, không phải tỷ số thập phân."},
     {jp:"（1）式と（2）式より、下記が成り立ちます。",vi:"Kết hợp hai biểu thức:",equations:[["%z = ",{fraction:[["I"],["Iₛ"]]}," × 100 [%]"],["Iₛ = ",{fraction:[["I"],[{"fraction": [["%z"], ["100"]]}]]}," = ",{fraction:[["100I"],["%z"]]}," [A]"]],note:"Kiểm tra ngược: nếu %z=5% thì Iₛ = 20I. Điều kiện: mạch ba pha cân bằng và cách xác định %Z nhất quán."},
     {jp:"ここで、短絡電流 Iₛ［A］を表す式に √3 V［V］を掛けると、",vi:"Nhân hai vế với √3 V để đổi dòng ngắn mạch thành dung lượng ngắn mạch.",equations:[["√3 V Iₛ = ",{fraction:[["√3 V I"],["%z"]]}," × 100 [VA]"]]},
-    {jp:"この式の左辺は系統全体の短絡容量を、右辺の分子は系統全体の容量を表しています。",vi:"Vế trái là dung lượng ngắn mạch hệ thống; ở vế phải, √3VI là dung lượng cơ sở của hệ thống."},
+    {jp:"この式の左辺は系統全体の短絡容量を、右辺の分子は系統全体の容量を表しています。よって次式が成り立ちます。基準容量は系統全体の代表値で、計算しやすい値に仮定した大きさです。",vi:"Vế trái là dung lượng ngắn mạch của hệ thống. Tử số √3VI ở vế phải là dung lượng toàn hệ thống. Dung lượng cơ sở là giá trị đại diện giả định để thuận tiện tính toán."},
     {jp:"短絡容量 **といえば** 全体の容量を小数で表した %z で割る",vi:"Công thức ghi nhớ: lấy **dung lượng cơ sở** chia **tổng trở phần đơn vị**.",equations:[["Sₛ = ",{fraction:[["Sᵦ"],[{"fraction": [["%z"], ["100"]]}]]}," = ",{fraction:[["100Sᵦ"],["%z"]]}," [VA]"]],note:"Ví dụ Sᵦ=10 MVA, %z=5 thì Sₛ=200 MVA. Không nhân 100 hai lần."},
   ],
   382: [
@@ -976,25 +984,25 @@ export const electricPowerPages: Record<number, LessonRow[]> = {
       vi: ["Loại đường dây","Các mức điện áp danh định"],
       rows: [
         ["送電線路の公称電圧 kV","Điện áp danh định đường dây truyền tải [kV]","11、22、33、(66、77)、110、(154、187)、(220、275)、500、1000"],
-        ["配電線路の公称電圧 V","Điện áp danh định đường dây phân phối [V]","低圧：100、200、100/200、415、240/415。高圧：3300、6600。特別高圧：11000、22000、33000"]
+        ["配電線路の公称電圧 V","Điện áp danh định đường dây phân phối [V]","低圧：100、200、100/200、415、240/415。高圧配電線路：3300、6600（現在の標準的な配電方式の電圧）。特別高圧配電線路：11000、22000、33000"]
       ],
       rowsVi: [
         ["送電線路の公称電圧 kV","Điện áp danh định đường dây truyền tải [kV]","11, 22, 33, (66, 77), 110, (154, 187), (220, 275), 500, 1.000"],
-        ["配電線路の公称電圧 V","Điện áp danh định đường dây phân phối [V]","Hạ áp: 100, 200, 100/200, 415, 240/415. Cao áp: 3.300, 6.600. Siêu cao áp: 11.000, 22.000, 33.000."]
+        ["配電線路の公称電圧 V","Điện áp danh định đường dây phân phối [V]","Hạ áp: 100, 200, 100/200, 415, 240/415. Cao áp: 3.300, 6.600 (các cấp điện áp phân phối tiêu chuẩn theo sách). Đặc biệt cao áp: 11.000, 22.000, 33.000."]
       ],
-    },note:"Số trong ngoặc là các mức sử dụng tại từng vùng theo ghi chú sách. Các giá trị này mang tính liệt kê trong tài liệu, không mặc định đúng cho mọi lưới."},
+    },note:"Mỗi vùng chỉ dùng một trong các cấp điện áp trong cùng một cặp ngoặc, theo ghi chú của sách. Các giá trị này mang tính liệt kê trong tài liệu, không mặc định đúng cho mọi lưới."},
     {jp:"表4-4-2 電気設備技術基準による電圧の区分",vi:"Bảng 4-4-2 · Phân loại điện áp theo quy định kỹ thuật mà sách dẫn",heading:true,table:{
       jp: ["電圧の区分","交流","直流"],
       vi: ["Loại","AC","DC"],
       rows: [
         ["低圧","Hạ áp","600 V 以下","750 V 以下"],
         ["高圧","Cao áp","600 V を超え 7 kV 以下","750 V を超え 7 kV 以下"],
-        ["特別高圧","Siêu cao áp","7 kV を超えるもの","7 kV を超えるもの"]
+        ["特別高圧","Đặc biệt cao áp","7 kV を超えるもの","7 kV を超えるもの"]
       ],
       rowsVi: [
         ["低圧","Hạ áp","Đến 600 V","Đến 750 V"],
         ["高圧","Cao áp","Trên 600 V đến 7 kV","Trên 750 V đến 7 kV"],
-        ["特別高圧","Siêu cao áp","Trên 7 kV","Trên 7 kV"]
+        ["特別高圧","Đặc biệt cao áp","Trên 7 kV","Trên 7 kV"]
       ],
     },note:"Đây là số liệu theo tài liệu in; trước khi dùng như quy định pháp lý hiện hành cần xác minh văn bản pháp luật mới nhất."},
     {jp:"練習問題 01　遮断容量",vi:"Bài luyện tập 01 · Dung lượng cắt",heading:true},
@@ -1024,8 +1032,9 @@ export const electricPowerPages: Record<number, LessonRow[]> = {
     {jp:"距離継電器",vi:"Rơle khoảng cách",heading:true},
     {jp:"距離継電器は、故障点までの距離を検出し、**インピーダンス**が設定値以下のとき動作する継電器です。",vi:"Rơle khoảng cách ước lượng tổng trở nhìn đến điểm sự cố, tác động nếu tổng trở nằm trong vùng cài đặt.",note:"Không nhất thiết đo 'mét' trực tiếp: Z nhìn thấy tỷ lệ với chiều dài trên đường dây có thông số gần đồng đều."},
     {jp:"ブッフホルツ継電器",vi:"Rơle Buchholz",heading:true},
-    {jp:"変圧器の故障により、部分的に急激に過熱されることで、絶縁油から油の分解ガス、蒸気などが発生します。このときの**圧力の変化**を検出し動作する継電器がブッフホルツ継電器で、変圧器タンクとコンサベータの連絡管の途中に設けます。",vi:"Khi máy biến áp dầu có sự cố nội bộ, dầu/cách điện có thể phân hủy sinh khí và tạo dòng dầu đột ngột. Rơle Buchholz lắp trên ống nối thùng máy với bình dầu phụ (conservator), phát hiện khí tích tụ hoặc dòng dầu tăng mạnh.",note:"Trong thực tế, Buchholz thường phát tín hiệu cảnh báo do khí tích tụ và cắt khi dòng dầu đột biến; không nhầm với rơle áp suất riêng của thùng MBA."},
+    {jp:"変圧器の故障により、部分的に急激に過熱されることで、絶縁油から油の分解ガス、蒸気などが発生します。このときの**圧力の変化**を検出し動作する継電器がブッフホルツ継電器で、変圧器タンクとコンサベータの連絡管の途中に設けます。",vi:"Khi máy biến áp dầu có sự cố nội bộ, dầu/cách điện có thể phân hủy sinh khí và sinh hơi do quá nhiệt cục bộ. Theo sách, rơle Buchholz phát hiện **biến đổi áp suất** và được lắp trên đường ống nối thùng máy với bình dầu phụ (conservator).",note:"Trong thực tế, Buchholz thường phát tín hiệu cảnh báo do khí tích tụ và cắt khi dòng dầu đột biến; không nhầm với rơle áp suất riêng của thùng MBA."},
     {jp:"POINT　比率差動＝変圧器の内部故障、過電流＝過負荷や短絡、地絡過電流＝地絡電流、地絡方向＝地絡電流の大きさと方向、距離＝インピーダンス、ブッフホルツ＝圧力の変化",vi:"Ghi nhớ: so lệch → sự cố nội bộ MBA; quá dòng → quá tải/ngắn mạch; chạm đất → dòng thứ tự không; chạm đất có hướng → thêm hướng; khoảng cách → tổng trở; Buchholz → khí/dòng dầu do sự cố."},
+    {jp:"※1 コンサベータ：油入変圧器本体の外に設けたタンクで、絶縁油の劣化を防止するためのもの。絶縁油の膨張、収縮による油面の上下がコンサベータ内部だけで行われる仕組みになっています。コンサベータ内に窒素を封入し、絶縁油を大気と遮断します。",vi:"※1 Bình dầu phụ là bình đặt bên ngoài máy biến áp dầu để hạn chế dầu cách điện bị lão hóa. Mực dầu trong bình thay đổi khi dầu giãn nở hoặc co lại. Theo cấu hình trong sách, khí nitơ cách ly dầu với không khí bên ngoài."},
   ],
   385: [
     {jp:"5-1 架空電線路の構成 **といえば** 支持物、電線、架空地線、がいしなど",vi:"5-1 Cấu tạo đường dây trên không: cột, dây dẫn, dây chống sét, cách điện...",heading:true},
@@ -1035,7 +1044,7 @@ export const electricPowerPages: Record<number, LessonRow[]> = {
     {jp:"発電所、変電所、開閉所などを結ぶ大電力を送る電線路を**送電線路**（500 kV～22 kV）といい、変電所から電気を使用する需要家までの電線路を**配電線路**（6 kV の高圧配電線路、200/100 V の低圧配電線路）といいます。",vi:"**Đường truyền tải (送電線路)** đưa công suất lớn giữa nhà máy và các trạm (sách ví dụ 500–22 kV). **Đường phân phối (配電線路)** đưa điện từ trạm đến khách hàng, như lưới 6 kV hoặc hạ áp 200/100 V."},
     {jp:"架空電線路、地中電線路",vi:"Đường dây trên không và cáp ngầm",heading:true},
     {jp:"電路を構造的に見た場合、**架空電線路**と**地中電線路**があります。架空電線路は電線と支持物とからなり、地中電線路は電力ケーブルを埋設して電力を送ります。",vi:"Theo kết cấu có **đường dây trên không (架空電線路)** gồm dây và cột, và **đường cáp ngầm (地中電線路)** dùng cáp chôn ngầm."},
-    {jp:"架空電線路の支持物としては**鉄塔、鉄柱、鉄筋コンクリート柱、木柱**などが使用されます。",vi:"Kết cấu đỡ đường dây trên không có tháp thép, cột thép, cột bê tông cốt thép và cột gỗ."},
+    {jp:"架空電線路の支持物としては**鉄塔、鉄柱、鉄筋コンクリート柱、木柱**などが使用されます。",vi:"Kết cấu đỡ đường dây trên không gồm **tháp thép, cột thép, cột bê tông cốt thép và cột gỗ**."},
     {jp:"架空送電線路に使用する電線は、次のような条件を満たす必要があります。・導電率が大きいこと。・機械的強度が大きいこと。・耐久性があること。・安価であること。・架線が容易であること。",vi:"Dây cho đường dây trên không cần: **dẫn điện tốt, chịu lực cao, bền, giá hợp lý và dễ thi công kéo dây**."},
   ],
 
@@ -1082,6 +1091,7 @@ export const electricPowerPages: Record<number, LessonRow[]> = {
         ["ギャロッピング","Dao động galloping","Gió mạnh tác động lên dây dẫn có băng tuyết bám gây dao động phức tạp và mạnh."]
       ],
     }},
+    {jp:"POINT　着雪、着氷による現象といえば**スリートジャンプ、ギャロッピング**現象。",vi:"Ghi nhớ · Tuyết hoặc băng bám dây có thể gây **sleet jump và galloping**."},
     {jp:"がいし",vi:"Sứ cách điện (がいし)",heading:true},
     {jp:"がいしは、電線とその支持物である鉄塔や電柱を絶縁するために用いるものです。表5-1-3 のような種類があります。",vi:"Sứ/cách điện đường dây dùng cách ly điện giữa dây dẫn và cột/tháp đỡ."},
     {jp:"表5-1-3 がいしの種類",vi:"Bảng 5-1-3 · Các loại cách điện",heading:true,table:{
@@ -1105,9 +1115,10 @@ export const electricPowerPages: Record<number, LessonRow[]> = {
     {jp:"**アークホーン**はがいしの沿面フラッシュオーバーを防止します。雷撃などの異常電圧により直接放電すると、がいしや電線を破損するおそれがあります。異常電圧を安全に放電させるために設けられた金具で、ホーン（つの）の形状が多く用いられます。",vi:"**Sừng phóng điện** tạo khe phóng điện được kiểm soát, hạn chế hồ quang chạy dọc bề mặt sứ khi có quá điện áp do sét, bảo vệ dây và cách điện."},
     {diagram:"powerArcHorn388"},
     {jp:"架空送電線のねん架",vi:"Đảo vị trí dây pha trên đường dây trên không",heading:true},
-    {jp:"架空送電線路の電線の**インダクタンス**及び**静電容量**が同じ大きさになるようにするため、図5-1-4 のように全区間を**3等分**し、各相に属する電線の位置が一巡するように電線の位置を入れ換えることを、**ねん架**といいます。",vi:"Để cân bằng **điện cảm** và **điện dung** giữa ba pha, chia toàn tuyến làm ba đoạn tương đương và luân phiên đổi vị trí các pha để mỗi pha trải qua đủ ba vị trí, gọi là **đảo vị trí pha (ねん架)**."},
+    {jp:"架空送電線路の電線の**インダクタンス**及び**静電容量**が同じ大きさになるようにするため、図5-1-4 のように全区間を**3等分**し、各相に属する電線の位置が一巡するように電線の位置を入れ換えることを、**ねん架**といいます。",vi:"Để cân bằng **điện cảm** và **điện dung** giữa ba pha, chia toàn tuyến làm **ba đoạn bằng nhau** và luân phiên đổi vị trí các pha để mỗi pha trải qua đủ ba vị trí, gọi là **đảo vị trí pha (ねん架)**."},
     {diagram:"powerTransposition388"},
-    {jp:"電圧や電流を**平衡**させて送電線路の中性点に現れる**残留電圧**を減少させ、付近の通信線に対する**誘導障害**を軽減させる効果があります。",vi:"Tác dụng: cân bằng điện áp/dòng, giảm điện áp dư ở điểm trung tính và giảm nhiễu cảm ứng lên đường thông tin."},
+    {jp:"電圧や電流を**平衡**させて送電線路の中性点に現れる**残留電圧**を減少させ、付近の通信線に対する**誘導障害**を軽減させる効果があります。",vi:"**Cân bằng** điện áp và dòng điện, giảm **điện áp dư** ở điểm trung tính và giảm **nhiễu cảm ứng** lên đường thông tin gần đó."},
+    {jp:"POINT　ねん架といえば**電線の位置**を入れ換え電気的不平衡を防ぐ。",vi:"Ghi nhớ · Đảo pha là đổi **vị trí dây dẫn** để hạn chế mất cân bằng điện."},
     {jp:"電線振動の原因と防止法",vi:"Nguyên nhân và chống rung dây",heading:true},
     {jp:"電線振動が起きやすいのは**微風振動**で、電線に生じる振動と送電線の固有周波数が一致すると振動が持続し、電線の支持点付近で金属疲労が起き、断線することがあります。",vi:"Gió nhẹ có thể gây **rung gió (微風振動)**, dao động cộng hưởng với tần số riêng của nhịp dây, làm mỏi kim loại gần kẹp treo dẫn đến đứt dây."},
     {jp:"微風振動の特徴は、軽量の電線（ACSR など）に起きやすく、径間が長く電線の張力が大きいほど起こりやすくなります。また、懸垂箇所で被害が発生しやすく、平たん地で起きやすいという特徴があります。",vi:"Dễ xảy ra với dây nhẹ, khoảng vượt dài, lực căng lớn; nguy cơ hỏng gần điểm treo và vùng địa hình bằng phẳng."},
@@ -1133,9 +1144,10 @@ export const electricPowerPages: Record<number, LessonRow[]> = {
     {jp:"地中送電線のように対地間の**静電容量**が大きい場合、受電端電圧 Vᵣ［V］が送電端電圧 Vₛ［V］よりも上昇することがあります。この現象を**フェランチ効果**といいます。",vi:"Đường cáp ngầm có điện dung đối đất lớn; khi tải nhỏ hoặc không tải, điện áp cuối đường dây **Vᵣ có thể cao hơn Vₛ**, gọi là **hiệu ứng Ferranti**."},
     {jp:"図5-1-5 のような等価的な回路で、図5-1-6 の Vᵣ を基準としたベクトル図をつくると、I𝒸［A］は Vᵣ よりも 90° 進み位相で、上向きです。抵抗電圧 I𝒸r［V］は、I𝒸 と同位相なので、上向きです。リアクタンス電圧 I𝒸x［V］は、I𝒸 よりも 90° 進み位相なので、左向きです。Vᵣ と I𝒸r、I𝒸x のベクトル和、すなわち送電端電圧 Vₛ は、受電端電圧 Vᵣ よりも小さくなります。",vi:"Lấy Vᵣ làm chuẩn pha: dòng điện dung I𝒸 sớm Vᵣ 90°; thành phần rI𝒸 cùng pha I𝒸; thành phần xI𝒸 sớm I𝒸 thêm 90°, hướng ngược Vᵣ. Tổng vectơ có thể cho |Vₛ| nhỏ hơn |Vᵣ|.",note:"Không kết luận Vᵣ luôn lớn hơn Vₛ. Hiệu ứng đặc trưng khi đường dây dài/điện dung lớn và tải nhẹ. Phải cộng véc-tơ phức, không cộng đại số độ lớn."},
     {diagram:"powerFerranti389"},
+    {jp:"POINT　フェランチ効果といえば**受電端電圧**が上昇する現象。",vi:"Ghi nhớ · Hiệu ứng Ferranti làm tăng **điện áp ở đầu nhận**."},
     {jp:"コロナの発生と対策",vi:"Phát sinh corona và biện pháp",heading:true},
     {jp:"送電電圧が高いとき、電線表面から青白い光を発したりジーという音を発したりすることがあります。これを**コロナ放電**といいます。コロナ放電は、送電線の近くで**電波障害**を生じる、**コロナ損失**を生じ送電効率を低下させる、電線の振動や導体の腐食など、多くのコロナ障害を生じます。",vi:"Ở điện áp cao, điện trường quanh bề mặt dây có thể ion hóa không khí, phát ánh sáng xanh trắng và tiếng rì, gọi là **phóng điện corona**. Corona gây tổn thất điện năng, nhiễu vô tuyến và có thể làm tăng ăn mòn/rung."},
-    {jp:"コロナの発生を防ぐには、電線の外径が大きい**鋼心アルミより線**を用い、**多導体**を用います。",vi:"Biện pháp: tăng đường kính hiệu dụng của dây, dùng ACSR hoặc dây bó nhiều phân dẫn."},
+    {jp:"コロナの発生を防ぐには、電線の外径が大きい**鋼心アルミより線**を用い、**多導体**を用います。",vi:"Để hạn chế corona, dùng **dây nhôm lõi thép (ACSR)** có đường kính ngoài lớn hoặc dùng **dây bó nhiều phân dẫn**."},
   ],
   390: [
     {jp:"5-2 送電線による障害 **といえば** 電磁誘導と静電誘導",vi:"5-2 Nhiễu do đường dây: cảm ứng điện từ và cảm ứng tĩnh điện",heading:true},
@@ -1149,7 +1161,7 @@ export const electricPowerPages: Record<number, LessonRow[]> = {
     {jp:"送電線と通信線の相互の静電結合によって通信線に誘導電圧を生じ、障害となる現象を**静電誘導障害**といいます。静電誘導電圧の大きさ E𝒸［V］は、送電線の対地電圧を E［V］、通信線の対地静電容量を C₀［F］、両者の相互静電容量を Cₘ［F］とすると",vi:"Điện dung tương hỗ giữa hai tuyến tạo điện áp cảm ứng E𝒸 trên đường thông tin. Với E là điện áp pha–đất của dây điện lực, C₀ là điện dung dây thông tin–đất, Cₘ là điện dung tương hỗ:",equations:[["E𝒸 = ",{fraction:[["Cₘ"],["Cₘ + C₀"]]}," E [V]"]],note:"Kiểm tra: nếu Cₘ = 0 thì E𝒸 = 0; nếu C₀ rất lớn thì E𝒸 nhỏ. Công thức là mô hình điện dung đơn giản, không áp dụng nguyên xi cho mọi mạng cáp nhiều dây."},
     {diagram:"powerStaticInduction390"},
     {jp:"誘導障害対策",vi:"Biện pháp giảm nhiễu cảm ứng",heading:true},
-    {jp:"・電力線と通信線の**離隔距離**を大きくする。・電力線と通信線の間に**遮へい線**を設ける。・通信線に遮へい層がある**ケーブル**を採用する。・送電線を**ねん架**し常時の誘導を軽減させる。・**架空地線**の条数を多くする。架空地線に導電率のよい電線を使用する。・電力線の**地絡電流**を小さくし、地絡継続時間を短くする。",vi:"Tăng khoảng cách hai tuyến; đặt dây che chắn hoặc dùng cáp thông tin có màn chắn; đảo vị trí pha; tăng số dây chống sét dùng vật liệu dẫn tốt; giảm dòng chạm đất và rút ngắn thời gian tồn tại sự cố."},
+    {jp:"・電力線と通信線の**離隔距離**を大きくする。・電力線と通信線の間に**遮へい線**を設ける。・通信線に遮へい層がある**ケーブル**を採用する。・送電線を**ねん架**し常時の誘導を軽減させる。・**架空地線**の条数を多くする。架空地線に導電率のよい電線を使用する。・電力線の**地絡電流**を小さくし、地絡継続時間を短くする（高抵抗接地方式の採用、故障箇所を高速度で遮断する）。",vi:"Tăng **khoảng cách** giữa hai tuyến. Bố trí **dây che chắn** và dùng **cáp** thông tin có màn chắn. **Đảo vị trí pha** để giảm cảm ứng trong vận hành bình thường. Tăng số **dây chống sét** và dùng dây có độ dẫn điện tốt. Giảm **dòng chạm đất** và thời gian sự cố, chẳng hạn bằng nối đất qua điện trở cao và cắt nhanh đoạn sự cố trong mô hình sách."},
   ],
 
 };
