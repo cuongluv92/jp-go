@@ -5,12 +5,13 @@ import { PageKeyboardNav } from "@/components/exam/page-keyboard-nav";
 import { WideContainer } from "@/components/exam/wide-container";
 import { enrichLessonPart } from "./readings";
 import { ContentsTree } from "../contents-tree";
+import { BookIndexScan, indexPages } from "../book-index";
 import { lesson } from "./lesson";
 import { OhmReader } from "./reader";
 
 export const metadata = { title: "1‑1 オームの法則 — 電験三種 — jp-go" };
 
-const pages = Object.keys(lesson).map(Number);
+const pages = [...Object.keys(lesson).map(Number), ...indexPages];
 const href = (page: number) => page === 2 ? "/denken/ohm" : `/denken/ohm?trang=${page}`;
 const machineChapters = [
   [162, "変圧器", "Máy biến áp"],
@@ -58,10 +59,12 @@ export default async function OhmLesson({ searchParams }: { searchParams: Promis
   const machineChapter = page <= 320 ? machineChapters.findLast(([start]) => start <= page) : undefined;
   const powerChapter = page >= 322 && page <= 422 ? powerChapters.findLast(([start]) => start <= page) : undefined;
   const isLaw = page >= 423 && page <= 514;
+  const isIndex = indexPages.includes(page);
   const isMath = page >= 515 && page <= 537;
   const mathChapter = isMath ? mathChapters.findLast(([start]) => start <= page) : undefined;
   const lawChapter = isLaw ? lawChapters.findLast(([start]) => start <= page) : undefined;
-  const title = page === 515 ? "第5部 電験三種に必要な数学 · Toán cần thiết cho kỳ thi 電験三種"
+  const title = isIndex ? "索引 · Tra cứu thuật ngữ"
+    : page === 515 ? "第5部 電験三種に必要な数学 · Toán cần thiết cho kỳ thi 電験三種"
     : mathChapter ? `${mathChapter[1]} · ${mathChapter[2]}`
     : page === 423 ? "第4部 法規 · Pháp quy"
     : lawChapter ? `${lawChapter[1]} · ${lawChapter[2]}`
@@ -122,7 +125,7 @@ export default async function OhmLesson({ searchParams }: { searchParams: Promis
     : page >= 9 ? "1‑3 導体の抵抗 · Điện trở của vật dẫn" : page >= 5 ? "1‑2 直列・並列合成抵抗 · Điện trở nối tiếp và song song" : "1‑1 オームの法則 · Định luật Ohm";
   const readingSection = isMath ? "math" : isLaw ? "law" : page === 321 || powerChapter ? "power" : undefined;
   const read = (text: string) => Promise.all(text.split("**").map(part => enrichLessonPart(part, readingSection)));
-  const rows = await Promise.all(lesson[page].map(async row => {
+  const rows = await Promise.all((lesson[page] ?? []).map(async row => {
     if ("diagram" in row) return row;
     const readings = await read(row.jp);
     if ((!isMath && !isLaw && page !== 321 && !powerChapter) || !row.table) return { ...row, readings };
@@ -147,7 +150,7 @@ export default async function OhmLesson({ searchParams }: { searchParams: Promis
         <main className="min-w-0 space-y-4">
           <div className="flex flex-wrap items-center justify-between gap-2">
             <p className="min-w-0 text-sm text-muted">
-              <Link href="/denken" className="hover:text-accent">電験三種</Link> / {isMath ? "数学" : isLaw ? "法規" : page >= 321 ? "電力" : page >= 161 ? "機械" : "理論"} / {isMath ? mathChapter?.[1] ?? "目次" : isLaw ? lawChapter?.[1] ?? "目次" : powerChapter ? powerChapter[1] : page === 321 ? "目次" : machineChapter ? machineChapter[1] : page === 161 ? "目次" : page >= 141 ? "電子工学・電子回路" : page >= 115 ? "磁気と磁界" : page >= 99 ? "静電気と電界" : page >= 87 ? "電気・電子計測" : page >= 70 ? "三相交流回路" : page >= 31 ? "交流回路" : "直流回路"} / {title}
+              <Link href="/denken" className="hover:text-accent">電験三種</Link> / {isIndex ? "索引" : <> {isMath ? "数学" : isLaw ? "法規" : page >= 321 ? "電力" : page >= 161 ? "機械" : "理論"} / {isMath ? mathChapter?.[1] ?? "目次" : isLaw ? lawChapter?.[1] ?? "目次" : powerChapter ? powerChapter[1] : page === 321 ? "目次" : machineChapter ? machineChapter[1] : page === 161 ? "目次" : page >= 141 ? "電子工学・電子回路" : page >= 115 ? "磁気と磁界" : page >= 99 ? "静電気と電界" : page >= 87 ? "電気・電子計測" : page >= 70 ? "三相交流回路" : page >= 31 ? "交流回路" : "直流回路"} / {title}</>}
             </p>
             <nav aria-label="Chuyển trang" className="flex flex-wrap items-center gap-2">
               {prevHref ? <Link href={prevHref} className={navButton}>← Trang trước</Link> : <span className="text-sm text-muted">← Trang trước</span>}
@@ -156,7 +159,7 @@ export default async function OhmLesson({ searchParams }: { searchParams: Promis
             </nav>
           </div>
           <h1 className="font-jp text-xl font-bold">{title} <span className="text-sm text-red-700 dark:text-red-300">p.{page}</span></h1>
-          <OhmReader rows={rows} />
+          {isIndex ? <BookIndexScan page={page} /> : <OhmReader rows={rows} />}
         </main>
       </div>
     </WideContainer>

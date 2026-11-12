@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { indexPages } from "./book-index";
 import { Fraction } from "./fraction";
 import { frontMatter, lessons } from "./contents";
 import { lesson } from "./ohm/lesson";
@@ -25,7 +26,9 @@ const availableStarts = Object.values(lessons)
 
 export function ContentsTree({ currentPage }: { currentPage?: number }) {
   const activeStart = currentPage === undefined ? undefined : availableStarts.findLast(page => page <= currentPage);
-  const activeSubject = subjects.findLast(([, , start]) => start <= (currentPage ?? 2));
+  const activeSubject = indexPages.includes(currentPage ?? 0)
+    ? undefined
+    : subjects.findLast(([, , start]) => start <= (currentPage ?? 2));
   const openChapter = activeSubject?.[3].findLast(([start]) => start <= (currentPage ?? 2))?.[0];
   return (
       <nav className="space-y-3" aria-label="Mục lục">
@@ -80,7 +83,12 @@ export function ContentsTree({ currentPage }: { currentPage?: number }) {
             </ul>
           </details>
         ))}
-        <p className="px-4 py-2 text-sm"><span className={bookRed}>p.538</span> · 索引</p>
+        <p className="px-4 py-2 text-sm">
+          <span className={bookRed}>p.{indexPages[0]}–{indexPages.at(-1)}</span> ·{" "}
+          <Link prefetch={false} href={`/denken/ohm?trang=${indexPages[0]}`} aria-current={currentPage === indexPages[0] ? "page" : undefined} className="underline underline-offset-2">
+            索引 · Tra cứu thuật ngữ
+          </Link>
+        </p>
       </nav>
   );
 }
