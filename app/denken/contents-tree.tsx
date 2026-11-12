@@ -85,9 +85,9 @@ export function ContentsTree({ currentPage }: { currentPage?: number }) {
         ))}
         <p className="px-4 py-2 text-sm">
           <span className={bookRed}>p.{indexPages[0]}–{indexPages.at(-1)}</span> ·{" "}
-          <Link prefetch={false} href={`/denken/ohm?trang=${indexPages[0]}`} aria-current={currentPage === indexPages[0] ? "page" : undefined} className="underline underline-offset-2">
+          <a href={`/denken/ohm?trang=${indexPages[0]}#tra-cuu`} target="_blank" rel="noopener noreferrer" aria-current={currentPage === indexPages[0] ? "page" : undefined} className="underline underline-offset-2">
             索引 · Tra cứu thuật ngữ
-          </Link>
+          </a>
         </p>
       </nav>
   );

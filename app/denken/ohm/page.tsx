@@ -6,13 +6,14 @@ import { WideContainer } from "@/components/exam/wide-container";
 import { enrichLessonPart } from "./readings";
 import { ContentsTree } from "../contents-tree";
 import { BookIndexScan, indexPages } from "../book-index";
+import { bookPageHref, IndexLookup } from "../index-lookup";
 import { lesson } from "./lesson";
 import { OhmReader } from "./reader";
 
 export const metadata = { title: "1‑1 オームの法則 — 電験三種 — jp-go" };
 
 const pages = [...Object.keys(lesson).map(Number), ...indexPages];
-const href = (page: number) => page === 2 ? "/denken/ohm" : `/denken/ohm?trang=${page}`;
+const href = bookPageHref;
 const machineChapters = [
   [162, "変圧器", "Máy biến áp"],
   [186, "誘導電動機", "Động cơ cảm ứng"],
@@ -48,8 +49,9 @@ const mathChapters = [
 
 const navButton = "rounded-lg border border-border px-3 py-1.5 text-sm hover:border-accent hover:text-accent";
 
-export default async function OhmLesson({ searchParams }: { searchParams: Promise<{ trang?: string }> }) {
-  const { trang } = await searchParams;
+export default async function OhmLesson({ searchParams }: { searchParams: Promise<{ trang?: string; q?: string | string[] }> }) {
+  const { trang, q } = await searchParams;
+  const query = typeof q === "string" ? q.trim().slice(0, 100) : "";
   const page = Number(trang ?? "2");
   if (!pages.includes(page)) notFound();
   const previous = pages[pages.indexOf(page) - 1];
@@ -153,13 +155,14 @@ export default async function OhmLesson({ searchParams }: { searchParams: Promis
               <Link href="/denken" className="hover:text-accent">電験三種</Link> / {isIndex ? "索引" : <> {isMath ? "数学" : isLaw ? "法規" : page >= 321 ? "電力" : page >= 161 ? "機械" : "理論"} / {isMath ? mathChapter?.[1] ?? "目次" : isLaw ? lawChapter?.[1] ?? "目次" : powerChapter ? powerChapter[1] : page === 321 ? "目次" : machineChapter ? machineChapter[1] : page === 161 ? "目次" : page >= 141 ? "電子工学・電子回路" : page >= 115 ? "磁気と磁界" : page >= 99 ? "静電気と電界" : page >= 87 ? "電気・電子計測" : page >= 70 ? "三相交流回路" : page >= 31 ? "交流回路" : "直流回路"} / {title}</>}
             </p>
             <nav aria-label="Chuyển trang" className="flex flex-wrap items-center gap-2">
+              {!isIndex && <a href={href(indexPages[0]) + "#tra-cuu"} target="_blank" rel="noopener noreferrer" className={navButton}>Tra cứu</a>}
               {prevHref ? <Link href={prevHref} className={navButton}>← Trang trước</Link> : <span className="text-sm text-muted">← Trang trước</span>}
               <PageJumpSelect bookSlug="denken" currentPage={page} options={pages.map(n => ({ pageNumber: n, label: `Trang ${n}`, href: href(n) }))} />
               {nextHref ? <Link href={nextHref} className={navButton}>Trang sau →</Link> : <span className="text-sm text-muted">Trang sau →</span>}
             </nav>
           </div>
           <h1 className="font-jp text-xl font-bold">{title} <span className="text-sm text-red-700 dark:text-red-300">p.{page}</span></h1>
-          {isIndex ? <BookIndexScan page={page} /> : <OhmReader rows={rows} />}
+          {isIndex ? <><IndexLookup page={page} query={query} /><BookIndexScan page={page} availablePages={pages} /></> : <OhmReader rows={rows} />}
         </main>
       </div>
     </WideContainer>
