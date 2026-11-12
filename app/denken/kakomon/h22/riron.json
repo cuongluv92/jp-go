@@ -230,7 +230,7 @@
     "titleJp": "Δ結線した三相平衡回路の消費電力",
     "questionJp": "図の平衡三相回路について，次の(a)及び(b)に答えよ。\n(b) 端子 a ， b ， c に線間電圧 200 [V] の対称三相交流電源を接続したときの全消費電力 [kW] の値として，正しいのは次のうちどれか。",
     "questionVi": "Xét mạch ba pha cân bằng trong hình. Khi nối nguồn xoay chiều ba pha đối xứng có điện áp dây 200 V vào ba cọc a, b, c, chọn giá trị đúng của tổng công suất tiêu thụ [kW].",
-    "solution": ["Mỗi pha có trở R/2 + R/3 = 25 Ω sau khi đổi sang sao. Điện áp pha là [[200~√3]] V.", "Công suất ba pha P = 3 × (200/√3)² ÷ 25 = 1 600 W, tức 1,6 kW. Chọn (4)."],
+    "solution": ["Từ phép đo ở phần (a), điện trở giữa a và c là [[100²~200]] = 50 Ω. Khi b hở, mạch giữa a và c gồm hai điện trở nối tiếp R/2 ở hai đầu và nhánh tam giác tương đương R song song 2R, tức 2R/3. Vậy 5R/3 = 50 Ω, suy ra R = 30 Ω.", "Khi cấp nguồn ba pha cân bằng, đổi ba điện trở R đấu tam giác thành ba nhánh sao R/3. Điện trở mỗi pha, kể cả điện trở nối tiếp ở đầu dây, là R/2 + R/3 = 25 Ω. Điện áp pha của nguồn là [[200~√3]] V.", "Tổng công suất ba pha là P = 3 × [[(200/√3)²~25]] = 1 600 W = 1,6 kW. Chọn (4)."],
     "theory": [77, 79],
     "pages": [17, 18],
     "answer": 4,

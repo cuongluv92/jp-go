@@ -50,6 +50,7 @@ export default async function DenkenPastExamPage({ params, searchParams }: {
           question.id,
           {
             label: questionLabel(key),
+            partGroup: /^[0-9]+[ab]$/.test(key) ? key.slice(0, -1) : undefined,
             theoryLinks: theory.map(({ page, title }) => ({ href: bookPageHref(page), label: title ? `Trang ${page} · ${title}` : `Trang ${page}` })),
             originalPages,
             source,

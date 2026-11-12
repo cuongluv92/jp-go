@@ -219,7 +219,7 @@ export function TestRunner({
   userId: string;
   staticQuestions?: boolean;
   initialQuestionNumber?: number;
-  questionDetails?: Record<string, { label?: string; theoryLinks?: QuestionLink[]; source?: QuestionLink; originalPages?: QuestionLink[]; explanation?: ReactNode }>;
+  questionDetails?: Record<string, { label?: string; partGroup?: string; theoryLinks?: QuestionLink[]; source?: QuestionLink; originalPages?: QuestionLink[]; explanation?: ReactNode }>;
 }) {
   // Render ngay với dữ liệu gốc (chưa có furigana) để không phải chờ kuromoji
   // dựng dictionary - furigana (nếu có) tới sau qua API, state ở đây chỉ đổi
@@ -325,6 +325,13 @@ export function TestRunner({
   const writtenAnswer = current?.answer_jp?.trim() ? current.answer_jp : null;
   const details = current ? questionDetails?.[current.id] : undefined;
   const questionLabel = (question: ExamQuestion) => questionDetails?.[question.id]?.label ?? question.question_number;
+  const partGroup = details?.partGroup;
+  const partIndices = partGroup ? questions.flatMap((question, index) =>
+    questionDetails?.[question.id]?.partGroup === partGroup ? [index] : [],
+  ) : [];
+  const nextPartLabel = nextIndex !== undefined && partIndices.includes(nextIndex)
+    ? `Sang câu ${questionLabel(questions[nextIndex])} →`
+    : undefined;
   const hasOriginalPages = Boolean(details?.originalPages?.length);
   const sourceUrl = details?.source?.href ?? getKakomonnQuestionUrl(test.slug, current?.question_number ?? 0);
   const sourceLabel = details?.source?.label ?? "Giải Nhật · Kakomon";
@@ -638,6 +645,25 @@ export function TestRunner({
         )}
       </div>
 
+      {partIndices.length > 1 && !retryIndices && (
+        <nav aria-label={`Các phần của câu ${partGroup}`} className="flex flex-wrap gap-2">
+          {partIndices.map((index) => (
+            <button
+              key={questions[index].id}
+              type="button"
+              onClick={() => goTo(index)}
+              aria-current={index === currentIndex ? "step" : undefined}
+              disabled={index === currentIndex}
+              className={`rounded-lg border px-3 py-1.5 text-sm font-semibold ${index === currentIndex
+                ? "border-accent bg-accent/10 text-accent"
+                : "border-border bg-surface hover:border-accent/60"}`}
+            >
+              Câu {questionLabel(questions[index])}
+            </button>
+          ))}
+        </nav>
+      )}
+
       {details?.theoryLinks?.length ? <ReferencePages question={current} theoryLinks={details.theoryLinks} /> : null}
 
       <div className={`grid gap-3 ${gridColsClass(renderedColumns.length)}`}>
@@ -823,7 +849,7 @@ export function TestRunner({
             disabled={nextIndex === undefined}
             className="rounded-lg border border-border px-4 py-2 text-sm disabled:opacity-40"
           >
-            Câu sau →
+            {nextPartLabel ?? "Câu sau →"}
           </button>
         )}
       </div>
@@ -843,6 +869,7 @@ export function TestRunner({
           sourceUrl={sourceUrl}
           sourceLabel={sourceLabel}
           isLastQuestion={isLastQuestion}
+          nextLabel={nextPartLabel}
           onRetry={closeFeedbackAndRetry}
           onNext={closeFeedbackAndAdvance}
         />

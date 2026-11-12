@@ -14,6 +14,9 @@ const officialKeys: Record<string, string> = {
   "h22-houki": "3145332514424552",
 };
 
+const firstMultipartQuestion = { riron: 15, denryoku: 15, kikai: 15, houki: 11 };
+const lastMultipartQuestion = { riron: 18, denryoku: 17, kikai: 18, houki: 13 };
+
 describe("Denken past exams", () => {
   it.each(denkenPastExams.map((exam) => [exam.test.slug, exam] as const))(
     "%s matches the official answer key and links to existing source and theory pages",
@@ -42,6 +45,21 @@ describe("Denken past exams", () => {
           expect(lesson[page]).toBeTruthy();
           expect(pastQuestionsForBookPage(page).map(({ href }) => href)).toContain(denkenQuestionHref(slug, key));
         }
+      }
+    },
+  );
+
+  it.each(denkenPastExams.map((exam) => [exam.test.slug, exam] as const))(
+    "%s includes both parts of every multipart question in the official order",
+    (_, { questions, subject }) => {
+      const first = firstMultipartQuestion[subject];
+      const last = lastMultipartQuestion[subject];
+      const expected = Array.from({ length: last - first + 1 }, (_, index) => first + index)
+        .flatMap((number) => [`${number}a`, `${number}b`]);
+      const multipart = questions.filter(({ key }) => /[ab]$/.test(key));
+      expect(multipart.map(({ key }) => key)).toEqual(expected);
+      for (const { key, question } of multipart) {
+        expect(question.question_jp).toMatch(new RegExp(`(?:^|\\n)\\(${key.at(-1)}\\)`));
       }
     },
   );

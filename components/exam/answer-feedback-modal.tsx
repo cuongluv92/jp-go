@@ -20,6 +20,7 @@ export function AnswerFeedbackModal({
   sourceUrl,
   sourceLabel = "Giải Nhật · Kakomon",
   isLastQuestion,
+  nextLabel,
   onRetry,
   onNext,
 }: {
@@ -33,6 +34,7 @@ export function AnswerFeedbackModal({
   sourceUrl?: string | null;
   sourceLabel?: string;
   isLastQuestion: boolean;
+  nextLabel?: string;
   onRetry: () => void;
   onNext: () => void;
 }) {
@@ -134,7 +136,7 @@ export function AnswerFeedbackModal({
           onClick={onNext}
           className="flex-1 rounded-xl bg-accent px-4 py-3 text-base font-semibold text-accent-foreground sm:text-lg"
         >
-          {isLastQuestion ? "Hoàn thành bài" : "Câu tiếp theo →"}
+          {isLastQuestion ? "Hoàn thành bài" : nextLabel ?? "Câu tiếp theo →"}
         </button>
       </div>
     </dialog>
