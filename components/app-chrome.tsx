@@ -41,6 +41,7 @@ function getPageKind(pathname: string): string {
 export function AppChrome({ children }: { children: ReactNode }) {
   const pathname = usePathname();
   const isLoginPage = pathname === "/login";
+  const isDenkenExamCatalog = pathname === "/denken/kakomon";
   const [layoutMode, setLayoutMode] = useState<LayoutMode>("mobile");
   const [sidebarCollapsed, setSidebarCollapsed] = useState(false);
   const [commandOpen, setCommandOpen] = useState(false);
@@ -163,7 +164,7 @@ export function AppChrome({ children }: { children: ReactNode }) {
   return (
     <>
       <TopHeader desktopMode={false} onToggleDesktop={toggleLayoutMode} onOpenMenu={() => setMobileMenuOpen(true)} />
-      <main className={`${styles.mobileMain} mx-auto w-full max-w-md flex-1 px-4 pb-24 pt-4 sm:max-w-lg`}>
+      <main className={`${styles.mobileMain} mx-auto w-full flex-1 px-4 pb-24 pt-4 ${isDenkenExamCatalog ? "max-w-6xl" : "max-w-md sm:max-w-lg"}`}>
         {children}
         <DetailQuickNavigator variant="bottom" />
       </main>

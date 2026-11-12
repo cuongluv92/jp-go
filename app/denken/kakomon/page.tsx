@@ -7,12 +7,12 @@ export default function DenkenPastExamsPage() {
   const years = [...new Set(denkenPastExams.map(({ eraYear }) => eraYear))].sort((a, b) => b - a);
 
   return (
-    <main className="mx-auto w-full max-w-6xl space-y-4 px-4 py-6">
+    <section aria-labelledby="denken-exam-title" className="@container mx-auto w-full max-w-6xl space-y-4 py-4">
       <header className="space-y-2">
         <Link href="/denken" className="text-sm text-accent">← 電験三種</Link>
-        <h1 className="text-2xl font-bold">Đề thi các năm</h1>
+        <h1 id="denken-exam-title" className="text-2xl font-bold">Đề thi các năm</h1>
       </header>
-      <div className="grid items-start gap-3 min-[400px]:grid-cols-2 md:grid-cols-3 xl:grid-cols-4">
+      <div className="grid items-start gap-3 @min-[22rem]:grid-cols-2 @min-[38rem]:grid-cols-3 @min-[56rem]:grid-cols-4">
         {years.map((year) => (
           <details key={year} className="group rounded-xl border border-border bg-surface">
             <summary className="flex cursor-pointer list-none items-center justify-between gap-2 rounded-xl px-3 py-3 hover:bg-accent/5 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent [&::-webkit-details-marker]:hidden">
@@ -34,6 +34,6 @@ export default function DenkenPastExamsPage() {
           </details>
         ))}
       </div>
-    </main>
+    </section>
   );
 }
