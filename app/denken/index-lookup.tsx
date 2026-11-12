@@ -27,14 +27,15 @@ function searchBook(query: string) {
     for (const column of columns) {
       for (const row of column) {
         if (typeof row === "string") continue;
-        const [label, references] = row as [string, (number | string)[]];
-        const normalized = normalize(label);
-        if (!normalized.includes(term)) continue;
-        const rank = normalized === term ? 0 : 1;
+        const [label, references, translation] = row as [string, (number | string)[], string];
+        const japanese = normalize(label);
+        const vietnamese = normalize(translation);
+        if (!japanese.includes(term) && !vietnamese.includes(term)) continue;
+        const rank = japanese === term || vietnamese === term ? 0 : 1;
         for (const page of references) {
           if (typeof page !== "number" || !Object.hasOwn(lesson, page)) continue;
           const previous = results.get(page);
-          if (!previous || rank < previous.rank) results.set(page, { page, label, rank });
+          if (!previous || rank < previous.rank) results.set(page, { page, label: `${label} · ${translation}`, rank });
         }
       }
     }
