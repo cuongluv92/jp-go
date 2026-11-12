@@ -5,7 +5,8 @@ import { TestRunner } from "@/components/exam/test-runner";
 import { WideContainer } from "@/components/exam/wide-container";
 import { createClient } from "@/lib/supabase/server";
 import { bookPageHref } from "../../index-lookup";
-import { denkenExamHref, denkenPastExams } from "../catalog";
+import { denkenExamHref, denkenPastExams, questionLabel } from "../catalog";
+import { SolutionSteps } from "../solution-steps";
 import { H21RironQuestion6Solution } from "../h21-riron-solution";
 
 const solutions: Record<string, ReactNode> = {
@@ -22,7 +23,7 @@ export default async function DenkenPastExamPage({ params, searchParams }: {
   const exam = denkenPastExams.find(({ test }) => test.slug === testSlug);
   if (!exam) notFound();
   const entryQuestion = typeof cau === "string"
-    ? exam.questions.find(({ question }) => String(question.question_number) === cau)
+    ? exam.questions.find(({ key }) => key === cau)
     : undefined;
   if (cau !== undefined && !entryQuestion) notFound();
 
@@ -35,6 +36,9 @@ export default async function DenkenPastExamPage({ params, searchParams }: {
         <Link href="/denken">← 電験三種</Link>
         <Link href={denkenExamHref}>Đề thi các năm</Link>
       </nav>
+      {(exam.subject === "riron" || exam.subject === "kikai") && (
+        <p className="pt-3 text-sm text-muted">Đề gốc yêu cầu chọn câu 17 hoặc câu 18. Ở chế độ luyện tập, bạn có thể làm cả hai.</p>
+      )}
       <TestRunner
         key={`${user.id}:${exam.test.id}:${cau ?? ""}`}
         test={exam.test}
@@ -42,12 +46,14 @@ export default async function DenkenPastExamPage({ params, searchParams }: {
         userId={user.id}
         staticQuestions
         initialQuestionNumber={entryQuestion?.question.question_number}
-        questionDetails={Object.fromEntries(exam.questions.map(({ question, theory, source }) => [
+        questionDetails={Object.fromEntries(exam.questions.map(({ key, question, theory, source, originalPages, solution }) => [
           question.id,
           {
-            theoryLinks: theory.map(({ page, title }) => ({ href: bookPageHref(page), label: `Trang ${page} · ${title}` })),
+            label: questionLabel(key),
+            theoryLinks: theory.map(({ page, title }) => ({ href: bookPageHref(page), label: title ? `Trang ${page} · ${title}` : `Trang ${page}` })),
+            originalPages,
             source,
-            explanation: solutions[question.id],
+            explanation: solution ? <SolutionSteps steps={solution} /> : solutions[question.id],
           },
         ]))}
       />

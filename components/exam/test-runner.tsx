@@ -219,7 +219,7 @@ export function TestRunner({
   userId: string;
   staticQuestions?: boolean;
   initialQuestionNumber?: number;
-  questionDetails?: Record<string, { theoryLinks?: QuestionLink[]; source?: QuestionLink; explanation?: ReactNode }>;
+  questionDetails?: Record<string, { label?: string; theoryLinks?: QuestionLink[]; source?: QuestionLink; originalPages?: QuestionLink[]; explanation?: ReactNode }>;
 }) {
   // Render ngay với dữ liệu gốc (chưa có furigana) để không phải chờ kuromoji
   // dựng dictionary - furigana (nếu có) tới sau qua API, state ở đây chỉ đổi
@@ -324,6 +324,8 @@ export function TestRunner({
   const correctChoice = current?.choices.find((choice) => choice.is_correct) ?? null;
   const writtenAnswer = current?.answer_jp?.trim() ? current.answer_jp : null;
   const details = current ? questionDetails?.[current.id] : undefined;
+  const questionLabel = (question: ExamQuestion) => questionDetails?.[question.id]?.label ?? question.question_number;
+  const hasOriginalPages = Boolean(details?.originalPages?.length);
   const sourceUrl = details?.source?.href ?? getKakomonnQuestionUrl(test.slug, current?.question_number ?? 0);
   const sourceLabel = details?.source?.label ?? "Giải Nhật · Kakomon";
 
@@ -522,7 +524,7 @@ export function TestRunner({
                 key={q.id}
                 type="button"
                 onClick={() => goTo(i)}
-                aria-label={`Câu ${q.question_number}: ${status}${selected ? `, đã chọn đáp án ${selected.choice_label}` : ""}`}
+                aria-label={`Câu ${questionLabel(q)}: ${status}${selected ? `, đã chọn đáp án ${selected.choice_label}` : ""}`}
                 aria-current={i === currentIndex ? "step" : undefined}
                 className={`relative flex h-8 min-w-8 items-center justify-center rounded-lg px-2 text-xs font-medium transition ${
                   status === "Đúng"
@@ -532,7 +534,7 @@ export function TestRunner({
                         : "bg-slate-100 text-muted dark:bg-white/10"
                 } ${i === currentIndex ? "ring-2 ring-accent ring-offset-2 ring-offset-surface" : ""}`}
               >
-                {q.question_number}
+                {questionLabel(q)}
                 {selected && (
                   <span
                     aria-hidden="true"
@@ -605,16 +607,29 @@ export function TestRunner({
             onToggleFocus={() => toggleColumnFocus("question")}
           />
           <p className="font-jp whitespace-pre-line text-sm leading-relaxed sm:text-base">
-            問{current.question_number}. {renderExamJapanese(current.question_jp, current.question_furigana_tokens, showFurigana)}
+            問{questionLabel(current)}. {renderExamJapanese(current.question_jp, current.question_furigana_tokens, showFurigana)}
           </p>
 
           {current.question_image_path && (
             // eslint-disable-next-line @next/next/no-img-element
             <img
               src={getExamSourceImageUrl(current.question_image_path)}
-              alt={`Hình câu ${current.question_number}`}
+              alt={`Hình câu ${questionLabel(current)}`}
               className="mt-4 h-auto max-w-full rounded-lg border border-border"
             />
+          )}
+
+          {hasOriginalPages && (
+            <details key={current.id} open={/図|次式|表[1１]/u.test(current.question_jp) || current.choices.some((choice) => !choice.choice_jp) || undefined} className="mt-4 rounded-lg border border-border p-2">
+              <summary className="cursor-pointer text-sm font-semibold">Đề gốc · Hình và bảng lựa chọn</summary>
+              {details?.originalPages?.map(({ href, label }) => (
+                <a key={href} href={href} target="_blank" rel="noopener noreferrer" className="mt-2 block rounded border border-border">
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img src={href} alt={label} loading="lazy" className="h-auto w-full" />
+                  <span className="block px-2 py-1 text-xs text-accent">{label} ↗</span>
+                </a>
+              ))}
+            </details>
           )}
 
           {current.choices.length === 0 && writtenAnswer && (
@@ -653,7 +668,9 @@ export function TestRunner({
                     className={`flex items-start gap-3 rounded-xl border px-3 py-2.5 text-left text-sm transition ${style}`}
                   >
                     <span className="font-jp font-semibold">{choice.choice_label}</span>
-                    <span className="font-jp">{renderExamJapanese(choice.choice_jp, choice.choice_furigana_tokens, showFurigana)}</span>
+                    <span className="font-jp">{choice.choice_jp
+                      ? renderExamJapanese(choice.choice_jp, choice.choice_furigana_tokens, showFurigana)
+                      : "Chọn phương án theo đề gốc"}</span>
                   </button>
                 );
               })}
@@ -683,7 +700,7 @@ export function TestRunner({
               {current.choices.map((choice) => (
                 <div key={choice.id} className="flex items-start gap-3 rounded-xl border border-border px-3 py-2.5 text-sm">
                   <span className="font-semibold">{choice.choice_label}</span>
-                  <span>{choice.choice_vi ?? "(chưa dịch lựa chọn)"}</span>
+                  <span>{choice.choice_vi ?? (hasOriginalPages ? "Xem phương án trong đề gốc" : "(chưa dịch lựa chọn)")}</span>
                 </div>
               ))}
             </div>
@@ -771,7 +788,7 @@ export function TestRunner({
           ← Câu trước
         </button>
         <span className="text-xs text-muted">
-          {retryIndices ? `Câu sai ${navigationPosition + 1}/${retryIndices.length} · Câu gốc ${current.question_number}` : `Câu ${currentIndex + 1}/${questions.length}`}
+          {retryIndices ? `Câu sai ${navigationPosition + 1}/${retryIndices.length} · Câu gốc ${questionLabel(current)}` : `Câu ${currentIndex + 1}/${questions.length}`}
         </span>
         {hasAnyChoices && isLastQuestion ? (
           <button
