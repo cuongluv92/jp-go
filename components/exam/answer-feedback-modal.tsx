@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useId, useRef } from "react";
+import { useEffect, useId, useRef, type ReactNode } from "react";
 
 import { segmentJapaneseText, type FuriganaToken } from "@/lib/japanese-text";
 
@@ -17,17 +17,19 @@ export function AnswerFeedbackModal({
   explanationJpTokens = [],
   showFurigana = false,
   sourceUrl,
+  sourceLabel = "Giải Nhật · Kakomon",
   isLastQuestion,
   onRetry,
   onNext,
 }: {
   correct: boolean;
   choiceLabel: string;
-  explanation?: string | null;
+  explanation?: ReactNode;
   explanationJp?: string | null;
   explanationJpTokens?: FuriganaToken[];
   showFurigana?: boolean;
   sourceUrl?: string | null;
+  sourceLabel?: string;
   isLastQuestion: boolean;
   onRetry: () => void;
   onNext: () => void;
@@ -93,7 +95,7 @@ export function AnswerFeedbackModal({
           {explanation && (
             <div>
               <p className="mb-2 text-sm font-semibold text-muted">Giải thích tiếng Việt</p>
-              <p className="whitespace-pre-line text-base leading-relaxed sm:text-lg">{explanation}</p>
+              {typeof explanation === "string" ? <p className="whitespace-pre-line text-base leading-relaxed sm:text-lg">{explanation}</p> : explanation}
             </div>
           )}
         </div>
@@ -103,10 +105,10 @@ export function AnswerFeedbackModal({
           href={sourceUrl}
           target="_blank"
           rel="noopener noreferrer"
-          title="Xem lời giải tiếng Nhật trên Kakomonn"
+          title={sourceLabel}
           className="mt-4 inline-flex items-center gap-1 rounded-lg border border-accent/40 px-3 py-2 text-sm font-semibold text-accent hover:bg-accent/10 sm:text-base"
         >
-          📖 Giải Nhật · Kakomon <span aria-hidden="true">↗</span>
+          📖 {sourceLabel} <span aria-hidden="true">↗</span>
         </a>
       )}
       <div className="mt-5 flex gap-3">

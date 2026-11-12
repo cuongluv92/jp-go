@@ -4,7 +4,7 @@ import { createClient } from '@/lib/supabase/client';
 import type { ExamQuestion } from './types';
 import { emptyProgress, projectProgress, progressPatch, validEvent, type ExamProgress, type ProgressEvent } from './progress-events';
 
-export function useExamProgress(userId: string, testId: string, questions: ExamQuestion[]) {
+export function useExamProgress(userId: string, testId: string, questions: ExamQuestion[], localOnly = false) {
   const defaults = Object.fromEntries(questions.map(q => [q.id, q.is_flagged_default]));
   const [state, render] = useState<ExamProgress>(() => emptyProgress(defaults));
   const [ready, setReady] = useState(false);
@@ -49,6 +49,10 @@ export function useExamProgress(userId: string, testId: string, questions: ExamQ
     const event: ProgressEvent = { id: crypto.randomUUID(), at, epoch, kind, patch };
     const saved = persist(event);
     display();
+    if (localOnly) {
+      setStatus(saved ? 'Đã lưu trên trình duyệt' : 'Chưa lưu được trên trình duyệt');
+      return;
+    }
     setStatus(saved ? 'Đã lưu trên máy · đang đồng bộ…' : 'Chưa lưu trên máy — đang thử lưu tài khoản, đừng đóng trang.');
     void syncRef.current();
   }
@@ -62,6 +66,24 @@ export function useExamProgress(userId: string, testId: string, questions: ExamQ
 
   useEffect(() => {
     active.current = true;
+    if (localOnly) {
+      const refresh = async () => {
+        const readable = readLocal();
+        display();
+        setStatus(readable ? 'Tiến độ lưu trên trình duyệt' : 'Không đọc được tiến độ trên trình duyệt');
+        setReady(true);
+      };
+      syncRef.current = refresh;
+      const storage = (event: StorageEvent) => {
+        if (event.key?.startsWith(prefix)) void refresh();
+      };
+      window.addEventListener('storage', storage);
+      void refresh();
+      return () => {
+        active.current = false;
+        window.removeEventListener('storage', storage);
+      };
+    }
     const client = createClient();
     readLocal();
     // A legacy copy is retained intact and claimed by only one account.
@@ -147,6 +169,6 @@ export function useExamProgress(userId: string, testId: string, questions: ExamQ
     };
     // Component is keyed by user and test; these inputs are immutable per mount.
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [userId,testId]);
+  }, [userId,testId,localOnly]);
   return {state,update,ready,status, retry: () => void syncRef.current(), reset: () => append('reset',{})};
 }

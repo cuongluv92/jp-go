@@ -2,6 +2,7 @@ import Link from "next/link";
 import { Fraction } from "./fraction";
 import { quantitySymbols } from "./contents";
 import { ContentsTree } from "./contents-tree";
+import { denkenExamHref } from "./kakomon/catalog";
 
 export const metadata = { title: "電験三種 — jp-go" };
 
@@ -15,6 +16,7 @@ export default function DenkenPage() {
         <h1 className="font-jp mt-2 text-2xl font-bold">電験三種</h1>
         <p className="mt-1 text-sm text-muted">電験三種 合格ガイド 第4版 · Mục lục theo số trang in trong sách</p>
       </header>
+      <Link href={denkenExamHref} className="w-fit rounded-lg border border-accent/40 bg-accent/5 px-4 py-2 text-sm font-semibold text-accent hover:bg-accent/10">Đề thi các năm</Link>
       <ContentsTree />
       <section id="quantity-symbols" className="scroll-mt-20 rounded-2xl border border-border bg-surface p-4" aria-labelledby="quantity-symbols-title">
         <h2 id="quantity-symbols-title" className="font-jp font-semibold">

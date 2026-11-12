@@ -53,3 +53,20 @@ describe('wrong-answer retry mode',()=>{
  await act(async()=>view.unmount());
  });
 });
+
+describe('linked question', () => {
+  it('opens the requested question ahead of the saved position and allows normal navigation', async () => {
+    fixture.initial = { ...emptyProgress(), currentIndex: 4 };
+    let view: ReturnType<typeof create>;
+    await act(async () => {
+      view = create(createElement(TestRunner, { test, questions, userId: 'user', staticQuestions: true, initialQuestionNumber: 2 }));
+    });
+    const activeQuestion = () => view.root.findByProps({ 'aria-current': 'step' }).props['aria-label'];
+    expect(activeQuestion()).toMatch(/^Câu 2:/);
+    expect(fetch).not.toHaveBeenCalled();
+    await act(async () => { (fixture.nav as { onNext: () => void }).onNext(); });
+    expect(activeQuestion()).toMatch(/^Câu 3:/);
+    expect(fixture.latest).toMatchObject({ currentIndex: 2 });
+    await act(async () => view.unmount());
+  });
+});

@@ -9,6 +9,7 @@ import { BookIndex, indexPages } from "../book-index";
 import { bookPageHref, IndexLookup } from "../index-lookup";
 import { lesson } from "./lesson";
 import { OhmReader } from "./reader";
+import { pastQuestionsForBookPage } from "../kakomon/catalog";
 
 export const metadata = { title: "1‑1 オームの法則 — 電験三種 — jp-go" };
 
@@ -127,6 +128,7 @@ export default async function OhmLesson({ searchParams }: { searchParams: Promis
     : page >= 9 ? "1‑3 導体の抵抗 · Điện trở của vật dẫn" : page >= 5 ? "1‑2 直列・並列合成抵抗 · Điện trở nối tiếp và song song" : "1‑1 オームの法則 · Định luật Ohm";
   const readingSection = isMath ? "math" : isLaw ? "law" : page === 321 || powerChapter ? "power" : undefined;
   const read = (text: string) => Promise.all(text.split("**").map(part => enrichLessonPart(part, readingSection)));
+  const relatedQuestions = pastQuestionsForBookPage(page);
   const rows = await Promise.all((lesson[page] ?? []).map(async row => {
     if ("diagram" in row) return row;
     const readings = await read(row.jp);
@@ -162,6 +164,20 @@ export default async function OhmLesson({ searchParams }: { searchParams: Promis
             </nav>
           </div>
           <h1 className="font-jp text-xl font-bold">{title} <span className="text-sm text-red-700 dark:text-red-300">p.{page}</span></h1>
+          {relatedQuestions.length > 0 && (
+            <section aria-label="Đề thi liên quan" className="rounded-xl border border-accent/30 bg-accent/5 px-4 py-3">
+              <h2 className="text-sm font-semibold">Đề thi liên quan</h2>
+              <ul className="mt-2 space-y-2">
+                {relatedQuestions.map(({ href, title, topic }) => (
+                  <li key={href}>
+                    <a href={href} target="_blank" rel="noopener noreferrer" className="text-sm font-medium text-accent underline">
+                      {title} · {topic} <span aria-label="Mở tab mới">↗</span>
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </section>
+          )}
           {isIndex ? <><IndexLookup page={page} query={query} /><BookIndex page={page} availablePages={pages} /></> : <OhmReader rows={rows} />}
         </main>
       </div>

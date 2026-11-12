@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useExamProgress } from "@/lib/exam/use-exam-progress";
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useState, type ReactNode } from "react";
 
 import { AnswerFeedbackModal } from "./answer-feedback-modal";
 import { AnswerPracticeModal } from "./answer-practice-modal";
@@ -158,8 +158,10 @@ function renderExamJapanese(text: string, tokens: FuriganaToken[] = [], showFuri
   );
 }
 
-function ReferencePages({ question }: { question: ExamQuestion }) {
-  if (question.references.length === 0) return null;
+type QuestionLink = { href: string; label: string };
+
+function ReferencePages({ question, theoryLinks = [] }: { question: ExamQuestion; theoryLinks?: QuestionLink[] }) {
+  if (question.references.length === 0 && theoryLinks.length === 0) return null;
 
   return (
     <div className="mt-4 border-t border-border pt-3">
@@ -167,6 +169,12 @@ function ReferencePages({ question }: { question: ExamQuestion }) {
         Lý thuyết liên quan
       </p>
       <div className="flex flex-wrap gap-2">
+        {theoryLinks.map(({ href, label }) => (
+          <a key={href} href={href} target="_blank" rel="noopener noreferrer"
+            className="rounded-lg border border-accent/40 bg-accent/5 px-2.5 py-1 text-xs font-medium text-accent hover:bg-accent/10">
+            {label} ↗
+          </a>
+        ))}
         {question.references.map((ref) => {
           if (!ref.book || !ref.page) {
             return ref.note ? (
@@ -203,13 +211,23 @@ function ReferencePages({ question }: { question: ExamQuestion }) {
  * - 解答 chỉ dùng đáp án Nhật đã có trong dữ liệu, không tự suy đoán.
  * - Chỉ bật chấm điểm khi câu thực sự có choices/đáp án.
  */
-export function TestRunner({ test, questions: initialQuestions, userId }: { test: ExamTest; questions: ExamQuestion[]; userId: string }) {
+export function TestRunner({
+  test, questions: initialQuestions, userId, staticQuestions = false, initialQuestionNumber, questionDetails,
+}: {
+  test: ExamTest;
+  questions: ExamQuestion[];
+  userId: string;
+  staticQuestions?: boolean;
+  initialQuestionNumber?: number;
+  questionDetails?: Record<string, { theoryLinks?: QuestionLink[]; source?: QuestionLink; explanation?: ReactNode }>;
+}) {
   // Render ngay với dữ liệu gốc (chưa có furigana) để không phải chờ kuromoji
   // dựng dictionary - furigana (nếu có) tới sau qua API, state ở đây chỉ đổi
   // phần furigana_tokens, không đổi id/thứ tự câu nên không ảnh hưởng gì tới
   // index/answers đang có.
   const [questions, setQuestions] = useState(initialQuestions);
   useEffect(() => {
+    if (staticQuestions) return;
     let cancelled = false;
     fetch(`/api/exam/furigana/test?slug=${encodeURIComponent(test.slug)}`)
       .then((res) => (res.ok ? res.json() : null))
@@ -220,9 +238,12 @@ export function TestRunner({ test, questions: initialQuestions, userId }: { test
     return () => {
       cancelled = true;
     };
-  }, [test.slug]);
+  }, [test.slug, staticQuestions]);
 
-  const {state, update: setState, ready, status, retry, reset} = useExamProgress(userId, test.id, initialQuestions);
+  const {state, update: setState, ready, status, retry, reset} = useExamProgress(userId, test.id, initialQuestions, staticQuestions);
+  const [linkedQuestionIndex, setLinkedQuestionIndex] = useState(() =>
+    initialQuestions.findIndex((question) => question.question_number === initialQuestionNumber));
+  const currentIndex = linkedQuestionIndex >= 0 ? linkedQuestionIndex : state.currentIndex;
   const submitted = state.submitted;
   const setSubmitted = (value: boolean) => setState(s => ({...s, submitted: value}));
   const [showFurigana, setShowFurigana] = useState(false);
@@ -241,19 +262,20 @@ export function TestRunner({ test, questions: initialQuestions, userId }: { test
     setColumnVisible(readStoredColumnVisibility());
   }, []);
 
-  const current = questions[state.currentIndex];
+  const current = questions[currentIndex];
   const wrongIndices = questions.flatMap((q, index) => {
     const selected = q.choices.find(choice => choice.id === state.answers[q.id]);
     return selected && !selected.is_correct ? [index] : [];
   });
   // Freeze each retry round so a corrected question does not disappear mid-answer.
   const navigationIndices = retryIndices ?? questions.map((_, index) => index);
-  const navigationPosition = navigationIndices.indexOf(state.currentIndex);
+  const navigationPosition = navigationIndices.indexOf(currentIndex);
   const previousIndex = navigationIndices[navigationPosition - 1];
   const nextIndex = navigationIndices[navigationPosition + 1];
 
   const goTo = (index: number) => {
     if (index < 0 || index >= questions.length) return;
+    setLinkedQuestionIndex(-1);
     setRetryFinished(false);
     setPracticeOpen(false);
     // Phóng to chỉ nên áp dụng cho câu đang xem - không mang sang câu khác.
@@ -282,6 +304,7 @@ export function TestRunner({ test, questions: initialQuestions, userId }: { test
   const resetTest = () => {
     if (!window.confirm("Xóa toàn bộ đáp án đã lưu và làm lại đề này từ đầu?")) return;
     leaveWrongRetry();
+    setLinkedQuestionIndex(-1);
     reset();
     setSubmitted(false);
     setFeedback(null);
@@ -300,7 +323,9 @@ export function TestRunner({ test, questions: initialQuestions, userId }: { test
   const hasAnyChoices = useMemo(() => questions.some((q) => q.choices.length > 0), [questions]);
   const correctChoice = current?.choices.find((choice) => choice.is_correct) ?? null;
   const writtenAnswer = current?.answer_jp?.trim() ? current.answer_jp : null;
-  const kakomonnSourceUrl = getKakomonnQuestionUrl(test.slug, current?.question_number ?? 0);
+  const details = current ? questionDetails?.[current.id] : undefined;
+  const sourceUrl = details?.source?.href ?? getKakomonnQuestionUrl(test.slug, current?.question_number ?? 0);
+  const sourceLabel = details?.source?.label ?? "Giải Nhật · Kakomon";
 
   const score = useMemo(() => {
     if (!submitted || !hasAnyChoices) return null;
@@ -412,7 +437,7 @@ export function TestRunner({ test, questions: initialQuestions, userId }: { test
     <div className="flex flex-col gap-4 py-4">
       <div className="flex items-center gap-3 text-xs text-muted" role="status">
         <span>{status}</span>
-        <button type="button" onClick={retry} className="underline">Đồng bộ lại</button>
+        <button type="button" onClick={retry} className="underline">{staticQuestions ? "Đọc lại tiến độ" : "Đồng bộ lại"}</button>
       </div>
       <div className="flex flex-wrap items-center justify-between gap-3 rounded-2xl border border-border bg-surface px-4 py-3">
         <div>
@@ -498,14 +523,14 @@ export function TestRunner({ test, questions: initialQuestions, userId }: { test
                 type="button"
                 onClick={() => goTo(i)}
                 aria-label={`Câu ${q.question_number}: ${status}${selected ? `, đã chọn đáp án ${selected.choice_label}` : ""}`}
-                aria-current={i === state.currentIndex ? "step" : undefined}
+                aria-current={i === currentIndex ? "step" : undefined}
                 className={`relative flex h-8 min-w-8 items-center justify-center rounded-lg px-2 text-xs font-medium transition ${
                   status === "Đúng"
                       ? "bg-emerald-100 text-emerald-700 dark:bg-emerald-500/15 dark:text-emerald-400"
                       : status === "Chưa đúng"
                         ? "bg-red-100 text-red-700 dark:bg-red-500/15 dark:text-red-400"
                         : "bg-slate-100 text-muted dark:bg-white/10"
-                } ${i === state.currentIndex ? "ring-2 ring-accent ring-offset-2 ring-offset-surface" : ""}`}
+                } ${i === currentIndex ? "ring-2 ring-accent ring-offset-2 ring-offset-surface" : ""}`}
               >
                 {q.question_number}
                 {selected && (
@@ -565,6 +590,8 @@ export function TestRunner({ test, questions: initialQuestions, userId }: { test
           </button>
         )}
       </div>
+
+      {details?.theoryLinks?.length ? <ReferencePages question={current} theoryLinks={details.theoryLinks} /> : null}
 
       <div className={`grid gap-3 ${gridColsClass(renderedColumns.length)}`}>
         {renderedColumns.includes("question") && (
@@ -718,18 +745,18 @@ export function TestRunner({ test, questions: initialQuestions, userId }: { test
               <p lang="ja" className="font-jp whitespace-pre-line text-sm leading-relaxed">{renderExamJapanese(current.explanation_jp, current.explanation_furigana_tokens ?? [], showFurigana)}</p>
             </div>
           )}
-          {current.explanation_vi ? (
+          {current.explanation_vi || details?.explanation ? (
             <div>
               <p className="mb-2 text-xs font-semibold uppercase tracking-wide text-muted">
                 {current.explanation_jp ? "Giải thích tiếng Việt" : "Giải thích"}
               </p>
-              <p className="whitespace-pre-line text-sm leading-relaxed">{current.explanation_vi}</p>
+              {details?.explanation ?? <p className="whitespace-pre-line text-sm leading-relaxed">{current.explanation_vi}</p>}
             </div>
           ) : (
             <p className="text-sm italic text-muted">Chưa có phần giải thích cho câu này.</p>
           )}
-          <ReferencePages question={current} />
-          {kakomonnSourceUrl && <a href={kakomonnSourceUrl} target="_blank" rel="noopener noreferrer" className="mt-4 inline-block rounded-lg border border-accent/40 px-2.5 py-1.5 text-xs font-semibold text-accent hover:bg-accent/10">📖 Giải Nhật · Kakomon ↗</a>}
+          {!details?.theoryLinks?.length && <ReferencePages question={current} />}
+          {sourceUrl && <a href={sourceUrl} target="_blank" rel="noopener noreferrer" className="mt-4 inline-block rounded-lg border border-accent/40 px-2.5 py-1.5 text-xs font-semibold text-accent hover:bg-accent/10">📖 {sourceLabel} ↗</a>}
         </section>
         )}
       </div>
@@ -744,7 +771,7 @@ export function TestRunner({ test, questions: initialQuestions, userId }: { test
           ← Câu trước
         </button>
         <span className="text-xs text-muted">
-          {retryIndices ? `Câu sai ${navigationPosition + 1}/${retryIndices.length} · Câu gốc ${current.question_number}` : `Câu ${state.currentIndex + 1}/${questions.length}`}
+          {retryIndices ? `Câu sai ${navigationPosition + 1}/${retryIndices.length} · Câu gốc ${current.question_number}` : `Câu ${currentIndex + 1}/${questions.length}`}
         </span>
         {hasAnyChoices && isLastQuestion ? (
           <button
@@ -771,11 +798,12 @@ export function TestRunner({ test, questions: initialQuestions, userId }: { test
         <AnswerFeedbackModal
           correct={feedback.correct}
           choiceLabel={feedback.choiceLabel}
-          explanation={current.explanation_vi}
+          explanation={details?.explanation ?? current.explanation_vi}
           explanationJp={current.explanation_jp}
           explanationJpTokens={current.explanation_furigana_tokens ?? []}
           showFurigana={showFurigana}
-          sourceUrl={kakomonnSourceUrl}
+          sourceUrl={sourceUrl}
+          sourceLabel={sourceLabel}
           isLastQuestion={isLastQuestion}
           onRetry={closeFeedbackAndRetry}
           onNext={closeFeedbackAndAdvance}

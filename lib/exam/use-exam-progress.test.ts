@@ -29,10 +29,10 @@ const handles:Record<string,ReturnType<typeof useExamProgress>>={};
 const roots:Array<{unmount:()=>void}>=[];
 // Test harness exposes the latest hook result to assertions.
 // eslint-disable-next-line react-hooks/immutability
-function Harness({name,user='user',test='r2'}:{name:string;user?:string;test?:string}){handles[name]=useExamProgress(user,test,questions);return null;}
-async function mount(name:string,user='user',test='r2'){
+function Harness({name,user='user',test='r2',localOnly=false}:{name:string;user?:string;test?:string;localOnly?:boolean}){handles[name]=useExamProgress(user,test,questions,localOnly);return null;}
+async function mount(name:string,user='user',test='r2',localOnly=false){
  let root: {unmount:()=>void};
- await act(async()=>{root=create(createElement(Harness,{name,user,test}));});roots.push(root!);return root!;
+ await act(async()=>{root=create(createElement(Harness,{name,user,test,localOnly}));});roots.push(root!);return root!;
 }
 beforeEach(()=>{
  backend.rows.clear();backend.offline=false;
@@ -43,6 +43,13 @@ beforeEach(()=>{
 });
 afterEach(async()=>{for(const root of roots.splice(0))await act(async()=>root.unmount());vi.unstubAllGlobals();});
 describe('exam persistence integration',()=>{
+ it('restores a static exam from browser storage without writing to account progress',async()=>{
+  await mount('pilot','user','denken-h21-riron',true);
+  await act(async()=>handles.pilot.update(s=>({...s,answers:{q0:'4'}})));
+  await mount('reopened-pilot','user','denken-h21-riron',true);
+  expect(handles['reopened-pilot'].state.answers).toEqual({q0:'4'});
+  expect(backend.rows.size).toBe(0);
+ });
  it('keeps completed answers when a stale tab navigates, then restores on a fresh device',async()=>{
   await mount('A');await mount('B');
   await act(async()=>handles.A.update(s=>({...s,answers:{q0:'a',q1:'b'},currentIndex:63,submitted:true})));
