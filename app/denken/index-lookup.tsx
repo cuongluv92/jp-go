@@ -1,3 +1,4 @@
+import entries from "./index-entries.json";
 import { lesson } from "./ohm/lesson";
 
 function normalize(value: string) {
@@ -21,9 +22,26 @@ function searchBook(query: string) {
     return Object.hasOwn(lesson, page) ? [{ page, label: "", rank: 0 }] : [];
   }
 
-  const results = [];
+  const results = new Map<number, { page: number; label: string; rank: number }>();
+  for (const columns of Object.values(entries)) {
+    for (const column of columns) {
+      for (const row of column) {
+        if (typeof row === "string") continue;
+        const [label, references] = row as [string, (number | string)[]];
+        const normalized = normalize(label);
+        if (!normalized.includes(term)) continue;
+        const rank = normalized === term ? 0 : 1;
+        for (const page of references) {
+          if (typeof page !== "number" || !Object.hasOwn(lesson, page)) continue;
+          const previous = results.get(page);
+          if (!previous || rank < previous.rank) results.set(page, { page, label, rank });
+        }
+      }
+    }
+  }
   for (const [key, rows] of Object.entries(lesson)) {
     const page = Number(key);
+    if (results.has(page)) continue;
     let best: { page: number; label: string; rank: number } | undefined;
     for (const row of rows) {
       if ("diagram" in row) continue;
@@ -32,16 +50,16 @@ function searchBook(query: string) {
       for (const value of [...japanese, ...vietnamese]) {
         const normalized = normalize(value);
         if (!normalized.includes(term)) continue;
-        const rank = normalized === term ? 0 : row.heading ? 1 : 2;
+        const rank = normalized === term ? 2 : row.heading ? 3 : 4;
         if (best && best.rank <= rank) continue;
         const label = value.replaceAll("**", "");
         const start = Math.max(0, normalized.indexOf(term) - 28);
         best = { page, rank, label: (start ? "…" : "") + label.slice(start, start + 116) + (label.length > start + 116 ? "…" : "") };
       }
     }
-    if (best) results.push(best);
+    if (best) results.set(page, best);
   }
-  return results.sort((a, b) => a.rank - b.rank || a.page - b.page);
+  return [...results.values()].sort((a, b) => a.rank - b.rank || a.page - b.page);
 }
 
 export function IndexLookup({ page, query }: { page: number; query: string }) {

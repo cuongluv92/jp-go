@@ -1,44 +1,47 @@
-import Image from "next/image";
-import references from "./index-references.json";
+import entries from "./index-entries.json";
 import { bookPageHref } from "./index-lookup";
 
-export const indexPages = [538, 539, 540, 541, 542, 543, 544, 545, 546, 547];
-const width = 1250;
-const height = 1900;
+export const indexPages = Object.keys(entries).map(Number);
 
-export function BookIndexScan({ page, availablePages }: { page: number; availablePages: number[] }) {
-  const src = `/denken/index/${page}.webp`;
-  const links = references[String(page) as keyof typeof references] ?? [];
+type IndexReference = number | string;
+type IndexRow = string | [term: string, references: IndexReference[]];
+const columnsByPage = entries as Record<string, IndexRow[][]>;
+
+export function BookIndex({ page, availablePages }: { page: number; availablePages: number[] }) {
+  const columns = columnsByPage[String(page)] ?? [];
+  const available = new Set(availablePages);
 
   return (
-    <figure className="mx-auto max-w-[60rem] space-y-2">
-      <figcaption className="flex flex-wrap items-baseline justify-between gap-2 text-sm">
-        <span className="text-muted">Nhấn số trang có gạch dưới để mở bài trong tab mới.</span>
-        <a href={src} target="_blank" rel="noopener noreferrer" className="text-accent underline underline-offset-2">
-          Mở ảnh phóng to
-        </a>
-      </figcaption>
-      <div className="relative overflow-hidden rounded-lg ring-1 ring-border">
-        <Image src={src} alt={`索引 · Ảnh tra cứu thuật ngữ trang ${page}`} width={width} height={height}
-          unoptimized className="block h-auto w-full" />
-        {links.map(([target, x, y, w, h]) => {
-          const href = target === "xx" ? "/denken#quantity-symbols"
-            : typeof target === "number" && availablePages.includes(target) ? bookPageHref(target) : null;
-          if (!href) return null;
-          const label = `Mở trang ${target} trong tab mới`;
-          return (
-            <a key={`${x}-${y}-${target}`} href={href} target="_blank" rel="noopener noreferrer"
-              aria-label={label} title={label}
-              className="absolute border-b border-sky-700 hover:bg-sky-400/30 focus-visible:z-10 focus-visible:outline-2 focus-visible:outline-sky-700"
-              style={{
-                left: `${(Number(x) - 2) / width * 100}%`,
-                top: `${(Number(y) - 2) / height * 100}%`,
-                width: `${(Number(w) + 4) / width * 100}%`,
-                height: `${(Number(h) + 5) / height * 100}%`,
-              }} />
-          );
-        })}
-      </div>
-    </figure>
+    <div aria-label="Danh sách thuật ngữ theo sách" className="mx-auto grid max-w-[90rem] items-start gap-x-5 gap-y-6 md:grid-cols-2 xl:grid-cols-3" lang="ja">
+      {columns.map((rows, column) => (
+        <ul key={column} className="min-w-0 space-y-0.5">
+          {rows.map((row, index) => {
+            if (typeof row === "string") {
+              return <li key={index} className="rounded-md bg-red-100 px-2 py-1 text-center font-semibold text-red-900 dark:bg-red-950 dark:text-red-200">{row}</li>;
+            }
+            const [term, references] = row;
+            return (
+              <li key={index} className="flex min-h-7 items-baseline gap-1.5 rounded px-1 py-0.5 text-sm hover:bg-surface-muted">
+                <span className="min-w-0 break-words font-jp">{term}</span>
+                <span aria-hidden="true" className="min-w-2 flex-1 border-b border-dotted border-border" />
+                <span className="flex shrink-0 flex-wrap justify-end gap-x-1.5 tabular-nums text-red-700 dark:text-red-300">
+                  {references.map((target, occurrence) => {
+                    const href = target === "xx" ? "/denken#quantity-symbols"
+                      : typeof target === "number" && available.has(target) ? bookPageHref(target) : null;
+                    return href ? (
+                      <a key={occurrence} href={href} target="_blank" rel="noopener noreferrer" lang="vi"
+                        aria-label={`${term} · Mở trang ${target} trong tab mới`}
+                        className="rounded-sm px-0.5 underline underline-offset-2 hover:bg-red-100 dark:hover:bg-red-950">
+                        {target}
+                      </a>
+                    ) : <span key={occurrence}>{target}</span>;
+                  })}
+                </span>
+              </li>
+            );
+          })}
+        </ul>
+      ))}
+    </div>
   );
 }

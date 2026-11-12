@@ -5,7 +5,7 @@ import { PageKeyboardNav } from "@/components/exam/page-keyboard-nav";
 import { WideContainer } from "@/components/exam/wide-container";
 import { enrichLessonPart } from "./readings";
 import { ContentsTree } from "../contents-tree";
-import { BookIndexScan, indexPages } from "../book-index";
+import { BookIndex, indexPages } from "../book-index";
 import { bookPageHref, IndexLookup } from "../index-lookup";
 import { lesson } from "./lesson";
 import { OhmReader } from "./reader";
@@ -162,7 +162,7 @@ export default async function OhmLesson({ searchParams }: { searchParams: Promis
             </nav>
           </div>
           <h1 className="font-jp text-xl font-bold">{title} <span className="text-sm text-red-700 dark:text-red-300">p.{page}</span></h1>
-          {isIndex ? <><IndexLookup page={page} query={query} /><BookIndexScan page={page} availablePages={pages} /></> : <OhmReader rows={rows} />}
+          {isIndex ? <><IndexLookup page={page} query={query} /><BookIndex page={page} availablePages={pages} /></> : <OhmReader rows={rows} />}
         </main>
       </div>
     </WideContainer>
