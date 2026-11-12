@@ -1,4 +1,5 @@
 import { lawPages } from "./law-pages";
+import { mathPages } from "./math-pages";
 import { opampPages } from "./opamp-pages";
 import { electricPowerPages } from "./electric-power-pages";
 import { electricPowerContinuation } from "./electric-power-continuation";
@@ -86,6 +87,7 @@ export const lesson: Record<number, LessonRow[]> = {
   ...electricPowerContinuation,
   ...machinePages,
   ...lawPages,
+  ...mathPages,
   2: [
     { jp: "オームの法則 といえば 電圧÷電流＝抵抗", vi: "Định luật Ohm · Điện áp chia dòng điện bằng điện trở", heading: true },
     { diagram: "examples" },

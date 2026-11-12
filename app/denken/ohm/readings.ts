@@ -742,12 +742,51 @@ const powerReadings = {
   "同位相": "どういそう",
 } as const;
 
+const mathReadings = {
+  通分: "つうぶん",
+  分母: "ぶんぼ",
+  分子: "ぶんし",
+  逆数: "ぎゃくすう",
+  内項: "ないこう",
+  外項: "がいこう",
+  比例配分: "ひれいはいぶん",
+  逆比例配分: "ぎゃくひれいはいぶん",
+  分路電流: "ぶんろでんりゅう",
+  円周角: "えんしゅうかく",
+  円周率: "えんしゅうりつ",
+  未知数: "みちすう",
+  移項: "いこう",
+  加減法: "かげんほう",
+  行列式法: "ぎょうれつしきほう",
+  定数項: "ていすうこう",
+  因数分解: "いんすうぶんかい",
+  三角関数: "さんかくかんすう",
+  逆三角関数: "ぎゃくさんかくかんすう",
+  斜辺: "しゃへん",
+  対辺: "たいへん",
+  三平方の定理: "さんへいほうのていり",
+  虚数単位: "きょすうたんい",
+  共役複素数: "きょうやくふくそすう",
+  実数部: "じっすうぶ",
+  虚数部: "きょすうぶ",
+  実軸: "じつじく",
+  虚軸: "きょじく",
+  極座標表示: "きょくざひょうひょうじ",
+  極形式: "きょくけいしき",
+  偏角: "へんかく",
+  常用対数: "じょうようたいすう",
+  真数: "しんすう",
+  単相等価回路: "たんそうとうかかいろ",
+  力率角: "りきりつかく",
+} as const;
+
 const technicalEntries = Object.entries(technicalReadings);
 const powerEntries = Object.entries({ ...technicalReadings, ...powerReadings });
 const lawEntries = Object.entries({ ...technicalReadings, ...lawReadings });
+const mathEntries = Object.entries({ ...technicalReadings, ...mathReadings });
 
-export function enrichLessonPart(part: string, section?: "law" | "power") {
-  const entries = section === "law" ? lawEntries : section === "power" ? powerEntries : technicalEntries;
+export function enrichLessonPart(part: string, section?: "law" | "power" | "math") {
+  const entries = section === "law" ? lawEntries : section === "power" ? powerEntries : section === "math" ? mathEntries : technicalEntries;
   const reviewed = entries.flatMap(([surface, reading]) =>
     Array.from(part.matchAll(new RegExp(surface, "g")), match => ({ surface, reading, start: match.index })),
   );

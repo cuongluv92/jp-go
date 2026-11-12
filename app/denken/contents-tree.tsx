@@ -44,7 +44,7 @@ export function ContentsTree({ currentPage }: { currentPage?: number }) {
         {subjects.map(([title, translation, page, chapters]) => (
           <details key={title} open={title === activeSubject?.[0] ? true : undefined} className="rounded-2xl border border-border bg-surface p-4">
             <summary className="cursor-pointer font-semibold">{title} · {translation} <span className={`text-sm font-normal ${bookRed}`}>p.{page}</span></summary>
-            {title === "法規" && Object.hasOwn(lesson, page) && (
+            {(title === "法規" || title === "数学") && Object.hasOwn(lesson, page) && (
               <Link prefetch={false} href={`/denken/ohm?trang=${page}`} aria-current={currentPage === page ? "page" : undefined} className="mt-3 inline-block text-sm underline underline-offset-2">Trang mở đầu · p.{page}</Link>
             )}
             <ul className="mt-3 space-y-2">

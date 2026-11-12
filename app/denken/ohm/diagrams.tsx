@@ -44,6 +44,23 @@ function PowerPageReference({ page }: { page: number }) {
 }
 
 export const diagrams = {
+  mathComplex530: <Diagram file="mathComplex530" width={300} height={286} title="図3-1-1 ベクトルの表し方 · Biểu diễn vectơ pha" labels={[["実軸", "Trục thực"], ["虚軸", "Trục ảo"]]} />,
+  mathConjugate530: <Diagram file="mathConjugate530" width={327} height={288} title="図3-1-2 共役複素数 · Số phức liên hợp" labels={[["実軸", "Trục thực"], ["虚軸", "Trục ảo"], ["θ、−θ", "Hai góc đối dấu"]]} />,
+  mathRotation531: <Diagram file="mathRotation531" width={420} height={277} title="図3-1-3 j とベクトルの回転 · Phép quay vectơ" labels={[["j を掛ける", "Nhân với j, quay ngược chiều kim đồng hồ 90°"], ["−j を掛ける", "Nhân với −j, quay theo chiều kim đồng hồ 90°"], ["j² = −1 を掛ける", "Nhân với −1, quay 180°"]]} />,
+  mathCircuit532: <Diagram file="mathCircuit532" width={283} height={182} title="練習問題 01 · Mạch xoay chiều ba nhánh" labels={[["V̇", "Điện áp chung của ba nhánh"], ["İ₁、İ₂、İ₃", "Dòng qua các nhánh"], ["İ", "Dòng tổng"]]} />,
+  mathPhase535: <Diagram file="mathPhase535" width={221} height={236} title="図3-3-1 電圧、電流のベクトル図 · Giản đồ pha điện áp và dòng điện" labels={[["基準線", "Đường chuẩn"], ["V̇", "Vectơ pha điện áp"], ["İ", "Vectơ pha dòng điện"]]} />,
+  mathVectorOperations536: <Diagram file="mathVectorOperations536" width={722} height={236} title="図3-3-2 ベクトルの計算 · Cộng và trừ vectơ" labels={[["ベクトルの三角形", "Quy tắc tam giác"], ["ベクトルの平行四辺形", "Quy tắc hình bình hành"], ["ベクトルの引き算", "Phép trừ vectơ"]]} />,
+  mathEquivalent536: <Diagram file="mathEquivalent536" width={494} height={245} title="図3-3-3 単相等価回路 · Mạch tương đương một pha" labels={[["抵抗電圧", "Sụt áp trên điện trở"], ["リアクタンス電圧", "Sụt áp trên điện kháng"], ["送電端電圧", "Điện áp đầu gửi"], ["受電端電圧", "Điện áp đầu nhận"]]} />,
+  mathLinePhasors537: <Diagram file="mathLinePhasors537" width={508} height={241} title="図3-3-4 電線路のベクトル図 · Giản đồ vectơ đường dây" labels={[["受電端電圧を基準", "Chọn điện áp đầu nhận làm chuẩn"], ["電流を基準", "Chọn dòng điện làm chuẩn"]]} />,
+  mathDeterminant526: <Diagram file="mathDeterminant526" width={710} height={509} title="行列式法 · Các bước lập định thức" labels={[["係数", "Hệ số"], ["定数項", "Số hạng hằng"], ["そのまま", "Giữ nguyên"], ["入れ換える", "Thay cột hệ số bằng cột hằng số"]]} />,
+  mathRightTriangle528: <Diagram file="mathRightTriangle528" width={208} height={159} title="図2-2-1 直角三角形 · Tam giác vuông" labels={[["斜辺", "Cạnh huyền"], ["対辺", "Cạnh đối"], ["底辺", "Cạnh kề"]]} />,
+  mathMnemonic528: <Diagram file="mathMnemonic528" width={797} height={65} title="三角比の覚え方 · Cách nhớ tỉ số lượng giác" labels={[["sin", "Đối chia huyền"], ["cos", "Kề chia huyền"], ["tan", "Đối chia kề"]]} />,
+  mathSpecialTriangles529: <Diagram file="mathSpecialTriangles529" width={378} height={483} title="表2-2-1 · Các tam giác vuông đặc biệt" labels={[["45°", "Tam giác vuông cân"], ["30°・60°", "Tam giác vuông 30°–60°"], ["3・4・5 / 5・12・13", "Hai bộ ba cạnh nguyên"]]} />,
+  mathCurrent520: <Diagram file="mathCurrent520" width={169} height={118} title="図1-3-1 分路電流 · Dòng điện nhánh" labels={[["I", "Dòng điện tổng"], ["I₁、I₂", "Dòng điện hai nhánh"], ["R₁、R₂", "Điện trở hai nhánh"]]} />,
+  mathOhm522: <Diagram file="mathOhm522" width={122} height={125} title="練習問題 03 · Mạch điện trở" labels={[["V", "Điện áp nguồn"], ["I", "Dòng điện"], ["R", "Điện trở"]]} />,
+  mathGeometry523: <Diagram file="mathGeometry523" width={293} height={220} title="表1-3-1 · Hình tròn và tam giác" labels={[["半径", "Bán kính"], ["直径", "Đường kính"], ["円周率", "Số pi"], ["a、h", "Cạnh đáy và chiều cao"]]} />,
+  mathParallel518: <Diagram file="mathParallel518" width={135} height={85} title="練習問題 01 · Hai điện trở song song" labels={[["R₁、R₂", "Hai điện trở nhánh"], ["a、b", "Hai đầu cần tính điện trở tương đương"]]} />,
+  mathSeries519: <Diagram file="mathSeries519" width={160} height={126} title="練習問題 01 · Hai điện trở nối tiếp" labels={[["R₁、R₂", "Hai điện trở nối tiếp"], ["V₁、V₂", "Điện áp trên mỗi điện trở"], ["V", "Điện áp nguồn"]]} />,
   powerCVCable396: (
     <Diagram file="powerCVCable396" width={587} height={236} title="図5-5-1 CVケーブルの例" labels={[
       ["単心", "Một lõi"],
