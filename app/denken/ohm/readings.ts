@@ -714,11 +714,41 @@ const technicalReadings = {
   国際標準軟銅: "こくさいひょうじゅんなんどう",
 } as const;
 
+const powerReadings = {
+  "速度変動率": "そくどへんどうりつ",
+  "速度調定率": "そくどちょうていりつ",
+  "全負荷遮断": "ぜんふかしゃだん",
+  "比速度": "ひそくど",
+  "吸出し水頭": "すいだしすいとう",
+  "単位落差": "たんいらくさ",
+  "抽気背圧タービン": "ちゅうきはいあつタービン",
+  "真空度": "しんくうど",
+  "発電端熱効率": "はつでんたんねつこうりつ",
+  "送電端熱効率": "そうでんたんねつこうりつ",
+  "所内比率": "しょないひりつ",
+  "重油": "じゅうゆ",
+  "風切り音": "かざきりおん",
+  "受風面積": "じゅふうめんせき",
+  "固体高分子形": "こたいこうぶんしがた",
+  "固体酸化物形": "こたいさんかぶつがた",
+  "溶融炭酸塩形": "ようゆうたんさんえんがた",
+  "系統連系保護装置": "けいとうれんけいほごそうち",
+  "日中": "にっちゅう",
+  "負荷時タップ切換装置": "ふかじタップきりかえそうち",
+  "計器用変成器": "けいきようへんせいき",
+  "調相設備": "ちょうそうせつび",
+  "調相機": "ちょうそうき",
+  "静止形無効電力補償装置": "せいしがたむこうでんりょくほしょうそうち",
+  "同位相": "どういそう",
+} as const;
+
 const technicalEntries = Object.entries(technicalReadings);
+const powerEntries = Object.entries({ ...technicalReadings, ...powerReadings });
 const lawEntries = Object.entries({ ...technicalReadings, ...lawReadings });
 
-export function enrichLessonPart(part: string, section?: "law") {
-  const reviewed = (section === "law" ? lawEntries : technicalEntries).flatMap(([surface, reading]) =>
+export function enrichLessonPart(part: string, section?: "law" | "power") {
+  const entries = section === "law" ? lawEntries : section === "power" ? powerEntries : technicalEntries;
+  const reviewed = entries.flatMap(([surface, reading]) =>
     Array.from(part.matchAll(new RegExp(surface, "g")), match => ({ surface, reading, start: match.index })),
   );
   return enrichExamTextWithFurigana(part, reviewed);

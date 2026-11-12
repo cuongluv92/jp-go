@@ -110,7 +110,8 @@ export default async function OhmLesson({ searchParams }: { searchParams: Promis
     : page >= 14 ? "1‑5 テブナンの定理 · Định lý Thévenin"
     : page >= 12 ? "1‑4 キルヒホッフの法則 · Định luật Kirchhoff"
     : page >= 9 ? "1‑3 導体の抵抗 · Điện trở của vật dẫn" : page >= 5 ? "1‑2 直列・並列合成抵抗 · Điện trở nối tiếp và song song" : "1‑1 オームの法則 · Định luật Ohm";
-  const read = (text: string) => Promise.all(text.split("**").map(part => enrichLessonPart(part, isLaw ? "law" : undefined)));
+  const readingSection = isLaw ? "law" : page === 321 || powerChapter ? "power" : undefined;
+  const read = (text: string) => Promise.all(text.split("**").map(part => enrichLessonPart(part, readingSection)));
   const rows = await Promise.all(lesson[page].map(async row => {
     if ("diagram" in row) return row;
     const readings = await read(row.jp);

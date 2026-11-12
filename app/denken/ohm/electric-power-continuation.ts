@@ -220,6 +220,7 @@ export const electricPowerContinuation: Record<number, LessonRow[]> = {
     { diagram: "powerGroundFault406" },
     { jp: "図5-9-1(a)のように電線路の1線が点Pで地絡したときの地絡電流 İg [A] は、テブナンの定理を用いて求めます。", vi: "Khi một pha của đường dây chạm đất ở điểm P như hình 5-9-1(a), tính dòng chạm đất İg theo định lý Thévenin." },
     { jp: "図5-9-1(b)及び(c)のように、地絡点Pの地絡発生前の対地電圧は、Ė [V] です。（ŻがないときのP点と対地間電圧）。Żがないときの点Pと対地間から回路内を見た合成インピーダンス Ż₀は、同図(b)のĖを除いた回路である同図(d)で求めます。", vi: "Theo hình (b), (c), điện áp trước chạm đất giữa P và đất là Ė. Khi bỏ nhánh tổng trở sự cố Ż, tổng trở nhìn từ P về đất là Ż₀; để tìm Ż₀, thay nguồn Ė bằng ngắn mạch như hình (d).", note: "Ký hiệu dấu chấm biểu thị số phức/phasor. Không đồng nhất điện áp trước sự cố với điện áp tại điểm lỗi sau khi chạm đất." },
+    { jp: "注）図(a)のようにa相が地絡したとき、地絡電流は、抵抗 R と3線の静電容量 C を通して流れます。C を通して流れる地絡電流は、すべて同位相になります。したがって、地絡電流に対して、変圧器は短絡されているのと同じになり、各相の C と抵抗 R は、並列接続されていることになります。", vi: "Chú thích hình (a): Khi pha a chạm đất, dòng sự cố có đường về qua điện trở R và điện dung C của cả ba dây. Các thành phần dòng qua C cùng pha. Trong mạch tương đương dùng để tính dòng sự cố, máy biến áp được thay bằng nối tắt, nên ba điện dung C và điện trở R mắc song song.", note: "Kết luận R song song với 3C áp dụng cho mạch tương đương trong hình và giả thiết điện dung đối đất của ba pha bằng nhau." },
     { jp: "R [Ω]と1/(j3ωC) [Ω]の並列合成インピーダンス Ż₀ [Ω]は、和分の積より、", vi: "Tổng trở tương đương của điện trở R mắc song song với tổng trở điện dung của ba pha:", equations: [["Ż₀ = ", {"fraction": [["R × ", {"fraction": [["1"], ["j3ωC"]]}], ["R + ", {"fraction": [["1"], ["j3ωC"]]}]]}], ["Ż₀ = ", {"fraction": [["R"], ["1 + j3ωCR"]]}, " [Ω]"]] },
     { jp: "地絡電流 İg [A]は、テブナンの定理と図(c)の回路から、", vi: "Từ mạch tương đương Thévenin:", equations: [["İg = ", {"fraction": [["Ė"], ["Ż + ", {"fraction": [["R"], ["1 + j3ωCR"]]}]]}, " [A]"]] },
     { jp: "地絡電流の計算 **といえば** テブナンの定理を用いる。", vi: "Ghi nhớ: tính dòng chạm đất bằng mạch tương đương Thévenin.", heading: true, equations: [["İg = ", {"fraction": [["Ė"], ["Ż + Ż₀"]]}, " [A]"]], note: "Ba điện dung đối đất bằng nhau, mỗi pha có điện dung C. Các dòng qua điện dung cùng pha trong mạch tương đương nên ba điện dung mắc song song cho tổng điện dung 3C." },
@@ -243,30 +244,72 @@ export const electricPowerContinuation: Record<number, LessonRow[]> = {
     { jp: "高圧配電線路の方式", vi: "Các dạng lưới phân phối cao áp", heading: true },
     { jp: "高圧配電線路の方式の代表的なものに樹枝状方式、ループ方式があります。", vi: "Các dạng phổ biến gồm lưới hình cây (樹枝状方式) và lưới vòng (ループ方式)." },
     { diagram: "powerDistributionNetworks408" },
-    { jp: "樹枝状方式：負荷の分布に応じて樹枝状に分岐していく方式で、放射状方式ともいう。線路の延長が容易で設備費が安いという利点があるが、他の方式よりも電力損失、電圧変動が大きくなる。", vi: "Lưới hình cây (hình tia) rẽ nhánh theo vị trí phụ tải, dễ mở rộng và chi phí thấp, nhưng tổn thất công suất và biến thiên điện áp lớn hơn các dạng khác." },
-    { jp: "ループ方式（環状方式）：ループ状になっている形式で、電力損失、電圧降下が少なく、故障時には故障部分以外への電力の供給が可能。都市など、負荷密度の大きい地域に適している。", vi: "Lưới vòng: tạo mạch vòng; có thể giảm tổn thất và sụt áp, và khi sự cố có thể cô lập đoạn lỗi để cấp điện cho phần còn lại; thích hợp vùng đô thị có mật độ phụ tải lớn.", note: "Ảnh gốc trang 408 có sơ đồ hình cây và hình vòng, cần giữ để phân biệt cách ly sự cố." },
+    { jp: "表5-10-1 高圧配電線路の方式", vi: "Bảng 5-10-1 · Các dạng lưới phân phối cao áp", heading: true, table: {
+      jp: ["名称", "内容"],
+      vi: ["Phương thức", "Đặc điểm"],
+      rows: [
+        ["樹枝状方式", "Hình cây (hình tia)", "負荷の分布に応じて樹枝状に分岐していく方式で、放射状方式ともいう。線路の延長が容易で設備費が安いという利点があるが、他の方式よりも電力損失、電圧変動が大きくなる。"],
+        ["ループ方式（環状方式）", "Mạch vòng", "ループ状になっている形式で、電力損失、電圧降下が少なく、故障時には故障部分以外への電力の供給が可能。都市など、負荷密度の大きい地域に適している。"]
+      ],
+      rowsVi: [
+        ["樹枝状方式", "Hình cây (hình tia)", "Lưới hình cây (hình tia) rẽ nhánh theo vị trí phụ tải, dễ mở rộng và chi phí thấp, nhưng tổn thất công suất và biến thiên điện áp lớn hơn các dạng khác."],
+        ["ループ方式（環状方式）", "Mạch vòng", "Lưới vòng: tạo mạch vòng; có thể giảm tổn thất và sụt áp, và khi sự cố có thể cô lập đoạn lỗi để cấp điện cho phần còn lại; thích hợp vùng đô thị có mật độ phụ tải lớn."]
+      ],
+    } },
     { jp: "20 kV級（22 kVまたは33 kV）配電方式", vi: "Phân phối điện cấp 20 kV (22 hoặc 33 kV)", heading: true },
     { jp: "電力需要の増大に対応するために、20 kV級の架空配電方式、地中配電方式があります。", vi: "Để đáp ứng nhu cầu phụ tải tăng, có phương án phân phối trên không và ngầm ở cấp 20 kV." },
-    { jp: "20 kV級直接供給方式：大口需要家に対して直接20 kV級配電線で供給する方式。", vi: "Cấp trực tiếp 20 kV: cung cấp thẳng bằng đường dây cấp 20 kV cho khách hàng có nhu cầu lớn." },
-    { jp: "20 kV級／低圧・直接てい降供給方式：20 kV級配電線より配電用変圧器を介して直接低圧に電圧を下げ、一般低圧需要家に供給する方式。22 kV（33 kV）→100、200、240/415 V。", vi: "Hạ trực tiếp từ 20 kV xuống hạ áp qua máy biến áp phân phối, cấp cho khách hàng thông thường; sách minh họa 22/33 kV xuống 100, 200 hoặc 240/415 V." },
-    { jp: "20 kV級／6.6 kV配電塔供給方式：20 kV級配電線より配電塔を介して6.6 kVの高圧に降圧し、需要家に供給する方式。", vi: "Qua trạm phân phối: hạ 20 kV xuống 6,6 kV tại trạm trung gian, sau đó cấp điện cho khách hàng." },
+    { jp: "表5-10-2 20 kV級配電方式", vi: "Bảng 5-10-2 · Phân phối cấp 20 kV", heading: true, table: {
+      jp: ["種類", "内容"],
+      vi: ["Phương thức", "Đặc điểm"],
+      rows: [
+        ["20 kV級直接供給方式", "Cấp trực tiếp cấp 20 kV", "大口需要家に対して直接20 kV級配電線で供給する方式。"],
+        ["20 kV級／低圧・直接てい降供給方式", "Hạ trực tiếp xuống hạ áp", "20 kV級配電線より配電用変圧器を介して直接低圧に電圧を下げ、一般低圧需要家に供給する方式。22 kV（33 kV）→100、200、240/415 V。"],
+        ["20 kV級／6.6 kV配電塔供給方式", "Qua trạm phân phối 6,6 kV", "20 kV級配電線より配電塔を介して6.6 kVの高圧に降圧し、需要家に供給する方式。"]
+      ],
+      rowsVi: [
+        ["20 kV級直接供給方式", "Cấp trực tiếp cấp 20 kV", "Cấp trực tiếp 20 kV: cung cấp thẳng bằng đường dây cấp 20 kV cho khách hàng có nhu cầu lớn."],
+        ["20 kV級／低圧・直接てい降供給方式", "Hạ trực tiếp xuống hạ áp", "Hạ trực tiếp từ 20 kV xuống hạ áp qua máy biến áp phân phối, cấp cho khách hàng thông thường; sách minh họa 22/33 kV xuống 100, 200 hoặc 240/415 V."],
+        ["20 kV級／6.6 kV配電塔供給方式", "Qua trạm phân phối 6,6 kV", "Qua trạm phân phối: hạ 20 kV xuống 6,6 kV tại trạm trung gian, sau đó cấp điện cho khách hàng."]
+      ],
+    } },
     { diagram: "powerOriginalPage408" },
   ],
   409: [
     { jp: "特別高圧受電方式", vi: "Phương thức nhận điện đặc biệt cao áp", heading: true },
     { jp: "特別高圧受電方式には、一回線受電方式、本線予備線受電方式、ループ受電方式、スポットネットワーク受電方式があります。", vi: "Có các phương án nhận điện đặc biệt cao áp: một đường dây, chính–dự phòng, vòng, mạng spot network." },
-    { jp: "一回線受電方式：需要家までが1回線で接続され、シンプルで経済的な方式。", vi: "Một đường dây: từ nguồn đến khách hàng chỉ một tuyến; đơn giản, tiết kiệm." },
-    { jp: "本線予備線受電方式：給電線を2回線布設し、1回線を常用、一方を予備とする配電方式。本線故障時に本線側を開いて予備線側を入れることにより、短時間の停電で受電が再開可能。", vi: "Đường chính–dự phòng: hai tuyến, một tuyến thường dùng, một dự phòng. Nếu đường chính lỗi, cô lập và chuyển sang đường dự phòng để rút ngắn thời gian mất điện." },
-    { jp: "ループ受電方式：常時2回線で受電するため、片側の1回線が故障してもその回線を遮断することにより、もう一方の回線から受電を継続できる。", vi: "Nhận điện mạch vòng: nhận từ hai nhánh; nếu một nhánh sự cố có thể cách ly nhánh đó và tiếp tục nhận từ phía còn lại." },
-    { jp: "スポットネットワーク受電方式：22～33 kV変電所から2～4回線（標準3回線）の配電線で受電し、変圧器の二次側を並列にする方式。高層ビルや大工場の大容量負荷に用いる。", vi: "Spot network: nhận điện từ 2–4 đường dây (thường ba) cấp 22–33 kV, song song các phía thứ cấp máy biến áp; dùng cho cao ốc và nhà máy có nhu cầu lớn." },
-    { jp: "・一次側配電線または変圧器の1回線が故障しても、他の回線で無停電で負荷に電力を供給できる。", vi: "Nếu một đường dây phía sơ cấp hoặc một nhánh máy biến áp hỏng, các nhánh còn lại có thể duy trì cấp điện không gián đoạn." },
-    { jp: "・電圧降下、電力損失が少ない。電動機の始動によるフリッカの影響が少ない。負荷を増加しやすい。", vi: "Sụt áp, tổn thất nhỏ; ít ảnh hưởng nhấp nháy điện áp khi động cơ khởi động; dễ mở rộng tải." },
-    { jp: "・保護装置が複雑で建設費が高い。", vi: "Hệ thống bảo vệ phức tạp, chi phí đầu tư cao." },
+    { jp: "表5-10-3 特別高圧受電方式", vi: "Bảng 5-10-3 · Các phương thức nhận điện đặc biệt cao áp", heading: true, table: {
+      jp: ["名称", "内容"],
+      vi: ["Phương thức", "Đặc điểm"],
+      rows: [
+        ["一回線受電方式", "Một đường dây", "需要家までが1回線で接続され、シンプルで経済的な方式。"],
+        ["本線予備線受電方式", "Đường chính và dự phòng", "給電線を2回線布設し、1回線を常用、一方を予備とする配電方式。本線故障時に本線側を開いて予備線側を入れることにより、短時間の停電で受電が再開可能。"],
+        ["ループ受電方式", "Mạch vòng", "常時2回線で受電するため、片側の1回線が故障してもその回線を遮断することにより、もう一方の回線から受電を継続できる。"],
+        ["スポットネットワーク受電方式", "Mạng spot network", "22～33 kV変電所から2～4回線（標準3回線）の配電線で受電し、変圧器の二次側を並列にする方式。高層ビルや大工場の大容量負荷に用いる。\n・一次側配電線または変圧器の1回線が故障しても、他の回線で無停電で負荷に電力を供給できる。\n・電圧降下、電力損失が少ない。電動機の始動によるフリッカ（電圧降下の変動であり、蛍光灯などがちらつく）の影響が少ない。負荷を増加しやすい。\n・保護装置が複雑で建設費が高い。"]
+      ],
+      rowsVi: [
+        ["一回線受電方式", "Một đường dây", "Một đường dây: từ nguồn đến khách hàng chỉ một tuyến; đơn giản, tiết kiệm."],
+        ["本線予備線受電方式", "Đường chính và dự phòng", "Đường chính–dự phòng: hai tuyến, một tuyến thường dùng, một dự phòng. Nếu đường chính lỗi, cô lập và chuyển sang đường dự phòng để rút ngắn thời gian mất điện."],
+        ["ループ受電方式", "Mạch vòng", "Nhận điện mạch vòng: nhận từ hai nhánh; nếu một nhánh sự cố có thể cách ly nhánh đó và tiếp tục nhận từ phía còn lại."],
+        ["スポットネットワーク受電方式", "Mạng spot network", "Spot network: nhận điện từ 2–4 đường dây (thường ba) cấp 22–33 kV, song song các phía thứ cấp máy biến áp; dùng cho cao ốc và nhà máy có nhu cầu lớn.\n• Nếu một đường dây phía sơ cấp hoặc một nhánh máy biến áp hỏng, các nhánh còn lại có thể duy trì cấp điện không gián đoạn.\n• Sụt áp, tổn thất nhỏ; ít ảnh hưởng do dao động điện áp khi khởi động động cơ, chẳng hạn hiện tượng đèn huỳnh quang nhấp nháy; dễ mở rộng tải.\n• Hệ thống bảo vệ phức tạp, chi phí đầu tư cao."]
+      ],
+    } },
     { jp: "他の配電方式", vi: "Các phương án phân phối khác", heading: true },
-    { jp: "低圧バンキング方式：高圧配電線路に接続された2台以上の変圧器の二次側を並列に接続し、負荷の融通を図る方式。", vi: "Low-voltage banking: song song thứ cấp của ít nhất hai máy biến áp nối vào lưới cao áp, chia sẻ phụ tải." },
-    { jp: "レギュラーネットワーク方式：複数の特別高圧または高圧給電線に接続された変圧器を、ネットワークプロテクタを通して網目状の低圧幹線で並列運転させる配電方式。", vi: "Regular network: nhiều máy biến áp từ các feeder cao/trung áp nối song song qua network protector vào lưới hạ áp dạng mắt lưới." },
-    { jp: "400 V級配電方式：三相4線式で構成され、電動機負荷の大きなビルディングや工場などの需要家で採用される。動力は415 V三相3線式、蛍光灯や水銀灯などは単相240 V、コンセントや白熱電灯は100 Vに降圧する。", vi: "Phân phối cấp 400 V: hệ ba pha bốn dây cho công trình nhiều động cơ. Sách minh họa động lực 415 V ba pha, chiếu sáng 240 V một pha và ổ cắm/đèn sợi đốt qua hạ áp 100 V." },
+    { jp: "表5-10-4 その他の配電方式", vi: "Bảng 5-10-4 · Các phương thức phân phối khác", heading: true, table: {
+      jp: ["名称", "内容"],
+      vi: ["Phương thức", "Đặc điểm"],
+      rows: [
+        ["低圧バンキング方式", "Ghép song song hạ áp", "高圧配電線路に接続された2台以上の変圧器の二次側を並列に接続し、負荷の融通を図る方式。"],
+        ["レギュラーネットワーク方式", "Mạng regular network", "複数の特別高圧または高圧給電線に接続された変圧器を、ネットワークプロテクタを通して**網目状**の低圧幹線で並列運転させる配電方式。100/200 Vの需要家に供給する方式で、故障が発生したとき故障回線を切り離して無停電で電力を供給できる。"],
+        ["400 V級配電方式", "Phân phối cấp 400 V", "三相4線式で構成され、電動機負荷の大きなビルディングや工場などの需要家で採用される。動力は415 V三相3線式、蛍光灯や水銀灯などは単相240 V、コンセントや白熱電灯は100 Vに降圧する。"]
+      ],
+      rowsVi: [
+        ["低圧バンキング方式", "Ghép song song hạ áp", "Low-voltage banking: song song thứ cấp của ít nhất hai máy biến áp nối vào lưới cao áp, chia sẻ phụ tải."],
+        ["レギュラーネットワーク方式", "Mạng regular network", "Các máy biến áp nối vào nhiều đường cấp cao áp hoặc đặc biệt cao áp, vận hành song song qua thiết bị bảo vệ mạng trên **lưới chính hạ áp dạng mắt lưới**. Cấp cho khách hàng dùng 100/200 V. Khi có sự cố, có thể tách nhánh lỗi và duy trì cấp điện."],
+        ["400 V級配電方式", "Phân phối cấp 400 V", "Phân phối cấp 400 V: hệ ba pha bốn dây cho công trình nhiều động cơ. Sách minh họa động lực 415 V ba pha, chiếu sáng 240 V một pha và ổ cắm/đèn sợi đốt qua hạ áp 100 V."]
+      ],
+    } },
     { diagram: "powerDistribution400V409" },
+    { jp: "※1 スポットネットワーク方式とレギュラーネットワーク方式：スポットネットワーク方式は大口需要家一か所だけに対し、レギュラーネットワーク方式は高密度負荷地域の商店街、繁華街といった地域の一般需要家を対象としています。", vi: "Chú thích 1: Spot network phục vụ một địa điểm có phụ tải lớn. Regular network phục vụ nhiều khách hàng thông thường tại khu phụ tải dày đặc, như phố mua sắm hoặc khu thương mại." },
     { diagram: "powerOriginalPage409" },
   ],
   410: [
@@ -319,6 +362,7 @@ export const electricPowerContinuation: Record<number, LessonRow[]> = {
     { jp: "(b) A-Bにおける電圧降下率の値 [%] として、最も近いものを次の(1)～(5)のうちから一つ選べ。", vi: "(b) Chọn tỷ lệ sụt áp đoạn A–B gần đúng nhất: (1) 4,9; (2) 5,1; (3) 5,3; (4) 5,5; (5) 5,7%." },
     { jp: "解き方 (a) A、B、C点の負荷電流及びS-A間の電流の三角形は下図のようになります。", vi: "Giải (a): cộng dòng điện theo vectơ bằng tổng các thành phần tác dụng và phản kháng.", equations: [["Iₛₐ hữu công = 200×0.8 + 100×0.6 + 200 = 420 [A]"], ["Iₛₐ vô công = 200×0.6 + 100×0.8 = 200 [A]"], ["Iₛₐ = √(420² + 200²) ≒ 465 [A]"]] },
     { diagram: "powerCurrentTriangles413" },
+    { jp: "力率 cos θ＝0.8 のとき無効率 sin θ＝0.6。力率 cos θ＝0.6 のとき無効率 sin θ＝0.8。", vi: "Với tải A có cos θ = 0,8 thì sin θ = 0,6. Với tải B có cos θ = 0,6 thì sin θ = 0,8. Dùng các giá trị này để tách dòng tải thành thành phần tác dụng và phản kháng.", equations: [["sin θ = √(1 − cos² θ) = √(1 − 0.8²) = √0.36 = 0.6"]] },
     { jp: "解答 (a) **（5）**", vi: "Đáp án (a): **⑤ = 465 A**.", heading: true },
     { diagram: "powerOriginalPage413" },
   ],
