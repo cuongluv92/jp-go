@@ -723,7 +723,8 @@
       "21,6"
     ],
     "solution": [
-      "Đường kính ngoài gồm ba đường kính sợi và hai lớp cách điện: 3×2+2×2=10 mm. Mùa nhiệt độ cao lấy tải loại A. Trên 1 m dây, F=980×0,010×1=9,8 N."
+      "Đường kính ngoài của dây lấy theo mặt cắt: ba đường kính sợi 2 mm và hai bề dày cách điện 2 mm, tổng cộng 10 mm. Trong điều kiện đề nêu, mùa nóng dùng tải loại 甲 (A).",
+      "Trên 1 m dây, diện tích chắn gió là 0,010 m². Lực gió bằng 980×0,010=9,8 N."
     ],
     "pages": [
       13
@@ -779,7 +780,8 @@
       "21,6"
     ],
     "solution": [
-      "Mùa lạnh lấy tải loại B. Đường kính kể cả băng là 10+2×6=22 mm. Áp lực tính loại B bằng một nửa loại A, nên F=490×0,022×1≈10,8 N."
+      "Trong điều kiện đề nêu, mùa lạnh dùng tải loại 乙 (B). Đường kính ngoài khi có băng là 10+2×6=22 mm. Áp lực tính loại 乙 bằng một nửa loại 甲, tức 490 Pa.",
+      "Trên 1 m dây, lực gió bằng 490×0,022≈10,8 N."
     ],
     "pages": [
       13

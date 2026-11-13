@@ -13,6 +13,7 @@ export function AnswerFeedbackModal({
   correct,
   choiceLabel,
   officialAnswer,
+  allChoicesAccepted = false,
   explanation,
   explanationJp,
   explanationJpTokens = [],
@@ -27,6 +28,7 @@ export function AnswerFeedbackModal({
   correct: boolean;
   choiceLabel: string;
   officialAnswer?: { label: string; text: string };
+  allChoicesAccepted?: boolean;
   explanation?: ReactNode;
   explanationJp?: string | null;
   explanationJpTokens?: FuriganaToken[];
@@ -74,9 +76,12 @@ export function AnswerFeedbackModal({
           correct ? "text-emerald-600 dark:text-emerald-400" : "text-red-600 dark:text-red-400"
         }`}
       >
-        {correct ? "Chính xác!" : "Chưa đúng"}
+        {allChoicesAccepted ? "Được tính điểm" : correct ? "Chính xác!" : "Chưa đúng"}
       </p>
       {!correct && <p className="mt-2 text-base text-muted">Bạn đã chọn {choiceLabel}. Có thể làm lại ngay hoặc quay lại câu này sau.</p>}
+      {allChoicesAccepted && (
+        <p className="mt-2 text-base text-muted">Theo quy tắc chấm của kỳ thi, mọi phương án ở câu này đều được tính điểm.</p>
+      )}
       {officialAnswer && (
         <div className="mt-3 rounded-lg border border-border px-3 py-2 text-left">
           <p className="text-sm font-semibold">Đáp án chính thức ({officialAnswer.label})</p>

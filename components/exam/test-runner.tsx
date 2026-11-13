@@ -323,6 +323,7 @@ export function TestRunner({
   const hasAnyChoices = useMemo(() => questions.some((q) => q.choices.length > 0), [questions]);
   const correctChoices = current?.choices.filter((choice) => choice.is_correct) ?? [];
   const correctChoice = correctChoices.length === 1 ? correctChoices[0] : null;
+  const allChoicesAccepted = correctChoices.length > 1 && correctChoices.length === current?.choices.length;
   const writtenAnswer = current?.answer_jp?.trim() ? current.answer_jp : null;
   const details = current ? questionDetails?.[current.id] : undefined;
   const questionLabel = (question: ExamQuestion) => questionDetails?.[question.id]?.label ?? question.question_number;
@@ -756,7 +757,11 @@ export function TestRunner({
             onToggleVisible={() => toggleColumnVisible("answer")}
             onToggleFocus={() => toggleColumnFocus("answer")}
           />
-          {correctChoices.length > 1 ? (
+          {allChoicesAccepted ? (
+            <p className="text-sm font-semibold text-accent">
+              Theo quy tắc chấm của kỳ thi, mọi phương án ở câu này đều được tính điểm.
+            </p>
+          ) : correctChoices.length > 1 ? (
             <p className="text-sm font-semibold text-accent">
               Đáp án được chấp nhận ({correctChoices.map((choice) => choice.choice_label).join(", ")})
             </p>
@@ -862,7 +867,8 @@ export function TestRunner({
         <AnswerFeedbackModal
           correct={feedback.correct}
           choiceLabel={feedback.choiceLabel}
-          officialAnswer={staticQuestions && correctChoices.length > 0 ? {
+          allChoicesAccepted={allChoicesAccepted}
+          officialAnswer={staticQuestions && !allChoicesAccepted && correctChoices.length > 0 ? {
             label: correctChoices.map((choice) => choice.choice_label).join(", "),
             text: correctChoice ? correctChoice.choice_vi ?? correctChoice.choice_jp : "",
           } : undefined}

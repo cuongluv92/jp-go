@@ -337,7 +337,8 @@
       "3600"
     ],
     "solution": [
-      "Sụt áp cho phép là 330 V. Dùng ΔU≈√3I(0,90×0,85+0,50×√(1−0,85²)) được I≈185 A. Từ P=√3×6.600×I×0,85 được khoảng 1.800 kW."
+      "Sụt áp tối đa bằng 6.600×0,05=330 V. Mỗi dây có R=2×0,45=0,90 Ω và X=2×0,25=0,50 Ω. Từ cosφ=0,85 suy ra sinφ≈0,5268.",
+      "Dùng gần đúng ΔU≈√3 I(R cosφ+X sinφ) khi góc lệch điện áp hai đầu nhỏ. Suy ra I≈185,3 A, nên P=√3×6.600×I×0,85≈1.800 kW, gần nhất 1.799 kW."
     ],
     "pages": [
       7
@@ -1013,7 +1014,7 @@
     "topic": "Lượng than dùng trong một ngày",
     "titleJp": "石炭火力の燃料消費量",
     "questionJp": "定格出力200 MWの石炭火力発電所がある。石炭の発熱量は28000 kJ/kg，定格出力時の発電端熱効率は36 %で，潜熱の影響は無視する。石炭は重量比で炭素70 %，水素他30 %とし，原子量は炭素12，酸素16，反応は C+O₂→CO₂ とする。 (a) 定格出力で1日運転したときの燃料重量 [t] を選べ。",
-    "questionVi": "Một nhà máy nhiệt điện than có công suất định mức 200 MW, nhiệt trị than 28.000 kJ/kg và hiệu suất nhiệt đầu phát 36% ở công suất định mức. Bỏ qua ảnh hưởng của nhiệt ẩn. Than có 70% cacbon và 30% chất khác theo khối lượng. Lấy nguyên tử khối cacbon là 12 và oxy là 16. Phản ứng oxy hóa cacbon là C+O₂→CO₂.\n\n(a) Chọn khối lượng nhiên liệu tiêu thụ (tấn) gần nhất khi chạy định mức trong một ngày.",
+    "questionVi": "Một nhà máy nhiệt điện than có công suất định mức 200 MW, nhiệt trị than 28.000 kJ/kg và hiệu suất nhiệt đầu phát 36% ở công suất định mức. Bỏ qua ảnh hưởng của nhiệt ẩn. Than có 70% cacbon và 30% hydro cùng các chất khác theo khối lượng. Lấy nguyên tử khối cacbon là 12 và oxy là 16. Phản ứng oxy hóa cacbon là C+O₂→CO₂.\n\n(a) Chọn khối lượng nhiên liệu tiêu thụ (tấn) gần nhất khi chạy định mức trong một ngày.",
     "choicesJp": [
       "222",
       "410",
@@ -1053,7 +1054,7 @@
     "topic": "Khối lượng CO₂ phát sinh",
     "titleJp": "石炭火力の二酸化炭素発生量",
     "questionJp": "定格出力200 MWの石炭火力発電所がある。石炭の発熱量は28000 kJ/kg，定格出力時の発電端熱効率は36 %で，潜熱の影響は無視する。石炭は重量比で炭素70 %，水素他30 %とし，原子量は炭素12，酸素16，反応は C+O₂→CO₂ とする。 (b) 定格出力で1日運転したときの二酸化炭素の重量 [t] を選べ。",
-    "questionVi": "Một nhà máy nhiệt điện than có công suất định mức 200 MW, nhiệt trị than 28.000 kJ/kg và hiệu suất nhiệt đầu phát 36% ở công suất định mức. Bỏ qua ảnh hưởng của nhiệt ẩn. Than có 70% cacbon và 30% chất khác theo khối lượng. Lấy nguyên tử khối cacbon là 12 và oxy là 16. Phản ứng oxy hóa cacbon là C+O₂→CO₂.\n\n(b) Chọn khối lượng CO₂ phát sinh (tấn) gần nhất khi chạy định mức trong một ngày.",
+    "questionVi": "Một nhà máy nhiệt điện than có công suất định mức 200 MW, nhiệt trị than 28.000 kJ/kg và hiệu suất nhiệt đầu phát 36% ở công suất định mức. Bỏ qua ảnh hưởng của nhiệt ẩn. Than có 70% cacbon và 30% hydro cùng các chất khác theo khối lượng. Lấy nguyên tử khối cacbon là 12 và oxy là 16. Phản ứng oxy hóa cacbon là C+O₂→CO₂.\n\n(b) Chọn khối lượng CO₂ phát sinh (tấn) gần nhất khi chạy định mức trong một ngày.",
     "choicesJp": [
       "327",
       "1052",

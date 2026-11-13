@@ -476,8 +476,8 @@
     "key": "8",
     "topic": "Độ biến thiên điện áp máy biến áp và quy tắc chấm",
     "titleJp": "単相変圧器の電圧変動",
-    "questionJp": "単相変圧器の一次抵抗と漏れリアクタンスが励磁回路のインピーダンスに比べ十分小さいとし，二次側に換算した簡易等価回路を考える。r₂₁=1.0×10⁻³ Ω，x₂₁=3.0×10⁻³ Ω，V₂ₙ=100 V，I₂ₙ=1 kA とする。遅れ力率80 %のとき，百分率抵抗降下 p，百分率リアクタンス降下 q，電圧変動率 ε の組合せを近似式で求める。図は訂正済みで，公式採点では全受験者の解答が正解となった。",
-    "questionVi": "Xét mạch tương đương gần đúng quy về thứ cấp của máy biến áp một pha như hình. Điện trở sơ cấp và điện kháng tản sơ cấp được coi là đủ nhỏ so với tổng trở mạch kích từ. Cho r₂₁=1,0×10⁻³ Ω, x₂₁=3,0×10⁻³ Ω, điện áp thứ cấp định mức 100 V và dòng thứ cấp định mức 1 kA. Với tải hệ số công suất 80% trễ, dùng công thức gần đúng để chọn bộ ba gần nhất gồm phần trăm sụt áp điện trở p, phần trăm sụt áp điện kháng q và độ biến thiên điện áp ε. Hình trong PDF đã được sửa. Đáp án chính thức công nhận mọi bài làm ở câu này.",
+    "questionJp": "単相変圧器の一次抵抗と漏れリアクタンスが励磁回路のインピーダンスに比べ十分小さいとし，二次側に換算した簡易等価回路を考える。r₂₁=1.0×10⁻³ Ω，x₂₁=3.0×10⁻³ Ω，V₂ₙ=100 V，I₂ₙ=1 kA とする。遅れ力率80 %のとき，百分率抵抗降下 p，百分率リアクタンス降下 q，電圧変動率 ε の組合せを近似式で求める。",
+    "questionVi": "Xét mạch tương đương gần đúng quy về thứ cấp của máy biến áp một pha như hình. Điện trở sơ cấp và điện kháng tản sơ cấp được coi là đủ nhỏ so với tổng trở mạch kích từ. Cho r₂₁=1,0×10⁻³ Ω, x₂₁=3,0×10⁻³ Ω, điện áp thứ cấp định mức 100 V và dòng thứ cấp định mức 1 kA. Với tải hệ số công suất 80% trễ, dùng công thức gần đúng để chọn bộ ba gần nhất gồm phần trăm sụt áp điện trở p, phần trăm sụt áp điện kháng q và độ biến thiên điện áp ε.",
     "choicesJp": [
       "3.0 · 1.0 · 3.0",
       "3.0 · 1.0 · 2.4",
@@ -493,7 +493,8 @@
       "1,0 · 3,0 · 2,6"
     ],
     "solution": [
-      "Theo hình đã sửa, p=100×1.000×0,001/100=1%, q=3%, ε≈p×0,8+q×0,6=2,6%, tương ứng (5). Theo thông báo chấm thi H26, mọi phương án đều được tính đúng."
+      "Kết quả tính theo sơ đồ đã đính chính: p=[[I₂ₙr₂₁~V₂ₙ]]×100=1,0% và q=[[I₂ₙx₂₁~V₂ₙ]]×100=3,0%. Với cosφ=0,8 trễ, sinφ=0,6. Áp dụng công thức gần đúng ε≈p cosφ+q sinφ=2,6%. Bộ số này ứng với phương án (5).",
+      "Khi chấm kỳ thi H26, trung tâm công nhận mọi phương án ở câu này do sơ đồ ban đầu có lỗi."
     ],
     "pages": [
       11
@@ -653,7 +654,8 @@
       "Dạng 2 · dạng 5 · dạng 3 · ngắn hơn"
     ],
     "solution": [
-      "Khi S mở, dòng cuộn cảm còn tiếp tục sau khi điện áp nguồn đổi dấu, nên e_d có đoạn âm. Khi có điôt hồi tiếp, dòng khép mạch qua điôt ở nửa chu kỳ âm, áp tải gần 0 và dòng duy trì lâu hơn."
+      "Khi S mở, dòng cuộn cảm tiếp tục chạy sau lúc điện áp nguồn đổi dấu. Điện áp tải có một đoạn âm (dạng 1), còn dòng tải giảm về 0 sau điểm nguồn qua 0 (dạng 5).",
+      "Khi S đóng, dòng ở nửa chu kỳ âm khép mạch qua điôt hồi tiếp. Điện áp tải xấp xỉ 0 trong khoảng đó (dạng 2), và dòng tải duy trì lâu hơn. Chọn (2)."
     ],
     "pages": [
       13,

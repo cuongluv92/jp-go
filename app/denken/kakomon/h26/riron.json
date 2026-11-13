@@ -549,14 +549,15 @@
       "RLC 直列回路でインピーダンス Z，電力 P，皮相電力 S を用いると，cosθ=R/Z，cosθ=S/P となる。"
     ],
     "choicesVi": [
-      "Giá trị cực đại Eₘ và giá trị trung bình Eₐ (lấy trên nửa chu kỳ dương) của suất điện động hình sin thỏa Eₐ=2Eₘ/π≈0,637Eₘ.",
+      "Giá trị cực đại Eₘ và giá trị trung bình Eₐ của suất điện động hình sin thỏa Eₐ=2Eₘ/π≈0,637Eₘ.",
       "Suất điện động e=100 sin(100πt) (V) có chu kỳ 20 ms.",
       "Trong mạch RLC nối tiếp, nếu ωL>1/(ωC) thì dòng trễ pha so với áp, nếu ωL<1/(ωC) thì dòng sớm pha.",
       "Trong mạch RLC nối tiếp, nếu ωL=1/(ωC) thì Z=R, áp và dòng cùng pha. Trạng thái đó gọi là cộng hưởng.",
       "Trong mạch RLC nối tiếp với tổng trở Z, công suất tác dụng P và công suất biểu kiến S, ta có cosθ=R/Z và cosθ=S/P."
     ],
     "solution": [
-      "P=UI cosθ và S=UI nên cosθ=P/S. Mạch nối tiếp có cosθ=R/|Z|. Lựa chọn (5) đảo P và S."
+      "Công thức ở (1) dùng giá trị trung bình trên nửa chu kỳ dương. Trung bình trên cả chu kỳ của sóng sin bằng 0.",
+      "Công suất tác dụng P=UI cosθ và công suất biểu kiến S=UI. Vì vậy cosθ=[[P~S]]=[[R~|Z|]]. Phương án (5) đảo P và S."
     ],
     "pages": [
       10
