@@ -13,6 +13,9 @@ import denryoku23 from "./h23/denryoku.json";
 import kikai23 from "./h23/kikai.json";
 import houki23 from "./h23/houki.json";
 import riron24 from "./h24/riron.json";
+import denryoku24 from "./h24/denryoku.json";
+import kikai24 from "./h24/kikai.json";
+import houki24 from "./h24/houki.json";
 
 export const denkenExamHref = "/denken/kakomon";
 
@@ -203,6 +206,9 @@ export const denkenPastExams = [
   makeExam(23, "kikai", kikai23),
   makeExam(23, "houki", houki23),
   makeExam(24, "riron", riron24),
+  makeExam(24, "denryoku", denryoku24),
+  makeExam(24, "kikai", kikai24),
+  makeExam(24, "houki", houki24),
 ];
 
 export function denkenQuestionHref(testSlug: string, key: string) {

@@ -1,0 +1,2768 @@
+[
+  {
+    "key": "1",
+    "topic": "直流機の構造",
+    "titleJp": "直流機の構造",
+    "questionJp": "直流機の固定子と回転子の構成，電機子鉄心を通る磁束と鉄心の種類，電機子巻線のつなぎ方について正しい組合せを選べ。",
+    "questionVi": "Máy điện một chiều gồm stato và rôto. Stato gồm (ア), gông từ và các bộ phận khác. Rôto gồm (イ), cổ góp và các bộ phận khác. Từ thông (ウ) qua lõi phần ứng nên dùng (エ). Cạnh bối dây hình lục giác nằm trong rãnh lõi. Hai cách nối bối dây là (オ) và quấn sóng. Dây quấn hai lớp có hai cạnh bối dây xếp trên dưới trong mỗi rãnh.",
+    "choicesJp": [
+      "界磁・電機子・交番・積層鉄心・重ね巻",
+      "界磁・電機子・一定・積層鉄心・直列巻",
+      "界磁・電機子・一定・鋳鉄・直列巻",
+      "電機子・界磁・交番・鋳鉄・重ね巻",
+      "電機子・界磁・一定・積層鉄心・直列巻"
+    ],
+    "choicesVi": [
+      "Phần kích từ · phần ứng · luân phiên · lõi thép lá · quấn xếp",
+      "Phần kích từ · phần ứng · không đổi · lõi thép lá · quấn nối tiếp",
+      "Phần kích từ · phần ứng · không đổi · gang · quấn nối tiếp",
+      "Phần ứng · phần kích từ · luân phiên · gang · quấn xếp",
+      "Phần ứng · phần kích từ · không đổi · lõi thép lá · quấn nối tiếp"
+    ],
+    "solution": [
+      "Phần kích từ nằm trên stato, phần ứng và cổ góp nằm trên rôto. Khi rôto quay, từ thông trong lõi đổi chiều.",
+      "Ghép lá giảm dòng xoáy. Hai dạng dây quấn là quấn xếp và quấn sóng."
+    ],
+    "theory": [
+      143
+    ],
+    "pages": [
+      1
+    ],
+    "answer": 1,
+    "readings": [
+      [
+        0,
+        2,
+        "ちょくりゅう"
+      ],
+      [
+        4,
+        3,
+        "こていし"
+      ],
+      [
+        8,
+        3,
+        "かいてんし"
+      ],
+      [
+        12,
+        2,
+        "こうせい"
+      ],
+      [
+        15,
+        3,
+        "でんきし"
+      ],
+      [
+        18,
+        2,
+        "てっしん"
+      ],
+      [
+        23,
+        2,
+        "じそく"
+      ],
+      [
+        26,
+        2,
+        "てっしん"
+      ],
+      [
+        32,
+        3,
+        "でんきし"
+      ]
+    ],
+    "choiceReadings": [
+      [
+        [
+          3,
+          3,
+          "でんきし"
+        ],
+        [
+          7,
+          2,
+          "こうばん"
+        ],
+        [
+          10,
+          2,
+          "せきそう"
+        ],
+        [
+          12,
+          2,
+          "てっしん"
+        ]
+      ],
+      [
+        [
+          3,
+          3,
+          "でんきし"
+        ],
+        [
+          7,
+          2,
+          "いってい"
+        ],
+        [
+          10,
+          2,
+          "せきそう"
+        ],
+        [
+          12,
+          2,
+          "てっしん"
+        ],
+        [
+          15,
+          2,
+          "ちょくれつ"
+        ]
+      ],
+      [
+        [
+          3,
+          3,
+          "でんきし"
+        ],
+        [
+          7,
+          2,
+          "いってい"
+        ],
+        [
+          13,
+          2,
+          "ちょくれつ"
+        ]
+      ],
+      [
+        [
+          0,
+          3,
+          "でんきし"
+        ],
+        [
+          7,
+          2,
+          "こうばん"
+        ]
+      ],
+      [
+        [
+          0,
+          3,
+          "でんきし"
+        ],
+        [
+          7,
+          2,
+          "いってい"
+        ],
+        [
+          10,
+          2,
+          "せきそう"
+        ],
+        [
+          12,
+          2,
+          "てっしん"
+        ],
+        [
+          15,
+          2,
+          "ちょくれつ"
+        ]
+      ]
+    ]
+  },
+  {
+    "key": "2",
+    "topic": "他励直流電動機の始動抵抗",
+    "titleJp": "他励直流電動機の始動抵抗",
+    "questionJp": "他励直流電動機を120 V，直列抵抗0.8 Ωで始動すると120 A流れた。40 Aになったとき外部抵抗を0.3 Ωに切り換える。速度と界磁は変化せず，インダクタンスとブラシ電圧降下，電機子反作用を無視する。切換え直後の電機子電流を求めよ。",
+    "questionVi": "Động cơ một chiều kích từ độc lập khởi động từ nguồn 120 V qua điện trở nối tiếp 0,8 Ω. Dòng phần ứng lúc bắt đầu là 120 A. Khi dòng giảm đến 40 A, đổi điện trở ngoài thành 0,3 Ω. Tính dòng ngay sau chuyển (A). Bỏ qua điện cảm, sụt áp chổi than và phản ứng phần ứng. Tốc độ tức thời, nguồn và dòng kích từ giữ nguyên.",
+    "choicesJp": [
+      "60",
+      "80",
+      "107",
+      "133",
+      "240"
+    ],
+    "choicesVi": [
+      "60",
+      "80",
+      "107",
+      "133",
+      "240"
+    ],
+    "solution": [
+      "Lúc khởi động sức phản điện động bằng 0, điện trở phần ứng = 120/120−0,8 = 0,2 Ω.",
+      "Trước chuyển, hiệu điện áp tạo dòng là 40(0,2+0,8)=40 V. Ngay sau chuyển sức phản điện động giữ nguyên, nên I = 40/(0,2+0,3)=80 A."
+    ],
+    "theory": [
+      147
+    ],
+    "pages": [
+      2
+    ],
+    "answer": 2,
+    "readings": [
+      [
+        2,
+        2,
+        "ちょくりゅう"
+      ],
+      [
+        4,
+        2,
+        "でんどう"
+      ],
+      [
+        14,
+        2,
+        "ちょくれつ"
+      ],
+      [
+        16,
+        2,
+        "ていこう"
+      ],
+      [
+        24,
+        2,
+        "しどう"
+      ],
+      [
+        48,
+        2,
+        "がいぶ"
+      ],
+      [
+        50,
+        2,
+        "ていこう"
+      ],
+      [
+        65,
+        2,
+        "そくど"
+      ],
+      [
+        71,
+        2,
+        "へんか"
+      ],
+      [
+        87,
+        2,
+        "でんあつ"
+      ],
+      [
+        89,
+        2,
+        "こうか"
+      ],
+      [
+        92,
+        3,
+        "でんきし"
+      ],
+      [
+        95,
+        3,
+        "はんさよう"
+      ],
+      [
+        99,
+        2,
+        "むし"
+      ],
+      [
+        110,
+        3,
+        "でんきし"
+      ],
+      [
+        113,
+        2,
+        "でんりゅう"
+      ]
+    ],
+    "choiceReadings": [
+      [],
+      [],
+      [],
+      [],
+      []
+    ]
+  },
+  {
+    "key": "3",
+    "topic": "誘導電動機の等価回路とトルク",
+    "titleJp": "誘導電動機の等価回路とトルク",
+    "questionJp": "滑りをsとする誘導電動機に関する記述として，誤っているものを選べ。",
+    "questionVi": "Chọn phát biểu sai về động cơ cảm ứng có hệ số trượt s.",
+    "choicesJp": [
+      "巻数比1なら二次誘導起電力の周波数と電圧は一次のs倍",
+      "等価回路では二次抵抗を1/s倍で表す",
+      "漏れリアクタンスがあり力率は1にならない",
+      "滑り一定で電圧を半分にすると電流とトルクが半分になる",
+      "同期ワットは二次銅損と動力出力の和"
+    ],
+    "choicesVi": [
+      "Với tỉ số vòng dây 1, tần số và điện áp cảm ứng thứ cấp bằng s lần sơ cấp",
+      "Trong mạch tương đương, điện trở thứ cấp biểu diễn bằng 1/s lần giá trị gốc",
+      "Có điện kháng tản nên hệ số công suất không bằng 1",
+      "Giữ s, giảm áp còn nửa thì dòng và mômen đều còn nửa",
+      "Công suất qua khe hở bằng tổn hao đồng thứ cấp cộng công suất cơ"
+    ],
+    "solution": [
+      "Với s cố định, tổng trở tương đương giữ nguyên và dòng tỉ lệ điện áp.",
+      "Mômen tỉ lệ bình phương điện áp trong điều kiện này, nên giảm áp một nửa làm mômen còn 1/4."
+    ],
+    "theory": [
+      162
+    ],
+    "pages": [
+      3
+    ],
+    "answer": 4,
+    "readings": [
+      [
+        7,
+        2,
+        "ゆうどう"
+      ],
+      [
+        9,
+        2,
+        "でんどう"
+      ],
+      [
+        16,
+        2,
+        "きじゅつ"
+      ]
+    ],
+    "choiceReadings": [
+      [
+        [
+          8,
+          2,
+          "ゆうどう"
+        ],
+        [
+          10,
+          2,
+          "きでん"
+        ],
+        [
+          14,
+          3,
+          "しゅうはすう"
+        ],
+        [
+          18,
+          2,
+          "でんあつ"
+        ]
+      ],
+      [
+        [
+          2,
+          2,
+          "かいろ"
+        ],
+        [
+          8,
+          2,
+          "ていこう"
+        ]
+      ],
+      [
+        [
+          11,
+          2,
+          "りきりつ"
+        ]
+      ],
+      [
+        [
+          2,
+          2,
+          "いってい"
+        ],
+        [
+          5,
+          2,
+          "でんあつ"
+        ],
+        [
+          14,
+          2,
+          "でんりゅう"
+        ]
+      ],
+      [
+        [
+          0,
+          2,
+          "どうき"
+        ],
+        [
+          13,
+          2,
+          "しゅつりょく"
+        ]
+      ]
+    ]
+  },
+  {
+    "key": "4",
+    "topic": "三相誘導電動機の効率",
+    "titleJp": "三相誘導電動機の効率",
+    "questionJp": "一次抵抗15 Ω，一次換算二次抵抗9 Ω，滑り0.1の三相誘導電動機がある。励磁電流は無視し，損失は一次及び二次銅損のみとする。効率を求めよ。",
+    "questionVi": "Động cơ cảm ứng ba pha có điện trở sơ cấp 15 Ω, điện trở thứ cấp quy về sơ cấp 9 Ω, độ trượt 0,1. Bỏ qua dòng kích từ và mọi tổn hao ngoài tổn hao đồng sơ cấp, thứ cấp. Tính hiệu suất (%).",
+    "choicesJp": [
+      "75",
+      "77",
+      "79",
+      "82",
+      "85"
+    ],
+    "choicesVi": [
+      "75",
+      "77",
+      "79",
+      "82",
+      "85"
+    ],
+    "solution": [
+      "Tính theo 3I², công suất vào tương ứng R₁+R₂′/s = 105 Ω.",
+      "Công suất cơ ứng với R₂′(1−s)/s = 81 Ω. Hiệu suất 81/105 ≈ 77%."
+    ],
+    "theory": [
+      163
+    ],
+    "pages": [
+      4
+    ],
+    "answer": 2,
+    "readings": [
+      [
+        2,
+        2,
+        "ていこう"
+      ],
+      [
+        15,
+        2,
+        "ていこう"
+      ],
+      [
+        27,
+        2,
+        "さんそう"
+      ],
+      [
+        29,
+        2,
+        "ゆうどう"
+      ],
+      [
+        31,
+        2,
+        "でんどう"
+      ],
+      [
+        38,
+        2,
+        "れいじ"
+      ],
+      [
+        40,
+        2,
+        "でんりゅう"
+      ],
+      [
+        43,
+        2,
+        "むし"
+      ],
+      [
+        47,
+        2,
+        "そんしつ"
+      ],
+      [
+        64,
+        2,
+        "こうりつ"
+      ]
+    ],
+    "choiceReadings": [
+      [],
+      [],
+      [],
+      [],
+      []
+    ]
+  },
+  {
+    "key": "5",
+    "topic": "電動機と負荷のトルク特性",
+    "titleJp": "電動機と負荷のトルク特性",
+    "questionJp": "図のトルク曲線A，Bの交点Cが不安定となる場合について，A，Bの種類，Cより速度が低下した場合の挙動，及び誘導電動機の定トルク負荷で対応する速度範囲の組合せを選べ。",
+    "questionVi": "Trên đồ thị mômen theo tốc độ, A tăng và B giảm. Xác định vai trò A và B để C là điểm không ổn định, xu hướng khi tốc độ tụt dưới C và khoảng tốc độ tương ứng với C khi tải có mômen không đổi nằm giữa mômen khởi động và cực đại của động cơ cảm ứng.",
+    "choicesJp": [
+      "電動機・負荷・減速・零〜最大トルク速度",
+      "電動機・負荷・減速・最大トルク速度〜同期速度",
+      "負荷・電動機・減速・零〜最大トルク速度",
+      "負荷・電動機・加速・零〜最大トルク速度",
+      "負荷・電動機・加速・最大トルク速度〜同期速度"
+    ],
+    "choicesVi": [
+      "Động cơ · tải · giảm tốc · 0 đến tốc độ mômen cực đại",
+      "Động cơ · tải · giảm tốc · tốc độ mômen cực đại đến đồng bộ",
+      "Tải · động cơ · giảm tốc · 0 đến tốc độ mômen cực đại",
+      "Tải · động cơ · tăng tốc · 0 đến tốc độ mômen cực đại",
+      "Tải · động cơ · tăng tốc · tốc độ mômen cực đại đến đồng bộ"
+    ],
+    "solution": [
+      "Với A là mômen động cơ, tốc độ tụt dưới C làm mômen động cơ nhỏ hơn tải và máy tiếp tục giảm tốc.",
+      "Với tải mômen không đổi, điểm không ổn định nằm trên đoạn tăng từ tốc độ 0 đến tốc độ ứng với mômen cực đại."
+    ],
+    "theory": [
+      164
+    ],
+    "pages": [
+      5,
+      6
+    ],
+    "answer": 1,
+    "readings": [
+      [
+        5,
+        2,
+        "きょくせん"
+      ],
+      [
+        16,
+        2,
+        "あんてい"
+      ],
+      [
+        21,
+        2,
+        "ばあい"
+      ],
+      [
+        38,
+        2,
+        "そくど"
+      ],
+      [
+        41,
+        2,
+        "ていか"
+      ],
+      [
+        45,
+        2,
+        "ばあい"
+      ],
+      [
+        53,
+        2,
+        "ゆうどう"
+      ],
+      [
+        55,
+        2,
+        "でんどう"
+      ],
+      [
+        63,
+        2,
+        "ふか"
+      ],
+      [
+        70,
+        2,
+        "そくど"
+      ]
+    ],
+    "choiceReadings": [
+      [
+        [
+          0,
+          2,
+          "でんどう"
+        ],
+        [
+          4,
+          2,
+          "ふか"
+        ],
+        [
+          12,
+          2,
+          "さいだい"
+        ],
+        [
+          17,
+          2,
+          "そくど"
+        ]
+      ],
+      [
+        [
+          0,
+          2,
+          "でんどう"
+        ],
+        [
+          4,
+          2,
+          "ふか"
+        ],
+        [
+          10,
+          2,
+          "さいだい"
+        ],
+        [
+          15,
+          2,
+          "そくど"
+        ],
+        [
+          18,
+          2,
+          "どうき"
+        ],
+        [
+          20,
+          2,
+          "そくど"
+        ]
+      ],
+      [
+        [
+          0,
+          2,
+          "ふか"
+        ],
+        [
+          3,
+          2,
+          "でんどう"
+        ],
+        [
+          12,
+          2,
+          "さいだい"
+        ],
+        [
+          17,
+          2,
+          "そくど"
+        ]
+      ],
+      [
+        [
+          0,
+          2,
+          "ふか"
+        ],
+        [
+          3,
+          2,
+          "でんどう"
+        ],
+        [
+          12,
+          2,
+          "さいだい"
+        ],
+        [
+          17,
+          2,
+          "そくど"
+        ]
+      ],
+      [
+        [
+          0,
+          2,
+          "ふか"
+        ],
+        [
+          3,
+          2,
+          "でんどう"
+        ],
+        [
+          10,
+          2,
+          "さいだい"
+        ],
+        [
+          15,
+          2,
+          "そくど"
+        ],
+        [
+          18,
+          2,
+          "どうき"
+        ],
+        [
+          20,
+          2,
+          "そくど"
+        ]
+      ]
+    ]
+  },
+  {
+    "key": "6",
+    "topic": "同期発電機の自己励磁",
+    "titleJp": "同期発電機の自己励磁",
+    "questionJp": "同期発電機の自己励磁について，負荷力率，電機子反作用，端子電圧と負荷電流の変化，負荷の性質の組合せを選べ。",
+    "questionVi": "Máy phát đồng bộ không cấp kích từ vẫn có điện áp nhỏ nhờ từ dư. Chọn loại hệ số công suất tải, tác dụng của phản ứng phần ứng, biến đổi điện áp, biến đổi dòng tải và tính chất tải trong hiện tượng tự kích.",
+    "choicesJp": [
+      "進み・増磁・低下・増加・容量性",
+      "進み・減磁・低下・減少・誘導性",
+      "遅れ・減磁・低下・減少・誘導性",
+      "遅れ・増磁・上昇・増加・誘導性",
+      "進み・増磁・上昇・増加・容量性"
+    ],
+    "choicesVi": [
+      "Sớm · tăng từ · giảm · tăng · dung",
+      "Sớm · giảm từ · giảm · giảm · cảm",
+      "Trễ · giảm từ · giảm · giảm · cảm",
+      "Trễ · tăng từ · tăng · tăng · cảm",
+      "Sớm · tăng từ · tăng · tăng · dung"
+    ],
+    "solution": [
+      "Tải dung tạo dòng sớm pha, có tác dụng tăng từ trong máy phát.",
+      "Điện áp tăng làm dòng tải dung tăng. Quá trình tiến đến giao điểm đặc tuyến tải với đường bão hòa không tải."
+    ],
+    "theory": [
+      150
+    ],
+    "pages": [
+      7
+    ],
+    "answer": 5,
+    "readings": [
+      [
+        0,
+        2,
+        "どうき"
+      ],
+      [
+        2,
+        2,
+        "はつでん"
+      ],
+      [
+        8,
+        2,
+        "れいじ"
+      ],
+      [
+        15,
+        2,
+        "ふか"
+      ],
+      [
+        17,
+        2,
+        "りきりつ"
+      ],
+      [
+        20,
+        3,
+        "でんきし"
+      ],
+      [
+        23,
+        3,
+        "はんさよう"
+      ],
+      [
+        27,
+        2,
+        "たんし"
+      ],
+      [
+        29,
+        2,
+        "でんあつ"
+      ],
+      [
+        32,
+        2,
+        "ふか"
+      ],
+      [
+        34,
+        2,
+        "でんりゅう"
+      ],
+      [
+        37,
+        2,
+        "へんか"
+      ],
+      [
+        40,
+        2,
+        "ふか"
+      ],
+      [
+        43,
+        2,
+        "せいしつ"
+      ]
+    ],
+    "choiceReadings": [
+      [
+        [
+          6,
+          2,
+          "ていか"
+        ],
+        [
+          9,
+          2,
+          "ぞうか"
+        ],
+        [
+          12,
+          2,
+          "ようりょう"
+        ]
+      ],
+      [
+        [
+          6,
+          2,
+          "ていか"
+        ],
+        [
+          9,
+          2,
+          "げんしょう"
+        ],
+        [
+          12,
+          2,
+          "ゆうどう"
+        ]
+      ],
+      [
+        [
+          6,
+          2,
+          "ていか"
+        ],
+        [
+          9,
+          2,
+          "げんしょう"
+        ],
+        [
+          12,
+          2,
+          "ゆうどう"
+        ]
+      ],
+      [
+        [
+          6,
+          2,
+          "じょうしょう"
+        ],
+        [
+          9,
+          2,
+          "ぞうか"
+        ],
+        [
+          12,
+          2,
+          "ゆうどう"
+        ]
+      ],
+      [
+        [
+          6,
+          2,
+          "じょうしょう"
+        ],
+        [
+          9,
+          2,
+          "ぞうか"
+        ],
+        [
+          12,
+          2,
+          "ようりょう"
+        ]
+      ]
+    ]
+  },
+  {
+    "key": "7",
+    "topic": "単相変圧器の漏れリアクタンス",
+    "titleJp": "単相変圧器の漏れリアクタンス",
+    "questionJp": "単相変圧器の無負荷二次電圧を100%とする。同じ電流で力率0のリアクトル負荷では95%，力率1の抵抗負荷では98%となる。一次換算抵抗の合計は10 Ωで，鉄損と励磁電流を無視する。近似式で一次換算漏れリアクタンスの合計を求めよ。",
+    "questionVi": "Điện áp thứ cấp không tải của máy biến áp một pha là 100%. Với tải cuộn kháng cosφ=0, điện áp còn 95%. Với tải điện trở cosφ=1 và cùng dòng, còn 98%. Điện trở tổng quy về sơ cấp là 10 Ω. Bỏ qua tổn hao sắt và dòng kích từ. Dùng công thức sụt áp gần đúng, tính điện kháng tản tổng quy về sơ cấp (Ω).",
+    "choicesJp": [
+      "5",
+      "10",
+      "15",
+      "20",
+      "25"
+    ],
+    "choicesVi": [
+      "5",
+      "10",
+      "15",
+      "20",
+      "25"
+    ],
+    "solution": [
+      "Tải thuần trở có sụt áp gần đúng IR và tải thuần cảm có IX.",
+      "Cùng dòng và điện áp cơ sở, X/R=5/2 nên X=25 Ω."
+    ],
+    "theory": [
+      170
+    ],
+    "pages": [
+      8
+    ],
+    "answer": 5,
+    "readings": [
+      [
+        2,
+        2,
+        "へんあつ"
+      ],
+      [
+        7,
+        2,
+        "ふか"
+      ],
+      [
+        11,
+        2,
+        "でんあつ"
+      ],
+      [
+        24,
+        2,
+        "でんりゅう"
+      ],
+      [
+        27,
+        2,
+        "りきりつ"
+      ],
+      [
+        36,
+        2,
+        "ふか"
+      ],
+      [
+        44,
+        2,
+        "りきりつ"
+      ],
+      [
+        48,
+        2,
+        "ていこう"
+      ],
+      [
+        50,
+        2,
+        "ふか"
+      ],
+      [
+        65,
+        2,
+        "ていこう"
+      ],
+      [
+        80,
+        2,
+        "れいじ"
+      ],
+      [
+        82,
+        2,
+        "でんりゅう"
+      ],
+      [
+        85,
+        2,
+        "むし"
+      ]
+    ],
+    "choiceReadings": [
+      [],
+      [],
+      [],
+      [],
+      []
+    ]
+  },
+  {
+    "key": "8",
+    "topic": "三相変圧器の並行運転",
+    "titleJp": "三相変圧器の並行運転",
+    "questionJp": "三相変圧器の並行運転に関する記述として，誤っているものを選べ。",
+    "questionVi": "Chọn phát biểu sai về vận hành song song máy biến áp ba pha.",
+    "choicesJp": [
+      "極性不一致で大きな循環電流が流れる",
+      "変圧比不一致では無負荷でも循環電流が流れる",
+      "Δ–YとY–Yは並行運転できるがΔ–ΔとΔ–Yはできない",
+      "抵抗と漏れリアクタンスの比が違うと分担電流に位相差が生じる",
+      "百分率インピーダンス降下が異なると定格容量比どおり分担できない"
+    ],
+    "choicesVi": [
+      "Sai cực tính tạo dòng tuần hoàn lớn",
+      "Sai tỉ số biến áp gây dòng tuần hoàn kể cả không tải",
+      "Có thể chạy song song Δ–Y với Y–Y, nhưng không thể chạy Δ–Δ với Δ–Y",
+      "Tỉ số điện trở trên điện kháng tản khác nhau gây lệch pha dòng chia tải, làm giảm mức tận dụng công suất",
+      "Tổng trở phần trăm khác nhau khiến tải không chia theo tỉ lệ công suất định mức"
+    ],
+    "solution": [
+      "Điện áp thứ cấp của các máy chạy song song phải có cùng góc pha.",
+      "Δ–Y và Y–Y có góc lệch khác nhau, nên phần khẳng định có thể chạy song song trong (3) sai."
+    ],
+    "theory": [
+      175
+    ],
+    "pages": [
+      9
+    ],
+    "answer": 3,
+    "readings": [
+      [
+        0,
+        2,
+        "さんそう"
+      ],
+      [
+        2,
+        2,
+        "へんあつ"
+      ],
+      [
+        6,
+        2,
+        "へいこう"
+      ],
+      [
+        8,
+        2,
+        "うんてん"
+      ],
+      [
+        14,
+        2,
+        "きじゅつ"
+      ]
+    ],
+    "choiceReadings": [
+      [
+        [
+          0,
+          2,
+          "きょくせい"
+        ],
+        [
+          11,
+          2,
+          "でんりゅう"
+        ]
+      ],
+      [
+        [
+          0,
+          2,
+          "へんあつ"
+        ],
+        [
+          9,
+          2,
+          "ふか"
+        ],
+        [
+          15,
+          2,
+          "でんりゅう"
+        ]
+      ],
+      [
+        [
+          8,
+          2,
+          "へいこう"
+        ],
+        [
+          10,
+          2,
+          "うんてん"
+        ]
+      ],
+      [
+        [
+          0,
+          2,
+          "ていこう"
+        ],
+        [
+          19,
+          2,
+          "でんりゅう"
+        ],
+        [
+          22,
+          2,
+          "いそう"
+        ]
+      ],
+      [
+        [
+          0,
+          3,
+          "ひゃくぶんりつ"
+        ],
+        [
+          10,
+          2,
+          "こうか"
+        ],
+        [
+          19,
+          2,
+          "ようりょう"
+        ]
+      ]
+    ]
+  },
+  {
+    "key": "9",
+    "topic": "太陽光発電のパワーコンディショナ",
+    "titleJp": "太陽光発電のパワーコンディショナ",
+    "questionJp": "太陽光発電のパワーコンディショナについて，内蔵する変換装置，系統事故時に防止する運転状態，検出に用いる量及び不要な解列を避けるべき事象の組合せを選べ。",
+    "questionVi": "Thiết bị điều hòa công suất giữa tấm pin mặt trời và lưới hạ áp tích hợp (ア) với bảo vệ đấu nối. Khi lưới có sự cố, thiết bị ngắt để tránh (イ), phát hiện qua biến động pha điện áp và (ウ). Có biện pháp tránh tách lưới không cần thiết khi (エ).",
+    "choicesJp": [
+      "逆変換装置・単独運転・周波数・瞬時電圧低下",
+      "逆変換装置・単独運転・発電電力・瞬時電圧低下",
+      "逆変換装置・自立運転・発電電力・停電",
+      "整流装置・自立運転・発電電力・停電",
+      "整流装置・単独運転・周波数・停電"
+    ],
+    "choicesVi": [
+      "Nghịch lưu · vận hành cô lập · tần số · sụt áp tức thời",
+      "Nghịch lưu · vận hành cô lập · công suất phát · sụt áp tức thời",
+      "Nghịch lưu · vận hành độc lập · công suất phát · mất điện",
+      "Chỉnh lưu · vận hành độc lập · công suất phát · mất điện",
+      "Chỉnh lưu · vận hành cô lập · tần số · mất điện"
+    ],
+    "solution": [
+      "Pin tạo điện một chiều, nên cần nghịch lưu để cấp lưới xoay chiều.",
+      "Theo dõi pha và tần số giúp phát hiện vận hành cô lập. Sụt áp thoáng qua cần xử lý để tránh ngắt không cần thiết."
+    ],
+    "theory": [
+      365
+    ],
+    "pages": [
+      10
+    ],
+    "answer": 1,
+    "readings": [
+      [
+        0,
+        3,
+        "たいようこう"
+      ],
+      [
+        3,
+        2,
+        "はつでん"
+      ],
+      [
+        25,
+        2,
+        "へんかん"
+      ],
+      [
+        27,
+        2,
+        "そうち"
+      ],
+      [
+        30,
+        2,
+        "けいとう"
+      ],
+      [
+        32,
+        2,
+        "じこ"
+      ],
+      [
+        36,
+        2,
+        "ぼうし"
+      ],
+      [
+        40,
+        2,
+        "うんてん"
+      ],
+      [
+        42,
+        2,
+        "じょうたい"
+      ]
+    ],
+    "choiceReadings": [
+      [
+        [
+          1,
+          2,
+          "へんかん"
+        ],
+        [
+          3,
+          2,
+          "そうち"
+        ],
+        [
+          6,
+          2,
+          "たんどく"
+        ],
+        [
+          8,
+          2,
+          "うんてん"
+        ],
+        [
+          11,
+          3,
+          "しゅうはすう"
+        ],
+        [
+          15,
+          2,
+          "しゅんじ"
+        ],
+        [
+          17,
+          2,
+          "でんあつ"
+        ],
+        [
+          19,
+          2,
+          "ていか"
+        ]
+      ],
+      [
+        [
+          1,
+          2,
+          "へんかん"
+        ],
+        [
+          3,
+          2,
+          "そうち"
+        ],
+        [
+          6,
+          2,
+          "たんどく"
+        ],
+        [
+          8,
+          2,
+          "うんてん"
+        ],
+        [
+          11,
+          2,
+          "はつでん"
+        ],
+        [
+          13,
+          2,
+          "でんりょく"
+        ],
+        [
+          16,
+          2,
+          "しゅんじ"
+        ],
+        [
+          18,
+          2,
+          "でんあつ"
+        ],
+        [
+          20,
+          2,
+          "ていか"
+        ]
+      ],
+      [
+        [
+          1,
+          2,
+          "へんかん"
+        ],
+        [
+          3,
+          2,
+          "そうち"
+        ],
+        [
+          6,
+          2,
+          "じりつ"
+        ],
+        [
+          8,
+          2,
+          "うんてん"
+        ],
+        [
+          11,
+          2,
+          "はつでん"
+        ],
+        [
+          13,
+          2,
+          "でんりょく"
+        ],
+        [
+          16,
+          2,
+          "ていでん"
+        ]
+      ],
+      [
+        [
+          0,
+          2,
+          "せいりゅう"
+        ],
+        [
+          2,
+          2,
+          "そうち"
+        ],
+        [
+          5,
+          2,
+          "じりつ"
+        ],
+        [
+          7,
+          2,
+          "うんてん"
+        ],
+        [
+          10,
+          2,
+          "はつでん"
+        ],
+        [
+          12,
+          2,
+          "でんりょく"
+        ],
+        [
+          15,
+          2,
+          "ていでん"
+        ]
+      ],
+      [
+        [
+          0,
+          2,
+          "せいりゅう"
+        ],
+        [
+          2,
+          2,
+          "そうち"
+        ],
+        [
+          5,
+          2,
+          "たんどく"
+        ],
+        [
+          7,
+          2,
+          "うんてん"
+        ],
+        [
+          10,
+          3,
+          "しゅうはすう"
+        ],
+        [
+          14,
+          2,
+          "ていでん"
+        ]
+      ]
+    ]
+  },
+  {
+    "key": "10",
+    "topic": "サイリスタ全波整流回路",
+    "titleJp": "サイリスタ全波整流回路",
+    "questionJp": "交流電圧100 Vのサイリスタ全波整流器に抵抗負荷を接続する。サイリスタの電圧降下を無視して，制御遅れ角αに対する平均出力電圧V_dのグラフを選べ。",
+    "questionVi": "Mạch cầu thyristor cấp tải thuần trở từ nguồn xoay chiều 100 V hiệu dụng. Bỏ qua sụt áp van. Chọn đồ thị điện áp một chiều trung bình V_d theo góc kích trễ α (độ).",
+    "choicesJp": [
+      "図(1)",
+      "図(2)",
+      "図(3)",
+      "図(4)",
+      "図(5)"
+    ],
+    "choicesVi": [
+      "Đồ thị (1)",
+      "Đồ thị (2)",
+      "Đồ thị (3)",
+      "Đồ thị (4)",
+      "Đồ thị (5)"
+    ],
+    "solution": [
+      "Tải thuần trở dẫn từ α đến π trong mỗi nửa chu kỳ. Lấy tích phân điện áp sin và chia π, V_d = (100√2/π)(1+cosα).",
+      "V_d xấp xỉ 90 V tại 0°, 45 V tại 90° và 0 V tại 180°. Độ dốc về 0 tại hai đầu, khớp đồ thị (5)."
+    ],
+    "theory": [
+      251
+    ],
+    "pages": [
+      11,
+      12
+    ],
+    "answer": 5,
+    "readings": [
+      [
+        0,
+        2,
+        "こうりゅう"
+      ],
+      [
+        2,
+        2,
+        "でんあつ"
+      ],
+      [
+        17,
+        2,
+        "せいりゅう"
+      ],
+      [
+        21,
+        2,
+        "ていこう"
+      ],
+      [
+        23,
+        2,
+        "ふか"
+      ],
+      [
+        26,
+        2,
+        "せつぞく"
+      ],
+      [
+        37,
+        2,
+        "でんあつ"
+      ],
+      [
+        39,
+        2,
+        "こうか"
+      ],
+      [
+        42,
+        2,
+        "むし"
+      ],
+      [
+        47,
+        2,
+        "せいぎょ"
+      ],
+      [
+        57,
+        2,
+        "へいきん"
+      ],
+      [
+        59,
+        2,
+        "しゅつりょく"
+      ],
+      [
+        61,
+        2,
+        "でんあつ"
+      ]
+    ],
+    "choiceReadings": [
+      [],
+      [],
+      [],
+      [],
+      []
+    ]
+  },
+  {
+    "key": "11",
+    "topic": "電動機の発電制動と回生制動",
+    "titleJp": "電動機の発電制動と回生制動",
+    "questionJp": "整流器，平滑コンデンサ，インバータで電動機を駆動する。減速時に電力が戻る負荷の性質，直流側で電力を消費する素子と制動の名称，交流電源へ電力を戻す制動の名称を選べ。",
+    "questionVi": "Động cơ được cấp qua chỉnh lưu, tụ san bằng và nghịch lưu. Khi giảm tốc tải có (ア) lớn, năng lượng từ động cơ làm tăng áp DC. Mắc (イ) nối tiếp van công suất rồi đặt nhánh này song song với tụ để tiêu tán năng lượng, gọi là hãm (ウ). Dùng chỉnh lưu có khả năng nghịch lưu để trả điện về nguồn gọi là hãm (エ).",
+    "choicesJp": [
+      "慣性モーメント・抵抗・発電・回生",
+      "慣性モーメント・抵抗・降圧・発電",
+      "摩擦係数・抵抗・降圧・発電",
+      "慣性モーメント・リアクトル・発電・回生",
+      "摩擦係数・リアクトル・降圧・回生"
+    ],
+    "choicesVi": [
+      "Mômen quán tính · điện trở · phát điện · tái sinh",
+      "Mômen quán tính · điện trở · hạ áp · phát điện",
+      "Hệ số ma sát · điện trở · hạ áp · phát điện",
+      "Mômen quán tính · cuộn kháng · phát điện · tái sinh",
+      "Hệ số ma sát · cuộn kháng · hạ áp · tái sinh"
+    ],
+    "solution": [
+      "Tải quán tính lớn chứa nhiều động năng. Khi giảm tốc, động cơ phát điện về mạch DC.",
+      "Hãm phát điện tiêu tán năng lượng ở điện trở. Hãm tái sinh hoàn trả năng lượng về phía nguồn."
+    ],
+    "theory": [
+      251
+    ],
+    "pages": [
+      13
+    ],
+    "answer": 1,
+    "readings": [
+      [
+        0,
+        2,
+        "せいりゅう"
+      ],
+      [
+        4,
+        2,
+        "へいかつ"
+      ],
+      [
+        18,
+        2,
+        "でんどう"
+      ],
+      [
+        31,
+        2,
+        "でんりょく"
+      ],
+      [
+        36,
+        2,
+        "ふか"
+      ],
+      [
+        39,
+        2,
+        "せいしつ"
+      ],
+      [
+        42,
+        2,
+        "ちょくりゅう"
+      ],
+      [
+        46,
+        2,
+        "でんりょく"
+      ],
+      [
+        49,
+        2,
+        "しょうひ"
+      ],
+      [
+        56,
+        2,
+        "せいどう"
+      ],
+      [
+        62,
+        2,
+        "こうりゅう"
+      ],
+      [
+        64,
+        2,
+        "でんげん"
+      ],
+      [
+        67,
+        2,
+        "でんりょく"
+      ],
+      [
+        72,
+        2,
+        "せいどう"
+      ]
+    ],
+    "choiceReadings": [
+      [
+        [
+          8,
+          2,
+          "ていこう"
+        ],
+        [
+          11,
+          2,
+          "はつでん"
+        ]
+      ],
+      [
+        [
+          8,
+          2,
+          "ていこう"
+        ],
+        [
+          14,
+          2,
+          "はつでん"
+        ]
+      ],
+      [
+        [
+          2,
+          2,
+          "けいすう"
+        ],
+        [
+          5,
+          2,
+          "ていこう"
+        ],
+        [
+          11,
+          2,
+          "はつでん"
+        ]
+      ],
+      [
+        [
+          14,
+          2,
+          "はつでん"
+        ]
+      ],
+      [
+        [
+          2,
+          2,
+          "けいすう"
+        ]
+      ]
+    ]
+  },
+  {
+    "key": "12",
+    "topic": "誘導加熱と表皮効果",
+    "titleJp": "誘導加熱と表皮効果",
+    "questionJp": "交番磁束による渦電流で被加熱物を加熱する方式，加熱されにくい抵抗率，表面への電流集中を生じる効果，浸透深さを浅くする周波数及び深部加熱に適した周波数の組合せを選べ。",
+    "questionVi": "Từ thông xoay chiều gây dòng xoáy trong vật dẫn. Chọn phương pháp gia nhiệt, mức điện trở suất của vật tương đối khó gia nhiệt, hiệu ứng dồn dòng về bề mặt, chiều biến thiên tần số làm giảm độ sâu thâm nhập và tần số phù hợp để nung sâu.",
+    "choicesJp": [
+      "誘導・低い・表皮・低い・高い",
+      "誘電・高い・近接・低い・高い",
+      "誘導・低い・表皮・高い・低い",
+      "誘電・高い・表皮・低い・高い",
+      "誘導・高い・近接・高い・低い"
+    ],
+    "choicesVi": [
+      "Cảm ứng · thấp · bề mặt · thấp · cao",
+      "Điện môi · cao · lân cận · thấp · cao",
+      "Cảm ứng · thấp · bề mặt · cao · thấp",
+      "Điện môi · cao · bề mặt · thấp · cao",
+      "Cảm ứng · cao · lân cận · cao · thấp"
+    ],
+    "solution": [
+      "Gia nhiệt cảm ứng sử dụng nhiệt Joule do dòng xoáy. Theo so sánh trong đề, vật có điện trở suất thấp tương đối khó gia nhiệt.",
+      "Hiệu ứng bề mặt mạnh hơn khi tần số tăng. Muốn gia nhiệt sâu hơn thì giảm tần số."
+    ],
+    "theory": [
+      276
+    ],
+    "pages": [
+      14
+    ],
+    "answer": 3,
+    "readings": [
+      [
+        0,
+        2,
+        "こうばん"
+      ],
+      [
+        2,
+        2,
+        "じそく"
+      ],
+      [
+        8,
+        2,
+        "でんりゅう"
+      ],
+      [
+        12,
+        2,
+        "かねつ"
+      ],
+      [
+        16,
+        2,
+        "かねつ"
+      ],
+      [
+        20,
+        2,
+        "ほうしき"
+      ],
+      [
+        23,
+        2,
+        "かねつ"
+      ],
+      [
+        30,
+        2,
+        "ていこう"
+      ],
+      [
+        34,
+        2,
+        "ひょうめん"
+      ],
+      [
+        38,
+        2,
+        "でんりゅう"
+      ],
+      [
+        46,
+        2,
+        "こうか"
+      ],
+      [
+        58,
+        3,
+        "しゅうはすう"
+      ],
+      [
+        65,
+        2,
+        "かねつ"
+      ],
+      [
+        71,
+        3,
+        "しゅうはすう"
+      ]
+    ],
+    "choiceReadings": [
+      [
+        [
+          0,
+          2,
+          "ゆうどう"
+        ]
+      ],
+      [
+        [
+          0,
+          2,
+          "ゆうでん"
+        ]
+      ],
+      [
+        [
+          0,
+          2,
+          "ゆうどう"
+        ]
+      ],
+      [
+        [
+          0,
+          2,
+          "ゆうでん"
+        ]
+      ],
+      [
+        [
+          0,
+          2,
+          "ゆうどう"
+        ]
+      ]
+    ]
+  },
+  {
+    "key": "13",
+    "topic": "非反転演算増幅回路",
+    "titleJp": "非反転演算増幅回路",
+    "questionJp": "図の理想演算増幅器回路で，R₁＝10 kΩ，R₂＝120 kΩとする。入力と出力が動作範囲内のとき，出力電圧と入力電圧の比を求めよ。",
+    "questionVi": "Tìm tỉ số điện áp ra V₂ trên điện áp vào V₁ của mạch như hình, R₁=10 kΩ, R₂=120 kΩ. Op-amp lý tưởng và hoạt động trong vùng tuyến tính.",
+    "choicesJp": [
+      "−12",
+      "−10",
+      "10",
+      "12",
+      "13"
+    ],
+    "choicesVi": [
+      "−12",
+      "−10",
+      "10",
+      "12",
+      "13"
+    ],
+    "solution": [
+      "Đây là mạch khuếch đại không đảo với phản hồi âm. Điện áp đầu vào đảo bằng V₁ và dòng vào op-amp bằng 0.",
+      "Cầu chia áp phản hồi cho V₁=V₂R₁/(R₁+R₂). Suy ra V₂/V₁=13."
+    ],
+    "theory": [
+      126
+    ],
+    "pages": [
+      15
+    ],
+    "answer": 5,
+    "readings": [
+      [
+        9,
+        2,
+        "かいろ"
+      ],
+      [
+        35,
+        2,
+        "にゅうりょく"
+      ],
+      [
+        38,
+        2,
+        "しゅつりょく"
+      ],
+      [
+        41,
+        2,
+        "どうさ"
+      ],
+      [
+        50,
+        2,
+        "しゅつりょく"
+      ],
+      [
+        52,
+        2,
+        "でんあつ"
+      ],
+      [
+        55,
+        2,
+        "にゅうりょく"
+      ],
+      [
+        57,
+        2,
+        "でんあつ"
+      ]
+    ],
+    "choiceReadings": [
+      [],
+      [],
+      [],
+      [],
+      []
+    ]
+  },
+  {
+    "key": "14",
+    "topic": "論理回路の出力XとY",
+    "titleJp": "論理回路の出力XとY",
+    "questionJp": "図の論理回路でA，B，Cに対するXの論理式と，A＝0，B＝1，C＝1のときのYの組合せを選べ。",
+    "questionVi": "Từ sơ đồ, chọn biểu thức X theo A, B, C và giá trị Y tại A=0, B=1, C=1.",
+    "choicesJp": [
+      "A̅BC̅+AB̅C̅+A̅B̅C+ABC・Y=1",
+      "A̅BC+AB̅C̅+A̅B̅C+ABC・Y=0",
+      "A̅BC+AB̅C̅+A̅B̅C+ABC̅・Y=1",
+      "A̅BC̅+AB̅C̅+A̅B̅C+ABC・Y=0",
+      "A̅BC+A̅BC+A̅B̅C̅+ABC・Y=1"
+    ],
+    "choicesVi": [
+      "A̅BC̅+AB̅C̅+A̅B̅C+ABC · Y=1",
+      "A̅BC+AB̅C̅+A̅B̅C+ABC · Y=0",
+      "A̅BC+AB̅C̅+A̅B̅C+ABC̅ · Y=1",
+      "A̅BC̅+AB̅C̅+A̅B̅C+ABC · Y=0",
+      "A̅BC+A̅BC+A̅B̅C̅+ABC · Y=1"
+    ],
+    "solution": [
+      "Bốn cổng AND trên cho A̅BC̅, AB̅C̅, A̅B̅C, ABC. Cổng OR cộng bốn tích.",
+      "Ba NAND dưới nhận các cặp BC, AC và AB. Tại 011, BC=1 nên một đầu vào NAND cuối bằng 0 và Y=1."
+    ],
+    "theory": [
+      296
+    ],
+    "pages": [
+      16
+    ],
+    "answer": 1,
+    "readings": [
+      [
+        2,
+        2,
+        "ろんり"
+      ],
+      [
+        4,
+        2,
+        "かいろ"
+      ],
+      [
+        18,
+        2,
+        "ろんり"
+      ]
+    ],
+    "choiceReadings": [
+      [],
+      [],
+      [],
+      [],
+      []
+    ]
+  },
+  {
+    "key": "15a",
+    "topic": "単相インバータの電流波形",
+    "titleJp": "単相インバータの電流波形",
+    "questionJp": "単相インバータで誘導性負荷に給電する。\n(a) 図2の信号に対する負荷電流i_oと直流電流i_dの波形を選べ。",
+    "questionVi": "(a) Cầu nghịch lưu một pha cấp tải cảm. Dùng chiều dòng i_o và i_d như hình. Chọn cặp đồ thị của dòng tải và dòng nguồn DC khi các van S₁–S₄ đóng cắt theo tín hiệu Hình 2.",
+    "choicesJp": [
+      "アとエ",
+      "イとエ",
+      "ウとオ",
+      "アとオ",
+      "イとオ"
+    ],
+    "choicesVi": [
+      "ア và エ",
+      "イ và エ",
+      "ウ và オ",
+      "ア và オ",
+      "イ và オ"
+    ],
+    "solution": [
+      "Dòng tải cảm liên tục, tăng ở nửa chu kỳ điện áp tải dương và giảm ở nửa âm, khớp ア.",
+      "Dòng phía DC đổi quan hệ dấu với dòng tải khi đổi cặp van. Ngay sau chuyển mạch có dòng trả năng lượng, khớp エ."
+    ],
+    "theory": [
+      251
+    ],
+    "pages": [
+      17,
+      18
+    ],
+    "answer": 1,
+    "readings": [
+      [
+        8,
+        2,
+        "ゆうどう"
+      ],
+      [
+        11,
+        2,
+        "ふか"
+      ],
+      [
+        27,
+        2,
+        "しんごう"
+      ],
+      [
+        33,
+        2,
+        "ふか"
+      ],
+      [
+        35,
+        2,
+        "でんりゅう"
+      ],
+      [
+        41,
+        2,
+        "ちょくりゅう"
+      ],
+      [
+        43,
+        2,
+        "でんりゅう"
+      ],
+      [
+        49,
+        2,
+        "はけい"
+      ]
+    ],
+    "choiceReadings": [
+      [],
+      [],
+      [],
+      [],
+      []
+    ]
+  },
+  {
+    "key": "15b",
+    "topic": "単相インバータの特徴",
+    "titleJp": "単相インバータの特徴",
+    "questionJp": "図1は誘導性負荷を駆動する単相インバータである。\n(b) 単相インバータの特徴として誤っているものを選べ。",
+    "questionVi": "(b) Chọn phát biểu sai về bộ nghịch lưu một pha ở Hình 1.",
+    "choicesJp": [
+      "電圧形で直流電源の高周波インピーダンスが低いことが必要",
+      "オンオフ周期を短くして周波数を上げ直流電圧を上げて交流電圧を上げられる",
+      "IGBTやパワーMOSFETで実現できる",
+      "ダイオードはエネルギーを戻し逆電圧でパワートランジスタを転流させる",
+      "誘導電動機を駆動でき力率低下でダイオードの通電時間が長くなる"
+    ],
+    "choicesVi": [
+      "Nghịch lưu nguồn áp cần tổng trở nguồn DC ở tần số cao thấp",
+      "Rút ngắn chu kỳ điều khiển để tăng tần số và tăng áp DC để tăng áp AC",
+      "Có thể dùng IGBT hoặc MOSFET công suất",
+      "Điôt hồi năng lượng và dùng điện áp ngược để chuyển mạch transistor công suất",
+      "Có thể chạy động cơ cảm ứng, hệ số công suất thấp làm điôt dẫn lâu hơn"
+    ],
+    "solution": [
+      "Điôt song song ngược tạo đường đi cho dòng tải cảm và hồi năng lượng về nguồn DC.",
+      "Transistor công suất tự tắt bằng tín hiệu điều khiển. Vai trò chuyển mạch cưỡng bức nêu trong (4) sai."
+    ],
+    "theory": [
+      251
+    ],
+    "pages": [
+      17,
+      18
+    ],
+    "answer": 4,
+    "readings": [
+      [
+        3,
+        2,
+        "ゆうどう"
+      ],
+      [
+        6,
+        2,
+        "ふか"
+      ],
+      [
+        37,
+        2,
+        "とくちょう"
+      ]
+    ],
+    "choiceReadings": [
+      [
+        [
+          0,
+          2,
+          "でんあつ"
+        ],
+        [
+          4,
+          2,
+          "ちょくりゅう"
+        ],
+        [
+          6,
+          2,
+          "でんげん"
+        ],
+        [
+          25,
+          2,
+          "ひつよう"
+        ]
+      ],
+      [
+        [
+          11,
+          3,
+          "しゅうはすう"
+        ],
+        [
+          17,
+          2,
+          "ちょくりゅう"
+        ],
+        [
+          19,
+          2,
+          "でんあつ"
+        ],
+        [
+          25,
+          2,
+          "こうりゅう"
+        ],
+        [
+          27,
+          2,
+          "でんあつ"
+        ]
+      ],
+      [
+        [
+          15,
+          2,
+          "じつげん"
+        ]
+      ],
+      [
+        [
+          15,
+          2,
+          "でんあつ"
+        ]
+      ],
+      [
+        [
+          0,
+          2,
+          "ゆうどう"
+        ],
+        [
+          2,
+          2,
+          "でんどう"
+        ],
+        [
+          10,
+          2,
+          "りきりつ"
+        ],
+        [
+          12,
+          2,
+          "ていか"
+        ],
+        [
+          21,
+          2,
+          "つうでん"
+        ],
+        [
+          23,
+          2,
+          "じかん"
+        ]
+      ]
+    ]
+  },
+  {
+    "key": "16a",
+    "topic": "同期電動機の内部誘導起電力",
+    "titleJp": "同期電動機の内部誘導起電力",
+    "questionJp": "星形結線の三相同期電動機の線間電圧は3.3 kV，同期リアクタンスは1相10 Ωである。電機子抵抗，損失及び磁気飽和を無視する。\n(a) 電流110 A，力率1のときの1相当たり内部誘導起電力を求めよ。",
+    "questionVi": "(a) Động cơ đồng bộ ba pha đấu sao chạy ở điện áp dây 3,3 kV. Điện kháng đồng bộ 10 Ω mỗi pha. Bỏ qua điện trở phần ứng, tổn hao và bão hòa từ. Với dòng 110 A và cosφ=1, tính sức điện động nội bộ mỗi pha (V).",
+    "choicesJp": [
+      "1100",
+      "1600",
+      "1900",
+      "2200",
+      "3300"
+    ],
+    "choicesVi": [
+      "1.100",
+      "1.600",
+      "1.900",
+      "2.200",
+      "3.300"
+    ],
+    "solution": [
+      "Điện áp pha là 3.300/√3 ≈ 1.905 V. Sụt áp jXI = j1.100 V.",
+      "Ở chế độ động cơ E=V−jXI. Độ lớn E≈√(1.905²+1.100²)≈2.200 V."
+    ],
+    "theory": [
+      150
+    ],
+    "pages": [
+      19
+    ],
+    "answer": 4,
+    "readings": [
+      [
+        2,
+        2,
+        "けっせん"
+      ],
+      [
+        5,
+        2,
+        "さんそう"
+      ],
+      [
+        7,
+        2,
+        "どうき"
+      ],
+      [
+        9,
+        2,
+        "でんどう"
+      ],
+      [
+        15,
+        2,
+        "でんあつ"
+      ],
+      [
+        25,
+        2,
+        "どうき"
+      ],
+      [
+        44,
+        3,
+        "でんきし"
+      ],
+      [
+        47,
+        2,
+        "ていこう"
+      ],
+      [
+        50,
+        2,
+        "そんしつ"
+      ],
+      [
+        54,
+        2,
+        "じき"
+      ],
+      [
+        56,
+        2,
+        "ほうわ"
+      ],
+      [
+        59,
+        2,
+        "むし"
+      ],
+      [
+        69,
+        2,
+        "でんりゅう"
+      ],
+      [
+        77,
+        2,
+        "りきりつ"
+      ],
+      [
+        85,
+        2,
+        "そうとう"
+      ],
+      [
+        89,
+        2,
+        "ないぶ"
+      ],
+      [
+        91,
+        2,
+        "ゆうどう"
+      ],
+      [
+        93,
+        2,
+        "きでん"
+      ]
+    ],
+    "choiceReadings": [
+      [],
+      [],
+      [],
+      [],
+      []
+    ]
+  },
+  {
+    "key": "16b",
+    "topic": "界磁電流増加と負荷角",
+    "titleJp": "界磁電流増加と負荷角",
+    "questionJp": "星形結線の三相同期電動機の線間電圧は3.3 kV，同期リアクタンスは1相10 Ωである。初めは電流110 A，力率1で，電機子抵抗，損失及び磁気飽和を無視する。\n(b) 電圧と出力を一定にして界磁電流を1.5倍にしたときのsinδ′を求めよ。",
+    "questionVi": "(b) Động cơ đồng bộ ba pha đấu sao, điện áp dây 3,3 kV, điện kháng đồng bộ 10 Ω mỗi pha. Bỏ qua điện trở, tổn hao và bão hòa. Trường hợp ban đầu có dòng 110 A và cosφ=1. Giữ điện áp và công suất ra, tăng dòng kích từ 1,5 lần. Tính sinδ′ của góc tải mới.",
+    "choicesJp": [
+      "0.250",
+      "0.333",
+      "0.500",
+      "0.707",
+      "0.866"
+    ],
+    "choicesVi": [
+      "0,250",
+      "0,333",
+      "0,500",
+      "0,707",
+      "0,866"
+    ],
+    "solution": [
+      "Ban đầu E≈2.200 V, nên sinδ≈1.100/2.200=0,5.",
+      "Ở V, X và công suất cố định, E sinδ không đổi. E tăng 1,5 lần khi chưa bão hòa, nên sinδ′≈0,333."
+    ],
+    "theory": [
+      154
+    ],
+    "pages": [
+      19
+    ],
+    "answer": 2,
+    "readings": [
+      [
+        2,
+        2,
+        "けっせん"
+      ],
+      [
+        5,
+        2,
+        "さんそう"
+      ],
+      [
+        7,
+        2,
+        "どうき"
+      ],
+      [
+        9,
+        2,
+        "でんどう"
+      ],
+      [
+        15,
+        2,
+        "でんあつ"
+      ],
+      [
+        25,
+        2,
+        "どうき"
+      ],
+      [
+        47,
+        2,
+        "でんりゅう"
+      ],
+      [
+        55,
+        2,
+        "りきりつ"
+      ],
+      [
+        60,
+        3,
+        "でんきし"
+      ],
+      [
+        63,
+        2,
+        "ていこう"
+      ],
+      [
+        66,
+        2,
+        "そんしつ"
+      ],
+      [
+        70,
+        2,
+        "じき"
+      ],
+      [
+        72,
+        2,
+        "ほうわ"
+      ],
+      [
+        75,
+        2,
+        "むし"
+      ],
+      [
+        85,
+        2,
+        "でんあつ"
+      ],
+      [
+        88,
+        2,
+        "しゅつりょく"
+      ],
+      [
+        91,
+        2,
+        "いってい"
+      ],
+      [
+        98,
+        2,
+        "でんりゅう"
+      ]
+    ],
+    "choiceReadings": [
+      [],
+      [],
+      [],
+      [],
+      []
+    ]
+  },
+  {
+    "key": "17a",
+    "topic": "照明の間引きによる節電",
+    "titleJp": "照明の間引きによる節電",
+    "questionJp": "10 m×40 mのオフィスで平均照度を1,000 lxから750 lxにする。器具は70 Wで3,520 lmのランプ2本，照明率0.65，保守率0.7である。\n(a) 間引きによる節電電力を求めよ。",
+    "questionVi": "Câu tự chọn. Chọn một trong hai câu 17 và 18, rồi làm cả (a) và (b) của câu đã chọn. Nếu làm cả hai câu, phần tự chọn không được chấm.\n\n(a) Văn phòng 10×40 m muốn giảm độ rọi trung bình từ 1.000 xuống 750 lx bằng cách tắt bớt bộ đèn. Mỗi bộ có hai bóng 3.520 lm, tiêu thụ 70 W. Hệ số sử dụng 0,65 và bảo trì 0,7. Tìm công suất chiếu sáng tiết kiệm (W).",
+    "choicesJp": [
+      "420",
+      "980",
+      "1540",
+      "2170",
+      "4340"
+    ],
+    "choicesVi": [
+      "420",
+      "980",
+      "1.540",
+      "2.170",
+      "4.340"
+    ],
+    "solution": [
+      "Quang thông hữu ích mỗi bộ bằng 2×3.520×0,65×0,7=3.203,2 lm.",
+      "Mức giảm 250 lx trên 400 m² tương ứng khoảng 31,2 bộ. Nhân 70 W được khoảng 2.185 W, gần 2.170 W."
+    ],
+    "theory": [
+      269
+    ],
+    "pages": [
+      20
+    ],
+    "answer": 4,
+    "readings": [
+      [
+        15,
+        2,
+        "へいきん"
+      ],
+      [
+        17,
+        2,
+        "しょうど"
+      ],
+      [
+        40,
+        2,
+        "きぐ"
+      ],
+      [
+        63,
+        2,
+        "しょうめい"
+      ],
+      [
+        71,
+        2,
+        "ほしゅ"
+      ],
+      [
+        94,
+        2,
+        "でんりょく"
+      ]
+    ],
+    "choiceReadings": [
+      [],
+      [],
+      [],
+      [],
+      []
+    ]
+  },
+  {
+    "key": "17b",
+    "topic": "照明の節電による冷房負荷低減",
+    "titleJp": "照明の節電による冷房負荷低減",
+    "questionJp": "オフィス照明を間引き，照明器具の発熱と冷房負荷を減らす。\n(b) COPを3とし，冷房の節電電力と照明の節電電力の比を求めよ。",
+    "questionVi": "Câu tự chọn. Chọn một trong hai câu 17 và 18, rồi làm cả (a) và (b) của câu đã chọn. Nếu làm cả hai câu, phần tự chọn không được chấm.\n\n(b) Văn phòng tắt bớt đèn, làm giảm nhiệt do đèn tỏa ra. Điều hòa có COP=3. Công suất điện điều hòa giảm bằng bao nhiêu lần công suất chiếu sáng đã tiết kiệm?",
+    "choicesJp": [
+      "0.3",
+      "0.33",
+      "0.63",
+      "1.3",
+      "1.33"
+    ],
+    "choicesVi": [
+      "0,3",
+      "0,33",
+      "0,63",
+      "1,3",
+      "1,33"
+    ],
+    "solution": [
+      "Theo giả thiết bài toán, tải lạnh giảm bằng mức điện chiếu sáng tiết kiệm.",
+      "Điện máy lạnh giảm bằng tải lạnh giảm chia COP, nên tỉ số là 1/3≈0,33."
+    ],
+    "theory": [
+      270
+    ],
+    "pages": [
+      20
+    ],
+    "answer": 2,
+    "readings": [
+      [
+        4,
+        2,
+        "しょうめい"
+      ],
+      [
+        11,
+        2,
+        "しょうめい"
+      ],
+      [
+        13,
+        2,
+        "きぐ"
+      ],
+      [
+        16,
+        2,
+        "はつねつ"
+      ],
+      [
+        19,
+        2,
+        "れいぼう"
+      ],
+      [
+        21,
+        2,
+        "ふか"
+      ],
+      [
+        41,
+        2,
+        "れいぼう"
+      ],
+      [
+        46,
+        2,
+        "でんりょく"
+      ],
+      [
+        49,
+        2,
+        "しょうめい"
+      ],
+      [
+        54,
+        2,
+        "でんりょく"
+      ]
+    ],
+    "choiceReadings": [
+      [],
+      [],
+      [],
+      [],
+      []
+    ]
+  },
+  {
+    "key": "18a",
+    "topic": "動作クロックとサイクルタイム",
+    "titleJp": "動作クロックとサイクルタイム",
+    "questionJp": "マイクロプロセッサの動作クロックの周期をT，周波数をfとする。\n(a) f＝2.5 GHzのとき，Tをnsで求めよ。",
+    "questionVi": "Câu tự chọn. Chọn một trong hai câu 17 và 18, rồi làm cả (a) và (b) của câu đã chọn. Nếu làm cả hai câu, phần tự chọn không được chấm.\n\n(a) Bộ vi xử lý đồng bộ theo xung nhịp. Chu kỳ T là thời gian một xung, tần số f là số xung mỗi giây. Tính T (ns) khi f=2,5 GHz.",
+    "choicesJp": [
+      "0.0004",
+      "0.25",
+      "0.4",
+      "250",
+      "400"
+    ],
+    "choicesVi": [
+      "0,0004",
+      "0,25",
+      "0,4",
+      "250",
+      "400"
+    ],
+    "solution": [
+      "T=1/f=1/(2,5×10⁹) s.",
+      "Kết quả 4×10⁻¹⁰ s=0,4 ns."
+    ],
+    "theory": [
+      296
+    ],
+    "pages": [
+      21
+    ],
+    "answer": 3,
+    "readings": [
+      [
+        10,
+        2,
+        "どうさ"
+      ],
+      [
+        22,
+        3,
+        "しゅうはすう"
+      ]
+    ],
+    "choiceReadings": [
+      [],
+      [],
+      [],
+      [],
+      []
+    ]
+  },
+  {
+    "key": "18b",
+    "topic": "CPIと動作周波数",
+    "titleJp": "CPIと動作周波数",
+    "questionJp": "マイクロプロセッサの1命令当たりの平均クロック数をCPIとする。\n(b) CPI＝4，平均実行時間0.02 μsのとき，動作周波数をMHzで求めよ。",
+    "questionVi": "Câu tự chọn. Chọn một trong hai câu 17 và 18, rồi làm cả (a) và (b) của câu đã chọn. Nếu làm cả hai câu, phần tự chọn không được chấm.\n\n(b) Bộ vi xử lý dùng trung bình CPI=4 chu kỳ cho một lệnh. Thời gian thực thi trung bình là 0,02 μs/lệnh. Tính tần số xung (MHz).",
+    "choicesJp": [
+      "0.0125",
+      "0.2",
+      "12.5",
+      "200",
+      "12500"
+    ],
+    "choicesVi": [
+      "0,0125",
+      "0,2",
+      "12,5",
+      "200",
+      "12.500"
+    ],
+    "solution": [
+      "Mỗi chu kỳ dài 0,02/4=0,005 μs.",
+      "Nghịch đảo cho 200 chu kỳ/μs, tức 200 MHz."
+    ],
+    "theory": [
+      296
+    ],
+    "pages": [
+      21
+    ],
+    "answer": 4,
+    "readings": [
+      [
+        11,
+        2,
+        "めいれい"
+      ],
+      [
+        17,
+        2,
+        "へいきん"
+      ],
+      [
+        43,
+        2,
+        "へいきん"
+      ],
+      [
+        47,
+        2,
+        "じかん"
+      ],
+      [
+        60,
+        2,
+        "どうさ"
+      ],
+      [
+        62,
+        3,
+        "しゅうはすう"
+      ]
+    ],
+    "choiceReadings": [
+      [],
+      [],
+      [],
+      [],
+      []
+    ]
+  }
+]
