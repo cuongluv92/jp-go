@@ -1,0 +1,1832 @@
+[
+  {
+    "key": "1",
+    "titleJp": "主任技術者の選任と職務",
+    "topic": "主任技術者の選任と職務",
+    "questionJp": "電気事業法に基づく主任技術者について，a 免状交付を受けた者から選任する，b 保安監督の職務を誠実に行う，c 従事者は保安上の指示に従う，の適否を選べ。",
+    "questionVi": "Theo Luật Kinh doanh điện lực trong đề H25, đánh giá a. Người lắp đặt công trình phục vụ kinh doanh điện phải chọn người có giấy chứng nhận để giám sát an toàn thi công, bảo trì và vận hành. b. Kỹ thuật viên trưởng phải thực hiện nhiệm vụ giám sát một cách trung thực. c. Người thi công, bảo trì hoặc vận hành phải tuân theo chỉ dẫn an toàn của kỹ thuật viên trưởng.",
+    "choicesJp": [
+      "不適・適・適",
+      "不適・不適・適",
+      "適・不適・不適",
+      "適・適・適",
+      "適・適・不適"
+    ],
+    "choicesVi": [
+      "Không phù hợp · phù hợp · phù hợp",
+      "Không phù hợp · không phù hợp · phù hợp",
+      "Phù hợp · không phù hợp · không phù hợp",
+      "Phù hợp · phù hợp · phù hợp",
+      "Phù hợp · phù hợp · không phù hợp"
+    ],
+    "solution": [
+      "Ba nội dung lần lượt tương ứng nghĩa vụ bổ nhiệm, nghĩa vụ giám sát an toàn và nghĩa vụ tuân thủ chỉ dẫn an toàn.",
+      "Chọn (4)."
+    ],
+    "theory": [
+      425
+    ],
+    "pages": [
+      1
+    ],
+    "answer": 4,
+    "readings": [
+      [
+        0,
+        2,
+        "でんき"
+      ],
+      [
+        2,
+        2,
+        "じぎょう"
+      ],
+      [
+        9,
+        5,
+        "しゅにんぎじゅつしゃ"
+      ],
+      [
+        39,
+        2,
+        "ほあん"
+      ],
+      [
+        59,
+        2,
+        "ほあん"
+      ],
+      [
+        63,
+        2,
+        "しじ"
+      ]
+    ],
+    "choiceReadings": [
+      [],
+      [],
+      [],
+      [],
+      []
+    ]
+  },
+  {
+    "key": "2",
+    "titleJp": "工事計画の事前届出",
+    "topic": "工事計画の事前届出",
+    "questionJp": "電気事業法及び施行規則に基づき，工事計画の事前届出が必要なものを選べ。",
+    "questionVi": "Theo luật và quy tắc thi hành tại thời điểm H25, chọn công trình phải khai báo kế hoạch trước cho Bộ trưởng Kinh tế, Thương mại và Công nghiệp.",
+    "choicesJp": [
+      "6,600 V・2,000 kWの需要設備の設置",
+      "6,600 Vの受電用遮断器の取替え",
+      "6,600 Vの受電用遮断器の遮断電流を25%変更",
+      "22,000 Vの受電用遮断器の取替え",
+      "22,000 V・5,000 kV·Aの変圧器を同容量品に交換"
+    ],
+    "choicesVi": [
+      "Lắp thiết bị nhận điện 6.600 V, công suất cực đại 2.000 kW",
+      "Thay máy cắt nhận điện ở cơ sở 6.600 V",
+      "Đổi dòng cắt của máy cắt nhận điện 6.600 V thêm 25%",
+      "Thay máy cắt nhận điện ở cơ sở 22.000 V",
+      "Thay máy biến áp 5.000 kV·A ở cơ sở 22.000 V bằng máy cùng dung lượng"
+    ],
+    "solution": [
+      "Trong các trường hợp đề cho, thay máy cắt nhận điện của thiết bị 22 kV thuộc phạm vi phải khai báo trước. Thay máy biến áp bằng máy cùng dung lượng ở lựa chọn (5) không thuộc trường hợp này.",
+      "Chọn (4)."
+    ],
+    "theory": [
+      426
+    ],
+    "pages": [
+      2
+    ],
+    "answer": 4,
+    "readings": [
+      [
+        0,
+        2,
+        "でんき"
+      ],
+      [
+        2,
+        2,
+        "じぎょう"
+      ],
+      [
+        7,
+        2,
+        "しこう"
+      ],
+      [
+        16,
+        2,
+        "こうじ"
+      ],
+      [
+        26,
+        2,
+        "ひつよう"
+      ]
+    ],
+    "choiceReadings": [
+      [
+        [
+          19,
+          2,
+          "せつび"
+        ]
+      ],
+      [
+        [
+          8,
+          2,
+          "じゅでん"
+        ],
+        [
+          11,
+          2,
+          "しゃだん"
+        ]
+      ],
+      [
+        [
+          8,
+          2,
+          "じゅでん"
+        ],
+        [
+          11,
+          2,
+          "しゃだん"
+        ],
+        [
+          15,
+          2,
+          "しゃだん"
+        ],
+        [
+          17,
+          2,
+          "でんりゅう"
+        ]
+      ],
+      [
+        [
+          9,
+          2,
+          "じゅでん"
+        ],
+        [
+          12,
+          2,
+          "しゃだん"
+        ]
+      ],
+      [
+        [
+          20,
+          3,
+          "へんあつき"
+        ],
+        [
+          25,
+          2,
+          "ようりょう"
+        ]
+      ]
+    ]
+  },
+  {
+    "key": "3",
+    "titleJp": "電気使用場所の配線用電線",
+    "topic": "電気使用場所の配線用電線",
+    "questionJp": "配線用電線の強度と絶縁性能，裸電線の制限及び特別高圧の接触電線の制限に関して，文中の空欄に入る語の組合せを選べ。",
+    "questionVi": "Dây đi trong nơi sử dụng điện, trừ (ア) và (イ) dùng ở đặc biệt cao áp, phải đủ bền và cách điện phù hợp với nơi lắp và (ウ). Thông thường cấm dùng (ア), trừ khi có biện pháp tránh điện giật, cháy. Dây đặc biệt cao áp không được dùng (イ). Chọn tổ hợp.",
+    "choicesJp": [
+      "接触電線・移動電線・施設方法",
+      "接触電線・裸電線・使用目的",
+      "接触電線・裸電線・電圧",
+      "裸電線・接触電線・使用目的",
+      "裸電線・接触電線・電圧"
+    ],
+    "choicesVi": [
+      "Dây tiếp xúc · dây di động · cách lắp",
+      "Dây tiếp xúc · dây trần · mục đích dùng",
+      "Dây tiếp xúc · dây trần · điện áp",
+      "Dây trần · dây tiếp xúc · mục đích dùng",
+      "Dây trần · dây tiếp xúc · điện áp"
+    ],
+    "solution": [
+      "Các ô lần lượt chỉ dây trần, dây tiếp xúc và điện áp. Yêu cầu cách điện phụ thuộc nơi lắp và điện áp sử dụng.",
+      "Chọn (5)."
+    ],
+    "theory": [
+      434
+    ],
+    "pages": [
+      3
+    ],
+    "answer": 5,
+    "readings": [
+      [
+        3,
+        2,
+        "でんせん"
+      ],
+      [
+        6,
+        2,
+        "きょうど"
+      ],
+      [
+        9,
+        2,
+        "ぜつえん"
+      ],
+      [
+        15,
+        2,
+        "でんせん"
+      ],
+      [
+        18,
+        2,
+        "せいげん"
+      ],
+      [
+        24,
+        2,
+        "こうあつ"
+      ],
+      [
+        29,
+        2,
+        "でんせん"
+      ],
+      [
+        32,
+        2,
+        "せいげん"
+      ],
+      [
+        42,
+        2,
+        "くうらん"
+      ],
+      [
+        49,
+        2,
+        "くみあ"
+      ]
+    ],
+    "choiceReadings": [
+      [
+        [
+          2,
+          2,
+          "でんせん"
+        ],
+        [
+          7,
+          2,
+          "でんせん"
+        ],
+        [
+          10,
+          2,
+          "しせつ"
+        ],
+        [
+          12,
+          2,
+          "ほうほう"
+        ]
+      ],
+      [
+        [
+          2,
+          2,
+          "でんせん"
+        ],
+        [
+          6,
+          2,
+          "でんせん"
+        ],
+        [
+          9,
+          2,
+          "しよう"
+        ],
+        [
+          11,
+          2,
+          "もくてき"
+        ]
+      ],
+      [
+        [
+          2,
+          2,
+          "でんせん"
+        ],
+        [
+          6,
+          2,
+          "でんせん"
+        ],
+        [
+          9,
+          2,
+          "でんあつ"
+        ]
+      ],
+      [
+        [
+          1,
+          2,
+          "でんせん"
+        ],
+        [
+          6,
+          2,
+          "でんせん"
+        ],
+        [
+          9,
+          2,
+          "しよう"
+        ],
+        [
+          11,
+          2,
+          "もくてき"
+        ]
+      ],
+      [
+        [
+          1,
+          2,
+          "でんせん"
+        ],
+        [
+          6,
+          2,
+          "でんせん"
+        ],
+        [
+          9,
+          2,
+          "でんあつ"
+        ]
+      ]
+    ]
+  },
+  {
+    "key": "4",
+    "titleJp": "金属製外箱の接地省略",
+    "topic": "金属製外箱の接地省略",
+    "questionJp": "金属製外箱等の接地を省略できる機器の構造，二次300 V以下・3 kV·A以下の変圧器，漏電遮断器の定格感度電流及び動作時間を選べ。",
+    "questionVi": "Chọn các điều kiện miễn nối đất vỏ kim loại theo đề. a. Kết cấu thiết bị. b. Loại máy biến áp ở nguồn, thứ cấp không quá 300 V và công suất không quá 3 kV·A, với mạch tải thứ cấp không nối đất. c. Dòng dư tác động định mức và thời gian tối đa của thiết bị cắt rò dòng điện tại nơi không ẩm.",
+    "choicesJp": [
+      "二重絶縁・絶縁変圧器・15・0.3",
+      "二重絶縁・絶縁変圧器・15・0.1",
+      "過負荷保護付き・絶縁変圧器・30・0.3",
+      "過負荷保護付き・単巻変圧器・30・0.1",
+      "過負荷保護付き・単巻変圧器・50・0.1"
+    ],
+    "choicesVi": [
+      "Cách điện kép · biến áp cách ly · 15 mA · 0,3 s",
+      "Cách điện kép · biến áp cách ly · 15 mA · 0,1 s",
+      "Bảo vệ quá tải · biến áp cách ly · 30 mA · 0,3 s",
+      "Bảo vệ quá tải · biến áp tự ngẫu · 30 mA · 0,1 s",
+      "Bảo vệ quá tải · biến áp tự ngẫu · 50 mA · 0,1 s"
+    ],
+    "solution": [
+      "Đề yêu cầu cách điện kép hoặc cách ly bằng biến áp theo các điều kiện đã nêu. Phương án thiết bị cắt rò áp dụng ở nơi khô dùng giới hạn 15 mA và 0,1 giây.",
+      "Chọn (2)."
+    ],
+    "theory": [
+      436
+    ],
+    "pages": [
+      4
+    ],
+    "answer": 2,
+    "readings": [
+      [
+        0,
+        2,
+        "きんぞく"
+      ],
+      [
+        3,
+        2,
+        "がいばこ"
+      ],
+      [
+        7,
+        2,
+        "せっち"
+      ],
+      [
+        15,
+        2,
+        "きき"
+      ],
+      [
+        18,
+        2,
+        "こうぞう"
+      ],
+      [
+        28,
+        2,
+        "いか"
+      ],
+      [
+        37,
+        2,
+        "いか"
+      ],
+      [
+        40,
+        3,
+        "へんあつき"
+      ],
+      [
+        44,
+        2,
+        "ろうでん"
+      ],
+      [
+        46,
+        2,
+        "しゃだん"
+      ],
+      [
+        50,
+        2,
+        "ていかく"
+      ],
+      [
+        54,
+        2,
+        "でんりゅう"
+      ],
+      [
+        58,
+        2,
+        "どうさ"
+      ],
+      [
+        60,
+        2,
+        "じかん"
+      ]
+    ],
+    "choiceReadings": [
+      [
+        [
+          2,
+          2,
+          "ぜつえん"
+        ],
+        [
+          5,
+          2,
+          "ぜつえん"
+        ],
+        [
+          7,
+          3,
+          "へんあつき"
+        ]
+      ],
+      [
+        [
+          2,
+          2,
+          "ぜつえん"
+        ],
+        [
+          5,
+          2,
+          "ぜつえん"
+        ],
+        [
+          7,
+          3,
+          "へんあつき"
+        ]
+      ],
+      [
+        [
+          1,
+          2,
+          "ふか"
+        ],
+        [
+          3,
+          2,
+          "ほご"
+        ],
+        [
+          8,
+          2,
+          "ぜつえん"
+        ],
+        [
+          10,
+          3,
+          "へんあつき"
+        ]
+      ],
+      [
+        [
+          1,
+          2,
+          "ふか"
+        ],
+        [
+          3,
+          2,
+          "ほご"
+        ],
+        [
+          10,
+          3,
+          "へんあつき"
+        ]
+      ],
+      [
+        [
+          1,
+          2,
+          "ふか"
+        ],
+        [
+          3,
+          2,
+          "ほご"
+        ],
+        [
+          10,
+          3,
+          "へんあつき"
+        ]
+      ]
+    ]
+  },
+  {
+    "key": "5",
+    "titleJp": "アークを生じる器具の離隔距離",
+    "topic": "アークを生じる器具の離隔距離",
+    "questionJp": "高圧・特別高圧でアークを生じる開閉器等について，隔離対象，高圧の離隔距離及び特別高圧の原則距離の組合せを選べ。",
+    "questionVi": "Thiết bị đóng cắt hoặc chống sét có thể sinh hồ quang khi làm việc phải được che chắn bằng vật chịu lửa hoặc đặt cách tường, trần gỗ và (ア). Chọn khoảng cách cao áp (イ) và khoảng cách nguyên tắc đặc biệt cao áp (ウ). Với điện áp không quá 35 kV có thể dùng (イ) khi hướng và chiều dài hồ quang đã được hạn chế để tránh cháy.",
+    "choicesJp": [
+      "可燃性のもの・0.5・1",
+      "造営物・0.5・1",
+      "可燃性のもの・1・2",
+      "造営物・1・2",
+      "造営物・2・3"
+    ],
+    "choicesVi": [
+      "Vật dễ cháy · 0,5 m · 1 m",
+      "Công trình · 0,5 m · 1 m",
+      "Vật dễ cháy · 1 m · 2 m",
+      "Công trình · 1 m · 2 m",
+      "Công trình · 2 m · 3 m"
+    ],
+    "solution": [
+      "Đối tượng là vật dễ cháy. Theo bảng trong đề H25, khoảng cách tương ứng là 1 m cho cao áp và 2 m theo nguyên tắc cho đặc biệt cao áp.",
+      "Chọn (3)."
+    ],
+    "theory": [
+      434
+    ],
+    "pages": [
+      5,
+      6
+    ],
+    "answer": 3,
+    "readings": [
+      [
+        0,
+        2,
+        "こうあつ"
+      ],
+      [
+        5,
+        2,
+        "こうあつ"
+      ],
+      [
+        29,
+        2,
+        "こうあつ"
+      ],
+      [
+        34,
+        2,
+        "きょり"
+      ],
+      [
+        40,
+        2,
+        "こうあつ"
+      ],
+      [
+        43,
+        2,
+        "げんそく"
+      ],
+      [
+        45,
+        2,
+        "きょり"
+      ],
+      [
+        48,
+        2,
+        "くみあ"
+      ]
+    ],
+    "choiceReadings": [
+      [],
+      [],
+      [],
+      [],
+      []
+    ]
+  },
+  {
+    "key": "6",
+    "titleJp": "高圧の過電流遮断器とヒューズ",
+    "topic": "高圧の過電流遮断器とヒューズ",
+    "questionJp": "過電流遮断器の遮断能力，表示状態，包装ヒューズの耐電流・溶断時間，非包装ヒューズの耐電流を選べ。",
+    "questionVi": "Chọn loại dòng sự cố mà thiết bị phải cắt được, trạng thái phải hiển thị và các yêu cầu cầu chì. Cầu chì có vỏ phải chịu (ウ) lần định mức, nóng chảy trong (エ) phút ở gấp đôi dòng. Cầu chì không vỏ chịu (オ) lần định mức và nóng chảy trong 2 phút ở gấp đôi dòng.",
+    "choicesJp": [
+      "短絡・異常・1.5・90・1.5",
+      "過負荷・開閉・1.3・150・1.5",
+      "短絡・開閉・1.3・120・1.25",
+      "過負荷・異常・1.5・150・1.25",
+      "過負荷・開閉・1.3・120・1.5"
+    ],
+    "choicesVi": [
+      "Ngắn mạch · bất thường · 1,5 · 90 · 1,5",
+      "Quá tải · đóng mở · 1,3 · 150 · 1,5",
+      "Ngắn mạch · đóng mở · 1,3 · 120 · 1,25",
+      "Quá tải · bất thường · 1,5 · 150 · 1,25",
+      "Quá tải · đóng mở · 1,3 · 120 · 1,5"
+    ],
+    "solution": [
+      "Thiết bị phải có khả năng cắt dòng ngắn mạch và hiển thị đóng/mở nếu khó nhận biết trực tiếp. Các giá trị trong đề là 1,3 và 120 phút cho loại có vỏ, 1,25 cho loại không vỏ.",
+      "Chọn (3)."
+    ],
+    "theory": [
+      391
+    ],
+    "pages": [
+      7
+    ],
+    "answer": 3,
+    "readings": [
+      [
+        1,
+        2,
+        "でんりゅう"
+      ],
+      [
+        3,
+        2,
+        "しゃだん"
+      ],
+      [
+        7,
+        2,
+        "しゃだん"
+      ],
+      [
+        14,
+        2,
+        "じょうたい"
+      ],
+      [
+        25,
+        2,
+        "でんりゅう"
+      ],
+      [
+        30,
+        2,
+        "じかん"
+      ],
+      [
+        42,
+        2,
+        "でんりゅう"
+      ]
+    ],
+    "choiceReadings": [
+      [
+        [
+          0,
+          2,
+          "たんらく"
+        ]
+      ],
+      [
+        [
+          1,
+          2,
+          "ふか"
+        ]
+      ],
+      [
+        [
+          0,
+          2,
+          "たんらく"
+        ]
+      ],
+      [
+        [
+          1,
+          2,
+          "ふか"
+        ]
+      ],
+      [
+        [
+          1,
+          2,
+          "ふか"
+        ]
+      ]
+    ]
+  },
+  {
+    "key": "7",
+    "titleJp": "地中電線路の施設",
+    "topic": "地中電線路の施設",
+    "questionJp": "地中電線路の施設例として不適切なものを選べ。",
+    "questionVi": "Chọn ví dụ thi công đường cáp ngầm không phù hợp với tiêu chuẩn trong đề.",
+    "choicesJp": [
+      "ケーブルを暗きょ式で施設",
+      "管路に車両その他の重量物の圧力に耐える管を使用",
+      "暗きょ式のケーブルに耐燃措置",
+      "直接埋設のケーブルを堅ろうなトラフで保護",
+      "公道下の高圧管路で名称・管理者名・電圧を10 m間隔で表示"
+    ],
+    "choicesVi": [
+      "Dùng cáp đặt trong hầm cáp",
+      "Dùng ống chịu được áp lực xe và vật nặng",
+      "Có biện pháp chống cháy lan với cáp trong hầm",
+      "Bảo vệ cáp chôn trực tiếp bằng máng chắc chắn",
+      "Ghi tên, người quản lý và điện áp mỗi 10 m cho đường cáp cao áp trong ống dưới đường công cộng"
+    ],
+    "solution": [
+      "Theo quy định áp dụng trong đề, khoảng cách đánh dấu thông thường khoảng 2 m. Mức 10 m ở phương án (5) không đạt.",
+      "Chọn (5)."
+    ],
+    "theory": [
+      395
+    ],
+    "pages": [
+      8
+    ],
+    "answer": 5,
+    "readings": [
+      [
+        2,
+        2,
+        "でんせん"
+      ],
+      [
+        6,
+        2,
+        "しせつ"
+      ],
+      [
+        12,
+        3,
+        "ふてきせつ"
+      ]
+    ],
+    "choiceReadings": [
+      [
+        [
+          10,
+          2,
+          "しせつ"
+        ]
+      ],
+      [
+        [
+          21,
+          2,
+          "しよう"
+        ]
+      ],
+      [],
+      [
+        [
+          18,
+          2,
+          "ほご"
+        ]
+      ],
+      [
+        [
+          4,
+          2,
+          "こうあつ"
+        ],
+        [
+          17,
+          2,
+          "でんあつ"
+        ]
+      ]
+    ]
+  },
+  {
+    "key": "8",
+    "titleJp": "住宅屋内電路の対地電圧",
+    "topic": "住宅屋内電路の対地電圧",
+    "questionJp": "住宅屋内電路の対地電圧150 Vの例外について，機器の定格消費電力，対地電圧，接続方式及び専用器具を選べ。",
+    "questionVi": "Mạch điện trong nhà ở thường có điện áp với đất không quá 150 V. Với ngoại lệ cấp riêng một thiết bị, chọn ngưỡng công suất thiết bị, mức điện áp tối đa, cách nối thiết bị và khí cụ đóng cắt riêng đi cùng bảo vệ quá dòng. Đề còn yêu cầu bảo vệ chống chạm và tự động cắt khi chạm đất.",
+    "choicesJp": [
+      "5・450・直接接続・漏電遮断器",
+      "2・300・直接接続・開閉器",
+      "2・450・分岐接続・漏電遮断器",
+      "3・300・直接接続・開閉器",
+      "5・450・分岐接続・漏電遮断器"
+    ],
+    "choicesVi": [
+      "5 kW · 450 V · nối trực tiếp · thiết bị cắt rò",
+      "2 kW · 300 V · nối trực tiếp · công tắc đóng cắt",
+      "2 kW · 450 V · nối nhánh · thiết bị cắt rò",
+      "3 kW · 300 V · nối trực tiếp · công tắc đóng cắt",
+      "5 kW · 450 V · nối nhánh · thiết bị cắt rò"
+    ],
+    "solution": [
+      "Đề xét thiết bị từ 2 kW và điện áp với đất tối đa 300 V, nối trực tiếp với dây riêng. Công tắc đóng cắt riêng đi cùng bảo vệ quá dòng và điều kiện cắt chạm đất.",
+      "Chọn (2)."
+    ],
+    "theory": [
+      481
+    ],
+    "pages": [
+      9
+    ],
+    "answer": 2,
+    "readings": [
+      [
+        2,
+        2,
+        "おくない"
+      ],
+      [
+        4,
+        2,
+        "でんろ"
+      ],
+      [
+        7,
+        2,
+        "たいち"
+      ],
+      [
+        9,
+        2,
+        "でんあつ"
+      ],
+      [
+        24,
+        2,
+        "きき"
+      ],
+      [
+        27,
+        2,
+        "ていかく"
+      ],
+      [
+        29,
+        2,
+        "しょうひ"
+      ],
+      [
+        31,
+        2,
+        "でんりょく"
+      ],
+      [
+        34,
+        2,
+        "たいち"
+      ],
+      [
+        36,
+        2,
+        "でんあつ"
+      ],
+      [
+        39,
+        2,
+        "せつぞく"
+      ],
+      [
+        41,
+        2,
+        "ほうしき"
+      ],
+      [
+        47,
+        2,
+        "きぐ"
+      ]
+    ],
+    "choiceReadings": [
+      [
+        [
+          8,
+          2,
+          "せつぞく"
+        ],
+        [
+          11,
+          2,
+          "ろうでん"
+        ],
+        [
+          13,
+          2,
+          "しゃだん"
+        ]
+      ],
+      [
+        [
+          8,
+          2,
+          "せつぞく"
+        ]
+      ],
+      [
+        [
+          8,
+          2,
+          "せつぞく"
+        ],
+        [
+          11,
+          2,
+          "ろうでん"
+        ],
+        [
+          13,
+          2,
+          "しゃだん"
+        ]
+      ],
+      [
+        [
+          8,
+          2,
+          "せつぞく"
+        ]
+      ],
+      [
+        [
+          8,
+          2,
+          "せつぞく"
+        ],
+        [
+          11,
+          2,
+          "ろうでん"
+        ],
+        [
+          13,
+          2,
+          "しゃだん"
+        ]
+      ]
+    ]
+  },
+  {
+    "key": "9",
+    "titleJp": "IEC 60364と低圧供給設備との整合",
+    "topic": "IEC 60364と低圧供給設備との整合",
+    "questionJp": "IEC 60364に対応する規定で施設した需要場所の低圧設備を電気事業者の設備に直接接続する場合，何と整合させる必要があるか。",
+    "questionVi": "Khi thiết bị hạ áp của khách hàng được lắp theo quy định tương ứng IEC 60364 và nối trực tiếp với thiết bị của đơn vị điện lực, phải bảo đảm tương thích về nội dung nào?",
+    "choicesJp": [
+      "電路の絶縁性能",
+      "接地工事の施設",
+      "変圧器の施設",
+      "避雷器の施設",
+      "離隔距離"
+    ],
+    "choicesVi": [
+      "Tính năng cách điện",
+      "Bố trí nối đất",
+      "Lắp máy biến áp",
+      "Lắp chống sét van",
+      "Khoảng cách cách ly"
+    ],
+    "solution": [
+      "Kiểu nối đất và biện pháp bảo vệ chạm đất của thiết bị nhận điện phải tương thích với cách nối đất của hệ thống cấp điện hạ áp.",
+      "Chọn (2)."
+    ],
+    "theory": [
+      436
+    ],
+    "pages": [
+      10
+    ],
+    "answer": 2,
+    "readings": [
+      [
+        17,
+        2,
+        "しせつ"
+      ],
+      [
+        26,
+        2,
+        "ていあつ"
+      ],
+      [
+        28,
+        2,
+        "せつび"
+      ],
+      [
+        31,
+        2,
+        "でんき"
+      ],
+      [
+        33,
+        2,
+        "じぎょう"
+      ],
+      [
+        37,
+        2,
+        "せつび"
+      ],
+      [
+        42,
+        2,
+        "せつぞく"
+      ],
+      [
+        46,
+        2,
+        "ばあい"
+      ],
+      [
+        56,
+        2,
+        "ひつよう"
+      ]
+    ],
+    "choiceReadings": [
+      [
+        [
+          0,
+          2,
+          "でんろ"
+        ],
+        [
+          3,
+          2,
+          "ぜつえん"
+        ]
+      ],
+      [
+        [
+          0,
+          2,
+          "せっち"
+        ],
+        [
+          2,
+          2,
+          "こうじ"
+        ],
+        [
+          5,
+          2,
+          "しせつ"
+        ]
+      ],
+      [
+        [
+          0,
+          3,
+          "へんあつき"
+        ],
+        [
+          4,
+          2,
+          "しせつ"
+        ]
+      ],
+      [
+        [
+          4,
+          2,
+          "しせつ"
+        ]
+      ],
+      [
+        [
+          2,
+          2,
+          "きょり"
+        ]
+      ]
+    ]
+  },
+  {
+    "key": "10",
+    "titleJp": "高圧受電設備の単線結線図",
+    "topic": "高圧受電設備の単線結線図",
+    "questionJp": "受電電力500 kWの高圧受電設備の単線結線図で，ア〜エの機器・計器を選べ。",
+    "questionVi": "Sơ đồ một sợi của thiết bị nhận điện cao áp 500 kW. Chọn bốn thiết bị và đồng hồ tại vị trí ア–エ.",
+    "choicesJp": [
+      "ZCT・電力量計・避雷器・過電流継電器",
+      "VCT・電力量計・避雷器・過負荷継電器",
+      "ZCT・電力量計・進相コンデンサ・過電流継電器",
+      "VCT・電力計・避雷器・過負荷継電器",
+      "ZCT・電力計・進相コンデンサ・過負荷継電器"
+    ],
+    "choicesVi": [
+      "Biến dòng thứ tự không · công tơ điện năng · chống sét van · rơle quá dòng",
+      "Biến điện áp và dòng đo lường · công tơ · chống sét van · rơle quá tải",
+      "Biến dòng thứ tự không · công tơ · tụ bù · rơle quá dòng",
+      "Biến điện áp và dòng đo lường · oát kế · chống sét van · rơle quá tải",
+      "Biến dòng thứ tự không · oát kế · tụ bù · rơle quá tải"
+    ],
+    "solution": [
+      "ZCT phục vụ bảo vệ chạm đất của PAS. Nhánh đo nhận tín hiệu áp và dòng vào công tơ. Nhánh nối đất qua DS là chống sét van. Rơle quá dòng nhận dòng từ CT để ra lệnh cắt VCB.",
+      "Chọn (1)."
+    ],
+    "theory": [
+      492
+    ],
+    "pages": [
+      11,
+      12
+    ],
+    "answer": 1,
+    "readings": [
+      [
+        0,
+        2,
+        "じゅでん"
+      ],
+      [
+        2,
+        2,
+        "でんりょく"
+      ],
+      [
+        11,
+        2,
+        "こうあつ"
+      ],
+      [
+        13,
+        2,
+        "じゅでん"
+      ],
+      [
+        15,
+        2,
+        "せつび"
+      ],
+      [
+        18,
+        2,
+        "たんせん"
+      ],
+      [
+        20,
+        2,
+        "けっせん"
+      ],
+      [
+        29,
+        2,
+        "きき"
+      ],
+      [
+        32,
+        2,
+        "けいき"
+      ]
+    ],
+    "choiceReadings": [
+      [
+        [
+          4,
+          2,
+          "でんりょく"
+        ],
+        [
+          14,
+          2,
+          "でんりゅう"
+        ],
+        [
+          16,
+          3,
+          "けいでんき"
+        ]
+      ],
+      [
+        [
+          4,
+          2,
+          "でんりょく"
+        ],
+        [
+          14,
+          2,
+          "ふか"
+        ],
+        [
+          16,
+          3,
+          "けいでんき"
+        ]
+      ],
+      [
+        [
+          4,
+          2,
+          "でんりょく"
+        ],
+        [
+          18,
+          2,
+          "でんりゅう"
+        ],
+        [
+          20,
+          3,
+          "けいでんき"
+        ]
+      ],
+      [
+        [
+          4,
+          2,
+          "でんりょく"
+        ],
+        [
+          13,
+          2,
+          "ふか"
+        ],
+        [
+          15,
+          3,
+          "けいでんき"
+        ]
+      ],
+      [
+        [
+          4,
+          2,
+          "でんりょく"
+        ],
+        [
+          17,
+          2,
+          "ふか"
+        ],
+        [
+          19,
+          3,
+          "けいでんき"
+        ]
+      ]
+    ]
+  },
+  {
+    "key": "11a",
+    "titleJp": "進相コンデンサの運転電流",
+    "topic": "進相コンデンサの運転電流",
+    "questionJp": "三相3線50 Hz，6.6 kVに50 kvarのY結線進相コンデンサがある。直列リアクトルはない。\n(a) 定格電流に対するR，S，T相の比が1.50，1.15，1.15のとき，実測電流を求めよ。",
+    "questionVi": "Tụ bù cao áp đấu sao 50 kvar, 6,6 kV, 50 Hz, không có kháng nối tiếp.\n(a) Dòng đo các pha R, S, T lần lượt bằng 1,50, 1,15 và 1,15 lần định mức. Tính bộ dòng gần nhất (A).",
+    "choicesJp": [
+      "6.6・5.0・5.0",
+      "7.5・5.7・5.7",
+      "3.8・2.9・2.9",
+      "11.3・8.6・8.6",
+      "7.2・5.5・5.5"
+    ],
+    "choicesVi": [
+      "6,6・5,0・5,0",
+      "7,5・5,7・5,7",
+      "3,8・2,9・2,9",
+      "11,3・8,6・8,6",
+      "7,2・5,5・5,5"
+    ],
+    "solution": [
+      "Dòng định mức Q/(√3V)=50.000/(√3×6.600)≈4,37 A. Nhân từng hệ số được 6,56 A, 5,03 A, 5,03 A.",
+      "Chọn (1)."
+    ],
+    "theory": [
+      404
+    ],
+    "pages": [
+      13,
+      14
+    ],
+    "answer": 1,
+    "readings": [
+      [
+        0,
+        2,
+        "さんそう"
+      ],
+      [
+        26,
+        2,
+        "けっせん"
+      ],
+      [
+        39,
+        2,
+        "ちょくれつ"
+      ],
+      [
+        55,
+        2,
+        "ていかく"
+      ],
+      [
+        57,
+        2,
+        "でんりゅう"
+      ],
+      [
+        92,
+        2,
+        "でんりゅう"
+      ]
+    ],
+    "choiceReadings": [
+      [],
+      [],
+      [],
+      [],
+      []
+    ]
+  },
+  {
+    "key": "11b",
+    "titleJp": "素子短絡時の端子間静電容量",
+    "topic": "素子短絡時の端子間静電容量",
+    "questionJp": "各相2素子直列のY結線コンデンサで，図のR相1素子が短絡した。\n(b) 1端子開放の二端子法による測定結果として正しいものを選べ。",
+    "questionVi": "Tụ ba pha đấu sao, mỗi pha có hai phần tử nối tiếp. Một phần tử pha R bị ngắn mạch như hình.\n(b) Đo điện dung giữa từng cặp đầu cực, để đầu thứ ba hở. Chọn nhận xét đúng.",
+    "choicesJp": [
+      "R–Sが最小",
+      "S–Tが最小",
+      "T–Rは測定不可",
+      "R–SはS–Tの約75%",
+      "R–SとS–Tは等しい"
+    ],
+    "choicesVi": [
+      "R–S nhỏ nhất",
+      "S–T nhỏ nhất",
+      "Không đo được T–R",
+      "R–S bằng khoảng 75% S–T",
+      "R–S bằng S–T"
+    ],
+    "solution": [
+      "Gọi điện dung một phần tử là C. Nhánh R còn C, hai nhánh S và T mỗi nhánh C/2. Khi đầu thứ ba hở, đo qua hai nhánh nối tiếp: S–T được C/4, nhỏ hơn R–S và T–R đều bằng C/3.",
+      "Chọn (2)."
+    ],
+    "theory": [
+      93,
+      404
+    ],
+    "pages": [
+      13,
+      14
+    ],
+    "answer": 2,
+    "readings": [
+      [
+        5,
+        2,
+        "ちょくれつ"
+      ],
+      [
+        9,
+        2,
+        "けっせん"
+      ],
+      [
+        26,
+        2,
+        "たんらく"
+      ],
+      [
+        37,
+        2,
+        "たんし"
+      ],
+      [
+        43,
+        2,
+        "たんし"
+      ],
+      [
+        49,
+        2,
+        "そくてい"
+      ]
+    ],
+    "choiceReadings": [
+      [],
+      [],
+      [
+        [
+          4,
+          2,
+          "そくてい"
+        ]
+      ],
+      [],
+      []
+    ]
+  },
+  {
+    "key": "12a",
+    "titleJp": "太陽光発電の余剰電力量",
+    "topic": "太陽光発電の余剰電力量",
+    "questionJp": "太陽光出力は6時に0，12時に600 kW，18時に0まで直線変化する。負荷は0〜10時100 kW，10〜17時300 kW，17〜21時400 kW，21〜24時100 kW。\n(a) 系統へ送った余剰電力量を求めよ。",
+    "questionVi": "Điện mặt trời tăng tuyến tính từ 0 lúc 6 h đến 600 kW lúc 12 h, rồi giảm tuyến tính về 0 lúc 18 h. Tải là 100 kW từ 0–10 h, 300 kW từ 10–17 h, 400 kW từ 17–21 h và 100 kW từ 21–24 h.\n(a) Tính điện năng dư đưa lên lưới (kWh).",
+    "choicesJp": [
+      "900",
+      "1300",
+      "1500",
+      "2200",
+      "3600"
+    ],
+    "choicesVi": [
+      "900",
+      "1300",
+      "1500",
+      "2200",
+      "3600"
+    ],
+    "solution": [
+      "Phần dư 7–10 h là tam giác đáy 3 h, cao 300 kW: 450 kWh. Từ 10–12 h là hình thang với 100 và 300 kW: 400 kWh. Từ 12–15 h là tam giác cao 300 kW: 450 kWh. Tổng 1.300 kWh.",
+      "Chọn (2)."
+    ],
+    "theory": [
+      365,
+      494
+    ],
+    "pages": [
+      15,
+      16
+    ],
+    "answer": 2,
+    "readings": [
+      [
+        0,
+        3,
+        "たいようこう"
+      ],
+      [
+        3,
+        2,
+        "しゅつりょく"
+      ],
+      [
+        29,
+        2,
+        "ちょくせん"
+      ],
+      [
+        31,
+        2,
+        "へんか"
+      ],
+      [
+        36,
+        2,
+        "ふか"
+      ],
+      [
+        95,
+        2,
+        "けいとう"
+      ],
+      [
+        103,
+        2,
+        "でんりょく"
+      ]
+    ],
+    "choiceReadings": [
+      [],
+      [],
+      [],
+      [],
+      []
+    ]
+  },
+  {
+    "key": "12b",
+    "titleJp": "太陽光発電の自給率",
+    "topic": "太陽光発電の自給率",
+    "questionJp": "図の太陽光発電と負荷の一日を考える。発電電力量は余剰分を除いて自家消費する。\n(b) 全消費電力量に対する自家消費発電電力量の比率を求めよ。",
+    "questionVi": "Xét biểu đồ phát điện mặt trời và tải trong ngày ở phần (a). Điện phát được dùng tại chỗ, phần dư đưa lên lưới.\n(b) Tính tỉ lệ điện năng tiêu thụ được tự cấp từ điện mặt trời (%).",
+    "choicesJp": [
+      "35",
+      "38",
+      "46",
+      "52",
+      "58"
+    ],
+    "choicesVi": [
+      "35",
+      "38",
+      "46",
+      "52",
+      "58"
+    ],
+    "solution": [
+      "Tổng phát là 12×600/2=3.600 kWh. Trừ 1.300 kWh xuất lưới còn 2.300 kWh tự dùng. Tổng tải 10×100+7×300+4×400+3×100=5.000 kWh. Tỉ lệ 46%.",
+      "Chọn (3)."
+    ],
+    "theory": [
+      365,
+      494
+    ],
+    "pages": [
+      15,
+      16
+    ],
+    "answer": 3,
+    "readings": [
+      [
+        2,
+        3,
+        "たいようこう"
+      ],
+      [
+        5,
+        2,
+        "はつでん"
+      ],
+      [
+        8,
+        2,
+        "ふか"
+      ],
+      [
+        18,
+        2,
+        "はつでん"
+      ],
+      [
+        20,
+        2,
+        "でんりょく"
+      ],
+      [
+        33,
+        2,
+        "しょうひ"
+      ],
+      [
+        44,
+        2,
+        "しょうひ"
+      ],
+      [
+        46,
+        2,
+        "でんりょく"
+      ],
+      [
+        55,
+        2,
+        "しょうひ"
+      ],
+      [
+        57,
+        2,
+        "はつでん"
+      ],
+      [
+        59,
+        2,
+        "でんりょく"
+      ]
+    ],
+    "choiceReadings": [
+      [],
+      [],
+      [],
+      [],
+      []
+    ]
+  },
+  {
+    "key": "13a",
+    "titleJp": "B種接地抵抗の上限",
+    "topic": "B種接地抵抗の上限",
+    "questionJp": "高圧側一線地絡電流は3 Aで，高低圧混触により対地電圧が150 Vを超えたとき1.2秒で高圧側を遮断する。\n(a) B種接地抵抗の上限を求めよ。",
+    "questionVi": "Dòng chạm đất một pha cao áp là 3 A. Khi chạm chéo cao áp–hạ áp làm điện áp hạ áp với đất vượt 150 V, thiết bị cắt phía cao áp sau 1,2 giây.\n(a) Tính điện trở nối đất B tối đa (Ω) theo đề.",
+    "choicesJp": [
+      "10",
+      "25",
+      "50",
+      "75",
+      "100"
+    ],
+    "choicesVi": [
+      "10",
+      "25",
+      "50",
+      "75",
+      "100"
+    ],
+    "solution": [
+      "Thời gian 1,2 giây nằm trong nhóm trên 1 giây đến 2 giây trong đề. Dùng giới hạn 300/I_g=300/3=100 Ω.",
+      "Chọn (5)."
+    ],
+    "theory": [
+      436
+    ],
+    "pages": [
+      17
+    ],
+    "answer": 5,
+    "readings": [
+      [
+        0,
+        2,
+        "こうあつ"
+      ],
+      [
+        5,
+        4,
+        "ちらくでんりゅう"
+      ],
+      [
+        16,
+        2,
+        "ていあつ"
+      ],
+      [
+        23,
+        2,
+        "たいち"
+      ],
+      [
+        25,
+        2,
+        "でんあつ"
+      ],
+      [
+        44,
+        2,
+        "こうあつ"
+      ],
+      [
+        48,
+        2,
+        "しゃだん"
+      ],
+      [
+        60,
+        2,
+        "せっち"
+      ],
+      [
+        62,
+        2,
+        "ていこう"
+      ]
+    ],
+    "choiceReadings": [
+      [],
+      [],
+      [],
+      [],
+      []
+    ]
+  },
+  {
+    "key": "13b",
+    "titleJp": "D種接地抵抗と接触電圧",
+    "topic": "D種接地抵抗と接触電圧",
+    "questionJp": "100 Vの電動ポンプに完全地絡が生じる。B種接地抵抗を100 Ωとする。\n(b) 金属製外箱の対地電圧を25 V以下とするD種接地抵抗の上限を求めよ。",
+    "questionVi": "Bơm điện 100 V vỏ kim loại bị chạm vỏ hoàn toàn. Lấy điện trở nối đất B bằng 100 Ω như phần (a).\n(b) Tính điện trở nối đất D tối đa gần nhất để điện áp vỏ với đất không quá 25 V.",
+    "choicesJp": [
+      "15",
+      "20",
+      "25",
+      "30",
+      "35"
+    ],
+    "choicesVi": [
+      "15",
+      "20",
+      "25",
+      "30",
+      "35"
+    ],
+    "solution": [
+      "Mạch sự cố qua đất có R_B và R_D nối tiếp. Điện áp vỏ là 100R_D/(100+R_D). Bất đẳng thức ≤25 V cho R_D≤100/3≈33,3 Ω. Mức 30 Ω là lựa chọn lớn nhất vẫn đạt giới hạn.",
+      "Chọn (4)."
+    ],
+    "theory": [
+      436
+    ],
+    "pages": [
+      17
+    ],
+    "answer": 4,
+    "readings": [
+      [
+        6,
+        2,
+        "でんどう"
+      ],
+      [
+        14,
+        2,
+        "ちらく"
+      ],
+      [
+        23,
+        2,
+        "せっち"
+      ],
+      [
+        25,
+        2,
+        "ていこう"
+      ],
+      [
+        42,
+        2,
+        "きんぞく"
+      ],
+      [
+        45,
+        2,
+        "がいばこ"
+      ],
+      [
+        48,
+        2,
+        "たいち"
+      ],
+      [
+        50,
+        2,
+        "でんあつ"
+      ],
+      [
+        57,
+        2,
+        "いか"
+      ],
+      [
+        64,
+        2,
+        "せっち"
+      ],
+      [
+        66,
+        2,
+        "ていこう"
+      ]
+    ],
+    "choiceReadings": [
+      [],
+      [],
+      [],
+      [],
+      []
+    ]
+  }
+]

@@ -1,0 +1,2124 @@
+[
+  {
+    "key": "1",
+    "titleJp": "水車の種類",
+    "topic": "水車の種類",
+    "questionJp": "水車について，ノズルからの流水をランナに作用させる方式と代表例，圧力エネルギーを利用する方式の例，軸方向に流水を通す方式，少水量・低落差の発電に用いる方式の組合せを選べ。",
+    "questionVi": "Vòi phun biến thế năng nước thành động năng trước khi nước tác dụng lên bánh công tác. Chọn loại tuabin và ví dụ tương ứng, ví dụ tuabin sử dụng năng lượng áp suất, loại cho nước đi theo trục, và loại dùng cho thủy điện nhỏ có cột nước thấp.",
+    "choicesJp": [
+      "反動・ペルトン・プロペラ・フランシス・クロスフロー",
+      "衝動・フランシス・カプラン・クロスフロー・ポンプ",
+      "反動・斜流・フランシス・ポンプ・プロペラ",
+      "衝動・ペルトン・フランシス・プロペラ・クロスフロー",
+      "斜流・カプラン・クロスフロー・プロペラ・フランシス"
+    ],
+    "choicesVi": [
+      "Phản lực / Pelton / cánh quạt / Francis / dòng chảy ngang",
+      "Xung lực / Francis / Kaplan / dòng chảy ngang / bơm",
+      "Phản lực / dòng chéo / Francis / bơm / cánh quạt",
+      "Xung lực / Pelton / Francis / cánh quạt / dòng chảy ngang",
+      "Dòng chéo / Kaplan / dòng chảy ngang / cánh quạt / Francis"
+    ],
+    "solution": [
+      "Tia nước tác dụng trực tiếp lên bánh Pelton, đại diện của tuabin xung lực. Francis thuộc loại phản lực. Tuabin cánh quạt có dòng dọc trục, còn tuabin dòng chảy ngang dùng được ở công trình thủy điện nhỏ.",
+      "Chọn (4)."
+    ],
+    "theory": [
+      316
+    ],
+    "pages": [
+      1
+    ],
+    "answer": 4,
+    "readings": [
+      [
+        0,
+        2,
+        "すいしゃ"
+      ],
+      [
+        20,
+        2,
+        "さよう"
+      ],
+      [
+        25,
+        2,
+        "ほうしき"
+      ],
+      [
+        40,
+        2,
+        "りよう"
+      ],
+      [
+        44,
+        2,
+        "ほうしき"
+      ],
+      [
+        50,
+        2,
+        "ほうこう"
+      ],
+      [
+        58,
+        2,
+        "ほうしき"
+      ],
+      [
+        69,
+        2,
+        "はつでん"
+      ],
+      [
+        75,
+        2,
+        "ほうしき"
+      ],
+      [
+        78,
+        2,
+        "くみあ"
+      ]
+    ],
+    "choiceReadings": [
+      [],
+      [],
+      [],
+      [],
+      []
+    ]
+  },
+  {
+    "key": "2",
+    "titleJp": "コンバインドサイクル発電の熱効率",
+    "topic": "コンバインドサイクル発電の熱効率",
+    "questionJp": "排熱回収式コンバインドサイクルの熱効率は48%，ガスタービン排気の熱量に対する蒸気タービンの熱効率は20%である。排気をすべて蒸気側に供給するとき，ガスタービン発電の熱効率を求めよ。",
+    "questionVi": "Nhà máy chu trình hỗn hợp thu hồi nhiệt khí xả đạt hiệu suất 48%. Tuabin hơi biến 20% nhiệt chứa trong toàn bộ khí xả tuabin khí thành điện. Tính hiệu suất tuabin khí (%).",
+    "choicesJp": [
+      "23",
+      "27",
+      "28",
+      "35",
+      "38"
+    ],
+    "choicesVi": [
+      "23",
+      "27",
+      "28",
+      "35",
+      "38"
+    ],
+    "solution": [
+      "Gọi η là hiệu suất tuabin khí. Cân bằng trên một đơn vị nhiệt nhiên liệu cho η + 0,20(1−η)=0,48. Suy ra η=0,35.",
+      "Chọn (4)."
+    ],
+    "theory": [
+      337
+    ],
+    "pages": [
+      2
+    ],
+    "answer": 4,
+    "readings": [
+      [
+        17,
+        2,
+        "こうりつ"
+      ],
+      [
+        33,
+        2,
+        "ねつりょう"
+      ],
+      [
+        39,
+        2,
+        "じょうき"
+      ],
+      [
+        47,
+        2,
+        "こうりつ"
+      ],
+      [
+        63,
+        2,
+        "じょうき"
+      ],
+      [
+        67,
+        2,
+        "きょうきゅう"
+      ],
+      [
+        80,
+        2,
+        "はつでん"
+      ],
+      [
+        84,
+        2,
+        "こうりつ"
+      ]
+    ],
+    "choiceReadings": [
+      [],
+      [],
+      [],
+      [],
+      []
+    ]
+  },
+  {
+    "key": "3",
+    "titleJp": "蒸気タービンの分類",
+    "topic": "蒸気タービンの分類",
+    "questionJp": "蒸気の作用，機能及び用途による蒸気タービンの分類について，誤っているものを選べ。",
+    "questionVi": "Chọn phát biểu sai về các loại tuabin hơi.",
+    "choicesJp": [
+      "復水器を用いて排気を復水させ，蒸気をごく低圧まで膨張させる。",
+      "背圧タービンでは排気を工場用などへ送る。",
+      "反動タービンでは固定羽根で蒸気圧力を上昇させ，衝突力と排気時の反力を利用する。",
+      "衝動タービンは蒸気が回転羽根に衝突する力を利用する。",
+      "再生タービンでは給水加熱用の蒸気を中間段から取り出す。"
+    ],
+    "choicesVi": [
+      "Tuabin ngưng hơi cho hơi giãn đến áp suất rất thấp nhờ ngưng tụ hơi xả trong bình ngưng",
+      "Tuabin đối áp cấp hơi xả cho nhà máy hoặc nơi cần dùng thay vì đưa vào bình ngưng",
+      "Tuabin phản lực tăng áp suất hơi ở cánh tĩnh và dùng cả lực va vào cánh động lẫn phản lực khi hơi rời cánh động",
+      "Tuabin xung lực quay nhờ lực sinh ra khi hơi tác dụng lên cánh động",
+      "Tuabin trích hơi lấy một phần hơi ở tầng giữa để gia nhiệt nước cấp lò hơi"
+    ],
+    "solution": [
+      "Áp suất hơi giảm khi giãn nở qua cánh tĩnh của tuabin phản lực. Hơi tiếp tục giãn nở ở cánh động. Phát biểu (3) sai ở chi tiết tăng áp suất.",
+      "Chọn (3)."
+    ],
+    "theory": [
+      337
+    ],
+    "pages": [
+      2
+    ],
+    "answer": 3,
+    "readings": [
+      [
+        0,
+        2,
+        "じょうき"
+      ],
+      [
+        3,
+        2,
+        "さよう"
+      ],
+      [
+        15,
+        2,
+        "じょうき"
+      ]
+    ],
+    "choiceReadings": [
+      [
+        [
+          15,
+          2,
+          "じょうき"
+        ],
+        [
+          20,
+          2,
+          "ていあつ"
+        ],
+        [
+          24,
+          2,
+          "ぼうちょう"
+        ]
+      ],
+      [],
+      [
+        [
+          13,
+          2,
+          "じょうき"
+        ],
+        [
+          18,
+          2,
+          "じょうしょう"
+        ],
+        [
+          34,
+          2,
+          "りよう"
+        ]
+      ],
+      [
+        [
+          7,
+          2,
+          "じょうき"
+        ],
+        [
+          10,
+          2,
+          "かいてん"
+        ],
+        [
+          21,
+          2,
+          "りよう"
+        ]
+      ],
+      [
+        [
+          10,
+          2,
+          "かねつ"
+        ],
+        [
+          14,
+          2,
+          "じょうき"
+        ]
+      ]
+    ]
+  },
+  {
+    "key": "4",
+    "titleJp": "軽水炉のPWRとBWR",
+    "topic": "軽水炉のPWRとBWR",
+    "questionJp": "加圧水型PWRと沸騰水型BWRについて，誤っているものを選べ。",
+    "questionVi": "Chọn phát biểu sai về lò nước nhẹ PWR và BWR.",
+    "choicesJp": [
+      "軽水炉は低濃縮ウランを燃料とし，冷却材と減速材に軽水を用いる。",
+      "PWRは一次冷却材を沸騰させず，ホウ酸で反応度を調整する。",
+      "PWRは蒸気発生器の二次側の蒸気をタービンへ送る。",
+      "BWRは炉心の蒸気と蒸気発生器の蒸気を混合してタービンへ送る。",
+      "BWRでは冷却材の蒸気がタービンに入るため放射線防護が必要である。"
+    ],
+    "choicesVi": [
+      "Lò nước nhẹ dùng urani làm giàu thấp và nước nhẹ làm chất làm mát, chất làm chậm",
+      "Trong PWR, chất làm mát sơ cấp không sôi và có thể hòa axit boric để điều chỉnh độ phản ứng",
+      "Trong PWR, môi chất sơ cấp truyền nhiệt cho mạch thứ cấp trong bộ sinh hơi và về nguyên tắc không trực tiếp vào tuabin",
+      "Trong BWR, hơi từ lõi lò trộn với hơi từ bộ sinh hơi rồi mới đi vào tuabin",
+      "Trong BWR, hơi của chất làm mát đi vào tuabin nên cần bảo vệ bức xạ ở tuabin"
+    ],
+    "solution": [
+      "Trong BWR, hơi được tạo ngay trong bình lò và đưa đến tuabin sau khi tách ẩm. Bộ sinh hơi tách mạch sơ cấp và thứ cấp là cấu hình của PWR.",
+      "Chọn (4)."
+    ],
+    "theory": [
+      353
+    ],
+    "pages": [
+      3
+    ],
+    "answer": 4,
+    "readings": [],
+    "choiceReadings": [
+      [
+        [
+          11,
+          2,
+          "ねんりょう"
+        ]
+      ],
+      [
+        [
+          24,
+          2,
+          "ちょうせい"
+        ]
+      ],
+      [
+        [
+          4,
+          2,
+          "じょうき"
+        ],
+        [
+          14,
+          2,
+          "じょうき"
+        ]
+      ],
+      [
+        [
+          7,
+          2,
+          "じょうき"
+        ],
+        [
+          10,
+          2,
+          "じょうき"
+        ],
+        [
+          16,
+          2,
+          "じょうき"
+        ]
+      ],
+      [
+        [
+          9,
+          2,
+          "じょうき"
+        ],
+        [
+          21,
+          2,
+          "ほうしゃ"
+        ],
+        [
+          27,
+          2,
+          "ひつよう"
+        ]
+      ]
+    ]
+  },
+  {
+    "key": "5",
+    "titleJp": "太陽光発電の導入",
+    "topic": "太陽光発電の導入",
+    "questionJp": "太陽光発電について，太陽電池の変換効率，年間で予想する量，傾斜角とともに確認する条件，及び系統連系保護を内蔵した変換装置の組合せを選べ。",
+    "questionVi": "Theo bối cảnh đề H25, chọn hiệu suất pin quang điện, đại lượng cần ước tính theo năm, thông số lắp đặt cùng với góc nghiêng, và thiết bị đổi DC sang AC có bảo vệ đấu nối.",
+    "choicesJp": [
+      "7〜20・平均気温・影・コンバータ",
+      "7〜20・発電電力量・方位・パワーコンディショナ",
+      "20〜30・発電電力量・強度・インバータ",
+      "15〜40・平均気温・面積・インバータ",
+      "30〜40・日照時間・方位・パワーコンディショナ"
+    ],
+    "choicesVi": [
+      "7–20% / nhiệt độ trung bình / bóng che / bộ biến đổi",
+      "7–20% / điện năng phát / hướng lắp / bộ điều hòa công suất",
+      "20–30% / điện năng phát / cường độ / nghịch lưu",
+      "15–40% / nhiệt độ trung bình / diện tích / nghịch lưu",
+      "30–40% / số giờ nắng / hướng lắp / bộ điều hòa công suất"
+    ],
+    "solution": [
+      "Đề lấy hiệu suất khoảng 7–20%. Điện năng hằng năm thay đổi theo hướng và góc nghiêng. Bộ điều hòa công suất tích hợp nghịch lưu và bảo vệ đấu nối.",
+      "Chọn (2)."
+    ],
+    "theory": [
+      365
+    ],
+    "pages": [
+      4
+    ],
+    "answer": 2,
+    "readings": [
+      [
+        0,
+        3,
+        "たいようこう"
+      ],
+      [
+        3,
+        2,
+        "はつでん"
+      ],
+      [
+        15,
+        2,
+        "へんかん"
+      ],
+      [
+        17,
+        2,
+        "こうりつ"
+      ],
+      [
+        40,
+        2,
+        "じょうけん"
+      ],
+      [
+        45,
+        2,
+        "けいとう"
+      ],
+      [
+        49,
+        2,
+        "ほご"
+      ],
+      [
+        56,
+        2,
+        "へんかん"
+      ],
+      [
+        58,
+        2,
+        "そうち"
+      ],
+      [
+        61,
+        2,
+        "くみあ"
+      ]
+    ],
+    "choiceReadings": [
+      [
+        [
+          5,
+          2,
+          "へいきん"
+        ]
+      ],
+      [
+        [
+          5,
+          2,
+          "はつでん"
+        ],
+        [
+          7,
+          2,
+          "でんりょく"
+        ]
+      ],
+      [
+        [
+          6,
+          2,
+          "はつでん"
+        ],
+        [
+          8,
+          2,
+          "でんりょく"
+        ],
+        [
+          12,
+          2,
+          "きょうど"
+        ]
+      ],
+      [
+        [
+          6,
+          2,
+          "へいきん"
+        ]
+      ],
+      [
+        [
+          8,
+          2,
+          "じかん"
+        ]
+      ]
+    ]
+  },
+  {
+    "key": "6",
+    "titleJp": "変圧器のY–Y–Δ結線",
+    "topic": "変圧器のY–Y–Δ結線",
+    "questionJp": "変圧器のY–Y–Δ結線に関する記述として，誤っているものを選べ。",
+    "questionVi": "Chọn phát biểu sai về đấu dây máy biến áp Y–Y–Δ.",
+    "choicesJp": [
+      "高電圧大容量変電所の主変圧器に広く使われる。",
+      "一次又は二次巻線の中性点を接地できない。",
+      "一次と二次を同位相とする場合に用いる。",
+      "Δ結線がないと励磁電流による第三調波で誘導起電力がひずむ。",
+      "Δ結線は調相設備の接続や所内電源に使える。"
+    ],
+    "choicesVi": [
+      "Dùng rộng rãi cho máy biến áp chính ở trạm công suất lớn, điện áp cao",
+      "Không thể nối đất trung tính phía sơ cấp hoặc thứ cấp",
+      "Dùng khi cần phía sơ cấp và thứ cấp cùng pha",
+      "Nếu thiếu cuộn Δ, sức điện động cảm ứng có thể méo do hài bậc ba của dòng kích từ",
+      "Có thể dùng cuộn Δ làm cuộn thứ ba cấp thiết bị bù hoặc nguồn tự dùng"
+    ],
+    "solution": [
+      "Đấu sao tạo điểm trung tính có thể nối đất. Cuộn tam giác cung cấp đường khép kín cho dòng hài bậc ba, giúp hạn chế méo điện áp.",
+      "Chọn (2)."
+    ],
+    "theory": [
+      175
+    ],
+    "pages": [
+      5
+    ],
+    "answer": 2,
+    "readings": [
+      [
+        0,
+        3,
+        "へんあつき"
+      ],
+      [
+        9,
+        2,
+        "けっせん"
+      ],
+      [
+        15,
+        2,
+        "きじゅつ"
+      ]
+    ],
+    "choiceReadings": [
+      [
+        [
+          1,
+          2,
+          "でんあつ"
+        ],
+        [
+          4,
+          2,
+          "ようりょう"
+        ],
+        [
+          6,
+          2,
+          "へんでん"
+        ],
+        [
+          11,
+          3,
+          "へんあつき"
+        ]
+      ],
+      [
+        [
+          6,
+          2,
+          "まきせん"
+        ],
+        [
+          9,
+          3,
+          "ちゅうせいてん"
+        ],
+        [
+          13,
+          2,
+          "せっち"
+        ]
+      ],
+      [
+        [
+          7,
+          2,
+          "いそう"
+        ],
+        [
+          12,
+          2,
+          "ばあい"
+        ]
+      ],
+      [
+        [
+          1,
+          2,
+          "けっせん"
+        ],
+        [
+          7,
+          2,
+          "れいじ"
+        ],
+        [
+          9,
+          2,
+          "でんりゅう"
+        ],
+        [
+          19,
+          2,
+          "ゆうどう"
+        ],
+        [
+          21,
+          2,
+          "きでん"
+        ]
+      ],
+      [
+        [
+          1,
+          2,
+          "けっせん"
+        ],
+        [
+          6,
+          2,
+          "せつび"
+        ],
+        [
+          9,
+          2,
+          "せつぞく"
+        ],
+        [
+          14,
+          2,
+          "でんげん"
+        ]
+      ]
+    ]
+  },
+  {
+    "key": "7",
+    "titleJp": "真空遮断器の構造",
+    "topic": "真空遮断器の構造",
+    "questionJp": "真空遮断器の電極を密閉する部分，可動電極が動いても真空を保つ部分，空気遮断器に比べた騒音，ガス遮断器に比べた適用電圧の組合せを選べ。",
+    "questionVi": "Chọn buồng kín chứa điện cực, bộ phận duy trì chân không khi điện cực động di chuyển, mức ồn so với máy cắt không khí và cấp điện áp điển hình so với máy cắt khí.",
+    "choicesJp": [
+      "真空バルブ・ベローズ・小さく・高い",
+      "パッファシリンダ・ベローズ・大きく・高い",
+      "真空バルブ・ベローズ・小さく・低い",
+      "パッファシリンダ・ブッシング変流器・小さく・高い",
+      "真空バルブ・ブッシング変流器・大きく・低い"
+    ],
+    "choicesVi": [
+      "Buồng chân không / ống xếp / nhỏ / cao",
+      "Xi lanh nén khí / ống xếp / lớn / cao",
+      "Buồng chân không / ống xếp / nhỏ / thấp",
+      "Xi lanh nén khí / biến dòng xuyên sứ / nhỏ / cao",
+      "Buồng chân không / biến dòng xuyên sứ / lớn / thấp"
+    ],
+    "solution": [
+      "Tiếp điểm nằm trong buồng chân không. Ống xếp kín cho phép tiếp điểm di chuyển. Trong so sánh của đề, máy cắt chân không ít ồn hơn loại không khí và phổ biến ở điện áp thấp hơn loại khí.",
+      "Chọn (3)."
+    ],
+    "theory": [
+      391
+    ],
+    "pages": [
+      6
+    ],
+    "answer": 3,
+    "readings": [
+      [
+        0,
+        2,
+        "しんくう"
+      ],
+      [
+        2,
+        2,
+        "しゃだん"
+      ],
+      [
+        6,
+        2,
+        "でんきょく"
+      ],
+      [
+        16,
+        2,
+        "かどう"
+      ],
+      [
+        18,
+        2,
+        "でんきょく"
+      ],
+      [
+        25,
+        2,
+        "しんくう"
+      ],
+      [
+        35,
+        2,
+        "しゃだん"
+      ],
+      [
+        47,
+        2,
+        "しゃだん"
+      ],
+      [
+        56,
+        2,
+        "でんあつ"
+      ],
+      [
+        59,
+        2,
+        "くみあ"
+      ]
+    ],
+    "choiceReadings": [
+      [
+        [
+          0,
+          2,
+          "しんくう"
+        ]
+      ],
+      [],
+      [
+        [
+          0,
+          2,
+          "しんくう"
+        ]
+      ],
+      [],
+      [
+        [
+          0,
+          2,
+          "しんくう"
+        ]
+      ]
+    ]
+  },
+  {
+    "key": "8",
+    "titleJp": "架空送電線路の構成要素",
+    "topic": "架空送電線路の構成要素",
+    "questionJp": "架空送電線路の構成要素に関する記述として，誤っているものを選べ。",
+    "questionVi": "Chọn mô tả sai về phần tử của đường dây trên không.",
+    "choicesJp": [
+      "ACSRは鋼心の周囲に硬アルミ線をより合わせた電線。",
+      "アーマロッドはクランプ部の振動疲労及び溶断防止に用いる。",
+      "ダンパは微風振動による疲労と損傷を防ぐ。",
+      "スペーサは多導体の電線相互の接近・衝突を防ぐ。",
+      "懸垂がいしは棒状絶縁物の両側に連結金具を付けた装置で，複数個を連結して用いる。"
+    ],
+    "choicesVi": [
+      "ACSR có lõi thép mạ kẽm, quanh là dây nhôm cứng bện đồng tâm",
+      "Thanh giáp bảo vệ dây ở kẹp khỏi mỏi rung và đứt do nóng chảy",
+      "Bộ giảm rung chống mỏi và hỏng dây do rung nhỏ",
+      "Miếng giãn cách ngăn các dây trong bó xích lại hoặc va nhau",
+      "Chuỗi sứ treo gồm các thanh cách điện có phụ kiện liên kết ở hai đầu"
+    ],
+    "solution": [
+      "Đề mô tả sứ treo dạng chuỗi bằng cấu tạo thanh cách điện hai đầu gắn kim loại, vốn là mô tả của loại sứ thanh. Các bát sứ treo thông dụng ghép nối thành chuỗi.",
+      "Chọn (5)."
+    ],
+    "theory": [
+      385
+    ],
+    "pages": [
+      7
+    ],
+    "answer": 5,
+    "readings": [
+      [
+        0,
+        2,
+        "かくう"
+      ],
+      [
+        2,
+        2,
+        "そうでん"
+      ],
+      [
+        4,
+        2,
+        "せんろ"
+      ],
+      [
+        7,
+        2,
+        "こうせい"
+      ],
+      [
+        15,
+        2,
+        "きじゅつ"
+      ]
+    ],
+    "choiceReadings": [
+      [
+        [
+          23,
+          2,
+          "でんせん"
+        ]
+      ],
+      [
+        [
+          21,
+          2,
+          "ぼうし"
+        ]
+      ],
+      [],
+      [
+        [
+          6,
+          2,
+          "どうたい"
+        ],
+        [
+          9,
+          2,
+          "でんせん"
+        ],
+        [
+          11,
+          2,
+          "そうご"
+        ]
+      ],
+      [
+        [
+          8,
+          2,
+          "ぜつえん"
+        ],
+        [
+          23,
+          2,
+          "そうち"
+        ]
+      ]
+    ]
+  },
+  {
+    "key": "9",
+    "titleJp": "支線と追支線の水平力",
+    "topic": "支線と追支線の水平力",
+    "questionJp": "図の支持物に水平張力Tが作用する。固定点C，Dの高さをh₁，h₂，水平距離AB，BEをℓ₁，ℓ₂とする。各柱の水平力の釣合いから追支線DEの張力T₂を求めよ。",
+    "questionVi": "Lực ngang T tác dụng lên cột như hình. Điểm C cao h₁, điểm D cao h₂, AB=ℓ₁ và BE=ℓ₂. Cân bằng riêng lực ngang ở hai cột, bỏ qua trọng lượng dây. Tìm lực căng T₂ của dây néo DE.",
+    "choicesJp": [
+      "T√(h₂²+ℓ₂²)/ℓ₂",
+      "Tℓ₂/√(h₂²+ℓ₂²)",
+      "T√(h₂²+ℓ₂²)/√((h₁−h₂)²+ℓ₁²)",
+      "T√((h₁−h₂)²+ℓ₁²)/√(h₂²+ℓ₂²)",
+      "Th₂√((h₁−h₂)²+ℓ₁²)/[(h₁−h₂)√(h₂²+ℓ₂²)]"
+    ],
+    "choicesVi": [
+      "T√(h₂²+ℓ₂²)/ℓ₂",
+      "Tℓ₂/√(h₂²+ℓ₂²)",
+      "T√(h₂²+ℓ₂²)/√((h₁−h₂)²+ℓ₁²)",
+      "T√((h₁−h₂)²+ℓ₁²)/√(h₂²+ℓ₂²)",
+      "Th₂√((h₁−h₂)²+ℓ₁²)/[(h₁−h₂)√(h₂²+ℓ₂²)]"
+    ],
+    "solution": [
+      "Thành phần ngang truyền qua dây CD bằng T và phải cân bằng thành phần ngang của DE. Do đó T₂ℓ₂/√(h₂²+ℓ₂²)=T.",
+      "Chọn (1)."
+    ],
+    "theory": [
+      385
+    ],
+    "pages": [
+      8
+    ],
+    "answer": 1,
+    "readings": [
+      [
+        2,
+        2,
+        "しじ"
+      ],
+      [
+        8,
+        2,
+        "ちょうりょく"
+      ],
+      [
+        12,
+        2,
+        "さよう"
+      ],
+      [
+        35,
+        2,
+        "きょり"
+      ],
+      [
+        70,
+        2,
+        "ちょうりょく"
+      ]
+    ],
+    "choiceReadings": [
+      [],
+      [],
+      [],
+      [],
+      []
+    ]
+  },
+  {
+    "key": "10",
+    "titleJp": "地中電線の損失",
+    "topic": "地中電線の損失",
+    "questionJp": "地中電線の損失に関する記述として，誤っているものを選べ。",
+    "questionVi": "Chọn phát biểu sai về tổn hao của cáp ngầm.",
+    "choicesJp": [
+      "誘電体損は電圧より位相が90°進んだ電流成分による。",
+      "シース損は金属シースに誘導される電流による。",
+      "導体の抵抗損は抵抗が一定なら導体電流の二乗に比例する。",
+      "クロスボンド接地はシース損の低減に有効である。",
+      "絶縁体が劣化すると誘電体損は一般に増える。"
+    ],
+    "choicesVi": [
+      "Tổn hao điện môi do thành phần dòng sớm pha 90° so với áp",
+      "Tổn hao vỏ kim loại do dòng cảm ứng trong vỏ",
+      "Tổn hao điện trở lõi tỉ lệ bình phương dòng khi điện trở trên đơn vị chiều dài không đổi",
+      "Nối đất kiểu cross-bonding giúp giảm tổn hao vỏ",
+      "Điện môi suy giảm thường làm tăng tổn hao điện môi"
+    ],
+    "solution": [
+      "Thành phần dòng vuông pha chỉ trao đổi năng lượng phản kháng. Tổn hao thực do thành phần dòng đồng pha với điện áp.",
+      "Chọn (1)."
+    ],
+    "theory": [
+      395
+    ],
+    "pages": [
+      9
+    ],
+    "answer": 1,
+    "readings": [
+      [
+        2,
+        2,
+        "でんせん"
+      ],
+      [
+        5,
+        2,
+        "そんしつ"
+      ],
+      [
+        11,
+        2,
+        "きじゅつ"
+      ]
+    ],
+    "choiceReadings": [
+      [
+        [
+          0,
+          3,
+          "ゆうでんたい"
+        ],
+        [
+          5,
+          2,
+          "でんあつ"
+        ],
+        [
+          9,
+          2,
+          "いそう"
+        ],
+        [
+          18,
+          2,
+          "でんりゅう"
+        ]
+      ],
+      [
+        [
+          5,
+          2,
+          "きんぞく"
+        ],
+        [
+          11,
+          2,
+          "ゆうどう"
+        ],
+        [
+          16,
+          2,
+          "でんりゅう"
+        ]
+      ],
+      [
+        [
+          0,
+          2,
+          "どうたい"
+        ],
+        [
+          3,
+          2,
+          "ていこう"
+        ],
+        [
+          7,
+          2,
+          "ていこう"
+        ],
+        [
+          10,
+          2,
+          "いってい"
+        ],
+        [
+          14,
+          2,
+          "どうたい"
+        ],
+        [
+          16,
+          2,
+          "でんりゅう"
+        ],
+        [
+          22,
+          2,
+          "ひれい"
+        ]
+      ],
+      [
+        [
+          6,
+          2,
+          "せっち"
+        ],
+        [
+          14,
+          2,
+          "ていげん"
+        ],
+        [
+          17,
+          2,
+          "ゆうこう"
+        ]
+      ],
+      [
+        [
+          0,
+          2,
+          "ぜつえん"
+        ],
+        [
+          9,
+          3,
+          "ゆうでんたい"
+        ],
+        [
+          14,
+          2,
+          "いっぱん"
+        ]
+      ]
+    ]
+  },
+  {
+    "key": "11",
+    "titleJp": "配電系統の特徴",
+    "topic": "配電系統の特徴",
+    "questionJp": "日本の配電系統の特徴について，誤っているものを選べ。",
+    "questionVi": "Chọn phát biểu sai về lưới phân phối Nhật Bản trong đề.",
+    "choicesJp": [
+      "配電用変電所に過電流継電器と地絡方向継電器を設ける。",
+      "柱上変圧器には高圧カットアウトを設ける。",
+      "高圧配電は通常6.6 kV三相3線式で，一部では22 kV又は33 kVも使う。",
+      "低圧配電には単相3線式や電灯・動力共用のV結線三相4線式を使う。",
+      "低圧引込線の需要場所側の取付点にケッチヒューズを設ける。"
+    ],
+    "choicesVi": [
+      "Trạm phân phối có rơle quá dòng và rơle chạm đất có hướng",
+      "Máy biến áp cột có bộ cắt cao áp để ngăn sự cố ngắn mạch lan lên lưới cao áp",
+      "Lưới thường dùng 6,6 kV ba pha ba dây, có nơi dùng 22 hoặc 33 kV",
+      "Hạ áp dùng một pha ba dây cho chiếu sáng, có thể dùng V ba pha bốn dây để dùng chung cho chiếu sáng và động lực",
+      "Cầu chì dây dẫn vào hạ áp được lắp tại điểm dây gắn vào cơ sở khách hàng"
+    ],
+    "solution": [
+      "Cầu chì bảo vệ dây dẫn vào hạ áp được bố trí phía đấu nối với lưới phân phối, để bảo vệ đoạn dây dẫn vào. Đề đặt nó ở đầu phía khách hàng nên (5) sai.",
+      "Chọn (5)."
+    ],
+    "theory": [
+      401
+    ],
+    "pages": [
+      10
+    ],
+    "answer": 5,
+    "readings": [
+      [
+        3,
+        2,
+        "はいでん"
+      ],
+      [
+        5,
+        2,
+        "けいとう"
+      ],
+      [
+        8,
+        2,
+        "とくちょう"
+      ]
+    ],
+    "choiceReadings": [
+      [
+        [
+          0,
+          2,
+          "はいでん"
+        ],
+        [
+          3,
+          2,
+          "へんでん"
+        ],
+        [
+          8,
+          2,
+          "でんりゅう"
+        ],
+        [
+          10,
+          3,
+          "けいでんき"
+        ],
+        [
+          14,
+          2,
+          "ちらく"
+        ],
+        [
+          16,
+          2,
+          "ほうこう"
+        ],
+        [
+          18,
+          3,
+          "けいでんき"
+        ]
+      ],
+      [
+        [
+          2,
+          3,
+          "へんあつき"
+        ],
+        [
+          7,
+          2,
+          "こうあつ"
+        ]
+      ],
+      [
+        [
+          0,
+          2,
+          "こうあつ"
+        ],
+        [
+          2,
+          2,
+          "はいでん"
+        ],
+        [
+          13,
+          2,
+          "さんそう"
+        ]
+      ],
+      [
+        [
+          0,
+          2,
+          "ていあつ"
+        ],
+        [
+          2,
+          2,
+          "はいでん"
+        ],
+        [
+          21,
+          2,
+          "けっせん"
+        ],
+        [
+          23,
+          2,
+          "さんそう"
+        ]
+      ],
+      [
+        [
+          0,
+          2,
+          "ていあつ"
+        ]
+      ]
+    ]
+  },
+  {
+    "key": "12",
+    "titleJp": "配電線の時限順送方式",
+    "topic": "配電線の時限順送方式",
+    "questionJp": "高圧配電線路の事故時に区分開閉器が動作する。動作時限が7秒で，送電再開から約22秒で再停止した。検出機器，区分開閉器の開閉順，方式名及び図の故障区間の組合せを選べ。",
+    "questionVi": "Rơle trạm phát hiện sự cố rồi máy cắt ngừng cấp. Các công tắc phân đoạn đổi trạng thái và sau khi cấp lại điện sẽ lần lượt tác động từ phía nguồn. Với trễ mỗi công tắc 7 giây, cấp lại rồi bị cắt sau khoảng 22 giây. Chọn thiết bị phát hiện, trạng thái ban đầu, trạng thái khi cấp lại, tên phương thức và đoạn sự cố.",
+    "choicesJp": [
+      "保護継電器・開放・投入・区間順送方式・c",
+      "避雷器・開放・投入・時限順送方式・d",
+      "保護継電器・開放・投入・時限順送方式・d",
+      "避雷器・投入・開放・区間順送方式・c",
+      "保護継電器・投入・開放・時限順送方式・c"
+    ],
+    "choicesVi": [
+      "Rơle bảo vệ / mở / đóng / tuần tự theo phân đoạn / c",
+      "Chống sét van / mở / đóng / tuần tự theo thời gian / d",
+      "Rơle bảo vệ / mở / đóng / tuần tự theo thời gian / d",
+      "Chống sét van / đóng / mở / tuần tự theo phân đoạn / c",
+      "Rơle bảo vệ / đóng / mở / tuần tự theo thời gian / c"
+    ],
+    "solution": [
+      "Rơle bảo vệ phát hiện sự cố. Các công tắc mở khi mất điện và đóng tuần tự khi có điện. Sau 7, 14 và 21 giây ba công tắc đã đóng, cấp đến đoạn d. Sự cố tái xuất hiện vào khoảng 22 giây.",
+      "Chọn (3)."
+    ],
+    "theory": [
+      401
+    ],
+    "pages": [
+      11
+    ],
+    "answer": 3,
+    "readings": [
+      [
+        0,
+        2,
+        "こうあつ"
+      ],
+      [
+        2,
+        2,
+        "はいでん"
+      ],
+      [
+        4,
+        2,
+        "せんろ"
+      ],
+      [
+        7,
+        2,
+        "じこ"
+      ],
+      [
+        17,
+        2,
+        "どうさ"
+      ],
+      [
+        22,
+        2,
+        "どうさ"
+      ],
+      [
+        31,
+        2,
+        "そうでん"
+      ],
+      [
+        43,
+        2,
+        "ていし"
+      ],
+      [
+        50,
+        2,
+        "きき"
+      ],
+      [
+        63,
+        2,
+        "ほうしき"
+      ],
+      [
+        75,
+        2,
+        "くみあ"
+      ]
+    ],
+    "choiceReadings": [
+      [
+        [
+          0,
+          2,
+          "ほご"
+        ],
+        [
+          2,
+          3,
+          "けいでんき"
+        ],
+        [
+          16,
+          2,
+          "ほうしき"
+        ]
+      ],
+      [
+        [
+          14,
+          2,
+          "ほうしき"
+        ]
+      ],
+      [
+        [
+          0,
+          2,
+          "ほご"
+        ],
+        [
+          2,
+          3,
+          "けいでんき"
+        ],
+        [
+          16,
+          2,
+          "ほうしき"
+        ]
+      ],
+      [
+        [
+          14,
+          2,
+          "ほうしき"
+        ]
+      ],
+      [
+        [
+          0,
+          2,
+          "ほご"
+        ],
+        [
+          2,
+          3,
+          "けいでんき"
+        ],
+        [
+          16,
+          2,
+          "ほうしき"
+        ]
+      ]
+    ]
+  },
+  {
+    "key": "13",
+    "titleJp": "三相配電線の電圧降下",
+    "topic": "三相配電線の電圧降下",
+    "questionJp": "三相3線式の配電線S–A–Bで各区間は1 km，Sの線間電圧は6,900 V，AとBの負荷電流は150 Aと100 A，力率はともに0.8遅れである。1線当たりR＝0.3 Ω/km，X＝0.2 Ω/kmとし，位相差を小さいとしてBの線間電圧を求めよ。",
+    "questionVi": "Đường dây ba pha ba dây S–A–B, mỗi đoạn 1 km. Điện áp dây S là 6.900 V. Tải tại A 150 A, tại B 100 A, cùng cosφ=0,8 trễ. Mỗi dây R=0,3 Ω/km, X=0,2 Ω/km. Dùng gần đúng góc lệch nhỏ, tính điện áp dây tại B (V).",
+    "choicesJp": [
+      "6522",
+      "6646",
+      "6682",
+      "6774",
+      "6795"
+    ],
+    "choicesVi": [
+      "6522",
+      "6646",
+      "6682",
+      "6774",
+      "6795"
+    ],
+    "solution": [
+      "Dòng đoạn S–A là 250 A, đoạn A–B là 100 A. Mỗi đoạn có sụt áp dây √3I(Rcosφ+Xsinφ). Tổng sụt áp khoảng 218 V, cho V_B≈6.682 V.",
+      "Chọn (3)."
+    ],
+    "theory": [
+      404
+    ],
+    "pages": [
+      12
+    ],
+    "answer": 3,
+    "readings": [
+      [
+        0,
+        2,
+        "さんそう"
+      ],
+      [
+        6,
+        2,
+        "はいでん"
+      ],
+      [
+        26,
+        4,
+        "せんかんでんあつ"
+      ],
+      [
+        43,
+        2,
+        "ふか"
+      ],
+      [
+        45,
+        2,
+        "でんりゅう"
+      ],
+      [
+        60,
+        2,
+        "りきりつ"
+      ],
+      [
+        104,
+        2,
+        "いそう"
+      ],
+      [
+        116,
+        4,
+        "せんかんでんあつ"
+      ]
+    ],
+    "choiceReadings": [
+      [],
+      [],
+      [],
+      [],
+      []
+    ]
+  },
+  {
+    "key": "14",
+    "titleJp": "絶縁材料の性質",
+    "topic": "絶縁材料の性質",
+    "questionJp": "絶縁材料に関する記述として，誤っているものを選べ。",
+    "questionVi": "Chọn phát biểu sai về vật liệu cách điện.",
+    "choicesJp": [
+      "絶縁油の性能は温度や不純物の影響を受ける。",
+      "固体絶縁材料は熱膨張・収縮によるひずみで劣化し得る。",
+      "SF₆は絶縁耐力が高いが地球温暖化への影響が大きい。",
+      "液体の絶縁耐力は気体に比べて圧力により大きく変わる。",
+      "固体の絶縁耐力は液体や気体より高いものが多い。"
+    ],
+    "choicesVi": [
+      "Nhiệt độ và tạp chất ảnh hưởng đến dầu cách điện",
+      "Giãn nở và co do nhiệt có thể gây biến dạng và lão hóa cách điện rắn",
+      "SF₆ cách điện tốt hơn không khí nhưng có tác động lớn lên nóng lên toàn cầu",
+      "Độ bền cách điện của chất lỏng biến đổi theo áp suất mạnh hơn của chất khí",
+      "Nhiều chất rắn có độ bền cách điện cao hơn chất lỏng hoặc khí"
+    ],
+    "solution": [
+      "Độ bền đánh thủng của khí nhạy với áp suất vì mật độ phân tử thay đổi đáng kể. Chất lỏng ít nén được hơn. Vì vậy (4) sai.",
+      "Chọn (4)."
+    ],
+    "theory": [
+      390
+    ],
+    "pages": [
+      13
+    ],
+    "answer": 4,
+    "readings": [
+      [
+        0,
+        2,
+        "ぜつえん"
+      ],
+      [
+        2,
+        2,
+        "ざいりょう"
+      ],
+      [
+        8,
+        2,
+        "きじゅつ"
+      ]
+    ],
+    "choiceReadings": [
+      [
+        [
+          0,
+          2,
+          "ぜつえん"
+        ],
+        [
+          14,
+          2,
+          "えいきょう"
+        ]
+      ],
+      [
+        [
+          2,
+          2,
+          "ぜつえん"
+        ],
+        [
+          4,
+          2,
+          "ざいりょう"
+        ],
+        [
+          8,
+          2,
+          "ぼうちょう"
+        ]
+      ],
+      [
+        [
+          4,
+          4,
+          "ぜつえんたいりょく"
+        ],
+        [
+          19,
+          2,
+          "えいきょう"
+        ]
+      ],
+      [
+        [
+          3,
+          4,
+          "ぜつえんたいりょく"
+        ]
+      ],
+      [
+        [
+          3,
+          4,
+          "ぜつえんたいりょく"
+        ]
+      ]
+    ]
+  },
+  {
+    "key": "15a",
+    "titleJp": "汽力発電所の発生電力量",
+    "topic": "汽力発電所の発生電力量",
+    "questionJp": "海水で復水器を冷却する汽力発電所が定格で運転している。\n(a) 発電端熱効率38%，燃料消費量40 t/h，発熱量44,000 kJ/kgのとき，1時間当たりの発生電力量を求めよ。",
+    "questionVi": "(a) Nhà máy điện hơi nước có hiệu suất đầu phát 38%, dùng 40 tấn nhiên liệu mỗi giờ, nhiệt trị 44.000 kJ/kg. Tìm điện năng phát trong một giờ (MWh).",
+    "choicesJp": [
+      "186",
+      "489",
+      "778",
+      "1286",
+      "2046"
+    ],
+    "choicesVi": [
+      "186",
+      "489",
+      "778",
+      "1286",
+      "2046"
+    ],
+    "solution": [
+      "Nhiệt đầu vào mỗi giờ là 40.000×44.000 kJ. Nhân hiệu suất 0,38 rồi chia 3.600.000 kJ/MWh, được khoảng 186 MWh.",
+      "Chọn (1)."
+    ],
+    "theory": [
+      337
+    ],
+    "pages": [
+      14
+    ],
+    "answer": 1,
+    "readings": [
+      [
+        13,
+        2,
+        "はつでん"
+      ],
+      [
+        17,
+        2,
+        "ていかく"
+      ],
+      [
+        20,
+        2,
+        "うんてん"
+      ],
+      [
+        32,
+        2,
+        "はつでん"
+      ],
+      [
+        36,
+        2,
+        "こうりつ"
+      ],
+      [
+        42,
+        2,
+        "ねんりょう"
+      ],
+      [
+        44,
+        2,
+        "しょうひ"
+      ],
+      [
+        54,
+        2,
+        "はつねつ"
+      ],
+      [
+        74,
+        2,
+        "じかん"
+      ],
+      [
+        82,
+        2,
+        "でんりょく"
+      ]
+    ],
+    "choiceReadings": [
+      [],
+      [],
+      [],
+      [],
+      []
+    ]
+  },
+  {
+    "key": "15b",
+    "titleJp": "復水器の冷却水流量",
+    "topic": "復水器の冷却水流量",
+    "questionJp": "海水で復水器を冷却する汽力発電所が定格で運転している。\n(b) タービン熱消費率8,000 kJ/(kWh)，発電機効率98%，海水の比熱4.0 kJ/(kg·K)，密度1,000 kg/m³とする。冷却水温度上昇を7 Kにする流量を求めよ。",
+    "questionVi": "(b) Nhà máy đang chạy định mức như phần (a). Suất tiêu hao nhiệt tuabin 8.000 kJ/kWh, hiệu suất máy phát 98%, nước biển có nhiệt dung riêng 4,0 kJ/(kg·K), khối lượng riêng 1.000 kg/m³. Tính lưu lượng nước làm mát (m³/s) để nhiệt độ tăng 7 K.",
+    "choicesJp": [
+      "6.8",
+      "8.0",
+      "14.8",
+      "17.9",
+      "21.0"
+    ],
+    "choicesVi": [
+      "6.8",
+      "8.0",
+      "14.8",
+      "17.9",
+      "21.0"
+    ],
+    "solution": [
+      "Công suất trục khoảng 186 MW/0,98≈190 MW. Mỗi kWh trục nhận 8.000 kJ và cho 3.600 kJ công cơ, còn khoảng 4.400 kJ thải nhiệt. Chia nhiệt thải mỗi giây cho 4,0×1.000×7 được khoảng 8,3 m³/s, gần 8,0.",
+      "Chọn (2)."
+    ],
+    "theory": [
+      337
+    ],
+    "pages": [
+      14
+    ],
+    "answer": 2,
+    "readings": [
+      [
+        13,
+        2,
+        "はつでん"
+      ],
+      [
+        17,
+        2,
+        "ていかく"
+      ],
+      [
+        20,
+        2,
+        "うんてん"
+      ],
+      [
+        37,
+        2,
+        "しょうひ"
+      ],
+      [
+        55,
+        2,
+        "はつでん"
+      ],
+      [
+        58,
+        2,
+        "こうりつ"
+      ],
+      [
+        83,
+        2,
+        "みつど"
+      ],
+      [
+        105,
+        2,
+        "じょうしょう"
+      ],
+      [
+        114,
+        2,
+        "りゅうりょう"
+      ]
+    ],
+    "choiceReadings": [
+      [],
+      [],
+      [],
+      [],
+      []
+    ]
+  },
+  {
+    "key": "16a",
+    "titleJp": "受電端力率改善のコンデンサ容量",
+    "topic": "受電端力率改善のコンデンサ容量",
+    "questionJp": "受電端電圧66 kV，負荷40 MW，力率0.87遅れの需要家を考える。\n(a) 受電端電圧一定で力率を1とするコンデンサの総容量を求めよ。",
+    "questionVi": "(a) Tải 40 MW, cosφ=0,87 trễ, nhận điện 66 kV. Giữ điện áp nhận không đổi. Tính tổng dung lượng tụ (Mvar) để hệ số công suất tại đầu nhận bằng 1.",
+    "choicesJp": [
+      "9.7",
+      "19.7",
+      "22.7",
+      "34.8",
+      "81.1"
+    ],
+    "choicesVi": [
+      "9.7",
+      "19.7",
+      "22.7",
+      "34.8",
+      "81.1"
+    ],
+    "solution": [
+      "Tụ cần bù hết Q tải. Tính 40√(1−0,87²)/0,87≈22,7 Mvar.",
+      "Chọn (3)."
+    ],
+    "theory": [
+      404
+    ],
+    "pages": [
+      15,
+      16
+    ],
+    "answer": 3,
+    "readings": [
+      [
+        0,
+        3,
+        "じゅでんたん"
+      ],
+      [
+        3,
+        2,
+        "でんあつ"
+      ],
+      [
+        11,
+        2,
+        "ふか"
+      ],
+      [
+        19,
+        2,
+        "りきりつ"
+      ],
+      [
+        41,
+        3,
+        "じゅでんたん"
+      ],
+      [
+        44,
+        2,
+        "でんあつ"
+      ],
+      [
+        46,
+        2,
+        "いってい"
+      ],
+      [
+        49,
+        2,
+        "りきりつ"
+      ],
+      [
+        63,
+        2,
+        "ようりょう"
+      ]
+    ],
+    "choiceReadings": [
+      [],
+      [],
+      [],
+      [],
+      []
+    ]
+  },
+  {
+    "key": "16b",
+    "titleJp": "コンデンサ開閉による電圧変動",
+    "topic": "コンデンサ開閉による電圧変動",
+    "questionJp": "需要家から見た電源と線路のインピーダンスは10 MV·A基準で6.0%，抵抗は無視する。\n(b) 開閉による受電端電圧変動を2.0%以内にするコンデンサ単機容量の最大値を求めよ。",
+    "questionVi": "(b) Nguồn và đường dây nhìn từ đầu nhận có điện kháng 6% trên cơ sở 10 MVA. Bỏ qua điện trở. Tìm dung lượng tối đa mỗi cấp tụ (Mvar) để dao động áp khi đóng cắt không vượt 2%.",
+    "choicesJp": [
+      "0.46",
+      "1.9",
+      "3.3",
+      "4.3",
+      "5.7"
+    ],
+    "choicesVi": [
+      "0.46",
+      "1.9",
+      "3.3",
+      "4.3",
+      "5.7"
+    ],
+    "solution": [
+      "Đổi về đơn vị tương đối: ΔV≈X_puΔQ_pu. Giới hạn ΔQ_pu≈0,02/0,06=1/3. Nhân cơ sở 10 MVA được khoảng 3,3 Mvar.",
+      "Chọn (3)."
+    ],
+    "theory": [
+      404
+    ],
+    "pages": [
+      15,
+      16
+    ],
+    "answer": 3,
+    "readings": [
+      [
+        7,
+        2,
+        "でんげん"
+      ],
+      [
+        10,
+        2,
+        "せんろ"
+      ],
+      [
+        28,
+        2,
+        "きじゅん"
+      ],
+      [
+        36,
+        2,
+        "ていこう"
+      ],
+      [
+        39,
+        2,
+        "むし"
+      ],
+      [
+        54,
+        3,
+        "じゅでんたん"
+      ],
+      [
+        57,
+        2,
+        "でんあつ"
+      ],
+      [
+        78,
+        2,
+        "ようりょう"
+      ],
+      [
+        81,
+        2,
+        "さいだい"
+      ]
+    ],
+    "choiceReadings": [
+      [],
+      [],
+      [],
+      [],
+      []
+    ]
+  },
+  {
+    "key": "17a",
+    "titleJp": "百分率リアクタンスの基準容量換算",
+    "topic": "百分率リアクタンスの基準容量換算",
+    "questionJp": "電源・送電線側は100 MV·A基準で5.0%，20 MV·A，66/6.6 kVの変圧器は自己容量基準で15.0%である。抵抗を無視する。\n(a) 10 MV·A基準に換算した二次側から見た百分率リアクタンスを求めよ。",
+    "questionVi": "(a) Nguồn và đường dây có tổng trở 5% trên cơ sở 100 MVA. Máy biến áp 20 MVA, 66/6,6 kV có điện kháng 15% trên cơ sở riêng. Bỏ qua điện trở. Quy về 10 MVA, tính tổng điện kháng phần trăm nhìn từ thứ cấp.",
+    "choicesJp": [
+      "2.0",
+      "8.0",
+      "12.5",
+      "15.5",
+      "20.0"
+    ],
+    "choicesVi": [
+      "2.0",
+      "8.0",
+      "12.5",
+      "15.5",
+      "20.0"
+    ],
+    "solution": [
+      "Phía nguồn quy về 10 MVA còn 0,5%, máy biến áp còn 7,5%. Cộng nối tiếp được 8,0%.",
+      "Chọn (2)."
+    ],
+    "theory": [
+      175
+    ],
+    "pages": [
+      17
+    ],
+    "answer": 2,
+    "readings": [
+      [
+        0,
+        2,
+        "でんげん"
+      ],
+      [
+        3,
+        2,
+        "そうでん"
+      ],
+      [
+        16,
+        2,
+        "きじゅん"
+      ],
+      [
+        42,
+        3,
+        "へんあつき"
+      ],
+      [
+        46,
+        2,
+        "じこ"
+      ],
+      [
+        48,
+        2,
+        "ようりょう"
+      ],
+      [
+        50,
+        2,
+        "きじゅん"
+      ],
+      [
+        62,
+        2,
+        "ていこう"
+      ],
+      [
+        65,
+        2,
+        "むし"
+      ],
+      [
+        82,
+        2,
+        "きじゅん"
+      ],
+      [
+        96,
+        3,
+        "ひゃくぶんりつ"
+      ]
+    ],
+    "choiceReadings": [
+      [],
+      [],
+      [],
+      [],
+      []
+    ]
+  },
+  {
+    "key": "17b",
+    "titleJp": "三相短絡電流",
+    "topic": "三相短絡電流",
+    "questionJp": "66/6.6 kVの変圧器を含む図の系統を考える。\n(b) Aで三相短絡したときの電流を求めよ。二次側からAまでのインピーダンスと負荷は無視する。",
+    "questionVi": "(b) Với hệ thống 66/6,6 kV ở phần (a), xảy ra ngắn mạch ba pha tại A phía thứ cấp. Bỏ qua tổng trở đoạn từ thứ cấp đến A và tải. Tìm dòng ngắn mạch (kA).",
+    "choicesJp": [
+      "4.4",
+      "6.0",
+      "7.0",
+      "11",
+      "44"
+    ],
+    "choicesVi": [
+      "4.4",
+      "6.0",
+      "7.0",
+      "11",
+      "44"
+    ],
+    "solution": [
+      "Dòng cơ sở thứ cấp là 10 MVA/(√3×6,6 kV)≈0,875 kA. Điện kháng 0,08 pu cho dòng sự cố 0,875/0,08≈10,9 kA.",
+      "Chọn (4)."
+    ],
+    "theory": [
+      175
+    ],
+    "pages": [
+      17
+    ],
+    "answer": 4,
+    "readings": [
+      [
+        10,
+        3,
+        "へんあつき"
+      ],
+      [
+        18,
+        2,
+        "けいとう"
+      ],
+      [
+        32,
+        2,
+        "さんそう"
+      ],
+      [
+        34,
+        2,
+        "たんらく"
+      ],
+      [
+        41,
+        2,
+        "でんりゅう"
+      ],
+      [
+        65,
+        2,
+        "ふか"
+      ],
+      [
+        68,
+        2,
+        "むし"
+      ]
+    ],
+    "choiceReadings": [
+      [],
+      [],
+      [],
+      [],
+      []
+    ]
+  }
+]
