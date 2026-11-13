@@ -176,7 +176,7 @@
     "titleJp": "蒸気タービンの分類",
     "topic": "蒸気タービンの分類",
     "questionJp": "蒸気の作用，機能及び用途による蒸気タービンの分類について，誤っているものを選べ。",
-    "questionVi": "Chọn phát biểu sai về các loại tuabin hơi.",
+    "questionVi": "Trong nhà máy điện hơi nước, có thể phân loại tuabin hơi theo tác dụng của hơi, chức năng và mục đích sử dụng. Chọn phát biểu sai về các loại tuabin này.",
     "choicesJp": [
       "復水器を用いて排気を復水させ，蒸気をごく低圧まで膨張させる。",
       "背圧タービンでは排気を工場用などへ送る。",
@@ -1603,7 +1603,7 @@
     "titleJp": "汽力発電所の発生電力量",
     "topic": "汽力発電所の発生電力量",
     "questionJp": "海水で復水器を冷却する汽力発電所が定格で運転している。\n(a) 発電端熱効率38%，燃料消費量40 t/h，発熱量44,000 kJ/kgのとき，1時間当たりの発生電力量を求めよ。",
-    "questionVi": "(a) Nhà máy điện hơi nước có hiệu suất đầu phát 38%, dùng 40 tấn nhiên liệu mỗi giờ, nhiệt trị 44.000 kJ/kg. Tìm điện năng phát trong một giờ (MWh).",
+    "questionVi": "Một nhà máy điện hơi nước dùng nước biển để làm mát bình ngưng và đang vận hành ở công suất định mức.\n\n(a) Hiệu suất nhiệt tại đầu cực máy phát khi chạy định mức là 38%, mức tiêu thụ nhiên liệu là 40 tấn/giờ và nhiệt trị nhiên liệu là 44.000 kJ/kg. Chọn điện năng phát trong một giờ (MW·h) gần nhất.",
     "choicesJp": [
       "186",
       "489",
@@ -1694,7 +1694,7 @@
     "titleJp": "復水器の冷却水流量",
     "topic": "復水器の冷却水流量",
     "questionJp": "海水で復水器を冷却する汽力発電所が定格で運転している。\n(b) タービン熱消費率8,000 kJ/(kWh)，発電機効率98%，海水の比熱4.0 kJ/(kg·K)，密度1,000 kg/m³とする。冷却水温度上昇を7 Kにする流量を求めよ。",
-    "questionVi": "(b) Nhà máy đang chạy định mức như phần (a). Suất tiêu hao nhiệt tuabin 8.000 kJ/kWh, hiệu suất máy phát 98%, nước biển có nhiệt dung riêng 4,0 kJ/(kg·K), khối lượng riêng 1.000 kg/m³. Tính lưu lượng nước làm mát (m³/s) để nhiệt độ tăng 7 K.",
+    "questionVi": "Một nhà máy điện hơi nước dùng nước biển để làm mát bình ngưng và đang vận hành ở công suất định mức.\n\n(b) Chọn lưu lượng nước làm mát bình ngưng (m³/s) gần nhất để nhiệt độ nước tăng 7 K. Suất tiêu hao nhiệt của tuabin là 8.000 kJ/(kW·h), nhiệt dung riêng và khối lượng riêng của nước biển lần lượt là 4,0 kJ/(kg·K) và 1,0×10³ kg/m³. Hiệu suất máy phát là 98%. Bỏ qua các điều kiện không nêu trong đề.",
     "choicesJp": [
       "6.8",
       "8.0",
@@ -1954,7 +1954,7 @@
     "titleJp": "百分率リアクタンスの基準容量換算",
     "topic": "百分率リアクタンスの基準容量換算",
     "questionJp": "電源・送電線側は100 MV·A基準で5.0%，20 MV·A，66/6.6 kVの変圧器は自己容量基準で15.0%である。抵抗を無視する。\n(a) 10 MV·A基準に換算した二次側から見た百分率リアクタンスを求めよ。",
-    "questionVi": "(a) Nguồn và đường dây có tổng trở 5% trên cơ sở 100 MVA. Máy biến áp 20 MVA, 66/6,6 kV có điện kháng 15% trên cơ sở riêng. Bỏ qua điện trở. Quy về 10 MVA, tính tổng điện kháng phần trăm nhìn từ thứ cấp.",
+    "questionVi": "Hệ thống trong hình gồm nguồn 66 kV, đường dây, máy biến áp ba pha 20 MV·A, 66/6,6 kV và máy cắt ở phía thứ cấp. Điện kháng máy biến áp bằng 15,0% trên cơ sở công suất định mức của nó. Tổng trở nhìn từ đường dây về phía nguồn bằng 5,0% trên cơ sở 100 MV·A. Bỏ qua thành phần điện trở.\n\n(a) Với công suất cơ sở 10 MV·A, chọn điện kháng phần trăm nhìn từ phía thứ cấp máy biến áp về phía nguồn.",
     "choicesJp": [
       "2.0",
       "8.0",

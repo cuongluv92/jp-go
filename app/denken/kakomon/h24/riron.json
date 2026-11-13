@@ -97,7 +97,7 @@
       "Nếu thay điện môi bằng vật dẫn, điện dung C₂ lớn hơn C₀."
     ],
     "solution": [
-      "Tấm điện môi làm giảm bề dày tương đương của khe, nên C tăng. V₀ cố định nên điện tích trên bản tụ tăng, kéo điện trường trong các đoạn không khí tăng. Do đó P giảm điện thế khi đo từ A, còn Q tăng điện thế khi đo từ B nối đất.",
+      "Tấm điện môi làm giảm bề dày tương đương của khe nên điện dung tăng. Giữ bản A ở V₀ và nối đất bản B. Điện tích trên bản tụ tăng làm điện trường trong hai đoạn không khí tăng. Độ sụt áp từ A đến P tăng nên điện thế P giảm. Độ tăng điện thế từ B đến Q lớn hơn nên điện thế Q tăng.",
       "Khi chèn vật dẫn, điện trường bên trong vật dẫn bằng 0. Khe không khí chỉ còn 3d/4 nên điện trường ngoài vật dẫn bằng 4V₀/(3d). Tại P, điện thế là V₀ − [4V₀/(3d)](d/4) = 2V₀/3, thấp hơn 3V₀/4 lúc chưa chèn. Chọn (4)."
     ],
     "pages": [
@@ -1572,15 +1572,15 @@
       "二電力計法で三相負荷の消費電力を測定すると，力率によっては指針が逆に振れることがある。"
     ],
     "choicesVi": [
-      "Đồng hồ số hiển thị giá trị đo bằng chữ số.",
-      "Đồng hồ cuộn dây động dùng mômen tỉ lệ với giá trị hiệu dụng của dòng qua cuộn dây.",
-      "Đồng hồ sắt động dùng lực lên miếng sắt bị từ hóa, phổ biến để đo dòng và áp xoay chiều ở tần số lưới.",
-      "Đồng hồ chỉnh lưu có độ nhạy tốt và dùng để đo xoay chiều.",
-      "Khi đo công suất tải ba pha bằng hai watt kế, tùy hệ số công suất mà một kim có thể lệch ngược."
+      "Đồng hồ chỉ thị số hiển thị giá trị đo bằng chữ số.",
+      "Đồng hồ kiểu từ điện (khung dây quay) dùng mômen tỉ lệ với giá trị hiệu dụng của dòng điện chạy qua cuộn dây.",
+      "Đồng hồ kiểu sắt động dùng lực tác dụng lên miếng sắt bị từ hóa trong từ trường, được dùng rộng rãi làm ampe kế và vôn kế xoay chiều ở tần số lưới.",
+      "Đồng hồ kiểu chỉnh lưu có độ nhạy cao và được dùng để đo xoay chiều.",
+      "Khi dùng phương pháp hai oát kế để đo công suất tiêu thụ của tải ba pha, tùy hệ số công suất của tải, kim của một oát kế có thể lệch ngược."
     ],
     "solution": [
-      "Ở cơ cấu cuộn dây động, mômen tức thời tỉ lệ với dòng tức thời và đổi dấu theo chiều dòng điện. Với dòng xoay chiều đối xứng đưa trực tiếp vào, mômen trung bình bằng 0.",
-      "Phát biểu (2) gán mômen cho giá trị hiệu dụng nên sai. Có thể dùng bộ chỉnh lưu để đo xoay chiều bằng cơ cấu cuộn dây động."
+      "Ở cơ cấu từ điện, mômen tức thời tỉ lệ với dòng tức thời chạy qua khung dây và đổi chiều khi dòng đổi chiều. Nếu đưa trực tiếp dòng xoay chiều đối xứng vào, mômen trung bình bằng 0.",
+      "Vì phát biểu (2) nói mômen tỉ lệ với giá trị hiệu dụng nên đó là phát biểu sai. Muốn dùng cơ cấu từ điện để đo xoay chiều, có thể đưa dòng qua bộ chỉnh lưu."
     ],
     "theory": [
       86,

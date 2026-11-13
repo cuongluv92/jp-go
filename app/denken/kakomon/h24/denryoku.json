@@ -309,11 +309,11 @@
       "固定子巻線内部短絡を比率差動継電器で検出する"
     ],
     "choicesVi": [
-      "Van điều chỉnh hơi xả hơi khi quá áp",
-      "Khi nước lò tuần hoàn kém, cắt nhiên liệu để tắt đầu đốt",
-      "Khi quá tốc, bộ điều tốc khẩn cấp đóng van chặn hơi",
-      "Áp dầu ổ trục tụt bất thường thì cắt tuabin",
-      "Rơle so lệch có hãm phát hiện ngắn mạch nội bộ dây quấn stato"
+      "Khi áp suất hơi trong lò hơi vượt giới hạn, van điều chỉnh áp suất hơi sẽ xả hơi để tránh làm hỏng thiết bị.",
+      "Khi nước lò hơi tuần hoàn kém, thiết bị cắt nhiên liệu ngắt nhiên liệu và dập đầu đốt để tránh cháy hỏng ống nước.",
+      "Khi tốc độ tuabin hơi tăng tới ngưỡng quy định trên tốc độ định mức, bộ điều tốc khẩn cấp tự động đóng van chặn hơi để dừng tuabin.",
+      "Khi áp suất dầu ổ trục tuabin hơi giảm bất thường, thiết bị bảo vệ tác động cắt để dừng tuabin.",
+      "Rơle so lệch có hãm dùng để phát hiện và bảo vệ khi xảy ra ngắn mạch nội bộ dây quấn stato máy phát."
     ],
     "solution": [
       "Van an toàn xả hơi khi quá áp.",
@@ -1252,7 +1252,7 @@
     "topic": "送電損失と電線断面積",
     "titleJp": "送電損失と電線断面積",
     "questionJp": "こう長20 kmの三相3線式2回線で，受電端33 kV，6,600 kW，力率0.9の負荷に供給する。損失を受電端電力の5%以内にするための電線の最小断面積を求めよ。1 mm²，1 m当たりの抵抗は1/35 Ωとする。",
-    "questionVi": "Tuyến ba pha ba dây, hai mạch, dài 20 km, cấp 6.600 kW tại 33 kV, cosφ = 0,9. Mỗi dây dài 1 m, tiết diện 1 mm² có điện trở 1/35 Ω. Tính tiết diện nhỏ nhất (mm²) để tổn thất không quá 5% công suất nhận.",
+    "questionVi": "Một tuyến truyền tải dài 20 km gồm hai mạch ba pha ba dây. Đầu nhận cấp cho tải ba pha công suất 6.600 kW, điện áp 33 kV, hệ số công suất 0,9. Chọn tiết diện dây nhỏ nhất (mm²) gần nhất để tổn thất truyền tải không quá 5% công suất đầu nhận. Dây tiết diện 1 mm², dài 1 m có điện trở 1/35 Ω. Bỏ qua các điều kiện khác.",
     "choicesJp": [
       "14.3",
       "23.4",
@@ -1353,7 +1353,7 @@
     "topic": "地中ケーブルの充電容量",
     "titleJp": "地中ケーブルの充電容量",
     "questionJp": "6.6 kV，50 Hz，こう長1.5 kmの三相3線式地中線路がある。心線1線当たりの静電容量を0.35 μF/kmとして，3線の充電容量を求めよ。",
-    "questionVi": "Đường cáp ba pha ba dây 6,6 kV, 50 Hz, dài 1,5 km. Điện dung mỗi lõi là 0,35 μF/km. Tính dung lượng nạp tổng ba pha (kV·A).",
+    "questionVi": "Đường cáp ngầm xoay chiều ba pha ba dây có điện áp 6,6 kV, tần số 50 Hz và chiều dài 1,5 km. Điện dung của mỗi lõi cáp là 0,35 μF/km. Chọn công suất biểu kiến (kV·A) gần nhất cần để nạp điện cho cả ba lõi cáp.",
     "choicesJp": [
       "4.2",
       "4.8",
@@ -1428,11 +1428,11 @@
       "長い線路で起こりやすい"
     ],
     "choicesVi": [
-      "Điện áp cuối đường dây cao hơn đầu gửi",
-      "Dễ xảy ra khi dòng tải rất nhỏ",
-      "Cáp ngầm ở phía tải làm tăng khả năng xảy ra",
-      "Thường xảy ra khi dòng trễ pha so với áp",
-      "Dễ xảy ra với đường dây dài"
+      "Là hiện tượng điện áp đầu nhận cao hơn điện áp đầu gửi.",
+      "Hiện tượng thường xảy ra khi dòng điện trên đường dây rất nhỏ, ít gặp hơn khi dòng lớn.",
+      "Khả năng xảy ra hiện tượng tăng khi có đường cáp ngầm nối ở phía tải của đường dây trên không.",
+      "Hiện tượng thường xảy ra khi dòng điện trên đường dây trễ pha so với điện áp.",
+      "Hiện tượng thường xảy ra ở đường dây truyền tải hoặc phân phối dài hơn là ở đường dây ngắn."
     ],
     "solution": [
       "Điện dung đường dây tạo dòng nạp sớm pha.",
@@ -1878,7 +1878,7 @@
     "topic": "π形等価回路の線路アドミタンス",
     "titleJp": "π形等価回路の線路アドミタンス",
     "questionJp": "三相3線式無負荷送電線の送電端線間電圧66.0 kV，受電端線間電圧72.0 kV，送電端電流30.0 Aとする。図のπ形等価回路を用いる。\n(a) 線路アドミタンスBを求めよ。",
-    "questionVi": "(a) Đường dây ba pha không tải, điện áp dây đầu gửi 66 kV, đầu nhận 72 kV, dòng đầu gửi 30 A. Mạch π như hình có jB/2 mỗi đầu và jX nối tiếp. Tính B (mS).",
+    "questionVi": "Khi đặt điện áp dây 66,0 kV vào đầu gửi của một mạch truyền tải ba pha ba dây không tải, điện áp dây đầu nhận là 72,0 kV và dòng đầu gửi trên mỗi dây là 30,0 A. Mạch tương đương hình π dùng điện dẫn nạp B (mS) và điện kháng đường dây X (Ω), với nhánh jB/2 ở mỗi đầu và jX nối tiếp như hình.\n\n(a) Chọn giá trị B (mS) gần nhất.",
     "choicesJp": [
       "0.217",
       "0.377",
@@ -1974,7 +1974,7 @@
     "topic": "π形等価回路の線路リアクタンス",
     "titleJp": "π形等価回路の線路リアクタンス",
     "questionJp": "三相3線式無負荷送電線の送電端線間電圧66.0 kV，受電端線間電圧72.0 kV，送電端電流30.0 Aとする。図のπ形等価回路を用いる。\n(b) 線路リアクタンスXを求めよ。",
-    "questionVi": "(b) Đường dây ba pha không tải, điện áp dây đầu gửi 66 kV, đầu nhận 72 kV, dòng đầu gửi 30 A. Mạch π như hình có jB/2 mỗi đầu và jX nối tiếp. Tính X (Ω).",
+    "questionVi": "Khi đặt điện áp dây 66,0 kV vào đầu gửi của một mạch truyền tải ba pha ba dây không tải, điện áp dây đầu nhận là 72,0 kV và dòng đầu gửi trên mỗi dây là 30,0 A. Mạch tương đương hình π dùng điện dẫn nạp B (mS) và điện kháng đường dây X (Ω), với nhánh jB/2 ở mỗi đầu và jX nối tiếp như hình.\n\n(b) Chọn giá trị X (Ω) gần nhất.",
     "choicesJp": [
       "222",
       "306",
@@ -2146,7 +2146,7 @@
     "topic": "過負荷回避に必要なコンデンサ",
     "titleJp": "過負荷回避に必要なコンデンサ",
     "questionJp": "750 kV·Aの三相変圧器に遅れ力率0.9の500 kW負荷がある。遅れ力率0.8の200 kW負荷を追加する。\n(b) 過負荷を避けるための最小コンデンサ容量を求めよ。",
-    "questionVi": "(b) Máy biến áp ba pha 750 kV·A cấp tải 500 kW, cosφ = 0,9 trễ. Thêm tải 200 kW, cosφ = 0,8 trễ. Tính dung lượng tụ bù nhỏ nhất (kvar) để tránh quá tải.",
+    "questionVi": "Một máy biến áp ba pha định mức 750 kV·A đang cấp cho tải ba pha 500 kW, hệ số công suất 0,9 trễ. Nối thêm tải ba pha 200 kW, hệ số công suất 0,8 trễ.\n\n(b) Để tránh vận hành quá tải, phải đặt tụ bù công suất ở phía thứ cấp máy biến áp. Chọn dung lượng tụ nhỏ nhất (kvar) gần nhất.",
     "choicesJp": [
       "50",
       "70",

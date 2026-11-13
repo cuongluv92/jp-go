@@ -4,7 +4,7 @@
     "topic": "直流機の構造",
     "titleJp": "直流機の構造",
     "questionJp": "直流機の固定子と回転子の構成，電機子鉄心を通る磁束と鉄心の種類，電機子巻線のつなぎ方について正しい組合せを選べ。",
-    "questionVi": "Máy điện một chiều gồm stato và rôto. Stato gồm (ア), gông từ và các bộ phận khác. Rôto gồm (イ), cổ góp và các bộ phận khác. Từ thông (ウ) qua lõi phần ứng nên dùng (エ). Cạnh bối dây hình lục giác nằm trong rãnh lõi. Hai cách nối bối dây là (オ) và quấn sóng. Dây quấn hai lớp có hai cạnh bối dây xếp trên dưới trong mỗi rãnh.",
+    "questionVi": "Đoạn sau mô tả cấu tạo máy điện một chiều. Máy gồm stato và rôto. Stato gồm (ア), gông từ và các bộ phận khác. Rôto gồm (イ), cổ góp và các bộ phận khác.\n\nTừ thông (ウ) đi qua lõi sắt phần ứng nên lõi được làm bằng (エ). Trên lõi có nhiều rãnh để đặt dây quấn phần ứng.\n\nDây quấn phần ứng có các bối dây hình lục giác (hình mai rùa), với các cạnh bối dây được đặt vào rãnh của lõi sắt. Các bối dây nối với nhau theo kiểu (オ) hoặc quấn sóng. Máy điện một chiều dùng dây quấn hai lớp, trong đó hai cạnh bối dây được đặt chồng trên dưới trong cùng một rãnh. Chọn tổ hợp đúng cho (ア) đến (オ).",
     "choicesJp": [
       "界磁・電機子・交番・積層鉄心・重ね巻",
       "界磁・電機子・一定・積層鉄心・直列巻",
@@ -523,7 +523,7 @@
     "topic": "電動機と負荷のトルク特性",
     "titleJp": "電動機と負荷のトルク特性",
     "questionJp": "図のトルク曲線A，Bの交点Cが不安定となる場合について，A，Bの種類，Cより速度が低下した場合の挙動，及び誘導電動機の定トルク負荷で対応する速度範囲の組合せを選べ。",
-    "questionVi": "Trên đồ thị mômen theo tốc độ, A tăng và B giảm. Xác định vai trò A và B để C là điểm không ổn định, xu hướng khi tốc độ tụt dưới C và khoảng tốc độ tương ứng với C khi tải có mômen không đổi nằm giữa mômen khởi động và cực đại của động cơ cảm ứng.",
+    "questionVi": "Đoạn sau mô tả quan hệ giữa đặc tính mômen của động cơ và của tải. Trục ngang trên đồ thị là tốc độ quay và trục dọc là mômen. Hai đường A và B lần lượt biểu diễn hai đặc tính, một của động cơ và một của tải.\n\nKhi A là đặc tính (ア) và B là đặc tính (イ), giao điểm C là điểm làm việc không ổn định. Nếu vì lý do nào đó tốc độ quay của động cơ giảm so với tại C, chênh lệch giữa mômen động cơ và mômen tải làm động cơ (ウ).\n\nCụ thể, xét động cơ cảm ứng kéo tải có mômen không đổi theo tốc độ quay, với mômen tải nằm giữa mômen khởi động và mômen cực đại của động cơ. Khi đó có hai giao điểm giữa đường mômen động cơ và đường mômen tải. Một giao điểm nằm giữa tốc độ 0 và tốc độ ứng với mômen cực đại. Giao điểm kia nằm giữa tốc độ ứng với mômen cực đại và tốc độ đồng bộ. C tương ứng với giao điểm trong khoảng (エ). Chọn tổ hợp đúng.",
     "choicesJp": [
       "電動機・負荷・減速・零〜最大トルク速度",
       "電動機・負荷・減速・最大トルク速度〜同期速度",
@@ -740,7 +740,7 @@
     "topic": "同期発電機の自己励磁",
     "titleJp": "同期発電機の自己励磁",
     "questionJp": "同期発電機の自己励磁について，負荷力率，電機子反作用，端子電圧と負荷電流の変化，負荷の性質の組合せを選べ。",
-    "questionVi": "Máy phát đồng bộ không cấp kích từ vẫn có điện áp nhỏ nhờ từ dư. Chọn loại hệ số công suất tải, tác dụng của phản ứng phần ứng, biến đổi điện áp, biến đổi dòng tải và tính chất tải trong hiện tượng tự kích.",
+    "questionVi": "Đoạn sau mô tả hiện tượng tự kích của máy phát đồng bộ. Ngay cả khi dòng kích từ bằng 0, từ dư vẫn tạo ra một điện áp nhỏ. Khi nối tải có hệ số công suất (ア), phản ứng phần ứng do dòng điện (ア) có tác dụng (イ), nên điện áp đầu cực máy phát (ウ). Khi điện áp đầu cực (ウ), dòng tải tiếp tục (エ).\n\nQuá trình lặp lại và điện áp đầu cực máy phát (ウ) đến điểm làm việc ứng với giao điểm của đường thẳng biểu diễn quan hệ giữa dòng qua tải (オ) với điện áp hai đầu tải và đường cong bão hòa không tải của máy phát. Hiện tượng dòng điện (ア) chạy trong máy phát đồng bộ không cấp kích từ, làm điện áp (ウ), được gọi là tự kích. Chọn tổ hợp đúng.",
     "choicesJp": [
       "進み・増磁・低下・増加・容量性",
       "進み・減磁・低下・減少・誘導性",
@@ -1173,7 +1173,7 @@
     "topic": "太陽光発電のパワーコンディショナ",
     "titleJp": "太陽光発電のパワーコンディショナ",
     "questionJp": "太陽光発電のパワーコンディショナについて，内蔵する変換装置，系統事故時に防止する運転状態，検出に用いる量及び不要な解列を避けるべき事象の組合せを選べ。",
-    "questionVi": "Thiết bị điều hòa công suất giữa tấm pin mặt trời và lưới hạ áp tích hợp (ア) với bảo vệ đấu nối. Khi lưới có sự cố, thiết bị ngắt để tránh (イ), phát hiện qua biến động pha điện áp và (ウ). Có biện pháp tránh tách lưới không cần thiết khi (エ).",
+    "questionVi": "Đoạn sau nói về bộ điều hòa công suất của hệ thống điện mặt trời. Gần đây ngày càng có nhiều hệ thống điện mặt trời lắp tại nhà ở và đấu nối với đường dây phân phối hạ áp. Để đấu nối, lắp bộ điều hòa công suất giữa pin mặt trời và đường dây phân phối. Bộ này tích hợp (ア) và thiết bị bảo vệ đấu nối lưới.\n\nKhi đường dây phân phối đang nối với hệ thống xảy ra sự cố, bộ điều hòa công suất phát hiện tình trạng (イ) và tách hệ thống điện mặt trời khỏi lưới để tình trạng đó không tiếp diễn. Để phát hiện (イ), bộ điều hòa công suất liên tục giám sát pha điện áp, sự biến đổi đột ngột của (ウ) và các dấu hiệu tương tự. Riêng đối với (エ) xảy ra phía đường dây phân phối, có biện pháp tránh tách lưới khi không cần thiết. Chọn tổ hợp đúng.",
     "choicesJp": [
       "逆変換装置・単独運転・周波数・瞬時電圧低下",
       "逆変換装置・単独運転・発電電力・瞬時電圧低下",
@@ -1717,7 +1717,7 @@
     "topic": "誘導加熱と表皮効果",
     "titleJp": "誘導加熱と表皮効果",
     "questionJp": "交番磁束による渦電流で被加熱物を加熱する方式，加熱されにくい抵抗率，表面への電流集中を生じる効果，浸透深さを浅くする周波数及び深部加熱に適した周波数の組合せを選べ。",
-    "questionVi": "Từ thông xoay chiều gây dòng xoáy trong vật dẫn. Chọn phương pháp gia nhiệt, mức điện trở suất của vật tương đối khó gia nhiệt, hiệu ứng dồn dòng về bề mặt, chiều biến thiên tần số làm giảm độ sâu thâm nhập và tần số phù hợp để nung sâu.",
+    "questionVi": "Đoạn sau nói về gia nhiệt bằng điện. Đặt vật dẫn cần gia nhiệt trong từ thông xoay chiều sẽ tạo ra suất điện động và dòng điện xoáy trong vật. Gia nhiệt (ア) là phương pháp làm chính vật nóng lên nhờ nhiệt Joule do dòng điện xoáy sinh ra. Vật có điện trở suất (イ) tương đối khó gia nhiệt.\n\nDo hiệu ứng (ウ), từ thông xoay chiều tập trung gần bề mặt vật, nên dòng điện xoáy cũng tập trung tại đó. Độ sâu thâm nhập của dòng điện là chỉ số biểu thị mức độ tập trung này. Tần số từ thông xoay chiều càng (エ) thì độ sâu thâm nhập càng nhỏ. Vì vậy, để gia nhiệt đến sâu bên trong vật, nên chọn tần số từ thông xoay chiều (オ). Chọn tổ hợp đúng.",
     "choicesJp": [
       "誘導・低い・表皮・低い・高い",
       "誘電・高い・近接・低い・高い",
@@ -2486,7 +2486,7 @@
     "topic": "照明の間引きによる節電",
     "titleJp": "照明の間引きによる節電",
     "questionJp": "10 m×40 mのオフィスで平均照度を1,000 lxから750 lxにする。器具は70 Wで3,520 lmのランプ2本，照明率0.65，保守率0.7である。\n(a) 間引きによる節電電力を求めよ。",
-    "questionVi": "Câu tự chọn. Chọn một trong hai câu 17 và 18, rồi làm cả (a) và (b) của câu đã chọn. Nếu làm cả hai câu, phần tự chọn không được chấm.\n\n(a) Văn phòng 10×40 m muốn giảm độ rọi trung bình từ 1.000 xuống 750 lx bằng cách tắt bớt bộ đèn. Mỗi bộ có hai bóng 3.520 lm, tiêu thụ 70 W. Hệ số sử dụng 0,65 và bảo trì 0,7. Tìm công suất chiếu sáng tiết kiệm (W).",
+    "questionVi": "Câu tự chọn. Chọn một trong hai câu 17 và 18, rồi làm cả (a) và (b) của câu đã chọn. Nếu làm cả hai câu, phần tự chọn không được chấm.\n\nMột văn phòng rộng 10 m, sâu 40 m quyết định chỉ bật một phần số đèn trần để tiết kiệm điện vào mùa hè, đồng thời muốn ước tính lượng điện giảm được cho điều hòa làm mát. Trả lời (a) và (b) về mức giảm công suất tiêu thụ.\n\n(a) Độ rọi trung bình thiết kế trên mặt làm việc trước khi tắt bớt đèn là 1.000 lx và mục tiêu sau khi tắt bớt là 750 lx. Mỗi bộ đèn trần gồm hai bóng huỳnh quang và chấn lưu, tiêu thụ 70 W. Mỗi bóng có quang thông 3.520 lm. Cho hệ số sử dụng 0,65 và hệ số duy trì 0,7. Chọn mức công suất tiết kiệm được gần nhất (W).",
     "choicesJp": [
       "420",
       "980",
@@ -2502,8 +2502,8 @@
       "4.340"
     ],
     "solution": [
-      "Quang thông hữu ích mỗi bộ bằng 2×3.520×0,65×0,7=3.203,2 lm.",
-      "Mức giảm 250 lx trên 400 m² tương ứng khoảng 31,2 bộ. Nhân 70 W được khoảng 2.185 W, gần 2.170 W."
+      "Quang thông hữu ích mỗi bộ bằng 2×3.520×0,65×0,7 = 3.203,2 lm.",
+      "Mức giảm 250 lx trên 400 m² tương ứng với 250×400/3.203,2 ≈ 31,2 bộ. Có thể tắt 31 bộ đèn nguyên mà vẫn giữ độ rọi ít nhất 750 lx. Công suất tiết kiệm là 31×70 = 2.170 W."
     ],
     "theory": [
       269
@@ -2557,7 +2557,7 @@
     "topic": "照明の節電による冷房負荷低減",
     "titleJp": "照明の節電による冷房負荷低減",
     "questionJp": "オフィス照明を間引き，照明器具の発熱と冷房負荷を減らす。\n(b) COPを3とし，冷房の節電電力と照明の節電電力の比を求めよ。",
-    "questionVi": "Câu tự chọn. Chọn một trong hai câu 17 và 18, rồi làm cả (a) và (b) của câu đã chọn. Nếu làm cả hai câu, phần tự chọn không được chấm.\n\n(b) Văn phòng tắt bớt đèn, làm giảm nhiệt do đèn tỏa ra. Điều hòa có COP=3. Công suất điện điều hòa giảm bằng bao nhiêu lần công suất chiếu sáng đã tiết kiệm?",
+    "questionVi": "Câu tự chọn. Chọn một trong hai câu 17 và 18, rồi làm cả (a) và (b) của câu đã chọn. Nếu làm cả hai câu, phần tự chọn không được chấm.\n\nMột văn phòng rộng 10 m, sâu 40 m tắt bớt đèn trần để tiết kiệm điện vào mùa hè và muốn ước tính mức giảm điện dùng cho điều hòa.\n\n(b) Khi tắt bớt đèn, nhiệt tỏa từ các bộ đèn giảm, khiến tải nhiệt làm mát của điều hòa trong văn phòng giảm. Vì vậy công suất điện dùng để làm mát cũng giảm. Nếu hệ số hiệu quả làm lạnh (COP) bằng 3, mức giảm công suất tiêu thụ của điều hòa bằng bao nhiêu lần mức giảm công suất chiếu sáng? Chọn giá trị gần nhất.",
     "choicesJp": [
       "0.3",
       "0.33",

@@ -492,7 +492,7 @@
     "titleJp": "三相同期電動機の始動",
     "topic": "三相同期電動機の始動",
     "questionJp": "同期速度近くまで加速する方法について，磁極面の巻線，対応する誘導機の部分，始動方式，全電圧を加える巻線，別の電動機で加速する方式の組合せを選べ。",
-    "questionVi": "Chọn cuộn dây đặt ở mặt cực rôto, bộ phận tương đương của máy cảm ứng lồng sóc, tên phương pháp, cuộn dây có dòng khởi động lớn khi đặt đủ áp và tên cách kéo bằng động cơ riêng.",
+    "questionVi": "Đoạn sau mô tả phương pháp khởi động động cơ đồng bộ ba pha thông dụng. Khi khởi động phải đưa rôto đến gần tốc độ đồng bộ.\n\nMột cách là dùng (ア) đặt ở mặt cực từ rôto để tạo mômen khởi động. Bộ phận (ア) có tác dụng như (イ) dạng lồng sóc của động cơ cảm ứng. Đây là phương pháp (ウ). Nếu cấp trực tiếp toàn bộ điện áp vào (エ), dòng khởi động sẽ lớn. Vì vậy, người ta dùng bộ bù khởi động, cuộn kháng nối tiếp hoặc máy biến áp khởi động để khởi động ở điện áp thấp hơn.\n\nMột cách khác là ghép trục động cơ đồng bộ ba pha với động cơ cảm ứng hoặc động cơ một chiều để kéo nó quay. Khi rôto đạt gần tốc độ đồng bộ, cấp kích từ cho dây quấn kích từ của động cơ đồng bộ rồi nối động cơ với nguồn. Đây là phương pháp (オ), chủ yếu dùng cho máy công suất lớn. Chọn tổ hợp đúng.",
     "choicesJp": [
       "制動巻線・回転子導体・自己始動・固定子巻線・始動電動機",
       "界磁巻線・回転子導体・Y–Δ始動・固定子巻線・始動電動機",
@@ -894,7 +894,7 @@
     "titleJp": "負荷増加と電動機の磁束",
     "topic": "負荷増加と電動機の磁束",
     "questionJp": "a 他励直流，b 直巻直流，c 定格V/fの誘導機，d 0.9倍のV/fの誘導機。負荷増加時，速度は一定又はほぼ一定で，誘導機の電圧と周波数は維持する。磁束が電流にほぼ比例する方式を選べ。",
-    "questionVi": "Xét a. động cơ DC kích từ độc lập, b. DC nối tiếp, c. động cơ cảm ứng giữ V/f định mức, d. động cơ cảm ứng giữ V/f bằng 0,9 định mức. Khi tải tăng, máy DC giữ tốc độ bằng cách tăng dòng phần ứng, máy AC giữ áp và tần số với trượt nhỏ. Hệ nào có từ thông gần tỉ lệ với dòng phần ứng hoặc dòng sơ cấp tương ứng?",
+    "questionVi": "Xét bốn hệ truyền động sau.\n\na. Động cơ một chiều kích từ độc lập, dùng hai nguồn một chiều riêng cho phần ứng và mạch kích từ.\nb. Động cơ một chiều kích từ nối tiếp, dùng chung một nguồn một chiều cho phần ứng và mạch kích từ.\nc. Động cơ cảm ứng ba pha, có thể bỏ qua điện trở sơ cấp và điện cảm tản. Nguồn xoay chiều điều khiển điện áp và tần số, giữ tỉ số điện áp trên tần số bằng tỉ số giữa điện áp định mức và tần số định mức.\nd. Động cơ cảm ứng ba pha, có thể bỏ qua điện trở sơ cấp và điện cảm tản. Nguồn xoay chiều điều khiển điện áp và tần số, giữ tỉ số này bằng 0,9 lần điện áp định mức chia cho tần số định mức.\n\nXét sự thay đổi của từ thông góp phần sinh mômen khi mômen tải tăng tại một tốc độ làm việc. Ở hệ a và b, nguồn một chiều tăng dòng phần ứng để giữ tốc độ không đổi. Ở hệ c và d, nguồn xoay chiều giữ nguyên điện áp và tần số. Độ trượt và dòng sơ cấp tăng, nhưng nếu độ trượt nhỏ thì tốc độ gần như không đổi.\n\nỞ hệ nào từ thông trong động cơ thay đổi gần tỉ lệ với dòng phần ứng (a, b) hoặc dòng sơ cấp (c, d)? Chọn phương án đúng.",
     "choicesJp": [
       "a",
       "b",

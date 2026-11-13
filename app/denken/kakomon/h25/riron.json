@@ -733,7 +733,7 @@
     "key": "9",
     "titleJp": "並列RLC回路の電流位相",
     "questionJp": "R，L，Cの並列回路に角周波数ωの交流電圧vを加える。R≫ωL，ωL＝2/(ωC)とし，過渡現象を無視する。図2のベクトルと図3の波形の組合せを選べ。",
-    "questionVi": "Đặt điện áp xoay chiều v, tần số góc ω vào mạch RLC song song. Biết R ≫ ωL và ωL = 2/(ωC). Bỏ qua quá độ. Chọn cặp giản đồ vectơ (Hình 2) và dạng sóng của v, i (Hình 3).",
+    "questionVi": "Hình 1 là mạch song song gồm điện trở R (Ω), cuộn cảm L (H) và tụ điện C (F). Khi đặt điện áp xoay chiều v (V) có tần số góc ω (rad/s) vào mạch, dòng điện qua mạch là i (A). Gọi vectơ tương ứng với v và i lần lượt là V̇ và İ. Chọn tổ hợp đúng gồm giản đồ quan hệ giữa hai vectơ trong Hình 2 (ア, イ, ウ) và đồ thị biến thiên của v và i theo thời gian t (s) trong Hình 3 (エ, オ, カ). Cho R ≫ ωL và ωL = 2/(ωC). Bỏ qua mọi hiện tượng quá độ.",
     "choicesJp": [
       "ア · オ",
       "ア · カ",
@@ -1765,7 +1765,7 @@
     ],
     "solution": [
       "Đối xứng cầu làm điện trường ngoài bề mặt có cùng độ lớn trên mặt Gauss bán kính r.",
-      "Từ E·4πr²=Q/ε₀, suy ra E=Q/(4πε₀r²) với Q dương, hoặc dùng độ lớn độ lớn của Q cho trường hợp tổng quát."
+      "Từ E·4πr²=Q/ε₀, suy ra E=Q/(4πε₀r²) với Q dương, hoặc dùng độ lớn của Q cho trường hợp tổng quát."
     ],
     "theory": [
       90,
