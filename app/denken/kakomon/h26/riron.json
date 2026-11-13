@@ -1,0 +1,1145 @@
+[
+  {
+    "key": "1",
+    "topic": "Điện thế tấm dẫn trong tụ phẳng",
+    "titleJp": "平行平板コンデンサ",
+    "questionJp": "極板 A–B 間が比誘電率 εᵣ=2 の誘電体で満たされた平行平板コンデンサがある。極板間の距離は d [m]，極板間の直流電圧は V₀ [V] である。極板と同じ形状と大きさをもち，厚さが d/4 [m] の帯電していない導体を図に示す位置 P–Q 間に極板と平行に挿入したとき，導体の電位の値 [V] として正しいものを選べ。ただし，コンデンサの端効果は無視できるものとする。",
+    "questionVi": "Tụ phẳng có khoảng cách giữa hai bản A–B là d (m), chứa đầy điện môi có điện thẩm tương đối εᵣ=2. Điện áp một chiều giữa hai bản là V₀ (V). Chèn một tấm dẫn không tích điện, có cùng hình dạng và kích thước với bản tụ, dày d/4 (m), song song với hai bản tại đoạn P–Q như hình. Chọn điện thế của tấm dẫn (V). Bỏ qua hiệu ứng mép của tụ.",
+    "choicesJp": [
+      "V₀/8",
+      "V₀/6",
+      "V₀/4",
+      "V₀/3",
+      "V₀/2"
+    ],
+    "choicesVi": [
+      "V₀/8",
+      "V₀/6",
+      "V₀/4",
+      "V₀/3",
+      "V₀/2"
+    ],
+    "solution": [
+      "Tấm dẫn đẳng thế. Do hai khe có cùng điện môi và tấm dẫn trung hòa, cường độ điện trường có cùng độ lớn ở hai khe. Điện áp V₀ rơi trên tổng bề dày d/2+d/4=3d/4. Tấm dẫn cách bản B nối đất d/4 nên điện thế bằng V₀/3."
+    ],
+    "pages": [
+      1
+    ],
+    "theory": [
+      107
+    ],
+    "readings": [
+      [
+        9,
+        4,
+        "ひゆうでんりつ"
+      ],
+      [
+        29,
+        4,
+        "へいこうへいばん"
+      ],
+      [
+        105,
+        2,
+        "たいでん"
+      ],
+      [
+        112,
+        2,
+        "どうたい"
+      ],
+      [
+        141,
+        2,
+        "どうたい"
+      ],
+      [
+        144,
+        2,
+        "でんい"
+      ]
+    ],
+    "choiceReadings": [
+      [],
+      [],
+      [],
+      [],
+      []
+    ],
+    "answer": 4
+  },
+  {
+    "key": "2",
+    "topic": "Cảm ứng tĩnh điện",
+    "titleJp": "静電誘導",
+    "questionJp": "次の文章は，静電気に関する記述である。図のように真空中において，負に帯電した帯電体 A を，帯電していない絶縁された導体 B に近づけると，導体 B の帯電体 A に近い側の表面 c 付近に (ア) の電荷が現れ，それと反対側の表面 d 付近に (イ) の電荷が現れる。この現象を (ウ) という。正しい組合せを選べ。",
+    "questionVi": "Đoạn sau nói về tĩnh điện. Trong chân không, khi đưa vật A tích điện âm đến gần vật dẫn B trung hòa và được cách điện như hình, điện tích (ア) xuất hiện gần bề mặt c của B ở phía gần A, còn điện tích (イ) xuất hiện gần bề mặt d ở phía đối diện. Hiện tượng này gọi là (ウ). Chọn tổ hợp đúng.",
+    "choicesJp": [
+      "正・負・静電遮へい",
+      "負・正・静電誘導",
+      "負・正・分極",
+      "負・正・静電遮へい",
+      "正・負・静電誘導"
+    ],
+    "choicesVi": [
+      "Dương · âm · che chắn tĩnh điện",
+      "Âm · dương · cảm ứng tĩnh điện",
+      "Âm · dương · phân cực",
+      "Âm · dương · che chắn tĩnh điện",
+      "Dương · âm · cảm ứng tĩnh điện"
+    ],
+    "solution": [
+      "Vật A đẩy electron tự do trong B ra xa, làm phía c thiếu electron (dương) và phía d thừa electron (âm). B vẫn có tổng điện tích bằng 0. Đây là cảm ứng tĩnh điện."
+    ],
+    "pages": [
+      2
+    ],
+    "theory": [
+      102
+    ],
+    "readings": [
+      [
+        24,
+        2,
+        "しんくう"
+      ],
+      [
+        34,
+        2,
+        "たいでん"
+      ],
+      [
+        38,
+        2,
+        "たいでん"
+      ],
+      [
+        46,
+        2,
+        "たいでん"
+      ],
+      [
+        58,
+        2,
+        "どうたい"
+      ],
+      [
+        70,
+        2,
+        "どうたい"
+      ],
+      [
+        76,
+        2,
+        "たいでん"
+      ]
+    ],
+    "choiceReadings": [
+      [
+        [
+          4,
+          5,
+          "せいでんしゃへい"
+        ]
+      ],
+      [
+        [
+          4,
+          4,
+          "せいでんゆうどう"
+        ]
+      ],
+      [],
+      [
+        [
+          4,
+          5,
+          "せいでんしゃへい"
+        ]
+      ],
+      [
+        [
+          4,
+          4,
+          "せいでんゆうどう"
+        ]
+      ]
+    ],
+    "answer": 5
+  },
+  {
+    "key": "3",
+    "topic": "Từ trở và sức từ động",
+    "titleJp": "磁気回路",
+    "questionJp": "環状鉄心に絶縁電線を巻いて作った磁気回路に関する記述として，誤っているものを一つ選べ。",
+    "questionVi": "Xét mạch từ tạo bằng cách quấn dây dẫn cách điện quanh lõi sắt hình vòng. Chọn phát biểu sai.",
+    "choicesJp": [
+      "磁気抵抗は磁束の通りにくさを表し，毎ヘンリー [H⁻¹] が単位である。",
+      "電気抵抗が導体断面積に反比例するように，磁気抵抗は鉄心断面積に反比例する。",
+      "鉄心の透磁率が大きいほど，磁気抵抗は小さくなる。",
+      "起磁力が同じ場合，鉄心の磁気抵抗が大きいほど，鉄心を通る磁束は小さくなる。",
+      "磁気回路における起磁力と磁気抵抗は，電気回路におけるオームの法則の電流と電気抵抗にそれぞれ対応する。"
+    ],
+    "choicesVi": [
+      "Từ trở biểu thị mức cản trở từ thông và có đơn vị H⁻¹.",
+      "Từ trở tỉ lệ nghịch với tiết diện lõi sắt, tương tự điện trở tỉ lệ nghịch với tiết diện vật dẫn.",
+      "Độ từ thẩm lõi sắt càng lớn thì từ trở càng nhỏ.",
+      "Cùng sức từ động, từ trở lõi sắt càng lớn thì từ thông qua lõi càng nhỏ.",
+      "Sức từ động và từ trở của mạch từ lần lượt tương ứng với dòng điện và điện trở trong định luật Ohm của mạch điện."
+    ],
+    "solution": [
+      "Quan hệ Φ=F/ℛ tương ứng với I=V/R. Sức từ động F tương ứng với điện áp, từ thông Φ tương ứng với dòng điện và từ trở ℛ tương ứng với điện trở. Vì vậy (5) sai."
+    ],
+    "pages": [
+      3
+    ],
+    "theory": [
+      131
+    ],
+    "readings": [],
+    "choiceReadings": [
+      [
+        [
+          0,
+          4,
+          "じきていこう"
+        ],
+        [
+          5,
+          2,
+          "じそく"
+        ]
+      ],
+      [
+        [
+          5,
+          2,
+          "どうたい"
+        ],
+        [
+          20,
+          4,
+          "じきていこう"
+        ]
+      ],
+      [
+        [
+          3,
+          3,
+          "とうじりつ"
+        ],
+        [
+          13,
+          4,
+          "じきていこう"
+        ]
+      ],
+      [
+        [
+          0,
+          3,
+          "きじりょく"
+        ],
+        [
+          12,
+          4,
+          "じきていこう"
+        ],
+        [
+          28,
+          2,
+          "じそく"
+        ]
+      ],
+      [
+        [
+          8,
+          3,
+          "きじりょく"
+        ],
+        [
+          12,
+          4,
+          "じきていこう"
+        ]
+      ]
+    ],
+    "answer": 5
+  },
+  {
+    "key": "4",
+    "topic": "Triệt tiêu từ trường của hai dây vuông góc",
+    "titleJp": "直線電流の磁界",
+    "questionJp": "図のように，十分に長い直線状導体 A，B があり，それぞれ直角座標系の x 軸と y 軸に沿って置かれている。A には +x 方向の電流 Iₓ [A] が，B には +y 方向の電流 Iᵧ [A] が流れている。Iₓ>0，Iᵧ>0 とする。xy 平面上で Iₓ と Iᵧ のつくる磁界が零となる点 (x [m], y [m]) の満たす条件を選べ。ただし，x≠0，y≠0 とする。",
+    "questionVi": "Hai dây thẳng đủ dài A và B nằm lần lượt dọc theo trục x và y như hình. Dây A mang dòng Iₓ theo chiều +x, dây B mang dòng Iᵧ theo chiều +y. Cho Iₓ>0 và Iᵧ>0. Chọn điều kiện để từ trường tổng hợp do hai dòng tạo ra bằng 0 tại điểm (x, y) trên mặt phẳng xy, với x≠0 và y≠0.",
+    "choicesJp": [
+      "y=(Iₓ/Iᵧ)x",
+      "y=(Iᵧ/Iₓ)x",
+      "y=−(Iₓ/Iᵧ)x",
+      "y=−(Iᵧ/Iₓ)x",
+      "y=±x"
+    ],
+    "choicesVi": [
+      "y=(Iₓ/Iᵧ)x",
+      "y=(Iᵧ/Iₓ)x",
+      "y=−(Iₓ/Iᵧ)x",
+      "y=−(Iᵧ/Iₓ)x",
+      "y=±x"
+    ],
+    "solution": [
+      "Theo quy tắc bàn tay phải, các thành phần có dấu theo trục z tỉ lệ với Iₓ/y và −Iᵧ/x. Đặt tổng bằng 0 được y=(Iₓ/Iᵧ)x."
+    ],
+    "pages": [
+      4
+    ],
+    "theory": [
+      120
+    ],
+    "readings": [
+      [
+        14,
+        2,
+        "どうたい"
+      ]
+    ],
+    "choiceReadings": [
+      [],
+      [],
+      [],
+      [],
+      []
+    ],
+    "answer": 1
+  },
+  {
+    "key": "5",
+    "topic": "Bảo toàn điện tích khi nạp ba tụ",
+    "titleJp": "コンデンサの充電",
+    "questionJp": "図のように，コンデンサ 3 個を充電する回路がある。スイッチ S₁ 及び S₂ を同時に閉じてから十分に時間が経過し，定常状態となったとき，a 点からみた b 点の電圧 [V] として正しいものを選べ。ただし，各コンデンサの初期電荷は零とする。",
+    "questionVi": "Xét mạch nạp ba tụ như hình. Sau khi đóng đồng thời S₁ và S₂, chờ đủ lâu để mạch đạt xác lập. Chọn điện áp tại b so với a (V). Điện tích ban đầu trên từng tụ đều bằng 0.",
+    "choicesJp": [
+      "−10/3",
+      "−2.5",
+      "2.5",
+      "10/3",
+      "20/3"
+    ],
+    "choicesVi": [
+      "−10/3",
+      "−2,5",
+      "2,5",
+      "10/3",
+      "20/3"
+    ],
+    "solution": [
+      "Lấy a làm mốc 0 V. Bản bên trái của tụ trên, giữa, dưới lần lượt ở +20 V, 0 V và −10 V. Nút b cô lập nên tổng điện tích trên ba bản nối b bằng 0: 10(V_b−20)+20V_b+10(V_b+10)=0. Suy ra V_b=2,5 V."
+    ],
+    "pages": [
+      5
+    ],
+    "theory": [
+      12,
+      107
+    ],
+    "readings": [
+      [
+        59,
+        4,
+        "ていじょうじょうたい"
+      ],
+      [
+        112,
+        4,
+        "しょきでんか"
+      ]
+    ],
+    "choiceReadings": [
+      [],
+      [],
+      [],
+      [],
+      []
+    ],
+    "answer": 3
+  },
+  {
+    "key": "6",
+    "topic": "Chia dòng trong mạch điện trở",
+    "titleJp": "抵抗の直並列回路",
+    "questionJp": "図のように抵抗を直並列に接続した直流回路がある。回路電流 I は 10 mA である。抵抗 R₁，R₂ を流れる電流の比 I₁/I₂ は 1/2 とする。R₂ [kΩ] の値として最も近いものを選べ。",
+    "questionVi": "Mạch một chiều nối tiếp và song song như hình có dòng tổng 10 mA. Biết tỉ số dòng qua R₁ và R₂ là I₁/I₂=1/2. Chọn giá trị R₂ (kΩ) gần nhất.",
+    "choicesJp": [
+      "0.3",
+      "0.6",
+      "1.2",
+      "2.4",
+      "4.8"
+    ],
+    "choicesVi": [
+      "0,3",
+      "0,6",
+      "1,2",
+      "2,4",
+      "4,8"
+    ],
+    "solution": [
+      "Hai điện trở 100 Ω nối tiếp làm sụt tổng cộng 2 V, nên hai nhánh song song có điện áp 8 V. I₂=(2/3)×10=6,667 mA. R₂=8/6,667≈1,2 kΩ."
+    ],
+    "pages": [
+      6
+    ],
+    "theory": [
+      5,
+      12
+    ],
+    "readings": [],
+    "choiceReadings": [
+      [],
+      [],
+      [],
+      [],
+      []
+    ],
+    "answer": 3
+  },
+  {
+    "key": "7",
+    "topic": "Tỉ số công suất trên hai điện trở",
+    "titleJp": "抵抗の消費電力",
+    "questionJp": "図に示す直流回路において，抵抗 R₁=5 Ω で消費される電力は，抵抗 R₃=15 Ω で消費される電力の何倍か。最も近い値を選べ。",
+    "questionVi": "Trong mạch một chiều như hình, công suất tiêu thụ ở R₁=5 Ω bằng bao nhiêu lần công suất ở R₃=15 Ω? Chọn giá trị gần nhất.",
+    "choicesJp": [
+      "0.9",
+      "1.2",
+      "1.5",
+      "1.8",
+      "2.1"
+    ],
+    "choicesVi": [
+      "0,9",
+      "1,2",
+      "1,5",
+      "1,8",
+      "2,1"
+    ],
+    "solution": [
+      "Tổ hợp song song 10 Ω và 15 Ω có điện trở 6 Ω. Nếu dòng tổng là I thì dòng qua 15 Ω là 6I/15=0,4I. Tỉ số công suất là 5I²/[15(0,4I)²]≈2,08."
+    ],
+    "pages": [
+      7
+    ],
+    "theory": [
+      5,
+      23
+    ],
+    "readings": [],
+    "choiceReadings": [
+      [],
+      [],
+      [],
+      [],
+      []
+    ],
+    "answer": 5
+  },
+  {
+    "key": "8",
+    "topic": "Hệ số công suất khi dòng nguồn nhỏ nhất",
+    "titleJp": "並列回路の力率",
+    "questionJp": "図の交流回路において，電源を流れる電流 I [A] の大きさが最小となるように静電容量 C [F] の値を調整した。このときの回路の力率として最も近いものを選べ。",
+    "questionVi": "Trong mạch xoay chiều như hình, điều chỉnh điện dung C (F) để dòng I (A) từ nguồn nhỏ nhất. Chọn hệ số công suất của mạch lúc đó.",
+    "choicesJp": [
+      "0.11",
+      "0.50",
+      "0.71",
+      "0.87",
+      "1"
+    ],
+    "choicesVi": [
+      "0,11",
+      "0,50",
+      "0,71",
+      "0,87",
+      "1"
+    ],
+    "solution": [
+      "Nhánh R–L có điện dẫn thực cố định và điện dẫn phản kháng cảm. Tụ chỉ thay đổi phần phản kháng. Dòng nguồn nhỏ nhất khi hai phần phản kháng triệt tiêu. Dòng cùng pha điện áp, hệ số công suất bằng 1."
+    ],
+    "pages": [
+      8
+    ],
+    "theory": [
+      51,
+      55,
+      57
+    ],
+    "readings": [],
+    "choiceReadings": [
+      [],
+      [],
+      [],
+      [],
+      []
+    ],
+    "answer": 5
+  },
+  {
+    "key": "9",
+    "topic": "So sánh tần số cộng hưởng LC",
+    "titleJp": "LC 直列共振",
+    "questionJp": "図のように二つの LC 直列共振回路 A，B があり，それぞれの共振周波数が f_A [Hz]，f_B [Hz] である。A と B をさらに直列に接続した場合の共振周波数を f_AB [Hz] とするとき，三つの周波数の大小関係を選べ。",
+    "questionVi": "Hai mạch cộng hưởng LC nối tiếp A và B có tần số cộng hưởng lần lượt là f_A và f_B (Hz). Ghép hai mạch nối tiếp với nhau như hình, tần số cộng hưởng chung là f_AB (Hz). Chọn thứ tự đúng.",
+    "choicesJp": [
+      "f_A<f_B<f_AB",
+      "f_A<f_AB<f_B",
+      "f_AB<f_A<f_B",
+      "f_AB<f_B<f_A",
+      "f_B<f_AB<f_A"
+    ],
+    "choicesVi": [
+      "f_A<f_B<f_AB",
+      "f_A<f_AB<f_B",
+      "f_AB<f_A<f_B",
+      "f_AB<f_B<f_A",
+      "f_B<f_AB<f_A"
+    ],
+    "solution": [
+      "Tích LC của A là LC và của B là 2LC. Ghép nối tiếp được L_t=3L và C_t=C/2, tích bằng 1,5LC. Vì tần số cộng hưởng tỉ lệ nghịch với căn bậc hai của tích này, f_B<f_AB<f_A."
+    ],
+    "pages": [
+      9
+    ],
+    "theory": [
+      44,
+      55
+    ],
+    "readings": [
+      [
+        32,
+        5,
+        "きょうしんしゅうはすう"
+      ],
+      [
+        81,
+        5,
+        "きょうしんしゅうはすう"
+      ]
+    ],
+    "choiceReadings": [
+      [],
+      [],
+      [],
+      [],
+      []
+    ],
+    "answer": 5
+  },
+  {
+    "key": "10",
+    "topic": "Đại lượng trong mạch xoay chiều",
+    "titleJp": "交流回路の諸量",
+    "questionJp": "交流回路に関する記述として誤っているものを選べ。ただし，抵抗を R [Ω]，インダクタンスを L [H]，静電容量を C [F] とする。",
+    "questionVi": "Chọn phát biểu sai về mạch xoay chiều. Ký hiệu điện trở R (Ω), điện cảm L (H) và điện dung C (F).",
+    "choicesJp": [
+      "正弦波交流起電力の最大値 Eₘ と平均値 Eₐ は Eₐ=2Eₘ/π≈0.637Eₘ の関係にある。",
+      "e=100 sin(100πt) [V] の周期は 20 ms である。",
+      "RLC 直列回路で ωL>1/(ωC) なら電流の位相は電圧より遅れ，ωL<1/(ωC) なら進む。",
+      "RLC 直列回路で ωL=1/(ωC) なら Z=R であり，電圧と電流は同相となる。この状態を共振という。",
+      "RLC 直列回路でインピーダンス Z，電力 P，皮相電力 S を用いると，cosθ=R/Z，cosθ=S/P となる。"
+    ],
+    "choicesVi": [
+      "Giá trị cực đại Eₘ và giá trị trung bình Eₐ (lấy trên nửa chu kỳ dương) của suất điện động hình sin thỏa Eₐ=2Eₘ/π≈0,637Eₘ.",
+      "Suất điện động e=100 sin(100πt) (V) có chu kỳ 20 ms.",
+      "Trong mạch RLC nối tiếp, nếu ωL>1/(ωC) thì dòng trễ pha so với áp, nếu ωL<1/(ωC) thì dòng sớm pha.",
+      "Trong mạch RLC nối tiếp, nếu ωL=1/(ωC) thì Z=R, áp và dòng cùng pha. Trạng thái đó gọi là cộng hưởng.",
+      "Trong mạch RLC nối tiếp với tổng trở Z, công suất tác dụng P và công suất biểu kiến S, ta có cosθ=R/Z và cosθ=S/P."
+    ],
+    "solution": [
+      "P=UI cosθ và S=UI nên cosθ=P/S. Mạch nối tiếp có cosθ=R/|Z|. Lựa chọn (5) đảo P và S."
+    ],
+    "pages": [
+      10
+    ],
+    "theory": [
+      36,
+      48,
+      55,
+      57
+    ],
+    "readings": [],
+    "choiceReadings": [
+      [],
+      [],
+      [],
+      [],
+      []
+    ],
+    "answer": 5
+  },
+  {
+    "key": "11",
+    "topic": "Quá độ khi đổi cực nguồn nạp tụ",
+    "titleJp": "RC 過渡現象",
+    "questionJp": "図のように直流電圧 E の電源二つ，抵抗 R 二つ，静電容量 C のコンデンサ及びスイッチ S₁，S₂ の回路がある。初めスイッチはともに開き，コンデンサの初期電荷は零とする。電源の内部インピーダンスは零とする。t=t₁ で S₁ を閉じ，時定数 CR に比べ十分に時間が経過した t=t₂ で S₁ を開き S₂ を閉じる。端子電圧 v の波形として最も近いものを選べ。",
+    "questionVi": "Mạch như hình gồm hai nguồn một chiều E, hai điện trở R, tụ C và hai công tắc S₁, S₂. Ban đầu cả hai công tắc mở, tụ chưa tích điện. Tổng trở trong của các nguồn bằng 0. Đóng S₁ tại t₁. Tại t₂, sau một khoảng rất dài so với hằng số thời gian CR, mở S₁ và đóng S₂. Chọn dạng sóng điện áp v hai đầu tụ gần nhất.",
+    "choicesJp": [
+      "図(1)",
+      "図(2)",
+      "図(3)",
+      "図(4)",
+      "図(5)"
+    ],
+    "choicesVi": [
+      "Đồ thị (1)",
+      "Đồ thị (2)",
+      "Đồ thị (3)",
+      "Đồ thị (4)",
+      "Đồ thị (5)"
+    ],
+    "solution": [
+      "Nguồn trái có cực dương phía trên nên v tăng từ 0 đến gần +E theo hàm mũ. Nguồn phải có cực dương phía dưới. Sau t₂, v liên tục tại thời điểm chuyển mạch rồi giảm theo hàm mũ về −E."
+    ],
+    "pages": [
+      11,
+      12
+    ],
+    "theory": [
+      62
+    ],
+    "readings": [
+      [
+        78,
+        4,
+        "しょきでんか"
+      ]
+    ],
+    "choiceReadings": [
+      [],
+      [],
+      [],
+      [],
+      []
+    ],
+    "answer": 4
+  },
+  {
+    "key": "12",
+    "topic": "Ứng dụng của tiếp giáp p–n",
+    "titleJp": "pn 接合素子",
+    "questionJp": "半導体の pn 接合を利用した素子に関する記述として誤っているものを選べ。",
+    "questionVi": "Chọn phát biểu sai về linh kiện sử dụng tiếp giáp p–n của chất bán dẫn.",
+    "choicesJp": [
+      "ダイオードに p 形が負，n 形が正となる電圧を加えると，それぞれの領域の少数キャリアに対して順電圧と考えられ，移動によってごくわずかな電流が流れる。",
+      "pn 接合を用いた太陽電池では光照射によって電子と正孔が生じ，接合部で分離され，電子は n 形，正孔は p 形の電極に集まり，起電力が生じる。",
+      "発光ダイオードの pn 接合に順電圧を加えるとキャリヤが再結合し，そのエネルギーに相当する波長の光が接合部付近から放出される。",
+      "定電圧ダイオード（ツェナーダイオード）は順電圧・電流特性の急激な降伏現象を利用する。",
+      "空乏層の静電容量が逆電圧によって変化する性質を利用したダイオードを可変容量ダイオード又はバラクタという。逆電圧を小さくすると静電容量が大きくなる。"
+    ],
+    "choicesVi": [
+      "Khi đặt điện áp làm vùng p âm và vùng n dương, điện áp này có thể xem là thuận đối với hạt tải thiểu số của từng vùng. Các hạt tải đó di chuyển tạo dòng điện rất nhỏ.",
+      "Chiếu sáng tiếp giáp p–n của pin mặt trời tạo electron và lỗ trống. Chúng được tách tại tiếp giáp, electron tập trung ở điện cực vùng n và lỗ trống ở điện cực vùng p, sinh ra suất điện động.",
+      "Đặt điện áp thuận lên tiếp giáp p–n của LED làm hạt tải tái hợp. Ánh sáng có bước sóng tương ứng với năng lượng tái hợp phát ra gần tiếp giáp.",
+      "Điôt ổn áp (Zener) dùng hiện tượng đánh thủng đột ngột trong đặc tuyến dòng–áp thuận.",
+      "Điôt biến dung (varactor) khai thác điện dung vùng nghèo thay đổi theo điện áp ngược. Giảm độ lớn điện áp ngược làm điện dung tăng."
+    ],
+    "solution": [
+      "Điôt Zener làm việc trong vùng đánh thủng của đặc tuyến phân cực ngược. Vì vậy (4) sai."
+    ],
+    "pages": [
+      13
+    ],
+    "theory": [
+      141
+    ],
+    "readings": [
+      [
+        1,
+        2,
+        "どうたい"
+      ]
+    ],
+    "choiceReadings": [
+      [],
+      [
+        [
+          16,
+          2,
+          "しょうしゃ"
+        ]
+      ],
+      [],
+      [],
+      []
+    ],
+    "answer": 4
+  },
+  {
+    "key": "13",
+    "topic": "Khuếch đại đảo với điện áp chuẩn",
+    "titleJp": "演算増幅器の出力電圧",
+    "questionJp": "図のような演算増幅器を用いた能動回路がある。直流入力電圧 V_in が 3 V のとき，出力電圧 V_out [V] として最も近いものを選べ。ただし，演算増幅器は理想的なものとする。",
+    "questionVi": "Cho mạch tích cực dùng op-amp như hình. Khi điện áp vào một chiều V_in=3 V, chọn điện áp ra V_out (V) gần nhất. Coi op-amp lý tưởng.",
+    "choicesJp": [
+      "1.5",
+      "5",
+      "5.5",
+      "6",
+      "6.5"
+    ],
+    "choicesVi": [
+      "1,5",
+      "5",
+      "5,5",
+      "6",
+      "6,5"
+    ],
+    "solution": [
+      "Hồi tiếp âm giữ hai đầu vào cùng mức 5 V. Không có dòng vào op-amp nên (5−3)/20 kΩ=(V_out−5)/10 kΩ. Suy ra V_out=6 V."
+    ],
+    "pages": [
+      14
+    ],
+    "theory": [
+      155
+    ],
+    "readings": [],
+    "choiceReadings": [
+      [],
+      [],
+      [],
+      [],
+      []
+    ],
+    "answer": 4
+  },
+  {
+    "key": "14",
+    "topic": "Số chỉ oát kế ở tải ba pha cân bằng",
+    "titleJp": "三相負荷の電力測定",
+    "questionJp": "図のように 200 V の対称三相交流電源に抵抗 R からなる平衡三相負荷を接続すると，線電流は 1.73 A であった。電力計の電流コイルを c 相に，電圧コイルを c–a 相間に接続したときの指示 P [W] を選べ。相回転は a，b，c の順とし，電力計の電力損失は無視する。",
+    "questionVi": "Nguồn ba pha đối xứng 200 V cấp tải ba pha cân bằng gồm các điện trở R như hình. Dòng dây là 1,73 A. Nối cuộn dòng của oát kế vào pha c và cuộn áp vào giữa hai pha c–a. Chọn số chỉ P (W) gần nhất. Thứ tự pha a, b, c. Bỏ qua tổn hao oát kế.",
+    "choicesJp": [
+      "200",
+      "300",
+      "346",
+      "400",
+      "600"
+    ],
+    "choicesVi": [
+      "200",
+      "300",
+      "346",
+      "400",
+      "600"
+    ],
+    "solution": [
+      "Dòng dây pha c cùng pha với điện áp pha c đối với điểm trung tính giả định. Điện áp dây c–a lệch 30° so với điện áp pha c. Oát kế chỉ 200×1,73×cos 30°≈300 W."
+    ],
+    "pages": [
+      15
+    ],
+    "theory": [
+      79,
+      93
+    ],
+    "readings": [],
+    "choiceReadings": [
+      [],
+      [],
+      [],
+      [],
+      []
+    ],
+    "answer": 2
+  },
+  {
+    "key": "15a",
+    "topic": "Công suất phản kháng từ số chỉ dụng cụ đo",
+    "titleJp": "並列回路の無効電力",
+    "questionJp": "図のように，正弦波交流電圧 E の電源が誘導性リアクタンス X のコイルと抵抗 R との並列回路に電力を供給している。電流計は 12.5 A，電圧計は 300 V，電力計は 2 250 W を示す。各計器の損失は無視できるものとする。 (a) 無効電力 Q [var] の最も近い値を選べ。",
+    "questionVi": "Nguồn điện áp hình sin E cấp điện cho mạch song song gồm cuộn cảm có cảm kháng X và điện trở R. Ampe kế chỉ 12,5 A, vôn kế chỉ 300 V, oát kế chỉ 2.250 W. Bỏ qua tổn hao của ba dụng cụ đo.\n\n(a) Chọn công suất phản kháng Q (var) gần nhất.",
+    "choicesJp": [
+      "1800",
+      "2250",
+      "2750",
+      "3000",
+      "3750"
+    ],
+    "choicesVi": [
+      "1800",
+      "2250",
+      "2750",
+      "3000",
+      "3750"
+    ],
+    "solution": [
+      "S=UI=300×12,5=3.750 V·A và P=2.250 W. Nhánh cuộn cảm lấy công suất phản kháng Q=√(S²−P²)=3.000 var."
+    ],
+    "pages": [
+      16
+    ],
+    "theory": [
+      51,
+      57
+    ],
+    "readings": [
+      [
+        20,
+        9,
+        "ゆうどうせいりあくたんす"
+      ]
+    ],
+    "choiceReadings": [
+      [],
+      [],
+      [],
+      [],
+      []
+    ],
+    "answer": 4
+  },
+  {
+    "key": "15b",
+    "topic": "Cảm kháng của nhánh cuộn dây",
+    "titleJp": "コイルの誘導性リアクタンス",
+    "questionJp": "図のように，正弦波交流電圧 E の電源が誘導性リアクタンス X のコイルと抵抗 R との並列回路に電力を供給している。電流計は 12.5 A，電圧計は 300 V，電力計は 2 250 W を示す。各計器の損失は無視できるものとする。 (b) 誘導性リアクタンス X [Ω] の最も近い値を選べ。",
+    "questionVi": "Nguồn điện áp hình sin E cấp điện cho mạch song song gồm cuộn cảm có cảm kháng X và điện trở R. Ampe kế chỉ 12,5 A, vôn kế chỉ 300 V, oát kế chỉ 2.250 W. Bỏ qua tổn hao của ba dụng cụ đo.\n\n(b) Chọn cảm kháng X (Ω) gần nhất.",
+    "choicesJp": [
+      "16",
+      "24",
+      "30",
+      "40",
+      "48"
+    ],
+    "choicesVi": [
+      "16",
+      "24",
+      "30",
+      "40",
+      "48"
+    ],
+    "solution": [
+      "Cuộn cảm chịu 300 V và lấy toàn bộ Q=3.000 var của mạch. Dùng Q=U²/X được X=30 Ω."
+    ],
+    "pages": [
+      16
+    ],
+    "theory": [
+      51,
+      57
+    ],
+    "readings": [
+      [
+        20,
+        9,
+        "ゆうどうせいりあくたんす"
+      ],
+      [
+        122,
+        9,
+        "ゆうどうせいりあくたんす"
+      ]
+    ],
+    "choiceReadings": [
+      [],
+      [],
+      [],
+      [],
+      []
+    ],
+    "answer": 3
+  },
+  {
+    "key": "16a",
+    "topic": "Công suất tác dụng và phản kháng của tải ba pha",
+    "titleJp": "三相負荷の有効・無効電力",
+    "questionJp": "図1のように，線間電圧 200 V，周波数 50 Hz の対称三相交流電源に，1 Ω の抵抗と誘導性リアクタンス 4/3 Ω のコイルとの並列回路からなる平衡三相負荷（Y結線）が接続されている。スイッチ S を介してコンデンサ C（Δ結線）を接続できる。 (a) S が開いたときの P [kW] と Q [kvar] の正しい組合せを選べ。",
+    "questionVi": "Nguồn ba pha đối xứng có điện áp dây 200 V và tần số 50 Hz cấp tải ba pha cân bằng đấu sao. Mỗi pha tải gồm điện trở 1 Ω song song với cuộn cảm có cảm kháng 4/3 Ω như Hình 1. Qua công tắc S có thể nối bộ tụ C đấu tam giác.\n\n(a) Khi S mở, chọn tổ hợp công suất tác dụng P (kW) và công suất phản kháng Q (kvar) của tải.",
+    "choicesJp": [
+      "40 · 30",
+      "40 · 53",
+      "80 · 60",
+      "120 · 90",
+      "120 · 160"
+    ],
+    "choicesVi": [
+      "40 · 30",
+      "40 · 53",
+      "80 · 60",
+      "120 · 90",
+      "120 · 160"
+    ],
+    "solution": [
+      "Điện áp pha là 200/√3 V. P=3U_pha²/R=40 kW và Q=3U_pha²/X=30 kvar."
+    ],
+    "pages": [
+      17,
+      18
+    ],
+    "theory": [
+      70,
+      79
+    ],
+    "readings": [
+      [
+        47,
+        9,
+        "ゆうどうせいりあくたんす"
+      ]
+    ],
+    "choiceReadings": [
+      [],
+      [],
+      [],
+      [],
+      []
+    ],
+    "answer": 1
+  },
+  {
+    "key": "16b",
+    "topic": "Tụ bù tam giác giữ nguyên công suất nguồn",
+    "titleJp": "三相負荷のコンデンサ補償",
+    "questionJp": "図1のように，線間電圧 200 V，周波数 50 Hz の対称三相交流電源に，1 Ω の抵抗と誘導性リアクタンス 4/3 Ω のコイルとの並列回路からなる平衡三相負荷（Y結線）が接続されている。スイッチ S を介してコンデンサ C（Δ結線）を接続できる。 (b) 図2のようにコイルの誘導性リアクタンスを 2/3 Ω に置き換え，S を閉じる。電源からみた有効電力と無効電力が図1と同じになるとき，C [μF] の最も近い値を選べ。",
+    "questionVi": "Nguồn ba pha đối xứng có điện áp dây 200 V và tần số 50 Hz cấp tải ba pha cân bằng đấu sao. Mỗi pha tải gồm điện trở 1 Ω song song với cuộn cảm có cảm kháng 4/3 Ω như Hình 1. Qua công tắc S có thể nối bộ tụ C đấu tam giác.\n\n(b) Thay các cuộn cảm bằng cuộn có cảm kháng 2/3 Ω như Hình 2 rồi đóng S. Công suất tác dụng và phản kháng nhìn từ nguồn bằng các giá trị ở Hình 1. Chọn điện dung C (μF) của mỗi tụ gần nhất.",
+    "choicesJp": [
+      "800",
+      "1200",
+      "2400",
+      "4800",
+      "7200"
+    ],
+    "choicesVi": [
+      "800",
+      "1200",
+      "2400",
+      "4800",
+      "7200"
+    ],
+    "solution": [
+      "Cảm kháng giảm một nửa làm Q cảm tăng từ 30 lên 60 kvar. Cần tụ phát 30 kvar. Mỗi tụ tam giác chịu 200 V, nên 30.000=3×2π×50×C×200². Suy ra C≈796 μF."
+    ],
+    "pages": [
+      17,
+      18
+    ],
+    "theory": [
+      79,
+      404
+    ],
+    "readings": [
+      [
+        47,
+        9,
+        "ゆうどうせいりあくたんす"
+      ],
+      [
+        142,
+        9,
+        "ゆうどうせいりあくたんす"
+      ]
+    ],
+    "choiceReadings": [
+      [],
+      [],
+      [],
+      [],
+      []
+    ],
+    "answer": 1
+  },
+  {
+    "key": "17a",
+    "topic": "So sánh lực điện và trọng lực",
+    "titleJp": "クーロン力と重力",
+    "questionJp": "問17と問18のいずれか一方を選ぶ。真空中で小さな物体 A，B が距離 r を隔てて鉛直線上にある。固定された A の真下に B がある。質量は m_A，m_B，電荷は +q_A，−q_B（q_A,q_B>0）とし，真空の誘電率を ε₀ とする。物体間の万有引力は無視する。 (a) 重力加速度 g のもとで静かに放した B が A に近づく条件を選べ。",
+    "questionVi": "Chọn một trong hai câu 17 và 18. Nếu làm cả hai, phần tự chọn không được chấm. Trong chân không, hai vật nhỏ A và B nằm trên đường thẳng đứng, cách nhau r. A cố định, B nằm ngay bên dưới A. Khối lượng lần lượt là m_A và m_B, điện tích lần lượt là +q_A và −q_B, với q_A,q_B>0. Điện thẩm chân không là ε₀. Bỏ qua lực hấp dẫn giữa hai vật.\n\n(a) Trong trọng trường có gia tốc g, thả B từ trạng thái đứng yên. B bắt đầu đi lên về phía A. Chọn biểu thức điều kiện để xảy ra chuyển động này.",
+    "choicesJp": [
+      "q_Aq_B/(4πε₀r²)>m_Bg",
+      "q_Aq_B/(4πε₀r)>m_Bg",
+      "q_Aq_B/(4πr)>m_Bg",
+      "q_Aq_B/(2πε₀r²)>m_Bg",
+      "q_Aq_B/(2πε₀r)>m_Bg"
+    ],
+    "choicesVi": [
+      "q_Aq_B/(4πε₀r²)>m_Bg",
+      "q_Aq_B/(4πε₀r)>m_Bg",
+      "q_Aq_B/(4πr)>m_Bg",
+      "q_Aq_B/(2πε₀r²)>m_Bg",
+      "q_Aq_B/(2πε₀r)>m_Bg"
+    ],
+    "solution": [
+      "Lực hút Coulomb q_Aq_B/(4πε₀r²) hướng lên, còn trọng lực m_Bg hướng xuống. B tăng tốc lên khi lực hút lớn hơn trọng lực."
+    ],
+    "pages": [
+      19,
+      20
+    ],
+    "theory": [
+      99
+    ],
+    "readings": [
+      [
+        18,
+        2,
+        "しんくう"
+      ],
+      [
+        108,
+        2,
+        "しんくう"
+      ]
+    ],
+    "choiceReadings": [
+      [],
+      [],
+      [],
+      [],
+      []
+    ],
+    "answer": 1
+  },
+  {
+    "key": "17b",
+    "topic": "Điều kiện quay lại trong điện trường",
+    "titleJp": "クーロン力とエネルギー",
+    "questionJp": "問17と問18のいずれか一方を選ぶ。真空中で小さな物体 A，B が距離 r を隔てて鉛直線上にある。固定された A の真下に B がある。質量は m_A，m_B，電荷は +q_A，−q_B（q_A,q_B>0）とし，真空の誘電率を ε₀ とする。物体間の万有引力は無視する。 (b) 無重力のもとで B を下向きの初速度 v_B で放すと，途中で上昇に転じた。この条件を選べ。",
+    "questionVi": "Chọn một trong hai câu 17 và 18. Nếu làm cả hai, phần tự chọn không được chấm. Trong chân không, hai vật nhỏ A và B nằm trên đường thẳng đứng, cách nhau r. A cố định, B nằm ngay bên dưới A. Khối lượng lần lượt là m_A và m_B, điện tích lần lượt là +q_A và −q_B, với q_A,q_B>0. Điện thẩm chân không là ε₀. Bỏ qua lực hấp dẫn giữa hai vật.\n\n(b) Trong điều kiện không trọng lực, phóng B xuống với vận tốc ban đầu v_B. B đi xuống rồi đổi chiều và đi lên. Chọn biểu thức điều kiện.",
+    "choicesJp": [
+      "m_Bv_B²/2<q_Aq_B/(4πε₀r²)",
+      "m_Bv_B²/2<q_Aq_B/(4πε₀r)",
+      "m_Bv_B<q_Aq_B/(4πε₀r²)",
+      "m_Bv_B<q_Aq_B/(4πε₀r)",
+      "m_Bv_B/2<q_Aq_B/(4πε₀r²)"
+    ],
+    "choicesVi": [
+      "m_Bv_B²/2<q_Aq_B/(4πε₀r²)",
+      "m_Bv_B²/2<q_Aq_B/(4πε₀r)",
+      "m_Bv_B<q_Aq_B/(4πε₀r²)",
+      "m_Bv_B<q_Aq_B/(4πε₀r)",
+      "m_Bv_B/2<q_Aq_B/(4πε₀r²)"
+    ],
+    "solution": [
+      "Mốc thế năng tại vô cực là 0. Thế năng ban đầu U=−q_Aq_B/(4πε₀r). Để B dừng ở khoảng cách hữu hạn rồi quay lại, tổng cơ năng phải âm, tức động năng ban đầu nhỏ hơn |U|."
+    ],
+    "pages": [
+      19,
+      20
+    ],
+    "theory": [
+      99
+    ],
+    "readings": [
+      [
+        18,
+        2,
+        "しんくう"
+      ],
+      [
+        108,
+        2,
+        "しんくう"
+      ]
+    ],
+    "choiceReadings": [
+      [],
+      [],
+      [],
+      [],
+      []
+    ],
+    "answer": 2
+  },
+  {
+    "key": "18a",
+    "topic": "Nguyên lý nguồn xung hạ áp",
+    "titleJp": "スイッチング電源",
+    "questionJp": "図1は代表的なスイッチング電源回路の原理図である。(a) 回路の説明として誤っているものを選べ。",
+    "questionVi": "Câu tự chọn. Hình 1 là sơ đồ nguyên lý của một mạch nguồn xung điển hình. (a) Chọn phát biểu sai về mạch.",
+    "choicesJp": [
+      "コイル L は S がオンのとき電磁エネルギーを蓄え，オフのとき放出する。",
+      "D は S がオンのとき電流が流れず，オフのとき電流が流れる。",
+      "C は出力電圧 V₀ を平滑化し，C が大きいほどリプル電圧が小さい。",
+      "L や C の値を小さくするため，S のスイッチング周期を長くする。",
+      "スイッチにはバイポーラトランジスタや電界効果トランジスタが使用できる。"
+    ],
+    "choicesVi": [
+      "Cuộn cảm L tích trữ năng lượng điện từ khi S đóng và giải phóng năng lượng khi S ngắt.",
+      "Dòng không chạy qua điôt D khi S đóng và chạy qua D khi S ngắt.",
+      "Tụ C làm phẳng điện áp ra V₀. Điện dung càng lớn, độ gợn điện áp càng nhỏ.",
+      "Muốn giảm điện cảm L và điện dung C thì tăng chu kỳ đóng ngắt của S.",
+      "Có thể dùng transistor lưỡng cực hoặc transistor hiệu ứng trường để thực hiện công tắc."
+    ],
+    "solution": [
+      "Ở cùng độ gợn cho phép, tăng tần số đóng ngắt giúp giảm kích thước L và C. Tăng tần số đồng nghĩa giảm chu kỳ, nên (4) sai."
+    ],
+    "pages": [
+      21
+    ],
+    "theory": [
+      257
+    ],
+    "readings": [],
+    "choiceReadings": [
+      [],
+      [],
+      [],
+      [],
+      [
+        [
+          18,
+          4,
+          "でんかいこうか"
+        ]
+      ]
+    ],
+    "answer": 4
+  },
+  {
+    "key": "18b",
+    "topic": "Độ gợn dòng và điện áp ra của bộ hạ áp",
+    "titleJp": "降圧回路の出力とリプル",
+    "questionJp": "図1の回路で，S がオンの間の電流 I の増加量を ΔI₁，オフの間の減少量を ΔI₂ とすると，定常状態で ΔI₁=ΔI₂ となる。V₀ のリプルは十分小さく V₀ は一定，I の増減は直線的，D の順方向電圧は 0 V とする。オン及びオフ時間を T_ON，T_OFF とするとき，ΔI₁ と V₀ の式を選べ。",
+    "questionVi": "Câu tự chọn. Xét mạch Hình 1. Dòng cuộn cảm I tăng ΔI₁ khi S đóng và giảm ΔI₂ khi S ngắt. Ở trạng thái xác lập ΔI₁=ΔI₂ như Hình 2. Coi độ gợn V₀ rất nhỏ để lấy V₀ không đổi, dòng tăng và giảm tuyến tính, sụt áp thuận điôt bằng 0 V. Gọi thời gian đóng và ngắt là T_ON và T_OFF. Chọn cặp biểu thức ΔI₁ và V₀.",
+    "choicesJp": [
+      "(E−V₀)T_ON/L · T_OFF E/(T_ON+T_OFF)",
+      "(E−V₀)T_ON/L · T_ON E/(T_ON+T_OFF)",
+      "(E−V₀)T_ON/L · (T_ON+T_OFF)E/T_OFF",
+      "(V₀−E)T_ON/L · (T_ON+T_OFF)E/T_ON",
+      "(V₀−E)T_ON/L · (T_ON+T_OFF)E/T_OFF"
+    ],
+    "choicesVi": [
+      "(E−V₀)T_ON/L · T_OFF E/(T_ON+T_OFF)",
+      "(E−V₀)T_ON/L · T_ON E/(T_ON+T_OFF)",
+      "(E−V₀)T_ON/L · (T_ON+T_OFF)E/T_OFF",
+      "(V₀−E)T_ON/L · (T_ON+T_OFF)E/T_ON",
+      "(V₀−E)T_ON/L · (T_ON+T_OFF)E/T_OFF"
+    ],
+    "solution": [
+      "Khi đóng, điện áp cuộn cảm E−V₀, nên ΔI₁=(E−V₀)T_ON/L. Khi ngắt, điện áp cuộn cảm −V₀, nên ΔI₂=V₀T_OFF/L. Cân bằng hai mức biến thiên cho V₀=ET_ON/(T_ON+T_OFF)."
+    ],
+    "pages": [
+      21,
+      22
+    ],
+    "theory": [
+      257
+    ],
+    "readings": [
+      [
+        49,
+        4,
+        "ていじょうじょうたい"
+      ]
+    ],
+    "choiceReadings": [
+      [],
+      [],
+      [],
+      [],
+      []
+    ],
+    "answer": 2
+  }
+]

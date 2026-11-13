@@ -321,7 +321,8 @@ export function TestRunner({
   });
 
   const hasAnyChoices = useMemo(() => questions.some((q) => q.choices.length > 0), [questions]);
-  const correctChoice = current?.choices.find((choice) => choice.is_correct) ?? null;
+  const correctChoices = current?.choices.filter((choice) => choice.is_correct) ?? [];
+  const correctChoice = correctChoices.length === 1 ? correctChoices[0] : null;
   const writtenAnswer = current?.answer_jp?.trim() ? current.answer_jp : null;
   const details = current ? questionDetails?.[current.id] : undefined;
   const questionLabel = (question: ExamQuestion) => questionDetails?.[question.id]?.label ?? question.question_number;
@@ -342,10 +343,9 @@ export function TestRunner({
     let gradable = 0;
     let firstTry = 0;
     for (const q of questions) {
-      const correctChoiceForQuestion = q.choices.find((c) => c.is_correct);
-      if (!correctChoiceForQuestion) continue;
+      if (!q.choices.some((choice) => choice.is_correct)) continue;
       gradable += 1;
-      if (state.answers[q.id] === correctChoiceForQuestion.id) {
+      if (q.choices.some((choice) => choice.id === state.answers[q.id] && choice.is_correct)) {
         correct += 1;
         if (!state.mistakes[q.id]) firstTry += 1;
       }
@@ -756,7 +756,11 @@ export function TestRunner({
             onToggleVisible={() => toggleColumnVisible("answer")}
             onToggleFocus={() => toggleColumnFocus("answer")}
           />
-          {correctChoice ? (
+          {correctChoices.length > 1 ? (
+            <p className="text-sm font-semibold text-accent">
+              Đáp án được chấp nhận ({correctChoices.map((choice) => choice.choice_label).join(", ")})
+            </p>
+          ) : correctChoice ? (
             <div className="space-y-3">
               <p className="font-jp text-sm font-bold text-accent">【正解】{correctChoice.choice_label}</p>
               <p className="font-jp whitespace-pre-line text-sm leading-relaxed sm:text-base">
@@ -858,9 +862,9 @@ export function TestRunner({
         <AnswerFeedbackModal
           correct={feedback.correct}
           choiceLabel={feedback.choiceLabel}
-          officialAnswer={staticQuestions && correctChoice ? {
-            label: correctChoice.choice_label,
-            text: correctChoice.choice_vi ?? correctChoice.choice_jp,
+          officialAnswer={staticQuestions && correctChoices.length > 0 ? {
+            label: correctChoices.map((choice) => choice.choice_label).join(", "),
+            text: correctChoice ? correctChoice.choice_vi ?? correctChoice.choice_jp : "",
           } : undefined}
           explanation={details?.explanation ?? current.explanation_vi}
           explanationJp={current.explanation_jp}

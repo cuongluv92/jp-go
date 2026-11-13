@@ -20,6 +20,10 @@ import riron25 from "./h25/riron.json";
 import denryoku25 from "./h25/denryoku.json";
 import kikai25 from "./h25/kikai.json";
 import houki25 from "./h25/houki.json";
+import riron26 from "./h26/riron.json";
+import denryoku26 from "./h26/denryoku.json";
+import kikai26 from "./h26/kikai.json";
+import houki26 from "./h26/houki.json";
 
 export const denkenExamHref = "/denken/kakomon";
 
@@ -68,7 +72,7 @@ type QuestionContent = {
   solution: string[];
   theory: number[];
   pages: number[];
-  answer: number;
+  answer: number | "all";
   choicesJp: string[];
   choicesVi: (string | null)[];
   readings: (string | number)[][];
@@ -159,7 +163,7 @@ function makeExam(eraYear: number, subject: keyof typeof subjects, rows: Questio
         choice_jp: choice,
         choice_vi: row.choicesVi[index],
         choice_furigana_tokens: expandReadings(choice, row.choiceReadings[index]),
-        is_correct: index + 1 === row.answer,
+        is_correct: row.answer === "all" || index + 1 === row.answer,
         sort_order: index,
       })),
       references: [],
@@ -170,7 +174,9 @@ function makeExam(eraYear: number, subject: keyof typeof subjects, rows: Questio
       question,
       topic: row.topic,
       theory: row.theory.map((page) => ({ page, title: theoryTitles.get(page) ?? "" })),
-      source: { href: `https://denken-ou.com/${subject}h${eraYear}-${number}/`, label: `Lời giải Nhật · H${eraYear} 問${number}` },
+      source: row.answer === "all"
+        ? { href: "https://www.shiken.or.jp/chief/upload/20140907_ch_third_a01.pdf", label: `Đáp án chính thức · H${eraYear} 問${number}` }
+        : { href: `https://denken-ou.com/${subject}h${eraYear}-${number}/`, label: `Lời giải Nhật · H${eraYear} 問${number}` },
       originalPages: row.pages.map((page) => ({
         href: `/denken/kakomon/h${eraYear}/${subject}/${String(page).padStart(2, "0")}.webp`,
         label: `Trang ${page} của đề gốc`,
@@ -217,6 +223,10 @@ export const denkenPastExams = [
   makeExam(25, "denryoku", denryoku25),
   makeExam(25, "kikai", kikai25),
   makeExam(25, "houki", houki25),
+  makeExam(26, "riron", riron26),
+  makeExam(26, "denryoku", denryoku26),
+  makeExam(26, "kikai", kikai26.map((row) => ({ ...row, answer: row.answer === "all" ? ("all" as const) : Number(row.answer) }))),
+  makeExam(26, "houki", houki26),
 ];
 
 export function denkenQuestionHref(testSlug: string, key: string) {

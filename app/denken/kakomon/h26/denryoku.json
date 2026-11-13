@@ -1,0 +1,1091 @@
+[
+  {
+    "key": "1",
+    "topic": "Bộ điều tốc tuabin nước",
+    "titleJp": "水車の調速機",
+    "questionJp": "水車の調速機は，発電機を系統に並列する前に回転速度を制御し，並列後は (ア) を調整し，事故時には回転速度の異常な (イ) を防止する。回転速度などを検出して規定値との偏差から制御信号を作り，パイロットバルブや配圧弁を介してサーボモータを動かす。ペルトン水車では (ウ)，フランシス水車では (エ) の開度を調整する。正しい組合せを選べ。",
+    "questionVi": "Bộ điều tốc điều chỉnh tốc độ quay tuabin nước trước khi hòa máy phát vào lưới, điều chỉnh (ア) sau khi hòa lưới và ngăn tốc độ quay (イ) bất thường khi có sự cố. Bộ điều tốc đo tốc độ quay và các đại lượng khác, tính tín hiệu điều khiển từ sai lệch so với giá trị đặt, rồi vận hành động cơ servo qua van điều khiển hoặc van phân phối áp lực. Nó điều chỉnh độ mở của (ウ) ở tuabin Pelton và (エ) ở tuabin Francis. Chọn tổ hợp đúng.",
+    "choicesJp": [
+      "出力・上昇・ニードル弁・ガイドベーン",
+      "電圧・上昇・ニードル弁・ランナベーン",
+      "出力・下降・デフレクタ・ガイドベーン",
+      "電圧・下降・デフレクタ・ランナベーン",
+      "出力・上昇・ニードル弁・ランナベーン"
+    ],
+    "choicesVi": [
+      "Công suất ra · tăng · van kim · cánh hướng nước",
+      "Điện áp · tăng · van kim · cánh bánh công tác",
+      "Công suất ra · giảm · bộ đổi hướng tia nước · cánh hướng nước",
+      "Điện áp · giảm · bộ đổi hướng tia nước · cánh bánh công tác",
+      "Công suất ra · tăng · van kim · cánh bánh công tác"
+    ],
+    "solution": [
+      "Trước hòa lưới cần đưa tốc độ đến gần đồng bộ. Khi đã hòa, điều chỉnh lưu lượng nước để chỉnh công suất và chống quá tốc khi mất tải. Pelton dùng van kim, Francis dùng cánh hướng nước."
+    ],
+    "pages": [
+      1
+    ],
+    "theory": [
+      331,
+      334
+    ],
+    "readings": [
+      [
+        0,
+        2,
+        "すいしゃ"
+      ],
+      [
+        3,
+        3,
+        "ちょうそくき"
+      ],
+      [
+        127,
+        2,
+        "すいしゃ"
+      ],
+      [
+        141,
+        2,
+        "すいしゃ"
+      ]
+    ],
+    "choiceReadings": [
+      [],
+      [],
+      [],
+      [],
+      []
+    ],
+    "answer": 1
+  },
+  {
+    "key": "2",
+    "topic": "Các quá trình trong chu trình hơi nước",
+    "titleJp": "汽力発電所の熱サイクル",
+    "questionJp": "図に示す汽力発電所の熱サイクルにおいて，各過程に関する記述として誤っているものを選べ。",
+    "questionVi": "Xét chu trình nhiệt của nhà máy điện hơi nước trên đồ thị nhiệt độ–entropy như hình. Chọn phát biểu sai về các quá trình.",
+    "choicesJp": [
+      "A→B：給水ポンプで給水をボイラ圧力まで高める断熱膨張。",
+      "B→C：給水がボイラで熱を受け飽和蒸気になる等圧受熱。",
+      "C→D：飽和蒸気が過熱器で過熱蒸気になる等圧受熱。",
+      "D→E：過熱蒸気がタービンで復水器圧力まで断熱膨張する。",
+      "E→A：蒸気が復水器で海水などに冷却され，水になる等圧放熱。"
+    ],
+    "choicesVi": [
+      "A→B: Nước cấp được bơm nâng lên áp suất lò hơi trong quá trình giãn nở đoạn nhiệt.",
+      "B→C: Nước cấp nhận nhiệt trong lò hơi ở áp suất không đổi và trở thành hơi bão hòa.",
+      "C→D: Hơi bão hòa nhận nhiệt ở áp suất không đổi trong bộ quá nhiệt và trở thành hơi quá nhiệt.",
+      "D→E: Hơi quá nhiệt vào tuabin hơi và giãn nở đoạn nhiệt đến áp suất bình ngưng.",
+      "E→A: Hơi được nước biển hoặc môi chất khác làm lạnh, ngưng thành nước và tỏa nhiệt ở áp suất không đổi."
+    ],
+    "solution": [
+      "Bơm nâng áp suất nước cấp nên A→B là quá trình nén đoạn nhiệt trong mô hình lý tưởng. Giãn nở xảy ra trong tuabin ở D→E."
+    ],
+    "pages": [
+      2
+    ],
+    "theory": [
+      341,
+      344,
+      346
+    ],
+    "readings": [
+      [
+        4,
+        4,
+        "きりょくはつでん"
+      ]
+    ],
+    "choiceReadings": [
+      [],
+      [],
+      [],
+      [],
+      []
+    ],
+    "answer": 1
+  },
+  {
+    "key": "3",
+    "topic": "Hiệu suất nhà máy chu trình hỗn hợp",
+    "titleJp": "コンバインドサイクル発電",
+    "questionJp": "コンバインドサイクル発電の出力増大や熱効率向上にはガスタービンの高効率化が重要である。入口ガス温度を (ア) することや空気圧縮機の出口と入口の (イ) 比を増加させることがある。そのためには燃焼器やタービン翼に用いる (ウ) 材料の開発や冷却技術の向上が重要で，同時に (エ) の低減が必要となる。正しい組合せを選べ。",
+    "questionVi": "Để tăng công suất và hiệu suất nhiệt của nhà máy chu trình hỗn hợp, cần nâng hiệu suất tuabin khí. Có thể làm nhiệt độ khí vào tuabin (ア) và tăng tỉ số (イ) giữa đầu ra và đầu vào của máy nén không khí. Cần phát triển vật liệu (ウ) dùng cho buồng đốt, cánh tuabin và nâng cao kỹ thuật làm mát các bộ phận, đồng thời giảm (エ). Chọn tổ hợp đúng.",
+    "choicesJp": [
+      "高く・温度・耐熱・窒素酸化物",
+      "高く・圧力・触媒・窒素酸化物",
+      "低く・圧力・耐熱・ばいじん",
+      "低く・温度・触媒・ばいじん",
+      "高く・圧力・耐熱・窒素酸化物"
+    ],
+    "choicesVi": [
+      "Cao hơn · nhiệt độ · chịu nhiệt · ôxít nitơ",
+      "Cao hơn · áp suất · xúc tác · ôxít nitơ",
+      "Thấp hơn · áp suất · chịu nhiệt · bụi khói",
+      "Thấp hơn · nhiệt độ · xúc tác · bụi khói",
+      "Cao hơn · áp suất · chịu nhiệt · ôxít nitơ"
+    ],
+    "solution": [
+      "Đề xét tăng nhiệt độ đầu vào tuabin và tăng tỉ số nén áp suất. Nhiệt độ cao đặt ra yêu cầu về vật liệu chịu nhiệt, làm mát và kiểm soát NOₓ."
+    ],
+    "pages": [
+      3
+    ],
+    "theory": [
+      349,
+      352
+    ],
+    "readings": [],
+    "choiceReadings": [
+      [],
+      [],
+      [],
+      [],
+      []
+    ],
+    "answer": 5
+  },
+  {
+    "key": "4",
+    "topic": "Khái niệm cơ bản về điện hạt nhân",
+    "titleJp": "原子力発電の基礎",
+    "questionJp": "原子力発電に関する記述として誤っているものを選べ。",
+    "questionVi": "Chọn phát biểu sai về phát điện hạt nhân.",
+    "choicesJp": [
+      "核分裂で原子エネルギーを取り出せる物質はウラン，トリウム，プルトニウムであり，ウランとプルトニウムは自然界に十分に存在する。",
+      "原子核を陽子と中性子に分解するには外部から結合エネルギーを加える必要がある。",
+      "原子核に外力を加えて他の原子核に変換する現象を核反応という。",
+      "ウラン235を1 g核分裂させたときのエネルギーは石炭数トンの発熱量に相当する。",
+      "ウランの核分裂で出る高速中性子の一部が減速し，熱中性子となって他の原子核を分裂させ，これが繰り返される現象を連鎖反応という。"
+    ],
+    "choicesVi": [
+      "Hiện nay, các chất có khối lượng nguyên tử lớn có thể dùng để thu năng lượng hạt nhân bằng phân hạch là urani (U), thori (Th) và plutoni (Pu). Urani và plutoni cũng có đủ trong tự nhiên.",
+      "Cần cấp năng lượng từ bên ngoài để tách hạt nhân thành proton và neutron. Năng lượng này gọi là năng lượng liên kết.",
+      "Hiện tượng hạt nhân biến đổi thành hạt nhân khác dưới tác động từ bên ngoài được gọi là phản ứng hạt nhân.",
+      "Năng lượng khi 1 g urani-235 phân hạch tương đương nhiệt lượng khi đốt vài tấn than.",
+      "Neutron nhiệt gây phân hạch urani. Một phần neutron nhanh phát ra bị làm chậm thành neutron nhiệt, tiếp tục gây phân hạch hạt nhân khác. Sự lặp lại này gọi là phản ứng dây chuyền."
+    ],
+    "solution": [
+      "Phát biểu (1) sai ở nhận định plutoni có sẵn với lượng đáng kể trong tự nhiên. Plutoni tự nhiên chỉ tồn tại ở lượng vết."
+    ],
+    "pages": [
+      4
+    ],
+    "theory": [
+      357,
+      360
+    ],
+    "readings": [
+      [
+        0,
+        5,
+        "げんしりょくはつでん"
+      ]
+    ],
+    "choiceReadings": [
+      [
+        [
+          0,
+          3,
+          "かくぶんれつ"
+        ]
+      ],
+      [
+        [
+          7,
+          3,
+          "ちゅうせいし"
+        ]
+      ],
+      [],
+      [
+        [
+          10,
+          3,
+          "かくぶんれつ"
+        ]
+      ],
+      [
+        [
+          4,
+          3,
+          "かくぶんれつ"
+        ],
+        [
+          12,
+          3,
+          "ちゅうせいし"
+        ],
+        [
+          24,
+          3,
+          "ちゅうせいし"
+        ]
+      ]
+    ],
+    "answer": 1
+  },
+  {
+    "key": "5",
+    "topic": "Ắc quy và phương pháp nạp",
+    "titleJp": "二次電池",
+    "questionJp": "二次電池に関する記述として誤っているものを選べ。",
+    "questionVi": "Chọn phát biểu sai về pin và ắc quy sạc lại.",
+    "choicesJp": [
+      "リチウムイオン電池，NAS 電池，ニッケル水素電池は繰り返し充放電できる。",
+      "浮動充電では，整流器を介して負荷に常時電力を供給しながら二次電池を充電する。",
+      "二次電池を利用した無停電電源システムは商用電源停電時に瞬時に負荷に給電する。",
+      "風力や太陽光発電の出力変動を抑えるため二次電池が利用されることがある。",
+      "鉛蓄電池では一般に整流器の定格電圧で回復充電し，その後定電流で満充電にする。"
+    ],
+    "choicesVi": [
+      "Pin lithium-ion, pin NaS và pin nickel–hydride kim loại đều có thể sạc và xả nhiều lần.",
+      "Nạp nổi là cách vừa cấp điện liên tục cho tải qua bộ chỉnh lưu vừa nạp ắc quy.",
+      "Bộ lưu điện dùng ắc quy có thể cấp điện cho tải ngay khi mất điện lưới.",
+      "Có thể dùng pin sạc để giảm dao động công suất điện gió hoặc điện mặt trời.",
+      "Thông thường, nạp phục hồi ắc quy chì ở điện áp định mức của bộ chỉnh lưu rồi nạp dòng không đổi đến khi đầy."
+    ],
+    "solution": [
+      "Trình tự nạp thông dụng là giới hạn dòng ở giai đoạn đầu rồi giữ điện áp và để dòng giảm dần. Lựa chọn (5) mô tả ngược trình tự."
+    ],
+    "pages": [
+      5
+    ],
+    "theory": [
+      282
+    ],
+    "readings": [],
+    "choiceReadings": [
+      [],
+      [],
+      [],
+      [],
+      []
+    ],
+    "answer": 5
+  },
+  {
+    "key": "6",
+    "topic": "Giới hạn tải trạm khi mất một máy biến áp",
+    "titleJp": "変圧器バンクの事故時負荷",
+    "questionJp": "配電用変電所に定格容量 25 MV·A の三相変圧器が 3 バンクある。1 バンクの故障時に長時間の停電なしに故障前と同じ電力を供給したい。故障前負荷の 10 % を直ちに他変電所へ切り換え，健全な変圧器は 125 % まで過負荷できる。力率が常に 95 %（遅れ）のとき，故障前の最大総負荷 [MW] に最も近い値を選べ。",
+    "questionVi": "Một trạm biến áp phân phối có ba tổ máy biến áp ba pha, mỗi tổ định mức 25 MV·A. Khi một tổ hỏng, cần cấp được cùng mức công suất như trước mà không mất điện kéo dài. Có thể chuyển ngay 10% tải trước sự cố sang trạm khác, còn các tổ khỏe được phép mang tải đến 125% định mức. Hệ số công suất luôn bằng 95% trễ. Chọn tổng công suất tải cực đại trước sự cố (MW) gần nhất.",
+    "choicesJp": [
+      "32.9",
+      "53.4",
+      "65.9",
+      "80.1",
+      "98.9"
+    ],
+    "choicesVi": [
+      "32,9",
+      "53,4",
+      "65,9",
+      "80,1",
+      "98,9"
+    ],
+    "solution": [
+      "Hai tổ còn lại cấp được 2×25×1,25×0,95=59,375 MW. Mức này phải gánh 90% tải trước sự cố, nên tải ban đầu tối đa 59,375/0,9≈65,97 MW."
+    ],
+    "pages": [
+      6
+    ],
+    "theory": [
+      372
+    ],
+    "readings": [
+      [
+        3,
+        3,
+        "へんでんしょ"
+      ],
+      [
+        87,
+        3,
+        "へんでんしょ"
+      ]
+    ],
+    "choiceReadings": [
+      [],
+      [],
+      [],
+      [],
+      []
+    ],
+    "answer": 3
+  },
+  {
+    "key": "7",
+    "topic": "Giới hạn công suất tải theo sụt áp",
+    "titleJp": "配電線路の電圧降下",
+    "questionJp": "こう長 2 km の三相3線式配電線路が遅れ力率85 % の平衡三相負荷に電力を供給している。負荷端子電圧を 6.6 kV に保ち，電圧降下率が 5.0 % を超えないときの負荷電力の最大値 [kW] を選べ。1 km 1 線当たりの抵抗は 0.45 Ω，リアクタンスは 0.25 Ω とし，他の条件は無視する。送受電端電圧の相差角が小さいとする近似式を用いる。",
+    "questionVi": "Đường dây phân phối ba pha ba dây dài 2 km cấp tải ba pha cân bằng có hệ số công suất 85% trễ. Giữ điện áp đầu tải ở 6,6 kV. Chọn công suất tải cực đại gần nhất (kW) để độ sụt áp không quá 5,0%. Điện trở và điện kháng mỗi dây trên mỗi km lần lượt là 0,45 Ω và 0,25 Ω. Bỏ qua các điều kiện khác và dùng công thức gần đúng với góc lệch pha điện áp hai đầu nhỏ.",
+    "choicesJp": [
+      "1023",
+      "1799",
+      "2117",
+      "3117",
+      "3600"
+    ],
+    "choicesVi": [
+      "1023",
+      "1799",
+      "2117",
+      "3117",
+      "3600"
+    ],
+    "solution": [
+      "Sụt áp cho phép là 330 V. Dùng ΔU≈√3I(0,90×0,85+0,50×√(1−0,85²)) được I≈185 A. Từ P=√3×6.600×I×0,85 được khoảng 1.800 kW."
+    ],
+    "pages": [
+      7
+    ],
+    "theory": [
+      401
+    ],
+    "readings": [
+      [
+        15,
+        4,
+        "はいでんせんろ"
+      ],
+      [
+        20,
+        4,
+        "おくれりきりつ"
+      ],
+      [
+        66,
+        5,
+        "でんあつこうかりつ"
+      ]
+    ],
+    "choiceReadings": [
+      [],
+      [],
+      [],
+      [],
+      []
+    ],
+    "answer": 2
+  },
+  {
+    "key": "8",
+    "topic": "Chống sự cố do sét trên đường dây trên không",
+    "titleJp": "架空送電線路の雷害対策",
+    "questionJp": "架空送電線路の雷害対策に関する記述として誤っているものを選べ。",
+    "questionVi": "Chọn phát biểu sai về biện pháp chống tác hại của sét trên đường dây truyền tải trên không.",
+    "choicesJp": [
+      "直撃雷からの遮へい効果を高めるには架空地線の遮へい角を小さくする。",
+      "送電用避雷装置は雷撃時のアークホーン間電圧を抑制でき，雷事故を抑制できる。",
+      "架空地線を多条化すると電力線との結合率が増し，鉄塔雷撃時のアークホーン間電圧を抑え，逆フラッシオーバを抑制できる。",
+      "二回線送電線路の両回線に絶縁格差を設け，両回線にまたがる事故を抑制する方法を不平衡絶縁方式という。",
+      "鉄塔塔脚の接地抵抗を低くすると，電力線への雷撃に伴う逆フラッシオーバを抑制できる。"
+    ],
+    "choicesVi": [
+      "Giảm góc che chắn của dây chống sét để tăng khả năng che dây pha khỏi sét đánh trực tiếp.",
+      "Thiết bị chống sét đường dây hạn chế điện áp giữa hai sừng phóng điện khi sét đánh, giúp hạn chế sự cố.",
+      "Dùng nhiều dây chống sét làm tăng mức liên kết với dây pha, hạ điện áp giữa hai sừng phóng điện khi sét đánh vào cột và hạn chế phóng điện ngược.",
+      "Tạo chênh lệch mức cách điện giữa hai mạch để hạn chế sự cố đồng thời ở cả hai gọi là phương pháp cách điện không cân bằng.",
+      "Giảm điện trở nối đất chân cột để hạn chế phóng điện ngược do sét đánh vào dây pha."
+    ],
+    "solution": [
+      "Giảm điện trở chân cột giúp hạ điện thế cột khi sét đánh vào cột hoặc dây chống sét, giảm phóng điện ngược từ cột sang dây pha. Phát biểu (5) nêu sét đánh vào dây pha."
+    ],
+    "pages": [
+      8
+    ],
+    "theory": [
+      385,
+      391
+    ],
+    "readings": [
+      [
+        2,
+        4,
+        "そうでんせんろ"
+      ]
+    ],
+    "choiceReadings": [
+      [
+        [
+          17,
+          4,
+          "かくうちせん"
+        ]
+      ],
+      [],
+      [
+        [
+          0,
+          4,
+          "かくうちせん"
+        ],
+        [
+          42,
+          8,
+          "ぎゃくふらっしおーば"
+        ]
+      ],
+      [
+        [
+          3,
+          4,
+          "そうでんせんろ"
+        ]
+      ],
+      [
+        [
+          26,
+          8,
+          "ぎゃくふらっしおーば"
+        ]
+      ]
+    ],
+    "answer": 5
+  },
+  {
+    "key": "9",
+    "topic": "Phóng điện vầng quang trên đường dây",
+    "titleJp": "コロナ放電",
+    "questionJp": "架空送電線路におけるコロナ放電及び関連する障害について，誤っているものを選べ。",
+    "questionVi": "Chọn phát biểu sai về phóng điện vầng quang và các ảnh hưởng liên quan trên đường dây truyền tải trên không.",
+    "choicesJp": [
+      "電線表面電界がある値を超えるとコロナ放電が発生する。",
+      "コロナ放電により電線や取り付け金具で腐食が生じることがある。",
+      "単導体方式は多導体方式に比べてコロナ放電を抑制できる。",
+      "電気エネルギーの一部が音，光，熱などに変わり，コロナ損を生じる。",
+      "架空送電線近傍で誘導障害や受信障害が生じることがある。"
+    ],
+    "choicesVi": [
+      "Khi điện trường bề mặt dây vượt ngưỡng, xảy ra phóng điện vầng quang.",
+      "Phóng điện vầng quang có thể làm ăn mòn dây và phụ kiện kim loại.",
+      "Dùng một dây dẫn mỗi pha hạn chế phóng điện vầng quang tốt hơn dùng bó nhiều dây mỗi pha.",
+      "Một phần năng lượng điện biến thành âm, ánh sáng và nhiệt, tạo tổn hao vầng quang.",
+      "Có thể gây nhiễu cảm ứng và nhiễu thu tín hiệu gần đường dây trên không."
+    ],
+    "solution": [
+      "Bó dây làm tăng bán kính hữu hiệu của pha, giảm điện trường trên bề mặt dây và hạn chế vầng quang. Lựa chọn (3) đảo quan hệ."
+    ],
+    "pages": [
+      9
+    ],
+    "theory": [
+      390
+    ],
+    "readings": [
+      [
+        2,
+        4,
+        "そうでんせんろ"
+      ]
+    ],
+    "choiceReadings": [
+      [],
+      [],
+      [
+        [
+          1,
+          2,
+          "どうたい"
+        ],
+        [
+          7,
+          2,
+          "どうたい"
+        ]
+      ],
+      [],
+      []
+    ],
+    "answer": 3
+  },
+  {
+    "key": "10",
+    "topic": "Các phương thức đặt cáp ngầm",
+    "titleJp": "地中送電線の布設方式",
+    "questionJp": "地中ケーブルの布設方式には直接埋設式，(ア)，(イ) などがある。直接埋設式は (ア) や (イ) より工事費が (ウ) なる。(ア) や (イ) は我が国で主流で，直接埋設より引き替えが容易である。(ア) は (イ) より一般に放熱が良好で (エ) を高くとれる。(イ) ではケーブルの接続を一般に (オ) で行うため設計や工事の自由度に制約が生じる場合がある。正しい組合せを選べ。",
+    "questionVi": "Có các phương thức đặt cáp ngầm như chôn trực tiếp, (ア) và (イ). Chi phí thi công chôn trực tiếp (ウ) so với (ア) và (イ). Hai phương thức (ア) và (イ) phổ biến tại Nhật Bản và dễ thay cáp hơn chôn trực tiếp. Phương thức (ア) thường tản nhiệt tốt hơn (イ), nên có thể chọn (エ) cao hơn. Với (イ), việc nối cáp thường thực hiện tại (オ), đôi khi hạn chế tính linh hoạt trong thiết kế và thi công. Chọn tổ hợp đúng.",
+    "choicesJp": [
+      "暗きょ式・管路式・高く・送電電圧・地上開削部",
+      "管路式・暗きょ式・安く・許容電流・マンホール",
+      "管路式・暗きょ式・高く・送電電圧・マンホール",
+      "暗きょ式・管路式・安く・許容電流・マンホール",
+      "暗きょ式・管路式・高く・許容電流・地上開削部"
+    ],
+    "choicesVi": [
+      "Hầm cáp · ống cáp · cao hơn · điện áp truyền tải · vị trí đào mở mặt đất",
+      "Ống cáp · hầm cáp · thấp hơn · dòng cho phép · hố ga",
+      "Ống cáp · hầm cáp · cao hơn · điện áp truyền tải · hố ga",
+      "Hầm cáp · ống cáp · thấp hơn · dòng cho phép · hố ga",
+      "Hầm cáp · ống cáp · cao hơn · dòng cho phép · vị trí đào mở mặt đất"
+    ],
+    "solution": [
+      "Hầm cáp thường tản nhiệt tốt hơn ống cáp, nên có thể tăng dòng cho phép. Đặt ống thường nối cáp ở hố ga. Chôn trực tiếp giảm chi phí công trình so với hai phương thức này."
+    ],
+    "pages": [
+      10
+    ],
+    "theory": [
+      396,
+      470
+    ],
+    "readings": [],
+    "choiceReadings": [
+      [
+        [
+          0,
+          4,
+          "あんきょしき"
+        ],
+        [
+          5,
+          3,
+          "かんろしき"
+        ]
+      ],
+      [
+        [
+          0,
+          3,
+          "かんろしき"
+        ],
+        [
+          4,
+          4,
+          "あんきょしき"
+        ]
+      ],
+      [
+        [
+          0,
+          3,
+          "かんろしき"
+        ],
+        [
+          4,
+          4,
+          "あんきょしき"
+        ]
+      ],
+      [
+        [
+          0,
+          4,
+          "あんきょしき"
+        ],
+        [
+          5,
+          3,
+          "かんろしき"
+        ]
+      ],
+      [
+        [
+          0,
+          4,
+          "あんきょしき"
+        ],
+        [
+          5,
+          3,
+          "かんろしき"
+        ]
+      ]
+    ],
+    "answer": 4
+  },
+  {
+    "key": "11",
+    "topic": "Nối đất lưới phân phối cao áp",
+    "titleJp": "高圧配電線路の接地方式",
+    "questionJp": "配電線路の接地方式と一線地絡に関する記述である。a. 高圧配電線路は多くの場合，変電所の変圧器二次側の (ア) から3線で引き出され，(イ) が採用される。b. この方式では一線地絡電流は一般に (ウ) 程度で，高低圧線の混触時に低圧側対地電圧上昇を抑えやすく，地絡中の (エ) もほとんど問題とならない。",
+    "questionVi": "Đoạn sau nói về phương thức nối đất đường dây phân phối và hiện tượng khi một pha chạm đất. a. Đường dây phân phối cao áp thường lấy ba dây từ (ア) phía thứ cấp máy biến áp của trạm phân phối và dùng (イ). b. Với phương thức này, dòng một pha chạm đất thường khoảng (ウ). Có thể dễ hạn chế điện áp hạ áp đối với đất khi dây cao áp chạm dây hạ áp, và (エ) trong lúc chạm đất hầu như không thành vấn đề. Chọn tổ hợp đúng.",
+    "choicesJp": [
+      "Δ結線・直接接地方式・数百～数千 A・健全相電圧上昇",
+      "Δ結線・非接地方式・数～数十 A・通信障害",
+      "Y結線・直接接地方式・数～数十 A・通信障害",
+      "Δ結線・非接地方式・数百～数千 A・健全相電圧上昇",
+      "Y結線・直接接地方式・数百～数千 A・健全相電圧上昇"
+    ],
+    "choicesVi": [
+      "Đấu tam giác · nối đất trực tiếp · vài trăm đến vài nghìn A · tăng áp pha lành",
+      "Đấu tam giác · không nối đất · vài đến vài chục A · nhiễu thông tin",
+      "Đấu sao · nối đất trực tiếp · vài đến vài chục A · nhiễu thông tin",
+      "Đấu tam giác · không nối đất · vài trăm đến vài nghìn A · tăng áp pha lành",
+      "Đấu sao · nối đất trực tiếp · vài trăm đến vài nghìn A · tăng áp pha lành"
+    ],
+    "solution": [
+      "Ở lưới không nối đất, dòng sự cố một pha chủ yếu qua điện dung đối đất, tương đối nhỏ. Dòng nhỏ cũng hạn chế nhiễu đường thông tin. Điện áp pha lành đối với đất vẫn có thể tăng."
+    ],
+    "pages": [
+      11
+    ],
+    "theory": [
+      408,
+      497
+    ],
+    "readings": [
+      [
+        0,
+        4,
+        "はいでんせんろ"
+      ],
+      [
+        10,
+        4,
+        "いっせんちらく"
+      ],
+      [
+        29,
+        4,
+        "はいでんせんろ"
+      ],
+      [
+        40,
+        3,
+        "へんでんしょ"
+      ],
+      [
+        87,
+        4,
+        "いっせんちらく"
+      ]
+    ],
+    "choiceReadings": [
+      [],
+      [],
+      [],
+      [],
+      []
+    ],
+    "answer": 2
+  },
+  {
+    "key": "12",
+    "topic": "Chọn công suất hai máy biến áp cho tải hỗn hợp",
+    "titleJp": "電灯動力共用三相4線式",
+    "questionJp": "図のように単相変圧器2台による電灯動力共用の三相4線式低圧配電線に，平衡三相負荷 45 kW（遅れ力率角30°）1個と単相負荷 10 kW（力率1）2個が接続されている。共用変圧器及び専用変圧器に必要な容量 [kV·A] の組合せを選べ。相回転は a′–c′–b′ とする。",
+    "questionVi": "Hai máy biến áp một pha cấp đường dây hạ áp ba pha bốn dây dùng chung cho chiếu sáng và động lực như hình. Có một tải ba pha cân bằng 45 kW, góc hệ số công suất trễ 30°, và hai tải một pha 10 kW, hệ số công suất bằng 1. Chọn cặp dung lượng tối thiểu (kV·A) của máy dùng chung và máy chuyên dùng. Thứ tự pha là a′–c′–b′.",
+    "choicesJp": [
+      "20 · 30",
+      "30 · 20",
+      "40 · 20",
+      "20 · 40",
+      "50 · 30"
+    ],
+    "choicesVi": [
+      "20 · 30",
+      "30 · 20",
+      "40 · 20",
+      "20 · 40",
+      "50 · 30"
+    ],
+    "solution": [
+      "Tải ba pha có công suất biểu kiến 45/cos30°≈52 kV·A. Mỗi máy nối tam giác hở chịu 52/√3≈30 kV·A. Với thứ tự pha đã cho, phần tải ba pha nhìn từ máy dùng chung có hệ số công suất 1, nên cộng cùng pha với hai tải một pha được 30+20=50 kV·A. Máy chuyên dùng chịu 30 kV·A."
+    ],
+    "pages": [
+      12
+    ],
+    "theory": [
+      81,
+      374,
+      408
+    ],
+    "readings": [
+      [
+        47,
+        4,
+        "おくれりきりつ"
+      ]
+    ],
+    "choiceReadings": [
+      [],
+      [],
+      [],
+      [],
+      []
+    ],
+    "answer": 5
+  },
+  {
+    "key": "13",
+    "topic": "Thiết bị trên lưới phân phối cao áp",
+    "titleJp": "高圧架空配電系統の機材",
+    "questionJp": "高圧架空配電系統を構成する機材とその特徴について誤っているものを選べ。",
+    "questionVi": "Chọn phát biểu sai về thiết bị và đặc điểm của lưới phân phối cao áp trên không.",
+    "choicesJp": [
+      "柱上変圧器に方向性けい素鋼板やアモルファス材を鉄心に用いたものが実用化されている。",
+      "鋼板組立柱は山間部や狭い場所など搬入困難な場所で使用される。",
+      "電線は一般に銅又はアルミで，感電事故防止のため原則として絶縁電線である。",
+      "避雷器は特性要素を内蔵する構造が一般的で，保護対象機器に近づけて取り付けると有効である。",
+      "区分開閉器には一般に気中形，真空形があり，主に事故電流の遮断に使用される。"
+    ],
+    "choicesVi": [
+      "Máy biến áp treo cột đã sử dụng lõi tổn hao thấp bằng thép silic định hướng hoặc vật liệu vô định hình.",
+      "Cột lắp ghép từ tấm thép dùng ở nơi khó vận chuyển như vùng núi hoặc chỗ hẹp.",
+      "Dây thường bằng đồng hoặc nhôm. Theo nguyên tắc dùng dây có cách điện để phòng tai nạn điện giật.",
+      "Thiết bị chống sét thường tích hợp phần tử đặc tính phi tuyến và phát huy hiệu quả khi lắp gần thiết bị cần bảo vệ.",
+      "Thiết bị đóng cắt phân đoạn thường có loại không khí và chân không, chủ yếu để cắt dòng sự cố."
+    ],
+    "solution": [
+      "Thiết bị phân đoạn thường dùng để đóng cắt tải và cô lập đoạn đường dây. Máy cắt đảm nhiệm cắt dòng ngắn mạch. Lựa chọn (5) sai."
+    ],
+    "pages": [
+      13
+    ],
+    "theory": [
+      378,
+      408
+    ],
+    "readings": [],
+    "choiceReadings": [
+      [],
+      [],
+      [],
+      [
+        [
+          0,
+          3,
+          "ひらいき"
+        ]
+      ],
+      [
+        [
+          14,
+          2,
+          "しんくう"
+        ]
+      ]
+    ],
+    "answer": 5
+  },
+  {
+    "key": "14",
+    "topic": "Đặc tính khí SF₆",
+    "titleJp": "六ふっ化硫黄ガス",
+    "questionJp": "六ふっ化硫黄（SF₆）ガスに関する記述として誤っているものを選べ。",
+    "questionVi": "Chọn phát biểu sai về khí lưu huỳnh hexaflorua SF₆.",
+    "choicesJp": [
+      "消弧能力は空気より優れている。",
+      "無色，無臭だが，化学的安定性に欠ける。",
+      "温暖化への影響は同質量の二酸化炭素よりはるかに大きい。",
+      "ガス遮断器やガス絶縁変圧器の絶縁媒体として使われる。",
+      "同じ圧力の空気より絶縁破壊電圧が高い。"
+    ],
+    "choicesVi": [
+      "Khả năng dập hồ quang tốt hơn không khí.",
+      "Không màu, không mùi nhưng kém ổn định về hóa học.",
+      "Tác động làm nóng toàn cầu lớn hơn nhiều so với cùng khối lượng CO₂.",
+      "Dùng làm môi chất cách điện trong máy cắt khí và máy biến áp cách điện bằng khí.",
+      "Ở cùng áp suất, điện áp đánh thủng cao hơn không khí."
+    ],
+    "solution": [
+      "Trong điều kiện thông thường SF₆ có tính ổn định hóa học cao. Lựa chọn (2) sai ở đặc tính này."
+    ],
+    "pages": [
+      14
+    ],
+    "theory": [
+      378,
+      420
+    ],
+    "readings": [],
+    "choiceReadings": [
+      [],
+      [],
+      [],
+      [],
+      []
+    ],
+    "answer": 2
+  },
+  {
+    "key": "15a",
+    "topic": "Lưu lượng tuabin Pelton",
+    "titleJp": "ペルトン水車の流量",
+    "questionJp": "ペルトン水車1台をもつ水力発電所がある。水車中心線上の鉄管 A 点で圧力 p=3000 kPa，流速 v=5.3 m/s である。鉄管断面は内径1.2 mの円である。全水頭 H=h+p/(ρg)+v²/(2g) とし，位置水頭 h は無視する。g=9.8 m/s²，ρ=1000 kg/m³ とする。 (a) 流量 [m³/s] の最も近い値を選べ。",
+    "questionVi": "Nhà máy thủy điện có một tuabin Pelton. Đo tại điểm A của ống thép, nằm trên đường tâm tuabin, được áp suất p=3.000 kPa và vận tốc v=5,3 m/s. Tiết diện trong ống tròn, đường kính 1,2 m. Cột nước toàn phần H tại A bằng h+p/(ρg)+v²/(2g). Bỏ qua cột cao độ h do A nằm trên đường tâm tuabin. Lấy g=9,8 m/s² và ρ=1.000 kg/m³.\n\n(a) Chọn lưu lượng qua tuabin (m³/s) gần nhất.",
+    "choicesJp": [
+      "3",
+      "4",
+      "5",
+      "6",
+      "7"
+    ],
+    "choicesVi": [
+      "3",
+      "4",
+      "5",
+      "6",
+      "7"
+    ],
+    "solution": [
+      "Tiết diện ống π×1,2²/4≈1,131 m². Lưu lượng bằng tiết diện nhân vận tốc, Q≈1,131×5,3≈5,99 m³/s."
+    ],
+    "pages": [
+      15
+    ],
+    "theory": [
+      325,
+      327
+    ],
+    "readings": [
+      [
+        4,
+        2,
+        "すいしゃ"
+      ],
+      [
+        20,
+        2,
+        "すいしゃ"
+      ]
+    ],
+    "choiceReadings": [
+      [],
+      [],
+      [],
+      [],
+      []
+    ],
+    "answer": 4
+  },
+  {
+    "key": "15b",
+    "topic": "Công suất cơ của tuabin Pelton",
+    "titleJp": "ペルトン水車の出力",
+    "questionJp": "ペルトン水車1台をもつ水力発電所がある。水車中心線上の鉄管 A 点で圧力 p=3000 kPa，流速 v=5.3 m/s である。鉄管断面は内径1.2 mの円である。全水頭 H=h+p/(ρg)+v²/(2g) とし，位置水頭 h は無視する。g=9.8 m/s²，ρ=1000 kg/m³ とする。 (b) A 点から水車までの水路損失は無視し，水車効率を88.5 %とするとき，出力 [kW] の最も近い値を選べ。",
+    "questionVi": "Nhà máy thủy điện có một tuabin Pelton. Đo tại điểm A của ống thép, nằm trên đường tâm tuabin, được áp suất p=3.000 kPa và vận tốc v=5,3 m/s. Tiết diện trong ống tròn, đường kính 1,2 m. Cột nước toàn phần H tại A bằng h+p/(ρg)+v²/(2g). Bỏ qua cột cao độ h do A nằm trên đường tâm tuabin. Lấy g=9,8 m/s² và ρ=1.000 kg/m³.\n\n(b) Bỏ qua tổn thất đường nước từ A đến tuabin và lấy hiệu suất tuabin 88,5%. Chọn công suất ra (kW) gần nhất.",
+    "choicesJp": [
+      "13000",
+      "14000",
+      "15000",
+      "16000",
+      "17000"
+    ],
+    "choicesVi": [
+      "13000",
+      "14000",
+      "15000",
+      "16000",
+      "17000"
+    ],
+    "solution": [
+      "H=3.000.000/(1.000×9,8)+5,3²/(2×9,8)≈307,6 m. Với Q≈5,99 m³/s, công suất cơ ρgQHη≈16.000 kW."
+    ],
+    "pages": [
+      15,
+      16
+    ],
+    "theory": [
+      325,
+      327,
+      334
+    ],
+    "readings": [
+      [
+        4,
+        2,
+        "すいしゃ"
+      ],
+      [
+        20,
+        2,
+        "すいしゃ"
+      ],
+      [
+        160,
+        2,
+        "すいしゃ"
+      ],
+      [
+        174,
+        2,
+        "すいしゃ"
+      ]
+    ],
+    "choiceReadings": [
+      [],
+      [],
+      [],
+      [],
+      []
+    ],
+    "answer": 4
+  },
+  {
+    "key": "16a",
+    "topic": "Đo dẫn nạp đối đất đường dây",
+    "titleJp": "送電線の対地アドミタンス",
+    "questionJp": "中性点をリアクトル L を介して接地した公称電圧66 kVの系統がある。C は送電線の対地静電容量を表す等価キャパシタであり，図にない電気定数は無視する。 (a) A 点で変電所と送電線を切り離し，送電線の3線を一括して大地との間に公称電圧の相電圧相当を加えると，全充電電流は115 Aであった。1線当たりのアドミタンスの大きさ [mS] を選べ。",
+    "questionVi": "Hệ thống điện áp danh định 66 kV có trung tính nối đất qua cuộn kháng L như hình. Mỗi tụ tương đương C biểu thị điện dung đối đất của một dây. Bỏ qua các thông số điện không có trên hình.\n\n(a) Để đo thông số đường dây, tách đường dây khỏi trạm tại A, nối chung ba dây phía đường dây và đặt giữa ba dây này với đất điện áp bằng điện áp pha danh định. Tổng dòng nạp là 115 A. Chọn độ lớn dẫn nạp trên mỗi dây (mS) gần nhất.",
+    "choicesJp": [
+      "0.58",
+      "1.0",
+      "1.7",
+      "3.0",
+      "9.1"
+    ],
+    "choicesVi": [
+      "0,58",
+      "1,0",
+      "1,7",
+      "3,0",
+      "9,1"
+    ],
+    "solution": [
+      "Ba điện dung cùng chịu 66.000/√3 V. Mỗi dây mang 115/3 A, nên dẫn nạp một dây là (115/3)/(66.000/√3)≈1,0 mS."
+    ],
+    "pages": [
+      17
+    ],
+    "theory": [
+      401,
+      497
+    ],
+    "readings": [
+      [
+        86,
+        3,
+        "へんでんしょ"
+      ]
+    ],
+    "choiceReadings": [
+      [],
+      [],
+      [],
+      [],
+      []
+    ],
+    "answer": 2
+  },
+  {
+    "key": "16b",
+    "topic": "Tổng trở cuộn kháng dập hồ quang",
+    "titleJp": "消弧リアクトルのインピーダンス",
+    "questionJp": "中性点をリアクトル L を介して接地した公称電圧66 kVの系統がある。C は送電線の対地静電容量を表す等価キャパシタであり，図にない電気定数は無視する。 (b) B 点の a 相に一線地絡が発生したとき，地絡電流が零となるための L のインピーダンス [Ω] を選べ。線路定数は (a) の値を用いる。",
+    "questionVi": "Hệ thống điện áp danh định 66 kV có trung tính nối đất qua cuộn kháng L như hình. Mỗi tụ tương đương C biểu thị điện dung đối đất của một dây. Bỏ qua các thông số điện không có trên hình.\n\n(b) Khi pha a tại B chạm đất, chọn độ lớn tổng trở cuộn kháng L (Ω) gần nhất để dòng tại điểm chạm đất bằng 0. Dùng thông số đường dây tính ở (a).",
+    "choicesJp": [
+      "111",
+      "196",
+      "333",
+      "575",
+      "1000"
+    ],
+    "choicesVi": [
+      "111",
+      "196",
+      "333",
+      "575",
+      "1000"
+    ],
+    "solution": [
+      "Cuộn kháng trung tính phải bù tổng dẫn nạp điện dung ba pha. Từ 1/X_L=3×0,001 S, suy ra X_L≈333 Ω."
+    ],
+    "pages": [
+      17
+    ],
+    "theory": [
+      391,
+      497
+    ],
+    "readings": [
+      [
+        91,
+        4,
+        "いっせんちらく"
+      ]
+    ],
+    "choiceReadings": [
+      [],
+      [],
+      [],
+      [],
+      []
+    ],
+    "answer": 3
+  },
+  {
+    "key": "17a",
+    "topic": "Lượng than dùng trong một ngày",
+    "titleJp": "石炭火力の燃料消費量",
+    "questionJp": "定格出力200 MWの石炭火力発電所がある。石炭の発熱量は28000 kJ/kg，定格出力時の発電端熱効率は36 %で，潜熱の影響は無視する。石炭は重量比で炭素70 %，水素他30 %とし，原子量は炭素12，酸素16，反応は C+O₂→CO₂ とする。 (a) 定格出力で1日運転したときの燃料重量 [t] を選べ。",
+    "questionVi": "Một nhà máy nhiệt điện than có công suất định mức 200 MW, nhiệt trị than 28.000 kJ/kg và hiệu suất nhiệt đầu phát 36% ở công suất định mức. Bỏ qua ảnh hưởng của nhiệt ẩn. Than có 70% cacbon và 30% chất khác theo khối lượng. Lấy nguyên tử khối cacbon là 12 và oxy là 16. Phản ứng oxy hóa cacbon là C+O₂→CO₂.\n\n(a) Chọn khối lượng nhiên liệu tiêu thụ (tấn) gần nhất khi chạy định mức trong một ngày.",
+    "choicesJp": [
+      "222",
+      "410",
+      "1062",
+      "1714",
+      "2366"
+    ],
+    "choicesVi": [
+      "222",
+      "410",
+      "1062",
+      "1714",
+      "2366"
+    ],
+    "solution": [
+      "Điện năng phát 200×24=4.800 MWh, tương đương 1,728×10¹⁰ kJ. Chia cho 0,36 rồi chia 28.000 kJ/kg, được khoảng 1.714 tấn than."
+    ],
+    "pages": [
+      18
+    ],
+    "theory": [
+      341,
+      349
+    ],
+    "readings": [],
+    "choiceReadings": [
+      [],
+      [],
+      [],
+      [],
+      []
+    ],
+    "answer": 4
+  },
+  {
+    "key": "17b",
+    "topic": "Khối lượng CO₂ phát sinh",
+    "titleJp": "石炭火力の二酸化炭素発生量",
+    "questionJp": "定格出力200 MWの石炭火力発電所がある。石炭の発熱量は28000 kJ/kg，定格出力時の発電端熱効率は36 %で，潜熱の影響は無視する。石炭は重量比で炭素70 %，水素他30 %とし，原子量は炭素12，酸素16，反応は C+O₂→CO₂ とする。 (b) 定格出力で1日運転したときの二酸化炭素の重量 [t] を選べ。",
+    "questionVi": "Một nhà máy nhiệt điện than có công suất định mức 200 MW, nhiệt trị than 28.000 kJ/kg và hiệu suất nhiệt đầu phát 36% ở công suất định mức. Bỏ qua ảnh hưởng của nhiệt ẩn. Than có 70% cacbon và 30% chất khác theo khối lượng. Lấy nguyên tử khối cacbon là 12 và oxy là 16. Phản ứng oxy hóa cacbon là C+O₂→CO₂.\n\n(b) Chọn khối lượng CO₂ phát sinh (tấn) gần nhất khi chạy định mức trong một ngày.",
+    "choicesJp": [
+      "327",
+      "1052",
+      "4399",
+      "5342",
+      "6285"
+    ],
+    "choicesVi": [
+      "327",
+      "1052",
+      "4399",
+      "5342",
+      "6285"
+    ],
+    "solution": [
+      "Khối lượng cacbon là 1.714,3×0,70≈1.200 tấn. Một mol C tạo một mol CO₂, nên nhân tỉ số khối lượng mol 44/12 được khoảng 4.400 tấn CO₂."
+    ],
+    "pages": [
+      18
+    ],
+    "theory": [
+      341,
+      349
+    ],
+    "readings": [],
+    "choiceReadings": [
+      [],
+      [],
+      [],
+      [],
+      []
+    ],
+    "answer": 3
+  }
+]
