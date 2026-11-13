@@ -24,6 +24,10 @@ import riron26 from "./h26/riron.json";
 import denryoku26 from "./h26/denryoku.json";
 import kikai26 from "./h26/kikai.json";
 import houki26 from "./h26/houki.json";
+import riron27 from "./h27/riron.json";
+import denryoku27 from "./h27/denryoku.json";
+import kikai27 from "./h27/kikai.json";
+import houki27 from "./h27/houki.json";
 
 export const denkenExamHref = "/denken/kakomon";
 
@@ -176,7 +180,9 @@ function makeExam(eraYear: number, subject: keyof typeof subjects, rows: Questio
       theory: row.theory.map((page) => ({ page, title: theoryTitles.get(page) ?? "" })),
       source: row.answer === "all"
         ? { href: "https://www.shiken.or.jp/chief/upload/20140907_ch_third_a01.pdf", label: `Đáp án chính thức · H${eraYear} 問${number}` }
-        : { href: `https://denken-ou.com/${subject}h${eraYear}-${number}/`, label: `Lời giải Nhật · H${eraYear} 問${number}` },
+        : eraYear === 27
+          ? { href: "https://www.shiken.or.jp/chief/upload/20150906_ch_third_a01.pdf", label: `Đáp án chính thức · H${eraYear} 問${number}` }
+          : { href: `https://denken-ou.com/${subject}h${eraYear}-${number}/`, label: `Lời giải Nhật · H${eraYear} 問${number}` },
       originalPages: row.pages.map((page) => ({
         href: `/denken/kakomon/h${eraYear}/${subject}/${String(page).padStart(2, "0")}.webp`,
         label: `Trang ${page} của đề gốc`,
@@ -227,6 +233,10 @@ export const denkenPastExams = [
   makeExam(26, "denryoku", denryoku26),
   makeExam(26, "kikai", kikai26.map((row) => ({ ...row, answer: row.answer === "all" ? ("all" as const) : Number(row.answer) }))),
   makeExam(26, "houki", houki26),
+  makeExam(27, "riron", riron27),
+  makeExam(27, "denryoku", denryoku27),
+  makeExam(27, "kikai", kikai27),
+  makeExam(27, "houki", houki27),
 ];
 
 export function denkenQuestionHref(testSlug: string, key: string) {
