@@ -201,7 +201,7 @@
     "titleJp": "電気使用場所の配線用電線",
     "topic": "電気使用場所の配線用電線",
     "questionJp": "配線用電線の強度と絶縁性能，裸電線の制限及び特別高圧の接触電線の制限に関して，文中の空欄に入る語の組合せを選べ。",
-    "questionVi": "Dây đi trong nơi sử dụng điện, trừ (ア) và (イ) dùng ở đặc biệt cao áp, phải đủ bền và cách điện phù hợp với nơi lắp và (ウ). Thông thường cấm dùng (ア), trừ khi có biện pháp tránh điện giật, cháy. Dây đặc biệt cao áp không được dùng (イ). Chọn tổ hợp.",
+    "questionVi": "Đoạn sau nói về dây dùng cho hệ thống đi dây tại nơi sử dụng điện theo Tiêu chuẩn kỹ thuật thiết bị điện trong đề H25.\n\na. Trừ (ア) và (イ) dùng ở cấp đặc biệt cao áp, dây phải có độ bền và tính năng cách điện đủ dùng theo tình trạng nơi lắp và (ウ), để tránh nguy cơ điện giật hoặc cháy.\n\nb. Không được dùng (ア) để đi dây. Có ngoại lệ khi dây đủ bền theo tình trạng nơi lắp và (ウ), đồng thời hệ thống được lắp sao cho dù dây không có cách điện cũng không gây nguy cơ điện giật hoặc cháy.\n\nc. Không được dùng (イ) cho hệ thống đi dây đặc biệt cao áp. Chọn tổ hợp đúng.",
     "choicesJp": [
       "接触電線・移動電線・施設方法",
       "接触電線・裸電線・使用目的",
@@ -387,7 +387,7 @@
     "titleJp": "金属製外箱の接地省略",
     "topic": "金属製外箱の接地省略",
     "questionJp": "金属製外箱等の接地を省略できる機器の構造，二次300 V以下・3 kV·A以下の変圧器，漏電遮断器の定格感度電流及び動作時間を選べ。",
-    "questionVi": "Chọn các điều kiện miễn nối đất vỏ kim loại theo đề. a. Kết cấu thiết bị. b. Loại máy biến áp ở nguồn, thứ cấp không quá 300 V và công suất không quá 3 kV·A, với mạch tải thứ cấp không nối đất. c. Dòng dư tác động định mức và thời gian tối đa của thiết bị cắt rò dòng điện tại nơi không ẩm.",
+    "questionVi": "Theo Hướng dẫn áp dụng Tiêu chuẩn kỹ thuật thiết bị điện trong đề H25, có thể miễn nối đất vỏ kim loại của thiết bị trong các trường hợp dưới đây. Phạm vi đoạn trích loại trừ thiết bị phát điện pin nhiên liệu thuộc nhóm thiết bị phát công suất nhỏ.\n\na. Thiết bị thuộc phạm vi Luật An toàn thiết bị và vật tư điện và có kết cấu (ア).\n\nb. Phía nguồn của mạch cấp thiết bị hạ áp có (イ), với điện áp dây thứ cấp không quá 300 V và dung lượng không quá 3 kV·A, đồng thời mạch phía tải của (イ) không nối đất.\n\nc. Mạch cấp thiết bị hạ áp ở nơi không ẩm có thiết bị cắt dòng rò thuộc phạm vi luật trên. Thiết bị tác động theo dòng điện, có dòng dư tác động định mức không quá (ウ) mA và thời gian tác động không quá (エ) giây. Chọn tổ hợp đúng.",
     "choicesJp": [
       "二重絶縁・絶縁変圧器・15・0.3",
       "二重絶縁・絶縁変圧器・15・0.1",
@@ -856,7 +856,7 @@
     "titleJp": "住宅屋内電路の対地電圧",
     "topic": "住宅屋内電路の対地電圧",
     "questionJp": "住宅屋内電路の対地電圧150 Vの例外について，機器の定格消費電力，対地電圧，接続方式及び専用器具を選べ。",
-    "questionVi": "Mạch điện trong nhà ở thường có điện áp với đất không quá 150 V. Với ngoại lệ cấp riêng một thiết bị, chọn ngưỡng công suất thiết bị, mức điện áp tối đa, cách nối thiết bị và khí cụ đóng cắt riêng đi cùng bảo vệ quá dòng. Đề còn yêu cầu bảo vệ chống chạm và tự động cắt khi chạm đất.",
+    "questionVi": "Theo Hướng dẫn áp dụng Tiêu chuẩn kỹ thuật thiết bị điện trong đề H25, điện áp với đất của mạch điện trong nhà ở không quá 150 V, trừ mạch bên trong bản thân thiết bị. Có ngoại lệ với thiết bị có công suất tiêu thụ định mức từ (ア) kW và dây cấp cho nó được lắp như sau.\n\na. Dây trong nhà chỉ cấp điện cho thiết bị đó.\nb. Điện áp sử dụng của thiết bị và điện áp với đất của dây đều không quá (イ) V.\nc. Có biện pháp bảo vệ chống chạm đơn giản cho dây.\nd. Có biện pháp bảo vệ chống chạm đơn giản cho thiết bị.\ne. Thiết bị được (ウ) với dây trong nhà.\nf. Mạch cấp có (エ) riêng và thiết bị cắt quá dòng.\ng. Có thiết bị tự động cắt mạch khi chạm đất.\n\nChọn tổ hợp đúng.",
     "choicesJp": [
       "5・450・直接接続・漏電遮断器",
       "2・300・直接接続・開閉器",
@@ -1325,7 +1325,7 @@
     "titleJp": "進相コンデンサの運転電流",
     "topic": "進相コンデンサの運転電流",
     "questionJp": "三相3線50 Hz，6.6 kVに50 kvarのY結線進相コンデンサがある。直列リアクトルはない。\n(a) 定格電流に対するR，S，T相の比が1.50，1.15，1.15のとき，実測電流を求めよ。",
-    "questionVi": "Tụ bù cao áp đấu sao 50 kvar, 6,6 kV, 50 Hz, không có kháng nối tiếp.\n(a) Dòng đo các pha R, S, T lần lượt bằng 1,50, 1,15 và 1,15 lần định mức. Tính bộ dòng gần nhất (A).",
+    "questionVi": "Xét chẩn đoán suy giảm tụ bù cao áp. Lưới ba pha ba dây 50 Hz, điện áp sử dụng 6,6 kV, cấp tụ có điện áp định mức 6,6 kV và dung lượng 50 kvar. Tụ đấu sao, mỗi pha gồm hai phần tử. Dòng vận hành được đo định kỳ bằng ampe kìm cao áp để theo dõi suy giảm phần tử bên trong.\n\n(a) Trong một lần đo, tỉ số dòng đo trên dòng định mức của các pha R, S, T lần lượt là 1,50, 1,15 và 1,15 như hình. Giả sử không có cuộn kháng nối tiếp. Chọn bộ dòng đo (A) gần nhất.",
     "choicesJp": [
       "6.6・5.0・5.0",
       "7.5・5.7・5.7",

@@ -1021,7 +1021,7 @@
     "titleJp": "単相単巻変圧器",
     "topic": "単相単巻変圧器",
     "questionJp": "単巻変圧器の共通巻線と非共通巻線，二次端子電圧と二次電流の積，漏れ磁束及び電圧変動率の組合せを選べ。",
-    "questionVi": "Chọn tên phần cuộn chung, phần cuộn riêng, tích điện áp với dòng đầu ra, mức từ thông tản và mức thay đổi điện áp của máy biến áp tự ngẫu.",
+    "questionVi": "Máy biến áp tự ngẫu có một phần dây quấn chung cho mạch sơ cấp và thứ cấp. Phần chung gọi là (ア), phần còn lại gọi là (イ). Khi nối các đầu của (ア) vào phía sơ cấp và các đầu của (イ) vào phía thứ cấp, nó hoạt động như máy biến áp thông thường. (ウ) của máy biến áp tự ngẫu bằng tích điện áp đầu cực thứ cấp và dòng thứ cấp.\n\nDo dùng chung một phần dây quấn, từ thông tản (エ) và độ biến động điện áp (オ). Chọn tổ hợp đúng.",
     "choicesJp": [
       "分路巻線・直列巻線・負荷容量・多く・小さい",
       "直列巻線・分路巻線・自己容量・少なく・小さい",
@@ -1233,7 +1233,7 @@
     "titleJp": "平滑コンデンサ付き単相整流回路",
     "topic": "平滑コンデンサ付き単相整流回路",
     "questionJp": "平滑コンデンサ付き単相ブリッジ整流器について，出力電圧波形，負荷から見た直流源，交流源の扱い，入力電流波形の組合せを選べ。",
-    "questionVi": "Mạch cầu chỉnh lưu một pha có tụ san bằng. Chọn dạng điện áp đầu ra, loại nguồn DC nhìn từ tải, loại nguồn AC đầu vào và dạng dòng AC.",
+    "questionVi": "Xét cầu chỉnh lưu điôt một pha có tụ san bằng như hình. Dòng qua tụ i_C bằng dòng xoay chiều i_s sau chỉnh lưu trừ dòng i_d cấp cho tải. Điện áp v_d có dạng (ア). Nhìn từ tải, mạch hoạt động như (イ) một chiều.\n\nTổng trở của nguồn AC thường rất nhỏ so với tổng trở tải, nên trong ứng dụng thông thường nguồn AC được xem là (ウ). Dòng i_s có dạng (エ), gồm phần dương và âm. Người ta thường mắc thêm cuộn kháng giữa nguồn AC và cầu chỉnh lưu để cải thiện dạng sóng. Chọn tổ hợp đúng.",
     "choicesJp": [
       "脈動・電圧源・電圧源・パルス",
       "正負反転・電流源・電圧源・パルス",
@@ -1705,7 +1705,7 @@
     "titleJp": "変圧器の高圧側換算抵抗",
     "topic": "変圧器の高圧側換算抵抗",
     "questionJp": "10 kV·A，1000/100 Vの単相変圧器で，無負荷試験80 W，定格電流の短絡試験120 Wを得た。\n(a) 高圧側換算巻線抵抗を求めよ。",
-    "questionVi": "Máy biến áp một pha 10 kV·A, 1.000/100 V. Thử không tải ở điện áp định mức đo 80 W. Thử ngắn mạch ở dòng định mức, cấp phía cao áp, đo 120 W.\n(a) Tính điện trở dây quấn quy về cao áp (Ω).",
+    "questionVi": "Máy biến áp một pha có dung lượng định mức 10 kV·A, điện áp sơ cấp 1.000 V, thứ cấp 100 V. Trong thử không tải, để hở phía cao áp và đặt điện áp định mức vào phía hạ áp, oát kế chỉ 80 W. Trong thử ngắn mạch, nối tắt phía hạ áp rồi đặt điện áp tổng trở vào phía cao áp cho dòng định mức chạy qua, oát kế chỉ 120 W.\n\n(a) Chọn điện trở dây quấn quy về cao áp (Ω) gần nhất.",
     "choicesJp": [
       "1.0",
       "1.2",
@@ -1797,7 +1797,7 @@
     "titleJp": "変圧器の定格効率",
     "topic": "変圧器の定格効率",
     "questionJp": "10 kV·Aの単相変圧器の無負荷損は80 W，定格電流時の銅損は120 Wである。\n(b) 力率1の定格効率を求めよ。",
-    "questionVi": "Máy biến áp một pha 10 kV·A có tổn hao không tải 80 W và tổn hao đồng định mức 120 W.\n(b) Tính hiệu suất khi tải định mức có cosφ=1 (%).",
+    "questionVi": "Máy biến áp một pha có định mức 10 kV·A, 1.000/100 V. Trong thử không tải, để hở phía cao áp và đặt điện áp định mức vào phía hạ áp, oát kế chỉ 80 W. Trong thử ngắn mạch, nối tắt phía hạ áp và đặt điện áp tổng trở vào phía cao áp cho dòng định mức chạy qua, oát kế chỉ 120 W.\n\n(b) Chọn hiệu suất (%) gần nhất khi vận hành ở tải định mức và cosφ = 1.",
     "choicesJp": [
       "95",
       "96",
@@ -1873,7 +1873,7 @@
     "titleJp": "PWMインバータの基本波実効値",
     "topic": "PWMインバータの基本波実効値",
     "questionJp": "PWMインバータの信号波振幅9 V，搬送波振幅10 V，直流電圧200 Vとする。\n(a) v_A−v_Bの50 Hz基本波の実効値を求めよ。",
-    "questionVi": "Nghịch lưu PWM cho điện áp 50 Hz. Biên độ sóng điều khiển 9 V, sóng mang 10 V, nguồn DC 200 V.\n(a) Tính điện áp hiệu dụng thành phần cơ bản của v_A−v_B (V).",
+    "questionVi": "Hình vẽ cho mạch nghịch lưu PWM tạo điện áp xoay chiều 50 Hz và các dạng sóng. Gọi v_A, v_B là điện áp tức thời tại A và B so với điểm giữa M của nguồn DC. Điện áp giữa hai đầu ra là v_A−v_B.\n\n(a) Biên độ thành phần cơ bản 50 Hz của mỗi nhánh được tính bằng (V_s/V_c)×(V_d/2). Biên độ sóng mang tam giác V_c = 10 V, biên độ của mỗi tín hiệu sin V_s = 9 V và điện áp DC V_d = 200 V. Biên độ cơ bản của v_A−v_B bằng tổng biên độ V_A và V_B. Chọn giá trị hiệu dụng (V) của thành phần cơ bản gần nhất.",
     "choicesJp": [
       "64",
       "90",
@@ -1935,7 +1935,7 @@
     "titleJp": "PWM電圧の高調波を含む実効値",
     "topic": "PWM電圧の高調波を含む実効値",
     "questionJp": "v_A−v_Bは5 msごとに対称で，直流電圧は200 Vである。\n(b) 図の最初の5 msのパルスから高調波を含む実効値を求めよ。",
-    "questionVi": "Điện áp v_A−v_B có các đoạn đối xứng mỗi 5 ms, biên độ xung 200 V.\n(b) Tính giá trị hiệu dụng gồm cả hài từ các xung trong 5 ms đầu.",
+    "questionVi": "Hình vẽ cho mạch nghịch lưu PWM tạo điện áp 50 Hz. v_A và v_B là điện áp tức thời của A và B so với điểm giữa M của nguồn DC. Điện áp đầu ra là v_A−v_B, với V_d = 200 V.\n\n(b) Điện áp đầu ra chứa sóng hài nên giá trị hiệu dụng lớn hơn giá trị của riêng thành phần cơ bản ở (a). Dạng sóng đối xứng theo từng đoạn 5 ms. Gọi T_s (ms) là tổng thời gian có xung điện áp trong 5 ms đầu, khi đó V_rms = V_d√(T_s/5). Dựa vào hình, chọn V_rms (V) gần nhất.",
     "choicesJp": [
       "88",
       "127",
@@ -2059,7 +2059,7 @@
     "titleJp": "放射伝熱",
     "topic": "放射伝熱",
     "questionJp": "向かい合う二面の放射伝熱をΦ＝εσA₁F₁₂×（ウ）で表す。\n(b) 放出される形態，温度単位，温度項とσの組合せを選べ。",
-    "questionVi": "Câu tự chọn. Chọn một trong hai câu 17 và 18 rồi làm cả (a) và (b) của câu đã chọn. Nếu làm cả hai câu, phần tự chọn không được chấm.\n\nHai bề mặt đối diện trao đổi nhiệt bức xạ theo Φ=εσA₁F₁₂×(ウ), với T₁>T₂.\n(b) Chọn dạng năng lượng phát ra, đơn vị nhiệt độ, biểu thức nhiệt độ và tên hằng số σ.",
+    "questionVi": "Câu tự chọn. Chọn một trong hai câu 17 và 18 rồi làm cả (a) và (b) của câu đã chọn. Nếu làm cả hai câu, phần tự chọn không được chấm.\n\n(b) Mọi vật đều phát năng lượng dưới dạng (ア), với cường độ phụ thuộc nhiệt độ. Lượng phát có thể tính từ nhiệt độ bề mặt và hệ số phát xạ. Hai mặt S₁ và S₂ đối diện nhau, có diện tích A₁ và A₂ (m²) và nhiệt độ T₁, T₂ tính bằng (イ). Khi T₁>T₂, năng lượng truyền ròng mỗi giây từ S₁ đến S₂ là Φ = εσA₁F₁₂×(ウ), tính bằng W.\n\nε là hệ số phát xạ, σ là (エ), còn F₁₂ là hệ số hình dạng, phụ thuộc kích thước, hình dạng và vị trí tương đối của hai mặt. Giả sử ε không phụ thuộc bước sóng và giống nhau ở hai mặt. Chọn tổ hợp đúng.",
     "choicesJp": [
       "電磁波・K・T₁−T₂・プランク",
       "熱・K・T₁⁴−T₂⁴・ステファン–ボルツマン",

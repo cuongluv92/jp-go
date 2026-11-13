@@ -4,7 +4,7 @@
     "titleJp": "水車の種類",
     "topic": "水車の種類",
     "questionJp": "水車について，ノズルからの流水をランナに作用させる方式と代表例，圧力エネルギーを利用する方式の例，軸方向に流水を通す方式，少水量・低落差の発電に用いる方式の組合せを選べ。",
-    "questionVi": "Vòi phun biến thế năng nước thành động năng trước khi nước tác dụng lên bánh công tác. Chọn loại tuabin và ví dụ tương ứng, ví dụ tuabin sử dụng năng lượng áp suất, loại cho nước đi theo trục, và loại dùng cho thủy điện nhỏ có cột nước thấp.",
+    "questionVi": "Đoạn sau nói về các tuabin dùng trong thủy điện. Tuabin phun nước qua vòi để biến thế năng thành động năng, rồi cho tia nước tác dụng lên bánh công tác, gọi là tuabin (ア). Một ví dụ điển hình là tuabin (イ). Tuabin (ウ) là ví dụ điển hình của kiểu dùng năng lượng áp suất của dòng nước để tác dụng lên bánh công tác. Còn ở tuabin (エ), nước đi qua bánh công tác theo phương trục.\n\nTrong bối cảnh tìm giải pháp hạn chế nóng lên toàn cầu, người ta quan tâm đến phát điện với lưu lượng nhỏ và cột nước thấp, chẳng hạn tận dụng nước tưới, hệ thống cấp thoát nước hoặc nước công nghiệp. Tuabin (オ) là một ví dụ điển hình. Chọn tổ hợp đúng.",
     "choicesJp": [
       "反動・ペルトン・プロペラ・フランシス・クロスフロー",
       "衝動・フランシス・カプラン・クロスフロー・ポンプ",
@@ -386,7 +386,7 @@
     "titleJp": "太陽光発電の導入",
     "topic": "太陽光発電の導入",
     "questionJp": "太陽光発電について，太陽電池の変換効率，年間で予想する量，傾斜角とともに確認する条件，及び系統連系保護を内蔵した変換装置の組合せを選べ。",
-    "questionVi": "Theo bối cảnh đề H25, chọn hiệu suất pin quang điện, đại lượng cần ước tính theo năm, thông số lắp đặt cùng với góc nghiêng, và thiết bị đổi DC sang AC có bảo vệ đấu nối.",
+    "questionVi": "Hiệu suất chuyển đổi của pin mặt trời được sử dụng phổ biến tại thời điểm ra đề thay đổi theo loại pin, vào khoảng (ア)%. Khi triển khai điện mặt trời, cần dự tính (イ) hằng năm của khu vực. (イ) thay đổi theo (ウ) và góc nghiêng của tấm pin, nên cần kiểm tra các điều kiện này.\n\nĐể đổi điện một chiều do pin tạo ra thành điện xoay chiều, cần (エ) có tích hợp bảo vệ nhằm tránh ảnh hưởng xấu khi đấu nối vào lưới phân phối của đơn vị điện lực. Chọn tổ hợp phù hợp nhất.",
     "choicesJp": [
       "7〜20・平均気温・影・コンバータ",
       "7〜20・発電電力量・方位・パワーコンディショナ",
@@ -673,7 +673,7 @@
     "titleJp": "真空遮断器の構造",
     "topic": "真空遮断器の構造",
     "questionJp": "真空遮断器の電極を密閉する部分，可動電極が動いても真空を保つ部分，空気遮断器に比べた騒音，ガス遮断器に比べた適用電圧の組合せを選べ。",
-    "questionVi": "Chọn buồng kín chứa điện cực, bộ phận duy trì chân không khi điện cực động di chuyển, mức ồn so với máy cắt không khí và cấp điện áp điển hình so với máy cắt khí.",
+    "questionVi": "Các điện cực đóng cắt của máy cắt chân không được đặt kín trong (ア). Máy gồm cơ cấu đóng mở điện cực, (イ) để duy trì chân không khi điện cực động di chuyển và các phần dẫn điện nối với mạch.\n\nKhi ngắt mạch, sản phẩm của hồ quang khuếch tán trong chân không rồi bám vào mặt trong ống cách điện, làm nồng độ của chúng giảm. So với máy cắt không khí, máy cắt chân không có tiếng ồn khi thao tác (ウ), kích thước nhỏ và khối lượng nhẹ. So với máy cắt khí, nó được dùng rộng rãi ở hệ thống có điện áp (エ). Chọn tổ hợp đúng.",
     "choicesJp": [
       "真空バルブ・ベローズ・小さく・高い",
       "パッファシリンダ・ベローズ・大きく・高い",
@@ -1260,7 +1260,7 @@
     "titleJp": "配電線の時限順送方式",
     "topic": "配電線の時限順送方式",
     "questionJp": "高圧配電線路の事故時に区分開閉器が動作する。動作時限が7秒で，送電再開から約22秒で再停止した。検出機器，区分開閉器の開閉順，方式名及び図の故障区間の組合せを選べ。",
-    "questionVi": "Rơle trạm phát hiện sự cố rồi máy cắt ngừng cấp. Các công tắc phân đoạn đổi trạng thái và sau khi cấp lại điện sẽ lần lượt tác động từ phía nguồn. Với trễ mỗi công tắc 7 giây, cấp lại rồi bị cắt sau khoảng 22 giây. Chọn thiết bị phát hiện, trạng thái ban đầu, trạng thái khi cấp lại, tên phương thức và đoạn sự cố.",
+    "questionVi": "Khi đường dây phân phối cao áp bị ngắn mạch hoặc chạm đất, (ア) tại trạm biến áp phân phối phát hiện sự cố và máy cắt ngừng cấp điện. Khi đó, các thiết bị đóng cắt phân đoạn trên đường dây (イ). Khi trạm cấp điện trở lại, mỗi thiết bị nhận biết điện áp từ phía nguồn và tác động sau thời gian đặt trước. Kết quả là chúng lần lượt (ウ) từ phía nguồn.\n\nNếu sự cố còn tồn tại, ngay sau khi thiết bị ngay trước đoạn sự cố tác động, (ア) lại phát hiện sự cố và máy cắt lại ngừng cấp điện. Dựa vào thời gian từ lúc cấp lại đến lúc ngừng cấp lần nữa, có thể xác định đoạn sự cố. Đây là phương thức (エ). Nếu thời gian đặt của mỗi thiết bị là 7 giây và nguồn bị cắt lại sau khoảng 22 giây, đoạn nào trong hình là đoạn sự cố (オ)? Chọn tổ hợp đúng.",
     "choicesJp": [
       "保護継電器・開放・投入・区間順送方式・c",
       "避雷器・開放・投入・時限順送方式・d",
@@ -1780,7 +1780,7 @@
     "titleJp": "受電端力率改善のコンデンサ容量",
     "topic": "受電端力率改善のコンデンサ容量",
     "questionJp": "受電端電圧66 kV，負荷40 MW，力率0.87遅れの需要家を考える。\n(a) 受電端電圧一定で力率を1とするコンデンサの総容量を求めよ。",
-    "questionVi": "(a) Tải 40 MW, cosφ=0,87 trễ, nhận điện 66 kV. Giữ điện áp nhận không đổi. Tính tổng dung lượng tụ (Mvar) để hệ số công suất tại đầu nhận bằng 1.",
+    "questionVi": "Một khách hàng nhận điện bằng đường dây trên không chuyên dùng, đặc biệt cao áp, ba pha ba dây, một mạch như hình. Tải 40 MW có hệ số công suất 0,87 trễ. Điện áp tại đầu nhận là 66 kV. Tổng trở nhìn về phía nguồn, gồm nguồn và đường dây chuyên dùng, bằng 6,0% trên cơ sở 10 MV·A. Điện trở rất nhỏ so với điện kháng. Bỏ qua các hằng số và điều kiện khác.\n\n(a) Giả sử điện áp đầu nhận giữ nguyên. Chọn tổng dung lượng tụ bù (Mvar) gần nhất để hệ số công suất nhận điện bằng 1.",
     "choicesJp": [
       "9.7",
       "19.7",
@@ -1867,7 +1867,7 @@
     "titleJp": "コンデンサ開閉による電圧変動",
     "topic": "コンデンサ開閉による電圧変動",
     "questionJp": "需要家から見た電源と線路のインピーダンスは10 MV·A基準で6.0%，抵抗は無視する。\n(b) 開閉による受電端電圧変動を2.0%以内にするコンデンサ単機容量の最大値を求めよ。",
-    "questionVi": "(b) Nguồn và đường dây nhìn từ đầu nhận có điện kháng 6% trên cơ sở 10 MVA. Bỏ qua điện trở. Tìm dung lượng tối đa mỗi cấp tụ (Mvar) để dao động áp khi đóng cắt không vượt 2%.",
+    "questionVi": "Khách hàng nhận điện 66 kV qua đường dây trên không chuyên dùng, đặc biệt cao áp, ba pha ba dây, một mạch. Tải 40 MW có hệ số công suất 0,87 trễ. Tổng trở nhìn về phía nguồn, gồm nguồn và đường dây, bằng 6,0% trên cơ sở 10 MV·A. Điện trở rất nhỏ so với điện kháng. Bỏ qua các hằng số và điều kiện khác.\n\n(b) Khi đóng hoặc cắt một cấp tụ, chọn dung lượng tối đa gần nhất của mỗi cấp (Mvar) để độ biến động điện áp đầu nhận không vượt 2,0%.",
     "choicesJp": [
       "0.46",
       "1.9",
@@ -2050,7 +2050,7 @@
     "titleJp": "三相短絡電流",
     "topic": "三相短絡電流",
     "questionJp": "66/6.6 kVの変圧器を含む図の系統を考える。\n(b) Aで三相短絡したときの電流を求めよ。二次側からAまでのインピーダンスと負荷は無視する。",
-    "questionVi": "(b) Với hệ thống 66/6,6 kV ở phần (a), xảy ra ngắn mạch ba pha tại A phía thứ cấp. Bỏ qua tổng trở đoạn từ thứ cấp đến A và tải. Tìm dòng ngắn mạch (kA).",
+    "questionVi": "Hệ thống trong hình gồm nguồn 66 kV, đường dây, máy biến áp ba pha 20 MV·A, 66/6,6 kV và máy cắt ở phía thứ cấp. Điện kháng máy biến áp bằng 15,0% trên cơ sở công suất định mức của nó. Tổng trở nhìn từ đường dây về phía nguồn bằng 5,0% trên cơ sở 100 MV·A. Bỏ qua thành phần điện trở.\n\n(b) Nếu ngắn mạch ba pha tại A, chọn dòng sự cố (kA) gần nhất. Bỏ qua tải và tổng trở từ phía thứ cấp máy biến áp đến A.",
     "choicesJp": [
       "4.4",
       "6.0",

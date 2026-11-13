@@ -1665,7 +1665,7 @@
     "key": "16b",
     "titleJp": "電圧と電流の位相差と力率",
     "questionJp": "電圧v＝V_m sinωtの交流電源を負荷に接続した。\n(b) 電流i＝25 cos(ωt−π/3) Aのとき，負荷の力率を求めよ。",
-    "questionVi": "Nguồn có điện áp v=V_m sinωt.\n(b) Khi nối tải, dòng i=25 cos(ωt−π/3) A. Tính hệ số công suất (%).",
+    "questionVi": "Điện áp nguồn v=V_m sinωt được đo bằng máy hiện sóng và có dạng sóng như hình. Độ nhạy đứng là 5 V/ô, tốc độ quét 2 ms/ô và tỉ số suy giảm đầu dò 1:1.\n\n(b) Khi nối nguồn vào tải, dòng điện là i=25 cos(ωt−π/3) A. Chọn hệ số công suất (%) gần nhất.",
     "choicesJp": [
       "50",
       "60",
@@ -1977,7 +1977,7 @@
     "key": "18b",
     "titleJp": "非安定マルチバイブレータのコンデンサ電圧",
     "questionJp": "図のNOT IC，コンデンサCと抵抗で構成した非安定マルチバイブレータを考える。\n(b) コンデンサ端子電圧V_Cの1周期の波形を選べ。",
-    "questionVi": "Câu tự chọn. Chọn một trong hai câu 17 và 18 rồi làm cả (a) và (b) của câu đã chọn. Nếu làm cả hai câu, phần tự chọn không được chấm.\n\nXét mạch đa hài phi ổn dùng IC NOT, tụ C và điện trở như hình.\n(b) Chọn dạng sóng một chu kỳ của điện áp V_C giữa hai đầu tụ.",
+    "questionVi": "Câu tự chọn. Chọn một trong hai câu 17 và 18 rồi làm cả (a) và (b) của câu đã chọn. Nếu làm cả hai câu, phần tự chọn không được chấm.\n\nXét mạch đa hài phi ổn dùng IC NOT, tụ C và điện trở như hình.\n(b) Chọn đồ thị thể hiện đúng nhất sự biến thiên theo thời gian của điện áp V_C giữa hai đầu tụ. Mỗi đồ thị biểu diễn một chu kỳ.",
     "choicesJp": [
       "図(1)",
       "図(2)",

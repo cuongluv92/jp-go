@@ -1049,7 +1049,7 @@
       "Sai cực tính tạo dòng tuần hoàn lớn",
       "Sai tỉ số biến áp gây dòng tuần hoàn kể cả không tải",
       "Có thể chạy song song Δ–Y với Y–Y, nhưng không thể chạy Δ–Δ với Δ–Y",
-      "Tỉ số điện trở trên điện kháng tản khác nhau gây lệch pha dòng chia tải, làm giảm mức tận dụng công suất",
+      "Nếu tỉ số giữa điện trở dây quấn và điện kháng tản khác nhau, các dòng thứ cấp lệch pha. Công suất lấy ra nhỏ hơn tổng công suất đầu ra của từng máy, và tỉ lệ tổn hao đồng trên công suất ra tăng, làm giảm mức tận dụng máy.",
       "Tổng trở phần trăm khác nhau khiến tải không chia theo tỉ lệ công suất định mức"
     ],
     "solution": [
@@ -2077,7 +2077,7 @@
     "topic": "単相インバータの特徴",
     "titleJp": "単相インバータの特徴",
     "questionJp": "図1は誘導性負荷を駆動する単相インバータである。\n(b) 単相インバータの特徴として誤っているものを選べ。",
-    "questionVi": "(b) Chọn phát biểu sai về bộ nghịch lưu một pha ở Hình 1.",
+    "questionVi": "Hình 1 là mạch cơ bản của bộ nghịch lưu một pha cấp cho tải có tính cảm. Chiều dương của dòng tải i_o và dòng nguồn một chiều i_d được quy ước theo mũi tên trong hình.\n\n(b) Chọn phát biểu sai về đặc điểm của bộ nghịch lưu một pha này.",
     "choicesJp": [
       "電圧形で直流電源の高周波インピーダンスが低いことが必要",
       "オンオフ周期を短くして周波数を上げ直流電圧を上げて交流電圧を上げられる",
