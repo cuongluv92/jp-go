@@ -1390,7 +1390,7 @@
     "titleJp": "はずみ車の運動エネルギー",
     "topic": "はずみ車の運動エネルギー",
     "questionJp": "回転速度N min⁻¹，出力P，慣性モーメントI，最終角速度ω₀のとき，n，ω，トルクT，運動エネルギーEの組合せを選べ。",
-    "questionVi": "Động cơ tăng tốc bánh đà. Biết N vòng/phút, công suất P, mômen quán tính I và tốc độ góc cuối ω₀. Chọn số vòng mỗi giây n, tốc độ góc ω, mômen T và động năng E.",
+    "questionVi": "Động cơ tăng tốc bánh đà để tích trữ động năng. Trong lúc tăng tốc, nếu động cơ quay với tốc độ N (vòng/phút) thì tốc độ n (vòng/giây) được tính bằng (ア). Từ n, tính tốc độ góc ω (rad/s) bằng (イ). Nếu động cơ thực hiện công P joule mỗi giây, tức công suất P (W), mômen T (N·m) được tính bằng (ウ).\n\nMômen này tăng tốc bánh đà nối trực tiếp với động cơ. Trong thời gian động cơ tiếp tục cấp công suất, năng lượng được đưa vào bánh đà. Gọi I (kg·m²) là mômen quán tính của bánh đà và ω₀ (rad/s) là tốc độ góc khi tăng tốc xong. Động năng E (J) tích trữ bằng (エ). Chọn tổ hợp đúng.",
     "choicesJp": [
       "N/60 · 2πn · P/ω · I²ω₀/2",
       "60N · n/(2π) · Pω · I²ω₀/2",
@@ -1462,7 +1462,7 @@
     "titleJp": "白色LEDの発光とスペクトル",
     "topic": "白色LEDの発光とスペクトル",
     "questionJp": "照明用白色LEDについて，pn接合での現象，LEDの色，蛍光体の色，擬似白色光のスペクトル図の組合せを選べ。",
-    "questionVi": "Chọn hiện tượng ở tiếp giáp pn, màu LED, màu phát quang của bột huỳnh quang và đồ thị phổ của nguồn sáng trắng kiểu phối màu.",
+    "questionVi": "LED được dùng rộng rãi làm nguồn chiếu sáng hiệu suất cao. Khi cho dòng thuận qua LED, electron và lỗ trống (ア) ở tiếp giáp pn và phát ánh sáng. Ánh sáng LED về cơ bản là đơn sắc, nên có nhiều cách tạo ánh sáng trắng để chiếu sáng.\n\nMột cách điển hình là dùng LED màu (イ) chiếu một phần ánh sáng lên chất huỳnh quang phát màu (ウ). Ánh sáng (ウ) từ chất huỳnh quang trộn với ánh sáng (イ) từ LED để tạo ánh sáng trông như màu trắng. Hình (エ) mô tả gần đúng phổ của nguồn sáng đó. Chọn tổ hợp đúng.",
     "choicesJp": [
       "分離・青・青緑・A",
       "再結合・赤・黄・A",
@@ -1515,7 +1515,7 @@
     "titleJp": "ニッケルの電気めっき",
     "topic": "ニッケルの電気めっき",
     "questionJp": "ニッケルめっきについて，析出側，ニッケル板の電極，ニッケル・硫酸イオンの極性，及び電子の授受の組合せを選べ。",
-    "questionVi": "Chọn điện cực kết tủa, cực nối với tấm niken, dấu của ion niken và ion sunfat, cùng quá trình nhận hoặc nhường electron ở vật cần mạ.",
+    "questionVi": "Khi điện phân dung dịch muối kim loại, kim loại có độ tinh khiết cao kết tủa ở (ア). Hiện tượng lắng đọng điện hóa này được dùng trong mạ. Khi mạ niken, nhúng tấm niken nối (イ) và tấm kim loại cần mạ nối (ア) vào dung dịch niken sunfat, rồi cho dòng điện chạy qua.\n\nNiken sunfat phân ly thành ion niken (ウ) và ion sunfat (エ). Tại bề mặt tấm cần mạ, ion niken (オ) electron, trở thành niken kim loại và bám lên bề mặt. Ngoài trang trí, mạ còn giúp tăng khả năng chống ăn mòn và chống mài mòn. Chọn tổ hợp đúng.",
     "choicesJp": [
       "陽極・陰極・負・正・放出",
       "陰極・陽極・正・負・受取",

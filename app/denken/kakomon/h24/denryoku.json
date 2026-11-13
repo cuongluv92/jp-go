@@ -4,7 +4,7 @@
     "topic": "水力発電の理論式",
     "titleJp": "水力発電の理論式",
     "questionJp": "水力発電で，放水地点の水面から貯水池の静水面までの高さをH_g，摩擦による損失に相当する高さをh_l，その差をHとする。流量Q，水車効率η_w，発電機効率η_g，重力加速度9.8 m/s²のとき，各水頭の名称と水車・発電機の出力の組合せを選べ。",
-    "questionVi": "Lấy mặt nước nơi xả làm mốc. H_g là chênh cao đến mặt nước tĩnh hồ chứa, h_l là phần cột nước mất do ma sát trong đường dẫn và ống áp lực, H = H_g − h_l. Với lưu lượng Q m³/s, hiệu suất tuabin η_w, máy phát η_g và g = 9,8 m/s², chọn tên ba đại lượng và hai biểu thức công suất.",
+    "questionVi": "Xét công thức thủy điện trong hình. Lấy mặt nước tại điểm xả làm mặt chuẩn. Độ cao H_g (m) từ mặt chuẩn đến mặt nước tĩnh của hồ chứa thường gọi là (ア). Độ cao h_l (m) tương ứng với năng lượng bị mất do ma sát giữa nước và thành đường dẫn, ống áp lực gọi là (イ). Hiệu H = H_g − h_l thường gọi là (ウ).\n\nKhi lưu lượng Q (m³/s) đi vào tuabin và hiệu suất tuabin là η_w, công suất tuabin P_w bằng (エ). Nếu hiệu suất máy phát là η_g, công suất máy phát P bằng (オ). Lấy gia tốc trọng trường 9,8 m/s². Chọn tổ hợp đúng.",
     "choicesJp": [
       "総落差・損失水頭・実効落差・9.8QHη_w×10³ W・9.8QHη_wη_g×10³ W",
       "自然落差・位置水頭・有効落差・9.8QH/η_w×10⁻³ kW・9.8QHη_g/η_w×10⁻³ kW",
@@ -181,7 +181,7 @@
     "topic": "タービン発電機の回転子",
     "titleJp": "タービン発電機の回転子",
     "questionJp": "汽力発電所のタービン発電機について，水車発電機と比較した回転速度，要求される強度，回転子の構造，直径及び軸方向長さの組合せを選べ。",
-    "questionVi": "So với máy phát thủy điện, chọn tốc độ, loại độ bền, dạng rôto, đường kính và chiều dài dọc trục của máy phát tuabin hơi cùng công suất.",
+    "questionVi": "So với máy phát thủy điện, máy phát tuabin hơi có tốc độ quay (ア), nên cần độ bền (イ). Vì vậy rôto có dạng (ウ) và đường kính phải (エ) hơn. Để đạt cùng công suất với máy phát thủy điện, rôto phải được làm (オ) theo phương trục. Chọn tổ hợp thích hợp nhất.",
     "choicesJp": [
       "高く・熱的・突極形・小さく・長く",
       "低く・熱的・円筒形・大きく・短く",
@@ -628,7 +628,7 @@
     "topic": "ガス絶縁開閉装置",
     "titleJp": "ガス絶縁開閉装置",
     "questionJp": "遮断器，断路器，避雷器，変流器等を金属容器に収納したGISについて，絶縁ガス，容器の処置，気中絶縁に比べた大きさ，適用環境の組合せを選べ。",
-    "questionVi": "GIS chứa máy cắt, dao cách ly, chống sét van và biến dòng trong vỏ kim loại kín. Chọn khí cách điện thông dụng theo đề, cách xử lý vỏ, thay đổi kích thước so với cách điện không khí và loại môi trường phù hợp.",
+    "questionVi": "Thiết bị đóng cắt cách điện bằng khí (GIS) chứa máy cắt, dao cách ly, chống sét van, biến dòng và các thiết bị khác trong vỏ kim loại chứa khí có khả năng cách điện cao. Theo bối cảnh đề H24, khí (ア) được dùng rộng rãi. Phần mang điện nằm kín trong vỏ kim loại được (イ), nên nguy cơ điện giật rất thấp. So với thiết bị cách điện bằng không khí, GIS có kích thước (ウ). Vì vậy, GIS thích hợp cho các trạm biến áp ngầm ở đô thị lớn và cho các nơi cần chống tác hại do (エ). Chọn tổ hợp đúng.",
     "choicesJp": [
       "SF₆・絶縁・小形化・塩害",
       "C₃F₆・絶縁・大形化・水害",
@@ -905,7 +905,7 @@
     "topic": "調相設備",
     "titleJp": "調相設備",
     "questionJp": "調相設備と負荷との接続方法，進み電流用，遅れ電流用，両方の調整用及び電力電子技術を用いる装置の組合せを選べ。",
-    "questionVi": "Chọn cách mắc thiết bị điều chỉnh công suất phản kháng, thiết bị làm dòng sớm pha, thiết bị làm dòng trễ pha, thiết bị làm được cả hai và thiết bị điều khiển bằng điện tử công suất.",
+    "questionVi": "Giảm dao động điện áp ở đầu gửi và đầu nhận có lợi cho khách hàng, thiết bị và đường dây. Để điều chỉnh hệ số công suất theo biến động tải và giữ điện áp ổn định, nối thiết bị bù (ア) với tải.\n\nThiết bị dùng để làm dòng sớm pha là (イ), thiết bị làm dòng trễ pha là (ウ), còn (エ) điều chỉnh được cả hai chiều. Ngoài ra còn có thiết bị (オ), dùng điện tử công suất để điều khiển dung lượng cuộn kháng hoặc tụ điện. Chọn tổ hợp đúng.",
     "choicesJp": [
       "並列・電力用コンデンサ・分路リアクトル・同期調相機・静止形無効電力補償",
       "並列・直列リアクトル・電力用コンデンサ・界磁調整器・PWM制御",

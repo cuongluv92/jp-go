@@ -1397,7 +1397,7 @@
     "titleJp": "素子短絡時の端子間静電容量",
     "topic": "素子短絡時の端子間静電容量",
     "questionJp": "各相2素子直列のY結線コンデンサで，図のR相1素子が短絡した。\n(b) 1端子開放の二端子法による測定結果として正しいものを選べ。",
-    "questionVi": "Tụ ba pha đấu sao, mỗi pha có hai phần tử nối tiếp. Một phần tử pha R bị ngắn mạch như hình.\n(b) Đo điện dung giữa từng cặp đầu cực, để đầu thứ ba hở. Chọn nhận xét đúng.",
+    "questionVi": "(b) Kết quả đo ở phần (a) cho thấy có phần tử bên trong bị hỏng do suy giảm, gây ngắn mạch. Sau khi dừng thiết bị, đo điện dung giữa từng cặp pha bằng phương pháp hai đầu cực, để đầu còn lại hở. Giả sử sơ đồ đấu dây và vị trí phần tử bị ngắn mạch đúng như Hình 2. Dấu × chỉ phần tử bị hỏng. Chọn nhận xét đúng về kết quả đo.",
     "choicesJp": [
       "R–Sが最小",
       "S–Tが最小",
@@ -1476,7 +1476,7 @@
     "titleJp": "太陽光発電の余剰電力量",
     "topic": "太陽光発電の余剰電力量",
     "questionJp": "太陽光出力は6時に0，12時に600 kW，18時に0まで直線変化する。負荷は0〜10時100 kW，10〜17時300 kW，17〜21時400 kW，21〜24時100 kW。\n(a) 系統へ送った余剰電力量を求めよ。",
-    "questionVi": "Điện mặt trời tăng tuyến tính từ 0 lúc 6 h đến 600 kW lúc 12 h, rồi giảm tuyến tính về 0 lúc 18 h. Tải là 100 kW từ 0–10 h, 300 kW từ 10–17 h, 400 kW từ 17–21 h và 100 kW từ 21–24 h.\n(a) Tính điện năng dư đưa lên lưới (kWh).",
+    "questionVi": "Một trung tâm mua sắm có hệ thống điện mặt trời công suất 600 kW. Trong ngày đang xét, công suất phát tăng tuyến tính từ 0 lúc 6 h đến 600 kW lúc 12 h rồi giảm tuyến tính về 0 lúc 18 h. Tải của trung tâm là 100 kW từ 0–10 h, 300 kW từ 10–17 h, 400 kW từ 17–21 h và 100 kW từ 21–24 h. Trung tâm ưu tiên dùng điện mặt trời tại chỗ. Khi công suất phát vượt công suất tiêu thụ, phần dư được đưa lên lưới.\n\n(a) Chọn điện năng dư đưa lên lưới trong ngày (kWh) gần nhất.",
     "choicesJp": [
       "900",
       "1300",
@@ -1554,7 +1554,7 @@
     "titleJp": "太陽光発電の自給率",
     "topic": "太陽光発電の自給率",
     "questionJp": "図の太陽光発電と負荷の一日を考える。発電電力量は余剰分を除いて自家消費する。\n(b) 全消費電力量に対する自家消費発電電力量の比率を求めよ。",
-    "questionVi": "Xét biểu đồ phát điện mặt trời và tải trong ngày ở phần (a). Điện phát được dùng tại chỗ, phần dư đưa lên lưới.\n(b) Tính tỉ lệ điện năng tiêu thụ được tự cấp từ điện mặt trời (%).",
+    "questionVi": "Một trung tâm mua sắm có hệ thống điện mặt trời công suất 600 kW. Trong ngày đang xét, công suất phát tăng tuyến tính từ 0 lúc 6 h đến 600 kW lúc 12 h rồi giảm tuyến tính về 0 lúc 18 h. Tải là 100 kW từ 0–10 h, 300 kW từ 10–17 h, 400 kW từ 17–21 h và 100 kW từ 21–24 h. Trung tâm dùng điện mặt trời tại chỗ và đưa phần dư lên lưới.\n\n(b) Chọn tỉ lệ (%) gần nhất của điện năng do hệ thống mặt trời tự cấp so với tổng điện năng trung tâm tiêu thụ trong ngày.",
     "choicesJp": [
       "35",
       "38",
