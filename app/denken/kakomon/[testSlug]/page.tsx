@@ -39,10 +39,10 @@ export default async function DenkenPastExamPage({ params, searchParams }: {
       {(exam.subject === "riron" || exam.subject === "kikai") && (
         <p className="pt-3 text-sm text-muted">Đề gốc yêu cầu chọn câu 17 hoặc câu 18. Ở chế độ luyện tập, bạn có thể làm cả hai.</p>
       )}
-      {(exam.eraYear === 26 || exam.eraYear === 27) && (
+      {(exam.eraYear >= 26 && exam.eraYear <= 28) && (
         <p className="pt-2 text-sm text-muted">
           Nguồn đề gốc:{" "}
-          <a href="https://www.shiken.or.jp/chief/third/qa/index_2.html" target="_blank" rel="noreferrer" className="underline">
+          <a href={exam.eraYear === 28 ? "https://www.shiken.or.jp/chief/third/qa/" : "https://www.shiken.or.jp/chief/third/qa/index_2.html"} target="_blank" rel="noreferrer" className="underline">
             電気技術者試験センター · 平成{exam.eraYear}年度第三種電気主任技術者試験
           </a>
           {". Phần chữ tiếng Nhật được biên tập cho giao diện. Ảnh đi kèm giữ đề gốc."}

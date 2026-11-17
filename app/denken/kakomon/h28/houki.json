@@ -1,0 +1,1565 @@
+[
+  {
+    "key": "1",
+    "titleJp": "主任技術者の選任と外部委託",
+    "topic": "Điều kiện thuê ngoài giám sát an toàn",
+    "questionJp": "自家用電気工作物の設置者は工事・維持・運用の保安を監督させるため主任技術者を選任する。一定の事業場では、要件を満たす者との外部委託契約と所管の承認があれば選任不要。a. 22 kV連系の内燃力2000 kW、b. 6.6 kV送電の水力3000 kW、c. 6.6 kV連系の太陽電池500 kW、d. 6.6 kV受電の需要設備。適否を選べ。",
+    "questionVi": "Theo Luật Kinh doanh điện và quy tắc thi hành, bên lắp công trình điện tự dùng phải bổ nhiệm kỹ sư trưởng để giám sát an toàn việc thi công, duy trì và vận hành. Một số cơ sở đủ điều kiện có thể miễn bổ nhiệm nếu ký hợp đồng thuê ngoài với đơn vị hoặc cá nhân đủ tiêu chuẩn và được Bộ trưởng Kinh tế, Thương mại và Công nghiệp chấp thuận do đáp ứng an toàn. Nếu cơ sở chỉ thuộc một khu vực, người phê duyệt là trưởng cơ quan giám sát an toàn công nghiệp tại nơi đó. Xét a. nhà máy động cơ đốt trong 2.000 kW nối truyền tải ở 22 kV, b. thủy điện 3.000 kW truyền điện ở 6,6 kV, c. điện mặt trời 500 kW nối phân phối ở 6,6 kV, d. thiết bị tiêu thụ nhận điện 6,6 kV. Chọn tổ hợp trường hợp phù hợp.",
+    "choicesJp": [
+      "適／不適／適／適",
+      "不適／不適／適／適",
+      "適／不適／不適／適",
+      "不適／適／適／不適",
+      "適／適／不適／不適"
+    ],
+    "choicesVi": [
+      "Phù hợp / không / phù hợp / phù hợp",
+      "Không / không / phù hợp / phù hợp",
+      "Phù hợp / không / không / phù hợp",
+      "Không / phù hợp / phù hợp / không",
+      "Phù hợp / phù hợp / không / không"
+    ],
+    "solution": [
+      "Theo phạm vi văn bản dùng trong H28, c và d thuộc nhóm có thể xin thuê ngoài. a dùng điện áp 22 kV, b là thủy điện 3.000 kW, vượt phạm vi đề xét."
+    ],
+    "theory": [
+      424,
+      430
+    ],
+    "pages": [
+      1,
+      2
+    ],
+    "answer": 2,
+    "readings": [
+      [
+        0,
+        8,
+        "じかようでんきこうさくぶつ"
+      ],
+      [
+        32,
+        5,
+        "しゅにんぎじゅつしゃ"
+      ],
+      [
+        38,
+        2,
+        "せんにん"
+      ],
+      [
+        61,
+        4,
+        "がいぶいたく"
+      ],
+      [
+        77,
+        2,
+        "せんにん"
+      ],
+      [
+        93,
+        3,
+        "ないねんりょく"
+      ],
+      [
+        140,
+        2,
+        "でんち"
+      ],
+      [
+        161,
+        4,
+        "じゅようせつび"
+      ],
+      [
+        166,
+        1,
+        "てき"
+      ]
+    ],
+    "choiceReadings": [
+      [
+        [
+          0,
+          1,
+          "てき"
+        ],
+        [
+          2,
+          2,
+          "ふてき"
+        ],
+        [
+          5,
+          1,
+          "てき"
+        ],
+        [
+          7,
+          1,
+          "てき"
+        ]
+      ],
+      [
+        [
+          0,
+          2,
+          "ふてき"
+        ],
+        [
+          3,
+          2,
+          "ふてき"
+        ],
+        [
+          6,
+          1,
+          "てき"
+        ],
+        [
+          8,
+          1,
+          "てき"
+        ]
+      ],
+      [
+        [
+          0,
+          1,
+          "てき"
+        ],
+        [
+          2,
+          2,
+          "ふてき"
+        ],
+        [
+          5,
+          2,
+          "ふてき"
+        ],
+        [
+          8,
+          1,
+          "てき"
+        ]
+      ],
+      [
+        [
+          0,
+          2,
+          "ふてき"
+        ],
+        [
+          3,
+          1,
+          "てき"
+        ],
+        [
+          5,
+          1,
+          "てき"
+        ],
+        [
+          7,
+          2,
+          "ふてき"
+        ]
+      ],
+      [
+        [
+          0,
+          1,
+          "てき"
+        ],
+        [
+          2,
+          1,
+          "てき"
+        ],
+        [
+          4,
+          2,
+          "ふてき"
+        ],
+        [
+          7,
+          2,
+          "ふてき"
+        ]
+      ]
+    ]
+  },
+  {
+    "key": "2",
+    "titleJp": "電路の接地点",
+    "topic": "Vị trí nối đất mạch điện",
+    "questionJp": "保護装置の確実動作・異常電圧抑制・対地電圧低下のため、中性点（（ア）電圧300 V以下で困難なら一端子）、特別高圧（イ）電路、燃料電池又は接続（イ）電路への接地が可能。高圧・特別高圧と低圧の変圧器でB種は低圧中性点、条件付きで低圧一端子。高圧計器用変成器の二次は（ウ）種、電子機器につながる（ア）電圧（エ）V以下の回路等は危険がなければ接地可能。",
+    "questionVi": "a. Để bảo đảm bảo vệ tác động, hạn chế quá áp bất thường hoặc giảm điện áp đối đất, có thể nối đất trung tính (nếu điện áp (ア) ≤300 V và khó nối trung tính, có thể nối một đầu cực), mạch (イ) đặc biệt cao áp, mạch pin nhiên liệu hoặc mạch (イ) nối với nó. b. Máy biến áp nối cao áp hoặc đặc biệt cao áp với hạ áp phải nối đất loại B tại trung tính hạ áp. Nếu điện áp (ア) của mạch hạ áp ≤300 V và khó nối trung tính thì nối một đầu cực hạ áp. c. Thứ cấp biến đo lường cao áp nối đất loại (ウ). d. Mạch nối thiết bị điện tử có điện áp (ア) ≤(エ) V và vị trí khác cần thiết về chức năng có thể nối đất nếu không gây điện giật, cháy hay nguy hiểm khác.",
+    "choicesJp": [
+      "使用／直流／A種／300",
+      "対地／交流／A種／150",
+      "使用／直流／D種／150",
+      "対地／交流／D種／300",
+      "使用／交流／A種／150"
+    ],
+    "choicesVi": [
+      "Sử dụng / DC / loại A / 300",
+      "Đối đất / AC / loại A / 150",
+      "Sử dụng / DC / loại D / 150",
+      "Đối đất / AC / loại D / 300",
+      "Sử dụng / AC / loại A / 150"
+    ],
+    "solution": [
+      "Các ô theo đề là điện áp sử dụng, một chiều, nối đất D, 150 V. Chú ý phân biệt điện áp sử dụng với điện áp đối đất."
+    ],
+    "theory": [
+      441,
+      477
+    ],
+    "pages": [
+      3
+    ],
+    "answer": 3,
+    "readings": [
+      [
+        0,
+        2,
+        "ほご"
+      ],
+      [
+        12,
+        2,
+        "でんあつ"
+      ],
+      [
+        19,
+        2,
+        "でんあつ"
+      ],
+      [
+        27,
+        3,
+        "ちゅうせいてん"
+      ],
+      [
+        34,
+        2,
+        "でんあつ"
+      ],
+      [
+        63,
+        4,
+        "ねんりょうでんち"
+      ],
+      [
+        69,
+        2,
+        "せつぞく"
+      ],
+      [
+        78,
+        2,
+        "せっち"
+      ],
+      [
+        104,
+        3,
+        "ちゅうせいてん"
+      ],
+      [
+        121,
+        6,
+        "けいきようへんせいき"
+      ],
+      [
+        148,
+        2,
+        "でんあつ"
+      ],
+      [
+        157,
+        2,
+        "かいろ"
+      ],
+      [
+        168,
+        2,
+        "せっち"
+      ]
+    ],
+    "choiceReadings": [
+      [],
+      [],
+      [],
+      [],
+      []
+    ]
+  },
+  {
+    "key": "3",
+    "titleJp": "高圧機械器具の施設",
+    "topic": "Bố trí thiết bị cao áp",
+    "questionJp": "高圧機械器具（附属高圧電線のうちケーブル以外も含む）の施設で、発電所・変電所・開閉所等を除く。不適切な工事例を選べ。",
+    "questionVi": "Chọn ví dụ lắp đặt không phù hợp đối với thiết bị cao áp, bao gồm dây cao áp đi kèm thuộc loại ngoài cáp. Phạm vi câu hỏi loại trừ nhà máy điện, trạm biến áp, trạm đóng cắt và nơi tương đương.",
+    "choicesJp": [
+      "屋内で取扱者以外の出入りを防止。",
+      "工場構内で人が触れないよう周囲にさく・へい等を設置。",
+      "工場等の構外で充電部が露出するので簡易接触防護措置を実施。",
+      "附属高圧線にケーブルを使い、接触のおそれがないよう地表上5 mに設置。",
+      "充電部が露出せず、温度上昇や故障時の近傍大地との電位差で人・家畜・工作物に危険を及ぼさないよう設置。"
+    ],
+    "choicesVi": [
+      "Lắp trong nhà, có biện pháp ngăn người ngoài người vận hành ra vào.",
+      "Trong khuôn viên nhà máy, bao bằng rào hoặc tường phù hợp để tránh người chạm vào.",
+      "Ngoài khuôn viên nhà máy, có phần mang điện lộ ra và chỉ áp dụng biện pháp chống chạm đơn giản.",
+      "Dây cao áp kèm theo dùng cáp, thiết bị đặt cao 5 m so với mặt đất để tránh người chạm.",
+      "Thiết bị không lộ phần mang điện, bố trí để tăng nhiệt hoặc chênh điện thế với đất gần đó khi sự cố không gây nguy hiểm cho người, gia súc hoặc công trình khác."
+    ],
+    "solution": [
+      "Trong trường hợp (3), đề đặt thiết bị có phần mang điện lộ ra ngoài khuôn viên. Biện pháp chống chạm đơn giản không đáp ứng điều kiện tình huống này."
+    ],
+    "theory": [
+      452,
+      477
+    ],
+    "pages": [
+      4
+    ],
+    "answer": 3,
+    "readings": [
+      [
+        31,
+        3,
+        "はつでんしょ"
+      ],
+      [
+        35,
+        3,
+        "へんでんしょ"
+      ],
+      [
+        39,
+        3,
+        "かいへいしょ"
+      ],
+      [
+        47,
+        3,
+        "ふてきせつ"
+      ]
+    ],
+    "choiceReadings": [
+      [],
+      [
+        [
+          2,
+          2,
+          "こうない"
+        ]
+      ],
+      [
+        [
+          4,
+          2,
+          "こうがい"
+        ],
+        [
+          17,
+          8,
+          "かんいせっしょくぼうごそち"
+        ]
+      ],
+      [],
+      [
+        [
+          9,
+          2,
+          "おんど"
+        ],
+        [
+          24,
+          2,
+          "でんい"
+        ]
+      ]
+    ]
+  },
+  {
+    "key": "4",
+    "titleJp": "移動電線の施設",
+    "topic": "Dây điện di động",
+    "questionJp": "移動電線と機器の接続不良で感電又は（ア）を防ぐ。高圧移動電線の供給回路には（イ）遮断器を設ける。機器とは（ウ）等で堅ろうに接続。特別高圧移動電線は、接触で危険のおそれがない電気集じん用装置付きのものを（エ）に施設する場合を除き、施設しない。",
+    "questionVi": "a. Nối dây di động với thiết bị sao cho tiếp xúc kém không gây điện giật hoặc (ア). b. Mạch cấp cho dây di động cao áp phải có thiết bị cắt (イ) để bảo vệ dây khi xảy ra (イ). c. Dây di động cao áp nối chắc với thiết bị bằng (ウ) hoặc phương pháp tương đương. d. Không lắp dây di động đặc biệt cao áp, trừ trường hợp đi kèm thiết bị lọc bụi tĩnh điện có phần mang điện mà khi chạm không có nguy cơ gây nguy hiểm, lắp ở (エ).",
+    "choicesJp": [
+      "火災／地絡／差込み接続器使用／屋内",
+      "断線／過電流／ボルト締め／屋外",
+      "火災／過電流／ボルト締め／屋内",
+      "断線／地絡／差込み接続器使用／屋外",
+      "断線／過電流／差込み接続器使用／屋外"
+    ],
+    "choicesVi": [
+      "Cháy / chạm đất / đầu nối cắm / trong nhà",
+      "Đứt dây / quá dòng / siết bu lông / ngoài trời",
+      "Cháy / quá dòng / siết bu lông / trong nhà",
+      "Đứt dây / chạm đất / đầu nối cắm / ngoài trời",
+      "Đứt dây / quá dòng / đầu nối cắm / ngoài trời"
+    ],
+    "solution": [
+      "Tổ hợp H28 là cháy, quá dòng, siết bu lông và trong nhà. Điểm c yêu cầu mối nối chắc; điểm d nêu một ngoại lệ có điều kiện."
+    ],
+    "theory": [
+      474,
+      477
+    ],
+    "pages": [
+      5
+    ],
+    "answer": 3,
+    "readings": [
+      [
+        0,
+        4,
+        "いどうでんせん"
+      ],
+      [
+        8,
+        2,
+        "せつぞく"
+      ],
+      [
+        26,
+        4,
+        "いどうでんせん"
+      ],
+      [
+        33,
+        2,
+        "かいろ"
+      ],
+      [
+        40,
+        2,
+        "しゃだん"
+      ],
+      [
+        61,
+        2,
+        "せつぞく"
+      ],
+      [
+        68,
+        4,
+        "いどうでんせん"
+      ],
+      [
+        86,
+        5,
+        "でんきしゅうじん"
+      ]
+    ],
+    "choiceReadings": [
+      [
+        [
+          6,
+          3,
+          "さしこみ"
+        ],
+        [
+          9,
+          2,
+          "せつぞく"
+        ]
+      ],
+      [
+        [
+          0,
+          2,
+          "だんせん"
+        ],
+        [
+          4,
+          2,
+          "でんりゅう"
+        ]
+      ],
+      [
+        [
+          4,
+          2,
+          "でんりゅう"
+        ]
+      ],
+      [
+        [
+          0,
+          2,
+          "だんせん"
+        ],
+        [
+          6,
+          3,
+          "さしこみ"
+        ],
+        [
+          9,
+          2,
+          "せつぞく"
+        ]
+      ],
+      [
+        [
+          0,
+          2,
+          "だんせん"
+        ],
+        [
+          4,
+          2,
+          "でんりゅう"
+        ],
+        [
+          7,
+          3,
+          "さしこみ"
+        ],
+        [
+          10,
+          2,
+          "せつぞく"
+        ]
+      ]
+    ]
+  },
+  {
+    "key": "5",
+    "titleJp": "蓄電池の保護装置",
+    "topic": "Bảo vệ ắc quy",
+    "questionJp": "発電所・変電所等の蓄電池に、（ア）、（イ）、（ウ）装置異常、又は高温型の断熱容器内部の著しい温度上昇が起きれば自動遮断。非常用予備電源は除く。",
+    "questionVi": "Ắc quy ở nhà máy điện, trạm biến áp hoặc nơi tương đương phải có thiết bị tự động tách khỏi mạch khi (ア), (イ), bất thường ở thiết bị (ウ), hoặc với loại vận hành ở nhiệt độ cao, khi nhiệt độ trong vỏ cách nhiệt tăng đáng kể. Đề loại trừ ắc quy chỉ làm nguồn dự phòng khẩn cấp khi nguồn thường mất điện hoặc sụt áp.",
+    "choicesJp": [
+      "過電圧／過電流／制御",
+      "過電圧／地絡／充電",
+      "短絡／過電流／制御",
+      "地絡／過電流／制御",
+      "短絡／地絡／充電"
+    ],
+    "choicesVi": [
+      "Quá áp / quá dòng / điều khiển",
+      "Quá áp / chạm đất / sạc",
+      "Ngắn mạch / quá dòng / điều khiển",
+      "Chạm đất / quá dòng / điều khiển",
+      "Ngắn mạch / chạm đất / sạc"
+    ],
+    "solution": [
+      "Theo đề, các trường hợp điền là quá áp, quá dòng và sự cố ở bộ điều khiển. Điều kiện nhiệt là trường hợp thứ tư, chỉ áp dụng cho loại có nhiệt độ nội bộ cao."
+    ],
+    "theory": [
+      282,
+      452
+    ],
+    "pages": [
+      6
+    ],
+    "answer": 1,
+    "readings": [
+      [
+        0,
+        3,
+        "はつでんしょ"
+      ],
+      [
+        4,
+        3,
+        "へんでんしょ"
+      ],
+      [
+        10,
+        2,
+        "でんち"
+      ],
+      [
+        36,
+        4,
+        "だんねつようき"
+      ],
+      [
+        46,
+        2,
+        "おんど"
+      ],
+      [
+        57,
+        2,
+        "しゃだん"
+      ],
+      [
+        65,
+        2,
+        "でんげん"
+      ]
+    ],
+    "choiceReadings": [
+      [
+        [
+          1,
+          2,
+          "でんあつ"
+        ],
+        [
+          5,
+          2,
+          "でんりゅう"
+        ]
+      ],
+      [
+        [
+          1,
+          2,
+          "でんあつ"
+        ]
+      ],
+      [
+        [
+          0,
+          2,
+          "たんらく"
+        ],
+        [
+          4,
+          2,
+          "でんりゅう"
+        ]
+      ],
+      [
+        [
+          4,
+          2,
+          "でんりゅう"
+        ]
+      ],
+      [
+        [
+          0,
+          2,
+          "たんらく"
+        ]
+      ]
+    ]
+  },
+  {
+    "key": "6",
+    "titleJp": "太陽電池モジュールの絶縁と直流ケーブル",
+    "topic": "Cách điện môđun và cáp DC quang điện",
+    "questionJp": "モジュールは最大使用電圧の（ア）倍DC又は（イ）倍AC（500 V未満は500 V）を充電部と大地間に（ウ）分印加して耐える。高圧直流電路用の太陽電池発電設備用直流ケーブルを管理された場所に使うときは直流（エ）V以下。",
+    "questionVi": "a. Môđun quang điện phải chịu điện áp DC bằng (ア) lần hoặc điện áp AC bằng (イ) lần điện áp sử dụng tối đa, lấy 500 V nếu kết quả thấp hơn 500 V. Đặt liên tục giữa phần mang điện và đất trong (ウ) phút. b. Với dây mạch DC cao áp nhà máy quang điện, trừ dây trong thiết bị, nếu dùng loại cáp DC chuyên dụng ở nơi đã ngăn người không có nhiệm vụ vào, điện áp sử dụng phải không quá (エ) V DC.",
+    "choicesJp": [
+      "1.5／1／1／1000",
+      "1.5／1／10／1500",
+      "2／1／10／1000",
+      "2／1.5／10／1000",
+      "2／1.5／1／1500"
+    ],
+    "choicesVi": [
+      "1,5／1／1／1000",
+      "1,5／1／10／1500",
+      "2／1／10／1000",
+      "2／1,5／10／1000",
+      "2／1,5／1／1500"
+    ],
+    "solution": [
+      "Tổ hợp H28 là 1,5 lần DC, 1 lần AC, 10 phút và 1.500 V DC, tương ứng (2). Mức sàn điện áp thử đề nêu là 500 V."
+    ],
+    "theory": [
+      441,
+      488
+    ],
+    "pages": [
+      7
+    ],
+    "answer": 2,
+    "readings": [
+      [
+        10,
+        2,
+        "でんあつ"
+      ],
+      [
+        73,
+        2,
+        "でんち"
+      ],
+      [
+        75,
+        2,
+        "はつでん"
+      ]
+    ],
+    "choiceReadings": [
+      [],
+      [],
+      [],
+      [],
+      []
+    ]
+  },
+  {
+    "key": "7",
+    "titleJp": "高圧架空引込線",
+    "topic": "Đường dây cao áp trên không dẫn vào",
+    "questionJp": "引込線は引張強さ8.01 kN以上又は直径（ア）mm以上の硬銅を使う高圧・特別高圧絶縁電線、（イ）用高圧絶縁電線、又はケーブル。絶縁電線はがいし引き工事。道路・鉄道・軌道横断及び横断歩道橋の上を除き、ケーブル以外は（エ）に危険表示すれば高さ（ウ）m以上とできる。",
+    "questionVi": "a. Dây dẫn phải là dây cách điện cao áp hoặc đặc biệt cao áp có độ bền kéo ít nhất 8,01 kN hoặc dùng đồng cứng đường kính ít nhất (ア) mm, dây cách điện cao áp loại (イ), hoặc cáp. b. Nếu dùng dây cách điện thì lắp trên sứ. c. Chiều cao theo quy định dây hạ áp/cao áp trên không. Có thể giảm xuống tối thiểu (ウ) m nếu không vượt đường bộ, đường sắt, đường ray hoặc đi trên cầu vượt bộ hành và, khi dây thuộc loại ngoài cáp, đặt biển nguy hiểm ở (エ) của dây.",
+    "choicesJp": [
+      "5／引下げ／2.5／下方",
+      "4／引下げ／3.5／近傍",
+      "4／引上げ／2.5／近傍",
+      "5／引上げ／5／下方",
+      "5／引下げ／3.5／下方"
+    ],
+    "choicesVi": [
+      "5 / dẫn xuống / 2,5 / phía dưới",
+      "4 / dẫn xuống / 3,5 / lân cận",
+      "4 / dẫn lên / 2,5 / lân cận",
+      "5 / dẫn lên / 5 / phía dưới",
+      "5 / dẫn xuống / 3,5 / phía dưới"
+    ],
+    "solution": [
+      "Theo H28, chọn 5 mm, dây dẫn xuống, 3,5 m và biển phía dưới. Mức chiều cao ngoại lệ chỉ đi cùng các điều kiện nêu trong đề."
+    ],
+    "theory": [
+      462
+    ],
+    "pages": [
+      8
+    ],
+    "answer": 5,
+    "readings": [
+      [
+        0,
+        3,
+        "ひきこみせん"
+      ],
+      [
+        4,
+        4,
+        "ひっぱりつよさ"
+      ],
+      [
+        29,
+        2,
+        "こうどう"
+      ],
+      [
+        41,
+        4,
+        "ぜつえんでんせん"
+      ],
+      [
+        52,
+        4,
+        "ぜつえんでんせん"
+      ],
+      [
+        64,
+        4,
+        "ぜつえんでんせん"
+      ]
+    ],
+    "choiceReadings": [
+      [
+        [
+          2,
+          3,
+          "ひきさげ"
+        ]
+      ],
+      [
+        [
+          2,
+          3,
+          "ひきさげ"
+        ]
+      ],
+      [
+        [
+          2,
+          3,
+          "ひきあげ"
+        ]
+      ],
+      [
+        [
+          2,
+          3,
+          "ひきあげ"
+        ]
+      ],
+      [
+        [
+          2,
+          3,
+          "ひきさげ"
+        ]
+      ]
+    ]
+  },
+  {
+    "key": "8",
+    "titleJp": "地中電線の接近・交差",
+    "topic": "Cáp ngầm đi gần hoặc giao nhau",
+    "questionJp": "地中箱内を除き、低圧と高圧、又は低圧・高圧と特別高圧の地中線が近接・交差する場合、次のいずれか。a. 最小離隔（ア）mと（イ）m。b. 堅ろうな（ウ）隔壁。c. （エ）の電線が不燃性被覆又は堅ろうな不燃性管に入る。d. （オ）の電線が自消性難燃被覆又は堅ろうな自消性難燃管に入る。",
+    "questionVi": "Ngoài phạm vi bên trong hộp ngầm, khi dây ngầm hạ áp đi gần/giao dây cao áp, hoặc dây ngầm hạ áp hay cao áp đi gần/giao dây đặc biệt cao áp, phải đáp ứng một trong các phương án. a. Khoảng cách ít nhất (ア) m cho hạ áp–cao áp và (イ) m khi có phía đặc biệt cao áp. b. Có vách ngăn chắc, có tính (ウ). c. (エ) dây có vỏ không cháy hoặc đặt trong ống chắc không cháy. d. (オ) dây có vỏ khó cháy tự tắt hoặc đi trong ống chắc khó cháy tự tắt.",
+    "choicesJp": [
+      "0.15／0.3／耐火性／いずれか／それぞれ",
+      "0.15／0.3／耐火性／それぞれ／いずれか",
+      "0.1／0.2／耐圧性／いずれか／それぞれ",
+      "0.1／0.2／耐圧性／それぞれ／いずれか",
+      "0.1／0.3／耐火性／いずれか／それぞれ"
+    ],
+    "choicesVi": [
+      "0,15 / 0,3 / chịu lửa / một trong hai / mỗi dây",
+      "0,15 / 0,3 / chịu lửa / mỗi dây / một trong hai",
+      "0,1 / 0,2 / chịu áp lực / một trong hai / mỗi dây",
+      "0,1 / 0,2 / chịu áp lực / mỗi dây / một trong hai",
+      "0,1 / 0,3 / chịu lửa / một trong hai / mỗi dây"
+    ],
+    "solution": [
+      "Theo đề, không cháy áp dụng cho một trong hai dây, còn khó cháy tự tắt áp dụng cho mỗi dây. Hai mức khoảng cách là 0,15 m và 0,3 m."
+    ],
+    "theory": [
+      470
+    ],
+    "pages": [
+      9,
+      10
+    ],
+    "answer": 1,
+    "readings": [
+      [
+        0,
+        3,
+        "ちちゅうばこ"
+      ],
+      [
+        27,
+        2,
+        "ちちゅう"
+      ],
+      [
+        117,
+        3,
+        "じしょうせい"
+      ],
+      [
+        130,
+        3,
+        "じしょうせい"
+      ]
+    ],
+    "choiceReadings": [
+      [
+        [
+          9,
+          3,
+          "たいかせい"
+        ]
+      ],
+      [
+        [
+          9,
+          3,
+          "たいかせい"
+        ]
+      ],
+      [
+        [
+          8,
+          3,
+          "たいあつせい"
+        ]
+      ],
+      [
+        [
+          8,
+          3,
+          "たいあつせい"
+        ]
+      ],
+      [
+        [
+          8,
+          3,
+          "たいかせい"
+        ]
+      ]
+    ]
+  },
+  {
+    "key": "9",
+    "titleJp": "電気さくの施設条件",
+    "topic": "Điều kiện của hàng rào điện",
+    "questionJp": "屋外裸線を用いる電気さくは原則禁止。農地等で獣の侵入や家畜の脱出を防ぎ、（ア）のおそれがない場合に限る。（イ）の表示、適合電源、電源使用電圧（ウ）V以上かつ人が入りやすい場所で感度（エ）mA以下・0.1秒以下の電流動作型漏電遮断器、専用開閉器、電波障害防止が必要。",
+    "questionVi": "Hàng rào điện là hàng rào ngoài trời dùng dây trần cố định được cấp điện. Nguyên tắc là cấm, ngoại lệ ở ruộng, đồng cỏ hoặc nơi tương tự để tránh thú hoang xâm nhập hoặc gia súc thoát ra và tránh nguy cơ (ア). Theo diễn giải tiêu chuẩn trong đề: a. Chỉ dùng cho mục đích vừa nêu. b. Đặt biển (イ) dễ thấy với khoảng cách thích hợp. c. Dùng bộ cấp điện thuộc Luật An toàn sản phẩm điện, hoặc bộ có giới hạn dòng ra an toàn và được cấp bởi nguồn DC thuộc luật, ắc quy, pin mặt trời hoặc nguồn DC tương tự. d. Ở nơi dễ vào, nếu điện áp sử dụng của nguồn cấp cho bộ hàng rào (hoặc nguồn DC trung gian) từ (ウ) V trở lên, mạch phải dùng thiết bị chống rò kiểu tác động theo dòng, độ nhạy định mức không quá (エ) mA và thời gian không quá 0,1 giây. e. Có công tắc riêng ở chỗ dễ đóng cắt. f. Nguồn phát xung lặp lại không được đặt nơi sóng hoặc dòng cao tần từ thiết bị hay mạch nối có thể gây nhiễu vô tuyến nghiêm trọng và liên tục.",
+    "choicesJp": [
+      "感電又は火災／危険／100／15",
+      "感電又は火災／電気さく／30／10",
+      "損壊／電気さく／100／15",
+      "感電又は火災／危険／30／15",
+      "損壊／電気さく／100／10"
+    ],
+    "choicesVi": [
+      "Điện giật hoặc cháy / nguy hiểm / 100 / 15",
+      "Điện giật hoặc cháy / hàng rào điện / 30 / 10",
+      "Hư hỏng / hàng rào điện / 100 / 15",
+      "Điện giật hoặc cháy / nguy hiểm / 30 / 15",
+      "Hư hỏng / hàng rào điện / 100 / 10"
+    ],
+    "solution": [
+      "Đề H28 yêu cầu bảng cảnh báo nguy hiểm, ngưỡng điện áp cấp 30 V và giới hạn dòng tác động 15 mA trong điều kiện d."
+    ],
+    "theory": [
+      474,
+      486
+    ],
+    "pages": [
+      11,
+      12
+    ],
+    "answer": 4,
+    "readings": [
+      [
+        2,
+        2,
+        "らせん"
+      ],
+      [
+        59,
+        1,
+        "てき"
+      ],
+      [
+        61,
+        2,
+        "でんげん"
+      ],
+      [
+        64,
+        2,
+        "でんげん"
+      ],
+      [
+        68,
+        2,
+        "でんあつ"
+      ],
+      [
+        88,
+        2,
+        "かんど"
+      ],
+      [
+        105,
+        2,
+        "でんりゅう"
+      ],
+      [
+        110,
+        2,
+        "ろうでん"
+      ],
+      [
+        112,
+        2,
+        "しゃだん"
+      ]
+    ],
+    "choiceReadings": [
+      [],
+      [],
+      [
+        [
+          0,
+          2,
+          "そんかい"
+        ]
+      ],
+      [],
+      [
+        [
+          0,
+          2,
+          "そんかい"
+        ]
+      ]
+    ]
+  },
+  {
+    "key": "10",
+    "titleJp": "保安規程に定める事項",
+    "topic": "Nội dung quy chế an toàn",
+    "questionJp": "自家用電気工作物の保安規程に定める事項。a. 管理者の（ア）、b. 従事者への（イ）、c. 保安のための（ウ）及び検査、d. 運転又は操作、e. 発電所を相当期間停止する場合の保全、f. 災害その他非常時の（エ）、g. 保安の（オ）。",
+    "questionVi": "Quy tắc thi hành Luật Kinh doanh điện yêu cầu quy chế an toàn công trình điện tự dùng quy định về a. (ア) của người quản lý thi công, duy trì hoặc vận hành, b. (イ) cho người thực hiện những công việc đó, c. (ウ) và kiểm định phục vụ an toàn, d. vận hành hoặc thao tác, e. phương pháp bảo toàn khi dừng nhà máy điện một thời gian đáng kể, f. (エ) khi có thiên tai hay tình trạng khẩn cấp khác, g. (オ) về an toàn thi công, duy trì và vận hành.",
+    "choicesJp": [
+      "権限及び義務／勤務体制／巡視・点検／指揮命令／記録",
+      "職務及び組織／勤務体制／整備・補修／措置／届出",
+      "権限及び義務／保安教育／整備・補修／指揮命令／届出",
+      "職務及び組織／保安教育／巡視・点検／措置／記録",
+      "権限及び義務／勤務体制／整備・補修／指揮命令／記録"
+    ],
+    "choicesVi": [
+      "Quyền hạn và nghĩa vụ / chế độ làm việc / tuần tra và kiểm tra / chỉ huy, mệnh lệnh / ghi chép",
+      "Nhiệm vụ và tổ chức / chế độ làm việc / bảo dưỡng, sửa chữa / biện pháp / thông báo nộp cơ quan",
+      "Quyền hạn và nghĩa vụ / đào tạo an toàn / bảo dưỡng, sửa chữa / chỉ huy, mệnh lệnh / thông báo nộp cơ quan",
+      "Nhiệm vụ và tổ chức / đào tạo an toàn / tuần tra và kiểm tra / biện pháp / ghi chép",
+      "Quyền hạn và nghĩa vụ / chế độ làm việc / bảo dưỡng, sửa chữa / chỉ huy, mệnh lệnh / ghi chép"
+    ],
+    "solution": [
+      "Tổ hợp gồm nhiệm vụ và tổ chức, đào tạo an toàn, tuần tra và kiểm tra, biện pháp khẩn cấp, ghi chép. Phân biệt hồ sơ ghi chép với thông báo nộp cơ quan."
+    ],
+    "theory": [
+      424,
+      430
+    ],
+    "pages": [
+      13,
+      14
+    ],
+    "answer": 4,
+    "readings": [
+      [
+        0,
+        8,
+        "じかようでんきこうさくぶつ"
+      ],
+      [
+        9,
+        4,
+        "ほあんきてい"
+      ],
+      [
+        73,
+        3,
+        "はつでんしょ"
+      ]
+    ],
+    "choiceReadings": [
+      [
+        [
+          12,
+          2,
+          "じゅんし"
+        ]
+      ],
+      [
+        [
+          21,
+          2,
+          "とどけで"
+        ]
+      ],
+      [
+        [
+          7,
+          4,
+          "ほあんきょういく"
+        ],
+        [
+          23,
+          2,
+          "とどけで"
+        ]
+      ],
+      [
+        [
+          7,
+          4,
+          "ほあんきょういく"
+        ],
+        [
+          12,
+          2,
+          "じゅんし"
+        ]
+      ],
+      []
+    ]
+  },
+  {
+    "key": "11a",
+    "titleJp": "低圧電路の地絡遮断装置",
+    "topic": "Bảo vệ chạm đất mạch hạ áp",
+    "questionJp": "金属製外箱を持つ使用電圧60 V超の低圧機器の回路には原則地絡自動遮断装置が必要。省略できる場合として誤っているものを選べ。",
+    "questionVi": "Mạch nối thiết bị hạ áp vỏ kim loại có điện áp sử dụng trên 60 V, theo nguyên tắc, phải tự động ngắt khi chạm đất. Chọn trường hợp sai trong các trường hợp được miễn lắp thiết bị này theo đề.",
+    "choicesJp": [
+      "C種又はD種接地抵抗が3 Ω以下。",
+      "系統電源側に二次線間300 V以下の絶縁変圧器を設置し、機器側を非接地とする。",
+      "電気用品安全法の過電流遮断器を機器内に設け、電源引出部の損傷を防ぐ。",
+      "簡易接触防護措置を施す。ただし機器と電気的につながるおそれがある金属製の防護は除く。",
+      "乾燥した場所に設置する。"
+    ],
+    "choicesVi": [
+      "Nối đất loại C hoặc D với điện trở ≤3 Ω.",
+      "Đặt biến áp cách ly phía nguồn, điện áp dây phía thiết bị ≤300 V và mạch phía thiết bị không nối đất.",
+      "Lắp máy cắt quá dòng thuộc Luật An toàn sản phẩm điện trong thiết bị và bảo vệ đầu ra nguồn khỏi hư hại.",
+      "Dùng biện pháp chống chạm đơn giản, trừ loại bảo vệ kim loại có nguy cơ nối điện với chính thiết bị.",
+      "Đặt thiết bị ở nơi khô ráo."
+    ],
+    "solution": [
+      "Thiết bị cắt quá dòng không đương nhiên phát hiện được dòng chạm đất nhỏ. Điều kiện nêu ở (3) không thuộc các ngoại lệ trong câu hỏi."
+    ],
+    "theory": [
+      474,
+      477
+    ],
+    "pages": [
+      15
+    ],
+    "answer": 3,
+    "readings": [
+      [
+        0,
+        5,
+        "きんぞくせいそとばこ"
+      ],
+      [
+        10,
+        2,
+        "でんあつ"
+      ],
+      [
+        23,
+        2,
+        "かいろ"
+      ],
+      [
+        33,
+        2,
+        "しゃだん"
+      ]
+    ],
+    "choiceReadings": [
+      [
+        [
+          6,
+          2,
+          "せっち"
+        ],
+        [
+          8,
+          2,
+          "ていこう"
+        ]
+      ],
+      [
+        [
+          2,
+          2,
+          "でんげん"
+        ],
+        [
+          32,
+          3,
+          "ひせっち"
+        ]
+      ],
+      [
+        [
+          8,
+          6,
+          "かでんりゅうしゃだんき"
+        ],
+        [
+          22,
+          2,
+          "でんげん"
+        ]
+      ],
+      [
+        [
+          0,
+          8,
+          "かんいせっしょくぼうごそち"
+        ]
+      ],
+      []
+    ]
+  },
+  {
+    "key": "11b",
+    "titleJp": "高圧電路の地絡遮断装置",
+    "topic": "Bảo vệ chạm đất cao áp",
+    "questionJp": "高圧・特別高圧の地絡遮断装置の省略条件を示す表の下線（ア）～（ウ）の誤りを選べ。引出口では母線延長とみなせる線路の地絡を、母線CT等で検出し電源側（ア）を遮断できる場合。受電点では全電力を同一受電場所で変成又は使用する場合。配電用変圧器（単巻を除く）では変圧器の電源側（イ）地絡を、電源側（ウ）発電所・変電所で遮断する装置がある場合。",
+    "questionVi": "Với mạch cao áp hoặc đặc biệt cao áp, ở vị trí ghi trong bảng hoặc gần đó cần thiết bị tự động cắt mạch tương ứng khi chạm đất. Xét các trường hợp miễn. a. Đầu ra nhà máy điện, trạm biến áp hoặc nơi tương đương: mạch đi ra có thể miễn nếu đường dây giữa các cơ sở được xem là phần kéo dài của thanh cái một bên, và có bảo vệ từ biến đo lường trên thanh cái hoặc biện pháp tương đương để cắt mạch phía nguồn (ア) khi đường dây chạm đất. b. Điểm nhận điện từ bên khác: mạch phía tải có thể miễn nếu toàn bộ điện nhận được biến đổi hoặc sử dụng trong cùng địa điểm nhận điện. c. Vị trí biến áp phân phối, trừ máy tự ngẫu: mạch phía tải có thể miễn nếu khi chạm đất phía nguồn (イ) của máy biến áp, có thiết bị cắt mạch tại nhà máy điện hoặc trạm biến áp phía nguồn (ウ). Đầu ra là nơi dòng điện đi từ cơ sở ra đường dây trong vận hành thường hoặc khi sự cố. Chọn phần gạch dưới sai.",
+    "choicesJp": [
+      "（ア）のみ",
+      "（イ）のみ",
+      "（ウ）のみ",
+      "（ア）と（イ）",
+      "（イ）と（ウ）"
+    ],
+    "choicesVi": [
+      "Chỉ (ア)",
+      "Chỉ (イ)",
+      "Chỉ (ウ)",
+      "Cả (ア) và (イ)",
+      "Cả (イ) và (ウ)"
+    ],
+    "solution": [
+      "Ở hàng máy biến áp, bảo vệ đặt tại nguồn (ウ) phải có khả năng cắt khi chính mạch phía tải của máy biến áp bị chạm đất. (イ) phải là phía tải, còn vị trí bảo vệ tại (ウ) vẫn ở phía nguồn."
+    ],
+    "theory": [
+      474
+    ],
+    "pages": [
+      16
+    ],
+    "answer": 2,
+    "readings": [
+      [
+        10,
+        2,
+        "しゃだん"
+      ],
+      [
+        40,
+        3,
+        "ひきだしぐち"
+      ],
+      [
+        54,
+        2,
+        "せんろ"
+      ],
+      [
+        70,
+        2,
+        "でんげん"
+      ],
+      [
+        77,
+        2,
+        "しゃだん"
+      ],
+      [
+        91,
+        2,
+        "でんりょく"
+      ],
+      [
+        112,
+        6,
+        "はいでんようへんあつき"
+      ],
+      [
+        131,
+        2,
+        "でんげん"
+      ],
+      [
+        141,
+        2,
+        "でんげん"
+      ],
+      [
+        147,
+        3,
+        "はつでんしょ"
+      ],
+      [
+        151,
+        3,
+        "へんでんしょ"
+      ],
+      [
+        155,
+        2,
+        "しゃだん"
+      ]
+    ],
+    "choiceReadings": [
+      [],
+      [],
+      [],
+      [],
+      []
+    ]
+  },
+  {
+    "key": "12a",
+    "titleJp": "高圧ケーブルの交流絶縁耐力試験",
+    "topic": "Công suất biểu kiến thử cách điện AC",
+    "questionJp": "6600 V、50 Hz回路のCVTケーブル100 mm²、87 m、1線の対地容量0.45 μF/km。三線一括で交流絶縁耐力試験を行う。試験変圧器はAC 0–120 V／0–12000 V、50 Hz。機器損失を無視し、必要な試験容量 [kVA] を求めよ。",
+    "questionVi": "Đề mô tả phép thử chịu điện áp AC của cáp CVT ba sợi xoắn, cách điện XLPE và vỏ vinyl, cho mạch 6.600 V, 50 Hz. Tiết diện danh nghĩa 100 mm², chiều dài 87 m, điện dung đối đất mỗi dây 0,45 μF/km. Đặt điện áp thử đồng thời lên cả ba dây theo hình. Biến áp thử đầu vào AC 0–120 V, đầu ra AC 0–12.000 V, 50 Hz. Bỏ qua tổn thất thiết bị. Tìm công suất biểu kiến cần để thử [kVA].",
+    "choicesJp": [
+      "1.4",
+      "3.0",
+      "4.0",
+      "4.8",
+      "7.0"
+    ],
+    "choicesVi": [
+      "1,4",
+      "3,0",
+      "4,0",
+      "4,8",
+      "7,0"
+    ],
+    "solution": [
+      "Theo quy tắc dùng trong đề H28, điện áp sử dụng tối đa là [[1,15~1,10]]×6.600=6.900 V. Vì mức này không quá 7.000 V, điện áp thử bằng 1,5×6.900=10.350 V. Ba lõi nối chung có C=3×0,45×0,087=0,11745 μF đối đất. S=2πfCV²≈3,95 kVA, chọn 4,0 kVA."
+    ],
+    "theory": [
+      441,
+      470
+    ],
+    "pages": [
+      17,
+      18
+    ],
+    "answer": 3,
+    "readings": [
+      [
+        12,
+        2,
+        "かいろ"
+      ],
+      [
+        60,
+        4,
+        "ぜつえんたいりょく"
+      ]
+    ],
+    "choiceReadings": [
+      [],
+      [],
+      [],
+      [],
+      []
+    ]
+  },
+  {
+    "key": "12b",
+    "titleJp": "高圧補償リアクトル",
+    "topic": "Bù công suất thử bằng cuộn kháng",
+    "questionJp": "試験容量が変圧器容量を超えるため、高圧補償リアクトル1台（3.5 kvar、50 Hz、12000 Vで292 mA）を使う。損失無視。A–B間に入れるなら既設A–B電線を外す。図の接続箇所と変圧器容量 [kVA] を選べ。",
+    "questionVi": "Công suất thử ở (a) lớn hơn công suất biến áp thử, nên đề dùng một cuộn kháng bù cao áp để giảm công suất biến áp phải cấp. Cuộn kháng định mức 3,5 kvar, 50 Hz, 12.000 V, dòng 292 mA ở 12.000 V và 50 Hz. Bỏ qua tổn thất cuộn kháng. Nếu nối giữa A–B thì bỏ dây nối A–B trong hình. Chọn hai điểm nối cuộn kháng và công suất biến áp thử [kVA] phù hợp.",
+    "choicesJp": [
+      "A–B／1",
+      "A–C／1",
+      "C–D／2",
+      "A–C／2",
+      "A–B／3"
+    ],
+    "choicesVi": [
+      "A–B／1",
+      "A–C／1",
+      "C–D／2",
+      "A–C／2",
+      "A–B／3"
+    ],
+    "solution": [
+      "Nối A–C để dòng cảm của cuộn kháng bù dòng dung của cáp. Tại 10.350 V, I_L=0,292×[[10.350~12.000]]≈0,252 A và I_C≈0,382 A. Biến áp còn chịu khoảng 10.350×(0,382−0,252)≈1,35 kVA. Chọn biến áp 2 kVA."
+    ],
+    "theory": [
+      441,
+      500
+    ],
+    "pages": [
+      17,
+      18
+    ],
+    "answer": 4,
+    "readings": [
+      [
+        89,
+        1,
+        "ず"
+      ],
+      [
+        91,
+        2,
+        "せつぞく"
+      ]
+    ],
+    "choiceReadings": [
+      [],
+      [],
+      [],
+      [],
+      []
+    ]
+  },
+  {
+    "key": "13a",
+    "titleJp": "非接地系統の一線地絡電流",
+    "topic": "Dòng chạm đất trong lưới trung tính cách ly",
+    "questionJp": "線間V、周波数f、中性点非接地の三相3線高圧系統。配電線と需要設備の一相対地容量はC₁、C₂。図示外の負荷・線路定数・変電所制限抵抗を無視。遮断器は投入のまま一線完全地絡し、間欠アークを無視。I_gを表す式を選べ。",
+    "questionVi": "Đường dây phân phối cao áp ba pha ba dây trung tính cách ly, điện áp dây V [V], tần số f [Hz]. Điện dung đối đất toàn phần mỗi pha của đường dây là C₁ [F], của thiết bị khách hàng là C₂ [F]. Bỏ qua tải và thông số tuyến không vẽ, cùng điện trở hạn chế ở trạm phân phối. Khi máy cắt vẫn đóng, xảy ra chạm đất hoàn toàn một pha tại điểm trên hình. Bỏ qua hồ quang gián đoạn và giả sử sự cố không làm máy cắt mở. Chọn biểu thức độ lớn dòng I_g [A].",
+    "choicesJp": [
+      "(2/√3)Vπf√(C₁²+C₂²)",
+      "2√3Vπf√(C₁²+C₂²)",
+      "(2/√3)Vπf(C₁+C₂)",
+      "2√3Vπf(C₁+C₂)",
+      "2√3Vπf√(C₁C₂)"
+    ],
+    "choicesVi": [
+      "(2/√3)Vπf√(C₁²+C₂²)",
+      "2√3Vπf√(C₁²+C₂²)",
+      "(2/√3)Vπf(C₁+C₂)",
+      "2√3Vπf(C₁+C₂)",
+      "2√3Vπf√(C₁C₂)"
+    ],
+    "solution": [
+      "Mỗi pha có điện dung đối đất C₁+C₂. Khi một pha chạm đất hoàn toàn, tổng vectơ dòng dung từ hai pha là √3ωV(C₁+C₂). Thay ω=2πf được (4)."
+    ],
+    "theory": [
+      391,
+      497
+    ],
+    "pages": [
+      19
+    ],
+    "answer": 4,
+    "readings": [
+      [
+        4,
+        3,
+        "しゅうはすう"
+      ],
+      [
+        9,
+        3,
+        "ちゅうせいてん"
+      ],
+      [
+        12,
+        3,
+        "ひせっち"
+      ],
+      [
+        29,
+        4,
+        "じゅようせつび"
+      ],
+      [
+        47,
+        1,
+        "ず"
+      ],
+      [
+        51,
+        2,
+        "ふか"
+      ],
+      [
+        54,
+        2,
+        "せんろ"
+      ],
+      [
+        59,
+        3,
+        "へんでんしょ"
+      ],
+      [
+        64,
+        2,
+        "ていこう"
+      ],
+      [
+        70,
+        2,
+        "しゃだん"
+      ],
+      [
+        79,
+        6,
+        "いっせんかんぜんちらく"
+      ],
+      [
+        87,
+        2,
+        "かんけつ"
+      ]
+    ],
+    "choiceReadings": [
+      [],
+      [],
+      [],
+      [],
+      []
+    ]
+  },
+  {
+    "key": "13b",
+    "titleJp": "零相変流器が検出する電流",
+    "topic": "Dòng qua biến dòng thứ tự không",
+    "questionJp": "I_gはC₁:C₂で配電線側と需要設備側に分流する。需要設備側の電流は零相変流器で検出され、構外事故でも不要動作し得る。V=6600 V、f=60 Hz、C₁=2.3 μF、C₂=0.02 μFのとき、検出電流 [mA] は。",
+    "questionVi": "Dòng chạm đất ở (a) phân về phía lưới và phía thiết bị khách hàng theo tỷ lệ C₁:C₂. Nhánh phía khách hàng qua biến dòng thứ tự không, có thể gây tác động không cần thiết dù sự cố xảy ra ngoài khuôn viên. Với V=6.600 V, f=60 Hz, C₁=2,3 μF, C₂=0,02 μF, tìm dòng biến dòng thứ tự không phía khách hàng phát hiện [mA].",
+    "choicesJp": [
+      "54",
+      "86",
+      "124",
+      "152",
+      "256"
+    ],
+    "choicesVi": [
+      "54",
+      "86",
+      "124",
+      "152",
+      "256"
+    ],
+    "solution": [
+      "Nhân I_g với C₂/(C₁+C₂). Dòng được phát hiện bằng 2√3π×60×6600×0,02×10⁻⁶ A≈86,2 mA."
+    ],
+    "theory": [
+      474,
+      497
+    ],
+    "pages": [
+      19,
+      20
+    ],
+    "answer": 2,
+    "readings": [
+      [
+        15,
+        4,
+        "じゅようせつび"
+      ],
+      [
+        26,
+        4,
+        "じゅようせつび"
+      ],
+      [
+        32,
+        2,
+        "でんりゅう"
+      ],
+      [
+        35,
+        5,
+        "れいそうへんりゅうき"
+      ],
+      [
+        46,
+        2,
+        "こうがい"
+      ],
+      [
+        103,
+        2,
+        "でんりゅう"
+      ]
+    ],
+    "choiceReadings": [
+      [],
+      [],
+      [],
+      [],
+      []
+    ]
+  }
+]
