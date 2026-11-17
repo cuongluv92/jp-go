@@ -466,8 +466,8 @@
       "VR/(IR−V)"
     ],
     "solution": [
-      "Dòng qua R bằng V/R, nên dòng qua R_x là I − V/R.",
-      "Lấy điện áp chung V chia dòng nhánh này, được R_x = VR/(IR−V)."
+      "Hai nhánh song song có cùng điện áp V. Dòng qua R là V/R. Theo Kirchhoff tại nút, dòng nhánh cần tìm là Iₓ=I−V/R.",
+      "Dùng định luật Ohm riêng cho nhánh Rₓ: Rₓ=[[V~I−V/R]]=[[VR~IR−V]]."
     ],
     "theory": [
       3,
@@ -1397,8 +1397,8 @@
       "9840"
     ],
     "solution": [
-      "Cảm kháng mỗi pha khoảng 2,5 Ω. Tổng trở pha có độ lớn √(6²+2,5²)=6,5 Ω.",
-      "Dòng pha bằng (200/√3)/6,5. Công suất 3I²×6≈5.680 W."
+      "L=7,96 mH=0,00796 H, nên X_L=2π×50×0,00796≈2,500708 Ω. Tổng trở mỗi pha có độ lớn √(6²+X_L²).",
+      "Tải Y có điện áp pha 200/√3 V. Thay vào P=3I²R, thu được P=[[200²×6~6²+(2π×50×0,00796)²]]≈5.680,00 W."
     ],
     "theory": [
       56,
@@ -1495,8 +1495,8 @@
       "1,88×10⁻⁴"
     ],
     "solution": [
-      "Tải tiêu thụ Q=3I²X_L≈2.367 var. Mỗi tụ đấu tam giác chịu 200 V.",
-      "Cho 3ωC×200²=Q, suy ra C≈6,28×10⁻⁵ F."
+      "Với X_L=2π×50×0,00796 Ω, phản kháng cảm của tải là Q=3I²X_L≈2.367,3357 var. Tụ cung cấp cùng độ lớn để cosφ nhìn từ nguồn bằng 1.",
+      "Mỗi tụ Δ chịu điện áp dây 200 V, nên Q_C=3ωC×200². Giải C=[[Q~3ω×200²]]≈6,27955×10⁻⁵ F, chọn 6,28×10⁻⁵ F mỗi tụ."
     ],
     "theory": [
       56,
@@ -1603,8 +1603,8 @@
       "20 · 50 · 25,0"
     ],
     "solution": [
-      "Một chu kỳ chiếm 10 ô ngang, nên T=20 ms và f=50 Hz.",
-      "Biên độ là 5 ô đứng, tức 25 V. Điện áp hiệu dụng bằng 25/√2≈17,7 V."
+      "Đồ thị có một chu kỳ dài 10 ô ngang. Với 2 ms/ô, T=20 ms=0,020 s, do đó f=50 Hz.",
+      "Tính biên độ từ đường 0 đến đỉnh: 5 ô×5 V/ô=25 V. Đối với sóng sin, U_hiệu_dụng=25/√2≈17,6777 V, chọn 17,7 V."
     ],
     "theory": [
       86,
@@ -1681,8 +1681,8 @@
       "100"
     ],
     "solution": [
-      "Đổi dòng sang dạng sin: i=25 sin(ωt+π/6). Dòng sớm pha 30° so với điện áp.",
-      "Hệ số công suất bằng cos30°≈86,6%."
+      "Đưa biểu thức dòng và áp về cùng dạng sin. Dòng là i=25 sin(ωt+π/6), sớm hơn điện áp π/6=30°.",
+      "Hệ số công suất bằng cos30°=√3/2≈0,866025, tức khoảng 86,6%. Giữ dấu sớm pha khi mô tả tải."
     ],
     "theory": [
       56,
@@ -1832,8 +1832,8 @@
       "3,3×10⁻⁶"
     ],
     "solution": [
-      "Dùng công thức ở (a) và giải theo Q, được Q=4πε₀r²E.",
-      "Thay r=0,01 m và E=3×10⁶ V/m, được Q≈3,34×10⁻⁸ C."
+      "Từ điện trường ngoài vật dẫn tích điện, E=[[Q~4πε₀r²]]. Suy ra Q=4πε₀r²E.",
+      "Đổi r=0,01 m trước khi bình phương. Thay E=3×10⁶ V/m và ε₀≈8,854×10⁻¹² F/m, được Q≈3,338×10⁻⁸ C, gần 3,34×10⁻⁸ C."
     ],
     "theory": [
       90,

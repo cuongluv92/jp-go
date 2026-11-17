@@ -120,7 +120,8 @@
       "Công suất ra · điện áp · chấm dứt hoạt động"
     ],
     "solution": [
-      "Theo điều khoản được hỏi trong đề, các từ cần điền là thay đổi công suất ra, thay đổi điện áp và chấm dứt hoạt động."
+      "Đọc riêng từng sự kiện ảnh hưởng đến hồ sơ công trình điện tự dùng. Hai thay đổi kỹ thuật cần nhận ra là công suất ra và điện áp.",
+      "Sự kiện thứ ba là chấm dứt hoạt động. Điền bộ ba theo đúng thứ tự của đề H26."
     ],
     "pages": [
       3
@@ -621,7 +622,8 @@
       "Lộ thiên · cáp · 2 · 10"
     ],
     "solution": [
-      "Quy định trong đề chọn vị trí lộ thiên và dùng cáp. Giới hạn khoảng đỡ là 2 m, hoặc 6 m khi đặt thẳng đứng."
+      "Đề xét tuyến cao áp lắp phía ngoài công trình. Tổ hợp đúng xác định vị trí lộ thiên và dây dùng là cáp.",
+      "Sau đó xét phương lắp. Khoảng cách giữa các điểm đỡ không quá 2 m thông thường, hoặc 6 m nếu đặt thẳng đứng theo điều kiện được nêu."
     ],
     "pages": [
       10

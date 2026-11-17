@@ -23,7 +23,8 @@
       "55,0"
     ],
     "solution": [
-      "Sức phản điện động E=[[4×258×0,020×1.200~60×2]]=206,4 V. Công suất điện từ là EI_a=206,4×250=51,6 kW."
+      "Dùng công thức sức phản điện động của máy DC E=[[pZΦn~60a]], trong đó a là số đường song song của phần ứng.",
+      "Thay p=4, Z=258, Φ=0,020 Wb, n=1.200 vòng/phút và a=2, được E=206,4 V. Công suất điện từ bằng EI_a=206,4×250=51.600 W=51,6 kW."
     ],
     "theory": [
       205,
@@ -773,7 +774,8 @@
       "Đấu Scott biến nguồn ba pha ba dây thành hai nguồn một pha vuông pha để cấp tải một pha lớn. Cấp tải một pha trực tiếp từ một pha gây mất cân bằng. Cân bằng tải hai pha sau chuyển đổi giúp giảm mất cân bằng phía ba pha."
     ],
     "solution": [
-      "Độ lệch pha điển hình của tổ nối dây Δ–Y hoặc Y–Δ là 30° theo nhóm véc-tơ, vì vậy (3) sai."
+      "Khi đổi giữa ghép Y và Δ, điện áp dây và điện áp pha liên hệ với nhau theo giản đồ ba pha. Nhóm véc-tơ xác định dấu và góc lệch cụ thể.",
+      "Độ lệch giữa các điện áp dây của nhóm Δ–Y hoặc Y–Δ thông dụng là ±30° tùy nhóm. Phương án (3) dùng 45° nên sai."
     ],
     "theory": [
       162,
@@ -1021,7 +1023,8 @@
       "Góc chồng dẫn khi chuyển mạch · thyristor · cycloconverter · GTO · tần số"
     ],
     "solution": [
-      "Bộ điều áp AC dùng thyristor và thay góc kích. IGBT dùng cổng điều khiển điện áp. PWM điều chế độ rộng xung."
+      "Bộ điều áp xoay chiều trong đề dùng thyristor và thay góc kích để thay đổi phần chu kỳ dẫn, từ đó điều chỉnh điện áp hiệu dụng.",
+      "IGBT là linh kiện điều khiển bằng điện áp cổng. PWM thay đổi độ rộng xung trong chu kỳ đóng cắt. Cả ba chi tiết khớp với (1)."
     ],
     "theory": [
       246,
@@ -1701,7 +1704,7 @@
       "114"
     ],
     "solution": [
-      "Tốc độ đồng bộ là 1200 vòng/phút, tốc độ tại điểm định mức là 1140 vòng/phút. Tₙ = [[15000~2π × 1140/60]] ≈ 125,65 N·m. Khi giữ R₂/s và tần số, T′ = Tₙ(200/220)² ≈ 103,85 N·m.",
+      "Tốc độ đồng bộ là 1.200 vòng/phút, tốc độ tại điểm định mức là 1.140 vòng/phút. Tₙ = [[15000~2π × 1140/60]] ≈ 125,65 N·m. Khi giữ R₂/s và tần số, T′ = Tₙ(200/220)² ≈ 103,85 N·m.",
       "Dùng tốc độ cơ thực để đổi công suất trục sang mômen."
     ],
     "theory": [

@@ -448,8 +448,9 @@
       "85"
     ],
     "solution": [
-      "Tính theo 3I², công suất vào tương ứng R₁+R₂′/s = 105 Ω.",
-      "Công suất cơ ứng với R₂′(1−s)/s = 81 Ω. Hiệu suất 81/105 ≈ 77%."
+      "Mạch tương đương cho công suất tác dụng đầu vào P₁=3I²(R₁+R₂′/s). Theo dữ kiện, hệ số trong ngoặc là 105 Ω.",
+      "Phần công suất qua khe hở chuyển thành cơ là P_m=3I²R₂′(1−s)/s, có hệ số 81 Ω theo giả thiết bỏ qua tổn hao cơ.",
+      "Hệ số 3I² triệt tiêu. η=[[81~105]]×100%≈77,1429%, chọn khoảng 77%."
     ],
     "theory": [
       163
@@ -947,8 +948,8 @@
       "25"
     ],
     "solution": [
-      "Tải thuần trở có sụt áp gần đúng IR và tải thuần cảm có IX.",
-      "Cùng dòng và điện áp cơ sở, X/R=5/2 nên X=25 Ω."
+      "Trong xấp xỉ đề dùng, sụt áp ứng với tải thuần trở là IR và ứng với tải thuần cảm là IX. Hai phép thử dùng cùng dòng điện và điện áp cơ sở.",
+      "Tỉ số phần trăm sụt áp vì vậy là X/R=5/2. Với R=10 Ω, X=10×5/2=25 Ω."
     ],
     "theory": [
       170
@@ -2240,8 +2241,9 @@
       "3.300"
     ],
     "solution": [
-      "Điện áp pha là 3.300/√3 ≈ 1.905 V. Sụt áp jXI = j1.100 V.",
-      "Ở chế độ động cơ E=V−jXI. Độ lớn E≈√(1.905²+1.100²)≈2.200 V."
+      "Đổi điện áp dây thành điện áp pha V=3.300/√3≈1.905,2559 V. Sụt áp điện kháng có độ lớn XI=1.100 V.",
+      "Ở chế độ động cơ, giản đồ dùng E=V−jXI. Với dòng cùng pha V trong phần (a), hai thành phần V và jXI vuông góc.",
+      "|E|=√[(3.300/√3)²+1.100²]=2.200 V mỗi pha."
     ],
     "theory": [
       150
@@ -2371,8 +2373,9 @@
       "0,866"
     ],
     "solution": [
-      "Ban đầu E≈2.200 V, nên sinδ≈1.100/2.200=0,5.",
-      "Ở V, X và công suất cố định, E sinδ không đổi. E tăng 1,5 lần khi chưa bão hòa, nên sinδ′≈0,333."
+      "Từ (a), |E|=2.200 V và thành phần vuông góc với V là 1.100 V, nên sinδ=0,500.",
+      "Khi điện áp, điện kháng và công suất giữ nguyên, tích E sinδ giữ nguyên theo công thức công suất góc tải. Bỏ qua bão hòa nên tăng dòng kích từ 1,5 lần cũng tăng E 1,5 lần.",
+      "Vậy sinδ′=0,500/1,5=0,3333…, chọn 0,333."
     ],
     "theory": [
       154
@@ -2664,8 +2667,8 @@
       "400"
     ],
     "solution": [
-      "T=1/f=1/(2,5×10⁹) s.",
-      "Kết quả 4×10⁻¹⁰ s=0,4 ns."
+      "Tần số 2,5 GHz là 2,5×10⁹ chu kỳ mỗi giây. Chu kỳ T=[[1~2,5×10⁹]]=4×10⁻¹⁰ s.",
+      "Vì 1 ns=10⁻⁹ s, kết quả là 0,4 ns."
     ],
     "theory": [
       296
@@ -2715,8 +2718,8 @@
       "12.500"
     ],
     "solution": [
-      "Mỗi chu kỳ dài 0,02/4=0,005 μs.",
-      "Nghịch đảo cho 200 chu kỳ/μs, tức 200 MHz."
+      "Đọc bốn chu kỳ trên khoảng 0,02 μs. Một chu kỳ có độ dài 0,02/4=0,005 μs=5×10⁻⁹ s.",
+      "f=1/T=2×10⁸ Hz=200 MHz."
     ],
     "theory": [
       296

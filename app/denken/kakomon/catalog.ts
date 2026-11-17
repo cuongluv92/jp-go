@@ -35,6 +35,17 @@ import houki28 from "./h28/houki.json";
 
 export const denkenExamHref = "/denken/kakomon";
 
+export const denkenOfficialAnswers: Readonly<Partial<Record<number, string>>> = {
+  21: "https://www.shiken.or.jp/chief/upload/20090906_ch_third_a01.pdf",
+  22: "https://www.shiken.or.jp/chief/upload/20100905_ch_third_a01.pdf",
+  23: "https://www.shiken.or.jp/chief/upload/20110904_ch_third_a01.pdf",
+  24: "https://www.shiken.or.jp/chief/upload/20120909_ch_third_a01.pdf",
+  25: "https://www.shiken.or.jp/chief/upload/20130901_ch_third_a01.pdf",
+  26: "https://www.shiken.or.jp/chief/upload/20140907_ch_third_a01.pdf",
+  27: "https://www.shiken.or.jp/chief/upload/20150906_ch_third_a01.pdf",
+  28: "https://www.shiken.or.jp/chief/upload/20160904_ch_third_a01.pdf",
+};
+
 const testId = "denken-h21-riron";
 const questionId = `${testId}-06`;
 
@@ -184,11 +195,7 @@ function makeExam(eraYear: number, subject: keyof typeof subjects, rows: Questio
       theory: row.theory.map((page) => ({ page, title: theoryTitles.get(page) ?? "" })),
       source: row.answer === "all"
         ? { href: "https://www.shiken.or.jp/chief/upload/20140907_ch_third_a01.pdf", label: `Đáp án chính thức · H${eraYear} 問${number}` }
-        : eraYear === 28
-          ? { href: "https://www.shiken.or.jp/chief/upload/20160904_ch_third_a01.pdf", label: `Đáp án chính thức · H${eraYear} 問${number}` }
-          : eraYear === 27
-          ? { href: "https://www.shiken.or.jp/chief/upload/20150906_ch_third_a01.pdf", label: `Đáp án chính thức · H${eraYear} 問${number}` }
-          : { href: `https://denken-ou.com/${subject}h${eraYear}-${number}/`, label: `Lời giải Nhật · H${eraYear} 問${number}` },
+        : { href: `https://denken-ou.com/${subject}h${eraYear}-${number}/`, label: `Lời giải Nhật · H${eraYear} 問${number}` },
       originalPages: row.pages.map((page) => ({
         href: `/denken/kakomon/h${eraYear}/${subject}/${String(page).padStart(2, "0")}.webp`,
         label: `Trang ${page} của đề gốc`,

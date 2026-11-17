@@ -5,7 +5,7 @@ import { TestRunner } from "@/components/exam/test-runner";
 import { WideContainer } from "@/components/exam/wide-container";
 import { createClient } from "@/lib/supabase/server";
 import { bookPageHref } from "../../index-lookup";
-import { denkenExamHref, denkenPastExams, questionLabel } from "../catalog";
+import { denkenExamHref, denkenOfficialAnswers, denkenPastExams, questionLabel } from "../catalog";
 import { SolutionSteps } from "../solution-steps";
 import { H21RironQuestion6Solution } from "../h21-riron-solution";
 
@@ -22,6 +22,7 @@ export default async function DenkenPastExamPage({ params, searchParams }: {
   const [{ testSlug }, { cau }] = await Promise.all([params, searchParams]);
   const exam = denkenPastExams.find(({ test }) => test.slug === testSlug);
   if (!exam) notFound();
+  const officialAnswer = denkenOfficialAnswers[exam.eraYear];
   const entryQuestion = typeof cau === "string"
     ? exam.questions.find(({ key }) => key === cau)
     : undefined;
@@ -35,6 +36,11 @@ export default async function DenkenPastExamPage({ params, searchParams }: {
       <nav aria-label="Đề thi 電験三種" className="flex flex-wrap gap-3 pt-4 text-sm text-accent">
         <Link href="/denken">← 電験三種</Link>
         <Link href={denkenExamHref}>Đề thi các năm</Link>
+        {officialAnswer && (
+          <a href={officialAnswer} target="_blank" rel="noreferrer" className="underline">
+            Đáp án chính thức · H{exam.eraYear}
+          </a>
+        )}
       </nav>
       {(exam.subject === "riron" || exam.subject === "kikai") && (
         <p className="pt-3 text-sm text-muted">Đề gốc yêu cầu chọn câu 17 hoặc câu 18. Ở chế độ luyện tập, bạn có thể làm cả hai.</p>

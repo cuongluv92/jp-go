@@ -145,8 +145,8 @@
       "452"
     ],
     "solution": [
-      "Vận tốc tiếp tuyến πDn/60=31,42 m/s. Hai cạnh tác dụng có sức điện động cộng nối tiếp, nên e=2Blv≈7,54 V.",
-      "Chọn (3)."
+      "Đổi tốc độ quay n thành vận tốc tiếp tuyến v=πDn/60≈31,4159 m/s.",
+      "Sức điện động cảm ứng của một cạnh tác dụng là Blv. Hai cạnh cùng vòng dây nối sao cho hai suất điện động cộng lại, e=2Blv≈7,54 V."
     ],
     "theory": [
       143
@@ -1406,8 +1406,8 @@
       "N/60 · 2πn · P/ω · Iω₀²/2"
     ],
     "solution": [
-      "Chia N cho 60, rồi nhân 2π để đổi sang rad/s. Vì P=Tω nên T=P/ω. Động năng quay là Iω₀²/2.",
-      "Chọn (5)."
+      "Nếu N tính bằng vòng/phút, tốc độ góc là ω=2πN/60 rad/s.",
+      "Theo công thức công suất quay P=Tω, mômen T=[[P~ω]]. Động năng tại tốc độ góc ban đầu ω₀ là W=Iω₀²/2. I ở đây là mômen quán tính."
     ],
     "theory": [
       147
@@ -1531,8 +1531,8 @@
       "Anôt · catôt · dương · âm · nhường"
     ],
     "solution": [
-      "Vật cần mạ nối catôt. Ion Ni²⁺ nhận 2 electron và kết tủa thành Ni. Tấm niken nối anôt, ion sunfat mang điện âm.",
-      "Chọn (2)."
+      "Vật cần mạ nối vào catôt để phản ứng khử Ni²⁺+2e⁻→Ni tạo lớp kim loại bám trên bề mặt.",
+      "Tấm niken nối vào anôt. Trong dung dịch, ion sunfat mang điện âm. Ba chi tiết này khớp với phương án (2)."
     ],
     "theory": [
       276
@@ -1604,8 +1604,8 @@
       "(G₁V₁+D)/(1+G₁G₂)"
     ],
     "solution": [
-      "Tại nút tổng thứ nhất có V₁−G₂V₂. Sau G₁, nhiễu D được cộng vào. Từ V₂=G₁(V₁−G₂V₂)+D, chuyển vế để giải V₂.",
-      "Chọn (5)."
+      "Tín hiệu vào khâu G₁ là V₁−G₂V₂ vì nhánh hồi tiếp có dấu trừ. Nhiễu D đi vào sau G₁.",
+      "Viết V₂=G₁(V₁−G₂V₂)+D, gom các hạng chứa V₂ rồi chia: V₂=[[G₁V₁+D~1+G₁G₂]]."
     ],
     "theory": [
       286
@@ -1655,8 +1655,8 @@
       "Đồ thị (5)"
     ],
     "solution": [
-      "Mạch cho X=AC+B¬C. Khi C=0, đầu ra bằng B. Khi C=1, đầu ra bằng A. Ghép các khoảng theo trạng thái của C được (3).",
-      "Chọn (3)."
+      "Mạch có X=AC+B¬C. Đây là phép chọn tín hiệu theo C.",
+      "Khi C=0, AC=0 còn B¬C=B. Khi C=1, AC=A còn B¬C=0. Theo từng khoảng của đồ thị C, chép B hoặc A để được dạng sóng (3)."
     ],
     "theory": [
       296
@@ -1813,8 +1813,8 @@
       "99"
     ],
     "solution": [
-      "Công suất ra 10.000 W, tổng tổn hao 200 W. Hiệu suất là 10.000/(10.000+200)≈98,04%.",
-      "Chọn (4)."
+      "Năng lượng vào gồm phần hữu ích và tổn hao. Với P_ra=10.000 W và tổng tổn hao 200 W, P_vào=10.200 W.",
+      "η=[[10.000~10.200]]×100%≈98,0392%. Giữ chữ số trung gian và chọn khoảng 98,04%."
     ],
     "theory": [
       168
@@ -2013,8 +2013,8 @@
       "1630"
     ],
     "solution": [
-      "Diện tích dẫn nhiệt π/4 m². Dùng định luật Fourier cho dòng nhiệt ổn định: 0,26×(π/4)×(600−330)/0,5≈110 W.",
-      "Chọn (2)."
+      "Với dẫn nhiệt ổn định qua lớp phẳng, công suất nhiệt Φ=λA(T_nóng−T_lạnh)/d. Diện tích truyền nhiệt trong bài là A=π/4 m².",
+      "Thay λ=0,26 W/(m·K), d=0,5 m và ΔT=270 K, được Φ≈110,2699 W, gần 110 W."
     ],
     "theory": [
       276
@@ -2132,8 +2132,8 @@
       "XY+¬XZ"
     ],
     "solution": [
-      "Hai hạng đầu gộp thành XY(¬Z+Z)=XY. Hai hạng sau gộp thành ¬XZ(Y+¬Y)=¬XZ.",
-      "Chọn (5)."
+      "Nhóm hai hạng đầu theo XY: XY(¬Z+Z)=XY. Nhóm hai hạng sau theo ¬XZ: ¬XZ(Y+¬Y)=¬XZ.",
+      "Dùng quy tắc biến OR với phần bù bằng 1. Biểu thức rút gọn là XY+¬XZ, khớp phương án (5)."
     ],
     "theory": [
       296
@@ -2178,8 +2178,8 @@
       "(X+Y)(¬X+Z)"
     ],
     "solution": [
-      "Hai ngoặc đầu gộp thành X+Z. Khai triển phần còn lại: (X+Z)(¬X+Y+Z)=Z+XY=(X+Z)(Y+Z).",
-      "Chọn (4)."
+      "Dùng (A+B)(A+¬B)=A để gộp hai ngoặc đầu thành X+Z.",
+      "Phân phối phần còn lại cho (X+Z)(¬X+Y+Z)=Z+X¬X+XY=Z+XY. Đưa về tích các tổng là (X+Z)(Y+Z), phương án (4)."
     ],
     "theory": [
       296

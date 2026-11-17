@@ -212,7 +212,8 @@
       "Sử dụng / AC / loại A / 150"
     ],
     "solution": [
-      "Các ô theo đề là điện áp sử dụng, một chiều, nối đất D, 150 V. Chú ý phân biệt điện áp sử dụng với điện áp đối đất."
+      "Theo văn bản tại thời điểm H28, ô (ア) dùng điện áp sử dụng, xuất hiện cả ở điều kiện 300 V và ở mạch thiết bị điện tử. Ô (イ) chỉ mạch DC trong hai ví dụ được nêu.",
+      "Thứ cấp biến đo lường cao áp trong đề thuộc nối đất loại D. Ngưỡng ở mục thiết bị điện tử là 150 V. Chọn (3)."
     ],
     "theory": [
       441,
@@ -407,7 +408,8 @@
       "Đứt dây / quá dòng / đầu nối cắm / ngoài trời"
     ],
     "solution": [
-      "Tổ hợp H28 là cháy, quá dòng, siết bu lông và trong nhà. Điểm c yêu cầu mối nối chắc; điểm d nêu một ngoại lệ có điều kiện."
+      "Đọc từng yêu cầu của H28: tiếp xúc kém có nguy cơ điện giật hoặc cháy (ア). Dây di động cao áp cần bảo vệ quá dòng (イ).",
+      "Mối nối với thiết bị phải chắc, chẳng hạn siết bu lông (ウ). Ngoại lệ ở mục d chỉ dành cho thiết bị lọc bụi tĩnh điện đáp ứng điều kiện an toàn tiếp xúc và đặt trong nhà (エ). Chọn (3)."
     ],
     "theory": [
       474,
@@ -669,7 +671,8 @@
       "2／1,5／1／1500"
     ],
     "solution": [
-      "Tổ hợp H28 là 1,5 lần DC, 1 lần AC, 10 phút và 1.500 V DC, tương ứng (2). Mức sàn điện áp thử đề nêu là 500 V."
+      "Tách hai nhóm thông số. Phép thử môđun trong đề lấy 1,5 lần điện áp sử dụng tối đa nếu dùng DC, hoặc 1 lần nếu dùng AC. Nếu điện áp thử thấp hơn 500 V thì lấy 500 V, và thời gian là 10 phút.",
+      "Giới hạn 1.500 V DC thuộc trường hợp dùng cáp quang điện chuyên dụng tại nơi hạn chế tiếp cận. Chọn (2)."
     ],
     "theory": [
       441,
@@ -725,7 +728,8 @@
       "5 / dẫn xuống / 3,5 / phía dưới"
     ],
     "solution": [
-      "Theo H28, chọn 5 mm, dây dẫn xuống, 3,5 m và biển phía dưới. Mức chiều cao ngoại lệ chỉ đi cùng các điều kiện nêu trong đề."
+      "Trường hợp dùng dây đồng cứng trong nhóm dây cách điện của đề lấy đường kính tối thiểu 5 mm. Nhóm dây chuyên dụng còn lại là dây cao áp dẫn xuống.",
+      "Ngoại lệ chiều cao 3,5 m không áp dụng cho các vị trí giao cắt hoặc cầu vượt đã liệt kê. Nếu dây thuộc loại ngoài cáp, đặt biển nguy hiểm phía dưới dây. Chọn (5)."
     ],
     "theory": [
       462
@@ -916,7 +920,8 @@
       "Hư hỏng / hàng rào điện / 100 / 10"
     ],
     "solution": [
-      "Đề H28 yêu cầu bảng cảnh báo nguy hiểm, ngưỡng điện áp cấp 30 V và giới hạn dòng tác động 15 mA trong điều kiện d."
+      "Ngoại lệ trong đề gắn với mục đích chăn nuôi hoặc bảo vệ ruộng và điều kiện phòng điện giật, cháy. Biển phải báo nguy hiểm.",
+      "Với mạch cấp cho bộ hàng rào ở nơi dễ tiếp cận, điều kiện d nêu ngưỡng nguồn từ 30 V và thiết bị chống rò có dòng tác động định mức không quá 15 mA, thời gian không quá 0,1 s. Chọn (4)."
     ],
     "theory": [
       474,
@@ -1511,7 +1516,8 @@
       "256"
     ],
     "solution": [
-      "Nhân I_g với C₂/(C₁+C₂). Dòng được phát hiện bằng 2√3π×60×6600×0,02×10⁻⁶ A≈86,2 mA."
+      "Từ (a), I_g=2√3πfV(C₁+C₂). Theo giả thiết phân dòng, biến dòng thứ tự không phía khách chỉ thấy phần C₂/(C₁+C₂).",
+      "Nhân hai biểu thức, C₁+C₂ triệt tiêu. Với C₂=0,02×10⁻⁶ F, I_ZCT=2√3π×60×6.600×0,02×10⁻⁶≈0,086193 A=86,19 mA. Chọn 86 mA."
     ],
     "theory": [
       474,

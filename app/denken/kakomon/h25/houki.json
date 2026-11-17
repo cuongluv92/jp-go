@@ -20,8 +20,8 @@
       "Phù hợp · phù hợp · không phù hợp"
     ],
     "solution": [
-      "Ba nội dung lần lượt tương ứng nghĩa vụ bổ nhiệm, nghĩa vụ giám sát an toàn và nghĩa vụ tuân thủ chỉ dẫn an toàn.",
-      "Chọn (4)."
+      "Đọc theo thứ tự chủ thể trong điều khoản H25: người lắp công trình điện phải bổ nhiệm người phụ trách; người được bổ nhiệm giám sát an toàn; người thực hiện công việc tuân thủ chỉ dẫn về an toàn.",
+      "Phương án (4) giữ đúng nghĩa vụ của cả ba chủ thể."
     ],
     "theory": [
       425
@@ -217,8 +217,8 @@
       "Dây trần · dây tiếp xúc · điện áp"
     ],
     "solution": [
-      "Các ô lần lượt chỉ dây trần, dây tiếp xúc và điện áp. Yêu cầu cách điện phụ thuộc nơi lắp và điện áp sử dụng.",
-      "Chọn (5)."
+      "Đề mô tả loại dây và điều kiện bố trí từng vị trí. Phân biệt dây trần với dây tiếp xúc dùng để lấy điện. Sau đó xác định đại lượng điều kiện là điện áp sử dụng.",
+      "Ba chỗ trống theo thứ tự là dây trần, dây tiếp xúc và điện áp, tương ứng (5)."
     ],
     "theory": [
       434
@@ -787,8 +787,8 @@
       "Ghi tên, người quản lý và điện áp mỗi 10 m cho đường cáp cao áp trong ống dưới đường công cộng"
     ],
     "solution": [
-      "Theo quy định áp dụng trong đề, khoảng cách đánh dấu thông thường khoảng 2 m. Mức 10 m ở phương án (5) không đạt.",
-      "Chọn (5)."
+      "Điểm cần so là bước bố trí dấu cảnh báo theo điều kiện được nêu ở đề H25. Quy định trong tình huống này lấy khoảng 2 m.",
+      "Phương án (5) dùng 10 m, tức khoảng cách gấp 5 lần mức được hỏi, nên không phù hợp."
     ],
     "theory": [
       395
@@ -1341,8 +1341,9 @@
       "7,2・5,5・5,5"
     ],
     "solution": [
-      "Dòng định mức Q/(√3V)=50.000/(√3×6.600)≈4,37 A. Nhân từng hệ số được 6,56 A, 5,03 A, 5,03 A.",
-      "Chọn (1)."
+      "Dòng đường dây của tụ ba pha là I_n=[[50.000~√3×6.600]]≈4,3739 A.",
+      "Nhân I_n chưa làm tròn lần lượt với 1,50, 1,15 và 1,15. Kết quả xấp xỉ 6,5608 A, 5,0299 A và 5,0299 A.",
+      "Các giá trị trong phương án được ghi tới một chữ số thập phân: 6,6 A, 5,0 A và 5,0 A. Chọn (1)."
     ],
     "theory": [
       404
@@ -1668,8 +1669,8 @@
       "100"
     ],
     "solution": [
-      "Thời gian 1,2 giây nằm trong nhóm trên 1 giây đến 2 giây trong đề. Dùng giới hạn 300/I_g=300/3=100 Ω.",
-      "Chọn (5)."
+      "Đọc thời gian cắt 1,2 s vào đúng khoảng: lớn hơn 1 s và không vượt 2 s. Với điều kiện đề H25, hệ số của trường hợp này là 300.",
+      "Áp dụng R_B≤[[300~I_g]]. Với I_g=3 A, giới hạn là 100 Ω, phương án (5)."
     ],
     "theory": [
       436

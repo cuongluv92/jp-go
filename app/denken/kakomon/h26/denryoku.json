@@ -81,7 +81,8 @@
       "E→A: Hơi được nước biển hoặc môi chất khác làm lạnh, ngưng thành nước và tỏa nhiệt ở áp suất không đổi."
     ],
     "solution": [
-      "Bơm nâng áp suất nước cấp nên A→B là quá trình nén đoạn nhiệt trong mô hình lý tưởng. Giãn nở xảy ra trong tuabin ở D→E."
+      "Đoạn A→B ứng với bơm đưa nước cấp lên áp suất nồi hơi. Mô hình lý tưởng của đề coi đó là quá trình nén đoạn nhiệt.",
+      "Quá trình giãn nở đoạn nhiệt xảy ra trong tuabin, chẳng hạn D→E, khi hơi xuống áp. Phương án (4) gán nhầm quá trình ở A→B."
     ],
     "pages": [
       2
@@ -168,7 +169,8 @@
       "Neutron nhiệt gây phân hạch urani. Một phần neutron nhanh phát ra bị làm chậm thành neutron nhiệt, tiếp tục gây phân hạch hạt nhân khác. Sự lặp lại này gọi là phản ứng dây chuyền."
     ],
     "solution": [
-      "Phát biểu (1) sai ở nhận định plutoni có sẵn với lượng đáng kể trong tự nhiên. Plutoni tự nhiên chỉ tồn tại ở lượng vết."
+      "Phương án (1) xem plutoni là nguyên liệu có sẵn với lượng đáng kể trong tự nhiên. Trong tự nhiên nó chỉ tồn tại ở lượng vết.",
+      "Cần phân biệt điều này với việc plutoni xuất hiện trong nhiên liệu hạt nhân đã qua chiếu xạ."
     ],
     "pages": [
       4
@@ -468,7 +470,8 @@
       "Có thể gây nhiễu cảm ứng và nhiễu thu tín hiệu gần đường dây trên không."
     ],
     "solution": [
-      "Bó dây làm tăng bán kính hữu hiệu của pha, giảm điện trường trên bề mặt dây và hạn chế vầng quang. Lựa chọn (3) đảo quan hệ."
+      "Khi chia mỗi pha thành bó dây, bán kính hữu hiệu của pha tăng và điện trường bề mặt giảm trong điều kiện so sánh của đề.",
+      "Điện trường thấp hơn làm giảm xu hướng ion hóa không khí quanh dây, nhờ đó hạn chế vầng quang. Phương án (3) đảo quan hệ."
     ],
     "pages": [
       9
@@ -784,7 +787,8 @@
       "Ở cùng áp suất, điện áp đánh thủng cao hơn không khí."
     ],
     "solution": [
-      "Trong điều kiện thông thường SF₆ có tính ổn định hóa học cao. Lựa chọn (2) sai ở đặc tính này."
+      "SF₆ ở điều kiện bình thường có độ ổn định hóa học cao và có khả năng cách điện tốt. Phương án (2) mô tả nó kém ổn định nên sai.",
+      "Tính ổn định khi vận hành bình thường khác với sự phân hủy có thể xảy ra trong hồ quang."
     ],
     "pages": [
       14
@@ -824,7 +828,8 @@
       "7"
     ],
     "solution": [
-      "Tiết diện ống π×1,2²/4≈1,131 m². Lưu lượng bằng tiết diện nhân vận tốc, Q≈1,131×5,3≈5,99 m³/s."
+      "Ống tròn đường kính 1,2 m có tiết diện A=π×1,2²/4≈1,130973 m².",
+      "Lưu lượng thể tích bằng tiết diện nhân vận tốc trung bình: Q=A×5,3≈5,994159 m³/s. Chọn 5,99 m³/s."
     ],
     "pages": [
       15
@@ -875,7 +880,8 @@
       "17000"
     ],
     "solution": [
-      "H=3.000.000/(1.000×9,8)+5,3²/(2×9,8)≈307,6 m. Với Q≈5,99 m³/s, công suất cơ ρgQHη≈16.000 kW."
+      "Tại cao độ tâm tuabin, cột cao độ bằng 0. Cột áp do áp suất là [[3.000.000~1.000×9,8]]≈306,12245 m. Cột áp vận tốc là [[5,3²~2×9,8]]≈1,43316 m. Tổng H≈307,55561 m.",
+      "Dùng Q≈5,994159 m³/s và η=0,885. P=9,8QHη≈15.988,998 kW, gần 16.000 kW."
     ],
     "pages": [
       15,
@@ -938,7 +944,8 @@
       "9,1"
     ],
     "solution": [
-      "Ba điện dung cùng chịu 66.000/√3 V. Mỗi dây mang 115/3 A, nên dẫn nạp một dây là (115/3)/(66.000/√3)≈1,0 mS."
+      "Ba điện dung được xét ở cùng điện áp pha U=66.000/√3≈38.105,118 V. Dòng tổng đo 115 A chia đều, dòng mỗi pha khoảng 38,3333 A.",
+      "Dẫn nạp một pha B=I_pha/U≈0,001005989 S=1,006 mS. Chọn khoảng 1,0 mS."
     ],
     "pages": [
       17
@@ -984,7 +991,8 @@
       "1000"
     ],
     "solution": [
-      "Cuộn kháng trung tính phải bù tổng dẫn nạp điện dung ba pha. Từ 1/X_L=3×0,001 S, suy ra X_L≈333 Ω."
+      "Cuộn kháng ở trung tính bù tổng dẫn nạp đối đất của ba pha. Đặt 1/X_L=3B.",
+      "Dùng B≈0,001005989 S chưa làm tròn theo (a), X_L≈331,35 Ω. Nếu lấy B≈1,0 mS, được 333,33 Ω. Cả hai dẫn đến cùng phương án gần nhất."
     ],
     "pages": [
       17
@@ -1030,7 +1038,8 @@
       "2366"
     ],
     "solution": [
-      "Điện năng phát 200×24=4.800 MWh, tương đương 1,728×10¹⁰ kJ. Chia cho 0,36 rồi chia 28.000 kJ/kg, được khoảng 1.714 tấn than."
+      "Nhà máy phát 200×24=4.800 MWh trong một ngày, tức 1,728×10¹⁰ kJ điện. Hiệu suất 0,36 nên nhiệt đầu vào là 4,8×10¹⁰ kJ.",
+      "Chia nhiệt trị 28.000 kJ/kg, được khoảng 1.714.285,7 kg, tức 1.714,29 tấn than."
     ],
     "pages": [
       18

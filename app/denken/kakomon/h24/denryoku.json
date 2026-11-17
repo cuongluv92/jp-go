@@ -316,8 +316,8 @@
       "Rơle so lệch có hãm dùng để phát hiện và bảo vệ khi xảy ra ngắn mạch nội bộ dây quấn stato máy phát."
     ],
     "solution": [
-      "Van an toàn xả hơi khi quá áp.",
-      "Van điều chỉnh hơi điều tiết lượng hơi cấp vào tuabin, nên (1) sai."
+      "Xét thiết bị tác động khi áp suất hơi vượt giới hạn. Van an toàn mở để xả hơi và bảo vệ thiết bị chịu áp.",
+      "Van điều chỉnh hơi thay đổi lưu lượng hơi cấp vào tuabin để điều chỉnh vận hành. Phương án (1) đã gán nhầm nhiệm vụ của hai loại van."
     ],
     "theory": [
       337
@@ -442,8 +442,8 @@
       "38.000"
     ],
     "solution": [
-      "Khối lượng hụt 9×10⁻⁶ kg cho năng lượng 8,1×10¹¹ J.",
-      "Đổi ra 8,1×10⁸ kJ, chia 43.000 kJ/L được khoảng 18.837 L."
+      "Áp dụng ΔE=Δmc². Với Δm=9×10⁻⁶ kg và c≈3,0×10⁸ m/s, ΔE≈8,1×10¹¹ J=8,1×10⁸ kJ.",
+      "Đổi năng lượng sang thể tích nhiên liệu theo nhiệt trị 43.000 kJ/L. V=[[8,1×10⁸~43.000]]≈18.837,21 L. Chọn giá trị gần nhất trong đề."
     ],
     "theory": [
       353
@@ -1137,8 +1137,8 @@
       "Điểm nối với hệ thống xoay chiều cần trạm chuyển đổi"
     ],
     "solution": [
-      "Ở trạng thái xác lập điện áp một chiều không biến thiên.",
-      "Điện dung cáp không gây dòng nạp liên tục như với xoay chiều."
+      "Dòng điện dung tuân theo i=C·du/dt. Điện áp DC xác lập không đổi theo thời gian nên dòng qua điện dung bằng 0. Khi mới cấp điện vẫn có dòng nạp quá độ.",
+      "Với AC hình sin, điện áp liên tục biến thiên, nên cáp vẫn lấy dòng điện dung I=2πfCU ở trạng thái xác lập."
     ],
     "theory": [
       404
@@ -1268,8 +1268,9 @@
       "171"
     ],
     "solution": [
-      "Dòng mỗi mạch là 6.600.000/(2√3×33.000×0,9) ≈ 64,15 A.",
-      "Tổn thất sáu dây là 6I²×20.000/(35S). Đặt giới hạn 330 kW được S ≈ 42,8 mm²."
+      "Dòng tải chia đều cho hai mạch ba pha. Dòng trên một dây là [[6.600.000~2√3×33.000×0,9]]≈64,1500 A.",
+      "Nếu tiết diện mỗi dây là S mm² thì điện trở một dây dài 20 km là 20.000/(35S) Ω. Tổng sáu dây mất 6I²R.",
+      "Giới hạn là 5%×6.600 kW=330.000 W. Giải bất đẳng thức 6I²×20.000/(35S)≤330.000 cho S≥42,76 mm², chọn 42,8 mm²."
     ],
     "theory": [
       401
@@ -1571,8 +1572,9 @@
       "2,89"
     ],
     "solution": [
-      "Dùng gần đúng parabol L ≈ S + 8D²/(3S), được L₃₀ ≈ 100,1067 m.",
-      "L₆₀ = L₃₀(1 + 30×1,5×10⁻⁵) ≈ 100,1517 m. Suy ngược D ≈ 2,39 m."
+      "Dùng xấp xỉ parabol cho dây võng giữa hai điểm cùng độ cao: L≈S+[[8D²~3S]]. Với nhịp S=100 m và độ võng ban đầu D=2 m, chiều dài dây ở 30 °C là L₃₀≈100,106667 m.",
+      "Khi tăng thêm 30 °C, L₆₀≈100,106667×(1+1,5×10⁻⁵×30)≈100,151715 m.",
+      "Giải ngược theo D=√[3S(L−S)/8], được D₆₀≈2,3852 m. Làm tròn cuối cùng, khoảng 2,39 m."
     ],
     "theory": [
       385
@@ -1637,8 +1639,8 @@
       "Phiến cổ góp máy phát một chiều thường dùng đồng cứng"
     ],
     "solution": [
-      "Bạc có điện trở suất ở 20 °C thấp hơn đồng.",
-      "Đồng được dùng rộng rãi nhờ độ dẫn cao và tính kinh tế. Phát biểu (4) sai."
+      "Ở cùng nhiệt độ 20 °C, bạc có điện trở suất nhỏ hơn đồng, đồng nghĩa với độ dẫn điện lớn hơn. Vì vậy phát biểu (4) sai.",
+      "Khi chọn vật liệu dẫn điện còn phải cân nhắc chi phí, cơ tính và khả năng gia công. Đồng được dùng phổ biến nhờ cân bằng các yếu tố đó."
     ],
     "theory": [
       390
@@ -1737,8 +1739,8 @@
       "227.000"
     ],
     "solution": [
-      "Điện năng phát là 300×24×30 = 216.000 MWh.",
-      "Sau khi trừ 5% tự dùng còn 205.200 MWh."
+      "Thời gian phát là 24×30=720 h. Với công suất 300 MW không đổi, điện năng phát bằng 300×720=216.000 MWh.",
+      "Điện tự dùng chiếm 5% điện năng phát, nên điện đưa lên lưới là 216.000×0,95=205.200 MWh. Chọn phương án gần nhất 205.000 MWh."
     ],
     "theory": [
       337
@@ -1894,8 +1896,9 @@
       "0,753"
     ],
     "solution": [
-      "Không có tải ngoài nên dòng đầu gửi là tổng hai dòng nạp. Hai điện áp cùng pha trong mô hình thuần phản kháng này.",
-      "30 = B(66.000 + 72.000)/(2√3), nên B ≈ 0,753 mS."
+      "Đường dây không tải, nên dòng đầu gửi bằng tổng dòng nạp của hai nhánh ngang. Trong mô hình thuần phản kháng, hai điện áp đầu dây cùng pha.",
+      "Đổi 66 kV và 72 kV dây sang điện áp pha bằng cách chia √3. Mỗi nhánh ngang có dẫn nạp B/2.",
+      "Giải 30=B(66.000+72.000)/(2√3), được B≈0,0007530656 S=0,7530656 mS, chọn 0,753 mS."
     ],
     "theory": [
       404
@@ -1990,8 +1993,9 @@
       "770"
     ],
     "solution": [
-      "Dòng qua jX chỉ là dòng nạp đầu nhận, I_r = (B/2)(72.000/√3) ≈ 15,65 A.",
-      "Độ chênh điện áp pha là (72.000−66.000)/√3 ≈ 3.464 V. Chia cho I_r được khoảng 221 Ω."
+      "Nhánh nối tiếp chỉ dẫn dòng nạp phía đầu nhận vì không có tải: I_nhận=(B/2)(72.000/√3)≈15,65217 A.",
+      "Chênh lệch điện áp pha giữa hai đầu là (72.000−66.000)/√3≈3.464,1016 V. Suy ra X≈221,3176 Ω.",
+      "Đối chiếu phương án, giá trị gần nhất là 222 Ω."
     ],
     "theory": [
       404
@@ -2086,8 +2090,8 @@
       "610"
     ],
     "solution": [
-      "Tính từng tải theo Q = Ptanφ.",
-      "Q = 500√(1−0,9²)/0,9 + 200×0,6/0,8 ≈ 392 kvar."
+      "Tính riêng công suất phản kháng mỗi tải theo Q=P tanφ. Tải 1 có tanφ=√(1−0,9²)/0,9 nên Q₁≈242,1611 kvar.",
+      "Tải 2 có tanφ=0,6/0,8=0,75 nên Q₂=150 kvar. Cả hai tải trễ, cộng cùng dấu: Q≈392,1611 kvar, gần 392 kvar."
     ],
     "theory": [
       168
@@ -2162,8 +2166,8 @@
       "256"
     ],
     "solution": [
-      "Tổng tải tác dụng là 700 kW. Ở giới hạn 750 kV·A, công suất phản kháng còn lại tối đa √(750²−700²) ≈ 269,3 kvar.",
-      "Bù 392,2−269,3 ≈ 123 kvar."
+      "Tổng tải là P=500+200=700 kW. Để không quá 750 kVA, phản kháng còn lại tối đa bằng √(750²−700²)≈269,2582 kvar.",
+      "Trước bù, Q≈392,1611 kvar theo (a). Cần ít nhất Q_C≈392,1611−269,2582=122,9029 kvar. Chọn 123 kvar."
     ],
     "theory": [
       404

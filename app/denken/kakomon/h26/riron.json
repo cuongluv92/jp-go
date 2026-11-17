@@ -288,7 +288,8 @@
       "y=±x"
     ],
     "solution": [
-      "Theo quy tắc bàn tay phải, các thành phần có dấu theo trục z tỉ lệ với Iₓ/y và −Iᵧ/x. Đặt tổng bằng 0 được y=(Iₓ/Iᵧ)x."
+      "Ở vị trí trên hình, dùng quy tắc nắm tay phải cho hai dây. Hai từ trường vuông góc mặt phẳng xy và ngược dấu trên trục z.",
+      "Độ lớn từ trường do dây dài tỉ lệ I/r. Khoảng cách vuông góc lần lượt là y và x. Đặt Iₓ/y=Iᵧ/x, suy ra y=(Iₓ/Iᵧ)x."
     ],
     "pages": [
       4
@@ -645,7 +646,8 @@
       "Điôt biến dung (varactor) khai thác điện dung vùng nghèo thay đổi theo điện áp ngược. Giảm độ lớn điện áp ngược làm điện dung tăng."
     ],
     "solution": [
-      "Điôt Zener làm việc trong vùng đánh thủng của đặc tuyến phân cực ngược. Vì vậy (4) sai."
+      "Điôt Zener được dùng để ổn áp khi phân cực ngược tới vùng đánh thủng. Trong vùng này, điện áp hai đầu biến thiên ít khi dòng qua điôt thay đổi trong phạm vi cho phép.",
+      "Vì vậy mô tả ở (4) nhầm vùng hoạt động của điôt."
     ],
     "pages": [
       13
@@ -696,7 +698,8 @@
       "6,5"
     ],
     "solution": [
-      "Hồi tiếp âm giữ hai đầu vào cùng mức 5 V. Không có dòng vào op-amp nên (5−3)/20 kΩ=(V_out−5)/10 kΩ. Suy ra V_out=6 V."
+      "Hồi tiếp âm của op-amp lý tưởng giữ V₋=V₊=5 V. Dòng vào chân op-amp bằng 0, nên hai dòng tại nút V₋ cân bằng.",
+      "Viết [[5−3~20]]=[[V_out−5~10]] với điện trở tính bằng kΩ. Giải ra V_out=5+10×(2/20)=6 V."
     ],
     "pages": [
       14
@@ -775,7 +778,8 @@
       "3750"
     ],
     "solution": [
-      "S=UI=300×12,5=3.750 V·A và P=2.250 W. Nhánh cuộn cảm lấy công suất phản kháng Q=√(S²−P²)=3.000 var."
+      "Dùng số chỉ hiệu dụng: S=UI=300×12,5=3.750 VA, P=2.250 W.",
+      "Trong tam giác công suất, |Q|=√(S²−P²)=√(3.750²−2.250²)=3.000 var. Nhánh cuộn cảm cho biết Q có tính cảm."
     ],
     "pages": [
       16
@@ -821,7 +825,8 @@
       "48"
     ],
     "solution": [
-      "Cuộn cảm chịu 300 V và lấy toàn bộ Q=3.000 var của mạch. Dùng Q=U²/X được X=30 Ω."
+      "Nhánh cuộn cảm mắc song song nên chịu đủ 300 V. Nhánh thuần trở không tiêu thụ công suất phản kháng, do đó Q_L=3.000 var.",
+      "Với tải thuần cảm, Q_L=U²/X_L. Suy ra X_L=[[300²~3.000]]=30 Ω."
     ],
     "pages": [
       16
@@ -872,7 +877,8 @@
       "120 · 160"
     ],
     "solution": [
-      "Điện áp pha là 200/√3 V. P=3U_pha²/R=40 kW và Q=3U_pha²/X=30 kvar."
+      "Điện áp 200 V là điện áp dây. Tải đấu Y có điện áp pha U_pha=200/√3≈115,470 V.",
+      "Nhánh điện trở cho P=3U_pha²/R=40 kW. Nhánh điện kháng cảm cho Q=3U_pha²/X=30 kvar. Hệ số 3 cộng công suất của ba pha."
     ],
     "pages": [
       17,
@@ -971,7 +977,8 @@
       "q_Aq_B/(2πε₀r)>m_Bg"
     ],
     "solution": [
-      "Lực hút Coulomb q_Aq_B/(4πε₀r²) hướng lên, còn trọng lực m_Bg hướng xuống. B tăng tốc lên khi lực hút lớn hơn trọng lực."
+      "Điện tích A và B trái dấu nên lực hút lên B hướng về A, tức hướng lên. Vì q_A và q_B trong đề là độ lớn dương, lực hút có độ lớn F_e=[[q_Aq_B~4πε₀r²]].",
+      "Trọng lực m_Bg hướng xuống. B bắt đầu chuyển động lên từ trạng thái nghỉ khi F_e>m_Bg."
     ],
     "pages": [
       19,
@@ -1073,7 +1080,8 @@
       "Có thể dùng transistor lưỡng cực hoặc transistor hiệu ứng trường để thực hiện công tắc."
     ],
     "solution": [
-      "Ở cùng độ gợn cho phép, tăng tần số đóng ngắt giúp giảm kích thước L và C. Tăng tần số đồng nghĩa giảm chu kỳ, nên (4) sai."
+      "Độ gợn dòng cuộn cảm phụ thuộc khoảng thời gian đóng hoặc ngắt. Với yêu cầu độ gợn không đổi, nâng tần số cho phép giảm L và thường giảm C cần thiết.",
+      "Chu kỳ T=1/f nên nâng tần số phải làm chu kỳ ngắn lại. Đó là điểm sai ở (4)."
     ],
     "pages": [
       21

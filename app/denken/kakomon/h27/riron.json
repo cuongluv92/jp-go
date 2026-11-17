@@ -23,7 +23,8 @@
       "Giữ V không đổi, tăng d thì Q giảm."
     ],
     "solution": [
-      "Từ C=[[εA~d]], Q=CV và E=[[V~d]] suy ra E=[[Q~εA]]. Giữ Q và εA thì E không đổi. Chọn (2)."
+      "Điện dung tụ phẳng C=[[εA~d]], và Q=CV. Điện trường giữa hai bản là E=V/d.",
+      "Thay V=Q/C cho E=[[Q~Cd]]=[[Q~εA]]. Nếu giữ Q, ε và A không đổi, tăng khoảng cách d không làm E tăng. Vì vậy (2) sai."
     ],
     "theory": [
       107
@@ -332,7 +333,9 @@
       "Đồ thị (5)"
     ],
     "solution": [
-      "Trong khoảng T<t<T+w/u, chiều dài giao tuyến giữa khung và biên từ trường tăng tuyến tính từ 0 đến d. Độ lớn suất điện động bằng B u nhân chiều dài đó. Theo định luật Lenz, dòng qua r đi từ R lên Q, nên điện áp theo quy ước mũi tên là âm. Khi toàn bộ khung vào trong, từ thông không đổi và e về 0."
+      "Tính suất điện động bằng e=−B·dS/dt, với S là phần diện tích khung nằm trong từ trường. Trước t=T, S=0.",
+      "Trong khoảng T<t<T+w/u, chiều dài đoạn cắt biên trường tăng tuyến tính từ 0 đến d. Vì dS/dt bằng tốc độ u nhân chiều dài đoạn đó, |e| tăng tuyến tính đến Bud ngay trước khi khung vào hết.",
+      "Theo Lenz và chiều mũi tên của đề, e âm trong khoảng này. Khi khung vào hết, S không đổi nên e trở về 0. Chọn hình (5)."
     ],
     "theory": [
       124,
@@ -544,7 +547,8 @@
       "Điện dung tương đương của C₁ và C₂ mắc song song bằng tổng điện dung."
     ],
     "solution": [
-      "Tổng nghịch đảo là điện dẫn tương đương: 1/R_eq=1/R₁+1/R₂. Phương án (4) nhầm điện dẫn với điện trở."
+      "Hai điện trở song song cùng điện áp V. Tổng dòng là I=V/R₁+V/R₂. Theo I=V/R_eq, suy ra 1/R_eq=1/R₁+1/R₂.",
+      "Vế phải là tổng điện dẫn. Phương án (4) gọi tổng đó là điện trở nên sai."
     ],
     "theory": [
       5,
@@ -727,7 +731,8 @@
       "577"
     ],
     "solution": [
-      "Cuộn cảm lý tưởng không tiêu thụ công suất tác dụng. Điện trở tiêu thụ P=I²R=5²×10=250 W."
+      "Dòng hiệu dụng qua R và L trong mạch nối tiếp là 5 A. Cuộn cảm lý tưởng chỉ trao đổi năng lượng với nguồn, công suất tác dụng trung bình bằng 0.",
+      "Công suất tác dụng của mạch bằng công suất trên R: P=I²R=5²×10=250 W."
     ],
     "theory": [
       44,
@@ -1157,7 +1162,9 @@
       "elE/(mv) · eldE/(mv²)"
     ],
     "solution": [
-      "Độ lớn gia tốc là eE/m, thời gian đi qua bản là l/v, nên u=[[elE~mv]]. Vì l≪d, lấy X≈d tanθ=[[eldE~mv²]]."
+      "Điện trường giữa các bản tạo gia tốc ngang |a|=eE/m. Thời gian electron đi qua đoạn bản dài ℓ là ℓ/v.",
+      "Vận tốc ngang khi ra khỏi bản có độ lớn u=eEℓ/(mv). Từ đó tanθ=u/v.",
+      "Vì ℓ≪d, bỏ qua độ dịch nhỏ trong vùng bản và lấy X≈d tanθ=[[eEℓd~mv²]]."
     ],
     "theory": [
       102
@@ -1212,7 +1219,8 @@
       "Lớp C dùng để khuếch đại công suất cao tần."
     ],
     "solution": [
-      "Tổn hao cực góp xét theo tích I_C V_CE, dùng điện áp giữa cực góp và cực phát. Phương án (1) nêu điện áp cực góp–cực gốc."
+      "Để tính công suất tức thời tiêu tán ở nhánh cực góp, nhân dòng cực góp I_C với điện áp cực góp–cực phát V_CE.",
+      "Phương án (1) thay bằng điện áp cực góp–cực gốc. Đây là nhầm hai cặp cực của transistor."
     ],
     "theory": [
       145,
@@ -1343,7 +1351,8 @@
       "5,66"
     ],
     "solution": [
-      "Giá trị trung bình sau chỉnh lưu là (8×10+0×10)/20=4 V. Thang sin nhân hệ số π/(2√2)≈1,11, nên số chỉ 4,44 V."
+      "Vôn kế chỉnh lưu lấy trung bình trị tuyệt đối qua trọn chu kỳ. Từ dạng sóng, U_tb=[[8×10+0×10~20]]=4 V.",
+      "Thang được chuẩn theo sóng sin, nhân hệ số π/(2√2)≈1,11072. Số chỉ là 4,4429 V, chọn 4,44 V."
     ],
     "theory": [
       36,
@@ -1507,7 +1516,8 @@
       "6,0"
     ],
     "solution": [
-      "Trong Hình 2, pin Eₓ cấp dòng 0,05 A qua toàn bộ R=30 Ω. Tổng điện trở là 1,8/0,05=36 Ω, nên điện trở trong bằng 6 Ω."
+      "Từ (a), sức điện động pin Eₓ=1,8 V. Trong Hình 2, pin cấp 0,05 A qua điện trở 30 Ω nối tiếp điện trở trong r.",
+      "Eₓ/I=1,8/0,05=36 Ω, đây là tổng trở vòng. Suy ra r=36−30=6 Ω."
     ],
     "theory": [
       12,
@@ -1729,7 +1739,9 @@
       "18"
     ],
     "solution": [
-      "Điện áp dây hiệu dụng là 100√3 V, nên điện áp pha tải sao là 100 V. Cảm kháng 100π×0,016≈5 Ω. P=3×100²×5/(5²+5²)=3.000 W."
+      "Biên độ điện áp dây là 100√6 V, nên điện áp dây hiệu dụng là 100√3 V. Tải cân bằng đấu Y có điện áp pha hiệu dụng 100 V.",
+      "X_L=ωL=100π×0,016≈5,02655 Ω. Công suất tác dụng ba pha là P=[[3×100²×5~5²+(100π×0,016)²]]≈2.984,11 W.",
+      "Đổi đơn vị, P≈2,984 kW. Chọn 3 kW."
     ],
     "theory": [
       70,
@@ -1817,7 +1829,9 @@
       "2,3×10⁻³"
     ],
     "solution": [
-      "Điện áp pha tải tương ứng trễ e_a 30°, nên i_a cùng pha điện áp pha sau bù. Q cảm trước bù xấp xỉ 3.000 var. Ba tụ tam giác chịu U_dây=100√3 V, nên 3×100π×C×(100√3)²≈3.000, cho C≈1,06×10⁻⁴ F."
+      "Điện áp pha tải tương ứng trễ điện áp dây e_a 30°. Vì i_a trễ e_a 30°, dòng sau bù cùng pha với điện áp pha và Q tổng bằng 0.",
+      "Dùng X_L=100π×0,016 Ω. Công suất phản kháng cảm Q_L=3×100²X_L/(5²+X_L²)≈2.999,96 var.",
+      "Mỗi tụ Δ chịu U_dây=100√3 V. Từ 3ωCU_dây²=Q_L, suy ra C≈1,06102×10⁻⁴ F, chọn 1,1×10⁻⁴ F."
     ],
     "theory": [
       70,
@@ -2059,7 +2073,8 @@
       "7,5 · 24"
     ],
     "solution": [
-      "Hai tầng đảo có hệ số −100/20=−5 và −90/30=−3. Hệ số chung +15 cho V₀=7,5 V. Độ lợi 20log₁₀15≈23,5 dB, gần 24 dB."
+      "Tầng đảo thứ nhất có độ lợi −100/20=−5. Tầng đảo thứ hai có độ lợi −90/30=−3. Nhân lại được +15, hai lần đảo pha triệt tiêu nhau.",
+      "Với đầu vào 0,5 V, đầu ra bằng 7,5 V. Độ lợi điện áp là 20 log₁₀15≈23,5218 dB, chọn khoảng 24 dB."
     ],
     "theory": [
       155,

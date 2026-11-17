@@ -314,7 +314,9 @@
       "27"
     ],
     "solution": [
-      "nₛ=120×50/6=1000 vòng/phút. Công suất qua khe hở bằng Tωₛ=200×2π×1000/60≈20,94 kW. Dùng tốc độ đồng bộ cho công suất này."
+      "Tốc độ đồng bộ nₛ=120f/p=120×50/6=1.000 vòng/phút, tức ωₛ≈104,71976 rad/s.",
+      "Công suất điện từ truyền qua khe hở dùng tốc độ đồng bộ: P₂=Tωₛ=200×104,71976≈20,94395 kW.",
+      "Công suất cơ trục 20 kW ứng với tốc độ rôto; câu hỏi yêu cầu P₂, nên chọn 21 kW."
     ],
     "theory": [
       190,
@@ -911,7 +913,8 @@
       "55,0"
     ],
     "solution": [
-      "R₇₅=1,0×(235+75)/(235+20)≈1,216 Ω, gần 1,22 Ω."
+      "Với dây đồng, giữ tỉ số R_T/R_t=(235+T)/(235+t) theo đề.",
+      "Thay R₂₀=1,0 Ω: R₇₅=1,0×[[235+75~235+20]]=310/255≈1,215686 Ω. Chọn 1,22 Ω."
     ],
     "theory": [
       175
@@ -1148,7 +1151,9 @@
       "706"
     ],
     "solution": [
-      "Chênh lệch khối lượng là (200+1000)−(200+400)=600 kg. Tốc độ 1,5 m/s. P=600×9,8×1,5/0,75=11,76 kW."
+      "Cabin đầy tải nặng 200+1.000=1.200 kg. Đối trọng là 200+0,40×1.000=600 kg. Chênh khối lượng cần nâng là 600 kg.",
+      "Tốc độ 90 m/phút=1,50 m/s. Công suất nâng hữu ích bằng 600×9,8×1,50=8.820 W.",
+      "Chia hiệu suất cơ 0,75 để tìm công suất trục động cơ: 11.760 W=11,76 kW. Chọn 11,8 kW."
     ],
     "theory": [
       238
@@ -1208,7 +1213,8 @@
       "Chênh lệch xu hướng ion hóa của hai vật liệu điện cực càng lớn thì điện áp hở mạch càng cao."
     ],
     "solution": [
-      "Cùng suất điện động và tải, trở trong lớn làm giảm dòng tải và tăng sụt áp nội. Phát biểu (4) đảo quan hệ."
+      "Với suất điện động E, mô hình đơn giản cho dòng tải I=E/(R_tải+r_trong). Tăng trở kháng đầu ra làm tăng sụt áp nội ở cùng dòng.",
+      "Với cùng E và cùng tải, dòng cấp được giảm. Phương án (4) nói ngược quan hệ."
     ],
     "theory": [
       282
@@ -1418,7 +1424,8 @@
       "37／11010100／7321／C7"
     ],
     "solution": [
-      "00100100₂=32+4=36. 170=128+32+8+2. Nhóm 111 011 100 001 thành 7 3 4 1. Nhóm 1101 0111 thành D7."
+      "00100100₂=2⁵+2²=36. Ngược lại, 170=128+32+8+2 nên viết thành 10101010₂.",
+      "Với hệ 8, nhóm từ phải sang trái thành 111 011 100 001, được 7341₈. Với hệ 16, nhóm 1101 0111, được D7₁₆. Chọn (4)."
     ],
     "theory": [
       315
@@ -1478,7 +1485,9 @@
       "8690"
     ],
     "solution": [
-      "V_pha=6600/√3≈3811 V, I=3300000/(√3×6600)≈288,7 A. Lấy điện áp làm chuẩn, cộng vectơ E=V_pha+jXₛI∠(−acos 0,9). Độ lớn E≈6.170 V."
+      "Máy đấu Y nên điện áp pha V=6.600/√3≈3.810,5118 V. Dòng định mức I=3.300.000/(√3×6.600)≈288,6751 A. Với cosφ=0,90 trễ, sinφ≈0,4358899.",
+      "Lấy V làm trục thực. Với máy phát, E=V+jXₛI̲. Hai thành phần của E là V+XₛI sinφ≈5.320,4787 V và XₛI cosφ≈3.117,6915 V.",
+      "Lấy căn tổng bình phương, |E|≈6.166,6436 V/pha, chọn 6.170 V."
     ],
     "theory": [
       219,
@@ -1554,7 +1563,9 @@
       "6950"
     ],
     "solution": [
-      "Mỗi pha có tổng trở E nhìn thấy là 13+j(5+12)=13+j17 Ω. Điện áp dây đầu cực bằng √3×6170×|13+j5|/|13+j17|≈6.950 V."
+      "Giữ kích từ như (a), nên sức điện động nội giữ khoảng 6.166,6436 V mỗi pha. Mỗi pha có tổng trở nhìn từ E là j12+(13+j5)=13+j17 Ω.",
+      "Chia điện áp theo tổng trở phức. Độ lớn điện áp pha đầu cực là |E|×[[√(13²+5²)~√(13²+17²)]].",
+      "Nhân √3 để đổi sang điện áp dây, được khoảng 6.951,49 V. Chọn 6.950 V."
     ],
     "theory": [
       225
@@ -1808,7 +1819,8 @@
       "297"
     ],
     "solution": [
-      "460 L tương ứng 460 kg. W_h=460×4,18×(88−17) kJ≈136,5 MJ, gần 137 MJ."
+      "Với ρ=1.000 kg/m³, 460 L=0,460 m³ tương ứng khối lượng 460 kg. Độ tăng nhiệt là 88−17=71 K.",
+      "Bỏ qua thất thoát, Q=mcΔT=460×4,18×71=136.518,8 kJ=136,5188 MJ. Chọn 137 MJ."
     ],
     "theory": [
       274
@@ -1859,7 +1871,8 @@
       "15,4"
     ],
     "solution": [
-      "Công suất nhiệt bằng 1,34×4,0=5,36 kW. t=136518,8 kJ/5,36 kJ/s≈25.470 s≈7,1 h."
+      "Công suất nhiệt cấp cho nước bằng công suất điện nhân COP: 1,34×4,0=5,36 kW=5,36 kJ/s.",
+      "Dùng nhiệt lượng chưa làm tròn ở (a): t=136.518,8/5,36≈25.469,9254 s. Chia 3.600, được khoảng 7,075 h. Chọn 7,1 h."
     ],
     "theory": [
       274
@@ -1905,7 +1918,8 @@
       "01・10・10・01"
     ],
     "solution": [
-      "Nhánh dưới cho T₁=A∧B. Nhánh trên cho S₁=(A∨B)∧¬T₁=A⊕B. Vì vậy lần lượt nhận 00, 10, 10, 01."
+      "Cổng AND ở nhánh dưới cho T₁=A∧B. Tín hiệu đó qua cổng NOT rồi AND với A∨B ở nhánh trên, nên S₁=(A∨B)∧¬T₁=A⊕B.",
+      "Với AB lần lượt 00, 01, 10, 11 thì (S₁,T₁) lần lượt 00, 10, 10, 01. Chọn bảng (4)."
     ],
     "theory": [
       302,
@@ -1971,7 +1985,8 @@
       "110 → 11"
     ],
     "solution": [
-      "S₂=(A⊕B)⊕C và T₂=(A∧B)∨[(A⊕B)∧C]. Với (0,1,0), tổng là 1 và bit nhớ 0, nên chọn (3)."
+      "Bộ thứ nhất cộng A,B: S₁=A⊕B, T₁=A∧B. Bộ thứ hai cộng S₁,C; tổng là S₂=S₁⊕C, bit nhớ là T₂=T₁∨(S₁∧C).",
+      "Với A=0, B=1, C=0, tổng nhị phân là 1 và không có nhớ, cho (1,0). Các lựa chọn có hai bit 1 ở đầu vào phải cho tổng 0, nhớ 1. Chọn (3)."
     ],
     "theory": [
       302,

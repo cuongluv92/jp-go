@@ -20,7 +20,9 @@
       "Hình (5)"
     ],
     "solution": [
-      "V=0 khi r_A=2r_B. Bình phương phương trình khoảng cách được (x+2d)²+y²=4d², đường tròn tâm (−2d,0), bán kính 2d. Chọn hình (4)."
+      "Gọi r_A, r_B là khoảng cách từ điểm (x,y) đến hai điện tích. Điện thế tổng là k(2Q/r_A−Q/r_B). Điều kiện V=0 cho r_A=2r_B.",
+      "Bình phương quan hệ khoảng cách: (x−2d)²+y²=4[(x+d)²+y²]. Thu gọn, được (x+2d)²+y²=4d².",
+      "Đây là đường tròn tâm (−2d,0), bán kính 2d, tiếp xúc trục y ở gốc tọa độ. Chọn hình (4)."
     ],
     "theory": [
       99,
@@ -112,7 +114,8 @@
       "a, b, c, d"
     ],
     "solution": [
-      "Điện trường giữa hai bản phẳng là đều. Điện thế biến thiên tuyến tính theo phương vuông góc với bản tụ. Do đó b, c, d đúng."
+      "Bỏ qua hiệu ứng mép, điện trường giữa hai bản phẳng song song là đều. Vì V thay đổi với độ dốc không đổi theo phương vuông góc với bản, phát biểu a về tỉ lệ nghịch sai, còn b đúng.",
+      "Đi dọc theo bản tụ không đổi điện thế, nên các đường đẳng thế song song với bản. Đường sức vuông góc với đường đẳng thế. Chọn b, c, d."
     ],
     "theory": [
       102,
@@ -243,7 +246,8 @@
       "Đi qua sắt / cao / cảm ứng từ"
     ],
     "solution": [
-      "Độ từ thẩm cao của vỏ sắt tạo đường dẫn từ trở thấp, làm giảm mạnh mật độ từ thông trong khoang rỗng. Đây là che chắn từ."
+      "Vỏ sắt có độ từ thẩm lớn nên cùng kích thước, đường đi qua sắt có từ trở thấp hơn qua không khí. Phần lớn từ thông đi qua thành vỏ.",
+      "Mật độ từ thông tại A bên trong giảm mạnh. Hiện tượng này gọi là che chắn từ, khớp phương án (2)."
     ],
     "theory": [
       131
@@ -363,7 +367,9 @@
       "4050"
     ],
     "solution": [
-      "Nguồn tương đương là 9 V với điện trở trong 0,1/4=0,025 Ω. Công suất tải bằng 0,5[9/(0,5+0,025)]²≈147 W."
+      "Bốn pin giống nhau mắc song song cùng cực tính giữ sức điện động 9 V. Điện trở trong tương đương là 0,1/4=0,025 Ω.",
+      "Toàn mạch có R_tổng=0,500+0,025=0,525 Ω. Dòng tải I=9/0,525≈17,14286 A.",
+      "Chỉ dùng điện trở tải để tính công suất tiêu thụ: P=I²×0,5≈146,9388 W, chọn 147 W."
     ],
     "theory": [
       5,
@@ -444,7 +450,9 @@
       "0,5"
     ],
     "solution": [
-      "100∥350=77,78 Ω. Dòng vào nhánh 150+77,78 là 5/227,78, dòng tổng là 5/200+5/227,78. I₂ là 100/(100+350) lần dòng vào nhánh đó. Tỉ số ≈0,104."
+      "Từ nút giữa, nhánh ngoài gồm 150+200=350 Ω song song với 100 Ω. Tổng tương đương là 100×350/(100+350)=77,7778 Ω.",
+      "Dòng vào nhánh bên phải I_n=5/(150+77,7778)≈0,0219512 A. Dòng tổng I₁=5/200+I_n≈0,0469512 A.",
+      "Chia dòng tại nút giữa, I₂=I_n×100/(100+350)≈0,00487805 A. Tỉ số I₂/I₁≈0,103896, chọn 0,1."
     ],
     "theory": [
       5,
@@ -662,7 +670,9 @@
       "3,1×10⁴／2,5×10⁴"
     ],
     "solution": [
-      "Nhánh L₂∥C cộng hưởng tại ω₂=1/√(L₂C)=2,5×10⁴. Khử phần ảo của tổng trở nối tiếp cho ω₁=√[(L₁+L₂)/(L₁L₂C)]≈3,1×10⁴ rad/s."
+      "Đặt mạch nhánh là L₂ song song C. Khi dẫn nạp tổng của nhánh bằng 0, tổng trở đạt cực đại: ω₂=1/√(L₂C)=25.000 rad/s.",
+      "Tổng trở của nhánh là jωL₂/(1−ω²L₂C). Để cộng hưởng nối tiếp, phần ảo jωL₁+jωL₂/(1−ω²L₂C) bằng 0.",
+      "Suy ra ω₁=√[(L₁+L₂)/(L₁L₂C)]≈30.618,62 rad/s. So với các lựa chọn, cặp là 3,1×10⁴ và 2,5×10⁴ rad/s."
     ],
     "theory": [
       44,
@@ -802,7 +812,8 @@
       "Khi cấp năng lượng nhiệt hoặc ánh sáng và có dòng điện trong bán dẫn nội tại, chiều dòng điện trùng chiều chuyển động của lỗ trống."
     ],
     "solution": [
-      "Gia nhiệt làm tăng mật độ cặp electron–lỗ trống của bán dẫn nội tại. Độ dẫn điện tăng, điện trở suất giảm, nên (2) sai."
+      "Nhiệt kích thích electron chuyển lên vùng dẫn và để lại lỗ trống. Với bán dẫn nội tại trong ngữ cảnh đề, số hạt tải tăng làm độ dẫn điện tăng.",
+      "Điện trở suất là nghịch đảo của độ dẫn điện, nên giảm khi gia nhiệt. Phương án (2) nói tăng và là phương án sai."
     ],
     "theory": [
       141
@@ -956,7 +967,8 @@
       "1000"
     ],
     "solution": [
-      "40 dB tương ứng |vₒ/vᵢ|=100. |vₒ|=1 V nên |i꜀|=1 mA, do đó |iᵦ|=1 mA/100=10 μA."
+      "Với độ lợi điện áp 40 dB, 20 log₁₀|vₒ/vᵢ|=40, nên |vₒ/vᵢ|=100. Đầu vào 10 mV cho |vₒ|=1,00 V.",
+      "Điện trở tải tương đương 1 kΩ cho |i꜀|=1 V/1 kΩ=1 mA. Vì |i꜀|=h_fe|iᵦ|, dòng cực gốc là 1 mA/100=10 μA."
     ],
     "theory": [
       145,
@@ -1042,7 +1054,8 @@
       "Tự chọn thang đo hữu ích cả khi chưa biết độ lớn gần đúng của đại lượng."
     ],
     "solution": [
-      "Máy hiện sóng số có bộ nhớ để ghi và hiển thị sự kiện một lần, nên vẫn đo được tín hiệu không tuần hoàn."
+      "Máy hiện sóng số lấy mẫu và lưu chuỗi mẫu trong bộ nhớ. Khi dùng chế độ kích một lần, nó có thể giữ lại dạng sóng của một sự kiện không lặp lại.",
+      "Do đó khẳng định trong (2) rằng chỉ đo được tín hiệu tuần hoàn là sai."
     ],
     "theory": [],
     "pages": [
@@ -1097,7 +1110,9 @@
       "1,73"
     ],
     "solution": [
-      "Trước đứt, đổi Δ sang Y, điện áp dây trên tải bằng V/4, nên I₀=V/(4r). Sau đứt, giữa a và c tải tương đương r∥2r=2r/3. Tải vẫn nhận V/4, nhưng nhánh chứa I là 2r, cho I=V/(8r), bằng 0,50I₀."
+      "Trước đứt dây, nguồn và tải cân bằng. Đổi tải Δ sang Y thấy mỗi pha gồm r nối tiếp r/3, nên điện áp dây trên tải bằng V×(r/3)/(r+r/3)=V/4. Dòng trong cạnh Δ đang xét là I₀=V/(4r).",
+      "Sau đứt dây b, giữa hai đỉnh a và c của Δ có r song song 2r, tương đương 2r/3. Cùng hai điện trở dây r, tổng mạch bằng 8r/3. Điện áp giữa a và c của Δ vẫn bằng (2r/3)/(8r/3)×V=V/4.",
+      "Cạnh mang I nằm trong đường vòng gồm hai điện trở r nối tiếp. Do đó I=V/(8r), bằng 0,50 lần I₀."
     ],
     "theory": [
       70,
@@ -1193,7 +1208,8 @@
       "1,15"
     ],
     "solution": [
-      "Đầu b phía tải có điện thế là trung bình vectơ của hai đầu a,c do các điện trở đối xứng và dây b không có dòng. Điện áp từ b phía nguồn tới điểm giữa a,c là đường cao tam giác điện áp dây, bằng √3V/2≈0,87V."
+      "Sau đứt dây b, nhánh dây b không mang dòng. Hai điện trở tải nối từ đỉnh b tới a và tới c bằng nhau, nên đỉnh b có điện thế ở trung điểm của hai đỉnh a,c. Hai sụt áp dây ngoài đối xứng, vì vậy điểm này cũng là trung điểm của hai đầu nguồn a,c.",
+      "Các điện thế pha nguồn tạo tam giác đều có cạnh bằng điện áp dây V. Từ đầu b phía nguồn tới trung điểm a,c là đường cao bằng (√3/2)V. Tỉ số √3/2≈0,866025, chọn 0,87."
     ],
     "theory": [
       70,
@@ -1249,7 +1265,8 @@
       "1,4"
     ],
     "solution": [
-      "R đo được 50,00/1,600=31,25 Ω. Sai số tuyệt đối là |31,25−31,21|=0,04 Ω."
+      "Áp dụng định luật Ohm cho số chỉ đo: R_đo=[[50,00~1,600]]=31,25 Ω, đúng bốn chữ số có nghĩa như đề yêu cầu.",
+      "So với giá trị thật 31,21 Ω, sai số tuyệt đối là |31,25−31,21|=0,04 Ω."
     ],
     "theory": [
       2
@@ -1330,7 +1347,8 @@
       "1,3"
     ],
     "solution": [
-      "0,04/31,21 × 100% ≈ 0,128%, gần 0,13%."
+      "Dùng 0,04 Ω từ (a) và chia cho giá trị thật 31,21 Ω. Sai số tương đối là 0,00128164.",
+      "Nhân 100 để sang phần trăm: 0,128164%, gần nhất 0,13%."
     ],
     "theory": [],
     "pages": [
@@ -1384,7 +1402,8 @@
       "1,6×10⁻⁶"
     ],
     "solution": [
-      "Hai tụ song song nên Q=V₀ε(A₁+A₂)/d=9,735×10⁻⁸ C."
+      "Khi x=d, hai tụ cùng có khe 10⁻³ m và mắc song song. C_tổng=ε(A₁+A₂)/d=8,85×10⁻¹²×11=9,735×10⁻¹¹ F.",
+      "Sau khi nạp ở V₀=1.000 V và mở công tắc, tổng điện tích trên hai bản trên là Q=C_tổngV₀=9,735×10⁻⁸ C. Chọn 9,7×10⁻⁸ C."
     ],
     "theory": [
       107
@@ -1491,7 +1510,8 @@
       "3,0"
     ],
     "solution": [
-      "m=[[A_max−A_min~A_max+A_min]]=[[3a/2−a/2~3a/2+a/2]]=0,5."
+      "Đọc bao biên trên ở đồ thị, A_max=3a/2 và A_min=a/2.",
+      "Độ sâu điều chế là m=[[A_max−A_min~A_max+A_min]]=[[3a/2−a/2~3a/2+a/2]]=0,5. Đây là tỉ số, tương đương 50%."
     ],
     "theory": [],
     "pages": [

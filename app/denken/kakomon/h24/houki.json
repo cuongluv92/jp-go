@@ -455,8 +455,8 @@
       "Không phù hợp · không phù hợp · phù hợp"
     ],
     "solution": [
-      "a và b phù hợp với khung pháp quy được nêu trong đề.",
-      "c sai ở phần cho phép lắp mới lại sau khi tháo thiết bị chứa PCB."
+      "a và b phù hợp với các điều kiện trong văn bản mà đề viện dẫn. Ở c, cần phân biệt thiết bị đang được sử dụng theo điều kiện chuyển tiếp với thiết bị đã tháo khỏi vị trí.",
+      "Phần cho phép lắp mới lại sau khi tháo thiết bị chứa PCB làm c sai. Chọn tổ hợp theo trạng thái đúng của a, b, c."
     ],
     "theory": [
       424
@@ -914,8 +914,8 @@
       "Đặt ở vùng núi hoặc nơi người ngoài khó tiếp cận"
     ],
     "solution": [
-      "Ngoại lệ xét việc ngăn tiếp cận hoặc ngăn leo thực tế.",
-      "Thiết bị giám sát đơn thuần không thay thế biện pháp chống leo."
+      "Đề hỏi biện pháp hạn chế người tiếp cận hoặc leo lên kết cấu thực tế. Kiểm tra từng phương án xem có ngăn được hành vi leo lên hay không.",
+      "Thiết bị giám sát chỉ quan sát hoặc ghi nhận. Phương án chỉ giám sát không đáp ứng yêu cầu ngăn leo."
     ],
     "theory": [
       459

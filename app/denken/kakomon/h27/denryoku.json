@@ -23,7 +23,8 @@
       "kg·m/s² · N · J · W · kW"
     ],
     "solution": [
-      "kg·m/s²=N, N·m=J và J/s=W. Thay ρg=9.800, ta được 9.800QH W=9,8QH kW."
+      "Bắt đầu từ công suất thủy lực P=ρgQH. Khối lượng nước đi qua mỗi giây là ρQ. Một kilôgam nước qua cột cao H chuyển thế năng gH.",
+      "kg·m/s²=N, N·m=J và J/s=W. Với ρ=1.000 kg/m³ và g=9,8 m/s², P=9.800QH W=9,8QH kW."
     ],
     "theory": [
       325,
@@ -925,7 +926,8 @@
       "2648"
     ],
     "solution": [
-      "Mỗi lõi có C=0,43×5=2,15 μF và chịu U_pha=66.000/√3 V. Ba lõi có P=3×2πfC U_pha² tanδ≈883 W với tanδ=0,0003."
+      "Một lõi dài 5 km có C=0,43×5=2,15 μF. Dùng điện áp pha U=66.000/√3 V vì tổn hao được tính từ từng lõi tới màn chắn.",
+      "Một lõi có P₁=2πfCU²tanδ. Nhân ba lõi, thay f=50 Hz, C=2,15×10⁻⁶ F và tanδ=0,0003, được khoảng 882,67 W, chọn 883 W."
     ],
     "theory": [
       396,
@@ -1081,7 +1083,8 @@
       "Với spot network, vẫn có thể nhận điện khi sự cố xảy ra trên thanh cái mạng phía thứ cấp."
     ],
     "solution": [
-      "Spot network có thể chịu mất một đường cấp, nhưng sự cố ngay trên thanh cái chung làm mất điểm cấp cho tải. Vì vậy (5) sai."
+      "Các nguồn cấp của spot network nối qua bộ bảo vệ vào thanh cái thứ cấp chung. Khi mất một lộ cấp, những lộ còn lại có thể tiếp tục cấp tải.",
+      "Nếu sự cố nằm ngay trên thanh cái chung, chính điểm cấp tải phải được cô lập. Vì vậy bảo đảm cấp liên tục trong (5) không đúng."
     ],
     "theory": [
       374,
@@ -1271,7 +1274,8 @@
       "So với thép silic, hợp kim vô định hình có độ từ thẩm và điện trở suất cao hơn, tổn hao sắt thấp hơn."
     ],
     "solution": [
-      "Lõi cần lực kháng từ nhỏ để giảm từ trễ, đồng thời cần mật độ từ thông bão hòa đủ cao để làm việc với từ thông lớn. (2) sai."
+      "Lõi máy biến áp cần lực kháng từ thấp để giảm diện tích vòng từ trễ. Mật độ từ thông bão hòa nên đủ cao để mang từ thông làm việc mà chưa bão hòa.",
+      "Phương án (2) đòi cả hai đại lượng cùng nhỏ nên sai."
     ],
     "theory": [
       177,
@@ -1377,7 +1381,8 @@
       "60,5"
     ],
     "solution": [
-      "Máy tuabin tăng từ 800 lên 900 MW, tức 0,10 lần định mức. Tần số giảm 60×0,05×0,10=0,3 Hz, còn 59,7 Hz."
+      "Mức tăng công suất của máy là 900−800=100 MW. Trên cơ sở 1.000 MW của chính máy, ΔP=0,10 pu.",
+      "Với độ dốc điều tốc 5%, độ giảm tần số là 60×0,05×0,10=0,30 Hz. Vì công suất tăng khi tần số giảm, tần số mới là 59,70 Hz."
     ],
     "theory": [
       429
@@ -1625,7 +1630,9 @@
       "5120"
     ],
     "solution": [
-      "Q_A=3.800√(1−0,9²)≈1.656 kvar. Q_B=2.000√(1−0,85²)/0,85≈1.239 kvar. Tổng ≈2.896 kvar, gần 2.900 kvar."
+      "Tải A cho công suất biểu kiến 3.800 kVA, nên Q_A=3.800√(1−0,9²)≈1.656,3816 kvar.",
+      "Tải B cho công suất tác dụng 2.000 kW, nên Q_B=2.000√(1−0,85²)/0,85≈1.239,4887 kvar.",
+      "Cả hai tải đều trễ. Tổng Q≈2.895,8703 kvar, chọn khoảng 2.900 kvar."
     ],
     "theory": [
       57,
@@ -1727,7 +1734,9 @@
       "101"
     ],
     "solution": [
-      "Dùng ΔU≈(RP+XQ)/U_dây, lấy U_dây≈22 kV. Đoạn a–b chỉ mang tải B, sụt khoảng 25,6 V. Đoạn f–a mang cả hai tải với P=5.420 kW, Q≈2.896 kvar, sụt khoảng 33,1 V. Tổng gần 59 V."
+      "Với góc lệch hai đầu nhỏ, ΔU_dây≈(RP+XQ)/U_nhận. R, X là tổng theo một dây trên từng đoạn. P, Q là tổng ba pha đi qua đoạn đó.",
+      "Đoạn a–b có R=0,192 Ω, X=0,144 Ω và chỉ mang tải B: P_B=2.000 kW, Q_B≈1.239,4887 kvar. Thay U_b=22.000 V, được ΔU_ab≈25,5676 V.",
+      "Đoạn f–a có R=0,096 Ω, X=0,072 Ω, mang cả hai tải: P=5.420 kW, Q≈2.895,8703 kvar. Dùng U_a≈22.025,57 V, được ΔU_fa≈33,0898 V. Tổng ≈58,6574 V, chọn 59 V."
     ],
     "theory": [
       79,
@@ -1838,7 +1847,8 @@
       "30,0"
     ],
     "solution": [
-      "Điện kháng mạch A là 15−5=10%, mạch B là 10%. Ghép song song hai nhánh j10% được j5%."
+      "Đường dây mạch A có j15% và tụ bù nối tiếp góp −j5%, nên phần còn lại là j10%. Mạch B cũng có j10%.",
+      "Hai nhánh bằng nhau ghép song song cho một nửa điện kháng, j5% trên cùng cơ sở. Dùng 0,05 pu cho (b)."
     ],
     "theory": [
       401,
@@ -1909,7 +1919,9 @@
       "152"
     ],
     "solution": [
-      "Trong hệ đơn vị tương đối, điện áp hai đầu đều 1 pu và X=0,05 pu. Công suất P=(1×1/0,05)sin30°=10 pu. Với cơ sở 10 MV·A, công suất bằng 100 MW."
+      "Ở hai đầu, 154 kV bằng điện áp dây cơ sở, nên U_gửi=U_nhận=1 pu. Dùng điện kháng tương đương 5%=0,05 pu từ (a).",
+      "Với đường dây thuần cảm, P_pu=[[U_gửiU_nhận~X_pu]]sinδ. Thay δ=30° cho P_pu=(1/0,05)×0,5=10.",
+      "Nhân cơ sở công suất 10 MVA, nhận được công suất tác dụng 100 MW."
     ],
     "theory": [
       401
