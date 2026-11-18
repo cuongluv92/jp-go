@@ -24,8 +24,7 @@
       "Kiểu đường dẫn thường ít tốn chi phí xây dựng hơn và không có khả năng tích nước đáng kể. Dòng tự nhiên phát theo lưu lượng đến, còn hồ điều tiết tích nước ngắn hạn để phát lúc nhu cầu cao."
     ],
     "theory": [
-      346,
-      349
+      322
     ],
     "pages": [
       1
@@ -466,8 +465,8 @@
       "Bỏ qua tổn thất theo mô hình của đề, Bernoulli cho p_B = p_A + ρg × 30 + [[ρ~2]](v_A² − v_B²) ≈ 315,9 kPa. Nhỏ hơn 318 kPa vì một phần cột áp biến thành động năng."
     ],
     "theory": [
-      346,
-      349
+      325,
+      331
     ],
     "pages": [
       2
@@ -567,8 +566,8 @@
       "Hơi ra khỏi tuabin cao áp đi qua bộ tái nhiệt rồi vào tầng tuabin có áp suất thấp hơn, thường là tuabin trung áp. Tái nhiệt giúp cải thiện hiệu suất chu trình và giảm độ ẩm hơi ở cuối quá trình giãn nở. Do đó ⑤ sai."
     ],
     "theory": [
-      334,
-      338
+      341,
+      344
     ],
     "pages": [
       3
@@ -894,8 +893,7 @@
       "Ở kiểu khô thường gõ bản thu để bụi rơi xuống phễu."
     ],
     "theory": [
-      334,
-      338
+      344
     ],
     "pages": [
       4
@@ -1215,7 +1213,8 @@
       "Trong lò nước nhẹ, nước nhẹ đảm nhiệm cả làm chậm neutron lẫn tải nhiệt. Điểm sai trong ② là nêu than chì làm chất làm chậm neutron."
     ],
     "theory": [
-      341
+      357,
+      360
     ],
     "pages": [
       5
@@ -1630,7 +1629,7 @@
       "Pin nhiên liệu hydro–oxy tạo điện từ phản ứng điện hóa tỏa nhiệt. Phần “thu nhiệt” làm ⑤ sai."
     ],
     "theory": [
-      352
+      366
     ],
     "pages": [
       6
@@ -2030,7 +2029,8 @@
       "Biến điện áp (VT) và biến dòng (CT) cấp tín hiệu đo và bảo vệ. CT có sơ cấp nằm nối tiếp trên đường dòng cần đo và làm việc với tổng trở tải thứ cấp thấp. Khi sơ cấp có dòng, hở mạch thứ cấp có thể sinh điện áp cao."
     ],
     "theory": [
-      401
+      372,
+      383
     ],
     "pages": [
       7
@@ -2390,7 +2390,7 @@
       "Dao cách ly tạo khoảng cách cách điện sau khi dòng đã được ngắt bằng thiết bị có khả năng cắt. Một số loại có thể thao tác với dòng nạp điện dung rất nhỏ theo định mức. Phương án ④ đánh tráo dòng nạp với dòng sự cố chạm đất."
     ],
     "theory": [
-      401
+      378
     ],
     "pages": [
       8
@@ -2666,8 +2666,7 @@
       "Tỉ lệ chuyển tải là [[9,4~55]] × 100 ≈ 17,1%."
     ],
     "theory": [
-      401,
-      404
+      374
     ],
     "pages": [
       9
@@ -2828,7 +2827,8 @@
       "Thêm bát nối tiếp hoặc tăng chiều dài đường rò giúp tăng khả năng cách điện. Sứ thanh dài có cấu tạo thuận lợi để mưa rửa bề mặt."
     ],
     "theory": [
-      378
+      385,
+      391
     ],
     "pages": [
       10
@@ -3153,7 +3153,7 @@
       "Hiệu ứng bề mặt dồn dòng AC về ngoài lõi, giảm tiết diện dẫn hữu hiệu và làm tăng điện trở AC. Vì vậy ② sai. Tản nhiệt tốt hơn hoặc giảm nguồn phát nhiệt cho phép nâng dòng ở cùng giới hạn nhiệt độ."
     ],
     "theory": [
-      394
+      396
     ],
     "pages": [
       11
@@ -3484,7 +3484,8 @@
       "Khi đứt trung tính, hai tải 100 V trở thành nối tiếp trên 200 V. Nhánh có tổng trở lớn nhận phần điện áp lớn hơn."
     ],
     "theory": [
-      396
+      408,
+      411
     ],
     "pages": [
       12
@@ -3860,8 +3861,8 @@
       "Chống sét van mắc song song để dẫn xung quá áp xuống đất. Cầu chì dây bảo vệ đoạn dây dẫn vào hạ áp."
     ],
     "theory": [
-      390,
-      401
+      383,
+      408
     ],
     "pages": [
       13
@@ -4256,7 +4257,8 @@
       "Đồng cứng chịu kéo tốt nhưng biến cứng do gia công thường làm độ dẫn điện thấp hơn đồng mềm chuẩn. Phát biểu ④ sai ở vế so sánh độ dẫn điện."
     ],
     "theory": [
-      378
+      385,
+      415
     ],
     "pages": [
       14
@@ -4662,8 +4664,8 @@
       "Trừ điện tự dùng bằng cách nhân 0,98, được 5 713,4 MWh, gần 5 710 MWh."
     ],
     "theory": [
-      334,
-      338
+      349,
+      352
     ],
     "pages": [
       15
@@ -4799,8 +4801,8 @@
       "Nhiệt vào là 770 000 × 54,70 = 42 119 000 MJ. Hiệu suất ≈ 49,83%, gần 50%."
     ],
     "theory": [
-      334,
-      338
+      349,
+      352
     ],
     "pages": [
       15
@@ -4891,7 +4893,7 @@
       "Tăng 45 ℃, L₂ = L₁(1 + 0,000018 × 45) ≈ 150,3395 m."
     ],
     "theory": [
-      378
+      400
     ],
     "pages": [
       16
@@ -5012,7 +5014,7 @@
       "Áp dụng xấp xỉ parabol của dây có độ võng nhỏ, H = [[wl²~8d]] ≈ 12 873 N. Giá trị gần nhất trong các lựa chọn là 12 863 N."
     ],
     "theory": [
-      378
+      400
     ],
     "pages": [
       16
@@ -5113,7 +5115,7 @@
       "Điện áp B là 103,7 V, nên tỉ lệ bằng [[3,3~103,7]] × 100 ≈ 3,18%."
     ],
     "theory": [
-      396
+      401
     ],
     "pages": [
       17
@@ -5259,7 +5261,7 @@
       "Về C, sinφ = 0,6 nên ΔV = 2 × 20 × (0,3 × 0,8 + 0,4 × 0,6)(0,7 − x) = 13,44 − 19,2x V. Cho hai mức bằng nhau được x = 0,325 km."
     ],
     "theory": [
-      396
+      401
     ],
     "pages": [
       17

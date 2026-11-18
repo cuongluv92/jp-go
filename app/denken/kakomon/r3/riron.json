@@ -216,8 +216,7 @@
       "Trong mô hình điện tích điểm, độ lớn lực tỉ lệ nghịch với ε. Đổi ε₀ thành 2ε₀ làm lực giảm một nửa. Dấu hai điện tích không đổi nên lực hút hay đẩy giữ nguyên."
     ],
     "theory": [
-      99,
-      102
+      99
     ],
     "pages": [
       3
@@ -467,7 +466,8 @@
       "Vật liệu sắt từ có độ từ thẩm lớn nên tạo đường có từ trở thấp trong thành vỏ. Phần lớn từ thông đi trong vỏ, giảm từ trường trong vùng rỗng. Đó là che chắn từ."
     ],
     "theory": [
-      70
+      117,
+      131
     ],
     "pages": [
       4
@@ -733,7 +733,8 @@
       "Độ biến thiên móc vòng là NΔΦ = 200 × 0,010 = 2 Wb·vòng. Suất điện động có độ lớn [[2~0,5]] = 4 V, kể cả khi S mở."
     ],
     "theory": [
-      79
+      124,
+      133
     ],
     "pages": [
       5
@@ -867,9 +868,7 @@
     "solution": [
       "Chênh nhiệt độ sinh suất điện động nhiệt điện qua hiệu ứng Seebeck. Tên quy ước là 温接点 (mối nóng) và 冷接点 (mối lạnh). Hiệu ứng Peltier là quá trình thu hoặc tỏa nhiệt khi dòng điện chạy qua mối nối."
     ],
-    "theory": [
-      148
-    ],
+    "theory": [],
     "pages": [
       6
     ],
@@ -1099,7 +1098,7 @@
       "Nguồn giữ 100 A qua hai giai đoạn đầu. Sau t₂ nguồn bị giới hạn ở 20 V nên dòng giảm xuống 20 A. Đồ thị đúng là ②."
     ],
     "theory": [
-      5
+      24
     ],
     "pages": [
       7
@@ -1240,7 +1239,7 @@
       "I = [[nE~nr + nr]] = [[E~2r]]. Việc tăng n làm cả điện áp nguồn và điện trở trong tăng cùng tỉ lệ."
     ],
     "theory": [
-      5,
+      14,
       23
     ],
     "pages": [
@@ -1352,7 +1351,9 @@
       "Điện trở thuần cho i = v/5 cùng pha với v, nên biên độ là 20√2 A và pha đầu vẫn −π/4."
     ],
     "theory": [
-      44
+      31,
+      36,
+      39
     ],
     "pages": [
       9
@@ -1438,8 +1439,7 @@
       "Nguồn trong cả hai mạch chỉ thấy phần điện trở R ở cộng hưởng nên I = [[V~R]]."
     ],
     "theory": [
-      44,
-      51
+      55
     ],
     "pages": [
       10
@@ -1680,7 +1680,7 @@
       "Chọn ④, đường có cùng độ dốc ban đầu và tiến đến mức xác lập bằng một nửa."
     ],
     "theory": [
-      55
+      62
     ],
     "pages": [
       11,
@@ -2107,8 +2107,8 @@
       "Điện lực và lực từ ngược chiều theo hình. Điều kiện triệt tiêu độ lớn là eE = evB. Trong chân không B = μ₀H, nên v = [[E~μ₀H]]."
     ],
     "theory": [
-      70,
-      99
+      102,
+      127
     ],
     "pages": [
       14
@@ -2370,7 +2370,8 @@
       "Trừ 1 cho sai số khoảng 0,0406. Tính nhanh bậc nhất được 0,01 + 0,02 − (−0,01) = 0,04."
     ],
     "theory": [
-      23
+      19,
+      91
     ],
     "pages": [
       16
@@ -2506,8 +2507,8 @@
       "Nhân tỉ số thứ cấp trên sơ cấp [[5~20]] được 2,50 A."
     ],
     "theory": [
-      44,
-      62
+      70,
+      87
     ],
     "pages": [
       17,
@@ -2704,8 +2705,8 @@
       "Tổng trở pha có độ lớn [[400~√3 × 10]] ≈ 23,09 Ω. Cảm kháng X = √(|Z|² − R²) ≈ 11,55 Ω."
     ],
     "theory": [
-      44,
-      62
+      70,
+      79
     ],
     "pages": [
       17,
@@ -2811,7 +2812,8 @@
       "Số chỉ I₁ chính là dòng chạy qua điện trở trong Rₐ của ampe kế. Theo định luật Joule, tổn hao riêng của đồng hồ là I₁²Rₐ."
     ],
     "theory": [
-      5
+      87,
+      93
     ],
     "pages": [
       19
@@ -2957,7 +2959,7 @@
       "Sai số tương đối bằng [[Rₐ~R]] × 100 = 1,25%. Lựa chọn gần nhất là 1,2%."
     ],
     "theory": [
-      5
+      93
     ],
     "pages": [
       19,
@@ -3074,7 +3076,6 @@
       "Cộng sụt áp ba lớp được V = E_A1 × (d/6 + 2d/9 + d/6) = E_A1 × [[5d~9]]. E_A1 lớn nhất và bằng [[9V~5d]]."
     ],
     "theory": [
-      102,
       107
     ],
     "pages": [
@@ -3247,7 +3248,6 @@
       "Cùng điện áp nên tỉ số năng lượng bằng tỉ số điện dung, [[54~65]] ≈ 0,831."
     ],
     "theory": [
-      102,
       107
     ],
     "pages": [
@@ -3370,8 +3370,7 @@
       "Theo vòng base–emitter, I_B = [[2,755 − 0,6~2,082 kΩ + 101 × 1,4 kΩ]] ≈ 15,0 µA. V_C = 9 − 2,1 kΩ × 100I_B ≈ 5,85 V, gần 6 V."
     ],
     "theory": [
-      152,
-      155
+      148
     ],
     "pages": [
       23
@@ -3462,8 +3461,8 @@
       "Tần số f₀ = [[1~2π√(LC_eq)]] ≈ 100,66 kHz, chọn 100 kHz."
     ],
     "theory": [
-      51,
-      155
+      55,
+      148
     ],
     "pages": [
       23,

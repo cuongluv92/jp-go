@@ -356,7 +356,7 @@
       "Ở chế độ mới E₂ = 200 − 110 × 0,35 = 161,5 V và P_cơ = 161,5 × 110 = 17 765 W. Chia cho tốc độ góc 2π × 720/60 được khoảng 235,6 N·m."
     ],
     "theory": [
-      205,
+      210,
       212
     ],
     "pages": [
@@ -548,7 +548,7 @@
     ],
     "theory": [
       186,
-      190
+      195
     ],
     "pages": [
       3
@@ -1030,7 +1030,7 @@
     ],
     "theory": [
       186,
-      190
+      201
     ],
     "pages": [
       4
@@ -1376,7 +1376,7 @@
       "Sau bước thay đổi tải, quán tính khiến δ dao động quanh góc mới. Cuộn cản tạo mômen chống sai lệch tốc độ để dập dao động."
     ],
     "theory": [
-      195
+      233
     ],
     "pages": [
       5
@@ -1722,7 +1722,7 @@
       "Tổng trở phần trăm là [[6,90~12]] × 100 = 57,5%."
     ],
     "theory": [
-      195
+      225
     ],
     "pages": [
       6
@@ -1833,9 +1833,9 @@
       "Rôto dây quấn tiếp cận được mạch thứ cấp. Với phương án máy phụ của động cơ đồng bộ, kích từ và hòa lưới ở trạng thái máy phát đồng bộ, rồi chuyển sang chạy động cơ."
     ],
     "theory": [
-      186,
-      190,
-      212
+      198,
+      212,
+      233
     ],
     "pages": [
       7,
@@ -2180,9 +2180,7 @@
     "solution": [
       "Chuyển mạch điện tử thay tiếp xúc cơ khí, giúp giảm mài mòn. Hiệu suất tốt và khả năng điều tốc khiến BLDC phù hợp với quạt, điều hòa và tủ lạnh. Vì vậy ⑤ sai."
     ],
-    "theory": [
-      212
-    ],
+    "theory": [],
     "pages": [
       9
     ],
@@ -2452,7 +2450,7 @@
       "Tỉ số tổn hao đồng định mức trên công suất biểu kiến định mức là [[6~500]] × 100 = 1,2%."
     ],
     "theory": [
-      169,
+      172,
       177
     ],
     "pages": [
@@ -2714,7 +2712,7 @@
       "γ < 0,5 thì tỉ số nhỏ hơn 1 và giảm áp. γ > 0,5 thì tăng áp. Phương án ③ đảo hai miền."
     ],
     "theory": [
-      246
+      257
     ],
     "pages": [
       12
@@ -2945,7 +2943,7 @@
       "Khi nước bị điện phân do nạp quá mức, oxy sinh ở cực dương và hydro sinh ở cực âm."
     ],
     "theory": [
-      251
+      282
     ],
     "pages": [
       13
@@ -3306,7 +3304,8 @@
       "Tần số thấp có |H| ≈ 1, tức 0 dB. Xa phía trên điểm gãy, độ lợi giảm 20 dB mỗi thập kỷ và pha tiến đến −90°. −45° là pha tại điểm gãy."
     ],
     "theory": [
-      274
+      291,
+      298
     ],
     "pages": [
       14
@@ -3587,7 +3586,6 @@
       "Tổn hao đồng bằng 2/3 tổng tổn hao, tức khoảng 206,2 W."
     ],
     "theory": [
-      169,
       177
     ],
     "pages": [
@@ -3754,7 +3752,6 @@
       "Hiệu suất cực đại khi hai tổn hao bằng nhau. Vì tỉ số đầy tải là 2:1, x² = 1/2 và x ≈ 0,707, tức 70,7%."
     ],
     "theory": [
-      169,
       177
     ],
     "pages": [
@@ -3881,6 +3878,7 @@
       "Tại π + β dòng bằng 0 nên năng lượng LI²/2 bằng 0. Điện áp nguồn chỉ đặt lên tải trong đoạn dẫn 0 đến π + β, và trung bình trên cả chu kỳ 2π."
     ],
     "theory": [
+      141,
       246
     ],
     "pages": [
@@ -4095,6 +4093,7 @@
       "Thay β = π/6, giá trị xấp xỉ 42,0 V. Phần dẫn sau π làm giá trị trung bình thấp hơn trường hợp tải thuần trở."
     ],
     "theory": [
+      141,
       246
     ],
     "pages": [
@@ -4176,7 +4175,9 @@
       "Bức xạ là sóng điện từ, truyền được qua chân không. Trong mô hình của đề, trao đổi ròng tỉ lệ với hiệu lũy thừa bậc bốn của nhiệt độ tuyệt đối.",
       "F₂₁ là phần bức xạ rời mặt 2 tới mặt 1 và σ là hằng số Stefan–Boltzmann."
     ],
-    "theory": [],
+    "theory": [
+      274
+    ],
     "pages": [
       19
     ],
@@ -4399,7 +4400,9 @@
     "solution": [
       "Diện tích truyền nhiệt S = π × 0,5² m². Theo Fourier ở trạng thái ổn định, Φ = λS × [[ΔT~l]]. Thay ΔT = 80 K, l = 0,1 m được khoảng 163,4 W."
     ],
-    "theory": [],
+    "theory": [
+      274
+    ],
     "pages": [
       19,
       20
@@ -4514,7 +4517,7 @@
       "JK-FF giữ trạng thái với J = K = 0. Với J = K = 1, mỗi cạnh clock tác động làm Q đảo trạng thái. Do đó ② sai ở trường hợp hai đầu vào đều bằng 1."
     ],
     "theory": [
-      315
+      312
     ],
     "pages": [
       21
@@ -4655,7 +4658,7 @@
       "Q₁ chia đôi tần số C, Q₂ chia đôi tiếp. Đối chiếu dấu cạnh trong các hình, chọn ⑤."
     ],
     "theory": [
-      315
+      312
     ],
     "pages": [
       21,

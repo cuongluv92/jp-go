@@ -501,9 +501,7 @@
       "Câu ① nêu sai thủ tục. Với đối tượng thuộc diện đăng ký theo luật trong đề, thủ tục là 登録. Cơ quan đăng ký tùy vào phạm vi tỉnh có cơ sở.",
       "Thời hạn đăng ký được hỏi gián tiếp trong ② là 5 năm."
     ],
-    "theory": [
-      424
-    ],
+    "theory": [],
     "pages": [
       3
     ],
@@ -842,7 +840,8 @@
       "Trong bối cảnh quy định của đề, đại lượng là mật độ từ thông B ở tần số lưới, với trung bình không quá 200 µT. Ngoại lệ dùng cụm “ít người qua lại” và kèm điều kiện tránh nguy hại cho con người."
     ],
     "theory": [
-      474
+      390,
+      441
     ],
     "pages": [
       4
@@ -1203,7 +1202,8 @@
       "Ngưỡng nhận điện ở đầu vào khách hàng lấy từ đường dây cao áp trên không là 500 kW trở lên theo điều kiện đề nêu."
     ],
     "theory": [
-      488
+      391,
+      474
     ],
     "pages": [
       5
@@ -1584,7 +1584,7 @@
       "Mục đầu là quá dòng. Mốc 10 000 kVA trong mục cuối liên quan đến sự cố nội bộ máy phát."
     ],
     "theory": [
-      401,
+      452,
       474
     ],
     "pages": [
@@ -1986,8 +1986,8 @@
       "Đề nêu ngoại lệ cho nhóm B khi dùng dây có độ bền kéo từ 14,51 kN hoặc dây đồng cứng bện có tiết diện từ 38 mm²."
     ],
     "theory": [
-      474,
-      477
+      456,
+      462
     ],
     "pages": [
       7
@@ -2292,7 +2292,7 @@
       "Đề dùng cặp “điện giật hoặc cháy” cho nơi nhiều bụi. Về nguy cơ bắt lửa, cụm đúng là hơi của chất dễ bắt lửa. Cặp động từ cho chất nguy hiểm dễ cháy là sản xuất hoặc lưu trữ."
     ],
     "theory": [
-      452
+      477
     ],
     "pages": [
       8
@@ -2583,7 +2583,7 @@
       "150 V là mốc chung của nhà ở. Hai trường hợp DC đến 450 V trong đề đi kèm các điều kiện riêng."
     ],
     "theory": [
-      456
+      477
     ],
     "pages": [
       9
@@ -3485,8 +3485,8 @@
       "Chạm đất cáp vào thuộc vùng bảo vệ của PAS có rơle chạm đất, vì vậy chỉnh để không tác động ở (e) là sai."
     ],
     "theory": [
-      401,
-      429
+      474,
+      490
     ],
     "pages": [
       11,
@@ -3808,7 +3808,7 @@
       "Thành phần ngang của lực néo là T × [[4~√(4² + 8²)]]. Cho bằng 15 kN được T ≈ 33,54 kN, gần 34 kN."
     ],
     "theory": [
-      477
+      503
     ],
     "pages": [
       13,
@@ -3985,7 +3985,7 @@
       "Dây cần chịu ít nhất 33,54 × 1,5 ≈ 50,31 kN. Chia cho 8,12 được khoảng 6,19 sợi, nên phải làm tròn lên 7."
     ],
     "theory": [
-      477
+      503
     ],
     "pages": [
       13,
@@ -4127,7 +4127,8 @@
       "Đối với phương án DC nêu trong đề, nhân mức AC với 2 được 20 700 V, duy trì liên tục 10 phút."
     ],
     "theory": [
-      441
+      441,
+      470
     ],
     "pages": [
       15
@@ -4393,7 +4394,8 @@
       "Dòng nạp I = 2πfCV ≈ 0,966 A. Công suất biểu kiến VI ≈ 10,0 kVA."
     ],
     "theory": [
-      441
+      441,
+      470
     ],
     "pages": [
       15,
@@ -4550,7 +4552,7 @@
       "Nhân các hệ số phụ tải được công suất trung bình 220, 210 và 252 kW. Tổng điện năng bằng (220 + 210 + 252) × 24 = 16 368 kWh."
     ],
     "theory": [
-      396
+      494
     ],
     "pages": [
       17
@@ -4686,7 +4688,7 @@
       "Tổng công suất trung bình từ câu (a) là 682 kW. Hệ số phụ tải tổng hợp bằng [[682~928]] × 100 ≈ 73,5%."
     ],
     "theory": [
-      396
+      494
     ],
     "pages": [
       17
