@@ -22,7 +22,7 @@ export default async function DenkenPastExamPage({ params, searchParams }: {
   const [{ testSlug }, { cau }] = await Promise.all([params, searchParams]);
   const exam = denkenPastExams.find(({ test }) => test.slug === testSlug);
   if (!exam) notFound();
-  const officialAnswer = denkenOfficialAnswers[exam.eraYear];
+  const officialAnswer = denkenOfficialAnswers[exam.year];
   const entryQuestion = typeof cau === "string"
     ? exam.questions.find(({ key }) => key === cau)
     : undefined;
@@ -38,21 +38,21 @@ export default async function DenkenPastExamPage({ params, searchParams }: {
         <Link href={denkenExamHref}>Đề thi các năm</Link>
         {officialAnswer && (
           <a href={officialAnswer} target="_blank" rel="noreferrer" className="underline">
-            Đáp án chính thức · H{exam.eraYear}
+            Đáp án chính thức · {exam.edition.toUpperCase()}
           </a>
         )}
       </nav>
       {(exam.subject === "riron" || exam.subject === "kikai") && (
         <p className="pt-3 text-sm text-muted">Đề gốc yêu cầu chọn câu 17 hoặc câu 18. Ở chế độ luyện tập, bạn có thể làm cả hai.</p>
       )}
-      {(exam.eraYear >= 26 && exam.eraYear <= 30) && (
+      {exam.year >= 2014 && (
         <p className="pt-2 text-sm text-muted">
           Nguồn đề gốc:{" "}
-          <a href={exam.eraYear >= 28 ? "https://www.shiken.or.jp/chief/third/qa/" : "https://www.shiken.or.jp/chief/third/qa/index_2.html"} target="_blank" rel="noreferrer" className="underline">
-            電気技術者試験センター · 平成{exam.eraYear}年度第三種電気主任技術者試験
+          <a href={exam.year >= 2016 ? "https://www.shiken.or.jp/chief/third/qa/" : "https://www.shiken.or.jp/chief/third/qa/index_2.html"} target="_blank" rel="noreferrer" className="underline">
+            電気技術者試験センター · {exam.eraLabel}第三種電気主任技術者試験
           </a>
           {". Phần chữ tiếng Nhật được biên tập cho giao diện. Ảnh đi kèm giữ đề gốc."}
-          {exam.subject === "houki" && ` Các câu pháp quy căn cứ vào văn bản có hiệu lực ngày 01/04/${1988 + exam.eraYear}.`}
+          {exam.subject === "houki" && ` Các câu pháp quy căn cứ vào văn bản có hiệu lực ngày 01/04/${exam.year}.`}
         </p>
       )}
       <TestRunner

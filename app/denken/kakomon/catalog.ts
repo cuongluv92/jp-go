@@ -40,20 +40,25 @@ import riron30 from "./h30/riron.json";
 import denryoku30 from "./h30/denryoku.json";
 import kikai30 from "./h30/kikai.json";
 import houki30 from "./h30/houki.json";
+import rironR1 from "./r1/riron.json";
+import denryokuR1 from "./r1/denryoku.json";
+import kikaiR1 from "./r1/kikai.json";
+import houkiR1 from "./r1/houki.json";
 
 export const denkenExamHref = "/denken/kakomon";
 
 export const denkenOfficialAnswers: Readonly<Partial<Record<number, string>>> = {
-  21: "https://www.shiken.or.jp/chief/upload/20090906_ch_third_a01.pdf",
-  22: "https://www.shiken.or.jp/chief/upload/20100905_ch_third_a01.pdf",
-  23: "https://www.shiken.or.jp/chief/upload/20110904_ch_third_a01.pdf",
-  24: "https://www.shiken.or.jp/chief/upload/20120909_ch_third_a01.pdf",
-  25: "https://www.shiken.or.jp/chief/upload/20130901_ch_third_a01.pdf",
-  26: "https://www.shiken.or.jp/chief/upload/20140907_ch_third_a01.pdf",
-  27: "https://www.shiken.or.jp/chief/upload/20150906_ch_third_a01.pdf",
-  28: "https://www.shiken.or.jp/chief/upload/20160904_ch_third_a01.pdf",
-  29: "https://www.shiken.or.jp/chief/upload/20170903_ch_third_a01.pdf",
-  30: "https://www.shiken.or.jp/chief/upload/20180902_ch_third_a01.pdf",
+  2009: "https://www.shiken.or.jp/chief/upload/20090906_ch_third_a01.pdf",
+  2010: "https://www.shiken.or.jp/chief/upload/20100905_ch_third_a01.pdf",
+  2011: "https://www.shiken.or.jp/chief/upload/20110904_ch_third_a01.pdf",
+  2012: "https://www.shiken.or.jp/chief/upload/20120909_ch_third_a01.pdf",
+  2013: "https://www.shiken.or.jp/chief/upload/20130901_ch_third_a01.pdf",
+  2014: "https://www.shiken.or.jp/chief/upload/20140907_ch_third_a01.pdf",
+  2015: "https://www.shiken.or.jp/chief/upload/20150906_ch_third_a01.pdf",
+  2016: "https://www.shiken.or.jp/chief/upload/20160904_ch_third_a01.pdf",
+  2017: "https://www.shiken.or.jp/chief/upload/20170903_ch_third_a01.pdf",
+  2018: "https://www.shiken.or.jp/chief/upload/20180902_ch_third_a01.pdf",
+  2019: "https://www.shiken.or.jp/chief/upload/20190901_ch_third_a01.pdf",
 };
 
 const testId = "denken-h21-riron";
@@ -147,14 +152,17 @@ function expandReadings(text: string, readings: (string | number)[][]) {
   }));
 }
 
-function makeExam(eraYear: number, subject: keyof typeof subjects, rows: QuestionContent[]) {
-  const slug = `h${eraYear}-${subject}`;
+function makeExam(eraYear: number, subject: keyof typeof subjects, rows: QuestionContent[], era: "h" | "r" = "h") {
+  const year = (era === "h" ? 1988 : 2018) + eraYear;
+  const edition = `${era}${eraYear}`;
+  const eraLabel = era === "h" ? `平成${eraYear}年度` : `令和${eraYear === 1 ? "元" : eraYear}年度`;
+  const slug = `${edition}-${subject}`;
   const id = `denken-${slug}`;
-  const title = `平成${eraYear}年度 · ${subjects[subject]}`;
-  const pilot = eraYear === 21 && subject === "riron";
+  const title = `${eraLabel} · ${subjects[subject]}`;
+  const pilot = edition === "h21" && subject === "riron";
   const test: ExamTest = {
     id, slug, title,
-    test_year: String(1988 + eraYear),
+    test_year: String(year),
     exam_stage: null,
     test_type: "kakomon",
     question_count: rows.length + Number(pilot),
@@ -204,10 +212,10 @@ function makeExam(eraYear: number, subject: keyof typeof subjects, rows: Questio
       topic: row.topic,
       theory: row.theory.map((page) => ({ page, title: theoryTitles.get(page) ?? "" })),
       source: row.answer === "all"
-        ? { href: "https://www.shiken.or.jp/chief/upload/20140907_ch_third_a01.pdf", label: `Đáp án chính thức · H${eraYear} 問${number}` }
-        : { href: `https://denken-ou.com/${subject}h${eraYear}-${number}/`, label: `Lời giải Nhật · H${eraYear} 問${number}` },
+        ? { href: "https://www.shiken.or.jp/chief/upload/20140907_ch_third_a01.pdf", label: `Đáp án chính thức · ${edition.toUpperCase()} 問${number}` }
+        : { href: `https://denken-ou.com/${subject}${edition}-${number}/`, label: `Lời giải Nhật · ${edition.toUpperCase()} 問${number}` },
       originalPages: row.pages.map((page) => ({
-        href: `/denken/kakomon/h${eraYear}/${subject}/${String(page).padStart(2, "0")}.webp`,
+        href: `/denken/kakomon/${edition}/${subject}/${String(page).padStart(2, "0")}.webp`,
         label: `Trang ${page} của đề gốc`,
       })),
       solution: row.solution,
@@ -228,7 +236,7 @@ function makeExam(eraYear: number, subject: keyof typeof subjects, rows: Questio
     });
   }
 
-  return { test, questions, subject, eraYear };
+  return { test, questions, subject, eraYear, year, eraLabel, edition };
 }
 
 export const denkenPastExams = [
@@ -272,6 +280,10 @@ export const denkenPastExams = [
   makeExam(30, "denryoku", denryoku30),
   makeExam(30, "kikai", kikai30),
   makeExam(30, "houki", houki30),
+  makeExam(1, "riron", rironR1, "r"),
+  makeExam(1, "denryoku", denryokuR1, "r"),
+  makeExam(1, "kikai", kikaiR1, "r"),
+  makeExam(1, "houki", houkiR1, "r"),
 ];
 
 export function denkenQuestionHref(testSlug: string, key: string) {
