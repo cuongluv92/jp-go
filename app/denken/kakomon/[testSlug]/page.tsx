@@ -45,7 +45,7 @@ export default async function DenkenPastExamPage({ params, searchParams }: {
       {(exam.subject === "riron" || exam.subject === "kikai") && (
         <p className="pt-3 text-sm text-muted">Đề gốc yêu cầu chọn câu 17 hoặc câu 18. Ở chế độ luyện tập, bạn có thể làm cả hai.</p>
       )}
-      {(exam.eraYear >= 26 && exam.eraYear <= 29) && (
+      {(exam.eraYear >= 26 && exam.eraYear <= 30) && (
         <p className="pt-2 text-sm text-muted">
           Nguồn đề gốc:{" "}
           <a href={exam.eraYear >= 28 ? "https://www.shiken.or.jp/chief/third/qa/" : "https://www.shiken.or.jp/chief/third/qa/index_2.html"} target="_blank" rel="noreferrer" className="underline">

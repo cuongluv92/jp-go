@@ -36,6 +36,10 @@ import riron29 from "./h29/riron.json";
 import denryoku29 from "./h29/denryoku.json";
 import kikai29 from "./h29/kikai.json";
 import houki29 from "./h29/houki.json";
+import riron30 from "./h30/riron.json";
+import denryoku30 from "./h30/denryoku.json";
+import kikai30 from "./h30/kikai.json";
+import houki30 from "./h30/houki.json";
 
 export const denkenExamHref = "/denken/kakomon";
 
@@ -49,6 +53,7 @@ export const denkenOfficialAnswers: Readonly<Partial<Record<number, string>>> = 
   27: "https://www.shiken.or.jp/chief/upload/20150906_ch_third_a01.pdf",
   28: "https://www.shiken.or.jp/chief/upload/20160904_ch_third_a01.pdf",
   29: "https://www.shiken.or.jp/chief/upload/20170903_ch_third_a01.pdf",
+  30: "https://www.shiken.or.jp/chief/upload/20180902_ch_third_a01.pdf",
 };
 
 const testId = "denken-h21-riron";
@@ -263,6 +268,10 @@ export const denkenPastExams = [
   makeExam(29, "denryoku", denryoku29),
   makeExam(29, "kikai", kikai29),
   makeExam(29, "houki", houki29),
+  makeExam(30, "riron", riron30),
+  makeExam(30, "denryoku", denryoku30),
+  makeExam(30, "kikai", kikai30),
+  makeExam(30, "houki", houki30),
 ];
 
 export function denkenQuestionHref(testSlug: string, key: string) {
