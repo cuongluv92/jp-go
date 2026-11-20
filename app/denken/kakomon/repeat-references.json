@@ -1,0 +1,51 @@
+{
+  "riron": [
+    ["h23", "2", "r8-early", "1", "similar", "reviewed"],
+    ["h21", "3", "r8-early", "3", "same", "reviewed"],
+    ["h25", "5", "r8-early", "7", "similar", "reviewed"],
+    ["h21", "7", "r8-early", "9", "same", "reviewed"],
+    ["h23", "18a", "r8-early", "18a", "same", "reviewed"],
+    ["h23", "18b", "r8-early", "18b", "same", "reviewed"],
+    ["r4-early", "6", "r8-early", "6", "similar", "pdf"],
+    ["r5-early", "5", "r6-early", "5", "similar", "pdf"],
+    ["r5-early", "14", "r8-early", "14", "similar", "pdf"],
+    ["r5-early", "17a", "r7-late", "17a", "similar", "pdf"],
+    ["r5-early", "17b", "r7-late", "17b", "similar", "pdf"],
+    ["r6-early", "10", "r7-early", "10", "similar", "pdf"]
+  ],
+  "denryoku": [
+    ["h23", "9", "r8-early", "13", "similar", "reviewed"],
+    ["r4-early", "16a", "r6-early", "16a", "similar", "pdf"],
+    ["r4-early", "16b", "r6-early", "16b", "similar", "pdf"],
+    ["r4-late", "8", "r5-late", "8", "similar", "pdf"]
+  ],
+  "kikai": [
+    ["h28", "4", "r8-early", "4", "same", "reviewed"],
+    ["r3", "14", "r8-early", "14", "same", "reviewed"],
+    ["r4-late", "7", "r6-late", "7", "similar", "pdf"],
+    ["r4-late", "16a", "r6-early", "16a", "similar", "pdf"],
+    ["r4-late", "16b", "r6-early", "16b", "similar", "pdf"],
+    ["r4-late", "17a", "r6-late", "17a", "similar", "pdf"],
+    ["r4-late", "17b", "r6-late", "17b", "similar", "pdf"],
+    ["r5-late", "16a", "r6-late", "16a", "similar", "pdf"],
+    ["r5-late", "16b", "r6-late", "16b", "similar", "pdf"],
+    ["r6-early", "5", "r7-late", "5", "similar", "pdf"],
+    ["r6-late", "5", "r8-early", "5", "similar", "pdf"],
+    ["r6-late", "14", "r7-early", "14", "similar", "pdf"]
+  ],
+  "houki": [
+    ["h22", "7", "r8-early", "6", "similar", "reviewed"],
+    ["h21", "11a", "r8-early", "12a", "same", "reviewed"],
+    ["h21", "11b", "r8-early", "12b", "same", "reviewed"],
+    ["r4-early", "9", "r7-early", "1", "similar", "pdf"],
+    ["r4-late", "7", "r7-early", "9", "similar", "pdf"],
+    ["r4-late", "8", "r8-early", "7", "similar", "pdf"],
+    ["r4-late", "12a", "r8-early", "11a", "similar", "pdf"],
+    ["r4-late", "12b", "r8-early", "11b", "similar", "pdf"],
+    ["r5-early", "12a", "r6-late", "12a", "similar", "pdf"],
+    ["r5-early", "12b", "r6-late", "12b", "similar", "pdf"],
+    ["r5-late", "3", "r6-late", "3", "similar", "pdf"],
+    ["r5-late", "12a", "r6-early", "12a", "similar", "pdf"],
+    ["r5-late", "12b", "r6-early", "12b", "similar", "pdf"]
+  ]
+}

@@ -1,5 +1,7 @@
 import Link from "next/link";
 import { denkenExamHref, denkenPastExams } from "./catalog";
+import { getDenkenStatistics } from "./statistics";
+import { DenkenStatisticsPanel } from "./statistics-panel";
 
 export const metadata = { title: "Đề thi các năm · 電験三種 · JP-GO" };
 
@@ -36,6 +38,7 @@ export default function DenkenPastExamsPage() {
           </details>
         ))}
       </div>
+      <DenkenStatisticsPanel subjects={getDenkenStatistics()} />
     </section>
   );
 }
