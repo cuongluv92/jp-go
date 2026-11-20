@@ -361,7 +361,7 @@ function makeExam(
         { page: 5, title: "Điện trở tương đương nối tiếp và song song" },
       ],
       source: { href: "https://eleking.net/denken3/d3rq/d3rq-h21a06.html", label: "Lời giải Nhật · H21 理論 問6" },
-      originalPages: [],
+      originalPages: [{ href: "/denken/kakomon/h21/riron/07.webp", label: "Trang 7 của đề gốc" }],
     });
   }
 

@@ -1763,7 +1763,7 @@
     "titleJp": "重陽子の核反応と静電エネルギー",
     "topic": "Phản ứng của hạt nhân đơteri và thế năng điện",
     "questionJp": "陽子と中性子を一つずつ含む重陽子の反応を ²₁H + ²₁H → ³₂He + ¹₀n とする。これは（ア）反応で、総質量がΔmだけ（イ）し、（ウ）で表されるエネルギー5.4×10⁻¹³ Jを放出する。距離4.0×10⁻¹⁵ mでの二つの重陽子の静電的な位置エネルギーは（エ）Jである。c = 3.0×10⁸ m/s、k = 9.0×10⁹ N·m²/C²、e = 1.6×10⁻¹⁹ Cとし、位置エネルギーは無限遠を基準としてU = kq₁q₂/rで与える。正しい組合せを選べ。",
-    "questionVi": "Hai hạt nhân đơteri, mỗi hạt gồm một proton và một neutron, tham gia phản ứng ²₁H + ²₁H → ³₂He + ¹₀n. Điền loại phản ứng (ア), chiều biến thiên tổng khối lượng Δm (イ), biểu thức cho 5,4×10⁻¹³ J năng lượng giải phóng (ウ) và thế năng tĩnh điện [J] của hai hạt ở khoảng cách 4,0×10⁻¹⁵ m (エ). Cho c = 3,0×10⁸ m/s, k = 9,0×10⁹ N·m²/C², e = 1,6×10⁻¹⁹ C và U = kq₁q₂/r với mốc ở vô cực.",
+    "questionVi": "Đoạn sau nói về phản ứng hạt nhân giữa hai hạt nhân đơteri. Hạt nhân đơteri ²₁H gồm một proton liên kết với một neutron. Chọn tổ hợp đúng cho (ア)–(エ).\n\n²₁H + ²₁H → ³₂He + ¹₀n     (1)\n\nPhản ứng (1) tạo ra một hạt nhân có số khối lớn hơn số khối của từng hạt ban đầu, nên đây là phản ứng (ア). Sau phản ứng, tổng khối lượng (イ) một lượng Δm [kg] và giải phóng 5,4×10⁻¹³ J năng lượng hạt nhân, biểu diễn bằng (ウ) [J]. Đề cho khoảng cách giữa hai hạt khi xét phản ứng là xấp xỉ 4,0×10⁻¹⁵ m. Ở khoảng cách này, thế năng do lực tĩnh điện giữa hai hạt nhân đơteri là (エ) J.\n\nCho tốc độ ánh sáng trong chân không c = 3,0×10⁸ m/s, hằng số Coulomb k = 9,0×10⁹ N·m²/C² và điện tích nguyên tố e = 1,6×10⁻¹⁹ C. Với hai điện tích điểm q₁ [C] và q₂ [C] cách nhau r [m], thế năng tĩnh điện là U = kq₁q₂/r [J], lấy mốc ở vô cực.",
     "choicesJp": [
       "核分裂 / 増加 / Δmc² / 3.6×10⁻¹⁴",
       "核融合 / 減少 / Δmc² / 5.8×10⁻¹⁴",

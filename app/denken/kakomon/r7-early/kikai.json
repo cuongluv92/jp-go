@@ -2176,7 +2176,7 @@
     "titleJp": "四隅の光源による水平面照度",
     "topic": "Độ rọi ngang do bốn đèn ở các góc",
     "questionJp": "幅6 m、奥行8 mの駐車場の四隅に高さ5 mの均等光源を置く。一灯5 000 lmのとき中心Oの水平面照度を求めよ。",
-    "questionVi": "Bãi đỗ 6×8 m có bốn nguồn đẳng hướng ở bốn góc, cao 5 m, mỗi nguồn 5 000 lm. Tính độ rọi ngang ở tâm.",
+    "questionVi": "Một bãi đỗ xe hình chữ nhật rộng 6 m, sâu 8 m như hình. Ở bốn góc có bốn cột, trên đỉnh mỗi cột ở độ cao 5 m so với mặt đất đặt một đèn có quang thông toàn phần 5 000 lm. Coi mỗi đèn là nguồn sáng đẳng hướng. Chọn giá trị độ rọi trên mặt phẳng ngang tại tâm O của bãi đỗ [lx] gần nhất.",
     "choicesJp": [
       "283 lx",
       "141 lx",
@@ -2632,7 +2632,7 @@
     "titleJp": "小滑りでの誘導機トルク",
     "topic": "Mômen động cơ không đồng bộ ở độ trượt nhỏ",
     "questionJp": "(a) 二次抵抗換算値r₂/sが一次抵抗・漏れリアクタンスより十分大きい。トルクTと電圧V、滑りsの近似関係を選べ。",
-    "questionVi": "(a) Khi r₂/s quy đổi lớn hơn nhiều điện trở sơ cấp và điện kháng tản, chọn biểu thức gần đúng của mômen T theo V và s.",
+    "questionVi": "Xét động cơ cảm ứng ba pha.\n\n(a) Động cơ được thiết kế sao cho tỷ số r₂/s của điện trở dây quấn thứ cấp quy về sơ cấp r₂ với độ trượt s lớn hơn nhiều so với các hằng số sau: điện trở dây quấn sơ cấp r₁, điện kháng dây quấn sơ cấp x₁ và điện kháng dây quấn thứ cấp quy về sơ cấp x₂. Khi nối động cơ với nguồn có điện áp V và vận hành, chọn công thức gần đúng biểu diễn quan hệ giữa mô-men T, độ trượt s và điện áp V. Trong các công thức, k là hằng số.",
     "choicesJp": [
       "k/(Vs)",
       "k/(V²s)",
@@ -2754,7 +2754,7 @@
     "titleJp": "電圧低下で変わる滑りと速度",
     "topic": "Độ trượt và tốc độ khi giảm điện áp",
     "questionJp": "(b) 同期速度1 200 min⁻¹、220 Vで1 140 min⁻¹の誘導機を一定トルクで200 Vに下げる。回転速度を求めよ。",
-    "questionVi": "(b) Động cơ có tốc độ đồng bộ 1 200 vòng/phút, chạy 1 140 vòng/phút ở 220 V. Giảm xuống 200 V ở cùng mômen. Tính tốc độ mới.",
+    "questionVi": "(b) Động cơ cảm ứng ba pha được thiết kế với điều kiện ở phần (a), có điện áp định mức 220 V và tốc độ đồng bộ 1 200 vòng/phút. Khi cấp 220 V và vận hành với tải có mô-men không đổi, tốc độ quay là 1 140 vòng/phút. Hạ điện áp cấp xuống 200 V. Giả sử mô-men tải và điện trở thứ cấp không đổi khi hạ áp, chọn giá trị tốc độ quay [vòng/phút] gần nhất.",
     "choicesJp": [
       "1 150 min⁻¹",
       "1 127 min⁻¹",
@@ -2841,7 +2841,7 @@
     "titleJp": "直流チョッパのオン時間",
     "topic": "Thời gian đóng khóa bộ băm DC",
     "questionJp": "(a) 200 V、500 Hzの他励直流機用チョッパで、Q₂をオフ。V₁平均150 VとなるQ₁のオン時間を求めよ。",
-    "questionVi": "(a) Bộ băm DC cấp động cơ kích từ độc lập, nguồn 200 V, tần số 500 Hz. Q₂ luôn mở. Tính thời gian Q₁ dẫn mỗi chu kỳ để V₁ trung bình 150 V.",
+    "questionVi": "Dùng bộ băm một chiều để điều khiển máy điện một chiều kích từ độc lập như hình. Điện áp nguồn E giữ ở 200 V, điện áp phần ứng là V. Hai IGBT Q₁ và Q₂ có tần số đóng cắt 500 Hz khi được điều khiển. Chỉ xét trạng thái xác lập.\n\n(a) Khi vận hành máy ở chế độ động cơ, giữ Q₂ ở trạng thái tắt và điều khiển đóng cắt Q₁ để điều chỉnh V. Nếu điện áp trung bình tại V₁ bằng 150 V, chọn thời gian Q₁ ở trạng thái dẫn trong một chu kỳ [ms] gần nhất.",
     "choicesJp": [
       "1.75 ms",
       "1.50 ms",
@@ -2918,7 +2918,7 @@
     "titleJp": "回生制動時の電機子電圧",
     "topic": "Điện áp phần ứng khi hãm tái sinh",
     "questionJp": "(b) 回生制動でQ₁をオフ、周期2 msのうちQ₂を0.4 msオンする。電源200 Vのとき定常電機子電圧Vを求めよ。",
-    "questionVi": "(b) Khi hãm tái sinh, Q₁ luôn mở và Q₂ dẫn 0,4 ms trong chu kỳ 2 ms. Tìm điện áp phần ứng xác lập với nguồn 200 V.",
+    "questionVi": "Dùng bộ băm một chiều để điều khiển máy điện một chiều kích từ độc lập như hình. Điện áp nguồn E giữ ở 200 V, điện áp phần ứng là V. Hai IGBT Q₁ và Q₂ có tần số đóng cắt 500 Hz khi được điều khiển. Chỉ xét trạng thái xác lập.\n\n(b) Giữ Q₁ tắt và điều khiển đóng cắt Q₂ để đảo chiều dòng phần ứng so với phần (a), đưa máy sang chế độ phát điện để hãm tái sinh. Nếu Q₂ dẫn 0,4 ms trong mỗi chu kỳ đóng cắt, chọn giá trị điện áp phần ứng V [V] gần nhất.",
     "choicesJp": [
       "1 000 V",
       "250 V",

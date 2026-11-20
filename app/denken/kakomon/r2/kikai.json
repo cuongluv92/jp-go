@@ -3768,7 +3768,9 @@
       "Chênh lệch nhiệt độ ΔT thúc đẩy nhiệt truyền. Dòng nhiệt Φ là năng lượng truyền mỗi giây, đơn vị W.",
       "Nhiệt trở Rₜ = [[ΔT~Φ]] có đơn vị K/W. Nhiệt dung C = [[ΔQ~ΔT]] có đơn vị J/K."
     ],
-    "theory": [],
+    "theory": [
+      274
+    ],
     "pages": [
       15
     ],

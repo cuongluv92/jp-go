@@ -4814,7 +4814,9 @@
       "Cuộn kháng có Z = jωL nên ở sóng hài bậc 5 phải nhân 5. Dây phân phối theo mô hình cảm của đề cũng nhân 5.",
       "Tụ có Z = −j/(ωC) nên chia độ lớn cho 5. Kết quả lần lượt là j22 Ω, j165 Ω và −j109 Ω."
     ],
-    "theory": [],
+    "theory": [
+      490
+    ],
     "pages": [
       19
     ],
@@ -4953,7 +4955,9 @@
       "Dòng tối đa lên lưới là 3,5 × 250 = 875 mA = 0,875 A. Ở bậc 5, nhánh tụ và kháng nối tiếp có Z = j165 − j109 = j56 Ω.",
       "Theo chia dòng, nhánh lưới j22 Ω nhận phần [[56~22 + 56]] của I₅. Suy ra I₅ tối đa bằng 0,875 × [[78~56]] ≈ 1,22 A."
     ],
-    "theory": [],
+    "theory": [
+      490
+    ],
     "pages": [
       19,
       20

@@ -46,16 +46,14 @@ export default async function DenkenPastExamPage({ params, searchParams }: {
       {(exam.subject === "riron" || exam.subject === "kikai") && (
         <p className="pt-3 text-sm text-muted">Đề gốc yêu cầu chọn câu 17 hoặc câu 18. Ở chế độ luyện tập, bạn có thể làm cả hai.</p>
       )}
-      {exam.year >= 2014 && (
-        <p className="pt-2 text-sm text-muted">
-          Nguồn đề gốc:{" "}
-          <a href={exam.year >= 2016 ? "https://www.shiken.or.jp/chief/third/qa/" : "https://www.shiken.or.jp/chief/third/qa/index_2.html"} target="_blank" rel="noreferrer" className="underline">
-            電気技術者試験センター · {exam.examLabel} 第三種電気主任技術者試験
-          </a>
-          {". Phần chữ tiếng Nhật được biên tập cho giao diện. Ảnh đi kèm giữ đề gốc."}
-          {exam.subject === "houki" && ` Các câu pháp quy căn cứ vào văn bản có hiệu lực ngày 01/04/${exam.year}.`}
-        </p>
-      )}
+      <p className="pt-2 text-sm text-muted">
+        Nguồn đề gốc:{" "}
+        <a href={exam.year >= 2016 ? "https://www.shiken.or.jp/chief/third/qa/" : "https://www.shiken.or.jp/chief/third/qa/index_2.html"} target="_blank" rel="noreferrer" className="underline">
+          電気技術者試験センター · {exam.examLabel} 第三種電気主任技術者試験
+        </a>
+        {". Phần chữ tiếng Nhật được biên tập cho giao diện. Ảnh đi kèm từ đề gốc."}
+        {exam.subject === "houki" && exam.year >= 2014 && ` Các câu pháp quy căn cứ vào văn bản có hiệu lực ngày 01/04/${exam.year}.`}
+      </p>
       <TestRunner
         key={`${user.id}:${exam.test.id}:${cau ?? ""}`}
         test={exam.test}

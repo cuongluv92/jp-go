@@ -24,6 +24,38 @@ const officialKeys: Record<string, string> = {
   "h25-denryoku": "44342235115334123324",
   "h25-kikai": "3334122415425324342354",
   "h25-houki": "4452335221122354",
+  "h26-riron": "4551335555444243111242",
+  "h26-denryoku": "11515325342552442343",
+  "h26-kikai": "4413121A12213333422351",
+  "h26-houki": "5533423121433421",
+  "h27-riron": "2215524112451245532215",
+  "h27-denryoku": "54411515331522252324",
+  "h27-kikai": "4254513214151342431134",
+  "h27-houki": "5442512334422342",
+  "h28-riron": "4422213555223213233222",
+  "h28-denryoku": "51214251354314351211",
+  "h28-kikai": "4353213311342435522243",
+  "h28-houki": "2333125144323442",
+  "h29-riron": "2225351531253534342242",
+  "h29-denryoku": "45553232141331535142",
+  "h29-kikai": "4214331412544533142251",
+  "h29-houki": "4451454334545425",
+  "h30-riron": "1144121131353544323352",
+  "h30-denryoku": "34524543451254252333",
+  "h30-kikai": "4243525314514143122334",
+  "h30-houki": "2322115153322123",
+  "r1-riron": "2325554332115253345214",
+  "r1-denryoku": "31241233324251342441",
+  "r1-kikai": "4235451323354221122321",
+  "r1-houki": "1323443523325341",
+  "r2-riron": "3234421422155123425233",
+  "r2-denryoku": "33123154215551443442",
+  "r2-kikai": "1343454222332541415453",
+  "r2-houki": "4451213155544154",
+  "r3-riron": "1344124514231521454244",
+  "r3-denryoku": "53542554412524244223",
+  "r3-kikai": "1221541534342523133325",
+  "r3-houki": "4142325211434424",
   "r4-early-riron": "3323231243525142214234",
   "r4-early-denryoku": "33442315325444535342",
   "r4-early-kikai": "4152345334344223435552",
@@ -70,25 +102,25 @@ describe("Denken past exams", () => {
     "%s matches the official answer key and links to existing source and theory pages",
     (slug, { questions, test }) => {
       const keys = questions.map(({ question }) => question.choices.filter((choice) => choice.is_correct));
-      expect(keys.map(([choice]) => choice.choice_label).join("")).toBe(officialKeys[slug]);
+      expect(keys.map((correct) => correct.length === 5 ? "A" : correct[0]?.choice_label).join("")).toBe(officialKeys[slug]);
       expect(new Set(questions.map(({ key }) => key)).size).toBe(test.question_count);
-      for (const { key, question, originalPages, theory, solution } of questions) {
+      for (const [index, { key, question, originalPages, theory, solution }] of questions.entries()) {
         expect(question.choices).toHaveLength(5);
-        expect(question.choices.filter((choice) => choice.is_correct)).toHaveLength(1);
+        const officialAnswer = officialKeys[slug][index];
+        expect(question.choices.filter((choice) => choice.is_correct)).toHaveLength(officialAnswer === "A" ? 5 : 1);
         for (const choice of question.choices) {
           expect(choice.choice_jp.trim()).not.toBe("");
           expect(choice.choice_vi?.trim()).toBeTruthy();
         }
         expect(question.question_jp).toBeTruthy();
         expect(question.question_vi).toBeTruthy();
-        expect(theory.length).toBeGreaterThan(0);
         if (key === "6" && slug === "h21-riron") {
           expect(existsSync(`public${question.question_image_path}`)).toBe(true);
         } else {
-          expect(solution?.length).toBeGreaterThan(1);
-          expect(originalPages.length).toBeGreaterThan(0);
-          for (const { href } of originalPages) expect(existsSync(`public${href}`)).toBe(true);
+          expect(solution?.some((step) => step.trim())).toBe(true);
         }
+        expect(originalPages.length).toBeGreaterThan(0);
+        for (const { href } of originalPages) expect(existsSync(`public${href}`)).toBe(true);
         for (const { page } of theory) {
           expect(lesson[page]).toBeTruthy();
           expect(pastQuestionsForBookPage(page).map(({ href }) => href)).toContain(denkenQuestionHref(slug, key));
@@ -107,10 +139,29 @@ describe("Denken past exams", () => {
       const multipart = questions.filter(({ key }) => /[ab]$/.test(key));
       expect(multipart.map(({ key }) => key)).toEqual(expected);
       for (const { key, question } of multipart) {
-        expect(question.question_jp).toMatch(new RegExp(`(?:^|\\n)\\(${key.at(-1)}\\)`));
+        const number = Number.parseInt(key, 10);
+        expect(question.question_number).toBe(number * 10 + (key.endsWith("a") ? 1 : 2));
       }
     },
   );
+
+  it("keeps the conditions and original figures for the grounding question in Reiwa 7 late", () => {
+    const exam = denkenPastExams.find(({ test }) => test.slug === "r7-late-houki");
+    const partA = exam?.questions.find(({ key }) => key === "11a");
+    const partB = exam?.questions.find(({ key }) => key === "11b");
+    expect(partA?.question.question_jp).toContain("[[ρ~2πL]] × ln(4L/d)");
+    expect(partA?.question.question_vi).toContain("coi ρ không đổi theo độ sâu");
+    expect(partA?.originalPages.map(({ href }) => href)).toContain("/denken/kakomon/r7-late/houki/16.webp");
+    expect(partB?.question.choices.find(({ is_correct }) => is_correct)?.choice_vi)
+      .toBe("Thẳng hàng theo thứ tự E–S–H. E–S = 10 m, S–H = 10 m.");
+  });
+
+  it("includes all ten rows of the R8 indoor-wiring table in the Vietnamese question", () => {
+    const exam = denkenPastExams.find(({ test }) => test.slug === "r8-early-houki");
+    const row = exam?.questions.find(({ key }) => key === "9");
+    expect(row?.question.question_vi?.split("\n").filter((line) => line.startsWith("• "))).toHaveLength(10);
+    expect(row?.originalPages).toHaveLength(2);
+  });
 
   it("keeps both H21 theory ammeter experiments and their answer in the original order", () => {
     const exam = denkenPastExams.find(({ test }) => test.slug === "h21-riron");

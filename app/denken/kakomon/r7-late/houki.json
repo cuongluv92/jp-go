@@ -3174,8 +3174,8 @@
     ],
     "titleJp": "棒状接地極の最小長さ",
     "topic": "Chiều dài cọc nối đất trong bài toán",
-    "questionJp": "(a) 棒状接地極の大地抵抗率150 Ω·m、直径0.014 m。R=ρln[[4L/d~2πL]]を用いて、100 Ω以下となる最短のLを選べ。",
-    "questionVi": "(a) Cọc có đường kính 0,014 m, điện trở suất đất 150 Ω·m. Dùng công thức của đề R=ρln(4L/d)/(2πL). Chọn chiều dài nhỏ nhất trong các phương án để R≤100 Ω.",
+    "questionJp": "(a) 棒状接地極を大地抵抗率ρ［Ω·m］の土壌に埋設する（図1）。接地抵抗は R = [[ρ~2πL]] × ln(4L/d) で与えられる。Lは接地極の長さ、dは直径［m］、πは円周率、lnは自然対数である。x = 4L/dと置くと、R = [[2ρ~πd]] × [[ln(x)~x]] となる。Lがdに比べ十分大きいとして、200 ≦ x ≦ 1 000でのln(x)/xを図2に示す。ρ = 150 Ω·m、d = 14×10⁻³ mのとき、Rが100 Ω以下となる最小のL［m］に最も近いものを選べ。ただし、ρは深さによらず一定とする。",
+    "questionVi": "Câu hỏi về điện cực nối đất và phép đo điện trở nối đất.\n\n(a) Hình 1 mô tả một điện cực nối đất dạng cọc chôn trong đất có điện trở suất ρ [Ω·m]. Điện trở nối đất R [Ω] của cọc được cho bởi công thức (1).\nR = [[ρ~2πL]] × ln(4L/d)     (1)\nTrong đó L [m] là chiều dài, d [m] là đường kính cọc, π là số pi và ln(4L/d) là logarit tự nhiên của 4L/d.\n\nĐặt x = 4L/d, viết lại được công thức (2).\nR = [[2ρ~πd]] × [[ln(x)~x]]     (2)\nKhi L lớn hơn nhiều so với d, Hình 2 cho giá trị ln(x)/x trong khoảng 200 ≤ x ≤ 1 000.\n\nCho ρ = 150 Ω·m, d = 14×10⁻³ m và coi ρ không đổi theo độ sâu. Muốn R không quá 100 Ω, chọn giá trị gần nhất với chiều dài tối thiểu L [m].",
     "choicesJp": [
       "0.7 m",
       "1.0 m",
@@ -3207,13 +3207,8 @@
       ],
       [
         6,
-        2,
-        "せっち"
-      ],
-      [
-        8,
-        1,
-        "きょく"
+        3,
+        "せっちきょく"
       ],
       [
         10,
@@ -3222,38 +3217,133 @@
       ],
       [
         12,
+        3,
+        "ていこうりつ"
+      ],
+      [
+        22,
+        2,
+        "どじょう"
+      ],
+      [
+        25,
+        2,
+        "まいせつ"
+      ],
+      [
+        30,
+        1,
+        "ず"
+      ],
+      [
+        34,
+        2,
+        "せっち"
+      ],
+      [
+        36,
         2,
         "ていこう"
       ],
       [
-        14,
+        66,
         1,
-        "りつ"
+        "あた"
       ],
       [
-        23,
+        74,
+        3,
+        "せっちきょく"
+      ],
+      [
+        78,
+        1,
+        "なが"
+      ],
+      [
+        83,
         2,
         "ちょっけい"
       ],
       [
-        51,
-        1,
-        "もち"
+        91,
+        3,
+        "えんしゅうりつ"
       ],
       [
-        60,
+        98,
+        4,
+        "しぜんたいすう"
+      ],
+      [
+        115,
+        1,
+        "お"
+      ],
+      [
+        155,
+        1,
+        "くら"
+      ],
+      [
+        157,
+        1,
+        "じゅう"
+      ],
+      [
+        158,
+        1,
+        "ふん"
+      ],
+      [
+        159,
+        1,
+        "おお"
+      ],
+      [
+        191,
+        1,
+        "ず"
+      ],
+      [
+        194,
+        1,
+        "しめ"
+      ],
+      [
+        233,
         2,
         "いか"
       ],
       [
-        65,
+        238,
         2,
-        "さいたん"
+        "さいしょう"
       ],
       [
-        70,
+        246,
+        1,
+        "もっと"
+      ],
+      [
+        248,
+        1,
+        "ちか"
+      ],
+      [
+        253,
         1,
         "えら"
+      ],
+      [
+        262,
+        1,
+        "ふか"
+      ],
+      [
+        268,
+        2,
+        "いってい"
       ]
     ],
     "choiceReadings": [
@@ -3273,7 +3363,7 @@
     "titleJp": "接地抵抗測定の補助極配置",
     "topic": "Bố trí điện cực phụ khi đo điện trở nối đất",
     "questionJp": "(b) 直読式接地抵抗計で被測定極E、電圧用S、電流用Hを設置する配置を図から選べ。",
-    "questionVi": "(b) Chọn sơ đồ bố trí điện cực cần đo E, điện cực đo áp S và điện cực dòng H cho phép đo trong đề.",
+    "questionVi": "(b) Khi dùng máy đo điện trở nối đất kiểu đọc trực tiếp, cần chọn vị trí trên mặt đất cho hai điện cực phụ S (điện áp) và H (dòng điện) so với điện cực nối đất E cần đo. Chọn cách bố trí phù hợp nhất trong năm sơ đồ.",
     "choicesJp": [
       "図(1)",
       "図(2)",
@@ -3282,11 +3372,11 @@
       "図(5)"
     ],
     "choicesVi": [
-      "Hình (1)",
-      "Hình (2)",
-      "Hình (3)",
-      "Hình (4)",
-      "Hình (5)"
+      "Ba cọc tạo thành tam giác. S–H = 10 m, S–E = 10 m, H–E = 2 m.",
+      "Ba cọc tạo thành tam giác. E–H = 10 m, E–S = 10 m, H–S = 2 m.",
+      "Thẳng hàng theo thứ tự E–H–S. E–H = 4 m, H–S = 2 m.",
+      "Thẳng hàng theo thứ tự E–S–H. E–S = 10 m, S–H = 10 m.",
+      "Thẳng hàng theo thứ tự S–E–H. S–E = 10 m, E–H = 2 m."
     ],
     "solution": [
       "Theo sơ đồ điển hình được hỏi, ba điện cực thẳng hàng, điện cực đo áp S ở giữa E và H.",
@@ -3427,7 +3517,7 @@
     "titleJp": "CVケーブルの耐圧試験の充電電流",
     "topic": "Dòng nạp điện dung cáp CV trong bài thử cách điện",
     "questionJp": "(a) 最大使用電圧6.9 kVの電路用CVケーブルは800 m、対地静電容量0.45 µF/km。50 Hzの交流耐圧試験の充電電流を求めよ。",
-    "questionVi": "(a) Cáp CV dùng cho mạch có điện áp sử dụng tối đa 6,9 kV, dài 800 m, điện dung đối đất 0,45 µF/km. Tính dòng nạp tại phép thử AC 50 Hz của đề.",
+    "questionVi": "Câu hỏi về thử độ bền cách điện bằng điện xoay chiều theo Hướng dẫn áp dụng Tiêu chuẩn kỹ thuật thiết bị điện. Cáp CV cao áp một lõi, tiết diện ruột dẫn 100 mm², dài 800 m, nối vào mạch điện có điện áp sử dụng tối đa 6,9 kV. Tần số thử 50 Hz. Giả sử điện dung đối đất của cáp là 0,45 µF mỗi kilômét.\n\n(a) Khi đặt điện áp thử lên cáp, chọn giá trị dòng nạp [A] gần nhất.",
     "choicesJp": [
       "0.78 A",
       "1.17 A",
@@ -3545,7 +3635,7 @@
     "titleJp": "耐圧試験の補償リアクトル台数",
     "topic": "Số cuộn kháng bù trong bài thử cách điện",
     "questionJp": "(b) 試験用変圧器5 kVA、試験電圧10.35 kV、ケーブル電流1.17 A、補償器一台270 mA。必要な最小台数を選べ。",
-    "questionVi": "(b) Máy biến áp thử 5 kVA tại 10,35 kV, cáp nhận dòng nạp 1,17 A, mỗi kháng bù được 270 mA. Chọn số kháng tối thiểu.",
+    "questionVi": "Câu hỏi về thử độ bền cách điện bằng điện xoay chiều theo Hướng dẫn áp dụng Tiêu chuẩn kỹ thuật thiết bị điện. Cáp CV cao áp một lõi, tiết diện ruột dẫn 100 mm², dài 800 m, nối vào mạch điện có điện áp sử dụng tối đa 6,9 kV. Tần số thử 50 Hz. Giả sử điện dung đối đất của cáp là 0,45 µF mỗi kilômét.\n\n(b) Thực hiện thử cách điện bằng mạch trên hình và dùng máy biến áp thử công suất 5 kVA. Mỗi cuộn kháng bù có thể mang dòng tối đa 270 mA khi đặt điện áp thử. Chọn số cuộn kháng bù tối thiểu.",
     "choicesJp": [
       "1台",
       "2台",

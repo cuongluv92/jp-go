@@ -1150,7 +1150,7 @@
     "titleJp": "短絡特性と同期インピーダンス",
     "topic": "Đặc tuyến ngắn mạch và tổng trở đồng bộ",
     "questionJp": "界磁500 Aで無負荷線間15.2 kV、界磁100 Aで短絡860 A。界磁500 Aでの同期インピーダンスを求めよ。",
-    "questionVi": "Máy phát có điện áp dây không tải 15,2 kV tại kích từ 500 A. Kích từ 100 A cho dòng ngắn mạch 860 A. Tính tổng trở đồng bộ tại 500 A.",
+    "questionVi": "Một máy phát đồng bộ ba pha cần dòng kích từ 500 A để tạo điện áp dây ở đầu cực 15,2 kV khi không tải. Khi giảm dòng kích từ xuống 100 A và làm thí nghiệm ngắn mạch, dòng ngắn mạch đo được là 860 A. Chọn giá trị tổng trở đồng bộ [Ω] gần nhất khi dòng kích từ là 500 A.",
     "choicesJp": [
       "10.2 Ω",
       "6.86 Ω",
@@ -1828,7 +1828,7 @@
     "titleJp": "短絡試験の漏れリアクタンス",
     "topic": "Điện kháng tản từ thí nghiệm ngắn mạch",
     "questionJp": "単相変圧器で二次を短絡し、一次150 V・30 Aで電力計1 350 W。励磁回路を無視し一次換算漏れリアクタンスを求めよ。",
-    "questionVi": "Ngắn mạch thứ cấp máy biến áp một pha. Sơ cấp đo 150 V, 30 A và 1 350 W. Bỏ qua nhánh từ hóa. Tìm điện kháng tản quy sơ cấp.",
+    "questionVi": "Nối ampe kế, vôn kế và oát kế vào phía sơ cấp của một máy biến áp một pha để thử ngắn mạch. Nối ngắn mạch phía thứ cấp và cấp điện áp ở tần số định mức vào phía sơ cấp. Điều chỉnh điện áp sơ cấp đến khi ampe kế chỉ 30 A. Khi đó vôn kế chỉ 150 V và oát kế chỉ 1 350 W.\n\nBỏ qua tổng trở mạch từ hóa và coi cả ba đồng hồ là lý tưởng. Chọn giá trị điện kháng tản [Ω] của máy biến áp nhìn từ phía sơ cấp gần nhất.",
     "choicesJp": [
       "1.50 Ω",
       "3.50 Ω",

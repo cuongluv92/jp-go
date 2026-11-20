@@ -2298,7 +2298,9 @@
       "(1) Cộng phải làm tròn đến hàng phần mười, tức 2,7 V. (2) Phép chia theo số đo 1,2 A chỉ giữ hai chữ số có nghĩa, tức 0,56 Ω. (3) A·ms=10⁻³ C, nên kết quả là 5,5×10⁻³ C. (4) Đơn vị của hiệu phải là A.",
       "Ở (5), giá trị tính được là 0,5×2,4×0,5×0,5=0,300, viết 0,3 theo độ chính xác của điện áp. F·V²=C·V=J, nên đơn vị đúng."
     ],
-    "theory": [],
+    "theory": [
+      516
+    ],
     "pages": [
       15
     ],

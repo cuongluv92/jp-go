@@ -1057,7 +1057,9 @@
       "Máy hiện sóng số lấy mẫu và lưu chuỗi mẫu trong bộ nhớ. Khi dùng chế độ kích một lần, nó có thể giữ lại dạng sóng của một sự kiện không lặp lại.",
       "Do đó khẳng định trong (2) rằng chỉ đo được tín hiệu tuần hoàn là sai."
     ],
-    "theory": [],
+    "theory": [
+      87
+    ],
     "pages": [
       15
     ],
@@ -1350,7 +1352,10 @@
       "Dùng 0,04 Ω từ (a) và chia cho giá trị thật 31,21 Ω. Sai số tương đối là 0,00128164.",
       "Nhân 100 để sang phần trăm: 0,128164%, gần nhất 0,13%."
     ],
-    "theory": [],
+    "theory": [
+      87,
+      91
+    ],
     "pages": [
       17,
       18
