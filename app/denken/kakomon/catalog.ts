@@ -79,6 +79,15 @@ import denryokuR6Late from "./r6-late/denryoku.json";
 import kikaiR6Late from "./r6-late/kikai.json";
 import houkiR6Late from "./r6-late/houki.json";
 
+import rironR7Early from "./r7-early/riron.json";
+import denryokuR7Early from "./r7-early/denryoku.json";
+import kikaiR7Early from "./r7-early/kikai.json";
+import houkiR7Early from "./r7-early/houki.json";
+import rironR7Late from "./r7-late/riron.json";
+import denryokuR7Late from "./r7-late/denryoku.json";
+import kikaiR7Late from "./r7-late/kikai.json";
+import houkiR7Late from "./r7-late/houki.json";
+
 export const denkenExamHref = "/denken/kakomon";
 
 const denkenOfficialAnswers: Readonly<Partial<Record<number, string>>> = {
@@ -235,6 +244,20 @@ const r6LateSession: ExamSession = {
   label: "下期",
   solutionsSuffix: "-2",
   officialAnswer: "https://www.shiken.or.jp/chief/upload/2024_3_2.pdf",
+};
+
+const r7EarlySession: ExamSession = {
+  slug: "early",
+  label: "上期",
+  solutionsSuffix: "-1",
+  officialAnswer: "https://www.shiken.or.jp/chief/upload/20250831_ch_third_a01.pdf",
+};
+
+const r7LateSession: ExamSession = {
+  slug: "late",
+  label: "下期",
+  solutionsSuffix: "-2",
+  officialAnswer: "https://www.shiken.or.jp/chief/upload/20260322_ch_third_a01.pdf",
 };
 
 function makeExam(
@@ -414,6 +437,14 @@ export const denkenPastExams = [
   makeExam(6, "denryoku", denryokuR6Late, "r", r6LateSession),
   makeExam(6, "kikai", kikaiR6Late, "r", r6LateSession),
   makeExam(6, "houki", houkiR6Late, "r", r6LateSession),
+  makeExam(7, "riron", rironR7Early, "r", r7EarlySession),
+  makeExam(7, "denryoku", denryokuR7Early, "r", r7EarlySession),
+  makeExam(7, "kikai", kikaiR7Early, "r", r7EarlySession),
+  makeExam(7, "houki", houkiR7Early, "r", r7EarlySession),
+  makeExam(7, "riron", rironR7Late, "r", r7LateSession),
+  makeExam(7, "denryoku", denryokuR7Late, "r", r7LateSession),
+  makeExam(7, "kikai", kikaiR7Late, "r", r7LateSession),
+  makeExam(7, "houki", houkiR7Late, "r", r7LateSession),
 ];
 
 export function denkenQuestionHref(testSlug: string, key: string) {
