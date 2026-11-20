@@ -32,6 +32,14 @@ const officialKeys: Record<string, string> = {
   "r4-late-denryoku": "35515322135332433234",
   "r4-late-kikai": "3144341453453424222342",
   "r4-late-houki": "2452411433415311",
+  "r5-early-riron": "4523153334555324524222",
+  "r5-early-denryoku": "43532453222222344252",
+  "r5-early-kikai": "1452344341231342142434",
+  "r5-early-houki": "4451311523344132",
+  "r5-late-riron": "1142545225153534455341",
+  "r5-late-denryoku": "34335332133245332424",
+  "r5-late-kikai": "2255331532544521122353",
+  "r5-late-houki": "4342212414425354",
 };
 
 const firstMultipartQuestion = { riron: 15, denryoku: 15, kikai: 15, houki: 11 };

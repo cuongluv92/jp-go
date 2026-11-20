@@ -61,6 +61,15 @@ import denryokuR4Late from "./r4-late/denryoku.json";
 import kikaiR4Late from "./r4-late/kikai.json";
 import houkiR4Late from "./r4-late/houki.json";
 
+import rironR5Early from "./r5-early/riron.json";
+import denryokuR5Early from "./r5-early/denryoku.json";
+import kikaiR5Early from "./r5-early/kikai.json";
+import houkiR5Early from "./r5-early/houki.json";
+import rironR5Late from "./r5-late/riron.json";
+import denryokuR5Late from "./r5-late/denryoku.json";
+import kikaiR5Late from "./r5-late/kikai.json";
+import houkiR5Late from "./r5-late/houki.json";
+
 export const denkenExamHref = "/denken/kakomon";
 
 const denkenOfficialAnswers: Readonly<Partial<Record<number, string>>> = {
@@ -189,6 +198,20 @@ const r4LateSession: ExamSession = {
   label: "下期",
   solutionsSuffix: "-2",
   officialAnswer: "https://www.shiken.or.jp/chief/upload/20230326_ch_third_a01.pdf",
+};
+
+const r5EarlySession: ExamSession = {
+  slug: "early",
+  label: "上期",
+  solutionsSuffix: "-1",
+  officialAnswer: "https://www.shiken.or.jp/chief/upload/20230820_ch_third_a01.pdf",
+};
+
+const r5LateSession: ExamSession = {
+  slug: "late",
+  label: "下期",
+  solutionsSuffix: "-2",
+  officialAnswer: "https://www.shiken.or.jp/chief/upload/20240324_ch_third_a01.pdf",
 };
 
 function makeExam(
@@ -352,6 +375,14 @@ export const denkenPastExams = [
   makeExam(4, "denryoku", denryokuR4Late, "r", r4LateSession),
   makeExam(4, "kikai", kikaiR4Late, "r", r4LateSession),
   makeExam(4, "houki", houkiR4Late, "r", r4LateSession),
+  makeExam(5, "riron", rironR5Early, "r", r5EarlySession),
+  makeExam(5, "denryoku", denryokuR5Early, "r", r5EarlySession),
+  makeExam(5, "kikai", kikaiR5Early, "r", r5EarlySession),
+  makeExam(5, "houki", houkiR5Early, "r", r5EarlySession),
+  makeExam(5, "riron", rironR5Late, "r", r5LateSession),
+  makeExam(5, "denryoku", denryokuR5Late, "r", r5LateSession),
+  makeExam(5, "kikai", kikaiR5Late, "r", r5LateSession),
+  makeExam(5, "houki", houkiR5Late, "r", r5LateSession),
 ];
 
 export function denkenQuestionHref(testSlug: string, key: string) {
