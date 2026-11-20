@@ -88,6 +88,11 @@ import denryokuR7Late from "./r7-late/denryoku.json";
 import kikaiR7Late from "./r7-late/kikai.json";
 import houkiR7Late from "./r7-late/houki.json";
 
+import rironR8Early from "./r8-early/riron.json";
+import denryokuR8Early from "./r8-early/denryoku.json";
+import kikaiR8Early from "./r8-early/kikai.json";
+import houkiR8Early from "./r8-early/houki.json";
+
 export const denkenExamHref = "/denken/kakomon";
 
 const denkenOfficialAnswers: Readonly<Partial<Record<number, string>>> = {
@@ -258,6 +263,13 @@ const r7LateSession: ExamSession = {
   label: "下期",
   solutionsSuffix: "-2",
   officialAnswer: "https://www.shiken.or.jp/chief/upload/20260322_ch_third_a01.pdf",
+};
+
+const r8EarlySession: ExamSession = {
+  slug: "early",
+  label: "上期",
+  solutionsSuffix: "-1",
+  officialAnswer: "https://www.shiken.or.jp/chief/upload/20260830_ch_third_a01.pdf",
 };
 
 function makeExam(
@@ -445,6 +457,10 @@ export const denkenPastExams = [
   makeExam(7, "denryoku", denryokuR7Late, "r", r7LateSession),
   makeExam(7, "kikai", kikaiR7Late, "r", r7LateSession),
   makeExam(7, "houki", houkiR7Late, "r", r7LateSession),
+  makeExam(8, "riron", rironR8Early, "r", r8EarlySession),
+  makeExam(8, "denryoku", denryokuR8Early, "r", r8EarlySession),
+  makeExam(8, "kikai", kikaiR8Early, "r", r8EarlySession),
+  makeExam(8, "houki", houkiR8Early, "r", r8EarlySession),
 ];
 
 export function denkenQuestionHref(testSlug: string, key: string) {
