@@ -5,7 +5,8 @@ import { TestRunner } from "@/components/exam/test-runner";
 import { WideContainer } from "@/components/exam/wide-container";
 import { createClient } from "@/lib/supabase/server";
 import { bookPageHref } from "../../index-lookup";
-import { denkenExamHref, denkenPastExams, questionLabel } from "../catalog";
+import { denkenExamHref, denkenPastExams, denkenQuestionHref, questionLabel } from "../catalog";
+import { getDenkenRelatedQuestions } from "../statistics";
 import { SolutionSteps } from "../solution-steps";
 import { H21RironQuestion6Solution } from "../h21-riron-solution";
 
@@ -29,6 +30,7 @@ export default async function DenkenPastExamPage({ params, searchParams }: {
 
   const { data: { user } } = await (await createClient()).auth.getUser();
   if (!user) redirect("/login");
+  const relatedQuestions = getDenkenRelatedQuestions(exam.subject, testSlug);
 
   return (
     <WideContainer>
@@ -67,6 +69,7 @@ export default async function DenkenPastExamPage({ params, searchParams }: {
             label: questionLabel(key),
             partGroup: /^[0-9]+[ab]$/.test(key) ? key.slice(0, -1) : undefined,
             theoryLinks: theory.map(({ page, title }) => ({ href: bookPageHref(page), label: title ? `Trang ${page} · ${title}` : `Trang ${page}` })),
+            relatedQuestions: relatedQuestions.get(denkenQuestionHref(testSlug, key)),
             originalPages,
             source,
             explanation: solution ? <SolutionSteps steps={solution} /> : solutions[question.id],

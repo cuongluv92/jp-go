@@ -70,3 +70,28 @@ describe('linked question', () => {
     await act(async () => view.unmount());
   });
 });
+
+describe('related past-exam questions', () => {
+  it('shows the links for the active question beside its theory references', async () => {
+    let view: ReturnType<typeof create>;
+    const href = '/denken/kakomon/h21-riron?cau=7';
+    await act(async () => {
+      view = create(createElement(TestRunner, {
+        test, questions, userId: 'user', staticQuestions: true, initialQuestionNumber: 2,
+        questionDetails: {
+          q1: {
+            theoryLinks: [{ href: '/denken/ohm?trang=60', label: 'Trang 60' }],
+            relatedQuestions: [{ href, label: '2009 · Câu 7', kind: 'same' }],
+          },
+        },
+      }));
+    });
+    const link = view.root.findByProps({ href });
+    expect(link.props.target).toBe('_blank');
+    expect(textOf(link)).toContain('2009 · Câu 7 · Trùng nội dung');
+    expect(view.root.findByProps({ href: '/denken/ohm?trang=60' })).toBeDefined();
+    await act(async () => { (fixture.nav as { onNext: () => void }).onNext(); });
+    expect(view.root.findAllByProps({ href })).toHaveLength(0);
+    await act(async () => view.unmount());
+  });
+});

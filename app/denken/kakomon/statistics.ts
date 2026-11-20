@@ -90,63 +90,94 @@ function compareText(first: QuestionText, second: QuestionText): RepeatKind | un
 type Subject = (typeof denkenPastExams)[number]["subject"];
 const subjectOrder: Subject[] = ["riron", "denryoku", "kikai", "houki"];
 
-export function getDenkenStatistics(): SubjectStatistics[] {
-  return subjectOrder.map((subject) => {
-    const catalog = denkenPastExams.filter((exam) => exam.subject === subject).sort((a, b) =>
-      b.year - a.year || Number(b.sessionLabel === "下期") - Number(a.sessionLabel === "下期")
-    );
-    const exams: ExamRow[] = [];
-    const questions: QuestionReference[] = [];
-    const texts: QuestionText[] = [];
-    const byEditionAndKey = new Map<string, number>();
-    const topics = new Map<number, TopicRow>();
+const statisticsBySubject = new Map<Subject, SubjectStatistics>();
 
-    for (const exam of catalog) {
-      exams.push({
-        href: `${denkenExamHref}/${exam.test.slug}`,
-        label: exam.sessionLabel ?? "Đề năm",
+function getSubjectStatistics(subject: Subject): SubjectStatistics {
+  const cached = statisticsBySubject.get(subject);
+  if (cached) return cached;
+
+  const catalog = denkenPastExams.filter((exam) => exam.subject === subject).sort((a, b) =>
+    b.year - a.year || Number(b.sessionLabel === "下期") - Number(a.sessionLabel === "下期")
+  );
+  const exams: ExamRow[] = [];
+  const questions: QuestionReference[] = [];
+  const texts: QuestionText[] = [];
+  const byEditionAndKey = new Map<string, number>();
+  const topics = new Map<number, TopicRow>();
+
+  for (const exam of catalog) {
+    exams.push({
+      href: `${denkenExamHref}/${exam.test.slug}`,
+      label: exam.sessionLabel ?? "Đề năm",
+      year: exam.year,
+      count: exam.questions.length,
+    });
+    for (const row of exam.questions) {
+      const index = questions.length;
+      byEditionAndKey.set(`${exam.edition}/${row.key}`, index);
+      questions.push({
+        href: denkenQuestionHref(exam.test.slug, row.key),
+        label: [exam.year, exam.sessionLabel, `Câu ${questionLabel(row.key)}`].filter(Boolean).join(" · "),
         year: exam.year,
-        count: exam.questions.length,
+        topic: row.topic,
       });
-      for (const row of exam.questions) {
-        const index = questions.length;
-        byEditionAndKey.set(`${exam.edition}/${row.key}`, index);
-        questions.push({
-          href: denkenQuestionHref(exam.test.slug, row.key),
-          label: [exam.year, exam.sessionLabel, `Câu ${questionLabel(row.key)}`].filter(Boolean).join(" · "),
-          year: exam.year,
-          topic: row.topic,
-        });
-        texts.push(prepareQuestionText(row.question));
-        for (const { page, title } of row.theory) {
-          if (!topics.has(page)) {
-            const heading = lesson[page]?.find((line) => "heading" in line && line.heading && line.vi);
-            const name = heading && "vi" in heading ? heading.vi.replaceAll("**", "").split(" · ")[0] : title;
-            topics.set(page, { title: page === 107 ? "Điện dung của tụ điện" : name, japanese: title, href: bookPageHref(page), questions: [] });
-          }
-          topics.get(page)!.questions.push(index);
+      texts.push(prepareQuestionText(row.question));
+      for (const { page, title } of row.theory) {
+        if (!topics.has(page)) {
+          const heading = lesson[page]?.find((line) => "heading" in line && line.heading && line.vi);
+          const name = heading && "vi" in heading ? heading.vi.replaceAll("**", "").split(" · ")[0] : title;
+          topics.set(page, { title: page === 107 ? "Điện dung của tụ điện" : name, japanese: title, href: bookPageHref(page), questions: [] });
         }
+        topics.get(page)!.questions.push(index);
       }
     }
+  }
 
-    const repeats = new Map<string, RepeatPair>();
-    for (const [editionA, keyA, editionB, keyB, kind, evidence] of references[subject]) {
-      const a = byEditionAndKey.get(`${editionA}/${keyA}`);
-      const b = byEditionAndKey.get(`${editionB}/${keyB}`);
-      if (a === undefined || b === undefined || questions[a].year === questions[b].year) continue;
-      const first = Math.min(a, b);
-      const second = Math.max(a, b);
-      repeats.set(`${first}:${second}`, { first, second, kind: kind === "same" ? "same" : "similar", reviewed: evidence === "reviewed" ? true : undefined });
+  const repeats = new Map<string, RepeatPair>();
+  for (const [editionA, keyA, editionB, keyB, kind, evidence] of references[subject]) {
+    const a = byEditionAndKey.get(`${editionA}/${keyA}`);
+    const b = byEditionAndKey.get(`${editionB}/${keyB}`);
+    if (a === undefined || b === undefined || questions[a].year === questions[b].year) continue;
+    const first = Math.min(a, b);
+    const second = Math.max(a, b);
+    repeats.set(`${first}:${second}`, { first, second, kind: kind === "same" ? "same" : "similar", reviewed: evidence === "reviewed" ? true : undefined });
+  }
+  for (let first = 0; first < texts.length; first++) {
+    for (let second = first + 1; second < texts.length; second++) {
+      if (questions[first].year === questions[second].year) continue;
+      const kind = compareText(texts[first], texts[second]);
+      const key = `${first}:${second}`;
+      const prior = repeats.get(key);
+      if (kind && (!prior || (kind === "same" && !prior.reviewed))) repeats.set(key, { first, second, kind });
     }
-    for (let first = 0; first < texts.length; first++) {
-      for (let second = first + 1; second < texts.length; second++) {
-        if (questions[first].year === questions[second].year) continue;
-        const kind = compareText(texts[first], texts[second]);
-        const key = `${first}:${second}`;
-        const prior = repeats.get(key);
-        if (kind && (!prior || (kind === "same" && !prior.reviewed))) repeats.set(key, { first, second, kind });
-      }
-    }
-    return { subject: catalog[0].test.title.split(" · ")[1], exams, questions, topics: [...topics.values()], repeats: [...repeats.values()].sort((a, b) => a.first - b.first || a.second - b.second) };
-  });
+  }
+  const result = { subject: catalog[0].test.title.split(" · ")[1], exams, questions, topics: [...topics.values()], repeats: [...repeats.values()].sort((a, b) => a.first - b.first || a.second - b.second) };
+  statisticsBySubject.set(subject, result);
+  return result;
+}
+
+export function getDenkenStatistics(): SubjectStatistics[] {
+  return subjectOrder.map(getSubjectStatistics);
+}
+
+export function getDenkenRelatedQuestions(subject: Subject, testSlug: string) {
+  const { questions, repeats } = getSubjectStatistics(subject);
+  const testPrefix = `${denkenExamHref}/${testSlug}?cau=`;
+  const related = new Map<string, (QuestionReference & { kind: RepeatKind })[]>();
+
+  for (const { first, second, kind } of repeats) {
+    const a = questions[first];
+    const b = questions[second];
+    const [question, other] = a.href.startsWith(testPrefix) ? [a, b] : [b, a];
+    if (!question.href.startsWith(testPrefix)) continue;
+
+    const links = related.get(question.href) ?? [];
+    links.push({ ...other, kind });
+    related.set(question.href, links);
+  }
+
+  for (const links of related.values()) {
+    links.sort((a, b) => Number(b.kind === "same") - Number(a.kind === "same") || b.year - a.year);
+  }
+  return related;
 }

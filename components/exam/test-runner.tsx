@@ -160,45 +160,70 @@ function renderExamJapanese(text: string, tokens: FuriganaToken[] = [], showFuri
 }
 
 type QuestionLink = { href: string; label: string };
+type RelatedQuestionLink = QuestionLink & { kind: "same" | "similar" };
 
-function ReferencePages({ question, theoryLinks = [] }: { question: ExamQuestion; theoryLinks?: QuestionLink[] }) {
-  if (question.references.length === 0 && theoryLinks.length === 0) return null;
+function ReferencePages({ question, theoryLinks = [], relatedQuestions = [] }: {
+  question: ExamQuestion;
+  theoryLinks?: QuestionLink[];
+  relatedQuestions?: RelatedQuestionLink[];
+}) {
+  const hasTheory = question.references.length > 0 || theoryLinks.length > 0;
+  if (!hasTheory && relatedQuestions.length === 0) return null;
 
   return (
-    <div className="mt-4 border-t border-border pt-3">
-      <p className="mb-2 text-xs font-semibold uppercase tracking-wide text-muted">
-        Lý thuyết liên quan
-      </p>
-      <div className="flex flex-wrap gap-2">
-        {theoryLinks.map(({ href, label }) => (
-          <a key={href} href={href} target="_blank" rel="noopener noreferrer"
-            className="rounded-lg border border-accent/40 bg-accent/5 px-2.5 py-1 text-xs font-medium text-accent hover:bg-accent/10">
-            {label} ↗
-          </a>
-        ))}
-        {question.references.map((ref) => {
-          if (!ref.book || !ref.page) {
-            return ref.note ? (
-              <span key={ref.id} className="rounded-lg bg-slate-100 px-2.5 py-1 text-xs text-muted dark:bg-white/10">
-                {ref.note}
-              </span>
-            ) : null;
-          }
+    <div className={`mt-4 grid gap-3 border-t border-border pt-3 ${hasTheory && relatedQuestions.length > 0 ? "lg:grid-cols-2" : ""}`}>
+      {hasTheory && (
+        <div>
+          <p className="mb-2 text-xs font-semibold uppercase tracking-wide text-muted">
+            Lý thuyết liên quan
+          </p>
+          <div className="flex flex-wrap gap-2">
+            {theoryLinks.map(({ href, label }) => (
+              <a key={href} href={href} target="_blank" rel="noopener noreferrer"
+                className="rounded-lg border border-accent/40 bg-accent/5 px-2.5 py-1 text-xs font-medium text-accent hover:bg-accent/10">
+                {label} ↗
+              </a>
+            ))}
+            {question.references.map((ref) => {
+              if (!ref.book || !ref.page) {
+                return ref.note ? (
+                  <span key={ref.id} className="rounded-lg bg-slate-100 px-2.5 py-1 text-xs text-muted dark:bg-white/10">
+                    {ref.note}
+                  </span>
+                ) : null;
+              }
 
-          return (
-            <Link
-              key={ref.id}
-              href={`/exam/${ref.book.slug}/page/${ref.page.page_number}`}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="rounded-lg border border-accent/40 bg-accent/5 px-2.5 py-1 text-xs font-medium text-accent hover:bg-accent/10"
-            >
-              {ref.book.short_title} · p.{ref.page.page_number}
-              {ref.note ? ` · ${ref.note}` : ""}
-            </Link>
-          );
-        })}
-      </div>
+              return (
+                <Link
+                  key={ref.id}
+                  href={`/exam/${ref.book.slug}/page/${ref.page.page_number}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="rounded-lg border border-accent/40 bg-accent/5 px-2.5 py-1 text-xs font-medium text-accent hover:bg-accent/10"
+                >
+                  {ref.book.short_title} · p.{ref.page.page_number}
+                  {ref.note ? ` · ${ref.note}` : ""}
+                </Link>
+              );
+            })}
+          </div>
+        </div>
+      )}
+      {relatedQuestions.length > 0 && (
+        <div>
+          <p className="mb-2 text-xs font-semibold uppercase tracking-wide text-muted">
+            Câu tương tự ở năm khác
+          </p>
+          <div className="flex flex-wrap gap-2">
+            {relatedQuestions.map(({ href, label, kind }) => (
+              <a key={href} href={href} target="_blank" rel="noopener noreferrer"
+                className="rounded-lg border border-accent/40 bg-accent/5 px-2.5 py-1 text-xs font-medium text-accent hover:bg-accent/10">
+                {label} · {kind === "same" ? "Trùng nội dung" : "Gần trùng"} ↗
+              </a>
+            ))}
+          </div>
+        </div>
+      )}
     </div>
   );
 }
@@ -220,7 +245,7 @@ export function TestRunner({
   userId: string;
   staticQuestions?: boolean;
   initialQuestionNumber?: number;
-  questionDetails?: Record<string, { label?: string; partGroup?: string; theoryLinks?: QuestionLink[]; source?: QuestionLink; originalPages?: QuestionLink[]; explanation?: ReactNode }>;
+  questionDetails?: Record<string, { label?: string; partGroup?: string; theoryLinks?: QuestionLink[]; relatedQuestions?: RelatedQuestionLink[]; source?: QuestionLink; originalPages?: QuestionLink[]; explanation?: ReactNode }>;
 }) {
   // Render ngay với dữ liệu gốc (chưa có furigana) để không phải chờ kuromoji
   // dựng dictionary - furigana (nếu có) tới sau qua API, state ở đây chỉ đổi
@@ -327,6 +352,7 @@ export function TestRunner({
   const allChoicesAccepted = correctChoices.length > 1 && correctChoices.length === current?.choices.length;
   const writtenAnswer = current?.answer_jp?.trim() ? current.answer_jp : null;
   const details = current ? questionDetails?.[current.id] : undefined;
+  const hasReferenceLinks = Boolean(details?.theoryLinks?.length || details?.relatedQuestions?.length);
   const questionLabel = (question: ExamQuestion) => questionDetails?.[question.id]?.label ?? question.question_number;
   const partGroup = details?.partGroup;
   const partIndices = partGroup ? questions.flatMap((question, index) =>
@@ -666,7 +692,9 @@ export function TestRunner({
         </nav>
       )}
 
-      {details?.theoryLinks?.length ? <ReferencePages question={current} theoryLinks={details.theoryLinks} /> : null}
+      {hasReferenceLinks && (
+        <ReferencePages question={current} theoryLinks={details?.theoryLinks} relatedQuestions={details?.relatedQuestions} />
+      )}
 
       <div className={`grid gap-3 ${gridColsClass(renderedColumns.length)}`}>
         {renderedColumns.includes("question") && (
@@ -825,7 +853,7 @@ export function TestRunner({
           ) : (
             <p className="text-sm italic text-muted">Chưa có phần giải thích cho câu này.</p>
           )}
-          {!details?.theoryLinks?.length && <ReferencePages question={current} />}
+          {!hasReferenceLinks && <ReferencePages question={current} />}
           {sourceUrl && <a href={sourceUrl} target="_blank" rel="noopener noreferrer" className="mt-4 inline-block rounded-lg border border-accent/40 px-2.5 py-1.5 text-xs font-semibold text-accent hover:bg-accent/10">📖 {sourceLabel} ↗</a>}
         </section>
         )}
