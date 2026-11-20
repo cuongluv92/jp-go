@@ -52,6 +52,10 @@ import rironR3 from "./r3/riron.json";
 import denryokuR3 from "./r3/denryoku.json";
 import kikaiR3 from "./r3/kikai.json";
 import houkiR3 from "./r3/houki.json";
+import rironR4Early from "./r4-early/riron.json";
+import denryokuR4Early from "./r4-early/denryoku.json";
+import kikaiR4Early from "./r4-early/kikai.json";
+import houkiR4Early from "./r4-early/houki.json";
 import rironR4Late from "./r4-late/riron.json";
 import denryokuR4Late from "./r4-late/denryoku.json";
 import kikaiR4Late from "./r4-late/kikai.json";
@@ -166,7 +170,21 @@ function expandReadings(text: string, readings: (string | number)[][]) {
   }));
 }
 
-const r4LateSession = {
+type ExamSession = {
+  slug: string;
+  label: string;
+  solutionsSuffix: string;
+  officialAnswer: string;
+};
+
+const r4EarlySession: ExamSession = {
+  slug: "early",
+  label: "上期",
+  solutionsSuffix: "-1",
+  officialAnswer: "https://www.shiken.or.jp/chief/upload/20220821_ch_third_a01.pdf",
+};
+
+const r4LateSession: ExamSession = {
   slug: "late",
   label: "下期",
   solutionsSuffix: "-2",
@@ -178,7 +196,7 @@ function makeExam(
   subject: keyof typeof subjects,
   rows: QuestionContent[],
   era: "h" | "r" = "h",
-  session?: typeof r4LateSession,
+  session?: ExamSession,
 ) {
   const year = (era === "h" ? 1988 : 2018) + eraYear;
   const eraEdition = `${era}${eraYear}`;
@@ -326,6 +344,10 @@ export const denkenPastExams = [
   makeExam(3, "denryoku", denryokuR3, "r"),
   makeExam(3, "kikai", kikaiR3, "r"),
   makeExam(3, "houki", houkiR3, "r"),
+  makeExam(4, "riron", rironR4Early, "r", r4EarlySession),
+  makeExam(4, "denryoku", denryokuR4Early, "r", r4EarlySession),
+  makeExam(4, "kikai", kikaiR4Early, "r", r4EarlySession),
+  makeExam(4, "houki", houkiR4Early, "r", r4EarlySession),
   makeExam(4, "riron", rironR4Late, "r", r4LateSession),
   makeExam(4, "denryoku", denryokuR4Late, "r", r4LateSession),
   makeExam(4, "kikai", kikaiR4Late, "r", r4LateSession),
