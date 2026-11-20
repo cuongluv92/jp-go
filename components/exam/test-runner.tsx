@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { renderFractions } from "@/app/denken/fraction";
 import { useExamProgress } from "@/lib/exam/use-exam-progress";
 import { useEffect, useMemo, useState, type ReactNode } from "react";
 
@@ -145,7 +146,7 @@ function ColumnHeader({
 }
 
 function renderExamJapanese(text: string, tokens: FuriganaToken[] = [], showFurigana = false) {
-  if (!showFurigana || tokens.length === 0) return text;
+  if (!showFurigana || tokens.length === 0) return renderFractions(text);
   return segmentJapaneseText(text, [], tokens).map((segment, index) =>
     segment.reading ? (
       <ruby key={`${segment.start}-${index}`}>
@@ -153,7 +154,7 @@ function renderExamJapanese(text: string, tokens: FuriganaToken[] = [], showFuri
         <rt className="text-[0.65em] font-medium leading-none text-muted">{segment.reading}</rt>
       </ruby>
     ) : (
-      <span key={`${segment.start}-${index}`}>{segment.text}</span>
+      <span key={`${segment.start}-${index}`}>{renderFractions(segment.text)}</span>
     ),
   );
 }
@@ -466,7 +467,7 @@ export function TestRunner({
             ? choice.choice_jp
               ? renderExamJapanese(choice.choice_jp, choice.choice_furigana_tokens, showFurigana)
               : "Chọn phương án theo đề gốc"
-            : choice.choice_vi ?? (hasOriginalPages ? "Xem phương án trong đề gốc" : "(chưa dịch lựa chọn)");
+            : renderFractions(choice.choice_vi ?? (hasOriginalPages ? "Xem phương án trong đề gốc" : "(chưa dịch lựa chọn)"));
           return (
             <Choice
               key={choice.id}
@@ -729,7 +730,7 @@ export function TestRunner({
             onToggleFocus={() => toggleColumnFocus("questionVi")}
           />
           {current.question_vi ? (
-            <p className="whitespace-pre-line text-sm leading-relaxed sm:text-base">{current.question_vi}</p>
+            <p className="whitespace-pre-line text-sm leading-relaxed sm:text-base">{renderFractions(current.question_vi)}</p>
           ) : (
             <p className="text-sm italic text-muted">(chưa dịch)</p>
           )}
@@ -774,7 +775,7 @@ export function TestRunner({
                   : "Xem hình tương ứng trong đề gốc."}
               </p>
               {staticQuestions && correctChoice.choice_vi && (
-                <p lang="vi" className="whitespace-pre-line text-sm leading-relaxed">{correctChoice.choice_vi}</p>
+                <p lang="vi" className="whitespace-pre-line text-sm leading-relaxed">{renderFractions(correctChoice.choice_vi)}</p>
               )}
             </div>
           ) : writtenAnswer ? (

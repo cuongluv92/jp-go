@@ -5,7 +5,7 @@ import { TestRunner } from "@/components/exam/test-runner";
 import { WideContainer } from "@/components/exam/wide-container";
 import { createClient } from "@/lib/supabase/server";
 import { bookPageHref } from "../../index-lookup";
-import { denkenExamHref, denkenOfficialAnswers, denkenPastExams, questionLabel } from "../catalog";
+import { denkenExamHref, denkenPastExams, questionLabel } from "../catalog";
 import { SolutionSteps } from "../solution-steps";
 import { H21RironQuestion6Solution } from "../h21-riron-solution";
 
@@ -22,7 +22,6 @@ export default async function DenkenPastExamPage({ params, searchParams }: {
   const [{ testSlug }, { cau }] = await Promise.all([params, searchParams]);
   const exam = denkenPastExams.find(({ test }) => test.slug === testSlug);
   if (!exam) notFound();
-  const officialAnswer = denkenOfficialAnswers[exam.year];
   const entryQuestion = typeof cau === "string"
     ? exam.questions.find(({ key }) => key === cau)
     : undefined;
@@ -36,9 +35,9 @@ export default async function DenkenPastExamPage({ params, searchParams }: {
       <nav aria-label="Đề thi 電験三種" className="flex flex-wrap gap-3 pt-4 text-sm text-accent">
         <Link href="/denken">← 電験三種</Link>
         <Link href={denkenExamHref}>Đề thi các năm</Link>
-        {officialAnswer && (
-          <a href={officialAnswer} target="_blank" rel="noreferrer" className="underline">
-            Đáp án chính thức · {exam.edition.toUpperCase()}
+        {exam.officialAnswer && (
+          <a href={exam.officialAnswer} target="_blank" rel="noreferrer" className="underline">
+            Đáp án chính thức · {exam.sessionLabel ? exam.examLabel : exam.edition.toUpperCase()}
           </a>
         )}
       </nav>
@@ -49,7 +48,7 @@ export default async function DenkenPastExamPage({ params, searchParams }: {
         <p className="pt-2 text-sm text-muted">
           Nguồn đề gốc:{" "}
           <a href={exam.year >= 2016 ? "https://www.shiken.or.jp/chief/third/qa/" : "https://www.shiken.or.jp/chief/third/qa/index_2.html"} target="_blank" rel="noreferrer" className="underline">
-            電気技術者試験センター · {exam.eraLabel}第三種電気主任技術者試験
+            電気技術者試験センター · {exam.examLabel} 第三種電気主任技術者試験
           </a>
           {". Phần chữ tiếng Nhật được biên tập cho giao diện. Ảnh đi kèm giữ đề gốc."}
           {exam.subject === "houki" && ` Các câu pháp quy căn cứ vào văn bản có hiệu lực ngày 01/04/${exam.year}.`}

@@ -52,10 +52,14 @@ import rironR3 from "./r3/riron.json";
 import denryokuR3 from "./r3/denryoku.json";
 import kikaiR3 from "./r3/kikai.json";
 import houkiR3 from "./r3/houki.json";
+import rironR4Late from "./r4-late/riron.json";
+import denryokuR4Late from "./r4-late/denryoku.json";
+import kikaiR4Late from "./r4-late/kikai.json";
+import houkiR4Late from "./r4-late/houki.json";
 
 export const denkenExamHref = "/denken/kakomon";
 
-export const denkenOfficialAnswers: Readonly<Partial<Record<number, string>>> = {
+const denkenOfficialAnswers: Readonly<Partial<Record<number, string>>> = {
   2009: "https://www.shiken.or.jp/chief/upload/20090906_ch_third_a01.pdf",
   2010: "https://www.shiken.or.jp/chief/upload/20100905_ch_third_a01.pdf",
   2011: "https://www.shiken.or.jp/chief/upload/20110904_ch_third_a01.pdf",
@@ -162,13 +166,29 @@ function expandReadings(text: string, readings: (string | number)[][]) {
   }));
 }
 
-function makeExam(eraYear: number, subject: keyof typeof subjects, rows: QuestionContent[], era: "h" | "r" = "h") {
+const r4LateSession = {
+  slug: "late",
+  label: "下期",
+  solutionsSuffix: "-2",
+  officialAnswer: "https://www.shiken.or.jp/chief/upload/20230326_ch_third_a01.pdf",
+};
+
+function makeExam(
+  eraYear: number,
+  subject: keyof typeof subjects,
+  rows: QuestionContent[],
+  era: "h" | "r" = "h",
+  session?: typeof r4LateSession,
+) {
   const year = (era === "h" ? 1988 : 2018) + eraYear;
-  const edition = `${era}${eraYear}`;
+  const eraEdition = `${era}${eraYear}`;
+  const edition = session ? `${eraEdition}-${session.slug}` : eraEdition;
+  const solutionsEdition = eraEdition + (session?.solutionsSuffix ?? "");
   const eraLabel = era === "h" ? `平成${eraYear}年度` : `令和${eraYear === 1 ? "元" : eraYear}年度`;
+  const examLabel = session ? `${eraLabel} ${session.label}` : eraLabel;
   const slug = `${edition}-${subject}`;
   const id = `denken-${slug}`;
-  const title = `${eraLabel} · ${subjects[subject]}`;
+  const title = `${examLabel} · ${subjects[subject]}`;
   const pilot = edition === "h21" && subject === "riron";
   const test: ExamTest = {
     id, slug, title,
@@ -223,7 +243,7 @@ function makeExam(eraYear: number, subject: keyof typeof subjects, rows: Questio
       theory: row.theory.map((page) => ({ page, title: theoryTitles.get(page) ?? "" })),
       source: row.answer === "all"
         ? { href: "https://www.shiken.or.jp/chief/upload/20140907_ch_third_a01.pdf", label: `Đáp án chính thức · ${edition.toUpperCase()} 問${number}` }
-        : { href: `https://denken-ou.com/${subject}${edition}-${number}/`, label: `Lời giải Nhật · ${edition.toUpperCase()} 問${number}` },
+        : { href: `https://denken-ou.com/${subject}${solutionsEdition}-${number}/`, label: `Lời giải Nhật · ${session ? examLabel : edition.toUpperCase()} 問${number}` },
       originalPages: row.pages.map((page) => ({
         href: `/denken/kakomon/${edition}/${subject}/${String(page).padStart(2, "0")}.webp`,
         label: `Trang ${page} của đề gốc`,
@@ -246,7 +266,11 @@ function makeExam(eraYear: number, subject: keyof typeof subjects, rows: Questio
     });
   }
 
-  return { test, questions, subject, eraYear, year, eraLabel, edition };
+  return {
+    test, questions, subject, eraYear, year, eraLabel, edition, examLabel,
+    sessionLabel: session?.label,
+    officialAnswer: session?.officialAnswer ?? denkenOfficialAnswers[year],
+  };
 }
 
 export const denkenPastExams = [
@@ -302,6 +326,10 @@ export const denkenPastExams = [
   makeExam(3, "denryoku", denryokuR3, "r"),
   makeExam(3, "kikai", kikaiR3, "r"),
   makeExam(3, "houki", houkiR3, "r"),
+  makeExam(4, "riron", rironR4Late, "r", r4LateSession),
+  makeExam(4, "denryoku", denryokuR4Late, "r", r4LateSession),
+  makeExam(4, "kikai", kikaiR4Late, "r", r4LateSession),
+  makeExam(4, "houki", houkiR4Late, "r", r4LateSession),
 ];
 
 export function denkenQuestionHref(testSlug: string, key: string) {

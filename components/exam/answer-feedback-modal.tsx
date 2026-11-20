@@ -2,6 +2,7 @@
 
 import { useEffect, useId, useRef, type ReactNode } from "react";
 
+import { renderFractions } from "@/app/denken/fraction";
 import { segmentJapaneseText, type FuriganaToken } from "@/lib/japanese-text";
 
 /**
@@ -85,7 +86,7 @@ export function AnswerFeedbackModal({
       {officialAnswer && (
         <div className="mt-3 rounded-lg border border-border px-3 py-2 text-left">
           <p className="text-sm font-semibold">Đáp án chính thức ({officialAnswer.label})</p>
-          {officialAnswer.text && <p className="mt-1 whitespace-pre-line text-sm">{officialAnswer.text}</p>}
+          {officialAnswer.text && <p className="mt-1 whitespace-pre-line text-sm">{renderFractions(officialAnswer.text)}</p>}
         </div>
       )}
       {(explanationJp || explanation) && (

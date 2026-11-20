@@ -24,9 +24,10 @@ export default function DenkenPastExamsPage() {
               <span aria-hidden="true" className="mr-1 size-2 shrink-0 -translate-y-0.5 rotate-45 border-r-2 border-b-2 border-current text-accent group-open:translate-y-0.5 group-open:-rotate-135" />
             </summary>
             <ul className="space-y-1 border-t border-border p-2">
-              {denkenPastExams.filter((exam) => exam.year === year).map(({ test }) => (
+              {denkenPastExams.filter((exam) => exam.year === year).map(({ test, sessionLabel }) => (
                 <li key={test.id}>
                   <Link href={`${denkenExamHref}/${test.slug}`} className="block rounded-md px-2 py-2 text-sm font-medium text-accent hover:bg-accent/10 hover:underline">
+                    {sessionLabel && <span lang="ja" className="mr-2 font-jp text-muted">{sessionLabel}</span>}
                     {test.title.split(" · ")[1]}
                   </Link>
                 </li>
